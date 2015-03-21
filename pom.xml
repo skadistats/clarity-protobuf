@@ -1,0 +1,53 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.skadistats</groupId>
+    <artifactId>clarity-protobuf</artifactId>
+    <version>1.0</version>
+    <packaging>jar</packaging>
+    <name>clarity-protobuf</name>
+    <description>Clarity is a fast, almost complete replay parser for Dota 2. This JAR contains the protobuf classes for clarity</description>
+    <url>https://github.com/skadistats/clarity</url>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <properties>
+        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>BSD style license</name>
+            <url>https://github.com/skadistats/clarity-protobuf/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/skadistats/clarity-protobuf</url>
+        <connection>scm:git:git@github.com:skadistats/clarity-protobuf.git</connection>
+        <developerConnection>scm:git:git@github.com:skadistats/clarity-protobuf.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>spheenik</id>
+            <name>Martin Schrodt</name>
+            <email>clarity@martin.schrodt.org</email>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>2.5.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
