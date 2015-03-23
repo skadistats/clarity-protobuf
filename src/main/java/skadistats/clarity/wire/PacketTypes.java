@@ -54,6 +54,9 @@ public class PacketTypes {
         EMBED.put(Netmessages.SVC_Messages.svc_UserMessage_VALUE, Networkbasetypes.CSVCMsg_UserMessage.class);
         EMBED.put(Netmessages.SVC_Messages.svc_VoiceInit_VALUE, Netmessages.CSVCMsg_VoiceInit.class);
         EMBED.put(Netmessages.SVC_Messages.svc_VoiceData_VALUE, Netmessages.CSVCMsg_VoiceData.class);
+
+        EMBED.put(Netmessages.SVC_Messages.svc_Print_VALUE, Netmessages.CSVCMsg_Print.class);
+        EMBED.put(Netmessages.SVC_Messages.svc_FullFrameSplit_VALUE, Netmessages.CSVCMsg_FullFrameSplit.class);
     }
     
     public static final Map<Integer, Class<? extends GeneratedMessage>> USERMSG;
