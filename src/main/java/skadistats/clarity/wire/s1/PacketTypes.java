@@ -1,13 +1,10 @@
-package skadistats.clarity.wire;
+package skadistats.clarity.wire.s1;
 
 import com.google.protobuf.ByteString;
 import com.google.protobuf.GeneratedMessage;
-import skadistats.clarity.wire.proto.*;
+import skadistats.clarity.wire.s1.proto.*;
 
-import java.lang.invoke.ConstantCallSite;
-import java.lang.invoke.MethodHandle;
-import java.lang.invoke.MethodHandles;
-import java.lang.invoke.MethodType;
+import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +12,7 @@ public class PacketTypes {
 
     public static final Map<Integer, Class<? extends GeneratedMessage>> DEMO;
     static {
-        DEMO = new HashMap<Integer, Class<? extends GeneratedMessage>>();
+        DEMO = new HashMap<>();
         DEMO.put(Demo.EDemoCommands.DEM_ClassInfo_VALUE, Demo.CDemoClassInfo.class);
         DEMO.put(Demo.EDemoCommands.DEM_ConsoleCmd_VALUE, Demo.CDemoConsoleCmd.class);
         DEMO.put(Demo.EDemoCommands.DEM_CustomData_VALUE, Demo.CDemoCustomData.class);
@@ -35,7 +32,7 @@ public class PacketTypes {
     
     public static final Map<Integer, Class<? extends GeneratedMessage>> EMBED;
     static {
-        EMBED = new HashMap<Integer, Class<? extends GeneratedMessage>>();
+        EMBED = new HashMap<>();
         EMBED.put(Networkbasetypes.NET_Messages.net_SetConVar_VALUE, Networkbasetypes.CNETMsg_SetConVar.class);
         EMBED.put(Networkbasetypes.NET_Messages.net_SignonState_VALUE, Networkbasetypes.CNETMsg_SignonState.class);
         EMBED.put(Networkbasetypes.NET_Messages.net_Tick_VALUE, Networkbasetypes.CNETMsg_Tick.class);
@@ -61,7 +58,7 @@ public class PacketTypes {
     
     public static final Map<Integer, Class<? extends GeneratedMessage>> USERMSG;
     static {
-        USERMSG = new HashMap<Integer, Class<? extends GeneratedMessage>>();
+        USERMSG = new HashMap<>();
         USERMSG.put(Usermessages.EBaseUserMessages.UM_AchievementEvent_VALUE, Usermessages.CUserMsg_AchievementEvent.class);
         USERMSG.put(Usermessages.EBaseUserMessages.UM_CloseCaption_VALUE, Usermessages.CUserMsg_CloseCaption.class);
         USERMSG.put(Usermessages.EBaseUserMessages.UM_CloseCaptionDirect_VALUE, Usermessages.CUserMsg_CloseCaption.class);
@@ -165,21 +162,15 @@ public class PacketTypes {
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_StatsHeroDetails_VALUE, DotaUsermessages.CDOTAUserMsg_StatsHeroMinuteDetails.class);
     }
 
-    private static final Map<Class<? extends GeneratedMessage>, MethodHandle> PARSE_METHODS = new HashMap<Class<? extends GeneratedMessage>, MethodHandle>() {
+    private static final Map<Class<? extends GeneratedMessage>, Method> PARSE_METHODS = new HashMap<Class<? extends GeneratedMessage>, Method>() {
         private static final long serialVersionUID = -6842762498712492043L;
         @SuppressWarnings("unchecked")
         @Override
-        public MethodHandle get(Object key) {
-            MethodHandle m = super.get(key);
+        public Method get(Object key) {
+            Method m = super.get(key);
             if (m == null) {
                 try {
-                    m = new ConstantCallSite(
-                        MethodHandles.publicLookup().findStatic(
-                            (Class<? extends GeneratedMessage>) key,
-                            "parseFrom",
-                            MethodType.methodType((Class<? extends GeneratedMessage>) key, ByteString.class)
-                        )
-                    ).dynamicInvoker();
+                    m = key.getClass().getMethod("parseFrom", ByteString.class);
                     put((Class<? extends GeneratedMessage>) key, m);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
