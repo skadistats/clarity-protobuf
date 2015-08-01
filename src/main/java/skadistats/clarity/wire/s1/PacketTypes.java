@@ -170,8 +170,9 @@ public class PacketTypes {
             Method m = super.get(key);
             if (m == null) {
                 try {
-                    m = key.getClass().getMethod("parseFrom", ByteString.class);
-                    put((Class<? extends GeneratedMessage>) key, m);
+                    Class<? extends GeneratedMessage> keyAsClass = (Class<? extends GeneratedMessage>) key;
+                    m = keyAsClass.getMethod("parseFrom", ByteString.class);
+                    put(keyAsClass, m);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -183,7 +184,7 @@ public class PacketTypes {
     @SuppressWarnings("unchecked")
     public static <T extends GeneratedMessage> T parse(Class<T> clazz, ByteString data) {
         try {
-            return (T) PARSE_METHODS.get(clazz).invoke(data);
+            return (T) PARSE_METHODS.get(clazz).invoke(null, data);
         } catch (Throwable throwable) {
             throw new RuntimeException(throwable);
         }
