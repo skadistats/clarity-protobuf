@@ -181,23 +181,6 @@ enum DOTA_ABILITY_PING_TYPE {
 	ABILITY_PING_ENEMY = 4;
 }
 
-enum DOTA_COMBATLOG_TYPES {
-	DOTA_COMBATLOG_DAMAGE = 0;
-	DOTA_COMBATLOG_HEAL = 1;
-	DOTA_COMBATLOG_MODIFIER_ADD = 2;
-	DOTA_COMBATLOG_MODIFIER_REMOVE = 3;
-	DOTA_COMBATLOG_DEATH = 4;
-	DOTA_COMBATLOG_ABILITY = 5;
-	DOTA_COMBATLOG_ITEM = 6;
-	DOTA_COMBATLOG_LOCATION = 7;
-	DOTA_COMBATLOG_GOLD = 8;
-	DOTA_COMBATLOG_GAME_STATE = 9;
-	DOTA_COMBATLOG_XP = 10;
-	DOTA_COMBATLOG_PURCHASE = 11;
-	DOTA_COMBATLOG_BUYBACK = 12;
-	DOTA_COMBATLOG_ABILITY_TRIGGER = 13;
-}
-
 enum EDotaEntityMessages {
 	DOTA_UNIT_SPEECH = 0;
 	DOTA_UNIT_SPEECH_MUTE = 1;
@@ -847,45 +830,3 @@ message CMsgCombatAnalyzerStats {
 	optional uint64 match_id = 1;
 	repeated .CMsgCombatAnalyzerPlayerStat player_stats = 2;
 }
-
-message CDOTAUserMsg_CombatLogData {
-	optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
-	optional uint32 target_name = 2;
-	optional uint32 attacker_name = 3;
-	optional bool attacker_illusion = 4;
-	optional bool target_illusion = 5;
-	optional uint32 inflictor_name = 6;
-	optional int32 value = 7;
-	optional int32 health = 8;
-	optional float time = 9;
-}
-
-message CMsgDOTACombatLogEntry {
-	optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
-	optional uint32 target_name = 2;
-	optional uint32 target_source_name = 3;
-	optional uint32 attacker_name = 4;
-	optional uint32 damage_source_name = 5;
-	optional uint32 inflictor_name = 6;
-	optional bool is_attacker_illusion = 7;
-	optional bool is_attacker_hero = 8;
-	optional bool is_target_illusion = 9;
-	optional bool is_target_hero = 10;
-	optional bool is_visible_radiant = 11;
-	optional bool is_visible_dire = 12;
-	optional uint32 value = 13;
-	optional int32 health = 14;
-	optional float timestamp = 15;
-	optional float stun_duration = 16;
-	optional float slow_duration = 17;
-	optional bool is_ability_toggle_on = 18;
-	optional bool is_ability_toggle_off = 19;
-	optional uint32 ability_level = 20;
-	optional float location_x = 21;
-	optional float location_y = 22;
-	optional uint32 gold_reason = 23;
-	optional float timestamp_raw = 24;
-}
-
-
-

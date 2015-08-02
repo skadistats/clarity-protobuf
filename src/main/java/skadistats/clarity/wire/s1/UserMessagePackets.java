@@ -47,7 +47,7 @@ public class UserMessagePackets {
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUsermessages.CDOTAUserMsg_AIDebugLine.class);
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_ChatEvent_VALUE, DotaUsermessages.CDOTAUserMsg_ChatEvent.class);
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_CombatHeroPositions_VALUE, DotaUsermessages.CDOTAUserMsg_CombatHeroPositions.class);
-        USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_CombatLogData_VALUE, DotaUsermessages.CDOTAUserMsg_CombatLogData.class);
+        USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_CombatLogData_VALUE, null);
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_CombatLogShowDeath_VALUE, DotaUsermessages.CDOTAUserMsg_CombatLogShowDeath.class);
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_CreateLinearProjectile_VALUE, DotaUsermessages.CDOTAUserMsg_CreateLinearProjectile.class);
         USERMSG.put(DotaUsermessages.EDotaUserMessages.DOTA_UM_DestroyLinearProjectile_VALUE, DotaUsermessages.CDOTAUserMsg_DestroyLinearProjectile.class);
