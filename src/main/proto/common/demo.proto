@@ -1,6 +1,6 @@
-option java_package = "skadistats.clarity.wire.s1.proto";
+option java_package = "skadistats.clarity.wire.common.proto";
 
-import "google/protobuf/descriptor.proto";
+option cc_generic_services = false;
 
 enum EDemoCommands {
 	DEM_Error = -1;
@@ -19,8 +19,10 @@ enum EDemoCommands {
 	DEM_UserCmd = 12;
 	DEM_FullPacket = 13;
 	DEM_SaveGame = 14;
-	DEM_Max = 15;
-	DEM_IsCompressed = 112;
+	DEM_SpawnGroups = 15;
+	DEM_Max = 16;
+	DEM_IsCompressed_S1 = 112;
+	DEM_IsCompressed_S2 = 64;
 }
 
 message CDemoFileHeader {
@@ -33,6 +35,7 @@ message CDemoFileHeader {
 	optional int32 fullpackets_version = 7;
 	optional bool allow_clientside_entities = 8;
 	optional bool allow_clientside_particles = 9;
+	optional string addons = 10;
 }
 
 message CGameInfo {
@@ -54,9 +57,9 @@ message CGameInfo {
 		optional uint32 match_id = 1;
 		optional int32 game_mode = 2;
 		optional int32 game_winner = 3;
-		repeated .CGameInfo.CDotaGameInfo.CPlayerInfo player_info = 4;
+		repeated CGameInfo.CDotaGameInfo.CPlayerInfo player_info = 4;
 		optional uint32 leagueid = 5;
-		repeated .CGameInfo.CDotaGameInfo.CHeroSelectEvent picks_bans = 6;
+		repeated CGameInfo.CDotaGameInfo.CHeroSelectEvent picks_bans = 6;
 		optional uint32 radiant_team_id = 7;
 		optional uint32 dire_team_id = 8;
 		optional string radiant_team_tag = 9;
@@ -64,14 +67,14 @@ message CGameInfo {
 		optional uint32 end_time = 11;
 	}
 
-	optional .CGameInfo.CDotaGameInfo dota = 4;
+	optional CGameInfo.CDotaGameInfo dota = 4;
 }
 
 message CDemoFileInfo {
 	optional float playback_time = 1;
 	optional int32 playback_ticks = 2;
 	optional int32 playback_frames = 3;
-	optional .CGameInfo game_info = 4;
+	optional CGameInfo game_info = 4;
 }
 
 message CDemoPacket {
@@ -81,8 +84,8 @@ message CDemoPacket {
 }
 
 message CDemoFullPacket {
-	optional .CDemoStringTables string_table = 1;
-	optional .CDemoPacket packet = 2;
+	optional CDemoStringTables string_table = 1;
+	optional CDemoPacket packet = 2;
 }
 
 message CDemoSaveGame {
@@ -110,7 +113,7 @@ message CDemoClassInfo {
 		optional string table_name = 3;
 	}
 
-	repeated .CDemoClassInfo.class_t classes = 1;
+	repeated CDemoClassInfo.class_t classes = 1;
 }
 
 message CDemoCustomData {
@@ -130,12 +133,12 @@ message CDemoStringTables {
 
 	message table_t {
 		optional string table_name = 1;
-		repeated .CDemoStringTables.items_t items = 2;
-		repeated .CDemoStringTables.items_t items_clientside = 3;
+		repeated CDemoStringTables.items_t items = 2;
+		repeated CDemoStringTables.items_t items_clientside = 3;
 		optional int32 table_flags = 4;
 	}
 
-	repeated .CDemoStringTables.table_t tables = 1;
+	repeated CDemoStringTables.table_t tables = 1;
 }
 
 message CDemoStop {
@@ -144,5 +147,9 @@ message CDemoStop {
 message CDemoUserCmd {
 	optional int32 cmd_number = 1;
 	optional bytes data = 2;
+}
+
+message CDemoSpawnGroups {
+	repeated bytes msgs = 3;
 }
 
