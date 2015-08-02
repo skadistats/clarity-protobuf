@@ -1,8 +1,8 @@
 package skadistats.clarity.wire.s1;
 
 import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.wire.common.proto.Networkbasetypes;
 import skadistats.clarity.wire.s1.proto.Netmessages;
-import skadistats.clarity.wire.s1.proto.Networkbasetypes;
 
 import java.util.HashMap;
 import java.util.Map;
