@@ -754,11 +754,11 @@ public final class Gameevents {
     /**
      * <code>optional .CMsgVector position = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition();
     /**
      * <code>optional .CMsgVector position = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
 
     /**
      * <code>optional .CMsgVector normal = 2;</code>
@@ -767,11 +767,11 @@ public final class Gameevents {
     /**
      * <code>optional .CMsgVector normal = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getNormal();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getNormal();
     /**
      * <code>optional .CMsgVector normal = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getNormalOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getNormalOrBuilder();
 
     /**
      * <code>optional .CMsgVector saxis = 3;</code>
@@ -780,11 +780,11 @@ public final class Gameevents {
     /**
      * <code>optional .CMsgVector saxis = 3;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getSaxis();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getSaxis();
     /**
      * <code>optional .CMsgVector saxis = 3;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getSaxisOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getSaxisOrBuilder();
 
     /**
      * <code>optional uint32 decalmaterialindex = 4;</code>
@@ -929,11 +929,11 @@ public final class Gameevents {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = position_.toBuilder();
               }
-              position_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              position_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(position_);
                 position_ = subBuilder.buildPartial();
@@ -942,11 +942,11 @@ public final class Gameevents {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = normal_.toBuilder();
               }
-              normal_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              normal_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(normal_);
                 normal_ = subBuilder.buildPartial();
@@ -955,11 +955,11 @@ public final class Gameevents {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = saxis_.toBuilder();
               }
-              saxis_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              saxis_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(saxis_);
                 saxis_ = subBuilder.buildPartial();
@@ -1058,7 +1058,7 @@ public final class Gameevents {
 
     private int bitField0_;
     public static final int POSITION_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector position_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_;
     /**
      * <code>optional .CMsgVector position = 1;</code>
      */
@@ -1068,18 +1068,18 @@ public final class Gameevents {
     /**
      * <code>optional .CMsgVector position = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
       return position_;
     }
     /**
      * <code>optional .CMsgVector position = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
       return position_;
     }
 
     public static final int NORMAL_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector normal_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector normal_;
     /**
      * <code>optional .CMsgVector normal = 2;</code>
      */
@@ -1089,18 +1089,18 @@ public final class Gameevents {
     /**
      * <code>optional .CMsgVector normal = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getNormal() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getNormal() {
       return normal_;
     }
     /**
      * <code>optional .CMsgVector normal = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getNormalOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getNormalOrBuilder() {
       return normal_;
     }
 
     public static final int SAXIS_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector saxis_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector saxis_;
     /**
      * <code>optional .CMsgVector saxis = 3;</code>
      */
@@ -1110,13 +1110,13 @@ public final class Gameevents {
     /**
      * <code>optional .CMsgVector saxis = 3;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getSaxis() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getSaxis() {
       return saxis_;
     }
     /**
      * <code>optional .CMsgVector saxis = 3;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getSaxisOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getSaxisOrBuilder() {
       return saxis_;
     }
 
@@ -1271,9 +1271,9 @@ public final class Gameevents {
     }
 
     private void initFields() {
-      position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-      normal_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-      saxis_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      normal_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      saxis_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       decalmaterialindex_ = 0;
       flags_ = 0;
       color_ = 0;
@@ -1519,19 +1519,19 @@ public final class Gameevents {
       public Builder clear() {
         super.clear();
         if (positionBuilder_ == null) {
-          position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           positionBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (normalBuilder_ == null) {
-          normal_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          normal_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           normalBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (saxisBuilder_ == null) {
-          saxis_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          saxis_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           saxisBuilder_.clear();
         }
@@ -1730,9 +1730,9 @@ public final class Gameevents {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
       /**
        * <code>optional .CMsgVector position = 1;</code>
        */
@@ -1742,7 +1742,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector position = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
         if (positionBuilder_ == null) {
           return position_;
         } else {
@@ -1752,7 +1752,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector position = 1;</code>
        */
-      public Builder setPosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (positionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1769,7 +1769,7 @@ public final class Gameevents {
        * <code>optional .CMsgVector position = 1;</code>
        */
       public Builder setPosition(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (positionBuilder_ == null) {
           position_ = builderForValue.build();
           onChanged();
@@ -1782,12 +1782,12 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector position = 1;</code>
        */
-      public Builder mergePosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergePosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (positionBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              position_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              position_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             position_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
           } else {
             position_ = value;
           }
@@ -1803,7 +1803,7 @@ public final class Gameevents {
        */
       public Builder clearPosition() {
         if (positionBuilder_ == null) {
-          position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           positionBuilder_.clear();
@@ -1814,7 +1814,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector position = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getPositionFieldBuilder().getBuilder();
@@ -1822,7 +1822,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector position = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
         if (positionBuilder_ != null) {
           return positionBuilder_.getMessageOrBuilder();
         } else {
@@ -1833,11 +1833,11 @@ public final class Gameevents {
        * <code>optional .CMsgVector position = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getPositionFieldBuilder() {
         if (positionBuilder_ == null) {
           positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getPosition(),
                   getParentForChildren(),
                   isClean());
@@ -1846,9 +1846,9 @@ public final class Gameevents {
         return positionBuilder_;
       }
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector normal_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector normal_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> normalBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> normalBuilder_;
       /**
        * <code>optional .CMsgVector normal = 2;</code>
        */
@@ -1858,7 +1858,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector normal = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getNormal() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getNormal() {
         if (normalBuilder_ == null) {
           return normal_;
         } else {
@@ -1868,7 +1868,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector normal = 2;</code>
        */
-      public Builder setNormal(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setNormal(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (normalBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1885,7 +1885,7 @@ public final class Gameevents {
        * <code>optional .CMsgVector normal = 2;</code>
        */
       public Builder setNormal(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (normalBuilder_ == null) {
           normal_ = builderForValue.build();
           onChanged();
@@ -1898,12 +1898,12 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector normal = 2;</code>
        */
-      public Builder mergeNormal(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeNormal(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (normalBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              normal_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              normal_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             normal_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(normal_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(normal_).mergeFrom(value).buildPartial();
           } else {
             normal_ = value;
           }
@@ -1919,7 +1919,7 @@ public final class Gameevents {
        */
       public Builder clearNormal() {
         if (normalBuilder_ == null) {
-          normal_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          normal_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           normalBuilder_.clear();
@@ -1930,7 +1930,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector normal = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getNormalBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getNormalBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getNormalFieldBuilder().getBuilder();
@@ -1938,7 +1938,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector normal = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getNormalOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getNormalOrBuilder() {
         if (normalBuilder_ != null) {
           return normalBuilder_.getMessageOrBuilder();
         } else {
@@ -1949,11 +1949,11 @@ public final class Gameevents {
        * <code>optional .CMsgVector normal = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getNormalFieldBuilder() {
         if (normalBuilder_ == null) {
           normalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getNormal(),
                   getParentForChildren(),
                   isClean());
@@ -1962,9 +1962,9 @@ public final class Gameevents {
         return normalBuilder_;
       }
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector saxis_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector saxis_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> saxisBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> saxisBuilder_;
       /**
        * <code>optional .CMsgVector saxis = 3;</code>
        */
@@ -1974,7 +1974,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector saxis = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getSaxis() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getSaxis() {
         if (saxisBuilder_ == null) {
           return saxis_;
         } else {
@@ -1984,7 +1984,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector saxis = 3;</code>
        */
-      public Builder setSaxis(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setSaxis(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (saxisBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2001,7 +2001,7 @@ public final class Gameevents {
        * <code>optional .CMsgVector saxis = 3;</code>
        */
       public Builder setSaxis(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (saxisBuilder_ == null) {
           saxis_ = builderForValue.build();
           onChanged();
@@ -2014,12 +2014,12 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector saxis = 3;</code>
        */
-      public Builder mergeSaxis(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeSaxis(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (saxisBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              saxis_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              saxis_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             saxis_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(saxis_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(saxis_).mergeFrom(value).buildPartial();
           } else {
             saxis_ = value;
           }
@@ -2035,7 +2035,7 @@ public final class Gameevents {
        */
       public Builder clearSaxis() {
         if (saxisBuilder_ == null) {
-          saxis_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          saxis_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           saxisBuilder_.clear();
@@ -2046,7 +2046,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector saxis = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getSaxisBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getSaxisBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getSaxisFieldBuilder().getBuilder();
@@ -2054,7 +2054,7 @@ public final class Gameevents {
       /**
        * <code>optional .CMsgVector saxis = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getSaxisOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getSaxisOrBuilder() {
         if (saxisBuilder_ != null) {
           return saxisBuilder_.getMessageOrBuilder();
         } else {
@@ -2065,11 +2065,11 @@ public final class Gameevents {
        * <code>optional .CMsgVector saxis = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getSaxisFieldBuilder() {
         if (saxisBuilder_ == null) {
           saxisBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getSaxis(),
                   getParentForChildren(),
                   isClean());
@@ -11083,7 +11083,7 @@ public final class Gameevents {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.getDescriptor(),
+          skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor(),
         }, assigner);
     internal_static_CMsgVDebugGameSessionIDEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -11181,7 +11181,7 @@ public final class Gameevents {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgSosSetLibraryStackFields_descriptor,
         new java.lang.String[] { "StackHash", "PackedFields", });
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.getDescriptor();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -6256,11 +6256,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector2D world_pos = 3;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getWorldPos();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getWorldPos();
     /**
      * <code>optional .CMsgVector2D world_pos = 3;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getWorldPosOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getWorldPosOrBuilder();
 
     /**
      * <code>optional int32 health = 4;</code>
@@ -6334,11 +6334,11 @@ public final class DotaUsermessages {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = worldPos_.toBuilder();
               }
-              worldPos_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
+              worldPos_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(worldPos_);
                 worldPos_ = subBuilder.buildPartial();
@@ -6422,7 +6422,7 @@ public final class DotaUsermessages {
     }
 
     public static final int WORLD_POS_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D worldPos_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D worldPos_;
     /**
      * <code>optional .CMsgVector2D world_pos = 3;</code>
      */
@@ -6432,13 +6432,13 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector2D world_pos = 3;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getWorldPos() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getWorldPos() {
       return worldPos_;
     }
     /**
      * <code>optional .CMsgVector2D world_pos = 3;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getWorldPosOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getWorldPosOrBuilder() {
       return worldPos_;
     }
 
@@ -6460,7 +6460,7 @@ public final class DotaUsermessages {
     private void initFields() {
       index_ = 0;
       time_ = 0;
-      worldPos_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+      worldPos_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
       health_ = 0;
     }
     private byte memoizedIsInitialized = -1;
@@ -6636,7 +6636,7 @@ public final class DotaUsermessages {
         time_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
         if (worldPosBuilder_ == null) {
-          worldPos_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+          worldPos_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
         } else {
           worldPosBuilder_.clear();
         }
@@ -6810,9 +6810,9 @@ public final class DotaUsermessages {
         return this;
       }
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D worldPos_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D worldPos_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder> worldPosBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder> worldPosBuilder_;
       /**
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
@@ -6822,7 +6822,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getWorldPos() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getWorldPos() {
         if (worldPosBuilder_ == null) {
           return worldPos_;
         } else {
@@ -6832,7 +6832,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
-      public Builder setWorldPos(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D value) {
+      public Builder setWorldPos(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D value) {
         if (worldPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6849,7 +6849,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
       public Builder setWorldPos(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder builderForValue) {
         if (worldPosBuilder_ == null) {
           worldPos_ = builderForValue.build();
           onChanged();
@@ -6862,12 +6862,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
-      public Builder mergeWorldPos(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D value) {
+      public Builder mergeWorldPos(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D value) {
         if (worldPosBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              worldPos_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
+              worldPos_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
             worldPos_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.newBuilder(worldPos_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.newBuilder(worldPos_).mergeFrom(value).buildPartial();
           } else {
             worldPos_ = value;
           }
@@ -6883,7 +6883,7 @@ public final class DotaUsermessages {
        */
       public Builder clearWorldPos() {
         if (worldPosBuilder_ == null) {
-          worldPos_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+          worldPos_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
           onChanged();
         } else {
           worldPosBuilder_.clear();
@@ -6894,7 +6894,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder getWorldPosBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder getWorldPosBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getWorldPosFieldBuilder().getBuilder();
@@ -6902,7 +6902,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getWorldPosOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getWorldPosOrBuilder() {
         if (worldPosBuilder_ != null) {
           return worldPosBuilder_.getMessageOrBuilder();
         } else {
@@ -6913,11 +6913,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector2D world_pos = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder> 
           getWorldPosFieldBuilder() {
         if (worldPosBuilder_ == null) {
           worldPosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder>(
                   getWorldPos(),
                   getParentForChildren(),
                   isClean());
@@ -9441,11 +9441,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector direction = 1;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getDirection();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getDirection();
     /**
      * <code>optional .CMsgVector direction = 1;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder();
 
     /**
      * <code>optional float duration = 2;</code>
@@ -9509,11 +9509,11 @@ public final class DotaUsermessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = direction_.toBuilder();
               }
-              direction_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              direction_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(direction_);
                 direction_ = subBuilder.buildPartial();
@@ -9567,7 +9567,7 @@ public final class DotaUsermessages {
 
     private int bitField0_;
     public static final int DIRECTION_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector direction_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector direction_;
     /**
      * <code>optional .CMsgVector direction = 1;</code>
      */
@@ -9577,13 +9577,13 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector direction = 1;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getDirection() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getDirection() {
       return direction_;
     }
     /**
      * <code>optional .CMsgVector direction = 1;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
       return direction_;
     }
 
@@ -9603,7 +9603,7 @@ public final class DotaUsermessages {
     }
 
     private void initFields() {
-      direction_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       duration_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
@@ -9761,7 +9761,7 @@ public final class DotaUsermessages {
       public Builder clear() {
         super.clear();
         if (directionBuilder_ == null) {
-          direction_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           directionBuilder_.clear();
         }
@@ -9857,9 +9857,9 @@ public final class DotaUsermessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector direction_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> directionBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> directionBuilder_;
       /**
        * <code>optional .CMsgVector direction = 1;</code>
        */
@@ -9869,7 +9869,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector direction = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getDirection() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getDirection() {
         if (directionBuilder_ == null) {
           return direction_;
         } else {
@@ -9879,7 +9879,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector direction = 1;</code>
        */
-      public Builder setDirection(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setDirection(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (directionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9896,7 +9896,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector direction = 1;</code>
        */
       public Builder setDirection(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (directionBuilder_ == null) {
           direction_ = builderForValue.build();
           onChanged();
@@ -9909,12 +9909,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector direction = 1;</code>
        */
-      public Builder mergeDirection(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeDirection(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (directionBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              direction_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              direction_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             direction_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(direction_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(direction_).mergeFrom(value).buildPartial();
           } else {
             direction_ = value;
           }
@@ -9930,7 +9930,7 @@ public final class DotaUsermessages {
        */
       public Builder clearDirection() {
         if (directionBuilder_ == null) {
-          direction_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           directionBuilder_.clear();
@@ -9941,7 +9941,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector direction = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getDirectionBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getDirectionBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getDirectionFieldBuilder().getBuilder();
@@ -9949,7 +9949,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector direction = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
         if (directionBuilder_ != null) {
           return directionBuilder_.getMessageOrBuilder();
         } else {
@@ -9960,11 +9960,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector direction = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getDirectionFieldBuilder() {
         if (directionBuilder_ == null) {
           directionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getDirection(),
                   getParentForChildren(),
                   isClean());
@@ -15768,11 +15768,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector location = 1;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getLocation();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getLocation();
     /**
      * <code>optional .CMsgVector location = 1;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getLocationOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getLocationOrBuilder();
 
     /**
      * <code>optional uint32 color = 2;</code>
@@ -15854,11 +15854,11 @@ public final class DotaUsermessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = location_.toBuilder();
               }
-              location_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              location_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(location_);
                 location_ = subBuilder.buildPartial();
@@ -15922,7 +15922,7 @@ public final class DotaUsermessages {
 
     private int bitField0_;
     public static final int LOCATION_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector location_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector location_;
     /**
      * <code>optional .CMsgVector location = 1;</code>
      */
@@ -15932,13 +15932,13 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector location = 1;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getLocation() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getLocation() {
       return location_;
     }
     /**
      * <code>optional .CMsgVector location = 1;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getLocationOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getLocationOrBuilder() {
       return location_;
     }
 
@@ -15988,7 +15988,7 @@ public final class DotaUsermessages {
     }
 
     private void initFields() {
-      location_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      location_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       color_ = 0;
       size_ = 0;
       duration_ = 0F;
@@ -16162,7 +16162,7 @@ public final class DotaUsermessages {
       public Builder clear() {
         super.clear();
         if (locationBuilder_ == null) {
-          location_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          location_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           locationBuilder_.clear();
         }
@@ -16276,9 +16276,9 @@ public final class DotaUsermessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector location_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector location_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> locationBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> locationBuilder_;
       /**
        * <code>optional .CMsgVector location = 1;</code>
        */
@@ -16288,7 +16288,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector location = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getLocation() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getLocation() {
         if (locationBuilder_ == null) {
           return location_;
         } else {
@@ -16298,7 +16298,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector location = 1;</code>
        */
-      public Builder setLocation(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setLocation(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (locationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -16315,7 +16315,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector location = 1;</code>
        */
       public Builder setLocation(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (locationBuilder_ == null) {
           location_ = builderForValue.build();
           onChanged();
@@ -16328,12 +16328,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector location = 1;</code>
        */
-      public Builder mergeLocation(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeLocation(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (locationBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              location_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              location_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             location_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(location_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(location_).mergeFrom(value).buildPartial();
           } else {
             location_ = value;
           }
@@ -16349,7 +16349,7 @@ public final class DotaUsermessages {
        */
       public Builder clearLocation() {
         if (locationBuilder_ == null) {
-          location_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          location_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           locationBuilder_.clear();
@@ -16360,7 +16360,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector location = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getLocationBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getLocationBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getLocationFieldBuilder().getBuilder();
@@ -16368,7 +16368,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector location = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getLocationOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getLocationOrBuilder() {
         if (locationBuilder_ != null) {
           return locationBuilder_.getMessageOrBuilder();
         } else {
@@ -16379,11 +16379,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector location = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getLocationFieldBuilder() {
         if (locationBuilder_ == null) {
           locationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getLocation(),
                   getParentForChildren(),
                   isClean());
@@ -16510,11 +16510,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOrigin();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin();
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder();
 
     /**
      * <code>optional .CMsgVector2D velocity = 2;</code>
@@ -16523,11 +16523,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector2D velocity = 2;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getVelocity();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getVelocity();
     /**
      * <code>optional .CMsgVector2D velocity = 2;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getVelocityOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getVelocityOrBuilder();
 
     /**
      * <code>optional int32 latency = 3;</code>
@@ -16572,11 +16572,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector2D acceleration = 7;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getAcceleration();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getAcceleration();
     /**
      * <code>optional .CMsgVector2D acceleration = 7;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getAccelerationOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getAccelerationOrBuilder();
 
     /**
      * <code>optional float max_speed = 8;</code>
@@ -16640,11 +16640,11 @@ public final class DotaUsermessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = origin_.toBuilder();
               }
-              origin_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              origin_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(origin_);
                 origin_ = subBuilder.buildPartial();
@@ -16653,11 +16653,11 @@ public final class DotaUsermessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = velocity_.toBuilder();
               }
-              velocity_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
+              velocity_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(velocity_);
                 velocity_ = subBuilder.buildPartial();
@@ -16686,11 +16686,11 @@ public final class DotaUsermessages {
               break;
             }
             case 58: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder subBuilder = null;
               if (((bitField0_ & 0x00000040) == 0x00000040)) {
                 subBuilder = acceleration_.toBuilder();
               }
-              acceleration_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
+              acceleration_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(acceleration_);
                 acceleration_ = subBuilder.buildPartial();
@@ -16744,7 +16744,7 @@ public final class DotaUsermessages {
 
     private int bitField0_;
     public static final int ORIGIN_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector origin_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector origin_;
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
@@ -16754,18 +16754,18 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOrigin() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin() {
       return origin_;
     }
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
       return origin_;
     }
 
     public static final int VELOCITY_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D velocity_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D velocity_;
     /**
      * <code>optional .CMsgVector2D velocity = 2;</code>
      */
@@ -16775,13 +16775,13 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector2D velocity = 2;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getVelocity() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getVelocity() {
       return velocity_;
     }
     /**
      * <code>optional .CMsgVector2D velocity = 2;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getVelocityOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getVelocityOrBuilder() {
       return velocity_;
     }
 
@@ -16846,7 +16846,7 @@ public final class DotaUsermessages {
     }
 
     public static final int ACCELERATION_FIELD_NUMBER = 7;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D acceleration_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D acceleration_;
     /**
      * <code>optional .CMsgVector2D acceleration = 7;</code>
      */
@@ -16856,13 +16856,13 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector2D acceleration = 7;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getAcceleration() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getAcceleration() {
       return acceleration_;
     }
     /**
      * <code>optional .CMsgVector2D acceleration = 7;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getAccelerationOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getAccelerationOrBuilder() {
       return acceleration_;
     }
 
@@ -16882,13 +16882,13 @@ public final class DotaUsermessages {
     }
 
     private void initFields() {
-      origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-      velocity_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+      origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      velocity_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
       latency_ = 0;
       entindex_ = 0;
       particleIndex_ = 0;
       handle_ = 0;
-      acceleration_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+      acceleration_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
       maxSpeed_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
@@ -17090,13 +17090,13 @@ public final class DotaUsermessages {
       public Builder clear() {
         super.clear();
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           originBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (velocityBuilder_ == null) {
-          velocity_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+          velocity_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
         } else {
           velocityBuilder_.clear();
         }
@@ -17110,7 +17110,7 @@ public final class DotaUsermessages {
         handle_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
         if (accelerationBuilder_ == null) {
-          acceleration_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+          acceleration_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
         } else {
           accelerationBuilder_.clear();
         }
@@ -17256,9 +17256,9 @@ public final class DotaUsermessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> originBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> originBuilder_;
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
@@ -17268,7 +17268,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOrigin() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin() {
         if (originBuilder_ == null) {
           return origin_;
         } else {
@@ -17278,7 +17278,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public Builder setOrigin(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setOrigin(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17295,7 +17295,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector origin = 1;</code>
        */
       public Builder setOrigin(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (originBuilder_ == null) {
           origin_ = builderForValue.build();
           onChanged();
@@ -17308,12 +17308,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public Builder mergeOrigin(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeOrigin(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              origin_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              origin_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             origin_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
           } else {
             origin_ = value;
           }
@@ -17329,7 +17329,7 @@ public final class DotaUsermessages {
        */
       public Builder clearOrigin() {
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           originBuilder_.clear();
@@ -17340,7 +17340,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getOriginBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getOriginBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getOriginFieldBuilder().getBuilder();
@@ -17348,7 +17348,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
         if (originBuilder_ != null) {
           return originBuilder_.getMessageOrBuilder();
         } else {
@@ -17359,11 +17359,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector origin = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
           originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getOrigin(),
                   getParentForChildren(),
                   isClean());
@@ -17372,9 +17372,9 @@ public final class DotaUsermessages {
         return originBuilder_;
       }
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D velocity_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D velocity_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder> velocityBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder> velocityBuilder_;
       /**
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
@@ -17384,7 +17384,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getVelocity() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getVelocity() {
         if (velocityBuilder_ == null) {
           return velocity_;
         } else {
@@ -17394,7 +17394,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
-      public Builder setVelocity(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D value) {
+      public Builder setVelocity(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D value) {
         if (velocityBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17411,7 +17411,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
       public Builder setVelocity(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder builderForValue) {
         if (velocityBuilder_ == null) {
           velocity_ = builderForValue.build();
           onChanged();
@@ -17424,12 +17424,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
-      public Builder mergeVelocity(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D value) {
+      public Builder mergeVelocity(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D value) {
         if (velocityBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              velocity_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
+              velocity_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
             velocity_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.newBuilder(velocity_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.newBuilder(velocity_).mergeFrom(value).buildPartial();
           } else {
             velocity_ = value;
           }
@@ -17445,7 +17445,7 @@ public final class DotaUsermessages {
        */
       public Builder clearVelocity() {
         if (velocityBuilder_ == null) {
-          velocity_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+          velocity_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
           onChanged();
         } else {
           velocityBuilder_.clear();
@@ -17456,7 +17456,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder getVelocityBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder getVelocityBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getVelocityFieldBuilder().getBuilder();
@@ -17464,7 +17464,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getVelocityOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getVelocityOrBuilder() {
         if (velocityBuilder_ != null) {
           return velocityBuilder_.getMessageOrBuilder();
         } else {
@@ -17475,11 +17475,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector2D velocity = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder> 
           getVelocityFieldBuilder() {
         if (velocityBuilder_ == null) {
           velocityBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder>(
                   getVelocity(),
                   getParentForChildren(),
                   isClean());
@@ -17616,9 +17616,9 @@ public final class DotaUsermessages {
         return this;
       }
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D acceleration_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D acceleration_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder> accelerationBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder> accelerationBuilder_;
       /**
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
@@ -17628,7 +17628,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D getAcceleration() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D getAcceleration() {
         if (accelerationBuilder_ == null) {
           return acceleration_;
         } else {
@@ -17638,7 +17638,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
-      public Builder setAcceleration(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D value) {
+      public Builder setAcceleration(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D value) {
         if (accelerationBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17655,7 +17655,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
       public Builder setAcceleration(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder builderForValue) {
         if (accelerationBuilder_ == null) {
           acceleration_ = builderForValue.build();
           onChanged();
@@ -17668,12 +17668,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
-      public Builder mergeAcceleration(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D value) {
+      public Builder mergeAcceleration(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D value) {
         if (accelerationBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040) &&
-              acceleration_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
+              acceleration_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance()) {
             acceleration_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.newBuilder(acceleration_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.newBuilder(acceleration_).mergeFrom(value).buildPartial();
           } else {
             acceleration_ = value;
           }
@@ -17689,7 +17689,7 @@ public final class DotaUsermessages {
        */
       public Builder clearAcceleration() {
         if (accelerationBuilder_ == null) {
-          acceleration_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
+          acceleration_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.getDefaultInstance();
           onChanged();
         } else {
           accelerationBuilder_.clear();
@@ -17700,7 +17700,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder getAccelerationBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder getAccelerationBuilder() {
         bitField0_ |= 0x00000040;
         onChanged();
         return getAccelerationFieldBuilder().getBuilder();
@@ -17708,7 +17708,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder getAccelerationOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder getAccelerationOrBuilder() {
         if (accelerationBuilder_ != null) {
           return accelerationBuilder_.getMessageOrBuilder();
         } else {
@@ -17719,11 +17719,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector2D acceleration = 7;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder> 
           getAccelerationFieldBuilder() {
         if (accelerationBuilder_ == null) {
           accelerationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector2DOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2D.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector2DOrBuilder>(
                   getAcceleration(),
                   getParentForChildren(),
                   isClean());
@@ -19245,11 +19245,11 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector origin = 3;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOrigin();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin();
     /**
      * <code>optional .CMsgVector origin = 3;</code>
      */
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAUserMsg_NevermoreRequiem}
@@ -19314,11 +19314,11 @@ public final class DotaUsermessages {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = origin_.toBuilder();
               }
-              origin_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              origin_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(origin_);
                 origin_ = subBuilder.buildPartial();
@@ -19397,7 +19397,7 @@ public final class DotaUsermessages {
     }
 
     public static final int ORIGIN_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector origin_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector origin_;
     /**
      * <code>optional .CMsgVector origin = 3;</code>
      */
@@ -19407,20 +19407,20 @@ public final class DotaUsermessages {
     /**
      * <code>optional .CMsgVector origin = 3;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOrigin() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin() {
       return origin_;
     }
     /**
      * <code>optional .CMsgVector origin = 3;</code>
      */
-    public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
       return origin_;
     }
 
     private void initFields() {
       entityHandle_ = 0;
       lines_ = 0;
-      origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -19588,7 +19588,7 @@ public final class DotaUsermessages {
         lines_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           originBuilder_.clear();
         }
@@ -19753,9 +19753,9 @@ public final class DotaUsermessages {
         return this;
       }
 
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> originBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> originBuilder_;
       /**
        * <code>optional .CMsgVector origin = 3;</code>
        */
@@ -19765,7 +19765,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOrigin() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin() {
         if (originBuilder_ == null) {
           return origin_;
         } else {
@@ -19775,7 +19775,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 3;</code>
        */
-      public Builder setOrigin(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setOrigin(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19792,7 +19792,7 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector origin = 3;</code>
        */
       public Builder setOrigin(
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (originBuilder_ == null) {
           origin_ = builderForValue.build();
           onChanged();
@@ -19805,12 +19805,12 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 3;</code>
        */
-      public Builder mergeOrigin(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeOrigin(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              origin_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              origin_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             origin_ =
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
           } else {
             origin_ = value;
           }
@@ -19826,7 +19826,7 @@ public final class DotaUsermessages {
        */
       public Builder clearOrigin() {
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           originBuilder_.clear();
@@ -19837,7 +19837,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getOriginBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getOriginBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getOriginFieldBuilder().getBuilder();
@@ -19845,7 +19845,7 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
         if (originBuilder_ != null) {
           return originBuilder_.getMessageOrBuilder();
         } else {
@@ -19856,11 +19856,11 @@ public final class DotaUsermessages {
        * <code>optional .CMsgVector origin = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
           originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getOrigin(),
                   getParentForChildren(),
                   isClean());
@@ -33235,11 +33235,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getPosition();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition();
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
     }
     /**
      * Protobuf type {@code CDOTAUserMsg_ParticleManager.UpdateParticle}
@@ -33299,11 +33299,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = position_.toBuilder();
                 }
-                position_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                position_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(position_);
                   position_ = subBuilder.buildPartial();
@@ -33367,7 +33367,7 @@ public final class DotaUsermessages {
       }
 
       public static final int POSITION_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector position_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_;
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
@@ -33377,19 +33377,19 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
         return position_;
       }
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
         return position_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -33548,7 +33548,7 @@ public final class DotaUsermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             positionBuilder_.clear();
           }
@@ -33674,9 +33674,9 @@ public final class DotaUsermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
@@ -33686,7 +33686,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getPosition() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
           if (positionBuilder_ == null) {
             return position_;
           } else {
@@ -33696,7 +33696,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder setPosition(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -33713,7 +33713,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         public Builder setPosition(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (positionBuilder_ == null) {
             position_ = builderForValue.build();
             onChanged();
@@ -33726,12 +33726,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder mergePosition(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergePosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                position_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                position_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               position_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
             } else {
               position_ = value;
             }
@@ -33747,7 +33747,7 @@ public final class DotaUsermessages {
          */
         public Builder clearPosition() {
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             positionBuilder_.clear();
@@ -33758,7 +33758,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getPositionFieldBuilder().getBuilder();
@@ -33766,7 +33766,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
           if (positionBuilder_ != null) {
             return positionBuilder_.getMessageOrBuilder();
           } else {
@@ -33777,11 +33777,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
             positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
                     isClean());
@@ -33821,11 +33821,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getForward();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward();
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
     }
     /**
      * Protobuf type {@code CDOTAUserMsg_ParticleManager.UpdateParticleFwd}
@@ -33885,11 +33885,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = forward_.toBuilder();
                 }
-                forward_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                forward_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(forward_);
                   forward_ = subBuilder.buildPartial();
@@ -33953,7 +33953,7 @@ public final class DotaUsermessages {
       }
 
       public static final int FORWARD_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector forward_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_;
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
@@ -33963,19 +33963,19 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getForward() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
         return forward_;
       }
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
         return forward_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -34134,7 +34134,7 @@ public final class DotaUsermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             forwardBuilder_.clear();
           }
@@ -34260,9 +34260,9 @@ public final class DotaUsermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
@@ -34272,7 +34272,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getForward() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
           if (forwardBuilder_ == null) {
             return forward_;
           } else {
@@ -34282,7 +34282,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder setForward(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -34299,7 +34299,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         public Builder setForward(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (forwardBuilder_ == null) {
             forward_ = builderForValue.build();
             onChanged();
@@ -34312,12 +34312,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder mergeForward(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                forward_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                forward_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               forward_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
             } else {
               forward_ = value;
             }
@@ -34333,7 +34333,7 @@ public final class DotaUsermessages {
          */
         public Builder clearForward() {
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             forwardBuilder_.clear();
@@ -34344,7 +34344,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getForwardFieldBuilder().getBuilder();
@@ -34352,7 +34352,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
           if (forwardBuilder_ != null) {
             return forwardBuilder_.getMessageOrBuilder();
           } else {
@@ -34363,11 +34363,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getForwardFieldBuilder() {
           if (forwardBuilder_ == null) {
             forwardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getForward(),
                     getParentForChildren(),
                     isClean());
@@ -34407,11 +34407,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getForward();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward();
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
 
       /**
        * <code>optional .CMsgVector right = 3;</code>
@@ -34420,11 +34420,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getRight();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getRight();
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder();
 
       /**
        * <code>optional .CMsgVector up = 4;</code>
@@ -34433,11 +34433,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getUp();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getUp();
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder();
     }
     /**
      * Protobuf type {@code CDOTAUserMsg_ParticleManager.UpdateParticleOrient}
@@ -34497,11 +34497,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = forward_.toBuilder();
                 }
-                forward_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                forward_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(forward_);
                   forward_ = subBuilder.buildPartial();
@@ -34510,11 +34510,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 26: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000004) == 0x00000004)) {
                   subBuilder = right_.toBuilder();
                 }
-                right_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                right_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(right_);
                   right_ = subBuilder.buildPartial();
@@ -34523,11 +34523,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 34: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000008) == 0x00000008)) {
                   subBuilder = up_.toBuilder();
                 }
-                up_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                up_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(up_);
                   up_ = subBuilder.buildPartial();
@@ -34591,7 +34591,7 @@ public final class DotaUsermessages {
       }
 
       public static final int FORWARD_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector forward_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_;
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
@@ -34601,18 +34601,18 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getForward() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
         return forward_;
       }
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
         return forward_;
       }
 
       public static final int RIGHT_FIELD_NUMBER = 3;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector right_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector right_;
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
@@ -34622,18 +34622,18 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getRight() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getRight() {
         return right_;
       }
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
         return right_;
       }
 
       public static final int UP_FIELD_NUMBER = 4;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector up_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector up_;
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
@@ -34643,21 +34643,21 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getUp() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getUp() {
         return up_;
       }
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
         return up_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-        right_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-        up_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -34832,19 +34832,19 @@ public final class DotaUsermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             forwardBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000002);
           if (rightBuilder_ == null) {
-            right_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             rightBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000004);
           if (upBuilder_ == null) {
-            up_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             upBuilder_.clear();
           }
@@ -34992,9 +34992,9 @@ public final class DotaUsermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
@@ -35004,7 +35004,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getForward() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
           if (forwardBuilder_ == null) {
             return forward_;
           } else {
@@ -35014,7 +35014,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder setForward(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -35031,7 +35031,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         public Builder setForward(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (forwardBuilder_ == null) {
             forward_ = builderForValue.build();
             onChanged();
@@ -35044,12 +35044,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder mergeForward(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                forward_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                forward_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               forward_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
             } else {
               forward_ = value;
             }
@@ -35065,7 +35065,7 @@ public final class DotaUsermessages {
          */
         public Builder clearForward() {
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             forwardBuilder_.clear();
@@ -35076,7 +35076,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getForwardFieldBuilder().getBuilder();
@@ -35084,7 +35084,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
           if (forwardBuilder_ != null) {
             return forwardBuilder_.getMessageOrBuilder();
           } else {
@@ -35095,11 +35095,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getForwardFieldBuilder() {
           if (forwardBuilder_ == null) {
             forwardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getForward(),
                     getParentForChildren(),
                     isClean());
@@ -35108,9 +35108,9 @@ public final class DotaUsermessages {
           return forwardBuilder_;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector right_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> rightBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> rightBuilder_;
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
@@ -35120,7 +35120,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getRight() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getRight() {
           if (rightBuilder_ == null) {
             return right_;
           } else {
@@ -35130,7 +35130,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public Builder setRight(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setRight(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (rightBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -35147,7 +35147,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector right = 3;</code>
          */
         public Builder setRight(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (rightBuilder_ == null) {
             right_ = builderForValue.build();
             onChanged();
@@ -35160,12 +35160,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public Builder mergeRight(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeRight(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (rightBuilder_ == null) {
             if (((bitField0_ & 0x00000004) == 0x00000004) &&
-                right_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                right_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               right_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(right_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(right_).mergeFrom(value).buildPartial();
             } else {
               right_ = value;
             }
@@ -35181,7 +35181,7 @@ public final class DotaUsermessages {
          */
         public Builder clearRight() {
           if (rightBuilder_ == null) {
-            right_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             rightBuilder_.clear();
@@ -35192,7 +35192,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getRightBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getRightBuilder() {
           bitField0_ |= 0x00000004;
           onChanged();
           return getRightFieldBuilder().getBuilder();
@@ -35200,7 +35200,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
           if (rightBuilder_ != null) {
             return rightBuilder_.getMessageOrBuilder();
           } else {
@@ -35211,11 +35211,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector right = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getRightFieldBuilder() {
           if (rightBuilder_ == null) {
             rightBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getRight(),
                     getParentForChildren(),
                     isClean());
@@ -35224,9 +35224,9 @@ public final class DotaUsermessages {
           return rightBuilder_;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector up_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> upBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> upBuilder_;
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
@@ -35236,7 +35236,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getUp() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getUp() {
           if (upBuilder_ == null) {
             return up_;
           } else {
@@ -35246,7 +35246,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public Builder setUp(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setUp(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (upBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -35263,7 +35263,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector up = 4;</code>
          */
         public Builder setUp(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (upBuilder_ == null) {
             up_ = builderForValue.build();
             onChanged();
@@ -35276,12 +35276,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public Builder mergeUp(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeUp(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (upBuilder_ == null) {
             if (((bitField0_ & 0x00000008) == 0x00000008) &&
-                up_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                up_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               up_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(up_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(up_).mergeFrom(value).buildPartial();
             } else {
               up_ = value;
             }
@@ -35297,7 +35297,7 @@ public final class DotaUsermessages {
          */
         public Builder clearUp() {
           if (upBuilder_ == null) {
-            up_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             upBuilder_.clear();
@@ -35308,7 +35308,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getUpBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getUpBuilder() {
           bitField0_ |= 0x00000008;
           onChanged();
           return getUpFieldBuilder().getBuilder();
@@ -35316,7 +35316,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
           if (upBuilder_ != null) {
             return upBuilder_.getMessageOrBuilder();
           } else {
@@ -35327,11 +35327,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector up = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getUpFieldBuilder() {
           if (upBuilder_ == null) {
             upBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getUp(),
                     getParentForChildren(),
                     isClean());
@@ -35371,11 +35371,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getPosition();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition();
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
     }
     /**
      * Protobuf type {@code CDOTAUserMsg_ParticleManager.UpdateParticleFallback}
@@ -35435,11 +35435,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = position_.toBuilder();
                 }
-                position_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                position_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(position_);
                   position_ = subBuilder.buildPartial();
@@ -35503,7 +35503,7 @@ public final class DotaUsermessages {
       }
 
       public static final int POSITION_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector position_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_;
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
@@ -35513,19 +35513,19 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
         return position_;
       }
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
         return position_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -35684,7 +35684,7 @@ public final class DotaUsermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             positionBuilder_.clear();
           }
@@ -35810,9 +35810,9 @@ public final class DotaUsermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
@@ -35822,7 +35822,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getPosition() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
           if (positionBuilder_ == null) {
             return position_;
           } else {
@@ -35832,7 +35832,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder setPosition(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -35849,7 +35849,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         public Builder setPosition(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (positionBuilder_ == null) {
             position_ = builderForValue.build();
             onChanged();
@@ -35862,12 +35862,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder mergePosition(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergePosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                position_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                position_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               position_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
             } else {
               position_ = value;
             }
@@ -35883,7 +35883,7 @@ public final class DotaUsermessages {
          */
         public Builder clearPosition() {
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             positionBuilder_.clear();
@@ -35894,7 +35894,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getPositionFieldBuilder().getBuilder();
@@ -35902,7 +35902,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
           if (positionBuilder_ != null) {
             return positionBuilder_.getMessageOrBuilder();
           } else {
@@ -35913,11 +35913,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
             positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
                     isClean());
@@ -35957,11 +35957,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOriginOffset();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOriginOffset();
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder();
     }
     /**
      * Protobuf type {@code CDOTAUserMsg_ParticleManager.UpdateParticleOffset}
@@ -36021,11 +36021,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = originOffset_.toBuilder();
                 }
-                originOffset_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                originOffset_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(originOffset_);
                   originOffset_ = subBuilder.buildPartial();
@@ -36089,7 +36089,7 @@ public final class DotaUsermessages {
       }
 
       public static final int ORIGIN_OFFSET_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector originOffset_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector originOffset_;
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
@@ -36099,19 +36099,19 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOriginOffset() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOriginOffset() {
         return originOffset_;
       }
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
         return originOffset_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        originOffset_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -36270,7 +36270,7 @@ public final class DotaUsermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (originOffsetBuilder_ == null) {
-            originOffset_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             originOffsetBuilder_.clear();
           }
@@ -36396,9 +36396,9 @@ public final class DotaUsermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector originOffset_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> originOffsetBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> originOffsetBuilder_;
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
@@ -36408,7 +36408,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getOriginOffset() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOriginOffset() {
           if (originOffsetBuilder_ == null) {
             return originOffset_;
           } else {
@@ -36418,7 +36418,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public Builder setOriginOffset(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setOriginOffset(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (originOffsetBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -36435,7 +36435,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
         public Builder setOriginOffset(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (originOffsetBuilder_ == null) {
             originOffset_ = builderForValue.build();
             onChanged();
@@ -36448,12 +36448,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public Builder mergeOriginOffset(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeOriginOffset(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (originOffsetBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                originOffset_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                originOffset_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               originOffset_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(originOffset_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(originOffset_).mergeFrom(value).buildPartial();
             } else {
               originOffset_ = value;
             }
@@ -36469,7 +36469,7 @@ public final class DotaUsermessages {
          */
         public Builder clearOriginOffset() {
           if (originOffsetBuilder_ == null) {
-            originOffset_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             originOffsetBuilder_.clear();
@@ -36480,7 +36480,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getOriginOffsetBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getOriginOffsetBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getOriginOffsetFieldBuilder().getBuilder();
@@ -36488,7 +36488,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
           if (originOffsetBuilder_ != null) {
             return originOffsetBuilder_.getMessageOrBuilder();
           } else {
@@ -36499,11 +36499,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getOriginOffsetFieldBuilder() {
           if (originOffsetBuilder_ == null) {
             originOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getOriginOffset(),
                     getParentForChildren(),
                     isClean());
@@ -36570,11 +36570,11 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getFallbackPosition();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getFallbackPosition();
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder();
 
       /**
        * <code>optional bool include_wearables = 6;</code>
@@ -36658,11 +36658,11 @@ public final class DotaUsermessages {
                 break;
               }
               case 42: {
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000010) == 0x00000010)) {
                   subBuilder = fallbackPosition_.toBuilder();
                 }
-                fallbackPosition_ = input.readMessage(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                fallbackPosition_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(fallbackPosition_);
                   fallbackPosition_ = subBuilder.buildPartial();
@@ -36776,7 +36776,7 @@ public final class DotaUsermessages {
       }
 
       public static final int FALLBACK_POSITION_FIELD_NUMBER = 5;
-      private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector fallbackPosition_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector fallbackPosition_;
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
@@ -36786,13 +36786,13 @@ public final class DotaUsermessages {
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
         return fallbackPosition_;
       }
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
         return fallbackPosition_;
       }
 
@@ -36816,7 +36816,7 @@ public final class DotaUsermessages {
         entityHandle_ = 0;
         attachType_ = 0;
         attachment_ = 0;
-        fallbackPosition_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         includeWearables_ = false;
       }
       private byte memoizedIsInitialized = -1;
@@ -37010,7 +37010,7 @@ public final class DotaUsermessages {
           attachment_ = 0;
           bitField0_ = (bitField0_ & ~0x00000008);
           if (fallbackPositionBuilder_ == null) {
-            fallbackPosition_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             fallbackPositionBuilder_.clear();
           }
@@ -37262,9 +37262,9 @@ public final class DotaUsermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector fallbackPosition_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> fallbackPositionBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> fallbackPositionBuilder_;
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
@@ -37274,7 +37274,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
           if (fallbackPositionBuilder_ == null) {
             return fallbackPosition_;
           } else {
@@ -37284,7 +37284,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public Builder setFallbackPosition(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setFallbackPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (fallbackPositionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -37301,7 +37301,7 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
         public Builder setFallbackPosition(
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (fallbackPositionBuilder_ == null) {
             fallbackPosition_ = builderForValue.build();
             onChanged();
@@ -37314,12 +37314,12 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public Builder mergeFallbackPosition(skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeFallbackPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (fallbackPositionBuilder_ == null) {
             if (((bitField0_ & 0x00000010) == 0x00000010) &&
-                fallbackPosition_ != skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                fallbackPosition_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               fallbackPosition_ =
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.newBuilder(fallbackPosition_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(fallbackPosition_).mergeFrom(value).buildPartial();
             } else {
               fallbackPosition_ = value;
             }
@@ -37335,7 +37335,7 @@ public final class DotaUsermessages {
          */
         public Builder clearFallbackPosition() {
           if (fallbackPositionBuilder_ == null) {
-            fallbackPosition_ = skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             fallbackPositionBuilder_.clear();
@@ -37346,7 +37346,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder getFallbackPositionBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getFallbackPositionBuilder() {
           bitField0_ |= 0x00000010;
           onChanged();
           return getFallbackPositionFieldBuilder().getBuilder();
@@ -37354,7 +37354,7 @@ public final class DotaUsermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
           if (fallbackPositionBuilder_ != null) {
             return fallbackPositionBuilder_.getMessageOrBuilder();
           } else {
@@ -37365,11 +37365,11 @@ public final class DotaUsermessages {
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getFallbackPositionFieldBuilder() {
           if (fallbackPositionBuilder_ == null) {
             fallbackPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s1.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getFallbackPosition(),
                     getParentForChildren(),
                     isClean());
@@ -71547,7 +71547,7 @@ public final class DotaUsermessages {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.getDescriptor(),
+          skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor(),
           skadistats.clarity.wire.s1.proto.AiActivity.getDescriptor(),
           skadistats.clarity.wire.s1.proto.DotaCommonmessages.getDescriptor(),
         }, assigner);
@@ -72152,7 +72152,7 @@ public final class DotaUsermessages {
         internal_static_CMsgDOTACombatLogEntry_descriptor,
         new java.lang.String[] { "Type", "TargetName", "TargetSourceName", "AttackerName", "DamageSourceName", "InflictorName", "IsAttackerIllusion", "IsAttackerHero", "IsTargetIllusion", "IsTargetHero", "IsVisibleRadiant", "IsVisibleDire", "Value", "Health", "Timestamp", "StunDuration", "SlowDuration", "IsAbilityToggleOn", "IsAbilityToggleOff", "AbilityLevel", "LocationX", "LocationY", "GoldReason", "TimestampRaw", });
     com.google.protobuf.DescriptorProtos.getDescriptor();
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.getDescriptor();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor();
     skadistats.clarity.wire.s1.proto.AiActivity.getDescriptor();
     skadistats.clarity.wire.s1.proto.DotaCommonmessages.getDescriptor();
   }

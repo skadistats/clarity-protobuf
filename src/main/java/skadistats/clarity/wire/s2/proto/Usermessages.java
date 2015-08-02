@@ -5541,11 +5541,11 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector direction = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getDirection();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getDirection();
     /**
      * <code>optional .CMsgVector direction = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder();
   }
   /**
    * Protobuf type {@code CUserMessageShakeDir}
@@ -5613,11 +5613,11 @@ public final class Usermessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = direction_.toBuilder();
               }
-              direction_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              direction_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(direction_);
                 direction_ = subBuilder.buildPartial();
@@ -5687,7 +5687,7 @@ public final class Usermessages {
     }
 
     public static final int DIRECTION_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector direction_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector direction_;
     /**
      * <code>optional .CMsgVector direction = 2;</code>
      */
@@ -5697,19 +5697,19 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector direction = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getDirection() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getDirection() {
       return direction_;
     }
     /**
      * <code>optional .CMsgVector direction = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
       return direction_;
     }
 
     private void initFields() {
       shake_ = skadistats.clarity.wire.s2.proto.Usermessages.CUserMessageShake.getDefaultInstance();
-      direction_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5873,7 +5873,7 @@ public final class Usermessages {
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (directionBuilder_ == null) {
-          direction_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           directionBuilder_.clear();
         }
@@ -6087,9 +6087,9 @@ public final class Usermessages {
         return shakeBuilder_;
       }
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector direction_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> directionBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> directionBuilder_;
       /**
        * <code>optional .CMsgVector direction = 2;</code>
        */
@@ -6099,7 +6099,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector direction = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getDirection() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getDirection() {
         if (directionBuilder_ == null) {
           return direction_;
         } else {
@@ -6109,7 +6109,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector direction = 2;</code>
        */
-      public Builder setDirection(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setDirection(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (directionBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6126,7 +6126,7 @@ public final class Usermessages {
        * <code>optional .CMsgVector direction = 2;</code>
        */
       public Builder setDirection(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (directionBuilder_ == null) {
           direction_ = builderForValue.build();
           onChanged();
@@ -6139,12 +6139,12 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector direction = 2;</code>
        */
-      public Builder mergeDirection(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeDirection(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (directionBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              direction_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              direction_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             direction_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(direction_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(direction_).mergeFrom(value).buildPartial();
           } else {
             direction_ = value;
           }
@@ -6160,7 +6160,7 @@ public final class Usermessages {
        */
       public Builder clearDirection() {
         if (directionBuilder_ == null) {
-          direction_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          direction_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           directionBuilder_.clear();
@@ -6171,7 +6171,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector direction = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getDirectionBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getDirectionBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getDirectionFieldBuilder().getBuilder();
@@ -6179,7 +6179,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector direction = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getDirectionOrBuilder() {
         if (directionBuilder_ != null) {
           return directionBuilder_.getMessageOrBuilder();
         } else {
@@ -6190,11 +6190,11 @@ public final class Usermessages {
        * <code>optional .CMsgVector direction = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getDirectionFieldBuilder() {
         if (directionBuilder_ == null) {
           directionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getDirection(),
                   getParentForChildren(),
                   isClean());
@@ -6243,11 +6243,11 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector angle = 3;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getAngle();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getAngle();
     /**
      * <code>optional .CMsgVector angle = 3;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getAngleOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getAngleOrBuilder();
 
     /**
      * <code>optional float duration = 4;</code>
@@ -6330,11 +6330,11 @@ public final class Usermessages {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = angle_.toBuilder();
               }
-              angle_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              angle_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(angle_);
                 angle_ = subBuilder.buildPartial();
@@ -6423,7 +6423,7 @@ public final class Usermessages {
     }
 
     public static final int ANGLE_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector angle_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector angle_;
     /**
      * <code>optional .CMsgVector angle = 3;</code>
      */
@@ -6433,13 +6433,13 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector angle = 3;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getAngle() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getAngle() {
       return angle_;
     }
     /**
      * <code>optional .CMsgVector angle = 3;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getAngleOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getAngleOrBuilder() {
       return angle_;
     }
 
@@ -6476,7 +6476,7 @@ public final class Usermessages {
     private void initFields() {
       command_ = 0;
       easeInOut_ = false;
-      angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       duration_ = 0F;
       time_ = 0F;
     }
@@ -6660,7 +6660,7 @@ public final class Usermessages {
         easeInOut_ = false;
         bitField0_ = (bitField0_ & ~0x00000002);
         if (angleBuilder_ == null) {
-          angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           angleBuilder_.clear();
         }
@@ -6843,9 +6843,9 @@ public final class Usermessages {
         return this;
       }
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> angleBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> angleBuilder_;
       /**
        * <code>optional .CMsgVector angle = 3;</code>
        */
@@ -6855,7 +6855,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector angle = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getAngle() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getAngle() {
         if (angleBuilder_ == null) {
           return angle_;
         } else {
@@ -6865,7 +6865,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector angle = 3;</code>
        */
-      public Builder setAngle(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setAngle(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (angleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6882,7 +6882,7 @@ public final class Usermessages {
        * <code>optional .CMsgVector angle = 3;</code>
        */
       public Builder setAngle(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (angleBuilder_ == null) {
           angle_ = builderForValue.build();
           onChanged();
@@ -6895,12 +6895,12 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector angle = 3;</code>
        */
-      public Builder mergeAngle(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeAngle(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (angleBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              angle_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              angle_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             angle_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(angle_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(angle_).mergeFrom(value).buildPartial();
           } else {
             angle_ = value;
           }
@@ -6916,7 +6916,7 @@ public final class Usermessages {
        */
       public Builder clearAngle() {
         if (angleBuilder_ == null) {
-          angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           angleBuilder_.clear();
@@ -6927,7 +6927,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector angle = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getAngleBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getAngleBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getAngleFieldBuilder().getBuilder();
@@ -6935,7 +6935,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector angle = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getAngleOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getAngleOrBuilder() {
         if (angleBuilder_ != null) {
           return angleBuilder_.getMessageOrBuilder();
         } else {
@@ -6946,11 +6946,11 @@ public final class Usermessages {
        * <code>optional .CMsgVector angle = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getAngleFieldBuilder() {
         if (angleBuilder_ == null) {
           angleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getAngle(),
                   getParentForChildren(),
                   isClean());
@@ -20398,11 +20398,11 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgQAngle angcrosshair = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle getAngcrosshair();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle getAngcrosshair();
     /**
      * <code>optional .CMsgQAngle angcrosshair = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngcrosshairOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngcrosshairOrBuilder();
   }
   /**
    * Protobuf type {@code CUserMessageCrosshairAngle}
@@ -20457,11 +20457,11 @@ public final class Usermessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = angcrosshair_.toBuilder();
               }
-              angcrosshair_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.PARSER, extensionRegistry);
+              angcrosshair_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(angcrosshair_);
                 angcrosshair_ = subBuilder.buildPartial();
@@ -20510,7 +20510,7 @@ public final class Usermessages {
 
     private int bitField0_;
     public static final int ANGCROSSHAIR_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle angcrosshair_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle angcrosshair_;
     /**
      * <code>optional .CMsgQAngle angcrosshair = 1;</code>
      */
@@ -20520,18 +20520,18 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgQAngle angcrosshair = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle getAngcrosshair() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle getAngcrosshair() {
       return angcrosshair_;
     }
     /**
      * <code>optional .CMsgQAngle angcrosshair = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngcrosshairOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngcrosshairOrBuilder() {
       return angcrosshair_;
     }
 
     private void initFields() {
-      angcrosshair_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+      angcrosshair_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -20681,7 +20681,7 @@ public final class Usermessages {
       public Builder clear() {
         super.clear();
         if (angcrosshairBuilder_ == null) {
-          angcrosshair_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+          angcrosshair_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
         } else {
           angcrosshairBuilder_.clear();
         }
@@ -20768,9 +20768,9 @@ public final class Usermessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle angcrosshair_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle angcrosshair_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder> angcrosshairBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder> angcrosshairBuilder_;
       /**
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
@@ -20780,7 +20780,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle getAngcrosshair() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle getAngcrosshair() {
         if (angcrosshairBuilder_ == null) {
           return angcrosshair_;
         } else {
@@ -20790,7 +20790,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
-      public Builder setAngcrosshair(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle value) {
+      public Builder setAngcrosshair(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle value) {
         if (angcrosshairBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -20807,7 +20807,7 @@ public final class Usermessages {
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
       public Builder setAngcrosshair(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder builderForValue) {
         if (angcrosshairBuilder_ == null) {
           angcrosshair_ = builderForValue.build();
           onChanged();
@@ -20820,12 +20820,12 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
-      public Builder mergeAngcrosshair(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle value) {
+      public Builder mergeAngcrosshair(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle value) {
         if (angcrosshairBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              angcrosshair_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance()) {
+              angcrosshair_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance()) {
             angcrosshair_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.newBuilder(angcrosshair_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.newBuilder(angcrosshair_).mergeFrom(value).buildPartial();
           } else {
             angcrosshair_ = value;
           }
@@ -20841,7 +20841,7 @@ public final class Usermessages {
        */
       public Builder clearAngcrosshair() {
         if (angcrosshairBuilder_ == null) {
-          angcrosshair_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+          angcrosshair_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
           onChanged();
         } else {
           angcrosshairBuilder_.clear();
@@ -20852,7 +20852,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder getAngcrosshairBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder getAngcrosshairBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getAngcrosshairFieldBuilder().getBuilder();
@@ -20860,7 +20860,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngcrosshairOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngcrosshairOrBuilder() {
         if (angcrosshairBuilder_ != null) {
           return angcrosshairBuilder_.getMessageOrBuilder();
         } else {
@@ -20871,11 +20871,11 @@ public final class Usermessages {
        * <code>optional .CMsgQAngle angcrosshair = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder> 
           getAngcrosshairFieldBuilder() {
         if (angcrosshairBuilder_ == null) {
           angcrosshairBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder>(
                   getAngcrosshair(),
                   getParentForChildren(),
                   isClean());
@@ -23129,11 +23129,11 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getImpulse();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getImpulse();
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getImpulseOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getImpulseOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessagePropagateForce}
@@ -23188,11 +23188,11 @@ public final class Usermessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = impulse_.toBuilder();
               }
-              impulse_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              impulse_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(impulse_);
                 impulse_ = subBuilder.buildPartial();
@@ -23241,7 +23241,7 @@ public final class Usermessages {
 
     private int bitField0_;
     public static final int IMPULSE_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector impulse_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector impulse_;
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
@@ -23251,18 +23251,18 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getImpulse() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getImpulse() {
       return impulse_;
     }
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
       return impulse_;
     }
 
     private void initFields() {
-      impulse_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      impulse_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -23412,7 +23412,7 @@ public final class Usermessages {
       public Builder clear() {
         super.clear();
         if (impulseBuilder_ == null) {
-          impulse_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          impulse_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           impulseBuilder_.clear();
         }
@@ -23499,9 +23499,9 @@ public final class Usermessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector impulse_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector impulse_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> impulseBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> impulseBuilder_;
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
@@ -23511,7 +23511,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getImpulse() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getImpulse() {
         if (impulseBuilder_ == null) {
           return impulse_;
         } else {
@@ -23521,7 +23521,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public Builder setImpulse(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setImpulse(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (impulseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -23538,7 +23538,7 @@ public final class Usermessages {
        * <code>optional .CMsgVector impulse = 1;</code>
        */
       public Builder setImpulse(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (impulseBuilder_ == null) {
           impulse_ = builderForValue.build();
           onChanged();
@@ -23551,12 +23551,12 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public Builder mergeImpulse(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeImpulse(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (impulseBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              impulse_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              impulse_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             impulse_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(impulse_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(impulse_).mergeFrom(value).buildPartial();
           } else {
             impulse_ = value;
           }
@@ -23572,7 +23572,7 @@ public final class Usermessages {
        */
       public Builder clearImpulse() {
         if (impulseBuilder_ == null) {
-          impulse_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          impulse_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           impulseBuilder_.clear();
@@ -23583,7 +23583,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getImpulseBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getImpulseBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getImpulseFieldBuilder().getBuilder();
@@ -23591,7 +23591,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
         if (impulseBuilder_ != null) {
           return impulseBuilder_.getMessageOrBuilder();
         } else {
@@ -23602,11 +23602,11 @@ public final class Usermessages {
        * <code>optional .CMsgVector impulse = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getImpulseFieldBuilder() {
         if (impulseBuilder_ == null) {
           impulseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getImpulse(),
                   getParentForChildren(),
                   isClean());
@@ -23637,11 +23637,11 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getOrigin();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin();
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder();
 
     /**
      * <code>optional uint32 entityindex = 2;</code>
@@ -23750,11 +23750,11 @@ public final class Usermessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = origin_.toBuilder();
               }
-              origin_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+              origin_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(origin_);
                 origin_ = subBuilder.buildPartial();
@@ -23833,7 +23833,7 @@ public final class Usermessages {
 
     private int bitField0_;
     public static final int ORIGIN_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector origin_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector origin_;
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
@@ -23843,13 +23843,13 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getOrigin() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin() {
       return origin_;
     }
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
       return origin_;
     }
 
@@ -23944,7 +23944,7 @@ public final class Usermessages {
     }
 
     private void initFields() {
-      origin_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       entityindex_ = 0;
       radius_ = 0F;
       color_ = 0;
@@ -24142,7 +24142,7 @@ public final class Usermessages {
       public Builder clear() {
         super.clear();
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         } else {
           originBuilder_.clear();
         }
@@ -24283,9 +24283,9 @@ public final class Usermessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector origin_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> originBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> originBuilder_;
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
@@ -24295,7 +24295,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getOrigin() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOrigin() {
         if (originBuilder_ == null) {
           return origin_;
         } else {
@@ -24305,7 +24305,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public Builder setOrigin(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder setOrigin(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -24322,7 +24322,7 @@ public final class Usermessages {
        * <code>optional .CMsgVector origin = 1;</code>
        */
       public Builder setOrigin(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
         if (originBuilder_ == null) {
           origin_ = builderForValue.build();
           onChanged();
@@ -24335,12 +24335,12 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public Builder mergeOrigin(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+      public Builder mergeOrigin(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              origin_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+              origin_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
             origin_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
           } else {
             origin_ = value;
           }
@@ -24356,7 +24356,7 @@ public final class Usermessages {
        */
       public Builder clearOrigin() {
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           originBuilder_.clear();
@@ -24367,7 +24367,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getOriginBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getOriginBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getOriginFieldBuilder().getBuilder();
@@ -24375,7 +24375,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOrBuilder() {
         if (originBuilder_ != null) {
           return originBuilder_.getMessageOrBuilder();
         } else {
@@ -24386,11 +24386,11 @@ public final class Usermessages {
        * <code>optional .CMsgVector origin = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
           originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                   getOrigin(),
                   getParentForChildren(),
                   isClean());
@@ -24622,11 +24622,11 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle getAngle();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle getAngle();
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngleOrBuilder();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngleOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessageFixAngle}
@@ -24686,11 +24686,11 @@ public final class Usermessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = angle_.toBuilder();
               }
-              angle_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.PARSER, extensionRegistry);
+              angle_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(angle_);
                 angle_ = subBuilder.buildPartial();
@@ -24754,7 +24754,7 @@ public final class Usermessages {
     }
 
     public static final int ANGLE_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle angle_;
+    private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle angle_;
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
@@ -24764,19 +24764,19 @@ public final class Usermessages {
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle getAngle() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle getAngle() {
       return angle_;
     }
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
+    public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
       return angle_;
     }
 
     private void initFields() {
       relative_ = false;
-      angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+      angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -24935,7 +24935,7 @@ public final class Usermessages {
         relative_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (angleBuilder_ == null) {
-          angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+          angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
         } else {
           angleBuilder_.clear();
         }
@@ -25061,9 +25061,9 @@ public final class Usermessages {
         return this;
       }
 
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder> angleBuilder_;
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder> angleBuilder_;
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
@@ -25073,7 +25073,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle getAngle() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle getAngle() {
         if (angleBuilder_ == null) {
           return angle_;
         } else {
@@ -25083,7 +25083,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public Builder setAngle(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle value) {
+      public Builder setAngle(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle value) {
         if (angleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -25100,7 +25100,7 @@ public final class Usermessages {
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
       public Builder setAngle(
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder builderForValue) {
         if (angleBuilder_ == null) {
           angle_ = builderForValue.build();
           onChanged();
@@ -25113,12 +25113,12 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public Builder mergeAngle(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle value) {
+      public Builder mergeAngle(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle value) {
         if (angleBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              angle_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance()) {
+              angle_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance()) {
             angle_ =
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.newBuilder(angle_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.newBuilder(angle_).mergeFrom(value).buildPartial();
           } else {
             angle_ = value;
           }
@@ -25134,7 +25134,7 @@ public final class Usermessages {
        */
       public Builder clearAngle() {
         if (angleBuilder_ == null) {
-          angle_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
+          angle_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.getDefaultInstance();
           onChanged();
         } else {
           angleBuilder_.clear();
@@ -25145,7 +25145,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder getAngleBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder getAngleBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getAngleFieldBuilder().getBuilder();
@@ -25153,7 +25153,7 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
         if (angleBuilder_ != null) {
           return angleBuilder_.getMessageOrBuilder();
         } else {
@@ -25164,11 +25164,11 @@ public final class Usermessages {
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder> 
+          skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder> 
           getAngleFieldBuilder() {
         if (angleBuilder_ == null) {
           angleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgQAngleOrBuilder>(
+              skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgQAngleOrBuilder>(
                   getAngle(),
                   getParentForChildren(),
                   isClean());
@@ -28631,11 +28631,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition();
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticle}
@@ -28695,11 +28695,11 @@ public final class Usermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = position_.toBuilder();
                 }
-                position_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                position_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(position_);
                   position_ = subBuilder.buildPartial();
@@ -28763,7 +28763,7 @@ public final class Usermessages {
       }
 
       public static final int POSITION_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector position_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_;
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
@@ -28773,19 +28773,19 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
         return position_;
       }
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
         return position_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -28944,7 +28944,7 @@ public final class Usermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             positionBuilder_.clear();
           }
@@ -29070,9 +29070,9 @@ public final class Usermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
@@ -29082,7 +29082,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
           if (positionBuilder_ == null) {
             return position_;
           } else {
@@ -29092,7 +29092,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder setPosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -29109,7 +29109,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         public Builder setPosition(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (positionBuilder_ == null) {
             position_ = builderForValue.build();
             onChanged();
@@ -29122,12 +29122,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder mergePosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergePosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                position_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                position_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               position_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
             } else {
               position_ = value;
             }
@@ -29143,7 +29143,7 @@ public final class Usermessages {
          */
         public Builder clearPosition() {
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             positionBuilder_.clear();
@@ -29154,7 +29154,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getPositionFieldBuilder().getBuilder();
@@ -29162,7 +29162,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
           if (positionBuilder_ != null) {
             return positionBuilder_.getMessageOrBuilder();
           } else {
@@ -29173,11 +29173,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
             positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
                     isClean());
@@ -29217,11 +29217,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getForward();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward();
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleFwd}
@@ -29281,11 +29281,11 @@ public final class Usermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = forward_.toBuilder();
                 }
-                forward_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                forward_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(forward_);
                   forward_ = subBuilder.buildPartial();
@@ -29349,7 +29349,7 @@ public final class Usermessages {
       }
 
       public static final int FORWARD_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector forward_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_;
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
@@ -29359,19 +29359,19 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getForward() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
         return forward_;
       }
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
         return forward_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -29530,7 +29530,7 @@ public final class Usermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             forwardBuilder_.clear();
           }
@@ -29656,9 +29656,9 @@ public final class Usermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
@@ -29668,7 +29668,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getForward() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
           if (forwardBuilder_ == null) {
             return forward_;
           } else {
@@ -29678,7 +29678,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder setForward(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -29695,7 +29695,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         public Builder setForward(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (forwardBuilder_ == null) {
             forward_ = builderForValue.build();
             onChanged();
@@ -29708,12 +29708,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder mergeForward(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                forward_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                forward_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               forward_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
             } else {
               forward_ = value;
             }
@@ -29729,7 +29729,7 @@ public final class Usermessages {
          */
         public Builder clearForward() {
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             forwardBuilder_.clear();
@@ -29740,7 +29740,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getForwardFieldBuilder().getBuilder();
@@ -29748,7 +29748,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
           if (forwardBuilder_ != null) {
             return forwardBuilder_.getMessageOrBuilder();
           } else {
@@ -29759,11 +29759,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getForwardFieldBuilder() {
           if (forwardBuilder_ == null) {
             forwardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getForward(),
                     getParentForChildren(),
                     isClean());
@@ -29803,11 +29803,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getForward();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward();
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder();
 
       /**
        * <code>optional .CMsgVector right = 3;</code>
@@ -29816,11 +29816,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getRight();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getRight();
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder();
 
       /**
        * <code>optional .CMsgVector up = 4;</code>
@@ -29829,11 +29829,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getUp();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getUp();
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleOrient}
@@ -29893,11 +29893,11 @@ public final class Usermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = forward_.toBuilder();
                 }
-                forward_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                forward_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(forward_);
                   forward_ = subBuilder.buildPartial();
@@ -29906,11 +29906,11 @@ public final class Usermessages {
                 break;
               }
               case 26: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000004) == 0x00000004)) {
                   subBuilder = right_.toBuilder();
                 }
-                right_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                right_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(right_);
                   right_ = subBuilder.buildPartial();
@@ -29919,11 +29919,11 @@ public final class Usermessages {
                 break;
               }
               case 34: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000008) == 0x00000008)) {
                   subBuilder = up_.toBuilder();
                 }
-                up_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                up_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(up_);
                   up_ = subBuilder.buildPartial();
@@ -29987,7 +29987,7 @@ public final class Usermessages {
       }
 
       public static final int FORWARD_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector forward_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_;
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
@@ -29997,18 +29997,18 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getForward() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
         return forward_;
       }
       /**
        * <code>optional .CMsgVector forward = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
         return forward_;
       }
 
       public static final int RIGHT_FIELD_NUMBER = 3;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector right_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector right_;
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
@@ -30018,18 +30018,18 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getRight() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getRight() {
         return right_;
       }
       /**
        * <code>optional .CMsgVector right = 3;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
         return right_;
       }
 
       public static final int UP_FIELD_NUMBER = 4;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector up_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector up_;
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
@@ -30039,21 +30039,21 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getUp() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getUp() {
         return up_;
       }
       /**
        * <code>optional .CMsgVector up = 4;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
         return up_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-        right_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
-        up_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -30228,19 +30228,19 @@ public final class Usermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             forwardBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000002);
           if (rightBuilder_ == null) {
-            right_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             rightBuilder_.clear();
           }
           bitField0_ = (bitField0_ & ~0x00000004);
           if (upBuilder_ == null) {
-            up_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             upBuilder_.clear();
           }
@@ -30388,9 +30388,9 @@ public final class Usermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> forwardBuilder_;
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
@@ -30400,7 +30400,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getForward() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getForward() {
           if (forwardBuilder_ == null) {
             return forward_;
           } else {
@@ -30410,7 +30410,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder setForward(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -30427,7 +30427,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         public Builder setForward(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (forwardBuilder_ == null) {
             forward_ = builderForValue.build();
             onChanged();
@@ -30440,12 +30440,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public Builder mergeForward(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeForward(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (forwardBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                forward_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                forward_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               forward_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(forward_).mergeFrom(value).buildPartial();
             } else {
               forward_ = value;
             }
@@ -30461,7 +30461,7 @@ public final class Usermessages {
          */
         public Builder clearForward() {
           if (forwardBuilder_ == null) {
-            forward_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            forward_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             forwardBuilder_.clear();
@@ -30472,7 +30472,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getForwardBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getForwardFieldBuilder().getBuilder();
@@ -30480,7 +30480,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getForwardOrBuilder() {
           if (forwardBuilder_ != null) {
             return forwardBuilder_.getMessageOrBuilder();
           } else {
@@ -30491,11 +30491,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector forward = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getForwardFieldBuilder() {
           if (forwardBuilder_ == null) {
             forwardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getForward(),
                     getParentForChildren(),
                     isClean());
@@ -30504,9 +30504,9 @@ public final class Usermessages {
           return forwardBuilder_;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector right_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> rightBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> rightBuilder_;
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
@@ -30516,7 +30516,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getRight() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getRight() {
           if (rightBuilder_ == null) {
             return right_;
           } else {
@@ -30526,7 +30526,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public Builder setRight(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setRight(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (rightBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -30543,7 +30543,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector right = 3;</code>
          */
         public Builder setRight(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (rightBuilder_ == null) {
             right_ = builderForValue.build();
             onChanged();
@@ -30556,12 +30556,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public Builder mergeRight(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeRight(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (rightBuilder_ == null) {
             if (((bitField0_ & 0x00000004) == 0x00000004) &&
-                right_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                right_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               right_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(right_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(right_).mergeFrom(value).buildPartial();
             } else {
               right_ = value;
             }
@@ -30577,7 +30577,7 @@ public final class Usermessages {
          */
         public Builder clearRight() {
           if (rightBuilder_ == null) {
-            right_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            right_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             rightBuilder_.clear();
@@ -30588,7 +30588,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getRightBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getRightBuilder() {
           bitField0_ |= 0x00000004;
           onChanged();
           return getRightFieldBuilder().getBuilder();
@@ -30596,7 +30596,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector right = 3;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getRightOrBuilder() {
           if (rightBuilder_ != null) {
             return rightBuilder_.getMessageOrBuilder();
           } else {
@@ -30607,11 +30607,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector right = 3;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getRightFieldBuilder() {
           if (rightBuilder_ == null) {
             rightBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getRight(),
                     getParentForChildren(),
                     isClean());
@@ -30620,9 +30620,9 @@ public final class Usermessages {
           return rightBuilder_;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector up_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> upBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> upBuilder_;
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
@@ -30632,7 +30632,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getUp() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getUp() {
           if (upBuilder_ == null) {
             return up_;
           } else {
@@ -30642,7 +30642,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public Builder setUp(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setUp(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (upBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -30659,7 +30659,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector up = 4;</code>
          */
         public Builder setUp(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (upBuilder_ == null) {
             up_ = builderForValue.build();
             onChanged();
@@ -30672,12 +30672,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public Builder mergeUp(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeUp(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (upBuilder_ == null) {
             if (((bitField0_ & 0x00000008) == 0x00000008) &&
-                up_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                up_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               up_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(up_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(up_).mergeFrom(value).buildPartial();
             } else {
               up_ = value;
             }
@@ -30693,7 +30693,7 @@ public final class Usermessages {
          */
         public Builder clearUp() {
           if (upBuilder_ == null) {
-            up_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            up_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             upBuilder_.clear();
@@ -30704,7 +30704,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getUpBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getUpBuilder() {
           bitField0_ |= 0x00000008;
           onChanged();
           return getUpFieldBuilder().getBuilder();
@@ -30712,7 +30712,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getUpOrBuilder() {
           if (upBuilder_ != null) {
             return upBuilder_.getMessageOrBuilder();
           } else {
@@ -30723,11 +30723,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector up = 4;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getUpFieldBuilder() {
           if (upBuilder_ == null) {
             upBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getUp(),
                     getParentForChildren(),
                     isClean());
@@ -30767,11 +30767,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition();
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleFallback}
@@ -30831,11 +30831,11 @@ public final class Usermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = position_.toBuilder();
                 }
-                position_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                position_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(position_);
                   position_ = subBuilder.buildPartial();
@@ -30899,7 +30899,7 @@ public final class Usermessages {
       }
 
       public static final int POSITION_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector position_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_;
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
@@ -30909,19 +30909,19 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
         return position_;
       }
       /**
        * <code>optional .CMsgVector position = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
         return position_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -31080,7 +31080,7 @@ public final class Usermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             positionBuilder_.clear();
           }
@@ -31206,9 +31206,9 @@ public final class Usermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
@@ -31218,7 +31218,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getPosition() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getPosition() {
           if (positionBuilder_ == null) {
             return position_;
           } else {
@@ -31228,7 +31228,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder setPosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -31245,7 +31245,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         public Builder setPosition(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (positionBuilder_ == null) {
             position_ = builderForValue.build();
             onChanged();
@@ -31258,12 +31258,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public Builder mergePosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergePosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (positionBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                position_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                position_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               position_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
             } else {
               position_ = value;
             }
@@ -31279,7 +31279,7 @@ public final class Usermessages {
          */
         public Builder clearPosition() {
           if (positionBuilder_ == null) {
-            position_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            position_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             positionBuilder_.clear();
@@ -31290,7 +31290,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getPositionBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getPositionFieldBuilder().getBuilder();
@@ -31298,7 +31298,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getPositionOrBuilder() {
           if (positionBuilder_ != null) {
             return positionBuilder_.getMessageOrBuilder();
           } else {
@@ -31309,11 +31309,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector position = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
             positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
                     isClean());
@@ -31353,11 +31353,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getOriginOffset();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOriginOffset();
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleOffset}
@@ -31417,11 +31417,11 @@ public final class Usermessages {
                 break;
               }
               case 18: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   subBuilder = originOffset_.toBuilder();
                 }
-                originOffset_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                originOffset_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(originOffset_);
                   originOffset_ = subBuilder.buildPartial();
@@ -31485,7 +31485,7 @@ public final class Usermessages {
       }
 
       public static final int ORIGIN_OFFSET_FIELD_NUMBER = 2;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector originOffset_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector originOffset_;
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
@@ -31495,19 +31495,19 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getOriginOffset() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOriginOffset() {
         return originOffset_;
       }
       /**
        * <code>optional .CMsgVector origin_offset = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
         return originOffset_;
       }
 
       private void initFields() {
         controlPoint_ = 0;
-        originOffset_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -31666,7 +31666,7 @@ public final class Usermessages {
           controlPoint_ = 0;
           bitField0_ = (bitField0_ & ~0x00000001);
           if (originOffsetBuilder_ == null) {
-            originOffset_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             originOffsetBuilder_.clear();
           }
@@ -31792,9 +31792,9 @@ public final class Usermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector originOffset_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> originOffsetBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> originOffsetBuilder_;
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
@@ -31804,7 +31804,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getOriginOffset() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getOriginOffset() {
           if (originOffsetBuilder_ == null) {
             return originOffset_;
           } else {
@@ -31814,7 +31814,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public Builder setOriginOffset(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setOriginOffset(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (originOffsetBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -31831,7 +31831,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
         public Builder setOriginOffset(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (originOffsetBuilder_ == null) {
             originOffset_ = builderForValue.build();
             onChanged();
@@ -31844,12 +31844,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public Builder mergeOriginOffset(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeOriginOffset(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (originOffsetBuilder_ == null) {
             if (((bitField0_ & 0x00000002) == 0x00000002) &&
-                originOffset_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                originOffset_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               originOffset_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(originOffset_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(originOffset_).mergeFrom(value).buildPartial();
             } else {
               originOffset_ = value;
             }
@@ -31865,7 +31865,7 @@ public final class Usermessages {
          */
         public Builder clearOriginOffset() {
           if (originOffsetBuilder_ == null) {
-            originOffset_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            originOffset_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             originOffsetBuilder_.clear();
@@ -31876,7 +31876,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getOriginOffsetBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getOriginOffsetBuilder() {
           bitField0_ |= 0x00000002;
           onChanged();
           return getOriginOffsetFieldBuilder().getBuilder();
@@ -31884,7 +31884,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getOriginOffsetOrBuilder() {
           if (originOffsetBuilder_ != null) {
             return originOffsetBuilder_.getMessageOrBuilder();
           } else {
@@ -31895,11 +31895,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getOriginOffsetFieldBuilder() {
           if (originOffsetBuilder_ == null) {
             originOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getOriginOffset(),
                     getParentForChildren(),
                     isClean());
@@ -31966,11 +31966,11 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getFallbackPosition();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getFallbackPosition();
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder();
+      skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder();
 
       /**
        * <code>optional bool include_wearables = 6;</code>
@@ -32054,11 +32054,11 @@ public final class Usermessages {
                 break;
               }
               case 42: {
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder subBuilder = null;
                 if (((bitField0_ & 0x00000010) == 0x00000010)) {
                   subBuilder = fallbackPosition_.toBuilder();
                 }
-                fallbackPosition_ = input.readMessage(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
+                fallbackPosition_ = input.readMessage(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.PARSER, extensionRegistry);
                 if (subBuilder != null) {
                   subBuilder.mergeFrom(fallbackPosition_);
                   fallbackPosition_ = subBuilder.buildPartial();
@@ -32172,7 +32172,7 @@ public final class Usermessages {
       }
 
       public static final int FALLBACK_POSITION_FIELD_NUMBER = 5;
-      private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector fallbackPosition_;
+      private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector fallbackPosition_;
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
@@ -32182,13 +32182,13 @@ public final class Usermessages {
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
         return fallbackPosition_;
       }
       /**
        * <code>optional .CMsgVector fallback_position = 5;</code>
        */
-      public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
+      public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
         return fallbackPosition_;
       }
 
@@ -32212,7 +32212,7 @@ public final class Usermessages {
         entityHandle_ = 0;
         attachType_ = 0;
         attachment_ = 0;
-        fallbackPosition_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         includeWearables_ = false;
       }
       private byte memoizedIsInitialized = -1;
@@ -32406,7 +32406,7 @@ public final class Usermessages {
           attachment_ = 0;
           bitField0_ = (bitField0_ & ~0x00000008);
           if (fallbackPositionBuilder_ == null) {
-            fallbackPosition_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
           } else {
             fallbackPositionBuilder_.clear();
           }
@@ -32658,9 +32658,9 @@ public final class Usermessages {
           return this;
         }
 
-        private skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector fallbackPosition_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+        private skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> fallbackPositionBuilder_;
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> fallbackPositionBuilder_;
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
@@ -32670,7 +32670,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector getFallbackPosition() {
           if (fallbackPositionBuilder_ == null) {
             return fallbackPosition_;
           } else {
@@ -32680,7 +32680,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public Builder setFallbackPosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder setFallbackPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (fallbackPositionBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -32697,7 +32697,7 @@ public final class Usermessages {
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
         public Builder setFallbackPosition(
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder builderForValue) {
           if (fallbackPositionBuilder_ == null) {
             fallbackPosition_ = builderForValue.build();
             onChanged();
@@ -32710,12 +32710,12 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public Builder mergeFallbackPosition(skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector value) {
+        public Builder mergeFallbackPosition(skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector value) {
           if (fallbackPositionBuilder_ == null) {
             if (((bitField0_ & 0x00000010) == 0x00000010) &&
-                fallbackPosition_ != skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
+                fallbackPosition_ != skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance()) {
               fallbackPosition_ =
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.newBuilder(fallbackPosition_).mergeFrom(value).buildPartial();
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.newBuilder(fallbackPosition_).mergeFrom(value).buildPartial();
             } else {
               fallbackPosition_ = value;
             }
@@ -32731,7 +32731,7 @@ public final class Usermessages {
          */
         public Builder clearFallbackPosition() {
           if (fallbackPositionBuilder_ == null) {
-            fallbackPosition_ = skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
+            fallbackPosition_ = skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.getDefaultInstance();
             onChanged();
           } else {
             fallbackPositionBuilder_.clear();
@@ -32742,7 +32742,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder getFallbackPositionBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder getFallbackPositionBuilder() {
           bitField0_ |= 0x00000010;
           onChanged();
           return getFallbackPositionFieldBuilder().getBuilder();
@@ -32750,7 +32750,7 @@ public final class Usermessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        public skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
+        public skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder getFallbackPositionOrBuilder() {
           if (fallbackPositionBuilder_ != null) {
             return fallbackPositionBuilder_.getMessageOrBuilder();
           } else {
@@ -32761,11 +32761,11 @@ public final class Usermessages {
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
-            skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder> 
+            skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder> 
             getFallbackPositionFieldBuilder() {
           if (fallbackPositionBuilder_ == null) {
             fallbackPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-                skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.s2.proto.Networkbasetypes.CMsgVectorOrBuilder>(
+                skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.Networkbasetypes.CMsgVectorOrBuilder>(
                     getFallbackPosition(),
                     getParentForChildren(),
                     isClean());
@@ -39085,7 +39085,7 @@ public final class Usermessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.s2.proto.Networkbasetypes.getDescriptor(),
+          skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor(),
         }, assigner);
     internal_static_CUserMessageAchievementEvent_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -39453,7 +39453,7 @@ public final class Usermessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor,
         new java.lang.String[] { "Data", });
-    skadistats.clarity.wire.s2.proto.Networkbasetypes.getDescriptor();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

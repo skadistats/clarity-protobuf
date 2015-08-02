@@ -1,6 +1,4 @@
-option java_package = "skadistats.clarity.wire.s2.proto";
-
-import "network_connection.proto";
+option java_package = "skadistats.clarity.wire.common.proto";
 
 option cc_generic_services = false;
 
@@ -78,7 +76,7 @@ message CNETMsg_SplitScreenUser {
 }
 
 message CNETMsg_Disconnect {
-	optional ENetworkDisconnectionReason reason = 2 [default = NETWORK_DISCONNECT_INVALID];
+	// optional ENetworkDisconnectionReason reason = 2 [default = NETWORK_DISCONNECT_INVALID];
 }
 
 message CNETMsg_File {

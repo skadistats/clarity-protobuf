@@ -5455,7 +5455,7 @@ public final class DotaCommonmessages {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.DescriptorProtos.getDescriptor(),
-          skadistats.clarity.wire.s1.proto.Networkbasetypes.getDescriptor(),
+          skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor(),
         }, assigner);
     internal_static_CDOTAMsg_LocationPing_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5500,7 +5500,7 @@ public final class DotaCommonmessages {
         internal_static_CDOTAMsg_CoachHUDPing_descriptor,
         new java.lang.String[] { "X", "Y", "Tgtpath", });
     com.google.protobuf.DescriptorProtos.getDescriptor();
-    skadistats.clarity.wire.s1.proto.Networkbasetypes.getDescriptor();
+    skadistats.clarity.wire.common.proto.Networkbasetypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
