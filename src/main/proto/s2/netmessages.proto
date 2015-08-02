@@ -328,34 +328,6 @@ message CSVCMsg_SendTable {
 	repeated CSVCMsg_SendTable.sendprop_t props = 4;
 }
 
-message CSVCMsg_GameEventList {
-	message key_t {
-		optional int32 type = 1;
-		optional string name = 2;
-	}
-
-	message descriptor_t {
-		optional int32 eventid = 1;
-		optional string name = 2;
-		repeated CSVCMsg_GameEventList.key_t keys = 3;
-	}
-
-	repeated CSVCMsg_GameEventList.descriptor_t descriptors = 1;
-}
-
-message CSVCMsg_PacketEntities {
-	optional int32 max_entries = 1;
-	optional int32 updated_entries = 2;
-	optional bool is_delta = 3;
-	optional bool update_baseline = 4;
-	optional int32 baseline = 5;
-	optional int32 delta_from = 6;
-	optional bytes entity_data = 7;
-	optional bool pending_full_frame = 8;
-	optional uint32 active_spawngroup_handle = 9;
-	optional uint32 max_spawngroup_creationsequence = 10;
-}
-
 message CSVCMsg_TempEntities {
 	optional bool reliable = 1;
 	optional int32 num_entries = 2;

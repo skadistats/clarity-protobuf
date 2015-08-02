@@ -1,6 +1,7 @@
 package skadistats.clarity.wire.s2;
 
 import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.wire.common.proto.NetmessagesCommon;
 import skadistats.clarity.wire.common.proto.Networkbasetypes;
 import skadistats.clarity.wire.s2.proto.*;
 
@@ -28,7 +29,7 @@ public class EmbeddedPackets {
         /*  46 */ EMBED.put(Netmessages.SVC_Messages.svc_VoiceInit_VALUE, Netmessages.CSVCMsg_VoiceInit.class);
         /*  50 */ EMBED.put(Netmessages.SVC_Messages.svc_SetView_VALUE, Netmessages.CSVCMsg_SetView.class);
         /*  51 */ EMBED.put(Netmessages.SVC_Messages.svc_ClearAllStringTables_VALUE, Netmessages.CSVCMsg_ClearAllStringTables.class);
-        /*  55 */ EMBED.put(Netmessages.SVC_Messages.svc_PacketEntities_VALUE, Netmessages.CSVCMsg_PacketEntities.class);
+        /*  55 */ EMBED.put(Netmessages.SVC_Messages.svc_PacketEntities_VALUE, NetmessagesCommon.CSVCMsg_PacketEntities.class);
 
         /* 101 */ EMBED.put(Usermessages.EBaseUserMessages.UM_AchievementEvent_VALUE, Usermessages.CUserMessageAchievementEvent.class);
         /* 102 */ EMBED.put(Usermessages.EBaseUserMessages.UM_CloseCaption_VALUE, Usermessages.CUserMessageCloseCaption.class);
@@ -76,9 +77,9 @@ public class EmbeddedPackets {
         /* 202 */ EMBED.put(Gameevents.EBaseGameEvents.GE_ClearWorldDecalsEvent_VALUE, Gameevents.CMsgClearWorldDecalsEvent.class);
         /* 203 */ EMBED.put(Gameevents.EBaseGameEvents.GE_ClearEntityDecalsEvent_VALUE, Gameevents.CMsgClearEntityDecalsEvent.class);
         /* 204 */ EMBED.put(Gameevents.EBaseGameEvents.GE_ClearDecalsForSkeletonInstanceEvent_VALUE, Gameevents.CMsgClearDecalsForSkeletonInstanceEvent.class);
-        /* 205 */ EMBED.put(Gameevents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, Gameevents.CMsgSource1LegacyGameEventList.class);
+        /* 205 */ EMBED.put(Gameevents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, NetmessagesCommon.CSVCMsg_GameEventList.class);
         /* 206 */ EMBED.put(Gameevents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, Gameevents.CMsgSource1LegacyListenEvents.class);
-        /* 207 */ EMBED.put(Gameevents.EBaseGameEvents.GE_Source1LegacyGameEvent_VALUE, Gameevents.CMsgSource1LegacyGameEvent.class);
+        /* 207 */ EMBED.put(Gameevents.EBaseGameEvents.GE_Source1LegacyGameEvent_VALUE, Networkbasetypes.CSVCMsg_GameEvent.class);
         /* 208 */ EMBED.put(Gameevents.EBaseGameEvents.GE_SosStartSoundEvent_VALUE, Gameevents.CMsgSosStartSoundEvent.class);
         /* 209 */ EMBED.put(Gameevents.EBaseGameEvents.GE_SosStopSoundEvent_VALUE, Gameevents.CMsgSosStopSoundEvent.class);
         /* 210 */ EMBED.put(Gameevents.EBaseGameEvents.GE_SosSetSoundEventParams_VALUE, Gameevents.CMsgSosSetSoundEventParams.class);

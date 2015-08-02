@@ -1,6 +1,7 @@
 package skadistats.clarity.wire.s1;
 
 import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.wire.common.proto.NetmessagesCommon;
 import skadistats.clarity.wire.common.proto.Networkbasetypes;
 import skadistats.clarity.wire.s1.proto.Netmessages;
 
@@ -18,9 +19,9 @@ public class EmbeddedPackets {
         EMBED.put(Netmessages.SVC_Messages.svc_ClassInfo_VALUE, Netmessages.CSVCMsg_ClassInfo.class);
         EMBED.put(Netmessages.SVC_Messages.svc_CreateStringTable_VALUE, Netmessages.CSVCMsg_CreateStringTable.class);
         EMBED.put(Netmessages.SVC_Messages.svc_GameEvent_VALUE, Networkbasetypes.CSVCMsg_GameEvent.class);
-        EMBED.put(Netmessages.SVC_Messages.svc_GameEventList_VALUE, Netmessages.CSVCMsg_GameEventList.class);
+        EMBED.put(Netmessages.SVC_Messages.svc_GameEventList_VALUE, NetmessagesCommon.CSVCMsg_GameEventList.class);
         EMBED.put(Netmessages.SVC_Messages.svc_Menu_VALUE, Netmessages.CSVCMsg_Menu.class);
-        EMBED.put(Netmessages.SVC_Messages.svc_PacketEntities_VALUE, Netmessages.CSVCMsg_PacketEntities.class);
+        EMBED.put(Netmessages.SVC_Messages.svc_PacketEntities_VALUE, NetmessagesCommon.CSVCMsg_PacketEntities.class);
         EMBED.put(Netmessages.SVC_Messages.svc_SendTable_VALUE, Netmessages.CSVCMsg_SendTable.class);
         EMBED.put(Netmessages.SVC_Messages.svc_ServerInfo_VALUE, Netmessages.CSVCMsg_ServerInfo.class);
         EMBED.put(Netmessages.SVC_Messages.svc_SetView_VALUE, Netmessages.CSVCMsg_SetView.class);
