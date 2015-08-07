@@ -1,4 +1,5 @@
 option java_package = "skadistats.clarity.wire.s2.proto";
+option java_outer_classname = "S2TempEntities";
 
 import "networkbasetypes.proto";
 

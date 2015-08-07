@@ -3,8 +3,8 @@
 
 package skadistats.clarity.wire.s1.proto;
 
-public final class AiActivity {
-  private AiActivity() {}
+public final class S1AiActivity {
+  private S1AiActivity() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
@@ -5465,7 +5465,7 @@ public final class AiActivity {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s1.proto.AiActivity.getDescriptor().getEnumTypes().get(0);
+      return skadistats.clarity.wire.s1.proto.S1AiActivity.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final Activity[] VALUES = values();
@@ -5919,8 +5919,8 @@ public final class AiActivity {
       "TRAL_SPIRIT\020\326\004\022\034\n\027ACT_DOTA_THUNDER_STRIK" +
       "E\020\327\004\022\033\n\026ACT_DOTA_KINETIC_FIELD\020\330\004\022\032\n\025ACT" +
       "_DOTA_STATIC_STORM\020\331\004\022\030\n\023ACT_DOTA_MINI_T",
-      "AUNT\020\332\004B\"\n skadistats.clarity.wire.s1.pr" +
-      "oto"
+      "AUNT\020\332\004B0\n skadistats.clarity.wire.s1.pr" +
+      "otoB\014S1AiActivity"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

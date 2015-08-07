@@ -3,8 +3,8 @@
 
 package skadistats.clarity.wire.common.proto;
 
-public final class DotaUsermessagesCommon {
-  private DotaUsermessagesCommon() {}
+public final class DotaUserMessages {
+  private DotaUserMessages() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
@@ -227,7 +227,7 @@ public final class DotaUsermessagesCommon {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.common.proto.DotaUsermessagesCommon.getDescriptor().getEnumTypes().get(0);
+      return skadistats.clarity.wire.common.proto.DotaUserMessages.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final DOTA_COMBATLOG_TYPES[] VALUES = values();
@@ -277,8 +277,8 @@ public final class DotaUsermessagesCommon {
       "\022\035\n\031DOTA_COMBATLOG_KILLSTREAK\020\020\022%\n!DOTA_" +
       "COMBATLOG_TEAM_BUILDING_KILL\020\021\022\036\n\032DOTA_C" +
       "OMBATLOG_FIRST_BLOOD\020\022\022#\n\037DOTA_COMBATLOG" +
-      "_MODIFIER_REFRESH\020\023B)\n$skadistats.clarit" +
-      "y.wire.common.proto\200\001\000"
+      "_MODIFIER_REFRESH\020\023B;\n$skadistats.clarit" +
+      "y.wire.common.protoB\020DotaUserMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

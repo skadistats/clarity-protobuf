@@ -3,8 +3,8 @@
 
 package skadistats.clarity.wire.s2.proto;
 
-public final class DotaClientmessages {
-  private DotaClientmessages() {}
+public final class S2DotaClientMessages {
+  private S2DotaClientMessages() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
@@ -479,7 +479,7 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.getDescriptor().getEnumTypes().get(0);
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final EDotaClientMessages[] VALUES = values();
@@ -515,11 +515,11 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing getLocationPing();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing getLocationPing();
     /**
      * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPingOrBuilder getLocationPingOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPingOrBuilder getLocationPingOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAClientMsg_MapPing}
@@ -574,11 +574,11 @@ public final class DotaClientmessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = locationPing_.toBuilder();
               }
-              locationPing_ = input.readMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.PARSER, extensionRegistry);
+              locationPing_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(locationPing_);
                 locationPing_ = subBuilder.buildPartial();
@@ -600,14 +600,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapPing_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapPing_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapPing_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapPing_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_MapPing> PARSER =
@@ -627,7 +627,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int LOCATION_PING_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing locationPing_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing locationPing_;
     /**
      * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
      */
@@ -637,18 +637,18 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing getLocationPing() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing getLocationPing() {
       return locationPing_;
     }
     /**
      * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPingOrBuilder getLocationPingOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPingOrBuilder getLocationPingOrBuilder() {
       return locationPing_;
     }
 
     private void initFields() {
-      locationPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.getDefaultInstance();
+      locationPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -691,53 +691,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -746,7 +746,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -763,20 +763,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_MapPing)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPingOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapPing_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapPing_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapPing_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapPing_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -798,7 +798,7 @@ public final class DotaClientmessages {
       public Builder clear() {
         super.clear();
         if (locationPingBuilder_ == null) {
-          locationPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.getDefaultInstance();
+          locationPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.getDefaultInstance();
         } else {
           locationPingBuilder_.clear();
         }
@@ -812,23 +812,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapPing_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapPing_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -845,16 +845,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing.getDefaultInstance()) return this;
         if (other.hasLocationPing()) {
           mergeLocationPing(other.getLocationPing());
         }
@@ -870,11 +870,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapPing) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapPing) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -885,9 +885,9 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing locationPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing locationPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPingOrBuilder> locationPingBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPingOrBuilder> locationPingBuilder_;
       /**
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
@@ -897,7 +897,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing getLocationPing() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing getLocationPing() {
         if (locationPingBuilder_ == null) {
           return locationPing_;
         } else {
@@ -907,7 +907,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
-      public Builder setLocationPing(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing value) {
+      public Builder setLocationPing(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing value) {
         if (locationPingBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -924,7 +924,7 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
       public Builder setLocationPing(
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.Builder builderForValue) {
         if (locationPingBuilder_ == null) {
           locationPing_ = builderForValue.build();
           onChanged();
@@ -937,12 +937,12 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
-      public Builder mergeLocationPing(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing value) {
+      public Builder mergeLocationPing(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing value) {
         if (locationPingBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              locationPing_ != skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.getDefaultInstance()) {
+              locationPing_ != skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.getDefaultInstance()) {
             locationPing_ =
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.newBuilder(locationPing_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.newBuilder(locationPing_).mergeFrom(value).buildPartial();
           } else {
             locationPing_ = value;
           }
@@ -958,7 +958,7 @@ public final class DotaClientmessages {
        */
       public Builder clearLocationPing() {
         if (locationPingBuilder_ == null) {
-          locationPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.getDefaultInstance();
+          locationPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.getDefaultInstance();
           onChanged();
         } else {
           locationPingBuilder_.clear();
@@ -969,7 +969,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.Builder getLocationPingBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.Builder getLocationPingBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getLocationPingFieldBuilder().getBuilder();
@@ -977,7 +977,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPingOrBuilder getLocationPingOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPingOrBuilder getLocationPingOrBuilder() {
         if (locationPingBuilder_ != null) {
           return locationPingBuilder_.getMessageOrBuilder();
         } else {
@@ -988,11 +988,11 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_LocationPing location_ping = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPingOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPingOrBuilder> 
           getLocationPingFieldBuilder() {
         if (locationPingBuilder_ == null) {
           locationPingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPing.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_LocationPingOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPing.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_LocationPingOrBuilder>(
                   getLocationPing(),
                   getParentForChildren(),
                   isClean());
@@ -1023,11 +1023,11 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert getItemAlert();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert getItemAlert();
     /**
      * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlertOrBuilder getItemAlertOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlertOrBuilder getItemAlertOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAClientMsg_ItemAlert}
@@ -1082,11 +1082,11 @@ public final class DotaClientmessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = itemAlert_.toBuilder();
               }
-              itemAlert_ = input.readMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.PARSER, extensionRegistry);
+              itemAlert_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(itemAlert_);
                 itemAlert_ = subBuilder.buildPartial();
@@ -1108,14 +1108,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ItemAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ItemAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ItemAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ItemAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ItemAlert> PARSER =
@@ -1135,7 +1135,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int ITEM_ALERT_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert itemAlert_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert itemAlert_;
     /**
      * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
      */
@@ -1145,18 +1145,18 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert getItemAlert() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert getItemAlert() {
       return itemAlert_;
     }
     /**
      * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlertOrBuilder getItemAlertOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlertOrBuilder getItemAlertOrBuilder() {
       return itemAlert_;
     }
 
     private void initFields() {
-      itemAlert_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.getDefaultInstance();
+      itemAlert_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1199,53 +1199,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1254,7 +1254,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1271,20 +1271,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ItemAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ItemAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ItemAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ItemAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ItemAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1306,7 +1306,7 @@ public final class DotaClientmessages {
       public Builder clear() {
         super.clear();
         if (itemAlertBuilder_ == null) {
-          itemAlert_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.getDefaultInstance();
+          itemAlert_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.getDefaultInstance();
         } else {
           itemAlertBuilder_.clear();
         }
@@ -1320,23 +1320,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ItemAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ItemAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1353,16 +1353,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert.getDefaultInstance()) return this;
         if (other.hasItemAlert()) {
           mergeItemAlert(other.getItemAlert());
         }
@@ -1378,11 +1378,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ItemAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ItemAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -1393,9 +1393,9 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert itemAlert_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert itemAlert_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlertOrBuilder> itemAlertBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlertOrBuilder> itemAlertBuilder_;
       /**
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
@@ -1405,7 +1405,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert getItemAlert() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert getItemAlert() {
         if (itemAlertBuilder_ == null) {
           return itemAlert_;
         } else {
@@ -1415,7 +1415,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
-      public Builder setItemAlert(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert value) {
+      public Builder setItemAlert(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert value) {
         if (itemAlertBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1432,7 +1432,7 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
       public Builder setItemAlert(
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.Builder builderForValue) {
         if (itemAlertBuilder_ == null) {
           itemAlert_ = builderForValue.build();
           onChanged();
@@ -1445,12 +1445,12 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
-      public Builder mergeItemAlert(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert value) {
+      public Builder mergeItemAlert(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert value) {
         if (itemAlertBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              itemAlert_ != skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.getDefaultInstance()) {
+              itemAlert_ != skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.getDefaultInstance()) {
             itemAlert_ =
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.newBuilder(itemAlert_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.newBuilder(itemAlert_).mergeFrom(value).buildPartial();
           } else {
             itemAlert_ = value;
           }
@@ -1466,7 +1466,7 @@ public final class DotaClientmessages {
        */
       public Builder clearItemAlert() {
         if (itemAlertBuilder_ == null) {
-          itemAlert_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.getDefaultInstance();
+          itemAlert_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.getDefaultInstance();
           onChanged();
         } else {
           itemAlertBuilder_.clear();
@@ -1477,7 +1477,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.Builder getItemAlertBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.Builder getItemAlertBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getItemAlertFieldBuilder().getBuilder();
@@ -1485,7 +1485,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlertOrBuilder getItemAlertOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlertOrBuilder getItemAlertOrBuilder() {
         if (itemAlertBuilder_ != null) {
           return itemAlertBuilder_.getMessageOrBuilder();
         } else {
@@ -1496,11 +1496,11 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_ItemAlert item_alert = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlertOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlertOrBuilder> 
           getItemAlertFieldBuilder() {
         if (itemAlertBuilder_ == null) {
           itemAlertBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlert.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_ItemAlertOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlert.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_ItemAlertOrBuilder>(
                   getItemAlert(),
                   getParentForChildren(),
                   isClean());
@@ -1604,14 +1604,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EnemyItemAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EnemyItemAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EnemyItemAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EnemyItemAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_EnemyItemAlert> PARSER =
@@ -1689,53 +1689,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1744,7 +1744,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1761,20 +1761,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_EnemyItemAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EnemyItemAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EnemyItemAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EnemyItemAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EnemyItemAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1805,23 +1805,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EnemyItemAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EnemyItemAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1834,16 +1834,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert.getDefaultInstance()) return this;
         if (other.hasItemEntindex()) {
           setItemEntindex(other.getItemEntindex());
         }
@@ -1859,11 +1859,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EnemyItemAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EnemyItemAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2015,14 +2015,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ModifierAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ModifierAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ModifierAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ModifierAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ModifierAlert> PARSER =
@@ -2123,53 +2123,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2178,7 +2178,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2195,20 +2195,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ModifierAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ModifierAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ModifierAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ModifierAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ModifierAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2241,23 +2241,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ModifierAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ModifierAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2274,16 +2274,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert.getDefaultInstance()) return this;
         if (other.hasBuffInternalIndex()) {
           setBuffInternalIndex(other.getBuffInternalIndex());
         }
@@ -2302,11 +2302,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ModifierAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ModifierAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2490,14 +2490,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ClickedBuff_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ClickedBuff_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ClickedBuff_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ClickedBuff_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ClickedBuff> PARSER =
@@ -2598,53 +2598,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2653,7 +2653,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -2670,20 +2670,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ClickedBuff)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuffOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuffOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ClickedBuff_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ClickedBuff_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ClickedBuff_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ClickedBuff_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2716,23 +2716,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ClickedBuff_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ClickedBuff_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2749,16 +2749,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff.getDefaultInstance()) return this;
         if (other.hasBuffInternalIndex()) {
           setBuffInternalIndex(other.getBuffInternalIndex());
         }
@@ -2777,11 +2777,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ClickedBuff) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ClickedBuff) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2951,14 +2951,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HPManaAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HPManaAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HPManaAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HPManaAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_HPManaAlert> PARSER =
@@ -3036,53 +3036,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3091,7 +3091,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -3108,20 +3108,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_HPManaAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HPManaAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HPManaAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HPManaAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HPManaAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3152,23 +3152,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HPManaAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HPManaAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3181,16 +3181,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert.getDefaultInstance()) return this;
         if (other.hasTargetEntindex()) {
           setTargetEntindex(other.getTargetEntindex());
         }
@@ -3206,11 +3206,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HPManaAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HPManaAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -3348,14 +3348,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_GlyphAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_GlyphAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_GlyphAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_GlyphAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_GlyphAlert> PARSER =
@@ -3433,53 +3433,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3488,7 +3488,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -3505,20 +3505,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_GlyphAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_GlyphAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_GlyphAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_GlyphAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_GlyphAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3549,23 +3549,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_GlyphAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_GlyphAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3578,16 +3578,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert.getDefaultInstance()) return this;
         if (other.hasNegative()) {
           setNegative(other.getNegative());
         }
@@ -3603,11 +3603,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_GlyphAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_GlyphAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -3672,11 +3672,11 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine getMapline();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine getMapline();
     /**
      * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLineOrBuilder getMaplineOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLineOrBuilder getMaplineOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAClientMsg_MapLine}
@@ -3731,11 +3731,11 @@ public final class DotaClientmessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = mapline_.toBuilder();
               }
-              mapline_ = input.readMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.PARSER, extensionRegistry);
+              mapline_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(mapline_);
                 mapline_ = subBuilder.buildPartial();
@@ -3757,14 +3757,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapLine_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapLine_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapLine_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapLine_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_MapLine> PARSER =
@@ -3784,7 +3784,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int MAPLINE_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine mapline_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine mapline_;
     /**
      * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
      */
@@ -3794,18 +3794,18 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine getMapline() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine getMapline() {
       return mapline_;
     }
     /**
      * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLineOrBuilder getMaplineOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLineOrBuilder getMaplineOrBuilder() {
       return mapline_;
     }
 
     private void initFields() {
-      mapline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.getDefaultInstance();
+      mapline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3848,53 +3848,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3903,7 +3903,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -3920,20 +3920,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_MapLine)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLineOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLineOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapLine_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapLine_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapLine_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapLine_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3955,7 +3955,7 @@ public final class DotaClientmessages {
       public Builder clear() {
         super.clear();
         if (maplineBuilder_ == null) {
-          mapline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.getDefaultInstance();
+          mapline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.getDefaultInstance();
         } else {
           maplineBuilder_.clear();
         }
@@ -3969,23 +3969,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_MapLine_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_MapLine_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4002,16 +4002,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine.getDefaultInstance()) return this;
         if (other.hasMapline()) {
           mergeMapline(other.getMapline());
         }
@@ -4027,11 +4027,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_MapLine) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_MapLine) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -4042,9 +4042,9 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine mapline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine mapline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLineOrBuilder> maplineBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLineOrBuilder> maplineBuilder_;
       /**
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
@@ -4054,7 +4054,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine getMapline() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine getMapline() {
         if (maplineBuilder_ == null) {
           return mapline_;
         } else {
@@ -4064,7 +4064,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
-      public Builder setMapline(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine value) {
+      public Builder setMapline(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine value) {
         if (maplineBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4081,7 +4081,7 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
       public Builder setMapline(
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.Builder builderForValue) {
         if (maplineBuilder_ == null) {
           mapline_ = builderForValue.build();
           onChanged();
@@ -4094,12 +4094,12 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
-      public Builder mergeMapline(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine value) {
+      public Builder mergeMapline(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine value) {
         if (maplineBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              mapline_ != skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.getDefaultInstance()) {
+              mapline_ != skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.getDefaultInstance()) {
             mapline_ =
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.newBuilder(mapline_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.newBuilder(mapline_).mergeFrom(value).buildPartial();
           } else {
             mapline_ = value;
           }
@@ -4115,7 +4115,7 @@ public final class DotaClientmessages {
        */
       public Builder clearMapline() {
         if (maplineBuilder_ == null) {
-          mapline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.getDefaultInstance();
+          mapline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.getDefaultInstance();
           onChanged();
         } else {
           maplineBuilder_.clear();
@@ -4126,7 +4126,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.Builder getMaplineBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.Builder getMaplineBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getMaplineFieldBuilder().getBuilder();
@@ -4134,7 +4134,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLineOrBuilder getMaplineOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLineOrBuilder getMaplineOrBuilder() {
         if (maplineBuilder_ != null) {
           return maplineBuilder_.getMessageOrBuilder();
         } else {
@@ -4145,11 +4145,11 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_MapLine mapline = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLineOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLineOrBuilder> 
           getMaplineFieldBuilder() {
         if (maplineBuilder_ == null) {
           maplineBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLine.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_MapLineOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLine.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_MapLineOrBuilder>(
                   getMapline(),
                   getParentForChildren(),
                   isClean());
@@ -4253,14 +4253,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AspectRatio_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AspectRatio_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AspectRatio_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AspectRatio_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_AspectRatio> PARSER =
@@ -4338,53 +4338,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4393,7 +4393,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -4410,20 +4410,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_AspectRatio)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatioOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatioOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AspectRatio_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AspectRatio_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AspectRatio_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AspectRatio_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4454,23 +4454,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AspectRatio_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AspectRatio_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4483,16 +4483,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio.getDefaultInstance()) return this;
         if (other.hasRatio()) {
           setRatio(other.getRatio());
         }
@@ -4508,11 +4508,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AspectRatio) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AspectRatio) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -4650,14 +4650,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_UnitsAutoAttack> PARSER =
@@ -4735,53 +4735,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4790,7 +4790,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -4807,20 +4807,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_UnitsAutoAttack)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4851,23 +4851,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttack_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4880,16 +4880,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack.getDefaultInstance()) return this;
         if (other.hasEnabled()) {
           setEnabled(other.getEnabled());
         }
@@ -4905,11 +4905,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttack) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttack) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -5047,14 +5047,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_UnitsAutoAttackAfterSpell> PARSER =
@@ -5132,53 +5132,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5187,7 +5187,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -5204,20 +5204,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_UnitsAutoAttackAfterSpell)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpellOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpellOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5248,23 +5248,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UnitsAutoAttackAfterSpell_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5277,16 +5277,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell.getDefaultInstance()) return this;
         if (other.hasEnabled()) {
           setEnabled(other.getEnabled());
         }
@@ -5302,11 +5302,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UnitsAutoAttackAfterSpell) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -5444,14 +5444,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_TeleportRequiresHalt> PARSER =
@@ -5529,53 +5529,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5584,7 +5584,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -5601,20 +5601,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_TeleportRequiresHalt)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHaltOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHaltOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5645,23 +5645,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeleportRequiresHalt_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5674,16 +5674,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt.getDefaultInstance()) return this;
         if (other.hasEnabled()) {
           setEnabled(other.getEnabled());
         }
@@ -5699,11 +5699,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeleportRequiresHalt) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeleportRequiresHalt) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -5841,14 +5841,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_AutoPurchaseItems> PARSER =
@@ -5926,53 +5926,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5981,7 +5981,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -5998,20 +5998,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_AutoPurchaseItems)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItemsOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItemsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6042,23 +6042,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_AutoPurchaseItems_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6071,16 +6071,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems.getDefaultInstance()) return this;
         if (other.hasEnabled()) {
           setEnabled(other.getEnabled());
         }
@@ -6096,11 +6096,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_AutoPurchaseItems) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_AutoPurchaseItems) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -6244,14 +6244,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TestItems_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TestItems_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TestItems_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TestItems_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_TestItems> PARSER =
@@ -6356,53 +6356,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6411,7 +6411,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -6428,20 +6428,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_TestItems)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItemsOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItemsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TestItems_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TestItems_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TestItems_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TestItems_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6472,23 +6472,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TestItems_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TestItems_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6501,16 +6501,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems.getDefaultInstance()) return this;
         if (other.hasKeyValues()) {
           bitField0_ |= 0x00000001;
           keyValues_ = other.keyValues_;
@@ -6528,11 +6528,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TestItems) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TestItems) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -6720,14 +6720,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SearchString_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SearchString_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SearchString_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SearchString_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_SearchString> PARSER =
@@ -6832,53 +6832,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -6887,7 +6887,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -6904,20 +6904,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_SearchString)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchStringOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchStringOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SearchString_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SearchString_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SearchString_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SearchString_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6948,23 +6948,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SearchString_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SearchString_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6977,16 +6977,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString.getDefaultInstance()) return this;
         if (other.hasSearch()) {
           bitField0_ |= 0x00000001;
           search_ = other.search_;
@@ -7004,11 +7004,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SearchString) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SearchString) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -7175,14 +7175,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_Pause_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_Pause_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_Pause_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_Pause_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_Pause> PARSER =
@@ -7236,53 +7236,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7291,7 +7291,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -7308,20 +7308,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_Pause)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PauseOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PauseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_Pause_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_Pause_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_Pause_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_Pause_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7350,38 +7350,38 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_Pause_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_Pause_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -7394,11 +7394,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_Pause) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_Pause) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -7503,14 +7503,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ShopViewMode_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ShopViewMode_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ShopViewMode_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ShopViewMode_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ShopViewMode> PARSER =
@@ -7588,53 +7588,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -7643,7 +7643,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -7660,20 +7660,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ShopViewMode)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewModeOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewModeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ShopViewMode_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ShopViewMode_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ShopViewMode_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ShopViewMode_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7704,23 +7704,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ShopViewMode_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ShopViewMode_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7733,16 +7733,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode.getDefaultInstance()) return this;
         if (other.hasMode()) {
           setMode(other.getMode());
         }
@@ -7758,11 +7758,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ShopViewMode) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ShopViewMode) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -7928,14 +7928,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_SetUnitShareFlag> PARSER =
@@ -8059,53 +8059,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8114,7 +8114,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -8131,20 +8131,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_SetUnitShareFlag)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlagOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlagOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8179,23 +8179,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SetUnitShareFlag_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8216,16 +8216,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag.getDefaultInstance()) return this;
         if (other.hasPlayerID()) {
           setPlayerID(other.getPlayerID());
         }
@@ -8247,11 +8247,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SetUnitShareFlag) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SetUnitShareFlag) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -8453,14 +8453,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapRequest_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapRequest_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_SwapRequest> PARSER =
@@ -8538,53 +8538,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8593,7 +8593,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -8610,20 +8610,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_SwapRequest)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequestOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapRequest_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapRequest_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8654,23 +8654,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapRequest_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapRequest_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8683,16 +8683,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest.getDefaultInstance()) return this;
         if (other.hasPlayerId()) {
           setPlayerId(other.getPlayerId());
         }
@@ -8708,11 +8708,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapRequest) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapRequest) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -8850,14 +8850,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapAccept_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapAccept_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapAccept_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapAccept_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_SwapAccept> PARSER =
@@ -8935,53 +8935,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -8990,7 +8990,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -9007,20 +9007,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_SwapAccept)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAcceptOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAcceptOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapAccept_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapAccept_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapAccept_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapAccept_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9051,23 +9051,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SwapAccept_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SwapAccept_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -9080,16 +9080,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept.getDefaultInstance()) return this;
         if (other.hasPlayerId()) {
           setPlayerId(other.getPlayerId());
         }
@@ -9105,11 +9105,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SwapAccept) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SwapAccept) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -9174,11 +9174,11 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine getWorldline();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine getWorldline();
     /**
      * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLineOrBuilder getWorldlineOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLineOrBuilder getWorldlineOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAClientMsg_WorldLine}
@@ -9233,11 +9233,11 @@ public final class DotaClientmessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = worldline_.toBuilder();
               }
-              worldline_ = input.readMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.PARSER, extensionRegistry);
+              worldline_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(worldline_);
                 worldline_ = subBuilder.buildPartial();
@@ -9259,14 +9259,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WorldLine_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WorldLine_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WorldLine_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WorldLine_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_WorldLine> PARSER =
@@ -9286,7 +9286,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int WORLDLINE_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine worldline_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine worldline_;
     /**
      * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
      */
@@ -9296,18 +9296,18 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine getWorldline() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine getWorldline() {
       return worldline_;
     }
     /**
      * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLineOrBuilder getWorldlineOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLineOrBuilder getWorldlineOrBuilder() {
       return worldline_;
     }
 
     private void initFields() {
-      worldline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.getDefaultInstance();
+      worldline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -9350,53 +9350,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9405,7 +9405,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -9422,20 +9422,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_WorldLine)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLineOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLineOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WorldLine_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WorldLine_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WorldLine_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WorldLine_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9457,7 +9457,7 @@ public final class DotaClientmessages {
       public Builder clear() {
         super.clear();
         if (worldlineBuilder_ == null) {
-          worldline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.getDefaultInstance();
+          worldline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.getDefaultInstance();
         } else {
           worldlineBuilder_.clear();
         }
@@ -9471,23 +9471,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WorldLine_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WorldLine_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -9504,16 +9504,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine.getDefaultInstance()) return this;
         if (other.hasWorldline()) {
           mergeWorldline(other.getWorldline());
         }
@@ -9529,11 +9529,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WorldLine) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WorldLine) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -9544,9 +9544,9 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine worldline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine worldline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLineOrBuilder> worldlineBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLineOrBuilder> worldlineBuilder_;
       /**
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
@@ -9556,7 +9556,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine getWorldline() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine getWorldline() {
         if (worldlineBuilder_ == null) {
           return worldline_;
         } else {
@@ -9566,7 +9566,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
-      public Builder setWorldline(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine value) {
+      public Builder setWorldline(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine value) {
         if (worldlineBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9583,7 +9583,7 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
       public Builder setWorldline(
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.Builder builderForValue) {
         if (worldlineBuilder_ == null) {
           worldline_ = builderForValue.build();
           onChanged();
@@ -9596,12 +9596,12 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
-      public Builder mergeWorldline(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine value) {
+      public Builder mergeWorldline(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine value) {
         if (worldlineBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              worldline_ != skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.getDefaultInstance()) {
+              worldline_ != skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.getDefaultInstance()) {
             worldline_ =
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.newBuilder(worldline_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.newBuilder(worldline_).mergeFrom(value).buildPartial();
           } else {
             worldline_ = value;
           }
@@ -9617,7 +9617,7 @@ public final class DotaClientmessages {
        */
       public Builder clearWorldline() {
         if (worldlineBuilder_ == null) {
-          worldline_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.getDefaultInstance();
+          worldline_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.getDefaultInstance();
           onChanged();
         } else {
           worldlineBuilder_.clear();
@@ -9628,7 +9628,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.Builder getWorldlineBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.Builder getWorldlineBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getWorldlineFieldBuilder().getBuilder();
@@ -9636,7 +9636,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLineOrBuilder getWorldlineOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLineOrBuilder getWorldlineOrBuilder() {
         if (worldlineBuilder_ != null) {
           return worldlineBuilder_.getMessageOrBuilder();
         } else {
@@ -9647,11 +9647,11 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_WorldLine worldline = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLineOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLineOrBuilder> 
           getWorldlineFieldBuilder() {
         if (worldlineBuilder_ == null) {
           worldlineBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLine.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_WorldLineOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLine.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_WorldLineOrBuilder>(
                   getWorldline(),
                   getParentForChildren(),
                   isClean());
@@ -9740,14 +9740,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_RequestGraphUpdate> PARSER =
@@ -9801,53 +9801,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -9856,7 +9856,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -9873,20 +9873,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_RequestGraphUpdate)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdateOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -9915,38 +9915,38 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RequestGraphUpdate_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -9959,11 +9959,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RequestGraphUpdate) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RequestGraphUpdate) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -9995,7 +9995,7 @@ public final class DotaClientmessages {
     /**
      * <code>optional .EDOTAChatWheelMessage chat_message = 1 [default = k_EDOTA_CW_Ok];</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage getChatMessage();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage getChatMessage();
 
     /**
      * <code>optional uint32 param_hero_id = 2;</code>
@@ -10060,7 +10060,7 @@ public final class DotaClientmessages {
             }
             case 8: {
               int rawValue = input.readEnum();
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage value = skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage.valueOf(rawValue);
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage value = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
@@ -10088,14 +10088,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChatWheel_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChatWheel_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChatWheel_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChatWheel_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ChatWheel> PARSER =
@@ -10115,7 +10115,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int CHAT_MESSAGE_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage chatMessage_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage chatMessage_;
     /**
      * <code>optional .EDOTAChatWheelMessage chat_message = 1 [default = k_EDOTA_CW_Ok];</code>
      */
@@ -10125,7 +10125,7 @@ public final class DotaClientmessages {
     /**
      * <code>optional .EDOTAChatWheelMessage chat_message = 1 [default = k_EDOTA_CW_Ok];</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage getChatMessage() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage getChatMessage() {
       return chatMessage_;
     }
 
@@ -10145,7 +10145,7 @@ public final class DotaClientmessages {
     }
 
     private void initFields() {
-      chatMessage_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
+      chatMessage_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
       paramHeroId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
@@ -10196,53 +10196,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10251,7 +10251,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -10268,20 +10268,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ChatWheel)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheelOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheelOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChatWheel_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChatWheel_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChatWheel_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChatWheel_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10301,7 +10301,7 @@ public final class DotaClientmessages {
 
       public Builder clear() {
         super.clear();
-        chatMessage_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
+        chatMessage_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
         bitField0_ = (bitField0_ & ~0x00000001);
         paramHeroId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -10314,23 +10314,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChatWheel_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChatWheel_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -10347,16 +10347,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel.getDefaultInstance()) return this;
         if (other.hasChatMessage()) {
           setChatMessage(other.getChatMessage());
         }
@@ -10375,11 +10375,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChatWheel) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChatWheel) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -10390,7 +10390,7 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage chatMessage_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage chatMessage_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
       /**
        * <code>optional .EDOTAChatWheelMessage chat_message = 1 [default = k_EDOTA_CW_Ok];</code>
        */
@@ -10400,13 +10400,13 @@ public final class DotaClientmessages {
       /**
        * <code>optional .EDOTAChatWheelMessage chat_message = 1 [default = k_EDOTA_CW_Ok];</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage getChatMessage() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage getChatMessage() {
         return chatMessage_;
       }
       /**
        * <code>optional .EDOTAChatWheelMessage chat_message = 1 [default = k_EDOTA_CW_Ok];</code>
        */
-      public Builder setChatMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage value) {
+      public Builder setChatMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -10420,7 +10420,7 @@ public final class DotaClientmessages {
        */
       public Builder clearChatMessage() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        chatMessage_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
+        chatMessage_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.EDOTAChatWheelMessage.k_EDOTA_CW_Ok;
         onChanged();
         return this;
       }
@@ -10479,11 +10479,11 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup getStatpopup();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup getStatpopup();
     /**
      * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopupOrBuilder getStatpopupOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopupOrBuilder getStatpopupOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAClientMsg_SendStatPopup}
@@ -10538,11 +10538,11 @@ public final class DotaClientmessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = statpopup_.toBuilder();
               }
-              statpopup_ = input.readMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.PARSER, extensionRegistry);
+              statpopup_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(statpopup_);
                 statpopup_ = subBuilder.buildPartial();
@@ -10564,14 +10564,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SendStatPopup_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SendStatPopup_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SendStatPopup_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SendStatPopup_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_SendStatPopup> PARSER =
@@ -10591,7 +10591,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int STATPOPUP_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup statpopup_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup statpopup_;
     /**
      * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
      */
@@ -10601,18 +10601,18 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup getStatpopup() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup getStatpopup() {
       return statpopup_;
     }
     /**
      * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopupOrBuilder getStatpopupOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopupOrBuilder getStatpopupOrBuilder() {
       return statpopup_;
     }
 
     private void initFields() {
-      statpopup_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
+      statpopup_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -10655,53 +10655,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10710,7 +10710,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -10727,20 +10727,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_SendStatPopup)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopupOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopupOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SendStatPopup_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SendStatPopup_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SendStatPopup_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SendStatPopup_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -10762,7 +10762,7 @@ public final class DotaClientmessages {
       public Builder clear() {
         super.clear();
         if (statpopupBuilder_ == null) {
-          statpopup_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
+          statpopup_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
         } else {
           statpopupBuilder_.clear();
         }
@@ -10776,23 +10776,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_SendStatPopup_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_SendStatPopup_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -10809,16 +10809,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup.getDefaultInstance()) return this;
         if (other.hasStatpopup()) {
           mergeStatpopup(other.getStatpopup());
         }
@@ -10834,11 +10834,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_SendStatPopup) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_SendStatPopup) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -10849,9 +10849,9 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup statpopup_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup statpopup_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopupOrBuilder> statpopupBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopupOrBuilder> statpopupBuilder_;
       /**
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
@@ -10861,7 +10861,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup getStatpopup() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup getStatpopup() {
         if (statpopupBuilder_ == null) {
           return statpopup_;
         } else {
@@ -10871,7 +10871,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
-      public Builder setStatpopup(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup value) {
+      public Builder setStatpopup(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup value) {
         if (statpopupBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10888,7 +10888,7 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
       public Builder setStatpopup(
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.Builder builderForValue) {
         if (statpopupBuilder_ == null) {
           statpopup_ = builderForValue.build();
           onChanged();
@@ -10901,12 +10901,12 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
-      public Builder mergeStatpopup(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup value) {
+      public Builder mergeStatpopup(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup value) {
         if (statpopupBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              statpopup_ != skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.getDefaultInstance()) {
+              statpopup_ != skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.getDefaultInstance()) {
             statpopup_ =
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.newBuilder(statpopup_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.newBuilder(statpopup_).mergeFrom(value).buildPartial();
           } else {
             statpopup_ = value;
           }
@@ -10922,7 +10922,7 @@ public final class DotaClientmessages {
        */
       public Builder clearStatpopup() {
         if (statpopupBuilder_ == null) {
-          statpopup_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
+          statpopup_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.getDefaultInstance();
           onChanged();
         } else {
           statpopupBuilder_.clear();
@@ -10933,7 +10933,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.Builder getStatpopupBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.Builder getStatpopupBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getStatpopupFieldBuilder().getBuilder();
@@ -10941,7 +10941,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopupOrBuilder getStatpopupOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopupOrBuilder getStatpopupOrBuilder() {
         if (statpopupBuilder_ != null) {
           return statpopupBuilder_.getMessageOrBuilder();
         } else {
@@ -10952,11 +10952,11 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_SendStatPopup statpopup = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopupOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopupOrBuilder> 
           getStatpopupFieldBuilder() {
         if (statpopupBuilder_ == null) {
           statpopupBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopup.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_SendStatPopupOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopup.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_SendStatPopupOrBuilder>(
                   getStatpopup(),
                   getParentForChildren(),
                   isClean());
@@ -11074,14 +11074,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_BeginLastHitChallenge> PARSER =
@@ -11182,53 +11182,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11237,7 +11237,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -11254,20 +11254,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_BeginLastHitChallenge)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallengeOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallengeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11300,23 +11300,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BeginLastHitChallenge_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11333,16 +11333,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge.getDefaultInstance()) return this;
         if (other.hasChosenLane()) {
           setChosenLane(other.getChosenLane());
         }
@@ -11361,11 +11361,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BeginLastHitChallenge) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BeginLastHitChallenge) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -11549,14 +11549,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_UpdateQuickBuyItem> PARSER =
@@ -11657,53 +11657,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -11712,7 +11712,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -11729,20 +11729,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_UpdateQuickBuyItem)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11775,23 +11775,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuyItem_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11808,16 +11808,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance()) return this;
         if (other.hasItemType()) {
           setItemType(other.getItemType());
         }
@@ -11836,11 +11836,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -11933,12 +11933,12 @@ public final class DotaClientmessages {
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem> 
+    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem> 
         getItemsList();
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem getItems(int index);
+    skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem getItems(int index);
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
@@ -11946,12 +11946,12 @@ public final class DotaClientmessages {
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    java.util.List<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
         getItemsOrBuilderList();
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder getItemsOrBuilder(
+    skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder getItemsOrBuilder(
         int index);
   }
   /**
@@ -12008,10 +12008,10 @@ public final class DotaClientmessages {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                items_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem>();
+                items_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              items_.add(input.readMessage(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.PARSER, extensionRegistry));
+              items_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.PARSER, extensionRegistry));
               break;
             }
           }
@@ -12031,14 +12031,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_UpdateQuickBuy> PARSER =
@@ -12057,17 +12057,17 @@ public final class DotaClientmessages {
     }
 
     public static final int ITEMS_FIELD_NUMBER = 1;
-    private java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem> items_;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem> items_;
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    public java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem> getItemsList() {
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem> getItemsList() {
       return items_;
     }
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    public java.util.List<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
         getItemsOrBuilderList() {
       return items_;
     }
@@ -12080,13 +12080,13 @@ public final class DotaClientmessages {
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem getItems(int index) {
+    public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem getItems(int index) {
       return items_.get(index);
     }
     /**
      * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder getItemsOrBuilder(
+    public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder getItemsOrBuilder(
         int index) {
       return items_.get(index);
     }
@@ -12135,53 +12135,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12190,7 +12190,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -12207,20 +12207,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_UpdateQuickBuy)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12256,23 +12256,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateQuickBuy_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy(this);
         int from_bitField0_ = bitField0_;
         if (itemsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12288,16 +12288,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy.getDefaultInstance()) return this;
         if (itemsBuilder_ == null) {
           if (!other.items_.isEmpty()) {
             if (items_.isEmpty()) {
@@ -12336,11 +12336,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuy) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuy) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -12351,22 +12351,22 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem> items_ =
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem> items_ =
         java.util.Collections.emptyList();
       private void ensureItemsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          items_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem>(items_);
+          items_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem>(items_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> itemsBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> itemsBuilder_;
 
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem> getItemsList() {
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem> getItemsList() {
         if (itemsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(items_);
         } else {
@@ -12386,7 +12386,7 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem getItems(int index) {
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem getItems(int index) {
         if (itemsBuilder_ == null) {
           return items_.get(index);
         } else {
@@ -12397,7 +12397,7 @@ public final class DotaClientmessages {
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
       public Builder setItems(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem value) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem value) {
         if (itemsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12414,7 +12414,7 @@ public final class DotaClientmessages {
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
       public Builder setItems(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder builderForValue) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
           items_.set(index, builderForValue.build());
@@ -12427,7 +12427,7 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public Builder addItems(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem value) {
+      public Builder addItems(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem value) {
         if (itemsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12444,7 +12444,7 @@ public final class DotaClientmessages {
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
       public Builder addItems(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem value) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem value) {
         if (itemsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12461,7 +12461,7 @@ public final class DotaClientmessages {
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
       public Builder addItems(
-          skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
           items_.add(builderForValue.build());
@@ -12475,7 +12475,7 @@ public final class DotaClientmessages {
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
       public Builder addItems(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder builderForValue) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder builderForValue) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
           items_.add(index, builderForValue.build());
@@ -12489,7 +12489,7 @@ public final class DotaClientmessages {
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
       public Builder addAllItems(
-          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem> values) {
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem> values) {
         if (itemsBuilder_ == null) {
           ensureItemsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -12529,14 +12529,14 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder getItemsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder getItemsBuilder(
           int index) {
         return getItemsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder getItemsOrBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder getItemsOrBuilder(
           int index) {
         if (itemsBuilder_ == null) {
           return items_.get(index);  } else {
@@ -12546,7 +12546,7 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public java.util.List<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
            getItemsOrBuilderList() {
         if (itemsBuilder_ != null) {
           return itemsBuilder_.getMessageOrBuilderList();
@@ -12557,31 +12557,31 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder addItemsBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder addItemsBuilder() {
         return getItemsFieldBuilder().addBuilder(
-            skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance());
+            skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance());
       }
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder addItemsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder addItemsBuilder(
           int index) {
         return getItemsFieldBuilder().addBuilder(
-            index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance());
+            index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.getDefaultInstance());
       }
       /**
        * <code>repeated .CDOTAClientMsg_UpdateQuickBuyItem items = 1;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder> 
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder> 
            getItemsBuilderList() {
         return getItemsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder> 
           getItemsFieldBuilder() {
         if (itemsBuilder_ == null) {
           itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItem.Builder, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateQuickBuyItemOrBuilder>(
                   items_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -12686,14 +12686,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateCoachListen_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateCoachListen_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateCoachListen_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateCoachListen_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_UpdateCoachListen> PARSER =
@@ -12771,53 +12771,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -12826,7 +12826,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -12843,20 +12843,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_UpdateCoachListen)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListenOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListenOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateCoachListen_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateCoachListen_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateCoachListen_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateCoachListen_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -12887,23 +12887,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_UpdateCoachListen_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_UpdateCoachListen_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12916,16 +12916,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen.getDefaultInstance()) return this;
         if (other.hasPlayerMask()) {
           setPlayerMask(other.getPlayerMask());
         }
@@ -12941,11 +12941,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_UpdateCoachListen) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_UpdateCoachListen) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -13010,11 +13010,11 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing getHudPing();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing getHudPing();
     /**
      * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPingOrBuilder getHudPingOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPingOrBuilder getHudPingOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAClientMsg_CoachHUDPing}
@@ -13069,11 +13069,11 @@ public final class DotaClientmessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = hudPing_.toBuilder();
               }
-              hudPing_ = input.readMessage(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.PARSER, extensionRegistry);
+              hudPing_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(hudPing_);
                 hudPing_ = subBuilder.buildPartial();
@@ -13095,14 +13095,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CoachHUDPing_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CoachHUDPing_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CoachHUDPing_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CoachHUDPing_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_CoachHUDPing> PARSER =
@@ -13122,7 +13122,7 @@ public final class DotaClientmessages {
 
     private int bitField0_;
     public static final int HUD_PING_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing hudPing_;
+    private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing hudPing_;
     /**
      * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
      */
@@ -13132,18 +13132,18 @@ public final class DotaClientmessages {
     /**
      * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing getHudPing() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing getHudPing() {
       return hudPing_;
     }
     /**
      * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPingOrBuilder getHudPingOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPingOrBuilder getHudPingOrBuilder() {
       return hudPing_;
     }
 
     private void initFields() {
-      hudPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
+      hudPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -13186,53 +13186,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13241,7 +13241,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -13258,20 +13258,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_CoachHUDPing)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPingOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPingOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CoachHUDPing_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CoachHUDPing_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CoachHUDPing_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CoachHUDPing_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13293,7 +13293,7 @@ public final class DotaClientmessages {
       public Builder clear() {
         super.clear();
         if (hudPingBuilder_ == null) {
-          hudPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
+          hudPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
         } else {
           hudPingBuilder_.clear();
         }
@@ -13307,23 +13307,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CoachHUDPing_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CoachHUDPing_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13340,16 +13340,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing.getDefaultInstance()) return this;
         if (other.hasHudPing()) {
           mergeHudPing(other.getHudPing());
         }
@@ -13365,11 +13365,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CoachHUDPing) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CoachHUDPing) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -13380,9 +13380,9 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing hudPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing hudPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPingOrBuilder> hudPingBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPingOrBuilder> hudPingBuilder_;
       /**
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
@@ -13392,7 +13392,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing getHudPing() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing getHudPing() {
         if (hudPingBuilder_ == null) {
           return hudPing_;
         } else {
@@ -13402,7 +13402,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
-      public Builder setHudPing(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing value) {
+      public Builder setHudPing(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing value) {
         if (hudPingBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -13419,7 +13419,7 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
       public Builder setHudPing(
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.Builder builderForValue) {
         if (hudPingBuilder_ == null) {
           hudPing_ = builderForValue.build();
           onChanged();
@@ -13432,12 +13432,12 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
-      public Builder mergeHudPing(skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing value) {
+      public Builder mergeHudPing(skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing value) {
         if (hudPingBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              hudPing_ != skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.getDefaultInstance()) {
+              hudPing_ != skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.getDefaultInstance()) {
             hudPing_ =
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.newBuilder(hudPing_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.newBuilder(hudPing_).mergeFrom(value).buildPartial();
           } else {
             hudPing_ = value;
           }
@@ -13453,7 +13453,7 @@ public final class DotaClientmessages {
        */
       public Builder clearHudPing() {
         if (hudPingBuilder_ == null) {
-          hudPing_ = skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
+          hudPing_ = skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.getDefaultInstance();
           onChanged();
         } else {
           hudPingBuilder_.clear();
@@ -13464,7 +13464,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.Builder getHudPingBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.Builder getHudPingBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getHudPingFieldBuilder().getBuilder();
@@ -13472,7 +13472,7 @@ public final class DotaClientmessages {
       /**
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPingOrBuilder getHudPingOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPingOrBuilder getHudPingOrBuilder() {
         if (hudPingBuilder_ != null) {
           return hudPingBuilder_.getMessageOrBuilder();
         } else {
@@ -13483,11 +13483,11 @@ public final class DotaClientmessages {
        * <code>optional .CDOTAMsg_CoachHUDPing hud_ping = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPingOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPingOrBuilder> 
           getHudPingFieldBuilder() {
         if (hudPingBuilder_ == null) {
           hudPingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPing.Builder, skadistats.clarity.wire.s2.proto.DotaCommonmessages.CDOTAMsg_CoachHUDPingOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPing.Builder, skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.CDOTAMsg_CoachHUDPingOrBuilder>(
                   getHudPing(),
                   getParentForChildren(),
                   isClean());
@@ -13591,14 +13591,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RecordVote_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RecordVote_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RecordVote_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RecordVote_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_RecordVote> PARSER =
@@ -13676,53 +13676,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -13731,7 +13731,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -13748,20 +13748,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_RecordVote)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVoteOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVoteOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RecordVote_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RecordVote_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RecordVote_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RecordVote_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -13792,23 +13792,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_RecordVote_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_RecordVote_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13821,16 +13821,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote.getDefaultInstance()) return this;
         if (other.hasChoiceIndex()) {
           setChoiceIndex(other.getChoiceIndex());
         }
@@ -13846,11 +13846,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_RecordVote) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_RecordVote) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -14002,14 +14002,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_WillPurchaseAlert> PARSER =
@@ -14110,53 +14110,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14165,7 +14165,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -14182,20 +14182,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_WillPurchaseAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14228,23 +14228,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_WillPurchaseAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14261,16 +14261,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert.getDefaultInstance()) return this;
         if (other.hasItemid()) {
           setItemid(other.getItemid());
         }
@@ -14289,11 +14289,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_WillPurchaseAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_WillPurchaseAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -14448,14 +14448,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_BuyBackStateAlert> PARSER =
@@ -14509,53 +14509,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14564,7 +14564,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -14581,20 +14581,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_BuyBackStateAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -14623,38 +14623,38 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BuyBackStateAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -14667,11 +14667,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BuyBackStateAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BuyBackStateAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -14790,14 +14790,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_QuickBuyAlert_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_QuickBuyAlert_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_QuickBuyAlert_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_QuickBuyAlert_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_QuickBuyAlert> PARSER =
@@ -14898,53 +14898,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -14953,7 +14953,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -14970,20 +14970,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_QuickBuyAlert)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlertOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlertOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_QuickBuyAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_QuickBuyAlert_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_QuickBuyAlert_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_QuickBuyAlert_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15016,23 +15016,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_QuickBuyAlert_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_QuickBuyAlert_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15049,16 +15049,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert.getDefaultInstance()) return this;
         if (other.hasItemid()) {
           setItemid(other.getItemid());
         }
@@ -15077,11 +15077,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_QuickBuyAlert) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_QuickBuyAlert) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -15251,14 +15251,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayerShowCase_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayerShowCase_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayerShowCase_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayerShowCase_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_PlayerShowCase> PARSER =
@@ -15336,53 +15336,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15391,7 +15391,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -15408,20 +15408,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_PlayerShowCase)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCaseOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCaseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayerShowCase_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayerShowCase_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayerShowCase_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayerShowCase_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15452,23 +15452,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayerShowCase_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayerShowCase_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15481,16 +15481,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase.getDefaultInstance()) return this;
         if (other.hasShowcase()) {
           setShowcase(other.getShowcase());
         }
@@ -15506,11 +15506,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayerShowCase) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayerShowCase) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -15648,14 +15648,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CameraZoomAmount_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CameraZoomAmount_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CameraZoomAmount_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CameraZoomAmount_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_CameraZoomAmount> PARSER =
@@ -15733,53 +15733,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -15788,7 +15788,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -15805,20 +15805,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_CameraZoomAmount)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmountOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmountOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CameraZoomAmount_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CameraZoomAmount_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CameraZoomAmount_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CameraZoomAmount_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -15849,23 +15849,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_CameraZoomAmount_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_CameraZoomAmount_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15878,16 +15878,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount.getDefaultInstance()) return this;
         if (other.hasZoomAmount()) {
           setZoomAmount(other.getZoomAmount());
         }
@@ -15903,11 +15903,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_CameraZoomAmount) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_CameraZoomAmount) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16045,14 +16045,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_BroadcasterUsingCameraman> PARSER =
@@ -16130,53 +16130,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16185,7 +16185,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -16202,20 +16202,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_BroadcasterUsingCameraman)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameramanOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameramanOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16246,23 +16246,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingCameraman_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16275,16 +16275,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman.getDefaultInstance()) return this;
         if (other.hasCameraman()) {
           setCameraman(other.getCameraman());
         }
@@ -16300,11 +16300,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingCameraman) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingCameraman) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16442,14 +16442,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator> PARSER =
@@ -16527,53 +16527,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -16582,7 +16582,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -16599,20 +16599,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperatorOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperatorOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -16643,23 +16643,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16672,16 +16672,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator.getDefaultInstance()) return this;
         if (other.hasEnabled()) {
           setEnabled(other.getEnabled());
         }
@@ -16697,11 +16697,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_BroadcasterUsingAssistedCameraOperator) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -16867,14 +16867,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CAdditionalEquipSlotClientMsg_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CAdditionalEquipSlotClientMsg_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CAdditionalEquipSlotClientMsg_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CAdditionalEquipSlotClientMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CAdditionalEquipSlotClientMsg> PARSER =
@@ -16998,53 +16998,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17053,7 +17053,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -17070,20 +17070,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CAdditionalEquipSlotClientMsg)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CAdditionalEquipSlotClientMsg_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CAdditionalEquipSlotClientMsg_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CAdditionalEquipSlotClientMsg_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CAdditionalEquipSlotClientMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -17118,23 +17118,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CAdditionalEquipSlotClientMsg_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CAdditionalEquipSlotClientMsg_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17155,16 +17155,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.getDefaultInstance()) return this;
         if (other.hasClassId()) {
           setClassId(other.getClassId());
         }
@@ -17186,11 +17186,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -17315,12 +17315,12 @@ public final class DotaClientmessages {
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg> 
+    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg> 
         getEquipsList();
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg getEquips(int index);
+    skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg getEquips(int index);
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
@@ -17328,12 +17328,12 @@ public final class DotaClientmessages {
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    java.util.List<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder> 
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder> 
         getEquipsOrBuilderList();
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder getEquipsOrBuilder(
+    skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder getEquipsOrBuilder(
         int index);
   }
   /**
@@ -17390,10 +17390,10 @@ public final class DotaClientmessages {
             }
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-                equips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg>();
+                equips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              equips_.add(input.readMessage(skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.PARSER, extensionRegistry));
+              equips_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.PARSER, extensionRegistry));
               break;
             }
           }
@@ -17413,14 +17413,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FreeInventory_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FreeInventory_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FreeInventory_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FreeInventory_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_FreeInventory> PARSER =
@@ -17439,17 +17439,17 @@ public final class DotaClientmessages {
     }
 
     public static final int EQUIPS_FIELD_NUMBER = 1;
-    private java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg> equips_;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg> equips_;
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    public java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg> getEquipsList() {
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg> getEquipsList() {
       return equips_;
     }
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    public java.util.List<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder> 
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder> 
         getEquipsOrBuilderList() {
       return equips_;
     }
@@ -17462,13 +17462,13 @@ public final class DotaClientmessages {
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg getEquips(int index) {
+    public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg getEquips(int index) {
       return equips_.get(index);
     }
     /**
      * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder getEquipsOrBuilder(
+    public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder getEquipsOrBuilder(
         int index) {
       return equips_.get(index);
     }
@@ -17517,53 +17517,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -17572,7 +17572,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -17589,20 +17589,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_FreeInventory)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventoryOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventoryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FreeInventory_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FreeInventory_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FreeInventory_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FreeInventory_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -17638,23 +17638,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FreeInventory_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FreeInventory_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory(this);
         int from_bitField0_ = bitField0_;
         if (equipsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17670,16 +17670,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory.getDefaultInstance()) return this;
         if (equipsBuilder_ == null) {
           if (!other.equips_.isEmpty()) {
             if (equips_.isEmpty()) {
@@ -17718,11 +17718,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FreeInventory) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FreeInventory) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -17733,22 +17733,22 @@ public final class DotaClientmessages {
       }
       private int bitField0_;
 
-      private java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg> equips_ =
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg> equips_ =
         java.util.Collections.emptyList();
       private void ensureEquipsIsMutable() {
         if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-          equips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg>(equips_);
+          equips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg>(equips_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder> equipsBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder> equipsBuilder_;
 
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg> getEquipsList() {
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg> getEquipsList() {
         if (equipsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(equips_);
         } else {
@@ -17768,7 +17768,7 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg getEquips(int index) {
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg getEquips(int index) {
         if (equipsBuilder_ == null) {
           return equips_.get(index);
         } else {
@@ -17779,7 +17779,7 @@ public final class DotaClientmessages {
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
       public Builder setEquips(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg value) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg value) {
         if (equipsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17796,7 +17796,7 @@ public final class DotaClientmessages {
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
       public Builder setEquips(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder builderForValue) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder builderForValue) {
         if (equipsBuilder_ == null) {
           ensureEquipsIsMutable();
           equips_.set(index, builderForValue.build());
@@ -17809,7 +17809,7 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public Builder addEquips(skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg value) {
+      public Builder addEquips(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg value) {
         if (equipsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17826,7 +17826,7 @@ public final class DotaClientmessages {
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
       public Builder addEquips(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg value) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg value) {
         if (equipsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -17843,7 +17843,7 @@ public final class DotaClientmessages {
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
       public Builder addEquips(
-          skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder builderForValue) {
         if (equipsBuilder_ == null) {
           ensureEquipsIsMutable();
           equips_.add(builderForValue.build());
@@ -17857,7 +17857,7 @@ public final class DotaClientmessages {
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
       public Builder addEquips(
-          int index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder builderForValue) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder builderForValue) {
         if (equipsBuilder_ == null) {
           ensureEquipsIsMutable();
           equips_.add(index, builderForValue.build());
@@ -17871,7 +17871,7 @@ public final class DotaClientmessages {
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
       public Builder addAllEquips(
-          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg> values) {
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg> values) {
         if (equipsBuilder_ == null) {
           ensureEquipsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -17911,14 +17911,14 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder getEquipsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder getEquipsBuilder(
           int index) {
         return getEquipsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder getEquipsOrBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder getEquipsOrBuilder(
           int index) {
         if (equipsBuilder_ == null) {
           return equips_.get(index);  } else {
@@ -17928,7 +17928,7 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public java.util.List<? extends skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder> 
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder> 
            getEquipsOrBuilderList() {
         if (equipsBuilder_ != null) {
           return equipsBuilder_.getMessageOrBuilderList();
@@ -17939,31 +17939,31 @@ public final class DotaClientmessages {
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder addEquipsBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder addEquipsBuilder() {
         return getEquipsFieldBuilder().addBuilder(
-            skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.getDefaultInstance());
+            skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.getDefaultInstance());
       }
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder addEquipsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder addEquipsBuilder(
           int index) {
         return getEquipsFieldBuilder().addBuilder(
-            index, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.getDefaultInstance());
+            index, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.getDefaultInstance());
       }
       /**
        * <code>repeated .CAdditionalEquipSlotClientMsg equips = 1;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder> 
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder> 
            getEquipsBuilderList() {
         return getEquipsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder> 
           getEquipsFieldBuilder() {
         if (equipsBuilder_ == null) {
           equipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsg.Builder, skadistats.clarity.wire.s2.proto.DotaClientmessages.CAdditionalEquipSlotClientMsgOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsg.Builder, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CAdditionalEquipSlotClientMsgOrBuilder>(
                   equips_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
                   getParentForChildren(),
@@ -18068,14 +18068,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_FillEmptySlotsWithBots> PARSER =
@@ -18153,53 +18153,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18208,7 +18208,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -18225,20 +18225,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_FillEmptySlotsWithBots)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBotsOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBotsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -18269,23 +18269,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_FillEmptySlotsWithBots_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18298,16 +18298,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots.getDefaultInstance()) return this;
         if (other.hasFillwithbots()) {
           setFillwithbots(other.getFillwithbots());
         }
@@ -18323,11 +18323,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_FillEmptySlotsWithBots) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_FillEmptySlotsWithBots) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -18465,14 +18465,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HeroStatueLike_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HeroStatueLike_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HeroStatueLike_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HeroStatueLike_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_HeroStatueLike> PARSER =
@@ -18550,53 +18550,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -18605,7 +18605,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -18622,20 +18622,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_HeroStatueLike)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLikeOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLikeOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HeroStatueLike_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HeroStatueLike_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HeroStatueLike_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HeroStatueLike_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -18666,23 +18666,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_HeroStatueLike_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_HeroStatueLike_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18695,16 +18695,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike.getDefaultInstance()) return this;
         if (other.hasOwnerPlayerId()) {
           setOwnerPlayerId(other.getOwnerPlayerId());
         }
@@ -18720,11 +18720,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_HeroStatueLike) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_HeroStatueLike) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -18862,14 +18862,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_TeamShowcaseEditor> PARSER =
@@ -18947,53 +18947,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19002,7 +19002,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -19019,20 +19019,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_TeamShowcaseEditor)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditorOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditorOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19063,23 +19063,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseEditor_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -19092,16 +19092,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor.getDefaultInstance()) return this;
         if (other.hasData()) {
           setData(other.getData());
         }
@@ -19117,11 +19117,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseEditor) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseEditor) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -19262,14 +19262,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_TeamShowcaseClientData> PARSER =
@@ -19347,53 +19347,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19402,7 +19402,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -19419,20 +19419,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_TeamShowcaseClientData)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientDataOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientDataOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19463,23 +19463,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_TeamShowcaseClientData_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -19492,16 +19492,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData.getDefaultInstance()) return this;
         if (other.hasData()) {
           setData(other.getData());
         }
@@ -19517,11 +19517,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_TeamShowcaseClientData) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_TeamShowcaseClientData) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -19647,14 +19647,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_PlayTeamShowcase> PARSER =
@@ -19708,53 +19708,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -19763,7 +19763,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -19780,20 +19780,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_PlayTeamShowcase)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcaseOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcaseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -19822,38 +19822,38 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_PlayTeamShowcase_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase(this);
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase.getDefaultInstance()) return this;
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -19866,11 +19866,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_PlayTeamShowcase) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_PlayTeamShowcase) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -19975,14 +19975,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_EventCNY2015Cmd> PARSER =
@@ -20060,53 +20060,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20115,7 +20115,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -20132,20 +20132,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_EventCNY2015Cmd)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015CmdOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015CmdOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20176,23 +20176,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_EventCNY2015Cmd_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20205,16 +20205,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd.getDefaultInstance()) return this;
         if (other.hasData()) {
           setData(other.getData());
         }
@@ -20230,11 +20230,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_EventCNY2015Cmd) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_EventCNY2015Cmd) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -20463,14 +20463,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_DemoHero_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_DemoHero_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_DemoHero_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_DemoHero_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_DemoHero> PARSER =
@@ -20641,53 +20641,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -20696,7 +20696,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -20713,20 +20713,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_DemoHero)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHeroOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHeroOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_DemoHero_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_DemoHero_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_DemoHero_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_DemoHero_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -20763,23 +20763,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_DemoHero_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_DemoHero_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20806,16 +20806,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero.getDefaultInstance()) return this;
         if (other.hasHeroId()) {
           setHeroId(other.getHeroId());
         }
@@ -20854,11 +20854,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_DemoHero) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_DemoHero) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -21188,14 +21188,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeSelect_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeSelect_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeSelect_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeSelect_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ChallengeSelect> PARSER =
@@ -21319,53 +21319,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21374,7 +21374,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -21391,20 +21391,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ChallengeSelect)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelectOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelectOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeSelect_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeSelect_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeSelect_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeSelect_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -21439,23 +21439,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeSelect_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeSelect_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21476,16 +21476,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect.getDefaultInstance()) return this;
         if (other.hasEventId()) {
           setEventId(other.getEventId());
         }
@@ -21507,11 +21507,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeSelect) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeSelect) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -21741,14 +21741,14 @@ public final class DotaClientmessages {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeReroll_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeReroll_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeReroll_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeReroll_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAClientMsg_ChallengeReroll> PARSER =
@@ -21872,53 +21872,53 @@ public final class DotaClientmessages {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -21927,7 +21927,7 @@ public final class DotaClientmessages {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -21944,20 +21944,20 @@ public final class DotaClientmessages {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAClientMsg_ChallengeReroll)
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeRerollOrBuilder {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeRerollOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeReroll_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeReroll_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeReroll_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeReroll_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.class, skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.class, skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -21992,23 +21992,23 @@ public final class DotaClientmessages {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.internal_static_CDOTAClientMsg_ChallengeReroll_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.internal_static_CDOTAClientMsg_ChallengeReroll_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll build() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll build() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll buildPartial() {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll result = new skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll result = new skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -22029,16 +22029,16 @@ public final class DotaClientmessages {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll other) {
-        if (other == skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll.getDefaultInstance()) return this;
         if (other.hasEventId()) {
           setEventId(other.getEventId());
         }
@@ -22060,11 +22060,11 @@ public final class DotaClientmessages {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.DotaClientmessages.CDOTAClientMsg_ChallengeReroll) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaClientMessages.CDOTAClientMsg_ChallengeReroll) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -22544,8 +22544,9 @@ public final class DotaClientmessages {
       "TA_CM_AbilityLearnModeToggled\020\330\002\022\034\n\027DOTA" +
       "_CM_AbilityStartUse\020\331\002\022\034\n\027DOTA_CM_Challe" +
       "ngeSelect\020\332\002\022\034\n\027DOTA_CM_ChallengeReroll\020" +
-      "\333\002\022\030\n\023DOTA_CM_ClickedBuff\020\334\002B\'\n skadista" +
-      "ts.clarity.wire.s2.protoH\001\200\001\000"
+      "\333\002\022\030\n\023DOTA_CM_ClickedBuff\020\334\002B=\n skadista" +
+      "ts.clarity.wire.s2.protoB\024S2DotaClientMe" +
+      "ssagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22558,7 +22559,7 @@ public final class DotaClientmessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.s2.proto.DotaCommonmessages.getDescriptor(),
+          skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.getDescriptor(),
         }, assigner);
     internal_static_CDOTAClientMsg_MapPing_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -22848,7 +22849,7 @@ public final class DotaClientmessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAClientMsg_ChallengeReroll_descriptor,
         new java.lang.String[] { "EventId", "SlotId", "SequenceId", });
-    skadistats.clarity.wire.s2.proto.DotaCommonmessages.getDescriptor();
+    skadistats.clarity.wire.s2.proto.S2DotaCommonMessages.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

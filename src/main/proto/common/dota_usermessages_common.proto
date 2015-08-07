@@ -1,4 +1,5 @@
 option java_package = "skadistats.clarity.wire.common.proto";
+option java_outer_classname = "DotaUserMessages";
 
 option cc_generic_services = false;
 
