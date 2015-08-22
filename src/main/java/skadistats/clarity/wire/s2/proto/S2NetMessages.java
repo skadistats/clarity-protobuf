@@ -15207,6 +15207,15 @@ public final class S2NetMessages {
      * <code>optional int32 send_node_sym = 9;</code>
      */
     int getSendNodeSym();
+
+    /**
+     * <code>optional int32 var_encoder_sym = 10;</code>
+     */
+    boolean hasVarEncoderSym();
+    /**
+     * <code>optional int32 var_encoder_sym = 10;</code>
+     */
+    int getVarEncoderSym();
   }
   /**
    * Protobuf type {@code ProtoFlattenedSerializerField_t}
@@ -15303,6 +15312,11 @@ public final class S2NetMessages {
             case 72: {
               bitField0_ |= 0x00000100;
               sendNodeSym_ = input.readInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              varEncoderSym_ = input.readInt32();
               break;
             }
           }
@@ -15480,6 +15494,21 @@ public final class S2NetMessages {
       return sendNodeSym_;
     }
 
+    public static final int VAR_ENCODER_SYM_FIELD_NUMBER = 10;
+    private int varEncoderSym_;
+    /**
+     * <code>optional int32 var_encoder_sym = 10;</code>
+     */
+    public boolean hasVarEncoderSym() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional int32 var_encoder_sym = 10;</code>
+     */
+    public int getVarEncoderSym() {
+      return varEncoderSym_;
+    }
+
     private void initFields() {
       varTypeSym_ = 0;
       varNameSym_ = 0;
@@ -15490,6 +15519,7 @@ public final class S2NetMessages {
       fieldSerializerNameSym_ = 0;
       fieldSerializerVersion_ = 0;
       sendNodeSym_ = 0;
+      varEncoderSym_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -15530,6 +15560,9 @@ public final class S2NetMessages {
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeInt32(9, sendNodeSym_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeInt32(10, varEncoderSym_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -15575,6 +15608,10 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(9, sendNodeSym_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(10, varEncoderSym_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -15711,6 +15748,8 @@ public final class S2NetMessages {
         bitField0_ = (bitField0_ & ~0x00000080);
         sendNodeSym_ = 0;
         bitField0_ = (bitField0_ & ~0x00000100);
+        varEncoderSym_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -15775,6 +15814,10 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000100;
         }
         result.sendNodeSym_ = sendNodeSym_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.varEncoderSym_ = varEncoderSym_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -15817,6 +15860,9 @@ public final class S2NetMessages {
         }
         if (other.hasSendNodeSym()) {
           setSendNodeSym(other.getSendNodeSym());
+        }
+        if (other.hasVarEncoderSym()) {
+          setVarEncoderSym(other.getVarEncoderSym());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -16129,6 +16175,38 @@ public final class S2NetMessages {
       public Builder clearSendNodeSym() {
         bitField0_ = (bitField0_ & ~0x00000100);
         sendNodeSym_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int varEncoderSym_ ;
+      /**
+       * <code>optional int32 var_encoder_sym = 10;</code>
+       */
+      public boolean hasVarEncoderSym() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional int32 var_encoder_sym = 10;</code>
+       */
+      public int getVarEncoderSym() {
+        return varEncoderSym_;
+      }
+      /**
+       * <code>optional int32 var_encoder_sym = 10;</code>
+       */
+      public Builder setVarEncoderSym(int value) {
+        bitField0_ |= 0x00000200;
+        varEncoderSym_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 var_encoder_sym = 10;</code>
+       */
+      public Builder clearVarEncoderSym() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        varEncoderSym_ = 0;
         onChanged();
         return this;
       }
@@ -18159,31 +18237,32 @@ public final class S2NetMessages {
       "T\n\026CSVCMsg_FullFrameSplit\022\014\n\004tick\030\001 \001(\005\022",
       "\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030" +
       "\004 \001(\014\"@\n\034CSVCMsg_ClearAllStringTables\022\017\n" +
-      "\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001(\r\"\371\001\n\037Prot" +
+      "\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001(\r\"\222\002\n\037Prot" +
       "oFlattenedSerializerField_t\022\024\n\014var_type_" +
       "sym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001(\005\022\021\n\tbit_c" +
       "ount\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n\nhigh_va" +
       "lue\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001(\005\022!\n\031field" +
       "_serializer_name_sym\030\007 \001(\005\022 \n\030field_seri" +
       "alizer_version\030\010 \001(\005\022\025\n\rsend_node_sym\030\t " +
-      "\001(\005\"k\n\032ProtoFlattenedSerializer_t\022\033\n\023ser",
-      "ializer_name_sym\030\001 \001(\005\022\032\n\022serializer_ver" +
-      "sion\030\002 \001(\005\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSV" +
-      "CMsg_FlattenedSerializer\0220\n\013serializers\030" +
-      "\001 \003(\0132\033.ProtoFlattenedSerializer_t\022\017\n\007sy" +
-      "mbols\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlatt" +
-      "enedSerializerField_t*\263\002\n\014SVC_Messages\022\022" +
-      "\n\016svc_ServerInfo\020(\022\033\n\027svc_FlattenedSeria" +
-      "lizer\020)\022\021\n\rsvc_ClassInfo\020*\022\031\n\025svc_Create" +
-      "StringTable\020,\022\031\n\025svc_UpdateStringTable\020-" +
-      "\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_VoiceData\020/\022\016",
-      "\n\nsvc_Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_C" +
-      "learAllStringTables\0203\022\026\n\022svc_PacketEntit" +
-      "ies\0207\022\024\n\020svc_TempEntities\020D\022\026\n\022svc_FullF" +
-      "rameSplit\020F*L\n\021VoiceDataFormat_t\022\032\n\026VOIC" +
-      "EDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FORMAT" +
-      "_ENGINE\020\001B4\n skadistats.clarity.wire.s2." +
-      "protoB\rS2NetMessages\200\001\000"
+      "\001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\"k\n\032ProtoFla",
+      "ttenedSerializer_t\022\033\n\023serializer_name_sy" +
+      "m\030\001 \001(\005\022\032\n\022serializer_version\030\002 \001(\005\022\024\n\014f" +
+      "ields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg_FlattenedS" +
+      "erializer\0220\n\013serializers\030\001 \003(\0132\033.ProtoFl" +
+      "attenedSerializer_t\022\017\n\007symbols\030\002 \003(\t\0220\n\006" +
+      "fields\030\003 \003(\0132 .ProtoFlattenedSerializerF" +
+      "ield_t*\263\002\n\014SVC_Messages\022\022\n\016svc_ServerInf" +
+      "o\020(\022\033\n\027svc_FlattenedSerializer\020)\022\021\n\rsvc_" +
+      "ClassInfo\020*\022\031\n\025svc_CreateStringTable\020,\022\031" +
+      "\n\025svc_UpdateStringTable\020-\022\021\n\rsvc_VoiceIn",
+      "it\020.\022\021\n\rsvc_VoiceData\020/\022\016\n\nsvc_Sounds\0201\022" +
+      "\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStringTa" +
+      "bles\0203\022\026\n\022svc_PacketEntities\0207\022\024\n\020svc_Te" +
+      "mpEntities\020D\022\026\n\022svc_FullFrameSplit\020F*L\n\021" +
+      "VoiceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_ST" +
+      "EAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001B4\n sk" +
+      "adistats.clarity.wire.s2.protoB\rS2NetMes" +
+      "sages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18299,7 +18378,7 @@ public final class S2NetMessages {
     internal_static_ProtoFlattenedSerializerField_t_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializerField_t_descriptor,
-        new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", });
+        new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", "VarEncoderSym", });
     internal_static_ProtoFlattenedSerializer_t_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_ProtoFlattenedSerializer_t_fieldAccessorTable = new
