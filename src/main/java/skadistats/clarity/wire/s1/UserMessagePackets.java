@@ -76,7 +76,7 @@ public class UserMessagePackets {
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_CharacterSpeakConcept_VALUE, null); // MISSING
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_SwapVerify_VALUE, S1DotaUserMessages.CDOTAUserMsg_SwapVerify.class);
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, S1DotaUserMessages.CDOTAUserMsg_WorldLine.class);
-        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_TournamentDrop_VALUE, S1DotaUserMessages.CDOTAUserMsg_TournamentDrop.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_TournamentDrop_VALUE, null); // MISSING
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemAlert_VALUE, S1DotaUserMessages.CDOTAUserMsg_ItemAlert.class);
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_HalloweenDrops_VALUE, S1DotaUserMessages.CDOTAUserMsg_HalloweenDrops.class);
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheel_VALUE, S1DotaUserMessages.CDOTAUserMsg_ChatWheel.class);
@@ -113,6 +113,15 @@ public class UserMessagePackets {
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_BuyBackStateAlert_VALUE, S1DotaUserMessages.CDOTAUserMsg_BuyBackStateAlert.class);
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_QuickBuyAlert_VALUE, S1DotaUserMessages.CDOTAUserMsg_QuickBuyAlert.class);
         USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_StatsHeroDetails_VALUE, S1DotaUserMessages.CDOTAUserMsg_StatsHeroMinuteDetails.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_PredictionResult_VALUE, S1DotaUserMessages.CDOTAUserMsg_PredictionResult.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_ModifierAlert_VALUE, S1DotaUserMessages.CDOTAUserMsg_ModifierAlert.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_HPManaAlert_VALUE, S1DotaUserMessages.CDOTAUserMsg_HPManaAlert.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_GlyphAlert_VALUE, S1DotaUserMessages.CDOTAUserMsg_GlyphAlert.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_BeastChat_VALUE, S1DotaUserMessages.CDOTAUserMsg_BeastChat.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_SpectatorPlayerUnitOrders_VALUE, S1DotaUserMessages.CDOTAUserMsg_SpectatorPlayerUnitOrders.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_CompendiumState_VALUE, S1DotaUserMessages.CDOTAUserMsg_CompendiumState.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionAbility_VALUE, S1DotaUserMessages.CDOTAUserMsg_ProjectionAbility.class);
+        USERMSG.put(S1DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionEvent_VALUE, S1DotaUserMessages.CDOTAUserMsg_ProjectionEvent.class);
     }
 
     public static boolean isKnownClass(Class<? extends GeneratedMessage> clazz) {
