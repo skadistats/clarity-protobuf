@@ -1,7 +1,6 @@
 option java_package = "skadistats.clarity.wire.s1.proto";
 option java_outer_classname = "S1NetMessages";
 
-import "google/protobuf/descriptor.proto";
 import "networkbasetypes.proto";
 
 enum CLC_Messages {

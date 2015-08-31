@@ -1,5 +1,5 @@
-option java_package = "skadistats.clarity.wire.s2.proto";
-option java_outer_classname = "S2DotaCommonMessages";
+option java_package = "skadistats.clarity.wire.common.proto";
+option java_outer_classname = "DotaCommonMessages";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
@@ -146,6 +146,11 @@ message CDOTAMsg_ItemAlert {
 	optional int32 itemid = 3;
 }
 
+message CDOTAMsg_EnemyItemAlert {
+	optional uint32 player_id = 1;
+	optional int32 itemid = 2;
+}
+
 message CDOTAMsg_MapLine {
 	optional int32 x = 1;
 	optional int32 y = 2;
@@ -171,4 +176,3 @@ message CDOTAMsg_CoachHUDPing {
 	optional uint32 y = 2;
 	optional string tgtpath = 3;
 }
-
