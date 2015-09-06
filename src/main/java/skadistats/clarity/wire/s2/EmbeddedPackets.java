@@ -176,6 +176,8 @@ public class EmbeddedPackets {
         /* 549 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CustomHudElement_Modify_VALUE, DotaUserMessages.CDOTAUserMsg_CustomHudElement_Modify.class);
         /* 550 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CustomHudElement_Destroy_VALUE, DotaUserMessages.CDOTAUserMsg_CustomHudElement_Destroy.class);
         /* 551 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CompendiumState_VALUE, DotaUserMessages.CDOTAUserMsg_CompendiumState.class);
+        /* 552 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionAbility_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionAbility.class);
+        /* 553 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionEvent_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionEvent.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {
