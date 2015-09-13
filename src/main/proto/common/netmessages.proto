@@ -1,7 +1,14 @@
 option java_package = "skadistats.clarity.wire.common.proto";
 option java_outer_classname = "NetMessages";
 
+import "networkbasetypes.proto";
+
 option cc_generic_services = false;
+
+enum VoiceDataFormat_t {
+	VOICEDATA_FORMAT_STEAM = 0;
+	VOICEDATA_FORMAT_ENGINE = 1;
+}
 
 message CSVCMsg_GameEventList {
 	message key_t {
@@ -30,5 +37,95 @@ message CSVCMsg_PacketEntities {
 	optional uint32 active_spawngroup_handle = 9;
 	optional uint32 max_spawngroup_creationsequence = 10;
 }
+
+message CSVCMsg_ServerInfo {
+	optional int32 protocol = 1;
+	optional int32 server_count = 2;
+	optional bool is_dedicated = 3;
+	optional bool is_hltv = 4;
+	optional bool is_replay = 5;
+	optional int32 c_os = 6;
+	optional fixed32 map_crc = 7;
+	optional fixed32 client_crc = 8;
+	optional fixed32 string_table_crc = 9;
+	optional int32 max_clients = 10;
+	optional int32 max_classes = 11;
+	optional int32 player_slot = 12;
+	optional float tick_interval = 13;
+	optional string game_dir = 14;
+	optional string map_name = 15;
+	optional string sky_name = 16;
+	optional string host_name = 17;
+	optional string addon_name = 18;
+	optional CSVCMsg_GameSessionConfiguration game_session_config = 19;
+	optional bytes game_session_manifest = 20;
+}
+
+message CSVCMsg_ClassInfo {
+	message class_t {
+		optional int32 class_id = 1;
+		optional string data_table_name = 2;
+		optional string class_name = 3;
+	}
+
+	optional bool create_on_client = 1;
+	repeated CSVCMsg_ClassInfo.class_t classes = 2;
+}
+
+message CSVCMsg_SetView {
+	optional int32 entity_index = 1;
+	optional int32 slot = 2;
+}
+
+message CSVCMsg_Print {
+	optional string text = 1;
+}
+
+message CSVCMsg_VoiceInit {
+	optional int32 quality = 1;
+	optional string codec = 2;
+	optional int32 version = 3 [default = 0];
+}
+
+message CSVCMsg_Sounds {
+	message sounddata_t {
+		optional sint32 origin_x = 1;
+		optional sint32 origin_y = 2;
+		optional sint32 origin_z = 3;
+		optional uint32 volume = 4;
+		optional float delay_value = 5;
+		optional int32 sequence_number = 6;
+		optional int32 entity_index = 7;
+		optional int32 channel = 8;
+		optional int32 pitch = 9;
+		optional int32 flags = 10;
+		optional uint32 sound_num = 11;
+		optional fixed32 sound_num_handle = 12;
+		optional int32 speaker_entity = 13;
+		optional int32 random_seed = 14;
+		optional int32 sound_level = 15;
+		optional bool is_sentence = 16;
+		optional bool is_ambient = 17;
+		optional uint32 guid = 18;
+		optional fixed64 sound_resource_id = 19;
+	}
+
+	optional bool reliable_sound = 1;
+	repeated CSVCMsg_Sounds.sounddata_t sounds = 2;
+}
+
+message CSVCMsg_UpdateStringTable {
+	optional int32 table_id = 1;
+	optional int32 num_changed_entries = 2;
+	optional bytes string_data = 3;
+}
+
+message CSVCMsg_FullFrameSplit {
+	optional int32 tick = 1;
+	optional int32 section = 2;
+	optional int32 total = 3;
+	optional bytes data = 4;
+}
+
 
 

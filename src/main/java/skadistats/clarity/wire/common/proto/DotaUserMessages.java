@@ -4174,11 +4174,11 @@ public final class DotaUserMessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+     * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
      */
     boolean hasType();
     /**
-     * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+     * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
      */
     skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE getType();
 
@@ -4414,13 +4414,13 @@ public final class DotaUserMessages {
     public static final int TYPE_FIELD_NUMBER = 1;
     private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE type_;
     /**
-     * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+     * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+     * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
      */
     public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE getType() {
       return type_;
@@ -4579,10 +4579,6 @@ public final class DotaUserMessages {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -4925,10 +4921,6 @@ public final class DotaUserMessages {
       }
 
       public final boolean isInitialized() {
-        if (!hasType()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -4953,19 +4945,19 @@ public final class DotaUserMessages {
 
       private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE.CHAT_MESSAGE_INVALID;
       /**
-       * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+       * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+       * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
        */
       public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE getType() {
         return type_;
       }
       /**
-       * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+       * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
        */
       public Builder setType(skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_CHAT_MESSAGE value) {
         if (value == null) {
@@ -4977,7 +4969,7 @@ public final class DotaUserMessages {
         return this;
       }
       /**
-       * <code>required .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
+       * <code>optional .DOTA_CHAT_MESSAGE type = 1 [default = CHAT_MESSAGE_INVALID];</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -89815,7 +89807,7 @@ public final class DotaUserMessages {
       "\t\"$\n\021CDOTAUserMsg_Ping\022\017\n\007message\030\001 \001(\t\"" +
       ",\n\027CDOTAUserMsg_SwapVerify\022\021\n\tplayer_id\030" +
       "\001 \001(\r\"\217\002\n\026CDOTAUserMsg_ChatEvent\0226\n\004type" +
-      "\030\001 \002(\0162\022.DOTA_CHAT_MESSAGE:\024CHAT_MESSAGE" +
+      "\030\001 \001(\0162\022.DOTA_CHAT_MESSAGE:\024CHAT_MESSAGE" +
       "_INVALID\022\r\n\005value\030\002 \001(\r\022\026\n\nplayerid_1\030\003 " +
       "\001(\021:\002-1\022\026\n\nplayerid_2\030\004 \001(\021:\002-1\022\026\n\nplaye" +
       "rid_3\030\005 \001(\021:\002-1\022\026\n\nplayerid_4\030\006 \001(\021:\002-1\022",
