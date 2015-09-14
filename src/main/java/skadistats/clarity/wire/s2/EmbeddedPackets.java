@@ -96,6 +96,8 @@ public class EmbeddedPackets {
         /* 466 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatEvent_VALUE, DotaUserMessages.CDOTAUserMsg_ChatEvent.class);
         /* 471 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CreateLinearProjectile_VALUE, DotaUserMessages.CDOTAUserMsg_CreateLinearProjectile.class);
         /* 472 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DestroyLinearProjectile_VALUE, DotaUserMessages.CDOTAUserMsg_DestroyLinearProjectile.class);
+        /* 474 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GlobalLightColor_VALUE, DotaUserMessages.CDOTAUserMsg_GlobalLightColor.class);
+        /* 475 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GlobalLightDirection_VALUE, DotaUserMessages.CDOTAUserMsg_GlobalLightDirection.class);
         /* 473 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DodgeTrackingProjectiles_VALUE, DotaUserMessages.CDOTAUserMsg_DodgeTrackingProjectiles.class);
         /* 477 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_LocationPing_VALUE, DotaUserMessages.CDOTAUserMsg_LocationPing.class);
         /* 478 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MapLine_VALUE, DotaUserMessages.CDOTAUserMsg_MapLine.class);
@@ -127,8 +129,6 @@ public class EmbeddedPackets {
 //        /* 467 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatHeroPositions_VALUE, DotaUserMessages.CDOTAUserMsg_CombatHeroPositions.class);
 //        /* 468 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatLogData_VALUE, null);
 //        /* 470 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatLogShowDeath_VALUE, DotaUserMessages.CDOTAUserMsg_CombatLogShowDeath.class);
-//        /* 474 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GlobalLightColor_VALUE, DotaUserMessages.CDOTAUserMsg_GlobalLightColor.class);
-//        /* 475 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GlobalLightDirection_VALUE, DotaUserMessages.CDOTAUserMsg_GlobalLightDirection.class);
 //        /* 476 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_InvalidCommand_VALUE, DotaUserMessages.CDOTAUserMsg_InvalidCommand.class);
 //        /* 479 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MiniKillCamInfo_VALUE, DotaUserMessages.CDOTAUserMsg_MiniKillCamInfo.class);
 //        /* 480 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MinimapDebugPoint_VALUE, DotaUserMessages.CDOTAUserMsg_MinimapDebugPoint.class);
