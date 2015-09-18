@@ -87,6 +87,24 @@ message CSVCMsg_VoiceInit {
 	optional int32 version = 3 [default = 0];
 }
 
+message CSVCMsg_VoiceData {
+	optional .CMsgVoiceAudio audio = 1;
+	optional int32 client = 2;
+	optional bool proximity = 3;
+	optional fixed64 xuid = 4;
+	optional int32 audible_mask = 5;
+	optional uint32 tick = 6;
+}
+
+message CMsgVoiceAudio {
+	optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];
+	optional bytes voice_data = 2;
+	optional int32 sequence_bytes = 3;
+	optional uint32 section_number = 4;
+	optional uint32 sample_rate = 5;
+	optional uint32 uncompressed_sample_offset = 6;
+}
+
 message CSVCMsg_Sounds {
 	message sounddata_t {
 		optional sint32 origin_x = 1;

@@ -28,6 +28,7 @@ public class EmbeddedPackets {
         /*  44 */ EMBED.put(S2NetMessages.SVC_Messages.svc_CreateStringTable_VALUE, S2NetMessages.CSVCMsg_CreateStringTable.class);
         /*  45 */ EMBED.put(S2NetMessages.SVC_Messages.svc_UpdateStringTable_VALUE, NetMessages.CSVCMsg_UpdateStringTable.class);
         /*  46 */ EMBED.put(S2NetMessages.SVC_Messages.svc_VoiceInit_VALUE, NetMessages.CSVCMsg_VoiceInit.class);
+        /*  47 */ EMBED.put(S2NetMessages.SVC_Messages.svc_VoiceData_VALUE, NetMessages.CSVCMsg_VoiceData.class);
         /*  48 */ EMBED.put(S2NetMessages.SVC_Messages.svc_Print_VALUE, NetMessages.CSVCMsg_Print.class);
         /*  50 */ EMBED.put(S2NetMessages.SVC_Messages.svc_SetView_VALUE, NetMessages.CSVCMsg_SetView.class);
         /*  51 */ EMBED.put(S2NetMessages.SVC_Messages.svc_ClearAllStringTables_VALUE, S2NetMessages.CSVCMsg_ClearAllStringTables.class);
@@ -36,6 +37,7 @@ public class EmbeddedPackets {
 
         /* 118 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_SayText2_VALUE, S2UserMessages.CUserMessageSayText2.class);
         /* 124 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_TextMsg_VALUE, S2UserMessages.CUserMessageTextMsg.class);
+        /* 128 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_VoiceMask_VALUE, S2UserMessages.CUserMessageVoiceMask.class);
         /* 130 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_SendAudio_VALUE, S2UserMessages.CUserMessageSendAudio.class);
 
 //        /* 101 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
@@ -60,7 +62,6 @@ public class EmbeddedPackets {
 //        /* 125 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ScreenTilt_VALUE, S2UserMessages.CUserMessageScreenTilt.class);
 //        /* 126 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_Train_VALUE, S2UserMessages.CUserMessageTrain.class);
 //        /* 127 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_VGUIMenu_VALUE, S2UserMessages.CUserMessageVGUIMenu.class);
-//        /* 128 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_VoiceMask_VALUE, S2UserMessages.CUserMessageVoiceMask.class);
 //        /* 129 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_VoiceSubtitle_VALUE, S2UserMessages.CUserMessageVoiceSubtitle.class);
 //        /* 131 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ItemPickup_VALUE, S2UserMessages.CUserMessageItemPickup.class);
 //        /* 132 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_AmmoDenied_VALUE, S2UserMessages.CUserMessageAmmoDenied.class);
@@ -109,6 +110,7 @@ public class EmbeddedPackets {
         /* 488 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UnitEvent_VALUE, DotaUserMessages.CDOTAUserMsg_UnitEvent.class);
         /* 489 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
         /* 491 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HudError_VALUE, DotaUserMessages.CDOTAUserMsg_HudError.class);
+        /* 497 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);
         /* 501 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheel_VALUE, DotaUserMessages.CDOTAUserMsg_ChatWheel.class);
         /* 506 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GamerulesStateChanged_VALUE, DotaUserMessages.CDOTAUserMsg_GamerulesStateChanged.class);
         /* 512 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanPopup.class);
@@ -141,7 +143,6 @@ public class EmbeddedPackets {
 //        /* 494 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemFound_VALUE, DotaUserMessages.CDOTAUserMsg_ItemFound.class);
 //        /* 495 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CharacterSpeakConcept_VALUE, null);
 //        /* 496 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SwapVerify_VALUE, DotaUserMessages.CDOTAUserMsg_SwapVerify.class);
-//        /* 497 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);
 //        /* 498 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TournamentDrop_VALUE, null);
 //        /* 499 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_ItemAlert.class);
 //        /* 500 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HalloweenDrops_VALUE, DotaUserMessages.CDOTAUserMsg_HalloweenDrops.class);
