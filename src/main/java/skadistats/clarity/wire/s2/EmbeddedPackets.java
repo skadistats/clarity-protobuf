@@ -36,6 +36,7 @@ public class EmbeddedPackets {
         /*  60 */ EMBED.put(S2NetMessages.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
         /*  70 */ EMBED.put(S2NetMessages.SVC_Messages.svc_FullFrameSplit_VALUE, NetMessages.CSVCMsg_FullFrameSplit.class);
 
+        /* 115 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ResetHUD_VALUE, S2UserMessages.CUserMessageResetHUD.class);
         /* 118 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_SayText2_VALUE, S2UserMessages.CUserMessageSayText2.class);
         /* 124 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_TextMsg_VALUE, S2UserMessages.CUserMessageTextMsg.class);
         /* 128 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_VoiceMask_VALUE, S2UserMessages.CUserMessageVoiceMask.class);
@@ -54,7 +55,6 @@ public class EmbeddedPackets {
 //        /* 112 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_KeyHintText_VALUE, S2UserMessages.CUserMessageKeyHintText.class);
 //        /* 113 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ColoredText_VALUE, S2UserMessages.CUserMessageColoredText.class);
 //        /* 114 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_RequestState_VALUE, S2UserMessages.CUserMessageRequestState.class);
-//        /* 115 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ResetHUD_VALUE, S2UserMessages.CUserMessageResetHUD.class);
 //        /* 116 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_Rumble_VALUE, S2UserMessages.CUserMessageRumble.class);
 //        /* 117 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_SayText_VALUE, S2UserMessages.CUserMessageSayText.class);
 //        /* 119 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_SayTextChannel_VALUE, S2UserMessages.CUserMessageSayTextChannel.class);
