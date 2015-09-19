@@ -111,6 +111,7 @@ public class EmbeddedPackets {
         /* 488 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UnitEvent_VALUE, DotaUserMessages.CDOTAUserMsg_UnitEvent.class);
         /* 489 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
         /* 491 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HudError_VALUE, DotaUserMessages.CDOTAUserMsg_HudError.class);
+        /* 492 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemPurchased_VALUE, DotaUserMessages.CDOTAUserMsg_ItemPurchased.class);
         /* 497 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);
         /* 501 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheel_VALUE, DotaUserMessages.CDOTAUserMsg_ChatWheel.class);
         /* 506 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GamerulesStateChanged_VALUE, DotaUserMessages.CDOTAUserMsg_GamerulesStateChanged.class);
