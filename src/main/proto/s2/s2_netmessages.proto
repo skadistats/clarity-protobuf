@@ -95,3 +95,21 @@ message CSVCMsg_FlattenedSerializer {
 	repeated string symbols = 2;
 	repeated ProtoFlattenedSerializerField_t fields = 3;
 }
+
+message CMsgIPCAddress {
+	optional fixed64 computer_guid = 1;
+	optional uint32 process_id = 2;
+}
+
+message CMsgServerPeer {
+	optional int32 player_slot = 1;
+	optional fixed64 steamid = 2;
+	optional .CMsgIPCAddress ipc = 3;
+	optional bool they_hear_you = 4;
+	optional bool you_hear_them = 5;
+	optional bool is_listenserver_host = 6;
+}
+
+message CSVCMsg_PeerList {
+	repeated .CMsgServerPeer peer = 1;
+}

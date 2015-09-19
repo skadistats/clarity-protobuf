@@ -28,11 +28,12 @@ public class EmbeddedPackets {
         /*  44 */ EMBED.put(S2NetMessages.SVC_Messages.svc_CreateStringTable_VALUE, S2NetMessages.CSVCMsg_CreateStringTable.class);
         /*  45 */ EMBED.put(S2NetMessages.SVC_Messages.svc_UpdateStringTable_VALUE, NetMessages.CSVCMsg_UpdateStringTable.class);
         /*  46 */ EMBED.put(S2NetMessages.SVC_Messages.svc_VoiceInit_VALUE, NetMessages.CSVCMsg_VoiceInit.class);
-        /*  47 */ EMBED.put(S2NetMessages.SVC_Messages.svc_VoiceData_VALUE, NetMessages.CSVCMsg_VoiceData.class);
+        /*  47 */ EMBED.put(S2NetMessages.SVC_Messages.svc_VoiceData_VALUE, S2NetMessages.CSVCMsg_VoiceData.class);
         /*  48 */ EMBED.put(S2NetMessages.SVC_Messages.svc_Print_VALUE, NetMessages.CSVCMsg_Print.class);
         /*  50 */ EMBED.put(S2NetMessages.SVC_Messages.svc_SetView_VALUE, NetMessages.CSVCMsg_SetView.class);
         /*  51 */ EMBED.put(S2NetMessages.SVC_Messages.svc_ClearAllStringTables_VALUE, S2NetMessages.CSVCMsg_ClearAllStringTables.class);
         /*  55 */ EMBED.put(S2NetMessages.SVC_Messages.svc_PacketEntities_VALUE, NetMessages.CSVCMsg_PacketEntities.class);
+        /*  60 */ EMBED.put(S2NetMessages.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
         /*  70 */ EMBED.put(S2NetMessages.SVC_Messages.svc_FullFrameSplit_VALUE, NetMessages.CSVCMsg_FullFrameSplit.class);
 
         /* 118 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_SayText2_VALUE, S2UserMessages.CUserMessageSayText2.class);

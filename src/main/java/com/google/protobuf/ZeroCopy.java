@@ -6,6 +6,10 @@ public final class ZeroCopy {
         return new LiteralByteString(array);
     }
 
+    public static ByteString wrapBounded(final byte[] array, int offset, int length) {
+        return new BoundedByteString(array, offset, length);
+    }
+
     public static byte[] extract(final ByteString buf) {
         if (buf instanceof LiteralByteString) {
             return ((LiteralByteString) buf).bytes;

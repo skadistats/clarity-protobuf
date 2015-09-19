@@ -6626,6 +6626,2055 @@ public final class S2NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_FlattenedSerializer)
   }
 
+  public interface CMsgIPCAddressOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgIPCAddress)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional fixed64 computer_guid = 1;</code>
+     */
+    boolean hasComputerGuid();
+    /**
+     * <code>optional fixed64 computer_guid = 1;</code>
+     */
+    long getComputerGuid();
+
+    /**
+     * <code>optional uint32 process_id = 2;</code>
+     */
+    boolean hasProcessId();
+    /**
+     * <code>optional uint32 process_id = 2;</code>
+     */
+    int getProcessId();
+  }
+  /**
+   * Protobuf type {@code CMsgIPCAddress}
+   */
+  public static final class CMsgIPCAddress extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgIPCAddress)
+      CMsgIPCAddressOrBuilder {
+    // Use CMsgIPCAddress.newBuilder() to construct.
+    private CMsgIPCAddress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgIPCAddress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgIPCAddress defaultInstance;
+    public static CMsgIPCAddress getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgIPCAddress getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgIPCAddress(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 9: {
+              bitField0_ |= 0x00000001;
+              computerGuid_ = input.readFixed64();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              processId_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgIPCAddress_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgIPCAddress_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CMsgIPCAddress> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgIPCAddress>() {
+      public CMsgIPCAddress parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgIPCAddress(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgIPCAddress> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int COMPUTER_GUID_FIELD_NUMBER = 1;
+    private long computerGuid_;
+    /**
+     * <code>optional fixed64 computer_guid = 1;</code>
+     */
+    public boolean hasComputerGuid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional fixed64 computer_guid = 1;</code>
+     */
+    public long getComputerGuid() {
+      return computerGuid_;
+    }
+
+    public static final int PROCESS_ID_FIELD_NUMBER = 2;
+    private int processId_;
+    /**
+     * <code>optional uint32 process_id = 2;</code>
+     */
+    public boolean hasProcessId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 process_id = 2;</code>
+     */
+    public int getProcessId() {
+      return processId_;
+    }
+
+    private void initFields() {
+      computerGuid_ = 0L;
+      processId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeFixed64(1, computerGuid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, processId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(1, computerGuid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, processId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgIPCAddress}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgIPCAddress)
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgIPCAddress_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgIPCAddress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        computerGuid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        processId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgIPCAddress_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress build() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress result = new skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.computerGuid_ = computerGuid_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.processId_ = processId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance()) return this;
+        if (other.hasComputerGuid()) {
+          setComputerGuid(other.getComputerGuid());
+        }
+        if (other.hasProcessId()) {
+          setProcessId(other.getProcessId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long computerGuid_ ;
+      /**
+       * <code>optional fixed64 computer_guid = 1;</code>
+       */
+      public boolean hasComputerGuid() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional fixed64 computer_guid = 1;</code>
+       */
+      public long getComputerGuid() {
+        return computerGuid_;
+      }
+      /**
+       * <code>optional fixed64 computer_guid = 1;</code>
+       */
+      public Builder setComputerGuid(long value) {
+        bitField0_ |= 0x00000001;
+        computerGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 computer_guid = 1;</code>
+       */
+      public Builder clearComputerGuid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        computerGuid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int processId_ ;
+      /**
+       * <code>optional uint32 process_id = 2;</code>
+       */
+      public boolean hasProcessId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 process_id = 2;</code>
+       */
+      public int getProcessId() {
+        return processId_;
+      }
+      /**
+       * <code>optional uint32 process_id = 2;</code>
+       */
+      public Builder setProcessId(int value) {
+        bitField0_ |= 0x00000002;
+        processId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 process_id = 2;</code>
+       */
+      public Builder clearProcessId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        processId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgIPCAddress)
+    }
+
+    static {
+      defaultInstance = new CMsgIPCAddress(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgIPCAddress)
+  }
+
+  public interface CMsgServerPeerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgServerPeer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 player_slot = 1;</code>
+     */
+    boolean hasPlayerSlot();
+    /**
+     * <code>optional int32 player_slot = 1;</code>
+     */
+    int getPlayerSlot();
+
+    /**
+     * <code>optional fixed64 steamid = 2;</code>
+     */
+    boolean hasSteamid();
+    /**
+     * <code>optional fixed64 steamid = 2;</code>
+     */
+    long getSteamid();
+
+    /**
+     * <code>optional .CMsgIPCAddress ipc = 3;</code>
+     */
+    boolean hasIpc();
+    /**
+     * <code>optional .CMsgIPCAddress ipc = 3;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress getIpc();
+    /**
+     * <code>optional .CMsgIPCAddress ipc = 3;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder getIpcOrBuilder();
+
+    /**
+     * <code>optional bool they_hear_you = 4;</code>
+     */
+    boolean hasTheyHearYou();
+    /**
+     * <code>optional bool they_hear_you = 4;</code>
+     */
+    boolean getTheyHearYou();
+
+    /**
+     * <code>optional bool you_hear_them = 5;</code>
+     */
+    boolean hasYouHearThem();
+    /**
+     * <code>optional bool you_hear_them = 5;</code>
+     */
+    boolean getYouHearThem();
+
+    /**
+     * <code>optional bool is_listenserver_host = 6;</code>
+     */
+    boolean hasIsListenserverHost();
+    /**
+     * <code>optional bool is_listenserver_host = 6;</code>
+     */
+    boolean getIsListenserverHost();
+  }
+  /**
+   * Protobuf type {@code CMsgServerPeer}
+   */
+  public static final class CMsgServerPeer extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgServerPeer)
+      CMsgServerPeerOrBuilder {
+    // Use CMsgServerPeer.newBuilder() to construct.
+    private CMsgServerPeer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgServerPeer(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgServerPeer defaultInstance;
+    public static CMsgServerPeer getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgServerPeer getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgServerPeer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              playerSlot_ = input.readInt32();
+              break;
+            }
+            case 17: {
+              bitField0_ |= 0x00000002;
+              steamid_ = input.readFixed64();
+              break;
+            }
+            case 26: {
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = ipc_.toBuilder();
+              }
+              ipc_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(ipc_);
+                ipc_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              theyHearYou_ = input.readBool();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              youHearThem_ = input.readBool();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              isListenserverHost_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgServerPeer_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgServerPeer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CMsgServerPeer> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgServerPeer>() {
+      public CMsgServerPeer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgServerPeer(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgServerPeer> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PLAYER_SLOT_FIELD_NUMBER = 1;
+    private int playerSlot_;
+    /**
+     * <code>optional int32 player_slot = 1;</code>
+     */
+    public boolean hasPlayerSlot() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 player_slot = 1;</code>
+     */
+    public int getPlayerSlot() {
+      return playerSlot_;
+    }
+
+    public static final int STEAMID_FIELD_NUMBER = 2;
+    private long steamid_;
+    /**
+     * <code>optional fixed64 steamid = 2;</code>
+     */
+    public boolean hasSteamid() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional fixed64 steamid = 2;</code>
+     */
+    public long getSteamid() {
+      return steamid_;
+    }
+
+    public static final int IPC_FIELD_NUMBER = 3;
+    private skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress ipc_;
+    /**
+     * <code>optional .CMsgIPCAddress ipc = 3;</code>
+     */
+    public boolean hasIpc() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .CMsgIPCAddress ipc = 3;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress getIpc() {
+      return ipc_;
+    }
+    /**
+     * <code>optional .CMsgIPCAddress ipc = 3;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder getIpcOrBuilder() {
+      return ipc_;
+    }
+
+    public static final int THEY_HEAR_YOU_FIELD_NUMBER = 4;
+    private boolean theyHearYou_;
+    /**
+     * <code>optional bool they_hear_you = 4;</code>
+     */
+    public boolean hasTheyHearYou() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool they_hear_you = 4;</code>
+     */
+    public boolean getTheyHearYou() {
+      return theyHearYou_;
+    }
+
+    public static final int YOU_HEAR_THEM_FIELD_NUMBER = 5;
+    private boolean youHearThem_;
+    /**
+     * <code>optional bool you_hear_them = 5;</code>
+     */
+    public boolean hasYouHearThem() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool you_hear_them = 5;</code>
+     */
+    public boolean getYouHearThem() {
+      return youHearThem_;
+    }
+
+    public static final int IS_LISTENSERVER_HOST_FIELD_NUMBER = 6;
+    private boolean isListenserverHost_;
+    /**
+     * <code>optional bool is_listenserver_host = 6;</code>
+     */
+    public boolean hasIsListenserverHost() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional bool is_listenserver_host = 6;</code>
+     */
+    public boolean getIsListenserverHost() {
+      return isListenserverHost_;
+    }
+
+    private void initFields() {
+      playerSlot_ = 0;
+      steamid_ = 0L;
+      ipc_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance();
+      theyHearYou_ = false;
+      youHearThem_ = false;
+      isListenserverHost_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, playerSlot_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFixed64(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(3, ipc_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(4, theyHearYou_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(5, youHearThem_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeBool(6, isListenserverHost_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, playerSlot_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed64Size(2, steamid_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, ipc_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(4, theyHearYou_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, youHearThem_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(6, isListenserverHost_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgServerPeer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgServerPeer)
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgServerPeer_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgServerPeer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getIpcFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        playerSlot_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamid_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        if (ipcBuilder_ == null) {
+          ipc_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance();
+        } else {
+          ipcBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        theyHearYou_ = false;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        youHearThem_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        isListenserverHost_ = false;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgServerPeer_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer build() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer result = new skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.playerSlot_ = playerSlot_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.steamid_ = steamid_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (ipcBuilder_ == null) {
+          result.ipc_ = ipc_;
+        } else {
+          result.ipc_ = ipcBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.theyHearYou_ = theyHearYou_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.youHearThem_ = youHearThem_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.isListenserverHost_ = isListenserverHost_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.getDefaultInstance()) return this;
+        if (other.hasPlayerSlot()) {
+          setPlayerSlot(other.getPlayerSlot());
+        }
+        if (other.hasSteamid()) {
+          setSteamid(other.getSteamid());
+        }
+        if (other.hasIpc()) {
+          mergeIpc(other.getIpc());
+        }
+        if (other.hasTheyHearYou()) {
+          setTheyHearYou(other.getTheyHearYou());
+        }
+        if (other.hasYouHearThem()) {
+          setYouHearThem(other.getYouHearThem());
+        }
+        if (other.hasIsListenserverHost()) {
+          setIsListenserverHost(other.getIsListenserverHost());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int playerSlot_ ;
+      /**
+       * <code>optional int32 player_slot = 1;</code>
+       */
+      public boolean hasPlayerSlot() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 player_slot = 1;</code>
+       */
+      public int getPlayerSlot() {
+        return playerSlot_;
+      }
+      /**
+       * <code>optional int32 player_slot = 1;</code>
+       */
+      public Builder setPlayerSlot(int value) {
+        bitField0_ |= 0x00000001;
+        playerSlot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 player_slot = 1;</code>
+       */
+      public Builder clearPlayerSlot() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        playerSlot_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long steamid_ ;
+      /**
+       * <code>optional fixed64 steamid = 2;</code>
+       */
+      public boolean hasSteamid() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional fixed64 steamid = 2;</code>
+       */
+      public long getSteamid() {
+        return steamid_;
+      }
+      /**
+       * <code>optional fixed64 steamid = 2;</code>
+       */
+      public Builder setSteamid(long value) {
+        bitField0_ |= 0x00000002;
+        steamid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed64 steamid = 2;</code>
+       */
+      public Builder clearSteamid() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        steamid_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress ipc_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder> ipcBuilder_;
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public boolean hasIpc() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress getIpc() {
+        if (ipcBuilder_ == null) {
+          return ipc_;
+        } else {
+          return ipcBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public Builder setIpc(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress value) {
+        if (ipcBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ipc_ = value;
+          onChanged();
+        } else {
+          ipcBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public Builder setIpc(
+          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder builderForValue) {
+        if (ipcBuilder_ == null) {
+          ipc_ = builderForValue.build();
+          onChanged();
+        } else {
+          ipcBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public Builder mergeIpc(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress value) {
+        if (ipcBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004) &&
+              ipc_ != skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance()) {
+            ipc_ =
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.newBuilder(ipc_).mergeFrom(value).buildPartial();
+          } else {
+            ipc_ = value;
+          }
+          onChanged();
+        } else {
+          ipcBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000004;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public Builder clearIpc() {
+        if (ipcBuilder_ == null) {
+          ipc_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.getDefaultInstance();
+          onChanged();
+        } else {
+          ipcBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder getIpcBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getIpcFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder getIpcOrBuilder() {
+        if (ipcBuilder_ != null) {
+          return ipcBuilder_.getMessageOrBuilder();
+        } else {
+          return ipc_;
+        }
+      }
+      /**
+       * <code>optional .CMsgIPCAddress ipc = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder> 
+          getIpcFieldBuilder() {
+        if (ipcBuilder_ == null) {
+          ipcBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddress.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgIPCAddressOrBuilder>(
+                  getIpc(),
+                  getParentForChildren(),
+                  isClean());
+          ipc_ = null;
+        }
+        return ipcBuilder_;
+      }
+
+      private boolean theyHearYou_ ;
+      /**
+       * <code>optional bool they_hear_you = 4;</code>
+       */
+      public boolean hasTheyHearYou() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool they_hear_you = 4;</code>
+       */
+      public boolean getTheyHearYou() {
+        return theyHearYou_;
+      }
+      /**
+       * <code>optional bool they_hear_you = 4;</code>
+       */
+      public Builder setTheyHearYou(boolean value) {
+        bitField0_ |= 0x00000008;
+        theyHearYou_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool they_hear_you = 4;</code>
+       */
+      public Builder clearTheyHearYou() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        theyHearYou_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean youHearThem_ ;
+      /**
+       * <code>optional bool you_hear_them = 5;</code>
+       */
+      public boolean hasYouHearThem() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool you_hear_them = 5;</code>
+       */
+      public boolean getYouHearThem() {
+        return youHearThem_;
+      }
+      /**
+       * <code>optional bool you_hear_them = 5;</code>
+       */
+      public Builder setYouHearThem(boolean value) {
+        bitField0_ |= 0x00000010;
+        youHearThem_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool you_hear_them = 5;</code>
+       */
+      public Builder clearYouHearThem() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        youHearThem_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isListenserverHost_ ;
+      /**
+       * <code>optional bool is_listenserver_host = 6;</code>
+       */
+      public boolean hasIsListenserverHost() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional bool is_listenserver_host = 6;</code>
+       */
+      public boolean getIsListenserverHost() {
+        return isListenserverHost_;
+      }
+      /**
+       * <code>optional bool is_listenserver_host = 6;</code>
+       */
+      public Builder setIsListenserverHost(boolean value) {
+        bitField0_ |= 0x00000020;
+        isListenserverHost_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_listenserver_host = 6;</code>
+       */
+      public Builder clearIsListenserverHost() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isListenserverHost_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgServerPeer)
+    }
+
+    static {
+      defaultInstance = new CMsgServerPeer(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgServerPeer)
+  }
+
+  public interface CSVCMsg_PeerListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_PeerList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    java.util.List<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer> 
+        getPeerList();
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer getPeer(int index);
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    int getPeerCount();
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder> 
+        getPeerOrBuilderList();
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder getPeerOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_PeerList}
+   */
+  public static final class CSVCMsg_PeerList extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_PeerList)
+      CSVCMsg_PeerListOrBuilder {
+    // Use CSVCMsg_PeerList.newBuilder() to construct.
+    private CSVCMsg_PeerList(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_PeerList(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_PeerList defaultInstance;
+    public static CSVCMsg_PeerList getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_PeerList getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_PeerList(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                peer_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              peer_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          peer_ = java.util.Collections.unmodifiableList(peer_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_PeerList_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_PeerList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_PeerList> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_PeerList>() {
+      public CSVCMsg_PeerList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_PeerList(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_PeerList> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int PEER_FIELD_NUMBER = 1;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer> peer_;
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer> getPeerList() {
+      return peer_;
+    }
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder> 
+        getPeerOrBuilderList() {
+      return peer_;
+    }
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    public int getPeerCount() {
+      return peer_.size();
+    }
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer getPeer(int index) {
+      return peer_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgServerPeer peer = 1;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder getPeerOrBuilder(
+        int index) {
+      return peer_.get(index);
+    }
+
+    private void initFields() {
+      peer_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < peer_.size(); i++) {
+        output.writeMessage(1, peer_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < peer_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, peer_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_PeerList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_PeerList)
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_PeerList_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_PeerList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPeerFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (peerBuilder_ == null) {
+          peer_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          peerBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_PeerList_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList build() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList result = new skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList(this);
+        int from_bitField0_ = bitField0_;
+        if (peerBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            peer_ = java.util.Collections.unmodifiableList(peer_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.peer_ = peer_;
+        } else {
+          result.peer_ = peerBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList.getDefaultInstance()) return this;
+        if (peerBuilder_ == null) {
+          if (!other.peer_.isEmpty()) {
+            if (peer_.isEmpty()) {
+              peer_ = other.peer_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensurePeerIsMutable();
+              peer_.addAll(other.peer_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.peer_.isEmpty()) {
+            if (peerBuilder_.isEmpty()) {
+              peerBuilder_.dispose();
+              peerBuilder_ = null;
+              peer_ = other.peer_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              peerBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPeerFieldBuilder() : null;
+            } else {
+              peerBuilder_.addAllMessages(other.peer_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_PeerList) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer> peer_ =
+        java.util.Collections.emptyList();
+      private void ensurePeerIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          peer_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer>(peer_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder> peerBuilder_;
+
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer> getPeerList() {
+        if (peerBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(peer_);
+        } else {
+          return peerBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public int getPeerCount() {
+        if (peerBuilder_ == null) {
+          return peer_.size();
+        } else {
+          return peerBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer getPeer(int index) {
+        if (peerBuilder_ == null) {
+          return peer_.get(index);
+        } else {
+          return peerBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder setPeer(
+          int index, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer value) {
+        if (peerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePeerIsMutable();
+          peer_.set(index, value);
+          onChanged();
+        } else {
+          peerBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder setPeer(
+          int index, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder builderForValue) {
+        if (peerBuilder_ == null) {
+          ensurePeerIsMutable();
+          peer_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          peerBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder addPeer(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer value) {
+        if (peerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePeerIsMutable();
+          peer_.add(value);
+          onChanged();
+        } else {
+          peerBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder addPeer(
+          int index, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer value) {
+        if (peerBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePeerIsMutable();
+          peer_.add(index, value);
+          onChanged();
+        } else {
+          peerBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder addPeer(
+          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder builderForValue) {
+        if (peerBuilder_ == null) {
+          ensurePeerIsMutable();
+          peer_.add(builderForValue.build());
+          onChanged();
+        } else {
+          peerBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder addPeer(
+          int index, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder builderForValue) {
+        if (peerBuilder_ == null) {
+          ensurePeerIsMutable();
+          peer_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          peerBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder addAllPeer(
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer> values) {
+        if (peerBuilder_ == null) {
+          ensurePeerIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, peer_);
+          onChanged();
+        } else {
+          peerBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder clearPeer() {
+        if (peerBuilder_ == null) {
+          peer_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          peerBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public Builder removePeer(int index) {
+        if (peerBuilder_ == null) {
+          ensurePeerIsMutable();
+          peer_.remove(index);
+          onChanged();
+        } else {
+          peerBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder getPeerBuilder(
+          int index) {
+        return getPeerFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder getPeerOrBuilder(
+          int index) {
+        if (peerBuilder_ == null) {
+          return peer_.get(index);  } else {
+          return peerBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder> 
+           getPeerOrBuilderList() {
+        if (peerBuilder_ != null) {
+          return peerBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(peer_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder addPeerBuilder() {
+        return getPeerFieldBuilder().addBuilder(
+            skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder addPeerBuilder(
+          int index) {
+        return getPeerFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgServerPeer peer = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder> 
+           getPeerBuilderList() {
+        return getPeerFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder> 
+          getPeerFieldBuilder() {
+        if (peerBuilder_ == null) {
+          peerBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeer.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgServerPeerOrBuilder>(
+                  peer_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          peer_ = null;
+        }
+        return peerBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_PeerList)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_PeerList(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_PeerList)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_CreateStringTable_descriptor;
   private static
@@ -6661,6 +8710,21 @@ public final class S2NetMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_FlattenedSerializer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgIPCAddress_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgIPCAddress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgServerPeer_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgServerPeer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_PeerList_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_PeerList_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6700,23 +8764,30 @@ public final class S2NetMessages {
       "CMsg_FlattenedSerializer\0220\n\013serializers\030" +
       "\001 \003(\0132\033.ProtoFlattenedSerializer_t\022\017\n\007sy" +
       "mbols\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlatt",
-      "enedSerializerField_t*\326\004\n\014SVC_Messages\022\022" +
-      "\n\016svc_ServerInfo\020(\022\033\n\027svc_FlattenedSeria" +
-      "lizer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPau" +
-      "se\020+\022\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_U" +
-      "pdateStringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n" +
-      "\rsvc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_S" +
-      "ounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAll" +
-      "StringTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014" +
-      "svc_BSPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022s" +
-      "vc_PacketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n",
-      "\010svc_Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc" +
-      "_StopSound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_Pa" +
-      "cketReliable\020=\022\023\n\017svc_UserMessage\020>\022\021\n\rs" +
-      "vc_SendTable\020?\022\021\n\rsvc_GameEvent\020C\022\024\n\020svc" +
-      "_TempEntities\020D\022\025\n\021svc_GameEventList\020E\022\026" +
-      "\n\022svc_FullFrameSplit\020FB4\n skadistats.cla" +
-      "rity.wire.s2.protoB\rS2NetMessages\200\001\000"
+      "enedSerializerField_t\";\n\016CMsgIPCAddress\022" +
+      "\025\n\rcomputer_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001" +
+      "(\r\"\240\001\n\016CMsgServerPeer\022\023\n\013player_slot\030\001 \001" +
+      "(\005\022\017\n\007steamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgI" +
+      "PCAddress\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_" +
+      "hear_them\030\005 \001(\010\022\034\n\024is_listenserver_host\030" +
+      "\006 \001(\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132" +
+      "\017.CMsgServerPeer*\326\004\n\014SVC_Messages\022\022\n\016svc" +
+      "_ServerInfo\020(\022\033\n\027svc_FlattenedSerializer" +
+      "\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022",
+      "\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_Update" +
+      "StringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_" +
+      "VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds" +
+      "\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStrin" +
+      "gTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_B" +
+      "SPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc_Pa" +
+      "cketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_" +
+      "Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_Stop" +
+      "Sound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_PacketR" +
+      "eliable\020=\022\023\n\017svc_UserMessage\020>\022\021\n\rsvc_Se",
+      "ndTable\020?\022\021\n\rsvc_GameEvent\020C\022\024\n\020svc_Temp" +
+      "Entities\020D\022\025\n\021svc_GameEventList\020E\022\026\n\022svc" +
+      "_FullFrameSplit\020FB4\n skadistats.clarity." +
+      "wire.s2.protoB\rS2NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6773,6 +8844,24 @@ public final class S2NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_FlattenedSerializer_descriptor,
         new java.lang.String[] { "Serializers", "Symbols", "Fields", });
+    internal_static_CMsgIPCAddress_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_CMsgIPCAddress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgIPCAddress_descriptor,
+        new java.lang.String[] { "ComputerGuid", "ProcessId", });
+    internal_static_CMsgServerPeer_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_CMsgServerPeer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgServerPeer_descriptor,
+        new java.lang.String[] { "PlayerSlot", "Steamid", "Ipc", "TheyHearYou", "YouHearThem", "IsListenserverHost", });
+    internal_static_CSVCMsg_PeerList_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_CSVCMsg_PeerList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_PeerList_descriptor,
+        new java.lang.String[] { "Peer", });
     skadistats.clarity.wire.common.proto.NetMessages.getDescriptor();
   }
 
