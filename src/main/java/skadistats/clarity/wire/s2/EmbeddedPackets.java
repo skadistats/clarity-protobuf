@@ -115,6 +115,7 @@ public class EmbeddedPackets {
         /* 497 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);
         /* 501 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheel_VALUE, DotaUserMessages.CDOTAUserMsg_ChatWheel.class);
         /* 506 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GamerulesStateChanged_VALUE, DotaUserMessages.CDOTAUserMsg_GamerulesStateChanged.class);
+        /* 510 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendStatPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendStatPopup.class);
         /* 512 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanPopup.class);
         /* 518 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_Projectile_VALUE, DotaUserMessages.CDOTAUserMsg_TE_Projectile.class);
         /* 519 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_ProjectileLoc_VALUE, DotaUserMessages.CDOTAUserMsg_TE_ProjectileLoc.class);
@@ -155,7 +156,6 @@ public class EmbeddedPackets {
 //        /* 507 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ShowSurvey_VALUE, DotaUserMessages.CDOTAUserMsg_ShowSurvey.class);
 //        /* 508 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialFade_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialFade.class);
 //        /* 509 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddQuestLogEntry_VALUE, DotaUserMessages.CDOTAUserMsg_AddQuestLogEntry.class);
-//        /* 510 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendStatPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendStatPopup.class);
 //        /* 511 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialFinish_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialFinish.class);
 //        /* 512 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanPopup.class);
 //        /* 513 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendGenericToolTip_VALUE, DotaUserMessages.CDOTAUserMsg_SendGenericToolTip.class);
