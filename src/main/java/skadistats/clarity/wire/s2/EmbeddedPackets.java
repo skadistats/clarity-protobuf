@@ -34,6 +34,7 @@ public class EmbeddedPackets {
         /*  51 */ EMBED.put(S2NetMessages.SVC_Messages.svc_ClearAllStringTables_VALUE, S2NetMessages.CSVCMsg_ClearAllStringTables.class);
         /*  55 */ EMBED.put(S2NetMessages.SVC_Messages.svc_PacketEntities_VALUE, NetMessages.CSVCMsg_PacketEntities.class);
         /*  60 */ EMBED.put(S2NetMessages.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
+        /*  62 */ EMBED.put(S2NetMessages.SVC_Messages.svc_HLTVStatus_VALUE, S2NetMessages.CSVCMsg_HLTVStatus.class);
         /*  70 */ EMBED.put(S2NetMessages.SVC_Messages.svc_FullFrameSplit_VALUE, NetMessages.CSVCMsg_FullFrameSplit.class);
 
         /* 115 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ResetHUD_VALUE, S2UserMessages.CUserMessageResetHUD.class);

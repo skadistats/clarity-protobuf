@@ -1,2 +1,2 @@
 #!/bin/sh
-protoc --java_out=../../java *.proto
+protoc --proto_path=../common --proto_path=. --java_out=../../java *.proto

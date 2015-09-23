@@ -102,29 +102,13 @@ public final class S2NetMessages {
      */
     svc_PacketReliable(21, 61),
     /**
-     * <code>svc_UserMessage = 62;</code>
+     * <code>svc_HLTVStatus = 62;</code>
      */
-    svc_UserMessage(22, 62),
-    /**
-     * <code>svc_SendTable = 63;</code>
-     */
-    svc_SendTable(23, 63),
-    /**
-     * <code>svc_GameEvent = 67;</code>
-     */
-    svc_GameEvent(24, 67),
-    /**
-     * <code>svc_TempEntities = 68;</code>
-     */
-    svc_TempEntities(25, 68),
-    /**
-     * <code>svc_GameEventList = 69;</code>
-     */
-    svc_GameEventList(26, 69),
+    svc_HLTVStatus(22, 62),
     /**
      * <code>svc_FullFrameSplit = 70;</code>
      */
-    svc_FullFrameSplit(27, 70),
+    svc_FullFrameSplit(23, 70),
     ;
 
     /**
@@ -216,25 +200,9 @@ public final class S2NetMessages {
      */
     public static final int svc_PacketReliable_VALUE = 61;
     /**
-     * <code>svc_UserMessage = 62;</code>
+     * <code>svc_HLTVStatus = 62;</code>
      */
-    public static final int svc_UserMessage_VALUE = 62;
-    /**
-     * <code>svc_SendTable = 63;</code>
-     */
-    public static final int svc_SendTable_VALUE = 63;
-    /**
-     * <code>svc_GameEvent = 67;</code>
-     */
-    public static final int svc_GameEvent_VALUE = 67;
-    /**
-     * <code>svc_TempEntities = 68;</code>
-     */
-    public static final int svc_TempEntities_VALUE = 68;
-    /**
-     * <code>svc_GameEventList = 69;</code>
-     */
-    public static final int svc_GameEventList_VALUE = 69;
+    public static final int svc_HLTVStatus_VALUE = 62;
     /**
      * <code>svc_FullFrameSplit = 70;</code>
      */
@@ -267,11 +235,7 @@ public final class S2NetMessages {
         case 59: return svc_StopSound;
         case 60: return svc_PeerList;
         case 61: return svc_PacketReliable;
-        case 62: return svc_UserMessage;
-        case 63: return svc_SendTable;
-        case 67: return svc_GameEvent;
-        case 68: return svc_TempEntities;
-        case 69: return svc_GameEventList;
+        case 62: return svc_HLTVStatus;
         case 70: return svc_FullFrameSplit;
         default: return null;
       }
@@ -8675,6 +8639,716 @@ public final class S2NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_PeerList)
   }
 
+  public interface CSVCMsg_HLTVStatusOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_HLTVStatus)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional string master = 1;</code>
+     */
+    boolean hasMaster();
+    /**
+     * <code>optional string master = 1;</code>
+     */
+    java.lang.String getMaster();
+    /**
+     * <code>optional string master = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getMasterBytes();
+
+    /**
+     * <code>optional int32 clients = 2;</code>
+     */
+    boolean hasClients();
+    /**
+     * <code>optional int32 clients = 2;</code>
+     */
+    int getClients();
+
+    /**
+     * <code>optional int32 slots = 3;</code>
+     */
+    boolean hasSlots();
+    /**
+     * <code>optional int32 slots = 3;</code>
+     */
+    int getSlots();
+
+    /**
+     * <code>optional int32 proxies = 4;</code>
+     */
+    boolean hasProxies();
+    /**
+     * <code>optional int32 proxies = 4;</code>
+     */
+    int getProxies();
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_HLTVStatus}
+   */
+  public static final class CSVCMsg_HLTVStatus extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_HLTVStatus)
+      CSVCMsg_HLTVStatusOrBuilder {
+    // Use CSVCMsg_HLTVStatus.newBuilder() to construct.
+    private CSVCMsg_HLTVStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_HLTVStatus(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_HLTVStatus defaultInstance;
+    public static CSVCMsg_HLTVStatus getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_HLTVStatus getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_HLTVStatus(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000001;
+              master_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              clients_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              slots_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              proxies_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_HLTVStatus_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_HLTVStatus> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_HLTVStatus>() {
+      public CSVCMsg_HLTVStatus parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_HLTVStatus(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_HLTVStatus> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int MASTER_FIELD_NUMBER = 1;
+    private java.lang.Object master_;
+    /**
+     * <code>optional string master = 1;</code>
+     */
+    public boolean hasMaster() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional string master = 1;</code>
+     */
+    public java.lang.String getMaster() {
+      java.lang.Object ref = master_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          master_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string master = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getMasterBytes() {
+      java.lang.Object ref = master_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        master_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CLIENTS_FIELD_NUMBER = 2;
+    private int clients_;
+    /**
+     * <code>optional int32 clients = 2;</code>
+     */
+    public boolean hasClients() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 clients = 2;</code>
+     */
+    public int getClients() {
+      return clients_;
+    }
+
+    public static final int SLOTS_FIELD_NUMBER = 3;
+    private int slots_;
+    /**
+     * <code>optional int32 slots = 3;</code>
+     */
+    public boolean hasSlots() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 slots = 3;</code>
+     */
+    public int getSlots() {
+      return slots_;
+    }
+
+    public static final int PROXIES_FIELD_NUMBER = 4;
+    private int proxies_;
+    /**
+     * <code>optional int32 proxies = 4;</code>
+     */
+    public boolean hasProxies() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 proxies = 4;</code>
+     */
+    public int getProxies() {
+      return proxies_;
+    }
+
+    private void initFields() {
+      master_ = "";
+      clients_ = 0;
+      slots_ = 0;
+      proxies_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, getMasterBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, clients_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, slots_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, proxies_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, getMasterBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, clients_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, slots_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, proxies_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_HLTVStatus}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_HLTVStatus)
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatusOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_HLTVStatus_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        master_ = "";
+        bitField0_ = (bitField0_ & ~0x00000001);
+        clients_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        slots_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        proxies_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_HLTVStatus_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus build() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus result = new skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.master_ = master_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.clients_ = clients_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.slots_ = slots_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.proxies_ = proxies_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus.getDefaultInstance()) return this;
+        if (other.hasMaster()) {
+          bitField0_ |= 0x00000001;
+          master_ = other.master_;
+          onChanged();
+        }
+        if (other.hasClients()) {
+          setClients(other.getClients());
+        }
+        if (other.hasSlots()) {
+          setSlots(other.getSlots());
+        }
+        if (other.hasProxies()) {
+          setProxies(other.getProxies());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_HLTVStatus) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object master_ = "";
+      /**
+       * <code>optional string master = 1;</code>
+       */
+      public boolean hasMaster() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string master = 1;</code>
+       */
+      public java.lang.String getMaster() {
+        java.lang.Object ref = master_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            master_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string master = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getMasterBytes() {
+        java.lang.Object ref = master_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          master_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string master = 1;</code>
+       */
+      public Builder setMaster(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        master_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string master = 1;</code>
+       */
+      public Builder clearMaster() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        master_ = getDefaultInstance().getMaster();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string master = 1;</code>
+       */
+      public Builder setMasterBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        master_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int clients_ ;
+      /**
+       * <code>optional int32 clients = 2;</code>
+       */
+      public boolean hasClients() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 clients = 2;</code>
+       */
+      public int getClients() {
+        return clients_;
+      }
+      /**
+       * <code>optional int32 clients = 2;</code>
+       */
+      public Builder setClients(int value) {
+        bitField0_ |= 0x00000002;
+        clients_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 clients = 2;</code>
+       */
+      public Builder clearClients() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        clients_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int slots_ ;
+      /**
+       * <code>optional int32 slots = 3;</code>
+       */
+      public boolean hasSlots() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 slots = 3;</code>
+       */
+      public int getSlots() {
+        return slots_;
+      }
+      /**
+       * <code>optional int32 slots = 3;</code>
+       */
+      public Builder setSlots(int value) {
+        bitField0_ |= 0x00000004;
+        slots_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 slots = 3;</code>
+       */
+      public Builder clearSlots() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        slots_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int proxies_ ;
+      /**
+       * <code>optional int32 proxies = 4;</code>
+       */
+      public boolean hasProxies() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 proxies = 4;</code>
+       */
+      public int getProxies() {
+        return proxies_;
+      }
+      /**
+       * <code>optional int32 proxies = 4;</code>
+       */
+      public Builder setProxies(int value) {
+        bitField0_ |= 0x00000008;
+        proxies_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 proxies = 4;</code>
+       */
+      public Builder clearProxies() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        proxies_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_HLTVStatus)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_HLTVStatus(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_HLTVStatus)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_CreateStringTable_descriptor;
   private static
@@ -8725,6 +9399,11 @@ public final class S2NetMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_PeerList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_HLTVStatus_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8771,23 +9450,23 @@ public final class S2NetMessages {
       "PCAddress\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_" +
       "hear_them\030\005 \001(\010\022\034\n\024is_listenserver_host\030" +
       "\006 \001(\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132" +
-      "\017.CMsgServerPeer*\326\004\n\014SVC_Messages\022\022\n\016svc" +
-      "_ServerInfo\020(\022\033\n\027svc_FlattenedSerializer" +
-      "\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022",
-      "\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_Update" +
-      "StringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_" +
-      "VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds" +
-      "\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStrin" +
-      "gTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_B" +
-      "SPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc_Pa" +
-      "cketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_" +
-      "Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_Stop" +
-      "Sound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_PacketR" +
-      "eliable\020=\022\023\n\017svc_UserMessage\020>\022\021\n\rsvc_Se",
-      "ndTable\020?\022\021\n\rsvc_GameEvent\020C\022\024\n\020svc_Temp" +
-      "Entities\020D\022\025\n\021svc_GameEventList\020E\022\026\n\022svc" +
-      "_FullFrameSplit\020FB4\n skadistats.clarity." +
-      "wire.s2.protoB\rS2NetMessages\200\001\000"
+      "\017.CMsgServerPeer\"U\n\022CSVCMsg_HLTVStatus\022\016" +
+      "\n\006master\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots" +
+      "\030\003 \001(\005\022\017\n\007proxies\030\004 \001(\005*\202\004\n\014SVC_Messages",
+      "\022\022\n\016svc_ServerInfo\020(\022\033\n\027svc_FlattenedSer" +
+      "ializer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetP" +
+      "ause\020+\022\031\n\025svc_CreateStringTable\020,\022\031\n\025svc" +
+      "_UpdateStringTable\020-\022\021\n\rsvc_VoiceInit\020.\022" +
+      "\021\n\rsvc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc" +
+      "_Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearA" +
+      "llStringTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020" +
+      "\n\014svc_BSPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n" +
+      "\022svc_PacketEntities\0207\022\020\n\014svc_Prefetch\0208\022" +
+      "\014\n\010svc_Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rs",
+      "vc_StopSound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_" +
+      "PacketReliable\020=\022\022\n\016svc_HLTVStatus\020>\022\026\n\022" +
+      "svc_FullFrameSplit\020FB4\n skadistats.clari" +
+      "ty.wire.s2.protoB\rS2NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8862,6 +9541,12 @@ public final class S2NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PeerList_descriptor,
         new java.lang.String[] { "Peer", });
+    internal_static_CSVCMsg_HLTVStatus_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_HLTVStatus_descriptor,
+        new java.lang.String[] { "Master", "Clients", "Slots", "Proxies", });
     skadistats.clarity.wire.common.proto.NetMessages.getDescriptor();
   }
 
