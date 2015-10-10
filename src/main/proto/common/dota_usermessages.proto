@@ -28,6 +28,8 @@ enum DOTA_COMBATLOG_TYPES {
     DOTA_COMBATLOG_TEAM_BUILDING_KILL = 17;
     DOTA_COMBATLOG_FIRST_BLOOD = 18;
     DOTA_COMBATLOG_MODIFIER_REFRESH = 19;
+    DOTA_COMBATLOG_NEUTRAL_CAMP_STACK = 20;
+    DOTA_COMBATLOG_PICKUP_RUNE = 21;
 }
 
 enum DOTA_CHAT_MESSAGE {
@@ -1055,4 +1057,47 @@ message CDOTAUserMsg_ProjectionAbility {
 message CDOTAUserMsg_ProjectionEvent {
     optional EProjectionEvent event_id = 1 [default = ePE_FirstBlood];
     optional uint32 team = 2;
+}
+
+message CMsgDOTACombatLogEntry {
+    optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
+    optional uint32 target_name = 2;
+    optional uint32 target_source_name = 3;
+    optional uint32 attacker_name = 4;
+    optional uint32 damage_source_name = 5;
+    optional uint32 inflictor_name = 6;
+    optional bool is_attacker_illusion = 7;
+    optional bool is_attacker_hero = 8;
+    optional bool is_target_illusion = 9;
+    optional bool is_target_hero = 10;
+    optional bool is_visible_radiant = 11;
+    optional bool is_visible_dire = 12;
+    optional uint32 value = 13;
+    optional int32 health = 14;
+    optional float timestamp = 15;
+    optional float stun_duration = 16;
+    optional float slow_duration = 17;
+    optional bool is_ability_toggle_on = 18;
+    optional bool is_ability_toggle_off = 19;
+    optional uint32 ability_level = 20;
+    optional float location_x = 21;
+    optional float location_y = 22;
+    optional uint32 gold_reason = 23;
+    optional float timestamp_raw = 24;
+    optional float modifier_duration = 25;
+    optional uint32 xp_reason = 26;
+    optional uint32 last_hits = 27;
+    optional uint32 attacker_team = 28;
+    optional uint32 target_team = 29;
+    optional uint32 obs_wards_placed = 30;
+    optional uint32 assist_player0 = 31;
+    optional uint32 assist_player1 = 32;
+    optional uint32 assist_player2 = 33;
+    optional uint32 assist_player3 = 34;
+    optional uint32 stack_count = 35;
+    optional bool hidden_modifier = 36;
+    optional bool is_target_building = 37;
+    optional uint32 neutral_camp_type = 38;
+    optional uint32 rune_type = 39;
+    repeated uint32 assist_players = 40;
 }

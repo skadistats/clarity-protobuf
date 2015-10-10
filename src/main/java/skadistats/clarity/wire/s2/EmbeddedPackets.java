@@ -129,6 +129,7 @@ public class EmbeddedPackets {
         /* 547 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SpectatorPlayerUnitOrders_VALUE, DotaUserMessages.CDOTAUserMsg_SpectatorPlayerUnitOrders.class);
         /* 552 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionAbility_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionAbility.class);
         /* 553 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionEvent_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionEvent.class);
+        /* 554 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatLogDataHLTV_VALUE, DotaUserMessages.CMsgDOTACombatLogEntry.class);
 
 //        /* 464 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);

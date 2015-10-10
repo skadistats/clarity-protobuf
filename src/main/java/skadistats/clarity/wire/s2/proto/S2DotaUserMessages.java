@@ -369,6 +369,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ProjectionEvent = 553;</code>
      */
     DOTA_UM_ProjectionEvent(88, 553),
+    /**
+     * <code>DOTA_UM_CombatLogDataHLTV = 554;</code>
+     */
+    DOTA_UM_CombatLogDataHLTV(89, 554),
     ;
 
     /**
@@ -727,6 +731,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ProjectionEvent = 553;</code>
      */
     public static final int DOTA_UM_ProjectionEvent_VALUE = 553;
+    /**
+     * <code>DOTA_UM_CombatLogDataHLTV = 554;</code>
+     */
+    public static final int DOTA_UM_CombatLogDataHLTV_VALUE = 554;
 
 
     public final int getNumber() { return value; }
@@ -822,6 +830,7 @@ public final class S2DotaUserMessages {
         case 551: return DOTA_UM_CompendiumState;
         case 552: return DOTA_UM_ProjectionAbility;
         case 553: return DOTA_UM_ProjectionEvent;
+        case 554: return DOTA_UM_CombatLogDataHLTV;
         default: return null;
       }
     }
@@ -882,7 +891,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\341\024\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\201\025\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -949,8 +958,9 @@ public final class S2DotaUserMessages {
       " DOTA_UM_CustomHudElement_Destroy\020\246\004\022\034\n\027" +
       "DOTA_UM_CompendiumState\020\247\004\022\036\n\031DOTA_UM_Pr" +
       "ojectionAbility\020\250\004\022\034\n\027DOTA_UM_Projection" +
-      "Event\020\251\004B;\n skadistats.clarity.wire.s2.p" +
-      "rotoB\022S2DotaUserMessagesH\001\200\001\000"
+      "Event\020\251\004\022\036\n\031DOTA_UM_CombatLogDataHLTV\020\252\004" +
+      "B;\n skadistats.clarity.wire.s2.protoB\022S2" +
+      "DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

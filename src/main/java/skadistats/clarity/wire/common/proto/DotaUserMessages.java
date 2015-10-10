@@ -93,6 +93,14 @@ public final class DotaUserMessages {
      * <code>DOTA_COMBATLOG_MODIFIER_REFRESH = 19;</code>
      */
     DOTA_COMBATLOG_MODIFIER_REFRESH(19, 19),
+    /**
+     * <code>DOTA_COMBATLOG_NEUTRAL_CAMP_STACK = 20;</code>
+     */
+    DOTA_COMBATLOG_NEUTRAL_CAMP_STACK(20, 20),
+    /**
+     * <code>DOTA_COMBATLOG_PICKUP_RUNE = 21;</code>
+     */
+    DOTA_COMBATLOG_PICKUP_RUNE(21, 21),
     ;
 
     /**
@@ -175,6 +183,14 @@ public final class DotaUserMessages {
      * <code>DOTA_COMBATLOG_MODIFIER_REFRESH = 19;</code>
      */
     public static final int DOTA_COMBATLOG_MODIFIER_REFRESH_VALUE = 19;
+    /**
+     * <code>DOTA_COMBATLOG_NEUTRAL_CAMP_STACK = 20;</code>
+     */
+    public static final int DOTA_COMBATLOG_NEUTRAL_CAMP_STACK_VALUE = 20;
+    /**
+     * <code>DOTA_COMBATLOG_PICKUP_RUNE = 21;</code>
+     */
+    public static final int DOTA_COMBATLOG_PICKUP_RUNE_VALUE = 21;
 
 
     public final int getNumber() { return value; }
@@ -201,6 +217,8 @@ public final class DotaUserMessages {
         case 17: return DOTA_COMBATLOG_TEAM_BUILDING_KILL;
         case 18: return DOTA_COMBATLOG_FIRST_BLOOD;
         case 19: return DOTA_COMBATLOG_MODIFIER_REFRESH;
+        case 20: return DOTA_COMBATLOG_NEUTRAL_CAMP_STACK;
+        case 21: return DOTA_COMBATLOG_PICKUP_RUNE;
         default: return null;
       }
     }
@@ -20828,6 +20846,15 @@ public final class DotaUserMessages {
      * <code>optional bool queue = 7;</code>
      */
     boolean getQueue();
+
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    boolean hasSequenceNumber();
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    int getSequenceNumber();
   }
   /**
    * Protobuf type {@code CDOTAUserMsg_SpectatorPlayerUnitOrders}
@@ -20938,6 +20965,11 @@ public final class DotaUserMessages {
             case 56: {
               bitField0_ |= 0x00000020;
               queue_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000040;
+              sequenceNumber_ = input.readInt32();
               break;
             }
           }
@@ -21101,6 +21133,21 @@ public final class DotaUserMessages {
       return queue_;
     }
 
+    public static final int SEQUENCE_NUMBER_FIELD_NUMBER = 8;
+    private int sequenceNumber_;
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    public boolean hasSequenceNumber() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    public int getSequenceNumber() {
+      return sequenceNumber_;
+    }
+
     private void initFields() {
       entindex_ = 0;
       orderType_ = 0;
@@ -21109,6 +21156,7 @@ public final class DotaUserMessages {
       abilityIndex_ = 0;
       position_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       queue_ = false;
+      sequenceNumber_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -21143,6 +21191,9 @@ public final class DotaUserMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBool(7, queue_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(8, sequenceNumber_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -21185,6 +21236,10 @@ public final class DotaUserMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(7, queue_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, sequenceNumber_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -21322,6 +21377,8 @@ public final class DotaUserMessages {
         bitField0_ = (bitField0_ & ~0x00000020);
         queue_ = false;
         bitField0_ = (bitField0_ & ~0x00000040);
+        sequenceNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -21383,6 +21440,10 @@ public final class DotaUserMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.queue_ = queue_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.sequenceNumber_ = sequenceNumber_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -21426,6 +21487,9 @@ public final class DotaUserMessages {
         }
         if (other.hasQueue()) {
           setQueue(other.getQueue());
+        }
+        if (other.hasSequenceNumber()) {
+          setSequenceNumber(other.getSequenceNumber());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -21792,6 +21856,38 @@ public final class DotaUserMessages {
       public Builder clearQueue() {
         bitField0_ = (bitField0_ & ~0x00000040);
         queue_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int sequenceNumber_ ;
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public boolean hasSequenceNumber() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public int getSequenceNumber() {
+        return sequenceNumber_;
+      }
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public Builder setSequenceNumber(int value) {
+        bitField0_ |= 0x00000080;
+        sequenceNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public Builder clearSequenceNumber() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        sequenceNumber_ = 0;
         onChanged();
         return this;
       }
@@ -89172,6 +89268,3537 @@ public final class DotaUserMessages {
     // @@protoc_insertion_point(class_scope:CDOTAUserMsg_ProjectionEvent)
   }
 
+  public interface CMsgDOTACombatLogEntryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgDOTACombatLogEntry)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     */
+    boolean hasType();
+    /**
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     */
+    skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES getType();
+
+    /**
+     * <code>optional uint32 target_name = 2;</code>
+     */
+    boolean hasTargetName();
+    /**
+     * <code>optional uint32 target_name = 2;</code>
+     */
+    int getTargetName();
+
+    /**
+     * <code>optional uint32 target_source_name = 3;</code>
+     */
+    boolean hasTargetSourceName();
+    /**
+     * <code>optional uint32 target_source_name = 3;</code>
+     */
+    int getTargetSourceName();
+
+    /**
+     * <code>optional uint32 attacker_name = 4;</code>
+     */
+    boolean hasAttackerName();
+    /**
+     * <code>optional uint32 attacker_name = 4;</code>
+     */
+    int getAttackerName();
+
+    /**
+     * <code>optional uint32 damage_source_name = 5;</code>
+     */
+    boolean hasDamageSourceName();
+    /**
+     * <code>optional uint32 damage_source_name = 5;</code>
+     */
+    int getDamageSourceName();
+
+    /**
+     * <code>optional uint32 inflictor_name = 6;</code>
+     */
+    boolean hasInflictorName();
+    /**
+     * <code>optional uint32 inflictor_name = 6;</code>
+     */
+    int getInflictorName();
+
+    /**
+     * <code>optional bool is_attacker_illusion = 7;</code>
+     */
+    boolean hasIsAttackerIllusion();
+    /**
+     * <code>optional bool is_attacker_illusion = 7;</code>
+     */
+    boolean getIsAttackerIllusion();
+
+    /**
+     * <code>optional bool is_attacker_hero = 8;</code>
+     */
+    boolean hasIsAttackerHero();
+    /**
+     * <code>optional bool is_attacker_hero = 8;</code>
+     */
+    boolean getIsAttackerHero();
+
+    /**
+     * <code>optional bool is_target_illusion = 9;</code>
+     */
+    boolean hasIsTargetIllusion();
+    /**
+     * <code>optional bool is_target_illusion = 9;</code>
+     */
+    boolean getIsTargetIllusion();
+
+    /**
+     * <code>optional bool is_target_hero = 10;</code>
+     */
+    boolean hasIsTargetHero();
+    /**
+     * <code>optional bool is_target_hero = 10;</code>
+     */
+    boolean getIsTargetHero();
+
+    /**
+     * <code>optional bool is_visible_radiant = 11;</code>
+     */
+    boolean hasIsVisibleRadiant();
+    /**
+     * <code>optional bool is_visible_radiant = 11;</code>
+     */
+    boolean getIsVisibleRadiant();
+
+    /**
+     * <code>optional bool is_visible_dire = 12;</code>
+     */
+    boolean hasIsVisibleDire();
+    /**
+     * <code>optional bool is_visible_dire = 12;</code>
+     */
+    boolean getIsVisibleDire();
+
+    /**
+     * <code>optional uint32 value = 13;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>optional uint32 value = 13;</code>
+     */
+    int getValue();
+
+    /**
+     * <code>optional int32 health = 14;</code>
+     */
+    boolean hasHealth();
+    /**
+     * <code>optional int32 health = 14;</code>
+     */
+    int getHealth();
+
+    /**
+     * <code>optional float timestamp = 15;</code>
+     */
+    boolean hasTimestamp();
+    /**
+     * <code>optional float timestamp = 15;</code>
+     */
+    float getTimestamp();
+
+    /**
+     * <code>optional float stun_duration = 16;</code>
+     */
+    boolean hasStunDuration();
+    /**
+     * <code>optional float stun_duration = 16;</code>
+     */
+    float getStunDuration();
+
+    /**
+     * <code>optional float slow_duration = 17;</code>
+     */
+    boolean hasSlowDuration();
+    /**
+     * <code>optional float slow_duration = 17;</code>
+     */
+    float getSlowDuration();
+
+    /**
+     * <code>optional bool is_ability_toggle_on = 18;</code>
+     */
+    boolean hasIsAbilityToggleOn();
+    /**
+     * <code>optional bool is_ability_toggle_on = 18;</code>
+     */
+    boolean getIsAbilityToggleOn();
+
+    /**
+     * <code>optional bool is_ability_toggle_off = 19;</code>
+     */
+    boolean hasIsAbilityToggleOff();
+    /**
+     * <code>optional bool is_ability_toggle_off = 19;</code>
+     */
+    boolean getIsAbilityToggleOff();
+
+    /**
+     * <code>optional uint32 ability_level = 20;</code>
+     */
+    boolean hasAbilityLevel();
+    /**
+     * <code>optional uint32 ability_level = 20;</code>
+     */
+    int getAbilityLevel();
+
+    /**
+     * <code>optional float location_x = 21;</code>
+     */
+    boolean hasLocationX();
+    /**
+     * <code>optional float location_x = 21;</code>
+     */
+    float getLocationX();
+
+    /**
+     * <code>optional float location_y = 22;</code>
+     */
+    boolean hasLocationY();
+    /**
+     * <code>optional float location_y = 22;</code>
+     */
+    float getLocationY();
+
+    /**
+     * <code>optional uint32 gold_reason = 23;</code>
+     */
+    boolean hasGoldReason();
+    /**
+     * <code>optional uint32 gold_reason = 23;</code>
+     */
+    int getGoldReason();
+
+    /**
+     * <code>optional float timestamp_raw = 24;</code>
+     */
+    boolean hasTimestampRaw();
+    /**
+     * <code>optional float timestamp_raw = 24;</code>
+     */
+    float getTimestampRaw();
+
+    /**
+     * <code>optional float modifier_duration = 25;</code>
+     */
+    boolean hasModifierDuration();
+    /**
+     * <code>optional float modifier_duration = 25;</code>
+     */
+    float getModifierDuration();
+
+    /**
+     * <code>optional uint32 xp_reason = 26;</code>
+     */
+    boolean hasXpReason();
+    /**
+     * <code>optional uint32 xp_reason = 26;</code>
+     */
+    int getXpReason();
+
+    /**
+     * <code>optional uint32 last_hits = 27;</code>
+     */
+    boolean hasLastHits();
+    /**
+     * <code>optional uint32 last_hits = 27;</code>
+     */
+    int getLastHits();
+
+    /**
+     * <code>optional uint32 attacker_team = 28;</code>
+     */
+    boolean hasAttackerTeam();
+    /**
+     * <code>optional uint32 attacker_team = 28;</code>
+     */
+    int getAttackerTeam();
+
+    /**
+     * <code>optional uint32 target_team = 29;</code>
+     */
+    boolean hasTargetTeam();
+    /**
+     * <code>optional uint32 target_team = 29;</code>
+     */
+    int getTargetTeam();
+
+    /**
+     * <code>optional uint32 obs_wards_placed = 30;</code>
+     */
+    boolean hasObsWardsPlaced();
+    /**
+     * <code>optional uint32 obs_wards_placed = 30;</code>
+     */
+    int getObsWardsPlaced();
+
+    /**
+     * <code>optional uint32 assist_player0 = 31;</code>
+     */
+    boolean hasAssistPlayer0();
+    /**
+     * <code>optional uint32 assist_player0 = 31;</code>
+     */
+    int getAssistPlayer0();
+
+    /**
+     * <code>optional uint32 assist_player1 = 32;</code>
+     */
+    boolean hasAssistPlayer1();
+    /**
+     * <code>optional uint32 assist_player1 = 32;</code>
+     */
+    int getAssistPlayer1();
+
+    /**
+     * <code>optional uint32 assist_player2 = 33;</code>
+     */
+    boolean hasAssistPlayer2();
+    /**
+     * <code>optional uint32 assist_player2 = 33;</code>
+     */
+    int getAssistPlayer2();
+
+    /**
+     * <code>optional uint32 assist_player3 = 34;</code>
+     */
+    boolean hasAssistPlayer3();
+    /**
+     * <code>optional uint32 assist_player3 = 34;</code>
+     */
+    int getAssistPlayer3();
+
+    /**
+     * <code>optional uint32 stack_count = 35;</code>
+     */
+    boolean hasStackCount();
+    /**
+     * <code>optional uint32 stack_count = 35;</code>
+     */
+    int getStackCount();
+
+    /**
+     * <code>optional bool hidden_modifier = 36;</code>
+     */
+    boolean hasHiddenModifier();
+    /**
+     * <code>optional bool hidden_modifier = 36;</code>
+     */
+    boolean getHiddenModifier();
+
+    /**
+     * <code>optional bool is_target_building = 37;</code>
+     */
+    boolean hasIsTargetBuilding();
+    /**
+     * <code>optional bool is_target_building = 37;</code>
+     */
+    boolean getIsTargetBuilding();
+
+    /**
+     * <code>optional uint32 neutral_camp_type = 38;</code>
+     */
+    boolean hasNeutralCampType();
+    /**
+     * <code>optional uint32 neutral_camp_type = 38;</code>
+     */
+    int getNeutralCampType();
+
+    /**
+     * <code>optional uint32 rune_type = 39;</code>
+     */
+    boolean hasRuneType();
+    /**
+     * <code>optional uint32 rune_type = 39;</code>
+     */
+    int getRuneType();
+
+    /**
+     * <code>repeated uint32 assist_players = 40;</code>
+     */
+    java.util.List<java.lang.Integer> getAssistPlayersList();
+    /**
+     * <code>repeated uint32 assist_players = 40;</code>
+     */
+    int getAssistPlayersCount();
+    /**
+     * <code>repeated uint32 assist_players = 40;</code>
+     */
+    int getAssistPlayers(int index);
+  }
+  /**
+   * Protobuf type {@code CMsgDOTACombatLogEntry}
+   */
+  public static final class CMsgDOTACombatLogEntry extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgDOTACombatLogEntry)
+      CMsgDOTACombatLogEntryOrBuilder {
+    // Use CMsgDOTACombatLogEntry.newBuilder() to construct.
+    private CMsgDOTACombatLogEntry(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgDOTACombatLogEntry(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgDOTACombatLogEntry defaultInstance;
+    public static CMsgDOTACombatLogEntry getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgDOTACombatLogEntry getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgDOTACombatLogEntry(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES value = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                type_ = value;
+              }
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              targetName_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              targetSourceName_ = input.readUInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              attackerName_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              damageSourceName_ = input.readUInt32();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000020;
+              inflictorName_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              isAttackerIllusion_ = input.readBool();
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000080;
+              isAttackerHero_ = input.readBool();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000100;
+              isTargetIllusion_ = input.readBool();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              isTargetHero_ = input.readBool();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              isVisibleRadiant_ = input.readBool();
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000800;
+              isVisibleDire_ = input.readBool();
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00001000;
+              value_ = input.readUInt32();
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00002000;
+              health_ = input.readInt32();
+              break;
+            }
+            case 125: {
+              bitField0_ |= 0x00004000;
+              timestamp_ = input.readFloat();
+              break;
+            }
+            case 133: {
+              bitField0_ |= 0x00008000;
+              stunDuration_ = input.readFloat();
+              break;
+            }
+            case 141: {
+              bitField0_ |= 0x00010000;
+              slowDuration_ = input.readFloat();
+              break;
+            }
+            case 144: {
+              bitField0_ |= 0x00020000;
+              isAbilityToggleOn_ = input.readBool();
+              break;
+            }
+            case 152: {
+              bitField0_ |= 0x00040000;
+              isAbilityToggleOff_ = input.readBool();
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00080000;
+              abilityLevel_ = input.readUInt32();
+              break;
+            }
+            case 173: {
+              bitField0_ |= 0x00100000;
+              locationX_ = input.readFloat();
+              break;
+            }
+            case 181: {
+              bitField0_ |= 0x00200000;
+              locationY_ = input.readFloat();
+              break;
+            }
+            case 184: {
+              bitField0_ |= 0x00400000;
+              goldReason_ = input.readUInt32();
+              break;
+            }
+            case 197: {
+              bitField0_ |= 0x00800000;
+              timestampRaw_ = input.readFloat();
+              break;
+            }
+            case 205: {
+              bitField0_ |= 0x01000000;
+              modifierDuration_ = input.readFloat();
+              break;
+            }
+            case 208: {
+              bitField0_ |= 0x02000000;
+              xpReason_ = input.readUInt32();
+              break;
+            }
+            case 216: {
+              bitField0_ |= 0x04000000;
+              lastHits_ = input.readUInt32();
+              break;
+            }
+            case 224: {
+              bitField0_ |= 0x08000000;
+              attackerTeam_ = input.readUInt32();
+              break;
+            }
+            case 232: {
+              bitField0_ |= 0x10000000;
+              targetTeam_ = input.readUInt32();
+              break;
+            }
+            case 240: {
+              bitField0_ |= 0x20000000;
+              obsWardsPlaced_ = input.readUInt32();
+              break;
+            }
+            case 248: {
+              bitField0_ |= 0x40000000;
+              assistPlayer0_ = input.readUInt32();
+              break;
+            }
+            case 256: {
+              bitField0_ |= 0x80000000;
+              assistPlayer1_ = input.readUInt32();
+              break;
+            }
+            case 264: {
+              bitField1_ |= 0x00000001;
+              assistPlayer2_ = input.readUInt32();
+              break;
+            }
+            case 272: {
+              bitField1_ |= 0x00000002;
+              assistPlayer3_ = input.readUInt32();
+              break;
+            }
+            case 280: {
+              bitField1_ |= 0x00000004;
+              stackCount_ = input.readUInt32();
+              break;
+            }
+            case 288: {
+              bitField1_ |= 0x00000008;
+              hiddenModifier_ = input.readBool();
+              break;
+            }
+            case 296: {
+              bitField1_ |= 0x00000010;
+              isTargetBuilding_ = input.readBool();
+              break;
+            }
+            case 304: {
+              bitField1_ |= 0x00000020;
+              neutralCampType_ = input.readUInt32();
+              break;
+            }
+            case 312: {
+              bitField1_ |= 0x00000040;
+              runeType_ = input.readUInt32();
+              break;
+            }
+            case 320: {
+              if (!((mutable_bitField1_ & 0x00000080) == 0x00000080)) {
+                assistPlayers_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00000080;
+              }
+              assistPlayers_.add(input.readUInt32());
+              break;
+            }
+            case 322: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField1_ & 0x00000080) == 0x00000080) && input.getBytesUntilLimit() > 0) {
+                assistPlayers_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField1_ |= 0x00000080;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                assistPlayers_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField1_ & 0x00000080) == 0x00000080)) {
+          assistPlayers_ = java.util.Collections.unmodifiableList(assistPlayers_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CMsgDOTACombatLogEntry_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CMsgDOTACombatLogEntry_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.class, skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CMsgDOTACombatLogEntry> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgDOTACombatLogEntry>() {
+      public CMsgDOTACombatLogEntry parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgDOTACombatLogEntry(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgDOTACombatLogEntry> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    private int bitField1_;
+    public static final int TYPE_FIELD_NUMBER = 1;
+    private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES type_;
+    /**
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     */
+    public boolean hasType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     */
+    public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES getType() {
+      return type_;
+    }
+
+    public static final int TARGET_NAME_FIELD_NUMBER = 2;
+    private int targetName_;
+    /**
+     * <code>optional uint32 target_name = 2;</code>
+     */
+    public boolean hasTargetName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 target_name = 2;</code>
+     */
+    public int getTargetName() {
+      return targetName_;
+    }
+
+    public static final int TARGET_SOURCE_NAME_FIELD_NUMBER = 3;
+    private int targetSourceName_;
+    /**
+     * <code>optional uint32 target_source_name = 3;</code>
+     */
+    public boolean hasTargetSourceName() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 target_source_name = 3;</code>
+     */
+    public int getTargetSourceName() {
+      return targetSourceName_;
+    }
+
+    public static final int ATTACKER_NAME_FIELD_NUMBER = 4;
+    private int attackerName_;
+    /**
+     * <code>optional uint32 attacker_name = 4;</code>
+     */
+    public boolean hasAttackerName() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional uint32 attacker_name = 4;</code>
+     */
+    public int getAttackerName() {
+      return attackerName_;
+    }
+
+    public static final int DAMAGE_SOURCE_NAME_FIELD_NUMBER = 5;
+    private int damageSourceName_;
+    /**
+     * <code>optional uint32 damage_source_name = 5;</code>
+     */
+    public boolean hasDamageSourceName() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional uint32 damage_source_name = 5;</code>
+     */
+    public int getDamageSourceName() {
+      return damageSourceName_;
+    }
+
+    public static final int INFLICTOR_NAME_FIELD_NUMBER = 6;
+    private int inflictorName_;
+    /**
+     * <code>optional uint32 inflictor_name = 6;</code>
+     */
+    public boolean hasInflictorName() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional uint32 inflictor_name = 6;</code>
+     */
+    public int getInflictorName() {
+      return inflictorName_;
+    }
+
+    public static final int IS_ATTACKER_ILLUSION_FIELD_NUMBER = 7;
+    private boolean isAttackerIllusion_;
+    /**
+     * <code>optional bool is_attacker_illusion = 7;</code>
+     */
+    public boolean hasIsAttackerIllusion() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional bool is_attacker_illusion = 7;</code>
+     */
+    public boolean getIsAttackerIllusion() {
+      return isAttackerIllusion_;
+    }
+
+    public static final int IS_ATTACKER_HERO_FIELD_NUMBER = 8;
+    private boolean isAttackerHero_;
+    /**
+     * <code>optional bool is_attacker_hero = 8;</code>
+     */
+    public boolean hasIsAttackerHero() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional bool is_attacker_hero = 8;</code>
+     */
+    public boolean getIsAttackerHero() {
+      return isAttackerHero_;
+    }
+
+    public static final int IS_TARGET_ILLUSION_FIELD_NUMBER = 9;
+    private boolean isTargetIllusion_;
+    /**
+     * <code>optional bool is_target_illusion = 9;</code>
+     */
+    public boolean hasIsTargetIllusion() {
+      return ((bitField0_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional bool is_target_illusion = 9;</code>
+     */
+    public boolean getIsTargetIllusion() {
+      return isTargetIllusion_;
+    }
+
+    public static final int IS_TARGET_HERO_FIELD_NUMBER = 10;
+    private boolean isTargetHero_;
+    /**
+     * <code>optional bool is_target_hero = 10;</code>
+     */
+    public boolean hasIsTargetHero() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional bool is_target_hero = 10;</code>
+     */
+    public boolean getIsTargetHero() {
+      return isTargetHero_;
+    }
+
+    public static final int IS_VISIBLE_RADIANT_FIELD_NUMBER = 11;
+    private boolean isVisibleRadiant_;
+    /**
+     * <code>optional bool is_visible_radiant = 11;</code>
+     */
+    public boolean hasIsVisibleRadiant() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional bool is_visible_radiant = 11;</code>
+     */
+    public boolean getIsVisibleRadiant() {
+      return isVisibleRadiant_;
+    }
+
+    public static final int IS_VISIBLE_DIRE_FIELD_NUMBER = 12;
+    private boolean isVisibleDire_;
+    /**
+     * <code>optional bool is_visible_dire = 12;</code>
+     */
+    public boolean hasIsVisibleDire() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional bool is_visible_dire = 12;</code>
+     */
+    public boolean getIsVisibleDire() {
+      return isVisibleDire_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 13;
+    private int value_;
+    /**
+     * <code>optional uint32 value = 13;</code>
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional uint32 value = 13;</code>
+     */
+    public int getValue() {
+      return value_;
+    }
+
+    public static final int HEALTH_FIELD_NUMBER = 14;
+    private int health_;
+    /**
+     * <code>optional int32 health = 14;</code>
+     */
+    public boolean hasHealth() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional int32 health = 14;</code>
+     */
+    public int getHealth() {
+      return health_;
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 15;
+    private float timestamp_;
+    /**
+     * <code>optional float timestamp = 15;</code>
+     */
+    public boolean hasTimestamp() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional float timestamp = 15;</code>
+     */
+    public float getTimestamp() {
+      return timestamp_;
+    }
+
+    public static final int STUN_DURATION_FIELD_NUMBER = 16;
+    private float stunDuration_;
+    /**
+     * <code>optional float stun_duration = 16;</code>
+     */
+    public boolean hasStunDuration() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional float stun_duration = 16;</code>
+     */
+    public float getStunDuration() {
+      return stunDuration_;
+    }
+
+    public static final int SLOW_DURATION_FIELD_NUMBER = 17;
+    private float slowDuration_;
+    /**
+     * <code>optional float slow_duration = 17;</code>
+     */
+    public boolean hasSlowDuration() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional float slow_duration = 17;</code>
+     */
+    public float getSlowDuration() {
+      return slowDuration_;
+    }
+
+    public static final int IS_ABILITY_TOGGLE_ON_FIELD_NUMBER = 18;
+    private boolean isAbilityToggleOn_;
+    /**
+     * <code>optional bool is_ability_toggle_on = 18;</code>
+     */
+    public boolean hasIsAbilityToggleOn() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional bool is_ability_toggle_on = 18;</code>
+     */
+    public boolean getIsAbilityToggleOn() {
+      return isAbilityToggleOn_;
+    }
+
+    public static final int IS_ABILITY_TOGGLE_OFF_FIELD_NUMBER = 19;
+    private boolean isAbilityToggleOff_;
+    /**
+     * <code>optional bool is_ability_toggle_off = 19;</code>
+     */
+    public boolean hasIsAbilityToggleOff() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional bool is_ability_toggle_off = 19;</code>
+     */
+    public boolean getIsAbilityToggleOff() {
+      return isAbilityToggleOff_;
+    }
+
+    public static final int ABILITY_LEVEL_FIELD_NUMBER = 20;
+    private int abilityLevel_;
+    /**
+     * <code>optional uint32 ability_level = 20;</code>
+     */
+    public boolean hasAbilityLevel() {
+      return ((bitField0_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <code>optional uint32 ability_level = 20;</code>
+     */
+    public int getAbilityLevel() {
+      return abilityLevel_;
+    }
+
+    public static final int LOCATION_X_FIELD_NUMBER = 21;
+    private float locationX_;
+    /**
+     * <code>optional float location_x = 21;</code>
+     */
+    public boolean hasLocationX() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional float location_x = 21;</code>
+     */
+    public float getLocationX() {
+      return locationX_;
+    }
+
+    public static final int LOCATION_Y_FIELD_NUMBER = 22;
+    private float locationY_;
+    /**
+     * <code>optional float location_y = 22;</code>
+     */
+    public boolean hasLocationY() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional float location_y = 22;</code>
+     */
+    public float getLocationY() {
+      return locationY_;
+    }
+
+    public static final int GOLD_REASON_FIELD_NUMBER = 23;
+    private int goldReason_;
+    /**
+     * <code>optional uint32 gold_reason = 23;</code>
+     */
+    public boolean hasGoldReason() {
+      return ((bitField0_ & 0x00400000) == 0x00400000);
+    }
+    /**
+     * <code>optional uint32 gold_reason = 23;</code>
+     */
+    public int getGoldReason() {
+      return goldReason_;
+    }
+
+    public static final int TIMESTAMP_RAW_FIELD_NUMBER = 24;
+    private float timestampRaw_;
+    /**
+     * <code>optional float timestamp_raw = 24;</code>
+     */
+    public boolean hasTimestampRaw() {
+      return ((bitField0_ & 0x00800000) == 0x00800000);
+    }
+    /**
+     * <code>optional float timestamp_raw = 24;</code>
+     */
+    public float getTimestampRaw() {
+      return timestampRaw_;
+    }
+
+    public static final int MODIFIER_DURATION_FIELD_NUMBER = 25;
+    private float modifierDuration_;
+    /**
+     * <code>optional float modifier_duration = 25;</code>
+     */
+    public boolean hasModifierDuration() {
+      return ((bitField0_ & 0x01000000) == 0x01000000);
+    }
+    /**
+     * <code>optional float modifier_duration = 25;</code>
+     */
+    public float getModifierDuration() {
+      return modifierDuration_;
+    }
+
+    public static final int XP_REASON_FIELD_NUMBER = 26;
+    private int xpReason_;
+    /**
+     * <code>optional uint32 xp_reason = 26;</code>
+     */
+    public boolean hasXpReason() {
+      return ((bitField0_ & 0x02000000) == 0x02000000);
+    }
+    /**
+     * <code>optional uint32 xp_reason = 26;</code>
+     */
+    public int getXpReason() {
+      return xpReason_;
+    }
+
+    public static final int LAST_HITS_FIELD_NUMBER = 27;
+    private int lastHits_;
+    /**
+     * <code>optional uint32 last_hits = 27;</code>
+     */
+    public boolean hasLastHits() {
+      return ((bitField0_ & 0x04000000) == 0x04000000);
+    }
+    /**
+     * <code>optional uint32 last_hits = 27;</code>
+     */
+    public int getLastHits() {
+      return lastHits_;
+    }
+
+    public static final int ATTACKER_TEAM_FIELD_NUMBER = 28;
+    private int attackerTeam_;
+    /**
+     * <code>optional uint32 attacker_team = 28;</code>
+     */
+    public boolean hasAttackerTeam() {
+      return ((bitField0_ & 0x08000000) == 0x08000000);
+    }
+    /**
+     * <code>optional uint32 attacker_team = 28;</code>
+     */
+    public int getAttackerTeam() {
+      return attackerTeam_;
+    }
+
+    public static final int TARGET_TEAM_FIELD_NUMBER = 29;
+    private int targetTeam_;
+    /**
+     * <code>optional uint32 target_team = 29;</code>
+     */
+    public boolean hasTargetTeam() {
+      return ((bitField0_ & 0x10000000) == 0x10000000);
+    }
+    /**
+     * <code>optional uint32 target_team = 29;</code>
+     */
+    public int getTargetTeam() {
+      return targetTeam_;
+    }
+
+    public static final int OBS_WARDS_PLACED_FIELD_NUMBER = 30;
+    private int obsWardsPlaced_;
+    /**
+     * <code>optional uint32 obs_wards_placed = 30;</code>
+     */
+    public boolean hasObsWardsPlaced() {
+      return ((bitField0_ & 0x20000000) == 0x20000000);
+    }
+    /**
+     * <code>optional uint32 obs_wards_placed = 30;</code>
+     */
+    public int getObsWardsPlaced() {
+      return obsWardsPlaced_;
+    }
+
+    public static final int ASSIST_PLAYER0_FIELD_NUMBER = 31;
+    private int assistPlayer0_;
+    /**
+     * <code>optional uint32 assist_player0 = 31;</code>
+     */
+    public boolean hasAssistPlayer0() {
+      return ((bitField0_ & 0x40000000) == 0x40000000);
+    }
+    /**
+     * <code>optional uint32 assist_player0 = 31;</code>
+     */
+    public int getAssistPlayer0() {
+      return assistPlayer0_;
+    }
+
+    public static final int ASSIST_PLAYER1_FIELD_NUMBER = 32;
+    private int assistPlayer1_;
+    /**
+     * <code>optional uint32 assist_player1 = 32;</code>
+     */
+    public boolean hasAssistPlayer1() {
+      return ((bitField0_ & 0x80000000) == 0x80000000);
+    }
+    /**
+     * <code>optional uint32 assist_player1 = 32;</code>
+     */
+    public int getAssistPlayer1() {
+      return assistPlayer1_;
+    }
+
+    public static final int ASSIST_PLAYER2_FIELD_NUMBER = 33;
+    private int assistPlayer2_;
+    /**
+     * <code>optional uint32 assist_player2 = 33;</code>
+     */
+    public boolean hasAssistPlayer2() {
+      return ((bitField1_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 assist_player2 = 33;</code>
+     */
+    public int getAssistPlayer2() {
+      return assistPlayer2_;
+    }
+
+    public static final int ASSIST_PLAYER3_FIELD_NUMBER = 34;
+    private int assistPlayer3_;
+    /**
+     * <code>optional uint32 assist_player3 = 34;</code>
+     */
+    public boolean hasAssistPlayer3() {
+      return ((bitField1_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 assist_player3 = 34;</code>
+     */
+    public int getAssistPlayer3() {
+      return assistPlayer3_;
+    }
+
+    public static final int STACK_COUNT_FIELD_NUMBER = 35;
+    private int stackCount_;
+    /**
+     * <code>optional uint32 stack_count = 35;</code>
+     */
+    public boolean hasStackCount() {
+      return ((bitField1_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 stack_count = 35;</code>
+     */
+    public int getStackCount() {
+      return stackCount_;
+    }
+
+    public static final int HIDDEN_MODIFIER_FIELD_NUMBER = 36;
+    private boolean hiddenModifier_;
+    /**
+     * <code>optional bool hidden_modifier = 36;</code>
+     */
+    public boolean hasHiddenModifier() {
+      return ((bitField1_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bool hidden_modifier = 36;</code>
+     */
+    public boolean getHiddenModifier() {
+      return hiddenModifier_;
+    }
+
+    public static final int IS_TARGET_BUILDING_FIELD_NUMBER = 37;
+    private boolean isTargetBuilding_;
+    /**
+     * <code>optional bool is_target_building = 37;</code>
+     */
+    public boolean hasIsTargetBuilding() {
+      return ((bitField1_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool is_target_building = 37;</code>
+     */
+    public boolean getIsTargetBuilding() {
+      return isTargetBuilding_;
+    }
+
+    public static final int NEUTRAL_CAMP_TYPE_FIELD_NUMBER = 38;
+    private int neutralCampType_;
+    /**
+     * <code>optional uint32 neutral_camp_type = 38;</code>
+     */
+    public boolean hasNeutralCampType() {
+      return ((bitField1_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional uint32 neutral_camp_type = 38;</code>
+     */
+    public int getNeutralCampType() {
+      return neutralCampType_;
+    }
+
+    public static final int RUNE_TYPE_FIELD_NUMBER = 39;
+    private int runeType_;
+    /**
+     * <code>optional uint32 rune_type = 39;</code>
+     */
+    public boolean hasRuneType() {
+      return ((bitField1_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional uint32 rune_type = 39;</code>
+     */
+    public int getRuneType() {
+      return runeType_;
+    }
+
+    public static final int ASSIST_PLAYERS_FIELD_NUMBER = 40;
+    private java.util.List<java.lang.Integer> assistPlayers_;
+    /**
+     * <code>repeated uint32 assist_players = 40;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getAssistPlayersList() {
+      return assistPlayers_;
+    }
+    /**
+     * <code>repeated uint32 assist_players = 40;</code>
+     */
+    public int getAssistPlayersCount() {
+      return assistPlayers_.size();
+    }
+    /**
+     * <code>repeated uint32 assist_players = 40;</code>
+     */
+    public int getAssistPlayers(int index) {
+      return assistPlayers_.get(index);
+    }
+
+    private void initFields() {
+      type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+      targetName_ = 0;
+      targetSourceName_ = 0;
+      attackerName_ = 0;
+      damageSourceName_ = 0;
+      inflictorName_ = 0;
+      isAttackerIllusion_ = false;
+      isAttackerHero_ = false;
+      isTargetIllusion_ = false;
+      isTargetHero_ = false;
+      isVisibleRadiant_ = false;
+      isVisibleDire_ = false;
+      value_ = 0;
+      health_ = 0;
+      timestamp_ = 0F;
+      stunDuration_ = 0F;
+      slowDuration_ = 0F;
+      isAbilityToggleOn_ = false;
+      isAbilityToggleOff_ = false;
+      abilityLevel_ = 0;
+      locationX_ = 0F;
+      locationY_ = 0F;
+      goldReason_ = 0;
+      timestampRaw_ = 0F;
+      modifierDuration_ = 0F;
+      xpReason_ = 0;
+      lastHits_ = 0;
+      attackerTeam_ = 0;
+      targetTeam_ = 0;
+      obsWardsPlaced_ = 0;
+      assistPlayer0_ = 0;
+      assistPlayer1_ = 0;
+      assistPlayer2_ = 0;
+      assistPlayer3_ = 0;
+      stackCount_ = 0;
+      hiddenModifier_ = false;
+      isTargetBuilding_ = false;
+      neutralCampType_ = 0;
+      runeType_ = 0;
+      assistPlayers_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, targetName_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(3, targetSourceName_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeUInt32(4, attackerName_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeUInt32(5, damageSourceName_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeUInt32(6, inflictorName_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeBool(7, isAttackerIllusion_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeBool(8, isAttackerHero_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        output.writeBool(9, isTargetIllusion_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeBool(10, isTargetHero_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBool(11, isVisibleRadiant_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBool(12, isVisibleDire_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeUInt32(13, value_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeInt32(14, health_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeFloat(15, timestamp_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeFloat(16, stunDuration_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeFloat(17, slowDuration_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeBool(18, isAbilityToggleOn_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeBool(19, isAbilityToggleOff_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeUInt32(20, abilityLevel_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeFloat(21, locationX_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeFloat(22, locationY_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        output.writeUInt32(23, goldReason_);
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        output.writeFloat(24, timestampRaw_);
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        output.writeFloat(25, modifierDuration_);
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        output.writeUInt32(26, xpReason_);
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        output.writeUInt32(27, lastHits_);
+      }
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        output.writeUInt32(28, attackerTeam_);
+      }
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+        output.writeUInt32(29, targetTeam_);
+      }
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        output.writeUInt32(30, obsWardsPlaced_);
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        output.writeUInt32(31, assistPlayer0_);
+      }
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
+        output.writeUInt32(32, assistPlayer1_);
+      }
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(33, assistPlayer2_);
+      }
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(34, assistPlayer3_);
+      }
+      if (((bitField1_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(35, stackCount_);
+      }
+      if (((bitField1_ & 0x00000008) == 0x00000008)) {
+        output.writeBool(36, hiddenModifier_);
+      }
+      if (((bitField1_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(37, isTargetBuilding_);
+      }
+      if (((bitField1_ & 0x00000020) == 0x00000020)) {
+        output.writeUInt32(38, neutralCampType_);
+      }
+      if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt32(39, runeType_);
+      }
+      for (int i = 0; i < assistPlayers_.size(); i++) {
+        output.writeUInt32(40, assistPlayers_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, type_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, targetName_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, targetSourceName_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, attackerName_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, damageSourceName_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(6, inflictorName_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(7, isAttackerIllusion_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(8, isAttackerHero_);
+      }
+      if (((bitField0_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(9, isTargetIllusion_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, isTargetHero_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(11, isVisibleRadiant_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(12, isVisibleDire_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(13, value_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(14, health_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(15, timestamp_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(16, stunDuration_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(17, slowDuration_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(18, isAbilityToggleOn_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(19, isAbilityToggleOff_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(20, abilityLevel_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(21, locationX_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(22, locationY_);
+      }
+      if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(23, goldReason_);
+      }
+      if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(24, timestampRaw_);
+      }
+      if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(25, modifierDuration_);
+      }
+      if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(26, xpReason_);
+      }
+      if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(27, lastHits_);
+      }
+      if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(28, attackerTeam_);
+      }
+      if (((bitField0_ & 0x10000000) == 0x10000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(29, targetTeam_);
+      }
+      if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(30, obsWardsPlaced_);
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(31, assistPlayer0_);
+      }
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(32, assistPlayer1_);
+      }
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(33, assistPlayer2_);
+      }
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(34, assistPlayer3_);
+      }
+      if (((bitField1_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(35, stackCount_);
+      }
+      if (((bitField1_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(36, hiddenModifier_);
+      }
+      if (((bitField1_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(37, isTargetBuilding_);
+      }
+      if (((bitField1_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(38, neutralCampType_);
+      }
+      if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(39, runeType_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < assistPlayers_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(assistPlayers_.get(i));
+        }
+        size += dataSize;
+        size += 2 * getAssistPlayersList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgDOTACombatLogEntry}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgDOTACombatLogEntry)
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CMsgDOTACombatLogEntry_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CMsgDOTACombatLogEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.class, skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        targetName_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetSourceName_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        attackerName_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        damageSourceName_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        inflictorName_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        isAttackerIllusion_ = false;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isAttackerHero_ = false;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        isTargetIllusion_ = false;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        isTargetHero_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        isVisibleRadiant_ = false;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isVisibleDire_ = false;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        value_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        health_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        timestamp_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        stunDuration_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        slowDuration_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        isAbilityToggleOn_ = false;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        isAbilityToggleOff_ = false;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        abilityLevel_ = 0;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        locationX_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        locationY_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        goldReason_ = 0;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        timestampRaw_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        modifierDuration_ = 0F;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        xpReason_ = 0;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        lastHits_ = 0;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        attackerTeam_ = 0;
+        bitField0_ = (bitField0_ & ~0x08000000);
+        targetTeam_ = 0;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        obsWardsPlaced_ = 0;
+        bitField0_ = (bitField0_ & ~0x20000000);
+        assistPlayer0_ = 0;
+        bitField0_ = (bitField0_ & ~0x40000000);
+        assistPlayer1_ = 0;
+        bitField0_ = (bitField0_ & ~0x80000000);
+        assistPlayer2_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000001);
+        assistPlayer3_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000002);
+        stackCount_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000004);
+        hiddenModifier_ = false;
+        bitField1_ = (bitField1_ & ~0x00000008);
+        isTargetBuilding_ = false;
+        bitField1_ = (bitField1_ & ~0x00000010);
+        neutralCampType_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000020);
+        runeType_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000040);
+        assistPlayers_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CMsgDOTACombatLogEntry_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry build() {
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry buildPartial() {
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry result = new skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry(this);
+        int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
+        int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.type_ = type_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.targetName_ = targetName_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.targetSourceName_ = targetSourceName_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.attackerName_ = attackerName_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.damageSourceName_ = damageSourceName_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.inflictorName_ = inflictorName_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.isAttackerIllusion_ = isAttackerIllusion_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.isAttackerHero_ = isAttackerHero_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000100;
+        }
+        result.isTargetIllusion_ = isTargetIllusion_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.isTargetHero_ = isTargetHero_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.isVisibleRadiant_ = isVisibleRadiant_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.isVisibleDire_ = isVisibleDire_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.value_ = value_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.health_ = health_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.timestamp_ = timestamp_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.stunDuration_ = stunDuration_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.slowDuration_ = slowDuration_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.isAbilityToggleOn_ = isAbilityToggleOn_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.isAbilityToggleOff_ = isAbilityToggleOff_;
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00080000;
+        }
+        result.abilityLevel_ = abilityLevel_;
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.locationX_ = locationX_;
+        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
+          to_bitField0_ |= 0x00200000;
+        }
+        result.locationY_ = locationY_;
+        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
+          to_bitField0_ |= 0x00400000;
+        }
+        result.goldReason_ = goldReason_;
+        if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
+          to_bitField0_ |= 0x00800000;
+        }
+        result.timestampRaw_ = timestampRaw_;
+        if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
+          to_bitField0_ |= 0x01000000;
+        }
+        result.modifierDuration_ = modifierDuration_;
+        if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
+          to_bitField0_ |= 0x02000000;
+        }
+        result.xpReason_ = xpReason_;
+        if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
+          to_bitField0_ |= 0x04000000;
+        }
+        result.lastHits_ = lastHits_;
+        if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
+          to_bitField0_ |= 0x08000000;
+        }
+        result.attackerTeam_ = attackerTeam_;
+        if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
+          to_bitField0_ |= 0x10000000;
+        }
+        result.targetTeam_ = targetTeam_;
+        if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
+          to_bitField0_ |= 0x20000000;
+        }
+        result.obsWardsPlaced_ = obsWardsPlaced_;
+        if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
+          to_bitField0_ |= 0x40000000;
+        }
+        result.assistPlayer0_ = assistPlayer0_;
+        if (((from_bitField0_ & 0x80000000) == 0x80000000)) {
+          to_bitField0_ |= 0x80000000;
+        }
+        result.assistPlayer1_ = assistPlayer1_;
+        if (((from_bitField1_ & 0x00000001) == 0x00000001)) {
+          to_bitField1_ |= 0x00000001;
+        }
+        result.assistPlayer2_ = assistPlayer2_;
+        if (((from_bitField1_ & 0x00000002) == 0x00000002)) {
+          to_bitField1_ |= 0x00000002;
+        }
+        result.assistPlayer3_ = assistPlayer3_;
+        if (((from_bitField1_ & 0x00000004) == 0x00000004)) {
+          to_bitField1_ |= 0x00000004;
+        }
+        result.stackCount_ = stackCount_;
+        if (((from_bitField1_ & 0x00000008) == 0x00000008)) {
+          to_bitField1_ |= 0x00000008;
+        }
+        result.hiddenModifier_ = hiddenModifier_;
+        if (((from_bitField1_ & 0x00000010) == 0x00000010)) {
+          to_bitField1_ |= 0x00000010;
+        }
+        result.isTargetBuilding_ = isTargetBuilding_;
+        if (((from_bitField1_ & 0x00000020) == 0x00000020)) {
+          to_bitField1_ |= 0x00000020;
+        }
+        result.neutralCampType_ = neutralCampType_;
+        if (((from_bitField1_ & 0x00000040) == 0x00000040)) {
+          to_bitField1_ |= 0x00000040;
+        }
+        result.runeType_ = runeType_;
+        if (((bitField1_ & 0x00000080) == 0x00000080)) {
+          assistPlayers_ = java.util.Collections.unmodifiableList(assistPlayers_);
+          bitField1_ = (bitField1_ & ~0x00000080);
+        }
+        result.assistPlayers_ = assistPlayers_;
+        result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry other) {
+        if (other == skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry.getDefaultInstance()) return this;
+        if (other.hasType()) {
+          setType(other.getType());
+        }
+        if (other.hasTargetName()) {
+          setTargetName(other.getTargetName());
+        }
+        if (other.hasTargetSourceName()) {
+          setTargetSourceName(other.getTargetSourceName());
+        }
+        if (other.hasAttackerName()) {
+          setAttackerName(other.getAttackerName());
+        }
+        if (other.hasDamageSourceName()) {
+          setDamageSourceName(other.getDamageSourceName());
+        }
+        if (other.hasInflictorName()) {
+          setInflictorName(other.getInflictorName());
+        }
+        if (other.hasIsAttackerIllusion()) {
+          setIsAttackerIllusion(other.getIsAttackerIllusion());
+        }
+        if (other.hasIsAttackerHero()) {
+          setIsAttackerHero(other.getIsAttackerHero());
+        }
+        if (other.hasIsTargetIllusion()) {
+          setIsTargetIllusion(other.getIsTargetIllusion());
+        }
+        if (other.hasIsTargetHero()) {
+          setIsTargetHero(other.getIsTargetHero());
+        }
+        if (other.hasIsVisibleRadiant()) {
+          setIsVisibleRadiant(other.getIsVisibleRadiant());
+        }
+        if (other.hasIsVisibleDire()) {
+          setIsVisibleDire(other.getIsVisibleDire());
+        }
+        if (other.hasValue()) {
+          setValue(other.getValue());
+        }
+        if (other.hasHealth()) {
+          setHealth(other.getHealth());
+        }
+        if (other.hasTimestamp()) {
+          setTimestamp(other.getTimestamp());
+        }
+        if (other.hasStunDuration()) {
+          setStunDuration(other.getStunDuration());
+        }
+        if (other.hasSlowDuration()) {
+          setSlowDuration(other.getSlowDuration());
+        }
+        if (other.hasIsAbilityToggleOn()) {
+          setIsAbilityToggleOn(other.getIsAbilityToggleOn());
+        }
+        if (other.hasIsAbilityToggleOff()) {
+          setIsAbilityToggleOff(other.getIsAbilityToggleOff());
+        }
+        if (other.hasAbilityLevel()) {
+          setAbilityLevel(other.getAbilityLevel());
+        }
+        if (other.hasLocationX()) {
+          setLocationX(other.getLocationX());
+        }
+        if (other.hasLocationY()) {
+          setLocationY(other.getLocationY());
+        }
+        if (other.hasGoldReason()) {
+          setGoldReason(other.getGoldReason());
+        }
+        if (other.hasTimestampRaw()) {
+          setTimestampRaw(other.getTimestampRaw());
+        }
+        if (other.hasModifierDuration()) {
+          setModifierDuration(other.getModifierDuration());
+        }
+        if (other.hasXpReason()) {
+          setXpReason(other.getXpReason());
+        }
+        if (other.hasLastHits()) {
+          setLastHits(other.getLastHits());
+        }
+        if (other.hasAttackerTeam()) {
+          setAttackerTeam(other.getAttackerTeam());
+        }
+        if (other.hasTargetTeam()) {
+          setTargetTeam(other.getTargetTeam());
+        }
+        if (other.hasObsWardsPlaced()) {
+          setObsWardsPlaced(other.getObsWardsPlaced());
+        }
+        if (other.hasAssistPlayer0()) {
+          setAssistPlayer0(other.getAssistPlayer0());
+        }
+        if (other.hasAssistPlayer1()) {
+          setAssistPlayer1(other.getAssistPlayer1());
+        }
+        if (other.hasAssistPlayer2()) {
+          setAssistPlayer2(other.getAssistPlayer2());
+        }
+        if (other.hasAssistPlayer3()) {
+          setAssistPlayer3(other.getAssistPlayer3());
+        }
+        if (other.hasStackCount()) {
+          setStackCount(other.getStackCount());
+        }
+        if (other.hasHiddenModifier()) {
+          setHiddenModifier(other.getHiddenModifier());
+        }
+        if (other.hasIsTargetBuilding()) {
+          setIsTargetBuilding(other.getIsTargetBuilding());
+        }
+        if (other.hasNeutralCampType()) {
+          setNeutralCampType(other.getNeutralCampType());
+        }
+        if (other.hasRuneType()) {
+          setRuneType(other.getRuneType());
+        }
+        if (!other.assistPlayers_.isEmpty()) {
+          if (assistPlayers_.isEmpty()) {
+            assistPlayers_ = other.assistPlayers_;
+            bitField1_ = (bitField1_ & ~0x00000080);
+          } else {
+            ensureAssistPlayersIsMutable();
+            assistPlayers_.addAll(other.assistPlayers_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.DotaUserMessages.CMsgDOTACombatLogEntry) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+      private int bitField1_;
+
+      private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+      /**
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       */
+      public boolean hasType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES getType() {
+        return type_;
+      }
+      /**
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       */
+      public Builder setType(skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       */
+      public Builder clearType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+        onChanged();
+        return this;
+      }
+
+      private int targetName_ ;
+      /**
+       * <code>optional uint32 target_name = 2;</code>
+       */
+      public boolean hasTargetName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 target_name = 2;</code>
+       */
+      public int getTargetName() {
+        return targetName_;
+      }
+      /**
+       * <code>optional uint32 target_name = 2;</code>
+       */
+      public Builder setTargetName(int value) {
+        bitField0_ |= 0x00000002;
+        targetName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 target_name = 2;</code>
+       */
+      public Builder clearTargetName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetName_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int targetSourceName_ ;
+      /**
+       * <code>optional uint32 target_source_name = 3;</code>
+       */
+      public boolean hasTargetSourceName() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 target_source_name = 3;</code>
+       */
+      public int getTargetSourceName() {
+        return targetSourceName_;
+      }
+      /**
+       * <code>optional uint32 target_source_name = 3;</code>
+       */
+      public Builder setTargetSourceName(int value) {
+        bitField0_ |= 0x00000004;
+        targetSourceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 target_source_name = 3;</code>
+       */
+      public Builder clearTargetSourceName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        targetSourceName_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int attackerName_ ;
+      /**
+       * <code>optional uint32 attacker_name = 4;</code>
+       */
+      public boolean hasAttackerName() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional uint32 attacker_name = 4;</code>
+       */
+      public int getAttackerName() {
+        return attackerName_;
+      }
+      /**
+       * <code>optional uint32 attacker_name = 4;</code>
+       */
+      public Builder setAttackerName(int value) {
+        bitField0_ |= 0x00000008;
+        attackerName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 attacker_name = 4;</code>
+       */
+      public Builder clearAttackerName() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        attackerName_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int damageSourceName_ ;
+      /**
+       * <code>optional uint32 damage_source_name = 5;</code>
+       */
+      public boolean hasDamageSourceName() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional uint32 damage_source_name = 5;</code>
+       */
+      public int getDamageSourceName() {
+        return damageSourceName_;
+      }
+      /**
+       * <code>optional uint32 damage_source_name = 5;</code>
+       */
+      public Builder setDamageSourceName(int value) {
+        bitField0_ |= 0x00000010;
+        damageSourceName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 damage_source_name = 5;</code>
+       */
+      public Builder clearDamageSourceName() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        damageSourceName_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int inflictorName_ ;
+      /**
+       * <code>optional uint32 inflictor_name = 6;</code>
+       */
+      public boolean hasInflictorName() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional uint32 inflictor_name = 6;</code>
+       */
+      public int getInflictorName() {
+        return inflictorName_;
+      }
+      /**
+       * <code>optional uint32 inflictor_name = 6;</code>
+       */
+      public Builder setInflictorName(int value) {
+        bitField0_ |= 0x00000020;
+        inflictorName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 inflictor_name = 6;</code>
+       */
+      public Builder clearInflictorName() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        inflictorName_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean isAttackerIllusion_ ;
+      /**
+       * <code>optional bool is_attacker_illusion = 7;</code>
+       */
+      public boolean hasIsAttackerIllusion() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool is_attacker_illusion = 7;</code>
+       */
+      public boolean getIsAttackerIllusion() {
+        return isAttackerIllusion_;
+      }
+      /**
+       * <code>optional bool is_attacker_illusion = 7;</code>
+       */
+      public Builder setIsAttackerIllusion(boolean value) {
+        bitField0_ |= 0x00000040;
+        isAttackerIllusion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_attacker_illusion = 7;</code>
+       */
+      public Builder clearIsAttackerIllusion() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        isAttackerIllusion_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isAttackerHero_ ;
+      /**
+       * <code>optional bool is_attacker_hero = 8;</code>
+       */
+      public boolean hasIsAttackerHero() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bool is_attacker_hero = 8;</code>
+       */
+      public boolean getIsAttackerHero() {
+        return isAttackerHero_;
+      }
+      /**
+       * <code>optional bool is_attacker_hero = 8;</code>
+       */
+      public Builder setIsAttackerHero(boolean value) {
+        bitField0_ |= 0x00000080;
+        isAttackerHero_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_attacker_hero = 8;</code>
+       */
+      public Builder clearIsAttackerHero() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        isAttackerHero_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isTargetIllusion_ ;
+      /**
+       * <code>optional bool is_target_illusion = 9;</code>
+       */
+      public boolean hasIsTargetIllusion() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional bool is_target_illusion = 9;</code>
+       */
+      public boolean getIsTargetIllusion() {
+        return isTargetIllusion_;
+      }
+      /**
+       * <code>optional bool is_target_illusion = 9;</code>
+       */
+      public Builder setIsTargetIllusion(boolean value) {
+        bitField0_ |= 0x00000100;
+        isTargetIllusion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_target_illusion = 9;</code>
+       */
+      public Builder clearIsTargetIllusion() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        isTargetIllusion_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isTargetHero_ ;
+      /**
+       * <code>optional bool is_target_hero = 10;</code>
+       */
+      public boolean hasIsTargetHero() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional bool is_target_hero = 10;</code>
+       */
+      public boolean getIsTargetHero() {
+        return isTargetHero_;
+      }
+      /**
+       * <code>optional bool is_target_hero = 10;</code>
+       */
+      public Builder setIsTargetHero(boolean value) {
+        bitField0_ |= 0x00000200;
+        isTargetHero_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_target_hero = 10;</code>
+       */
+      public Builder clearIsTargetHero() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        isTargetHero_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isVisibleRadiant_ ;
+      /**
+       * <code>optional bool is_visible_radiant = 11;</code>
+       */
+      public boolean hasIsVisibleRadiant() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional bool is_visible_radiant = 11;</code>
+       */
+      public boolean getIsVisibleRadiant() {
+        return isVisibleRadiant_;
+      }
+      /**
+       * <code>optional bool is_visible_radiant = 11;</code>
+       */
+      public Builder setIsVisibleRadiant(boolean value) {
+        bitField0_ |= 0x00000400;
+        isVisibleRadiant_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_visible_radiant = 11;</code>
+       */
+      public Builder clearIsVisibleRadiant() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        isVisibleRadiant_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isVisibleDire_ ;
+      /**
+       * <code>optional bool is_visible_dire = 12;</code>
+       */
+      public boolean hasIsVisibleDire() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional bool is_visible_dire = 12;</code>
+       */
+      public boolean getIsVisibleDire() {
+        return isVisibleDire_;
+      }
+      /**
+       * <code>optional bool is_visible_dire = 12;</code>
+       */
+      public Builder setIsVisibleDire(boolean value) {
+        bitField0_ |= 0x00000800;
+        isVisibleDire_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_visible_dire = 12;</code>
+       */
+      public Builder clearIsVisibleDire() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        isVisibleDire_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int value_ ;
+      /**
+       * <code>optional uint32 value = 13;</code>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional uint32 value = 13;</code>
+       */
+      public int getValue() {
+        return value_;
+      }
+      /**
+       * <code>optional uint32 value = 13;</code>
+       */
+      public Builder setValue(int value) {
+        bitField0_ |= 0x00001000;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 value = 13;</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        value_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int health_ ;
+      /**
+       * <code>optional int32 health = 14;</code>
+       */
+      public boolean hasHealth() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional int32 health = 14;</code>
+       */
+      public int getHealth() {
+        return health_;
+      }
+      /**
+       * <code>optional int32 health = 14;</code>
+       */
+      public Builder setHealth(int value) {
+        bitField0_ |= 0x00002000;
+        health_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 health = 14;</code>
+       */
+      public Builder clearHealth() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        health_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float timestamp_ ;
+      /**
+       * <code>optional float timestamp = 15;</code>
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional float timestamp = 15;</code>
+       */
+      public float getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>optional float timestamp = 15;</code>
+       */
+      public Builder setTimestamp(float value) {
+        bitField0_ |= 0x00004000;
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float timestamp = 15;</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        timestamp_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float stunDuration_ ;
+      /**
+       * <code>optional float stun_duration = 16;</code>
+       */
+      public boolean hasStunDuration() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional float stun_duration = 16;</code>
+       */
+      public float getStunDuration() {
+        return stunDuration_;
+      }
+      /**
+       * <code>optional float stun_duration = 16;</code>
+       */
+      public Builder setStunDuration(float value) {
+        bitField0_ |= 0x00008000;
+        stunDuration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float stun_duration = 16;</code>
+       */
+      public Builder clearStunDuration() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        stunDuration_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float slowDuration_ ;
+      /**
+       * <code>optional float slow_duration = 17;</code>
+       */
+      public boolean hasSlowDuration() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional float slow_duration = 17;</code>
+       */
+      public float getSlowDuration() {
+        return slowDuration_;
+      }
+      /**
+       * <code>optional float slow_duration = 17;</code>
+       */
+      public Builder setSlowDuration(float value) {
+        bitField0_ |= 0x00010000;
+        slowDuration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float slow_duration = 17;</code>
+       */
+      public Builder clearSlowDuration() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        slowDuration_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private boolean isAbilityToggleOn_ ;
+      /**
+       * <code>optional bool is_ability_toggle_on = 18;</code>
+       */
+      public boolean hasIsAbilityToggleOn() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional bool is_ability_toggle_on = 18;</code>
+       */
+      public boolean getIsAbilityToggleOn() {
+        return isAbilityToggleOn_;
+      }
+      /**
+       * <code>optional bool is_ability_toggle_on = 18;</code>
+       */
+      public Builder setIsAbilityToggleOn(boolean value) {
+        bitField0_ |= 0x00020000;
+        isAbilityToggleOn_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_ability_toggle_on = 18;</code>
+       */
+      public Builder clearIsAbilityToggleOn() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        isAbilityToggleOn_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isAbilityToggleOff_ ;
+      /**
+       * <code>optional bool is_ability_toggle_off = 19;</code>
+       */
+      public boolean hasIsAbilityToggleOff() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional bool is_ability_toggle_off = 19;</code>
+       */
+      public boolean getIsAbilityToggleOff() {
+        return isAbilityToggleOff_;
+      }
+      /**
+       * <code>optional bool is_ability_toggle_off = 19;</code>
+       */
+      public Builder setIsAbilityToggleOff(boolean value) {
+        bitField0_ |= 0x00040000;
+        isAbilityToggleOff_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_ability_toggle_off = 19;</code>
+       */
+      public Builder clearIsAbilityToggleOff() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        isAbilityToggleOff_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int abilityLevel_ ;
+      /**
+       * <code>optional uint32 ability_level = 20;</code>
+       */
+      public boolean hasAbilityLevel() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <code>optional uint32 ability_level = 20;</code>
+       */
+      public int getAbilityLevel() {
+        return abilityLevel_;
+      }
+      /**
+       * <code>optional uint32 ability_level = 20;</code>
+       */
+      public Builder setAbilityLevel(int value) {
+        bitField0_ |= 0x00080000;
+        abilityLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 ability_level = 20;</code>
+       */
+      public Builder clearAbilityLevel() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        abilityLevel_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float locationX_ ;
+      /**
+       * <code>optional float location_x = 21;</code>
+       */
+      public boolean hasLocationX() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional float location_x = 21;</code>
+       */
+      public float getLocationX() {
+        return locationX_;
+      }
+      /**
+       * <code>optional float location_x = 21;</code>
+       */
+      public Builder setLocationX(float value) {
+        bitField0_ |= 0x00100000;
+        locationX_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float location_x = 21;</code>
+       */
+      public Builder clearLocationX() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        locationX_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float locationY_ ;
+      /**
+       * <code>optional float location_y = 22;</code>
+       */
+      public boolean hasLocationY() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional float location_y = 22;</code>
+       */
+      public float getLocationY() {
+        return locationY_;
+      }
+      /**
+       * <code>optional float location_y = 22;</code>
+       */
+      public Builder setLocationY(float value) {
+        bitField0_ |= 0x00200000;
+        locationY_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float location_y = 22;</code>
+       */
+      public Builder clearLocationY() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        locationY_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int goldReason_ ;
+      /**
+       * <code>optional uint32 gold_reason = 23;</code>
+       */
+      public boolean hasGoldReason() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional uint32 gold_reason = 23;</code>
+       */
+      public int getGoldReason() {
+        return goldReason_;
+      }
+      /**
+       * <code>optional uint32 gold_reason = 23;</code>
+       */
+      public Builder setGoldReason(int value) {
+        bitField0_ |= 0x00400000;
+        goldReason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 gold_reason = 23;</code>
+       */
+      public Builder clearGoldReason() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        goldReason_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float timestampRaw_ ;
+      /**
+       * <code>optional float timestamp_raw = 24;</code>
+       */
+      public boolean hasTimestampRaw() {
+        return ((bitField0_ & 0x00800000) == 0x00800000);
+      }
+      /**
+       * <code>optional float timestamp_raw = 24;</code>
+       */
+      public float getTimestampRaw() {
+        return timestampRaw_;
+      }
+      /**
+       * <code>optional float timestamp_raw = 24;</code>
+       */
+      public Builder setTimestampRaw(float value) {
+        bitField0_ |= 0x00800000;
+        timestampRaw_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float timestamp_raw = 24;</code>
+       */
+      public Builder clearTimestampRaw() {
+        bitField0_ = (bitField0_ & ~0x00800000);
+        timestampRaw_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float modifierDuration_ ;
+      /**
+       * <code>optional float modifier_duration = 25;</code>
+       */
+      public boolean hasModifierDuration() {
+        return ((bitField0_ & 0x01000000) == 0x01000000);
+      }
+      /**
+       * <code>optional float modifier_duration = 25;</code>
+       */
+      public float getModifierDuration() {
+        return modifierDuration_;
+      }
+      /**
+       * <code>optional float modifier_duration = 25;</code>
+       */
+      public Builder setModifierDuration(float value) {
+        bitField0_ |= 0x01000000;
+        modifierDuration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float modifier_duration = 25;</code>
+       */
+      public Builder clearModifierDuration() {
+        bitField0_ = (bitField0_ & ~0x01000000);
+        modifierDuration_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int xpReason_ ;
+      /**
+       * <code>optional uint32 xp_reason = 26;</code>
+       */
+      public boolean hasXpReason() {
+        return ((bitField0_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional uint32 xp_reason = 26;</code>
+       */
+      public int getXpReason() {
+        return xpReason_;
+      }
+      /**
+       * <code>optional uint32 xp_reason = 26;</code>
+       */
+      public Builder setXpReason(int value) {
+        bitField0_ |= 0x02000000;
+        xpReason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 xp_reason = 26;</code>
+       */
+      public Builder clearXpReason() {
+        bitField0_ = (bitField0_ & ~0x02000000);
+        xpReason_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lastHits_ ;
+      /**
+       * <code>optional uint32 last_hits = 27;</code>
+       */
+      public boolean hasLastHits() {
+        return ((bitField0_ & 0x04000000) == 0x04000000);
+      }
+      /**
+       * <code>optional uint32 last_hits = 27;</code>
+       */
+      public int getLastHits() {
+        return lastHits_;
+      }
+      /**
+       * <code>optional uint32 last_hits = 27;</code>
+       */
+      public Builder setLastHits(int value) {
+        bitField0_ |= 0x04000000;
+        lastHits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 last_hits = 27;</code>
+       */
+      public Builder clearLastHits() {
+        bitField0_ = (bitField0_ & ~0x04000000);
+        lastHits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int attackerTeam_ ;
+      /**
+       * <code>optional uint32 attacker_team = 28;</code>
+       */
+      public boolean hasAttackerTeam() {
+        return ((bitField0_ & 0x08000000) == 0x08000000);
+      }
+      /**
+       * <code>optional uint32 attacker_team = 28;</code>
+       */
+      public int getAttackerTeam() {
+        return attackerTeam_;
+      }
+      /**
+       * <code>optional uint32 attacker_team = 28;</code>
+       */
+      public Builder setAttackerTeam(int value) {
+        bitField0_ |= 0x08000000;
+        attackerTeam_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 attacker_team = 28;</code>
+       */
+      public Builder clearAttackerTeam() {
+        bitField0_ = (bitField0_ & ~0x08000000);
+        attackerTeam_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int targetTeam_ ;
+      /**
+       * <code>optional uint32 target_team = 29;</code>
+       */
+      public boolean hasTargetTeam() {
+        return ((bitField0_ & 0x10000000) == 0x10000000);
+      }
+      /**
+       * <code>optional uint32 target_team = 29;</code>
+       */
+      public int getTargetTeam() {
+        return targetTeam_;
+      }
+      /**
+       * <code>optional uint32 target_team = 29;</code>
+       */
+      public Builder setTargetTeam(int value) {
+        bitField0_ |= 0x10000000;
+        targetTeam_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 target_team = 29;</code>
+       */
+      public Builder clearTargetTeam() {
+        bitField0_ = (bitField0_ & ~0x10000000);
+        targetTeam_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int obsWardsPlaced_ ;
+      /**
+       * <code>optional uint32 obs_wards_placed = 30;</code>
+       */
+      public boolean hasObsWardsPlaced() {
+        return ((bitField0_ & 0x20000000) == 0x20000000);
+      }
+      /**
+       * <code>optional uint32 obs_wards_placed = 30;</code>
+       */
+      public int getObsWardsPlaced() {
+        return obsWardsPlaced_;
+      }
+      /**
+       * <code>optional uint32 obs_wards_placed = 30;</code>
+       */
+      public Builder setObsWardsPlaced(int value) {
+        bitField0_ |= 0x20000000;
+        obsWardsPlaced_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 obs_wards_placed = 30;</code>
+       */
+      public Builder clearObsWardsPlaced() {
+        bitField0_ = (bitField0_ & ~0x20000000);
+        obsWardsPlaced_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int assistPlayer0_ ;
+      /**
+       * <code>optional uint32 assist_player0 = 31;</code>
+       */
+      public boolean hasAssistPlayer0() {
+        return ((bitField0_ & 0x40000000) == 0x40000000);
+      }
+      /**
+       * <code>optional uint32 assist_player0 = 31;</code>
+       */
+      public int getAssistPlayer0() {
+        return assistPlayer0_;
+      }
+      /**
+       * <code>optional uint32 assist_player0 = 31;</code>
+       */
+      public Builder setAssistPlayer0(int value) {
+        bitField0_ |= 0x40000000;
+        assistPlayer0_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 assist_player0 = 31;</code>
+       */
+      public Builder clearAssistPlayer0() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        assistPlayer0_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int assistPlayer1_ ;
+      /**
+       * <code>optional uint32 assist_player1 = 32;</code>
+       */
+      public boolean hasAssistPlayer1() {
+        return ((bitField0_ & 0x80000000) == 0x80000000);
+      }
+      /**
+       * <code>optional uint32 assist_player1 = 32;</code>
+       */
+      public int getAssistPlayer1() {
+        return assistPlayer1_;
+      }
+      /**
+       * <code>optional uint32 assist_player1 = 32;</code>
+       */
+      public Builder setAssistPlayer1(int value) {
+        bitField0_ |= 0x80000000;
+        assistPlayer1_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 assist_player1 = 32;</code>
+       */
+      public Builder clearAssistPlayer1() {
+        bitField0_ = (bitField0_ & ~0x80000000);
+        assistPlayer1_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int assistPlayer2_ ;
+      /**
+       * <code>optional uint32 assist_player2 = 33;</code>
+       */
+      public boolean hasAssistPlayer2() {
+        return ((bitField1_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 assist_player2 = 33;</code>
+       */
+      public int getAssistPlayer2() {
+        return assistPlayer2_;
+      }
+      /**
+       * <code>optional uint32 assist_player2 = 33;</code>
+       */
+      public Builder setAssistPlayer2(int value) {
+        bitField1_ |= 0x00000001;
+        assistPlayer2_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 assist_player2 = 33;</code>
+       */
+      public Builder clearAssistPlayer2() {
+        bitField1_ = (bitField1_ & ~0x00000001);
+        assistPlayer2_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int assistPlayer3_ ;
+      /**
+       * <code>optional uint32 assist_player3 = 34;</code>
+       */
+      public boolean hasAssistPlayer3() {
+        return ((bitField1_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 assist_player3 = 34;</code>
+       */
+      public int getAssistPlayer3() {
+        return assistPlayer3_;
+      }
+      /**
+       * <code>optional uint32 assist_player3 = 34;</code>
+       */
+      public Builder setAssistPlayer3(int value) {
+        bitField1_ |= 0x00000002;
+        assistPlayer3_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 assist_player3 = 34;</code>
+       */
+      public Builder clearAssistPlayer3() {
+        bitField1_ = (bitField1_ & ~0x00000002);
+        assistPlayer3_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int stackCount_ ;
+      /**
+       * <code>optional uint32 stack_count = 35;</code>
+       */
+      public boolean hasStackCount() {
+        return ((bitField1_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 stack_count = 35;</code>
+       */
+      public int getStackCount() {
+        return stackCount_;
+      }
+      /**
+       * <code>optional uint32 stack_count = 35;</code>
+       */
+      public Builder setStackCount(int value) {
+        bitField1_ |= 0x00000004;
+        stackCount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 stack_count = 35;</code>
+       */
+      public Builder clearStackCount() {
+        bitField1_ = (bitField1_ & ~0x00000004);
+        stackCount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean hiddenModifier_ ;
+      /**
+       * <code>optional bool hidden_modifier = 36;</code>
+       */
+      public boolean hasHiddenModifier() {
+        return ((bitField1_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bool hidden_modifier = 36;</code>
+       */
+      public boolean getHiddenModifier() {
+        return hiddenModifier_;
+      }
+      /**
+       * <code>optional bool hidden_modifier = 36;</code>
+       */
+      public Builder setHiddenModifier(boolean value) {
+        bitField1_ |= 0x00000008;
+        hiddenModifier_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool hidden_modifier = 36;</code>
+       */
+      public Builder clearHiddenModifier() {
+        bitField1_ = (bitField1_ & ~0x00000008);
+        hiddenModifier_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean isTargetBuilding_ ;
+      /**
+       * <code>optional bool is_target_building = 37;</code>
+       */
+      public boolean hasIsTargetBuilding() {
+        return ((bitField1_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool is_target_building = 37;</code>
+       */
+      public boolean getIsTargetBuilding() {
+        return isTargetBuilding_;
+      }
+      /**
+       * <code>optional bool is_target_building = 37;</code>
+       */
+      public Builder setIsTargetBuilding(boolean value) {
+        bitField1_ |= 0x00000010;
+        isTargetBuilding_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_target_building = 37;</code>
+       */
+      public Builder clearIsTargetBuilding() {
+        bitField1_ = (bitField1_ & ~0x00000010);
+        isTargetBuilding_ = false;
+        onChanged();
+        return this;
+      }
+
+      private int neutralCampType_ ;
+      /**
+       * <code>optional uint32 neutral_camp_type = 38;</code>
+       */
+      public boolean hasNeutralCampType() {
+        return ((bitField1_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional uint32 neutral_camp_type = 38;</code>
+       */
+      public int getNeutralCampType() {
+        return neutralCampType_;
+      }
+      /**
+       * <code>optional uint32 neutral_camp_type = 38;</code>
+       */
+      public Builder setNeutralCampType(int value) {
+        bitField1_ |= 0x00000020;
+        neutralCampType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 neutral_camp_type = 38;</code>
+       */
+      public Builder clearNeutralCampType() {
+        bitField1_ = (bitField1_ & ~0x00000020);
+        neutralCampType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int runeType_ ;
+      /**
+       * <code>optional uint32 rune_type = 39;</code>
+       */
+      public boolean hasRuneType() {
+        return ((bitField1_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 rune_type = 39;</code>
+       */
+      public int getRuneType() {
+        return runeType_;
+      }
+      /**
+       * <code>optional uint32 rune_type = 39;</code>
+       */
+      public Builder setRuneType(int value) {
+        bitField1_ |= 0x00000040;
+        runeType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rune_type = 39;</code>
+       */
+      public Builder clearRuneType() {
+        bitField1_ = (bitField1_ & ~0x00000040);
+        runeType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> assistPlayers_ = java.util.Collections.emptyList();
+      private void ensureAssistPlayersIsMutable() {
+        if (!((bitField1_ & 0x00000080) == 0x00000080)) {
+          assistPlayers_ = new java.util.ArrayList<java.lang.Integer>(assistPlayers_);
+          bitField1_ |= 0x00000080;
+         }
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getAssistPlayersList() {
+        return java.util.Collections.unmodifiableList(assistPlayers_);
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public int getAssistPlayersCount() {
+        return assistPlayers_.size();
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public int getAssistPlayers(int index) {
+        return assistPlayers_.get(index);
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public Builder setAssistPlayers(
+          int index, int value) {
+        ensureAssistPlayersIsMutable();
+        assistPlayers_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public Builder addAssistPlayers(int value) {
+        ensureAssistPlayersIsMutable();
+        assistPlayers_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public Builder addAllAssistPlayers(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureAssistPlayersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, assistPlayers_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 assist_players = 40;</code>
+       */
+      public Builder clearAssistPlayers() {
+        assistPlayers_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgDOTACombatLogEntry)
+    }
+
+    static {
+      defaultInstance = new CMsgDOTACombatLogEntry(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgDOTACombatLogEntry)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAUserMsg_AIDebugLine_descriptor;
   private static
@@ -89792,6 +93419,11 @@ public final class DotaUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAUserMsg_ProjectionEvent_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgDOTACombatLogEntry_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgDOTACombatLogEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -89871,512 +93503,540 @@ public final class DotaUserMessages {
       "ctiles\022\020\n\010entindex\030\001 \002(\005\022\024\n\014attacks_only" +
       "\030\002 \001(\010\"_\n!CDOTAUserMsg_SpectatorPlayerCl" +
       "ick\022\020\n\010entindex\030\001 \002(\005\022\022\n\norder_type\030\002 \001(",
-      "\005\022\024\n\014target_index\030\003 \001(\005\"\270\001\n&CDOTAUserMsg" +
+      "\005\022\024\n\014target_index\030\003 \001(\005\"\321\001\n&CDOTAUserMsg" +
       "_SpectatorPlayerUnitOrders\022\020\n\010entindex\030\001" +
       " \001(\005\022\022\n\norder_type\030\002 \001(\005\022\r\n\005units\030\003 \003(\005\022" +
       "\024\n\014target_index\030\004 \001(\005\022\025\n\rability_index\030\005" +
       " \001(\005\022\035\n\010position\030\006 \001(\0132\013.CMsgVector\022\r\n\005q" +
-      "ueue\030\007 \001(\010\"b\n\035CDOTAUserMsg_NevermoreRequ" +
-      "iem\022\025\n\rentity_handle\030\001 \001(\005\022\r\n\005lines\030\002 \001(" +
-      "\005\022\033\n\006origin\030\003 \001(\0132\013.CMsgVector\".\n\033CDOTAU" +
-      "serMsg_InvalidCommand\022\017\n\007message\030\001 \001(\t\")" +
-      "\n\025CDOTAUserMsg_HudError\022\020\n\010order_id\030\001 \001(",
-      "\005\"c\n\033CDOTAUserMsg_SharedCooldown\022\020\n\010enti" +
-      "ndex\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\020\n\010cooldown\030\003 \001" +
-      "(\002\022\022\n\nname_index\030\004 \001(\005\"/\n\037CDOTAUserMsg_S" +
-      "etNextAutobuyItem\022\014\n\004name\030\001 \001(\t\"X\n\033CDOTA" +
-      "UserMsg_HalloweenDrops\022\021\n\titem_defs\030\001 \003(" +
-      "\r\022\022\n\nplayer_ids\030\002 \003(\r\022\022\n\nprize_list\030\003 \001(" +
-      "\r\"\223\003\n\035CDOTAUserMsg_PredictionResult\022\022\n\na" +
-      "ccount_id\030\001 \001(\r\022\020\n\010match_id\030\002 \001(\004\022\017\n\007cor" +
-      "rect\030\003 \001(\010\022>\n\013predictions\030\004 \003(\0132).CDOTAU" +
-      "serMsg_PredictionResult.Prediction\032\372\001\n\nP",
-      "rediction\022\020\n\010item_def\030\001 \001(\r\022\023\n\013num_corre" +
-      "ct\030\002 \001(\r\022\021\n\tnum_fails\030\003 \001(\r\022X\n\006result\030\004 " +
-      "\001(\01621.CDOTAUserMsg_PredictionResult.Pred" +
-      "iction.EResult:\025k_eResult_ItemGranted\022\031\n" +
-      "\021granted_item_defs\030\006 \003(\r\"=\n\007EResult\022\031\n\025k" +
-      "_eResult_ItemGranted\020\001\022\027\n\023k_eResult_Dest" +
-      "royed\020\002\"\376\001\n\034CDOTAResponseQuerySerialized" +
-      "\0221\n\005facts\030\001 \003(\0132\".CDOTAResponseQuerySeri" +
-      "alized.Fact\032\252\001\n\004Fact\022\013\n\003key\030\001 \002(\005\022F\n\007val" +
-      "type\030\002 \002(\0162,.CDOTAResponseQuerySerialize",
-      "d.Fact.ValueType:\007NUMERIC\022\023\n\013val_numeric" +
-      "\030\003 \001(\002\022\022\n\nval_string\030\004 \001(\t\"$\n\tValueType\022" +
-      "\013\n\007NUMERIC\020\001\022\n\n\006STRING\020\002\"\220\001\n\030CDOTASpeech" +
-      "MatchOnClient\022\017\n\007concept\030\001 \001(\005\022\026\n\016recipi" +
-      "ent_type\030\002 \001(\005\0224\n\rresponsequery\030\003 \001(\0132\035." +
-      "CDOTAResponseQuerySerialized\022\025\n\nrandomse" +
-      "ed\030\004 \001(\017:\0010\"\350\006\n\026CDOTAUserMsg_UnitEvent\0228" +
-      "\n\010msg_type\030\001 \002(\0162\024.EDotaEntityMessages:\020" +
-      "DOTA_UNIT_SPEECH\022\024\n\014entity_index\030\002 \002(\005\022." +
-      "\n\006speech\030\003 \001(\0132\036.CDOTAUserMsg_UnitEvent.",
-      "Speech\0227\n\013speech_mute\030\004 \001(\0132\".CDOTAUserM" +
-      "sg_UnitEvent.SpeechMute\0227\n\013add_gesture\030\005" +
-      " \001(\0132\".CDOTAUserMsg_UnitEvent.AddGesture" +
-      "\022=\n\016remove_gesture\030\006 \001(\0132%.CDOTAUserMsg_" +
-      "UnitEvent.RemoveGesture\0229\n\014blood_impact\030" +
-      "\007 \001(\0132#.CDOTAUserMsg_UnitEvent.BloodImpa" +
-      "ct\0229\n\014fade_gesture\030\010 \001(\0132#.CDOTAUserMsg_" +
-      "UnitEvent.FadeGesture\0229\n\026speech_match_on" +
-      "_client\030\t \001(\0132\031.CDOTASpeechMatchOnClient" +
-      "\032k\n\006Speech\022\017\n\007concept\030\001 \001(\005\022\020\n\010response\030",
-      "\002 \001(\t\022\026\n\016recipient_type\030\003 \001(\005\022\r\n\005level\030\004" +
-      " \001(\005\022\027\n\010muteable\030\005 \001(\010:\005false\032 \n\nSpeechM" +
-      "ute\022\022\n\005delay\030\001 \001(\002:\0030.5\032W\n\nAddGesture\022\020\n" +
-      "\010activity\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\022\022\n\007fade_in" +
-      "\030\003 \001(\002:\0010\022\025\n\010fade_out\030\004 \001(\002:\0030.1\032!\n\rRemo" +
-      "veGesture\022\020\n\010activity\030\001 \001(\005\032@\n\013BloodImpa" +
-      "ct\022\r\n\005scale\030\001 \001(\005\022\020\n\010x_normal\030\002 \001(\005\022\020\n\010y" +
-      "_normal\030\003 \001(\005\032\037\n\013FadeGesture\022\020\n\010activity" +
-      "\030\001 \001(\005\"0\n\032CDOTAUserMsg_ItemPurchased\022\022\n\n" +
-      "item_index\030\001 \001(\005\"j\n\026CDOTAUserMsg_ItemFou",
-      "nd\022\016\n\006player\030\001 \001(\005\022\017\n\007quality\030\002 \001(\005\022\016\n\006r" +
-      "arity\030\003 \001(\005\022\016\n\006method\030\004 \001(\005\022\017\n\007itemdef\030\005" +
-      " \001(\005\"\376\021\n\034CDOTAUserMsg_ParticleManager\022H\n" +
-      "\004type\030\001 \002(\0162\026.DOTA_PARTICLE_MESSAGE:\"DOT" +
-      "A_PARTICLE_MANAGER_EVENT_CREATE\022\r\n\005index" +
-      "\030\002 \002(\r\022R\n\026release_particle_index\030\003 \001(\01322" +
-      ".CDOTAUserMsg_ParticleManager.ReleasePar" +
-      "ticleIndex\022E\n\017create_particle\030\004 \001(\0132,.CD" +
-      "OTAUserMsg_ParticleManager.CreateParticl" +
-      "e\022G\n\020destroy_particle\030\005 \001(\0132-.CDOTAUserM",
-      "sg_ParticleManager.DestroyParticle\022Z\n\032de" +
-      "stroy_particle_involving\030\006 \001(\01326.CDOTAUs" +
-      "erMsg_ParticleManager.DestroyParticleInv" +
-      "olving\022E\n\017update_particle\030\007 \001(\0132,.CDOTAU" +
-      "serMsg_ParticleManager.UpdateParticle\022L\n" +
-      "\023update_particle_fwd\030\010 \001(\0132/.CDOTAUserMs" +
-      "g_ParticleManager.UpdateParticleFwd\022R\n\026u" +
-      "pdate_particle_orient\030\t \001(\01322.CDOTAUserM" +
-      "sg_ParticleManager.UpdateParticleOrient\022" +
-      "V\n\030update_particle_fallback\030\n \001(\01324.CDOT",
-      "AUserMsg_ParticleManager.UpdateParticleF" +
-      "allback\022R\n\026update_particle_offset\030\013 \001(\0132" +
-      "2.CDOTAUserMsg_ParticleManager.UpdatePar" +
-      "ticleOffset\022L\n\023update_particle_ent\030\014 \001(\013" +
-      "2/.CDOTAUserMsg_ParticleManager.UpdatePa" +
-      "rticleEnt\022[\n\033update_particle_should_draw" +
-      "\030\016 \001(\01326.CDOTAUserMsg_ParticleManager.Up" +
-      "dateParticleShouldDraw\022Y\n\032update_particl" +
-      "e_set_frozen\030\017 \001(\01325.CDOTAUserMsg_Partic" +
-      "leManager.UpdateParticleSetFrozen\022c\n\037cha",
-      "nge_control_point_attachment\030\020 \001(\0132:.CDO" +
-      "TAUserMsg_ParticleManager.ChangeControlP" +
-      "ointAttachment\032\026\n\024ReleaseParticleIndex\032~" +
-      "\n\016CreateParticle\022\033\n\023particle_name_index\030" +
-      "\001 \001(\006\022\023\n\013attach_type\030\002 \001(\005\022\025\n\rentity_han" +
-      "dle\030\003 \001(\005\022#\n\033entity_handle_for_modifiers" +
-      "\030\004 \001(\005\032.\n\017DestroyParticle\022\033\n\023destroy_imm" +
-      "ediately\030\001 \001(\010\032N\n\030DestroyParticleInvolvi" +
-      "ng\022\033\n\023destroy_immediately\030\001 \001(\010\022\025\n\rentit" +
-      "y_handle\030\003 \001(\005\032F\n\016UpdateParticle\022\025\n\rcont",
-      "rol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsg" +
-      "Vector\032H\n\021UpdateParticleFwd\022\025\n\rcontrol_p" +
-      "oint\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVector" +
-      "\032\200\001\n\024UpdateParticleOrient\022\025\n\rcontrol_poi" +
-      "nt\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVector\022\032" +
-      "\n\005right\030\003 \001(\0132\013.CMsgVector\022\027\n\002up\030\004 \001(\0132\013" +
-      ".CMsgVector\032N\n\026UpdateParticleFallback\022\025\n" +
-      "\rcontrol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013" +
-      ".CMsgVector\032Q\n\024UpdateParticleOffset\022\025\n\rc" +
-      "ontrol_point\030\001 \001(\005\022\"\n\rorigin_offset\030\002 \001(",
-      "\0132\013.CMsgVector\032\255\001\n\021UpdateParticleEnt\022\025\n\r" +
-      "control_point\030\001 \001(\005\022\025\n\rentity_handle\030\002 \001" +
-      "(\005\022\023\n\013attach_type\030\003 \001(\005\022\022\n\nattachment\030\004 " +
-      "\001(\005\022&\n\021fallback_position\030\005 \001(\0132\013.CMsgVec" +
-      "tor\022\031\n\021include_wearables\030\006 \001(\010\032-\n\027Update" +
-      "ParticleSetFrozen\022\022\n\nset_frozen\030\001 \001(\010\032/\n" +
-      "\030UpdateParticleShouldDraw\022\023\n\013should_draw" +
-      "\030\001 \001(\010\032e\n\034ChangeControlPointAttachment\022\026" +
-      "\n\016attachment_old\030\001 \001(\005\022\026\n\016attachment_new" +
-      "\030\002 \001(\005\022\025\n\rentity_handle\030\003 \001(\005\"\305\001\n\032CDOTAU",
-      "serMsg_OverheadEvent\022?\n\014message_type\030\001 \002" +
-      "(\0162\024.DOTA_OVERHEAD_ALERT:\023OVERHEAD_ALERT" +
-      "_GOLD\022\r\n\005value\030\002 \001(\005\022\036\n\026target_player_en" +
-      "tindex\030\003 \001(\005\022\027\n\017target_entindex\030\004 \001(\005\022\036\n" +
-      "\026source_player_entindex\030\005 \001(\005\">\n\034CDOTAUs" +
-      "erMsg_TutorialTipInfo\022\014\n\004name\030\001 \001(\t\022\020\n\010p" +
-      "rogress\030\002 \001(\005\"]\n\033CDOTAUserMsg_TutorialFi" +
-      "nish\022\017\n\007heading\030\001 \001(\t\022\016\n\006emblem\030\002 \001(\t\022\014\n" +
-      "\004body\030\003 \001(\t\022\017\n\007success\030\004 \001(\010\"&\n$CDOTAUse" +
-      "rMsg_TutorialMinimapPosition\"_\n\037CDOTAUse",
-      "rMsg_SendGenericToolTip\022\r\n\005title\030\001 \001(\t\022\014" +
-      "\n\004text\030\002 \001(\t\022\020\n\010entindex\030\003 \001(\005\022\r\n\005close\030" +
-      "\004 \001(\010\"S\n\026CDOTAUserMsg_WorldLine\022\021\n\tplaye" +
-      "r_id\030\001 \001(\005\022&\n\tworldline\030\002 \001(\0132\023.CDOTAMsg" +
-      "_WorldLine\"\223\001\n\026CDOTAUserMsg_ChatWheel\022;\n" +
-      "\014chat_message\030\001 \001(\0162\026.EDOTAChatWheelMess" +
-      "age:\rk_EDOTA_CW_Ok\022\021\n\tplayer_id\030\002 \001(\r\022\022\n" +
-      "\naccount_id\030\003 \001(\r\022\025\n\rparam_hero_id\030\004 \001(\r" +
-      "\"]\n\035CDOTAUserMsg_ReceivedXmasGift\022\021\n\tpla" +
-      "yer_id\030\001 \001(\005\022\021\n\titem_name\030\002 \001(\t\022\026\n\016inven",
-      "tory_slot\030\003 \001(\005\"\244\001\n\027CDOTAUserMsg_ShowSur" +
-      "vey\022\021\n\tsurvey_id\030\001 \001(\005\022\020\n\010match_id\030\002 \001(\r" +
-      "\022\026\n\016response_style\030\003 \001(\t\022\030\n\020teammate_her" +
-      "o_id\030\004 \001(\r\022\025\n\rteammate_name\030\005 \001(\t\022\033\n\023tea" +
-      "mmate_account_id\030\006 \001(\r\"5\n CDOTAUserMsg_U" +
-      "pdateSharedContent\022\021\n\tslot_type\030\001 \001(\005\"!\n" +
-      "\037CDOTAUserMsg_TutorialRequestExp\".\n\031CDOT" +
-      "AUserMsg_TutorialFade\022\021\n\ttgt_alpha\030\001 \001(\005" +
-      "\"x\n CDOTAUserMsg_TutorialPingMinimap\022\021\n\t" +
-      "player_id\030\001 \001(\r\022\r\n\005pos_x\030\002 \001(\002\022\r\n\005pos_y\030",
-      "\003 \001(\002\022\r\n\005pos_z\030\004 \001(\002\022\024\n\014entity_index\030\005 \001" +
-      "(\005\"3\n\"CDOTAUserMsg_GamerulesStateChanged" +
-      "\022\r\n\005state\030\001 \001(\r\"E\n\035CDOTAUserMsg_AddQuest" +
-      "LogEntry\022\020\n\010npc_name\030\001 \001(\t\022\022\n\nnpc_dialog" +
-      "\030\002 \001(\t\"[\n\032CDOTAUserMsg_SendStatPopup\022\021\n\t" +
-      "player_id\030\001 \001(\005\022*\n\tstatpopup\030\002 \001(\0132\027.CDO" +
-      "TAMsg_SendStatPopup\"C\n\034CDOTAUserMsg_Send" +
-      "RoshanPopup\022\021\n\treclaimed\030\001 \001(\010\022\020\n\010gameti" +
-      "me\030\002 \001(\005\"L\n\032CDOTAUserMsg_SendFinalGold\022\025" +
-      "\n\rreliable_gold\030\001 \003(\r\022\027\n\017unreliable_gold",
-      "\030\002 \003(\r\"K\n\026CDOTAUserMsg_CustomMsg\022\017\n\007mess" +
-      "age\030\001 \001(\t\022\021\n\tplayer_id\030\002 \001(\005\022\r\n\005value\030\003 " +
-      "\001(\005\"X\n\031CDOTAUserMsg_CoachHUDPing\022\021\n\tplay" +
-      "er_id\030\001 \001(\r\022(\n\010hud_ping\030\002 \001(\0132\026.CDOTAMsg" +
-      "_CoachHUDPing\" \n\036CDOTAUserMsg_ClientLoad" +
-      "GridNav\"\353\001\n\032CDOTAUserMsg_TE_Projectile\022\017" +
-      "\n\007hSource\030\001 \001(\005\022\017\n\007hTarget\030\002 \001(\005\022\021\n\tmove" +
-      "Speed\030\003 \001(\005\022\030\n\020sourceAttachment\030\004 \001(\005\022\034\n" +
-      "\024particleSystemHandle\030\005 \001(\003\022\021\n\tdodgeable" +
-      "\030\006 \001(\010\022\020\n\010isAttack\030\007 \001(\010\022\020\n\010isEvaded\030\010 \001",
-      "(\010\022\022\n\nexpireTime\030\t \001(\002\022\025\n\rmaximpacttime\030" +
-      "\n \001(\002\"\356\001\n\035CDOTAUserMsg_TE_ProjectileLoc\022" +
-      "\037\n\nvSourceLoc\030\001 \001(\0132\013.CMsgVector\022\017\n\007hTar" +
-      "get\030\002 \001(\005\022\021\n\tmoveSpeed\030\003 \001(\005\022\034\n\024particle" +
-      "SystemHandle\030\004 \001(\003\022\021\n\tdodgeable\030\005 \001(\010\022\020\n" +
-      "\010isAttack\030\006 \001(\010\022\020\n\010isEvaded\030\010 \001(\010\022\022\n\nexp" +
-      "ireTime\030\t \001(\002\022\037\n\nvTargetLoc\030\n \001(\0132\013.CMsg" +
-      "Vector\"b\n\037CDOTAUserMsg_TE_DotaBloodImpac" +
-      "t\022\016\n\006entity\030\001 \001(\005\022\r\n\005scale\030\002 \001(\002\022\017\n\007xnor" +
-      "mal\030\003 \001(\002\022\017\n\007ynormal\030\004 \001(\002\"\313\001\n\030CDOTAUser",
-      "Msg_AbilityPing\022\021\n\tplayer_id\030\001 \001(\r\022\022\n\nab" +
-      "ility_id\030\002 \001(\r\0229\n\004type\030\003 \001(\0162\027.DOTA_ABIL" +
-      "ITY_PING_TYPE:\022ABILITY_PING_READY\022\030\n\020coo" +
-      "ldown_seconds\030\004 \001(\r\022\r\n\005level\030\005 \001(\r\022\017\n\007pa" +
-      "ssive\030\006 \001(\010\022\023\n\013mana_needed\030\007 \001(\r\"\221\001\n\035CDO" +
-      "TAUserMsg_TE_UnitAnimation\022\016\n\006entity\030\001 \001" +
-      "(\005\022\027\n\017sequenceVariant\030\002 \001(\005\022\024\n\014playbackr" +
-      "ate\030\003 \001(\002\022\021\n\tcastpoint\030\004 \001(\002\022\014\n\004type\030\005 \001" +
-      "(\005\022\020\n\010activity\030\006 \001(\005\"@\n CDOTAUserMsg_TE_" +
-      "UnitAnimationEnd\022\016\n\006entity\030\001 \001(\005\022\014\n\004snap",
-      "\030\002 \001(\010\"\221\001\n\035CDOTAUserMsg_ShowGenericPopup" +
-      "\022\016\n\006header\030\001 \002(\t\022\014\n\004body\030\002 \002(\t\022\016\n\006param1" +
-      "\030\003 \001(\t\022\016\n\006param2\030\004 \001(\t\022\023\n\013tint_screen\030\005 " +
-      "\001(\010\022\035\n\025show_no_other_dialogs\030\006 \001(\010\"`\n\026CD" +
-      "OTAUserMsg_VoteStart\022\r\n\005title\030\001 \001(\t\022\020\n\010d" +
-      "uration\030\002 \001(\002\022\024\n\014choice_count\030\003 \001(\005\022\017\n\007c" +
-      "hoices\030\004 \003(\t\"0\n\027CDOTAUserMsg_VoteUpdate\022" +
-      "\025\n\rchoice_counts\030\001 \003(\005\"/\n\024CDOTAUserMsg_V" +
-      "oteEnd\022\027\n\017selected_choice\030\001 \001(\005\"\214\001\n\037CDOT" +
-      "AUserMsg_BoosterStatePlayer\022\021\n\tplayer_id",
-      "\030\001 \001(\r\022\r\n\005bonus\030\002 \001(\002\022\023\n\013event_bonus\030\003 \001" +
-      "(\002\022\025\n\rbonus_item_id\030\004 \001(\r\022\033\n\023event_bonus" +
-      "_item_id\030\005 \001(\r\"V\n\031CDOTAUserMsg_BoosterSt" +
-      "ate\0229\n\017boosted_players\030\001 \003(\0132 .CDOTAUser" +
-      "Msg_BoosterStatePlayer\")\n\026CDOTAUserMsg_P" +
-      "layerMMR\022\017\n\003mmr\030\001 \003(\021B\002\020\001\"Y\n\031CDOTAUserMs" +
-      "g_AbilitySteal\022\021\n\tplayer_id\030\001 \001(\r\022\022\n\nabi" +
-      "lity_id\030\002 \001(\r\022\025\n\rability_level\030\003 \001(\r\"f\n\034" +
-      "CDOTAUserMsg_StatsHeroLookup\022\021\n\tplayer_i" +
-      "d\030\001 \001(\005\022\017\n\007hero_id\030\002 \001(\005\022\021\n\thero_name\030\003 ",
-      "\001(\t\022\017\n\007persona\030\004 \001(\t\"\372\001\n\"CDOTAUserMsg_St" +
-      "atsHeroPositionInfo\022\030\n\020average_position\030" +
-      "\001 \001(\002\022J\n\020position_details\030\002 \003(\01320.CDOTAU" +
-      "serMsg_StatsHeroPositionInfo.PositionPai" +
-      "r\032n\n\014PositionPair\022F\n\021position_category\030\001" +
-      " \001(\0162\027.DOTA_POSITION_CATEGORY:\022DOTA_POSI" +
-      "TION_NONE\022\026\n\016position_count\030\002 \001(\r\"\217\003\n#CD" +
-      "OTAUserMsg_StatsHeroMinuteDetails\022\021\n\tlas" +
-      "t_hits\030\001 \001(\r\022\022\n\nhero_kills\030\002 \001(\r\022\023\n\013hero" +
-      "_damage\030\003 \001(\r\022\024\n\014tower_damage\030\004 \001(\r\022:\n\rp",
-      "osition_info\030\005 \001(\0132#.CDOTAUserMsg_StatsH" +
-      "eroPositionInfo\022\020\n\010total_xp\030\006 \001(\r\022\021\n\tnet" +
-      "_worth\030\007 \001(\r\022\034\n\024harvested_creep_gold\030\010 \001" +
-      "(\r\022\024\n\014claimed_farm\030\t \001(\r\022\024\n\014wards_placed" +
-      "\030\n \001(\r\022\027\n\017runes_collected\030\013 \001(\r\022\020\n\010tps_u" +
-      "sed\030\014 \001(\r\022\022\n\nmana_spent\030\r \003(\r\022\027\n\017damage_" +
-      "absorbed\030\016 \003(\r\022\023\n\013damage_done\030\017 \003(\r\"\347\003\n#" +
-      "CDOTAUserMsg_StatsTeamMinuteDetails\022:\n\014p" +
-      "layer_stats\030\001 \003(\0132$.CDOTAUserMsg_StatsHe" +
-      "roMinuteDetails\022\023\n\013tower_kills\030\002 \001(\r\022\025\n\r",
-      "barrack_kills\030\003 \001(\r\022!\n\031available_lane_cr" +
-      "eep_gold\030\004 \001(\r\022\032\n\022balance_kill_value\030\005 \001" +
-      "(\r\022\033\n\023balance_tower_value\030\006 \001(\r\022\036\n\026balan" +
-      "ce_barracks_value\030\007 \001(\r\022\032\n\022balance_gold_" +
-      "value\030\010 \001(\r\022\030\n\020balance_xp_value\030\t \001(\r\022R\n" +
-      "\020lane_performance\030\n \003(\01328.CDOTAUserMsg_S" +
-      "tatsTeamMinuteDetails.LocationPerformanc" +
-      "e\032R\n\023LocationPerformance\022\031\n\021location_cat" +
-      "egory\030\001 \001(\r\022\021\n\tstat_type\030\002 \001(\r\022\r\n\005value\030" +
-      "\003 \001(\r\"\254\001\n!CDOTAUserMsg_StatsPlayerKillSh",
-      "are\022\021\n\tplayer_id\030\001 \001(\005\022\032\n\022kill_share_per" +
-      "cent\030\002 \001(\002\022\024\n\014player_loc_x\030\003 \001(\002\022\024\n\014play" +
-      "er_loc_y\030\004 \001(\002\022\026\n\016health_percent\030\005 \001(\002\022\024" +
-      "\n\014mana_percent\030\006 \001(\002\"\304\001\n\035CDOTAUserMsg_St" +
-      "atsKillDetails\022\021\n\tvictim_id\030\001 \001(\r\0227\n\013kil" +
-      "l_shares\030\002 \003(\0132\".CDOTAUserMsg_StatsPlaye" +
-      "rKillShare\022\026\n\016damage_to_kill\030\003 \001(\r\022\030\n\020ef" +
-      "fective_health\030\004 \001(\r\022\022\n\ndeath_time\030\005 \001(\002" +
-      "\022\021\n\tkiller_id\030\006 \001(\r\"\213\006\n\036CDOTAUserMsg_Sta" +
-      "tsMatchDetails\0222\n\013hero_lookup\030\001 \003(\0132\035.CD",
-      "OTAUserMsg_StatsHeroLookup\022;\n\rradiant_st" +
-      "ats\030\002 \003(\0132$.CDOTAUserMsg_StatsTeamMinute" +
-      "Details\0228\n\ndire_stats\030\003 \003(\0132$.CDOTAUserM" +
-      "sg_StatsTeamMinuteDetails\0225\n\rradiant_kil" +
-      "ls\030\004 \003(\0132\036.CDOTAUserMsg_StatsKillDetails" +
-      "\0222\n\ndire_kills\030\005 \003(\0132\036.CDOTAUserMsg_Stat" +
-      "sKillDetails\022U\n\rfight_details\030\006 \003(\0132>.CD" +
-      "OTAUserMsg_StatsMatchDetails.CDOTAUserMs" +
-      "g_StatsFightDetails\032p\n\"CDOTAUserMsg_Stat" +
-      "sFightTeamDetails\022\024\n\014participants\030\001 \003(\r\022",
-      "\016\n\006deaths\030\002 \003(\r\022\022\n\ngold_delta\030\003 \001(\r\022\020\n\010x" +
-      "p_delta\030\004 \001(\r\032\211\002\n\036CDOTAUserMsg_StatsFigh" +
-      "tDetails\022\022\n\nstart_time\030\001 \001(\002\022\020\n\010end_time" +
-      "\030\002 \001(\002\022a\n\025radiant_fight_details\030\003 \001(\0132B." +
-      "CDOTAUserMsg_StatsMatchDetails.CDOTAUser" +
-      "Msg_StatsFightTeamDetails\022^\n\022dire_fight_" +
-      "details\030\004 \001(\0132B.CDOTAUserMsg_StatsMatchD" +
-      "etails.CDOTAUserMsg_StatsFightTeamDetail" +
-      "s\"4\n\026CDOTAUserMsg_MiniTaunt\022\032\n\022taunting_" +
-      "player_id\030\001 \001(\r\"0\n\031CDOTAUserMsg_SpeechBu",
-      "bble\022\023\n\013destroy_all\030\001 \001(\010\"g\n CDOTAUserMs" +
-      "g_CustomHeaderMessage\022\021\n\tplayer_id\030\001 \001(\r" +
-      "\022\020\n\010duration\030\002 \001(\002\022\017\n\007message\030\003 \001(\t\022\r\n\005v" +
-      "alue\030\004 \001(\005\"v\n\023CMsgHeroAbilityStat\0227\n\tsta" +
-      "t_type\030\001 \001(\0162\016.EHeroStatType:\024k_EHeroSta" +
-      "tType_None\022\021\n\tint_value\030\002 \001(\005\022\023\n\013float_v" +
-      "alue\030\003 \001(\002\"d\n\034CMsgCombatAnalyzerPlayerSt" +
-      "at\022\022\n\naccount_id\030\001 \001(\r\0220\n\022hero_ability_s" +
-      "tats\030\002 \003(\0132\024.CMsgHeroAbilityStat\"`\n\027CMsg" +
-      "CombatAnalyzerStats\022\020\n\010match_id\030\001 \001(\004\0223\n",
-      "\014player_stats\030\002 \003(\0132\035.CMsgCombatAnalyzer" +
-      "PlayerStat\"W\n\026CDOTAUserMsg_BeastChat\022\014\n\004" +
-      "team\030\001 \001(\r\022\016\n\006format\030\002 \001(\t\022\017\n\007message\030\003 " +
-      "\001(\t\022\016\n\006target\030\004 \001(\t\"a\n$CDOTAUserMsg_Cust" +
-      "omHudElement_Create\022\022\n\nelement_id\030\001 \001(\t\022" +
-      "\027\n\017layout_filename\030\002 \001(\t\022\014\n\004data\030\003 \001(\014\"`" +
-      "\n$CDOTAUserMsg_CustomHudElement_Modify\022\022" +
-      "\n\nelement_id\030\001 \001(\t\022\026\n\016modify_visible\030\002 \001" +
-      "(\010\022\014\n\004data\030\003 \001(\014\";\n%CDOTAUserMsg_CustomH" +
-      "udElement_Destroy\022\022\n\nelement_id\030\001 \001(\t\"F\n",
-      "\"CDOTAUserMsg_CompendiumStatePlayer\022\021\n\tp" +
-      "layer_id\030\001 \001(\r\022\r\n\005level\030\002 \001(\r\"_\n\034CDOTAUs" +
-      "erMsg_CompendiumState\022?\n\022compendium_play" +
-      "ers\030\001 \003(\0132#.CDOTAUserMsg_CompendiumState" +
-      "Player\"\334\001\n\036CDOTAUserMsg_ProjectionAbilit" +
-      "y\022\022\n\nability_id\030\001 \001(\r\022\030\n\020caster_ent_inde" +
-      "x\030\002 \001(\005\022\023\n\013caster_team\030\003 \001(\005\022\023\n\013channel_" +
-      "end\030\004 \001(\010\022\033\n\006origin\030\005 \001(\0132\013.CMsgVector\022\031" +
-      "\n\021track_caster_only\030\006 \001(\010\022\020\n\010end_time\030\007 " +
-      "\001(\002\022\030\n\020victim_ent_index\030\010 \001(\005\"a\n\034CDOTAUs",
-      "erMsg_ProjectionEvent\0223\n\010event_id\030\001 \001(\0162" +
-      "\021.EProjectionEvent:\016ePE_FirstBlood\022\014\n\004te" +
-      "am\030\002 \001(\r*\360\004\n\024DOTA_COMBATLOG_TYPES\022\031\n\025DOT" +
-      "A_COMBATLOG_DAMAGE\020\000\022\027\n\023DOTA_COMBATLOG_H" +
-      "EAL\020\001\022\037\n\033DOTA_COMBATLOG_MODIFIER_ADD\020\002\022\"" +
-      "\n\036DOTA_COMBATLOG_MODIFIER_REMOVE\020\003\022\030\n\024DO" +
-      "TA_COMBATLOG_DEATH\020\004\022\032\n\026DOTA_COMBATLOG_A" +
-      "BILITY\020\005\022\027\n\023DOTA_COMBATLOG_ITEM\020\006\022\033\n\027DOT" +
-      "A_COMBATLOG_LOCATION\020\007\022\027\n\023DOTA_COMBATLOG" +
-      "_GOLD\020\010\022\035\n\031DOTA_COMBATLOG_GAME_STATE\020\t\022\025",
-      "\n\021DOTA_COMBATLOG_XP\020\n\022\033\n\027DOTA_COMBATLOG_" +
-      "PURCHASE\020\013\022\032\n\026DOTA_COMBATLOG_BUYBACK\020\014\022\"" +
-      "\n\036DOTA_COMBATLOG_ABILITY_TRIGGER\020\r\022\036\n\032DO" +
-      "TA_COMBATLOG_PLAYERSTATS\020\016\022\034\n\030DOTA_COMBA" +
-      "TLOG_MULTIKILL\020\017\022\035\n\031DOTA_COMBATLOG_KILLS" +
-      "TREAK\020\020\022%\n!DOTA_COMBATLOG_TEAM_BUILDING_" +
-      "KILL\020\021\022\036\n\032DOTA_COMBATLOG_FIRST_BLOOD\020\022\022#" +
-      "\n\037DOTA_COMBATLOG_MODIFIER_REFRESH\020\023*\324\030\n\021" +
-      "DOTA_CHAT_MESSAGE\022!\n\024CHAT_MESSAGE_INVALI" +
-      "D\020\377\377\377\377\377\377\377\377\377\001\022\032\n\026CHAT_MESSAGE_HERO_KILL\020\000",
-      "\022\032\n\026CHAT_MESSAGE_HERO_DENY\020\001\022\036\n\032CHAT_MES" +
-      "SAGE_BARRACKS_KILL\020\002\022\033\n\027CHAT_MESSAGE_TOW" +
-      "ER_KILL\020\003\022\033\n\027CHAT_MESSAGE_TOWER_DENY\020\004\022\033" +
-      "\n\027CHAT_MESSAGE_FIRSTBLOOD\020\005\022\034\n\030CHAT_MESS" +
-      "AGE_STREAK_KILL\020\006\022\030\n\024CHAT_MESSAGE_BUYBAC" +
-      "K\020\007\022\026\n\022CHAT_MESSAGE_AEGIS\020\010\022\034\n\030CHAT_MESS" +
-      "AGE_ROSHAN_KILL\020\t\022\035\n\031CHAT_MESSAGE_COURIE" +
-      "R_LOST\020\n\022\"\n\036CHAT_MESSAGE_COURIER_RESPAWN" +
-      "ED\020\013\022\033\n\027CHAT_MESSAGE_GLYPH_USED\020\014\022\036\n\032CHA" +
-      "T_MESSAGE_ITEM_PURCHASE\020\r\022\030\n\024CHAT_MESSAG",
-      "E_CONNECT\020\016\022\033\n\027CHAT_MESSAGE_DISCONNECT\020\017" +
-      "\022.\n*CHAT_MESSAGE_DISCONNECT_WAIT_FOR_REC" +
-      "ONNECT\020\020\022*\n&CHAT_MESSAGE_DISCONNECT_TIME" +
-      "_REMAINING\020\021\0221\n-CHAT_MESSAGE_DISCONNECT_" +
-      "TIME_REMAINING_PLURAL\020\022\022\032\n\026CHAT_MESSAGE_" +
-      "RECONNECT\020\023\022\034\n\030CHAT_MESSAGE_PLAYER_LEFT\020" +
-      "\024\022\036\n\032CHAT_MESSAGE_SAFE_TO_LEAVE\020\025\022\034\n\030CHA" +
-      "T_MESSAGE_RUNE_PICKUP\020\026\022\034\n\030CHAT_MESSAGE_" +
-      "RUNE_BOTTLE\020\027\022\031\n\025CHAT_MESSAGE_INTHEBAG\020\030" +
-      "\022\033\n\027CHAT_MESSAGE_SECRETSHOP\020\031\022#\n\037CHAT_ME",
-      "SSAGE_ITEM_AUTOPURCHASED\020\032\022\037\n\033CHAT_MESSA" +
-      "GE_ITEMS_COMBINED\020\033\022\035\n\031CHAT_MESSAGE_SUPE" +
-      "R_CREEPS\020\034\022%\n!CHAT_MESSAGE_CANT_USE_ACTI" +
-      "ON_ITEM\020\035\022\"\n\036CHAT_MESSAGE_CHARGES_EXHAUS" +
-      "TED\020\036\022\032\n\026CHAT_MESSAGE_CANTPAUSE\020\037\022\035\n\031CHA" +
-      "T_MESSAGE_NOPAUSESLEFT\020 \022\035\n\031CHAT_MESSAGE" +
-      "_CANTPAUSEYET\020!\022\027\n\023CHAT_MESSAGE_PAUSED\020\"" +
-      "\022\"\n\036CHAT_MESSAGE_UNPAUSE_COUNTDOWN\020#\022\031\n\025" +
-      "CHAT_MESSAGE_UNPAUSED\020$\022\036\n\032CHAT_MESSAGE_" +
-      "AUTO_UNPAUSED\020%\022\032\n\026CHAT_MESSAGE_YOUPAUSE",
-      "D\020&\022 \n\034CHAT_MESSAGE_CANTUNPAUSETEAM\020\'\022\"\n" +
-      "\036CHAT_MESSAGE_VOICE_TEXT_BANNED\020)\022.\n*CHA" +
-      "T_MESSAGE_SPECTATORS_WATCHING_THIS_GAME\020" +
-      "*\022 \n\034CHAT_MESSAGE_REPORT_REMINDER\020+\022\032\n\026C" +
-      "HAT_MESSAGE_ECON_ITEM\020,\022\026\n\022CHAT_MESSAGE_" +
-      "TAUNT\020-\022\027\n\023CHAT_MESSAGE_RANDOM\020.\022\030\n\024CHAT" +
-      "_MESSAGE_RD_TURN\020/\022 \n\034CHAT_MESSAGE_DROP_" +
-      "RATE_BONUS\0201\022!\n\035CHAT_MESSAGE_NO_BATTLE_P" +
-      "OINTS\0202\022\035\n\031CHAT_MESSAGE_DENIED_AEGIS\0203\022\036" +
-      "\n\032CHAT_MESSAGE_INFORMATIONAL\0204\022\035\n\031CHAT_M",
-      "ESSAGE_AEGIS_STOLEN\0205\022\035\n\031CHAT_MESSAGE_RO" +
-      "SHAN_CANDY\0206\022\034\n\030CHAT_MESSAGE_ITEM_GIFTED" +
-      "\0207\022\'\n#CHAT_MESSAGE_HERO_KILL_WITH_GREEVI" +
-      "L\0208\022(\n$CHAT_MESSAGE_HOLDOUT_TOWER_DESTRO" +
-      "YED\0209\022\'\n#CHAT_MESSAGE_HOLDOUT_WALL_DESTR" +
-      "OYED\020:\022&\n\"CHAT_MESSAGE_HOLDOUT_WALL_FINI" +
-      "SHED\020;\022)\n%CHAT_MESSAGE_PLAYER_LEFT_LIMIT" +
-      "ED_HERO\020>\0221\n-CHAT_MESSAGE_ABANDON_LIMITE" +
-      "D_HERO_EXPLANATION\020?\022(\n$CHAT_MESSAGE_DIS" +
-      "CONNECT_LIMITED_HERO\020@\0223\n/CHAT_MESSAGE_L",
-      "OW_PRIORITY_COMPLETED_EXPLANATION\020A\022,\n(C" +
-      "HAT_MESSAGE_RECRUITMENT_DROP_RATE_BONUS\020" +
-      "B\0221\n-CHAT_MESSAGE_FROSTIVUS_SHINING_BOOS" +
-      "TER_ACTIVE\020C\022 \n\034CHAT_MESSAGE_PLAYER_LEFT" +
-      "_AFK\020I\0222\n.CHAT_MESSAGE_PLAYER_LEFT_DISCO" +
-      "NNECTED_TOO_LONG\020J\022!\n\035CHAT_MESSAGE_PLAYE" +
-      "R_ABANDONED\020K\022%\n!CHAT_MESSAGE_PLAYER_ABA" +
-      "NDONED_AFK\020L\0227\n3CHAT_MESSAGE_PLAYER_ABAN" +
-      "DONED_DISCONNECTED_TOO_LONG\020M\022#\n\037CHAT_ME" +
-      "SSAGE_WILL_NOT_BE_SCORED\020N\022*\n&CHAT_MESSA",
-      "GE_WILL_NOT_BE_SCORED_RANKED\020O\022+\n\'CHAT_M" +
-      "ESSAGE_WILL_NOT_BE_SCORED_NETWORK\020P\0222\n.C" +
-      "HAT_MESSAGE_WILL_NOT_BE_SCORED_NETWORK_R" +
-      "ANKED\020Q\022)\n%CHAT_MESSAGE_CAN_QUIT_WITHOUT" +
-      "_ABANDON\020R\022:\n6CHAT_MESSAGE_RANKED_GAME_S" +
-      "TILL_SCORED_LEAVERS_GET_LOSS\020S\0228\n4CHAT_M" +
-      "ESSAGE_ABANDON_RANKED_BEFORE_FIRST_BLOOD" +
-      "_PARTY\020T\022!\n\035CHAT_MESSAGE_COMPENDIUM_LEVE" +
-      "L\020U\022*\n&CHAT_MESSAGE_VICTORY_PREDICTION_S" +
-      "TREAK\020V\022\"\n\036CHAT_MESSAGE_ASSASSIN_ANNOUNC",
-      "E\020W\022!\n\035CHAT_MESSAGE_ASSASSIN_SUCCESS\020X\022 " +
-      "\n\034CHAT_MESSAGE_ASSASSIN_DENIED\020Y\0227\n3CHAT" +
-      "_MESSAGE_VICTORY_PREDICTION_SINGLE_USER_" +
-      "CONFIRM\020Z\022\034\n\030CHAT_MESSAGE_EFFIGY_KILL\020[\022" +
-      "+\n\'CHAT_MESSAGE_VOICE_TEXT_BANNED_OVERFL" +
-      "OW\020\\\022\"\n\036CHAT_MESSAGE_YEAR_BEAST_KILLED\020]" +
-      "\022 \n\034CHAT_MESSAGE_PAUSE_COUNTDOWN\020^*\262\001\n\035D" +
-      "OTA_NO_BATTLE_POINTS_REASONS\022%\n!NO_BATTL" +
-      "E_POINTS_WRONG_LOBBY_TYPE\020\001\022\"\n\036NO_BATTLE" +
-      "_POINTS_PRACTICE_BOTS\020\002\022#\n\037NO_BATTLE_POI",
-      "NTS_CHEATS_ENABLED\020\003\022!\n\035NO_BATTLE_POINTS" +
-      "_LOW_PRIORITY\020\004*\250\001\n\027DOTA_CHAT_INFORMATIO" +
-      "NAL\022!\n\035INFO_COOP_BATTLE_POINTS_RULES\020\001\022#" +
-      "\n\037INFO_FROSTIVUS_ABANDON_REMINDER\020\002\022\030\n\024I" +
-      "NFO_RANKED_REMINDER\020\003\022+\n\'INFO_COOP_LOW_P" +
-      "RIORITY_PASSIVE_REMINDER\020\004*\226\001\n\026DOTA_ABIL" +
-      "ITY_PING_TYPE\022\026\n\022ABILITY_PING_READY\020\001\022\025\n" +
-      "\021ABILITY_PING_MANA\020\002\022\031\n\025ABILITY_PING_COO" +
-      "LDOWN\020\003\022\026\n\022ABILITY_PING_ENEMY\020\004\022\032\n\026ABILI" +
-      "TY_PING_UNLEARNED\020\005*\345\001\n\023EDotaEntityMessa",
-      "ges\022\024\n\020DOTA_UNIT_SPEECH\020\000\022\031\n\025DOTA_UNIT_S" +
-      "PEECH_MUTE\020\001\022\031\n\025DOTA_UNIT_ADD_GESTURE\020\002\022" +
-      "\034\n\030DOTA_UNIT_REMOVE_GESTURE\020\003\022!\n\035DOTA_UN" +
-      "IT_REMOVE_ALL_GESTURES\020\004\022\032\n\026DOTA_UNIT_FA" +
-      "DE_GESTURE\020\006\022%\n!DOTA_UNIT_SPEECH_CLIENTS" +
-      "IDE_RULES\020\007*\233\005\n\025DOTA_PARTICLE_MESSAGE\022&\n" +
-      "\"DOTA_PARTICLE_MANAGER_EVENT_CREATE\020\000\022&\n" +
-      "\"DOTA_PARTICLE_MANAGER_EVENT_UPDATE\020\001\022.\n" +
-      "*DOTA_PARTICLE_MANAGER_EVENT_UPDATE_FORW" +
-      "ARD\020\002\0222\n.DOTA_PARTICLE_MANAGER_EVENT_UPD",
-      "ATE_ORIENTATION\020\003\022/\n+DOTA_PARTICLE_MANAG" +
-      "ER_EVENT_UPDATE_FALLBACK\020\004\022*\n&DOTA_PARTI" +
-      "CLE_MANAGER_EVENT_UPDATE_ENT\020\005\022-\n)DOTA_P" +
-      "ARTICLE_MANAGER_EVENT_UPDATE_OFFSET\020\006\022\'\n" +
-      "#DOTA_PARTICLE_MANAGER_EVENT_DESTROY\020\007\0221" +
-      "\n-DOTA_PARTICLE_MANAGER_EVENT_DESTROY_IN" +
-      "VOLVING\020\010\022\'\n#DOTA_PARTICLE_MANAGER_EVENT" +
-      "_RELEASE\020\t\022\'\n#DOTA_PARTICLE_MANAGER_EVEN" +
-      "T_LATENCY\020\n\022+\n\'DOTA_PARTICLE_MANAGER_EVE" +
-      "NT_SHOULD_DRAW\020\013\022&\n\"DOTA_PARTICLE_MANAGE",
-      "R_EVENT_FROZEN\020\014\022?\n;DOTA_PARTICLE_MANAGE" +
-      "R_EVENT_CHANGE_CONTROL_POINT_ATTACHMENT\020" +
-      "\r*\356\003\n\023DOTA_OVERHEAD_ALERT\022\027\n\023OVERHEAD_AL" +
-      "ERT_GOLD\020\000\022\027\n\023OVERHEAD_ALERT_DENY\020\001\022\033\n\027O" +
-      "VERHEAD_ALERT_CRITICAL\020\002\022\025\n\021OVERHEAD_ALE" +
-      "RT_XP\020\003\022%\n!OVERHEAD_ALERT_BONUS_SPELL_DA" +
-      "MAGE\020\004\022\027\n\023OVERHEAD_ALERT_MISS\020\005\022\031\n\025OVERH" +
-      "EAD_ALERT_DAMAGE\020\006\022\030\n\024OVERHEAD_ALERT_EVA" +
-      "DE\020\007\022\030\n\024OVERHEAD_ALERT_BLOCK\020\010\022&\n\"OVERHE" +
-      "AD_ALERT_BONUS_POISON_DAMAGE\020\t\022\027\n\023OVERHE",
-      "AD_ALERT_HEAL\020\n\022\033\n\027OVERHEAD_ALERT_MANA_A" +
-      "DD\020\013\022\034\n\030OVERHEAD_ALERT_MANA_LOSS\020\014\022!\n\035OV" +
-      "ERHEAD_ALERT_LAST_HIT_EARLY\020\r\022!\n\035OVERHEA" +
-      "D_ALERT_LAST_HIT_CLOSE\020\016\022 \n\034OVERHEAD_ALE" +
-      "RT_LAST_HIT_MISS\020\017*\201\004\n\026DOTA_POSITION_CAT" +
-      "EGORY\022\026\n\022DOTA_POSITION_NONE\020\000\022\035\n\031DOTA_PO" +
-      "SITION_BOTTOM_LANE\020\001\022\032\n\026DOTA_POSITION_MI" +
-      "D_LANE\020\002\022\032\n\026DOTA_POSITION_TOP_LANE\020\003\022 \n\034" +
-      "DOTA_POSITION_RADIANT_JUNGLE\020\004\022\035\n\031DOTA_P" +
-      "OSITION_DIRE_JUNGLE\020\005\022\"\n\036DOTA_POSITION_R",
-      "ADIANT_ANCIENTS\020\006\022\037\n\033DOTA_POSITION_DIRE_" +
-      "ANCIENTS\020\007\022%\n!DOTA_POSITION_RADIANT_SECR" +
-      "ET_SHOP\020\010\022\"\n\036DOTA_POSITION_DIRE_SECRET_S" +
-      "HOP\020\t\022\027\n\023DOTA_POSITION_RIVER\020\n\022\034\n\030DOTA_P" +
-      "OSITION_ROSHAN_PIT\020\013\022\036\n\032DOTA_POSITION_RA" +
-      "DIANT_BASE\020\014\022\033\n\027DOTA_POSITION_DIRE_BASE\020" +
-      "\r\022\032\n\026DOTA_POSITION_FOUNTAIN\020\016\022\027\n\023DOTA_PO" +
-      "SITION_OTHER\020\017*\346\001\n\030DOTA_ABILITY_TARGET_T" +
-      "YPE\022\034\n\030DOTA_ABILITY_TARGET_NONE\020\000\022\034\n\030DOT" +
-      "A_ABILITY_TARGET_SELF\020\001\022!\n\035DOTA_ABILITY_",
-      "TARGET_ALLY_HERO\020\002\022\"\n\036DOTA_ABILITY_TARGE" +
-      "T_ALLY_CREEP\020\003\022\"\n\036DOTA_ABILITY_TARGET_EN" +
-      "EMY_HERO\020\004\022#\n\037DOTA_ABILITY_TARGET_ENEMY_" +
-      "CREEP\020\005*\230\010\n\rEHeroStatType\022\030\n\024k_EHeroStat" +
-      "Type_None\020\000\022#\n\036k_EHeroStatType_AxeTotalD" +
-      "amage\020\320\017\022\'\n\"k_EHeroStatType_BattleHunger" +
-      "Damage\020\321\017\022\'\n\"k_EHeroStatType_CounterHeli" +
-      "xDamage\020\322\017\022\'\n\"k_EHeroStatType_CullingBla" +
-      "deDamage\020\323\017\022,\n\'k_EHeroStatType_Berserker" +
-      "sCallCastCount\020\324\017\0223\n.k_EHeroStatType_Ber",
-      "serkersCallHeroesHitAverage\020\325\017\0220\n+k_EHer" +
-      "oStatType_BerserkersCallOtherUnitsHit\020\326\017" +
-      "\0223\n.k_EHeroStatType_BerserkersCallHeroAt" +
-      "tacksTaken\020\327\017\0224\n/k_EHeroStatType_Berserk" +
-      "ersCallOtherAttacksTaken\020\330\017\022*\n%k_EHeroSt" +
-      "atType_BattleHungerCastCount\020\331\017\0222\n-k_EHe" +
-      "roStatType_BattleHungerPotentialDuration" +
-      "\020\332\017\0220\n+k_EHeroStatType_BattleHungerAvera" +
-      "geDuration\020\333\017\022*\n%k_EHeroStatType_Counter" +
-      "HelixProcCount\020\334\017\022.\n)k_EHeroStatType_Cou",
-      "nterHelixHeroProcCount\020\335\017\0221\n,k_EHeroStat" +
-      "Type_CounterHelixHeroesHitAverage\020\336\017\0223\n." +
-      "k_EHeroStatType_CounterHelixOtherUnitsHi" +
-      "tCount\020\337\017\022*\n%k_EHeroStatType_CullingBlad" +
-      "eCastCount\020\340\017\022*\n%k_EHeroStatType_Culling" +
-      "BladeKillCount\020\341\017\0224\n/k_EHeroStatType_Cul" +
-      "lingBladeAverageHealthCulled\020\342\017\0227\n2k_EHe" +
-      "roStatType_CullingBladeAverageDamageAvai" +
-      "lable\020\343\017\0220\n+k_EHeroStatType_CullingBlade" +
-      "HeroBuffAverage\020\344\017*\251\004\n\027EPlayerVoiceListe",
-      "nState\022\016\n\nkPVLS_None\020\000\022\032\n\026kPVLS_DeniedCh" +
-      "atBanned\020\001\022\027\n\023kPVLS_DeniedPartner\020\002\022&\n\"k" +
-      "PVLS_DeniedHLTVTalkerNotSpectator\020\003\022$\n k" +
-      "PVLS_DeniedHLTVNoTalkerPlayerID\020\004\022(\n$kPV" +
-      "LS_DeniedHLTVTalkerNotBroadcaster\020\005\022\035\n\031k" +
-      "PVLS_DeniedTeamSpectator\020\006\022\027\n\023kPVLS_Deni" +
-      "edStudent\020\010\022\020\n\014kPVLS_Denied\020@\022&\n\"kPVLS_A" +
-      "llowHLTVTalkerIsBroadcaster\020A\022\034\n\030kPVLS_A" +
-      "llowCoBroadcaster\020B\022\026\n\022kPVLS_AllowAllCha" +
-      "t\020C\022\035\n\031kPVLS_AllowStudentToCoach\020D\022\034\n\030kP",
-      "VLS_AllowFellowStudent\020E\022\034\n\030kPVLS_AllowT" +
-      "alkerIsCoach\020F\022\034\n\030kPVLS_AllowCoachHearTe" +
-      "am\020G\022\027\n\023kPVLS_AllowSameTeam\020H\022\027\n\023kPVLS_A" +
-      "llowShowcase\020I*&\n\020EProjectionEvent\022\022\n\016eP" +
-      "E_FirstBlood\020\000B=\n$skadistats.clarity.wir" +
-      "e.common.protoB\020DotaUserMessagesH\001\200\001\000"
+      "ueue\030\007 \001(\010\022\027\n\017sequence_number\030\010 \001(\005\"b\n\035C" +
+      "DOTAUserMsg_NevermoreRequiem\022\025\n\rentity_h" +
+      "andle\030\001 \001(\005\022\r\n\005lines\030\002 \001(\005\022\033\n\006origin\030\003 \001" +
+      "(\0132\013.CMsgVector\".\n\033CDOTAUserMsg_InvalidC" +
+      "ommand\022\017\n\007message\030\001 \001(\t\")\n\025CDOTAUserMsg_",
+      "HudError\022\020\n\010order_id\030\001 \001(\005\"c\n\033CDOTAUserM" +
+      "sg_SharedCooldown\022\020\n\010entindex\030\001 \001(\005\022\014\n\004n" +
+      "ame\030\002 \001(\t\022\020\n\010cooldown\030\003 \001(\002\022\022\n\nname_inde" +
+      "x\030\004 \001(\005\"/\n\037CDOTAUserMsg_SetNextAutobuyIt" +
+      "em\022\014\n\004name\030\001 \001(\t\"X\n\033CDOTAUserMsg_Hallowe" +
+      "enDrops\022\021\n\titem_defs\030\001 \003(\r\022\022\n\nplayer_ids" +
+      "\030\002 \003(\r\022\022\n\nprize_list\030\003 \001(\r\"\223\003\n\035CDOTAUser" +
+      "Msg_PredictionResult\022\022\n\naccount_id\030\001 \001(\r" +
+      "\022\020\n\010match_id\030\002 \001(\004\022\017\n\007correct\030\003 \001(\010\022>\n\013p" +
+      "redictions\030\004 \003(\0132).CDOTAUserMsg_Predicti",
+      "onResult.Prediction\032\372\001\n\nPrediction\022\020\n\010it" +
+      "em_def\030\001 \001(\r\022\023\n\013num_correct\030\002 \001(\r\022\021\n\tnum" +
+      "_fails\030\003 \001(\r\022X\n\006result\030\004 \001(\01621.CDOTAUser" +
+      "Msg_PredictionResult.Prediction.EResult:" +
+      "\025k_eResult_ItemGranted\022\031\n\021granted_item_d" +
+      "efs\030\006 \003(\r\"=\n\007EResult\022\031\n\025k_eResult_ItemGr" +
+      "anted\020\001\022\027\n\023k_eResult_Destroyed\020\002\"\376\001\n\034CDO" +
+      "TAResponseQuerySerialized\0221\n\005facts\030\001 \003(\013" +
+      "2\".CDOTAResponseQuerySerialized.Fact\032\252\001\n" +
+      "\004Fact\022\013\n\003key\030\001 \002(\005\022F\n\007valtype\030\002 \002(\0162,.CD",
+      "OTAResponseQuerySerialized.Fact.ValueTyp" +
+      "e:\007NUMERIC\022\023\n\013val_numeric\030\003 \001(\002\022\022\n\nval_s" +
+      "tring\030\004 \001(\t\"$\n\tValueType\022\013\n\007NUMERIC\020\001\022\n\n" +
+      "\006STRING\020\002\"\220\001\n\030CDOTASpeechMatchOnClient\022\017" +
+      "\n\007concept\030\001 \001(\005\022\026\n\016recipient_type\030\002 \001(\005\022" +
+      "4\n\rresponsequery\030\003 \001(\0132\035.CDOTAResponseQu" +
+      "erySerialized\022\025\n\nrandomseed\030\004 \001(\017:\0010\"\350\006\n" +
+      "\026CDOTAUserMsg_UnitEvent\0228\n\010msg_type\030\001 \002(" +
+      "\0162\024.EDotaEntityMessages:\020DOTA_UNIT_SPEEC" +
+      "H\022\024\n\014entity_index\030\002 \002(\005\022.\n\006speech\030\003 \001(\0132",
+      "\036.CDOTAUserMsg_UnitEvent.Speech\0227\n\013speec" +
+      "h_mute\030\004 \001(\0132\".CDOTAUserMsg_UnitEvent.Sp" +
+      "eechMute\0227\n\013add_gesture\030\005 \001(\0132\".CDOTAUse" +
+      "rMsg_UnitEvent.AddGesture\022=\n\016remove_gest" +
+      "ure\030\006 \001(\0132%.CDOTAUserMsg_UnitEvent.Remov" +
+      "eGesture\0229\n\014blood_impact\030\007 \001(\0132#.CDOTAUs" +
+      "erMsg_UnitEvent.BloodImpact\0229\n\014fade_gest" +
+      "ure\030\010 \001(\0132#.CDOTAUserMsg_UnitEvent.FadeG" +
+      "esture\0229\n\026speech_match_on_client\030\t \001(\0132\031" +
+      ".CDOTASpeechMatchOnClient\032k\n\006Speech\022\017\n\007c",
+      "oncept\030\001 \001(\005\022\020\n\010response\030\002 \001(\t\022\026\n\016recipi" +
+      "ent_type\030\003 \001(\005\022\r\n\005level\030\004 \001(\005\022\027\n\010muteabl" +
+      "e\030\005 \001(\010:\005false\032 \n\nSpeechMute\022\022\n\005delay\030\001 " +
+      "\001(\002:\0030.5\032W\n\nAddGesture\022\020\n\010activity\030\001 \001(\005" +
+      "\022\014\n\004slot\030\002 \001(\005\022\022\n\007fade_in\030\003 \001(\002:\0010\022\025\n\010fa" +
+      "de_out\030\004 \001(\002:\0030.1\032!\n\rRemoveGesture\022\020\n\010ac" +
+      "tivity\030\001 \001(\005\032@\n\013BloodImpact\022\r\n\005scale\030\001 \001" +
+      "(\005\022\020\n\010x_normal\030\002 \001(\005\022\020\n\010y_normal\030\003 \001(\005\032\037" +
+      "\n\013FadeGesture\022\020\n\010activity\030\001 \001(\005\"0\n\032CDOTA" +
+      "UserMsg_ItemPurchased\022\022\n\nitem_index\030\001 \001(",
+      "\005\"j\n\026CDOTAUserMsg_ItemFound\022\016\n\006player\030\001 " +
+      "\001(\005\022\017\n\007quality\030\002 \001(\005\022\016\n\006rarity\030\003 \001(\005\022\016\n\006" +
+      "method\030\004 \001(\005\022\017\n\007itemdef\030\005 \001(\005\"\376\021\n\034CDOTAU" +
+      "serMsg_ParticleManager\022H\n\004type\030\001 \002(\0162\026.D" +
+      "OTA_PARTICLE_MESSAGE:\"DOTA_PARTICLE_MANA" +
+      "GER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022R\n\026relea" +
+      "se_particle_index\030\003 \001(\01322.CDOTAUserMsg_P" +
+      "articleManager.ReleaseParticleIndex\022E\n\017c" +
+      "reate_particle\030\004 \001(\0132,.CDOTAUserMsg_Part" +
+      "icleManager.CreateParticle\022G\n\020destroy_pa",
+      "rticle\030\005 \001(\0132-.CDOTAUserMsg_ParticleMana" +
+      "ger.DestroyParticle\022Z\n\032destroy_particle_" +
+      "involving\030\006 \001(\01326.CDOTAUserMsg_ParticleM" +
+      "anager.DestroyParticleInvolving\022E\n\017updat" +
+      "e_particle\030\007 \001(\0132,.CDOTAUserMsg_Particle" +
+      "Manager.UpdateParticle\022L\n\023update_particl" +
+      "e_fwd\030\010 \001(\0132/.CDOTAUserMsg_ParticleManag" +
+      "er.UpdateParticleFwd\022R\n\026update_particle_" +
+      "orient\030\t \001(\01322.CDOTAUserMsg_ParticleMana" +
+      "ger.UpdateParticleOrient\022V\n\030update_parti",
+      "cle_fallback\030\n \001(\01324.CDOTAUserMsg_Partic" +
+      "leManager.UpdateParticleFallback\022R\n\026upda" +
+      "te_particle_offset\030\013 \001(\01322.CDOTAUserMsg_" +
+      "ParticleManager.UpdateParticleOffset\022L\n\023" +
+      "update_particle_ent\030\014 \001(\0132/.CDOTAUserMsg" +
+      "_ParticleManager.UpdateParticleEnt\022[\n\033up" +
+      "date_particle_should_draw\030\016 \001(\01326.CDOTAU" +
+      "serMsg_ParticleManager.UpdateParticleSho" +
+      "uldDraw\022Y\n\032update_particle_set_frozen\030\017 " +
+      "\001(\01325.CDOTAUserMsg_ParticleManager.Updat",
+      "eParticleSetFrozen\022c\n\037change_control_poi" +
+      "nt_attachment\030\020 \001(\0132:.CDOTAUserMsg_Parti" +
+      "cleManager.ChangeControlPointAttachment\032" +
+      "\026\n\024ReleaseParticleIndex\032~\n\016CreateParticl" +
+      "e\022\033\n\023particle_name_index\030\001 \001(\006\022\023\n\013attach" +
+      "_type\030\002 \001(\005\022\025\n\rentity_handle\030\003 \001(\005\022#\n\033en" +
+      "tity_handle_for_modifiers\030\004 \001(\005\032.\n\017Destr" +
+      "oyParticle\022\033\n\023destroy_immediately\030\001 \001(\010\032" +
+      "N\n\030DestroyParticleInvolving\022\033\n\023destroy_i" +
+      "mmediately\030\001 \001(\010\022\025\n\rentity_handle\030\003 \001(\005\032",
+      "F\n\016UpdateParticle\022\025\n\rcontrol_point\030\001 \001(\005" +
+      "\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032H\n\021Updat" +
+      "eParticleFwd\022\025\n\rcontrol_point\030\001 \001(\005\022\034\n\007f" +
+      "orward\030\002 \001(\0132\013.CMsgVector\032\200\001\n\024UpdatePart" +
+      "icleOrient\022\025\n\rcontrol_point\030\001 \001(\005\022\034\n\007for" +
+      "ward\030\002 \001(\0132\013.CMsgVector\022\032\n\005right\030\003 \001(\0132\013" +
+      ".CMsgVector\022\027\n\002up\030\004 \001(\0132\013.CMsgVector\032N\n\026" +
+      "UpdateParticleFallback\022\025\n\rcontrol_point\030" +
+      "\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032Q\n\024" +
+      "UpdateParticleOffset\022\025\n\rcontrol_point\030\001 ",
+      "\001(\005\022\"\n\rorigin_offset\030\002 \001(\0132\013.CMsgVector\032" +
+      "\255\001\n\021UpdateParticleEnt\022\025\n\rcontrol_point\030\001" +
+      " \001(\005\022\025\n\rentity_handle\030\002 \001(\005\022\023\n\013attach_ty" +
+      "pe\030\003 \001(\005\022\022\n\nattachment\030\004 \001(\005\022&\n\021fallback" +
+      "_position\030\005 \001(\0132\013.CMsgVector\022\031\n\021include_" +
+      "wearables\030\006 \001(\010\032-\n\027UpdateParticleSetFroz" +
+      "en\022\022\n\nset_frozen\030\001 \001(\010\032/\n\030UpdateParticle" +
+      "ShouldDraw\022\023\n\013should_draw\030\001 \001(\010\032e\n\034Chang" +
+      "eControlPointAttachment\022\026\n\016attachment_ol" +
+      "d\030\001 \001(\005\022\026\n\016attachment_new\030\002 \001(\005\022\025\n\rentit",
+      "y_handle\030\003 \001(\005\"\305\001\n\032CDOTAUserMsg_Overhead" +
+      "Event\022?\n\014message_type\030\001 \002(\0162\024.DOTA_OVERH" +
+      "EAD_ALERT:\023OVERHEAD_ALERT_GOLD\022\r\n\005value\030" +
+      "\002 \001(\005\022\036\n\026target_player_entindex\030\003 \001(\005\022\027\n" +
+      "\017target_entindex\030\004 \001(\005\022\036\n\026source_player_" +
+      "entindex\030\005 \001(\005\">\n\034CDOTAUserMsg_TutorialT" +
+      "ipInfo\022\014\n\004name\030\001 \001(\t\022\020\n\010progress\030\002 \001(\005\"]" +
+      "\n\033CDOTAUserMsg_TutorialFinish\022\017\n\007heading" +
+      "\030\001 \001(\t\022\016\n\006emblem\030\002 \001(\t\022\014\n\004body\030\003 \001(\t\022\017\n\007" +
+      "success\030\004 \001(\010\"&\n$CDOTAUserMsg_TutorialMi",
+      "nimapPosition\"_\n\037CDOTAUserMsg_SendGeneri" +
+      "cToolTip\022\r\n\005title\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022\020\n" +
+      "\010entindex\030\003 \001(\005\022\r\n\005close\030\004 \001(\010\"S\n\026CDOTAU" +
+      "serMsg_WorldLine\022\021\n\tplayer_id\030\001 \001(\005\022&\n\tw" +
+      "orldline\030\002 \001(\0132\023.CDOTAMsg_WorldLine\"\223\001\n\026" +
+      "CDOTAUserMsg_ChatWheel\022;\n\014chat_message\030\001" +
+      " \001(\0162\026.EDOTAChatWheelMessage:\rk_EDOTA_CW" +
+      "_Ok\022\021\n\tplayer_id\030\002 \001(\r\022\022\n\naccount_id\030\003 \001" +
+      "(\r\022\025\n\rparam_hero_id\030\004 \001(\r\"]\n\035CDOTAUserMs" +
+      "g_ReceivedXmasGift\022\021\n\tplayer_id\030\001 \001(\005\022\021\n",
+      "\titem_name\030\002 \001(\t\022\026\n\016inventory_slot\030\003 \001(\005" +
+      "\"\244\001\n\027CDOTAUserMsg_ShowSurvey\022\021\n\tsurvey_i" +
+      "d\030\001 \001(\005\022\020\n\010match_id\030\002 \001(\r\022\026\n\016response_st" +
+      "yle\030\003 \001(\t\022\030\n\020teammate_hero_id\030\004 \001(\r\022\025\n\rt" +
+      "eammate_name\030\005 \001(\t\022\033\n\023teammate_account_i" +
+      "d\030\006 \001(\r\"5\n CDOTAUserMsg_UpdateSharedCont" +
+      "ent\022\021\n\tslot_type\030\001 \001(\005\"!\n\037CDOTAUserMsg_T" +
+      "utorialRequestExp\".\n\031CDOTAUserMsg_Tutori" +
+      "alFade\022\021\n\ttgt_alpha\030\001 \001(\005\"x\n CDOTAUserMs" +
+      "g_TutorialPingMinimap\022\021\n\tplayer_id\030\001 \001(\r",
+      "\022\r\n\005pos_x\030\002 \001(\002\022\r\n\005pos_y\030\003 \001(\002\022\r\n\005pos_z\030" +
+      "\004 \001(\002\022\024\n\014entity_index\030\005 \001(\005\"3\n\"CDOTAUser" +
+      "Msg_GamerulesStateChanged\022\r\n\005state\030\001 \001(\r" +
+      "\"E\n\035CDOTAUserMsg_AddQuestLogEntry\022\020\n\010npc" +
+      "_name\030\001 \001(\t\022\022\n\nnpc_dialog\030\002 \001(\t\"[\n\032CDOTA" +
+      "UserMsg_SendStatPopup\022\021\n\tplayer_id\030\001 \001(\005" +
+      "\022*\n\tstatpopup\030\002 \001(\0132\027.CDOTAMsg_SendStatP" +
+      "opup\"C\n\034CDOTAUserMsg_SendRoshanPopup\022\021\n\t" +
+      "reclaimed\030\001 \001(\010\022\020\n\010gametime\030\002 \001(\005\"L\n\032CDO" +
+      "TAUserMsg_SendFinalGold\022\025\n\rreliable_gold",
+      "\030\001 \003(\r\022\027\n\017unreliable_gold\030\002 \003(\r\"K\n\026CDOTA" +
+      "UserMsg_CustomMsg\022\017\n\007message\030\001 \001(\t\022\021\n\tpl" +
+      "ayer_id\030\002 \001(\005\022\r\n\005value\030\003 \001(\005\"X\n\031CDOTAUse" +
+      "rMsg_CoachHUDPing\022\021\n\tplayer_id\030\001 \001(\r\022(\n\010" +
+      "hud_ping\030\002 \001(\0132\026.CDOTAMsg_CoachHUDPing\" " +
+      "\n\036CDOTAUserMsg_ClientLoadGridNav\"\353\001\n\032CDO" +
+      "TAUserMsg_TE_Projectile\022\017\n\007hSource\030\001 \001(\005" +
+      "\022\017\n\007hTarget\030\002 \001(\005\022\021\n\tmoveSpeed\030\003 \001(\005\022\030\n\020" +
+      "sourceAttachment\030\004 \001(\005\022\034\n\024particleSystem" +
+      "Handle\030\005 \001(\003\022\021\n\tdodgeable\030\006 \001(\010\022\020\n\010isAtt",
+      "ack\030\007 \001(\010\022\020\n\010isEvaded\030\010 \001(\010\022\022\n\nexpireTim" +
+      "e\030\t \001(\002\022\025\n\rmaximpacttime\030\n \001(\002\"\356\001\n\035CDOTA" +
+      "UserMsg_TE_ProjectileLoc\022\037\n\nvSourceLoc\030\001" +
+      " \001(\0132\013.CMsgVector\022\017\n\007hTarget\030\002 \001(\005\022\021\n\tmo" +
+      "veSpeed\030\003 \001(\005\022\034\n\024particleSystemHandle\030\004 " +
+      "\001(\003\022\021\n\tdodgeable\030\005 \001(\010\022\020\n\010isAttack\030\006 \001(\010" +
+      "\022\020\n\010isEvaded\030\010 \001(\010\022\022\n\nexpireTime\030\t \001(\002\022\037" +
+      "\n\nvTargetLoc\030\n \001(\0132\013.CMsgVector\"b\n\037CDOTA" +
+      "UserMsg_TE_DotaBloodImpact\022\016\n\006entity\030\001 \001" +
+      "(\005\022\r\n\005scale\030\002 \001(\002\022\017\n\007xnormal\030\003 \001(\002\022\017\n\007yn",
+      "ormal\030\004 \001(\002\"\313\001\n\030CDOTAUserMsg_AbilityPing" +
+      "\022\021\n\tplayer_id\030\001 \001(\r\022\022\n\nability_id\030\002 \001(\r\022" +
+      "9\n\004type\030\003 \001(\0162\027.DOTA_ABILITY_PING_TYPE:\022" +
+      "ABILITY_PING_READY\022\030\n\020cooldown_seconds\030\004" +
+      " \001(\r\022\r\n\005level\030\005 \001(\r\022\017\n\007passive\030\006 \001(\010\022\023\n\013" +
+      "mana_needed\030\007 \001(\r\"\221\001\n\035CDOTAUserMsg_TE_Un" +
+      "itAnimation\022\016\n\006entity\030\001 \001(\005\022\027\n\017sequenceV" +
+      "ariant\030\002 \001(\005\022\024\n\014playbackrate\030\003 \001(\002\022\021\n\tca" +
+      "stpoint\030\004 \001(\002\022\014\n\004type\030\005 \001(\005\022\020\n\010activity\030" +
+      "\006 \001(\005\"@\n CDOTAUserMsg_TE_UnitAnimationEn",
+      "d\022\016\n\006entity\030\001 \001(\005\022\014\n\004snap\030\002 \001(\010\"\221\001\n\035CDOT" +
+      "AUserMsg_ShowGenericPopup\022\016\n\006header\030\001 \002(" +
+      "\t\022\014\n\004body\030\002 \002(\t\022\016\n\006param1\030\003 \001(\t\022\016\n\006param" +
+      "2\030\004 \001(\t\022\023\n\013tint_screen\030\005 \001(\010\022\035\n\025show_no_" +
+      "other_dialogs\030\006 \001(\010\"`\n\026CDOTAUserMsg_Vote" +
+      "Start\022\r\n\005title\030\001 \001(\t\022\020\n\010duration\030\002 \001(\002\022\024" +
+      "\n\014choice_count\030\003 \001(\005\022\017\n\007choices\030\004 \003(\t\"0\n" +
+      "\027CDOTAUserMsg_VoteUpdate\022\025\n\rchoice_count" +
+      "s\030\001 \003(\005\"/\n\024CDOTAUserMsg_VoteEnd\022\027\n\017selec" +
+      "ted_choice\030\001 \001(\005\"\214\001\n\037CDOTAUserMsg_Booste",
+      "rStatePlayer\022\021\n\tplayer_id\030\001 \001(\r\022\r\n\005bonus" +
+      "\030\002 \001(\002\022\023\n\013event_bonus\030\003 \001(\002\022\025\n\rbonus_ite" +
+      "m_id\030\004 \001(\r\022\033\n\023event_bonus_item_id\030\005 \001(\r\"" +
+      "V\n\031CDOTAUserMsg_BoosterState\0229\n\017boosted_" +
+      "players\030\001 \003(\0132 .CDOTAUserMsg_BoosterStat" +
+      "ePlayer\")\n\026CDOTAUserMsg_PlayerMMR\022\017\n\003mmr" +
+      "\030\001 \003(\021B\002\020\001\"Y\n\031CDOTAUserMsg_AbilitySteal\022" +
+      "\021\n\tplayer_id\030\001 \001(\r\022\022\n\nability_id\030\002 \001(\r\022\025" +
+      "\n\rability_level\030\003 \001(\r\"f\n\034CDOTAUserMsg_St" +
+      "atsHeroLookup\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007hero",
+      "_id\030\002 \001(\005\022\021\n\thero_name\030\003 \001(\t\022\017\n\007persona\030" +
+      "\004 \001(\t\"\372\001\n\"CDOTAUserMsg_StatsHeroPosition" +
+      "Info\022\030\n\020average_position\030\001 \001(\002\022J\n\020positi" +
+      "on_details\030\002 \003(\01320.CDOTAUserMsg_StatsHer" +
+      "oPositionInfo.PositionPair\032n\n\014PositionPa" +
+      "ir\022F\n\021position_category\030\001 \001(\0162\027.DOTA_POS" +
+      "ITION_CATEGORY:\022DOTA_POSITION_NONE\022\026\n\016po" +
+      "sition_count\030\002 \001(\r\"\217\003\n#CDOTAUserMsg_Stat" +
+      "sHeroMinuteDetails\022\021\n\tlast_hits\030\001 \001(\r\022\022\n" +
+      "\nhero_kills\030\002 \001(\r\022\023\n\013hero_damage\030\003 \001(\r\022\024",
+      "\n\014tower_damage\030\004 \001(\r\022:\n\rposition_info\030\005 " +
+      "\001(\0132#.CDOTAUserMsg_StatsHeroPositionInfo" +
+      "\022\020\n\010total_xp\030\006 \001(\r\022\021\n\tnet_worth\030\007 \001(\r\022\034\n" +
+      "\024harvested_creep_gold\030\010 \001(\r\022\024\n\014claimed_f" +
+      "arm\030\t \001(\r\022\024\n\014wards_placed\030\n \001(\r\022\027\n\017runes" +
+      "_collected\030\013 \001(\r\022\020\n\010tps_used\030\014 \001(\r\022\022\n\nma" +
+      "na_spent\030\r \003(\r\022\027\n\017damage_absorbed\030\016 \003(\r\022" +
+      "\023\n\013damage_done\030\017 \003(\r\"\347\003\n#CDOTAUserMsg_St" +
+      "atsTeamMinuteDetails\022:\n\014player_stats\030\001 \003" +
+      "(\0132$.CDOTAUserMsg_StatsHeroMinuteDetails",
+      "\022\023\n\013tower_kills\030\002 \001(\r\022\025\n\rbarrack_kills\030\003" +
+      " \001(\r\022!\n\031available_lane_creep_gold\030\004 \001(\r\022" +
+      "\032\n\022balance_kill_value\030\005 \001(\r\022\033\n\023balance_t" +
+      "ower_value\030\006 \001(\r\022\036\n\026balance_barracks_val" +
+      "ue\030\007 \001(\r\022\032\n\022balance_gold_value\030\010 \001(\r\022\030\n\020" +
+      "balance_xp_value\030\t \001(\r\022R\n\020lane_performan" +
+      "ce\030\n \003(\01328.CDOTAUserMsg_StatsTeamMinuteD" +
+      "etails.LocationPerformance\032R\n\023LocationPe" +
+      "rformance\022\031\n\021location_category\030\001 \001(\r\022\021\n\t" +
+      "stat_type\030\002 \001(\r\022\r\n\005value\030\003 \001(\r\"\254\001\n!CDOTA",
+      "UserMsg_StatsPlayerKillShare\022\021\n\tplayer_i" +
+      "d\030\001 \001(\005\022\032\n\022kill_share_percent\030\002 \001(\002\022\024\n\014p" +
+      "layer_loc_x\030\003 \001(\002\022\024\n\014player_loc_y\030\004 \001(\002\022" +
+      "\026\n\016health_percent\030\005 \001(\002\022\024\n\014mana_percent\030" +
+      "\006 \001(\002\"\304\001\n\035CDOTAUserMsg_StatsKillDetails\022" +
+      "\021\n\tvictim_id\030\001 \001(\r\0227\n\013kill_shares\030\002 \003(\0132" +
+      "\".CDOTAUserMsg_StatsPlayerKillShare\022\026\n\016d" +
+      "amage_to_kill\030\003 \001(\r\022\030\n\020effective_health\030" +
+      "\004 \001(\r\022\022\n\ndeath_time\030\005 \001(\002\022\021\n\tkiller_id\030\006" +
+      " \001(\r\"\213\006\n\036CDOTAUserMsg_StatsMatchDetails\022",
+      "2\n\013hero_lookup\030\001 \003(\0132\035.CDOTAUserMsg_Stat" +
+      "sHeroLookup\022;\n\rradiant_stats\030\002 \003(\0132$.CDO" +
+      "TAUserMsg_StatsTeamMinuteDetails\0228\n\ndire" +
+      "_stats\030\003 \003(\0132$.CDOTAUserMsg_StatsTeamMin" +
+      "uteDetails\0225\n\rradiant_kills\030\004 \003(\0132\036.CDOT" +
+      "AUserMsg_StatsKillDetails\0222\n\ndire_kills\030" +
+      "\005 \003(\0132\036.CDOTAUserMsg_StatsKillDetails\022U\n" +
+      "\rfight_details\030\006 \003(\0132>.CDOTAUserMsg_Stat" +
+      "sMatchDetails.CDOTAUserMsg_StatsFightDet" +
+      "ails\032p\n\"CDOTAUserMsg_StatsFightTeamDetai",
+      "ls\022\024\n\014participants\030\001 \003(\r\022\016\n\006deaths\030\002 \003(\r" +
+      "\022\022\n\ngold_delta\030\003 \001(\r\022\020\n\010xp_delta\030\004 \001(\r\032\211" +
+      "\002\n\036CDOTAUserMsg_StatsFightDetails\022\022\n\nsta" +
+      "rt_time\030\001 \001(\002\022\020\n\010end_time\030\002 \001(\002\022a\n\025radia" +
+      "nt_fight_details\030\003 \001(\0132B.CDOTAUserMsg_St" +
+      "atsMatchDetails.CDOTAUserMsg_StatsFightT" +
+      "eamDetails\022^\n\022dire_fight_details\030\004 \001(\0132B" +
+      ".CDOTAUserMsg_StatsMatchDetails.CDOTAUse" +
+      "rMsg_StatsFightTeamDetails\"4\n\026CDOTAUserM" +
+      "sg_MiniTaunt\022\032\n\022taunting_player_id\030\001 \001(\r",
+      "\"0\n\031CDOTAUserMsg_SpeechBubble\022\023\n\013destroy" +
+      "_all\030\001 \001(\010\"g\n CDOTAUserMsg_CustomHeaderM" +
+      "essage\022\021\n\tplayer_id\030\001 \001(\r\022\020\n\010duration\030\002 " +
+      "\001(\002\022\017\n\007message\030\003 \001(\t\022\r\n\005value\030\004 \001(\005\"v\n\023C" +
+      "MsgHeroAbilityStat\0227\n\tstat_type\030\001 \001(\0162\016." +
+      "EHeroStatType:\024k_EHeroStatType_None\022\021\n\ti" +
+      "nt_value\030\002 \001(\005\022\023\n\013float_value\030\003 \001(\002\"d\n\034C" +
+      "MsgCombatAnalyzerPlayerStat\022\022\n\naccount_i" +
+      "d\030\001 \001(\r\0220\n\022hero_ability_stats\030\002 \003(\0132\024.CM" +
+      "sgHeroAbilityStat\"`\n\027CMsgCombatAnalyzerS",
+      "tats\022\020\n\010match_id\030\001 \001(\004\0223\n\014player_stats\030\002" +
+      " \003(\0132\035.CMsgCombatAnalyzerPlayerStat\"W\n\026C" +
+      "DOTAUserMsg_BeastChat\022\014\n\004team\030\001 \001(\r\022\016\n\006f" +
+      "ormat\030\002 \001(\t\022\017\n\007message\030\003 \001(\t\022\016\n\006target\030\004" +
+      " \001(\t\"a\n$CDOTAUserMsg_CustomHudElement_Cr" +
+      "eate\022\022\n\nelement_id\030\001 \001(\t\022\027\n\017layout_filen" +
+      "ame\030\002 \001(\t\022\014\n\004data\030\003 \001(\014\"`\n$CDOTAUserMsg_" +
+      "CustomHudElement_Modify\022\022\n\nelement_id\030\001 " +
+      "\001(\t\022\026\n\016modify_visible\030\002 \001(\010\022\014\n\004data\030\003 \001(" +
+      "\014\";\n%CDOTAUserMsg_CustomHudElement_Destr",
+      "oy\022\022\n\nelement_id\030\001 \001(\t\"F\n\"CDOTAUserMsg_C" +
+      "ompendiumStatePlayer\022\021\n\tplayer_id\030\001 \001(\r\022" +
+      "\r\n\005level\030\002 \001(\r\"_\n\034CDOTAUserMsg_Compendiu" +
+      "mState\022?\n\022compendium_players\030\001 \003(\0132#.CDO" +
+      "TAUserMsg_CompendiumStatePlayer\"\334\001\n\036CDOT" +
+      "AUserMsg_ProjectionAbility\022\022\n\nability_id" +
+      "\030\001 \001(\r\022\030\n\020caster_ent_index\030\002 \001(\005\022\023\n\013cast" +
+      "er_team\030\003 \001(\005\022\023\n\013channel_end\030\004 \001(\010\022\033\n\006or" +
+      "igin\030\005 \001(\0132\013.CMsgVector\022\031\n\021track_caster_" +
+      "only\030\006 \001(\010\022\020\n\010end_time\030\007 \001(\002\022\030\n\020victim_e",
+      "nt_index\030\010 \001(\005\"a\n\034CDOTAUserMsg_Projectio" +
+      "nEvent\0223\n\010event_id\030\001 \001(\0162\021.EProjectionEv" +
+      "ent:\016ePE_FirstBlood\022\014\n\004team\030\002 \001(\r\"\360\007\n\026CM" +
+      "sgDOTACombatLogEntry\022:\n\004type\030\001 \001(\0162\025.DOT" +
+      "A_COMBATLOG_TYPES:\025DOTA_COMBATLOG_DAMAGE" +
+      "\022\023\n\013target_name\030\002 \001(\r\022\032\n\022target_source_n" +
+      "ame\030\003 \001(\r\022\025\n\rattacker_name\030\004 \001(\r\022\032\n\022dama" +
+      "ge_source_name\030\005 \001(\r\022\026\n\016inflictor_name\030\006" +
+      " \001(\r\022\034\n\024is_attacker_illusion\030\007 \001(\010\022\030\n\020is" +
+      "_attacker_hero\030\010 \001(\010\022\032\n\022is_target_illusi",
+      "on\030\t \001(\010\022\026\n\016is_target_hero\030\n \001(\010\022\032\n\022is_v" +
+      "isible_radiant\030\013 \001(\010\022\027\n\017is_visible_dire\030" +
+      "\014 \001(\010\022\r\n\005value\030\r \001(\r\022\016\n\006health\030\016 \001(\005\022\021\n\t" +
+      "timestamp\030\017 \001(\002\022\025\n\rstun_duration\030\020 \001(\002\022\025" +
+      "\n\rslow_duration\030\021 \001(\002\022\034\n\024is_ability_togg" +
+      "le_on\030\022 \001(\010\022\035\n\025is_ability_toggle_off\030\023 \001" +
+      "(\010\022\025\n\rability_level\030\024 \001(\r\022\022\n\nlocation_x\030" +
+      "\025 \001(\002\022\022\n\nlocation_y\030\026 \001(\002\022\023\n\013gold_reason" +
+      "\030\027 \001(\r\022\025\n\rtimestamp_raw\030\030 \001(\002\022\031\n\021modifie" +
+      "r_duration\030\031 \001(\002\022\021\n\txp_reason\030\032 \001(\r\022\021\n\tl",
+      "ast_hits\030\033 \001(\r\022\025\n\rattacker_team\030\034 \001(\r\022\023\n" +
+      "\013target_team\030\035 \001(\r\022\030\n\020obs_wards_placed\030\036" +
+      " \001(\r\022\026\n\016assist_player0\030\037 \001(\r\022\026\n\016assist_p" +
+      "layer1\030  \001(\r\022\026\n\016assist_player2\030! \001(\r\022\026\n\016" +
+      "assist_player3\030\" \001(\r\022\023\n\013stack_count\030# \001(" +
+      "\r\022\027\n\017hidden_modifier\030$ \001(\010\022\032\n\022is_target_" +
+      "building\030% \001(\010\022\031\n\021neutral_camp_type\030& \001(" +
+      "\r\022\021\n\trune_type\030\' \001(\r\022\026\n\016assist_players\030(" +
+      " \003(\r*\267\005\n\024DOTA_COMBATLOG_TYPES\022\031\n\025DOTA_CO" +
+      "MBATLOG_DAMAGE\020\000\022\027\n\023DOTA_COMBATLOG_HEAL\020",
+      "\001\022\037\n\033DOTA_COMBATLOG_MODIFIER_ADD\020\002\022\"\n\036DO" +
+      "TA_COMBATLOG_MODIFIER_REMOVE\020\003\022\030\n\024DOTA_C" +
+      "OMBATLOG_DEATH\020\004\022\032\n\026DOTA_COMBATLOG_ABILI" +
+      "TY\020\005\022\027\n\023DOTA_COMBATLOG_ITEM\020\006\022\033\n\027DOTA_CO" +
+      "MBATLOG_LOCATION\020\007\022\027\n\023DOTA_COMBATLOG_GOL" +
+      "D\020\010\022\035\n\031DOTA_COMBATLOG_GAME_STATE\020\t\022\025\n\021DO" +
+      "TA_COMBATLOG_XP\020\n\022\033\n\027DOTA_COMBATLOG_PURC" +
+      "HASE\020\013\022\032\n\026DOTA_COMBATLOG_BUYBACK\020\014\022\"\n\036DO" +
+      "TA_COMBATLOG_ABILITY_TRIGGER\020\r\022\036\n\032DOTA_C" +
+      "OMBATLOG_PLAYERSTATS\020\016\022\034\n\030DOTA_COMBATLOG",
+      "_MULTIKILL\020\017\022\035\n\031DOTA_COMBATLOG_KILLSTREA" +
+      "K\020\020\022%\n!DOTA_COMBATLOG_TEAM_BUILDING_KILL" +
+      "\020\021\022\036\n\032DOTA_COMBATLOG_FIRST_BLOOD\020\022\022#\n\037DO" +
+      "TA_COMBATLOG_MODIFIER_REFRESH\020\023\022%\n!DOTA_" +
+      "COMBATLOG_NEUTRAL_CAMP_STACK\020\024\022\036\n\032DOTA_C" +
+      "OMBATLOG_PICKUP_RUNE\020\025*\324\030\n\021DOTA_CHAT_MES" +
+      "SAGE\022!\n\024CHAT_MESSAGE_INVALID\020\377\377\377\377\377\377\377\377\377\001\022" +
+      "\032\n\026CHAT_MESSAGE_HERO_KILL\020\000\022\032\n\026CHAT_MESS" +
+      "AGE_HERO_DENY\020\001\022\036\n\032CHAT_MESSAGE_BARRACKS" +
+      "_KILL\020\002\022\033\n\027CHAT_MESSAGE_TOWER_KILL\020\003\022\033\n\027",
+      "CHAT_MESSAGE_TOWER_DENY\020\004\022\033\n\027CHAT_MESSAG" +
+      "E_FIRSTBLOOD\020\005\022\034\n\030CHAT_MESSAGE_STREAK_KI" +
+      "LL\020\006\022\030\n\024CHAT_MESSAGE_BUYBACK\020\007\022\026\n\022CHAT_M" +
+      "ESSAGE_AEGIS\020\010\022\034\n\030CHAT_MESSAGE_ROSHAN_KI" +
+      "LL\020\t\022\035\n\031CHAT_MESSAGE_COURIER_LOST\020\n\022\"\n\036C" +
+      "HAT_MESSAGE_COURIER_RESPAWNED\020\013\022\033\n\027CHAT_" +
+      "MESSAGE_GLYPH_USED\020\014\022\036\n\032CHAT_MESSAGE_ITE" +
+      "M_PURCHASE\020\r\022\030\n\024CHAT_MESSAGE_CONNECT\020\016\022\033" +
+      "\n\027CHAT_MESSAGE_DISCONNECT\020\017\022.\n*CHAT_MESS" +
+      "AGE_DISCONNECT_WAIT_FOR_RECONNECT\020\020\022*\n&C",
+      "HAT_MESSAGE_DISCONNECT_TIME_REMAINING\020\021\022" +
+      "1\n-CHAT_MESSAGE_DISCONNECT_TIME_REMAININ" +
+      "G_PLURAL\020\022\022\032\n\026CHAT_MESSAGE_RECONNECT\020\023\022\034" +
+      "\n\030CHAT_MESSAGE_PLAYER_LEFT\020\024\022\036\n\032CHAT_MES" +
+      "SAGE_SAFE_TO_LEAVE\020\025\022\034\n\030CHAT_MESSAGE_RUN" +
+      "E_PICKUP\020\026\022\034\n\030CHAT_MESSAGE_RUNE_BOTTLE\020\027" +
+      "\022\031\n\025CHAT_MESSAGE_INTHEBAG\020\030\022\033\n\027CHAT_MESS" +
+      "AGE_SECRETSHOP\020\031\022#\n\037CHAT_MESSAGE_ITEM_AU" +
+      "TOPURCHASED\020\032\022\037\n\033CHAT_MESSAGE_ITEMS_COMB" +
+      "INED\020\033\022\035\n\031CHAT_MESSAGE_SUPER_CREEPS\020\034\022%\n",
+      "!CHAT_MESSAGE_CANT_USE_ACTION_ITEM\020\035\022\"\n\036" +
+      "CHAT_MESSAGE_CHARGES_EXHAUSTED\020\036\022\032\n\026CHAT" +
+      "_MESSAGE_CANTPAUSE\020\037\022\035\n\031CHAT_MESSAGE_NOP" +
+      "AUSESLEFT\020 \022\035\n\031CHAT_MESSAGE_CANTPAUSEYET" +
+      "\020!\022\027\n\023CHAT_MESSAGE_PAUSED\020\"\022\"\n\036CHAT_MESS" +
+      "AGE_UNPAUSE_COUNTDOWN\020#\022\031\n\025CHAT_MESSAGE_" +
+      "UNPAUSED\020$\022\036\n\032CHAT_MESSAGE_AUTO_UNPAUSED" +
+      "\020%\022\032\n\026CHAT_MESSAGE_YOUPAUSED\020&\022 \n\034CHAT_M" +
+      "ESSAGE_CANTUNPAUSETEAM\020\'\022\"\n\036CHAT_MESSAGE" +
+      "_VOICE_TEXT_BANNED\020)\022.\n*CHAT_MESSAGE_SPE",
+      "CTATORS_WATCHING_THIS_GAME\020*\022 \n\034CHAT_MES" +
+      "SAGE_REPORT_REMINDER\020+\022\032\n\026CHAT_MESSAGE_E" +
+      "CON_ITEM\020,\022\026\n\022CHAT_MESSAGE_TAUNT\020-\022\027\n\023CH" +
+      "AT_MESSAGE_RANDOM\020.\022\030\n\024CHAT_MESSAGE_RD_T" +
+      "URN\020/\022 \n\034CHAT_MESSAGE_DROP_RATE_BONUS\0201\022" +
+      "!\n\035CHAT_MESSAGE_NO_BATTLE_POINTS\0202\022\035\n\031CH" +
+      "AT_MESSAGE_DENIED_AEGIS\0203\022\036\n\032CHAT_MESSAG" +
+      "E_INFORMATIONAL\0204\022\035\n\031CHAT_MESSAGE_AEGIS_" +
+      "STOLEN\0205\022\035\n\031CHAT_MESSAGE_ROSHAN_CANDY\0206\022" +
+      "\034\n\030CHAT_MESSAGE_ITEM_GIFTED\0207\022\'\n#CHAT_ME",
+      "SSAGE_HERO_KILL_WITH_GREEVIL\0208\022(\n$CHAT_M" +
+      "ESSAGE_HOLDOUT_TOWER_DESTROYED\0209\022\'\n#CHAT" +
+      "_MESSAGE_HOLDOUT_WALL_DESTROYED\020:\022&\n\"CHA" +
+      "T_MESSAGE_HOLDOUT_WALL_FINISHED\020;\022)\n%CHA" +
+      "T_MESSAGE_PLAYER_LEFT_LIMITED_HERO\020>\0221\n-" +
+      "CHAT_MESSAGE_ABANDON_LIMITED_HERO_EXPLAN" +
+      "ATION\020?\022(\n$CHAT_MESSAGE_DISCONNECT_LIMIT" +
+      "ED_HERO\020@\0223\n/CHAT_MESSAGE_LOW_PRIORITY_C" +
+      "OMPLETED_EXPLANATION\020A\022,\n(CHAT_MESSAGE_R" +
+      "ECRUITMENT_DROP_RATE_BONUS\020B\0221\n-CHAT_MES",
+      "SAGE_FROSTIVUS_SHINING_BOOSTER_ACTIVE\020C\022" +
+      " \n\034CHAT_MESSAGE_PLAYER_LEFT_AFK\020I\0222\n.CHA" +
+      "T_MESSAGE_PLAYER_LEFT_DISCONNECTED_TOO_L" +
+      "ONG\020J\022!\n\035CHAT_MESSAGE_PLAYER_ABANDONED\020K" +
+      "\022%\n!CHAT_MESSAGE_PLAYER_ABANDONED_AFK\020L\022" +
+      "7\n3CHAT_MESSAGE_PLAYER_ABANDONED_DISCONN" +
+      "ECTED_TOO_LONG\020M\022#\n\037CHAT_MESSAGE_WILL_NO" +
+      "T_BE_SCORED\020N\022*\n&CHAT_MESSAGE_WILL_NOT_B" +
+      "E_SCORED_RANKED\020O\022+\n\'CHAT_MESSAGE_WILL_N" +
+      "OT_BE_SCORED_NETWORK\020P\0222\n.CHAT_MESSAGE_W",
+      "ILL_NOT_BE_SCORED_NETWORK_RANKED\020Q\022)\n%CH" +
+      "AT_MESSAGE_CAN_QUIT_WITHOUT_ABANDON\020R\022:\n" +
+      "6CHAT_MESSAGE_RANKED_GAME_STILL_SCORED_L" +
+      "EAVERS_GET_LOSS\020S\0228\n4CHAT_MESSAGE_ABANDO" +
+      "N_RANKED_BEFORE_FIRST_BLOOD_PARTY\020T\022!\n\035C" +
+      "HAT_MESSAGE_COMPENDIUM_LEVEL\020U\022*\n&CHAT_M" +
+      "ESSAGE_VICTORY_PREDICTION_STREAK\020V\022\"\n\036CH" +
+      "AT_MESSAGE_ASSASSIN_ANNOUNCE\020W\022!\n\035CHAT_M" +
+      "ESSAGE_ASSASSIN_SUCCESS\020X\022 \n\034CHAT_MESSAG" +
+      "E_ASSASSIN_DENIED\020Y\0227\n3CHAT_MESSAGE_VICT",
+      "ORY_PREDICTION_SINGLE_USER_CONFIRM\020Z\022\034\n\030" +
+      "CHAT_MESSAGE_EFFIGY_KILL\020[\022+\n\'CHAT_MESSA" +
+      "GE_VOICE_TEXT_BANNED_OVERFLOW\020\\\022\"\n\036CHAT_" +
+      "MESSAGE_YEAR_BEAST_KILLED\020]\022 \n\034CHAT_MESS" +
+      "AGE_PAUSE_COUNTDOWN\020^*\262\001\n\035DOTA_NO_BATTLE" +
+      "_POINTS_REASONS\022%\n!NO_BATTLE_POINTS_WRON" +
+      "G_LOBBY_TYPE\020\001\022\"\n\036NO_BATTLE_POINTS_PRACT" +
+      "ICE_BOTS\020\002\022#\n\037NO_BATTLE_POINTS_CHEATS_EN" +
+      "ABLED\020\003\022!\n\035NO_BATTLE_POINTS_LOW_PRIORITY" +
+      "\020\004*\250\001\n\027DOTA_CHAT_INFORMATIONAL\022!\n\035INFO_C",
+      "OOP_BATTLE_POINTS_RULES\020\001\022#\n\037INFO_FROSTI" +
+      "VUS_ABANDON_REMINDER\020\002\022\030\n\024INFO_RANKED_RE" +
+      "MINDER\020\003\022+\n\'INFO_COOP_LOW_PRIORITY_PASSI" +
+      "VE_REMINDER\020\004*\226\001\n\026DOTA_ABILITY_PING_TYPE" +
+      "\022\026\n\022ABILITY_PING_READY\020\001\022\025\n\021ABILITY_PING" +
+      "_MANA\020\002\022\031\n\025ABILITY_PING_COOLDOWN\020\003\022\026\n\022AB" +
+      "ILITY_PING_ENEMY\020\004\022\032\n\026ABILITY_PING_UNLEA" +
+      "RNED\020\005*\345\001\n\023EDotaEntityMessages\022\024\n\020DOTA_U" +
+      "NIT_SPEECH\020\000\022\031\n\025DOTA_UNIT_SPEECH_MUTE\020\001\022" +
+      "\031\n\025DOTA_UNIT_ADD_GESTURE\020\002\022\034\n\030DOTA_UNIT_",
+      "REMOVE_GESTURE\020\003\022!\n\035DOTA_UNIT_REMOVE_ALL" +
+      "_GESTURES\020\004\022\032\n\026DOTA_UNIT_FADE_GESTURE\020\006\022" +
+      "%\n!DOTA_UNIT_SPEECH_CLIENTSIDE_RULES\020\007*\233" +
+      "\005\n\025DOTA_PARTICLE_MESSAGE\022&\n\"DOTA_PARTICL" +
+      "E_MANAGER_EVENT_CREATE\020\000\022&\n\"DOTA_PARTICL" +
+      "E_MANAGER_EVENT_UPDATE\020\001\022.\n*DOTA_PARTICL" +
+      "E_MANAGER_EVENT_UPDATE_FORWARD\020\002\0222\n.DOTA" +
+      "_PARTICLE_MANAGER_EVENT_UPDATE_ORIENTATI" +
+      "ON\020\003\022/\n+DOTA_PARTICLE_MANAGER_EVENT_UPDA" +
+      "TE_FALLBACK\020\004\022*\n&DOTA_PARTICLE_MANAGER_E",
+      "VENT_UPDATE_ENT\020\005\022-\n)DOTA_PARTICLE_MANAG" +
+      "ER_EVENT_UPDATE_OFFSET\020\006\022\'\n#DOTA_PARTICL" +
+      "E_MANAGER_EVENT_DESTROY\020\007\0221\n-DOTA_PARTIC" +
+      "LE_MANAGER_EVENT_DESTROY_INVOLVING\020\010\022\'\n#" +
+      "DOTA_PARTICLE_MANAGER_EVENT_RELEASE\020\t\022\'\n" +
+      "#DOTA_PARTICLE_MANAGER_EVENT_LATENCY\020\n\022+" +
+      "\n\'DOTA_PARTICLE_MANAGER_EVENT_SHOULD_DRA" +
+      "W\020\013\022&\n\"DOTA_PARTICLE_MANAGER_EVENT_FROZE" +
+      "N\020\014\022?\n;DOTA_PARTICLE_MANAGER_EVENT_CHANG" +
+      "E_CONTROL_POINT_ATTACHMENT\020\r*\356\003\n\023DOTA_OV",
+      "ERHEAD_ALERT\022\027\n\023OVERHEAD_ALERT_GOLD\020\000\022\027\n" +
+      "\023OVERHEAD_ALERT_DENY\020\001\022\033\n\027OVERHEAD_ALERT" +
+      "_CRITICAL\020\002\022\025\n\021OVERHEAD_ALERT_XP\020\003\022%\n!OV" +
+      "ERHEAD_ALERT_BONUS_SPELL_DAMAGE\020\004\022\027\n\023OVE" +
+      "RHEAD_ALERT_MISS\020\005\022\031\n\025OVERHEAD_ALERT_DAM" +
+      "AGE\020\006\022\030\n\024OVERHEAD_ALERT_EVADE\020\007\022\030\n\024OVERH" +
+      "EAD_ALERT_BLOCK\020\010\022&\n\"OVERHEAD_ALERT_BONU" +
+      "S_POISON_DAMAGE\020\t\022\027\n\023OVERHEAD_ALERT_HEAL" +
+      "\020\n\022\033\n\027OVERHEAD_ALERT_MANA_ADD\020\013\022\034\n\030OVERH" +
+      "EAD_ALERT_MANA_LOSS\020\014\022!\n\035OVERHEAD_ALERT_",
+      "LAST_HIT_EARLY\020\r\022!\n\035OVERHEAD_ALERT_LAST_" +
+      "HIT_CLOSE\020\016\022 \n\034OVERHEAD_ALERT_LAST_HIT_M" +
+      "ISS\020\017*\201\004\n\026DOTA_POSITION_CATEGORY\022\026\n\022DOTA" +
+      "_POSITION_NONE\020\000\022\035\n\031DOTA_POSITION_BOTTOM" +
+      "_LANE\020\001\022\032\n\026DOTA_POSITION_MID_LANE\020\002\022\032\n\026D" +
+      "OTA_POSITION_TOP_LANE\020\003\022 \n\034DOTA_POSITION" +
+      "_RADIANT_JUNGLE\020\004\022\035\n\031DOTA_POSITION_DIRE_" +
+      "JUNGLE\020\005\022\"\n\036DOTA_POSITION_RADIANT_ANCIEN" +
+      "TS\020\006\022\037\n\033DOTA_POSITION_DIRE_ANCIENTS\020\007\022%\n" +
+      "!DOTA_POSITION_RADIANT_SECRET_SHOP\020\010\022\"\n\036",
+      "DOTA_POSITION_DIRE_SECRET_SHOP\020\t\022\027\n\023DOTA" +
+      "_POSITION_RIVER\020\n\022\034\n\030DOTA_POSITION_ROSHA" +
+      "N_PIT\020\013\022\036\n\032DOTA_POSITION_RADIANT_BASE\020\014\022" +
+      "\033\n\027DOTA_POSITION_DIRE_BASE\020\r\022\032\n\026DOTA_POS" +
+      "ITION_FOUNTAIN\020\016\022\027\n\023DOTA_POSITION_OTHER\020" +
+      "\017*\346\001\n\030DOTA_ABILITY_TARGET_TYPE\022\034\n\030DOTA_A" +
+      "BILITY_TARGET_NONE\020\000\022\034\n\030DOTA_ABILITY_TAR" +
+      "GET_SELF\020\001\022!\n\035DOTA_ABILITY_TARGET_ALLY_H" +
+      "ERO\020\002\022\"\n\036DOTA_ABILITY_TARGET_ALLY_CREEP\020" +
+      "\003\022\"\n\036DOTA_ABILITY_TARGET_ENEMY_HERO\020\004\022#\n",
+      "\037DOTA_ABILITY_TARGET_ENEMY_CREEP\020\005*\230\010\n\rE" +
+      "HeroStatType\022\030\n\024k_EHeroStatType_None\020\000\022#" +
+      "\n\036k_EHeroStatType_AxeTotalDamage\020\320\017\022\'\n\"k" +
+      "_EHeroStatType_BattleHungerDamage\020\321\017\022\'\n\"" +
+      "k_EHeroStatType_CounterHelixDamage\020\322\017\022\'\n" +
+      "\"k_EHeroStatType_CullingBladeDamage\020\323\017\022," +
+      "\n\'k_EHeroStatType_BerserkersCallCastCoun" +
+      "t\020\324\017\0223\n.k_EHeroStatType_BerserkersCallHe" +
+      "roesHitAverage\020\325\017\0220\n+k_EHeroStatType_Ber" +
+      "serkersCallOtherUnitsHit\020\326\017\0223\n.k_EHeroSt",
+      "atType_BerserkersCallHeroAttacksTaken\020\327\017" +
+      "\0224\n/k_EHeroStatType_BerserkersCallOtherA" +
+      "ttacksTaken\020\330\017\022*\n%k_EHeroStatType_Battle" +
+      "HungerCastCount\020\331\017\0222\n-k_EHeroStatType_Ba" +
+      "ttleHungerPotentialDuration\020\332\017\0220\n+k_EHer" +
+      "oStatType_BattleHungerAverageDuration\020\333\017" +
+      "\022*\n%k_EHeroStatType_CounterHelixProcCoun" +
+      "t\020\334\017\022.\n)k_EHeroStatType_CounterHelixHero" +
+      "ProcCount\020\335\017\0221\n,k_EHeroStatType_CounterH" +
+      "elixHeroesHitAverage\020\336\017\0223\n.k_EHeroStatTy",
+      "pe_CounterHelixOtherUnitsHitCount\020\337\017\022*\n%" +
+      "k_EHeroStatType_CullingBladeCastCount\020\340\017" +
+      "\022*\n%k_EHeroStatType_CullingBladeKillCoun" +
+      "t\020\341\017\0224\n/k_EHeroStatType_CullingBladeAver" +
+      "ageHealthCulled\020\342\017\0227\n2k_EHeroStatType_Cu" +
+      "llingBladeAverageDamageAvailable\020\343\017\0220\n+k" +
+      "_EHeroStatType_CullingBladeHeroBuffAvera" +
+      "ge\020\344\017*\251\004\n\027EPlayerVoiceListenState\022\016\n\nkPV" +
+      "LS_None\020\000\022\032\n\026kPVLS_DeniedChatBanned\020\001\022\027\n" +
+      "\023kPVLS_DeniedPartner\020\002\022&\n\"kPVLS_DeniedHL",
+      "TVTalkerNotSpectator\020\003\022$\n kPVLS_DeniedHL" +
+      "TVNoTalkerPlayerID\020\004\022(\n$kPVLS_DeniedHLTV" +
+      "TalkerNotBroadcaster\020\005\022\035\n\031kPVLS_DeniedTe" +
+      "amSpectator\020\006\022\027\n\023kPVLS_DeniedStudent\020\010\022\020" +
+      "\n\014kPVLS_Denied\020@\022&\n\"kPVLS_AllowHLTVTalke" +
+      "rIsBroadcaster\020A\022\034\n\030kPVLS_AllowCoBroadca" +
+      "ster\020B\022\026\n\022kPVLS_AllowAllChat\020C\022\035\n\031kPVLS_" +
+      "AllowStudentToCoach\020D\022\034\n\030kPVLS_AllowFell" +
+      "owStudent\020E\022\034\n\030kPVLS_AllowTalkerIsCoach\020" +
+      "F\022\034\n\030kPVLS_AllowCoachHearTeam\020G\022\027\n\023kPVLS",
+      "_AllowSameTeam\020H\022\027\n\023kPVLS_AllowShowcase\020" +
+      "I*&\n\020EProjectionEvent\022\022\n\016ePE_FirstBlood\020" +
+      "\000B=\n$skadistats.clarity.wire.common.prot" +
+      "oB\020DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -90571,7 +94231,7 @@ public final class DotaUserMessages {
     internal_static_CDOTAUserMsg_SpectatorPlayerUnitOrders_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_SpectatorPlayerUnitOrders_descriptor,
-        new java.lang.String[] { "Entindex", "OrderType", "Units", "TargetIndex", "AbilityIndex", "Position", "Queue", });
+        new java.lang.String[] { "Entindex", "OrderType", "Units", "TargetIndex", "AbilityIndex", "Position", "Queue", "SequenceNumber", });
     internal_static_CDOTAUserMsg_NevermoreRequiem_descriptor =
       getDescriptor().getMessageTypes().get(28);
     internal_static_CDOTAUserMsg_NevermoreRequiem_fieldAccessorTable = new
@@ -91136,6 +94796,12 @@ public final class DotaUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_ProjectionEvent_descriptor,
         new java.lang.String[] { "EventId", "Team", });
+    internal_static_CMsgDOTACombatLogEntry_descriptor =
+      getDescriptor().getMessageTypes().get(97);
+    internal_static_CMsgDOTACombatLogEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgDOTACombatLogEntry_descriptor,
+        new java.lang.String[] { "Type", "TargetName", "TargetSourceName", "AttackerName", "DamageSourceName", "InflictorName", "IsAttackerIllusion", "IsAttackerHero", "IsTargetIllusion", "IsTargetHero", "IsVisibleRadiant", "IsVisibleDire", "Value", "Health", "Timestamp", "StunDuration", "SlowDuration", "IsAbilityToggleOn", "IsAbilityToggleOff", "AbilityLevel", "LocationX", "LocationY", "GoldReason", "TimestampRaw", "ModifierDuration", "XpReason", "LastHits", "AttackerTeam", "TargetTeam", "ObsWardsPlaced", "AssistPlayer0", "AssistPlayer1", "AssistPlayer2", "AssistPlayer3", "StackCount", "HiddenModifier", "IsTargetBuilding", "NeutralCampType", "RuneType", "AssistPlayers", });
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.common.proto.DotaCommonMessages.getDescriptor();
   }
