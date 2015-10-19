@@ -125,6 +125,7 @@ public class EmbeddedPackets {
         /* 522 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_UnitAnimationEnd_VALUE, DotaUserMessages.CDOTAUserMsg_TE_UnitAnimationEnd.class);
         /* 532 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AbilitySteal_VALUE, DotaUserMessages.CDOTAUserMsg_AbilitySteal.class);
         /* 533 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CourierKilledAlert_VALUE, DotaUserMessages.CDOTAUserMsg_CourierKilledAlert.class);
+        /* 534 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EnemyItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EnemyItemAlert.class);
         /* 542 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_PredictionResult_VALUE, DotaUserMessages.CDOTAUserMsg_PredictionResult.class);
         /* 547 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SpectatorPlayerUnitOrders_VALUE, DotaUserMessages.CDOTAUserMsg_SpectatorPlayerUnitOrders.class);
         /* 552 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionAbility_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionAbility.class);
