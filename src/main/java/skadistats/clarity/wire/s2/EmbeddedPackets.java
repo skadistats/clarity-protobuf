@@ -127,6 +127,7 @@ public class EmbeddedPackets {
         /* 533 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CourierKilledAlert_VALUE, DotaUserMessages.CDOTAUserMsg_CourierKilledAlert.class);
         /* 534 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EnemyItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EnemyItemAlert.class);
         /* 542 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_PredictionResult_VALUE, DotaUserMessages.CDOTAUserMsg_PredictionResult.class);
+        /* 544 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HPManaAlert_VALUE, DotaUserMessages.CDOTAUserMsg_HPManaAlert.class);
         /* 547 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SpectatorPlayerUnitOrders_VALUE, DotaUserMessages.CDOTAUserMsg_SpectatorPlayerUnitOrders.class);
         /* 552 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionAbility_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionAbility.class);
         /* 553 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ProjectionEvent_VALUE, DotaUserMessages.CDOTAUserMsg_ProjectionEvent.class);
@@ -184,7 +185,6 @@ public class EmbeddedPackets {
 //        /* 540 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QuickBuyAlert_VALUE, DotaUserMessages.CDOTAUserMsg_QuickBuyAlert.class);
 //        /* 541 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_StatsHeroDetails_VALUE, DotaUserMessages.CDOTAUserMsg_StatsHeroMinuteDetails.class);
 //        /* 543 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ModifierAlert_VALUE, DotaUserMessages.CDOTAUserMsg_ModifierAlert.class);
-//        /* 544 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HPManaAlert_VALUE, DotaUserMessages.CDOTAUserMsg_HPManaAlert.class);
 //        /* 545 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GlyphAlert_VALUE, DotaUserMessages.CDOTAUserMsg_GlyphAlert.class);
 //        /* 546 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_BeastChat_VALUE, DotaUserMessages.CDOTAUserMsg_BeastChat.class);
 //        /* 548 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CustomHudElement_Create_VALUE, DotaUserMessages.CDOTAUserMsg_CustomHudElement_Create.class);
