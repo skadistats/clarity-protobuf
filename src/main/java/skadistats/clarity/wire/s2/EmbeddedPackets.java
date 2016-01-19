@@ -104,6 +104,7 @@ public class EmbeddedPackets {
         /* 473 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DodgeTrackingProjectiles_VALUE, DotaUserMessages.CDOTAUserMsg_DodgeTrackingProjectiles.class);
         /* 477 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_LocationPing_VALUE, DotaUserMessages.CDOTAUserMsg_LocationPing.class);
         /* 478 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MapLine_VALUE, DotaUserMessages.CDOTAUserMsg_MapLine.class);
+        /* 479 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MiniKillCamInfo_VALUE, DotaUserMessages.CDOTAUserMsg_MiniKillCamInfo.class);
         /* 481 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MinimapEvent_VALUE, DotaUserMessages.CDOTAUserMsg_MinimapEvent.class);
         /* 482 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_NevermoreRequiem_VALUE, DotaUserMessages.CDOTAUserMsg_NevermoreRequiem.class);
         /* 483 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_OverheadEvent_VALUE, DotaUserMessages.CDOTAUserMsg_OverheadEvent.class);
@@ -111,6 +112,7 @@ public class EmbeddedPackets {
         /* 486 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SpectatorPlayerClick_VALUE, DotaUserMessages.CDOTAUserMsg_SpectatorPlayerClick.class);
         /* 488 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UnitEvent_VALUE, DotaUserMessages.CDOTAUserMsg_UnitEvent.class);
         /* 489 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
+        /* 490 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_BotChat_VALUE, DotaUserMessages.CDOTAUserMsg_BotChat.class);
         /* 491 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HudError_VALUE, DotaUserMessages.CDOTAUserMsg_HudError.class);
         /* 492 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemPurchased_VALUE, DotaUserMessages.CDOTAUserMsg_ItemPurchased.class);
         /* 497 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);
@@ -139,12 +141,10 @@ public class EmbeddedPackets {
 //        /* 468 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatLogData_VALUE, null);
 //        /* 470 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatLogShowDeath_VALUE, DotaUserMessages.CDOTAUserMsg_CombatLogShowDeath.class);
 //        /* 476 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_InvalidCommand_VALUE, DotaUserMessages.CDOTAUserMsg_InvalidCommand.class);
-//        /* 479 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MiniKillCamInfo_VALUE, DotaUserMessages.CDOTAUserMsg_MiniKillCamInfo.class);
 //        /* 480 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MinimapDebugPoint_VALUE, DotaUserMessages.CDOTAUserMsg_MinimapDebugPoint.class);
 //        /* 484 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SetNextAutobuyItem_VALUE, DotaUserMessages.CDOTAUserMsg_SetNextAutobuyItem.class);
 //        /* 487 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialTipInfo_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialTipInfo.class);
 //        /* 489 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
-//        /* 490 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_BotChat_VALUE, DotaUserMessages.CDOTAUserMsg_BotChat.class);
 //        /* 492 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemPurchased_VALUE, DotaUserMessages.CDOTAUserMsg_ItemPurchased.class);
 //        /* 493 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_Ping_VALUE, DotaUserMessages.CDOTAUserMsg_Ping.class);
 //        /* 494 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemFound_VALUE, DotaUserMessages.CDOTAUserMsg_ItemFound.class);
