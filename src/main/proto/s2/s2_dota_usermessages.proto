@@ -95,5 +95,7 @@ enum EDotaUserMessages {
 	DOTA_UM_ProjectionAbility = 552;
 	DOTA_UM_ProjectionEvent = 553;
 	DOTA_UM_CombatLogDataHLTV = 554;
+	DOTA_UM_XPAlert = 555;
+	DOTA_UM_UpdateQuestProgress = 556;
 
 }

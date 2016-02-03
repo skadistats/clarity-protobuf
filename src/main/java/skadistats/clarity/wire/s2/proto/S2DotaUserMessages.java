@@ -373,6 +373,14 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_CombatLogDataHLTV = 554;</code>
      */
     DOTA_UM_CombatLogDataHLTV(89, 554),
+    /**
+     * <code>DOTA_UM_XPAlert = 555;</code>
+     */
+    DOTA_UM_XPAlert(90, 555),
+    /**
+     * <code>DOTA_UM_UpdateQuestProgress = 556;</code>
+     */
+    DOTA_UM_UpdateQuestProgress(91, 556),
     ;
 
     /**
@@ -735,6 +743,14 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_CombatLogDataHLTV = 554;</code>
      */
     public static final int DOTA_UM_CombatLogDataHLTV_VALUE = 554;
+    /**
+     * <code>DOTA_UM_XPAlert = 555;</code>
+     */
+    public static final int DOTA_UM_XPAlert_VALUE = 555;
+    /**
+     * <code>DOTA_UM_UpdateQuestProgress = 556;</code>
+     */
+    public static final int DOTA_UM_UpdateQuestProgress_VALUE = 556;
 
 
     public final int getNumber() { return value; }
@@ -831,6 +847,8 @@ public final class S2DotaUserMessages {
         case 552: return DOTA_UM_ProjectionAbility;
         case 553: return DOTA_UM_ProjectionEvent;
         case 554: return DOTA_UM_CombatLogDataHLTV;
+        case 555: return DOTA_UM_XPAlert;
+        case 556: return DOTA_UM_UpdateQuestProgress;
         default: return null;
       }
     }
@@ -891,7 +909,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\201\025\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\271\025\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -959,8 +977,9 @@ public final class S2DotaUserMessages {
       "DOTA_UM_CompendiumState\020\247\004\022\036\n\031DOTA_UM_Pr" +
       "ojectionAbility\020\250\004\022\034\n\027DOTA_UM_Projection" +
       "Event\020\251\004\022\036\n\031DOTA_UM_CombatLogDataHLTV\020\252\004" +
-      "B;\n skadistats.clarity.wire.s2.protoB\022S2" +
-      "DotaUserMessagesH\001\200\001\000"
+      "\022\024\n\017DOTA_UM_XPAlert\020\253\004\022 \n\033DOTA_UM_Update" +
+      "QuestProgress\020\254\004B;\n skadistats.clarity.w",
+      "ire.s2.protoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
