@@ -1,0 +1,48 @@
+option java_package = "skadistats.clarity.wire.csgo.proto";
+option java_outer_classname = "CsGoGcMessages";
+
+option optimize_for = SPEED;
+option cc_generic_services = false;
+
+message CEconItemPreviewDataBlock {
+	message Sticker {
+		optional uint32 slot = 1;
+		optional uint32 sticker_id = 2;
+		optional float wear = 3;
+		optional float scale = 4;
+		optional float rotation = 5;
+	}
+
+	optional uint32 accountid = 1;
+	optional uint64 itemid = 2;
+	optional uint32 defindex = 3;
+	optional uint32 paintindex = 4;
+	optional uint32 rarity = 5;
+	optional uint32 quality = 6;
+	optional uint32 paintwear = 7;
+	optional uint32 paintseed = 8;
+	optional uint32 killeaterscoretype = 9;
+	optional uint32 killeatervalue = 10;
+	optional string customname = 11;
+	repeated .CEconItemPreviewDataBlock.Sticker stickers = 12;
+	optional uint32 inventory = 13;
+	optional uint32 origin = 14;
+	optional uint32 questid = 15;
+	optional uint32 dropreason = 16;
+}
+
+message CMsgGCCstrike15_v2_GC2ServerNotifyXPRewarded {
+	repeated .XpProgressData xp_progress_data = 1;
+	optional uint32 account_id = 2;
+	optional uint32 current_xp = 3;
+	optional uint32 current_level = 4;
+	optional uint32 upgraded_defidx = 5;
+}
+
+message XpProgressData {
+	optional uint32 xp_points = 1;
+	optional int32 xp_category = 2;
+}
+
+
+
