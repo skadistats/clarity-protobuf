@@ -1959,13 +1959,13 @@ public final class Demo {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>optional uint32 match_id = 1;</code>
+       * <code>optional uint64 match_id = 1;</code>
        */
       boolean hasMatchId();
       /**
-       * <code>optional uint32 match_id = 1;</code>
+       * <code>optional uint64 match_id = 1;</code>
        */
-      int getMatchId();
+      long getMatchId();
 
       /**
        * <code>optional int32 game_mode = 2;</code>
@@ -2151,7 +2151,7 @@ public final class Demo {
               }
               case 8: {
                 bitField0_ |= 0x00000001;
-                matchId_ = input.readUInt32();
+                matchId_ = input.readUInt64();
                 break;
               }
               case 16: {
@@ -3679,17 +3679,17 @@ public final class Demo {
 
       private int bitField0_;
       public static final int MATCH_ID_FIELD_NUMBER = 1;
-      private int matchId_;
+      private long matchId_;
       /**
-       * <code>optional uint32 match_id = 1;</code>
+       * <code>optional uint64 match_id = 1;</code>
        */
       public boolean hasMatchId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional uint32 match_id = 1;</code>
+       * <code>optional uint64 match_id = 1;</code>
        */
-      public int getMatchId() {
+      public long getMatchId() {
         return matchId_;
       }
 
@@ -3938,7 +3938,7 @@ public final class Demo {
       }
 
       private void initFields() {
-        matchId_ = 0;
+        matchId_ = 0L;
         gameMode_ = 0;
         gameWinner_ = 0;
         playerInfo_ = java.util.Collections.emptyList();
@@ -3964,7 +3964,7 @@ public final class Demo {
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          output.writeUInt32(1, matchId_);
+          output.writeUInt64(1, matchId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           output.writeInt32(2, gameMode_);
@@ -4007,7 +4007,7 @@ public final class Demo {
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(1, matchId_);
+            .computeUInt64Size(1, matchId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
           size += com.google.protobuf.CodedOutputStream
@@ -4168,7 +4168,7 @@ public final class Demo {
 
         public Builder clear() {
           super.clear();
-          matchId_ = 0;
+          matchId_ = 0L;
           bitField0_ = (bitField0_ & ~0x00000001);
           gameMode_ = 0;
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -4406,34 +4406,34 @@ public final class Demo {
         }
         private int bitField0_;
 
-        private int matchId_ ;
+        private long matchId_ ;
         /**
-         * <code>optional uint32 match_id = 1;</code>
+         * <code>optional uint64 match_id = 1;</code>
          */
         public boolean hasMatchId() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>optional uint32 match_id = 1;</code>
+         * <code>optional uint64 match_id = 1;</code>
          */
-        public int getMatchId() {
+        public long getMatchId() {
           return matchId_;
         }
         /**
-         * <code>optional uint32 match_id = 1;</code>
+         * <code>optional uint64 match_id = 1;</code>
          */
-        public Builder setMatchId(int value) {
+        public Builder setMatchId(long value) {
           bitField0_ |= 0x00000001;
           matchId_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional uint32 match_id = 1;</code>
+         * <code>optional uint64 match_id = 1;</code>
          */
         public Builder clearMatchId() {
           bitField0_ = (bitField0_ & ~0x00000001);
-          matchId_ = 0;
+          matchId_ = 0L;
           onChanged();
           return this;
         }
@@ -15732,7 +15732,7 @@ public final class Demo {
       "_clientside_particles\030\t \001(\010\022\016\n\006addons\030\n " +
       "\001(\t\"\264\004\n\tCGameInfo\022&\n\004dota\030\004 \001(\0132\030.CGameI" +
       "nfo.CDotaGameInfo\032\376\003\n\rCDotaGameInfo\022\020\n\010m" +
-      "atch_id\030\001 \001(\r\022\021\n\tgame_mode\030\002 \001(\005\022\023\n\013game",
+      "atch_id\030\001 \001(\004\022\021\n\tgame_mode\030\002 \001(\005\022\023\n\013game",
       "_winner\030\003 \001(\005\0229\n\013player_info\030\004 \003(\0132$.CGa" +
       "meInfo.CDotaGameInfo.CPlayerInfo\022\020\n\010leag" +
       "ueid\030\005 \001(\r\022=\n\npicks_bans\030\006 \003(\0132).CGameIn" +
