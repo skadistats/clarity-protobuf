@@ -14,11 +14,17 @@ message CDOTAMatchMetadataFile {
 
 message CDOTAMatchMetadata {
     message Team {
+        message PlayerKill {
+            optional uint32 victim_slot = 1;
+            optional uint32 count = 2;
+        }
+
         message Player {
             optional uint32 account_id = 1;
             repeated uint32 ability_upgrades = 2;
             optional uint32 player_slot = 3;
             repeated .CSOEconItem equipped_econ_items = 4;
+            repeated .CDOTAMatchMetadata.Team.PlayerKill kills = 5;
         }
 
         optional uint32 dota_team = 1;
@@ -26,9 +32,15 @@ message CDOTAMatchMetadata {
         repeated float graph_experience = 3;
         repeated float graph_gold_earned = 4;
         repeated float graph_net_worth = 5;
+        optional bool cm_first_pick = 6;
+        optional uint32 cm_captain_player_id = 7;
+        repeated uint32 cm_bans = 8;
+        repeated uint32 cm_picks = 9;
+        optional uint32 cm_penalty = 10;
     }
 
     repeated .CDOTAMatchMetadata.Team teams = 1;
+    repeated .CLobbyTimedRewardDetails item_rewards = 2;
 }
 
 message CDOTAMatchPrivateMetadata {
@@ -42,3 +54,12 @@ message CDOTAMatchPrivateMetadata {
     repeated .CDOTAMatchPrivateMetadata.Kill kills = 1;
     optional string test_string = 100;
 }
+
+message CLobbyTimedRewardDetails {
+    optional uint32 item_def_index = 2;
+    optional bool is_supply_crate = 3;
+    optional bool is_timed_drop = 4;
+    optional uint32 account_id = 5;
+    optional uint32 origin = 6;
+}
+

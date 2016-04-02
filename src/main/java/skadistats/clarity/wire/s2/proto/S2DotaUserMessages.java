@@ -385,6 +385,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_MatchMetadata = 557;</code>
      */
     DOTA_UM_MatchMetadata(92, 557),
+    /**
+     * <code>DOTA_UM_MatchDetails = 558;</code>
+     */
+    DOTA_UM_MatchDetails(93, 558),
     ;
 
     /**
@@ -759,6 +763,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_MatchMetadata = 557;</code>
      */
     public static final int DOTA_UM_MatchMetadata_VALUE = 557;
+    /**
+     * <code>DOTA_UM_MatchDetails = 558;</code>
+     */
+    public static final int DOTA_UM_MatchDetails_VALUE = 558;
 
 
     public final int getNumber() { return value; }
@@ -858,6 +866,7 @@ public final class S2DotaUserMessages {
         case 555: return DOTA_UM_XPAlert;
         case 556: return DOTA_UM_UpdateQuestProgress;
         case 557: return DOTA_UM_MatchMetadata;
+        case 558: return DOTA_UM_MatchDetails;
         default: return null;
       }
     }
@@ -918,7 +927,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\325\025\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\360\025\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -988,8 +997,9 @@ public final class S2DotaUserMessages {
       "Event\020\251\004\022\036\n\031DOTA_UM_CombatLogDataHLTV\020\252\004" +
       "\022\024\n\017DOTA_UM_XPAlert\020\253\004\022 \n\033DOTA_UM_Update" +
       "QuestProgress\020\254\004\022\032\n\025DOTA_UM_MatchMetadat",
-      "a\020\255\004B;\n skadistats.clarity.wire.s2.proto" +
-      "B\022S2DotaUserMessagesH\001\200\001\000"
+      "a\020\255\004\022\031\n\024DOTA_UM_MatchDetails\020\256\004B;\n skadi" +
+      "stats.clarity.wire.s2.protoB\022S2DotaUserM" +
+      "essagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
