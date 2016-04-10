@@ -14,8 +14,10 @@ public class UserMessagePackets {
     static {
         USERMSG = new HashMap<>();
 
+        /* 15 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_ResetHUD_VALUE, S1UserMessages.CUserMsg_ResetHUD.class);
         /* 18 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_SayText2_VALUE, S1UserMessages.CUserMsg_SayText2.class);
         /* 24 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_TextMsg_VALUE, S1UserMessages.CUserMsg_TextMsg.class);
+        /* 27 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_VGUIMenu_VALUE, S1UserMessages.CUserMsg_VGUIMenu.class);
         /* 28 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_VoiceMask_VALUE, S1UserMessages.CUserMsg_VoiceMask.class);
         /* 30 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_SendAudio_VALUE, S1UserMessages.CUserMsg_SendAudio.class);
         
@@ -33,7 +35,6 @@ public class UserMessagePackets {
 //        /* 12 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_KeyHintText_VALUE, S1UserMessages.CUserMsg_KeyHintText.class);
 //        /* 13 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_MessageText_VALUE, S1UserMessages.CUserMsg_MessageText.class);
 //        /* 14 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_RequestState_VALUE, S1UserMessages.CUserMsg_RequestState.class);
-//        /* 15 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_ResetHUD_VALUE, S1UserMessages.CUserMsg_ResetHUD.class);
 //        /* 16 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_Rumble_VALUE, S1UserMessages.CUserMsg_Rumble.class);
 //        /* 17 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_SayText_VALUE, S1UserMessages.CUserMsg_SayText.class);
 //        /* 19 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_SayTextChannel_VALUE, S1UserMessages.CUserMsg_SayTextChannel.class);
@@ -43,7 +44,6 @@ public class UserMessagePackets {
 //        /* 23 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_StatsSkipState_VALUE, S1UserMessages.CUserMsg_StatsSkipState.class);
 //        /* 25 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_Tilt_VALUE, S1UserMessages.CUserMsg_Tilt.class);
 //        /* 26 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_Train_VALUE, S1UserMessages.CUserMsg_Train.class);
-//        /* 27 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_VGUIMenu_VALUE, S1UserMessages.CUserMsg_VGUIMenu.class);
 //        /* 29 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_VoiceSubtitle_VALUE, S1UserMessages.CUserMsg_VoiceSubtitle.class);
 //        /* 31 */ USERMSG.put(S1UserMessages.EBaseUserMessages.UM_CameraTransition_VALUE, S1UserMessages.CUserMsg_CameraTransition.class);
 
