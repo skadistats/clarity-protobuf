@@ -1075,6 +1075,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_VECTOR_TARGET_POSITION = 30;</code>
      */
     DOTA_UNIT_ORDER_VECTOR_TARGET_POSITION(30, 30),
+    /**
+     * <code>DOTA_UNIT_ORDER_RADAR = 31;</code>
+     */
+    DOTA_UNIT_ORDER_RADAR(31, 31),
     ;
 
     /**
@@ -1201,6 +1205,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_VECTOR_TARGET_POSITION = 30;</code>
      */
     public static final int DOTA_UNIT_ORDER_VECTOR_TARGET_POSITION_VALUE = 30;
+    /**
+     * <code>DOTA_UNIT_ORDER_RADAR = 31;</code>
+     */
+    public static final int DOTA_UNIT_ORDER_RADAR_VALUE = 31;
 
 
     public final int getNumber() { return value; }
@@ -1238,6 +1246,7 @@ public final class DotaCommonMessages {
         case 28: return DOTA_UNIT_ORDER_MOVE_TO_DIRECTION;
         case 29: return DOTA_UNIT_ORDER_PATROL;
         case 30: return DOTA_UNIT_ORDER_VECTOR_TARGET_POSITION;
+        case 31: return DOTA_UNIT_ORDER_RADAR;
         default: return null;
       }
     }
@@ -5781,7 +5790,7 @@ public final class DotaCommonMessages {
       "Rune\020T\022\027\n\023k_EDOTA_CW_Zeus_Ult\020U*r\n\023EDOTA" +
       "StatPopupTypes\022\030\n\024k_EDOTA_SPT_Textline\020\000" +
       "\022\025\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k_EDOTA_SPT_P" +
-      "oll\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003*\243\010\n\017dotaunit" +
+      "oll\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003*\276\010\n\017dotaunit" +
       "order_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020\000\022$\n DOT" +
       "A_UNIT_ORDER_MOVE_TO_POSITION\020\001\022\"\n\036DOTA_" +
       "UNIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033DOTA_UNIT" +
@@ -5808,8 +5817,9 @@ public final class DotaCommonMessages {
       "DER_PING_ABILITY\020\033\022%\n!DOTA_UNIT_ORDER_MO" +
       "VE_TO_DIRECTION\020\034\022\032\n\026DOTA_UNIT_ORDER_PAT" +
       "ROL\020\035\022*\n&DOTA_UNIT_ORDER_VECTOR_TARGET_P",
-      "OSITION\020\036B?\n$skadistats.clarity.wire.com" +
-      "mon.protoB\022DotaCommonMessagesH\001\200\001\000"
+      "OSITION\020\036\022\031\n\025DOTA_UNIT_ORDER_RADAR\020\037B?\n$" +
+      "skadistats.clarity.wire.common.protoB\022Do" +
+      "taCommonMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
