@@ -21,7 +21,8 @@ public class Packet {
                     m = keyAsClass.getMethod("parseFrom", ByteString.class);
                     put(keyAsClass, m);
                 } catch (Exception e) {
-                    throw new RuntimeException(e);
+                    Exception et = e;
+                    throw (RuntimeException) et;
                 }
             }
             return m;
@@ -33,7 +34,8 @@ public class Packet {
         try {
             return (T) PARSE_METHODS.get(clazz).invoke(null, data);
         } catch (Throwable throwable) {
-            throw new RuntimeException(throwable);
+            Throwable et = throwable;
+            throw (RuntimeException) et;
         }
     }
     
