@@ -10,6 +10,99 @@ enum VoiceDataFormat_t {
 	VOICEDATA_FORMAT_ENGINE = 1;
 }
 
+enum RequestPause_t {
+	RP_PAUSE = 0;
+	RP_UNPAUSE = 1;
+	RP_TOGGLEPAUSE = 2;
+}
+
+message CCLCMsg_ClientInfo {
+	optional fixed32 send_table_crc = 1;
+	optional uint32 server_count = 2;
+	optional bool is_hltv = 3;
+	optional bool is_replay = 4;
+	optional uint32 friends_id = 5;
+	optional string friends_name = 6;
+}
+
+message CCLCMsg_Move {
+	optional uint32 num_backup_commands = 1;
+	optional uint32 num_new_commands = 2;
+	optional bytes data = 3;
+}
+
+message CMsgVoiceAudio {
+	optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];
+	optional bytes voice_data = 2;
+	optional int32 sequence_bytes = 3;
+	optional uint32 section_number = 4;
+	optional uint32 sample_rate = 5;
+	optional uint32 uncompressed_sample_offset = 6;
+}
+
+message CCLCMsg_VoiceData {
+	optional .CMsgVoiceAudio audio = 1;
+	optional fixed64 xuid = 2;
+	optional uint32 tick = 3;
+}
+
+message CCLCMsg_BaselineAck {
+	optional int32 baseline_tick = 1;
+	optional int32 baseline_nr = 2;
+}
+
+message CCLCMsg_ListenEvents {
+	repeated fixed32 event_mask = 1;
+}
+
+message CCLCMsg_RespondCvarValue {
+	optional int32 cookie = 1;
+	optional int32 status_code = 2;
+	optional string name = 3;
+	optional string value = 4;
+}
+
+message CCLCMsg_FileCRCCheck {
+	optional int32 code_path = 1;
+	optional string path = 2;
+	optional int32 code_filename = 3;
+	optional string filename = 4;
+	optional fixed32 crc = 5;
+}
+
+message CCLCMsg_LoadingProgress {
+	optional int32 progress = 1;
+}
+
+message CCLCMsg_SplitPlayerConnect {
+	optional string playername = 1;
+}
+
+message CCLCMsg_ClientMessage {
+	optional int32 msg_type = 1;
+	optional bytes data = 2;
+}
+
+message CCLCMsg_SplitPlayerDisconnect {
+	optional int32 slot = 1;
+}
+
+message CCLCMsg_ServerStatus {
+	optional bool simplified = 1;
+}
+
+message CCLCMsg_ServerPing {
+}
+
+message CCLCMsg_RequestPause {
+	optional .RequestPause_t pause_type = 1 [default = RP_PAUSE];
+	optional int32 pause_group = 2;
+}
+
+message CCLCMsg_CmdKeyValues {
+	optional bytes data = 1;
+}
+
 message CSVCMsg_GameEventList {
 	message key_t {
 		optional int32 type = 1;

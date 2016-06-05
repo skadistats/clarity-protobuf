@@ -14,6 +14,8 @@ public class EmbeddedPackets {
     private static final Map<Integer, Class<? extends GeneratedMessage>> EMBED;
     static {
         EMBED = new HashMap<>();
+        /*   0 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
+        /*   1 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, NetworkBaseTypes.CNETMsg_Disconnect.class);
         /*   4 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
         /*   6 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_SetConVar_VALUE, NetworkBaseTypes.CNETMsg_SetConVar.class);
         /*   7 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_SignonState_VALUE, NetworkBaseTypes.CNETMsg_SignonState.class);
@@ -21,6 +23,12 @@ public class EmbeddedPackets {
         /*   9 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_ManifestUpdate_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate.class);
         /*  11 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_SetCreationTick_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick.class);
         /*  12 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_Unload_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_Unload.class);
+        /*  12 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_LoadCompleted_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted.class);
+
+        /*  20 */ EMBED.put(S2NetMessages.CLC_Messages.clc_ClientInfo_VALUE, NetMessages.CCLCMsg_ClientInfo.class);
+        /*  21 */ EMBED.put(S2NetMessages.CLC_Messages.clc_Move_VALUE, NetMessages.CCLCMsg_Move.class);
+        /*  23 */ EMBED.put(S2NetMessages.CLC_Messages.clc_BaselineAck_VALUE, NetMessages.CCLCMsg_BaselineAck.class);
+        /*  27 */ EMBED.put(S2NetMessages.CLC_Messages.clc_LoadingProgress_VALUE, NetMessages.CCLCMsg_LoadingProgress.class);
 
         /*  40 */ EMBED.put(S2NetMessages.SVC_Messages.svc_ServerInfo_VALUE, NetMessages.CSVCMsg_ServerInfo.class);
         /*  41 */ EMBED.put(S2NetMessages.SVC_Messages.svc_FlattenedSerializer_VALUE, S2NetMessages.CSVCMsg_FlattenedSerializer.class);
@@ -80,6 +88,7 @@ public class EmbeddedPackets {
 //        /* 149 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_TrackedControllerInput_ClientToServer_VALUE, null);
 
         /* 205 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, NetMessages.CSVCMsg_GameEventList.class);
+        /* 206 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);
         /* 207 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEvent_VALUE, NetworkBaseTypes.CSVCMsg_GameEvent.class);
         /* 208 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_SosStartSoundEvent_VALUE, S2GameEvents.CMsgSosStartSoundEvent.class);
         /* 209 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_SosStopSoundEvent_VALUE, S2GameEvents.CMsgSosStopSoundEvent.class);
@@ -91,7 +100,6 @@ public class EmbeddedPackets {
 //        /* 202 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_ClearWorldDecalsEvent_VALUE, S2GameEvents.CMsgClearWorldDecalsEvent.class);
 //        /* 203 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_ClearEntityDecalsEvent_VALUE, S2GameEvents.CMsgClearEntityDecalsEvent.class);
 //        /* 204 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_ClearDecalsForSkeletonInstanceEvent_VALUE, S2GameEvents.CMsgClearDecalsForSkeletonInstanceEvent.class);
-//        /* 206 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);
 //        /* 211 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_SosSetLibraryStackFields_VALUE, S2GameEvents.CMsgSosSetLibraryStackFields.class);
 
         /* 400 */ EMBED.put(S2TempEntities.ETEProtobufIds.TE_EffectDispatchId_VALUE, S2TempEntities.CMsgTEEffectDispatch.class);

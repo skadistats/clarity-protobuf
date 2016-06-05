@@ -9,6 +9,205 @@ public final class S2NetMessages {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
+   * Protobuf enum {@code CLC_Messages}
+   */
+  public enum CLC_Messages
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>clc_ClientInfo = 20;</code>
+     */
+    clc_ClientInfo(0, 20),
+    /**
+     * <code>clc_Move = 21;</code>
+     */
+    clc_Move(1, 21),
+    /**
+     * <code>clc_VoiceData = 22;</code>
+     */
+    clc_VoiceData(2, 22),
+    /**
+     * <code>clc_BaselineAck = 23;</code>
+     */
+    clc_BaselineAck(3, 23),
+    /**
+     * <code>clc_ListenEvents = 24;</code>
+     */
+    clc_ListenEvents(4, 24),
+    /**
+     * <code>clc_RespondCvarValue = 25;</code>
+     */
+    clc_RespondCvarValue(5, 25),
+    /**
+     * <code>clc_FileCRCCheck = 26;</code>
+     */
+    clc_FileCRCCheck(6, 26),
+    /**
+     * <code>clc_LoadingProgress = 27;</code>
+     */
+    clc_LoadingProgress(7, 27),
+    /**
+     * <code>clc_SplitPlayerConnect = 28;</code>
+     */
+    clc_SplitPlayerConnect(8, 28),
+    /**
+     * <code>clc_ClientMessage = 29;</code>
+     */
+    clc_ClientMessage(9, 29),
+    /**
+     * <code>clc_SplitPlayerDisconnect = 30;</code>
+     */
+    clc_SplitPlayerDisconnect(10, 30),
+    /**
+     * <code>clc_ServerStatus = 31;</code>
+     */
+    clc_ServerStatus(11, 31),
+    /**
+     * <code>clc_ServerPing = 32;</code>
+     */
+    clc_ServerPing(12, 32),
+    /**
+     * <code>clc_RequestPause = 33;</code>
+     */
+    clc_RequestPause(13, 33),
+    /**
+     * <code>clc_CmdKeyValues = 34;</code>
+     */
+    clc_CmdKeyValues(14, 34),
+    ;
+
+    /**
+     * <code>clc_ClientInfo = 20;</code>
+     */
+    public static final int clc_ClientInfo_VALUE = 20;
+    /**
+     * <code>clc_Move = 21;</code>
+     */
+    public static final int clc_Move_VALUE = 21;
+    /**
+     * <code>clc_VoiceData = 22;</code>
+     */
+    public static final int clc_VoiceData_VALUE = 22;
+    /**
+     * <code>clc_BaselineAck = 23;</code>
+     */
+    public static final int clc_BaselineAck_VALUE = 23;
+    /**
+     * <code>clc_ListenEvents = 24;</code>
+     */
+    public static final int clc_ListenEvents_VALUE = 24;
+    /**
+     * <code>clc_RespondCvarValue = 25;</code>
+     */
+    public static final int clc_RespondCvarValue_VALUE = 25;
+    /**
+     * <code>clc_FileCRCCheck = 26;</code>
+     */
+    public static final int clc_FileCRCCheck_VALUE = 26;
+    /**
+     * <code>clc_LoadingProgress = 27;</code>
+     */
+    public static final int clc_LoadingProgress_VALUE = 27;
+    /**
+     * <code>clc_SplitPlayerConnect = 28;</code>
+     */
+    public static final int clc_SplitPlayerConnect_VALUE = 28;
+    /**
+     * <code>clc_ClientMessage = 29;</code>
+     */
+    public static final int clc_ClientMessage_VALUE = 29;
+    /**
+     * <code>clc_SplitPlayerDisconnect = 30;</code>
+     */
+    public static final int clc_SplitPlayerDisconnect_VALUE = 30;
+    /**
+     * <code>clc_ServerStatus = 31;</code>
+     */
+    public static final int clc_ServerStatus_VALUE = 31;
+    /**
+     * <code>clc_ServerPing = 32;</code>
+     */
+    public static final int clc_ServerPing_VALUE = 32;
+    /**
+     * <code>clc_RequestPause = 33;</code>
+     */
+    public static final int clc_RequestPause_VALUE = 33;
+    /**
+     * <code>clc_CmdKeyValues = 34;</code>
+     */
+    public static final int clc_CmdKeyValues_VALUE = 34;
+
+
+    public final int getNumber() { return value; }
+
+    public static CLC_Messages valueOf(int value) {
+      switch (value) {
+        case 20: return clc_ClientInfo;
+        case 21: return clc_Move;
+        case 22: return clc_VoiceData;
+        case 23: return clc_BaselineAck;
+        case 24: return clc_ListenEvents;
+        case 25: return clc_RespondCvarValue;
+        case 26: return clc_FileCRCCheck;
+        case 27: return clc_LoadingProgress;
+        case 28: return clc_SplitPlayerConnect;
+        case 29: return clc_ClientMessage;
+        case 30: return clc_SplitPlayerDisconnect;
+        case 31: return clc_ServerStatus;
+        case 32: return clc_ServerPing;
+        case 33: return clc_RequestPause;
+        case 34: return clc_CmdKeyValues;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CLC_Messages>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<CLC_Messages>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CLC_Messages>() {
+            public CLC_Messages findValueByNumber(int number) {
+              return CLC_Messages.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final CLC_Messages[] VALUES = values();
+
+    public static CLC_Messages valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private CLC_Messages(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:CLC_Messages)
+  }
+
+  /**
    * Protobuf enum {@code SVC_Messages}
    */
   public enum SVC_Messages
@@ -263,7 +462,7 @@ public final class S2NetMessages {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2NetMessages.getDescriptor().getEnumTypes().get(0);
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final SVC_Messages[] VALUES = values();
@@ -1391,805 +1590,6 @@ public final class S2NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_CreateStringTable)
   }
 
-  public interface CMsgVoiceAudioOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CMsgVoiceAudio)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-     */
-    boolean hasFormat();
-    /**
-     * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-     */
-    skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t getFormat();
-
-    /**
-     * <code>optional bytes voice_data = 2;</code>
-     */
-    boolean hasVoiceData();
-    /**
-     * <code>optional bytes voice_data = 2;</code>
-     */
-    com.google.protobuf.ByteString getVoiceData();
-
-    /**
-     * <code>optional int32 sequence_bytes = 3;</code>
-     */
-    boolean hasSequenceBytes();
-    /**
-     * <code>optional int32 sequence_bytes = 3;</code>
-     */
-    int getSequenceBytes();
-
-    /**
-     * <code>optional uint32 section_number = 4;</code>
-     */
-    boolean hasSectionNumber();
-    /**
-     * <code>optional uint32 section_number = 4;</code>
-     */
-    int getSectionNumber();
-
-    /**
-     * <code>optional uint32 sample_rate = 5;</code>
-     */
-    boolean hasSampleRate();
-    /**
-     * <code>optional uint32 sample_rate = 5;</code>
-     */
-    int getSampleRate();
-
-    /**
-     * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-     */
-    boolean hasUncompressedSampleOffset();
-    /**
-     * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-     */
-    int getUncompressedSampleOffset();
-  }
-  /**
-   * Protobuf type {@code CMsgVoiceAudio}
-   */
-  public static final class CMsgVoiceAudio extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:CMsgVoiceAudio)
-      CMsgVoiceAudioOrBuilder {
-    // Use CMsgVoiceAudio.newBuilder() to construct.
-    private CMsgVoiceAudio(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private CMsgVoiceAudio(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final CMsgVoiceAudio defaultInstance;
-    public static CMsgVoiceAudio getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public CMsgVoiceAudio getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CMsgVoiceAudio(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 8: {
-              int rawValue = input.readEnum();
-              skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t value = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(1, rawValue);
-              } else {
-                bitField0_ |= 0x00000001;
-                format_ = value;
-              }
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              voiceData_ = input.readBytes();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000004;
-              sequenceBytes_ = input.readInt32();
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000008;
-              sectionNumber_ = input.readUInt32();
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000010;
-              sampleRate_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000020;
-              uncompressedSampleOffset_ = input.readUInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgVoiceAudio_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgVoiceAudio_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<CMsgVoiceAudio> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgVoiceAudio>() {
-      public CMsgVoiceAudio parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CMsgVoiceAudio(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CMsgVoiceAudio> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int FORMAT_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t format_;
-    /**
-     * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-     */
-    public boolean hasFormat() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-     */
-    public skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t getFormat() {
-      return format_;
-    }
-
-    public static final int VOICE_DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString voiceData_;
-    /**
-     * <code>optional bytes voice_data = 2;</code>
-     */
-    public boolean hasVoiceData() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional bytes voice_data = 2;</code>
-     */
-    public com.google.protobuf.ByteString getVoiceData() {
-      return voiceData_;
-    }
-
-    public static final int SEQUENCE_BYTES_FIELD_NUMBER = 3;
-    private int sequenceBytes_;
-    /**
-     * <code>optional int32 sequence_bytes = 3;</code>
-     */
-    public boolean hasSequenceBytes() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional int32 sequence_bytes = 3;</code>
-     */
-    public int getSequenceBytes() {
-      return sequenceBytes_;
-    }
-
-    public static final int SECTION_NUMBER_FIELD_NUMBER = 4;
-    private int sectionNumber_;
-    /**
-     * <code>optional uint32 section_number = 4;</code>
-     */
-    public boolean hasSectionNumber() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional uint32 section_number = 4;</code>
-     */
-    public int getSectionNumber() {
-      return sectionNumber_;
-    }
-
-    public static final int SAMPLE_RATE_FIELD_NUMBER = 5;
-    private int sampleRate_;
-    /**
-     * <code>optional uint32 sample_rate = 5;</code>
-     */
-    public boolean hasSampleRate() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional uint32 sample_rate = 5;</code>
-     */
-    public int getSampleRate() {
-      return sampleRate_;
-    }
-
-    public static final int UNCOMPRESSED_SAMPLE_OFFSET_FIELD_NUMBER = 6;
-    private int uncompressedSampleOffset_;
-    /**
-     * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-     */
-    public boolean hasUncompressedSampleOffset() {
-      return ((bitField0_ & 0x00000020) == 0x00000020);
-    }
-    /**
-     * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-     */
-    public int getUncompressedSampleOffset() {
-      return uncompressedSampleOffset_;
-    }
-
-    private void initFields() {
-      format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
-      voiceData_ = com.google.protobuf.ByteString.EMPTY;
-      sequenceBytes_ = 0;
-      sectionNumber_ = 0;
-      sampleRate_ = 0;
-      uncompressedSampleOffset_ = 0;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeEnum(1, format_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, voiceData_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeInt32(3, sequenceBytes_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeUInt32(4, sectionNumber_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeUInt32(5, sampleRate_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        output.writeUInt32(6, uncompressedSampleOffset_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, format_.getNumber());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, voiceData_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(3, sequenceBytes_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, sectionNumber_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, sampleRate_);
-      }
-      if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, uncompressedSampleOffset_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CMsgVoiceAudio}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CMsgVoiceAudio)
-        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgVoiceAudio_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgVoiceAudio_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder.class);
-      }
-
-      // Construct using skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        voiceData_ = com.google.protobuf.ByteString.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        sequenceBytes_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        sectionNumber_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        sampleRate_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        uncompressedSampleOffset_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000020);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CMsgVoiceAudio_descriptor;
-      }
-
-      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance();
-      }
-
-      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio build() {
-        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio buildPartial() {
-        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio result = new skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.format_ = format_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.voiceData_ = voiceData_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.sequenceBytes_ = sequenceBytes_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.sectionNumber_ = sectionNumber_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.sampleRate_ = sampleRate_;
-        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
-          to_bitField0_ |= 0x00000020;
-        }
-        result.uncompressedSampleOffset_ = uncompressedSampleOffset_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio other) {
-        if (other == skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance()) return this;
-        if (other.hasFormat()) {
-          setFormat(other.getFormat());
-        }
-        if (other.hasVoiceData()) {
-          setVoiceData(other.getVoiceData());
-        }
-        if (other.hasSequenceBytes()) {
-          setSequenceBytes(other.getSequenceBytes());
-        }
-        if (other.hasSectionNumber()) {
-          setSectionNumber(other.getSectionNumber());
-        }
-        if (other.hasSampleRate()) {
-          setSampleRate(other.getSampleRate());
-        }
-        if (other.hasUncompressedSampleOffset()) {
-          setUncompressedSampleOffset(other.getUncompressedSampleOffset());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
-      /**
-       * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-       */
-      public boolean hasFormat() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-       */
-      public skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t getFormat() {
-        return format_;
-      }
-      /**
-       * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-       */
-      public Builder setFormat(skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        bitField0_ |= 0x00000001;
-        format_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
-       */
-      public Builder clearFormat() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
-        onChanged();
-        return this;
-      }
-
-      private com.google.protobuf.ByteString voiceData_ = com.google.protobuf.ByteString.EMPTY;
-      /**
-       * <code>optional bytes voice_data = 2;</code>
-       */
-      public boolean hasVoiceData() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional bytes voice_data = 2;</code>
-       */
-      public com.google.protobuf.ByteString getVoiceData() {
-        return voiceData_;
-      }
-      /**
-       * <code>optional bytes voice_data = 2;</code>
-       */
-      public Builder setVoiceData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        voiceData_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bytes voice_data = 2;</code>
-       */
-      public Builder clearVoiceData() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        voiceData_ = getDefaultInstance().getVoiceData();
-        onChanged();
-        return this;
-      }
-
-      private int sequenceBytes_ ;
-      /**
-       * <code>optional int32 sequence_bytes = 3;</code>
-       */
-      public boolean hasSequenceBytes() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional int32 sequence_bytes = 3;</code>
-       */
-      public int getSequenceBytes() {
-        return sequenceBytes_;
-      }
-      /**
-       * <code>optional int32 sequence_bytes = 3;</code>
-       */
-      public Builder setSequenceBytes(int value) {
-        bitField0_ |= 0x00000004;
-        sequenceBytes_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional int32 sequence_bytes = 3;</code>
-       */
-      public Builder clearSequenceBytes() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        sequenceBytes_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int sectionNumber_ ;
-      /**
-       * <code>optional uint32 section_number = 4;</code>
-       */
-      public boolean hasSectionNumber() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional uint32 section_number = 4;</code>
-       */
-      public int getSectionNumber() {
-        return sectionNumber_;
-      }
-      /**
-       * <code>optional uint32 section_number = 4;</code>
-       */
-      public Builder setSectionNumber(int value) {
-        bitField0_ |= 0x00000008;
-        sectionNumber_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 section_number = 4;</code>
-       */
-      public Builder clearSectionNumber() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        sectionNumber_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int sampleRate_ ;
-      /**
-       * <code>optional uint32 sample_rate = 5;</code>
-       */
-      public boolean hasSampleRate() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional uint32 sample_rate = 5;</code>
-       */
-      public int getSampleRate() {
-        return sampleRate_;
-      }
-      /**
-       * <code>optional uint32 sample_rate = 5;</code>
-       */
-      public Builder setSampleRate(int value) {
-        bitField0_ |= 0x00000010;
-        sampleRate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 sample_rate = 5;</code>
-       */
-      public Builder clearSampleRate() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        sampleRate_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int uncompressedSampleOffset_ ;
-      /**
-       * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-       */
-      public boolean hasUncompressedSampleOffset() {
-        return ((bitField0_ & 0x00000020) == 0x00000020);
-      }
-      /**
-       * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-       */
-      public int getUncompressedSampleOffset() {
-        return uncompressedSampleOffset_;
-      }
-      /**
-       * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-       */
-      public Builder setUncompressedSampleOffset(int value) {
-        bitField0_ |= 0x00000020;
-        uncompressedSampleOffset_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 uncompressed_sample_offset = 6;</code>
-       */
-      public Builder clearUncompressedSampleOffset() {
-        bitField0_ = (bitField0_ & ~0x00000020);
-        uncompressedSampleOffset_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:CMsgVoiceAudio)
-    }
-
-    static {
-      defaultInstance = new CMsgVoiceAudio(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:CMsgVoiceAudio)
-  }
-
   public interface CSVCMsg_VoiceDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_VoiceData)
       com.google.protobuf.MessageOrBuilder {
@@ -2201,11 +1601,11 @@ public final class S2NetMessages {
     /**
      * <code>optional .CMsgVoiceAudio audio = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio getAudio();
+    skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio getAudio();
     /**
      * <code>optional .CMsgVoiceAudio audio = 1;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder getAudioOrBuilder();
+    skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudioOrBuilder getAudioOrBuilder();
 
     /**
      * <code>optional int32 client = 2;</code>
@@ -2305,11 +1705,11 @@ public final class S2NetMessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder subBuilder = null;
+              skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = audio_.toBuilder();
               }
-              audio_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.PARSER, extensionRegistry);
+              audio_ = input.readMessage(skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(audio_);
                 audio_ = subBuilder.buildPartial();
@@ -2383,7 +1783,7 @@ public final class S2NetMessages {
 
     private int bitField0_;
     public static final int AUDIO_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio audio_;
+    private skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio audio_;
     /**
      * <code>optional .CMsgVoiceAudio audio = 1;</code>
      */
@@ -2393,13 +1793,13 @@ public final class S2NetMessages {
     /**
      * <code>optional .CMsgVoiceAudio audio = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio getAudio() {
+    public skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio getAudio() {
       return audio_;
     }
     /**
      * <code>optional .CMsgVoiceAudio audio = 1;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder getAudioOrBuilder() {
+    public skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudioOrBuilder getAudioOrBuilder() {
       return audio_;
     }
 
@@ -2479,7 +1879,7 @@ public final class S2NetMessages {
     }
 
     private void initFields() {
-      audio_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance();
+      audio_ = skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.getDefaultInstance();
       client_ = 0;
       proximity_ = false;
       xuid_ = 0L;
@@ -2669,7 +2069,7 @@ public final class S2NetMessages {
       public Builder clear() {
         super.clear();
         if (audioBuilder_ == null) {
-          audio_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance();
+          audio_ = skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.getDefaultInstance();
         } else {
           audioBuilder_.clear();
         }
@@ -2801,9 +2201,9 @@ public final class S2NetMessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio audio_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance();
+      private skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio audio_ = skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder> audioBuilder_;
+          skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio, skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudioOrBuilder> audioBuilder_;
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
@@ -2813,7 +2213,7 @@ public final class S2NetMessages {
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio getAudio() {
+      public skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio getAudio() {
         if (audioBuilder_ == null) {
           return audio_;
         } else {
@@ -2823,7 +2223,7 @@ public final class S2NetMessages {
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
-      public Builder setAudio(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio value) {
+      public Builder setAudio(skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio value) {
         if (audioBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2840,7 +2240,7 @@ public final class S2NetMessages {
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
       public Builder setAudio(
-          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder builderForValue) {
+          skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.Builder builderForValue) {
         if (audioBuilder_ == null) {
           audio_ = builderForValue.build();
           onChanged();
@@ -2853,12 +2253,12 @@ public final class S2NetMessages {
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
-      public Builder mergeAudio(skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio value) {
+      public Builder mergeAudio(skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio value) {
         if (audioBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              audio_ != skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance()) {
+              audio_ != skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.getDefaultInstance()) {
             audio_ =
-              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.newBuilder(audio_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.newBuilder(audio_).mergeFrom(value).buildPartial();
           } else {
             audio_ = value;
           }
@@ -2874,7 +2274,7 @@ public final class S2NetMessages {
        */
       public Builder clearAudio() {
         if (audioBuilder_ == null) {
-          audio_ = skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.getDefaultInstance();
+          audio_ = skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.getDefaultInstance();
           onChanged();
         } else {
           audioBuilder_.clear();
@@ -2885,7 +2285,7 @@ public final class S2NetMessages {
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder getAudioBuilder() {
+      public skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.Builder getAudioBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getAudioFieldBuilder().getBuilder();
@@ -2893,7 +2293,7 @@ public final class S2NetMessages {
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder getAudioOrBuilder() {
+      public skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudioOrBuilder getAudioOrBuilder() {
         if (audioBuilder_ != null) {
           return audioBuilder_.getMessageOrBuilder();
         } else {
@@ -2904,11 +2304,11 @@ public final class S2NetMessages {
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder> 
+          skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio, skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudioOrBuilder> 
           getAudioFieldBuilder() {
         if (audioBuilder_ == null) {
           audioBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.s2.proto.S2NetMessages.CMsgVoiceAudioOrBuilder>(
+              skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio, skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.common.proto.NetMessages.CMsgVoiceAudioOrBuilder>(
                   getAudio(),
                   getParentForChildren(),
                   isClean());
@@ -9355,11 +8755,6 @@ public final class S2NetMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgVoiceAudio_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CMsgVoiceAudio_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_VoiceData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -9419,54 +8814,58 @@ public final class S2NetMessages {
       "fixed_size\030\003 \001(\010\022\026\n\016user_data_size\030\004 \001(\005" +
       "\022\033\n\023user_data_size_bits\030\005 \001(\005\022\r\n\005flags\030\006" +
       " \001(\005\022\023\n\013string_data\030\007 \001(\014\022\031\n\021uncompresse" +
-      "d_size\030\010 \001(\005\022\027\n\017data_compressed\030\t \001(\010\"\311\001" +
-      "\n\016CMsgVoiceAudio\022:\n\006format\030\001 \001(\0162\022.Voice" +
-      "DataFormat_t:\026VOICEDATA_FORMAT_STEAM\022\022\n\n" +
-      "voice_data\030\002 \001(\014\022\026\n\016sequence_bytes\030\003 \001(\005",
-      "\022\026\n\016section_number\030\004 \001(\r\022\023\n\013sample_rate\030" +
-      "\005 \001(\r\022\"\n\032uncompressed_sample_offset\030\006 \001(" +
-      "\r\"\210\001\n\021CSVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017" +
-      ".CMsgVoiceAudio\022\016\n\006client\030\002 \001(\005\022\021\n\tproxi" +
-      "mity\030\003 \001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask" +
-      "\030\005 \001(\005\022\014\n\004tick\030\006 \001(\r\"@\n\034CSVCMsg_ClearAll" +
-      "StringTables\022\017\n\007mapname\030\001 \001(\t\022\017\n\007map_crc" +
-      "\030\002 \001(\r\"\222\002\n\037ProtoFlattenedSerializerField" +
-      "_t\022\024\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_name_sym" +
-      "\030\002 \001(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value\030\004",
-      " \001(\002\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_flags" +
-      "\030\006 \001(\005\022!\n\031field_serializer_name_sym\030\007 \001(" +
-      "\005\022 \n\030field_serializer_version\030\010 \001(\005\022\025\n\rs" +
-      "end_node_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n " +
-      "\001(\005\"k\n\032ProtoFlattenedSerializer_t\022\033\n\023ser" +
-      "ializer_name_sym\030\001 \001(\005\022\032\n\022serializer_ver" +
-      "sion\030\002 \001(\005\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSV" +
-      "CMsg_FlattenedSerializer\0220\n\013serializers\030" +
-      "\001 \003(\0132\033.ProtoFlattenedSerializer_t\022\017\n\007sy" +
-      "mbols\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlatt",
-      "enedSerializerField_t\";\n\016CMsgIPCAddress\022" +
-      "\025\n\rcomputer_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001" +
-      "(\r\"\240\001\n\016CMsgServerPeer\022\023\n\013player_slot\030\001 \001" +
-      "(\005\022\017\n\007steamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgI" +
-      "PCAddress\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_" +
-      "hear_them\030\005 \001(\010\022\034\n\024is_listenserver_host\030" +
-      "\006 \001(\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132" +
-      "\017.CMsgServerPeer\"U\n\022CSVCMsg_HLTVStatus\022\016" +
-      "\n\006master\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots" +
-      "\030\003 \001(\005\022\017\n\007proxies\030\004 \001(\005*\202\004\n\014SVC_Messages",
-      "\022\022\n\016svc_ServerInfo\020(\022\033\n\027svc_FlattenedSer" +
-      "ializer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetP" +
-      "ause\020+\022\031\n\025svc_CreateStringTable\020,\022\031\n\025svc" +
-      "_UpdateStringTable\020-\022\021\n\rsvc_VoiceInit\020.\022" +
-      "\021\n\rsvc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc" +
-      "_Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearA" +
-      "llStringTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020" +
-      "\n\014svc_BSPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n" +
-      "\022svc_PacketEntities\0207\022\020\n\014svc_Prefetch\0208\022" +
-      "\014\n\010svc_Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rs",
-      "vc_StopSound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_" +
-      "PacketReliable\020=\022\022\n\016svc_HLTVStatus\020>\022\026\n\022" +
-      "svc_FullFrameSplit\020FB4\n skadistats.clari" +
-      "ty.wire.s2.protoB\rS2NetMessages\200\001\000"
+      "d_size\030\010 \001(\005\022\027\n\017data_compressed\030\t \001(\010\"\210\001" +
+      "\n\021CSVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMs" +
+      "gVoiceAudio\022\016\n\006client\030\002 \001(\005\022\021\n\tproximity" +
+      "\030\003 \001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001",
+      "(\005\022\014\n\004tick\030\006 \001(\r\"@\n\034CSVCMsg_ClearAllStri" +
+      "ngTables\022\017\n\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001" +
+      "(\r\"\222\002\n\037ProtoFlattenedSerializerField_t\022\024" +
+      "\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001" +
+      "(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002" +
+      "\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001" +
+      "(\005\022!\n\031field_serializer_name_sym\030\007 \001(\005\022 \n" +
+      "\030field_serializer_version\030\010 \001(\005\022\025\n\rsend_" +
+      "node_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\"" +
+      "k\n\032ProtoFlattenedSerializer_t\022\033\n\023seriali",
+      "zer_name_sym\030\001 \001(\005\022\032\n\022serializer_version" +
+      "\030\002 \001(\005\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg" +
+      "_FlattenedSerializer\0220\n\013serializers\030\001 \003(" +
+      "\0132\033.ProtoFlattenedSerializer_t\022\017\n\007symbol" +
+      "s\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlattened" +
+      "SerializerField_t\";\n\016CMsgIPCAddress\022\025\n\rc" +
+      "omputer_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001(\r\"\240" +
+      "\001\n\016CMsgServerPeer\022\023\n\013player_slot\030\001 \001(\005\022\017" +
+      "\n\007steamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgIPCAd" +
+      "dress\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear",
+      "_them\030\005 \001(\010\022\034\n\024is_listenserver_host\030\006 \001(" +
+      "\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CM" +
+      "sgServerPeer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006ma" +
+      "ster\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001" +
+      "(\005\022\017\n\007proxies\030\004 \001(\005*\337\002\n\014CLC_Messages\022\022\n\016" +
+      "clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc_Vo" +
+      "iceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020clc_Li" +
+      "stenEvents\020\030\022\030\n\024clc_RespondCvarValue\020\031\022\024" +
+      "\n\020clc_FileCRCCheck\020\032\022\027\n\023clc_LoadingProgr" +
+      "ess\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\025\n\021clc",
+      "_ClientMessage\020\035\022\035\n\031clc_SplitPlayerDisco" +
+      "nnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016clc_Ser" +
+      "verPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020clc_C" +
+      "mdKeyValues\020\"*\202\004\n\014SVC_Messages\022\022\n\016svc_Se" +
+      "rverInfo\020(\022\033\n\027svc_FlattenedSerializer\020)\022" +
+      "\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025" +
+      "svc_CreateStringTable\020,\022\031\n\025svc_UpdateStr" +
+      "ingTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_Voi" +
+      "ceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds\0201\022" +
+      "\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStringTa",
+      "bles\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_BSPD" +
+      "ecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc_Packe" +
+      "tEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_Men" +
+      "u\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_StopSou" +
+      "nd\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_PacketReli" +
+      "able\020=\022\022\n\016svc_HLTVStatus\020>\022\026\n\022svc_FullFr" +
+      "ameSplit\020FB4\n skadistats.clarity.wire.s2" +
+      ".protoB\rS2NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9487,62 +8886,56 @@ public final class S2NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_CreateStringTable_descriptor,
         new java.lang.String[] { "Name", "NumEntries", "UserDataFixedSize", "UserDataSize", "UserDataSizeBits", "Flags", "StringData", "UncompressedSize", "DataCompressed", });
-    internal_static_CMsgVoiceAudio_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_CMsgVoiceAudio_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_CMsgVoiceAudio_descriptor,
-        new java.lang.String[] { "Format", "VoiceData", "SequenceBytes", "SectionNumber", "SampleRate", "UncompressedSampleOffset", });
     internal_static_CSVCMsg_VoiceData_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_CSVCMsg_VoiceData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceData_descriptor,
         new java.lang.String[] { "Audio", "Client", "Proximity", "Xuid", "AudibleMask", "Tick", });
     internal_static_CSVCMsg_ClearAllStringTables_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CSVCMsg_ClearAllStringTables_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ClearAllStringTables_descriptor,
         new java.lang.String[] { "Mapname", "MapCrc", });
     internal_static_ProtoFlattenedSerializerField_t_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ProtoFlattenedSerializerField_t_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializerField_t_descriptor,
         new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", "VarEncoderSym", });
     internal_static_ProtoFlattenedSerializer_t_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ProtoFlattenedSerializer_t_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializer_t_descriptor,
         new java.lang.String[] { "SerializerNameSym", "SerializerVersion", "FieldsIndex", });
     internal_static_CSVCMsg_FlattenedSerializer_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CSVCMsg_FlattenedSerializer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_FlattenedSerializer_descriptor,
         new java.lang.String[] { "Serializers", "Symbols", "Fields", });
     internal_static_CMsgIPCAddress_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CMsgIPCAddress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgIPCAddress_descriptor,
         new java.lang.String[] { "ComputerGuid", "ProcessId", });
     internal_static_CMsgServerPeer_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CMsgServerPeer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgServerPeer_descriptor,
         new java.lang.String[] { "PlayerSlot", "Steamid", "Ipc", "TheyHearYou", "YouHearThem", "IsListenserverHost", });
     internal_static_CSVCMsg_PeerList_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CSVCMsg_PeerList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PeerList_descriptor,
         new java.lang.String[] { "Peer", });
     internal_static_CSVCMsg_HLTVStatus_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_HLTVStatus_descriptor,
