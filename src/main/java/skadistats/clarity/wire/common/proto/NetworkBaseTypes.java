@@ -199,6 +199,142 @@ public final class NetworkBaseTypes {
   }
 
   /**
+   * Protobuf enum {@code SIGNONSTATE}
+   */
+  public enum SIGNONSTATE
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>SIGNONSTATE_NONE = 0;</code>
+     */
+    SIGNONSTATE_NONE(0, 0),
+    /**
+     * <code>SIGNONSTATE_CHALLENGE = 1;</code>
+     */
+    SIGNONSTATE_CHALLENGE(1, 1),
+    /**
+     * <code>SIGNONSTATE_CONNECTED = 2;</code>
+     */
+    SIGNONSTATE_CONNECTED(2, 2),
+    /**
+     * <code>SIGNONSTATE_NEW = 3;</code>
+     */
+    SIGNONSTATE_NEW(3, 3),
+    /**
+     * <code>SIGNONSTATE_PRESPAWN = 4;</code>
+     */
+    SIGNONSTATE_PRESPAWN(4, 4),
+    /**
+     * <code>SIGNONSTATE_SPAWN = 5;</code>
+     */
+    SIGNONSTATE_SPAWN(5, 5),
+    /**
+     * <code>SIGNONSTATE_FULL = 6;</code>
+     */
+    SIGNONSTATE_FULL(6, 6),
+    /**
+     * <code>SIGNONSTATE_CHANGELEVEL = 7;</code>
+     */
+    SIGNONSTATE_CHANGELEVEL(7, 7),
+    ;
+
+    /**
+     * <code>SIGNONSTATE_NONE = 0;</code>
+     */
+    public static final int SIGNONSTATE_NONE_VALUE = 0;
+    /**
+     * <code>SIGNONSTATE_CHALLENGE = 1;</code>
+     */
+    public static final int SIGNONSTATE_CHALLENGE_VALUE = 1;
+    /**
+     * <code>SIGNONSTATE_CONNECTED = 2;</code>
+     */
+    public static final int SIGNONSTATE_CONNECTED_VALUE = 2;
+    /**
+     * <code>SIGNONSTATE_NEW = 3;</code>
+     */
+    public static final int SIGNONSTATE_NEW_VALUE = 3;
+    /**
+     * <code>SIGNONSTATE_PRESPAWN = 4;</code>
+     */
+    public static final int SIGNONSTATE_PRESPAWN_VALUE = 4;
+    /**
+     * <code>SIGNONSTATE_SPAWN = 5;</code>
+     */
+    public static final int SIGNONSTATE_SPAWN_VALUE = 5;
+    /**
+     * <code>SIGNONSTATE_FULL = 6;</code>
+     */
+    public static final int SIGNONSTATE_FULL_VALUE = 6;
+    /**
+     * <code>SIGNONSTATE_CHANGELEVEL = 7;</code>
+     */
+    public static final int SIGNONSTATE_CHANGELEVEL_VALUE = 7;
+
+
+    public final int getNumber() { return value; }
+
+    public static SIGNONSTATE valueOf(int value) {
+      switch (value) {
+        case 0: return SIGNONSTATE_NONE;
+        case 1: return SIGNONSTATE_CHALLENGE;
+        case 2: return SIGNONSTATE_CONNECTED;
+        case 3: return SIGNONSTATE_NEW;
+        case 4: return SIGNONSTATE_PRESPAWN;
+        case 5: return SIGNONSTATE_SPAWN;
+        case 6: return SIGNONSTATE_FULL;
+        case 7: return SIGNONSTATE_CHANGELEVEL;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SIGNONSTATE>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<SIGNONSTATE>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SIGNONSTATE>() {
+            public SIGNONSTATE findValueByNumber(int number) {
+              return SIGNONSTATE.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final SIGNONSTATE[] VALUES = values();
+
+    public static SIGNONSTATE valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private SIGNONSTATE(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:SIGNONSTATE)
+  }
+
+  /**
    * Protobuf enum {@code SpawnGroupFlags_t}
    */
   public enum SpawnGroupFlags_t
@@ -318,7 +454,7 @@ public final class NetworkBaseTypes {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor().getEnumTypes().get(1);
+      return skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final SpawnGroupFlags_t[] VALUES = values();
@@ -20425,18 +20561,23 @@ public final class NetworkBaseTypes {
       "roup_ManifestUpdate\020\t\022\"\n\036net_SpawnGroup_" +
       "SetCreationTick\020\013\022\031\n\025net_SpawnGroup_Unlo" +
       "ad\020\014\022 \n\034net_SpawnGroup_LoadCompleted\020\r\022 ",
-      "\n\034net_ReliableMessageEndMarker\020\016*\353\002\n\021Spa" +
-      "wnGroupFlags_t\022\'\n#SPAWN_GROUP_LOAD_ENTIT" +
-      "IES_FROM_SAVE\020\001\022#\n\037SPAWN_GROUP_DONT_SPAW" +
-      "N_ENTITIES\020\002\022!\n\035SPAWN_GROUP_SYNCHRONOUS_" +
-      "SPAWN\020\004\022&\n\"SPAWN_GROUP_IS_INITIAL_SPAWN_" +
-      "GROUP\020\010\022+\n\'SPAWN_GROUP_CREATE_CLIENT_ONL" +
-      "Y_ENTITIES\020\020\022\035\n\031SPAWN_GROUP_SAVE_ENTITIE" +
-      "S\020 \022\"\n\036SPAWN_GROUP_BLOCK_UNTIL_LOADED\020@\022" +
-      "$\n\037SPAWN_GROUP_LOAD_STREAMING_DATA\020\200\001\022\'\n" +
-      "\"SPAWN_GROUP_CREATE_NEW_SCENE_WORLD\020\200\002B;",
-      "\n$skadistats.clarity.wire.common.protoB\020" +
-      "NetworkBaseTypes\200\001\000"
+      "\n\034net_ReliableMessageEndMarker\020\016*\322\001\n\013SIG" +
+      "NONSTATE\022\024\n\020SIGNONSTATE_NONE\020\000\022\031\n\025SIGNON" +
+      "STATE_CHALLENGE\020\001\022\031\n\025SIGNONSTATE_CONNECT" +
+      "ED\020\002\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024SIGNONSTATE" +
+      "_PRESPAWN\020\004\022\025\n\021SIGNONSTATE_SPAWN\020\005\022\024\n\020SI" +
+      "GNONSTATE_FULL\020\006\022\033\n\027SIGNONSTATE_CHANGELE" +
+      "VEL\020\007*\353\002\n\021SpawnGroupFlags_t\022\'\n#SPAWN_GRO" +
+      "UP_LOAD_ENTITIES_FROM_SAVE\020\001\022#\n\037SPAWN_GR" +
+      "OUP_DONT_SPAWN_ENTITIES\020\002\022!\n\035SPAWN_GROUP" +
+      "_SYNCHRONOUS_SPAWN\020\004\022&\n\"SPAWN_GROUP_IS_I",
+      "NITIAL_SPAWN_GROUP\020\010\022+\n\'SPAWN_GROUP_CREA" +
+      "TE_CLIENT_ONLY_ENTITIES\020\020\022\035\n\031SPAWN_GROUP" +
+      "_SAVE_ENTITIES\020 \022\"\n\036SPAWN_GROUP_BLOCK_UN" +
+      "TIL_LOADED\020@\022$\n\037SPAWN_GROUP_LOAD_STREAMI" +
+      "NG_DATA\020\200\001\022\'\n\"SPAWN_GROUP_CREATE_NEW_SCE" +
+      "NE_WORLD\020\200\002B;\n$skadistats.clarity.wire.c" +
+      "ommon.protoB\020NetworkBaseTypes\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
