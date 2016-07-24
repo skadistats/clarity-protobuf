@@ -44,9 +44,8 @@ enum EBaseUserMessages {
 	UM_AudioParameter = 144;
 	UM_ParticleManager = 145;
 	UM_HudError = 146;
-	UM_CustomGameEvent_ClientToServer = 147;
-	UM_CustomGameEvent_ServerToClient = 148;
-	UM_TrackedControllerInput_ClientToServer = 149;
+	UM_CustomGameEvent = 148;
+	UM_HandHapticPulse = 149;
 	UM_MAX_BASE = 200;
 }
 
@@ -82,6 +81,12 @@ enum PARTICLE_MESSAGE {
 	GAME_PARTICLE_MANAGER_EVENT_SHOULD_DRAW = 11;
 	GAME_PARTICLE_MANAGER_EVENT_FROZEN = 12;
 	GAME_PARTICLE_MANAGER_EVENT_CHANGE_CONTROL_POINT_ATTACHMENT = 13;
+}
+
+enum EHapticPulseType {
+	VR_HAND_HAPTIC_PULSE_LIGHT = 0;
+	VR_HAND_HAPTIC_PULSE_MEDIUM = 1;
+	VR_HAND_HAPTIC_PULSE_STRONG = 2;
 }
 
 message CUserMessageAchievementEvent {
@@ -201,6 +206,7 @@ message CUserMessageAudioParameter {
 	optional uint32 parameter_type = 1;
 	optional uint32 name_hash_code = 2;
 	optional float value = 3;
+	optional uint32 int_value = 4;
 }
 
 message CUserMessageVoiceMask {
@@ -283,9 +289,15 @@ message CUserMessageShowMenu {
 
 message CUserMessageCreditsMsg {
 	optional eRollType rolltype = 1 [default = ROLL_NONE];
+	optional float logo_length = 2;
 }
 
 message CEntityMessagePlayJingle {
+}
+
+message CUserMessageHapticPulse {
+	optional int32 hand_id = 1;
+	optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];
 }
 
 message CEntityMessageScreenOverlay {

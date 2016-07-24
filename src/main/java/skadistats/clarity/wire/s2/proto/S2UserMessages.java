@@ -162,21 +162,17 @@ public final class S2UserMessages {
      */
     UM_HudError(36, 146),
     /**
-     * <code>UM_CustomGameEvent_ClientToServer = 147;</code>
+     * <code>UM_CustomGameEvent = 148;</code>
      */
-    UM_CustomGameEvent_ClientToServer(37, 147),
+    UM_CustomGameEvent(37, 148),
     /**
-     * <code>UM_CustomGameEvent_ServerToClient = 148;</code>
+     * <code>UM_HandHapticPulse = 149;</code>
      */
-    UM_CustomGameEvent_ServerToClient(38, 148),
-    /**
-     * <code>UM_TrackedControllerInput_ClientToServer = 149;</code>
-     */
-    UM_TrackedControllerInput_ClientToServer(39, 149),
+    UM_HandHapticPulse(38, 149),
     /**
      * <code>UM_MAX_BASE = 200;</code>
      */
-    UM_MAX_BASE(40, 200),
+    UM_MAX_BASE(39, 200),
     ;
 
     /**
@@ -328,17 +324,13 @@ public final class S2UserMessages {
      */
     public static final int UM_HudError_VALUE = 146;
     /**
-     * <code>UM_CustomGameEvent_ClientToServer = 147;</code>
+     * <code>UM_CustomGameEvent = 148;</code>
      */
-    public static final int UM_CustomGameEvent_ClientToServer_VALUE = 147;
+    public static final int UM_CustomGameEvent_VALUE = 148;
     /**
-     * <code>UM_CustomGameEvent_ServerToClient = 148;</code>
+     * <code>UM_HandHapticPulse = 149;</code>
      */
-    public static final int UM_CustomGameEvent_ServerToClient_VALUE = 148;
-    /**
-     * <code>UM_TrackedControllerInput_ClientToServer = 149;</code>
-     */
-    public static final int UM_TrackedControllerInput_ClientToServer_VALUE = 149;
+    public static final int UM_HandHapticPulse_VALUE = 149;
     /**
      * <code>UM_MAX_BASE = 200;</code>
      */
@@ -386,9 +378,8 @@ public final class S2UserMessages {
         case 144: return UM_AudioParameter;
         case 145: return UM_ParticleManager;
         case 146: return UM_HudError;
-        case 147: return UM_CustomGameEvent_ClientToServer;
-        case 148: return UM_CustomGameEvent_ServerToClient;
-        case 149: return UM_TrackedControllerInput_ClientToServer;
+        case 148: return UM_CustomGameEvent;
+        case 149: return UM_HandHapticPulse;
         case 200: return UM_MAX_BASE;
         default: return null;
       }
@@ -856,6 +847,97 @@ public final class S2UserMessages {
     }
 
     // @@protoc_insertion_point(enum_scope:PARTICLE_MESSAGE)
+  }
+
+  /**
+   * Protobuf enum {@code EHapticPulseType}
+   */
+  public enum EHapticPulseType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>VR_HAND_HAPTIC_PULSE_LIGHT = 0;</code>
+     */
+    VR_HAND_HAPTIC_PULSE_LIGHT(0, 0),
+    /**
+     * <code>VR_HAND_HAPTIC_PULSE_MEDIUM = 1;</code>
+     */
+    VR_HAND_HAPTIC_PULSE_MEDIUM(1, 1),
+    /**
+     * <code>VR_HAND_HAPTIC_PULSE_STRONG = 2;</code>
+     */
+    VR_HAND_HAPTIC_PULSE_STRONG(2, 2),
+    ;
+
+    /**
+     * <code>VR_HAND_HAPTIC_PULSE_LIGHT = 0;</code>
+     */
+    public static final int VR_HAND_HAPTIC_PULSE_LIGHT_VALUE = 0;
+    /**
+     * <code>VR_HAND_HAPTIC_PULSE_MEDIUM = 1;</code>
+     */
+    public static final int VR_HAND_HAPTIC_PULSE_MEDIUM_VALUE = 1;
+    /**
+     * <code>VR_HAND_HAPTIC_PULSE_STRONG = 2;</code>
+     */
+    public static final int VR_HAND_HAPTIC_PULSE_STRONG_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static EHapticPulseType valueOf(int value) {
+      switch (value) {
+        case 0: return VR_HAND_HAPTIC_PULSE_LIGHT;
+        case 1: return VR_HAND_HAPTIC_PULSE_MEDIUM;
+        case 2: return VR_HAND_HAPTIC_PULSE_STRONG;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EHapticPulseType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EHapticPulseType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EHapticPulseType>() {
+            public EHapticPulseType findValueByNumber(int number) {
+              return EHapticPulseType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final EHapticPulseType[] VALUES = values();
+
+    public static EHapticPulseType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EHapticPulseType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EHapticPulseType)
   }
 
   public interface CUserMessageAchievementEventOrBuilder extends
@@ -12448,6 +12530,15 @@ public final class S2UserMessages {
      * <code>optional float value = 3;</code>
      */
     float getValue();
+
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    boolean hasIntValue();
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    int getIntValue();
   }
   /**
    * Protobuf type {@code CUserMessageAudioParameter}
@@ -12514,6 +12605,11 @@ public final class S2UserMessages {
             case 29: {
               bitField0_ |= 0x00000004;
               value_ = input.readFloat();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              intValue_ = input.readUInt32();
               break;
             }
           }
@@ -12601,10 +12697,26 @@ public final class S2UserMessages {
       return value_;
     }
 
+    public static final int INT_VALUE_FIELD_NUMBER = 4;
+    private int intValue_;
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    public boolean hasIntValue() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    public int getIntValue() {
+      return intValue_;
+    }
+
     private void initFields() {
       parameterType_ = 0;
       nameHashCode_ = 0;
       value_ = 0F;
+      intValue_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -12628,6 +12740,9 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeFloat(3, value_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeUInt32(4, intValue_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -12648,6 +12763,10 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, value_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, intValue_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -12772,6 +12891,8 @@ public final class S2UserMessages {
         bitField0_ = (bitField0_ & ~0x00000002);
         value_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000004);
+        intValue_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -12812,6 +12933,10 @@ public final class S2UserMessages {
           to_bitField0_ |= 0x00000004;
         }
         result.value_ = value_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.intValue_ = intValue_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -12836,6 +12961,9 @@ public final class S2UserMessages {
         }
         if (other.hasValue()) {
           setValue(other.getValue());
+        }
+        if (other.hasIntValue()) {
+          setIntValue(other.getIntValue());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -12956,6 +13084,38 @@ public final class S2UserMessages {
       public Builder clearValue() {
         bitField0_ = (bitField0_ & ~0x00000004);
         value_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int intValue_ ;
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public boolean hasIntValue() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public int getIntValue() {
+        return intValue_;
+      }
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public Builder setIntValue(int value) {
+        bitField0_ |= 0x00000008;
+        intValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public Builder clearIntValue() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        intValue_ = 0;
         onChanged();
         return this;
       }
@@ -21617,6 +21777,15 @@ public final class S2UserMessages {
      * <code>optional .eRollType rolltype = 1 [default = ROLL_NONE];</code>
      */
     skadistats.clarity.wire.s2.proto.S2UserMessages.eRollType getRolltype();
+
+    /**
+     * <code>optional float logo_length = 2;</code>
+     */
+    boolean hasLogoLength();
+    /**
+     * <code>optional float logo_length = 2;</code>
+     */
+    float getLogoLength();
   }
   /**
    * Protobuf type {@code CUserMessageCreditsMsg}
@@ -21681,6 +21850,11 @@ public final class S2UserMessages {
               }
               break;
             }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              logoLength_ = input.readFloat();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -21736,8 +21910,24 @@ public final class S2UserMessages {
       return rolltype_;
     }
 
+    public static final int LOGO_LENGTH_FIELD_NUMBER = 2;
+    private float logoLength_;
+    /**
+     * <code>optional float logo_length = 2;</code>
+     */
+    public boolean hasLogoLength() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional float logo_length = 2;</code>
+     */
+    public float getLogoLength() {
+      return logoLength_;
+    }
+
     private void initFields() {
       rolltype_ = skadistats.clarity.wire.s2.proto.S2UserMessages.eRollType.ROLL_NONE;
+      logoLength_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -21755,6 +21945,9 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeEnum(1, rolltype_.getNumber());
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, logoLength_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -21767,6 +21960,10 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, rolltype_.getNumber());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, logoLength_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -21887,6 +22084,8 @@ public final class S2UserMessages {
         super.clear();
         rolltype_ = skadistats.clarity.wire.s2.proto.S2UserMessages.eRollType.ROLL_NONE;
         bitField0_ = (bitField0_ & ~0x00000001);
+        logoLength_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -21919,6 +22118,10 @@ public final class S2UserMessages {
           to_bitField0_ |= 0x00000001;
         }
         result.rolltype_ = rolltype_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.logoLength_ = logoLength_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -21937,6 +22140,9 @@ public final class S2UserMessages {
         if (other == skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageCreditsMsg.getDefaultInstance()) return this;
         if (other.hasRolltype()) {
           setRolltype(other.getRolltype());
+        }
+        if (other.hasLogoLength()) {
+          setLogoLength(other.getLogoLength());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -21996,6 +22202,38 @@ public final class S2UserMessages {
       public Builder clearRolltype() {
         bitField0_ = (bitField0_ & ~0x00000001);
         rolltype_ = skadistats.clarity.wire.s2.proto.S2UserMessages.eRollType.ROLL_NONE;
+        onChanged();
+        return this;
+      }
+
+      private float logoLength_ ;
+      /**
+       * <code>optional float logo_length = 2;</code>
+       */
+      public boolean hasLogoLength() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float logo_length = 2;</code>
+       */
+      public float getLogoLength() {
+        return logoLength_;
+      }
+      /**
+       * <code>optional float logo_length = 2;</code>
+       */
+      public Builder setLogoLength(float value) {
+        bitField0_ |= 0x00000002;
+        logoLength_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float logo_length = 2;</code>
+       */
+      public Builder clearLogoLength() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        logoLength_ = 0F;
         onChanged();
         return this;
       }
@@ -22322,6 +22560,490 @@ public final class S2UserMessages {
     }
 
     // @@protoc_insertion_point(class_scope:CEntityMessagePlayJingle)
+  }
+
+  public interface CUserMessageHapticPulseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessageHapticPulse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 hand_id = 1;</code>
+     */
+    boolean hasHandId();
+    /**
+     * <code>optional int32 hand_id = 1;</code>
+     */
+    int getHandId();
+
+    /**
+     * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+     */
+    boolean hasPulseType();
+    /**
+     * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType getPulseType();
+  }
+  /**
+   * Protobuf type {@code CUserMessageHapticPulse}
+   */
+  public static final class CUserMessageHapticPulse extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessageHapticPulse)
+      CUserMessageHapticPulseOrBuilder {
+    // Use CUserMessageHapticPulse.newBuilder() to construct.
+    private CUserMessageHapticPulse(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessageHapticPulse(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessageHapticPulse defaultInstance;
+    public static CUserMessageHapticPulse getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessageHapticPulse getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessageHapticPulse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              handId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType value = skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000002;
+                pulseType_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageHapticPulse_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageHapticPulse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessageHapticPulse> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessageHapticPulse>() {
+      public CUserMessageHapticPulse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessageHapticPulse(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessageHapticPulse> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int HAND_ID_FIELD_NUMBER = 1;
+    private int handId_;
+    /**
+     * <code>optional int32 hand_id = 1;</code>
+     */
+    public boolean hasHandId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 hand_id = 1;</code>
+     */
+    public int getHandId() {
+      return handId_;
+    }
+
+    public static final int PULSE_TYPE_FIELD_NUMBER = 2;
+    private skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType pulseType_;
+    /**
+     * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+     */
+    public boolean hasPulseType() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType getPulseType() {
+      return pulseType_;
+    }
+
+    private void initFields() {
+      handId_ = 0;
+      pulseType_ = skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType.VR_HAND_HAPTIC_PULSE_LIGHT;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, handId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeEnum(2, pulseType_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, handId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, pulseType_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessageHapticPulse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessageHapticPulse)
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageHapticPulse_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageHapticPulse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        handId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pulseType_ = skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType.VR_HAND_HAPTIC_PULSE_LIGHT;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageHapticPulse_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse build() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse result = new skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.handId_ = handId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.pulseType_ = pulseType_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse.getDefaultInstance()) return this;
+        if (other.hasHandId()) {
+          setHandId(other.getHandId());
+        }
+        if (other.hasPulseType()) {
+          setPulseType(other.getPulseType());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageHapticPulse) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int handId_ ;
+      /**
+       * <code>optional int32 hand_id = 1;</code>
+       */
+      public boolean hasHandId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 hand_id = 1;</code>
+       */
+      public int getHandId() {
+        return handId_;
+      }
+      /**
+       * <code>optional int32 hand_id = 1;</code>
+       */
+      public Builder setHandId(int value) {
+        bitField0_ |= 0x00000001;
+        handId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 hand_id = 1;</code>
+       */
+      public Builder clearHandId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        handId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType pulseType_ = skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType.VR_HAND_HAPTIC_PULSE_LIGHT;
+      /**
+       * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+       */
+      public boolean hasPulseType() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType getPulseType() {
+        return pulseType_;
+      }
+      /**
+       * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+       */
+      public Builder setPulseType(skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000002;
+        pulseType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EHapticPulseType pulse_type = 2 [default = VR_HAND_HAPTIC_PULSE_LIGHT];</code>
+       */
+      public Builder clearPulseType() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pulseType_ = skadistats.clarity.wire.s2.proto.S2UserMessages.EHapticPulseType.VR_HAND_HAPTIC_PULSE_LIGHT;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessageHapticPulse)
+    }
+
+    static {
+      defaultInstance = new CUserMessageHapticPulse(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessageHapticPulse)
   }
 
   public interface CEntityMessageScreenOverlayOrBuilder extends
@@ -38746,6 +39468,11 @@ public final class S2UserMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CEntityMessagePlayJingle_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessageHapticPulse_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessageHapticPulse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CEntityMessageScreenOverlay_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -38919,161 +39646,165 @@ public final class S2UserMessages {
       "est\030\001 \001(\r\022\r\n\005param\030\002 \003(\t\"\027\n\025CUserMessage" +
       "GameTitle\"\026\n\024CUserMessageResetHUD\"8\n\025CUs" +
       "erMessageSendAudio\022\021\n\tsoundname\030\001 \001(\t\022\014\n",
-      "\004stop\030\002 \001(\010\"[\n\032CUserMessageAudioParamete" +
+      "\004stop\030\002 \001(\010\"n\n\032CUserMessageAudioParamete" +
       "r\022\026\n\016parameter_type\030\001 \001(\r\022\026\n\016name_hash_c" +
-      "ode\030\002 \001(\r\022\r\n\005value\030\003 \001(\002\"W\n\025CUserMessage" +
-      "VoiceMask\022\027\n\017gamerules_masks\030\001 \003(\r\022\021\n\tba" +
-      "n_masks\030\002 \003(\r\022\022\n\nmod_enable\030\003 \001(\010\"\032\n\030CUs" +
-      "erMessageRequestState\"\'\n\024CUserMessageHin" +
-      "tText\022\017\n\007message\030\001 \001(\t\"+\n\027CUserMessageKe" +
-      "yHintText\022\020\n\010messages\030\001 \003(\t\"G\n\031CUserMess" +
-      "ageVoiceSubtitle\022\016\n\006player\030\001 \001(\005\022\014\n\004menu" +
-      "\030\002 \001(\005\022\014\n\004item\030\003 \001(\005\"\201\001\n\024CUserMessageVGU",
-      "IMenu\022\014\n\004name\030\001 \001(\t\022\014\n\004show\030\002 \001(\010\022(\n\004key" +
-      "s\030\003 \003(\0132\032.CUserMessageVGUIMenu.Keys\032#\n\004K" +
-      "eys\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030\002 \001(\t\"@\n\022CUse" +
-      "rMessageRumble\022\r\n\005index\030\001 \001(\005\022\014\n\004data\030\002 " +
-      "\001(\005\022\r\n\005flags\030\003 \001(\005\"%\n\021CUserMessageTrain\022" +
-      "\020\n\010position\030\001 \001(\r\"K\n\032CUserMessageSayText" +
-      "Channel\022\016\n\006player\030\001 \001(\005\022\017\n\007channel\030\002 \001(\005" +
-      "\022\014\n\004text\030\003 \001(\t\"\220\001\n\027CUserMessageColoredTe" +
-      "xt\022\r\n\005color\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\022\r\n\005reset" +
-      "\030\003 \001(\010\022\031\n\021context_player_id\030\004 \001(\005\022\025\n\rcon",
-      "text_value\030\005 \001(\005\022\027\n\017context_team_id\030\006 \001(" +
-      "\005\"*\n\026CUserMessageItemPickup\022\020\n\010itemname\030" +
-      "\001 \001(\t\")\n\026CUserMessageAmmoDenied\022\017\n\007ammo_" +
-      "id\030\001 \001(\r\"?\n\032CUserMessageCrosshairAngle\022!" +
-      "\n\014angcrosshair\030\001 \001(\0132\013.CMsgQAngle\"e\n\024CUs" +
-      "erMessageShowMenu\022\022\n\nvalidslots\030\001 \001(\r\022\023\n" +
-      "\013displaytime\030\002 \001(\r\022\020\n\010needmore\030\003 \001(\010\022\022\n\n" +
-      "menustring\030\004 \001(\t\"A\n\026CUserMessageCreditsM" +
-      "sg\022\'\n\010rolltype\030\001 \001(\0162\n.eRollType:\tROLL_N" +
-      "ONE\"\032\n\030CEntityMessagePlayJingle\"3\n\033CEnti",
-      "tyMessageScreenOverlay\022\024\n\014start_effect\030\001" +
-      " \001(\010\"6\n\035CEntityMessageRemoveAllDecals\022\025\n" +
-      "\rremove_decals\030\001 \001(\010\"<\n\034CEntityMessagePr" +
-      "opagateForce\022\034\n\007impulse\030\001 \001(\0132\013.CMsgVect" +
-      "or\"\230\001\n\025CEntityMessageDoSpark\022\033\n\006origin\030\001" +
-      " \001(\0132\013.CMsgVector\022\023\n\013entityindex\030\002 \001(\r\022\016" +
-      "\n\006radius\030\003 \001(\002\022\r\n\005color\030\004 \001(\007\022\r\n\005beams\030\005" +
-      " \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010duration\030\007 \001(\002\"F\n" +
-      "\026CEntityMessageFixAngle\022\020\n\010relative\030\001 \001(" +
-      "\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngle\"\333\001\n\034CUserM",
-      "essageCameraTransition\022\023\n\013camera_type\030\001 " +
-      "\001(\r\022\020\n\010duration\030\002 \001(\002\022O\n\022params_data_dri" +
-      "ven\030\003 \001(\01323.CUserMessageCameraTransition" +
-      ".Transition_DataDriven\032C\n\025Transition_Dat" +
-      "aDriven\022\020\n\010filename\030\001 \001(\t\022\030\n\020attach_ent_" +
-      "index\030\002 \001(\005\"\234\021\n\030CUserMsg_ParticleManager" +
-      "\022C\n\004type\030\001 \002(\0162\021.PARTICLE_MESSAGE:\"GAME_" +
-      "PARTICLE_MANAGER_EVENT_CREATE\022\r\n\005index\030\002" +
-      " \002(\r\022N\n\026release_particle_index\030\003 \001(\0132..C" +
-      "UserMsg_ParticleManager.ReleaseParticleI",
-      "ndex\022A\n\017create_particle\030\004 \001(\0132(.CUserMsg" +
-      "_ParticleManager.CreateParticle\022C\n\020destr" +
-      "oy_particle\030\005 \001(\0132).CUserMsg_ParticleMan" +
-      "ager.DestroyParticle\022V\n\032destroy_particle" +
-      "_involving\030\006 \001(\01322.CUserMsg_ParticleMana" +
-      "ger.DestroyParticleInvolving\022A\n\017update_p" +
-      "article\030\007 \001(\0132(.CUserMsg_ParticleManager" +
-      ".UpdateParticle\022H\n\023update_particle_fwd\030\010" +
-      " \001(\0132+.CUserMsg_ParticleManager.UpdatePa" +
-      "rticleFwd\022N\n\026update_particle_orient\030\t \001(",
-      "\0132..CUserMsg_ParticleManager.UpdateParti" +
-      "cleOrient\022R\n\030update_particle_fallback\030\n " +
-      "\001(\01320.CUserMsg_ParticleManager.UpdatePar" +
-      "ticleFallback\022N\n\026update_particle_offset\030" +
-      "\013 \001(\0132..CUserMsg_ParticleManager.UpdateP" +
-      "articleOffset\022H\n\023update_particle_ent\030\014 \001" +
-      "(\0132+.CUserMsg_ParticleManager.UpdatePart" +
-      "icleEnt\022W\n\033update_particle_should_draw\030\016" +
-      " \001(\01322.CUserMsg_ParticleManager.UpdatePa" +
-      "rticleShouldDraw\022U\n\032update_particle_set_",
-      "frozen\030\017 \001(\01321.CUserMsg_ParticleManager." +
-      "UpdateParticleSetFrozen\022_\n\037change_contro" +
-      "l_point_attachment\030\020 \001(\01326.CUserMsg_Part" +
-      "icleManager.ChangeControlPointAttachment" +
-      "\032\026\n\024ReleaseParticleIndex\032Y\n\016CreatePartic" +
-      "le\022\033\n\023particle_name_index\030\001 \001(\006\022\023\n\013attac" +
-      "h_type\030\002 \001(\005\022\025\n\rentity_handle\030\003 \001(\005\032.\n\017D" +
-      "estroyParticle\022\033\n\023destroy_immediately\030\001 " +
-      "\001(\010\032N\n\030DestroyParticleInvolving\022\033\n\023destr" +
-      "oy_immediately\030\001 \001(\010\022\025\n\rentity_handle\030\003 ",
-      "\001(\005\032F\n\016UpdateParticle\022\025\n\rcontrol_point\030\001" +
-      " \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032H\n\021U" +
-      "pdateParticleFwd\022\025\n\rcontrol_point\030\001 \001(\005\022" +
-      "\034\n\007forward\030\002 \001(\0132\013.CMsgVector\032\200\001\n\024Update" +
-      "ParticleOrient\022\025\n\rcontrol_point\030\001 \001(\005\022\034\n" +
-      "\007forward\030\002 \001(\0132\013.CMsgVector\022\032\n\005right\030\003 \001" +
-      "(\0132\013.CMsgVector\022\027\n\002up\030\004 \001(\0132\013.CMsgVector" +
-      "\032N\n\026UpdateParticleFallback\022\025\n\rcontrol_po" +
-      "int\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsgVector" +
-      "\032Q\n\024UpdateParticleOffset\022\025\n\rcontrol_poin",
-      "t\030\001 \001(\005\022\"\n\rorigin_offset\030\002 \001(\0132\013.CMsgVec" +
-      "tor\032\255\001\n\021UpdateParticleEnt\022\025\n\rcontrol_poi" +
-      "nt\030\001 \001(\005\022\025\n\rentity_handle\030\002 \001(\005\022\023\n\013attac" +
-      "h_type\030\003 \001(\005\022\022\n\nattachment\030\004 \001(\005\022&\n\021fall" +
-      "back_position\030\005 \001(\0132\013.CMsgVector\022\031\n\021incl" +
-      "ude_wearables\030\006 \001(\010\032-\n\027UpdateParticleSet" +
-      "Frozen\022\022\n\nset_frozen\030\001 \001(\010\032/\n\030UpdatePart" +
-      "icleShouldDraw\022\023\n\013should_draw\030\001 \001(\010\032e\n\034C" +
-      "hangeControlPointAttachment\022\026\n\016attachmen" +
-      "t_old\030\001 \001(\005\022\026\n\016attachment_new\030\002 \001(\005\022\025\n\re",
-      "ntity_handle\030\003 \001(\005\"%\n\021CUserMsg_HudError\022" +
-      "\020\n\010order_id\030\001 \001(\005\"K\n\'CUserMsg_CustomGame" +
-      "Event_ClientToServer\022\022\n\nevent_name\030\001 \001(\t" +
-      "\022\014\n\004data\030\002 \001(\014\"K\n\'CUserMsg_CustomGameEve" +
-      "nt_ServerToClient\022\022\n\nevent_name\030\001 \001(\t\022\014\n" +
-      "\004data\030\002 \001(\014\">\n.CUserMsg_TrackedControlle" +
-      "rInput_ClientToServer\022\014\n\004data\030\001 \001(\014*\205\007\n\021" +
-      "EBaseUserMessages\022\027\n\023UM_AchievementEvent" +
-      "\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM_CloseCapti" +
-      "onDirect\020g\022\027\n\023UM_CurrentTimescale\020h\022\027\n\023U",
-      "M_DesiredTimescale\020i\022\013\n\007UM_Fade\020j\022\020\n\014UM_" +
-      "GameTitle\020k\022\017\n\013UM_HintText\020m\022\r\n\tUM_HudMs" +
-      "g\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_KeyHintText\020p\022" +
-      "\022\n\016UM_ColoredText\020q\022\023\n\017UM_RequestState\020r" +
-      "\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumble\020t\022\016\n\nUM_S" +
-      "ayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021UM_SayTextC" +
-      "hannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_ShakeDir\020y\022" +
-      "\016\n\nUM_TextMsg\020|\022\021\n\rUM_ScreenTilt\020}\022\014\n\010UM" +
-      "_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n\014UM_VoiceMas" +
-      "k\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022\021\n\014UM_SendAu",
-      "dio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n\rUM_AmmoDen" +
-      "ied\020\204\001\022\026\n\021UM_CrosshairAngle\020\205\001\022\020\n\013UM_Sho" +
-      "wMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022\037\n\032UM_Close" +
-      "CaptionPlaceholder\020\216\001\022\030\n\023UM_CameraTransi" +
-      "tion\020\217\001\022\026\n\021UM_AudioParameter\020\220\001\022\027\n\022UM_Pa" +
-      "rticleManager\020\221\001\022\020\n\013UM_HudError\020\222\001\022&\n!UM" +
-      "_CustomGameEvent_ClientToServer\020\223\001\022&\n!UM" +
-      "_CustomGameEvent_ServerToClient\020\224\001\022-\n(UM" +
-      "_TrackedControllerInput_ClientToServer\020\225" +
-      "\001\022\020\n\013UM_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessa",
-      "ges\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOver" +
-      "lay\020\211\001\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Pr" +
-      "opagateForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_F" +
-      "ixAngle\020\215\001*o\n\teRollType\022\026\n\tROLL_NONE\020\377\377\377" +
-      "\377\377\377\377\377\377\001\022\016\n\nROLL_STATS\020\000\022\020\n\014ROLL_CREDITS\020" +
-      "\001\022\027\n\023ROLL_LATE_JOIN_LOGO\020\002\022\017\n\013ROLL_OUTTR" +
-      "O\020\003*\226\005\n\020PARTICLE_MESSAGE\022&\n\"GAME_PARTICL" +
-      "E_MANAGER_EVENT_CREATE\020\000\022&\n\"GAME_PARTICL" +
-      "E_MANAGER_EVENT_UPDATE\020\001\022.\n*GAME_PARTICL" +
-      "E_MANAGER_EVENT_UPDATE_FORWARD\020\002\0222\n.GAME",
-      "_PARTICLE_MANAGER_EVENT_UPDATE_ORIENTATI" +
-      "ON\020\003\022/\n+GAME_PARTICLE_MANAGER_EVENT_UPDA" +
-      "TE_FALLBACK\020\004\022*\n&GAME_PARTICLE_MANAGER_E" +
-      "VENT_UPDATE_ENT\020\005\022-\n)GAME_PARTICLE_MANAG" +
-      "ER_EVENT_UPDATE_OFFSET\020\006\022\'\n#GAME_PARTICL" +
-      "E_MANAGER_EVENT_DESTROY\020\007\0221\n-GAME_PARTIC" +
-      "LE_MANAGER_EVENT_DESTROY_INVOLVING\020\010\022\'\n#" +
-      "GAME_PARTICLE_MANAGER_EVENT_RELEASE\020\t\022\'\n" +
-      "#GAME_PARTICLE_MANAGER_EVENT_LATENCY\020\n\022+" +
-      "\n\'GAME_PARTICLE_MANAGER_EVENT_SHOULD_DRA",
-      "W\020\013\022&\n\"GAME_PARTICLE_MANAGER_EVENT_FROZE" +
-      "N\020\014\022?\n;GAME_PARTICLE_MANAGER_EVENT_CHANG" +
-      "E_CONTROL_POINT_ATTACHMENT\020\rB7\n skadista" +
-      "ts.clarity.wire.s2.protoB\016S2UserMessages" +
-      "H\001\200\001\000"
+      "ode\030\002 \001(\r\022\r\n\005value\030\003 \001(\002\022\021\n\tint_value\030\004 " +
+      "\001(\r\"W\n\025CUserMessageVoiceMask\022\027\n\017gamerule" +
+      "s_masks\030\001 \003(\r\022\021\n\tban_masks\030\002 \003(\r\022\022\n\nmod_" +
+      "enable\030\003 \001(\010\"\032\n\030CUserMessageRequestState" +
+      "\"\'\n\024CUserMessageHintText\022\017\n\007message\030\001 \001(" +
+      "\t\"+\n\027CUserMessageKeyHintText\022\020\n\010messages" +
+      "\030\001 \003(\t\"G\n\031CUserMessageVoiceSubtitle\022\016\n\006p" +
+      "layer\030\001 \001(\005\022\014\n\004menu\030\002 \001(\005\022\014\n\004item\030\003 \001(\005\"",
+      "\201\001\n\024CUserMessageVGUIMenu\022\014\n\004name\030\001 \001(\t\022\014" +
+      "\n\004show\030\002 \001(\010\022(\n\004keys\030\003 \003(\0132\032.CUserMessag" +
+      "eVGUIMenu.Keys\032#\n\004Keys\022\014\n\004name\030\001 \001(\t\022\r\n\005" +
+      "value\030\002 \001(\t\"@\n\022CUserMessageRumble\022\r\n\005ind" +
+      "ex\030\001 \001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\"%\n" +
+      "\021CUserMessageTrain\022\020\n\010position\030\001 \001(\r\"K\n\032" +
+      "CUserMessageSayTextChannel\022\016\n\006player\030\001 \001" +
+      "(\005\022\017\n\007channel\030\002 \001(\005\022\014\n\004text\030\003 \001(\t\"\220\001\n\027CU" +
+      "serMessageColoredText\022\r\n\005color\030\001 \001(\r\022\014\n\004" +
+      "text\030\002 \001(\t\022\r\n\005reset\030\003 \001(\010\022\031\n\021context_pla",
+      "yer_id\030\004 \001(\005\022\025\n\rcontext_value\030\005 \001(\005\022\027\n\017c" +
+      "ontext_team_id\030\006 \001(\005\"*\n\026CUserMessageItem" +
+      "Pickup\022\020\n\010itemname\030\001 \001(\t\")\n\026CUserMessage" +
+      "AmmoDenied\022\017\n\007ammo_id\030\001 \001(\r\"?\n\032CUserMess" +
+      "ageCrosshairAngle\022!\n\014angcrosshair\030\001 \001(\0132" +
+      "\013.CMsgQAngle\"e\n\024CUserMessageShowMenu\022\022\n\n" +
+      "validslots\030\001 \001(\r\022\023\n\013displaytime\030\002 \001(\r\022\020\n" +
+      "\010needmore\030\003 \001(\010\022\022\n\nmenustring\030\004 \001(\t\"V\n\026C" +
+      "UserMessageCreditsMsg\022\'\n\010rolltype\030\001 \001(\0162" +
+      "\n.eRollType:\tROLL_NONE\022\023\n\013logo_length\030\002 ",
+      "\001(\002\"\032\n\030CEntityMessagePlayJingle\"m\n\027CUser" +
+      "MessageHapticPulse\022\017\n\007hand_id\030\001 \001(\005\022A\n\np" +
+      "ulse_type\030\002 \001(\0162\021.EHapticPulseType:\032VR_H" +
+      "AND_HAPTIC_PULSE_LIGHT\"3\n\033CEntityMessage" +
+      "ScreenOverlay\022\024\n\014start_effect\030\001 \001(\010\"6\n\035C" +
+      "EntityMessageRemoveAllDecals\022\025\n\rremove_d" +
+      "ecals\030\001 \001(\010\"<\n\034CEntityMessagePropagateFo" +
+      "rce\022\034\n\007impulse\030\001 \001(\0132\013.CMsgVector\"\230\001\n\025CE" +
+      "ntityMessageDoSpark\022\033\n\006origin\030\001 \001(\0132\013.CM" +
+      "sgVector\022\023\n\013entityindex\030\002 \001(\r\022\016\n\006radius\030",
+      "\003 \001(\002\022\r\n\005color\030\004 \001(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005t" +
+      "hick\030\006 \001(\002\022\020\n\010duration\030\007 \001(\002\"F\n\026CEntityM" +
+      "essageFixAngle\022\020\n\010relative\030\001 \001(\010\022\032\n\005angl" +
+      "e\030\002 \001(\0132\013.CMsgQAngle\"\333\001\n\034CUserMessageCam" +
+      "eraTransition\022\023\n\013camera_type\030\001 \001(\r\022\020\n\010du" +
+      "ration\030\002 \001(\002\022O\n\022params_data_driven\030\003 \001(\013" +
+      "23.CUserMessageCameraTransition.Transiti" +
+      "on_DataDriven\032C\n\025Transition_DataDriven\022\020" +
+      "\n\010filename\030\001 \001(\t\022\030\n\020attach_ent_index\030\002 \001" +
+      "(\005\"\234\021\n\030CUserMsg_ParticleManager\022C\n\004type\030",
+      "\001 \002(\0162\021.PARTICLE_MESSAGE:\"GAME_PARTICLE_" +
+      "MANAGER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022N\n\026r" +
+      "elease_particle_index\030\003 \001(\0132..CUserMsg_P" +
+      "articleManager.ReleaseParticleIndex\022A\n\017c" +
+      "reate_particle\030\004 \001(\0132(.CUserMsg_Particle" +
+      "Manager.CreateParticle\022C\n\020destroy_partic" +
+      "le\030\005 \001(\0132).CUserMsg_ParticleManager.Dest" +
+      "royParticle\022V\n\032destroy_particle_involvin" +
+      "g\030\006 \001(\01322.CUserMsg_ParticleManager.Destr" +
+      "oyParticleInvolving\022A\n\017update_particle\030\007",
+      " \001(\0132(.CUserMsg_ParticleManager.UpdatePa" +
+      "rticle\022H\n\023update_particle_fwd\030\010 \001(\0132+.CU" +
+      "serMsg_ParticleManager.UpdateParticleFwd" +
+      "\022N\n\026update_particle_orient\030\t \001(\0132..CUser" +
+      "Msg_ParticleManager.UpdateParticleOrient" +
+      "\022R\n\030update_particle_fallback\030\n \001(\01320.CUs" +
+      "erMsg_ParticleManager.UpdateParticleFall" +
+      "back\022N\n\026update_particle_offset\030\013 \001(\0132..C" +
+      "UserMsg_ParticleManager.UpdateParticleOf" +
+      "fset\022H\n\023update_particle_ent\030\014 \001(\0132+.CUse",
+      "rMsg_ParticleManager.UpdateParticleEnt\022W" +
+      "\n\033update_particle_should_draw\030\016 \001(\01322.CU" +
+      "serMsg_ParticleManager.UpdateParticleSho" +
+      "uldDraw\022U\n\032update_particle_set_frozen\030\017 " +
+      "\001(\01321.CUserMsg_ParticleManager.UpdatePar" +
+      "ticleSetFrozen\022_\n\037change_control_point_a" +
+      "ttachment\030\020 \001(\01326.CUserMsg_ParticleManag" +
+      "er.ChangeControlPointAttachment\032\026\n\024Relea" +
+      "seParticleIndex\032Y\n\016CreateParticle\022\033\n\023par" +
+      "ticle_name_index\030\001 \001(\006\022\023\n\013attach_type\030\002 ",
+      "\001(\005\022\025\n\rentity_handle\030\003 \001(\005\032.\n\017DestroyPar" +
+      "ticle\022\033\n\023destroy_immediately\030\001 \001(\010\032N\n\030De" +
+      "stroyParticleInvolving\022\033\n\023destroy_immedi" +
+      "ately\030\001 \001(\010\022\025\n\rentity_handle\030\003 \001(\005\032F\n\016Up" +
+      "dateParticle\022\025\n\rcontrol_point\030\001 \001(\005\022\035\n\010p" +
+      "osition\030\002 \001(\0132\013.CMsgVector\032H\n\021UpdatePart" +
+      "icleFwd\022\025\n\rcontrol_point\030\001 \001(\005\022\034\n\007forwar" +
+      "d\030\002 \001(\0132\013.CMsgVector\032\200\001\n\024UpdateParticleO" +
+      "rient\022\025\n\rcontrol_point\030\001 \001(\005\022\034\n\007forward\030" +
+      "\002 \001(\0132\013.CMsgVector\022\032\n\005right\030\003 \001(\0132\013.CMsg",
+      "Vector\022\027\n\002up\030\004 \001(\0132\013.CMsgVector\032N\n\026Updat" +
+      "eParticleFallback\022\025\n\rcontrol_point\030\001 \001(\005" +
+      "\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032Q\n\024Updat" +
+      "eParticleOffset\022\025\n\rcontrol_point\030\001 \001(\005\022\"" +
+      "\n\rorigin_offset\030\002 \001(\0132\013.CMsgVector\032\255\001\n\021U" +
+      "pdateParticleEnt\022\025\n\rcontrol_point\030\001 \001(\005\022" +
+      "\025\n\rentity_handle\030\002 \001(\005\022\023\n\013attach_type\030\003 " +
+      "\001(\005\022\022\n\nattachment\030\004 \001(\005\022&\n\021fallback_posi" +
+      "tion\030\005 \001(\0132\013.CMsgVector\022\031\n\021include_weara" +
+      "bles\030\006 \001(\010\032-\n\027UpdateParticleSetFrozen\022\022\n",
+      "\nset_frozen\030\001 \001(\010\032/\n\030UpdateParticleShoul" +
+      "dDraw\022\023\n\013should_draw\030\001 \001(\010\032e\n\034ChangeCont" +
+      "rolPointAttachment\022\026\n\016attachment_old\030\001 \001" +
+      "(\005\022\026\n\016attachment_new\030\002 \001(\005\022\025\n\rentity_han" +
+      "dle\030\003 \001(\005\"%\n\021CUserMsg_HudError\022\020\n\010order_" +
+      "id\030\001 \001(\005\"K\n\'CUserMsg_CustomGameEvent_Cli" +
+      "entToServer\022\022\n\nevent_name\030\001 \001(\t\022\014\n\004data\030" +
+      "\002 \001(\014\"K\n\'CUserMsg_CustomGameEvent_Server" +
+      "ToClient\022\022\n\nevent_name\030\001 \001(\t\022\014\n\004data\030\002 \001" +
+      "(\014\">\n.CUserMsg_TrackedControllerInput_Cl",
+      "ientToServer\022\014\n\004data\030\001 \001(\014*\270\006\n\021EBaseUser" +
+      "Messages\022\027\n\023UM_AchievementEvent\020e\022\023\n\017UM_" +
+      "CloseCaption\020f\022\031\n\025UM_CloseCaptionDirect\020" +
+      "g\022\027\n\023UM_CurrentTimescale\020h\022\027\n\023UM_Desired" +
+      "Timescale\020i\022\013\n\007UM_Fade\020j\022\020\n\014UM_GameTitle" +
+      "\020k\022\017\n\013UM_HintText\020m\022\r\n\tUM_HudMsg\020n\022\016\n\nUM" +
+      "_HudText\020o\022\022\n\016UM_KeyHintText\020p\022\022\n\016UM_Col" +
+      "oredText\020q\022\023\n\017UM_RequestState\020r\022\017\n\013UM_Re" +
+      "setHUD\020s\022\r\n\tUM_Rumble\020t\022\016\n\nUM_SayText\020u\022" +
+      "\017\n\013UM_SayText2\020v\022\025\n\021UM_SayTextChannel\020w\022",
+      "\014\n\010UM_Shake\020x\022\017\n\013UM_ShakeDir\020y\022\016\n\nUM_Tex" +
+      "tMsg\020|\022\021\n\rUM_ScreenTilt\020}\022\014\n\010UM_Train\020~\022" +
+      "\017\n\013UM_VGUIMenu\020\177\022\021\n\014UM_VoiceMask\020\200\001\022\025\n\020U" +
+      "M_VoiceSubtitle\020\201\001\022\021\n\014UM_SendAudio\020\202\001\022\022\n" +
+      "\rUM_ItemPickup\020\203\001\022\022\n\rUM_AmmoDenied\020\204\001\022\026\n" +
+      "\021UM_CrosshairAngle\020\205\001\022\020\n\013UM_ShowMenu\020\206\001\022" +
+      "\022\n\rUM_CreditsMsg\020\207\001\022\037\n\032UM_CloseCaptionPl" +
+      "aceholder\020\216\001\022\030\n\023UM_CameraTransition\020\217\001\022\026" +
+      "\n\021UM_AudioParameter\020\220\001\022\027\n\022UM_ParticleMan" +
+      "ager\020\221\001\022\020\n\013UM_HudError\020\222\001\022\027\n\022UM_CustomGa",
+      "meEvent\020\224\001\022\027\n\022UM_HandHapticPulse\020\225\001\022\020\n\013U" +
+      "M_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n" +
+      "\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001" +
+      "\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Propagat" +
+      "eForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngl" +
+      "e\020\215\001*o\n\teRollType\022\026\n\tROLL_NONE\020\377\377\377\377\377\377\377\377\377" +
+      "\001\022\016\n\nROLL_STATS\020\000\022\020\n\014ROLL_CREDITS\020\001\022\027\n\023R" +
+      "OLL_LATE_JOIN_LOGO\020\002\022\017\n\013ROLL_OUTTRO\020\003*\226\005" +
+      "\n\020PARTICLE_MESSAGE\022&\n\"GAME_PARTICLE_MANA" +
+      "GER_EVENT_CREATE\020\000\022&\n\"GAME_PARTICLE_MANA",
+      "GER_EVENT_UPDATE\020\001\022.\n*GAME_PARTICLE_MANA" +
+      "GER_EVENT_UPDATE_FORWARD\020\002\0222\n.GAME_PARTI" +
+      "CLE_MANAGER_EVENT_UPDATE_ORIENTATION\020\003\022/" +
+      "\n+GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAL" +
+      "LBACK\020\004\022*\n&GAME_PARTICLE_MANAGER_EVENT_U" +
+      "PDATE_ENT\020\005\022-\n)GAME_PARTICLE_MANAGER_EVE" +
+      "NT_UPDATE_OFFSET\020\006\022\'\n#GAME_PARTICLE_MANA" +
+      "GER_EVENT_DESTROY\020\007\0221\n-GAME_PARTICLE_MAN" +
+      "AGER_EVENT_DESTROY_INVOLVING\020\010\022\'\n#GAME_P" +
+      "ARTICLE_MANAGER_EVENT_RELEASE\020\t\022\'\n#GAME_",
+      "PARTICLE_MANAGER_EVENT_LATENCY\020\n\022+\n\'GAME" +
+      "_PARTICLE_MANAGER_EVENT_SHOULD_DRAW\020\013\022&\n" +
+      "\"GAME_PARTICLE_MANAGER_EVENT_FROZEN\020\014\022?\n" +
+      ";GAME_PARTICLE_MANAGER_EVENT_CHANGE_CONT" +
+      "ROL_POINT_ATTACHMENT\020\r*t\n\020EHapticPulseTy" +
+      "pe\022\036\n\032VR_HAND_HAPTIC_PULSE_LIGHT\020\000\022\037\n\033VR" +
+      "_HAND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033VR_HAND_H" +
+      "APTIC_PULSE_STRONG\020\002B7\n skadistats.clari" +
+      "ty.wire.s2.protoB\016S2UserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -39201,7 +39932,7 @@ public final class S2UserMessages {
     internal_static_CUserMessageAudioParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageAudioParameter_descriptor,
-        new java.lang.String[] { "ParameterType", "NameHashCode", "Value", });
+        new java.lang.String[] { "ParameterType", "NameHashCode", "Value", "IntValue", });
     internal_static_CUserMessageVoiceMask_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_CUserMessageVoiceMask_fieldAccessorTable = new
@@ -39297,45 +40028,51 @@ public final class S2UserMessages {
     internal_static_CUserMessageCreditsMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageCreditsMsg_descriptor,
-        new java.lang.String[] { "Rolltype", });
+        new java.lang.String[] { "Rolltype", "LogoLength", });
     internal_static_CEntityMessagePlayJingle_descriptor =
       getDescriptor().getMessageTypes().get(34);
     internal_static_CEntityMessagePlayJingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePlayJingle_descriptor,
         new java.lang.String[] { });
-    internal_static_CEntityMessageScreenOverlay_descriptor =
+    internal_static_CUserMessageHapticPulse_descriptor =
       getDescriptor().getMessageTypes().get(35);
+    internal_static_CUserMessageHapticPulse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessageHapticPulse_descriptor,
+        new java.lang.String[] { "HandId", "PulseType", });
+    internal_static_CEntityMessageScreenOverlay_descriptor =
+      getDescriptor().getMessageTypes().get(36);
     internal_static_CEntityMessageScreenOverlay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageScreenOverlay_descriptor,
         new java.lang.String[] { "StartEffect", });
     internal_static_CEntityMessageRemoveAllDecals_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_CEntityMessageRemoveAllDecals_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageRemoveAllDecals_descriptor,
         new java.lang.String[] { "RemoveDecals", });
     internal_static_CEntityMessagePropagateForce_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_CEntityMessagePropagateForce_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePropagateForce_descriptor,
         new java.lang.String[] { "Impulse", });
     internal_static_CEntityMessageDoSpark_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_CEntityMessageDoSpark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageDoSpark_descriptor,
         new java.lang.String[] { "Origin", "Entityindex", "Radius", "Color", "Beams", "Thick", "Duration", });
     internal_static_CEntityMessageFixAngle_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_CEntityMessageFixAngle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageFixAngle_descriptor,
         new java.lang.String[] { "Relative", "Angle", });
     internal_static_CUserMessageCameraTransition_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_CUserMessageCameraTransition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageCameraTransition_descriptor,
@@ -39347,7 +40084,7 @@ public final class S2UserMessages {
         internal_static_CUserMessageCameraTransition_Transition_DataDriven_descriptor,
         new java.lang.String[] { "Filename", "AttachEntIndex", });
     internal_static_CUserMsg_ParticleManager_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_CUserMsg_ParticleManager_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_descriptor,
@@ -39431,25 +40168,25 @@ public final class S2UserMessages {
         internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor,
         new java.lang.String[] { "AttachmentOld", "AttachmentNew", "EntityHandle", });
     internal_static_CUserMsg_HudError_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_CUserMsg_HudError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_HudError_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMsg_CustomGameEvent_ServerToClient_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_CUserMsg_CustomGameEvent_ServerToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_ServerToClient_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_CUserMsg_TrackedControllerInput_ClientToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor,

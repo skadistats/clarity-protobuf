@@ -203,6 +203,7 @@ public class EmbeddedPackets {
 //        /* 551 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CompendiumState_VALUE, DotaUserMessages.CDOTAUserMsg_CompendiumState.class);
 //        /* 555 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_XPAlert_VALUE, DotaUserMessages.CDOTAUserMsg_XPAlert.class);
 //        /* 556 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UpdateQuestProgress_VALUE, DotaUserMessages.CDOTAUserMsg_UpdateQuestProgress.class);
+//        /* 559 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QuestStatus_VALUE, DotaUserMessages.CDOTAUserMsg_QuestStatus.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {

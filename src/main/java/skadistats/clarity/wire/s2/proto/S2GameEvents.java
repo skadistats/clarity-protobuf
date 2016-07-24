@@ -8436,6 +8436,15 @@ public final class S2GameEvents {
      * <code>optional bytes packed_params = 5;</code>
      */
     com.google.protobuf.ByteString getPackedParams();
+
+    /**
+     * <code>optional float start_time = 6;</code>
+     */
+    boolean hasStartTime();
+    /**
+     * <code>optional float start_time = 6;</code>
+     */
+    float getStartTime();
   }
   /**
    * Protobuf type {@code CMsgSosStartSoundEvent}
@@ -8512,6 +8521,11 @@ public final class S2GameEvents {
             case 42: {
               bitField0_ |= 0x00000010;
               packedParams_ = input.readBytes();
+              break;
+            }
+            case 53: {
+              bitField0_ |= 0x00000020;
+              startTime_ = input.readFloat();
               break;
             }
           }
@@ -8629,12 +8643,28 @@ public final class S2GameEvents {
       return packedParams_;
     }
 
+    public static final int START_TIME_FIELD_NUMBER = 6;
+    private float startTime_;
+    /**
+     * <code>optional float start_time = 6;</code>
+     */
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional float start_time = 6;</code>
+     */
+    public float getStartTime() {
+      return startTime_;
+    }
+
     private void initFields() {
       soundeventGuid_ = 0;
       soundeventHash_ = 0;
       sourceEntityIndex_ = 0;
       seed_ = 0;
       packedParams_ = com.google.protobuf.ByteString.EMPTY;
+      startTime_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8664,6 +8694,9 @@ public final class S2GameEvents {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeBytes(5, packedParams_);
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeFloat(6, startTime_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -8692,6 +8725,10 @@ public final class S2GameEvents {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, packedParams_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(6, startTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -8820,6 +8857,8 @@ public final class S2GameEvents {
         bitField0_ = (bitField0_ & ~0x00000008);
         packedParams_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
+        startTime_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -8868,6 +8907,10 @@ public final class S2GameEvents {
           to_bitField0_ |= 0x00000010;
         }
         result.packedParams_ = packedParams_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.startTime_ = startTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -8898,6 +8941,9 @@ public final class S2GameEvents {
         }
         if (other.hasPackedParams()) {
           setPackedParams(other.getPackedParams());
+        }
+        if (other.hasStartTime()) {
+          setStartTime(other.getStartTime());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -9085,6 +9131,38 @@ public final class S2GameEvents {
       public Builder clearPackedParams() {
         bitField0_ = (bitField0_ & ~0x00000010);
         packedParams_ = getDefaultInstance().getPackedParams();
+        onChanged();
+        return this;
+      }
+
+      private float startTime_ ;
+      /**
+       * <code>optional float start_time = 6;</code>
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional float start_time = 6;</code>
+       */
+      public float getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <code>optional float start_time = 6;</code>
+       */
+      public Builder setStartTime(float value) {
+        bitField0_ |= 0x00000020;
+        startTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float start_time = 6;</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        startTime_ = 0F;
         onChanged();
         return this;
       }
@@ -11048,30 +11126,30 @@ public final class S2GameEvents {
       "val_string\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020\n\010v" +
       "al_long\030\004 \001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010val_",
       "byte\030\006 \001(\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_uint" +
-      "64\030\010 \001(\004\"\214\001\n\026CMsgSosStartSoundEvent\022\027\n\017s" +
+      "64\030\010 \001(\004\"\240\001\n\026CMsgSosStartSoundEvent\022\027\n\017s" +
       "oundevent_guid\030\001 \001(\005\022\027\n\017soundevent_hash\030" +
       "\002 \001(\007\022\033\n\023source_entity_index\030\003 \001(\005\022\014\n\004se" +
-      "ed\030\004 \001(\005\022\025\n\rpacked_params\030\005 \001(\014\"0\n\025CMsgS" +
-      "osStopSoundEvent\022\027\n\017soundevent_guid\030\001 \001(" +
-      "\005\"Q\n\031CMsgSosStopSoundEventHash\022\027\n\017sounde" +
-      "vent_hash\030\001 \001(\007\022\033\n\023source_entity_index\030\002" +
-      " \001(\005\"L\n\032CMsgSosSetSoundEventParams\022\027\n\017so" +
-      "undevent_guid\030\001 \001(\005\022\025\n\rpacked_params\030\005 \001",
-      "(\014\"I\n\034CMsgSosSetLibraryStackFields\022\022\n\nst" +
-      "ack_hash\030\001 \001(\007\022\025\n\rpacked_fields\030\005 \001(\014*\267\003" +
-      "\n\017EBaseGameEvents\022 \n\033GE_VDebugGameSessio" +
-      "nIDEvent\020\310\001\022\027\n\022GE_PlaceDecalEvent\020\311\001\022\035\n\030" +
-      "GE_ClearWorldDecalsEvent\020\312\001\022\036\n\031GE_ClearE" +
-      "ntityDecalsEvent\020\313\001\022+\n&GE_ClearDecalsFor" +
-      "SkeletonInstanceEvent\020\314\001\022\"\n\035GE_Source1Le" +
-      "gacyGameEventList\020\315\001\022!\n\034GE_Source1Legacy" +
-      "ListenEvents\020\316\001\022\036\n\031GE_Source1LegacyGameE" +
-      "vent\020\317\001\022\032\n\025GE_SosStartSoundEvent\020\320\001\022\031\n\024G",
-      "E_SosStopSoundEvent\020\321\001\022\036\n\031GE_SosSetSound" +
-      "EventParams\020\322\001\022 \n\033GE_SosSetLibraryStackF" +
-      "ields\020\323\001\022\035\n\030GE_SosStopSoundEventHash\020\324\001B" +
-      "5\n skadistats.clarity.wire.s2.protoB\014S2G" +
-      "ameEventsH\001\200\001\000"
+      "ed\030\004 \001(\005\022\025\n\rpacked_params\030\005 \001(\014\022\022\n\nstart" +
+      "_time\030\006 \001(\002\"0\n\025CMsgSosStopSoundEvent\022\027\n\017" +
+      "soundevent_guid\030\001 \001(\005\"Q\n\031CMsgSosStopSoun" +
+      "dEventHash\022\027\n\017soundevent_hash\030\001 \001(\007\022\033\n\023s" +
+      "ource_entity_index\030\002 \001(\005\"L\n\032CMsgSosSetSo" +
+      "undEventParams\022\027\n\017soundevent_guid\030\001 \001(\005\022",
+      "\025\n\rpacked_params\030\005 \001(\014\"I\n\034CMsgSosSetLibr" +
+      "aryStackFields\022\022\n\nstack_hash\030\001 \001(\007\022\025\n\rpa" +
+      "cked_fields\030\005 \001(\014*\267\003\n\017EBaseGameEvents\022 \n" +
+      "\033GE_VDebugGameSessionIDEvent\020\310\001\022\027\n\022GE_Pl" +
+      "aceDecalEvent\020\311\001\022\035\n\030GE_ClearWorldDecalsE" +
+      "vent\020\312\001\022\036\n\031GE_ClearEntityDecalsEvent\020\313\001\022" +
+      "+\n&GE_ClearDecalsForSkeletonInstanceEven" +
+      "t\020\314\001\022\"\n\035GE_Source1LegacyGameEventList\020\315\001" +
+      "\022!\n\034GE_Source1LegacyListenEvents\020\316\001\022\036\n\031G" +
+      "E_Source1LegacyGameEvent\020\317\001\022\032\n\025GE_SosSta",
+      "rtSoundEvent\020\320\001\022\031\n\024GE_SosStopSoundEvent\020" +
+      "\321\001\022\036\n\031GE_SosSetSoundEventParams\020\322\001\022 \n\033GE" +
+      "_SosSetLibraryStackFields\020\323\001\022\035\n\030GE_SosSt" +
+      "opSoundEventHash\020\324\001B5\n skadistats.clarit" +
+      "y.wire.s2.protoB\014S2GameEventsH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -11157,7 +11235,7 @@ public final class S2GameEvents {
     internal_static_CMsgSosStartSoundEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgSosStartSoundEvent_descriptor,
-        new java.lang.String[] { "SoundeventGuid", "SoundeventHash", "SourceEntityIndex", "Seed", "PackedParams", });
+        new java.lang.String[] { "SoundeventGuid", "SoundeventHash", "SourceEntityIndex", "Seed", "PackedParams", "StartTime", });
     internal_static_CMsgSosStopSoundEvent_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_CMsgSosStopSoundEvent_fieldAccessorTable = new

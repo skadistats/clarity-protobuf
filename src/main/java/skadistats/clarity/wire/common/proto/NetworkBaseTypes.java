@@ -14066,6 +14066,20 @@ public final class NetworkBaseTypes {
      * <code>optional uint32 creationsequence = 16;</code>
      */
     int getCreationsequence();
+
+    /**
+     * <code>optional string savegamefilename = 17;</code>
+     */
+    boolean hasSavegamefilename();
+    /**
+     * <code>optional string savegamefilename = 17;</code>
+     */
+    java.lang.String getSavegamefilename();
+    /**
+     * <code>optional string savegamefilename = 17;</code>
+     */
+    com.google.protobuf.ByteString
+        getSavegamefilenameBytes();
   }
   /**
    * Protobuf type {@code CNETMsg_SpawnGroup_Load}
@@ -14218,6 +14232,12 @@ public final class NetworkBaseTypes {
             case 128: {
               bitField0_ |= 0x00008000;
               creationsequence_ = input.readUInt32();
+              break;
+            }
+            case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00010000;
+              savegamefilename_ = bs;
               break;
             }
           }
@@ -14647,6 +14667,48 @@ public final class NetworkBaseTypes {
       return creationsequence_;
     }
 
+    public static final int SAVEGAMEFILENAME_FIELD_NUMBER = 17;
+    private java.lang.Object savegamefilename_;
+    /**
+     * <code>optional string savegamefilename = 17;</code>
+     */
+    public boolean hasSavegamefilename() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional string savegamefilename = 17;</code>
+     */
+    public java.lang.String getSavegamefilename() {
+      java.lang.Object ref = savegamefilename_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          savegamefilename_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string savegamefilename = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSavegamefilenameBytes() {
+      java.lang.Object ref = savegamefilename_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        savegamefilename_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       worldname_ = "";
       entitylumpname_ = "";
@@ -14664,6 +14726,7 @@ public final class NetworkBaseTypes {
       manifestloadpriority_ = 0;
       worldgroupid_ = 0;
       creationsequence_ = 0;
+      savegamefilename_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -14725,6 +14788,9 @@ public final class NetworkBaseTypes {
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         output.writeUInt32(16, creationsequence_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(17, getSavegamefilenameBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -14798,6 +14864,10 @@ public final class NetworkBaseTypes {
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(16, creationsequence_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(17, getSavegamefilenameBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -14958,6 +15028,8 @@ public final class NetworkBaseTypes {
         bitField0_ = (bitField0_ & ~0x00004000);
         creationsequence_ = 0;
         bitField0_ = (bitField0_ & ~0x00008000);
+        savegamefilename_ = "";
+        bitField0_ = (bitField0_ & ~0x00010000);
         return this;
       }
 
@@ -15058,6 +15130,10 @@ public final class NetworkBaseTypes {
           to_bitField0_ |= 0x00008000;
         }
         result.creationsequence_ = creationsequence_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.savegamefilename_ = savegamefilename_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -15131,6 +15207,11 @@ public final class NetworkBaseTypes {
         }
         if (other.hasCreationsequence()) {
           setCreationsequence(other.getCreationsequence());
+        }
+        if (other.hasSavegamefilename()) {
+          bitField0_ |= 0x00010000;
+          savegamefilename_ = other.savegamefilename_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -16058,6 +16139,82 @@ public final class NetworkBaseTypes {
       public Builder clearCreationsequence() {
         bitField0_ = (bitField0_ & ~0x00008000);
         creationsequence_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object savegamefilename_ = "";
+      /**
+       * <code>optional string savegamefilename = 17;</code>
+       */
+      public boolean hasSavegamefilename() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional string savegamefilename = 17;</code>
+       */
+      public java.lang.String getSavegamefilename() {
+        java.lang.Object ref = savegamefilename_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            savegamefilename_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string savegamefilename = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSavegamefilenameBytes() {
+        java.lang.Object ref = savegamefilename_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          savegamefilename_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string savegamefilename = 17;</code>
+       */
+      public Builder setSavegamefilename(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        savegamefilename_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string savegamefilename = 17;</code>
+       */
+      public Builder clearSavegamefilename() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        savegamefilename_ = getDefaultInstance().getSavegamefilename();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string savegamefilename = 17;</code>
+       */
+      public Builder setSavegamefilenameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        savegamefilename_ = value;
         onChanged();
         return this;
       }
@@ -20522,7 +20679,7 @@ public final class NetworkBaseTypes {
       "sages\0225\n\010usermsgs\030\001 \003(\0132#.CSVCMsgList_Us" +
       "erMessages.usermsg_t\032<\n\tusermsg_t\022\014\n\004tic",
       "k\030\001 \001(\005\022!\n\003msg\030\002 \001(\0132\024.CSVCMsg_UserMessa" +
-      "ge\"\300\003\n\027CNETMsg_SpawnGroup_Load\022\021\n\tworldn" +
+      "ge\"\332\003\n\027CNETMsg_SpawnGroup_Load\022\021\n\tworldn" +
       "ame\030\001 \001(\t\022\026\n\016entitylumpname\030\002 \001(\t\022\030\n\020ent" +
       "ityfiltername\030\003 \001(\t\022\030\n\020spawngrouphandle\030" +
       "\004 \001(\r\022\035\n\025spawngroupownerhandle\030\005 \001(\r\022%\n\020" +
@@ -20533,51 +20690,52 @@ public final class NetworkBaseTypes {
       "\030\013 \001(\010\022\026\n\016localnamefixup\030\014 \001(\t\022\027\n\017parent",
       "namefixup\030\r \001(\t\022\034\n\024manifestloadpriority\030" +
       "\016 \001(\005\022\024\n\014worldgroupid\030\017 \001(\r\022\030\n\020creations" +
-      "equence\030\020 \001(\r\"u\n!CNETMsg_SpawnGroup_Mani" +
-      "festUpdate\022\030\n\020spawngrouphandle\030\001 \001(\r\022\032\n\022" +
-      "spawngroupmanifest\030\002 \001(\014\022\032\n\022manifestinco" +
-      "mplete\030\003 \001(\010\"k\n\"CNETMsg_SpawnGroup_SetCr" +
-      "eationTick\022\030\n\020spawngrouphandle\030\001 \001(\r\022\021\n\t" +
-      "tickcount\030\002 \001(\005\022\030\n\020creationsequence\030\003 \001(" +
-      "\r\"W\n\031CNETMsg_SpawnGroup_Unload\022\030\n\020spawng" +
-      "rouphandle\030\001 \001(\r\022\r\n\005flags\030\002 \001(\r\022\021\n\ttickc",
-      "ount\030\003 \001(\005\"<\n CNETMsg_SpawnGroup_LoadCom" +
-      "pleted\022\030\n\020spawngrouphandle\030\001 \001(\r\"\360\002\n CSV" +
-      "CMsg_GameSessionConfiguration\022\026\n\016is_mult" +
-      "iplayer\030\001 \001(\010\022\027\n\017is_loadsavegame\030\002 \001(\010\022\031" +
-      "\n\021is_background_map\030\003 \001(\010\022\023\n\013is_headless" +
-      "\030\004 \001(\010\022\030\n\020min_client_limit\030\005 \001(\r\022\030\n\020max_" +
-      "client_limit\030\006 \001(\r\022\023\n\013max_clients\030\007 \001(\r\022" +
-      "\025\n\rtick_interval\030\010 \001(\007\022\020\n\010hostname\030\t \001(\t" +
-      "\022\024\n\014savegamename\030\n \001(\t\022\022\n\ns1_mapname\030\013 \001" +
-      "(\t\022\020\n\010gamemode\030\014 \001(\t\022\031\n\021server_ip_addres",
-      "s\030\r \001(\t\022\014\n\004data\030\016 \001(\014\022\024\n\014is_localonly\030\017 " +
-      "\001(\010\"\"\n CNETMsg_ReliableMessageEndMarker*" +
-      "\336\002\n\014NET_Messages\022\013\n\007net_NOP\020\000\022\022\n\016net_Dis" +
-      "connect\020\001\022\014\n\010net_File\020\002\022\027\n\023net_SplitScre" +
-      "enUser\020\003\022\014\n\010net_Tick\020\004\022\021\n\rnet_StringCmd\020" +
-      "\005\022\021\n\rnet_SetConVar\020\006\022\023\n\017net_SignonState\020" +
-      "\007\022\027\n\023net_SpawnGroup_Load\020\010\022!\n\035net_SpawnG" +
-      "roup_ManifestUpdate\020\t\022\"\n\036net_SpawnGroup_" +
-      "SetCreationTick\020\013\022\031\n\025net_SpawnGroup_Unlo" +
-      "ad\020\014\022 \n\034net_SpawnGroup_LoadCompleted\020\r\022 ",
-      "\n\034net_ReliableMessageEndMarker\020\016*\322\001\n\013SIG" +
-      "NONSTATE\022\024\n\020SIGNONSTATE_NONE\020\000\022\031\n\025SIGNON" +
-      "STATE_CHALLENGE\020\001\022\031\n\025SIGNONSTATE_CONNECT" +
-      "ED\020\002\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024SIGNONSTATE" +
-      "_PRESPAWN\020\004\022\025\n\021SIGNONSTATE_SPAWN\020\005\022\024\n\020SI" +
-      "GNONSTATE_FULL\020\006\022\033\n\027SIGNONSTATE_CHANGELE" +
-      "VEL\020\007*\353\002\n\021SpawnGroupFlags_t\022\'\n#SPAWN_GRO" +
-      "UP_LOAD_ENTITIES_FROM_SAVE\020\001\022#\n\037SPAWN_GR" +
-      "OUP_DONT_SPAWN_ENTITIES\020\002\022!\n\035SPAWN_GROUP" +
-      "_SYNCHRONOUS_SPAWN\020\004\022&\n\"SPAWN_GROUP_IS_I",
-      "NITIAL_SPAWN_GROUP\020\010\022+\n\'SPAWN_GROUP_CREA" +
-      "TE_CLIENT_ONLY_ENTITIES\020\020\022\035\n\031SPAWN_GROUP" +
-      "_SAVE_ENTITIES\020 \022\"\n\036SPAWN_GROUP_BLOCK_UN" +
-      "TIL_LOADED\020@\022$\n\037SPAWN_GROUP_LOAD_STREAMI" +
-      "NG_DATA\020\200\001\022\'\n\"SPAWN_GROUP_CREATE_NEW_SCE" +
-      "NE_WORLD\020\200\002B;\n$skadistats.clarity.wire.c" +
-      "ommon.protoB\020NetworkBaseTypes\200\001\000"
+      "equence\030\020 \001(\r\022\030\n\020savegamefilename\030\021 \001(\t\"" +
+      "u\n!CNETMsg_SpawnGroup_ManifestUpdate\022\030\n\020" +
+      "spawngrouphandle\030\001 \001(\r\022\032\n\022spawngroupmani" +
+      "fest\030\002 \001(\014\022\032\n\022manifestincomplete\030\003 \001(\010\"k" +
+      "\n\"CNETMsg_SpawnGroup_SetCreationTick\022\030\n\020" +
+      "spawngrouphandle\030\001 \001(\r\022\021\n\ttickcount\030\002 \001(" +
+      "\005\022\030\n\020creationsequence\030\003 \001(\r\"W\n\031CNETMsg_S" +
+      "pawnGroup_Unload\022\030\n\020spawngrouphandle\030\001 \001",
+      "(\r\022\r\n\005flags\030\002 \001(\r\022\021\n\ttickcount\030\003 \001(\005\"<\n " +
+      "CNETMsg_SpawnGroup_LoadCompleted\022\030\n\020spaw" +
+      "ngrouphandle\030\001 \001(\r\"\360\002\n CSVCMsg_GameSessi" +
+      "onConfiguration\022\026\n\016is_multiplayer\030\001 \001(\010\022" +
+      "\027\n\017is_loadsavegame\030\002 \001(\010\022\031\n\021is_backgroun" +
+      "d_map\030\003 \001(\010\022\023\n\013is_headless\030\004 \001(\010\022\030\n\020min_" +
+      "client_limit\030\005 \001(\r\022\030\n\020max_client_limit\030\006" +
+      " \001(\r\022\023\n\013max_clients\030\007 \001(\r\022\025\n\rtick_interv" +
+      "al\030\010 \001(\007\022\020\n\010hostname\030\t \001(\t\022\024\n\014savegamena" +
+      "me\030\n \001(\t\022\022\n\ns1_mapname\030\013 \001(\t\022\020\n\010gamemode",
+      "\030\014 \001(\t\022\031\n\021server_ip_address\030\r \001(\t\022\014\n\004dat" +
+      "a\030\016 \001(\014\022\024\n\014is_localonly\030\017 \001(\010\"\"\n CNETMsg" +
+      "_ReliableMessageEndMarker*\336\002\n\014NET_Messag" +
+      "es\022\013\n\007net_NOP\020\000\022\022\n\016net_Disconnect\020\001\022\014\n\010n" +
+      "et_File\020\002\022\027\n\023net_SplitScreenUser\020\003\022\014\n\010ne" +
+      "t_Tick\020\004\022\021\n\rnet_StringCmd\020\005\022\021\n\rnet_SetCo" +
+      "nVar\020\006\022\023\n\017net_SignonState\020\007\022\027\n\023net_Spawn" +
+      "Group_Load\020\010\022!\n\035net_SpawnGroup_ManifestU" +
+      "pdate\020\t\022\"\n\036net_SpawnGroup_SetCreationTic" +
+      "k\020\013\022\031\n\025net_SpawnGroup_Unload\020\014\022 \n\034net_Sp",
+      "awnGroup_LoadCompleted\020\r\022 \n\034net_Reliable" +
+      "MessageEndMarker\020\016*\322\001\n\013SIGNONSTATE\022\024\n\020SI" +
+      "GNONSTATE_NONE\020\000\022\031\n\025SIGNONSTATE_CHALLENG" +
+      "E\020\001\022\031\n\025SIGNONSTATE_CONNECTED\020\002\022\023\n\017SIGNON" +
+      "STATE_NEW\020\003\022\030\n\024SIGNONSTATE_PRESPAWN\020\004\022\025\n" +
+      "\021SIGNONSTATE_SPAWN\020\005\022\024\n\020SIGNONSTATE_FULL" +
+      "\020\006\022\033\n\027SIGNONSTATE_CHANGELEVEL\020\007*\353\002\n\021Spaw" +
+      "nGroupFlags_t\022\'\n#SPAWN_GROUP_LOAD_ENTITI" +
+      "ES_FROM_SAVE\020\001\022#\n\037SPAWN_GROUP_DONT_SPAWN" +
+      "_ENTITIES\020\002\022!\n\035SPAWN_GROUP_SYNCHRONOUS_S",
+      "PAWN\020\004\022&\n\"SPAWN_GROUP_IS_INITIAL_SPAWN_G" +
+      "ROUP\020\010\022+\n\'SPAWN_GROUP_CREATE_CLIENT_ONLY" +
+      "_ENTITIES\020\020\022\035\n\031SPAWN_GROUP_SAVE_ENTITIES" +
+      "\020 \022\"\n\036SPAWN_GROUP_BLOCK_UNTIL_LOADED\020@\022$" +
+      "\n\037SPAWN_GROUP_LOAD_STREAMING_DATA\020\200\001\022\'\n\"" +
+      "SPAWN_GROUP_CREATE_NEW_SCENE_WORLD\020\200\002B;\n" +
+      "$skadistats.clarity.wire.common.protoB\020N" +
+      "etworkBaseTypes\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20722,7 +20880,7 @@ public final class NetworkBaseTypes {
     internal_static_CNETMsg_SpawnGroup_Load_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_Load_descriptor,
-        new java.lang.String[] { "Worldname", "Entitylumpname", "Entityfiltername", "Spawngrouphandle", "Spawngroupownerhandle", "WorldOffsetPos", "WorldOffsetAngle", "Spawngroupmanifest", "Flags", "Tickcount", "Manifestincomplete", "Localnamefixup", "Parentnamefixup", "Manifestloadpriority", "Worldgroupid", "Creationsequence", });
+        new java.lang.String[] { "Worldname", "Entitylumpname", "Entityfiltername", "Spawngrouphandle", "Spawngroupownerhandle", "WorldOffsetPos", "WorldOffsetAngle", "Spawngroupmanifest", "Flags", "Tickcount", "Manifestincomplete", "Localnamefixup", "Parentnamefixup", "Manifestloadpriority", "Worldgroupid", "Creationsequence", "Savegamefilename", });
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_fieldAccessorTable = new
