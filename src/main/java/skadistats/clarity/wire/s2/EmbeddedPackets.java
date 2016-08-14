@@ -4,7 +4,13 @@ import com.google.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.common.proto.DotaUserMessages;
 import skadistats.clarity.wire.common.proto.NetMessages;
 import skadistats.clarity.wire.common.proto.NetworkBaseTypes;
-import skadistats.clarity.wire.s2.proto.*;
+import skadistats.clarity.wire.s2.proto.S2DotaGcCommon;
+import skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata;
+import skadistats.clarity.wire.s2.proto.S2DotaUserMessages;
+import skadistats.clarity.wire.s2.proto.S2GameEvents;
+import skadistats.clarity.wire.s2.proto.S2NetMessages;
+import skadistats.clarity.wire.s2.proto.S2TempEntities;
+import skadistats.clarity.wire.s2.proto.S2UserMessages;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +18,8 @@ import java.util.Map;
 public class EmbeddedPackets {
 
     private static final Map<Integer, Class<? extends GeneratedMessage>> EMBED;
+    private static final Map<Class<? extends GeneratedMessage>, Integer> REVERSE;
+
     static {
         EMBED = new HashMap<>();
         /*   0 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
@@ -204,10 +212,21 @@ public class EmbeddedPackets {
 //        /* 555 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_XPAlert_VALUE, DotaUserMessages.CDOTAUserMsg_XPAlert.class);
 //        /* 556 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UpdateQuestProgress_VALUE, DotaUserMessages.CDOTAUserMsg_UpdateQuestProgress.class);
 //        /* 559 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QuestStatus_VALUE, DotaUserMessages.CDOTAUserMsg_QuestStatus.class);
+
+
+        REVERSE = new HashMap<>();
+        for (Map.Entry<Integer, Class<? extends GeneratedMessage>> e : EMBED.entrySet()) {
+            REVERSE.put(e.getValue(), e.getKey());
+        }
+
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {
         return EMBED.get(kind);
+    }
+
+    public static Integer kindForClass(Class<? extends GeneratedMessage> clazz) {
+        return REVERSE.get(clazz);
     }
 
 }
