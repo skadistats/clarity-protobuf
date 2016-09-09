@@ -35969,11 +35969,11 @@ public final class DotaUserMessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+     * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
      */
     boolean hasType();
     /**
-     * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+     * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
      */
     skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE getType();
 
@@ -44416,13 +44416,13 @@ public final class DotaUserMessages {
     public static final int TYPE_FIELD_NUMBER = 1;
     private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE type_;
     /**
-     * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+     * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+     * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
      */
     public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE getType() {
       return type_;
@@ -44761,10 +44761,6 @@ public final class DotaUserMessages {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasIndex()) {
         memoizedIsInitialized = 0;
         return false;
@@ -45333,10 +45329,6 @@ public final class DotaUserMessages {
       }
 
       public final boolean isInitialized() {
-        if (!hasType()) {
-          
-          return false;
-        }
         if (!hasIndex()) {
           
           return false;
@@ -45365,19 +45357,19 @@ public final class DotaUserMessages {
 
       private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE.DOTA_PARTICLE_MANAGER_EVENT_CREATE;
       /**
-       * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+       * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+       * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
        */
       public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE getType() {
         return type_;
       }
       /**
-       * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+       * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
        */
       public Builder setType(skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE value) {
         if (value == null) {
@@ -45389,7 +45381,7 @@ public final class DotaUserMessages {
         return this;
       }
       /**
-       * <code>required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
+       * <code>optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -97671,7 +97663,7 @@ public final class DotaUserMessages {
       "\030\001 \001(\005\"j\n\026CDOTAUserMsg_ItemFound\022\016\n\006play" +
       "er\030\001 \001(\005\022\017\n\007quality\030\002 \001(\005\022\016\n\006rarity\030\003 \001(" +
       "\005\022\016\n\006method\030\004 \001(\005\022\017\n\007itemdef\030\005 \001(\005\"\240\023\n\034C" +
-      "DOTAUserMsg_ParticleManager\022H\n\004type\030\001 \002(" +
+      "DOTAUserMsg_ParticleManager\022H\n\004type\030\001 \001(" +
       "\0162\026.DOTA_PARTICLE_MESSAGE:\"DOTA_PARTICLE" +
       "_MANAGER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022R\n\026" +
       "release_particle_index\030\003 \001(\01322.CDOTAUser" +
