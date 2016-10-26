@@ -47062,11 +47062,11 @@ public final class DotaUserMessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+     * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
      */
     boolean hasMessageType();
     /**
-     * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+     * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
      */
     skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT getMessageType();
 
@@ -47232,13 +47232,13 @@ public final class DotaUserMessages {
     public static final int MESSAGE_TYPE_FIELD_NUMBER = 1;
     private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT messageType_;
     /**
-     * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+     * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
      */
     public boolean hasMessageType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+     * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
      */
     public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT getMessageType() {
       return messageType_;
@@ -47317,10 +47317,6 @@ public final class DotaUserMessages {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasMessageType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -47583,10 +47579,6 @@ public final class DotaUserMessages {
       }
 
       public final boolean isInitialized() {
-        if (!hasMessageType()) {
-          
-          return false;
-        }
         return true;
       }
 
@@ -47611,19 +47603,19 @@ public final class DotaUserMessages {
 
       private skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT messageType_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT.OVERHEAD_ALERT_GOLD;
       /**
-       * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+       * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
        */
       public boolean hasMessageType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+       * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
        */
       public skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT getMessageType() {
         return messageType_;
       }
       /**
-       * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+       * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
        */
       public Builder setMessageType(skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_OVERHEAD_ALERT value) {
         if (value == null) {
@@ -47635,7 +47627,7 @@ public final class DotaUserMessages {
         return this;
       }
       /**
-       * <code>required .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
+       * <code>optional .DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];</code>
        */
       public Builder clearMessageType() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -97725,7 +97717,7 @@ public final class DotaUserMessages {
       "\022\025\n\rentity_handle\030\003 \001(\005\032L\n\024UpdateEntityP" +
       "osition\022\025\n\rentity_handle\030\001 \001(\005\022\035\n\010positi" +
       "on\030\002 \001(\0132\013.CMsgVector\"\305\001\n\032CDOTAUserMsg_O" +
-      "verheadEvent\022?\n\014message_type\030\001 \002(\0162\024.DOT" +
+      "verheadEvent\022?\n\014message_type\030\001 \001(\0162\024.DOT" +
       "A_OVERHEAD_ALERT:\023OVERHEAD_ALERT_GOLD\022\r\n" +
       "\005value\030\002 \001(\005\022\036\n\026target_player_entindex\030\003" +
       " \001(\005\022\027\n\017target_entindex\030\004 \001(\005\022\036\n\026source_",

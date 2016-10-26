@@ -703,7 +703,7 @@ message CDOTAUserMsg_ParticleManager {
 }
 
 message CDOTAUserMsg_OverheadEvent {
-    required DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];
+    optional DOTA_OVERHEAD_ALERT message_type = 1 [default = OVERHEAD_ALERT_GOLD];
     optional int32 value = 2;
     optional int32 target_player_entindex = 3;
     optional int32 target_entindex = 4;
