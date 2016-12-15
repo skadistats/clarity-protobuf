@@ -89,11 +89,8 @@ public class EmbeddedPackets {
 //        /* 142 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_CloseCaptionPlaceholder_VALUE, S2UserMessages.CUserMessageCloseCaptionPlaceholder.class);
 //        /* 143 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_CameraTransition_VALUE, S2UserMessages.CUserMessageCameraTransition.class);
 //        /* 144 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_AudioParameter_VALUE, S2UserMessages.CUserMessageAudioParameter.class);
-//        /* 145 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_ParticleManager_VALUE, null);
-//        /* 146 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_HudError_VALUE, null);
-//        /* 147 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_CustomGameEvent_ClientToServer_VALUE, null);
-//        /* 148 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_CustomGameEvent_ServerToClient_VALUE, null);
-//        /* 149 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_TrackedControllerInput_ClientToServer_VALUE, null);
+//        /* 148 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_CustomGameEvent_VALUE, null);
+//        /* 149 */ EMBED.put(S2UserMessages.EBaseUserMessages.UM_HandHapticPulse_VALUE, null);
 
         /* 205 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, NetMessages.CSVCMsg_GameEventList.class);
         /* 206 */ EMBED.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);
@@ -162,8 +159,6 @@ public class EmbeddedPackets {
 //        /* 480 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MinimapDebugPoint_VALUE, DotaUserMessages.CDOTAUserMsg_MinimapDebugPoint.class);
 //        /* 484 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SetNextAutobuyItem_VALUE, DotaUserMessages.CDOTAUserMsg_SetNextAutobuyItem.class);
 //        /* 487 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialTipInfo_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialTipInfo.class);
-//        /* 489 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
-//        /* 492 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemPurchased_VALUE, DotaUserMessages.CDOTAUserMsg_ItemPurchased.class);
 //        /* 493 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_Ping_VALUE, DotaUserMessages.CDOTAUserMsg_Ping.class);
 //        /* 494 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemFound_VALUE, DotaUserMessages.CDOTAUserMsg_ItemFound.class);
 //        /* 495 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CharacterSpeakConcept_VALUE, null);
@@ -179,7 +174,6 @@ public class EmbeddedPackets {
 //        /* 508 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialFade_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialFade.class);
 //        /* 509 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddQuestLogEntry_VALUE, DotaUserMessages.CDOTAUserMsg_AddQuestLogEntry.class);
 //        /* 511 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialFinish_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialFinish.class);
-//        /* 512 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanPopup.class);
 //        /* 513 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendGenericToolTip_VALUE, DotaUserMessages.CDOTAUserMsg_SendGenericToolTip.class);
 //        /* 514 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendFinalGold_VALUE, DotaUserMessages.CDOTAUserMsg_SendFinalGold.class);
 //        /* 515 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CustomMsg_VALUE, DotaUserMessages.CDOTAUserMsg_CustomMsg.class);
@@ -194,7 +188,6 @@ public class EmbeddedPackets {
 //        /* 529 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WillPurchaseAlert_VALUE, DotaUserMessages.CDOTAUserMsg_WillPurchaseAlert.class);
 //        /* 530 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TutorialMinimapPosition_VALUE, DotaUserMessages.CDOTAUserMsg_TutorialMinimapPosition.class);
 //        /* 531 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_PlayerMMR_VALUE, DotaUserMessages.CDOTAUserMsg_PlayerMMR.class);
-//        /* 534 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EnemyItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EnemyItemAlert.class);
 //        /* 535 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_StatsMatchDetails_VALUE, DotaUserMessages.CDOTAUserMsg_StatsMatchDetails.class);
 //        /* 536 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MiniTaunt_VALUE, DotaUserMessages.CDOTAUserMsg_MiniTaunt.class);
 //        /* 537 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_BuyBackStateAlert_VALUE, DotaUserMessages.CDOTAUserMsg_BuyBackStateAlert.class);
