@@ -1,2 +1,2 @@
 #!/bin/sh
-protoc --java_out=../../java *.proto
+protobuf2-protoc --java_out=../../java *.proto

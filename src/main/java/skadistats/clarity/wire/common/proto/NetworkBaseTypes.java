@@ -8753,6 +8753,20 @@ public final class NetworkBaseTypes {
      */
     com.google.protobuf.ByteString
         getMapNameBytes();
+
+    /**
+     * <code>optional string addons = 6;</code>
+     */
+    boolean hasAddons();
+    /**
+     * <code>optional string addons = 6;</code>
+     */
+    java.lang.String getAddons();
+    /**
+     * <code>optional string addons = 6;</code>
+     */
+    com.google.protobuf.ByteString
+        getAddonsBytes();
   }
   /**
    * Protobuf type {@code CNETMsg_SignonState}
@@ -8834,6 +8848,12 @@ public final class NetworkBaseTypes {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
               mapName_ = bs;
+              break;
+            }
+            case 50: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              addons_ = bs;
               break;
             }
           }
@@ -8995,12 +9015,55 @@ public final class NetworkBaseTypes {
       }
     }
 
+    public static final int ADDONS_FIELD_NUMBER = 6;
+    private java.lang.Object addons_;
+    /**
+     * <code>optional string addons = 6;</code>
+     */
+    public boolean hasAddons() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string addons = 6;</code>
+     */
+    public java.lang.String getAddons() {
+      java.lang.Object ref = addons_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          addons_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string addons = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAddonsBytes() {
+      java.lang.Object ref = addons_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        addons_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       signonState_ = 0;
       spawnCount_ = 0;
       numServerPlayers_ = 0;
       playersNetworkids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       mapName_ = "";
+      addons_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -9029,6 +9092,9 @@ public final class NetworkBaseTypes {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeBytes(5, getMapNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(6, getAddonsBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -9063,6 +9129,10 @@ public final class NetworkBaseTypes {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(5, getMapNameBytes());
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(6, getAddonsBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -9191,6 +9261,8 @@ public final class NetworkBaseTypes {
         bitField0_ = (bitField0_ & ~0x00000008);
         mapName_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
+        addons_ = "";
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -9240,6 +9312,10 @@ public final class NetworkBaseTypes {
           to_bitField0_ |= 0x00000008;
         }
         result.mapName_ = mapName_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.addons_ = addons_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -9278,6 +9354,11 @@ public final class NetworkBaseTypes {
         if (other.hasMapName()) {
           bitField0_ |= 0x00000010;
           mapName_ = other.mapName_;
+          onChanged();
+        }
+        if (other.hasAddons()) {
+          bitField0_ |= 0x00000020;
+          addons_ = other.addons_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -9568,6 +9649,82 @@ public final class NetworkBaseTypes {
   }
   bitField0_ |= 0x00000010;
         mapName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object addons_ = "";
+      /**
+       * <code>optional string addons = 6;</code>
+       */
+      public boolean hasAddons() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional string addons = 6;</code>
+       */
+      public java.lang.String getAddons() {
+        java.lang.Object ref = addons_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            addons_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string addons = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAddonsBytes() {
+        java.lang.Object ref = addons_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          addons_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string addons = 6;</code>
+       */
+      public Builder setAddons(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        addons_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string addons = 6;</code>
+       */
+      public Builder clearAddons() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        addons_ = getDefaultInstance().getAddons();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string addons = 6;</code>
+       */
+      public Builder setAddonsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000020;
+        addons_ = value;
         onChanged();
         return this;
       }
@@ -21297,137 +21454,137 @@ public final class NetworkBaseTypes {
       "n\030\005 \001(\r\022)\n!host_framestarttime_std_devia" +
       "tion\030\006 \001(\r\"$\n\021CNETMsg_StringCmd\022\017\n\007comma" +
       "nd\030\001 \001(\t\"1\n\021CNETMsg_SetConVar\022\034\n\007convars" +
-      "\030\001 \001(\0132\013.CMsg_CVars\"\212\001\n\023CNETMsg_SignonSt" +
+      "\030\001 \001(\0132\013.CMsg_CVars\"\232\001\n\023CNETMsg_SignonSt" +
       "ate\022\024\n\014signon_state\030\001 \001(\r\022\023\n\013spawn_count" +
       "\030\002 \001(\r\022\032\n\022num_server_players\030\003 \001(\r\022\032\n\022pl" +
       "ayers_networkids\030\004 \003(\t\022\020\n\010map_name\030\005 \001(\t" +
-      "\"\374\001\n\021CSVCMsg_GameEvent\022\022\n\nevent_name\030\001 \001" +
-      "(\t\022\017\n\007eventid\030\002 \001(\005\022&\n\004keys\030\003 \003(\0132\030.CSVC",
-      "Msg_GameEvent.key_t\032\231\001\n\005key_t\022\014\n\004type\030\001 " +
-      "\001(\005\022\022\n\nval_string\030\002 \001(\t\022\021\n\tval_float\030\003 \001" +
-      "(\002\022\020\n\010val_long\030\004 \001(\005\022\021\n\tval_short\030\005 \001(\005\022" +
-      "\020\n\010val_byte\030\006 \001(\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nv" +
-      "al_uint64\030\010 \001(\004\"\205\001\n\026CSVCMsgList_GameEven" +
-      "ts\022/\n\006events\030\001 \003(\0132\037.CSVCMsgList_GameEve" +
-      "nts.event_t\032:\n\007event_t\022\014\n\004tick\030\001 \001(\005\022!\n\005" +
-      "event\030\002 \001(\0132\022.CSVCMsg_GameEvent\"9\n\023CSVCM" +
-      "sg_UserMessage\022\020\n\010msg_type\030\001 \001(\005\022\020\n\010msg_" +
-      "data\030\002 \001(\014\"\217\001\n\030CSVCMsgList_UserMessages\022",
-      "5\n\010usermsgs\030\001 \003(\0132#.CSVCMsgList_UserMess" +
-      "ages.usermsg_t\032<\n\tusermsg_t\022\014\n\004tick\030\001 \001(" +
-      "\005\022!\n\003msg\030\002 \001(\0132\024.CSVCMsg_UserMessage\"\332\003\n" +
-      "\027CNETMsg_SpawnGroup_Load\022\021\n\tworldname\030\001 " +
-      "\001(\t\022\026\n\016entitylumpname\030\002 \001(\t\022\030\n\020entityfil" +
-      "tername\030\003 \001(\t\022\030\n\020spawngrouphandle\030\004 \001(\r\022" +
-      "\035\n\025spawngroupownerhandle\030\005 \001(\r\022%\n\020world_" +
-      "offset_pos\030\006 \001(\0132\013.CMsgVector\022\'\n\022world_o" +
-      "ffset_angle\030\007 \001(\0132\013.CMsgQAngle\022\032\n\022spawng" +
-      "roupmanifest\030\010 \001(\014\022\r\n\005flags\030\t \001(\r\022\021\n\ttic",
-      "kcount\030\n \001(\005\022\032\n\022manifestincomplete\030\013 \001(\010" +
-      "\022\026\n\016localnamefixup\030\014 \001(\t\022\027\n\017parentnamefi" +
-      "xup\030\r \001(\t\022\034\n\024manifestloadpriority\030\016 \001(\005\022" +
-      "\024\n\014worldgroupid\030\017 \001(\r\022\030\n\020creationsequenc" +
-      "e\030\020 \001(\r\022\030\n\020savegamefilename\030\021 \001(\t\"u\n!CNE" +
-      "TMsg_SpawnGroup_ManifestUpdate\022\030\n\020spawng" +
-      "rouphandle\030\001 \001(\r\022\032\n\022spawngroupmanifest\030\002" +
-      " \001(\014\022\032\n\022manifestincomplete\030\003 \001(\010\"k\n\"CNET" +
-      "Msg_SpawnGroup_SetCreationTick\022\030\n\020spawng" +
-      "rouphandle\030\001 \001(\r\022\021\n\ttickcount\030\002 \001(\005\022\030\n\020c",
-      "reationsequence\030\003 \001(\r\"W\n\031CNETMsg_SpawnGr" +
-      "oup_Unload\022\030\n\020spawngrouphandle\030\001 \001(\r\022\r\n\005" +
-      "flags\030\002 \001(\r\022\021\n\ttickcount\030\003 \001(\005\"<\n CNETMs" +
-      "g_SpawnGroup_LoadCompleted\022\030\n\020spawngroup" +
-      "handle\030\001 \001(\r\"\360\002\n CSVCMsg_GameSessionConf" +
-      "iguration\022\026\n\016is_multiplayer\030\001 \001(\010\022\027\n\017is_" +
-      "loadsavegame\030\002 \001(\010\022\031\n\021is_background_map\030" +
-      "\003 \001(\010\022\023\n\013is_headless\030\004 \001(\010\022\030\n\020min_client" +
-      "_limit\030\005 \001(\r\022\030\n\020max_client_limit\030\006 \001(\r\022\023" +
-      "\n\013max_clients\030\007 \001(\r\022\025\n\rtick_interval\030\010 \001",
-      "(\007\022\020\n\010hostname\030\t \001(\t\022\024\n\014savegamename\030\n \001" +
-      "(\t\022\022\n\ns1_mapname\030\013 \001(\t\022\020\n\010gamemode\030\014 \001(\t" +
-      "\022\031\n\021server_ip_address\030\r \001(\t\022\014\n\004data\030\016 \001(" +
-      "\014\022\024\n\014is_localonly\030\017 \001(\010\"\"\n CNETMsg_Relia" +
-      "bleMessageEndMarker*\336\002\n\014NET_Messages\022\013\n\007" +
-      "net_NOP\020\000\022\022\n\016net_Disconnect\020\001\022\014\n\010net_Fil" +
-      "e\020\002\022\027\n\023net_SplitScreenUser\020\003\022\014\n\010net_Tick" +
-      "\020\004\022\021\n\rnet_StringCmd\020\005\022\021\n\rnet_SetConVar\020\006" +
-      "\022\023\n\017net_SignonState\020\007\022\027\n\023net_SpawnGroup_" +
-      "Load\020\010\022!\n\035net_SpawnGroup_ManifestUpdate\020",
-      "\t\022\"\n\036net_SpawnGroup_SetCreationTick\020\013\022\031\n" +
-      "\025net_SpawnGroup_Unload\020\014\022 \n\034net_SpawnGro" +
-      "up_LoadCompleted\020\r\022 \n\034net_ReliableMessag" +
-      "eEndMarker\020\016*\322\001\n\013SIGNONSTATE\022\024\n\020SIGNONST" +
-      "ATE_NONE\020\000\022\031\n\025SIGNONSTATE_CHALLENGE\020\001\022\031\n" +
-      "\025SIGNONSTATE_CONNECTED\020\002\022\023\n\017SIGNONSTATE_" +
-      "NEW\020\003\022\030\n\024SIGNONSTATE_PRESPAWN\020\004\022\025\n\021SIGNO" +
-      "NSTATE_SPAWN\020\005\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027" +
-      "SIGNONSTATE_CHANGELEVEL\020\007*\353\002\n\021SpawnGroup" +
-      "Flags_t\022\'\n#SPAWN_GROUP_LOAD_ENTITIES_FRO",
-      "M_SAVE\020\001\022#\n\037SPAWN_GROUP_DONT_SPAWN_ENTIT" +
-      "IES\020\002\022!\n\035SPAWN_GROUP_SYNCHRONOUS_SPAWN\020\004" +
-      "\022&\n\"SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP\020\010" +
-      "\022+\n\'SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTIT" +
-      "IES\020\020\022\035\n\031SPAWN_GROUP_SAVE_ENTITIES\020 \022\"\n\036" +
-      "SPAWN_GROUP_BLOCK_UNTIL_LOADED\020@\022$\n\037SPAW" +
-      "N_GROUP_LOAD_STREAMING_DATA\020\200\001\022\'\n\"SPAWN_" +
-      "GROUP_CREATE_NEW_SCENE_WORLD\020\200\002*\227\021\n\033ENet" +
-      "workDisconnectionReason\022\036\n\032NETWORK_DISCO" +
-      "NNECT_INVALID\020\000\022\037\n\033NETWORK_DISCONNECT_SH",
-      "UTDOWN\020\001\022)\n%NETWORK_DISCONNECT_DISCONNEC" +
-      "T_BY_USER\020\002\022+\n\'NETWORK_DISCONNECT_DISCON" +
-      "NECT_BY_SERVER\020\003\022\033\n\027NETWORK_DISCONNECT_L" +
-      "OST\020\004\022\037\n\033NETWORK_DISCONNECT_OVERFLOW\020\005\022#" +
-      "\n\037NETWORK_DISCONNECT_STEAM_BANNED\020\006\022\"\n\036N" +
-      "ETWORK_DISCONNECT_STEAM_INUSE\020\007\022#\n\037NETWO" +
-      "RK_DISCONNECT_STEAM_TICKET\020\010\022\"\n\036NETWORK_" +
-      "DISCONNECT_STEAM_LOGON\020\t\022*\n&NETWORK_DISC" +
-      "ONNECT_STEAM_AUTHCANCELLED\020\n\022,\n(NETWORK_" +
-      "DISCONNECT_STEAM_AUTHALREADYUSED\020\013\022(\n$NE",
-      "TWORK_DISCONNECT_STEAM_AUTHINVALID\020\014\022(\n$" +
-      "NETWORK_DISCONNECT_STEAM_VACBANSTATE\020\r\0220" +
-      "\n,NETWORK_DISCONNECT_STEAM_LOGGED_IN_ELS" +
-      "EWHERE\020\016\022/\n+NETWORK_DISCONNECT_STEAM_VAC" +
-      "_CHECK_TIMEDOUT\020\017\022$\n NETWORK_DISCONNECT_" +
-      "STEAM_DROPPED\020\020\022&\n\"NETWORK_DISCONNECT_ST" +
-      "EAM_OWNERSHIP\020\021\022*\n&NETWORK_DISCONNECT_SE" +
-      "RVERINFO_OVERFLOW\020\022\022\'\n#NETWORK_DISCONNEC" +
-      "T_TICKMSG_OVERFLOW\020\023\022.\n*NETWORK_DISCONNE" +
-      "CT_STRINGTABLEMSG_OVERFLOW\020\024\022+\n\'NETWORK_",
-      "DISCONNECT_DELTAENTMSG_OVERFLOW\020\025\022*\n&NET" +
-      "WORK_DISCONNECT_TEMPENTMSG_OVERFLOW\020\026\022)\n" +
-      "%NETWORK_DISCONNECT_SOUNDSMSG_OVERFLOW\020\027" +
-      "\022\'\n#NETWORK_DISCONNECT_SNAPSHOTOVERFLOW\020" +
-      "\030\022$\n NETWORK_DISCONNECT_SNAPSHOTERROR\020\031\022" +
-      "\'\n#NETWORK_DISCONNECT_RELIABLEOVERFLOW\020\032" +
-      "\022#\n\037NETWORK_DISCONNECT_BADDELTATICK\020\033\022#\n" +
-      "\037NETWORK_DISCONNECT_NOMORESPLITS\020\034\022\037\n\033NE" +
-      "TWORK_DISCONNECT_TIMEDOUT\020\035\022#\n\037NETWORK_D" +
-      "ISCONNECT_DISCONNECTED\020\036\022#\n\037NETWORK_DISC",
-      "ONNECT_LEAVINGSPLIT\020\037\022+\n\'NETWORK_DISCONN" +
-      "ECT_DIFFERENTCLASSTABLES\020 \022\'\n#NETWORK_DI" +
-      "SCONNECT_BADRELAYPASSWORD\020!\022+\n\'NETWORK_D" +
-      "ISCONNECT_BADSPECTATORPASSWORD\020\"\022%\n!NETW" +
-      "ORK_DISCONNECT_HLTVRESTRICTED\020#\022#\n\037NETWO" +
-      "RK_DISCONNECT_NOSPECTATORS\020$\022&\n\"NETWORK_" +
-      "DISCONNECT_HLTVUNAVAILABLE\020%\022\037\n\033NETWORK_" +
-      "DISCONNECT_HLTVSTOP\020&\022\035\n\031NETWORK_DISCONN" +
-      "ECT_KICKED\020\'\022\037\n\033NETWORK_DISCONNECT_BANAD" +
-      "DED\020(\022#\n\037NETWORK_DISCONNECT_KICKBANADDED",
-      "\020)\022!\n\035NETWORK_DISCONNECT_HLTVDIRECT\020*\022-\n" +
-      ")NETWORK_DISCONNECT_PURESERVER_CLIENTEXT" +
-      "RA\020+\022*\n&NETWORK_DISCONNECT_PURESERVER_MI" +
-      "SMATCH\020,\022\036\n\032NETWORK_DISCONNECT_USERCMD\020-" +
-      "\022\'\n#NETWORK_DISCONNECT_REJECTED_BY_GAME\020" +
-      ".\022*\n&NETWORK_DISCONNECT_MESSAGE_PARSE_ER" +
-      "ROR\020/\022,\n(NETWORK_DISCONNECT_INVALID_MESS" +
-      "AGE_ERROR\0200\022*\n&NETWORK_DISCONNECT_BAD_SE" +
-      "RVER_PASSWORD\0201\0221\n-NETWORK_DISCONNECT_DI" +
-      "RECT_CONNECT_RESERVATION\0202\022)\n%NETWORK_DI",
-      "SCONNECT_CONNECTION_FAILURE\0203\022-\n)NETWORK" +
-      "_DISCONNECT_NO_PEER_GROUP_HANDLERS\0204\022#\n\037" +
-      "NETWORK_DISCONNECT_RECONNECTION\0205B;\n$ska" +
-      "distats.clarity.wire.common.protoB\020Netwo" +
-      "rkBaseTypes\200\001\000"
+      "\022\016\n\006addons\030\006 \001(\t\"\374\001\n\021CSVCMsg_GameEvent\022\022" +
+      "\n\nevent_name\030\001 \001(\t\022\017\n\007eventid\030\002 \001(\005\022&\n\004k",
+      "eys\030\003 \003(\0132\030.CSVCMsg_GameEvent.key_t\032\231\001\n\005" +
+      "key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_string\030\002 \001(\t\022" +
+      "\021\n\tval_float\030\003 \001(\002\022\020\n\010val_long\030\004 \001(\005\022\021\n\t" +
+      "val_short\030\005 \001(\005\022\020\n\010val_byte\030\006 \001(\005\022\020\n\010val" +
+      "_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010 \001(\004\"\205\001\n\026CSVC" +
+      "MsgList_GameEvents\022/\n\006events\030\001 \003(\0132\037.CSV" +
+      "CMsgList_GameEvents.event_t\032:\n\007event_t\022\014" +
+      "\n\004tick\030\001 \001(\005\022!\n\005event\030\002 \001(\0132\022.CSVCMsg_Ga" +
+      "meEvent\"9\n\023CSVCMsg_UserMessage\022\020\n\010msg_ty" +
+      "pe\030\001 \001(\005\022\020\n\010msg_data\030\002 \001(\014\"\217\001\n\030CSVCMsgLi",
+      "st_UserMessages\0225\n\010usermsgs\030\001 \003(\0132#.CSVC" +
+      "MsgList_UserMessages.usermsg_t\032<\n\tuserms" +
+      "g_t\022\014\n\004tick\030\001 \001(\005\022!\n\003msg\030\002 \001(\0132\024.CSVCMsg" +
+      "_UserMessage\"\332\003\n\027CNETMsg_SpawnGroup_Load" +
+      "\022\021\n\tworldname\030\001 \001(\t\022\026\n\016entitylumpname\030\002 " +
+      "\001(\t\022\030\n\020entityfiltername\030\003 \001(\t\022\030\n\020spawngr" +
+      "ouphandle\030\004 \001(\r\022\035\n\025spawngroupownerhandle" +
+      "\030\005 \001(\r\022%\n\020world_offset_pos\030\006 \001(\0132\013.CMsgV" +
+      "ector\022\'\n\022world_offset_angle\030\007 \001(\0132\013.CMsg" +
+      "QAngle\022\032\n\022spawngroupmanifest\030\010 \001(\014\022\r\n\005fl",
+      "ags\030\t \001(\r\022\021\n\ttickcount\030\n \001(\005\022\032\n\022manifest" +
+      "incomplete\030\013 \001(\010\022\026\n\016localnamefixup\030\014 \001(\t" +
+      "\022\027\n\017parentnamefixup\030\r \001(\t\022\034\n\024manifestloa" +
+      "dpriority\030\016 \001(\005\022\024\n\014worldgroupid\030\017 \001(\r\022\030\n" +
+      "\020creationsequence\030\020 \001(\r\022\030\n\020savegamefilen" +
+      "ame\030\021 \001(\t\"u\n!CNETMsg_SpawnGroup_Manifest" +
+      "Update\022\030\n\020spawngrouphandle\030\001 \001(\r\022\032\n\022spaw" +
+      "ngroupmanifest\030\002 \001(\014\022\032\n\022manifestincomple" +
+      "te\030\003 \001(\010\"k\n\"CNETMsg_SpawnGroup_SetCreati" +
+      "onTick\022\030\n\020spawngrouphandle\030\001 \001(\r\022\021\n\ttick",
+      "count\030\002 \001(\005\022\030\n\020creationsequence\030\003 \001(\r\"W\n" +
+      "\031CNETMsg_SpawnGroup_Unload\022\030\n\020spawngroup" +
+      "handle\030\001 \001(\r\022\r\n\005flags\030\002 \001(\r\022\021\n\ttickcount" +
+      "\030\003 \001(\005\"<\n CNETMsg_SpawnGroup_LoadComplet" +
+      "ed\022\030\n\020spawngrouphandle\030\001 \001(\r\"\360\002\n CSVCMsg" +
+      "_GameSessionConfiguration\022\026\n\016is_multipla" +
+      "yer\030\001 \001(\010\022\027\n\017is_loadsavegame\030\002 \001(\010\022\031\n\021is" +
+      "_background_map\030\003 \001(\010\022\023\n\013is_headless\030\004 \001" +
+      "(\010\022\030\n\020min_client_limit\030\005 \001(\r\022\030\n\020max_clie" +
+      "nt_limit\030\006 \001(\r\022\023\n\013max_clients\030\007 \001(\r\022\025\n\rt",
+      "ick_interval\030\010 \001(\007\022\020\n\010hostname\030\t \001(\t\022\024\n\014" +
+      "savegamename\030\n \001(\t\022\022\n\ns1_mapname\030\013 \001(\t\022\020" +
+      "\n\010gamemode\030\014 \001(\t\022\031\n\021server_ip_address\030\r " +
+      "\001(\t\022\014\n\004data\030\016 \001(\014\022\024\n\014is_localonly\030\017 \001(\010\"" +
+      "\"\n CNETMsg_ReliableMessageEndMarker*\336\002\n\014" +
+      "NET_Messages\022\013\n\007net_NOP\020\000\022\022\n\016net_Disconn" +
+      "ect\020\001\022\014\n\010net_File\020\002\022\027\n\023net_SplitScreenUs" +
+      "er\020\003\022\014\n\010net_Tick\020\004\022\021\n\rnet_StringCmd\020\005\022\021\n" +
+      "\rnet_SetConVar\020\006\022\023\n\017net_SignonState\020\007\022\027\n" +
+      "\023net_SpawnGroup_Load\020\010\022!\n\035net_SpawnGroup",
+      "_ManifestUpdate\020\t\022\"\n\036net_SpawnGroup_SetC" +
+      "reationTick\020\013\022\031\n\025net_SpawnGroup_Unload\020\014" +
+      "\022 \n\034net_SpawnGroup_LoadCompleted\020\r\022 \n\034ne" +
+      "t_ReliableMessageEndMarker\020\016*\322\001\n\013SIGNONS" +
+      "TATE\022\024\n\020SIGNONSTATE_NONE\020\000\022\031\n\025SIGNONSTAT" +
+      "E_CHALLENGE\020\001\022\031\n\025SIGNONSTATE_CONNECTED\020\002" +
+      "\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024SIGNONSTATE_PRE" +
+      "SPAWN\020\004\022\025\n\021SIGNONSTATE_SPAWN\020\005\022\024\n\020SIGNON" +
+      "STATE_FULL\020\006\022\033\n\027SIGNONSTATE_CHANGELEVEL\020" +
+      "\007*\353\002\n\021SpawnGroupFlags_t\022\'\n#SPAWN_GROUP_L",
+      "OAD_ENTITIES_FROM_SAVE\020\001\022#\n\037SPAWN_GROUP_" +
+      "DONT_SPAWN_ENTITIES\020\002\022!\n\035SPAWN_GROUP_SYN" +
+      "CHRONOUS_SPAWN\020\004\022&\n\"SPAWN_GROUP_IS_INITI" +
+      "AL_SPAWN_GROUP\020\010\022+\n\'SPAWN_GROUP_CREATE_C" +
+      "LIENT_ONLY_ENTITIES\020\020\022\035\n\031SPAWN_GROUP_SAV" +
+      "E_ENTITIES\020 \022\"\n\036SPAWN_GROUP_BLOCK_UNTIL_" +
+      "LOADED\020@\022$\n\037SPAWN_GROUP_LOAD_STREAMING_D" +
+      "ATA\020\200\001\022\'\n\"SPAWN_GROUP_CREATE_NEW_SCENE_W" +
+      "ORLD\020\200\002*\227\021\n\033ENetworkDisconnectionReason\022" +
+      "\036\n\032NETWORK_DISCONNECT_INVALID\020\000\022\037\n\033NETWO",
+      "RK_DISCONNECT_SHUTDOWN\020\001\022)\n%NETWORK_DISC" +
+      "ONNECT_DISCONNECT_BY_USER\020\002\022+\n\'NETWORK_D" +
+      "ISCONNECT_DISCONNECT_BY_SERVER\020\003\022\033\n\027NETW" +
+      "ORK_DISCONNECT_LOST\020\004\022\037\n\033NETWORK_DISCONN" +
+      "ECT_OVERFLOW\020\005\022#\n\037NETWORK_DISCONNECT_STE" +
+      "AM_BANNED\020\006\022\"\n\036NETWORK_DISCONNECT_STEAM_" +
+      "INUSE\020\007\022#\n\037NETWORK_DISCONNECT_STEAM_TICK" +
+      "ET\020\010\022\"\n\036NETWORK_DISCONNECT_STEAM_LOGON\020\t" +
+      "\022*\n&NETWORK_DISCONNECT_STEAM_AUTHCANCELL" +
+      "ED\020\n\022,\n(NETWORK_DISCONNECT_STEAM_AUTHALR",
+      "EADYUSED\020\013\022(\n$NETWORK_DISCONNECT_STEAM_A" +
+      "UTHINVALID\020\014\022(\n$NETWORK_DISCONNECT_STEAM" +
+      "_VACBANSTATE\020\r\0220\n,NETWORK_DISCONNECT_STE" +
+      "AM_LOGGED_IN_ELSEWHERE\020\016\022/\n+NETWORK_DISC" +
+      "ONNECT_STEAM_VAC_CHECK_TIMEDOUT\020\017\022$\n NET" +
+      "WORK_DISCONNECT_STEAM_DROPPED\020\020\022&\n\"NETWO" +
+      "RK_DISCONNECT_STEAM_OWNERSHIP\020\021\022*\n&NETWO" +
+      "RK_DISCONNECT_SERVERINFO_OVERFLOW\020\022\022\'\n#N" +
+      "ETWORK_DISCONNECT_TICKMSG_OVERFLOW\020\023\022.\n*" +
+      "NETWORK_DISCONNECT_STRINGTABLEMSG_OVERFL",
+      "OW\020\024\022+\n\'NETWORK_DISCONNECT_DELTAENTMSG_O" +
+      "VERFLOW\020\025\022*\n&NETWORK_DISCONNECT_TEMPENTM" +
+      "SG_OVERFLOW\020\026\022)\n%NETWORK_DISCONNECT_SOUN" +
+      "DSMSG_OVERFLOW\020\027\022\'\n#NETWORK_DISCONNECT_S" +
+      "NAPSHOTOVERFLOW\020\030\022$\n NETWORK_DISCONNECT_" +
+      "SNAPSHOTERROR\020\031\022\'\n#NETWORK_DISCONNECT_RE" +
+      "LIABLEOVERFLOW\020\032\022#\n\037NETWORK_DISCONNECT_B" +
+      "ADDELTATICK\020\033\022#\n\037NETWORK_DISCONNECT_NOMO" +
+      "RESPLITS\020\034\022\037\n\033NETWORK_DISCONNECT_TIMEDOU" +
+      "T\020\035\022#\n\037NETWORK_DISCONNECT_DISCONNECTED\020\036",
+      "\022#\n\037NETWORK_DISCONNECT_LEAVINGSPLIT\020\037\022+\n" +
+      "\'NETWORK_DISCONNECT_DIFFERENTCLASSTABLES" +
+      "\020 \022\'\n#NETWORK_DISCONNECT_BADRELAYPASSWOR" +
+      "D\020!\022+\n\'NETWORK_DISCONNECT_BADSPECTATORPA" +
+      "SSWORD\020\"\022%\n!NETWORK_DISCONNECT_HLTVRESTR" +
+      "ICTED\020#\022#\n\037NETWORK_DISCONNECT_NOSPECTATO" +
+      "RS\020$\022&\n\"NETWORK_DISCONNECT_HLTVUNAVAILAB" +
+      "LE\020%\022\037\n\033NETWORK_DISCONNECT_HLTVSTOP\020&\022\035\n" +
+      "\031NETWORK_DISCONNECT_KICKED\020\'\022\037\n\033NETWORK_" +
+      "DISCONNECT_BANADDED\020(\022#\n\037NETWORK_DISCONN",
+      "ECT_KICKBANADDED\020)\022!\n\035NETWORK_DISCONNECT" +
+      "_HLTVDIRECT\020*\022-\n)NETWORK_DISCONNECT_PURE" +
+      "SERVER_CLIENTEXTRA\020+\022*\n&NETWORK_DISCONNE" +
+      "CT_PURESERVER_MISMATCH\020,\022\036\n\032NETWORK_DISC" +
+      "ONNECT_USERCMD\020-\022\'\n#NETWORK_DISCONNECT_R" +
+      "EJECTED_BY_GAME\020.\022*\n&NETWORK_DISCONNECT_" +
+      "MESSAGE_PARSE_ERROR\020/\022,\n(NETWORK_DISCONN" +
+      "ECT_INVALID_MESSAGE_ERROR\0200\022*\n&NETWORK_D" +
+      "ISCONNECT_BAD_SERVER_PASSWORD\0201\0221\n-NETWO" +
+      "RK_DISCONNECT_DIRECT_CONNECT_RESERVATION",
+      "\0202\022)\n%NETWORK_DISCONNECT_CONNECTION_FAIL" +
+      "URE\0203\022-\n)NETWORK_DISCONNECT_NO_PEER_GROU" +
+      "P_HANDLERS\0204\022#\n\037NETWORK_DISCONNECT_RECON" +
+      "NECTION\0205B;\n$skadistats.clarity.wire.com" +
+      "mon.protoB\020NetworkBaseTypes\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21524,7 +21681,7 @@ public final class NetworkBaseTypes {
     internal_static_CNETMsg_SignonState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SignonState_descriptor,
-        new java.lang.String[] { "SignonState", "SpawnCount", "NumServerPlayers", "PlayersNetworkids", "MapName", });
+        new java.lang.String[] { "SignonState", "SpawnCount", "NumServerPlayers", "PlayersNetworkids", "MapName", "Addons", });
     internal_static_CSVCMsg_GameEvent_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_CSVCMsg_GameEvent_fieldAccessorTable = new

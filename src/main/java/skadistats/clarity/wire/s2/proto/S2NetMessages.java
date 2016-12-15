@@ -305,9 +305,13 @@ public final class S2NetMessages {
      */
     svc_HLTVStatus(22, 62),
     /**
+     * <code>svc_ServerSteamID = 63;</code>
+     */
+    svc_ServerSteamID(23, 63),
+    /**
      * <code>svc_FullFrameSplit = 70;</code>
      */
-    svc_FullFrameSplit(23, 70),
+    svc_FullFrameSplit(24, 70),
     ;
 
     /**
@@ -403,6 +407,10 @@ public final class S2NetMessages {
      */
     public static final int svc_HLTVStatus_VALUE = 62;
     /**
+     * <code>svc_ServerSteamID = 63;</code>
+     */
+    public static final int svc_ServerSteamID_VALUE = 63;
+    /**
      * <code>svc_FullFrameSplit = 70;</code>
      */
     public static final int svc_FullFrameSplit_VALUE = 70;
@@ -435,6 +443,7 @@ public final class S2NetMessages {
         case 60: return svc_PeerList;
         case 61: return svc_PacketReliable;
         case 62: return svc_HLTVStatus;
+        case 63: return svc_ServerSteamID;
         case 70: return svc_FullFrameSplit;
         default: return null;
       }
@@ -8749,6 +8758,403 @@ public final class S2NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_HLTVStatus)
   }
 
+  public interface CSVCMsg_ServerSteamIDOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_ServerSteamID)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint64 steam_id = 1;</code>
+     */
+    boolean hasSteamId();
+    /**
+     * <code>optional uint64 steam_id = 1;</code>
+     */
+    long getSteamId();
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_ServerSteamID}
+   */
+  public static final class CSVCMsg_ServerSteamID extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_ServerSteamID)
+      CSVCMsg_ServerSteamIDOrBuilder {
+    // Use CSVCMsg_ServerSteamID.newBuilder() to construct.
+    private CSVCMsg_ServerSteamID(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_ServerSteamID(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_ServerSteamID defaultInstance;
+    public static CSVCMsg_ServerSteamID getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_ServerSteamID getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_ServerSteamID(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              steamId_ = input.readUInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_ServerSteamID_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_ServerSteamID_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_ServerSteamID> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_ServerSteamID>() {
+      public CSVCMsg_ServerSteamID parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_ServerSteamID(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_ServerSteamID> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int STEAM_ID_FIELD_NUMBER = 1;
+    private long steamId_;
+    /**
+     * <code>optional uint64 steam_id = 1;</code>
+     */
+    public boolean hasSteamId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint64 steam_id = 1;</code>
+     */
+    public long getSteamId() {
+      return steamId_;
+    }
+
+    private void initFields() {
+      steamId_ = 0L;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt64(1, steamId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(1, steamId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_ServerSteamID}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_ServerSteamID)
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamIDOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_ServerSteamID_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_ServerSteamID_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.class, skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        steamId_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.internal_static_CSVCMsg_ServerSteamID_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID build() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID result = new skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.steamId_ = steamId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID.getDefaultInstance()) return this;
+        if (other.hasSteamId()) {
+          setSteamId(other.getSteamId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2NetMessages.CSVCMsg_ServerSteamID) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private long steamId_ ;
+      /**
+       * <code>optional uint64 steam_id = 1;</code>
+       */
+      public boolean hasSteamId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint64 steam_id = 1;</code>
+       */
+      public long getSteamId() {
+        return steamId_;
+      }
+      /**
+       * <code>optional uint64 steam_id = 1;</code>
+       */
+      public Builder setSteamId(long value) {
+        bitField0_ |= 0x00000001;
+        steamId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint64 steam_id = 1;</code>
+       */
+      public Builder clearSteamId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        steamId_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_ServerSteamID)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_ServerSteamID(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_ServerSteamID)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_CreateStringTable_descriptor;
   private static
@@ -8799,6 +9205,11 @@ public final class S2NetMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_HLTVStatus_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_ServerSteamID_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_ServerSteamID_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -8842,30 +9253,32 @@ public final class S2NetMessages {
       "\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CM" +
       "sgServerPeer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006ma" +
       "ster\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001" +
-      "(\005\022\017\n\007proxies\030\004 \001(\005*\337\002\n\014CLC_Messages\022\022\n\016" +
-      "clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc_Vo" +
-      "iceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020clc_Li" +
-      "stenEvents\020\030\022\030\n\024clc_RespondCvarValue\020\031\022\024" +
-      "\n\020clc_FileCRCCheck\020\032\022\027\n\023clc_LoadingProgr" +
-      "ess\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\025\n\021clc",
-      "_ClientMessage\020\035\022\035\n\031clc_SplitPlayerDisco" +
-      "nnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016clc_Ser" +
-      "verPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020clc_C" +
-      "mdKeyValues\020\"*\202\004\n\014SVC_Messages\022\022\n\016svc_Se" +
-      "rverInfo\020(\022\033\n\027svc_FlattenedSerializer\020)\022" +
-      "\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025" +
-      "svc_CreateStringTable\020,\022\031\n\025svc_UpdateStr" +
-      "ingTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_Voi" +
-      "ceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds\0201\022" +
-      "\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStringTa",
-      "bles\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_BSPD" +
-      "ecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc_Packe" +
-      "tEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_Men" +
-      "u\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_StopSou" +
-      "nd\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_PacketReli" +
-      "able\020=\022\022\n\016svc_HLTVStatus\020>\022\026\n\022svc_FullFr" +
-      "ameSplit\020FB4\n skadistats.clarity.wire.s2" +
-      ".protoB\rS2NetMessages\200\001\000"
+      "(\005\022\017\n\007proxies\030\004 \001(\005\")\n\025CSVCMsg_ServerSte" +
+      "amID\022\020\n\010steam_id\030\001 \001(\004*\337\002\n\014CLC_Messages\022" +
+      "\022\n\016clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc" +
+      "_VoiceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020clc" +
+      "_ListenEvents\020\030\022\030\n\024clc_RespondCvarValue\020" +
+      "\031\022\024\n\020clc_FileCRCCheck\020\032\022\027\n\023clc_LoadingPr",
+      "ogress\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\025\n\021" +
+      "clc_ClientMessage\020\035\022\035\n\031clc_SplitPlayerDi" +
+      "sconnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016clc_" +
+      "ServerPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020cl" +
+      "c_CmdKeyValues\020\"*\231\004\n\014SVC_Messages\022\022\n\016svc" +
+      "_ServerInfo\020(\022\033\n\027svc_FlattenedSerializer" +
+      "\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022" +
+      "\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_Update" +
+      "StringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_" +
+      "VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sounds",
+      "\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllStrin" +
+      "gTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014svc_B" +
+      "SPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc_Pa" +
+      "cketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_" +
+      "Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_Stop" +
+      "Sound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_PacketR" +
+      "eliable\020=\022\022\n\016svc_HLTVStatus\020>\022\025\n\021svc_Ser" +
+      "verSteamID\020?\022\026\n\022svc_FullFrameSplit\020FB4\n " +
+      "skadistats.clarity.wire.s2.protoB\rS2NetM" +
+      "essages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -8940,6 +9353,12 @@ public final class S2NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_HLTVStatus_descriptor,
         new java.lang.String[] { "Master", "Clients", "Slots", "Proxies", });
+    internal_static_CSVCMsg_ServerSteamID_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_CSVCMsg_ServerSteamID_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_ServerSteamID_descriptor,
+        new java.lang.String[] { "SteamId", });
     skadistats.clarity.wire.common.proto.NetMessages.getDescriptor();
   }
 

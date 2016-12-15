@@ -100,4 +100,6 @@ enum EDotaUserMessages {
 	DOTA_UM_MatchMetadata = 557;
 	DOTA_UM_MatchDetails = 558;
 	DOTA_UM_QuestStatus = 559;
+	DOTA_UM_SuggestHeroPick = 560;
+	DOTA_UM_SuggestHeroRole = 561;
 }

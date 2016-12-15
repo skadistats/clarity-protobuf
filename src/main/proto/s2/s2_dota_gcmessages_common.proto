@@ -30,6 +30,17 @@ enum DOTA_GameMode {
     DOTA_GAMEMODE_ALL_DRAFT = 22;
 }
 
+enum EMatchOutcome {
+    k_EMatchOutcome_Unknown = 0;
+    k_EMatchOutcome_RadVictory = 2;
+    k_EMatchOutcome_DireVictory = 3;
+    k_EMatchOutcome_NotScored_PoorNetworkConditions = 64;
+    k_EMatchOutcome_NotScored_Leaver = 65;
+    k_EMatchOutcome_NotScored_ServerCrash = 66;
+    k_EMatchOutcome_NotScored_NeverStarted = 67;
+    k_EMatchOutcome_NotScored_Canceled = 68;
+}
+
 message CMatchPlayerAbilityUpgrade {
     optional uint32 ability = 1;
     optional uint32 time = 2;
@@ -38,6 +49,11 @@ message CMatchPlayerAbilityUpgrade {
 message CMatchAdditionalUnitInventory {
     optional string unit_name = 1;
     repeated uint32 items = 2;
+}
+
+message CMatchPlayerPermanentBuff {
+    optional uint32 permanent_buff = 1;
+    optional uint32 stack_count = 2;
 }
 
 message CMatchHeroSelectEvent {
@@ -65,7 +81,7 @@ message CMsgDOTAMatch {
         optional float expected_team_contribution = 10;
         optional float scaled_metric = 11;
         optional uint32 previous_rank = 12;
-        optional uint32 rank_change = 13;
+        optional sint32 rank_change = 13;
         optional bool solo_rank = 49;
         optional uint32 kills = 14;
         optional uint32 deaths = 15;
@@ -90,6 +106,9 @@ message CMsgDOTAMatch {
         optional int32 rank_uncertainty_change = 36;
         optional uint32 hero_play_count = 37;
         optional fixed64 party_id = 38;
+        optional uint32 scaled_hero_damage = 54;
+        optional uint32 scaled_tower_damage = 55;
+        optional uint32 scaled_hero_healing = 56;
         optional float scaled_kills = 39;
         optional float scaled_deaths = 40;
         optional float scaled_assists = 41;
@@ -100,9 +119,11 @@ message CMsgDOTAMatch {
         optional uint32 misses = 46;
         repeated .CMatchPlayerAbilityUpgrade ability_upgrades = 47;
         repeated .CMatchAdditionalUnitInventory additional_units_inventory = 48;
+        repeated .CMatchPlayerPermanentBuff permanent_buffs = 57;
         optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;
         optional bool active_battle_pass = 51;
         optional uint32 net_worth = 52;
+        optional uint32 bot_difficulty = 58;
     }
 
     message BroadcasterInfo {
@@ -172,4 +193,9 @@ message CMsgDOTAMatch {
     optional fixed32 private_metadata_key = 47;
     optional uint32 radiant_team_score = 48;
     optional uint32 dire_team_score = 49;
+    optional .EMatchOutcome match_outcome = 50 [default = k_EMatchOutcome_Unknown];
+    optional uint32 tournament_id = 51;
+    optional uint32 tournament_round = 52;
+    optional uint32 pre_game_duration = 53;
+
 }
