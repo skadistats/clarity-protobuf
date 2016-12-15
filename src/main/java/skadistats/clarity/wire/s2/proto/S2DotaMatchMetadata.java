@@ -3147,6 +3147,481 @@ public final class S2DotaMatchMetadata {
         // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.InventorySnapshot)
       }
 
+      public interface AutoStyleCriteriaOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.AutoStyleCriteria)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 name_token = 1;</code>
+         */
+        boolean hasNameToken();
+        /**
+         * <code>optional uint32 name_token = 1;</code>
+         */
+        int getNameToken();
+
+        /**
+         * <code>optional float value = 2;</code>
+         */
+        boolean hasValue();
+        /**
+         * <code>optional float value = 2;</code>
+         */
+        float getValue();
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.Team.AutoStyleCriteria}
+       */
+      public static final class AutoStyleCriteria extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Team.AutoStyleCriteria)
+          AutoStyleCriteriaOrBuilder {
+        // Use AutoStyleCriteria.newBuilder() to construct.
+        private AutoStyleCriteria(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private AutoStyleCriteria(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final AutoStyleCriteria defaultInstance;
+        public static AutoStyleCriteria getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public AutoStyleCriteria getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private AutoStyleCriteria(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  nameToken_ = input.readUInt32();
+                  break;
+                }
+                case 21: {
+                  bitField0_ |= 0x00000002;
+                  value_ = input.readFloat();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<AutoStyleCriteria> PARSER =
+            new com.google.protobuf.AbstractParser<AutoStyleCriteria>() {
+          public AutoStyleCriteria parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new AutoStyleCriteria(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<AutoStyleCriteria> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int NAME_TOKEN_FIELD_NUMBER = 1;
+        private int nameToken_;
+        /**
+         * <code>optional uint32 name_token = 1;</code>
+         */
+        public boolean hasNameToken() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 name_token = 1;</code>
+         */
+        public int getNameToken() {
+          return nameToken_;
+        }
+
+        public static final int VALUE_FIELD_NUMBER = 2;
+        private float value_;
+        /**
+         * <code>optional float value = 2;</code>
+         */
+        public boolean hasValue() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional float value = 2;</code>
+         */
+        public float getValue() {
+          return value_;
+        }
+
+        private void initFields() {
+          nameToken_ = 0;
+          value_ = 0F;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(1, nameToken_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeFloat(2, value_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, nameToken_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(2, value_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.Team.AutoStyleCriteria}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Team.AutoStyleCriteria)
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            nameToken_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            value_ = 0F;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_descriptor;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria getDefaultInstanceForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria build() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria buildPartial() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.nameToken_ = nameToken_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.value_ = value_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria) {
+              return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria other) {
+            if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.getDefaultInstance()) return this;
+            if (other.hasNameToken()) {
+              setNameToken(other.getNameToken());
+            }
+            if (other.hasValue()) {
+              setValue(other.getValue());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int nameToken_ ;
+          /**
+           * <code>optional uint32 name_token = 1;</code>
+           */
+          public boolean hasNameToken() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 name_token = 1;</code>
+           */
+          public int getNameToken() {
+            return nameToken_;
+          }
+          /**
+           * <code>optional uint32 name_token = 1;</code>
+           */
+          public Builder setNameToken(int value) {
+            bitField0_ |= 0x00000001;
+            nameToken_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 name_token = 1;</code>
+           */
+          public Builder clearNameToken() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            nameToken_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private float value_ ;
+          /**
+           * <code>optional float value = 2;</code>
+           */
+          public boolean hasValue() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional float value = 2;</code>
+           */
+          public float getValue() {
+            return value_;
+          }
+          /**
+           * <code>optional float value = 2;</code>
+           */
+          public Builder setValue(float value) {
+            bitField0_ |= 0x00000002;
+            value_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional float value = 2;</code>
+           */
+          public Builder clearValue() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            value_ = 0F;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.AutoStyleCriteria)
+        }
+
+        static {
+          defaultInstance = new AutoStyleCriteria(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.AutoStyleCriteria)
+      }
+
       public interface PlayerOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.Player)
           com.google.protobuf.MessageOrBuilder {
@@ -3447,6 +3922,30 @@ public final class S2DotaMatchMetadata {
          * <code>optional bool avg_stats_calibrated = 25;</code>
          */
         boolean getAvgStatsCalibrated();
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria> 
+            getAutoStyleCriteriaList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria getAutoStyleCriteria(int index);
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        int getAutoStyleCriteriaCount();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder> 
+            getAutoStyleCriteriaOrBuilderList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder getAutoStyleCriteriaOrBuilder(
+            int index);
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -3685,6 +4184,14 @@ public final class S2DotaMatchMetadata {
                   avgStatsCalibrated_ = input.readBool();
                   break;
                 }
+                case 210: {
+                  if (!((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+                    autoStyleCriteria_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria>();
+                    mutable_bitField0_ |= 0x02000000;
+                  }
+                  autoStyleCriteria_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.PARSER, extensionRegistry));
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -3713,6 +4220,9 @@ public final class S2DotaMatchMetadata {
             }
             if (((mutable_bitField0_ & 0x00800000) == 0x00800000)) {
               inventorySnapshot_ = java.util.Collections.unmodifiableList(inventorySnapshot_);
+            }
+            if (((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
+              autoStyleCriteria_ = java.util.Collections.unmodifiableList(autoStyleCriteria_);
             }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
@@ -4222,6 +4732,41 @@ public final class S2DotaMatchMetadata {
           return avgStatsCalibrated_;
         }
 
+        public static final int AUTO_STYLE_CRITERIA_FIELD_NUMBER = 26;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria> autoStyleCriteria_;
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria> getAutoStyleCriteriaList() {
+          return autoStyleCriteria_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder> 
+            getAutoStyleCriteriaOrBuilderList() {
+          return autoStyleCriteria_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        public int getAutoStyleCriteriaCount() {
+          return autoStyleCriteria_.size();
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria getAutoStyleCriteria(int index) {
+          return autoStyleCriteria_.get(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder getAutoStyleCriteriaOrBuilder(
+            int index) {
+          return autoStyleCriteria_.get(index);
+        }
+
         private void initFields() {
           accountId_ = 0;
           abilityUpgrades_ = java.util.Collections.emptyList();
@@ -4248,6 +4793,7 @@ public final class S2DotaMatchMetadata {
           graphNetWorth_ = java.util.Collections.emptyList();
           inventorySnapshot_ = java.util.Collections.emptyList();
           avgStatsCalibrated_ = false;
+          autoStyleCriteria_ = java.util.Collections.emptyList();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -4336,6 +4882,9 @@ public final class S2DotaMatchMetadata {
           }
           if (((bitField0_ & 0x00020000) == 0x00020000)) {
             output.writeBool(25, avgStatsCalibrated_);
+          }
+          for (int i = 0; i < autoStyleCriteria_.size(); i++) {
+            output.writeMessage(26, autoStyleCriteria_.get(i));
           }
           getUnknownFields().writeTo(output);
         }
@@ -4458,6 +5007,10 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeBoolSize(25, avgStatsCalibrated_);
           }
+          for (int i = 0; i < autoStyleCriteria_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(26, autoStyleCriteria_.get(i));
+          }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
           return size;
@@ -4571,6 +5124,7 @@ public final class S2DotaMatchMetadata {
               getKillsFieldBuilder();
               getItemsFieldBuilder();
               getInventorySnapshotFieldBuilder();
+              getAutoStyleCriteriaFieldBuilder();
             }
           }
           private static Builder create() {
@@ -4645,6 +5199,12 @@ public final class S2DotaMatchMetadata {
             }
             avgStatsCalibrated_ = false;
             bitField0_ = (bitField0_ & ~0x01000000);
+            if (autoStyleCriteriaBuilder_ == null) {
+              autoStyleCriteria_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x02000000);
+            } else {
+              autoStyleCriteriaBuilder_.clear();
+            }
             return this;
           }
 
@@ -4796,6 +5356,15 @@ public final class S2DotaMatchMetadata {
               to_bitField0_ |= 0x00020000;
             }
             result.avgStatsCalibrated_ = avgStatsCalibrated_;
+            if (autoStyleCriteriaBuilder_ == null) {
+              if (((bitField0_ & 0x02000000) == 0x02000000)) {
+                autoStyleCriteria_ = java.util.Collections.unmodifiableList(autoStyleCriteria_);
+                bitField0_ = (bitField0_ & ~0x02000000);
+              }
+              result.autoStyleCriteria_ = autoStyleCriteria_;
+            } else {
+              result.autoStyleCriteria_ = autoStyleCriteriaBuilder_.build();
+            }
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -4999,6 +5568,32 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasAvgStatsCalibrated()) {
               setAvgStatsCalibrated(other.getAvgStatsCalibrated());
+            }
+            if (autoStyleCriteriaBuilder_ == null) {
+              if (!other.autoStyleCriteria_.isEmpty()) {
+                if (autoStyleCriteria_.isEmpty()) {
+                  autoStyleCriteria_ = other.autoStyleCriteria_;
+                  bitField0_ = (bitField0_ & ~0x02000000);
+                } else {
+                  ensureAutoStyleCriteriaIsMutable();
+                  autoStyleCriteria_.addAll(other.autoStyleCriteria_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.autoStyleCriteria_.isEmpty()) {
+                if (autoStyleCriteriaBuilder_.isEmpty()) {
+                  autoStyleCriteriaBuilder_.dispose();
+                  autoStyleCriteriaBuilder_ = null;
+                  autoStyleCriteria_ = other.autoStyleCriteria_;
+                  bitField0_ = (bitField0_ & ~0x02000000);
+                  autoStyleCriteriaBuilder_ = 
+                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                       getAutoStyleCriteriaFieldBuilder() : null;
+                } else {
+                  autoStyleCriteriaBuilder_.addAllMessages(other.autoStyleCriteria_);
+                }
+              }
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -6759,6 +7354,246 @@ public final class S2DotaMatchMetadata {
             avgStatsCalibrated_ = false;
             onChanged();
             return this;
+          }
+
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria> autoStyleCriteria_ =
+            java.util.Collections.emptyList();
+          private void ensureAutoStyleCriteriaIsMutable() {
+            if (!((bitField0_ & 0x02000000) == 0x02000000)) {
+              autoStyleCriteria_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria>(autoStyleCriteria_);
+              bitField0_ |= 0x02000000;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder> autoStyleCriteriaBuilder_;
+
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria> getAutoStyleCriteriaList() {
+            if (autoStyleCriteriaBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(autoStyleCriteria_);
+            } else {
+              return autoStyleCriteriaBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public int getAutoStyleCriteriaCount() {
+            if (autoStyleCriteriaBuilder_ == null) {
+              return autoStyleCriteria_.size();
+            } else {
+              return autoStyleCriteriaBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria getAutoStyleCriteria(int index) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              return autoStyleCriteria_.get(index);
+            } else {
+              return autoStyleCriteriaBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder setAutoStyleCriteria(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria value) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.set(index, value);
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder setAutoStyleCriteria(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder builderForValue) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder addAutoStyleCriteria(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria value) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.add(value);
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder addAutoStyleCriteria(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria value) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.add(index, value);
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder addAutoStyleCriteria(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder builderForValue) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.add(builderForValue.build());
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder addAutoStyleCriteria(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder builderForValue) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder addAllAutoStyleCriteria(
+              java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria> values) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              ensureAutoStyleCriteriaIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, autoStyleCriteria_);
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder clearAutoStyleCriteria() {
+            if (autoStyleCriteriaBuilder_ == null) {
+              autoStyleCriteria_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x02000000);
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public Builder removeAutoStyleCriteria(int index) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              ensureAutoStyleCriteriaIsMutable();
+              autoStyleCriteria_.remove(index);
+              onChanged();
+            } else {
+              autoStyleCriteriaBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder getAutoStyleCriteriaBuilder(
+              int index) {
+            return getAutoStyleCriteriaFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder getAutoStyleCriteriaOrBuilder(
+              int index) {
+            if (autoStyleCriteriaBuilder_ == null) {
+              return autoStyleCriteria_.get(index);  } else {
+              return autoStyleCriteriaBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder> 
+               getAutoStyleCriteriaOrBuilderList() {
+            if (autoStyleCriteriaBuilder_ != null) {
+              return autoStyleCriteriaBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(autoStyleCriteria_);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder addAutoStyleCriteriaBuilder() {
+            return getAutoStyleCriteriaFieldBuilder().addBuilder(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder addAutoStyleCriteriaBuilder(
+              int index) {
+            return getAutoStyleCriteriaFieldBuilder().addBuilder(
+                index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.AutoStyleCriteria auto_style_criteria = 26;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder> 
+               getAutoStyleCriteriaBuilderList() {
+            return getAutoStyleCriteriaFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder> 
+              getAutoStyleCriteriaFieldBuilder() {
+            if (autoStyleCriteriaBuilder_ == null) {
+              autoStyleCriteriaBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder>(
+                      autoStyleCriteria_,
+                      ((bitField0_ & 0x02000000) == 0x02000000),
+                      getParentForChildren(),
+                      isClean());
+              autoStyleCriteria_ = null;
+            }
+            return autoStyleCriteriaBuilder_;
           }
 
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player)
@@ -12959,6 +13794,11 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_Team_InventorySnapshot_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchMetadata_Team_Player_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -13001,11 +13841,11 @@ public final class S2DotaMatchMetadata {
       "gcmessages.proto\"|\n\026CDOTAMatchMetadataFi" +
       "le\022\017\n\007version\030\001 \002(\005\022\020\n\010match_id\030\002 \002(\004\022%\n" +
       "\010metadata\030\003 \001(\0132\023.CDOTAMatchMetadata\022\030\n\020" +
-      "private_metadata\030\005 \001(\014\"\320\n\n\022CDOTAMatchMet" +
+      "private_metadata\030\005 \001(\014\"\321\013\n\022CDOTAMatchMet" +
       "adata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMatchMetadat" +
       "a.Team\022/\n\014item_rewards\030\002 \003(\0132\031.CLobbyTim" +
       "edRewardDetails\022\020\n\010lobby_id\030\003 \001(\006\022\031\n\021rep" +
-      "ort_until_time\030\004 \001(\006\032\262\t\n\004Team\022\021\n\tdota_te" +
+      "ort_until_time\030\004 \001(\006\032\263\n\n\004Team\022\021\n\tdota_te" +
       "am\030\001 \001(\r\0220\n\007players\030\002 \003(\0132\037.CDOTAMatchMe",
       "tadata.Team.Player\022\030\n\020graph_experience\030\003" +
       " \003(\002\022\031\n\021graph_gold_earned\030\004 \003(\002\022\027\n\017graph" +
@@ -13017,40 +13857,43 @@ public final class S2DotaMatchMetadata {
       "d\030\001 \001(\r\022\025\n\rpurchase_time\030\002 \001(\005\032v\n\021Invent" +
       "orySnapshot\022\017\n\007item_id\030\001 \003(\r\022\021\n\tgame_tim" +
       "e\030\002 \001(\005\022\r\n\005kills\030\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017",
-      "\n\007assists\030\005 \001(\r\022\r\n\005level\030\006 \001(\r\032\310\005\n\006Playe" +
-      "r\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020ability_upgrade" +
-      "s\030\002 \003(\r\022\023\n\013player_slot\030\003 \001(\r\022)\n\023equipped" +
-      "_econ_items\030\004 \003(\0132\014.CSOEconItem\0222\n\005kills" +
-      "\030\005 \003(\0132#.CDOTAMatchMetadata.Team.PlayerK" +
-      "ill\0224\n\005items\030\006 \003(\0132%.CDOTAMatchMetadata." +
-      "Team.ItemPurchase\022\025\n\ravg_kills_x16\030\007 \001(\r" +
-      "\022\026\n\016avg_deaths_x16\030\010 \001(\r\022\027\n\017avg_assists_" +
-      "x16\030\t \001(\r\022\023\n\013avg_gpm_x16\030\n \001(\r\022\023\n\013avg_xp" +
-      "m_x16\030\013 \001(\r\022\026\n\016best_kills_x16\030\014 \001(\r\022\030\n\020b",
-      "est_assists_x16\030\r \001(\r\022\024\n\014best_gpm_x16\030\016 " +
-      "\001(\r\022\024\n\014best_xpm_x16\030\017 \001(\r\022\022\n\nwin_streak\030" +
-      "\020 \001(\r\022\027\n\017best_win_streak\030\021 \001(\r\022\023\n\013fight_" +
-      "score\030\022 \001(\002\022\022\n\nfarm_score\030\023 \001(\002\022\025\n\rsuppo" +
-      "rt_score\030\024 \001(\002\022\022\n\npush_score\030\025 \001(\002\022\026\n\016le" +
-      "vel_up_times\030\026 \003(\r\022\027\n\017graph_net_worth\030\027 " +
-      "\003(\002\022F\n\022inventory_snapshot\030\030 \003(\0132*.CDOTAM" +
-      "atchMetadata.Team.InventorySnapshot\022\034\n\024a" +
-      "vg_stats_calibrated\030\031 \001(\010\"\220\003\n\031CDOTAMatch" +
-      "PrivateMetadata\022.\n\005teams\030\001 \003(\0132\037.CDOTAMa",
-      "tchPrivateMetadata.Team\032\302\002\n\004Team\022\021\n\tdota" +
-      "_team\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatc" +
-      "hPrivateMetadata.Team.Player\022;\n\tbuilding" +
-      "s\030\003 \003(\0132(.CDOTAMatchPrivateMetadata.Team" +
-      ".Building\032J\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022" +
-      "\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_stream\030" +
-      "\003 \001(\014\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020" +
-      "position_quant_x\030\002 \001(\r\022\030\n\020position_quant" +
-      "_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002\"\206\001\n\030CLobbyT" +
-      "imedRewardDetails\022\026\n\016item_def_index\030\002 \001(",
-      "\r\022\027\n\017is_supply_crate\030\003 \001(\010\022\025\n\ris_timed_d" +
-      "rop\030\004 \001(\010\022\022\n\naccount_id\030\005 \001(\r\022\016\n\006origin\030" +
-      "\006 \001(\rB:\n skadistats.clarity.wire.s2.prot" +
-      "oB\023S2DotaMatchMetadata\200\001\000"
+      "\n\007assists\030\005 \001(\r\022\r\n\005level\030\006 \001(\r\0326\n\021AutoSt" +
+      "yleCriteria\022\022\n\nname_token\030\001 \001(\r\022\r\n\005value" +
+      "\030\002 \001(\002\032\221\006\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n" +
+      "\020ability_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003" +
+      " \001(\r\022)\n\023equipped_econ_items\030\004 \003(\0132\014.CSOE" +
+      "conItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetad" +
+      "ata.Team.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDO" +
+      "TAMatchMetadata.Team.ItemPurchase\022\025\n\ravg" +
+      "_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r" +
+      "\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16",
+      "\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kill" +
+      "s_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n" +
+      "\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(" +
+      "\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_win_streak" +
+      "\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_scor" +
+      "e\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_s" +
+      "core\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017gr" +
+      "aph_net_worth\030\027 \003(\002\022F\n\022inventory_snapsho" +
+      "t\030\030 \003(\0132*.CDOTAMatchMetadata.Team.Invent" +
+      "orySnapshot\022\034\n\024avg_stats_calibrated\030\031 \001(",
+      "\010\022G\n\023auto_style_criteria\030\032 \003(\0132*.CDOTAMa" +
+      "tchMetadata.Team.AutoStyleCriteria\"\220\003\n\031C" +
+      "DOTAMatchPrivateMetadata\022.\n\005teams\030\001 \003(\0132" +
+      "\037.CDOTAMatchPrivateMetadata.Team\032\302\002\n\004Tea" +
+      "m\022\021\n\tdota_team\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&." +
+      "CDOTAMatchPrivateMetadata.Team.Player\022;\n" +
+      "\tbuildings\030\003 \003(\0132(.CDOTAMatchPrivateMeta" +
+      "data.Team.Building\032J\n\006Player\022\022\n\naccount_" +
+      "id\030\001 \001(\r\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017positio" +
+      "n_stream\030\003 \001(\014\032e\n\010Building\022\021\n\tunit_name\030",
+      "\001 \001(\t\022\030\n\020position_quant_x\030\002 \001(\r\022\030\n\020posit" +
+      "ion_quant_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002\"\206\001" +
+      "\n\030CLobbyTimedRewardDetails\022\026\n\016item_def_i" +
+      "ndex\030\002 \001(\r\022\027\n\017is_supply_crate\030\003 \001(\010\022\025\n\ri" +
+      "s_timed_drop\030\004 \001(\010\022\022\n\naccount_id\030\005 \001(\r\022\016" +
+      "\n\006origin\030\006 \001(\rB:\n skadistats.clarity.wir" +
+      "e.s2.protoB\023S2DotaMatchMetadata\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13101,12 +13944,18 @@ public final class S2DotaMatchMetadata {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_InventorySnapshot_descriptor,
         new java.lang.String[] { "ItemId", "GameTime", "Kills", "Deaths", "Assists", "Level", });
-    internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
+    internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_descriptor =
       internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(3);
+    internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Team_AutoStyleCriteria_descriptor,
+        new java.lang.String[] { "NameToken", "Value", });
+    internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(4);
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", });
     internal_static_CDOTAMatchPrivateMetadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CDOTAMatchPrivateMetadata_fieldAccessorTable = new

@@ -14872,6 +14872,15 @@ public final class NetworkBaseTypes {
      */
     com.google.protobuf.ByteString
         getSavegamefilenameBytes();
+
+    /**
+     * <code>optional uint32 spawngroupparenthandle = 18;</code>
+     */
+    boolean hasSpawngroupparenthandle();
+    /**
+     * <code>optional uint32 spawngroupparenthandle = 18;</code>
+     */
+    int getSpawngroupparenthandle();
   }
   /**
    * Protobuf type {@code CNETMsg_SpawnGroup_Load}
@@ -15030,6 +15039,11 @@ public final class NetworkBaseTypes {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
               savegamefilename_ = bs;
+              break;
+            }
+            case 144: {
+              bitField0_ |= 0x00020000;
+              spawngroupparenthandle_ = input.readUInt32();
               break;
             }
           }
@@ -15501,6 +15515,21 @@ public final class NetworkBaseTypes {
       }
     }
 
+    public static final int SPAWNGROUPPARENTHANDLE_FIELD_NUMBER = 18;
+    private int spawngroupparenthandle_;
+    /**
+     * <code>optional uint32 spawngroupparenthandle = 18;</code>
+     */
+    public boolean hasSpawngroupparenthandle() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional uint32 spawngroupparenthandle = 18;</code>
+     */
+    public int getSpawngroupparenthandle() {
+      return spawngroupparenthandle_;
+    }
+
     private void initFields() {
       worldname_ = "";
       entitylumpname_ = "";
@@ -15519,6 +15548,7 @@ public final class NetworkBaseTypes {
       worldgroupid_ = 0;
       creationsequence_ = 0;
       savegamefilename_ = "";
+      spawngroupparenthandle_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -15583,6 +15613,9 @@ public final class NetworkBaseTypes {
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeBytes(17, getSavegamefilenameBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeUInt32(18, spawngroupparenthandle_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -15660,6 +15693,10 @@ public final class NetworkBaseTypes {
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(17, getSavegamefilenameBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(18, spawngroupparenthandle_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -15822,6 +15859,8 @@ public final class NetworkBaseTypes {
         bitField0_ = (bitField0_ & ~0x00008000);
         savegamefilename_ = "";
         bitField0_ = (bitField0_ & ~0x00010000);
+        spawngroupparenthandle_ = 0;
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
 
@@ -15926,6 +15965,10 @@ public final class NetworkBaseTypes {
           to_bitField0_ |= 0x00010000;
         }
         result.savegamefilename_ = savegamefilename_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.spawngroupparenthandle_ = spawngroupparenthandle_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -16004,6 +16047,9 @@ public final class NetworkBaseTypes {
           bitField0_ |= 0x00010000;
           savegamefilename_ = other.savegamefilename_;
           onChanged();
+        }
+        if (other.hasSpawngroupparenthandle()) {
+          setSpawngroupparenthandle(other.getSpawngroupparenthandle());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -17007,6 +17053,38 @@ public final class NetworkBaseTypes {
   }
   bitField0_ |= 0x00010000;
         savegamefilename_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int spawngroupparenthandle_ ;
+      /**
+       * <code>optional uint32 spawngroupparenthandle = 18;</code>
+       */
+      public boolean hasSpawngroupparenthandle() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional uint32 spawngroupparenthandle = 18;</code>
+       */
+      public int getSpawngroupparenthandle() {
+        return spawngroupparenthandle_;
+      }
+      /**
+       * <code>optional uint32 spawngroupparenthandle = 18;</code>
+       */
+      public Builder setSpawngroupparenthandle(int value) {
+        bitField0_ |= 0x00020000;
+        spawngroupparenthandle_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 spawngroupparenthandle = 18;</code>
+       */
+      public Builder clearSpawngroupparenthandle() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        spawngroupparenthandle_ = 0;
         onChanged();
         return this;
       }
@@ -19244,6 +19322,43 @@ public final class NetworkBaseTypes {
      * <code>optional bool is_localonly = 15;</code>
      */
     boolean getIsLocalonly();
+
+    /**
+     * <code>optional bool is_transition = 16;</code>
+     */
+    boolean hasIsTransition();
+    /**
+     * <code>optional bool is_transition = 16;</code>
+     */
+    boolean getIsTransition();
+
+    /**
+     * <code>optional string previouslevel = 17;</code>
+     */
+    boolean hasPreviouslevel();
+    /**
+     * <code>optional string previouslevel = 17;</code>
+     */
+    java.lang.String getPreviouslevel();
+    /**
+     * <code>optional string previouslevel = 17;</code>
+     */
+    com.google.protobuf.ByteString
+        getPreviouslevelBytes();
+
+    /**
+     * <code>optional string landmarkname = 18;</code>
+     */
+    boolean hasLandmarkname();
+    /**
+     * <code>optional string landmarkname = 18;</code>
+     */
+    java.lang.String getLandmarkname();
+    /**
+     * <code>optional string landmarkname = 18;</code>
+     */
+    com.google.protobuf.ByteString
+        getLandmarknameBytes();
   }
   /**
    * Protobuf type {@code CSVCMsg_GameSessionConfiguration}
@@ -19375,6 +19490,23 @@ public final class NetworkBaseTypes {
             case 120: {
               bitField0_ |= 0x00004000;
               isLocalonly_ = input.readBool();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              isTransition_ = input.readBool();
+              break;
+            }
+            case 138: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00010000;
+              previouslevel_ = bs;
+              break;
+            }
+            case 146: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00020000;
+              landmarkname_ = bs;
               break;
             }
           }
@@ -19777,6 +19909,105 @@ public final class NetworkBaseTypes {
       return isLocalonly_;
     }
 
+    public static final int IS_TRANSITION_FIELD_NUMBER = 16;
+    private boolean isTransition_;
+    /**
+     * <code>optional bool is_transition = 16;</code>
+     */
+    public boolean hasIsTransition() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional bool is_transition = 16;</code>
+     */
+    public boolean getIsTransition() {
+      return isTransition_;
+    }
+
+    public static final int PREVIOUSLEVEL_FIELD_NUMBER = 17;
+    private java.lang.Object previouslevel_;
+    /**
+     * <code>optional string previouslevel = 17;</code>
+     */
+    public boolean hasPreviouslevel() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional string previouslevel = 17;</code>
+     */
+    public java.lang.String getPreviouslevel() {
+      java.lang.Object ref = previouslevel_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          previouslevel_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string previouslevel = 17;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPreviouslevelBytes() {
+      java.lang.Object ref = previouslevel_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        previouslevel_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LANDMARKNAME_FIELD_NUMBER = 18;
+    private java.lang.Object landmarkname_;
+    /**
+     * <code>optional string landmarkname = 18;</code>
+     */
+    public boolean hasLandmarkname() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional string landmarkname = 18;</code>
+     */
+    public java.lang.String getLandmarkname() {
+      java.lang.Object ref = landmarkname_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          landmarkname_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string landmarkname = 18;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLandmarknameBytes() {
+      java.lang.Object ref = landmarkname_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        landmarkname_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       isMultiplayer_ = false;
       isLoadsavegame_ = false;
@@ -19793,6 +20024,9 @@ public final class NetworkBaseTypes {
       serverIpAddress_ = "";
       data_ = com.google.protobuf.ByteString.EMPTY;
       isLocalonly_ = false;
+      isTransition_ = false;
+      previouslevel_ = "";
+      landmarkname_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -19851,6 +20085,15 @@ public final class NetworkBaseTypes {
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeBool(15, isLocalonly_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeBool(16, isTransition_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(17, getPreviouslevelBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeBytes(18, getLandmarknameBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -19920,6 +20163,18 @@ public final class NetworkBaseTypes {
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(15, isLocalonly_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(16, isTransition_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(17, getPreviouslevelBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(18, getLandmarknameBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -20068,6 +20323,12 @@ public final class NetworkBaseTypes {
         bitField0_ = (bitField0_ & ~0x00002000);
         isLocalonly_ = false;
         bitField0_ = (bitField0_ & ~0x00004000);
+        isTransition_ = false;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        previouslevel_ = "";
+        bitField0_ = (bitField0_ & ~0x00010000);
+        landmarkname_ = "";
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
 
@@ -20156,6 +20417,18 @@ public final class NetworkBaseTypes {
           to_bitField0_ |= 0x00004000;
         }
         result.isLocalonly_ = isLocalonly_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.isTransition_ = isTransition_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.previouslevel_ = previouslevel_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.landmarkname_ = landmarkname_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -20226,6 +20499,19 @@ public final class NetworkBaseTypes {
         }
         if (other.hasIsLocalonly()) {
           setIsLocalonly(other.getIsLocalonly());
+        }
+        if (other.hasIsTransition()) {
+          setIsTransition(other.getIsTransition());
+        }
+        if (other.hasPreviouslevel()) {
+          bitField0_ |= 0x00010000;
+          previouslevel_ = other.previouslevel_;
+          onChanged();
+        }
+        if (other.hasLandmarkname()) {
+          bitField0_ |= 0x00020000;
+          landmarkname_ = other.landmarkname_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -20957,6 +21243,190 @@ public final class NetworkBaseTypes {
         return this;
       }
 
+      private boolean isTransition_ ;
+      /**
+       * <code>optional bool is_transition = 16;</code>
+       */
+      public boolean hasIsTransition() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional bool is_transition = 16;</code>
+       */
+      public boolean getIsTransition() {
+        return isTransition_;
+      }
+      /**
+       * <code>optional bool is_transition = 16;</code>
+       */
+      public Builder setIsTransition(boolean value) {
+        bitField0_ |= 0x00008000;
+        isTransition_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool is_transition = 16;</code>
+       */
+      public Builder clearIsTransition() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        isTransition_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object previouslevel_ = "";
+      /**
+       * <code>optional string previouslevel = 17;</code>
+       */
+      public boolean hasPreviouslevel() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional string previouslevel = 17;</code>
+       */
+      public java.lang.String getPreviouslevel() {
+        java.lang.Object ref = previouslevel_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            previouslevel_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string previouslevel = 17;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPreviouslevelBytes() {
+        java.lang.Object ref = previouslevel_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          previouslevel_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string previouslevel = 17;</code>
+       */
+      public Builder setPreviouslevel(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        previouslevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string previouslevel = 17;</code>
+       */
+      public Builder clearPreviouslevel() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        previouslevel_ = getDefaultInstance().getPreviouslevel();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string previouslevel = 17;</code>
+       */
+      public Builder setPreviouslevelBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        previouslevel_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object landmarkname_ = "";
+      /**
+       * <code>optional string landmarkname = 18;</code>
+       */
+      public boolean hasLandmarkname() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional string landmarkname = 18;</code>
+       */
+      public java.lang.String getLandmarkname() {
+        java.lang.Object ref = landmarkname_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            landmarkname_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string landmarkname = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getLandmarknameBytes() {
+        java.lang.Object ref = landmarkname_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          landmarkname_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string landmarkname = 18;</code>
+       */
+      public Builder setLandmarkname(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        landmarkname_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string landmarkname = 18;</code>
+       */
+      public Builder clearLandmarkname() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        landmarkname_ = getDefaultInstance().getLandmarkname();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string landmarkname = 18;</code>
+       */
+      public Builder setLandmarknameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        landmarkname_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CSVCMsg_GameSessionConfiguration)
     }
 
@@ -21473,7 +21943,7 @@ public final class NetworkBaseTypes {
       "st_UserMessages\0225\n\010usermsgs\030\001 \003(\0132#.CSVC" +
       "MsgList_UserMessages.usermsg_t\032<\n\tuserms" +
       "g_t\022\014\n\004tick\030\001 \001(\005\022!\n\003msg\030\002 \001(\0132\024.CSVCMsg" +
-      "_UserMessage\"\332\003\n\027CNETMsg_SpawnGroup_Load" +
+      "_UserMessage\"\372\003\n\027CNETMsg_SpawnGroup_Load" +
       "\022\021\n\tworldname\030\001 \001(\t\022\026\n\016entitylumpname\030\002 " +
       "\001(\t\022\030\n\020entityfiltername\030\003 \001(\t\022\030\n\020spawngr" +
       "ouphandle\030\004 \001(\r\022\035\n\025spawngroupownerhandle" +
@@ -21485,106 +21955,109 @@ public final class NetworkBaseTypes {
       "\022\027\n\017parentnamefixup\030\r \001(\t\022\034\n\024manifestloa" +
       "dpriority\030\016 \001(\005\022\024\n\014worldgroupid\030\017 \001(\r\022\030\n" +
       "\020creationsequence\030\020 \001(\r\022\030\n\020savegamefilen" +
-      "ame\030\021 \001(\t\"u\n!CNETMsg_SpawnGroup_Manifest" +
-      "Update\022\030\n\020spawngrouphandle\030\001 \001(\r\022\032\n\022spaw" +
-      "ngroupmanifest\030\002 \001(\014\022\032\n\022manifestincomple" +
-      "te\030\003 \001(\010\"k\n\"CNETMsg_SpawnGroup_SetCreati" +
-      "onTick\022\030\n\020spawngrouphandle\030\001 \001(\r\022\021\n\ttick",
-      "count\030\002 \001(\005\022\030\n\020creationsequence\030\003 \001(\r\"W\n" +
-      "\031CNETMsg_SpawnGroup_Unload\022\030\n\020spawngroup" +
-      "handle\030\001 \001(\r\022\r\n\005flags\030\002 \001(\r\022\021\n\ttickcount" +
-      "\030\003 \001(\005\"<\n CNETMsg_SpawnGroup_LoadComplet" +
-      "ed\022\030\n\020spawngrouphandle\030\001 \001(\r\"\360\002\n CSVCMsg" +
-      "_GameSessionConfiguration\022\026\n\016is_multipla" +
-      "yer\030\001 \001(\010\022\027\n\017is_loadsavegame\030\002 \001(\010\022\031\n\021is" +
-      "_background_map\030\003 \001(\010\022\023\n\013is_headless\030\004 \001" +
-      "(\010\022\030\n\020min_client_limit\030\005 \001(\r\022\030\n\020max_clie" +
-      "nt_limit\030\006 \001(\r\022\023\n\013max_clients\030\007 \001(\r\022\025\n\rt",
-      "ick_interval\030\010 \001(\007\022\020\n\010hostname\030\t \001(\t\022\024\n\014" +
-      "savegamename\030\n \001(\t\022\022\n\ns1_mapname\030\013 \001(\t\022\020" +
-      "\n\010gamemode\030\014 \001(\t\022\031\n\021server_ip_address\030\r " +
-      "\001(\t\022\014\n\004data\030\016 \001(\014\022\024\n\014is_localonly\030\017 \001(\010\"" +
-      "\"\n CNETMsg_ReliableMessageEndMarker*\336\002\n\014" +
-      "NET_Messages\022\013\n\007net_NOP\020\000\022\022\n\016net_Disconn" +
-      "ect\020\001\022\014\n\010net_File\020\002\022\027\n\023net_SplitScreenUs" +
-      "er\020\003\022\014\n\010net_Tick\020\004\022\021\n\rnet_StringCmd\020\005\022\021\n" +
-      "\rnet_SetConVar\020\006\022\023\n\017net_SignonState\020\007\022\027\n" +
-      "\023net_SpawnGroup_Load\020\010\022!\n\035net_SpawnGroup",
-      "_ManifestUpdate\020\t\022\"\n\036net_SpawnGroup_SetC" +
-      "reationTick\020\013\022\031\n\025net_SpawnGroup_Unload\020\014" +
-      "\022 \n\034net_SpawnGroup_LoadCompleted\020\r\022 \n\034ne" +
-      "t_ReliableMessageEndMarker\020\016*\322\001\n\013SIGNONS" +
-      "TATE\022\024\n\020SIGNONSTATE_NONE\020\000\022\031\n\025SIGNONSTAT" +
-      "E_CHALLENGE\020\001\022\031\n\025SIGNONSTATE_CONNECTED\020\002" +
-      "\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024SIGNONSTATE_PRE" +
-      "SPAWN\020\004\022\025\n\021SIGNONSTATE_SPAWN\020\005\022\024\n\020SIGNON" +
-      "STATE_FULL\020\006\022\033\n\027SIGNONSTATE_CHANGELEVEL\020" +
-      "\007*\353\002\n\021SpawnGroupFlags_t\022\'\n#SPAWN_GROUP_L",
-      "OAD_ENTITIES_FROM_SAVE\020\001\022#\n\037SPAWN_GROUP_" +
-      "DONT_SPAWN_ENTITIES\020\002\022!\n\035SPAWN_GROUP_SYN" +
-      "CHRONOUS_SPAWN\020\004\022&\n\"SPAWN_GROUP_IS_INITI" +
-      "AL_SPAWN_GROUP\020\010\022+\n\'SPAWN_GROUP_CREATE_C" +
-      "LIENT_ONLY_ENTITIES\020\020\022\035\n\031SPAWN_GROUP_SAV" +
-      "E_ENTITIES\020 \022\"\n\036SPAWN_GROUP_BLOCK_UNTIL_" +
-      "LOADED\020@\022$\n\037SPAWN_GROUP_LOAD_STREAMING_D" +
-      "ATA\020\200\001\022\'\n\"SPAWN_GROUP_CREATE_NEW_SCENE_W" +
-      "ORLD\020\200\002*\227\021\n\033ENetworkDisconnectionReason\022" +
-      "\036\n\032NETWORK_DISCONNECT_INVALID\020\000\022\037\n\033NETWO",
-      "RK_DISCONNECT_SHUTDOWN\020\001\022)\n%NETWORK_DISC" +
-      "ONNECT_DISCONNECT_BY_USER\020\002\022+\n\'NETWORK_D" +
-      "ISCONNECT_DISCONNECT_BY_SERVER\020\003\022\033\n\027NETW" +
-      "ORK_DISCONNECT_LOST\020\004\022\037\n\033NETWORK_DISCONN" +
-      "ECT_OVERFLOW\020\005\022#\n\037NETWORK_DISCONNECT_STE" +
-      "AM_BANNED\020\006\022\"\n\036NETWORK_DISCONNECT_STEAM_" +
-      "INUSE\020\007\022#\n\037NETWORK_DISCONNECT_STEAM_TICK" +
-      "ET\020\010\022\"\n\036NETWORK_DISCONNECT_STEAM_LOGON\020\t" +
-      "\022*\n&NETWORK_DISCONNECT_STEAM_AUTHCANCELL" +
-      "ED\020\n\022,\n(NETWORK_DISCONNECT_STEAM_AUTHALR",
-      "EADYUSED\020\013\022(\n$NETWORK_DISCONNECT_STEAM_A" +
-      "UTHINVALID\020\014\022(\n$NETWORK_DISCONNECT_STEAM" +
-      "_VACBANSTATE\020\r\0220\n,NETWORK_DISCONNECT_STE" +
-      "AM_LOGGED_IN_ELSEWHERE\020\016\022/\n+NETWORK_DISC" +
-      "ONNECT_STEAM_VAC_CHECK_TIMEDOUT\020\017\022$\n NET" +
-      "WORK_DISCONNECT_STEAM_DROPPED\020\020\022&\n\"NETWO" +
-      "RK_DISCONNECT_STEAM_OWNERSHIP\020\021\022*\n&NETWO" +
-      "RK_DISCONNECT_SERVERINFO_OVERFLOW\020\022\022\'\n#N" +
-      "ETWORK_DISCONNECT_TICKMSG_OVERFLOW\020\023\022.\n*" +
-      "NETWORK_DISCONNECT_STRINGTABLEMSG_OVERFL",
-      "OW\020\024\022+\n\'NETWORK_DISCONNECT_DELTAENTMSG_O" +
-      "VERFLOW\020\025\022*\n&NETWORK_DISCONNECT_TEMPENTM" +
-      "SG_OVERFLOW\020\026\022)\n%NETWORK_DISCONNECT_SOUN" +
-      "DSMSG_OVERFLOW\020\027\022\'\n#NETWORK_DISCONNECT_S" +
-      "NAPSHOTOVERFLOW\020\030\022$\n NETWORK_DISCONNECT_" +
-      "SNAPSHOTERROR\020\031\022\'\n#NETWORK_DISCONNECT_RE" +
-      "LIABLEOVERFLOW\020\032\022#\n\037NETWORK_DISCONNECT_B" +
-      "ADDELTATICK\020\033\022#\n\037NETWORK_DISCONNECT_NOMO" +
-      "RESPLITS\020\034\022\037\n\033NETWORK_DISCONNECT_TIMEDOU" +
-      "T\020\035\022#\n\037NETWORK_DISCONNECT_DISCONNECTED\020\036",
-      "\022#\n\037NETWORK_DISCONNECT_LEAVINGSPLIT\020\037\022+\n" +
-      "\'NETWORK_DISCONNECT_DIFFERENTCLASSTABLES" +
-      "\020 \022\'\n#NETWORK_DISCONNECT_BADRELAYPASSWOR" +
-      "D\020!\022+\n\'NETWORK_DISCONNECT_BADSPECTATORPA" +
-      "SSWORD\020\"\022%\n!NETWORK_DISCONNECT_HLTVRESTR" +
-      "ICTED\020#\022#\n\037NETWORK_DISCONNECT_NOSPECTATO" +
-      "RS\020$\022&\n\"NETWORK_DISCONNECT_HLTVUNAVAILAB" +
-      "LE\020%\022\037\n\033NETWORK_DISCONNECT_HLTVSTOP\020&\022\035\n" +
-      "\031NETWORK_DISCONNECT_KICKED\020\'\022\037\n\033NETWORK_" +
-      "DISCONNECT_BANADDED\020(\022#\n\037NETWORK_DISCONN",
-      "ECT_KICKBANADDED\020)\022!\n\035NETWORK_DISCONNECT" +
-      "_HLTVDIRECT\020*\022-\n)NETWORK_DISCONNECT_PURE" +
-      "SERVER_CLIENTEXTRA\020+\022*\n&NETWORK_DISCONNE" +
-      "CT_PURESERVER_MISMATCH\020,\022\036\n\032NETWORK_DISC" +
-      "ONNECT_USERCMD\020-\022\'\n#NETWORK_DISCONNECT_R" +
-      "EJECTED_BY_GAME\020.\022*\n&NETWORK_DISCONNECT_" +
-      "MESSAGE_PARSE_ERROR\020/\022,\n(NETWORK_DISCONN" +
-      "ECT_INVALID_MESSAGE_ERROR\0200\022*\n&NETWORK_D" +
-      "ISCONNECT_BAD_SERVER_PASSWORD\0201\0221\n-NETWO" +
-      "RK_DISCONNECT_DIRECT_CONNECT_RESERVATION",
-      "\0202\022)\n%NETWORK_DISCONNECT_CONNECTION_FAIL" +
-      "URE\0203\022-\n)NETWORK_DISCONNECT_NO_PEER_GROU" +
-      "P_HANDLERS\0204\022#\n\037NETWORK_DISCONNECT_RECON" +
-      "NECTION\0205B;\n$skadistats.clarity.wire.com" +
-      "mon.protoB\020NetworkBaseTypes\200\001\000"
+      "ame\030\021 \001(\t\022\036\n\026spawngroupparenthandle\030\022 \001(" +
+      "\r\"u\n!CNETMsg_SpawnGroup_ManifestUpdate\022\030" +
+      "\n\020spawngrouphandle\030\001 \001(\r\022\032\n\022spawngroupma" +
+      "nifest\030\002 \001(\014\022\032\n\022manifestincomplete\030\003 \001(\010" +
+      "\"k\n\"CNETMsg_SpawnGroup_SetCreationTick\022\030",
+      "\n\020spawngrouphandle\030\001 \001(\r\022\021\n\ttickcount\030\002 " +
+      "\001(\005\022\030\n\020creationsequence\030\003 \001(\r\"W\n\031CNETMsg" +
+      "_SpawnGroup_Unload\022\030\n\020spawngrouphandle\030\001" +
+      " \001(\r\022\r\n\005flags\030\002 \001(\r\022\021\n\ttickcount\030\003 \001(\005\"<" +
+      "\n CNETMsg_SpawnGroup_LoadCompleted\022\030\n\020sp" +
+      "awngrouphandle\030\001 \001(\r\"\264\003\n CSVCMsg_GameSes" +
+      "sionConfiguration\022\026\n\016is_multiplayer\030\001 \001(" +
+      "\010\022\027\n\017is_loadsavegame\030\002 \001(\010\022\031\n\021is_backgro" +
+      "und_map\030\003 \001(\010\022\023\n\013is_headless\030\004 \001(\010\022\030\n\020mi" +
+      "n_client_limit\030\005 \001(\r\022\030\n\020max_client_limit",
+      "\030\006 \001(\r\022\023\n\013max_clients\030\007 \001(\r\022\025\n\rtick_inte" +
+      "rval\030\010 \001(\007\022\020\n\010hostname\030\t \001(\t\022\024\n\014savegame" +
+      "name\030\n \001(\t\022\022\n\ns1_mapname\030\013 \001(\t\022\020\n\010gamemo" +
+      "de\030\014 \001(\t\022\031\n\021server_ip_address\030\r \001(\t\022\014\n\004d" +
+      "ata\030\016 \001(\014\022\024\n\014is_localonly\030\017 \001(\010\022\025\n\ris_tr" +
+      "ansition\030\020 \001(\010\022\025\n\rpreviouslevel\030\021 \001(\t\022\024\n" +
+      "\014landmarkname\030\022 \001(\t\"\"\n CNETMsg_ReliableM" +
+      "essageEndMarker*\336\002\n\014NET_Messages\022\013\n\007net_" +
+      "NOP\020\000\022\022\n\016net_Disconnect\020\001\022\014\n\010net_File\020\002\022" +
+      "\027\n\023net_SplitScreenUser\020\003\022\014\n\010net_Tick\020\004\022\021",
+      "\n\rnet_StringCmd\020\005\022\021\n\rnet_SetConVar\020\006\022\023\n\017" +
+      "net_SignonState\020\007\022\027\n\023net_SpawnGroup_Load" +
+      "\020\010\022!\n\035net_SpawnGroup_ManifestUpdate\020\t\022\"\n" +
+      "\036net_SpawnGroup_SetCreationTick\020\013\022\031\n\025net" +
+      "_SpawnGroup_Unload\020\014\022 \n\034net_SpawnGroup_L" +
+      "oadCompleted\020\r\022 \n\034net_ReliableMessageEnd" +
+      "Marker\020\016*\322\001\n\013SIGNONSTATE\022\024\n\020SIGNONSTATE_" +
+      "NONE\020\000\022\031\n\025SIGNONSTATE_CHALLENGE\020\001\022\031\n\025SIG" +
+      "NONSTATE_CONNECTED\020\002\022\023\n\017SIGNONSTATE_NEW\020" +
+      "\003\022\030\n\024SIGNONSTATE_PRESPAWN\020\004\022\025\n\021SIGNONSTA",
+      "TE_SPAWN\020\005\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027SIGN" +
+      "ONSTATE_CHANGELEVEL\020\007*\353\002\n\021SpawnGroupFlag" +
+      "s_t\022\'\n#SPAWN_GROUP_LOAD_ENTITIES_FROM_SA" +
+      "VE\020\001\022#\n\037SPAWN_GROUP_DONT_SPAWN_ENTITIES\020" +
+      "\002\022!\n\035SPAWN_GROUP_SYNCHRONOUS_SPAWN\020\004\022&\n\"" +
+      "SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP\020\010\022+\n\'" +
+      "SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITIES\020" +
+      "\020\022\035\n\031SPAWN_GROUP_SAVE_ENTITIES\020 \022\"\n\036SPAW" +
+      "N_GROUP_BLOCK_UNTIL_LOADED\020@\022$\n\037SPAWN_GR" +
+      "OUP_LOAD_STREAMING_DATA\020\200\001\022\'\n\"SPAWN_GROU",
+      "P_CREATE_NEW_SCENE_WORLD\020\200\002*\227\021\n\033ENetwork" +
+      "DisconnectionReason\022\036\n\032NETWORK_DISCONNEC" +
+      "T_INVALID\020\000\022\037\n\033NETWORK_DISCONNECT_SHUTDO" +
+      "WN\020\001\022)\n%NETWORK_DISCONNECT_DISCONNECT_BY" +
+      "_USER\020\002\022+\n\'NETWORK_DISCONNECT_DISCONNECT" +
+      "_BY_SERVER\020\003\022\033\n\027NETWORK_DISCONNECT_LOST\020" +
+      "\004\022\037\n\033NETWORK_DISCONNECT_OVERFLOW\020\005\022#\n\037NE" +
+      "TWORK_DISCONNECT_STEAM_BANNED\020\006\022\"\n\036NETWO" +
+      "RK_DISCONNECT_STEAM_INUSE\020\007\022#\n\037NETWORK_D" +
+      "ISCONNECT_STEAM_TICKET\020\010\022\"\n\036NETWORK_DISC",
+      "ONNECT_STEAM_LOGON\020\t\022*\n&NETWORK_DISCONNE" +
+      "CT_STEAM_AUTHCANCELLED\020\n\022,\n(NETWORK_DISC" +
+      "ONNECT_STEAM_AUTHALREADYUSED\020\013\022(\n$NETWOR" +
+      "K_DISCONNECT_STEAM_AUTHINVALID\020\014\022(\n$NETW" +
+      "ORK_DISCONNECT_STEAM_VACBANSTATE\020\r\0220\n,NE" +
+      "TWORK_DISCONNECT_STEAM_LOGGED_IN_ELSEWHE" +
+      "RE\020\016\022/\n+NETWORK_DISCONNECT_STEAM_VAC_CHE" +
+      "CK_TIMEDOUT\020\017\022$\n NETWORK_DISCONNECT_STEA" +
+      "M_DROPPED\020\020\022&\n\"NETWORK_DISCONNECT_STEAM_" +
+      "OWNERSHIP\020\021\022*\n&NETWORK_DISCONNECT_SERVER",
+      "INFO_OVERFLOW\020\022\022\'\n#NETWORK_DISCONNECT_TI" +
+      "CKMSG_OVERFLOW\020\023\022.\n*NETWORK_DISCONNECT_S" +
+      "TRINGTABLEMSG_OVERFLOW\020\024\022+\n\'NETWORK_DISC" +
+      "ONNECT_DELTAENTMSG_OVERFLOW\020\025\022*\n&NETWORK" +
+      "_DISCONNECT_TEMPENTMSG_OVERFLOW\020\026\022)\n%NET" +
+      "WORK_DISCONNECT_SOUNDSMSG_OVERFLOW\020\027\022\'\n#" +
+      "NETWORK_DISCONNECT_SNAPSHOTOVERFLOW\020\030\022$\n" +
+      " NETWORK_DISCONNECT_SNAPSHOTERROR\020\031\022\'\n#N" +
+      "ETWORK_DISCONNECT_RELIABLEOVERFLOW\020\032\022#\n\037" +
+      "NETWORK_DISCONNECT_BADDELTATICK\020\033\022#\n\037NET",
+      "WORK_DISCONNECT_NOMORESPLITS\020\034\022\037\n\033NETWOR" +
+      "K_DISCONNECT_TIMEDOUT\020\035\022#\n\037NETWORK_DISCO" +
+      "NNECT_DISCONNECTED\020\036\022#\n\037NETWORK_DISCONNE" +
+      "CT_LEAVINGSPLIT\020\037\022+\n\'NETWORK_DISCONNECT_" +
+      "DIFFERENTCLASSTABLES\020 \022\'\n#NETWORK_DISCON" +
+      "NECT_BADRELAYPASSWORD\020!\022+\n\'NETWORK_DISCO" +
+      "NNECT_BADSPECTATORPASSWORD\020\"\022%\n!NETWORK_" +
+      "DISCONNECT_HLTVRESTRICTED\020#\022#\n\037NETWORK_D" +
+      "ISCONNECT_NOSPECTATORS\020$\022&\n\"NETWORK_DISC" +
+      "ONNECT_HLTVUNAVAILABLE\020%\022\037\n\033NETWORK_DISC",
+      "ONNECT_HLTVSTOP\020&\022\035\n\031NETWORK_DISCONNECT_" +
+      "KICKED\020\'\022\037\n\033NETWORK_DISCONNECT_BANADDED\020" +
+      "(\022#\n\037NETWORK_DISCONNECT_KICKBANADDED\020)\022!" +
+      "\n\035NETWORK_DISCONNECT_HLTVDIRECT\020*\022-\n)NET" +
+      "WORK_DISCONNECT_PURESERVER_CLIENTEXTRA\020+" +
+      "\022*\n&NETWORK_DISCONNECT_PURESERVER_MISMAT" +
+      "CH\020,\022\036\n\032NETWORK_DISCONNECT_USERCMD\020-\022\'\n#" +
+      "NETWORK_DISCONNECT_REJECTED_BY_GAME\020.\022*\n" +
+      "&NETWORK_DISCONNECT_MESSAGE_PARSE_ERROR\020" +
+      "/\022,\n(NETWORK_DISCONNECT_INVALID_MESSAGE_",
+      "ERROR\0200\022*\n&NETWORK_DISCONNECT_BAD_SERVER" +
+      "_PASSWORD\0201\0221\n-NETWORK_DISCONNECT_DIRECT" +
+      "_CONNECT_RESERVATION\0202\022)\n%NETWORK_DISCON" +
+      "NECT_CONNECTION_FAILURE\0203\022-\n)NETWORK_DIS" +
+      "CONNECT_NO_PEER_GROUP_HANDLERS\0204\022#\n\037NETW" +
+      "ORK_DISCONNECT_RECONNECTION\0205B;\n$skadist" +
+      "ats.clarity.wire.common.protoB\020NetworkBa" +
+      "seTypes\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21729,7 +22202,7 @@ public final class NetworkBaseTypes {
     internal_static_CNETMsg_SpawnGroup_Load_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_Load_descriptor,
-        new java.lang.String[] { "Worldname", "Entitylumpname", "Entityfiltername", "Spawngrouphandle", "Spawngroupownerhandle", "WorldOffsetPos", "WorldOffsetAngle", "Spawngroupmanifest", "Flags", "Tickcount", "Manifestincomplete", "Localnamefixup", "Parentnamefixup", "Manifestloadpriority", "Worldgroupid", "Creationsequence", "Savegamefilename", });
+        new java.lang.String[] { "Worldname", "Entitylumpname", "Entityfiltername", "Spawngrouphandle", "Spawngroupownerhandle", "WorldOffsetPos", "WorldOffsetAngle", "Spawngroupmanifest", "Flags", "Tickcount", "Manifestincomplete", "Localnamefixup", "Parentnamefixup", "Manifestloadpriority", "Worldgroupid", "Creationsequence", "Savegamefilename", "Spawngroupparenthandle", });
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_fieldAccessorTable = new
@@ -21759,7 +22232,7 @@ public final class NetworkBaseTypes {
     internal_static_CSVCMsg_GameSessionConfiguration_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_GameSessionConfiguration_descriptor,
-        new java.lang.String[] { "IsMultiplayer", "IsLoadsavegame", "IsBackgroundMap", "IsHeadless", "MinClientLimit", "MaxClientLimit", "MaxClients", "TickInterval", "Hostname", "Savegamename", "S1Mapname", "Gamemode", "ServerIpAddress", "Data", "IsLocalonly", });
+        new java.lang.String[] { "IsMultiplayer", "IsLoadsavegame", "IsBackgroundMap", "IsHeadless", "MinClientLimit", "MaxClientLimit", "MaxClients", "TickInterval", "Hostname", "Savegamename", "S1Mapname", "Gamemode", "ServerIpAddress", "Data", "IsLocalonly", "IsTransition", "Previouslevel", "Landmarkname", });
     internal_static_CNETMsg_ReliableMessageEndMarker_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_CNETMsg_ReliableMessageEndMarker_fieldAccessorTable = new

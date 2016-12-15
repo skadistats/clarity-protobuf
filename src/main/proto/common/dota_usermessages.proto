@@ -155,6 +155,7 @@ enum DOTA_REPLAY_STATE_EVENT {
 	DOTA_REPLAY_STATE_EVENT_GAME_START = 1;
 	DOTA_REPLAY_STATE_EVENT_STARTING_HORN = 2;
 	DOTA_REPLAY_STATE_EVENT_FIRST_BLOOD = 3;
+    DOTA_REPLAY_STATE_EVENT_SHOWCASE = 4;
 }
 
 enum DOTA_CHAT_INFORMATIONAL {
@@ -320,6 +321,7 @@ message CDOTAUserMsg_BotChat {
     optional string format = 2;
     optional string message = 3;
     optional string target = 4;
+    optional bool team_only = 5;
 }
 
 message CDOTAUserMsg_MiniKillCamInfo {
@@ -332,6 +334,7 @@ message CDOTAUserMsg_MiniKillCamInfo {
         optional uint32 attacker = 1;
         optional int32 total_damage = 2;
         repeated CDOTAUserMsg_MiniKillCamInfo.Attacker.Ability abilities = 3;
+        optional string attacker_name = 4;
     }
 
     repeated CDOTAUserMsg_MiniKillCamInfo.Attacker attackers = 1;
@@ -794,6 +797,11 @@ message CDOTAUserMsg_ProjectionEvent {
     optional uint32 team = 2;
 }
 
+message CDOTAUserMsg_SelectPenaltyGold {
+    required uint32 player_id = 1;
+    optional sint32 cost = 2;
+}
+
 message CMsgDOTACombatLogEntry {
     optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
     optional uint32 target_name = 2;
@@ -855,5 +863,7 @@ message CMsgDOTACombatLogEntry {
     optional bool spell_evaded = 58;
     optional bool motion_controller_modifier = 59;
     optional bool long_range_kill = 60;
+    optional uint32 modifier_purge_ability = 61;
+    optional uint32 modifier_purge_npc = 62;
 
 }

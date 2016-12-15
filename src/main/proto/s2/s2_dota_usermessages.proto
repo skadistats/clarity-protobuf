@@ -102,4 +102,9 @@ enum EDotaUserMessages {
 	DOTA_UM_QuestStatus = 559;
 	DOTA_UM_SuggestHeroPick = 560;
 	DOTA_UM_SuggestHeroRole = 561;
+	DOTA_UM_KillcamDamageTaken = 562;
+	DOTA_UM_SelectPenaltyGold = 563;
+	DOTA_UM_RollDiceResult = 564;
+	DOTA_UM_FlipCoinResult = 565;
+
 }

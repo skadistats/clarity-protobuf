@@ -149,6 +149,7 @@ public class EmbeddedPackets {
         /* 554 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CombatLogDataHLTV_VALUE, DotaUserMessages.CMsgDOTACombatLogEntry.class);
         /* 557 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MatchMetadata_VALUE, S2DotaMatchMetadata.CDOTAMatchMetadataFile.class);
         /* 558 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MatchDetails_VALUE, S2DotaGcCommon.CMsgDOTAMatch.class);
+        /* 563 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SelectPenaltyGold_VALUE, DotaUserMessages.CDOTAUserMsg_SelectPenaltyGold.class);
 
 //        /* 464 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);
@@ -207,6 +208,9 @@ public class EmbeddedPackets {
 //        /* 559 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QuestStatus_VALUE, DotaUserMessages.CDOTAUserMsg_QuestStatus.class);
 //        /* 560 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SuggestHeroPick_VALUE, DotaUserMessages.CDOTAUserMsg_SuggestHeroPick.class);
 //        /* 561 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SuggestHeroRole_VALUE, DotaUserMessages.CDOTAUserMsg_SuggestHeroRole.class);
+//        /* 562 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_KillcamDamageTaken_VALUE, DotaUserMessages.CDOTAUserMsg_KillcamDamageTaken.class);
+//        /* 564 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RollDiceResult_VALUE, DotaUserMessages.CDOTAUserMsg_RollDiceResult.class);
+//        /* 565 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_FlipCoinResult_VALUE, DotaUserMessages.CDOTAUserMsg_FlipCoinResult.class);
 
         REVERSE = new HashMap<>();
         for (Map.Entry<Integer, Class<? extends GeneratedMessage>> e : EMBED.entrySet()) {
