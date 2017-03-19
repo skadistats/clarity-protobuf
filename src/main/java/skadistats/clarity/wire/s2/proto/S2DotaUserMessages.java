@@ -417,6 +417,14 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_FlipCoinResult = 565;</code>
      */
     DOTA_UM_FlipCoinResult(100, 565),
+    /**
+     * <code>DOTA_UM_RequestItemSuggestions = 566;</code>
+     */
+    DOTA_UM_RequestItemSuggestions(101, 566),
+    /**
+     * <code>DOTA_UM_TeamCaptainChanged = 567;</code>
+     */
+    DOTA_UM_TeamCaptainChanged(102, 567),
     ;
 
     /**
@@ -823,6 +831,14 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_FlipCoinResult = 565;</code>
      */
     public static final int DOTA_UM_FlipCoinResult_VALUE = 565;
+    /**
+     * <code>DOTA_UM_RequestItemSuggestions = 566;</code>
+     */
+    public static final int DOTA_UM_RequestItemSuggestions_VALUE = 566;
+    /**
+     * <code>DOTA_UM_TeamCaptainChanged = 567;</code>
+     */
+    public static final int DOTA_UM_TeamCaptainChanged_VALUE = 567;
 
 
     public final int getNumber() { return value; }
@@ -930,6 +946,8 @@ public final class S2DotaUserMessages {
         case 563: return DOTA_UM_SelectPenaltyGold;
         case 564: return DOTA_UM_RollDiceResult;
         case 565: return DOTA_UM_FlipCoinResult;
+        case 566: return DOTA_UM_RequestItemSuggestions;
+        case 567: return DOTA_UM_TeamCaptainChanged;
         default: return null;
       }
     }
@@ -990,7 +1008,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\301\027\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\207\030\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1066,8 +1084,10 @@ public final class S2DotaUserMessages {
       "\032DOTA_UM_KillcamDamageTaken\020\262\004\022\036\n\031DOTA_U" +
       "M_SelectPenaltyGold\020\263\004\022\033\n\026DOTA_UM_RollDi" +
       "ceResult\020\264\004\022\033\n\026DOTA_UM_FlipCoinResult\020\265\004" +
-      "B;\n skadistats.clarity.wire.s2.protoB\022S2" +
-      "DotaUserMessagesH\001\200\001\000"
+      "\022#\n\036DOTA_UM_RequestItemSuggestions\020\266\004\022\037\n" +
+      "\032DOTA_UM_TeamCaptainChanged\020\267\004B;\n skadis" +
+      "tats.clarity.wire.s2.protoB\022S2DotaUserMe" +
+      "ssagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -106,5 +106,6 @@ enum EDotaUserMessages {
 	DOTA_UM_SelectPenaltyGold = 563;
 	DOTA_UM_RollDiceResult = 564;
 	DOTA_UM_FlipCoinResult = 565;
-
+	DOTA_UM_RequestItemSuggestions = 566;
+	DOTA_UM_TeamCaptainChanged = 567;
 }
