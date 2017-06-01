@@ -170,9 +170,17 @@ public final class S2UserMessages {
      */
     UM_HandHapticPulse(38, 149),
     /**
+     * <code>UM_AnimGraphUpdate = 150;</code>
+     */
+    UM_AnimGraphUpdate(39, 150),
+    /**
+     * <code>UM_HandHapticPulsePrecise = 151;</code>
+     */
+    UM_HandHapticPulsePrecise(40, 151),
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
-    UM_MAX_BASE(39, 200),
+    UM_MAX_BASE(41, 200),
     ;
 
     /**
@@ -332,6 +340,14 @@ public final class S2UserMessages {
      */
     public static final int UM_HandHapticPulse_VALUE = 149;
     /**
+     * <code>UM_AnimGraphUpdate = 150;</code>
+     */
+    public static final int UM_AnimGraphUpdate_VALUE = 150;
+    /**
+     * <code>UM_HandHapticPulsePrecise = 151;</code>
+     */
+    public static final int UM_HandHapticPulsePrecise_VALUE = 151;
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
     public static final int UM_MAX_BASE_VALUE = 200;
@@ -380,6 +396,8 @@ public final class S2UserMessages {
         case 146: return UM_HudError;
         case 148: return UM_CustomGameEvent;
         case 149: return UM_HandHapticPulse;
+        case 150: return UM_AnimGraphUpdate;
+        case 151: return UM_HandHapticPulsePrecise;
         case 200: return UM_MAX_BASE;
         default: return null;
       }
@@ -20309,7 +20327,7 @@ public final class S2UserMessages {
       "UserMsg_CustomGameEvent_ServerToClient\022\022" +
       "\n\nevent_name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUse" +
       "rMsg_TrackedControllerInput_ClientToServ" +
-      "er\022\014\n\004data\030\001 \001(\014*\270\006\n\021EBaseUserMessages\022\027" +
+      "er\022\014\n\004data\030\001 \001(\014*\361\006\n\021EBaseUserMessages\022\027" +
       "\n\023UM_AchievementEvent\020e\022\023\n\017UM_CloseCapti" +
       "on\020f\022\031\n\025UM_CloseCaptionDirect\020g\022\027\n\023UM_Cu" +
       "rrentTimescale\020h\022\027\n\023UM_DesiredTimescale\020" +
@@ -20329,32 +20347,34 @@ public final class S2UserMessages {
       "\216\001\022\030\n\023UM_CameraTransition\020\217\001\022\026\n\021UM_Audio" +
       "Parameter\020\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n" +
       "\013UM_HudError\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001" +
-      "\022\027\n\022UM_HandHapticPulse\020\225\001\022\020\n\013UM_MAX_BASE" +
-      "\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_PlayJi" +
-      "ngle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM_Rem" +
-      "oveAllDecals\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022" +
-      "\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\226\005\n\020P",
-      "ARTICLE_MESSAGE\022&\n\"GAME_PARTICLE_MANAGER" +
-      "_EVENT_CREATE\020\000\022&\n\"GAME_PARTICLE_MANAGER" +
-      "_EVENT_UPDATE\020\001\022.\n*GAME_PARTICLE_MANAGER" +
-      "_EVENT_UPDATE_FORWARD\020\002\0222\n.GAME_PARTICLE" +
-      "_MANAGER_EVENT_UPDATE_ORIENTATION\020\003\022/\n+G" +
-      "AME_PARTICLE_MANAGER_EVENT_UPDATE_FALLBA" +
-      "CK\020\004\022*\n&GAME_PARTICLE_MANAGER_EVENT_UPDA" +
-      "TE_ENT\020\005\022-\n)GAME_PARTICLE_MANAGER_EVENT_" +
-      "UPDATE_OFFSET\020\006\022\'\n#GAME_PARTICLE_MANAGER" +
-      "_EVENT_DESTROY\020\007\0221\n-GAME_PARTICLE_MANAGE",
-      "R_EVENT_DESTROY_INVOLVING\020\010\022\'\n#GAME_PART" +
-      "ICLE_MANAGER_EVENT_RELEASE\020\t\022\'\n#GAME_PAR" +
-      "TICLE_MANAGER_EVENT_LATENCY\020\n\022+\n\'GAME_PA" +
-      "RTICLE_MANAGER_EVENT_SHOULD_DRAW\020\013\022&\n\"GA" +
-      "ME_PARTICLE_MANAGER_EVENT_FROZEN\020\014\022?\n;GA" +
-      "ME_PARTICLE_MANAGER_EVENT_CHANGE_CONTROL" +
-      "_POINT_ATTACHMENT\020\r*t\n\020EHapticPulseType\022" +
-      "\036\n\032VR_HAND_HAPTIC_PULSE_LIGHT\020\000\022\037\n\033VR_HA" +
-      "ND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033VR_HAND_HAPT" +
-      "IC_PULSE_STRONG\020\002B7\n skadistats.clarity.",
-      "wire.s2.protoB\016S2UserMessagesH\001\200\001\000"
+      "\022\027\n\022UM_HandHapticPulse\020\225\001\022\027\n\022UM_AnimGrap" +
+      "hUpdate\020\226\001\022\036\n\031UM_HandHapticPulsePrecise\020" +
+      "\227\001\022\020\n\013UM_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMess" +
+      "ages\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOve" +
+      "rlay\020\211\001\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_P",
+      "ropagateForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_" +
+      "FixAngle\020\215\001*\226\005\n\020PARTICLE_MESSAGE\022&\n\"GAME" +
+      "_PARTICLE_MANAGER_EVENT_CREATE\020\000\022&\n\"GAME" +
+      "_PARTICLE_MANAGER_EVENT_UPDATE\020\001\022.\n*GAME" +
+      "_PARTICLE_MANAGER_EVENT_UPDATE_FORWARD\020\002" +
+      "\0222\n.GAME_PARTICLE_MANAGER_EVENT_UPDATE_O" +
+      "RIENTATION\020\003\022/\n+GAME_PARTICLE_MANAGER_EV" +
+      "ENT_UPDATE_FALLBACK\020\004\022*\n&GAME_PARTICLE_M" +
+      "ANAGER_EVENT_UPDATE_ENT\020\005\022-\n)GAME_PARTIC" +
+      "LE_MANAGER_EVENT_UPDATE_OFFSET\020\006\022\'\n#GAME",
+      "_PARTICLE_MANAGER_EVENT_DESTROY\020\007\0221\n-GAM" +
+      "E_PARTICLE_MANAGER_EVENT_DESTROY_INVOLVI" +
+      "NG\020\010\022\'\n#GAME_PARTICLE_MANAGER_EVENT_RELE" +
+      "ASE\020\t\022\'\n#GAME_PARTICLE_MANAGER_EVENT_LAT" +
+      "ENCY\020\n\022+\n\'GAME_PARTICLE_MANAGER_EVENT_SH" +
+      "OULD_DRAW\020\013\022&\n\"GAME_PARTICLE_MANAGER_EVE" +
+      "NT_FROZEN\020\014\022?\n;GAME_PARTICLE_MANAGER_EVE" +
+      "NT_CHANGE_CONTROL_POINT_ATTACHMENT\020\r*t\n\020" +
+      "EHapticPulseType\022\036\n\032VR_HAND_HAPTIC_PULSE" +
+      "_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_MEDIUM\020",
+      "\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG\020\002B7\n sk" +
+      "adistats.clarity.wire.s2.protoB\016S2UserMe" +
+      "ssagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

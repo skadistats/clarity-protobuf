@@ -46,6 +46,9 @@ enum DOTA_COMBATLOG_TYPES {
     DOTA_COMBATLOG_TREE_CUT = 35;
     DOTA_COMBATLOG_SUCCESSFUL_SCAN = 36;
     DOTA_COMBATLOG_END_KILLSTREAK = 37;
+    DOTA_COMBATLOG_BLOODSTONE_CHARGE = 38;
+    DOTA_COMBATLOG_CRITICAL_DAMAGE = 39;
+    DOTA_COMBATLOG_SPELL_ABSORB = 40;
 }
 
 enum DOTA_CHAT_MESSAGE {
@@ -143,6 +146,8 @@ enum DOTA_CHAT_MESSAGE {
     CHAT_MESSAGE_RIVER_PAINTED = 99;
     CHAT_MESSAGE_SCAN_USED = 100;
     CHAT_MESSAGE_SHRINE_KILLED = 101;
+    CHAT_MESSAGE_WAGER_TOKEN_SPENT = 102;
+    CHAT_MESSAGE_RANK_WAGER = 103;
 }
 
 enum DOTA_NO_BATTLE_POINTS_REASONS {
@@ -172,6 +177,7 @@ enum DOTA_ABILITY_PING_TYPE {
     ABILITY_PING_COOLDOWN = 3;
     ABILITY_PING_ENEMY = 4;
     ABILITY_PING_UNLEARNED = 5;
+    ABILITY_PING_INBACKPACK = 6;
 }
 
 enum EDotaEntityMessages {
@@ -223,6 +229,13 @@ enum DOTA_OVERHEAD_ALERT {
     OVERHEAD_ALERT_MAGICAL_BLOCK = 16;
     OVERHEAD_ALERT_INCOMING_DAMAGE = 17;
     OVERHEAD_ALERT_OUTGOING_DAMAGE = 18;
+    OVERHEAD_ALERT_DISABLE_RESIST = 19;
+}
+
+enum DOTA_ROSHAN_PHASE {
+    k_SRSP_ROSHAN_ALIVE = 0;
+    k_SRSP_ROSHAN_BASE_TIMER = 1;
+    k_SRSP_ROSHAN_VISIBLE_TIMER = 2;
 }
 
 enum DOTA_POSITION_CATEGORY {
@@ -673,6 +686,12 @@ message CDOTAUserMsg_SendStatPopup {
     optional CDOTAMsg_SendStatPopup statpopup = 2;
 }
 
+message CDOTAUserMsg_SendRoshanSpectatorPhase {
+    optional .DOTA_ROSHAN_PHASE phase = 1 [default = k_SRSP_ROSHAN_ALIVE];
+    optional int32 phase_start_time = 2;
+    optional int32 phase_length = 3;
+}
+
 message CDOTAUserMsg_SendRoshanPopup {
     optional bool reclaimed = 1;
     optional int32 gametime = 2;
@@ -690,6 +709,7 @@ message CDOTAUserMsg_TE_Projectile {
     optional float expireTime = 9;
     optional float maximpacttime = 10;
     optional fixed32 colorgemcolor = 11;
+    optional int32 launch_tick = 12;
 }
 
 message CDOTAUserMsg_TE_ProjectileLoc {
@@ -703,6 +723,7 @@ message CDOTAUserMsg_TE_ProjectileLoc {
     optional float expireTime = 9;
     optional CMsgVector vTargetLoc = 10;
     optional fixed32 colorgemcolor = 11;
+    optional int32 launch_tick = 12;
 }
 
 message CDOTAUserMsg_TE_DotaBloodImpact {
@@ -867,5 +888,10 @@ message CMsgDOTACombatLogEntry {
     optional bool long_range_kill = 60;
     optional uint32 modifier_purge_ability = 61;
     optional uint32 modifier_purge_npc = 62;
+    optional bool root_modifier = 63;
+    optional uint32 total_unit_death_count = 64;
+    optional bool aura_modifier = 65;
+    optional bool armor_debuff_modifier = 66;
+    optional bool no_physical_damage_modifier = 67;
 
 }

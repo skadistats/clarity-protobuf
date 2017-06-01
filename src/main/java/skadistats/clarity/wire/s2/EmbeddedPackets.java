@@ -150,6 +150,7 @@ public class EmbeddedPackets {
         /* 557 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MatchMetadata_VALUE, S2DotaMatchMetadata.CDOTAMatchMetadataFile.class);
         /* 558 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MatchDetails_VALUE, S2DotaGcCommon.CMsgDOTAMatch.class);
         /* 563 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SelectPenaltyGold_VALUE, DotaUserMessages.CDOTAUserMsg_SelectPenaltyGold.class);
+        /* 568 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanSpectatorPhase_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanSpectatorPhase.class);
 
 //        /* 464 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);
@@ -213,7 +214,7 @@ public class EmbeddedPackets {
 //        /* 565 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_FlipCoinResult_VALUE, DotaUserMessages.CDOTAUserMsg_FlipCoinResult.class);
 //        /* 566 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RequestItemSuggestions_VALUE, DotaUserMessages.CDOTAUserMessage_RequestItemSuggestions.class);
 //        /* 567 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TeamCaptainChanged_VALUE, DotaUserMessages.CDOTAUserMessage_TeamCaptainChanged.class);
-
+//        /* 569 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheelCooldown_VALUE, DotaUserMessages.CDOTAUserMessage_ChatWheelCooldown.class);
 
 
         REVERSE = new HashMap<>();

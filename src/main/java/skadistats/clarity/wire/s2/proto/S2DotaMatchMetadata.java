@@ -3960,6 +3960,24 @@ public final class S2DotaMatchMetadata {
          */
         skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteriaOrBuilder getAutoStyleCriteriaOrBuilder(
             int index);
+
+        /**
+         * <code>optional uint32 event_id = 27;</code>
+         */
+        boolean hasEventId();
+        /**
+         * <code>optional uint32 event_id = 27;</code>
+         */
+        int getEventId();
+
+        /**
+         * <code>optional uint32 event_points = 28;</code>
+         */
+        boolean hasEventPoints();
+        /**
+         * <code>optional uint32 event_points = 28;</code>
+         */
+        int getEventPoints();
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -4204,6 +4222,16 @@ public final class S2DotaMatchMetadata {
                     mutable_bitField0_ |= 0x02000000;
                   }
                   autoStyleCriteria_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.PARSER, extensionRegistry));
+                  break;
+                }
+                case 216: {
+                  bitField0_ |= 0x00040000;
+                  eventId_ = input.readUInt32();
+                  break;
+                }
+                case 224: {
+                  bitField0_ |= 0x00080000;
+                  eventPoints_ = input.readUInt32();
                   break;
                 }
               }
@@ -4781,6 +4809,36 @@ public final class S2DotaMatchMetadata {
           return autoStyleCriteria_.get(index);
         }
 
+        public static final int EVENT_ID_FIELD_NUMBER = 27;
+        private int eventId_;
+        /**
+         * <code>optional uint32 event_id = 27;</code>
+         */
+        public boolean hasEventId() {
+          return ((bitField0_ & 0x00040000) == 0x00040000);
+        }
+        /**
+         * <code>optional uint32 event_id = 27;</code>
+         */
+        public int getEventId() {
+          return eventId_;
+        }
+
+        public static final int EVENT_POINTS_FIELD_NUMBER = 28;
+        private int eventPoints_;
+        /**
+         * <code>optional uint32 event_points = 28;</code>
+         */
+        public boolean hasEventPoints() {
+          return ((bitField0_ & 0x00080000) == 0x00080000);
+        }
+        /**
+         * <code>optional uint32 event_points = 28;</code>
+         */
+        public int getEventPoints() {
+          return eventPoints_;
+        }
+
         private void initFields() {
           accountId_ = 0;
           abilityUpgrades_ = java.util.Collections.emptyList();
@@ -4808,6 +4866,8 @@ public final class S2DotaMatchMetadata {
           inventorySnapshot_ = java.util.Collections.emptyList();
           avgStatsCalibrated_ = false;
           autoStyleCriteria_ = java.util.Collections.emptyList();
+          eventId_ = 0;
+          eventPoints_ = 0;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -4899,6 +4959,12 @@ public final class S2DotaMatchMetadata {
           }
           for (int i = 0; i < autoStyleCriteria_.size(); i++) {
             output.writeMessage(26, autoStyleCriteria_.get(i));
+          }
+          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+            output.writeUInt32(27, eventId_);
+          }
+          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+            output.writeUInt32(28, eventPoints_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -5024,6 +5090,14 @@ public final class S2DotaMatchMetadata {
           for (int i = 0; i < autoStyleCriteria_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(26, autoStyleCriteria_.get(i));
+          }
+          if (((bitField0_ & 0x00040000) == 0x00040000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(27, eventId_);
+          }
+          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(28, eventPoints_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -5219,6 +5293,10 @@ public final class S2DotaMatchMetadata {
             } else {
               autoStyleCriteriaBuilder_.clear();
             }
+            eventId_ = 0;
+            bitField0_ = (bitField0_ & ~0x04000000);
+            eventPoints_ = 0;
+            bitField0_ = (bitField0_ & ~0x08000000);
             return this;
           }
 
@@ -5379,6 +5457,14 @@ public final class S2DotaMatchMetadata {
             } else {
               result.autoStyleCriteria_ = autoStyleCriteriaBuilder_.build();
             }
+            if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
+              to_bitField0_ |= 0x00040000;
+            }
+            result.eventId_ = eventId_;
+            if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
+              to_bitField0_ |= 0x00080000;
+            }
+            result.eventPoints_ = eventPoints_;
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -5608,6 +5694,12 @@ public final class S2DotaMatchMetadata {
                   autoStyleCriteriaBuilder_.addAllMessages(other.autoStyleCriteria_);
                 }
               }
+            }
+            if (other.hasEventId()) {
+              setEventId(other.getEventId());
+            }
+            if (other.hasEventPoints()) {
+              setEventPoints(other.getEventPoints());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -7608,6 +7700,70 @@ public final class S2DotaMatchMetadata {
               autoStyleCriteria_ = null;
             }
             return autoStyleCriteriaBuilder_;
+          }
+
+          private int eventId_ ;
+          /**
+           * <code>optional uint32 event_id = 27;</code>
+           */
+          public boolean hasEventId() {
+            return ((bitField0_ & 0x04000000) == 0x04000000);
+          }
+          /**
+           * <code>optional uint32 event_id = 27;</code>
+           */
+          public int getEventId() {
+            return eventId_;
+          }
+          /**
+           * <code>optional uint32 event_id = 27;</code>
+           */
+          public Builder setEventId(int value) {
+            bitField0_ |= 0x04000000;
+            eventId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 event_id = 27;</code>
+           */
+          public Builder clearEventId() {
+            bitField0_ = (bitField0_ & ~0x04000000);
+            eventId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int eventPoints_ ;
+          /**
+           * <code>optional uint32 event_points = 28;</code>
+           */
+          public boolean hasEventPoints() {
+            return ((bitField0_ & 0x08000000) == 0x08000000);
+          }
+          /**
+           * <code>optional uint32 event_points = 28;</code>
+           */
+          public int getEventPoints() {
+            return eventPoints_;
+          }
+          /**
+           * <code>optional uint32 event_points = 28;</code>
+           */
+          public Builder setEventPoints(int value) {
+            bitField0_ |= 0x08000000;
+            eventPoints_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 event_points = 28;</code>
+           */
+          public Builder clearEventPoints() {
+            bitField0_ = (bitField0_ & ~0x08000000);
+            eventPoints_ = 0;
+            onChanged();
+            return this;
           }
 
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player)
@@ -13922,12 +14078,12 @@ public final class S2DotaMatchMetadata {
       "gcmessages.proto\"|\n\026CDOTAMatchMetadataFi" +
       "le\022\017\n\007version\030\001 \002(\005\022\020\n\010match_id\030\002 \002(\004\022%\n" +
       "\010metadata\030\003 \001(\0132\023.CDOTAMatchMetadata\022\030\n\020" +
-      "private_metadata\030\005 \001(\014\"\362\013\n\022CDOTAMatchMet" +
+      "private_metadata\030\005 \001(\014\"\232\014\n\022CDOTAMatchMet" +
       "adata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMatchMetadat" +
       "a.Team\022/\n\014item_rewards\030\002 \003(\0132\031.CLobbyTim" +
       "edRewardDetails\022\020\n\010lobby_id\030\003 \001(\006\022\031\n\021rep" +
       "ort_until_time\030\004 \001(\006\022\037\n\027event_game_custo" +
-      "m_table\030\005 \001(\014\032\263\n\n\004Team\022\021\n\tdota_team\030\001 \001(",
+      "m_table\030\005 \001(\014\032\333\n\n\004Team\022\021\n\tdota_team\030\001 \001(",
       "\r\0220\n\007players\030\002 \003(\0132\037.CDOTAMatchMetadata." +
       "Team.Player\022\030\n\020graph_experience\030\003 \003(\002\022\031\n" +
       "\021graph_gold_earned\030\004 \003(\002\022\027\n\017graph_net_wo" +
@@ -13941,7 +14097,7 @@ public final class S2DotaMatchMetadata {
       "\022\r\n\005kills\030\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017\n\007assis" +
       "ts\030\005 \001(\r\022\r\n\005level\030\006 \001(\r\0326\n\021AutoStyleCrit" +
       "eria\022\022\n\nname_token\030\001 \001(\r\022\r\n\005value\030\002 \001(\002\032" +
-      "\221\006\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abilit" +
+      "\271\006\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abilit" +
       "y_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003 \001(\r\022)\n" +
       "\023equipped_econ_items\030\004 \003(\0132\014.CSOEconItem" +
       "\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetadata.Tea" +
@@ -13960,14 +14116,15 @@ public final class S2DotaMatchMetadata {
       "2*.CDOTAMatchMetadata.Team.InventorySnap",
       "shot\022\034\n\024avg_stats_calibrated\030\031 \001(\010\022G\n\023au" +
       "to_style_criteria\030\032 \003(\0132*.CDOTAMatchMeta" +
-      "data.Team.AutoStyleCriteria\"\220\003\n\031CDOTAMat" +
+      "data.Team.AutoStyleCriteria\022\020\n\010event_id\030" +
+      "\033 \001(\r\022\024\n\014event_points\030\034 \001(\r\"\220\003\n\031CDOTAMat" +
       "chPrivateMetadata\022.\n\005teams\030\001 \003(\0132\037.CDOTA" +
       "MatchPrivateMetadata.Team\032\302\002\n\004Team\022\021\n\tdo" +
       "ta_team\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMa" +
       "tchPrivateMetadata.Team.Player\022;\n\tbuildi" +
       "ngs\030\003 \003(\0132(.CDOTAMatchPrivateMetadata.Te" +
-      "am.Building\032J\n\006Player\022\022\n\naccount_id\030\001 \001(" +
-      "\r\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_strea",
+      "am.Building\032J\n\006Player\022\022\n\naccount_id\030\001 \001(",
+      "\r\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_strea" +
       "m\030\003 \001(\014\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030" +
       "\n\020position_quant_x\030\002 \001(\r\022\030\n\020position_qua" +
       "nt_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002\"\206\001\n\030CLobb" +
@@ -14037,7 +14194,7 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventId", "EventPoints", });
     internal_static_CDOTAMatchPrivateMetadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CDOTAMatchPrivateMetadata_fieldAccessorTable = new
