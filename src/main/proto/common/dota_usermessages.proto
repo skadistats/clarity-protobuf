@@ -825,6 +825,20 @@ message CDOTAUserMsg_SelectPenaltyGold {
     optional sint32 cost = 2;
 }
 
+message CDOTAUserMsg_RollDiceResult {
+    optional uint32 player_id = 1;
+    optional uint32 channel_type = 2;
+    optional uint32 roll_min = 3;
+    optional uint32 roll_max = 4;
+    optional uint32 result = 5;
+}
+
+message CDOTAUserMsg_FlipCoinResult {
+    optional uint32 player_id = 1;
+    optional uint32 channel_type = 2;
+    optional bool result = 3;
+}
+
 message CMsgDOTACombatLogEntry {
     optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
     optional uint32 target_name = 2;
