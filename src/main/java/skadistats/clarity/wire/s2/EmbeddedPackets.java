@@ -152,7 +152,9 @@ public class EmbeddedPackets {
         /* 563 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SelectPenaltyGold_VALUE, DotaUserMessages.CDOTAUserMsg_SelectPenaltyGold.class);
         /* 564 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RollDiceResult_VALUE, DotaUserMessages.CDOTAUserMsg_RollDiceResult.class);
         /* 565 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_FlipCoinResult_VALUE, DotaUserMessages.CDOTAUserMsg_FlipCoinResult.class);
+        /* 567 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TeamCaptainChanged_VALUE, DotaUserMessages.CDOTAUserMessage_TeamCaptainChanged.class);
         /* 568 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanSpectatorPhase_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanSpectatorPhase.class);
+
 
 //        /* 464 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);
@@ -213,7 +215,6 @@ public class EmbeddedPackets {
 //        /* 561 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SuggestHeroRole_VALUE, DotaUserMessages.CDOTAUserMsg_SuggestHeroRole.class);
 //        /* 562 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_KillcamDamageTaken_VALUE, DotaUserMessages.CDOTAUserMsg_KillcamDamageTaken.class);
 //        /* 566 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RequestItemSuggestions_VALUE, DotaUserMessages.CDOTAUserMessage_RequestItemSuggestions.class);
-//        /* 567 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TeamCaptainChanged_VALUE, DotaUserMessages.CDOTAUserMessage_TeamCaptainChanged.class);
 //        /* 569 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheelCooldown_VALUE, DotaUserMessages.CDOTAUserMessage_ChatWheelCooldown.class);
 
 

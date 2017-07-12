@@ -839,6 +839,11 @@ message CDOTAUserMsg_FlipCoinResult {
     optional bool result = 3;
 }
 
+message CDOTAUserMessage_TeamCaptainChanged {
+    optional uint32 team = 1;
+    optional uint32 captain_player_id = 2;
+}
+
 message CMsgDOTACombatLogEntry {
     optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
     optional uint32 target_name = 2;
