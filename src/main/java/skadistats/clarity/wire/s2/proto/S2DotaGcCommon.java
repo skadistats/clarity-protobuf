@@ -105,6 +105,10 @@ public final class S2DotaGcCommon {
      * <code>DOTA_GAMEMODE_ALL_DRAFT = 22;</code>
      */
     DOTA_GAMEMODE_ALL_DRAFT(22, 22),
+    /**
+     * <code>DOTA_GAMEMODE_TURBO = 23;</code>
+     */
+    DOTA_GAMEMODE_TURBO(23, 23),
     ;
 
     /**
@@ -199,6 +203,10 @@ public final class S2DotaGcCommon {
      * <code>DOTA_GAMEMODE_ALL_DRAFT = 22;</code>
      */
     public static final int DOTA_GAMEMODE_ALL_DRAFT_VALUE = 22;
+    /**
+     * <code>DOTA_GAMEMODE_TURBO = 23;</code>
+     */
+    public static final int DOTA_GAMEMODE_TURBO_VALUE = 23;
 
 
     public final int getNumber() { return value; }
@@ -228,6 +236,7 @@ public final class S2DotaGcCommon {
         case 20: return DOTA_GAMEMODE_ARDM;
         case 21: return DOTA_GAMEMODE_1V1MID;
         case 22: return DOTA_GAMEMODE_ALL_DRAFT;
+        case 23: return DOTA_GAMEMODE_TURBO;
         default: return null;
       }
     }
@@ -3657,6 +3666,33 @@ public final class S2DotaGcCommon {
       int getItem5();
 
       /**
+       * <code>optional uint32 item_6 = 59;</code>
+       */
+      boolean hasItem6();
+      /**
+       * <code>optional uint32 item_6 = 59;</code>
+       */
+      int getItem6();
+
+      /**
+       * <code>optional uint32 item_7 = 60;</code>
+       */
+      boolean hasItem7();
+      /**
+       * <code>optional uint32 item_7 = 60;</code>
+       */
+      int getItem7();
+
+      /**
+       * <code>optional uint32 item_8 = 61;</code>
+       */
+      boolean hasItem8();
+      /**
+       * <code>optional uint32 item_8 = 61;</code>
+       */
+      int getItem8();
+
+      /**
        * <code>optional float expected_team_contribution = 10;</code>
        */
       boolean hasExpectedTeamContribution();
@@ -3700,6 +3736,24 @@ public final class S2DotaGcCommon {
        * <code>optional bool solo_rank = 49;</code>
        */
       boolean getSoloRank();
+
+      /**
+       * <code>optional bool seasonal_rank = 53;</code>
+       */
+      boolean hasSeasonalRank();
+      /**
+       * <code>optional bool seasonal_rank = 53;</code>
+       */
+      boolean getSeasonalRank();
+
+      /**
+       * <code>optional bool rank_tier_updated = 66;</code>
+       */
+      boolean hasRankTierUpdated();
+      /**
+       * <code>optional bool rank_tier_updated = 66;</code>
+       */
+      boolean getRankTierUpdated();
 
       /**
        * <code>optional uint32 kills = 14;</code>
@@ -4098,13 +4152,13 @@ public final class S2DotaGcCommon {
       skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameDataOrBuilder getCustomGameDataOrBuilder();
 
       /**
-       * <code>optional bool active_battle_pass = 51;</code>
+       * <code>optional bool active_prime_subscription = 51;</code>
        */
-      boolean hasActiveBattlePass();
+      boolean hasActivePrimeSubscription();
       /**
-       * <code>optional bool active_battle_pass = 51;</code>
+       * <code>optional bool active_prime_subscription = 51;</code>
        */
-      boolean getActiveBattlePass();
+      boolean getActivePrimeSubscription();
 
       /**
        * <code>optional uint32 net_worth = 52;</code>
@@ -4123,6 +4177,33 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 bot_difficulty = 58;</code>
        */
       int getBotDifficulty();
+
+      /**
+       * <code>optional uint32 hero_pick_order = 63;</code>
+       */
+      boolean hasHeroPickOrder();
+      /**
+       * <code>optional uint32 hero_pick_order = 63;</code>
+       */
+      int getHeroPickOrder();
+
+      /**
+       * <code>optional bool hero_was_randomed = 64;</code>
+       */
+      boolean hasHeroWasRandomed();
+      /**
+       * <code>optional bool hero_was_randomed = 64;</code>
+       */
+      boolean getHeroWasRandomed();
+
+      /**
+       * <code>optional bool hero_was_bonus = 65;</code>
+       */
+      boolean hasHeroWasBonus();
+      /**
+       * <code>optional bool hero_was_bonus = 65;</code>
+       */
+      boolean getHeroWasBonus();
     }
     /**
      * Protobuf type {@code CMsgDOTAMatch.Player}
@@ -4223,205 +4304,205 @@ public final class S2DotaGcCommon {
                 break;
               }
               case 85: {
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00001000;
                 expectedTeamContribution_ = input.readFloat();
                 break;
               }
               case 93: {
-                bitField0_ |= 0x00000400;
+                bitField0_ |= 0x00002000;
                 scaledMetric_ = input.readFloat();
                 break;
               }
               case 96: {
-                bitField0_ |= 0x00000800;
+                bitField0_ |= 0x00004000;
                 previousRank_ = input.readUInt32();
                 break;
               }
               case 104: {
-                bitField0_ |= 0x00001000;
+                bitField0_ |= 0x00008000;
                 rankChange_ = input.readSInt32();
                 break;
               }
               case 112: {
-                bitField0_ |= 0x00004000;
+                bitField0_ |= 0x00080000;
                 kills_ = input.readUInt32();
                 break;
               }
               case 120: {
-                bitField0_ |= 0x00008000;
+                bitField0_ |= 0x00100000;
                 deaths_ = input.readUInt32();
                 break;
               }
               case 128: {
-                bitField0_ |= 0x00010000;
+                bitField0_ |= 0x00200000;
                 assists_ = input.readUInt32();
                 break;
               }
               case 136: {
-                bitField0_ |= 0x00020000;
+                bitField0_ |= 0x00400000;
                 leaverStatus_ = input.readUInt32();
                 break;
               }
               case 144: {
-                bitField0_ |= 0x00040000;
+                bitField0_ |= 0x00800000;
                 gold_ = input.readUInt32();
                 break;
               }
               case 152: {
-                bitField0_ |= 0x00080000;
+                bitField0_ |= 0x01000000;
                 lastHits_ = input.readUInt32();
                 break;
               }
               case 160: {
-                bitField0_ |= 0x00100000;
+                bitField0_ |= 0x02000000;
                 denies_ = input.readUInt32();
                 break;
               }
               case 168: {
-                bitField0_ |= 0x00200000;
+                bitField0_ |= 0x04000000;
                 goldPerMin_ = input.readUInt32();
                 break;
               }
               case 176: {
-                bitField0_ |= 0x00400000;
+                bitField0_ |= 0x08000000;
                 xPPerMin_ = input.readUInt32();
                 break;
               }
               case 184: {
-                bitField0_ |= 0x00800000;
+                bitField0_ |= 0x10000000;
                 goldSpent_ = input.readUInt32();
                 break;
               }
               case 192: {
-                bitField0_ |= 0x01000000;
+                bitField0_ |= 0x20000000;
                 heroDamage_ = input.readUInt32();
                 break;
               }
               case 200: {
-                bitField0_ |= 0x02000000;
+                bitField0_ |= 0x40000000;
                 towerDamage_ = input.readUInt32();
                 break;
               }
               case 208: {
-                bitField0_ |= 0x04000000;
+                bitField0_ |= 0x80000000;
                 heroHealing_ = input.readUInt32();
                 break;
               }
               case 216: {
-                bitField0_ |= 0x08000000;
+                bitField1_ |= 0x00000001;
                 level_ = input.readUInt32();
                 break;
               }
               case 224: {
-                bitField0_ |= 0x10000000;
+                bitField1_ |= 0x00000002;
                 timeLastSeen_ = input.readUInt32();
                 break;
               }
               case 234: {
                 com.google.protobuf.ByteString bs = input.readBytes();
-                bitField0_ |= 0x20000000;
+                bitField1_ |= 0x00000004;
                 playerName_ = bs;
                 break;
               }
               case 240: {
-                bitField0_ |= 0x40000000;
+                bitField1_ |= 0x00000008;
                 supportAbilityValue_ = input.readUInt32();
                 break;
               }
               case 256: {
-                bitField0_ |= 0x80000000;
+                bitField1_ |= 0x00000010;
                 feedingDetected_ = input.readBool();
                 break;
               }
               case 272: {
-                bitField1_ |= 0x00000001;
+                bitField1_ |= 0x00000020;
                 searchRank_ = input.readUInt32();
                 break;
               }
               case 280: {
-                bitField1_ |= 0x00000002;
+                bitField1_ |= 0x00000040;
                 searchRankUncertainty_ = input.readUInt32();
                 break;
               }
               case 288: {
-                bitField1_ |= 0x00000004;
+                bitField1_ |= 0x00000080;
                 rankUncertaintyChange_ = input.readInt32();
                 break;
               }
               case 296: {
-                bitField1_ |= 0x00000008;
+                bitField1_ |= 0x00000100;
                 heroPlayCount_ = input.readUInt32();
                 break;
               }
               case 305: {
-                bitField1_ |= 0x00000010;
+                bitField1_ |= 0x00000200;
                 partyId_ = input.readFixed64();
                 break;
               }
               case 317: {
-                bitField1_ |= 0x00000100;
+                bitField1_ |= 0x00002000;
                 scaledKills_ = input.readFloat();
                 break;
               }
               case 325: {
-                bitField1_ |= 0x00000200;
+                bitField1_ |= 0x00004000;
                 scaledDeaths_ = input.readFloat();
                 break;
               }
               case 333: {
-                bitField1_ |= 0x00000400;
+                bitField1_ |= 0x00008000;
                 scaledAssists_ = input.readFloat();
                 break;
               }
               case 336: {
-                bitField1_ |= 0x00000800;
+                bitField1_ |= 0x00010000;
                 claimedFarmGold_ = input.readUInt32();
                 break;
               }
               case 344: {
-                bitField1_ |= 0x00001000;
+                bitField1_ |= 0x00020000;
                 supportGold_ = input.readUInt32();
                 break;
               }
               case 352: {
-                bitField1_ |= 0x00002000;
+                bitField1_ |= 0x00040000;
                 claimedDenies_ = input.readUInt32();
                 break;
               }
               case 360: {
-                bitField1_ |= 0x00004000;
+                bitField1_ |= 0x00080000;
                 claimedMisses_ = input.readUInt32();
                 break;
               }
               case 368: {
-                bitField1_ |= 0x00008000;
+                bitField1_ |= 0x00100000;
                 misses_ = input.readUInt32();
                 break;
               }
               case 378: {
-                if (!((mutable_bitField1_ & 0x00010000) == 0x00010000)) {
+                if (!((mutable_bitField1_ & 0x00200000) == 0x00200000)) {
                   abilityUpgrades_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgrade>();
-                  mutable_bitField1_ |= 0x00010000;
+                  mutable_bitField1_ |= 0x00200000;
                 }
                 abilityUpgrades_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgrade.PARSER, extensionRegistry));
                 break;
               }
               case 386: {
-                if (!((mutable_bitField1_ & 0x00020000) == 0x00020000)) {
+                if (!((mutable_bitField1_ & 0x00400000) == 0x00400000)) {
                   additionalUnitsInventory_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventory>();
-                  mutable_bitField1_ |= 0x00020000;
+                  mutable_bitField1_ |= 0x00400000;
                 }
                 additionalUnitsInventory_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventory.PARSER, extensionRegistry));
                 break;
               }
               case 392: {
-                bitField0_ |= 0x00002000;
+                bitField0_ |= 0x00010000;
                 soloRank_ = input.readBool();
                 break;
               }
               case 402: {
                 skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData.Builder subBuilder = null;
-                if (((bitField1_ & 0x00010000) == 0x00010000)) {
+                if (((bitField1_ & 0x00200000) == 0x00200000)) {
                   subBuilder = customGameData_.toBuilder();
                 }
                 customGameData_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData.PARSER, extensionRegistry);
@@ -4429,45 +4510,85 @@ public final class S2DotaGcCommon {
                   subBuilder.mergeFrom(customGameData_);
                   customGameData_ = subBuilder.buildPartial();
                 }
-                bitField1_ |= 0x00010000;
+                bitField1_ |= 0x00200000;
                 break;
               }
               case 408: {
-                bitField1_ |= 0x00020000;
-                activeBattlePass_ = input.readBool();
+                bitField1_ |= 0x00400000;
+                activePrimeSubscription_ = input.readBool();
                 break;
               }
               case 416: {
-                bitField1_ |= 0x00040000;
+                bitField1_ |= 0x00800000;
                 netWorth_ = input.readUInt32();
                 break;
               }
+              case 424: {
+                bitField0_ |= 0x00020000;
+                seasonalRank_ = input.readBool();
+                break;
+              }
               case 432: {
-                bitField1_ |= 0x00000020;
+                bitField1_ |= 0x00000400;
                 scaledHeroDamage_ = input.readUInt32();
                 break;
               }
               case 440: {
-                bitField1_ |= 0x00000040;
+                bitField1_ |= 0x00000800;
                 scaledTowerDamage_ = input.readUInt32();
                 break;
               }
               case 448: {
-                bitField1_ |= 0x00000080;
+                bitField1_ |= 0x00001000;
                 scaledHeroHealing_ = input.readUInt32();
                 break;
               }
               case 458: {
-                if (!((mutable_bitField1_ & 0x00040000) == 0x00040000)) {
+                if (!((mutable_bitField1_ & 0x00800000) == 0x00800000)) {
                   permanentBuffs_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuff>();
-                  mutable_bitField1_ |= 0x00040000;
+                  mutable_bitField1_ |= 0x00800000;
                 }
                 permanentBuffs_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuff.PARSER, extensionRegistry));
                 break;
               }
               case 464: {
-                bitField1_ |= 0x00080000;
+                bitField1_ |= 0x01000000;
                 botDifficulty_ = input.readUInt32();
+                break;
+              }
+              case 472: {
+                bitField0_ |= 0x00000200;
+                item6_ = input.readUInt32();
+                break;
+              }
+              case 480: {
+                bitField0_ |= 0x00000400;
+                item7_ = input.readUInt32();
+                break;
+              }
+              case 488: {
+                bitField0_ |= 0x00000800;
+                item8_ = input.readUInt32();
+                break;
+              }
+              case 504: {
+                bitField1_ |= 0x02000000;
+                heroPickOrder_ = input.readUInt32();
+                break;
+              }
+              case 512: {
+                bitField1_ |= 0x04000000;
+                heroWasRandomed_ = input.readBool();
+                break;
+              }
+              case 520: {
+                bitField1_ |= 0x08000000;
+                heroWasBonus_ = input.readBool();
+                break;
+              }
+              case 528: {
+                bitField0_ |= 0x00040000;
+                rankTierUpdated_ = input.readBool();
                 break;
               }
             }
@@ -4478,13 +4599,13 @@ public final class S2DotaGcCommon {
           throw new com.google.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
-          if (((mutable_bitField1_ & 0x00010000) == 0x00010000)) {
+          if (((mutable_bitField1_ & 0x00200000) == 0x00200000)) {
             abilityUpgrades_ = java.util.Collections.unmodifiableList(abilityUpgrades_);
           }
-          if (((mutable_bitField1_ & 0x00020000) == 0x00020000)) {
+          if (((mutable_bitField1_ & 0x00400000) == 0x00400000)) {
             additionalUnitsInventory_ = java.util.Collections.unmodifiableList(additionalUnitsInventory_);
           }
-          if (((mutable_bitField1_ & 0x00040000) == 0x00040000)) {
+          if (((mutable_bitField1_ & 0x00800000) == 0x00800000)) {
             permanentBuffs_ = java.util.Collections.unmodifiableList(permanentBuffs_);
           }
           this.unknownFields = unknownFields.build();
@@ -5130,13 +5251,58 @@ public final class S2DotaGcCommon {
         return item5_;
       }
 
+      public static final int ITEM_6_FIELD_NUMBER = 59;
+      private int item6_;
+      /**
+       * <code>optional uint32 item_6 = 59;</code>
+       */
+      public boolean hasItem6() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional uint32 item_6 = 59;</code>
+       */
+      public int getItem6() {
+        return item6_;
+      }
+
+      public static final int ITEM_7_FIELD_NUMBER = 60;
+      private int item7_;
+      /**
+       * <code>optional uint32 item_7 = 60;</code>
+       */
+      public boolean hasItem7() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional uint32 item_7 = 60;</code>
+       */
+      public int getItem7() {
+        return item7_;
+      }
+
+      public static final int ITEM_8_FIELD_NUMBER = 61;
+      private int item8_;
+      /**
+       * <code>optional uint32 item_8 = 61;</code>
+       */
+      public boolean hasItem8() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional uint32 item_8 = 61;</code>
+       */
+      public int getItem8() {
+        return item8_;
+      }
+
       public static final int EXPECTED_TEAM_CONTRIBUTION_FIELD_NUMBER = 10;
       private float expectedTeamContribution_;
       /**
        * <code>optional float expected_team_contribution = 10;</code>
        */
       public boolean hasExpectedTeamContribution() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional float expected_team_contribution = 10;</code>
@@ -5151,7 +5317,7 @@ public final class S2DotaGcCommon {
        * <code>optional float scaled_metric = 11;</code>
        */
       public boolean hasScaledMetric() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional float scaled_metric = 11;</code>
@@ -5166,7 +5332,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 previous_rank = 12;</code>
        */
       public boolean hasPreviousRank() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>optional uint32 previous_rank = 12;</code>
@@ -5181,7 +5347,7 @@ public final class S2DotaGcCommon {
        * <code>optional sint32 rank_change = 13;</code>
        */
       public boolean hasRankChange() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
        * <code>optional sint32 rank_change = 13;</code>
@@ -5196,7 +5362,7 @@ public final class S2DotaGcCommon {
        * <code>optional bool solo_rank = 49;</code>
        */
       public boolean hasSoloRank() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00010000) == 0x00010000);
       }
       /**
        * <code>optional bool solo_rank = 49;</code>
@@ -5205,13 +5371,43 @@ public final class S2DotaGcCommon {
         return soloRank_;
       }
 
+      public static final int SEASONAL_RANK_FIELD_NUMBER = 53;
+      private boolean seasonalRank_;
+      /**
+       * <code>optional bool seasonal_rank = 53;</code>
+       */
+      public boolean hasSeasonalRank() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional bool seasonal_rank = 53;</code>
+       */
+      public boolean getSeasonalRank() {
+        return seasonalRank_;
+      }
+
+      public static final int RANK_TIER_UPDATED_FIELD_NUMBER = 66;
+      private boolean rankTierUpdated_;
+      /**
+       * <code>optional bool rank_tier_updated = 66;</code>
+       */
+      public boolean hasRankTierUpdated() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional bool rank_tier_updated = 66;</code>
+       */
+      public boolean getRankTierUpdated() {
+        return rankTierUpdated_;
+      }
+
       public static final int KILLS_FIELD_NUMBER = 14;
       private int kills_;
       /**
        * <code>optional uint32 kills = 14;</code>
        */
       public boolean hasKills() {
-        return ((bitField0_ & 0x00004000) == 0x00004000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional uint32 kills = 14;</code>
@@ -5226,7 +5422,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 deaths = 15;</code>
        */
       public boolean hasDeaths() {
-        return ((bitField0_ & 0x00008000) == 0x00008000);
+        return ((bitField0_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional uint32 deaths = 15;</code>
@@ -5241,7 +5437,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 assists = 16;</code>
        */
       public boolean hasAssists() {
-        return ((bitField0_ & 0x00010000) == 0x00010000);
+        return ((bitField0_ & 0x00200000) == 0x00200000);
       }
       /**
        * <code>optional uint32 assists = 16;</code>
@@ -5256,7 +5452,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 leaver_status = 17;</code>
        */
       public boolean hasLeaverStatus() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>optional uint32 leaver_status = 17;</code>
@@ -5271,7 +5467,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 gold = 18;</code>
        */
       public boolean hasGold() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x00800000) == 0x00800000);
       }
       /**
        * <code>optional uint32 gold = 18;</code>
@@ -5286,7 +5482,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 last_hits = 19;</code>
        */
       public boolean hasLastHits() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x01000000) == 0x01000000);
       }
       /**
        * <code>optional uint32 last_hits = 19;</code>
@@ -5301,7 +5497,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 denies = 20;</code>
        */
       public boolean hasDenies() {
-        return ((bitField0_ & 0x00100000) == 0x00100000);
+        return ((bitField0_ & 0x02000000) == 0x02000000);
       }
       /**
        * <code>optional uint32 denies = 20;</code>
@@ -5316,7 +5512,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 gold_per_min = 21;</code>
        */
       public boolean hasGoldPerMin() {
-        return ((bitField0_ & 0x00200000) == 0x00200000);
+        return ((bitField0_ & 0x04000000) == 0x04000000);
       }
       /**
        * <code>optional uint32 gold_per_min = 21;</code>
@@ -5331,7 +5527,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 XP_per_min = 22;</code>
        */
       public boolean hasXPPerMin() {
-        return ((bitField0_ & 0x00400000) == 0x00400000);
+        return ((bitField0_ & 0x08000000) == 0x08000000);
       }
       /**
        * <code>optional uint32 XP_per_min = 22;</code>
@@ -5346,7 +5542,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 gold_spent = 23;</code>
        */
       public boolean hasGoldSpent() {
-        return ((bitField0_ & 0x00800000) == 0x00800000);
+        return ((bitField0_ & 0x10000000) == 0x10000000);
       }
       /**
        * <code>optional uint32 gold_spent = 23;</code>
@@ -5361,7 +5557,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 hero_damage = 24;</code>
        */
       public boolean hasHeroDamage() {
-        return ((bitField0_ & 0x01000000) == 0x01000000);
+        return ((bitField0_ & 0x20000000) == 0x20000000);
       }
       /**
        * <code>optional uint32 hero_damage = 24;</code>
@@ -5376,7 +5572,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 tower_damage = 25;</code>
        */
       public boolean hasTowerDamage() {
-        return ((bitField0_ & 0x02000000) == 0x02000000);
+        return ((bitField0_ & 0x40000000) == 0x40000000);
       }
       /**
        * <code>optional uint32 tower_damage = 25;</code>
@@ -5391,7 +5587,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 hero_healing = 26;</code>
        */
       public boolean hasHeroHealing() {
-        return ((bitField0_ & 0x04000000) == 0x04000000);
+        return ((bitField0_ & 0x80000000) == 0x80000000);
       }
       /**
        * <code>optional uint32 hero_healing = 26;</code>
@@ -5406,7 +5602,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 level = 27;</code>
        */
       public boolean hasLevel() {
-        return ((bitField0_ & 0x08000000) == 0x08000000);
+        return ((bitField1_ & 0x00000001) == 0x00000001);
       }
       /**
        * <code>optional uint32 level = 27;</code>
@@ -5421,7 +5617,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 time_last_seen = 28;</code>
        */
       public boolean hasTimeLastSeen() {
-        return ((bitField0_ & 0x10000000) == 0x10000000);
+        return ((bitField1_ & 0x00000002) == 0x00000002);
       }
       /**
        * <code>optional uint32 time_last_seen = 28;</code>
@@ -5436,7 +5632,7 @@ public final class S2DotaGcCommon {
        * <code>optional string player_name = 29;</code>
        */
       public boolean hasPlayerName() {
-        return ((bitField0_ & 0x20000000) == 0x20000000);
+        return ((bitField1_ & 0x00000004) == 0x00000004);
       }
       /**
        * <code>optional string player_name = 29;</code>
@@ -5478,7 +5674,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 support_ability_value = 30;</code>
        */
       public boolean hasSupportAbilityValue() {
-        return ((bitField0_ & 0x40000000) == 0x40000000);
+        return ((bitField1_ & 0x00000008) == 0x00000008);
       }
       /**
        * <code>optional uint32 support_ability_value = 30;</code>
@@ -5493,7 +5689,7 @@ public final class S2DotaGcCommon {
        * <code>optional bool feeding_detected = 32;</code>
        */
       public boolean hasFeedingDetected() {
-        return ((bitField0_ & 0x80000000) == 0x80000000);
+        return ((bitField1_ & 0x00000010) == 0x00000010);
       }
       /**
        * <code>optional bool feeding_detected = 32;</code>
@@ -5508,7 +5704,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 search_rank = 34;</code>
        */
       public boolean hasSearchRank() {
-        return ((bitField1_ & 0x00000001) == 0x00000001);
+        return ((bitField1_ & 0x00000020) == 0x00000020);
       }
       /**
        * <code>optional uint32 search_rank = 34;</code>
@@ -5523,7 +5719,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 search_rank_uncertainty = 35;</code>
        */
       public boolean hasSearchRankUncertainty() {
-        return ((bitField1_ & 0x00000002) == 0x00000002);
+        return ((bitField1_ & 0x00000040) == 0x00000040);
       }
       /**
        * <code>optional uint32 search_rank_uncertainty = 35;</code>
@@ -5538,7 +5734,7 @@ public final class S2DotaGcCommon {
        * <code>optional int32 rank_uncertainty_change = 36;</code>
        */
       public boolean hasRankUncertaintyChange() {
-        return ((bitField1_ & 0x00000004) == 0x00000004);
+        return ((bitField1_ & 0x00000080) == 0x00000080);
       }
       /**
        * <code>optional int32 rank_uncertainty_change = 36;</code>
@@ -5553,7 +5749,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 hero_play_count = 37;</code>
        */
       public boolean hasHeroPlayCount() {
-        return ((bitField1_ & 0x00000008) == 0x00000008);
+        return ((bitField1_ & 0x00000100) == 0x00000100);
       }
       /**
        * <code>optional uint32 hero_play_count = 37;</code>
@@ -5568,7 +5764,7 @@ public final class S2DotaGcCommon {
        * <code>optional fixed64 party_id = 38;</code>
        */
       public boolean hasPartyId() {
-        return ((bitField1_ & 0x00000010) == 0x00000010);
+        return ((bitField1_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>optional fixed64 party_id = 38;</code>
@@ -5583,7 +5779,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 scaled_hero_damage = 54;</code>
        */
       public boolean hasScaledHeroDamage() {
-        return ((bitField1_ & 0x00000020) == 0x00000020);
+        return ((bitField1_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>optional uint32 scaled_hero_damage = 54;</code>
@@ -5598,7 +5794,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 scaled_tower_damage = 55;</code>
        */
       public boolean hasScaledTowerDamage() {
-        return ((bitField1_ & 0x00000040) == 0x00000040);
+        return ((bitField1_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>optional uint32 scaled_tower_damage = 55;</code>
@@ -5613,7 +5809,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 scaled_hero_healing = 56;</code>
        */
       public boolean hasScaledHeroHealing() {
-        return ((bitField1_ & 0x00000080) == 0x00000080);
+        return ((bitField1_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional uint32 scaled_hero_healing = 56;</code>
@@ -5628,7 +5824,7 @@ public final class S2DotaGcCommon {
        * <code>optional float scaled_kills = 39;</code>
        */
       public boolean hasScaledKills() {
-        return ((bitField1_ & 0x00000100) == 0x00000100);
+        return ((bitField1_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional float scaled_kills = 39;</code>
@@ -5643,7 +5839,7 @@ public final class S2DotaGcCommon {
        * <code>optional float scaled_deaths = 40;</code>
        */
       public boolean hasScaledDeaths() {
-        return ((bitField1_ & 0x00000200) == 0x00000200);
+        return ((bitField1_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>optional float scaled_deaths = 40;</code>
@@ -5658,7 +5854,7 @@ public final class S2DotaGcCommon {
        * <code>optional float scaled_assists = 41;</code>
        */
       public boolean hasScaledAssists() {
-        return ((bitField1_ & 0x00000400) == 0x00000400);
+        return ((bitField1_ & 0x00008000) == 0x00008000);
       }
       /**
        * <code>optional float scaled_assists = 41;</code>
@@ -5673,7 +5869,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 claimed_farm_gold = 42;</code>
        */
       public boolean hasClaimedFarmGold() {
-        return ((bitField1_ & 0x00000800) == 0x00000800);
+        return ((bitField1_ & 0x00010000) == 0x00010000);
       }
       /**
        * <code>optional uint32 claimed_farm_gold = 42;</code>
@@ -5688,7 +5884,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 support_gold = 43;</code>
        */
       public boolean hasSupportGold() {
-        return ((bitField1_ & 0x00001000) == 0x00001000);
+        return ((bitField1_ & 0x00020000) == 0x00020000);
       }
       /**
        * <code>optional uint32 support_gold = 43;</code>
@@ -5703,7 +5899,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 claimed_denies = 44;</code>
        */
       public boolean hasClaimedDenies() {
-        return ((bitField1_ & 0x00002000) == 0x00002000);
+        return ((bitField1_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>optional uint32 claimed_denies = 44;</code>
@@ -5718,7 +5914,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 claimed_misses = 45;</code>
        */
       public boolean hasClaimedMisses() {
-        return ((bitField1_ & 0x00004000) == 0x00004000);
+        return ((bitField1_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional uint32 claimed_misses = 45;</code>
@@ -5733,7 +5929,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 misses = 46;</code>
        */
       public boolean hasMisses() {
-        return ((bitField1_ & 0x00008000) == 0x00008000);
+        return ((bitField1_ & 0x00100000) == 0x00100000);
       }
       /**
        * <code>optional uint32 misses = 46;</code>
@@ -5853,7 +6049,7 @@ public final class S2DotaGcCommon {
        * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
        */
       public boolean hasCustomGameData() {
-        return ((bitField1_ & 0x00010000) == 0x00010000);
+        return ((bitField1_ & 0x00200000) == 0x00200000);
       }
       /**
        * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
@@ -5868,19 +6064,19 @@ public final class S2DotaGcCommon {
         return customGameData_;
       }
 
-      public static final int ACTIVE_BATTLE_PASS_FIELD_NUMBER = 51;
-      private boolean activeBattlePass_;
+      public static final int ACTIVE_PRIME_SUBSCRIPTION_FIELD_NUMBER = 51;
+      private boolean activePrimeSubscription_;
       /**
-       * <code>optional bool active_battle_pass = 51;</code>
+       * <code>optional bool active_prime_subscription = 51;</code>
        */
-      public boolean hasActiveBattlePass() {
-        return ((bitField1_ & 0x00020000) == 0x00020000);
+      public boolean hasActivePrimeSubscription() {
+        return ((bitField1_ & 0x00400000) == 0x00400000);
       }
       /**
-       * <code>optional bool active_battle_pass = 51;</code>
+       * <code>optional bool active_prime_subscription = 51;</code>
        */
-      public boolean getActiveBattlePass() {
-        return activeBattlePass_;
+      public boolean getActivePrimeSubscription() {
+        return activePrimeSubscription_;
       }
 
       public static final int NET_WORTH_FIELD_NUMBER = 52;
@@ -5889,7 +6085,7 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 net_worth = 52;</code>
        */
       public boolean hasNetWorth() {
-        return ((bitField1_ & 0x00040000) == 0x00040000);
+        return ((bitField1_ & 0x00800000) == 0x00800000);
       }
       /**
        * <code>optional uint32 net_worth = 52;</code>
@@ -5904,13 +6100,58 @@ public final class S2DotaGcCommon {
        * <code>optional uint32 bot_difficulty = 58;</code>
        */
       public boolean hasBotDifficulty() {
-        return ((bitField1_ & 0x00080000) == 0x00080000);
+        return ((bitField1_ & 0x01000000) == 0x01000000);
       }
       /**
        * <code>optional uint32 bot_difficulty = 58;</code>
        */
       public int getBotDifficulty() {
         return botDifficulty_;
+      }
+
+      public static final int HERO_PICK_ORDER_FIELD_NUMBER = 63;
+      private int heroPickOrder_;
+      /**
+       * <code>optional uint32 hero_pick_order = 63;</code>
+       */
+      public boolean hasHeroPickOrder() {
+        return ((bitField1_ & 0x02000000) == 0x02000000);
+      }
+      /**
+       * <code>optional uint32 hero_pick_order = 63;</code>
+       */
+      public int getHeroPickOrder() {
+        return heroPickOrder_;
+      }
+
+      public static final int HERO_WAS_RANDOMED_FIELD_NUMBER = 64;
+      private boolean heroWasRandomed_;
+      /**
+       * <code>optional bool hero_was_randomed = 64;</code>
+       */
+      public boolean hasHeroWasRandomed() {
+        return ((bitField1_ & 0x04000000) == 0x04000000);
+      }
+      /**
+       * <code>optional bool hero_was_randomed = 64;</code>
+       */
+      public boolean getHeroWasRandomed() {
+        return heroWasRandomed_;
+      }
+
+      public static final int HERO_WAS_BONUS_FIELD_NUMBER = 65;
+      private boolean heroWasBonus_;
+      /**
+       * <code>optional bool hero_was_bonus = 65;</code>
+       */
+      public boolean hasHeroWasBonus() {
+        return ((bitField1_ & 0x08000000) == 0x08000000);
+      }
+      /**
+       * <code>optional bool hero_was_bonus = 65;</code>
+       */
+      public boolean getHeroWasBonus() {
+        return heroWasBonus_;
       }
 
       private void initFields() {
@@ -5923,11 +6164,16 @@ public final class S2DotaGcCommon {
         item3_ = 0;
         item4_ = 0;
         item5_ = 0;
+        item6_ = 0;
+        item7_ = 0;
+        item8_ = 0;
         expectedTeamContribution_ = 0F;
         scaledMetric_ = 0F;
         previousRank_ = 0;
         rankChange_ = 0;
         soloRank_ = false;
+        seasonalRank_ = false;
+        rankTierUpdated_ = false;
         kills_ = 0;
         deaths_ = 0;
         assists_ = 0;
@@ -5966,9 +6212,12 @@ public final class S2DotaGcCommon {
         additionalUnitsInventory_ = java.util.Collections.emptyList();
         permanentBuffs_ = java.util.Collections.emptyList();
         customGameData_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData.getDefaultInstance();
-        activeBattlePass_ = false;
+        activePrimeSubscription_ = false;
         netWorth_ = 0;
         botDifficulty_ = 0;
+        heroPickOrder_ = 0;
+        heroWasRandomed_ = false;
+        heroWasBonus_ = false;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -6010,109 +6259,109 @@ public final class S2DotaGcCommon {
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
           output.writeUInt32(9, item5_);
         }
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
           output.writeFloat(10, expectedTeamContribution_);
         }
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
           output.writeFloat(11, scaledMetric_);
         }
-        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((bitField0_ & 0x00004000) == 0x00004000)) {
           output.writeUInt32(12, previousRank_);
         }
-        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((bitField0_ & 0x00008000) == 0x00008000)) {
           output.writeSInt32(13, rankChange_);
         }
-        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((bitField0_ & 0x00080000) == 0x00080000)) {
           output.writeUInt32(14, kills_);
         }
-        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((bitField0_ & 0x00100000) == 0x00100000)) {
           output.writeUInt32(15, deaths_);
         }
-        if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((bitField0_ & 0x00200000) == 0x00200000)) {
           output.writeUInt32(16, assists_);
         }
-        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((bitField0_ & 0x00400000) == 0x00400000)) {
           output.writeUInt32(17, leaverStatus_);
         }
-        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((bitField0_ & 0x00800000) == 0x00800000)) {
           output.writeUInt32(18, gold_);
         }
-        if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((bitField0_ & 0x01000000) == 0x01000000)) {
           output.writeUInt32(19, lastHits_);
         }
-        if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((bitField0_ & 0x02000000) == 0x02000000)) {
           output.writeUInt32(20, denies_);
         }
-        if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((bitField0_ & 0x04000000) == 0x04000000)) {
           output.writeUInt32(21, goldPerMin_);
         }
-        if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((bitField0_ & 0x08000000) == 0x08000000)) {
           output.writeUInt32(22, xPPerMin_);
         }
-        if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((bitField0_ & 0x10000000) == 0x10000000)) {
           output.writeUInt32(23, goldSpent_);
         }
-        if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((bitField0_ & 0x20000000) == 0x20000000)) {
           output.writeUInt32(24, heroDamage_);
         }
-        if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        if (((bitField0_ & 0x40000000) == 0x40000000)) {
           output.writeUInt32(25, towerDamage_);
         }
-        if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        if (((bitField0_ & 0x80000000) == 0x80000000)) {
           output.writeUInt32(26, heroHealing_);
         }
-        if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        if (((bitField1_ & 0x00000001) == 0x00000001)) {
           output.writeUInt32(27, level_);
         }
-        if (((bitField0_ & 0x10000000) == 0x10000000)) {
+        if (((bitField1_ & 0x00000002) == 0x00000002)) {
           output.writeUInt32(28, timeLastSeen_);
         }
-        if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        if (((bitField1_ & 0x00000004) == 0x00000004)) {
           output.writeBytes(29, getPlayerNameBytes());
         }
-        if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        if (((bitField1_ & 0x00000008) == 0x00000008)) {
           output.writeUInt32(30, supportAbilityValue_);
         }
-        if (((bitField0_ & 0x80000000) == 0x80000000)) {
+        if (((bitField1_ & 0x00000010) == 0x00000010)) {
           output.writeBool(32, feedingDetected_);
         }
-        if (((bitField1_ & 0x00000001) == 0x00000001)) {
+        if (((bitField1_ & 0x00000020) == 0x00000020)) {
           output.writeUInt32(34, searchRank_);
         }
-        if (((bitField1_ & 0x00000002) == 0x00000002)) {
+        if (((bitField1_ & 0x00000040) == 0x00000040)) {
           output.writeUInt32(35, searchRankUncertainty_);
         }
-        if (((bitField1_ & 0x00000004) == 0x00000004)) {
+        if (((bitField1_ & 0x00000080) == 0x00000080)) {
           output.writeInt32(36, rankUncertaintyChange_);
         }
-        if (((bitField1_ & 0x00000008) == 0x00000008)) {
+        if (((bitField1_ & 0x00000100) == 0x00000100)) {
           output.writeUInt32(37, heroPlayCount_);
         }
-        if (((bitField1_ & 0x00000010) == 0x00000010)) {
+        if (((bitField1_ & 0x00000200) == 0x00000200)) {
           output.writeFixed64(38, partyId_);
         }
-        if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        if (((bitField1_ & 0x00002000) == 0x00002000)) {
           output.writeFloat(39, scaledKills_);
         }
-        if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        if (((bitField1_ & 0x00004000) == 0x00004000)) {
           output.writeFloat(40, scaledDeaths_);
         }
-        if (((bitField1_ & 0x00000400) == 0x00000400)) {
+        if (((bitField1_ & 0x00008000) == 0x00008000)) {
           output.writeFloat(41, scaledAssists_);
         }
-        if (((bitField1_ & 0x00000800) == 0x00000800)) {
+        if (((bitField1_ & 0x00010000) == 0x00010000)) {
           output.writeUInt32(42, claimedFarmGold_);
         }
-        if (((bitField1_ & 0x00001000) == 0x00001000)) {
+        if (((bitField1_ & 0x00020000) == 0x00020000)) {
           output.writeUInt32(43, supportGold_);
         }
-        if (((bitField1_ & 0x00002000) == 0x00002000)) {
+        if (((bitField1_ & 0x00040000) == 0x00040000)) {
           output.writeUInt32(44, claimedDenies_);
         }
-        if (((bitField1_ & 0x00004000) == 0x00004000)) {
+        if (((bitField1_ & 0x00080000) == 0x00080000)) {
           output.writeUInt32(45, claimedMisses_);
         }
-        if (((bitField1_ & 0x00008000) == 0x00008000)) {
+        if (((bitField1_ & 0x00100000) == 0x00100000)) {
           output.writeUInt32(46, misses_);
         }
         for (int i = 0; i < abilityUpgrades_.size(); i++) {
@@ -6121,32 +6370,56 @@ public final class S2DotaGcCommon {
         for (int i = 0; i < additionalUnitsInventory_.size(); i++) {
           output.writeMessage(48, additionalUnitsInventory_.get(i));
         }
-        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((bitField0_ & 0x00010000) == 0x00010000)) {
           output.writeBool(49, soloRank_);
         }
-        if (((bitField1_ & 0x00010000) == 0x00010000)) {
+        if (((bitField1_ & 0x00200000) == 0x00200000)) {
           output.writeMessage(50, customGameData_);
         }
-        if (((bitField1_ & 0x00020000) == 0x00020000)) {
-          output.writeBool(51, activeBattlePass_);
+        if (((bitField1_ & 0x00400000) == 0x00400000)) {
+          output.writeBool(51, activePrimeSubscription_);
         }
-        if (((bitField1_ & 0x00040000) == 0x00040000)) {
+        if (((bitField1_ & 0x00800000) == 0x00800000)) {
           output.writeUInt32(52, netWorth_);
         }
-        if (((bitField1_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          output.writeBool(53, seasonalRank_);
+        }
+        if (((bitField1_ & 0x00000400) == 0x00000400)) {
           output.writeUInt32(54, scaledHeroDamage_);
         }
-        if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        if (((bitField1_ & 0x00000800) == 0x00000800)) {
           output.writeUInt32(55, scaledTowerDamage_);
         }
-        if (((bitField1_ & 0x00000080) == 0x00000080)) {
+        if (((bitField1_ & 0x00001000) == 0x00001000)) {
           output.writeUInt32(56, scaledHeroHealing_);
         }
         for (int i = 0; i < permanentBuffs_.size(); i++) {
           output.writeMessage(57, permanentBuffs_.get(i));
         }
-        if (((bitField1_ & 0x00080000) == 0x00080000)) {
+        if (((bitField1_ & 0x01000000) == 0x01000000)) {
           output.writeUInt32(58, botDifficulty_);
+        }
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          output.writeUInt32(59, item6_);
+        }
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          output.writeUInt32(60, item7_);
+        }
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          output.writeUInt32(61, item8_);
+        }
+        if (((bitField1_ & 0x02000000) == 0x02000000)) {
+          output.writeUInt32(63, heroPickOrder_);
+        }
+        if (((bitField1_ & 0x04000000) == 0x04000000)) {
+          output.writeBool(64, heroWasRandomed_);
+        }
+        if (((bitField1_ & 0x08000000) == 0x08000000)) {
+          output.writeBool(65, heroWasBonus_);
+        }
+        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          output.writeBool(66, rankTierUpdated_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -6193,143 +6466,143 @@ public final class S2DotaGcCommon {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(9, item5_);
         }
-        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(10, expectedTeamContribution_);
         }
-        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(11, scaledMetric_);
         }
-        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        if (((bitField0_ & 0x00004000) == 0x00004000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(12, previousRank_);
         }
-        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        if (((bitField0_ & 0x00008000) == 0x00008000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeSInt32Size(13, rankChange_);
         }
-        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((bitField0_ & 0x00080000) == 0x00080000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(14, kills_);
         }
-        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        if (((bitField0_ & 0x00100000) == 0x00100000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(15, deaths_);
         }
-        if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        if (((bitField0_ & 0x00200000) == 0x00200000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(16, assists_);
         }
-        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((bitField0_ & 0x00400000) == 0x00400000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(17, leaverStatus_);
         }
-        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((bitField0_ & 0x00800000) == 0x00800000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(18, gold_);
         }
-        if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((bitField0_ & 0x01000000) == 0x01000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(19, lastHits_);
         }
-        if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        if (((bitField0_ & 0x02000000) == 0x02000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(20, denies_);
         }
-        if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        if (((bitField0_ & 0x04000000) == 0x04000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(21, goldPerMin_);
         }
-        if (((bitField0_ & 0x00400000) == 0x00400000)) {
+        if (((bitField0_ & 0x08000000) == 0x08000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(22, xPPerMin_);
         }
-        if (((bitField0_ & 0x00800000) == 0x00800000)) {
+        if (((bitField0_ & 0x10000000) == 0x10000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(23, goldSpent_);
         }
-        if (((bitField0_ & 0x01000000) == 0x01000000)) {
+        if (((bitField0_ & 0x20000000) == 0x20000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(24, heroDamage_);
         }
-        if (((bitField0_ & 0x02000000) == 0x02000000)) {
+        if (((bitField0_ & 0x40000000) == 0x40000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(25, towerDamage_);
         }
-        if (((bitField0_ & 0x04000000) == 0x04000000)) {
+        if (((bitField0_ & 0x80000000) == 0x80000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(26, heroHealing_);
         }
-        if (((bitField0_ & 0x08000000) == 0x08000000)) {
+        if (((bitField1_ & 0x00000001) == 0x00000001)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(27, level_);
         }
-        if (((bitField0_ & 0x10000000) == 0x10000000)) {
+        if (((bitField1_ & 0x00000002) == 0x00000002)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(28, timeLastSeen_);
         }
-        if (((bitField0_ & 0x20000000) == 0x20000000)) {
+        if (((bitField1_ & 0x00000004) == 0x00000004)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(29, getPlayerNameBytes());
         }
-        if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        if (((bitField1_ & 0x00000008) == 0x00000008)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(30, supportAbilityValue_);
         }
-        if (((bitField0_ & 0x80000000) == 0x80000000)) {
+        if (((bitField1_ & 0x00000010) == 0x00000010)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(32, feedingDetected_);
         }
-        if (((bitField1_ & 0x00000001) == 0x00000001)) {
+        if (((bitField1_ & 0x00000020) == 0x00000020)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(34, searchRank_);
         }
-        if (((bitField1_ & 0x00000002) == 0x00000002)) {
+        if (((bitField1_ & 0x00000040) == 0x00000040)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(35, searchRankUncertainty_);
         }
-        if (((bitField1_ & 0x00000004) == 0x00000004)) {
+        if (((bitField1_ & 0x00000080) == 0x00000080)) {
           size += com.google.protobuf.CodedOutputStream
             .computeInt32Size(36, rankUncertaintyChange_);
         }
-        if (((bitField1_ & 0x00000008) == 0x00000008)) {
+        if (((bitField1_ & 0x00000100) == 0x00000100)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(37, heroPlayCount_);
         }
-        if (((bitField1_ & 0x00000010) == 0x00000010)) {
+        if (((bitField1_ & 0x00000200) == 0x00000200)) {
           size += com.google.protobuf.CodedOutputStream
             .computeFixed64Size(38, partyId_);
         }
-        if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        if (((bitField1_ & 0x00002000) == 0x00002000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(39, scaledKills_);
         }
-        if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        if (((bitField1_ & 0x00004000) == 0x00004000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(40, scaledDeaths_);
         }
-        if (((bitField1_ & 0x00000400) == 0x00000400)) {
+        if (((bitField1_ & 0x00008000) == 0x00008000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeFloatSize(41, scaledAssists_);
         }
-        if (((bitField1_ & 0x00000800) == 0x00000800)) {
+        if (((bitField1_ & 0x00010000) == 0x00010000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(42, claimedFarmGold_);
         }
-        if (((bitField1_ & 0x00001000) == 0x00001000)) {
+        if (((bitField1_ & 0x00020000) == 0x00020000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(43, supportGold_);
         }
-        if (((bitField1_ & 0x00002000) == 0x00002000)) {
+        if (((bitField1_ & 0x00040000) == 0x00040000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(44, claimedDenies_);
         }
-        if (((bitField1_ & 0x00004000) == 0x00004000)) {
+        if (((bitField1_ & 0x00080000) == 0x00080000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(45, claimedMisses_);
         }
-        if (((bitField1_ & 0x00008000) == 0x00008000)) {
+        if (((bitField1_ & 0x00100000) == 0x00100000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(46, misses_);
         }
@@ -6341,31 +6614,35 @@ public final class S2DotaGcCommon {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(48, additionalUnitsInventory_.get(i));
         }
-        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        if (((bitField0_ & 0x00010000) == 0x00010000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBoolSize(49, soloRank_);
         }
-        if (((bitField1_ & 0x00010000) == 0x00010000)) {
+        if (((bitField1_ & 0x00200000) == 0x00200000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(50, customGameData_);
         }
-        if (((bitField1_ & 0x00020000) == 0x00020000)) {
+        if (((bitField1_ & 0x00400000) == 0x00400000)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeBoolSize(51, activeBattlePass_);
+            .computeBoolSize(51, activePrimeSubscription_);
         }
-        if (((bitField1_ & 0x00040000) == 0x00040000)) {
+        if (((bitField1_ & 0x00800000) == 0x00800000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(52, netWorth_);
         }
-        if (((bitField1_ & 0x00000020) == 0x00000020)) {
+        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(53, seasonalRank_);
+        }
+        if (((bitField1_ & 0x00000400) == 0x00000400)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(54, scaledHeroDamage_);
         }
-        if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        if (((bitField1_ & 0x00000800) == 0x00000800)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(55, scaledTowerDamage_);
         }
-        if (((bitField1_ & 0x00000080) == 0x00000080)) {
+        if (((bitField1_ & 0x00001000) == 0x00001000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(56, scaledHeroHealing_);
         }
@@ -6373,9 +6650,37 @@ public final class S2DotaGcCommon {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(57, permanentBuffs_.get(i));
         }
-        if (((bitField1_ & 0x00080000) == 0x00080000)) {
+        if (((bitField1_ & 0x01000000) == 0x01000000)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(58, botDifficulty_);
+        }
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(59, item6_);
+        }
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(60, item7_);
+        }
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(61, item8_);
+        }
+        if (((bitField1_ & 0x02000000) == 0x02000000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(63, heroPickOrder_);
+        }
+        if (((bitField1_ & 0x04000000) == 0x04000000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(64, heroWasRandomed_);
+        }
+        if (((bitField1_ & 0x08000000) == 0x08000000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(65, heroWasBonus_);
+        }
+        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(66, rankTierUpdated_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -6516,99 +6821,109 @@ public final class S2DotaGcCommon {
           bitField0_ = (bitField0_ & ~0x00000080);
           item5_ = 0;
           bitField0_ = (bitField0_ & ~0x00000100);
-          expectedTeamContribution_ = 0F;
+          item6_ = 0;
           bitField0_ = (bitField0_ & ~0x00000200);
-          scaledMetric_ = 0F;
+          item7_ = 0;
           bitField0_ = (bitField0_ & ~0x00000400);
-          previousRank_ = 0;
+          item8_ = 0;
           bitField0_ = (bitField0_ & ~0x00000800);
-          rankChange_ = 0;
+          expectedTeamContribution_ = 0F;
           bitField0_ = (bitField0_ & ~0x00001000);
-          soloRank_ = false;
+          scaledMetric_ = 0F;
           bitField0_ = (bitField0_ & ~0x00002000);
-          kills_ = 0;
+          previousRank_ = 0;
           bitField0_ = (bitField0_ & ~0x00004000);
-          deaths_ = 0;
+          rankChange_ = 0;
           bitField0_ = (bitField0_ & ~0x00008000);
-          assists_ = 0;
+          soloRank_ = false;
           bitField0_ = (bitField0_ & ~0x00010000);
-          leaverStatus_ = 0;
+          seasonalRank_ = false;
           bitField0_ = (bitField0_ & ~0x00020000);
-          gold_ = 0;
+          rankTierUpdated_ = false;
           bitField0_ = (bitField0_ & ~0x00040000);
-          lastHits_ = 0;
+          kills_ = 0;
           bitField0_ = (bitField0_ & ~0x00080000);
-          denies_ = 0;
+          deaths_ = 0;
           bitField0_ = (bitField0_ & ~0x00100000);
-          goldPerMin_ = 0;
+          assists_ = 0;
           bitField0_ = (bitField0_ & ~0x00200000);
-          xPPerMin_ = 0;
+          leaverStatus_ = 0;
           bitField0_ = (bitField0_ & ~0x00400000);
-          goldSpent_ = 0;
+          gold_ = 0;
           bitField0_ = (bitField0_ & ~0x00800000);
-          heroDamage_ = 0;
+          lastHits_ = 0;
           bitField0_ = (bitField0_ & ~0x01000000);
-          towerDamage_ = 0;
+          denies_ = 0;
           bitField0_ = (bitField0_ & ~0x02000000);
-          heroHealing_ = 0;
+          goldPerMin_ = 0;
           bitField0_ = (bitField0_ & ~0x04000000);
-          level_ = 0;
+          xPPerMin_ = 0;
           bitField0_ = (bitField0_ & ~0x08000000);
-          timeLastSeen_ = 0;
+          goldSpent_ = 0;
           bitField0_ = (bitField0_ & ~0x10000000);
-          playerName_ = "";
+          heroDamage_ = 0;
           bitField0_ = (bitField0_ & ~0x20000000);
-          supportAbilityValue_ = 0;
+          towerDamage_ = 0;
           bitField0_ = (bitField0_ & ~0x40000000);
-          feedingDetected_ = false;
+          heroHealing_ = 0;
           bitField0_ = (bitField0_ & ~0x80000000);
-          searchRank_ = 0;
+          level_ = 0;
           bitField1_ = (bitField1_ & ~0x00000001);
-          searchRankUncertainty_ = 0;
+          timeLastSeen_ = 0;
           bitField1_ = (bitField1_ & ~0x00000002);
-          rankUncertaintyChange_ = 0;
+          playerName_ = "";
           bitField1_ = (bitField1_ & ~0x00000004);
-          heroPlayCount_ = 0;
+          supportAbilityValue_ = 0;
           bitField1_ = (bitField1_ & ~0x00000008);
-          partyId_ = 0L;
+          feedingDetected_ = false;
           bitField1_ = (bitField1_ & ~0x00000010);
-          scaledHeroDamage_ = 0;
+          searchRank_ = 0;
           bitField1_ = (bitField1_ & ~0x00000020);
-          scaledTowerDamage_ = 0;
+          searchRankUncertainty_ = 0;
           bitField1_ = (bitField1_ & ~0x00000040);
-          scaledHeroHealing_ = 0;
+          rankUncertaintyChange_ = 0;
           bitField1_ = (bitField1_ & ~0x00000080);
-          scaledKills_ = 0F;
+          heroPlayCount_ = 0;
           bitField1_ = (bitField1_ & ~0x00000100);
-          scaledDeaths_ = 0F;
+          partyId_ = 0L;
           bitField1_ = (bitField1_ & ~0x00000200);
-          scaledAssists_ = 0F;
+          scaledHeroDamage_ = 0;
           bitField1_ = (bitField1_ & ~0x00000400);
-          claimedFarmGold_ = 0;
+          scaledTowerDamage_ = 0;
           bitField1_ = (bitField1_ & ~0x00000800);
-          supportGold_ = 0;
+          scaledHeroHealing_ = 0;
           bitField1_ = (bitField1_ & ~0x00001000);
-          claimedDenies_ = 0;
+          scaledKills_ = 0F;
           bitField1_ = (bitField1_ & ~0x00002000);
-          claimedMisses_ = 0;
+          scaledDeaths_ = 0F;
           bitField1_ = (bitField1_ & ~0x00004000);
-          misses_ = 0;
+          scaledAssists_ = 0F;
           bitField1_ = (bitField1_ & ~0x00008000);
+          claimedFarmGold_ = 0;
+          bitField1_ = (bitField1_ & ~0x00010000);
+          supportGold_ = 0;
+          bitField1_ = (bitField1_ & ~0x00020000);
+          claimedDenies_ = 0;
+          bitField1_ = (bitField1_ & ~0x00040000);
+          claimedMisses_ = 0;
+          bitField1_ = (bitField1_ & ~0x00080000);
+          misses_ = 0;
+          bitField1_ = (bitField1_ & ~0x00100000);
           if (abilityUpgradesBuilder_ == null) {
             abilityUpgrades_ = java.util.Collections.emptyList();
-            bitField1_ = (bitField1_ & ~0x00010000);
+            bitField1_ = (bitField1_ & ~0x00200000);
           } else {
             abilityUpgradesBuilder_.clear();
           }
           if (additionalUnitsInventoryBuilder_ == null) {
             additionalUnitsInventory_ = java.util.Collections.emptyList();
-            bitField1_ = (bitField1_ & ~0x00020000);
+            bitField1_ = (bitField1_ & ~0x00400000);
           } else {
             additionalUnitsInventoryBuilder_.clear();
           }
           if (permanentBuffsBuilder_ == null) {
             permanentBuffs_ = java.util.Collections.emptyList();
-            bitField1_ = (bitField1_ & ~0x00040000);
+            bitField1_ = (bitField1_ & ~0x00800000);
           } else {
             permanentBuffsBuilder_.clear();
           }
@@ -6617,13 +6932,19 @@ public final class S2DotaGcCommon {
           } else {
             customGameDataBuilder_.clear();
           }
-          bitField1_ = (bitField1_ & ~0x00080000);
-          activeBattlePass_ = false;
-          bitField1_ = (bitField1_ & ~0x00100000);
+          bitField1_ = (bitField1_ & ~0x01000000);
+          activePrimeSubscription_ = false;
+          bitField1_ = (bitField1_ & ~0x02000000);
           netWorth_ = 0;
-          bitField1_ = (bitField1_ & ~0x00200000);
+          bitField1_ = (bitField1_ & ~0x04000000);
           botDifficulty_ = 0;
-          bitField1_ = (bitField1_ & ~0x00400000);
+          bitField1_ = (bitField1_ & ~0x08000000);
+          heroPickOrder_ = 0;
+          bitField1_ = (bitField1_ & ~0x10000000);
+          heroWasRandomed_ = false;
+          bitField1_ = (bitField1_ & ~0x20000000);
+          heroWasBonus_ = false;
+          bitField1_ = (bitField1_ & ~0x40000000);
           return this;
         }
 
@@ -6693,206 +7014,238 @@ public final class S2DotaGcCommon {
           if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
             to_bitField0_ |= 0x00000200;
           }
-          result.expectedTeamContribution_ = expectedTeamContribution_;
+          result.item6_ = item6_;
           if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
             to_bitField0_ |= 0x00000400;
           }
-          result.scaledMetric_ = scaledMetric_;
+          result.item7_ = item7_;
           if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
             to_bitField0_ |= 0x00000800;
           }
-          result.previousRank_ = previousRank_;
+          result.item8_ = item8_;
           if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
             to_bitField0_ |= 0x00001000;
           }
-          result.rankChange_ = rankChange_;
+          result.expectedTeamContribution_ = expectedTeamContribution_;
           if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
             to_bitField0_ |= 0x00002000;
           }
-          result.soloRank_ = soloRank_;
+          result.scaledMetric_ = scaledMetric_;
           if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
             to_bitField0_ |= 0x00004000;
           }
-          result.kills_ = kills_;
+          result.previousRank_ = previousRank_;
           if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
             to_bitField0_ |= 0x00008000;
           }
-          result.deaths_ = deaths_;
+          result.rankChange_ = rankChange_;
           if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
             to_bitField0_ |= 0x00010000;
           }
-          result.assists_ = assists_;
+          result.soloRank_ = soloRank_;
           if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
             to_bitField0_ |= 0x00020000;
           }
-          result.leaverStatus_ = leaverStatus_;
+          result.seasonalRank_ = seasonalRank_;
           if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
             to_bitField0_ |= 0x00040000;
           }
-          result.gold_ = gold_;
+          result.rankTierUpdated_ = rankTierUpdated_;
           if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
             to_bitField0_ |= 0x00080000;
           }
-          result.lastHits_ = lastHits_;
+          result.kills_ = kills_;
           if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
             to_bitField0_ |= 0x00100000;
           }
-          result.denies_ = denies_;
+          result.deaths_ = deaths_;
           if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
             to_bitField0_ |= 0x00200000;
           }
-          result.goldPerMin_ = goldPerMin_;
+          result.assists_ = assists_;
           if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
             to_bitField0_ |= 0x00400000;
           }
-          result.xPPerMin_ = xPPerMin_;
+          result.leaverStatus_ = leaverStatus_;
           if (((from_bitField0_ & 0x00800000) == 0x00800000)) {
             to_bitField0_ |= 0x00800000;
           }
-          result.goldSpent_ = goldSpent_;
+          result.gold_ = gold_;
           if (((from_bitField0_ & 0x01000000) == 0x01000000)) {
             to_bitField0_ |= 0x01000000;
           }
-          result.heroDamage_ = heroDamage_;
+          result.lastHits_ = lastHits_;
           if (((from_bitField0_ & 0x02000000) == 0x02000000)) {
             to_bitField0_ |= 0x02000000;
           }
-          result.towerDamage_ = towerDamage_;
+          result.denies_ = denies_;
           if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
             to_bitField0_ |= 0x04000000;
           }
-          result.heroHealing_ = heroHealing_;
+          result.goldPerMin_ = goldPerMin_;
           if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
             to_bitField0_ |= 0x08000000;
           }
-          result.level_ = level_;
+          result.xPPerMin_ = xPPerMin_;
           if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
             to_bitField0_ |= 0x10000000;
           }
-          result.timeLastSeen_ = timeLastSeen_;
+          result.goldSpent_ = goldSpent_;
           if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
             to_bitField0_ |= 0x20000000;
           }
-          result.playerName_ = playerName_;
+          result.heroDamage_ = heroDamage_;
           if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
             to_bitField0_ |= 0x40000000;
           }
-          result.supportAbilityValue_ = supportAbilityValue_;
+          result.towerDamage_ = towerDamage_;
           if (((from_bitField0_ & 0x80000000) == 0x80000000)) {
             to_bitField0_ |= 0x80000000;
           }
-          result.feedingDetected_ = feedingDetected_;
+          result.heroHealing_ = heroHealing_;
           if (((from_bitField1_ & 0x00000001) == 0x00000001)) {
             to_bitField1_ |= 0x00000001;
           }
-          result.searchRank_ = searchRank_;
+          result.level_ = level_;
           if (((from_bitField1_ & 0x00000002) == 0x00000002)) {
             to_bitField1_ |= 0x00000002;
           }
-          result.searchRankUncertainty_ = searchRankUncertainty_;
+          result.timeLastSeen_ = timeLastSeen_;
           if (((from_bitField1_ & 0x00000004) == 0x00000004)) {
             to_bitField1_ |= 0x00000004;
           }
-          result.rankUncertaintyChange_ = rankUncertaintyChange_;
+          result.playerName_ = playerName_;
           if (((from_bitField1_ & 0x00000008) == 0x00000008)) {
             to_bitField1_ |= 0x00000008;
           }
-          result.heroPlayCount_ = heroPlayCount_;
+          result.supportAbilityValue_ = supportAbilityValue_;
           if (((from_bitField1_ & 0x00000010) == 0x00000010)) {
             to_bitField1_ |= 0x00000010;
           }
-          result.partyId_ = partyId_;
+          result.feedingDetected_ = feedingDetected_;
           if (((from_bitField1_ & 0x00000020) == 0x00000020)) {
             to_bitField1_ |= 0x00000020;
           }
-          result.scaledHeroDamage_ = scaledHeroDamage_;
+          result.searchRank_ = searchRank_;
           if (((from_bitField1_ & 0x00000040) == 0x00000040)) {
             to_bitField1_ |= 0x00000040;
           }
-          result.scaledTowerDamage_ = scaledTowerDamage_;
+          result.searchRankUncertainty_ = searchRankUncertainty_;
           if (((from_bitField1_ & 0x00000080) == 0x00000080)) {
             to_bitField1_ |= 0x00000080;
           }
-          result.scaledHeroHealing_ = scaledHeroHealing_;
+          result.rankUncertaintyChange_ = rankUncertaintyChange_;
           if (((from_bitField1_ & 0x00000100) == 0x00000100)) {
             to_bitField1_ |= 0x00000100;
           }
-          result.scaledKills_ = scaledKills_;
+          result.heroPlayCount_ = heroPlayCount_;
           if (((from_bitField1_ & 0x00000200) == 0x00000200)) {
             to_bitField1_ |= 0x00000200;
           }
-          result.scaledDeaths_ = scaledDeaths_;
+          result.partyId_ = partyId_;
           if (((from_bitField1_ & 0x00000400) == 0x00000400)) {
             to_bitField1_ |= 0x00000400;
           }
-          result.scaledAssists_ = scaledAssists_;
+          result.scaledHeroDamage_ = scaledHeroDamage_;
           if (((from_bitField1_ & 0x00000800) == 0x00000800)) {
             to_bitField1_ |= 0x00000800;
           }
-          result.claimedFarmGold_ = claimedFarmGold_;
+          result.scaledTowerDamage_ = scaledTowerDamage_;
           if (((from_bitField1_ & 0x00001000) == 0x00001000)) {
             to_bitField1_ |= 0x00001000;
           }
-          result.supportGold_ = supportGold_;
+          result.scaledHeroHealing_ = scaledHeroHealing_;
           if (((from_bitField1_ & 0x00002000) == 0x00002000)) {
             to_bitField1_ |= 0x00002000;
           }
-          result.claimedDenies_ = claimedDenies_;
+          result.scaledKills_ = scaledKills_;
           if (((from_bitField1_ & 0x00004000) == 0x00004000)) {
             to_bitField1_ |= 0x00004000;
           }
-          result.claimedMisses_ = claimedMisses_;
+          result.scaledDeaths_ = scaledDeaths_;
           if (((from_bitField1_ & 0x00008000) == 0x00008000)) {
             to_bitField1_ |= 0x00008000;
           }
+          result.scaledAssists_ = scaledAssists_;
+          if (((from_bitField1_ & 0x00010000) == 0x00010000)) {
+            to_bitField1_ |= 0x00010000;
+          }
+          result.claimedFarmGold_ = claimedFarmGold_;
+          if (((from_bitField1_ & 0x00020000) == 0x00020000)) {
+            to_bitField1_ |= 0x00020000;
+          }
+          result.supportGold_ = supportGold_;
+          if (((from_bitField1_ & 0x00040000) == 0x00040000)) {
+            to_bitField1_ |= 0x00040000;
+          }
+          result.claimedDenies_ = claimedDenies_;
+          if (((from_bitField1_ & 0x00080000) == 0x00080000)) {
+            to_bitField1_ |= 0x00080000;
+          }
+          result.claimedMisses_ = claimedMisses_;
+          if (((from_bitField1_ & 0x00100000) == 0x00100000)) {
+            to_bitField1_ |= 0x00100000;
+          }
           result.misses_ = misses_;
           if (abilityUpgradesBuilder_ == null) {
-            if (((bitField1_ & 0x00010000) == 0x00010000)) {
+            if (((bitField1_ & 0x00200000) == 0x00200000)) {
               abilityUpgrades_ = java.util.Collections.unmodifiableList(abilityUpgrades_);
-              bitField1_ = (bitField1_ & ~0x00010000);
+              bitField1_ = (bitField1_ & ~0x00200000);
             }
             result.abilityUpgrades_ = abilityUpgrades_;
           } else {
             result.abilityUpgrades_ = abilityUpgradesBuilder_.build();
           }
           if (additionalUnitsInventoryBuilder_ == null) {
-            if (((bitField1_ & 0x00020000) == 0x00020000)) {
+            if (((bitField1_ & 0x00400000) == 0x00400000)) {
               additionalUnitsInventory_ = java.util.Collections.unmodifiableList(additionalUnitsInventory_);
-              bitField1_ = (bitField1_ & ~0x00020000);
+              bitField1_ = (bitField1_ & ~0x00400000);
             }
             result.additionalUnitsInventory_ = additionalUnitsInventory_;
           } else {
             result.additionalUnitsInventory_ = additionalUnitsInventoryBuilder_.build();
           }
           if (permanentBuffsBuilder_ == null) {
-            if (((bitField1_ & 0x00040000) == 0x00040000)) {
+            if (((bitField1_ & 0x00800000) == 0x00800000)) {
               permanentBuffs_ = java.util.Collections.unmodifiableList(permanentBuffs_);
-              bitField1_ = (bitField1_ & ~0x00040000);
+              bitField1_ = (bitField1_ & ~0x00800000);
             }
             result.permanentBuffs_ = permanentBuffs_;
           } else {
             result.permanentBuffs_ = permanentBuffsBuilder_.build();
           }
-          if (((from_bitField1_ & 0x00080000) == 0x00080000)) {
-            to_bitField1_ |= 0x00010000;
+          if (((from_bitField1_ & 0x01000000) == 0x01000000)) {
+            to_bitField1_ |= 0x00200000;
           }
           if (customGameDataBuilder_ == null) {
             result.customGameData_ = customGameData_;
           } else {
             result.customGameData_ = customGameDataBuilder_.build();
           }
-          if (((from_bitField1_ & 0x00100000) == 0x00100000)) {
-            to_bitField1_ |= 0x00020000;
+          if (((from_bitField1_ & 0x02000000) == 0x02000000)) {
+            to_bitField1_ |= 0x00400000;
           }
-          result.activeBattlePass_ = activeBattlePass_;
-          if (((from_bitField1_ & 0x00200000) == 0x00200000)) {
-            to_bitField1_ |= 0x00040000;
+          result.activePrimeSubscription_ = activePrimeSubscription_;
+          if (((from_bitField1_ & 0x04000000) == 0x04000000)) {
+            to_bitField1_ |= 0x00800000;
           }
           result.netWorth_ = netWorth_;
-          if (((from_bitField1_ & 0x00400000) == 0x00400000)) {
-            to_bitField1_ |= 0x00080000;
+          if (((from_bitField1_ & 0x08000000) == 0x08000000)) {
+            to_bitField1_ |= 0x01000000;
           }
           result.botDifficulty_ = botDifficulty_;
+          if (((from_bitField1_ & 0x10000000) == 0x10000000)) {
+            to_bitField1_ |= 0x02000000;
+          }
+          result.heroPickOrder_ = heroPickOrder_;
+          if (((from_bitField1_ & 0x20000000) == 0x20000000)) {
+            to_bitField1_ |= 0x04000000;
+          }
+          result.heroWasRandomed_ = heroWasRandomed_;
+          if (((from_bitField1_ & 0x40000000) == 0x40000000)) {
+            to_bitField1_ |= 0x08000000;
+          }
+          result.heroWasBonus_ = heroWasBonus_;
           result.bitField0_ = to_bitField0_;
           result.bitField1_ = to_bitField1_;
           onBuilt();
@@ -6937,6 +7290,15 @@ public final class S2DotaGcCommon {
           if (other.hasItem5()) {
             setItem5(other.getItem5());
           }
+          if (other.hasItem6()) {
+            setItem6(other.getItem6());
+          }
+          if (other.hasItem7()) {
+            setItem7(other.getItem7());
+          }
+          if (other.hasItem8()) {
+            setItem8(other.getItem8());
+          }
           if (other.hasExpectedTeamContribution()) {
             setExpectedTeamContribution(other.getExpectedTeamContribution());
           }
@@ -6951,6 +7313,12 @@ public final class S2DotaGcCommon {
           }
           if (other.hasSoloRank()) {
             setSoloRank(other.getSoloRank());
+          }
+          if (other.hasSeasonalRank()) {
+            setSeasonalRank(other.getSeasonalRank());
+          }
+          if (other.hasRankTierUpdated()) {
+            setRankTierUpdated(other.getRankTierUpdated());
           }
           if (other.hasKills()) {
             setKills(other.getKills());
@@ -6998,7 +7366,7 @@ public final class S2DotaGcCommon {
             setTimeLastSeen(other.getTimeLastSeen());
           }
           if (other.hasPlayerName()) {
-            bitField0_ |= 0x20000000;
+            bitField1_ |= 0x00000004;
             playerName_ = other.playerName_;
             onChanged();
           }
@@ -7060,7 +7428,7 @@ public final class S2DotaGcCommon {
             if (!other.abilityUpgrades_.isEmpty()) {
               if (abilityUpgrades_.isEmpty()) {
                 abilityUpgrades_ = other.abilityUpgrades_;
-                bitField1_ = (bitField1_ & ~0x00010000);
+                bitField1_ = (bitField1_ & ~0x00200000);
               } else {
                 ensureAbilityUpgradesIsMutable();
                 abilityUpgrades_.addAll(other.abilityUpgrades_);
@@ -7073,7 +7441,7 @@ public final class S2DotaGcCommon {
                 abilityUpgradesBuilder_.dispose();
                 abilityUpgradesBuilder_ = null;
                 abilityUpgrades_ = other.abilityUpgrades_;
-                bitField1_ = (bitField1_ & ~0x00010000);
+                bitField1_ = (bitField1_ & ~0x00200000);
                 abilityUpgradesBuilder_ = 
                   com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getAbilityUpgradesFieldBuilder() : null;
@@ -7086,7 +7454,7 @@ public final class S2DotaGcCommon {
             if (!other.additionalUnitsInventory_.isEmpty()) {
               if (additionalUnitsInventory_.isEmpty()) {
                 additionalUnitsInventory_ = other.additionalUnitsInventory_;
-                bitField1_ = (bitField1_ & ~0x00020000);
+                bitField1_ = (bitField1_ & ~0x00400000);
               } else {
                 ensureAdditionalUnitsInventoryIsMutable();
                 additionalUnitsInventory_.addAll(other.additionalUnitsInventory_);
@@ -7099,7 +7467,7 @@ public final class S2DotaGcCommon {
                 additionalUnitsInventoryBuilder_.dispose();
                 additionalUnitsInventoryBuilder_ = null;
                 additionalUnitsInventory_ = other.additionalUnitsInventory_;
-                bitField1_ = (bitField1_ & ~0x00020000);
+                bitField1_ = (bitField1_ & ~0x00400000);
                 additionalUnitsInventoryBuilder_ = 
                   com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getAdditionalUnitsInventoryFieldBuilder() : null;
@@ -7112,7 +7480,7 @@ public final class S2DotaGcCommon {
             if (!other.permanentBuffs_.isEmpty()) {
               if (permanentBuffs_.isEmpty()) {
                 permanentBuffs_ = other.permanentBuffs_;
-                bitField1_ = (bitField1_ & ~0x00040000);
+                bitField1_ = (bitField1_ & ~0x00800000);
               } else {
                 ensurePermanentBuffsIsMutable();
                 permanentBuffs_.addAll(other.permanentBuffs_);
@@ -7125,7 +7493,7 @@ public final class S2DotaGcCommon {
                 permanentBuffsBuilder_.dispose();
                 permanentBuffsBuilder_ = null;
                 permanentBuffs_ = other.permanentBuffs_;
-                bitField1_ = (bitField1_ & ~0x00040000);
+                bitField1_ = (bitField1_ & ~0x00800000);
                 permanentBuffsBuilder_ = 
                   com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getPermanentBuffsFieldBuilder() : null;
@@ -7137,14 +7505,23 @@ public final class S2DotaGcCommon {
           if (other.hasCustomGameData()) {
             mergeCustomGameData(other.getCustomGameData());
           }
-          if (other.hasActiveBattlePass()) {
-            setActiveBattlePass(other.getActiveBattlePass());
+          if (other.hasActivePrimeSubscription()) {
+            setActivePrimeSubscription(other.getActivePrimeSubscription());
           }
           if (other.hasNetWorth()) {
             setNetWorth(other.getNetWorth());
           }
           if (other.hasBotDifficulty()) {
             setBotDifficulty(other.getBotDifficulty());
+          }
+          if (other.hasHeroPickOrder()) {
+            setHeroPickOrder(other.getHeroPickOrder());
+          }
+          if (other.hasHeroWasRandomed()) {
+            setHeroWasRandomed(other.getHeroWasRandomed());
+          }
+          if (other.hasHeroWasBonus()) {
+            setHeroWasBonus(other.getHeroWasBonus());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
@@ -7462,12 +7839,108 @@ public final class S2DotaGcCommon {
           return this;
         }
 
+        private int item6_ ;
+        /**
+         * <code>optional uint32 item_6 = 59;</code>
+         */
+        public boolean hasItem6() {
+          return ((bitField0_ & 0x00000200) == 0x00000200);
+        }
+        /**
+         * <code>optional uint32 item_6 = 59;</code>
+         */
+        public int getItem6() {
+          return item6_;
+        }
+        /**
+         * <code>optional uint32 item_6 = 59;</code>
+         */
+        public Builder setItem6(int value) {
+          bitField0_ |= 0x00000200;
+          item6_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 item_6 = 59;</code>
+         */
+        public Builder clearItem6() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          item6_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int item7_ ;
+        /**
+         * <code>optional uint32 item_7 = 60;</code>
+         */
+        public boolean hasItem7() {
+          return ((bitField0_ & 0x00000400) == 0x00000400);
+        }
+        /**
+         * <code>optional uint32 item_7 = 60;</code>
+         */
+        public int getItem7() {
+          return item7_;
+        }
+        /**
+         * <code>optional uint32 item_7 = 60;</code>
+         */
+        public Builder setItem7(int value) {
+          bitField0_ |= 0x00000400;
+          item7_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 item_7 = 60;</code>
+         */
+        public Builder clearItem7() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          item7_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int item8_ ;
+        /**
+         * <code>optional uint32 item_8 = 61;</code>
+         */
+        public boolean hasItem8() {
+          return ((bitField0_ & 0x00000800) == 0x00000800);
+        }
+        /**
+         * <code>optional uint32 item_8 = 61;</code>
+         */
+        public int getItem8() {
+          return item8_;
+        }
+        /**
+         * <code>optional uint32 item_8 = 61;</code>
+         */
+        public Builder setItem8(int value) {
+          bitField0_ |= 0x00000800;
+          item8_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 item_8 = 61;</code>
+         */
+        public Builder clearItem8() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          item8_ = 0;
+          onChanged();
+          return this;
+        }
+
         private float expectedTeamContribution_ ;
         /**
          * <code>optional float expected_team_contribution = 10;</code>
          */
         public boolean hasExpectedTeamContribution() {
-          return ((bitField0_ & 0x00000200) == 0x00000200);
+          return ((bitField0_ & 0x00001000) == 0x00001000);
         }
         /**
          * <code>optional float expected_team_contribution = 10;</code>
@@ -7479,7 +7952,7 @@ public final class S2DotaGcCommon {
          * <code>optional float expected_team_contribution = 10;</code>
          */
         public Builder setExpectedTeamContribution(float value) {
-          bitField0_ |= 0x00000200;
+          bitField0_ |= 0x00001000;
           expectedTeamContribution_ = value;
           onChanged();
           return this;
@@ -7488,7 +7961,7 @@ public final class S2DotaGcCommon {
          * <code>optional float expected_team_contribution = 10;</code>
          */
         public Builder clearExpectedTeamContribution() {
-          bitField0_ = (bitField0_ & ~0x00000200);
+          bitField0_ = (bitField0_ & ~0x00001000);
           expectedTeamContribution_ = 0F;
           onChanged();
           return this;
@@ -7499,7 +7972,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_metric = 11;</code>
          */
         public boolean hasScaledMetric() {
-          return ((bitField0_ & 0x00000400) == 0x00000400);
+          return ((bitField0_ & 0x00002000) == 0x00002000);
         }
         /**
          * <code>optional float scaled_metric = 11;</code>
@@ -7511,7 +7984,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_metric = 11;</code>
          */
         public Builder setScaledMetric(float value) {
-          bitField0_ |= 0x00000400;
+          bitField0_ |= 0x00002000;
           scaledMetric_ = value;
           onChanged();
           return this;
@@ -7520,7 +7993,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_metric = 11;</code>
          */
         public Builder clearScaledMetric() {
-          bitField0_ = (bitField0_ & ~0x00000400);
+          bitField0_ = (bitField0_ & ~0x00002000);
           scaledMetric_ = 0F;
           onChanged();
           return this;
@@ -7531,7 +8004,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 previous_rank = 12;</code>
          */
         public boolean hasPreviousRank() {
-          return ((bitField0_ & 0x00000800) == 0x00000800);
+          return ((bitField0_ & 0x00004000) == 0x00004000);
         }
         /**
          * <code>optional uint32 previous_rank = 12;</code>
@@ -7543,7 +8016,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 previous_rank = 12;</code>
          */
         public Builder setPreviousRank(int value) {
-          bitField0_ |= 0x00000800;
+          bitField0_ |= 0x00004000;
           previousRank_ = value;
           onChanged();
           return this;
@@ -7552,7 +8025,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 previous_rank = 12;</code>
          */
         public Builder clearPreviousRank() {
-          bitField0_ = (bitField0_ & ~0x00000800);
+          bitField0_ = (bitField0_ & ~0x00004000);
           previousRank_ = 0;
           onChanged();
           return this;
@@ -7563,7 +8036,7 @@ public final class S2DotaGcCommon {
          * <code>optional sint32 rank_change = 13;</code>
          */
         public boolean hasRankChange() {
-          return ((bitField0_ & 0x00001000) == 0x00001000);
+          return ((bitField0_ & 0x00008000) == 0x00008000);
         }
         /**
          * <code>optional sint32 rank_change = 13;</code>
@@ -7575,7 +8048,7 @@ public final class S2DotaGcCommon {
          * <code>optional sint32 rank_change = 13;</code>
          */
         public Builder setRankChange(int value) {
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00008000;
           rankChange_ = value;
           onChanged();
           return this;
@@ -7584,7 +8057,7 @@ public final class S2DotaGcCommon {
          * <code>optional sint32 rank_change = 13;</code>
          */
         public Builder clearRankChange() {
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00008000);
           rankChange_ = 0;
           onChanged();
           return this;
@@ -7595,7 +8068,7 @@ public final class S2DotaGcCommon {
          * <code>optional bool solo_rank = 49;</code>
          */
         public boolean hasSoloRank() {
-          return ((bitField0_ & 0x00002000) == 0x00002000);
+          return ((bitField0_ & 0x00010000) == 0x00010000);
         }
         /**
          * <code>optional bool solo_rank = 49;</code>
@@ -7607,7 +8080,7 @@ public final class S2DotaGcCommon {
          * <code>optional bool solo_rank = 49;</code>
          */
         public Builder setSoloRank(boolean value) {
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00010000;
           soloRank_ = value;
           onChanged();
           return this;
@@ -7616,8 +8089,72 @@ public final class S2DotaGcCommon {
          * <code>optional bool solo_rank = 49;</code>
          */
         public Builder clearSoloRank() {
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           soloRank_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean seasonalRank_ ;
+        /**
+         * <code>optional bool seasonal_rank = 53;</code>
+         */
+        public boolean hasSeasonalRank() {
+          return ((bitField0_ & 0x00020000) == 0x00020000);
+        }
+        /**
+         * <code>optional bool seasonal_rank = 53;</code>
+         */
+        public boolean getSeasonalRank() {
+          return seasonalRank_;
+        }
+        /**
+         * <code>optional bool seasonal_rank = 53;</code>
+         */
+        public Builder setSeasonalRank(boolean value) {
+          bitField0_ |= 0x00020000;
+          seasonalRank_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool seasonal_rank = 53;</code>
+         */
+        public Builder clearSeasonalRank() {
+          bitField0_ = (bitField0_ & ~0x00020000);
+          seasonalRank_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean rankTierUpdated_ ;
+        /**
+         * <code>optional bool rank_tier_updated = 66;</code>
+         */
+        public boolean hasRankTierUpdated() {
+          return ((bitField0_ & 0x00040000) == 0x00040000);
+        }
+        /**
+         * <code>optional bool rank_tier_updated = 66;</code>
+         */
+        public boolean getRankTierUpdated() {
+          return rankTierUpdated_;
+        }
+        /**
+         * <code>optional bool rank_tier_updated = 66;</code>
+         */
+        public Builder setRankTierUpdated(boolean value) {
+          bitField0_ |= 0x00040000;
+          rankTierUpdated_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool rank_tier_updated = 66;</code>
+         */
+        public Builder clearRankTierUpdated() {
+          bitField0_ = (bitField0_ & ~0x00040000);
+          rankTierUpdated_ = false;
           onChanged();
           return this;
         }
@@ -7627,7 +8164,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 kills = 14;</code>
          */
         public boolean hasKills() {
-          return ((bitField0_ & 0x00004000) == 0x00004000);
+          return ((bitField0_ & 0x00080000) == 0x00080000);
         }
         /**
          * <code>optional uint32 kills = 14;</code>
@@ -7639,7 +8176,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 kills = 14;</code>
          */
         public Builder setKills(int value) {
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00080000;
           kills_ = value;
           onChanged();
           return this;
@@ -7648,7 +8185,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 kills = 14;</code>
          */
         public Builder clearKills() {
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00080000);
           kills_ = 0;
           onChanged();
           return this;
@@ -7659,7 +8196,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 deaths = 15;</code>
          */
         public boolean hasDeaths() {
-          return ((bitField0_ & 0x00008000) == 0x00008000);
+          return ((bitField0_ & 0x00100000) == 0x00100000);
         }
         /**
          * <code>optional uint32 deaths = 15;</code>
@@ -7671,7 +8208,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 deaths = 15;</code>
          */
         public Builder setDeaths(int value) {
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00100000;
           deaths_ = value;
           onChanged();
           return this;
@@ -7680,7 +8217,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 deaths = 15;</code>
          */
         public Builder clearDeaths() {
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00100000);
           deaths_ = 0;
           onChanged();
           return this;
@@ -7691,7 +8228,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 assists = 16;</code>
          */
         public boolean hasAssists() {
-          return ((bitField0_ & 0x00010000) == 0x00010000);
+          return ((bitField0_ & 0x00200000) == 0x00200000);
         }
         /**
          * <code>optional uint32 assists = 16;</code>
@@ -7703,7 +8240,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 assists = 16;</code>
          */
         public Builder setAssists(int value) {
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00200000;
           assists_ = value;
           onChanged();
           return this;
@@ -7712,7 +8249,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 assists = 16;</code>
          */
         public Builder clearAssists() {
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00200000);
           assists_ = 0;
           onChanged();
           return this;
@@ -7723,7 +8260,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 leaver_status = 17;</code>
          */
         public boolean hasLeaverStatus() {
-          return ((bitField0_ & 0x00020000) == 0x00020000);
+          return ((bitField0_ & 0x00400000) == 0x00400000);
         }
         /**
          * <code>optional uint32 leaver_status = 17;</code>
@@ -7735,7 +8272,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 leaver_status = 17;</code>
          */
         public Builder setLeaverStatus(int value) {
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00400000;
           leaverStatus_ = value;
           onChanged();
           return this;
@@ -7744,7 +8281,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 leaver_status = 17;</code>
          */
         public Builder clearLeaverStatus() {
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00400000);
           leaverStatus_ = 0;
           onChanged();
           return this;
@@ -7755,7 +8292,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold = 18;</code>
          */
         public boolean hasGold() {
-          return ((bitField0_ & 0x00040000) == 0x00040000);
+          return ((bitField0_ & 0x00800000) == 0x00800000);
         }
         /**
          * <code>optional uint32 gold = 18;</code>
@@ -7767,7 +8304,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold = 18;</code>
          */
         public Builder setGold(int value) {
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00800000;
           gold_ = value;
           onChanged();
           return this;
@@ -7776,7 +8313,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold = 18;</code>
          */
         public Builder clearGold() {
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00800000);
           gold_ = 0;
           onChanged();
           return this;
@@ -7787,7 +8324,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 last_hits = 19;</code>
          */
         public boolean hasLastHits() {
-          return ((bitField0_ & 0x00080000) == 0x00080000);
+          return ((bitField0_ & 0x01000000) == 0x01000000);
         }
         /**
          * <code>optional uint32 last_hits = 19;</code>
@@ -7799,7 +8336,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 last_hits = 19;</code>
          */
         public Builder setLastHits(int value) {
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x01000000;
           lastHits_ = value;
           onChanged();
           return this;
@@ -7808,7 +8345,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 last_hits = 19;</code>
          */
         public Builder clearLastHits() {
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x01000000);
           lastHits_ = 0;
           onChanged();
           return this;
@@ -7819,7 +8356,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 denies = 20;</code>
          */
         public boolean hasDenies() {
-          return ((bitField0_ & 0x00100000) == 0x00100000);
+          return ((bitField0_ & 0x02000000) == 0x02000000);
         }
         /**
          * <code>optional uint32 denies = 20;</code>
@@ -7831,7 +8368,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 denies = 20;</code>
          */
         public Builder setDenies(int value) {
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x02000000;
           denies_ = value;
           onChanged();
           return this;
@@ -7840,7 +8377,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 denies = 20;</code>
          */
         public Builder clearDenies() {
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x02000000);
           denies_ = 0;
           onChanged();
           return this;
@@ -7851,7 +8388,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold_per_min = 21;</code>
          */
         public boolean hasGoldPerMin() {
-          return ((bitField0_ & 0x00200000) == 0x00200000);
+          return ((bitField0_ & 0x04000000) == 0x04000000);
         }
         /**
          * <code>optional uint32 gold_per_min = 21;</code>
@@ -7863,7 +8400,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold_per_min = 21;</code>
          */
         public Builder setGoldPerMin(int value) {
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x04000000;
           goldPerMin_ = value;
           onChanged();
           return this;
@@ -7872,7 +8409,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold_per_min = 21;</code>
          */
         public Builder clearGoldPerMin() {
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x04000000);
           goldPerMin_ = 0;
           onChanged();
           return this;
@@ -7883,7 +8420,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 XP_per_min = 22;</code>
          */
         public boolean hasXPPerMin() {
-          return ((bitField0_ & 0x00400000) == 0x00400000);
+          return ((bitField0_ & 0x08000000) == 0x08000000);
         }
         /**
          * <code>optional uint32 XP_per_min = 22;</code>
@@ -7895,7 +8432,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 XP_per_min = 22;</code>
          */
         public Builder setXPPerMin(int value) {
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x08000000;
           xPPerMin_ = value;
           onChanged();
           return this;
@@ -7904,7 +8441,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 XP_per_min = 22;</code>
          */
         public Builder clearXPPerMin() {
-          bitField0_ = (bitField0_ & ~0x00400000);
+          bitField0_ = (bitField0_ & ~0x08000000);
           xPPerMin_ = 0;
           onChanged();
           return this;
@@ -7915,7 +8452,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold_spent = 23;</code>
          */
         public boolean hasGoldSpent() {
-          return ((bitField0_ & 0x00800000) == 0x00800000);
+          return ((bitField0_ & 0x10000000) == 0x10000000);
         }
         /**
          * <code>optional uint32 gold_spent = 23;</code>
@@ -7927,7 +8464,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold_spent = 23;</code>
          */
         public Builder setGoldSpent(int value) {
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x10000000;
           goldSpent_ = value;
           onChanged();
           return this;
@@ -7936,7 +8473,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 gold_spent = 23;</code>
          */
         public Builder clearGoldSpent() {
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x10000000);
           goldSpent_ = 0;
           onChanged();
           return this;
@@ -7947,7 +8484,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_damage = 24;</code>
          */
         public boolean hasHeroDamage() {
-          return ((bitField0_ & 0x01000000) == 0x01000000);
+          return ((bitField0_ & 0x20000000) == 0x20000000);
         }
         /**
          * <code>optional uint32 hero_damage = 24;</code>
@@ -7959,7 +8496,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_damage = 24;</code>
          */
         public Builder setHeroDamage(int value) {
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x20000000;
           heroDamage_ = value;
           onChanged();
           return this;
@@ -7968,7 +8505,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_damage = 24;</code>
          */
         public Builder clearHeroDamage() {
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x20000000);
           heroDamage_ = 0;
           onChanged();
           return this;
@@ -7979,7 +8516,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 tower_damage = 25;</code>
          */
         public boolean hasTowerDamage() {
-          return ((bitField0_ & 0x02000000) == 0x02000000);
+          return ((bitField0_ & 0x40000000) == 0x40000000);
         }
         /**
          * <code>optional uint32 tower_damage = 25;</code>
@@ -7991,7 +8528,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 tower_damage = 25;</code>
          */
         public Builder setTowerDamage(int value) {
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x40000000;
           towerDamage_ = value;
           onChanged();
           return this;
@@ -8000,7 +8537,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 tower_damage = 25;</code>
          */
         public Builder clearTowerDamage() {
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x40000000);
           towerDamage_ = 0;
           onChanged();
           return this;
@@ -8011,7 +8548,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_healing = 26;</code>
          */
         public boolean hasHeroHealing() {
-          return ((bitField0_ & 0x04000000) == 0x04000000);
+          return ((bitField0_ & 0x80000000) == 0x80000000);
         }
         /**
          * <code>optional uint32 hero_healing = 26;</code>
@@ -8023,7 +8560,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_healing = 26;</code>
          */
         public Builder setHeroHealing(int value) {
-          bitField0_ |= 0x04000000;
+          bitField0_ |= 0x80000000;
           heroHealing_ = value;
           onChanged();
           return this;
@@ -8032,7 +8569,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_healing = 26;</code>
          */
         public Builder clearHeroHealing() {
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x80000000);
           heroHealing_ = 0;
           onChanged();
           return this;
@@ -8043,7 +8580,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 level = 27;</code>
          */
         public boolean hasLevel() {
-          return ((bitField0_ & 0x08000000) == 0x08000000);
+          return ((bitField1_ & 0x00000001) == 0x00000001);
         }
         /**
          * <code>optional uint32 level = 27;</code>
@@ -8055,7 +8592,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 level = 27;</code>
          */
         public Builder setLevel(int value) {
-          bitField0_ |= 0x08000000;
+          bitField1_ |= 0x00000001;
           level_ = value;
           onChanged();
           return this;
@@ -8064,7 +8601,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 level = 27;</code>
          */
         public Builder clearLevel() {
-          bitField0_ = (bitField0_ & ~0x08000000);
+          bitField1_ = (bitField1_ & ~0x00000001);
           level_ = 0;
           onChanged();
           return this;
@@ -8075,7 +8612,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 time_last_seen = 28;</code>
          */
         public boolean hasTimeLastSeen() {
-          return ((bitField0_ & 0x10000000) == 0x10000000);
+          return ((bitField1_ & 0x00000002) == 0x00000002);
         }
         /**
          * <code>optional uint32 time_last_seen = 28;</code>
@@ -8087,7 +8624,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 time_last_seen = 28;</code>
          */
         public Builder setTimeLastSeen(int value) {
-          bitField0_ |= 0x10000000;
+          bitField1_ |= 0x00000002;
           timeLastSeen_ = value;
           onChanged();
           return this;
@@ -8096,7 +8633,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 time_last_seen = 28;</code>
          */
         public Builder clearTimeLastSeen() {
-          bitField0_ = (bitField0_ & ~0x10000000);
+          bitField1_ = (bitField1_ & ~0x00000002);
           timeLastSeen_ = 0;
           onChanged();
           return this;
@@ -8107,7 +8644,7 @@ public final class S2DotaGcCommon {
          * <code>optional string player_name = 29;</code>
          */
         public boolean hasPlayerName() {
-          return ((bitField0_ & 0x20000000) == 0x20000000);
+          return ((bitField1_ & 0x00000004) == 0x00000004);
         }
         /**
          * <code>optional string player_name = 29;</code>
@@ -8150,7 +8687,7 @@ public final class S2DotaGcCommon {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x20000000;
+  bitField1_ |= 0x00000004;
           playerName_ = value;
           onChanged();
           return this;
@@ -8159,7 +8696,7 @@ public final class S2DotaGcCommon {
          * <code>optional string player_name = 29;</code>
          */
         public Builder clearPlayerName() {
-          bitField0_ = (bitField0_ & ~0x20000000);
+          bitField1_ = (bitField1_ & ~0x00000004);
           playerName_ = getDefaultInstance().getPlayerName();
           onChanged();
           return this;
@@ -8172,7 +8709,7 @@ public final class S2DotaGcCommon {
           if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x20000000;
+  bitField1_ |= 0x00000004;
           playerName_ = value;
           onChanged();
           return this;
@@ -8183,7 +8720,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 support_ability_value = 30;</code>
          */
         public boolean hasSupportAbilityValue() {
-          return ((bitField0_ & 0x40000000) == 0x40000000);
+          return ((bitField1_ & 0x00000008) == 0x00000008);
         }
         /**
          * <code>optional uint32 support_ability_value = 30;</code>
@@ -8195,7 +8732,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 support_ability_value = 30;</code>
          */
         public Builder setSupportAbilityValue(int value) {
-          bitField0_ |= 0x40000000;
+          bitField1_ |= 0x00000008;
           supportAbilityValue_ = value;
           onChanged();
           return this;
@@ -8204,7 +8741,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 support_ability_value = 30;</code>
          */
         public Builder clearSupportAbilityValue() {
-          bitField0_ = (bitField0_ & ~0x40000000);
+          bitField1_ = (bitField1_ & ~0x00000008);
           supportAbilityValue_ = 0;
           onChanged();
           return this;
@@ -8215,7 +8752,7 @@ public final class S2DotaGcCommon {
          * <code>optional bool feeding_detected = 32;</code>
          */
         public boolean hasFeedingDetected() {
-          return ((bitField0_ & 0x80000000) == 0x80000000);
+          return ((bitField1_ & 0x00000010) == 0x00000010);
         }
         /**
          * <code>optional bool feeding_detected = 32;</code>
@@ -8227,7 +8764,7 @@ public final class S2DotaGcCommon {
          * <code>optional bool feeding_detected = 32;</code>
          */
         public Builder setFeedingDetected(boolean value) {
-          bitField0_ |= 0x80000000;
+          bitField1_ |= 0x00000010;
           feedingDetected_ = value;
           onChanged();
           return this;
@@ -8236,7 +8773,7 @@ public final class S2DotaGcCommon {
          * <code>optional bool feeding_detected = 32;</code>
          */
         public Builder clearFeedingDetected() {
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000010);
           feedingDetected_ = false;
           onChanged();
           return this;
@@ -8247,7 +8784,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 search_rank = 34;</code>
          */
         public boolean hasSearchRank() {
-          return ((bitField1_ & 0x00000001) == 0x00000001);
+          return ((bitField1_ & 0x00000020) == 0x00000020);
         }
         /**
          * <code>optional uint32 search_rank = 34;</code>
@@ -8259,7 +8796,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 search_rank = 34;</code>
          */
         public Builder setSearchRank(int value) {
-          bitField1_ |= 0x00000001;
+          bitField1_ |= 0x00000020;
           searchRank_ = value;
           onChanged();
           return this;
@@ -8268,7 +8805,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 search_rank = 34;</code>
          */
         public Builder clearSearchRank() {
-          bitField1_ = (bitField1_ & ~0x00000001);
+          bitField1_ = (bitField1_ & ~0x00000020);
           searchRank_ = 0;
           onChanged();
           return this;
@@ -8279,7 +8816,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 search_rank_uncertainty = 35;</code>
          */
         public boolean hasSearchRankUncertainty() {
-          return ((bitField1_ & 0x00000002) == 0x00000002);
+          return ((bitField1_ & 0x00000040) == 0x00000040);
         }
         /**
          * <code>optional uint32 search_rank_uncertainty = 35;</code>
@@ -8291,7 +8828,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 search_rank_uncertainty = 35;</code>
          */
         public Builder setSearchRankUncertainty(int value) {
-          bitField1_ |= 0x00000002;
+          bitField1_ |= 0x00000040;
           searchRankUncertainty_ = value;
           onChanged();
           return this;
@@ -8300,7 +8837,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 search_rank_uncertainty = 35;</code>
          */
         public Builder clearSearchRankUncertainty() {
-          bitField1_ = (bitField1_ & ~0x00000002);
+          bitField1_ = (bitField1_ & ~0x00000040);
           searchRankUncertainty_ = 0;
           onChanged();
           return this;
@@ -8311,7 +8848,7 @@ public final class S2DotaGcCommon {
          * <code>optional int32 rank_uncertainty_change = 36;</code>
          */
         public boolean hasRankUncertaintyChange() {
-          return ((bitField1_ & 0x00000004) == 0x00000004);
+          return ((bitField1_ & 0x00000080) == 0x00000080);
         }
         /**
          * <code>optional int32 rank_uncertainty_change = 36;</code>
@@ -8323,7 +8860,7 @@ public final class S2DotaGcCommon {
          * <code>optional int32 rank_uncertainty_change = 36;</code>
          */
         public Builder setRankUncertaintyChange(int value) {
-          bitField1_ |= 0x00000004;
+          bitField1_ |= 0x00000080;
           rankUncertaintyChange_ = value;
           onChanged();
           return this;
@@ -8332,7 +8869,7 @@ public final class S2DotaGcCommon {
          * <code>optional int32 rank_uncertainty_change = 36;</code>
          */
         public Builder clearRankUncertaintyChange() {
-          bitField1_ = (bitField1_ & ~0x00000004);
+          bitField1_ = (bitField1_ & ~0x00000080);
           rankUncertaintyChange_ = 0;
           onChanged();
           return this;
@@ -8343,7 +8880,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_play_count = 37;</code>
          */
         public boolean hasHeroPlayCount() {
-          return ((bitField1_ & 0x00000008) == 0x00000008);
+          return ((bitField1_ & 0x00000100) == 0x00000100);
         }
         /**
          * <code>optional uint32 hero_play_count = 37;</code>
@@ -8355,7 +8892,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_play_count = 37;</code>
          */
         public Builder setHeroPlayCount(int value) {
-          bitField1_ |= 0x00000008;
+          bitField1_ |= 0x00000100;
           heroPlayCount_ = value;
           onChanged();
           return this;
@@ -8364,7 +8901,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 hero_play_count = 37;</code>
          */
         public Builder clearHeroPlayCount() {
-          bitField1_ = (bitField1_ & ~0x00000008);
+          bitField1_ = (bitField1_ & ~0x00000100);
           heroPlayCount_ = 0;
           onChanged();
           return this;
@@ -8375,7 +8912,7 @@ public final class S2DotaGcCommon {
          * <code>optional fixed64 party_id = 38;</code>
          */
         public boolean hasPartyId() {
-          return ((bitField1_ & 0x00000010) == 0x00000010);
+          return ((bitField1_ & 0x00000200) == 0x00000200);
         }
         /**
          * <code>optional fixed64 party_id = 38;</code>
@@ -8387,7 +8924,7 @@ public final class S2DotaGcCommon {
          * <code>optional fixed64 party_id = 38;</code>
          */
         public Builder setPartyId(long value) {
-          bitField1_ |= 0x00000010;
+          bitField1_ |= 0x00000200;
           partyId_ = value;
           onChanged();
           return this;
@@ -8396,7 +8933,7 @@ public final class S2DotaGcCommon {
          * <code>optional fixed64 party_id = 38;</code>
          */
         public Builder clearPartyId() {
-          bitField1_ = (bitField1_ & ~0x00000010);
+          bitField1_ = (bitField1_ & ~0x00000200);
           partyId_ = 0L;
           onChanged();
           return this;
@@ -8407,7 +8944,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_hero_damage = 54;</code>
          */
         public boolean hasScaledHeroDamage() {
-          return ((bitField1_ & 0x00000020) == 0x00000020);
+          return ((bitField1_ & 0x00000400) == 0x00000400);
         }
         /**
          * <code>optional uint32 scaled_hero_damage = 54;</code>
@@ -8419,7 +8956,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_hero_damage = 54;</code>
          */
         public Builder setScaledHeroDamage(int value) {
-          bitField1_ |= 0x00000020;
+          bitField1_ |= 0x00000400;
           scaledHeroDamage_ = value;
           onChanged();
           return this;
@@ -8428,7 +8965,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_hero_damage = 54;</code>
          */
         public Builder clearScaledHeroDamage() {
-          bitField1_ = (bitField1_ & ~0x00000020);
+          bitField1_ = (bitField1_ & ~0x00000400);
           scaledHeroDamage_ = 0;
           onChanged();
           return this;
@@ -8439,7 +8976,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_tower_damage = 55;</code>
          */
         public boolean hasScaledTowerDamage() {
-          return ((bitField1_ & 0x00000040) == 0x00000040);
+          return ((bitField1_ & 0x00000800) == 0x00000800);
         }
         /**
          * <code>optional uint32 scaled_tower_damage = 55;</code>
@@ -8451,7 +8988,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_tower_damage = 55;</code>
          */
         public Builder setScaledTowerDamage(int value) {
-          bitField1_ |= 0x00000040;
+          bitField1_ |= 0x00000800;
           scaledTowerDamage_ = value;
           onChanged();
           return this;
@@ -8460,7 +8997,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_tower_damage = 55;</code>
          */
         public Builder clearScaledTowerDamage() {
-          bitField1_ = (bitField1_ & ~0x00000040);
+          bitField1_ = (bitField1_ & ~0x00000800);
           scaledTowerDamage_ = 0;
           onChanged();
           return this;
@@ -8471,7 +9008,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_hero_healing = 56;</code>
          */
         public boolean hasScaledHeroHealing() {
-          return ((bitField1_ & 0x00000080) == 0x00000080);
+          return ((bitField1_ & 0x00001000) == 0x00001000);
         }
         /**
          * <code>optional uint32 scaled_hero_healing = 56;</code>
@@ -8483,7 +9020,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_hero_healing = 56;</code>
          */
         public Builder setScaledHeroHealing(int value) {
-          bitField1_ |= 0x00000080;
+          bitField1_ |= 0x00001000;
           scaledHeroHealing_ = value;
           onChanged();
           return this;
@@ -8492,7 +9029,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 scaled_hero_healing = 56;</code>
          */
         public Builder clearScaledHeroHealing() {
-          bitField1_ = (bitField1_ & ~0x00000080);
+          bitField1_ = (bitField1_ & ~0x00001000);
           scaledHeroHealing_ = 0;
           onChanged();
           return this;
@@ -8503,7 +9040,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_kills = 39;</code>
          */
         public boolean hasScaledKills() {
-          return ((bitField1_ & 0x00000100) == 0x00000100);
+          return ((bitField1_ & 0x00002000) == 0x00002000);
         }
         /**
          * <code>optional float scaled_kills = 39;</code>
@@ -8515,7 +9052,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_kills = 39;</code>
          */
         public Builder setScaledKills(float value) {
-          bitField1_ |= 0x00000100;
+          bitField1_ |= 0x00002000;
           scaledKills_ = value;
           onChanged();
           return this;
@@ -8524,7 +9061,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_kills = 39;</code>
          */
         public Builder clearScaledKills() {
-          bitField1_ = (bitField1_ & ~0x00000100);
+          bitField1_ = (bitField1_ & ~0x00002000);
           scaledKills_ = 0F;
           onChanged();
           return this;
@@ -8535,7 +9072,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_deaths = 40;</code>
          */
         public boolean hasScaledDeaths() {
-          return ((bitField1_ & 0x00000200) == 0x00000200);
+          return ((bitField1_ & 0x00004000) == 0x00004000);
         }
         /**
          * <code>optional float scaled_deaths = 40;</code>
@@ -8547,7 +9084,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_deaths = 40;</code>
          */
         public Builder setScaledDeaths(float value) {
-          bitField1_ |= 0x00000200;
+          bitField1_ |= 0x00004000;
           scaledDeaths_ = value;
           onChanged();
           return this;
@@ -8556,7 +9093,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_deaths = 40;</code>
          */
         public Builder clearScaledDeaths() {
-          bitField1_ = (bitField1_ & ~0x00000200);
+          bitField1_ = (bitField1_ & ~0x00004000);
           scaledDeaths_ = 0F;
           onChanged();
           return this;
@@ -8567,7 +9104,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_assists = 41;</code>
          */
         public boolean hasScaledAssists() {
-          return ((bitField1_ & 0x00000400) == 0x00000400);
+          return ((bitField1_ & 0x00008000) == 0x00008000);
         }
         /**
          * <code>optional float scaled_assists = 41;</code>
@@ -8579,7 +9116,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_assists = 41;</code>
          */
         public Builder setScaledAssists(float value) {
-          bitField1_ |= 0x00000400;
+          bitField1_ |= 0x00008000;
           scaledAssists_ = value;
           onChanged();
           return this;
@@ -8588,7 +9125,7 @@ public final class S2DotaGcCommon {
          * <code>optional float scaled_assists = 41;</code>
          */
         public Builder clearScaledAssists() {
-          bitField1_ = (bitField1_ & ~0x00000400);
+          bitField1_ = (bitField1_ & ~0x00008000);
           scaledAssists_ = 0F;
           onChanged();
           return this;
@@ -8599,7 +9136,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_farm_gold = 42;</code>
          */
         public boolean hasClaimedFarmGold() {
-          return ((bitField1_ & 0x00000800) == 0x00000800);
+          return ((bitField1_ & 0x00010000) == 0x00010000);
         }
         /**
          * <code>optional uint32 claimed_farm_gold = 42;</code>
@@ -8611,7 +9148,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_farm_gold = 42;</code>
          */
         public Builder setClaimedFarmGold(int value) {
-          bitField1_ |= 0x00000800;
+          bitField1_ |= 0x00010000;
           claimedFarmGold_ = value;
           onChanged();
           return this;
@@ -8620,7 +9157,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_farm_gold = 42;</code>
          */
         public Builder clearClaimedFarmGold() {
-          bitField1_ = (bitField1_ & ~0x00000800);
+          bitField1_ = (bitField1_ & ~0x00010000);
           claimedFarmGold_ = 0;
           onChanged();
           return this;
@@ -8631,7 +9168,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 support_gold = 43;</code>
          */
         public boolean hasSupportGold() {
-          return ((bitField1_ & 0x00001000) == 0x00001000);
+          return ((bitField1_ & 0x00020000) == 0x00020000);
         }
         /**
          * <code>optional uint32 support_gold = 43;</code>
@@ -8643,7 +9180,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 support_gold = 43;</code>
          */
         public Builder setSupportGold(int value) {
-          bitField1_ |= 0x00001000;
+          bitField1_ |= 0x00020000;
           supportGold_ = value;
           onChanged();
           return this;
@@ -8652,7 +9189,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 support_gold = 43;</code>
          */
         public Builder clearSupportGold() {
-          bitField1_ = (bitField1_ & ~0x00001000);
+          bitField1_ = (bitField1_ & ~0x00020000);
           supportGold_ = 0;
           onChanged();
           return this;
@@ -8663,7 +9200,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_denies = 44;</code>
          */
         public boolean hasClaimedDenies() {
-          return ((bitField1_ & 0x00002000) == 0x00002000);
+          return ((bitField1_ & 0x00040000) == 0x00040000);
         }
         /**
          * <code>optional uint32 claimed_denies = 44;</code>
@@ -8675,7 +9212,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_denies = 44;</code>
          */
         public Builder setClaimedDenies(int value) {
-          bitField1_ |= 0x00002000;
+          bitField1_ |= 0x00040000;
           claimedDenies_ = value;
           onChanged();
           return this;
@@ -8684,7 +9221,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_denies = 44;</code>
          */
         public Builder clearClaimedDenies() {
-          bitField1_ = (bitField1_ & ~0x00002000);
+          bitField1_ = (bitField1_ & ~0x00040000);
           claimedDenies_ = 0;
           onChanged();
           return this;
@@ -8695,7 +9232,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_misses = 45;</code>
          */
         public boolean hasClaimedMisses() {
-          return ((bitField1_ & 0x00004000) == 0x00004000);
+          return ((bitField1_ & 0x00080000) == 0x00080000);
         }
         /**
          * <code>optional uint32 claimed_misses = 45;</code>
@@ -8707,7 +9244,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_misses = 45;</code>
          */
         public Builder setClaimedMisses(int value) {
-          bitField1_ |= 0x00004000;
+          bitField1_ |= 0x00080000;
           claimedMisses_ = value;
           onChanged();
           return this;
@@ -8716,7 +9253,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 claimed_misses = 45;</code>
          */
         public Builder clearClaimedMisses() {
-          bitField1_ = (bitField1_ & ~0x00004000);
+          bitField1_ = (bitField1_ & ~0x00080000);
           claimedMisses_ = 0;
           onChanged();
           return this;
@@ -8727,7 +9264,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 misses = 46;</code>
          */
         public boolean hasMisses() {
-          return ((bitField1_ & 0x00008000) == 0x00008000);
+          return ((bitField1_ & 0x00100000) == 0x00100000);
         }
         /**
          * <code>optional uint32 misses = 46;</code>
@@ -8739,7 +9276,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 misses = 46;</code>
          */
         public Builder setMisses(int value) {
-          bitField1_ |= 0x00008000;
+          bitField1_ |= 0x00100000;
           misses_ = value;
           onChanged();
           return this;
@@ -8748,7 +9285,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 misses = 46;</code>
          */
         public Builder clearMisses() {
-          bitField1_ = (bitField1_ & ~0x00008000);
+          bitField1_ = (bitField1_ & ~0x00100000);
           misses_ = 0;
           onChanged();
           return this;
@@ -8757,9 +9294,9 @@ public final class S2DotaGcCommon {
         private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgrade> abilityUpgrades_ =
           java.util.Collections.emptyList();
         private void ensureAbilityUpgradesIsMutable() {
-          if (!((bitField1_ & 0x00010000) == 0x00010000)) {
+          if (!((bitField1_ & 0x00200000) == 0x00200000)) {
             abilityUpgrades_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgrade>(abilityUpgrades_);
-            bitField1_ |= 0x00010000;
+            bitField1_ |= 0x00200000;
            }
         }
 
@@ -8909,7 +9446,7 @@ public final class S2DotaGcCommon {
         public Builder clearAbilityUpgrades() {
           if (abilityUpgradesBuilder_ == null) {
             abilityUpgrades_ = java.util.Collections.emptyList();
-            bitField1_ = (bitField1_ & ~0x00010000);
+            bitField1_ = (bitField1_ & ~0x00200000);
             onChanged();
           } else {
             abilityUpgradesBuilder_.clear();
@@ -8986,7 +9523,7 @@ public final class S2DotaGcCommon {
             abilityUpgradesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgrade, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgrade.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerAbilityUpgradeOrBuilder>(
                     abilityUpgrades_,
-                    ((bitField1_ & 0x00010000) == 0x00010000),
+                    ((bitField1_ & 0x00200000) == 0x00200000),
                     getParentForChildren(),
                     isClean());
             abilityUpgrades_ = null;
@@ -8997,9 +9534,9 @@ public final class S2DotaGcCommon {
         private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventory> additionalUnitsInventory_ =
           java.util.Collections.emptyList();
         private void ensureAdditionalUnitsInventoryIsMutable() {
-          if (!((bitField1_ & 0x00020000) == 0x00020000)) {
+          if (!((bitField1_ & 0x00400000) == 0x00400000)) {
             additionalUnitsInventory_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventory>(additionalUnitsInventory_);
-            bitField1_ |= 0x00020000;
+            bitField1_ |= 0x00400000;
            }
         }
 
@@ -9149,7 +9686,7 @@ public final class S2DotaGcCommon {
         public Builder clearAdditionalUnitsInventory() {
           if (additionalUnitsInventoryBuilder_ == null) {
             additionalUnitsInventory_ = java.util.Collections.emptyList();
-            bitField1_ = (bitField1_ & ~0x00020000);
+            bitField1_ = (bitField1_ & ~0x00400000);
             onChanged();
           } else {
             additionalUnitsInventoryBuilder_.clear();
@@ -9226,7 +9763,7 @@ public final class S2DotaGcCommon {
             additionalUnitsInventoryBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventory, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventory.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchAdditionalUnitInventoryOrBuilder>(
                     additionalUnitsInventory_,
-                    ((bitField1_ & 0x00020000) == 0x00020000),
+                    ((bitField1_ & 0x00400000) == 0x00400000),
                     getParentForChildren(),
                     isClean());
             additionalUnitsInventory_ = null;
@@ -9237,9 +9774,9 @@ public final class S2DotaGcCommon {
         private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuff> permanentBuffs_ =
           java.util.Collections.emptyList();
         private void ensurePermanentBuffsIsMutable() {
-          if (!((bitField1_ & 0x00040000) == 0x00040000)) {
+          if (!((bitField1_ & 0x00800000) == 0x00800000)) {
             permanentBuffs_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuff>(permanentBuffs_);
-            bitField1_ |= 0x00040000;
+            bitField1_ |= 0x00800000;
            }
         }
 
@@ -9389,7 +9926,7 @@ public final class S2DotaGcCommon {
         public Builder clearPermanentBuffs() {
           if (permanentBuffsBuilder_ == null) {
             permanentBuffs_ = java.util.Collections.emptyList();
-            bitField1_ = (bitField1_ & ~0x00040000);
+            bitField1_ = (bitField1_ & ~0x00800000);
             onChanged();
           } else {
             permanentBuffsBuilder_.clear();
@@ -9466,7 +10003,7 @@ public final class S2DotaGcCommon {
             permanentBuffsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuff, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuff.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMatchPlayerPermanentBuffOrBuilder>(
                     permanentBuffs_,
-                    ((bitField1_ & 0x00040000) == 0x00040000),
+                    ((bitField1_ & 0x00800000) == 0x00800000),
                     getParentForChildren(),
                     isClean());
             permanentBuffs_ = null;
@@ -9481,7 +10018,7 @@ public final class S2DotaGcCommon {
          * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
          */
         public boolean hasCustomGameData() {
-          return ((bitField1_ & 0x00080000) == 0x00080000);
+          return ((bitField1_ & 0x01000000) == 0x01000000);
         }
         /**
          * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
@@ -9506,7 +10043,7 @@ public final class S2DotaGcCommon {
           } else {
             customGameDataBuilder_.setMessage(value);
           }
-          bitField1_ |= 0x00080000;
+          bitField1_ |= 0x01000000;
           return this;
         }
         /**
@@ -9520,7 +10057,7 @@ public final class S2DotaGcCommon {
           } else {
             customGameDataBuilder_.setMessage(builderForValue.build());
           }
-          bitField1_ |= 0x00080000;
+          bitField1_ |= 0x01000000;
           return this;
         }
         /**
@@ -9528,7 +10065,7 @@ public final class S2DotaGcCommon {
          */
         public Builder mergeCustomGameData(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData value) {
           if (customGameDataBuilder_ == null) {
-            if (((bitField1_ & 0x00080000) == 0x00080000) &&
+            if (((bitField1_ & 0x01000000) == 0x01000000) &&
                 customGameData_ != skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData.getDefaultInstance()) {
               customGameData_ =
                 skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData.newBuilder(customGameData_).mergeFrom(value).buildPartial();
@@ -9539,7 +10076,7 @@ public final class S2DotaGcCommon {
           } else {
             customGameDataBuilder_.mergeFrom(value);
           }
-          bitField1_ |= 0x00080000;
+          bitField1_ |= 0x01000000;
           return this;
         }
         /**
@@ -9552,14 +10089,14 @@ public final class S2DotaGcCommon {
           } else {
             customGameDataBuilder_.clear();
           }
-          bitField1_ = (bitField1_ & ~0x00080000);
+          bitField1_ = (bitField1_ & ~0x01000000);
           return this;
         }
         /**
          * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
          */
         public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Player.CustomGameData.Builder getCustomGameDataBuilder() {
-          bitField1_ |= 0x00080000;
+          bitField1_ |= 0x01000000;
           onChanged();
           return getCustomGameDataFieldBuilder().getBuilder();
         }
@@ -9590,34 +10127,34 @@ public final class S2DotaGcCommon {
           return customGameDataBuilder_;
         }
 
-        private boolean activeBattlePass_ ;
+        private boolean activePrimeSubscription_ ;
         /**
-         * <code>optional bool active_battle_pass = 51;</code>
+         * <code>optional bool active_prime_subscription = 51;</code>
          */
-        public boolean hasActiveBattlePass() {
-          return ((bitField1_ & 0x00100000) == 0x00100000);
+        public boolean hasActivePrimeSubscription() {
+          return ((bitField1_ & 0x02000000) == 0x02000000);
         }
         /**
-         * <code>optional bool active_battle_pass = 51;</code>
+         * <code>optional bool active_prime_subscription = 51;</code>
          */
-        public boolean getActiveBattlePass() {
-          return activeBattlePass_;
+        public boolean getActivePrimeSubscription() {
+          return activePrimeSubscription_;
         }
         /**
-         * <code>optional bool active_battle_pass = 51;</code>
+         * <code>optional bool active_prime_subscription = 51;</code>
          */
-        public Builder setActiveBattlePass(boolean value) {
-          bitField1_ |= 0x00100000;
-          activeBattlePass_ = value;
+        public Builder setActivePrimeSubscription(boolean value) {
+          bitField1_ |= 0x02000000;
+          activePrimeSubscription_ = value;
           onChanged();
           return this;
         }
         /**
-         * <code>optional bool active_battle_pass = 51;</code>
+         * <code>optional bool active_prime_subscription = 51;</code>
          */
-        public Builder clearActiveBattlePass() {
-          bitField1_ = (bitField1_ & ~0x00100000);
-          activeBattlePass_ = false;
+        public Builder clearActivePrimeSubscription() {
+          bitField1_ = (bitField1_ & ~0x02000000);
+          activePrimeSubscription_ = false;
           onChanged();
           return this;
         }
@@ -9627,7 +10164,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 net_worth = 52;</code>
          */
         public boolean hasNetWorth() {
-          return ((bitField1_ & 0x00200000) == 0x00200000);
+          return ((bitField1_ & 0x04000000) == 0x04000000);
         }
         /**
          * <code>optional uint32 net_worth = 52;</code>
@@ -9639,7 +10176,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 net_worth = 52;</code>
          */
         public Builder setNetWorth(int value) {
-          bitField1_ |= 0x00200000;
+          bitField1_ |= 0x04000000;
           netWorth_ = value;
           onChanged();
           return this;
@@ -9648,7 +10185,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 net_worth = 52;</code>
          */
         public Builder clearNetWorth() {
-          bitField1_ = (bitField1_ & ~0x00200000);
+          bitField1_ = (bitField1_ & ~0x04000000);
           netWorth_ = 0;
           onChanged();
           return this;
@@ -9659,7 +10196,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 bot_difficulty = 58;</code>
          */
         public boolean hasBotDifficulty() {
-          return ((bitField1_ & 0x00400000) == 0x00400000);
+          return ((bitField1_ & 0x08000000) == 0x08000000);
         }
         /**
          * <code>optional uint32 bot_difficulty = 58;</code>
@@ -9671,7 +10208,7 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 bot_difficulty = 58;</code>
          */
         public Builder setBotDifficulty(int value) {
-          bitField1_ |= 0x00400000;
+          bitField1_ |= 0x08000000;
           botDifficulty_ = value;
           onChanged();
           return this;
@@ -9680,8 +10217,104 @@ public final class S2DotaGcCommon {
          * <code>optional uint32 bot_difficulty = 58;</code>
          */
         public Builder clearBotDifficulty() {
-          bitField1_ = (bitField1_ & ~0x00400000);
+          bitField1_ = (bitField1_ & ~0x08000000);
           botDifficulty_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int heroPickOrder_ ;
+        /**
+         * <code>optional uint32 hero_pick_order = 63;</code>
+         */
+        public boolean hasHeroPickOrder() {
+          return ((bitField1_ & 0x10000000) == 0x10000000);
+        }
+        /**
+         * <code>optional uint32 hero_pick_order = 63;</code>
+         */
+        public int getHeroPickOrder() {
+          return heroPickOrder_;
+        }
+        /**
+         * <code>optional uint32 hero_pick_order = 63;</code>
+         */
+        public Builder setHeroPickOrder(int value) {
+          bitField1_ |= 0x10000000;
+          heroPickOrder_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 hero_pick_order = 63;</code>
+         */
+        public Builder clearHeroPickOrder() {
+          bitField1_ = (bitField1_ & ~0x10000000);
+          heroPickOrder_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean heroWasRandomed_ ;
+        /**
+         * <code>optional bool hero_was_randomed = 64;</code>
+         */
+        public boolean hasHeroWasRandomed() {
+          return ((bitField1_ & 0x20000000) == 0x20000000);
+        }
+        /**
+         * <code>optional bool hero_was_randomed = 64;</code>
+         */
+        public boolean getHeroWasRandomed() {
+          return heroWasRandomed_;
+        }
+        /**
+         * <code>optional bool hero_was_randomed = 64;</code>
+         */
+        public Builder setHeroWasRandomed(boolean value) {
+          bitField1_ |= 0x20000000;
+          heroWasRandomed_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool hero_was_randomed = 64;</code>
+         */
+        public Builder clearHeroWasRandomed() {
+          bitField1_ = (bitField1_ & ~0x20000000);
+          heroWasRandomed_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean heroWasBonus_ ;
+        /**
+         * <code>optional bool hero_was_bonus = 65;</code>
+         */
+        public boolean hasHeroWasBonus() {
+          return ((bitField1_ & 0x40000000) == 0x40000000);
+        }
+        /**
+         * <code>optional bool hero_was_bonus = 65;</code>
+         */
+        public boolean getHeroWasBonus() {
+          return heroWasBonus_;
+        }
+        /**
+         * <code>optional bool hero_was_bonus = 65;</code>
+         */
+        public Builder setHeroWasBonus(boolean value) {
+          bitField1_ |= 0x40000000;
+          heroWasBonus_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool hero_was_bonus = 65;</code>
+         */
+        public Builder clearHeroWasBonus() {
+          bitField1_ = (bitField1_ & ~0x40000000);
+          heroWasBonus_ = false;
           onChanged();
           return this;
         }
@@ -16613,7 +17246,7 @@ public final class S2DotaGcCommon {
       "\r\"H\n\031CMatchPlayerPermanentBuff\022\026\n\016perman" +
       "ent_buff\030\001 \001(\r\022\023\n\013stack_count\030\002 \001(\r\"G\n\025C" +
       "MatchHeroSelectEvent\022\017\n\007is_pick\030\001 \001(\010\022\014\n" +
-      "\004team\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\"\250\030\n\rCMsgDOT" +
+      "\004team\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\"\335\031\n\rCMsgDOT" +
       "AMatch\022\025\n\rgood_guys_win\030\002 \001(\010\022\020\n\010duratio" +
       "n\030\003 \001(\r\022\021\n\tstartTime\030\004 \001(\007\022&\n\007players\030\005 ",
       "\003(\0132\025.CMsgDOTAMatch.Player\022\020\n\010match_id\030\006" +
@@ -16647,75 +17280,80 @@ public final class S2DotaGcCommon {
       "e\0301 \001(\r\022>\n\rmatch_outcome\0302 \001(\0162\016.EMatchO" +
       "utcome:\027k_EMatchOutcome_Unknown\022\025\n\rtourn",
       "ament_id\0303 \001(\r\022\030\n\020tournament_round\0304 \001(\r" +
-      "\022\031\n\021pre_game_duration\0305 \001(\r\032\202\013\n\006Player\022\022" +
+      "\022\031\n\021pre_game_duration\0305 \001(\r\032\267\014\n\006Player\022\022" +
       "\n\naccount_id\030\001 \001(\r\022\023\n\013player_slot\030\002 \001(\r\022" +
       "\017\n\007hero_id\030\003 \001(\r\022\016\n\006item_0\030\004 \001(\r\022\016\n\006item" +
       "_1\030\005 \001(\r\022\016\n\006item_2\030\006 \001(\r\022\016\n\006item_3\030\007 \001(\r" +
-      "\022\016\n\006item_4\030\010 \001(\r\022\016\n\006item_5\030\t \001(\r\022\"\n\032expe" +
-      "cted_team_contribution\030\n \001(\002\022\025\n\rscaled_m" +
-      "etric\030\013 \001(\002\022\025\n\rprevious_rank\030\014 \001(\r\022\023\n\013ra" +
-      "nk_change\030\r \001(\021\022\021\n\tsolo_rank\0301 \001(\010\022\r\n\005ki" +
-      "lls\030\016 \001(\r\022\016\n\006deaths\030\017 \001(\r\022\017\n\007assists\030\020 \001",
-      "(\r\022\025\n\rleaver_status\030\021 \001(\r\022\014\n\004gold\030\022 \001(\r\022" +
-      "\021\n\tlast_hits\030\023 \001(\r\022\016\n\006denies\030\024 \001(\r\022\024\n\014go" +
-      "ld_per_min\030\025 \001(\r\022\022\n\nXP_per_min\030\026 \001(\r\022\022\n\n" +
-      "gold_spent\030\027 \001(\r\022\023\n\013hero_damage\030\030 \001(\r\022\024\n" +
-      "\014tower_damage\030\031 \001(\r\022\024\n\014hero_healing\030\032 \001(" +
-      "\r\022\r\n\005level\030\033 \001(\r\022\026\n\016time_last_seen\030\034 \001(\r" +
-      "\022\023\n\013player_name\030\035 \001(\t\022\035\n\025support_ability" +
-      "_value\030\036 \001(\r\022\030\n\020feeding_detected\030  \001(\010\022\023" +
-      "\n\013search_rank\030\" \001(\r\022\037\n\027search_rank_uncer" +
-      "tainty\030# \001(\r\022\037\n\027rank_uncertainty_change\030",
-      "$ \001(\005\022\027\n\017hero_play_count\030% \001(\r\022\020\n\010party_" +
-      "id\030& \001(\006\022\032\n\022scaled_hero_damage\0306 \001(\r\022\033\n\023" +
-      "scaled_tower_damage\0307 \001(\r\022\033\n\023scaled_hero" +
-      "_healing\0308 \001(\r\022\024\n\014scaled_kills\030\' \001(\002\022\025\n\r" +
-      "scaled_deaths\030( \001(\002\022\026\n\016scaled_assists\030) " +
-      "\001(\002\022\031\n\021claimed_farm_gold\030* \001(\r\022\024\n\014suppor" +
-      "t_gold\030+ \001(\r\022\026\n\016claimed_denies\030, \001(\r\022\026\n\016" +
-      "claimed_misses\030- \001(\r\022\016\n\006misses\030. \001(\r\0225\n\020" +
-      "ability_upgrades\030/ \003(\0132\033.CMatchPlayerAbi" +
-      "lityUpgrade\022B\n\032additional_units_inventor",
-      "y\0300 \003(\0132\036.CMatchAdditionalUnitInventory\022" +
-      "3\n\017permanent_buffs\0309 \003(\0132\032.CMatchPlayerP" +
-      "ermanentBuff\022>\n\020custom_game_data\0302 \001(\0132$" +
-      ".CMsgDOTAMatch.Player.CustomGameData\022\032\n\022" +
-      "active_battle_pass\0303 \001(\010\022\021\n\tnet_worth\0304 " +
-      "\001(\r\022\026\n\016bot_difficulty\030: \001(\r\0323\n\016CustomGam" +
-      "eData\022\021\n\tdota_team\030\001 \001(\r\022\016\n\006winner\030\002 \001(\010" +
-      "\0323\n\017BroadcasterInfo\022\022\n\naccount_id\030\001 \001(\r\022" +
-      "\014\n\004name\030\002 \001(\t\032\221\001\n\022BroadcasterChannel\022\024\n\014" +
-      "country_code\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022",
-      "9\n\021broadcaster_infos\030\003 \003(\0132\036.CMsgDOTAMat" +
-      "ch.BroadcasterInfo\022\025\n\rlanguage_code\030\004 \001(" +
-      "\t\032:\n\016CustomGameData\022\026\n\016custom_game_id\030\001 " +
-      "\001(\004\022\020\n\010map_name\030\002 \001(\t\"P\n\013ReplayState\022\024\n\020" +
-      "REPLAY_AVAILABLE\020\000\022\027\n\023REPLAY_NOT_RECORDE" +
-      "D\020\001\022\022\n\016REPLAY_EXPIRED\020\002*\300\004\n\rDOTA_GameMod" +
-      "e\022\026\n\022DOTA_GAMEMODE_NONE\020\000\022\024\n\020DOTA_GAMEMO" +
-      "DE_AP\020\001\022\024\n\020DOTA_GAMEMODE_CM\020\002\022\024\n\020DOTA_GA" +
-      "MEMODE_RD\020\003\022\024\n\020DOTA_GAMEMODE_SD\020\004\022\024\n\020DOT" +
-      "A_GAMEMODE_AR\020\005\022\027\n\023DOTA_GAMEMODE_INTRO\020\006",
-      "\022\024\n\020DOTA_GAMEMODE_HW\020\007\022\034\n\030DOTA_GAMEMODE_" +
-      "REVERSE_CM\020\010\022\026\n\022DOTA_GAMEMODE_XMAS\020\t\022\032\n\026" +
-      "DOTA_GAMEMODE_TUTORIAL\020\n\022\024\n\020DOTA_GAMEMOD" +
-      "E_MO\020\013\022\024\n\020DOTA_GAMEMODE_LP\020\014\022\027\n\023DOTA_GAM" +
-      "EMODE_POOL1\020\r\022\024\n\020DOTA_GAMEMODE_FH\020\016\022\030\n\024D" +
-      "OTA_GAMEMODE_CUSTOM\020\017\022\024\n\020DOTA_GAMEMODE_C" +
-      "D\020\020\022\024\n\020DOTA_GAMEMODE_BD\020\021\022\037\n\033DOTA_GAMEMO" +
-      "DE_ABILITY_DRAFT\020\022\022\027\n\023DOTA_GAMEMODE_EVEN" +
-      "T\020\023\022\026\n\022DOTA_GAMEMODE_ARDM\020\024\022\030\n\024DOTA_GAME" +
-      "MODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_ALL_DRAFT",
-      "\020\026*\307\002\n\rEMatchOutcome\022\033\n\027k_EMatchOutcome_" +
-      "Unknown\020\000\022\036\n\032k_EMatchOutcome_RadVictory\020" +
-      "\002\022\037\n\033k_EMatchOutcome_DireVictory\020\003\0223\n/k_" +
-      "EMatchOutcome_NotScored_PoorNetworkCondi" +
-      "tions\020@\022$\n k_EMatchOutcome_NotScored_Lea" +
-      "ver\020A\022)\n%k_EMatchOutcome_NotScored_Serve" +
-      "rCrash\020B\022*\n&k_EMatchOutcome_NotScored_Ne" +
-      "verStarted\020C\022&\n\"k_EMatchOutcome_NotScore" +
-      "d_Canceled\020DB7\n skadistats.clarity.wire." +
-      "s2.protoB\016S2DotaGcCommonH\001\200\001\000"
+      "\022\016\n\006item_4\030\010 \001(\r\022\016\n\006item_5\030\t \001(\r\022\016\n\006item" +
+      "_6\030; \001(\r\022\016\n\006item_7\030< \001(\r\022\016\n\006item_8\030= \001(\r" +
+      "\022\"\n\032expected_team_contribution\030\n \001(\002\022\025\n\r" +
+      "scaled_metric\030\013 \001(\002\022\025\n\rprevious_rank\030\014 \001" +
+      "(\r\022\023\n\013rank_change\030\r \001(\021\022\021\n\tsolo_rank\0301 \001",
+      "(\010\022\025\n\rseasonal_rank\0305 \001(\010\022\031\n\021rank_tier_u" +
+      "pdated\030B \001(\010\022\r\n\005kills\030\016 \001(\r\022\016\n\006deaths\030\017 " +
+      "\001(\r\022\017\n\007assists\030\020 \001(\r\022\025\n\rleaver_status\030\021 " +
+      "\001(\r\022\014\n\004gold\030\022 \001(\r\022\021\n\tlast_hits\030\023 \001(\r\022\016\n\006" +
+      "denies\030\024 \001(\r\022\024\n\014gold_per_min\030\025 \001(\r\022\022\n\nXP" +
+      "_per_min\030\026 \001(\r\022\022\n\ngold_spent\030\027 \001(\r\022\023\n\013he" +
+      "ro_damage\030\030 \001(\r\022\024\n\014tower_damage\030\031 \001(\r\022\024\n" +
+      "\014hero_healing\030\032 \001(\r\022\r\n\005level\030\033 \001(\r\022\026\n\016ti" +
+      "me_last_seen\030\034 \001(\r\022\023\n\013player_name\030\035 \001(\t\022" +
+      "\035\n\025support_ability_value\030\036 \001(\r\022\030\n\020feedin",
+      "g_detected\030  \001(\010\022\023\n\013search_rank\030\" \001(\r\022\037\n" +
+      "\027search_rank_uncertainty\030# \001(\r\022\037\n\027rank_u" +
+      "ncertainty_change\030$ \001(\005\022\027\n\017hero_play_cou" +
+      "nt\030% \001(\r\022\020\n\010party_id\030& \001(\006\022\032\n\022scaled_her" +
+      "o_damage\0306 \001(\r\022\033\n\023scaled_tower_damage\0307 " +
+      "\001(\r\022\033\n\023scaled_hero_healing\0308 \001(\r\022\024\n\014scal" +
+      "ed_kills\030\' \001(\002\022\025\n\rscaled_deaths\030( \001(\002\022\026\n" +
+      "\016scaled_assists\030) \001(\002\022\031\n\021claimed_farm_go" +
+      "ld\030* \001(\r\022\024\n\014support_gold\030+ \001(\r\022\026\n\016claime" +
+      "d_denies\030, \001(\r\022\026\n\016claimed_misses\030- \001(\r\022\016",
+      "\n\006misses\030. \001(\r\0225\n\020ability_upgrades\030/ \003(\013" +
+      "2\033.CMatchPlayerAbilityUpgrade\022B\n\032additio" +
+      "nal_units_inventory\0300 \003(\0132\036.CMatchAdditi" +
+      "onalUnitInventory\0223\n\017permanent_buffs\0309 \003" +
+      "(\0132\032.CMatchPlayerPermanentBuff\022>\n\020custom" +
+      "_game_data\0302 \001(\0132$.CMsgDOTAMatch.Player." +
+      "CustomGameData\022!\n\031active_prime_subscript" +
+      "ion\0303 \001(\010\022\021\n\tnet_worth\0304 \001(\r\022\026\n\016bot_diff" +
+      "iculty\030: \001(\r\022\027\n\017hero_pick_order\030? \001(\r\022\031\n" +
+      "\021hero_was_randomed\030@ \001(\010\022\026\n\016hero_was_bon",
+      "us\030A \001(\010\0323\n\016CustomGameData\022\021\n\tdota_team\030" +
+      "\001 \001(\r\022\016\n\006winner\030\002 \001(\010\0323\n\017BroadcasterInfo" +
+      "\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\032\221\001\n\022B" +
+      "roadcasterChannel\022\024\n\014country_code\030\001 \001(\t\022" +
+      "\023\n\013description\030\002 \001(\t\0229\n\021broadcaster_info" +
+      "s\030\003 \003(\0132\036.CMsgDOTAMatch.BroadcasterInfo\022" +
+      "\025\n\rlanguage_code\030\004 \001(\t\032:\n\016CustomGameData" +
+      "\022\026\n\016custom_game_id\030\001 \001(\004\022\020\n\010map_name\030\002 \001" +
+      "(\t\"P\n\013ReplayState\022\024\n\020REPLAY_AVAILABLE\020\000\022" +
+      "\027\n\023REPLAY_NOT_RECORDED\020\001\022\022\n\016REPLAY_EXPIR",
+      "ED\020\002*\331\004\n\rDOTA_GameMode\022\026\n\022DOTA_GAMEMODE_" +
+      "NONE\020\000\022\024\n\020DOTA_GAMEMODE_AP\020\001\022\024\n\020DOTA_GAM" +
+      "EMODE_CM\020\002\022\024\n\020DOTA_GAMEMODE_RD\020\003\022\024\n\020DOTA" +
+      "_GAMEMODE_SD\020\004\022\024\n\020DOTA_GAMEMODE_AR\020\005\022\027\n\023" +
+      "DOTA_GAMEMODE_INTRO\020\006\022\024\n\020DOTA_GAMEMODE_H" +
+      "W\020\007\022\034\n\030DOTA_GAMEMODE_REVERSE_CM\020\010\022\026\n\022DOT" +
+      "A_GAMEMODE_XMAS\020\t\022\032\n\026DOTA_GAMEMODE_TUTOR" +
+      "IAL\020\n\022\024\n\020DOTA_GAMEMODE_MO\020\013\022\024\n\020DOTA_GAME" +
+      "MODE_LP\020\014\022\027\n\023DOTA_GAMEMODE_POOL1\020\r\022\024\n\020DO" +
+      "TA_GAMEMODE_FH\020\016\022\030\n\024DOTA_GAMEMODE_CUSTOM",
+      "\020\017\022\024\n\020DOTA_GAMEMODE_CD\020\020\022\024\n\020DOTA_GAMEMOD" +
+      "E_BD\020\021\022\037\n\033DOTA_GAMEMODE_ABILITY_DRAFT\020\022\022" +
+      "\027\n\023DOTA_GAMEMODE_EVENT\020\023\022\026\n\022DOTA_GAMEMOD" +
+      "E_ARDM\020\024\022\030\n\024DOTA_GAMEMODE_1V1MID\020\025\022\033\n\027DO" +
+      "TA_GAMEMODE_ALL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE" +
+      "_TURBO\020\027*\307\002\n\rEMatchOutcome\022\033\n\027k_EMatchOu" +
+      "tcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_RadVi" +
+      "ctory\020\002\022\037\n\033k_EMatchOutcome_DireVictory\020\003" +
+      "\0223\n/k_EMatchOutcome_NotScored_PoorNetwor" +
+      "kConditions\020@\022$\n k_EMatchOutcome_NotScor",
+      "ed_Leaver\020A\022)\n%k_EMatchOutcome_NotScored" +
+      "_ServerCrash\020B\022*\n&k_EMatchOutcome_NotSco" +
+      "red_NeverStarted\020C\022&\n\"k_EMatchOutcome_No" +
+      "tScored_Canceled\020DB7\n skadistats.clarity" +
+      ".wire.s2.protoB\016S2DotaGcCommonH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16764,7 +17402,7 @@ public final class S2DotaGcCommon {
     internal_static_CMsgDOTAMatch_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_Player_descriptor,
-        new java.lang.String[] { "AccountId", "PlayerSlot", "HeroId", "Item0", "Item1", "Item2", "Item3", "Item4", "Item5", "ExpectedTeamContribution", "ScaledMetric", "PreviousRank", "RankChange", "SoloRank", "Kills", "Deaths", "Assists", "LeaverStatus", "Gold", "LastHits", "Denies", "GoldPerMin", "XPPerMin", "GoldSpent", "HeroDamage", "TowerDamage", "HeroHealing", "Level", "TimeLastSeen", "PlayerName", "SupportAbilityValue", "FeedingDetected", "SearchRank", "SearchRankUncertainty", "RankUncertaintyChange", "HeroPlayCount", "PartyId", "ScaledHeroDamage", "ScaledTowerDamage", "ScaledHeroHealing", "ScaledKills", "ScaledDeaths", "ScaledAssists", "ClaimedFarmGold", "SupportGold", "ClaimedDenies", "ClaimedMisses", "Misses", "AbilityUpgrades", "AdditionalUnitsInventory", "PermanentBuffs", "CustomGameData", "ActiveBattlePass", "NetWorth", "BotDifficulty", });
+        new java.lang.String[] { "AccountId", "PlayerSlot", "HeroId", "Item0", "Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "ExpectedTeamContribution", "ScaledMetric", "PreviousRank", "RankChange", "SoloRank", "SeasonalRank", "RankTierUpdated", "Kills", "Deaths", "Assists", "LeaverStatus", "Gold", "LastHits", "Denies", "GoldPerMin", "XPPerMin", "GoldSpent", "HeroDamage", "TowerDamage", "HeroHealing", "Level", "TimeLastSeen", "PlayerName", "SupportAbilityValue", "FeedingDetected", "SearchRank", "SearchRankUncertainty", "RankUncertaintyChange", "HeroPlayCount", "PartyId", "ScaledHeroDamage", "ScaledTowerDamage", "ScaledHeroHealing", "ScaledKills", "ScaledDeaths", "ScaledAssists", "ClaimedFarmGold", "SupportGold", "ClaimedDenies", "ClaimedMisses", "Misses", "AbilityUpgrades", "AdditionalUnitsInventory", "PermanentBuffs", "CustomGameData", "ActivePrimeSubscription", "NetWorth", "BotDifficulty", "HeroPickOrder", "HeroWasRandomed", "HeroWasBonus", });
     internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor =
       internal_static_CMsgDOTAMatch_Player_descriptor.getNestedTypes().get(0);
     internal_static_CMsgDOTAMatch_Player_CustomGameData_fieldAccessorTable = new

@@ -1077,6 +1077,24 @@ public final class NetMessages {
      * <code>optional bytes data = 3;</code>
      */
     com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>optional uint32 command_number = 4;</code>
+     */
+    boolean hasCommandNumber();
+    /**
+     * <code>optional uint32 command_number = 4;</code>
+     */
+    int getCommandNumber();
+
+    /**
+     * <code>optional uint32 num_commands = 5;</code>
+     */
+    boolean hasNumCommands();
+    /**
+     * <code>optional uint32 num_commands = 5;</code>
+     */
+    int getNumCommands();
   }
   /**
    * Protobuf type {@code CCLCMsg_Move}
@@ -1143,6 +1161,16 @@ public final class NetMessages {
             case 26: {
               bitField0_ |= 0x00000004;
               data_ = input.readBytes();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              commandNumber_ = input.readUInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              numCommands_ = input.readUInt32();
               break;
             }
           }
@@ -1230,10 +1258,42 @@ public final class NetMessages {
       return data_;
     }
 
+    public static final int COMMAND_NUMBER_FIELD_NUMBER = 4;
+    private int commandNumber_;
+    /**
+     * <code>optional uint32 command_number = 4;</code>
+     */
+    public boolean hasCommandNumber() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional uint32 command_number = 4;</code>
+     */
+    public int getCommandNumber() {
+      return commandNumber_;
+    }
+
+    public static final int NUM_COMMANDS_FIELD_NUMBER = 5;
+    private int numCommands_;
+    /**
+     * <code>optional uint32 num_commands = 5;</code>
+     */
+    public boolean hasNumCommands() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional uint32 num_commands = 5;</code>
+     */
+    public int getNumCommands() {
+      return numCommands_;
+    }
+
     private void initFields() {
       numBackupCommands_ = 0;
       numNewCommands_ = 0;
       data_ = com.google.protobuf.ByteString.EMPTY;
+      commandNumber_ = 0;
+      numCommands_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1257,6 +1317,12 @@ public final class NetMessages {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeBytes(3, data_);
       }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeUInt32(4, commandNumber_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeUInt32(5, numCommands_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1277,6 +1343,14 @@ public final class NetMessages {
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(3, data_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, commandNumber_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(5, numCommands_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1401,6 +1475,10 @@ public final class NetMessages {
         bitField0_ = (bitField0_ & ~0x00000002);
         data_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        commandNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        numCommands_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1441,6 +1519,14 @@ public final class NetMessages {
           to_bitField0_ |= 0x00000004;
         }
         result.data_ = data_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.commandNumber_ = commandNumber_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.numCommands_ = numCommands_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1465,6 +1551,12 @@ public final class NetMessages {
         }
         if (other.hasData()) {
           setData(other.getData());
+        }
+        if (other.hasCommandNumber()) {
+          setCommandNumber(other.getCommandNumber());
+        }
+        if (other.hasNumCommands()) {
+          setNumCommands(other.getNumCommands());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1588,6 +1680,70 @@ public final class NetMessages {
       public Builder clearData() {
         bitField0_ = (bitField0_ & ~0x00000004);
         data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private int commandNumber_ ;
+      /**
+       * <code>optional uint32 command_number = 4;</code>
+       */
+      public boolean hasCommandNumber() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional uint32 command_number = 4;</code>
+       */
+      public int getCommandNumber() {
+        return commandNumber_;
+      }
+      /**
+       * <code>optional uint32 command_number = 4;</code>
+       */
+      public Builder setCommandNumber(int value) {
+        bitField0_ |= 0x00000008;
+        commandNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 command_number = 4;</code>
+       */
+      public Builder clearCommandNumber() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        commandNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int numCommands_ ;
+      /**
+       * <code>optional uint32 num_commands = 5;</code>
+       */
+      public boolean hasNumCommands() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional uint32 num_commands = 5;</code>
+       */
+      public int getNumCommands() {
+        return numCommands_;
+      }
+      /**
+       * <code>optional uint32 num_commands = 5;</code>
+       */
+      public Builder setNumCommands(int value) {
+        bitField0_ |= 0x00000010;
+        numCommands_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_commands = 5;</code>
+       */
+      public Builder clearNumCommands() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        numCommands_ = 0;
         onChanged();
         return this;
       }
@@ -11244,6 +11400,15 @@ public final class NetMessages {
      * <code>optional uint32 max_spawngroup_creationsequence = 10;</code>
      */
     int getMaxSpawngroupCreationsequence();
+
+    /**
+     * <code>optional uint32 last_cmd_number = 11;</code>
+     */
+    boolean hasLastCmdNumber();
+    /**
+     * <code>optional uint32 last_cmd_number = 11;</code>
+     */
+    int getLastCmdNumber();
   }
   /**
    * Protobuf type {@code CSVCMsg_PacketEntities}
@@ -11345,6 +11510,11 @@ public final class NetMessages {
             case 80: {
               bitField0_ |= 0x00000200;
               maxSpawngroupCreationsequence_ = input.readUInt32();
+              break;
+            }
+            case 88: {
+              bitField0_ |= 0x00000400;
+              lastCmdNumber_ = input.readUInt32();
               break;
             }
           }
@@ -11537,6 +11707,21 @@ public final class NetMessages {
       return maxSpawngroupCreationsequence_;
     }
 
+    public static final int LAST_CMD_NUMBER_FIELD_NUMBER = 11;
+    private int lastCmdNumber_;
+    /**
+     * <code>optional uint32 last_cmd_number = 11;</code>
+     */
+    public boolean hasLastCmdNumber() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional uint32 last_cmd_number = 11;</code>
+     */
+    public int getLastCmdNumber() {
+      return lastCmdNumber_;
+    }
+
     private void initFields() {
       maxEntries_ = 0;
       updatedEntries_ = 0;
@@ -11548,6 +11733,7 @@ public final class NetMessages {
       pendingFullFrame_ = false;
       activeSpawngroupHandle_ = 0;
       maxSpawngroupCreationsequence_ = 0;
+      lastCmdNumber_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -11591,6 +11777,9 @@ public final class NetMessages {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeUInt32(10, maxSpawngroupCreationsequence_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeUInt32(11, lastCmdNumber_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -11640,6 +11829,10 @@ public final class NetMessages {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(10, maxSpawngroupCreationsequence_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(11, lastCmdNumber_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -11778,6 +11971,8 @@ public final class NetMessages {
         bitField0_ = (bitField0_ & ~0x00000100);
         maxSpawngroupCreationsequence_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
+        lastCmdNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -11846,6 +12041,10 @@ public final class NetMessages {
           to_bitField0_ |= 0x00000200;
         }
         result.maxSpawngroupCreationsequence_ = maxSpawngroupCreationsequence_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.lastCmdNumber_ = lastCmdNumber_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11891,6 +12090,9 @@ public final class NetMessages {
         }
         if (other.hasMaxSpawngroupCreationsequence()) {
           setMaxSpawngroupCreationsequence(other.getMaxSpawngroupCreationsequence());
+        }
+        if (other.hasLastCmdNumber()) {
+          setLastCmdNumber(other.getLastCmdNumber());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -12238,6 +12440,38 @@ public final class NetMessages {
       public Builder clearMaxSpawngroupCreationsequence() {
         bitField0_ = (bitField0_ & ~0x00000200);
         maxSpawngroupCreationsequence_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lastCmdNumber_ ;
+      /**
+       * <code>optional uint32 last_cmd_number = 11;</code>
+       */
+      public boolean hasLastCmdNumber() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional uint32 last_cmd_number = 11;</code>
+       */
+      public int getLastCmdNumber() {
+        return lastCmdNumber_;
+      }
+      /**
+       * <code>optional uint32 last_cmd_number = 11;</code>
+       */
+      public Builder setLastCmdNumber(int value) {
+        bitField0_ |= 0x00000400;
+        lastCmdNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 last_cmd_number = 11;</code>
+       */
+      public Builder clearLastCmdNumber() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        lastCmdNumber_ = 0;
         onChanged();
         return this;
       }
@@ -21603,88 +21837,90 @@ public final class NetMessages {
       "oto\"\220\001\n\022CCLCMsg_ClientInfo\022\026\n\016send_table" +
       "_crc\030\001 \001(\007\022\024\n\014server_count\030\002 \001(\r\022\017\n\007is_h" +
       "ltv\030\003 \001(\010\022\021\n\tis_replay\030\004 \001(\010\022\022\n\nfriends_" +
-      "id\030\005 \001(\r\022\024\n\014friends_name\030\006 \001(\t\"S\n\014CCLCMs" +
-      "g_Move\022\033\n\023num_backup_commands\030\001 \001(\r\022\030\n\020n" +
-      "um_new_commands\030\002 \001(\r\022\014\n\004data\030\003 \001(\014\"\311\001\n\016" +
-      "CMsgVoiceAudio\022:\n\006format\030\001 \001(\0162\022.VoiceDa" +
-      "taFormat_t:\026VOICEDATA_FORMAT_STEAM\022\022\n\nvo" +
-      "ice_data\030\002 \001(\014\022\026\n\016sequence_bytes\030\003 \001(\005\022\026",
-      "\n\016section_number\030\004 \001(\r\022\023\n\013sample_rate\030\005 " +
-      "\001(\r\022\"\n\032uncompressed_sample_offset\030\006 \001(\r\"" +
-      "O\n\021CCLCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CM" +
-      "sgVoiceAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n\004tick\030\003 \001(\r" +
-      "\"A\n\023CCLCMsg_BaselineAck\022\025\n\rbaseline_tick" +
-      "\030\001 \001(\005\022\023\n\013baseline_nr\030\002 \001(\005\"*\n\024CCLCMsg_L" +
-      "istenEvents\022\022\n\nevent_mask\030\001 \003(\007\"\\\n\030CCLCM" +
-      "sg_RespondCvarValue\022\016\n\006cookie\030\001 \001(\005\022\023\n\013s" +
-      "tatus_code\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022\r\n\005value\030" +
-      "\004 \001(\t\"m\n\024CCLCMsg_FileCRCCheck\022\021\n\tcode_pa",
-      "th\030\001 \001(\005\022\014\n\004path\030\002 \001(\t\022\025\n\rcode_filename\030" +
-      "\003 \001(\005\022\020\n\010filename\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"+\n\027" +
-      "CCLCMsg_LoadingProgress\022\020\n\010progress\030\001 \001(" +
-      "\005\"0\n\032CCLCMsg_SplitPlayerConnect\022\022\n\nplaye" +
-      "rname\030\001 \001(\t\"7\n\025CCLCMsg_ClientMessage\022\020\n\010" +
-      "msg_type\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"-\n\035CCLCMsg_" +
-      "SplitPlayerDisconnect\022\014\n\004slot\030\001 \001(\005\"*\n\024C" +
-      "CLCMsg_ServerStatus\022\022\n\nsimplified\030\001 \001(\010\"" +
-      "\024\n\022CCLCMsg_ServerPing\"Z\n\024CCLCMsg_Request" +
-      "Pause\022-\n\npause_type\030\001 \001(\0162\017.RequestPause",
-      "_t:\010RP_PAUSE\022\023\n\013pause_group\030\002 \001(\005\"$\n\024CCL" +
-      "CMsg_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"\321\001\n\025CSVC" +
-      "Msg_GameEventList\0228\n\013descriptors\030\001 \003(\0132#" +
-      ".CSVCMsg_GameEventList.descriptor_t\032#\n\005k" +
-      "ey_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032Y\n\014desc" +
-      "riptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022" +
-      "*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEventList.ke" +
-      "y_t\"\223\002\n\026CSVCMsg_PacketEntities\022\023\n\013max_en" +
-      "tries\030\001 \001(\005\022\027\n\017updated_entries\030\002 \001(\005\022\020\n\010" +
-      "is_delta\030\003 \001(\010\022\027\n\017update_baseline\030\004 \001(\010\022",
-      "\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005\022\023\n" +
-      "\013entity_data\030\007 \001(\014\022\032\n\022pending_full_frame" +
-      "\030\010 \001(\010\022 \n\030active_spawngroup_handle\030\t \001(\r" +
-      "\022\'\n\037max_spawngroup_creationsequence\030\n \001(" +
-      "\r\"\325\003\n\022CSVCMsg_ServerInfo\022\020\n\010protocol\030\001 \001" +
-      "(\005\022\024\n\014server_count\030\002 \001(\005\022\024\n\014is_dedicated" +
-      "\030\003 \001(\010\022\017\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001" +
-      "(\010\022\014\n\004c_os\030\006 \001(\005\022\017\n\007map_crc\030\007 \001(\007\022\022\n\ncli" +
-      "ent_crc\030\010 \001(\007\022\030\n\020string_table_crc\030\t \001(\007\022" +
-      "\023\n\013max_clients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(",
-      "\005\022\023\n\013player_slot\030\014 \001(\005\022\025\n\rtick_interval\030" +
-      "\r \001(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(" +
-      "\t\022\020\n\010sky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022" +
-      "\n\naddon_name\030\022 \001(\t\022>\n\023game_session_confi" +
-      "g\030\023 \001(\0132!.CSVCMsg_GameSessionConfigurati" +
-      "on\022\035\n\025game_session_manifest\030\024 \001(\014\"\244\001\n\021CS" +
-      "VCMsg_ClassInfo\022\030\n\020create_on_client\030\001 \001(" +
-      "\010\022+\n\007classes\030\002 \003(\0132\032.CSVCMsg_ClassInfo.c" +
-      "lass_t\032H\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017d" +
-      "ata_table_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t",
-      "\"5\n\017CSVCMsg_SetView\022\024\n\014entity_index\030\001 \001(" +
-      "\005\022\014\n\004slot\030\002 \001(\005\"\035\n\rCSVCMsg_Print\022\014\n\004text" +
-      "\030\001 \001(\t\"G\n\021CSVCMsg_VoiceInit\022\017\n\007quality\030\001" +
-      " \001(\005\022\r\n\005codec\030\002 \001(\t\022\022\n\007version\030\003 \001(\005:\0010\"" +
-      "\337\003\n\016CSVCMsg_Sounds\022\026\n\016reliable_sound\030\001 \001" +
-      "(\010\022+\n\006sounds\030\002 \003(\0132\033.CSVCMsg_Sounds.soun" +
-      "ddata_t\032\207\003\n\013sounddata_t\022\020\n\010origin_x\030\001 \001(" +
-      "\021\022\020\n\010origin_y\030\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n" +
-      "\006volume\030\004 \001(\r\022\023\n\013delay_value\030\005 \001(\002\022\027\n\017se" +
-      "quence_number\030\006 \001(\005\022\024\n\014entity_index\030\007 \001(",
-      "\005\022\017\n\007channel\030\010 \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005fla" +
-      "gs\030\n \001(\005\022\021\n\tsound_num\030\013 \001(\r\022\030\n\020sound_num" +
-      "_handle\030\014 \001(\007\022\026\n\016speaker_entity\030\r \001(\005\022\023\n" +
-      "\013random_seed\030\016 \001(\005\022\023\n\013sound_level\030\017 \001(\005\022" +
-      "\023\n\013is_sentence\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010" +
-      "\022\014\n\004guid\030\022 \001(\r\022\031\n\021sound_resource_id\030\023 \001(" +
-      "\006\"_\n\031CSVCMsg_UpdateStringTable\022\020\n\010table_" +
-      "id\030\001 \001(\005\022\033\n\023num_changed_entries\030\002 \001(\005\022\023\n" +
-      "\013string_data\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameS" +
-      "plit\022\014\n\004tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005t",
-      "otal\030\003 \001(\005\022\014\n\004data\030\004 \001(\014*L\n\021VoiceDataFor" +
-      "mat_t\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOI" +
-      "CEDATA_FORMAT_ENGINE\020\001*B\n\016RequestPause_t" +
-      "\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOG" +
-      "GLEPAUSE\020\002B6\n$skadistats.clarity.wire.co" +
-      "mmon.protoB\013NetMessages\200\001\000"
+      "id\030\005 \001(\r\022\024\n\014friends_name\030\006 \001(\t\"\201\001\n\014CCLCM" +
+      "sg_Move\022\033\n\023num_backup_commands\030\001 \001(\r\022\030\n\020" +
+      "num_new_commands\030\002 \001(\r\022\014\n\004data\030\003 \001(\014\022\026\n\016" +
+      "command_number\030\004 \001(\r\022\024\n\014num_commands\030\005 \001" +
+      "(\r\"\311\001\n\016CMsgVoiceAudio\022:\n\006format\030\001 \001(\0162\022." +
+      "VoiceDataFormat_t:\026VOICEDATA_FORMAT_STEA",
+      "M\022\022\n\nvoice_data\030\002 \001(\014\022\026\n\016sequence_bytes\030" +
+      "\003 \001(\005\022\026\n\016section_number\030\004 \001(\r\022\023\n\013sample_" +
+      "rate\030\005 \001(\r\022\"\n\032uncompressed_sample_offset" +
+      "\030\006 \001(\r\"O\n\021CCLCMsg_VoiceData\022\036\n\005audio\030\001 \001" +
+      "(\0132\017.CMsgVoiceAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n\004tic" +
+      "k\030\003 \001(\r\"A\n\023CCLCMsg_BaselineAck\022\025\n\rbaseli" +
+      "ne_tick\030\001 \001(\005\022\023\n\013baseline_nr\030\002 \001(\005\"*\n\024CC" +
+      "LCMsg_ListenEvents\022\022\n\nevent_mask\030\001 \003(\007\"\\" +
+      "\n\030CCLCMsg_RespondCvarValue\022\016\n\006cookie\030\001 \001" +
+      "(\005\022\023\n\013status_code\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022\r\n",
+      "\005value\030\004 \001(\t\"m\n\024CCLCMsg_FileCRCCheck\022\021\n\t" +
+      "code_path\030\001 \001(\005\022\014\n\004path\030\002 \001(\t\022\025\n\rcode_fi" +
+      "lename\030\003 \001(\005\022\020\n\010filename\030\004 \001(\t\022\013\n\003crc\030\005 " +
+      "\001(\007\"+\n\027CCLCMsg_LoadingProgress\022\020\n\010progre" +
+      "ss\030\001 \001(\005\"0\n\032CCLCMsg_SplitPlayerConnect\022\022" +
+      "\n\nplayername\030\001 \001(\t\"7\n\025CCLCMsg_ClientMess" +
+      "age\022\020\n\010msg_type\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"-\n\035C" +
+      "CLCMsg_SplitPlayerDisconnect\022\014\n\004slot\030\001 \001" +
+      "(\005\"*\n\024CCLCMsg_ServerStatus\022\022\n\nsimplified" +
+      "\030\001 \001(\010\"\024\n\022CCLCMsg_ServerPing\"Z\n\024CCLCMsg_",
+      "RequestPause\022-\n\npause_type\030\001 \001(\0162\017.Reque" +
+      "stPause_t:\010RP_PAUSE\022\023\n\013pause_group\030\002 \001(\005" +
+      "\"$\n\024CCLCMsg_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"\321" +
+      "\001\n\025CSVCMsg_GameEventList\0228\n\013descriptors\030" +
+      "\001 \003(\0132#.CSVCMsg_GameEventList.descriptor" +
+      "_t\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032" +
+      "Y\n\014descriptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name" +
+      "\030\002 \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEvent" +
+      "List.key_t\"\254\002\n\026CSVCMsg_PacketEntities\022\023\n" +
+      "\013max_entries\030\001 \001(\005\022\027\n\017updated_entries\030\002 ",
+      "\001(\005\022\020\n\010is_delta\030\003 \001(\010\022\027\n\017update_baseline" +
+      "\030\004 \001(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006" +
+      " \001(\005\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022pending_ful" +
+      "l_frame\030\010 \001(\010\022 \n\030active_spawngroup_handl" +
+      "e\030\t \001(\r\022\'\n\037max_spawngroup_creationsequen" +
+      "ce\030\n \001(\r\022\027\n\017last_cmd_number\030\013 \001(\r\"\325\003\n\022CS" +
+      "VCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n\014se" +
+      "rver_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(\010\022\017" +
+      "\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004c_" +
+      "os\030\006 \001(\005\022\017\n\007map_crc\030\007 \001(\007\022\022\n\nclient_crc\030",
+      "\010 \001(\007\022\030\n\020string_table_crc\030\t \001(\007\022\023\n\013max_c" +
+      "lients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\023\n\013pla" +
+      "yer_slot\030\014 \001(\005\022\025\n\rtick_interval\030\r \001(\002\022\020\n" +
+      "\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020\n\010sky" +
+      "_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n\naddon_" +
+      "name\030\022 \001(\t\022>\n\023game_session_config\030\023 \001(\0132" +
+      "!.CSVCMsg_GameSessionConfiguration\022\035\n\025ga" +
+      "me_session_manifest\030\024 \001(\014\"\244\001\n\021CSVCMsg_Cl" +
+      "assInfo\022\030\n\020create_on_client\030\001 \001(\010\022+\n\007cla" +
+      "sses\030\002 \003(\0132\032.CSVCMsg_ClassInfo.class_t\032H",
+      "\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017data_tabl" +
+      "e_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"5\n\017CSVC" +
+      "Msg_SetView\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004slo" +
+      "t\030\002 \001(\005\"\035\n\rCSVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G" +
+      "\n\021CSVCMsg_VoiceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005" +
+      "codec\030\002 \001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVC" +
+      "Msg_Sounds\022\026\n\016reliable_sound\030\001 \001(\010\022+\n\006so" +
+      "unds\030\002 \003(\0132\033.CSVCMsg_Sounds.sounddata_t\032" +
+      "\207\003\n\013sounddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010ori" +
+      "gin_y\030\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030",
+      "\004 \001(\r\022\023\n\013delay_value\030\005 \001(\002\022\027\n\017sequence_n" +
+      "umber\030\006 \001(\005\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007cha" +
+      "nnel\030\010 \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005" +
+      "\022\021\n\tsound_num\030\013 \001(\r\022\030\n\020sound_num_handle\030" +
+      "\014 \001(\007\022\026\n\016speaker_entity\030\r \001(\005\022\023\n\013random_" +
+      "seed\030\016 \001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_se" +
+      "ntence\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid" +
+      "\030\022 \001(\r\022\031\n\021sound_resource_id\030\023 \001(\006\"_\n\031CSV" +
+      "CMsg_UpdateStringTable\022\020\n\010table_id\030\001 \001(\005" +
+      "\022\033\n\023num_changed_entries\030\002 \001(\005\022\023\n\013string_",
+      "data\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004" +
+      "tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001" +
+      "(\005\022\014\n\004data\030\004 \001(\014*L\n\021VoiceDataFormat_t\022\032\n" +
+      "\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_F" +
+      "ORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_P" +
+      "AUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE" +
+      "\020\002B6\n$skadistats.clarity.wire.common.pro" +
+      "toB\013NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21710,7 +21946,7 @@ public final class NetMessages {
     internal_static_CCLCMsg_Move_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCLCMsg_Move_descriptor,
-        new java.lang.String[] { "NumBackupCommands", "NumNewCommands", "Data", });
+        new java.lang.String[] { "NumBackupCommands", "NumNewCommands", "Data", "CommandNumber", "NumCommands", });
     internal_static_CMsgVoiceAudio_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CMsgVoiceAudio_fieldAccessorTable = new
@@ -21818,7 +22054,7 @@ public final class NetMessages {
     internal_static_CSVCMsg_PacketEntities_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PacketEntities_descriptor,
-        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", });
+        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumber", });
     internal_static_CSVCMsg_ServerInfo_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_CSVCMsg_ServerInfo_fieldAccessorTable = new

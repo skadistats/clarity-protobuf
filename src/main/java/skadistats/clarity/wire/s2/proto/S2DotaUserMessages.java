@@ -433,6 +433,18 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ChatWheelCooldown = 569;</code>
      */
     DOTA_UM_ChatWheelCooldown(104, 569),
+    /**
+     * <code>DOTA_UM_DismissAllStatPopups = 570;</code>
+     */
+    DOTA_UM_DismissAllStatPopups(105, 570),
+    /**
+     * <code>DOTA_UM_TE_DestroyProjectile = 571;</code>
+     */
+    DOTA_UM_TE_DestroyProjectile(106, 571),
+    /**
+     * <code>DOTA_UM_AbilityDraftRequestAbility = 573;</code>
+     */
+    DOTA_UM_AbilityDraftRequestAbility(107, 573),
     ;
 
     /**
@@ -855,6 +867,18 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ChatWheelCooldown = 569;</code>
      */
     public static final int DOTA_UM_ChatWheelCooldown_VALUE = 569;
+    /**
+     * <code>DOTA_UM_DismissAllStatPopups = 570;</code>
+     */
+    public static final int DOTA_UM_DismissAllStatPopups_VALUE = 570;
+    /**
+     * <code>DOTA_UM_TE_DestroyProjectile = 571;</code>
+     */
+    public static final int DOTA_UM_TE_DestroyProjectile_VALUE = 571;
+    /**
+     * <code>DOTA_UM_AbilityDraftRequestAbility = 573;</code>
+     */
+    public static final int DOTA_UM_AbilityDraftRequestAbility_VALUE = 573;
 
 
     public final int getNumber() { return value; }
@@ -966,6 +990,9 @@ public final class S2DotaUserMessages {
         case 567: return DOTA_UM_TeamCaptainChanged;
         case 568: return DOTA_UM_SendRoshanSpectatorPhase;
         case 569: return DOTA_UM_ChatWheelCooldown;
+        case 570: return DOTA_UM_DismissAllStatPopups;
+        case 571: return DOTA_UM_TE_DestroyProjectile;
+        case 573: return DOTA_UM_AbilityDraftRequestAbility;
         default: return null;
       }
     }
@@ -1026,7 +1053,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\316\030\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\275\031\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1105,9 +1132,11 @@ public final class S2DotaUserMessages {
       "\022#\n\036DOTA_UM_RequestItemSuggestions\020\266\004\022\037\n" +
       "\032DOTA_UM_TeamCaptainChanged\020\267\004\022%\n DOTA_U" +
       "M_SendRoshanSpectatorPhase\020\270\004\022\036\n\031DOTA_UM" +
-      "_ChatWheelCooldown\020\271\004B;\n skadistats.clar",
-      "ity.wire.s2.protoB\022S2DotaUserMessagesH\001\200" +
-      "\001\000"
+      "_ChatWheelCooldown\020\271\004\022!\n\034DOTA_UM_Dismiss",
+      "AllStatPopups\020\272\004\022!\n\034DOTA_UM_TE_DestroyPr" +
+      "ojectile\020\273\004\022\'\n\"DOTA_UM_AbilityDraftReque" +
+      "stAbility\020\275\004B;\n skadistats.clarity.wire." +
+      "s2.protoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

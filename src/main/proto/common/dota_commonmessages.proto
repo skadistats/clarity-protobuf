@@ -99,6 +99,7 @@ enum EDOTAStatPopupTypes {
 	k_EDOTA_SPT_Poll = 2;
 	k_EDOTA_SPT_Grid = 3;
 	k_EDOTA_SPT_DualImage = 4;
+    k_EDOTA_SPT_Movie = 5;
 }
 
 enum dotaunitorder_t {
@@ -138,6 +139,7 @@ enum dotaunitorder_t {
 	DOTA_UNIT_ORDER_CONTINUE = 33;
 	DOTA_UNIT_ORDER_VECTOR_TARGET_CANCELED = 34;
 	DOTA_UNIT_ORDER_CAST_RIVER_PAINT = 35;
+    DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT = 36;
 }
 
 message CDOTAMsg_LocationPing {
@@ -151,7 +153,7 @@ message CDOTAMsg_LocationPing {
 message CDOTAMsg_ItemAlert {
 	optional int32 x = 1;
 	optional int32 y = 2;
-	optional int32 itemid = 3;
+	optional int32 item_ability_id = 3;
 }
 
 message CDOTAMsg_EnemyItemAlert {
@@ -179,6 +181,12 @@ message CDOTAMsg_SendStatPopup {
 	repeated int32 stat_images = 3;
 	repeated int32 stat_image_types = 4;
 	optional float duration = 5;
+	optional bool use_html = 6;
+	optional string movie_name = 7;
+}
+
+message CDOTAMsg_DismissAllStatPopups {
+	optional float time_delay = 1;
 }
 
 message CDOTAMsg_CoachHUDPing {

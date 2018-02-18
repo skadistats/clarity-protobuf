@@ -366,13 +366,13 @@ public final class DotaModifiers {
     int getDdModifierIndex();
 
     /**
-     * <code>optional int32 dd_ability_index = 28;</code>
+     * <code>optional int32 dd_ability_id = 28;</code>
      */
-    boolean hasDdAbilityIndex();
+    boolean hasDdAbilityId();
     /**
-     * <code>optional int32 dd_ability_index = 28;</code>
+     * <code>optional int32 dd_ability_id = 28;</code>
      */
-    int getDdAbilityIndex();
+    int getDdAbilityId();
 
     /**
      * <code>optional string illusion_label = 29;</code>
@@ -626,7 +626,7 @@ public final class DotaModifiers {
             }
             case 224: {
               bitField0_ |= 0x08000000;
-              ddAbilityIndex_ = input.readInt32();
+              ddAbilityId_ = input.readInt32();
               break;
             }
             case 234: {
@@ -1211,19 +1211,19 @@ public final class DotaModifiers {
       return ddModifierIndex_;
     }
 
-    public static final int DD_ABILITY_INDEX_FIELD_NUMBER = 28;
-    private int ddAbilityIndex_;
+    public static final int DD_ABILITY_ID_FIELD_NUMBER = 28;
+    private int ddAbilityId_;
     /**
-     * <code>optional int32 dd_ability_index = 28;</code>
+     * <code>optional int32 dd_ability_id = 28;</code>
      */
-    public boolean hasDdAbilityIndex() {
+    public boolean hasDdAbilityId() {
       return ((bitField0_ & 0x08000000) == 0x08000000);
     }
     /**
-     * <code>optional int32 dd_ability_index = 28;</code>
+     * <code>optional int32 dd_ability_id = 28;</code>
      */
-    public int getDdAbilityIndex() {
-      return ddAbilityIndex_;
+    public int getDdAbilityId() {
+      return ddAbilityId_;
     }
 
     public static final int ILLUSION_LABEL_FIELD_NUMBER = 29;
@@ -1353,7 +1353,7 @@ public final class DotaModifiers {
       damage_ = 0;
       range_ = 0;
       ddModifierIndex_ = 0;
-      ddAbilityIndex_ = 0;
+      ddAbilityId_ = 0;
       illusionLabel_ = "";
       active_ = false;
       luaName_ = "";
@@ -1469,7 +1469,7 @@ public final class DotaModifiers {
         output.writeInt32(27, ddModifierIndex_);
       }
       if (((bitField0_ & 0x08000000) == 0x08000000)) {
-        output.writeInt32(28, ddAbilityIndex_);
+        output.writeInt32(28, ddAbilityId_);
       }
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
         output.writeBytes(29, getIllusionLabelBytes());
@@ -1599,7 +1599,7 @@ public final class DotaModifiers {
       }
       if (((bitField0_ & 0x08000000) == 0x08000000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(28, ddAbilityIndex_);
+          .computeInt32Size(28, ddAbilityId_);
       }
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
         size += com.google.protobuf.CodedOutputStream
@@ -1794,7 +1794,7 @@ public final class DotaModifiers {
         bitField0_ = (bitField0_ & ~0x02000000);
         ddModifierIndex_ = 0;
         bitField0_ = (bitField0_ & ~0x04000000);
-        ddAbilityIndex_ = 0;
+        ddAbilityId_ = 0;
         bitField0_ = (bitField0_ & ~0x08000000);
         illusionLabel_ = "";
         bitField0_ = (bitField0_ & ~0x10000000);
@@ -1949,7 +1949,7 @@ public final class DotaModifiers {
         if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
           to_bitField0_ |= 0x08000000;
         }
-        result.ddAbilityIndex_ = ddAbilityIndex_;
+        result.ddAbilityId_ = ddAbilityId_;
         if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
           to_bitField0_ |= 0x10000000;
         }
@@ -2067,8 +2067,8 @@ public final class DotaModifiers {
         if (other.hasDdModifierIndex()) {
           setDdModifierIndex(other.getDdModifierIndex());
         }
-        if (other.hasDdAbilityIndex()) {
-          setDdAbilityIndex(other.getDdAbilityIndex());
+        if (other.hasDdAbilityId()) {
+          setDdAbilityId(other.getDdAbilityId());
         }
         if (other.hasIllusionLabel()) {
           bitField0_ |= 0x10000000;
@@ -3337,34 +3337,34 @@ public final class DotaModifiers {
         return this;
       }
 
-      private int ddAbilityIndex_ ;
+      private int ddAbilityId_ ;
       /**
-       * <code>optional int32 dd_ability_index = 28;</code>
+       * <code>optional int32 dd_ability_id = 28;</code>
        */
-      public boolean hasDdAbilityIndex() {
+      public boolean hasDdAbilityId() {
         return ((bitField0_ & 0x08000000) == 0x08000000);
       }
       /**
-       * <code>optional int32 dd_ability_index = 28;</code>
+       * <code>optional int32 dd_ability_id = 28;</code>
        */
-      public int getDdAbilityIndex() {
-        return ddAbilityIndex_;
+      public int getDdAbilityId() {
+        return ddAbilityId_;
       }
       /**
-       * <code>optional int32 dd_ability_index = 28;</code>
+       * <code>optional int32 dd_ability_id = 28;</code>
        */
-      public Builder setDdAbilityIndex(int value) {
+      public Builder setDdAbilityId(int value) {
         bitField0_ |= 0x08000000;
-        ddAbilityIndex_ = value;
+        ddAbilityId_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional int32 dd_ability_index = 28;</code>
+       * <code>optional int32 dd_ability_id = 28;</code>
        */
-      public Builder clearDdAbilityIndex() {
+      public Builder clearDdAbilityId() {
         bitField0_ = (bitField0_ & ~0x08000000);
-        ddAbilityIndex_ = 0;
+        ddAbilityId_ = 0;
         onChanged();
         return this;
       }
@@ -4154,7 +4154,7 @@ public final class DotaModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\026networkbasetypes" +
-      ".proto\"\354\005\n\033CDOTAModifierBuffTableEntry\022N" +
+      ".proto\"\351\005\n\033CDOTAModifierBuffTableEntry\022N" +
       "\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIER_ENTRY" +
       "_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_ACTIVE\022\016" +
       "\n\006parent\030\002 \002(\005\022\r\n\005index\030\003 \002(\005\022\022\n\nserial_" +
@@ -4170,15 +4170,15 @@ public final class DotaModifiers {
       "pear\030\024 \001(\t\022\033\n\023hero_loop_disappear\030\025 \001(\t\022" +
       "\026\n\016movement_speed\030\026 \001(\005\022\014\n\004aura\030\027 \001(\010\022\020\n" +
       "\010activity\030\030 \001(\005\022\016\n\006damage\030\031 \001(\005\022\r\n\005range" +
-      "\030\032 \001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005\022\030\n\020dd_" +
-      "ability_index\030\034 \001(\005\022\026\n\016illusion_label\030\035 " +
-      "\001(\t\022\016\n\006active\030\036 \001(\010\022\020\n\010lua_name\030\037 \001(\t\"I\n",
-      "\025CDOTALuaModifierEntry\022\025\n\rmodifier_type\030" +
-      "\001 \002(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA" +
-      "_MODIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_EN" +
-      "TRY_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY" +
-      "_TYPE_REMOVED\020\002B:\n$skadistats.clarity.wi" +
-      "re.common.protoB\rDotaModifiersH\001\200\001\000"
+      "\030\032 \001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005\022\025\n\rdd_" +
+      "ability_id\030\034 \001(\005\022\026\n\016illusion_label\030\035 \001(\t" +
+      "\022\016\n\006active\030\036 \001(\010\022\020\n\010lua_name\030\037 \001(\t\"I\n\025CD",
+      "OTALuaModifierEntry\022\025\n\rmodifier_type\030\001 \002" +
+      "(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_MO" +
+      "DIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENTRY" +
+      "_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_TY" +
+      "PE_REMOVED\020\002B:\n$skadistats.clarity.wire." +
+      "common.protoB\rDotaModifiersH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4198,7 +4198,7 @@ public final class DotaModifiers {
     internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAModifierBuffTableEntry_descriptor,
-        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityIndex", "IllusionLabel", "Active", "LuaName", });
+        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "LuaName", });
     internal_static_CDOTALuaModifierEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTALuaModifierEntry_fieldAccessorTable = new

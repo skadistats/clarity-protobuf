@@ -110,4 +110,7 @@ enum EDotaUserMessages {
 	DOTA_UM_TeamCaptainChanged = 567;
 	DOTA_UM_SendRoshanSpectatorPhase = 568;
 	DOTA_UM_ChatWheelCooldown = 569;
+	DOTA_UM_DismissAllStatPopups = 570;
+	DOTA_UM_TE_DestroyProjectile = 571;
+	DOTA_UM_AbilityDraftRequestAbility = 573;
 }
