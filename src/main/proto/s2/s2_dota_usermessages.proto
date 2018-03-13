@@ -10,7 +10,7 @@ enum EDotaUserMessages {
 	DOTA_UM_ChatEvent = 466;
 	DOTA_UM_CombatHeroPositions = 467;
 	DOTA_UM_CombatLogData = 468;
-	DOTA_UM_CombatLogShowDeath = 470;
+	DOTA_UM_CombatLogBulkData = 470;
 	DOTA_UM_CreateLinearProjectile = 471;
 	DOTA_UM_DestroyLinearProjectile = 472;
 	DOTA_UM_DodgeTrackingProjectiles = 473;
@@ -112,5 +112,8 @@ enum EDotaUserMessages {
 	DOTA_UM_ChatWheelCooldown = 569;
 	DOTA_UM_DismissAllStatPopups = 570;
 	DOTA_UM_TE_DestroyProjectile = 571;
+    DOTA_UM_HeroRelicProgress = 572;
 	DOTA_UM_AbilityDraftRequestAbility = 573;
+	DOTA_UM_ItemSold = 574;
+	DOTA_UM_DamageReport = 575;
 }

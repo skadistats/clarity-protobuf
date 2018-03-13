@@ -398,18 +398,41 @@ public final class DotaModifiers {
     boolean getActive();
 
     /**
-     * <code>optional string lua_name = 31;</code>
+     * <code>optional string player_ids = 31;</code>
+     */
+    boolean hasPlayerIds();
+    /**
+     * <code>optional string player_ids = 31;</code>
+     */
+    java.lang.String getPlayerIds();
+    /**
+     * <code>optional string player_ids = 31;</code>
+     */
+    com.google.protobuf.ByteString
+        getPlayerIdsBytes();
+
+    /**
+     * <code>optional string lua_name = 32;</code>
      */
     boolean hasLuaName();
     /**
-     * <code>optional string lua_name = 31;</code>
+     * <code>optional string lua_name = 32;</code>
      */
     java.lang.String getLuaName();
     /**
-     * <code>optional string lua_name = 31;</code>
+     * <code>optional string lua_name = 32;</code>
      */
     com.google.protobuf.ByteString
         getLuaNameBytes();
+
+    /**
+     * <code>optional int32 attack_speed = 33;</code>
+     */
+    boolean hasAttackSpeed();
+    /**
+     * <code>optional int32 attack_speed = 33;</code>
+     */
+    int getAttackSpeed();
   }
   /**
    * Protobuf type {@code CDOTAModifierBuffTableEntry}
@@ -446,6 +469,7 @@ public final class DotaModifiers {
         throws com.google.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
+      int mutable_bitField1_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -643,7 +667,18 @@ public final class DotaModifiers {
             case 250: {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x40000000;
+              playerIds_ = bs;
+              break;
+            }
+            case 258: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x80000000;
               luaName_ = bs;
+              break;
+            }
+            case 264: {
+              bitField1_ |= 0x00000001;
+              attackSpeed_ = input.readInt32();
               break;
             }
           }
@@ -686,6 +721,7 @@ public final class DotaModifiers {
     }
 
     private int bitField0_;
+    private int bitField1_;
     public static final int ENTRY_TYPE_FIELD_NUMBER = 1;
     private skadistats.clarity.wire.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE entryType_;
     /**
@@ -1283,16 +1319,58 @@ public final class DotaModifiers {
       return active_;
     }
 
-    public static final int LUA_NAME_FIELD_NUMBER = 31;
-    private java.lang.Object luaName_;
+    public static final int PLAYER_IDS_FIELD_NUMBER = 31;
+    private java.lang.Object playerIds_;
     /**
-     * <code>optional string lua_name = 31;</code>
+     * <code>optional string player_ids = 31;</code>
      */
-    public boolean hasLuaName() {
+    public boolean hasPlayerIds() {
       return ((bitField0_ & 0x40000000) == 0x40000000);
     }
     /**
-     * <code>optional string lua_name = 31;</code>
+     * <code>optional string player_ids = 31;</code>
+     */
+    public java.lang.String getPlayerIds() {
+      java.lang.Object ref = playerIds_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          playerIds_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string player_ids = 31;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPlayerIdsBytes() {
+      java.lang.Object ref = playerIds_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        playerIds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int LUA_NAME_FIELD_NUMBER = 32;
+    private java.lang.Object luaName_;
+    /**
+     * <code>optional string lua_name = 32;</code>
+     */
+    public boolean hasLuaName() {
+      return ((bitField0_ & 0x80000000) == 0x80000000);
+    }
+    /**
+     * <code>optional string lua_name = 32;</code>
      */
     public java.lang.String getLuaName() {
       java.lang.Object ref = luaName_;
@@ -1309,7 +1387,7 @@ public final class DotaModifiers {
       }
     }
     /**
-     * <code>optional string lua_name = 31;</code>
+     * <code>optional string lua_name = 32;</code>
      */
     public com.google.protobuf.ByteString
         getLuaNameBytes() {
@@ -1323,6 +1401,21 @@ public final class DotaModifiers {
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
+    }
+
+    public static final int ATTACK_SPEED_FIELD_NUMBER = 33;
+    private int attackSpeed_;
+    /**
+     * <code>optional int32 attack_speed = 33;</code>
+     */
+    public boolean hasAttackSpeed() {
+      return ((bitField1_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 attack_speed = 33;</code>
+     */
+    public int getAttackSpeed() {
+      return attackSpeed_;
     }
 
     private void initFields() {
@@ -1356,7 +1449,9 @@ public final class DotaModifiers {
       ddAbilityId_ = 0;
       illusionLabel_ = "";
       active_ = false;
+      playerIds_ = "";
       luaName_ = "";
+      attackSpeed_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1478,7 +1573,13 @@ public final class DotaModifiers {
         output.writeBool(30, active_);
       }
       if (((bitField0_ & 0x40000000) == 0x40000000)) {
-        output.writeBytes(31, getLuaNameBytes());
+        output.writeBytes(31, getPlayerIdsBytes());
+      }
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
+        output.writeBytes(32, getLuaNameBytes());
+      }
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(33, attackSpeed_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1611,7 +1712,15 @@ public final class DotaModifiers {
       }
       if (((bitField0_ & 0x40000000) == 0x40000000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(31, getLuaNameBytes());
+          .computeBytesSize(31, getPlayerIdsBytes());
+      }
+      if (((bitField0_ & 0x80000000) == 0x80000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(32, getLuaNameBytes());
+      }
+      if (((bitField1_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(33, attackSpeed_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1800,8 +1909,12 @@ public final class DotaModifiers {
         bitField0_ = (bitField0_ & ~0x10000000);
         active_ = false;
         bitField0_ = (bitField0_ & ~0x20000000);
-        luaName_ = "";
+        playerIds_ = "";
         bitField0_ = (bitField0_ & ~0x40000000);
+        luaName_ = "";
+        bitField0_ = (bitField0_ & ~0x80000000);
+        attackSpeed_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000001);
         return this;
       }
 
@@ -1829,7 +1942,9 @@ public final class DotaModifiers {
       public skadistats.clarity.wire.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry buildPartial() {
         skadistats.clarity.wire.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry result = new skadistats.clarity.wire.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry(this);
         int from_bitField0_ = bitField0_;
+        int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
+        int to_bitField1_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
@@ -1961,8 +2076,17 @@ public final class DotaModifiers {
         if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
           to_bitField0_ |= 0x40000000;
         }
+        result.playerIds_ = playerIds_;
+        if (((from_bitField0_ & 0x80000000) == 0x80000000)) {
+          to_bitField0_ |= 0x80000000;
+        }
         result.luaName_ = luaName_;
+        if (((from_bitField1_ & 0x00000001) == 0x00000001)) {
+          to_bitField1_ |= 0x00000001;
+        }
+        result.attackSpeed_ = attackSpeed_;
         result.bitField0_ = to_bitField0_;
+        result.bitField1_ = to_bitField1_;
         onBuilt();
         return result;
       }
@@ -2078,10 +2202,18 @@ public final class DotaModifiers {
         if (other.hasActive()) {
           setActive(other.getActive());
         }
-        if (other.hasLuaName()) {
+        if (other.hasPlayerIds()) {
           bitField0_ |= 0x40000000;
+          playerIds_ = other.playerIds_;
+          onChanged();
+        }
+        if (other.hasLuaName()) {
+          bitField0_ |= 0x80000000;
           luaName_ = other.luaName_;
           onChanged();
+        }
+        if (other.hasAttackSpeed()) {
+          setAttackSpeed(other.getAttackSpeed());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2125,6 +2257,7 @@ public final class DotaModifiers {
         return this;
       }
       private int bitField0_;
+      private int bitField1_;
 
       private skadistats.clarity.wire.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE entryType_ = skadistats.clarity.wire.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       /**
@@ -3477,15 +3610,91 @@ public final class DotaModifiers {
         return this;
       }
 
-      private java.lang.Object luaName_ = "";
+      private java.lang.Object playerIds_ = "";
       /**
-       * <code>optional string lua_name = 31;</code>
+       * <code>optional string player_ids = 31;</code>
        */
-      public boolean hasLuaName() {
+      public boolean hasPlayerIds() {
         return ((bitField0_ & 0x40000000) == 0x40000000);
       }
       /**
-       * <code>optional string lua_name = 31;</code>
+       * <code>optional string player_ids = 31;</code>
+       */
+      public java.lang.String getPlayerIds() {
+        java.lang.Object ref = playerIds_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            playerIds_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string player_ids = 31;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPlayerIdsBytes() {
+        java.lang.Object ref = playerIds_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          playerIds_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string player_ids = 31;</code>
+       */
+      public Builder setPlayerIds(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x40000000;
+        playerIds_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string player_ids = 31;</code>
+       */
+      public Builder clearPlayerIds() {
+        bitField0_ = (bitField0_ & ~0x40000000);
+        playerIds_ = getDefaultInstance().getPlayerIds();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string player_ids = 31;</code>
+       */
+      public Builder setPlayerIdsBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x40000000;
+        playerIds_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object luaName_ = "";
+      /**
+       * <code>optional string lua_name = 32;</code>
+       */
+      public boolean hasLuaName() {
+        return ((bitField0_ & 0x80000000) == 0x80000000);
+      }
+      /**
+       * <code>optional string lua_name = 32;</code>
        */
       public java.lang.String getLuaName() {
         java.lang.Object ref = luaName_;
@@ -3502,7 +3711,7 @@ public final class DotaModifiers {
         }
       }
       /**
-       * <code>optional string lua_name = 31;</code>
+       * <code>optional string lua_name = 32;</code>
        */
       public com.google.protobuf.ByteString
           getLuaNameBytes() {
@@ -3518,37 +3727,69 @@ public final class DotaModifiers {
         }
       }
       /**
-       * <code>optional string lua_name = 31;</code>
+       * <code>optional string lua_name = 32;</code>
        */
       public Builder setLuaName(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x40000000;
+  bitField0_ |= 0x80000000;
         luaName_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional string lua_name = 31;</code>
+       * <code>optional string lua_name = 32;</code>
        */
       public Builder clearLuaName() {
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         luaName_ = getDefaultInstance().getLuaName();
         onChanged();
         return this;
       }
       /**
-       * <code>optional string lua_name = 31;</code>
+       * <code>optional string lua_name = 32;</code>
        */
       public Builder setLuaNameBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x40000000;
+  bitField0_ |= 0x80000000;
         luaName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int attackSpeed_ ;
+      /**
+       * <code>optional int32 attack_speed = 33;</code>
+       */
+      public boolean hasAttackSpeed() {
+        return ((bitField1_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 attack_speed = 33;</code>
+       */
+      public int getAttackSpeed() {
+        return attackSpeed_;
+      }
+      /**
+       * <code>optional int32 attack_speed = 33;</code>
+       */
+      public Builder setAttackSpeed(int value) {
+        bitField1_ |= 0x00000001;
+        attackSpeed_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 attack_speed = 33;</code>
+       */
+      public Builder clearAttackSpeed() {
+        bitField1_ = (bitField1_ & ~0x00000001);
+        attackSpeed_ = 0;
         onChanged();
         return this;
       }
@@ -4154,7 +4395,7 @@ public final class DotaModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\026networkbasetypes" +
-      ".proto\"\351\005\n\033CDOTAModifierBuffTableEntry\022N" +
+      ".proto\"\223\006\n\033CDOTAModifierBuffTableEntry\022N" +
       "\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIER_ENTRY" +
       "_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_ACTIVE\022\016" +
       "\n\006parent\030\002 \002(\005\022\r\n\005index\030\003 \002(\005\022\022\n\nserial_" +
@@ -4172,13 +4413,14 @@ public final class DotaModifiers {
       "\010activity\030\030 \001(\005\022\016\n\006damage\030\031 \001(\005\022\r\n\005range" +
       "\030\032 \001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005\022\025\n\rdd_" +
       "ability_id\030\034 \001(\005\022\026\n\016illusion_label\030\035 \001(\t" +
-      "\022\016\n\006active\030\036 \001(\010\022\020\n\010lua_name\030\037 \001(\t\"I\n\025CD",
-      "OTALuaModifierEntry\022\025\n\rmodifier_type\030\001 \002" +
-      "(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_MO" +
-      "DIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENTRY" +
-      "_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_TY" +
-      "PE_REMOVED\020\002B:\n$skadistats.clarity.wire." +
-      "common.protoB\rDotaModifiersH\001\200\001\000"
+      "\022\016\n\006active\030\036 \001(\010\022\022\n\nplayer_ids\030\037 \001(\t\022\020\n\010",
+      "lua_name\030  \001(\t\022\024\n\014attack_speed\030! \001(\005\"I\n\025" +
+      "CDOTALuaModifierEntry\022\025\n\rmodifier_type\030\001" +
+      " \002(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_" +
+      "MODIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENT" +
+      "RY_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_" +
+      "TYPE_REMOVED\020\002B:\n$skadistats.clarity.wir" +
+      "e.common.protoB\rDotaModifiersH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4198,7 +4440,7 @@ public final class DotaModifiers {
     internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAModifierBuffTableEntry_descriptor,
-        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "LuaName", });
+        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", });
     internal_static_CDOTALuaModifierEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTALuaModifierEntry_fieldAccessorTable = new
