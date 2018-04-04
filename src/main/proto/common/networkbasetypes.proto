@@ -18,6 +18,7 @@ enum NET_Messages {
 	net_SpawnGroup_Unload = 12;
 	net_SpawnGroup_LoadCompleted = 13;
 	net_ReliableMessageEndMarker = 14;
+    net_PlayerAvatarData = 100;
 }
 
 enum SIGNONSTATE {
@@ -297,3 +298,7 @@ message CSVCMsg_GameSessionConfiguration {
 message CNETMsg_ReliableMessageEndMarker {
 }
 
+message CNETMsg_PlayerAvatarData {
+	optional uint32 accountid = 1;
+	optional bytes rgb = 2;
+}

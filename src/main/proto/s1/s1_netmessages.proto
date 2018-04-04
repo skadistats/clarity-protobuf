@@ -34,6 +34,10 @@ enum SVC_Messages {
 	svc_FullFrameSplit = 33;
 }
 
+message CSVCMsg_Prefetch {
+	optional int32 sound_index = 1;
+}
+
 message CSVCMsg_CreateStringTable {
 	optional string name = 1;
 	optional int32 max_entries = 2;

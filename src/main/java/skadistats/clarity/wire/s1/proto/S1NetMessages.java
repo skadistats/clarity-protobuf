@@ -306,6 +306,403 @@ public final class S1NetMessages {
     // @@protoc_insertion_point(enum_scope:SVC_Messages)
   }
 
+  public interface CSVCMsg_PrefetchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_Prefetch)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 sound_index = 1;</code>
+     */
+    boolean hasSoundIndex();
+    /**
+     * <code>optional int32 sound_index = 1;</code>
+     */
+    int getSoundIndex();
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_Prefetch}
+   */
+  public static final class CSVCMsg_Prefetch extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_Prefetch)
+      CSVCMsg_PrefetchOrBuilder {
+    // Use CSVCMsg_Prefetch.newBuilder() to construct.
+    private CSVCMsg_Prefetch(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_Prefetch(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_Prefetch defaultInstance;
+    public static CSVCMsg_Prefetch getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_Prefetch getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_Prefetch(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              soundIndex_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s1.proto.S1NetMessages.internal_static_CSVCMsg_Prefetch_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s1.proto.S1NetMessages.internal_static_CSVCMsg_Prefetch_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.class, skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_Prefetch> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_Prefetch>() {
+      public CSVCMsg_Prefetch parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_Prefetch(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_Prefetch> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SOUND_INDEX_FIELD_NUMBER = 1;
+    private int soundIndex_;
+    /**
+     * <code>optional int32 sound_index = 1;</code>
+     */
+    public boolean hasSoundIndex() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 sound_index = 1;</code>
+     */
+    public int getSoundIndex() {
+      return soundIndex_;
+    }
+
+    private void initFields() {
+      soundIndex_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, soundIndex_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, soundIndex_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_Prefetch}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_Prefetch)
+        skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_PrefetchOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s1.proto.S1NetMessages.internal_static_CSVCMsg_Prefetch_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s1.proto.S1NetMessages.internal_static_CSVCMsg_Prefetch_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.class, skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        soundIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s1.proto.S1NetMessages.internal_static_CSVCMsg_Prefetch_descriptor;
+      }
+
+      public skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch build() {
+        skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch buildPartial() {
+        skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch result = new skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.soundIndex_ = soundIndex_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch) {
+          return mergeFrom((skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch other) {
+        if (other == skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch.getDefaultInstance()) return this;
+        if (other.hasSoundIndex()) {
+          setSoundIndex(other.getSoundIndex());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s1.proto.S1NetMessages.CSVCMsg_Prefetch) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int soundIndex_ ;
+      /**
+       * <code>optional int32 sound_index = 1;</code>
+       */
+      public boolean hasSoundIndex() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 sound_index = 1;</code>
+       */
+      public int getSoundIndex() {
+        return soundIndex_;
+      }
+      /**
+       * <code>optional int32 sound_index = 1;</code>
+       */
+      public Builder setSoundIndex(int value) {
+        bitField0_ |= 0x00000001;
+        soundIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 sound_index = 1;</code>
+       */
+      public Builder clearSoundIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        soundIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_Prefetch)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_Prefetch(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_Prefetch)
+  }
+
   public interface CSVCMsg_CreateStringTableOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_CreateStringTable)
       com.google.protobuf.MessageOrBuilder {
@@ -5170,6 +5567,11 @@ public final class S1NetMessages {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_Prefetch_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_Prefetch_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_CreateStringTable_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -5204,43 +5606,44 @@ public final class S1NetMessages {
   static {
     java.lang.String[] descriptorData = {
       "\n\024s1_netmessages.proto\032\021netmessages.prot" +
-      "o\"\312\001\n\031CSVCMsg_CreateStringTable\022\014\n\004name\030" +
-      "\001 \001(\t\022\023\n\013max_entries\030\002 \001(\005\022\023\n\013num_entrie" +
-      "s\030\003 \001(\005\022\034\n\024user_data_fixed_size\030\004 \001(\010\022\026\n" +
-      "\016user_data_size\030\005 \001(\005\022\033\n\023user_data_size_" +
-      "bits\030\006 \001(\005\022\r\n\005flags\030\007 \001(\005\022\023\n\013string_data" +
-      "\030\010 \001(\014\"\260\002\n\021CSVCMsg_SendTable\022\016\n\006is_end\030\001" +
-      " \001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\rneeds_de" +
-      "coder\030\003 \001(\010\022,\n\005props\030\004 \003(\0132\035.CSVCMsg_Sen" +
-      "dTable.sendprop_t\032\255\001\n\nsendprop_t\022\014\n\004type",
-      "\030\001 \001(\005\022\020\n\010var_name\030\002 \001(\t\022\r\n\005flags\030\003 \001(\005\022" +
-      "\020\n\010priority\030\004 \001(\005\022\017\n\007dt_name\030\005 \001(\t\022\024\n\014nu" +
-      "m_elements\030\006 \001(\005\022\021\n\tlow_value\030\007 \001(\002\022\022\n\nh" +
-      "igh_value\030\010 \001(\002\022\020\n\010num_bits\030\t \001(\005\"R\n\024CSV" +
-      "CMsg_TempEntities\022\020\n\010reliable\030\001 \001(\010\022\023\n\013n" +
-      "um_entries\030\002 \001(\005\022\023\n\013entity_data\030\003 \001(\014\"\214\002" +
-      "\n\021CSVCMsg_VoiceData\022\016\n\006client\030\001 \001(\005\022\021\n\tp" +
-      "roximity\030\002 \001(\010\022\014\n\004xuid\030\003 \001(\006\022\024\n\014audible_" +
-      "mask\030\004 \001(\005\022\022\n\nvoice_data\030\005 \001(\014\022:\n\006format" +
-      "\030\006 \001(\0162\022.VoiceDataFormat_t:\026VOICEDATA_FO",
-      "RMAT_STEAM\022\026\n\016sequence_bytes\030\007 \001(\005\022\026\n\016se" +
-      "ction_number\030\010 \001(\r\022\"\n\032uncompressed_sampl" +
-      "e_offset\030\t \001(\r\022\014\n\004tick\030\n \001(\r*\241\004\n\014SVC_Mes" +
-      "sages\022\022\n\016svc_ServerInfo\020\010\022\021\n\rsvc_SendTab" +
-      "le\020\t\022\021\n\rsvc_ClassInfo\020\n\022\020\n\014svc_SetPause\020" +
-      "\013\022\031\n\025svc_CreateStringTable\020\014\022\031\n\025svc_Upda" +
-      "teStringTable\020\r\022\021\n\rsvc_VoiceInit\020\016\022\021\n\rsv" +
-      "c_VoiceData\020\017\022\r\n\tsvc_Print\020\020\022\016\n\nsvc_Soun" +
-      "ds\020\021\022\017\n\013svc_SetView\020\022\022\020\n\014svc_FixAngle\020\023\022" +
-      "\026\n\022svc_CrosshairAngle\020\024\022\020\n\014svc_BSPDecal\020",
-      "\025\022\023\n\017svc_SplitScreen\020\026\022\023\n\017svc_UserMessag" +
-      "e\020\027\022\025\n\021svc_EntityMessage\020\030\022\021\n\rsvc_GameEv" +
-      "ent\020\031\022\026\n\022svc_PacketEntities\020\032\022\024\n\020svc_Tem" +
-      "pEntities\020\033\022\020\n\014svc_Prefetch\020\034\022\014\n\010svc_Men" +
-      "u\020\035\022\025\n\021svc_GameEventList\020\036\022\024\n\020svc_GetCva" +
-      "rValue\020\037\022\026\n\022svc_PacketReliable\020 \022\026\n\022svc_" +
-      "FullFrameSplit\020!B4\n skadistats.clarity.w" +
-      "ire.s1.protoB\rS1NetMessages\200\001\000"
+      "o\"\'\n\020CSVCMsg_Prefetch\022\023\n\013sound_index\030\001 \001" +
+      "(\005\"\312\001\n\031CSVCMsg_CreateStringTable\022\014\n\004name" +
+      "\030\001 \001(\t\022\023\n\013max_entries\030\002 \001(\005\022\023\n\013num_entri" +
+      "es\030\003 \001(\005\022\034\n\024user_data_fixed_size\030\004 \001(\010\022\026" +
+      "\n\016user_data_size\030\005 \001(\005\022\033\n\023user_data_size" +
+      "_bits\030\006 \001(\005\022\r\n\005flags\030\007 \001(\005\022\023\n\013string_dat" +
+      "a\030\010 \001(\014\"\260\002\n\021CSVCMsg_SendTable\022\016\n\006is_end\030" +
+      "\001 \001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\rneeds_d" +
+      "ecoder\030\003 \001(\010\022,\n\005props\030\004 \003(\0132\035.CSVCMsg_Se",
+      "ndTable.sendprop_t\032\255\001\n\nsendprop_t\022\014\n\004typ" +
+      "e\030\001 \001(\005\022\020\n\010var_name\030\002 \001(\t\022\r\n\005flags\030\003 \001(\005" +
+      "\022\020\n\010priority\030\004 \001(\005\022\017\n\007dt_name\030\005 \001(\t\022\024\n\014n" +
+      "um_elements\030\006 \001(\005\022\021\n\tlow_value\030\007 \001(\002\022\022\n\n" +
+      "high_value\030\010 \001(\002\022\020\n\010num_bits\030\t \001(\005\"R\n\024CS" +
+      "VCMsg_TempEntities\022\020\n\010reliable\030\001 \001(\010\022\023\n\013" +
+      "num_entries\030\002 \001(\005\022\023\n\013entity_data\030\003 \001(\014\"\214" +
+      "\002\n\021CSVCMsg_VoiceData\022\016\n\006client\030\001 \001(\005\022\021\n\t" +
+      "proximity\030\002 \001(\010\022\014\n\004xuid\030\003 \001(\006\022\024\n\014audible" +
+      "_mask\030\004 \001(\005\022\022\n\nvoice_data\030\005 \001(\014\022:\n\006forma",
+      "t\030\006 \001(\0162\022.VoiceDataFormat_t:\026VOICEDATA_F" +
+      "ORMAT_STEAM\022\026\n\016sequence_bytes\030\007 \001(\005\022\026\n\016s" +
+      "ection_number\030\010 \001(\r\022\"\n\032uncompressed_samp" +
+      "le_offset\030\t \001(\r\022\014\n\004tick\030\n \001(\r*\241\004\n\014SVC_Me" +
+      "ssages\022\022\n\016svc_ServerInfo\020\010\022\021\n\rsvc_SendTa" +
+      "ble\020\t\022\021\n\rsvc_ClassInfo\020\n\022\020\n\014svc_SetPause" +
+      "\020\013\022\031\n\025svc_CreateStringTable\020\014\022\031\n\025svc_Upd" +
+      "ateStringTable\020\r\022\021\n\rsvc_VoiceInit\020\016\022\021\n\rs" +
+      "vc_VoiceData\020\017\022\r\n\tsvc_Print\020\020\022\016\n\nsvc_Sou" +
+      "nds\020\021\022\017\n\013svc_SetView\020\022\022\020\n\014svc_FixAngle\020\023",
+      "\022\026\n\022svc_CrosshairAngle\020\024\022\020\n\014svc_BSPDecal" +
+      "\020\025\022\023\n\017svc_SplitScreen\020\026\022\023\n\017svc_UserMessa" +
+      "ge\020\027\022\025\n\021svc_EntityMessage\020\030\022\021\n\rsvc_GameE" +
+      "vent\020\031\022\026\n\022svc_PacketEntities\020\032\022\024\n\020svc_Te" +
+      "mpEntities\020\033\022\020\n\014svc_Prefetch\020\034\022\014\n\010svc_Me" +
+      "nu\020\035\022\025\n\021svc_GameEventList\020\036\022\024\n\020svc_GetCv" +
+      "arValue\020\037\022\026\n\022svc_PacketReliable\020 \022\026\n\022svc" +
+      "_FullFrameSplit\020!B4\n skadistats.clarity." +
+      "wire.s1.protoB\rS1NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5255,14 +5658,20 @@ public final class S1NetMessages {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.common.proto.NetMessages.getDescriptor(),
         }, assigner);
-    internal_static_CSVCMsg_CreateStringTable_descriptor =
+    internal_static_CSVCMsg_Prefetch_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CSVCMsg_Prefetch_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_Prefetch_descriptor,
+        new java.lang.String[] { "SoundIndex", });
+    internal_static_CSVCMsg_CreateStringTable_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_CreateStringTable_descriptor,
         new java.lang.String[] { "Name", "MaxEntries", "NumEntries", "UserDataFixedSize", "UserDataSize", "UserDataSizeBits", "Flags", "StringData", });
     internal_static_CSVCMsg_SendTable_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CSVCMsg_SendTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_SendTable_descriptor,
@@ -5274,13 +5683,13 @@ public final class S1NetMessages {
         internal_static_CSVCMsg_SendTable_sendprop_t_descriptor,
         new java.lang.String[] { "Type", "VarName", "Flags", "Priority", "DtName", "NumElements", "LowValue", "HighValue", "NumBits", });
     internal_static_CSVCMsg_TempEntities_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CSVCMsg_TempEntities_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_TempEntities_descriptor,
         new java.lang.String[] { "Reliable", "NumEntries", "EntityData", });
     internal_static_CSVCMsg_VoiceData_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CSVCMsg_VoiceData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceData_descriptor,

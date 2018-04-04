@@ -69,6 +69,10 @@ public final class NetworkBaseTypes {
      * <code>net_ReliableMessageEndMarker = 14;</code>
      */
     net_ReliableMessageEndMarker(13, 14),
+    /**
+     * <code>net_PlayerAvatarData = 100;</code>
+     */
+    net_PlayerAvatarData(14, 100),
     ;
 
     /**
@@ -127,6 +131,10 @@ public final class NetworkBaseTypes {
      * <code>net_ReliableMessageEndMarker = 14;</code>
      */
     public static final int net_ReliableMessageEndMarker_VALUE = 14;
+    /**
+     * <code>net_PlayerAvatarData = 100;</code>
+     */
+    public static final int net_PlayerAvatarData_VALUE = 100;
 
 
     public final int getNumber() { return value; }
@@ -147,6 +155,7 @@ public final class NetworkBaseTypes {
         case 12: return net_SpawnGroup_Unload;
         case 13: return net_SpawnGroup_LoadCompleted;
         case 14: return net_ReliableMessageEndMarker;
+        case 100: return net_PlayerAvatarData;
         default: return null;
       }
     }
@@ -22460,6 +22469,484 @@ public final class NetworkBaseTypes {
     // @@protoc_insertion_point(class_scope:CNETMsg_ReliableMessageEndMarker)
   }
 
+  public interface CNETMsg_PlayerAvatarDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CNETMsg_PlayerAvatarData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 accountid = 1;</code>
+     */
+    boolean hasAccountid();
+    /**
+     * <code>optional uint32 accountid = 1;</code>
+     */
+    int getAccountid();
+
+    /**
+     * <code>optional bytes rgb = 2;</code>
+     */
+    boolean hasRgb();
+    /**
+     * <code>optional bytes rgb = 2;</code>
+     */
+    com.google.protobuf.ByteString getRgb();
+  }
+  /**
+   * Protobuf type {@code CNETMsg_PlayerAvatarData}
+   */
+  public static final class CNETMsg_PlayerAvatarData extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CNETMsg_PlayerAvatarData)
+      CNETMsg_PlayerAvatarDataOrBuilder {
+    // Use CNETMsg_PlayerAvatarData.newBuilder() to construct.
+    private CNETMsg_PlayerAvatarData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CNETMsg_PlayerAvatarData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CNETMsg_PlayerAvatarData defaultInstance;
+    public static CNETMsg_PlayerAvatarData getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CNETMsg_PlayerAvatarData getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CNETMsg_PlayerAvatarData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              accountid_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              rgb_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.NetworkBaseTypes.internal_static_CNETMsg_PlayerAvatarData_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.NetworkBaseTypes.internal_static_CNETMsg_PlayerAvatarData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.class, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CNETMsg_PlayerAvatarData> PARSER =
+        new com.google.protobuf.AbstractParser<CNETMsg_PlayerAvatarData>() {
+      public CNETMsg_PlayerAvatarData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CNETMsg_PlayerAvatarData(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CNETMsg_PlayerAvatarData> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ACCOUNTID_FIELD_NUMBER = 1;
+    private int accountid_;
+    /**
+     * <code>optional uint32 accountid = 1;</code>
+     */
+    public boolean hasAccountid() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 accountid = 1;</code>
+     */
+    public int getAccountid() {
+      return accountid_;
+    }
+
+    public static final int RGB_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString rgb_;
+    /**
+     * <code>optional bytes rgb = 2;</code>
+     */
+    public boolean hasRgb() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional bytes rgb = 2;</code>
+     */
+    public com.google.protobuf.ByteString getRgb() {
+      return rgb_;
+    }
+
+    private void initFields() {
+      accountid_ = 0;
+      rgb_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, accountid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, rgb_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, accountid_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, rgb_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CNETMsg_PlayerAvatarData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CNETMsg_PlayerAvatarData)
+        skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.NetworkBaseTypes.internal_static_CNETMsg_PlayerAvatarData_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.NetworkBaseTypes.internal_static_CNETMsg_PlayerAvatarData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.class, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        accountid_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rgb_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.NetworkBaseTypes.internal_static_CNETMsg_PlayerAvatarData_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData build() {
+        skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData buildPartial() {
+        skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData result = new skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.accountid_ = accountid_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.rgb_ = rgb_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData other) {
+        if (other == skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData.getDefaultInstance()) return this;
+        if (other.hasAccountid()) {
+          setAccountid(other.getAccountid());
+        }
+        if (other.hasRgb()) {
+          setRgb(other.getRgb());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.NetworkBaseTypes.CNETMsg_PlayerAvatarData) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int accountid_ ;
+      /**
+       * <code>optional uint32 accountid = 1;</code>
+       */
+      public boolean hasAccountid() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 accountid = 1;</code>
+       */
+      public int getAccountid() {
+        return accountid_;
+      }
+      /**
+       * <code>optional uint32 accountid = 1;</code>
+       */
+      public Builder setAccountid(int value) {
+        bitField0_ |= 0x00000001;
+        accountid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 accountid = 1;</code>
+       */
+      public Builder clearAccountid() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        accountid_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString rgb_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes rgb = 2;</code>
+       */
+      public boolean hasRgb() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bytes rgb = 2;</code>
+       */
+      public com.google.protobuf.ByteString getRgb() {
+        return rgb_;
+      }
+      /**
+       * <code>optional bytes rgb = 2;</code>
+       */
+      public Builder setRgb(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        rgb_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes rgb = 2;</code>
+       */
+      public Builder clearRgb() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        rgb_ = getDefaultInstance().getRgb();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CNETMsg_PlayerAvatarData)
+    }
+
+    static {
+      defaultInstance = new CNETMsg_PlayerAvatarData(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CNETMsg_PlayerAvatarData)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgVector_descriptor;
   private static
@@ -22605,6 +23092,11 @@ public final class NetworkBaseTypes {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_ReliableMessageEndMarker_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CNETMsg_PlayerAvatarData_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CNETMsg_PlayerAvatarData_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22693,87 +23185,89 @@ public final class NetworkBaseTypes {
       " \001(\014\022\024\n\014is_localonly\030\017 \001(\010\022\025\n\ris_transit" +
       "ion\030\020 \001(\010\022\025\n\rpreviouslevel\030\021 \001(\t\022\024\n\014land" +
       "markname\030\022 \001(\t\"\"\n CNETMsg_ReliableMessag" +
-      "eEndMarker*\336\002\n\014NET_Messages\022\013\n\007net_NOP\020\000",
-      "\022\022\n\016net_Disconnect\020\001\022\014\n\010net_File\020\002\022\027\n\023ne" +
-      "t_SplitScreenUser\020\003\022\014\n\010net_Tick\020\004\022\021\n\rnet" +
-      "_StringCmd\020\005\022\021\n\rnet_SetConVar\020\006\022\023\n\017net_S" +
-      "ignonState\020\007\022\027\n\023net_SpawnGroup_Load\020\010\022!\n" +
-      "\035net_SpawnGroup_ManifestUpdate\020\t\022\"\n\036net_" +
-      "SpawnGroup_SetCreationTick\020\013\022\031\n\025net_Spaw" +
-      "nGroup_Unload\020\014\022 \n\034net_SpawnGroup_LoadCo" +
-      "mpleted\020\r\022 \n\034net_ReliableMessageEndMarke" +
-      "r\020\016*\322\001\n\013SIGNONSTATE\022\024\n\020SIGNONSTATE_NONE\020" +
-      "\000\022\031\n\025SIGNONSTATE_CHALLENGE\020\001\022\031\n\025SIGNONST",
-      "ATE_CONNECTED\020\002\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024" +
-      "SIGNONSTATE_PRESPAWN\020\004\022\025\n\021SIGNONSTATE_SP" +
-      "AWN\020\005\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027SIGNONSTA" +
-      "TE_CHANGELEVEL\020\007*\353\002\n\021SpawnGroupFlags_t\022\'" +
-      "\n#SPAWN_GROUP_LOAD_ENTITIES_FROM_SAVE\020\001\022" +
-      "#\n\037SPAWN_GROUP_DONT_SPAWN_ENTITIES\020\002\022!\n\035" +
-      "SPAWN_GROUP_SYNCHRONOUS_SPAWN\020\004\022&\n\"SPAWN" +
-      "_GROUP_IS_INITIAL_SPAWN_GROUP\020\010\022+\n\'SPAWN" +
-      "_GROUP_CREATE_CLIENT_ONLY_ENTITIES\020\020\022\035\n\031" +
-      "SPAWN_GROUP_SAVE_ENTITIES\020 \022\"\n\036SPAWN_GRO",
-      "UP_BLOCK_UNTIL_LOADED\020@\022$\n\037SPAWN_GROUP_L" +
-      "OAD_STREAMING_DATA\020\200\001\022\'\n\"SPAWN_GROUP_CRE" +
-      "ATE_NEW_SCENE_WORLD\020\200\002*\227\021\n\033ENetworkDisco" +
-      "nnectionReason\022\036\n\032NETWORK_DISCONNECT_INV" +
-      "ALID\020\000\022\037\n\033NETWORK_DISCONNECT_SHUTDOWN\020\001\022" +
-      ")\n%NETWORK_DISCONNECT_DISCONNECT_BY_USER" +
-      "\020\002\022+\n\'NETWORK_DISCONNECT_DISCONNECT_BY_S" +
-      "ERVER\020\003\022\033\n\027NETWORK_DISCONNECT_LOST\020\004\022\037\n\033" +
-      "NETWORK_DISCONNECT_OVERFLOW\020\005\022#\n\037NETWORK" +
-      "_DISCONNECT_STEAM_BANNED\020\006\022\"\n\036NETWORK_DI",
-      "SCONNECT_STEAM_INUSE\020\007\022#\n\037NETWORK_DISCON" +
-      "NECT_STEAM_TICKET\020\010\022\"\n\036NETWORK_DISCONNEC" +
-      "T_STEAM_LOGON\020\t\022*\n&NETWORK_DISCONNECT_ST" +
-      "EAM_AUTHCANCELLED\020\n\022,\n(NETWORK_DISCONNEC" +
-      "T_STEAM_AUTHALREADYUSED\020\013\022(\n$NETWORK_DIS" +
-      "CONNECT_STEAM_AUTHINVALID\020\014\022(\n$NETWORK_D" +
-      "ISCONNECT_STEAM_VACBANSTATE\020\r\0220\n,NETWORK" +
-      "_DISCONNECT_STEAM_LOGGED_IN_ELSEWHERE\020\016\022" +
-      "/\n+NETWORK_DISCONNECT_STEAM_VAC_CHECK_TI" +
-      "MEDOUT\020\017\022$\n NETWORK_DISCONNECT_STEAM_DRO",
-      "PPED\020\020\022&\n\"NETWORK_DISCONNECT_STEAM_OWNER" +
-      "SHIP\020\021\022*\n&NETWORK_DISCONNECT_SERVERINFO_" +
-      "OVERFLOW\020\022\022\'\n#NETWORK_DISCONNECT_TICKMSG" +
-      "_OVERFLOW\020\023\022.\n*NETWORK_DISCONNECT_STRING" +
-      "TABLEMSG_OVERFLOW\020\024\022+\n\'NETWORK_DISCONNEC" +
-      "T_DELTAENTMSG_OVERFLOW\020\025\022*\n&NETWORK_DISC" +
-      "ONNECT_TEMPENTMSG_OVERFLOW\020\026\022)\n%NETWORK_" +
-      "DISCONNECT_SOUNDSMSG_OVERFLOW\020\027\022\'\n#NETWO" +
-      "RK_DISCONNECT_SNAPSHOTOVERFLOW\020\030\022$\n NETW" +
-      "ORK_DISCONNECT_SNAPSHOTERROR\020\031\022\'\n#NETWOR",
-      "K_DISCONNECT_RELIABLEOVERFLOW\020\032\022#\n\037NETWO" +
-      "RK_DISCONNECT_BADDELTATICK\020\033\022#\n\037NETWORK_" +
-      "DISCONNECT_NOMORESPLITS\020\034\022\037\n\033NETWORK_DIS" +
-      "CONNECT_TIMEDOUT\020\035\022#\n\037NETWORK_DISCONNECT" +
-      "_DISCONNECTED\020\036\022#\n\037NETWORK_DISCONNECT_LE" +
-      "AVINGSPLIT\020\037\022+\n\'NETWORK_DISCONNECT_DIFFE" +
-      "RENTCLASSTABLES\020 \022\'\n#NETWORK_DISCONNECT_" +
-      "BADRELAYPASSWORD\020!\022+\n\'NETWORK_DISCONNECT" +
-      "_BADSPECTATORPASSWORD\020\"\022%\n!NETWORK_DISCO" +
-      "NNECT_HLTVRESTRICTED\020#\022#\n\037NETWORK_DISCON",
-      "NECT_NOSPECTATORS\020$\022&\n\"NETWORK_DISCONNEC" +
-      "T_HLTVUNAVAILABLE\020%\022\037\n\033NETWORK_DISCONNEC" +
-      "T_HLTVSTOP\020&\022\035\n\031NETWORK_DISCONNECT_KICKE" +
-      "D\020\'\022\037\n\033NETWORK_DISCONNECT_BANADDED\020(\022#\n\037" +
-      "NETWORK_DISCONNECT_KICKBANADDED\020)\022!\n\035NET" +
-      "WORK_DISCONNECT_HLTVDIRECT\020*\022-\n)NETWORK_" +
-      "DISCONNECT_PURESERVER_CLIENTEXTRA\020+\022*\n&N" +
-      "ETWORK_DISCONNECT_PURESERVER_MISMATCH\020,\022" +
-      "\036\n\032NETWORK_DISCONNECT_USERCMD\020-\022\'\n#NETWO" +
-      "RK_DISCONNECT_REJECTED_BY_GAME\020.\022*\n&NETW",
-      "ORK_DISCONNECT_MESSAGE_PARSE_ERROR\020/\022,\n(" +
-      "NETWORK_DISCONNECT_INVALID_MESSAGE_ERROR" +
-      "\0200\022*\n&NETWORK_DISCONNECT_BAD_SERVER_PASS" +
-      "WORD\0201\0221\n-NETWORK_DISCONNECT_DIRECT_CONN" +
-      "ECT_RESERVATION\0202\022)\n%NETWORK_DISCONNECT_" +
-      "CONNECTION_FAILURE\0203\022-\n)NETWORK_DISCONNE" +
-      "CT_NO_PEER_GROUP_HANDLERS\0204\022#\n\037NETWORK_D" +
-      "ISCONNECT_RECONNECTION\0205B;\n$skadistats.c" +
-      "larity.wire.common.protoB\020NetworkBaseTyp" +
-      "es\200\001\000"
+      "eEndMarker\":\n\030CNETMsg_PlayerAvatarData\022\021",
+      "\n\taccountid\030\001 \001(\r\022\013\n\003rgb\030\002 \001(\014*\370\002\n\014NET_M" +
+      "essages\022\013\n\007net_NOP\020\000\022\022\n\016net_Disconnect\020\001" +
+      "\022\014\n\010net_File\020\002\022\027\n\023net_SplitScreenUser\020\003\022" +
+      "\014\n\010net_Tick\020\004\022\021\n\rnet_StringCmd\020\005\022\021\n\rnet_" +
+      "SetConVar\020\006\022\023\n\017net_SignonState\020\007\022\027\n\023net_" +
+      "SpawnGroup_Load\020\010\022!\n\035net_SpawnGroup_Mani" +
+      "festUpdate\020\t\022\"\n\036net_SpawnGroup_SetCreati" +
+      "onTick\020\013\022\031\n\025net_SpawnGroup_Unload\020\014\022 \n\034n" +
+      "et_SpawnGroup_LoadCompleted\020\r\022 \n\034net_Rel" +
+      "iableMessageEndMarker\020\016\022\030\n\024net_PlayerAva",
+      "tarData\020d*\322\001\n\013SIGNONSTATE\022\024\n\020SIGNONSTATE" +
+      "_NONE\020\000\022\031\n\025SIGNONSTATE_CHALLENGE\020\001\022\031\n\025SI" +
+      "GNONSTATE_CONNECTED\020\002\022\023\n\017SIGNONSTATE_NEW" +
+      "\020\003\022\030\n\024SIGNONSTATE_PRESPAWN\020\004\022\025\n\021SIGNONST" +
+      "ATE_SPAWN\020\005\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027SIG" +
+      "NONSTATE_CHANGELEVEL\020\007*\353\002\n\021SpawnGroupFla" +
+      "gs_t\022\'\n#SPAWN_GROUP_LOAD_ENTITIES_FROM_S" +
+      "AVE\020\001\022#\n\037SPAWN_GROUP_DONT_SPAWN_ENTITIES" +
+      "\020\002\022!\n\035SPAWN_GROUP_SYNCHRONOUS_SPAWN\020\004\022&\n" +
+      "\"SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP\020\010\022+\n",
+      "\'SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITIES" +
+      "\020\020\022\035\n\031SPAWN_GROUP_SAVE_ENTITIES\020 \022\"\n\036SPA" +
+      "WN_GROUP_BLOCK_UNTIL_LOADED\020@\022$\n\037SPAWN_G" +
+      "ROUP_LOAD_STREAMING_DATA\020\200\001\022\'\n\"SPAWN_GRO" +
+      "UP_CREATE_NEW_SCENE_WORLD\020\200\002*\227\021\n\033ENetwor" +
+      "kDisconnectionReason\022\036\n\032NETWORK_DISCONNE" +
+      "CT_INVALID\020\000\022\037\n\033NETWORK_DISCONNECT_SHUTD" +
+      "OWN\020\001\022)\n%NETWORK_DISCONNECT_DISCONNECT_B" +
+      "Y_USER\020\002\022+\n\'NETWORK_DISCONNECT_DISCONNEC" +
+      "T_BY_SERVER\020\003\022\033\n\027NETWORK_DISCONNECT_LOST",
+      "\020\004\022\037\n\033NETWORK_DISCONNECT_OVERFLOW\020\005\022#\n\037N" +
+      "ETWORK_DISCONNECT_STEAM_BANNED\020\006\022\"\n\036NETW" +
+      "ORK_DISCONNECT_STEAM_INUSE\020\007\022#\n\037NETWORK_" +
+      "DISCONNECT_STEAM_TICKET\020\010\022\"\n\036NETWORK_DIS" +
+      "CONNECT_STEAM_LOGON\020\t\022*\n&NETWORK_DISCONN" +
+      "ECT_STEAM_AUTHCANCELLED\020\n\022,\n(NETWORK_DIS" +
+      "CONNECT_STEAM_AUTHALREADYUSED\020\013\022(\n$NETWO" +
+      "RK_DISCONNECT_STEAM_AUTHINVALID\020\014\022(\n$NET" +
+      "WORK_DISCONNECT_STEAM_VACBANSTATE\020\r\0220\n,N" +
+      "ETWORK_DISCONNECT_STEAM_LOGGED_IN_ELSEWH",
+      "ERE\020\016\022/\n+NETWORK_DISCONNECT_STEAM_VAC_CH" +
+      "ECK_TIMEDOUT\020\017\022$\n NETWORK_DISCONNECT_STE" +
+      "AM_DROPPED\020\020\022&\n\"NETWORK_DISCONNECT_STEAM" +
+      "_OWNERSHIP\020\021\022*\n&NETWORK_DISCONNECT_SERVE" +
+      "RINFO_OVERFLOW\020\022\022\'\n#NETWORK_DISCONNECT_T" +
+      "ICKMSG_OVERFLOW\020\023\022.\n*NETWORK_DISCONNECT_" +
+      "STRINGTABLEMSG_OVERFLOW\020\024\022+\n\'NETWORK_DIS" +
+      "CONNECT_DELTAENTMSG_OVERFLOW\020\025\022*\n&NETWOR" +
+      "K_DISCONNECT_TEMPENTMSG_OVERFLOW\020\026\022)\n%NE" +
+      "TWORK_DISCONNECT_SOUNDSMSG_OVERFLOW\020\027\022\'\n",
+      "#NETWORK_DISCONNECT_SNAPSHOTOVERFLOW\020\030\022$" +
+      "\n NETWORK_DISCONNECT_SNAPSHOTERROR\020\031\022\'\n#" +
+      "NETWORK_DISCONNECT_RELIABLEOVERFLOW\020\032\022#\n" +
+      "\037NETWORK_DISCONNECT_BADDELTATICK\020\033\022#\n\037NE" +
+      "TWORK_DISCONNECT_NOMORESPLITS\020\034\022\037\n\033NETWO" +
+      "RK_DISCONNECT_TIMEDOUT\020\035\022#\n\037NETWORK_DISC" +
+      "ONNECT_DISCONNECTED\020\036\022#\n\037NETWORK_DISCONN" +
+      "ECT_LEAVINGSPLIT\020\037\022+\n\'NETWORK_DISCONNECT" +
+      "_DIFFERENTCLASSTABLES\020 \022\'\n#NETWORK_DISCO" +
+      "NNECT_BADRELAYPASSWORD\020!\022+\n\'NETWORK_DISC",
+      "ONNECT_BADSPECTATORPASSWORD\020\"\022%\n!NETWORK" +
+      "_DISCONNECT_HLTVRESTRICTED\020#\022#\n\037NETWORK_" +
+      "DISCONNECT_NOSPECTATORS\020$\022&\n\"NETWORK_DIS" +
+      "CONNECT_HLTVUNAVAILABLE\020%\022\037\n\033NETWORK_DIS" +
+      "CONNECT_HLTVSTOP\020&\022\035\n\031NETWORK_DISCONNECT" +
+      "_KICKED\020\'\022\037\n\033NETWORK_DISCONNECT_BANADDED" +
+      "\020(\022#\n\037NETWORK_DISCONNECT_KICKBANADDED\020)\022" +
+      "!\n\035NETWORK_DISCONNECT_HLTVDIRECT\020*\022-\n)NE" +
+      "TWORK_DISCONNECT_PURESERVER_CLIENTEXTRA\020" +
+      "+\022*\n&NETWORK_DISCONNECT_PURESERVER_MISMA",
+      "TCH\020,\022\036\n\032NETWORK_DISCONNECT_USERCMD\020-\022\'\n" +
+      "#NETWORK_DISCONNECT_REJECTED_BY_GAME\020.\022*" +
+      "\n&NETWORK_DISCONNECT_MESSAGE_PARSE_ERROR" +
+      "\020/\022,\n(NETWORK_DISCONNECT_INVALID_MESSAGE" +
+      "_ERROR\0200\022*\n&NETWORK_DISCONNECT_BAD_SERVE" +
+      "R_PASSWORD\0201\0221\n-NETWORK_DISCONNECT_DIREC" +
+      "T_CONNECT_RESERVATION\0202\022)\n%NETWORK_DISCO" +
+      "NNECT_CONNECTION_FAILURE\0203\022-\n)NETWORK_DI" +
+      "SCONNECT_NO_PEER_GROUP_HANDLERS\0204\022#\n\037NET" +
+      "WORK_DISCONNECT_RECONNECTION\0205B;\n$skadis",
+      "tats.clarity.wire.common.protoB\020NetworkB" +
+      "aseTypes\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22961,6 +23455,12 @@ public final class NetworkBaseTypes {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_ReliableMessageEndMarker_descriptor,
         new java.lang.String[] { });
+    internal_static_CNETMsg_PlayerAvatarData_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_CNETMsg_PlayerAvatarData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CNETMsg_PlayerAvatarData_descriptor,
+        new java.lang.String[] { "Accountid", "Rgb", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
