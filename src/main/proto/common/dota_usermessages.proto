@@ -910,6 +910,12 @@ message CDOTAUserMsg_HeroRelicProgress {
 	optional uint32 event_id = 4;
 }
 
+message CDOTAUserMsg_SalutePlayer {
+    optional int32 SourcePlayerId = 1;
+    optional int32 TargetPlayerId = 2;
+    optional int32 TipAmount = 3;
+}
+
 message CMsgDOTACombatLogEntry {
     optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
 	optional uint32 target_name = 2;
