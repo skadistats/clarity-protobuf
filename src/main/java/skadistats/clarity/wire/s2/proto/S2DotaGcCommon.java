@@ -109,6 +109,10 @@ public final class S2DotaGcCommon {
      * <code>DOTA_GAMEMODE_TURBO = 23;</code>
      */
     DOTA_GAMEMODE_TURBO(23, 23),
+    /**
+     * <code>DOTA_GAMEMODE_MUTATION = 24;</code>
+     */
+    DOTA_GAMEMODE_MUTATION(24, 24),
     ;
 
     /**
@@ -207,6 +211,10 @@ public final class S2DotaGcCommon {
      * <code>DOTA_GAMEMODE_TURBO = 23;</code>
      */
     public static final int DOTA_GAMEMODE_TURBO_VALUE = 23;
+    /**
+     * <code>DOTA_GAMEMODE_MUTATION = 24;</code>
+     */
+    public static final int DOTA_GAMEMODE_MUTATION_VALUE = 24;
 
 
     public final int getNumber() { return value; }
@@ -237,6 +245,7 @@ public final class S2DotaGcCommon {
         case 21: return DOTA_GAMEMODE_1V1MID;
         case 22: return DOTA_GAMEMODE_ALL_DRAFT;
         case 23: return DOTA_GAMEMODE_TURBO;
+        case 24: return DOTA_GAMEMODE_MUTATION;
         default: return null;
       }
     }
@@ -286,6 +295,286 @@ public final class S2DotaGcCommon {
     }
 
     // @@protoc_insertion_point(enum_scope:DOTA_GameMode)
+  }
+
+  /**
+   * Protobuf enum {@code EEvent}
+   */
+  public enum EEvent
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>EVENT_ID_NONE = 0;</code>
+     */
+    EVENT_ID_NONE(0, 0),
+    /**
+     * <code>EVENT_ID_DIRETIDE = 1;</code>
+     */
+    EVENT_ID_DIRETIDE(1, 1),
+    /**
+     * <code>EVENT_ID_SPRING_FESTIVAL = 2;</code>
+     */
+    EVENT_ID_SPRING_FESTIVAL(2, 2),
+    /**
+     * <code>EVENT_ID_FROSTIVUS_2013 = 3;</code>
+     */
+    EVENT_ID_FROSTIVUS_2013(3, 3),
+    /**
+     * <code>EVENT_ID_COMPENDIUM_2014 = 4;</code>
+     */
+    EVENT_ID_COMPENDIUM_2014(4, 4),
+    /**
+     * <code>EVENT_ID_NEXON_PC_BANG = 5;</code>
+     */
+    EVENT_ID_NEXON_PC_BANG(5, 5),
+    /**
+     * <code>EVENT_ID_PWRD_DAC_2015 = 6;</code>
+     */
+    EVENT_ID_PWRD_DAC_2015(6, 6),
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2015 = 7;</code>
+     */
+    EVENT_ID_NEW_BLOOM_2015(7, 7),
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2015 = 8;</code>
+     */
+    EVENT_ID_INTERNATIONAL_2015(8, 8),
+    /**
+     * <code>EVENT_ID_FALL_MAJOR_2015 = 9;</code>
+     */
+    EVENT_ID_FALL_MAJOR_2015(9, 9),
+    /**
+     * <code>EVENT_ID_ORACLE_PA = 10;</code>
+     */
+    EVENT_ID_ORACLE_PA(10, 10),
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2015_PREBEAST = 11;</code>
+     */
+    EVENT_ID_NEW_BLOOM_2015_PREBEAST(11, 11),
+    /**
+     * <code>EVENT_ID_FROSTIVUS = 12;</code>
+     */
+    EVENT_ID_FROSTIVUS(12, 12),
+    /**
+     * <code>EVENT_ID_WINTER_MAJOR_2016 = 13;</code>
+     */
+    EVENT_ID_WINTER_MAJOR_2016(13, 13),
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2016 = 14;</code>
+     */
+    EVENT_ID_INTERNATIONAL_2016(14, 14),
+    /**
+     * <code>EVENT_ID_FALL_MAJOR_2016 = 15;</code>
+     */
+    EVENT_ID_FALL_MAJOR_2016(15, 15),
+    /**
+     * <code>EVENT_ID_WINTER_MAJOR_2017 = 16;</code>
+     */
+    EVENT_ID_WINTER_MAJOR_2017(16, 16),
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2017 = 17;</code>
+     */
+    EVENT_ID_NEW_BLOOM_2017(17, 17),
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2017 = 18;</code>
+     */
+    EVENT_ID_INTERNATIONAL_2017(18, 18),
+    /**
+     * <code>EVENT_ID_PLUS_SUBSCRIPTION = 19;</code>
+     */
+    EVENT_ID_PLUS_SUBSCRIPTION(19, 19),
+    /**
+     * <code>EVENT_ID_SINGLES_DAY_2017 = 20;</code>
+     */
+    EVENT_ID_SINGLES_DAY_2017(20, 20),
+    /**
+     * <code>EVENT_ID_FROSTIVUS_2017 = 21;</code>
+     */
+    EVENT_ID_FROSTIVUS_2017(21, 21),
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2018 = 22;</code>
+     */
+    EVENT_ID_INTERNATIONAL_2018(22, 22),
+    /**
+     * <code>EVENT_ID_COUNT = 23;</code>
+     */
+    EVENT_ID_COUNT(23, 23),
+    ;
+
+    /**
+     * <code>EVENT_ID_NONE = 0;</code>
+     */
+    public static final int EVENT_ID_NONE_VALUE = 0;
+    /**
+     * <code>EVENT_ID_DIRETIDE = 1;</code>
+     */
+    public static final int EVENT_ID_DIRETIDE_VALUE = 1;
+    /**
+     * <code>EVENT_ID_SPRING_FESTIVAL = 2;</code>
+     */
+    public static final int EVENT_ID_SPRING_FESTIVAL_VALUE = 2;
+    /**
+     * <code>EVENT_ID_FROSTIVUS_2013 = 3;</code>
+     */
+    public static final int EVENT_ID_FROSTIVUS_2013_VALUE = 3;
+    /**
+     * <code>EVENT_ID_COMPENDIUM_2014 = 4;</code>
+     */
+    public static final int EVENT_ID_COMPENDIUM_2014_VALUE = 4;
+    /**
+     * <code>EVENT_ID_NEXON_PC_BANG = 5;</code>
+     */
+    public static final int EVENT_ID_NEXON_PC_BANG_VALUE = 5;
+    /**
+     * <code>EVENT_ID_PWRD_DAC_2015 = 6;</code>
+     */
+    public static final int EVENT_ID_PWRD_DAC_2015_VALUE = 6;
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2015 = 7;</code>
+     */
+    public static final int EVENT_ID_NEW_BLOOM_2015_VALUE = 7;
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2015 = 8;</code>
+     */
+    public static final int EVENT_ID_INTERNATIONAL_2015_VALUE = 8;
+    /**
+     * <code>EVENT_ID_FALL_MAJOR_2015 = 9;</code>
+     */
+    public static final int EVENT_ID_FALL_MAJOR_2015_VALUE = 9;
+    /**
+     * <code>EVENT_ID_ORACLE_PA = 10;</code>
+     */
+    public static final int EVENT_ID_ORACLE_PA_VALUE = 10;
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2015_PREBEAST = 11;</code>
+     */
+    public static final int EVENT_ID_NEW_BLOOM_2015_PREBEAST_VALUE = 11;
+    /**
+     * <code>EVENT_ID_FROSTIVUS = 12;</code>
+     */
+    public static final int EVENT_ID_FROSTIVUS_VALUE = 12;
+    /**
+     * <code>EVENT_ID_WINTER_MAJOR_2016 = 13;</code>
+     */
+    public static final int EVENT_ID_WINTER_MAJOR_2016_VALUE = 13;
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2016 = 14;</code>
+     */
+    public static final int EVENT_ID_INTERNATIONAL_2016_VALUE = 14;
+    /**
+     * <code>EVENT_ID_FALL_MAJOR_2016 = 15;</code>
+     */
+    public static final int EVENT_ID_FALL_MAJOR_2016_VALUE = 15;
+    /**
+     * <code>EVENT_ID_WINTER_MAJOR_2017 = 16;</code>
+     */
+    public static final int EVENT_ID_WINTER_MAJOR_2017_VALUE = 16;
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2017 = 17;</code>
+     */
+    public static final int EVENT_ID_NEW_BLOOM_2017_VALUE = 17;
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2017 = 18;</code>
+     */
+    public static final int EVENT_ID_INTERNATIONAL_2017_VALUE = 18;
+    /**
+     * <code>EVENT_ID_PLUS_SUBSCRIPTION = 19;</code>
+     */
+    public static final int EVENT_ID_PLUS_SUBSCRIPTION_VALUE = 19;
+    /**
+     * <code>EVENT_ID_SINGLES_DAY_2017 = 20;</code>
+     */
+    public static final int EVENT_ID_SINGLES_DAY_2017_VALUE = 20;
+    /**
+     * <code>EVENT_ID_FROSTIVUS_2017 = 21;</code>
+     */
+    public static final int EVENT_ID_FROSTIVUS_2017_VALUE = 21;
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2018 = 22;</code>
+     */
+    public static final int EVENT_ID_INTERNATIONAL_2018_VALUE = 22;
+    /**
+     * <code>EVENT_ID_COUNT = 23;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 23;
+
+
+    public final int getNumber() { return value; }
+
+    public static EEvent valueOf(int value) {
+      switch (value) {
+        case 0: return EVENT_ID_NONE;
+        case 1: return EVENT_ID_DIRETIDE;
+        case 2: return EVENT_ID_SPRING_FESTIVAL;
+        case 3: return EVENT_ID_FROSTIVUS_2013;
+        case 4: return EVENT_ID_COMPENDIUM_2014;
+        case 5: return EVENT_ID_NEXON_PC_BANG;
+        case 6: return EVENT_ID_PWRD_DAC_2015;
+        case 7: return EVENT_ID_NEW_BLOOM_2015;
+        case 8: return EVENT_ID_INTERNATIONAL_2015;
+        case 9: return EVENT_ID_FALL_MAJOR_2015;
+        case 10: return EVENT_ID_ORACLE_PA;
+        case 11: return EVENT_ID_NEW_BLOOM_2015_PREBEAST;
+        case 12: return EVENT_ID_FROSTIVUS;
+        case 13: return EVENT_ID_WINTER_MAJOR_2016;
+        case 14: return EVENT_ID_INTERNATIONAL_2016;
+        case 15: return EVENT_ID_FALL_MAJOR_2016;
+        case 16: return EVENT_ID_WINTER_MAJOR_2017;
+        case 17: return EVENT_ID_NEW_BLOOM_2017;
+        case 18: return EVENT_ID_INTERNATIONAL_2017;
+        case 19: return EVENT_ID_PLUS_SUBSCRIPTION;
+        case 20: return EVENT_ID_SINGLES_DAY_2017;
+        case 21: return EVENT_ID_FROSTIVUS_2017;
+        case 22: return EVENT_ID_INTERNATIONAL_2018;
+        case 23: return EVENT_ID_COUNT;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EEvent>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EEvent>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EEvent>() {
+            public EEvent findValueByNumber(int number) {
+              return EEvent.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final EEvent[] VALUES = values();
+
+    public static EEvent valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EEvent(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EEvent)
   }
 
   /**
@@ -399,7 +688,7 @@ public final class S2DotaGcCommon {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(1);
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final EMatchOutcome[] VALUES = values();
@@ -17180,6 +17469,1325 @@ public final class S2DotaGcCommon {
     // @@protoc_insertion_point(class_scope:CMsgDOTAMatch)
   }
 
+  public interface CMsgMatchTipsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgMatchTips)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+     */
+    boolean hasEventId();
+    /**
+     * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId();
+
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip> 
+        getTipsList();
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip getTips(int index);
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    int getTipsCount();
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder> 
+        getTipsOrBuilderList();
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder getTipsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CMsgMatchTips}
+   */
+  public static final class CMsgMatchTips extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgMatchTips)
+      CMsgMatchTipsOrBuilder {
+    // Use CMsgMatchTips.newBuilder() to construct.
+    private CMsgMatchTips(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgMatchTips(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgMatchTips defaultInstance;
+    public static CMsgMatchTips getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgMatchTips getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgMatchTips(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent value = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(1, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                eventId_ = value;
+              }
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                tips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              tips_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          tips_ = java.util.Collections.unmodifiableList(tips_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.class, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CMsgMatchTips> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgMatchTips>() {
+      public CMsgMatchTips parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgMatchTips(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgMatchTips> getParserForType() {
+      return PARSER;
+    }
+
+    public interface SingleTipOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CMsgMatchTips.SingleTip)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 source_account_id = 1;</code>
+       */
+      boolean hasSourceAccountId();
+      /**
+       * <code>optional uint32 source_account_id = 1;</code>
+       */
+      int getSourceAccountId();
+
+      /**
+       * <code>optional uint32 target_account_id = 2;</code>
+       */
+      boolean hasTargetAccountId();
+      /**
+       * <code>optional uint32 target_account_id = 2;</code>
+       */
+      int getTargetAccountId();
+
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      boolean hasTipAmount();
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      int getTipAmount();
+    }
+    /**
+     * Protobuf type {@code CMsgMatchTips.SingleTip}
+     */
+    public static final class SingleTip extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CMsgMatchTips.SingleTip)
+        SingleTipOrBuilder {
+      // Use SingleTip.newBuilder() to construct.
+      private SingleTip(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private SingleTip(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final SingleTip defaultInstance;
+      public static SingleTip getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public SingleTip getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SingleTip(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                sourceAccountId_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                targetAccountId_ = input.readUInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                tipAmount_ = input.readUInt32();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_SingleTip_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.class, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<SingleTip> PARSER =
+          new com.google.protobuf.AbstractParser<SingleTip>() {
+        public SingleTip parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SingleTip(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SingleTip> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int SOURCE_ACCOUNT_ID_FIELD_NUMBER = 1;
+      private int sourceAccountId_;
+      /**
+       * <code>optional uint32 source_account_id = 1;</code>
+       */
+      public boolean hasSourceAccountId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 source_account_id = 1;</code>
+       */
+      public int getSourceAccountId() {
+        return sourceAccountId_;
+      }
+
+      public static final int TARGET_ACCOUNT_ID_FIELD_NUMBER = 2;
+      private int targetAccountId_;
+      /**
+       * <code>optional uint32 target_account_id = 2;</code>
+       */
+      public boolean hasTargetAccountId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 target_account_id = 2;</code>
+       */
+      public int getTargetAccountId() {
+        return targetAccountId_;
+      }
+
+      public static final int TIP_AMOUNT_FIELD_NUMBER = 3;
+      private int tipAmount_;
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public boolean hasTipAmount() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public int getTipAmount() {
+        return tipAmount_;
+      }
+
+      private void initFields() {
+        sourceAccountId_ = 0;
+        targetAccountId_ = 0;
+        tipAmount_ = 0;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeUInt32(1, sourceAccountId_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeUInt32(2, targetAccountId_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeUInt32(3, tipAmount_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, sourceAccountId_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, targetAccountId_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, tipAmount_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CMsgMatchTips.SingleTip}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CMsgMatchTips.SingleTip)
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_SingleTip_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.class, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          sourceAccountId_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          targetAccountId_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          tipAmount_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_SingleTip_descriptor;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip getDefaultInstanceForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip build() {
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip buildPartial() {
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip result = new skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.sourceAccountId_ = sourceAccountId_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.targetAccountId_ = targetAccountId_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.tipAmount_ = tipAmount_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip) {
+            return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip other) {
+          if (other == skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.getDefaultInstance()) return this;
+          if (other.hasSourceAccountId()) {
+            setSourceAccountId(other.getSourceAccountId());
+          }
+          if (other.hasTargetAccountId()) {
+            setTargetAccountId(other.getTargetAccountId());
+          }
+          if (other.hasTipAmount()) {
+            setTipAmount(other.getTipAmount());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int sourceAccountId_ ;
+        /**
+         * <code>optional uint32 source_account_id = 1;</code>
+         */
+        public boolean hasSourceAccountId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 source_account_id = 1;</code>
+         */
+        public int getSourceAccountId() {
+          return sourceAccountId_;
+        }
+        /**
+         * <code>optional uint32 source_account_id = 1;</code>
+         */
+        public Builder setSourceAccountId(int value) {
+          bitField0_ |= 0x00000001;
+          sourceAccountId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 source_account_id = 1;</code>
+         */
+        public Builder clearSourceAccountId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          sourceAccountId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int targetAccountId_ ;
+        /**
+         * <code>optional uint32 target_account_id = 2;</code>
+         */
+        public boolean hasTargetAccountId() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 target_account_id = 2;</code>
+         */
+        public int getTargetAccountId() {
+          return targetAccountId_;
+        }
+        /**
+         * <code>optional uint32 target_account_id = 2;</code>
+         */
+        public Builder setTargetAccountId(int value) {
+          bitField0_ |= 0x00000002;
+          targetAccountId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 target_account_id = 2;</code>
+         */
+        public Builder clearTargetAccountId() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          targetAccountId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int tipAmount_ ;
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public boolean hasTipAmount() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public int getTipAmount() {
+          return tipAmount_;
+        }
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public Builder setTipAmount(int value) {
+          bitField0_ |= 0x00000004;
+          tipAmount_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public Builder clearTipAmount() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          tipAmount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CMsgMatchTips.SingleTip)
+      }
+
+      static {
+        defaultInstance = new SingleTip(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CMsgMatchTips.SingleTip)
+    }
+
+    private int bitField0_;
+    public static final int EVENT_ID_FIELD_NUMBER = 1;
+    private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent eventId_;
+    /**
+     * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+     */
+    public boolean hasEventId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId() {
+      return eventId_;
+    }
+
+    public static final int TIPS_FIELD_NUMBER = 2;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip> tips_;
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip> getTipsList() {
+      return tips_;
+    }
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder> 
+        getTipsOrBuilderList() {
+      return tips_;
+    }
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    public int getTipsCount() {
+      return tips_.size();
+    }
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip getTips(int index) {
+      return tips_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder getTipsOrBuilder(
+        int index) {
+      return tips_.get(index);
+    }
+
+    private void initFields() {
+      eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+      tips_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(1, eventId_.getNumber());
+      }
+      for (int i = 0; i < tips_.size(); i++) {
+        output.writeMessage(2, tips_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, eventId_.getNumber());
+      }
+      for (int i = 0; i < tips_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, tips_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgMatchTips}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgMatchTips)
+        skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.class, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getTipsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        if (tipsBuilder_ == null) {
+          tips_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          tipsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.internal_static_CMsgMatchTips_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips build() {
+        skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips result = new skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.eventId_ = eventId_;
+        if (tipsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            tips_ = java.util.Collections.unmodifiableList(tips_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.tips_ = tips_;
+        } else {
+          result.tips_ = tipsBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.getDefaultInstance()) return this;
+        if (other.hasEventId()) {
+          setEventId(other.getEventId());
+        }
+        if (tipsBuilder_ == null) {
+          if (!other.tips_.isEmpty()) {
+            if (tips_.isEmpty()) {
+              tips_ = other.tips_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureTipsIsMutable();
+              tips_.addAll(other.tips_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.tips_.isEmpty()) {
+            if (tipsBuilder_.isEmpty()) {
+              tipsBuilder_.dispose();
+              tipsBuilder_ = null;
+              tips_ = other.tips_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              tipsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getTipsFieldBuilder() : null;
+            } else {
+              tipsBuilder_.addAllMessages(other.tips_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+      /**
+       * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+       */
+      public boolean hasEventId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId() {
+        return eventId_;
+      }
+      /**
+       * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+       */
+      public Builder setEventId(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        eventId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
+       */
+      public Builder clearEventId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip> tips_ =
+        java.util.Collections.emptyList();
+      private void ensureTipsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          tips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip>(tips_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder> tipsBuilder_;
+
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip> getTipsList() {
+        if (tipsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(tips_);
+        } else {
+          return tipsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public int getTipsCount() {
+        if (tipsBuilder_ == null) {
+          return tips_.size();
+        } else {
+          return tipsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip getTips(int index) {
+        if (tipsBuilder_ == null) {
+          return tips_.get(index);
+        } else {
+          return tipsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder setTips(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip value) {
+        if (tipsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTipsIsMutable();
+          tips_.set(index, value);
+          onChanged();
+        } else {
+          tipsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder setTips(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder builderForValue) {
+        if (tipsBuilder_ == null) {
+          ensureTipsIsMutable();
+          tips_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          tipsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder addTips(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip value) {
+        if (tipsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTipsIsMutable();
+          tips_.add(value);
+          onChanged();
+        } else {
+          tipsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder addTips(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip value) {
+        if (tipsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTipsIsMutable();
+          tips_.add(index, value);
+          onChanged();
+        } else {
+          tipsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder addTips(
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder builderForValue) {
+        if (tipsBuilder_ == null) {
+          ensureTipsIsMutable();
+          tips_.add(builderForValue.build());
+          onChanged();
+        } else {
+          tipsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder addTips(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder builderForValue) {
+        if (tipsBuilder_ == null) {
+          ensureTipsIsMutable();
+          tips_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          tipsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder addAllTips(
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip> values) {
+        if (tipsBuilder_ == null) {
+          ensureTipsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, tips_);
+          onChanged();
+        } else {
+          tipsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder clearTips() {
+        if (tipsBuilder_ == null) {
+          tips_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          tipsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public Builder removeTips(int index) {
+        if (tipsBuilder_ == null) {
+          ensureTipsIsMutable();
+          tips_.remove(index);
+          onChanged();
+        } else {
+          tipsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder getTipsBuilder(
+          int index) {
+        return getTipsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder getTipsOrBuilder(
+          int index) {
+        if (tipsBuilder_ == null) {
+          return tips_.get(index);  } else {
+          return tipsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder> 
+           getTipsOrBuilderList() {
+        if (tipsBuilder_ != null) {
+          return tipsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(tips_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder addTipsBuilder() {
+        return getTipsFieldBuilder().addBuilder(
+            skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder addTipsBuilder(
+          int index) {
+        return getTipsFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgMatchTips.SingleTip tips = 2;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder> 
+           getTipsBuilderList() {
+        return getTipsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder> 
+          getTipsFieldBuilder() {
+        if (tipsBuilder_ == null) {
+          tipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTip.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.SingleTipOrBuilder>(
+                  tips_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          tips_ = null;
+        }
+        return tipsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgMatchTips)
+    }
+
+    static {
+      defaultInstance = new CMsgMatchTips(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgMatchTips)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMatchPlayerAbilityUpgrade_descriptor;
   private static
@@ -17230,6 +18838,16 @@ public final class S2DotaGcCommon {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_CustomGameData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgMatchTips_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgMatchTips_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgMatchTips_SingleTip_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -17329,31 +18947,54 @@ public final class S2DotaGcCommon {
       "\022\026\n\016custom_game_id\030\001 \001(\004\022\020\n\010map_name\030\002 \001" +
       "(\t\"P\n\013ReplayState\022\024\n\020REPLAY_AVAILABLE\020\000\022" +
       "\027\n\023REPLAY_NOT_RECORDED\020\001\022\022\n\016REPLAY_EXPIR",
-      "ED\020\002*\331\004\n\rDOTA_GameMode\022\026\n\022DOTA_GAMEMODE_" +
-      "NONE\020\000\022\024\n\020DOTA_GAMEMODE_AP\020\001\022\024\n\020DOTA_GAM" +
-      "EMODE_CM\020\002\022\024\n\020DOTA_GAMEMODE_RD\020\003\022\024\n\020DOTA" +
-      "_GAMEMODE_SD\020\004\022\024\n\020DOTA_GAMEMODE_AR\020\005\022\027\n\023" +
-      "DOTA_GAMEMODE_INTRO\020\006\022\024\n\020DOTA_GAMEMODE_H" +
-      "W\020\007\022\034\n\030DOTA_GAMEMODE_REVERSE_CM\020\010\022\026\n\022DOT" +
-      "A_GAMEMODE_XMAS\020\t\022\032\n\026DOTA_GAMEMODE_TUTOR" +
-      "IAL\020\n\022\024\n\020DOTA_GAMEMODE_MO\020\013\022\024\n\020DOTA_GAME" +
-      "MODE_LP\020\014\022\027\n\023DOTA_GAMEMODE_POOL1\020\r\022\024\n\020DO" +
-      "TA_GAMEMODE_FH\020\016\022\030\n\024DOTA_GAMEMODE_CUSTOM",
-      "\020\017\022\024\n\020DOTA_GAMEMODE_CD\020\020\022\024\n\020DOTA_GAMEMOD" +
-      "E_BD\020\021\022\037\n\033DOTA_GAMEMODE_ABILITY_DRAFT\020\022\022" +
-      "\027\n\023DOTA_GAMEMODE_EVENT\020\023\022\026\n\022DOTA_GAMEMOD" +
-      "E_ARDM\020\024\022\030\n\024DOTA_GAMEMODE_1V1MID\020\025\022\033\n\027DO" +
-      "TA_GAMEMODE_ALL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE" +
-      "_TURBO\020\027*\307\002\n\rEMatchOutcome\022\033\n\027k_EMatchOu" +
-      "tcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_RadVi" +
-      "ctory\020\002\022\037\n\033k_EMatchOutcome_DireVictory\020\003" +
-      "\0223\n/k_EMatchOutcome_NotScored_PoorNetwor" +
-      "kConditions\020@\022$\n k_EMatchOutcome_NotScor",
-      "ed_Leaver\020A\022)\n%k_EMatchOutcome_NotScored" +
-      "_ServerCrash\020B\022*\n&k_EMatchOutcome_NotSco" +
-      "red_NeverStarted\020C\022&\n\"k_EMatchOutcome_No" +
-      "tScored_Canceled\020DB7\n skadistats.clarity" +
-      ".wire.s2.protoB\016S2DotaGcCommonH\001\200\001\000"
+      "ED\020\002\"\270\001\n\rCMsgMatchTips\022(\n\010event_id\030\001 \001(\016" +
+      "2\007.EEvent:\rEVENT_ID_NONE\022&\n\004tips\030\002 \003(\0132\030" +
+      ".CMsgMatchTips.SingleTip\032U\n\tSingleTip\022\031\n" +
+      "\021source_account_id\030\001 \001(\r\022\031\n\021target_accou" +
+      "nt_id\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(\r*\365\004\n\rDOTA" +
+      "_GameMode\022\026\n\022DOTA_GAMEMODE_NONE\020\000\022\024\n\020DOT" +
+      "A_GAMEMODE_AP\020\001\022\024\n\020DOTA_GAMEMODE_CM\020\002\022\024\n" +
+      "\020DOTA_GAMEMODE_RD\020\003\022\024\n\020DOTA_GAMEMODE_SD\020" +
+      "\004\022\024\n\020DOTA_GAMEMODE_AR\020\005\022\027\n\023DOTA_GAMEMODE" +
+      "_INTRO\020\006\022\024\n\020DOTA_GAMEMODE_HW\020\007\022\034\n\030DOTA_G",
+      "AMEMODE_REVERSE_CM\020\010\022\026\n\022DOTA_GAMEMODE_XM" +
+      "AS\020\t\022\032\n\026DOTA_GAMEMODE_TUTORIAL\020\n\022\024\n\020DOTA" +
+      "_GAMEMODE_MO\020\013\022\024\n\020DOTA_GAMEMODE_LP\020\014\022\027\n\023" +
+      "DOTA_GAMEMODE_POOL1\020\r\022\024\n\020DOTA_GAMEMODE_F" +
+      "H\020\016\022\030\n\024DOTA_GAMEMODE_CUSTOM\020\017\022\024\n\020DOTA_GA" +
+      "MEMODE_CD\020\020\022\024\n\020DOTA_GAMEMODE_BD\020\021\022\037\n\033DOT" +
+      "A_GAMEMODE_ABILITY_DRAFT\020\022\022\027\n\023DOTA_GAMEM" +
+      "ODE_EVENT\020\023\022\026\n\022DOTA_GAMEMODE_ARDM\020\024\022\030\n\024D" +
+      "OTA_GAMEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_A" +
+      "LL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026D",
+      "OTA_GAMEMODE_MUTATION\020\030*\303\005\n\006EEvent\022\021\n\rEV" +
+      "ENT_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030" +
+      "EVENT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_F" +
+      "ROSTIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2" +
+      "014\020\004\022\032\n\026EVENT_ID_NEXON_PC_BANG\020\005\022\032\n\026EVE" +
+      "NT_ID_PWRD_DAC_2015\020\006\022\033\n\027EVENT_ID_NEW_BL" +
+      "OOM_2015\020\007\022\037\n\033EVENT_ID_INTERNATIONAL_201" +
+      "5\020\010\022\034\n\030EVENT_ID_FALL_MAJOR_2015\020\t\022\026\n\022EVE" +
+      "NT_ID_ORACLE_PA\020\n\022$\n EVENT_ID_NEW_BLOOM_" +
+      "2015_PREBEAST\020\013\022\026\n\022EVENT_ID_FROSTIVUS\020\014\022",
+      "\036\n\032EVENT_ID_WINTER_MAJOR_2016\020\r\022\037\n\033EVENT" +
+      "_ID_INTERNATIONAL_2016\020\016\022\034\n\030EVENT_ID_FAL" +
+      "L_MAJOR_2016\020\017\022\036\n\032EVENT_ID_WINTER_MAJOR_" +
+      "2017\020\020\022\033\n\027EVENT_ID_NEW_BLOOM_2017\020\021\022\037\n\033E" +
+      "VENT_ID_INTERNATIONAL_2017\020\022\022\036\n\032EVENT_ID" +
+      "_PLUS_SUBSCRIPTION\020\023\022\035\n\031EVENT_ID_SINGLES" +
+      "_DAY_2017\020\024\022\033\n\027EVENT_ID_FROSTIVUS_2017\020\025" +
+      "\022\037\n\033EVENT_ID_INTERNATIONAL_2018\020\026\022\022\n\016EVE" +
+      "NT_ID_COUNT\020\027*\307\002\n\rEMatchOutcome\022\033\n\027k_EMa" +
+      "tchOutcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_",
+      "RadVictory\020\002\022\037\n\033k_EMatchOutcome_DireVict" +
+      "ory\020\003\0223\n/k_EMatchOutcome_NotScored_PoorN" +
+      "etworkConditions\020@\022$\n k_EMatchOutcome_No" +
+      "tScored_Leaver\020A\022)\n%k_EMatchOutcome_NotS" +
+      "cored_ServerCrash\020B\022*\n&k_EMatchOutcome_N" +
+      "otScored_NeverStarted\020C\022&\n\"k_EMatchOutco" +
+      "me_NotScored_Canceled\020DB7\n skadistats.cl" +
+      "arity.wire.s2.protoB\016S2DotaGcCommonH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -17427,6 +19068,18 @@ public final class S2DotaGcCommon {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_CustomGameData_descriptor,
         new java.lang.String[] { "CustomGameId", "MapName", });
+    internal_static_CMsgMatchTips_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CMsgMatchTips_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgMatchTips_descriptor,
+        new java.lang.String[] { "EventId", "Tips", });
+    internal_static_CMsgMatchTips_SingleTip_descriptor =
+      internal_static_CMsgMatchTips_descriptor.getNestedTypes().get(0);
+    internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgMatchTips_SingleTip_descriptor,
+        new java.lang.String[] { "SourceAccountId", "TargetAccountId", "TipAmount", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

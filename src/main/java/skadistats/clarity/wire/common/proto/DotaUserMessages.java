@@ -2059,6 +2059,10 @@ public final class DotaUserMessages {
      * <code>DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT = 16;</code>
      */
     DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT(16, 16),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_SET_SHOULD_CHECK_FOW = 17;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_SET_SHOULD_CHECK_FOW(17, 17),
     ;
 
     /**
@@ -2129,6 +2133,10 @@ public final class DotaUserMessages {
      * <code>DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT = 16;</code>
      */
     public static final int DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT_VALUE = 16;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_SET_SHOULD_CHECK_FOW = 17;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_SET_SHOULD_CHECK_FOW_VALUE = 17;
 
 
     public final int getNumber() { return value; }
@@ -2152,6 +2160,7 @@ public final class DotaUserMessages {
         case 14: return DOTA_PARTICLE_MANAGER_EVENT_UPDATE_ENTITY_POSITION;
         case 15: return DOTA_PARTICLE_MANAGER_EVENT_SET_FOW_PROPERTIES;
         case 16: return DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT;
+        case 17: return GAME_PARTICLE_MANAGER_EVENT_SET_SHOULD_CHECK_FOW;
         default: return null;
       }
     }
@@ -12039,6 +12048,15 @@ public final class DotaUserMessages {
      * <code>optional uint32 target_entindex = 2;</code>
      */
     int getTargetEntindex();
+
+    /**
+     * <code>optional bool show_raw_values = 3;</code>
+     */
+    boolean hasShowRawValues();
+    /**
+     * <code>optional bool show_raw_values = 3;</code>
+     */
+    boolean getShowRawValues();
   }
   /**
    * Protobuf type {@code CDOTAUserMsg_HPManaAlert}
@@ -12100,6 +12118,11 @@ public final class DotaUserMessages {
             case 16: {
               bitField0_ |= 0x00000002;
               targetEntindex_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              showRawValues_ = input.readBool();
               break;
             }
           }
@@ -12172,9 +12195,25 @@ public final class DotaUserMessages {
       return targetEntindex_;
     }
 
+    public static final int SHOW_RAW_VALUES_FIELD_NUMBER = 3;
+    private boolean showRawValues_;
+    /**
+     * <code>optional bool show_raw_values = 3;</code>
+     */
+    public boolean hasShowRawValues() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool show_raw_values = 3;</code>
+     */
+    public boolean getShowRawValues() {
+      return showRawValues_;
+    }
+
     private void initFields() {
       playerId_ = 0;
       targetEntindex_ = 0;
+      showRawValues_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -12195,6 +12234,9 @@ public final class DotaUserMessages {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeUInt32(2, targetEntindex_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, showRawValues_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -12211,6 +12253,10 @@ public final class DotaUserMessages {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, targetEntindex_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, showRawValues_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -12333,6 +12379,8 @@ public final class DotaUserMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         targetEntindex_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
+        showRawValues_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -12369,6 +12417,10 @@ public final class DotaUserMessages {
           to_bitField0_ |= 0x00000002;
         }
         result.targetEntindex_ = targetEntindex_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.showRawValues_ = showRawValues_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -12390,6 +12442,9 @@ public final class DotaUserMessages {
         }
         if (other.hasTargetEntindex()) {
           setTargetEntindex(other.getTargetEntindex());
+        }
+        if (other.hasShowRawValues()) {
+          setShowRawValues(other.getShowRawValues());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -12478,6 +12533,38 @@ public final class DotaUserMessages {
       public Builder clearTargetEntindex() {
         bitField0_ = (bitField0_ & ~0x00000002);
         targetEntindex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean showRawValues_ ;
+      /**
+       * <code>optional bool show_raw_values = 3;</code>
+       */
+      public boolean hasShowRawValues() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool show_raw_values = 3;</code>
+       */
+      public boolean getShowRawValues() {
+        return showRawValues_;
+      }
+      /**
+       * <code>optional bool show_raw_values = 3;</code>
+       */
+      public Builder setShowRawValues(boolean value) {
+        bitField0_ |= 0x00000004;
+        showRawValues_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool show_raw_values = 3;</code>
+       */
+      public Builder clearShowRawValues() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        showRawValues_ = false;
         onChanged();
         return this;
       }
@@ -31643,6 +31730,19 @@ public final class DotaUserMessages {
      * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleText set_particle_text = 19;</code>
      */
     skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleTextOrBuilder getSetParticleTextOrBuilder();
+
+    /**
+     * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+     */
+    boolean hasSetParticleShouldCheckFow();
+    /**
+     * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+     */
+    skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW getSetParticleShouldCheckFow();
+    /**
+     * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+     */
+    skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder getSetParticleShouldCheckFowOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAUserMsg_ParticleManager}
@@ -31918,6 +32018,19 @@ public final class DotaUserMessages {
                 setParticleText_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00020000;
+              break;
+            }
+            case 162: {
+              skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder subBuilder = null;
+              if (((bitField0_ & 0x00040000) == 0x00040000)) {
+                subBuilder = setParticleShouldCheckFow_.toBuilder();
+              }
+              setParticleShouldCheckFow_ = input.readMessage(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(setParticleShouldCheckFow_);
+                setParticleShouldCheckFow_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00040000;
               break;
             }
           }
@@ -40467,6 +40580,403 @@ public final class DotaUserMessages {
       // @@protoc_insertion_point(class_scope:CDOTAUserMsg_ParticleManager.SetParticleFoWProperties)
     }
 
+    public interface SetParticleShouldCheckFoWOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bool check_fow = 1;</code>
+       */
+      boolean hasCheckFow();
+      /**
+       * <code>optional bool check_fow = 1;</code>
+       */
+      boolean getCheckFow();
+    }
+    /**
+     * Protobuf type {@code CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW}
+     */
+    public static final class SetParticleShouldCheckFoW extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW)
+        SetParticleShouldCheckFoWOrBuilder {
+      // Use SetParticleShouldCheckFoW.newBuilder() to construct.
+      private SetParticleShouldCheckFoW(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private SetParticleShouldCheckFoW(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final SetParticleShouldCheckFoW defaultInstance;
+      public static SetParticleShouldCheckFoW getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public SetParticleShouldCheckFoW getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SetParticleShouldCheckFoW(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                checkFow_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.class, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<SetParticleShouldCheckFoW> PARSER =
+          new com.google.protobuf.AbstractParser<SetParticleShouldCheckFoW>() {
+        public SetParticleShouldCheckFoW parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetParticleShouldCheckFoW(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SetParticleShouldCheckFoW> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int CHECK_FOW_FIELD_NUMBER = 1;
+      private boolean checkFow_;
+      /**
+       * <code>optional bool check_fow = 1;</code>
+       */
+      public boolean hasCheckFow() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool check_fow = 1;</code>
+       */
+      public boolean getCheckFow() {
+        return checkFow_;
+      }
+
+      private void initFields() {
+        checkFow_ = false;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBool(1, checkFow_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, checkFow_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW)
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.class, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          checkFow_ = false;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
+        }
+
+        public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW getDefaultInstanceForType() {
+          return skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW build() {
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW buildPartial() {
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW result = new skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.checkFow_ = checkFow_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW) {
+            return mergeFrom((skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW other) {
+          if (other == skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance()) return this;
+          if (other.hasCheckFow()) {
+            setCheckFow(other.getCheckFow());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean checkFow_ ;
+        /**
+         * <code>optional bool check_fow = 1;</code>
+         */
+        public boolean hasCheckFow() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional bool check_fow = 1;</code>
+         */
+        public boolean getCheckFow() {
+          return checkFow_;
+        }
+        /**
+         * <code>optional bool check_fow = 1;</code>
+         */
+        public Builder setCheckFow(boolean value) {
+          bitField0_ |= 0x00000001;
+          checkFow_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool check_fow = 1;</code>
+         */
+        public Builder clearCheckFow() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          checkFow_ = false;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW)
+      }
+
+      static {
+        defaultInstance = new SetParticleShouldCheckFoW(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW)
+    }
+
     public interface SetParticleTextOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CDOTAUserMsg_ParticleManager.SetParticleText)
         com.google.protobuf.MessageOrBuilder {
@@ -41310,6 +41820,27 @@ public final class DotaUserMessages {
       return setParticleText_;
     }
 
+    public static final int SET_PARTICLE_SHOULD_CHECK_FOW_FIELD_NUMBER = 20;
+    private skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW setParticleShouldCheckFow_;
+    /**
+     * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+     */
+    public boolean hasSetParticleShouldCheckFow() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+     */
+    public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW getSetParticleShouldCheckFow() {
+      return setParticleShouldCheckFow_;
+    }
+    /**
+     * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+     */
+    public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder getSetParticleShouldCheckFowOrBuilder() {
+      return setParticleShouldCheckFow_;
+    }
+
     private void initFields() {
       type_ = skadistats.clarity.wire.common.proto.DotaUserMessages.DOTA_PARTICLE_MESSAGE.DOTA_PARTICLE_MANAGER_EVENT_CREATE;
       index_ = 0;
@@ -41329,6 +41860,7 @@ public final class DotaUserMessages {
       updateEntityPosition_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.UpdateEntityPosition.getDefaultInstance();
       setParticleFowProperties_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleFoWProperties.getDefaultInstance();
       setParticleText_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleText.getDefaultInstance();
+      setParticleShouldCheckFow_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -41400,6 +41932,9 @@ public final class DotaUserMessages {
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         output.writeMessage(19, setParticleText_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeMessage(20, setParticleShouldCheckFow_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -41481,6 +42016,10 @@ public final class DotaUserMessages {
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(19, setParticleText_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(20, setParticleShouldCheckFow_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -41607,6 +42146,7 @@ public final class DotaUserMessages {
           getUpdateEntityPositionFieldBuilder();
           getSetParticleFowPropertiesFieldBuilder();
           getSetParticleTextFieldBuilder();
+          getSetParticleShouldCheckFowFieldBuilder();
         }
       }
       private static Builder create() {
@@ -41715,6 +42255,12 @@ public final class DotaUserMessages {
           setParticleTextBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00020000);
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          setParticleShouldCheckFow_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance();
+        } else {
+          setParticleShouldCheckFowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
         return this;
       }
 
@@ -41879,6 +42425,14 @@ public final class DotaUserMessages {
         } else {
           result.setParticleText_ = setParticleTextBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          result.setParticleShouldCheckFow_ = setParticleShouldCheckFow_;
+        } else {
+          result.setParticleShouldCheckFow_ = setParticleShouldCheckFowBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -41948,6 +42502,9 @@ public final class DotaUserMessages {
         }
         if (other.hasSetParticleText()) {
           mergeSetParticleText(other.getSetParticleText());
+        }
+        if (other.hasSetParticleShouldCheckFow()) {
+          mergeSetParticleShouldCheckFow(other.getSetParticleShouldCheckFow());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -43901,6 +44458,122 @@ public final class DotaUserMessages {
           setParticleText_ = null;
         }
         return setParticleTextBuilder_;
+      }
+
+      private skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW setParticleShouldCheckFow_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder> setParticleShouldCheckFowBuilder_;
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public boolean hasSetParticleShouldCheckFow() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW getSetParticleShouldCheckFow() {
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          return setParticleShouldCheckFow_;
+        } else {
+          return setParticleShouldCheckFowBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public Builder setSetParticleShouldCheckFow(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW value) {
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setParticleShouldCheckFow_ = value;
+          onChanged();
+        } else {
+          setParticleShouldCheckFowBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public Builder setSetParticleShouldCheckFow(
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder builderForValue) {
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          setParticleShouldCheckFow_ = builderForValue.build();
+          onChanged();
+        } else {
+          setParticleShouldCheckFowBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public Builder mergeSetParticleShouldCheckFow(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW value) {
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          if (((bitField0_ & 0x00040000) == 0x00040000) &&
+              setParticleShouldCheckFow_ != skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance()) {
+            setParticleShouldCheckFow_ =
+              skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.newBuilder(setParticleShouldCheckFow_).mergeFrom(value).buildPartial();
+          } else {
+            setParticleShouldCheckFow_ = value;
+          }
+          onChanged();
+        } else {
+          setParticleShouldCheckFowBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public Builder clearSetParticleShouldCheckFow() {
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          setParticleShouldCheckFow_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance();
+          onChanged();
+        } else {
+          setParticleShouldCheckFowBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder getSetParticleShouldCheckFowBuilder() {
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return getSetParticleShouldCheckFowFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder getSetParticleShouldCheckFowOrBuilder() {
+        if (setParticleShouldCheckFowBuilder_ != null) {
+          return setParticleShouldCheckFowBuilder_.getMessageOrBuilder();
+        } else {
+          return setParticleShouldCheckFow_;
+        }
+      }
+      /**
+       * <code>optional .CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder> 
+          getSetParticleShouldCheckFowFieldBuilder() {
+        if (setParticleShouldCheckFowBuilder_ == null) {
+          setParticleShouldCheckFowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder>(
+                  getSetParticleShouldCheckFow(),
+                  getParentForChildren(),
+                  isClean());
+          setParticleShouldCheckFow_ = null;
+        }
+        return setParticleShouldCheckFowBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CDOTAUserMsg_ParticleManager)
@@ -65045,6 +65718,559 @@ public final class DotaUserMessages {
     // @@protoc_insertion_point(class_scope:CDOTAUserMsg_HeroRelicProgress)
   }
 
+  public interface CDOTAUserMsg_SalutePlayerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDOTAUserMsg_SalutePlayer)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 source_player_id = 1;</code>
+     */
+    boolean hasSourcePlayerId();
+    /**
+     * <code>optional int32 source_player_id = 1;</code>
+     */
+    int getSourcePlayerId();
+
+    /**
+     * <code>optional int32 target_player_id = 2;</code>
+     */
+    boolean hasTargetPlayerId();
+    /**
+     * <code>optional int32 target_player_id = 2;</code>
+     */
+    int getTargetPlayerId();
+
+    /**
+     * <code>optional uint32 tip_amount = 3;</code>
+     */
+    boolean hasTipAmount();
+    /**
+     * <code>optional uint32 tip_amount = 3;</code>
+     */
+    int getTipAmount();
+  }
+  /**
+   * Protobuf type {@code CDOTAUserMsg_SalutePlayer}
+   */
+  public static final class CDOTAUserMsg_SalutePlayer extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDOTAUserMsg_SalutePlayer)
+      CDOTAUserMsg_SalutePlayerOrBuilder {
+    // Use CDOTAUserMsg_SalutePlayer.newBuilder() to construct.
+    private CDOTAUserMsg_SalutePlayer(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDOTAUserMsg_SalutePlayer(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDOTAUserMsg_SalutePlayer defaultInstance;
+    public static CDOTAUserMsg_SalutePlayer getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDOTAUserMsg_SalutePlayer getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDOTAUserMsg_SalutePlayer(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              sourcePlayerId_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              targetPlayerId_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              tipAmount_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_SalutePlayer_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_SalutePlayer_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.class, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CDOTAUserMsg_SalutePlayer> PARSER =
+        new com.google.protobuf.AbstractParser<CDOTAUserMsg_SalutePlayer>() {
+      public CDOTAUserMsg_SalutePlayer parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDOTAUserMsg_SalutePlayer(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDOTAUserMsg_SalutePlayer> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int SOURCE_PLAYER_ID_FIELD_NUMBER = 1;
+    private int sourcePlayerId_;
+    /**
+     * <code>optional int32 source_player_id = 1;</code>
+     */
+    public boolean hasSourcePlayerId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 source_player_id = 1;</code>
+     */
+    public int getSourcePlayerId() {
+      return sourcePlayerId_;
+    }
+
+    public static final int TARGET_PLAYER_ID_FIELD_NUMBER = 2;
+    private int targetPlayerId_;
+    /**
+     * <code>optional int32 target_player_id = 2;</code>
+     */
+    public boolean hasTargetPlayerId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 target_player_id = 2;</code>
+     */
+    public int getTargetPlayerId() {
+      return targetPlayerId_;
+    }
+
+    public static final int TIP_AMOUNT_FIELD_NUMBER = 3;
+    private int tipAmount_;
+    /**
+     * <code>optional uint32 tip_amount = 3;</code>
+     */
+    public boolean hasTipAmount() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 tip_amount = 3;</code>
+     */
+    public int getTipAmount() {
+      return tipAmount_;
+    }
+
+    private void initFields() {
+      sourcePlayerId_ = 0;
+      targetPlayerId_ = 0;
+      tipAmount_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, sourcePlayerId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, targetPlayerId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(3, tipAmount_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, sourcePlayerId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, targetPlayerId_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, tipAmount_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDOTAUserMsg_SalutePlayer}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDOTAUserMsg_SalutePlayer)
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayerOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_SalutePlayer_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_SalutePlayer_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.class, skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        sourcePlayerId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        targetPlayerId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        tipAmount_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.internal_static_CDOTAUserMsg_SalutePlayer_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer build() {
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer buildPartial() {
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer result = new skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.sourcePlayerId_ = sourcePlayerId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.targetPlayerId_ = targetPlayerId_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.tipAmount_ = tipAmount_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer other) {
+        if (other == skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer.getDefaultInstance()) return this;
+        if (other.hasSourcePlayerId()) {
+          setSourcePlayerId(other.getSourcePlayerId());
+        }
+        if (other.hasTargetPlayerId()) {
+          setTargetPlayerId(other.getTargetPlayerId());
+        }
+        if (other.hasTipAmount()) {
+          setTipAmount(other.getTipAmount());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAUserMsg_SalutePlayer) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int sourcePlayerId_ ;
+      /**
+       * <code>optional int32 source_player_id = 1;</code>
+       */
+      public boolean hasSourcePlayerId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 source_player_id = 1;</code>
+       */
+      public int getSourcePlayerId() {
+        return sourcePlayerId_;
+      }
+      /**
+       * <code>optional int32 source_player_id = 1;</code>
+       */
+      public Builder setSourcePlayerId(int value) {
+        bitField0_ |= 0x00000001;
+        sourcePlayerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 source_player_id = 1;</code>
+       */
+      public Builder clearSourcePlayerId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        sourcePlayerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int targetPlayerId_ ;
+      /**
+       * <code>optional int32 target_player_id = 2;</code>
+       */
+      public boolean hasTargetPlayerId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 target_player_id = 2;</code>
+       */
+      public int getTargetPlayerId() {
+        return targetPlayerId_;
+      }
+      /**
+       * <code>optional int32 target_player_id = 2;</code>
+       */
+      public Builder setTargetPlayerId(int value) {
+        bitField0_ |= 0x00000002;
+        targetPlayerId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 target_player_id = 2;</code>
+       */
+      public Builder clearTargetPlayerId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetPlayerId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int tipAmount_ ;
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public boolean hasTipAmount() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public int getTipAmount() {
+        return tipAmount_;
+      }
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public Builder setTipAmount(int value) {
+        bitField0_ |= 0x00000004;
+        tipAmount_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public Builder clearTipAmount() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        tipAmount_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDOTAUserMsg_SalutePlayer)
+    }
+
+    static {
+      defaultInstance = new CDOTAUserMsg_SalutePlayer(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDOTAUserMsg_SalutePlayer)
+  }
+
   public interface CMsgDOTACombatLogEntryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgDOTACombatLogEntry)
       com.google.protobuf.MessageOrBuilder {
@@ -71349,6 +72575,11 @@ public final class DotaUserMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAUserMsg_ParticleManager_SetParticleFoWProperties_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAUserMsg_ParticleManager_SetParticleText_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -71509,6 +72740,11 @@ public final class DotaUserMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAUserMsg_HeroRelicProgress_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAUserMsg_SalutePlayer_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAUserMsg_SalutePlayer_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTACombatLogEntry_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -71559,557 +72795,565 @@ public final class DotaUserMessages {
       "CDOTAUserMsg_ModifierAlert\022\021\n\tplayer_id\030" +
       "\001 \001(\r\022\022\n\nclass_name\030\002 \001(\t\022\023\n\013stack_count" +
       "\030\003 \001(\r\022\021\n\tis_debuff\030\004 \001(\010\022\027\n\017target_enti" +
-      "ndex\030\005 \001(\r\022\031\n\021seconds_remaining\030\006 \001(\002\"F\n" +
+      "ndex\030\005 \001(\r\022\031\n\021seconds_remaining\030\006 \001(\002\"_\n" +
       "\030CDOTAUserMsg_HPManaAlert\022\021\n\tplayer_id\030\001" +
-      " \001(\r\022\027\n\017target_entindex\030\002 \001(\r\"\343\001\n\037CDOTAU",
-      "serMsg_CourierKilledAlert\022\014\n\004team\030\001 \001(\r\022" +
-      "\022\n\ngold_value\030\002 \001(\r\022\025\n\rentity_handle\030\003 \001" +
-      "(\005\022\021\n\ttimestamp\030\004 \001(\005\022=\n\nlost_items\030\005 \003(" +
-      "\0132).CDOTAUserMsg_CourierKilledAlert.Lost" +
-      "Item\0325\n\010LostItem\022\027\n\017item_ability_id\030\001 \001(" +
-      "\005\022\020\n\010quantity\030\002 \001(\r\"\214\001\n\031CDOTAUserMsg_Min" +
-      "imapEvent\022\022\n\nevent_type\030\001 \001(\005\022\025\n\rentity_" +
-      "handle\030\002 \001(\005\022\t\n\001x\030\003 \001(\005\022\t\n\001y\030\004 \001(\005\022\020\n\010du" +
-      "ration\030\005 \001(\005\022\034\n\024target_entity_handle\030\006 \001" +
-      "(\005\"M\n\024CDOTAUserMsg_MapLine\022\021\n\tplayer_id\030",
-      "\001 \001(\005\022\"\n\007mapline\030\002 \001(\0132\021.CDOTAMsg_MapLin" +
-      "e\"\247\002\n#CDOTAUserMsg_CreateLinearProjectil" +
-      "e\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\037\n\010veloci" +
-      "ty\030\002 \001(\0132\r.CMsgVector2D\022\017\n\007latency\030\003 \001(\005" +
-      "\022\020\n\010entindex\030\004 \001(\005\022\026\n\016particle_index\030\005 \001" +
-      "(\004\022\016\n\006handle\030\006 \001(\005\022#\n\014acceleration\030\007 \001(\013" +
-      "2\r.CMsgVector2D\022\021\n\tmax_speed\030\010 \001(\002\022\022\n\nfo" +
-      "w_radius\030\t \001(\002\022\031\n\021sticky_fow_reveal\030\n \001(" +
-      "\010\022\020\n\010distance\030\013 \001(\002\"6\n$CDOTAUserMsg_Dest" +
-      "royLinearProjectile\022\016\n\006handle\030\001 \001(\005\"O\n%C",
-      "DOTAUserMsg_DodgeTrackingProjectiles\022\020\n\010" +
-      "entindex\030\001 \002(\005\022\024\n\014attacks_only\030\002 \001(\010\"_\n!" +
-      "CDOTAUserMsg_SpectatorPlayerClick\022\020\n\010ent" +
-      "index\030\001 \002(\005\022\022\n\norder_type\030\002 \001(\005\022\024\n\014targe" +
-      "t_index\030\003 \001(\005\"\316\001\n&CDOTAUserMsg_Spectator" +
-      "PlayerUnitOrders\022\020\n\010entindex\030\001 \001(\005\022\022\n\nor" +
-      "der_type\030\002 \001(\005\022\r\n\005units\030\003 \003(\005\022\024\n\014target_" +
-      "index\030\004 \001(\005\022\022\n\nability_id\030\005 \001(\005\022\035\n\010posit" +
-      "ion\030\006 \001(\0132\013.CMsgVector\022\r\n\005queue\030\007 \001(\010\022\027\n" +
-      "\017sequence_number\030\010 \001(\005\"s\n\035CDOTAUserMsg_N",
-      "evermoreRequiem\022\025\n\rentity_handle\030\001 \001(\005\022\r" +
-      "\n\005lines\030\002 \001(\005\022\033\n\006origin\030\003 \001(\0132\013.CMsgVect" +
-      "or\022\017\n\007reverse\030\004 \001(\010\")\n\025CDOTAUserMsg_HudE" +
-      "rror\022\020\n\010order_id\030\001 \001(\005\"c\n\033CDOTAUserMsg_S" +
-      "haredCooldown\022\020\n\010entindex\030\001 \001(\005\022\014\n\004name\030" +
-      "\002 \001(\t\022\020\n\010cooldown\030\003 \001(\002\022\022\n\nname_index\030\004 " +
-      "\001(\005\"X\n\033CDOTAUserMsg_HalloweenDrops\022\021\n\tit" +
-      "em_defs\030\001 \003(\r\022\022\n\nplayer_ids\030\002 \003(\r\022\022\n\npri" +
-      "ze_list\030\003 \001(\r\"\223\003\n\035CDOTAUserMsg_Predictio" +
-      "nResult\022\022\n\naccount_id\030\001 \001(\r\022\020\n\010match_id\030",
-      "\002 \001(\004\022\017\n\007correct\030\003 \001(\010\022>\n\013predictions\030\004 " +
-      "\003(\0132).CDOTAUserMsg_PredictionResult.Pred" +
-      "iction\032\372\001\n\nPrediction\022\020\n\010item_def\030\001 \001(\r\022" +
-      "\023\n\013num_correct\030\002 \001(\r\022\021\n\tnum_fails\030\003 \001(\r\022" +
-      "X\n\006result\030\004 \001(\01621.CDOTAUserMsg_Predictio" +
-      "nResult.Prediction.EResult:\025k_eResult_It" +
-      "emGranted\022\031\n\021granted_item_defs\030\006 \003(\r\"=\n\007" +
-      "EResult\022\031\n\025k_eResult_ItemGranted\020\001\022\027\n\023k_" +
-      "eResult_Destroyed\020\002\"\376\001\n\034CDOTAResponseQue" +
-      "rySerialized\0221\n\005facts\030\001 \003(\0132\".CDOTARespo",
-      "nseQuerySerialized.Fact\032\252\001\n\004Fact\022\013\n\003key\030" +
-      "\001 \002(\005\022F\n\007valtype\030\002 \002(\0162,.CDOTAResponseQu" +
-      "erySerialized.Fact.ValueType:\007NUMERIC\022\023\n" +
-      "\013val_numeric\030\003 \001(\002\022\022\n\nval_string\030\004 \001(\t\"$" +
-      "\n\tValueType\022\013\n\007NUMERIC\020\001\022\n\n\006STRING\020\002\"\220\001\n" +
-      "\030CDOTASpeechMatchOnClient\022\017\n\007concept\030\001 \001" +
-      "(\005\022\026\n\016recipient_type\030\002 \001(\005\0224\n\rresponsequ" +
-      "ery\030\003 \001(\0132\035.CDOTAResponseQuerySerialized" +
-      "\022\025\n\nrandomseed\030\004 \001(\017:\0010\"\350\006\n\026CDOTAUserMsg" +
-      "_UnitEvent\0228\n\010msg_type\030\001 \002(\0162\024.EDotaEnti",
-      "tyMessages:\020DOTA_UNIT_SPEECH\022\024\n\014entity_i" +
-      "ndex\030\002 \002(\005\022.\n\006speech\030\003 \001(\0132\036.CDOTAUserMs" +
-      "g_UnitEvent.Speech\0227\n\013speech_mute\030\004 \001(\0132" +
-      "\".CDOTAUserMsg_UnitEvent.SpeechMute\0227\n\013a" +
-      "dd_gesture\030\005 \001(\0132\".CDOTAUserMsg_UnitEven" +
-      "t.AddGesture\022=\n\016remove_gesture\030\006 \001(\0132%.C" +
-      "DOTAUserMsg_UnitEvent.RemoveGesture\0229\n\014b" +
-      "lood_impact\030\007 \001(\0132#.CDOTAUserMsg_UnitEve" +
-      "nt.BloodImpact\0229\n\014fade_gesture\030\010 \001(\0132#.C" +
-      "DOTAUserMsg_UnitEvent.FadeGesture\0229\n\026spe",
-      "ech_match_on_client\030\t \001(\0132\031.CDOTASpeechM" +
-      "atchOnClient\032k\n\006Speech\022\017\n\007concept\030\001 \001(\005\022" +
-      "\020\n\010response\030\002 \001(\t\022\026\n\016recipient_type\030\003 \001(" +
-      "\005\022\r\n\005level\030\004 \001(\005\022\027\n\010muteable\030\005 \001(\010:\005fals" +
-      "e\032 \n\nSpeechMute\022\022\n\005delay\030\001 \001(\002:\0030.5\032W\n\nA" +
-      "ddGesture\022\020\n\010activity\030\001 \001(\005\022\014\n\004slot\030\002 \001(" +
-      "\005\022\022\n\007fade_in\030\003 \001(\002:\0010\022\025\n\010fade_out\030\004 \001(\002:" +
-      "\0030.1\032!\n\rRemoveGesture\022\020\n\010activity\030\001 \001(\005\032" +
-      "@\n\013BloodImpact\022\r\n\005scale\030\001 \001(\005\022\020\n\010x_norma" +
-      "l\030\002 \001(\005\022\020\n\010y_normal\030\003 \001(\005\032\037\n\013FadeGesture",
-      "\022\020\n\010activity\030\001 \001(\005\"5\n\032CDOTAUserMsg_ItemP" +
-      "urchased\022\027\n\017item_ability_id\030\001 \001(\005\"\317\025\n\034CD" +
-      "OTAUserMsg_ParticleManager\022H\n\004type\030\001 \001(\016" +
-      "2\026.DOTA_PARTICLE_MESSAGE:\"DOTA_PARTICLE_" +
-      "MANAGER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022R\n\026r" +
-      "elease_particle_index\030\003 \001(\01322.CDOTAUserM" +
-      "sg_ParticleManager.ReleaseParticleIndex\022" +
-      "E\n\017create_particle\030\004 \001(\0132,.CDOTAUserMsg_" +
-      "ParticleManager.CreateParticle\022G\n\020destro" +
-      "y_particle\030\005 \001(\0132-.CDOTAUserMsg_Particle",
-      "Manager.DestroyParticle\022Z\n\032destroy_parti" +
-      "cle_involving\030\006 \001(\01326.CDOTAUserMsg_Parti" +
-      "cleManager.DestroyParticleInvolving\022E\n\017u" +
-      "pdate_particle\030\007 \001(\0132,.CDOTAUserMsg_Part" +
-      "icleManager.UpdateParticle\022L\n\023update_par" +
-      "ticle_fwd\030\010 \001(\0132/.CDOTAUserMsg_ParticleM" +
-      "anager.UpdateParticleFwd\022R\n\026update_parti" +
-      "cle_orient\030\t \001(\01322.CDOTAUserMsg_Particle" +
-      "Manager.UpdateParticleOrient\022V\n\030update_p" +
-      "article_fallback\030\n \001(\01324.CDOTAUserMsg_Pa",
-      "rticleManager.UpdateParticleFallback\022R\n\026" +
-      "update_particle_offset\030\013 \001(\01322.CDOTAUser" +
-      "Msg_ParticleManager.UpdateParticleOffset" +
-      "\022L\n\023update_particle_ent\030\014 \001(\0132/.CDOTAUse" +
-      "rMsg_ParticleManager.UpdateParticleEnt\022[" +
-      "\n\033update_particle_should_draw\030\016 \001(\01326.CD" +
-      "OTAUserMsg_ParticleManager.UpdateParticl" +
-      "eShouldDraw\022Y\n\032update_particle_set_froze" +
-      "n\030\017 \001(\01325.CDOTAUserMsg_ParticleManager.U" +
-      "pdateParticleSetFrozen\022c\n\037change_control",
-      "_point_attachment\030\020 \001(\0132:.CDOTAUserMsg_P" +
-      "articleManager.ChangeControlPointAttachm" +
-      "ent\022R\n\026update_entity_position\030\021 \001(\01322.CD" +
-      "OTAUserMsg_ParticleManager.UpdateEntityP" +
-      "osition\022[\n\033set_particle_fow_properties\030\022" +
-      " \001(\01326.CDOTAUserMsg_ParticleManager.SetP" +
-      "articleFoWProperties\022H\n\021set_particle_tex" +
-      "t\030\023 \001(\0132-.CDOTAUserMsg_ParticleManager.S" +
-      "etParticleText\032\026\n\024ReleaseParticleIndex\032~" +
-      "\n\016CreateParticle\022\033\n\023particle_name_index\030",
-      "\001 \001(\006\022\023\n\013attach_type\030\002 \001(\005\022\025\n\rentity_han" +
-      "dle\030\003 \001(\005\022#\n\033entity_handle_for_modifiers" +
-      "\030\004 \001(\005\032.\n\017DestroyParticle\022\033\n\023destroy_imm" +
-      "ediately\030\001 \001(\010\032N\n\030DestroyParticleInvolvi" +
-      "ng\022\033\n\023destroy_immediately\030\001 \001(\010\022\025\n\rentit" +
-      "y_handle\030\003 \001(\005\032F\n\016UpdateParticle\022\025\n\rcont" +
-      "rol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsg" +
-      "Vector\032H\n\021UpdateParticleFwd\022\025\n\rcontrol_p" +
-      "oint\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVector" +
-      "\032\200\001\n\024UpdateParticleOrient\022\025\n\rcontrol_poi",
-      "nt\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVector\022\032" +
-      "\n\005right\030\003 \001(\0132\013.CMsgVector\022\027\n\002up\030\004 \001(\0132\013" +
-      ".CMsgVector\032N\n\026UpdateParticleFallback\022\025\n" +
-      "\rcontrol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013" +
-      ".CMsgVector\032Q\n\024UpdateParticleOffset\022\025\n\rc" +
-      "ontrol_point\030\001 \001(\005\022\"\n\rorigin_offset\030\002 \001(" +
-      "\0132\013.CMsgVector\032\255\001\n\021UpdateParticleEnt\022\025\n\r" +
-      "control_point\030\001 \001(\005\022\025\n\rentity_handle\030\002 \001" +
-      "(\005\022\023\n\013attach_type\030\003 \001(\005\022\022\n\nattachment\030\004 " +
-      "\001(\005\022&\n\021fallback_position\030\005 \001(\0132\013.CMsgVec",
-      "tor\022\031\n\021include_wearables\030\006 \001(\010\032-\n\027Update" +
-      "ParticleSetFrozen\022\022\n\nset_frozen\030\001 \001(\010\032/\n" +
-      "\030UpdateParticleShouldDraw\022\023\n\013should_draw" +
-      "\030\001 \001(\010\032e\n\034ChangeControlPointAttachment\022\026" +
-      "\n\016attachment_old\030\001 \001(\005\022\026\n\016attachment_new" +
-      "\030\002 \001(\005\022\025\n\rentity_handle\030\003 \001(\005\032L\n\024UpdateE" +
-      "ntityPosition\022\025\n\rentity_handle\030\001 \001(\005\022\035\n\010" +
-      "position\030\002 \001(\0132\013.CMsgVector\032e\n\030SetPartic" +
-      "leFoWProperties\022\031\n\021fow_control_point\030\001 \001" +
-      "(\005\022\032\n\022fow_control_point2\030\002 \001(\005\022\022\n\nfow_ra",
-      "dius\030\003 \001(\002\032\037\n\017SetParticleText\022\014\n\004text\030\001 " +
-      "\001(\t\"\305\001\n\032CDOTAUserMsg_OverheadEvent\022?\n\014me" +
-      "ssage_type\030\001 \001(\0162\024.DOTA_OVERHEAD_ALERT:\023" +
-      "OVERHEAD_ALERT_GOLD\022\r\n\005value\030\002 \001(\005\022\036\n\026ta" +
-      "rget_player_entindex\030\003 \001(\005\022\027\n\017target_ent" +
-      "index\030\004 \001(\005\022\036\n\026source_player_entindex\030\005 " +
-      "\001(\005\"S\n\026CDOTAUserMsg_WorldLine\022\021\n\tplayer_" +
-      "id\030\001 \001(\005\022&\n\tworldline\030\002 \001(\0132\023.CDOTAMsg_W" +
-      "orldLine\"o\n\026CDOTAUserMsg_ChatWheel\022\027\n\017ch" +
-      "at_message_id\030\001 \001(\r\022\021\n\tplayer_id\030\002 \001(\r\022\022",
-      "\n\naccount_id\030\003 \001(\r\022\025\n\rparam_hero_id\030\004 \001(" +
-      "\r\"3\n\"CDOTAUserMsg_GamerulesStateChanged\022" +
-      "\r\n\005state\030\001 \001(\r\"[\n\032CDOTAUserMsg_SendStatP" +
-      "opup\022\021\n\tplayer_id\030\001 \001(\005\022*\n\tstatpopup\030\002 \001" +
-      "(\0132\027.CDOTAMsg_SendStatPopup\"Z\n!CDOTAUser" +
-      "Msg_DismissAllStatPopups\0225\n\rdismissallms" +
-      "g\030\001 \001(\0132\036.CDOTAMsg_DismissAllStatPopups\"" +
-      "\217\001\n%CDOTAUserMsg_SendRoshanSpectatorPhas" +
-      "e\0226\n\005phase\030\001 \001(\0162\022.DOTA_ROSHAN_PHASE:\023k_" +
-      "SRSP_ROSHAN_ALIVE\022\030\n\020phase_start_time\030\002 ",
-      "\001(\005\022\024\n\014phase_length\030\003 \001(\005\"C\n\034CDOTAUserMs" +
-      "g_SendRoshanPopup\022\021\n\treclaimed\030\001 \001(\010\022\020\n\010" +
-      "gametime\030\002 \001(\005\"\310\002\n\032CDOTAUserMsg_TE_Proje" +
-      "ctile\022\017\n\007hSource\030\001 \001(\005\022\017\n\007hTarget\030\002 \001(\005\022" +
-      "\021\n\tmoveSpeed\030\003 \001(\005\022\030\n\020sourceAttachment\030\004" +
-      " \001(\005\022\034\n\024particleSystemHandle\030\005 \001(\003\022\021\n\tdo" +
-      "dgeable\030\006 \001(\010\022\020\n\010isAttack\030\007 \001(\010\022\020\n\010isEva" +
-      "ded\030\010 \001(\010\022\022\n\nexpireTime\030\t \001(\002\022\025\n\rmaximpa" +
-      "cttime\030\n \001(\002\022\025\n\rcolorgemcolor\030\013 \001(\007\022\023\n\013l" +
-      "aunch_tick\030\014 \001(\005\022\016\n\006handle\030\r \001(\005\022\037\n\nvTar",
-      "getLoc\030\016 \001(\0132\013.CMsgVector\"\252\002\n\035CDOTAUserM" +
-      "sg_TE_ProjectileLoc\022\037\n\nvSourceLoc\030\001 \001(\0132" +
-      "\013.CMsgVector\022\017\n\007hTarget\030\002 \001(\005\022\021\n\tmoveSpe" +
-      "ed\030\003 \001(\005\022\034\n\024particleSystemHandle\030\004 \001(\003\022\021" +
-      "\n\tdodgeable\030\005 \001(\010\022\020\n\010isAttack\030\006 \001(\010\022\020\n\010i" +
-      "sEvaded\030\010 \001(\010\022\022\n\nexpireTime\030\t \001(\002\022\037\n\nvTa" +
-      "rgetLoc\030\n \001(\0132\013.CMsgVector\022\025\n\rcolorgemco" +
-      "lor\030\013 \001(\007\022\023\n\013launch_tick\030\014 \001(\005\022\016\n\006handle" +
-      "\030\r \001(\005\"3\n!CDOTAUserMsg_TE_DestroyProject" +
-      "ile\022\016\n\006handle\030\001 \001(\005\"b\n\037CDOTAUserMsg_TE_D",
-      "otaBloodImpact\022\016\n\006entity\030\001 \001(\005\022\r\n\005scale\030" +
-      "\002 \001(\002\022\017\n\007xnormal\030\003 \001(\002\022\017\n\007ynormal\030\004 \001(\002\"" +
-      "\221\001\n\035CDOTAUserMsg_TE_UnitAnimation\022\016\n\006ent" +
-      "ity\030\001 \001(\005\022\027\n\017sequenceVariant\030\002 \001(\005\022\024\n\014pl" +
-      "aybackrate\030\003 \001(\002\022\021\n\tcastpoint\030\004 \001(\002\022\014\n\004t" +
-      "ype\030\005 \001(\005\022\020\n\010activity\030\006 \001(\005\"@\n CDOTAUser" +
-      "Msg_TE_UnitAnimationEnd\022\016\n\006entity\030\001 \001(\005\022" +
-      "\014\n\004snap\030\002 \001(\010\"Y\n\031CDOTAUserMsg_AbilitySte" +
-      "al\022\021\n\tplayer_id\030\001 \001(\r\022\022\n\nability_id\030\002 \001(" +
-      "\r\022\025\n\rability_level\030\003 \001(\r\"f\n\034CDOTAUserMsg",
-      "_StatsHeroLookup\022\021\n\tplayer_id\030\001 \001(\005\022\017\n\007h" +
-      "ero_id\030\002 \001(\005\022\021\n\thero_name\030\003 \001(\t\022\017\n\007perso" +
-      "na\030\004 \001(\t\"\372\001\n\"CDOTAUserMsg_StatsHeroPosit" +
-      "ionInfo\022\030\n\020average_position\030\001 \001(\002\022J\n\020pos" +
-      "ition_details\030\002 \003(\01320.CDOTAUserMsg_Stats" +
-      "HeroPositionInfo.PositionPair\032n\n\014Positio" +
-      "nPair\022F\n\021position_category\030\001 \001(\0162\027.DOTA_" +
-      "POSITION_CATEGORY:\022DOTA_POSITION_NONE\022\026\n" +
-      "\016position_count\030\002 \001(\r\"\254\001\n!CDOTAUserMsg_S" +
-      "tatsPlayerKillShare\022\021\n\tplayer_id\030\001 \001(\005\022\032",
-      "\n\022kill_share_percent\030\002 \001(\002\022\024\n\014player_loc" +
-      "_x\030\003 \001(\002\022\024\n\014player_loc_y\030\004 \001(\002\022\026\n\016health" +
-      "_percent\030\005 \001(\002\022\024\n\014mana_percent\030\006 \001(\002\"\304\001\n" +
-      "\035CDOTAUserMsg_StatsKillDetails\022\021\n\tvictim" +
-      "_id\030\001 \001(\r\0227\n\013kill_shares\030\002 \003(\0132\".CDOTAUs" +
-      "erMsg_StatsPlayerKillShare\022\026\n\016damage_to_" +
-      "kill\030\003 \001(\r\022\030\n\020effective_health\030\004 \001(\r\022\022\n\n" +
-      "death_time\030\005 \001(\002\022\021\n\tkiller_id\030\006 \001(\r\"v\n\023C" +
-      "MsgHeroAbilityStat\0227\n\tstat_type\030\001 \001(\0162\016." +
-      "EHeroStatType:\024k_EHeroStatType_None\022\021\n\ti",
-      "nt_value\030\002 \001(\005\022\023\n\013float_value\030\003 \001(\002\"d\n\034C" +
-      "MsgCombatAnalyzerPlayerStat\022\022\n\naccount_i" +
-      "d\030\001 \001(\r\0220\n\022hero_ability_stats\030\002 \003(\0132\024.CM" +
-      "sgHeroAbilityStat\"`\n\027CMsgCombatAnalyzerS" +
-      "tats\022\020\n\010match_id\030\001 \001(\004\0223\n\014player_stats\030\002" +
-      " \003(\0132\035.CMsgCombatAnalyzerPlayerStat\"\334\001\n\036" +
-      "CDOTAUserMsg_ProjectionAbility\022\022\n\nabilit" +
-      "y_id\030\001 \001(\r\022\030\n\020caster_ent_index\030\002 \001(\005\022\023\n\013" +
-      "caster_team\030\003 \001(\005\022\023\n\013channel_end\030\004 \001(\010\022\033" +
-      "\n\006origin\030\005 \001(\0132\013.CMsgVector\022\031\n\021track_cas",
-      "ter_only\030\006 \001(\010\022\020\n\010end_time\030\007 \001(\002\022\030\n\020vict" +
-      "im_ent_index\030\010 \001(\005\"a\n\034CDOTAUserMsg_Proje" +
-      "ctionEvent\0223\n\010event_id\030\001 \001(\0162\021.EProjecti" +
-      "onEvent:\016ePE_FirstBlood\022\014\n\004team\030\002 \001(\r\"B\n" +
-      "\024CDOTAUserMsg_XPAlert\022\021\n\tplayer_id\030\001 \001(\r" +
-      "\022\027\n\017target_entindex\030\002 \001(\r\"A\n\036CDOTAUserMs" +
-      "g_SelectPenaltyGold\022\021\n\tplayer_id\030\001 \002(\r\022\014" +
-      "\n\004cost\030\002 \001(\021\"z\n\033CDOTAUserMsg_RollDiceRes" +
-      "ult\022\021\n\tplayer_id\030\001 \001(\r\022\024\n\014channel_type\030\002" +
-      " \001(\r\022\020\n\010roll_min\030\003 \001(\r\022\020\n\010roll_max\030\004 \001(\r",
-      "\022\016\n\006result\030\005 \001(\r\"V\n\033CDOTAUserMsg_FlipCoi" +
-      "nResult\022\021\n\tplayer_id\030\001 \001(\r\022\024\n\014channel_ty" +
-      "pe\030\002 \001(\r\022\016\n\006result\030\003 \001(\010\"N\n#CDOTAUserMes" +
-      "sage_TeamCaptainChanged\022\014\n\004team\030\001 \001(\r\022\031\n" +
-      "\021captain_player_id\030\002 \001(\r\"k\n\036CDOTAUserMsg" +
-      "_HeroRelicProgress\022\027\n\017hero_relic_type\030\001 " +
-      "\001(\r\022\r\n\005value\030\002 \001(\r\022\017\n\007ehandle\030\003 \001(\r\022\020\n\010e" +
-      "vent_id\030\004 \001(\r\"\274\016\n\026CMsgDOTACombatLogEntry" +
-      "\022:\n\004type\030\001 \001(\0162\025.DOTA_COMBATLOG_TYPES:\025D" +
-      "OTA_COMBATLOG_DAMAGE\022\023\n\013target_name\030\002 \001(",
-      "\r\022\032\n\022target_source_name\030\003 \001(\r\022\025\n\rattacke" +
-      "r_name\030\004 \001(\r\022\032\n\022damage_source_name\030\005 \001(\r" +
-      "\022\026\n\016inflictor_name\030\006 \001(\r\022\034\n\024is_attacker_" +
-      "illusion\030\007 \001(\010\022\030\n\020is_attacker_hero\030\010 \001(\010" +
-      "\022\032\n\022is_target_illusion\030\t \001(\010\022\026\n\016is_targe" +
-      "t_hero\030\n \001(\010\022\032\n\022is_visible_radiant\030\013 \001(\010" +
-      "\022\027\n\017is_visible_dire\030\014 \001(\010\022\r\n\005value\030\r \001(\r" +
-      "\022\016\n\006health\030\016 \001(\005\022\021\n\ttimestamp\030\017 \001(\002\022\025\n\rs" +
-      "tun_duration\030\020 \001(\002\022\025\n\rslow_duration\030\021 \001(" +
-      "\002\022\034\n\024is_ability_toggle_on\030\022 \001(\010\022\035\n\025is_ab",
-      "ility_toggle_off\030\023 \001(\010\022\025\n\rability_level\030" +
-      "\024 \001(\r\022\022\n\nlocation_x\030\025 \001(\002\022\022\n\nlocation_y\030" +
-      "\026 \001(\002\022\023\n\013gold_reason\030\027 \001(\r\022\025\n\rtimestamp_" +
-      "raw\030\030 \001(\002\022\031\n\021modifier_duration\030\031 \001(\002\022\021\n\t" +
-      "xp_reason\030\032 \001(\r\022\021\n\tlast_hits\030\033 \001(\r\022\025\n\rat" +
-      "tacker_team\030\034 \001(\r\022\023\n\013target_team\030\035 \001(\r\022\030" +
-      "\n\020obs_wards_placed\030\036 \001(\r\022\026\n\016assist_playe" +
-      "r0\030\037 \001(\r\022\026\n\016assist_player1\030  \001(\r\022\026\n\016assi" +
-      "st_player2\030! \001(\r\022\026\n\016assist_player3\030\" \001(\r" +
-      "\022\023\n\013stack_count\030# \001(\r\022\027\n\017hidden_modifier",
-      "\030$ \001(\010\022\032\n\022is_target_building\030% \001(\010\022\031\n\021ne" +
-      "utral_camp_type\030& \001(\r\022\021\n\trune_type\030\' \001(\r" +
-      "\022\026\n\016assist_players\030( \003(\r\022\024\n\014is_heal_save" +
-      "\030) \001(\010\022\033\n\023is_ultimate_ability\030* \001(\010\022\033\n\023a" +
-      "ttacker_hero_level\030+ \001(\r\022\031\n\021target_hero_" +
-      "level\030, \001(\r\022\013\n\003xpm\030- \001(\r\022\013\n\003gpm\030. \001(\r\022\026\n" +
-      "\016event_location\030/ \001(\r\022\026\n\016target_is_self\030" +
-      "0 \001(\010\022\023\n\013damage_type\0301 \001(\r\022\035\n\025invisibili" +
-      "ty_modifier\0302 \001(\010\022\027\n\017damage_category\0303 \001" +
-      "(\r\022\020\n\010networth\0304 \001(\r\022\025\n\rbuilding_type\0305 ",
-      "\001(\r\022!\n\031modifier_elapsed_duration\0306 \001(\002\022\030" +
-      "\n\020silence_modifier\0307 \001(\010\022\033\n\023heal_from_li" +
-      "festeal\0308 \001(\010\022\027\n\017modifier_purged\0309 \001(\010\022\024" +
-      "\n\014spell_evaded\030: \001(\010\022\"\n\032motion_controlle" +
-      "r_modifier\030; \001(\010\022\027\n\017long_range_kill\030< \001(" +
-      "\010\022\036\n\026modifier_purge_ability\030= \001(\r\022\032\n\022mod" +
-      "ifier_purge_npc\030> \001(\r\022\025\n\rroot_modifier\030?" +
-      " \001(\010\022\036\n\026total_unit_death_count\030@ \001(\r\022\025\n\r" +
-      "aura_modifier\030A \001(\010\022\035\n\025armor_debuff_modi" +
-      "fier\030B \001(\010\022#\n\033no_physical_damage_modifie",
-      "r\030C \001(\010\022\030\n\020modifier_ability\030D \001(\r\022\027\n\017mod" +
-      "ifier_hidden\030E \001(\010\022#\n\033inflictor_is_stole" +
-      "n_ability\030F \001(\010\022\030\n\020kill_eater_event\030G \001(" +
-      "\r\022\031\n\021unit_status_label\030H \001(\r*\277\013\n\024DOTA_CO" +
-      "MBATLOG_TYPES\022#\n\026DOTA_COMBATLOG_INVALID\020" +
-      "\377\377\377\377\377\377\377\377\377\001\022\031\n\025DOTA_COMBATLOG_DAMAGE\020\000\022\027\n" +
-      "\023DOTA_COMBATLOG_HEAL\020\001\022\037\n\033DOTA_COMBATLOG" +
-      "_MODIFIER_ADD\020\002\022\"\n\036DOTA_COMBATLOG_MODIFI" +
-      "ER_REMOVE\020\003\022\030\n\024DOTA_COMBATLOG_DEATH\020\004\022\032\n" +
-      "\026DOTA_COMBATLOG_ABILITY\020\005\022\027\n\023DOTA_COMBAT",
-      "LOG_ITEM\020\006\022\033\n\027DOTA_COMBATLOG_LOCATION\020\007\022" +
-      "\027\n\023DOTA_COMBATLOG_GOLD\020\010\022\035\n\031DOTA_COMBATL" +
-      "OG_GAME_STATE\020\t\022\025\n\021DOTA_COMBATLOG_XP\020\n\022\033" +
-      "\n\027DOTA_COMBATLOG_PURCHASE\020\013\022\032\n\026DOTA_COMB" +
-      "ATLOG_BUYBACK\020\014\022\"\n\036DOTA_COMBATLOG_ABILIT" +
-      "Y_TRIGGER\020\r\022\036\n\032DOTA_COMBATLOG_PLAYERSTAT" +
-      "S\020\016\022\034\n\030DOTA_COMBATLOG_MULTIKILL\020\017\022\035\n\031DOT" +
-      "A_COMBATLOG_KILLSTREAK\020\020\022%\n!DOTA_COMBATL" +
-      "OG_TEAM_BUILDING_KILL\020\021\022\036\n\032DOTA_COMBATLO" +
-      "G_FIRST_BLOOD\020\022\022\'\n#DOTA_COMBATLOG_MODIFI",
-      "ER_STACK_EVENT\020\023\022%\n!DOTA_COMBATLOG_NEUTR" +
-      "AL_CAMP_STACK\020\024\022\036\n\032DOTA_COMBATLOG_PICKUP" +
-      "_RUNE\020\025\022%\n!DOTA_COMBATLOG_REVEALED_INVIS" +
-      "IBLE\020\026\022\035\n\031DOTA_COMBATLOG_HERO_SAVED\020\027\022 \n" +
-      "\034DOTA_COMBATLOG_MANA_RESTORED\020\030\022\037\n\033DOTA_" +
-      "COMBATLOG_HERO_LEVELUP\020\031\022#\n\037DOTA_COMBATL" +
-      "OG_BOTTLE_HEAL_ALLY\020\032\022 \n\034DOTA_COMBATLOG_" +
-      "ENDGAME_STATS\020\033\022$\n DOTA_COMBATLOG_INTERR" +
-      "UPT_CHANNEL\020\034\022\036\n\032DOTA_COMBATLOG_ALLIED_G" +
-      "OLD\020\035\022\036\n\032DOTA_COMBATLOG_AEGIS_TAKEN\020\036\022\036\n",
-      "\032DOTA_COMBATLOG_MANA_DAMAGE\020\037\022,\n(DOTA_CO" +
-      "MBATLOG_PHYSICAL_DAMAGE_PREVENTED\020 \022 \n\034D" +
-      "OTA_COMBATLOG_UNIT_SUMMONED\020!\022\037\n\033DOTA_CO" +
-      "MBATLOG_ATTACK_EVADE\020\"\022\033\n\027DOTA_COMBATLOG" +
-      "_TREE_CUT\020#\022\"\n\036DOTA_COMBATLOG_SUCCESSFUL" +
-      "_SCAN\020$\022!\n\035DOTA_COMBATLOG_END_KILLSTREAK" +
-      "\020%\022$\n DOTA_COMBATLOG_BLOODSTONE_CHARGE\020&" +
-      "\022\"\n\036DOTA_COMBATLOG_CRITICAL_DAMAGE\020\'\022\037\n\033" +
-      "DOTA_COMBATLOG_SPELL_ABSORB\020(\022\"\n\036DOTA_CO" +
-      "MBATLOG_UNIT_TELEPORTED\020)\022#\n\037DOTA_COMBAT",
-      "LOG_KILL_EATER_EVENT\020**\233\033\n\021DOTA_CHAT_MES" +
-      "SAGE\022!\n\024CHAT_MESSAGE_INVALID\020\377\377\377\377\377\377\377\377\377\001\022" +
-      "\032\n\026CHAT_MESSAGE_HERO_KILL\020\000\022\032\n\026CHAT_MESS" +
-      "AGE_HERO_DENY\020\001\022\036\n\032CHAT_MESSAGE_BARRACKS" +
-      "_KILL\020\002\022\033\n\027CHAT_MESSAGE_TOWER_KILL\020\003\022\033\n\027" +
-      "CHAT_MESSAGE_TOWER_DENY\020\004\022\033\n\027CHAT_MESSAG" +
-      "E_FIRSTBLOOD\020\005\022\034\n\030CHAT_MESSAGE_STREAK_KI" +
-      "LL\020\006\022\030\n\024CHAT_MESSAGE_BUYBACK\020\007\022\026\n\022CHAT_M" +
-      "ESSAGE_AEGIS\020\010\022\034\n\030CHAT_MESSAGE_ROSHAN_KI" +
-      "LL\020\t\022\035\n\031CHAT_MESSAGE_COURIER_LOST\020\n\022\"\n\036C",
-      "HAT_MESSAGE_COURIER_RESPAWNED\020\013\022\033\n\027CHAT_" +
-      "MESSAGE_GLYPH_USED\020\014\022\036\n\032CHAT_MESSAGE_ITE" +
-      "M_PURCHASE\020\r\022\030\n\024CHAT_MESSAGE_CONNECT\020\016\022\033" +
-      "\n\027CHAT_MESSAGE_DISCONNECT\020\017\022.\n*CHAT_MESS" +
-      "AGE_DISCONNECT_WAIT_FOR_RECONNECT\020\020\022*\n&C" +
-      "HAT_MESSAGE_DISCONNECT_TIME_REMAINING\020\021\022" +
-      "1\n-CHAT_MESSAGE_DISCONNECT_TIME_REMAININ" +
-      "G_PLURAL\020\022\022\032\n\026CHAT_MESSAGE_RECONNECT\020\023\022\034" +
-      "\n\030CHAT_MESSAGE_PLAYER_LEFT\020\024\022\036\n\032CHAT_MES" +
-      "SAGE_SAFE_TO_LEAVE\020\025\022\034\n\030CHAT_MESSAGE_RUN",
-      "E_PICKUP\020\026\022\034\n\030CHAT_MESSAGE_RUNE_BOTTLE\020\027" +
-      "\022\031\n\025CHAT_MESSAGE_INTHEBAG\020\030\022\033\n\027CHAT_MESS" +
-      "AGE_SECRETSHOP\020\031\022#\n\037CHAT_MESSAGE_ITEM_AU" +
-      "TOPURCHASED\020\032\022\037\n\033CHAT_MESSAGE_ITEMS_COMB" +
-      "INED\020\033\022\035\n\031CHAT_MESSAGE_SUPER_CREEPS\020\034\022%\n" +
-      "!CHAT_MESSAGE_CANT_USE_ACTION_ITEM\020\035\022\"\n\036" +
-      "CHAT_MESSAGE_CHARGES_EXHAUSTED\020\036\022\032\n\026CHAT" +
-      "_MESSAGE_CANTPAUSE\020\037\022\035\n\031CHAT_MESSAGE_NOP" +
-      "AUSESLEFT\020 \022\035\n\031CHAT_MESSAGE_CANTPAUSEYET" +
-      "\020!\022\027\n\023CHAT_MESSAGE_PAUSED\020\"\022\"\n\036CHAT_MESS",
-      "AGE_UNPAUSE_COUNTDOWN\020#\022\031\n\025CHAT_MESSAGE_" +
-      "UNPAUSED\020$\022\036\n\032CHAT_MESSAGE_AUTO_UNPAUSED" +
-      "\020%\022\032\n\026CHAT_MESSAGE_YOUPAUSED\020&\022 \n\034CHAT_M" +
-      "ESSAGE_CANTUNPAUSETEAM\020\'\022\"\n\036CHAT_MESSAGE" +
-      "_VOICE_TEXT_BANNED\020)\022.\n*CHAT_MESSAGE_SPE" +
-      "CTATORS_WATCHING_THIS_GAME\020*\022 \n\034CHAT_MES" +
-      "SAGE_REPORT_REMINDER\020+\022\032\n\026CHAT_MESSAGE_E" +
-      "CON_ITEM\020,\022\026\n\022CHAT_MESSAGE_TAUNT\020-\022\027\n\023CH" +
-      "AT_MESSAGE_RANDOM\020.\022\030\n\024CHAT_MESSAGE_RD_T" +
-      "URN\020/\022 \n\034CHAT_MESSAGE_DROP_RATE_BONUS\0201\022",
-      "!\n\035CHAT_MESSAGE_NO_BATTLE_POINTS\0202\022\035\n\031CH" +
-      "AT_MESSAGE_DENIED_AEGIS\0203\022\036\n\032CHAT_MESSAG" +
-      "E_INFORMATIONAL\0204\022\035\n\031CHAT_MESSAGE_AEGIS_" +
-      "STOLEN\0205\022\035\n\031CHAT_MESSAGE_ROSHAN_CANDY\0206\022" +
-      "\034\n\030CHAT_MESSAGE_ITEM_GIFTED\0207\022\'\n#CHAT_ME" +
-      "SSAGE_HERO_KILL_WITH_GREEVIL\0208\022(\n$CHAT_M" +
-      "ESSAGE_HOLDOUT_TOWER_DESTROYED\0209\022\'\n#CHAT" +
-      "_MESSAGE_HOLDOUT_WALL_DESTROYED\020:\022&\n\"CHA" +
-      "T_MESSAGE_HOLDOUT_WALL_FINISHED\020;\022)\n%CHA" +
-      "T_MESSAGE_PLAYER_LEFT_LIMITED_HERO\020>\0221\n-",
-      "CHAT_MESSAGE_ABANDON_LIMITED_HERO_EXPLAN" +
-      "ATION\020?\022(\n$CHAT_MESSAGE_DISCONNECT_LIMIT" +
-      "ED_HERO\020@\0223\n/CHAT_MESSAGE_LOW_PRIORITY_C" +
-      "OMPLETED_EXPLANATION\020A\022,\n(CHAT_MESSAGE_R" +
-      "ECRUITMENT_DROP_RATE_BONUS\020B\0221\n-CHAT_MES" +
-      "SAGE_FROSTIVUS_SHINING_BOOSTER_ACTIVE\020C\022" +
-      " \n\034CHAT_MESSAGE_PLAYER_LEFT_AFK\020I\0222\n.CHA" +
-      "T_MESSAGE_PLAYER_LEFT_DISCONNECTED_TOO_L" +
-      "ONG\020J\022!\n\035CHAT_MESSAGE_PLAYER_ABANDONED\020K" +
-      "\022%\n!CHAT_MESSAGE_PLAYER_ABANDONED_AFK\020L\022",
-      "7\n3CHAT_MESSAGE_PLAYER_ABANDONED_DISCONN" +
-      "ECTED_TOO_LONG\020M\022#\n\037CHAT_MESSAGE_WILL_NO" +
-      "T_BE_SCORED\020N\022*\n&CHAT_MESSAGE_WILL_NOT_B" +
-      "E_SCORED_RANKED\020O\022+\n\'CHAT_MESSAGE_WILL_N" +
-      "OT_BE_SCORED_NETWORK\020P\0222\n.CHAT_MESSAGE_W" +
-      "ILL_NOT_BE_SCORED_NETWORK_RANKED\020Q\022)\n%CH" +
-      "AT_MESSAGE_CAN_QUIT_WITHOUT_ABANDON\020R\022:\n" +
-      "6CHAT_MESSAGE_RANKED_GAME_STILL_SCORED_L" +
-      "EAVERS_GET_LOSS\020S\0228\n4CHAT_MESSAGE_ABANDO" +
-      "N_RANKED_BEFORE_FIRST_BLOOD_PARTY\020T\022!\n\035C",
-      "HAT_MESSAGE_COMPENDIUM_LEVEL\020U\022*\n&CHAT_M" +
-      "ESSAGE_VICTORY_PREDICTION_STREAK\020V\022\"\n\036CH" +
-      "AT_MESSAGE_ASSASSIN_ANNOUNCE\020W\022!\n\035CHAT_M" +
-      "ESSAGE_ASSASSIN_SUCCESS\020X\022 \n\034CHAT_MESSAG" +
-      "E_ASSASSIN_DENIED\020Y\0227\n3CHAT_MESSAGE_VICT" +
-      "ORY_PREDICTION_SINGLE_USER_CONFIRM\020Z\022\034\n\030" +
-      "CHAT_MESSAGE_EFFIGY_KILL\020[\022+\n\'CHAT_MESSA" +
-      "GE_VOICE_TEXT_BANNED_OVERFLOW\020\\\022\"\n\036CHAT_" +
-      "MESSAGE_YEAR_BEAST_KILLED\020]\022 \n\034CHAT_MESS" +
-      "AGE_PAUSE_COUNTDOWN\020^\022\036\n\032CHAT_MESSAGE_CO",
-      "INS_WAGERED\020_\022#\n\037CHAT_MESSAGE_HERO_NOMIN" +
-      "ATED_BAN\020`\022\034\n\030CHAT_MESSAGE_HERO_BANNED\020a" +
-      "\022\037\n\033CHAT_MESSAGE_HERO_BAN_COUNT\020b\022\036\n\032CHA" +
-      "T_MESSAGE_RIVER_PAINTED\020c\022\032\n\026CHAT_MESSAG" +
-      "E_SCAN_USED\020d\022\036\n\032CHAT_MESSAGE_SHRINE_KIL" +
-      "LED\020e\022\"\n\036CHAT_MESSAGE_WAGER_TOKEN_SPENT\020" +
-      "f\022\033\n\027CHAT_MESSAGE_RANK_WAGER\020g\022$\n CHAT_M" +
-      "ESSAGE_NEW_PLAYER_REMINDER\020h*\262\001\n\035DOTA_NO" +
-      "_BATTLE_POINTS_REASONS\022%\n!NO_BATTLE_POIN" +
-      "TS_WRONG_LOBBY_TYPE\020\001\022\"\n\036NO_BATTLE_POINT",
-      "S_PRACTICE_BOTS\020\002\022#\n\037NO_BATTLE_POINTS_CH" +
-      "EATS_ENABLED\020\003\022!\n\035NO_BATTLE_POINTS_LOW_P" +
-      "RIORITY\020\004*\273\001\n\027DOTA_REPLAY_STATE_EVENT\022&\n" +
-      "\"DOTA_REPLAY_STATE_EVENT_GAME_START\020\001\022)\n" +
-      "%DOTA_REPLAY_STATE_EVENT_STARTING_HORN\020\002" +
-      "\022\'\n#DOTA_REPLAY_STATE_EVENT_FIRST_BLOOD\020" +
-      "\003\022$\n DOTA_REPLAY_STATE_EVENT_SHOWCASE\020\004*" +
-      "\317\001\n\027DOTA_CHAT_INFORMATIONAL\022!\n\035INFO_COOP" +
-      "_BATTLE_POINTS_RULES\020\001\022#\n\037INFO_FROSTIVUS" +
-      "_ABANDON_REMINDER\020\002\022\030\n\024INFO_RANKED_REMIN",
-      "DER\020\003\022+\n\'INFO_COOP_LOW_PRIORITY_PASSIVE_" +
-      "REMINDER\020\004\022%\n!INFO_CUSTOM_GAME_PENALTY_R" +
-      "EMINDER\020\005*\200\002\n\026DOTA_ABILITY_PING_TYPE\022\026\n\022" +
-      "ABILITY_PING_READY\020\001\022\025\n\021ABILITY_PING_MAN" +
-      "A\020\002\022\031\n\025ABILITY_PING_COOLDOWN\020\003\022\026\n\022ABILIT" +
-      "Y_PING_ENEMY\020\004\022\032\n\026ABILITY_PING_UNLEARNED" +
-      "\020\005\022\033\n\027ABILITY_PING_INBACKPACK\020\006\022\030\n\024ABILI" +
-      "TY_PING_INSTASH\020\007\022\032\n\026ABILITY_PING_ONCOUR" +
-      "IER\020\010\022\025\n\021ABILITY_PING_ALLY\020\t*\345\001\n\023EDotaEn" +
-      "tityMessages\022\024\n\020DOTA_UNIT_SPEECH\020\000\022\031\n\025DO",
-      "TA_UNIT_SPEECH_MUTE\020\001\022\031\n\025DOTA_UNIT_ADD_G" +
-      "ESTURE\020\002\022\034\n\030DOTA_UNIT_REMOVE_GESTURE\020\003\022!" +
-      "\n\035DOTA_UNIT_REMOVE_ALL_GESTURES\020\004\022\032\n\026DOT" +
-      "A_UNIT_FADE_GESTURE\020\006\022%\n!DOTA_UNIT_SPEEC" +
-      "H_CLIENTSIDE_RULES\020\007*\261\006\n\025DOTA_PARTICLE_M" +
-      "ESSAGE\022&\n\"DOTA_PARTICLE_MANAGER_EVENT_CR" +
-      "EATE\020\000\022&\n\"DOTA_PARTICLE_MANAGER_EVENT_UP" +
-      "DATE\020\001\022.\n*DOTA_PARTICLE_MANAGER_EVENT_UP" +
-      "DATE_FORWARD\020\002\0222\n.DOTA_PARTICLE_MANAGER_" +
-      "EVENT_UPDATE_ORIENTATION\020\003\022/\n+DOTA_PARTI",
-      "CLE_MANAGER_EVENT_UPDATE_FALLBACK\020\004\022*\n&D" +
-      "OTA_PARTICLE_MANAGER_EVENT_UPDATE_ENT\020\005\022" +
-      "-\n)DOTA_PARTICLE_MANAGER_EVENT_UPDATE_OF" +
-      "FSET\020\006\022\'\n#DOTA_PARTICLE_MANAGER_EVENT_DE" +
-      "STROY\020\007\0221\n-DOTA_PARTICLE_MANAGER_EVENT_D" +
-      "ESTROY_INVOLVING\020\010\022\'\n#DOTA_PARTICLE_MANA" +
-      "GER_EVENT_RELEASE\020\t\022\'\n#DOTA_PARTICLE_MAN" +
-      "AGER_EVENT_LATENCY\020\n\022+\n\'DOTA_PARTICLE_MA" +
-      "NAGER_EVENT_SHOULD_DRAW\020\013\022&\n\"DOTA_PARTIC" +
-      "LE_MANAGER_EVENT_FROZEN\020\014\022?\n;DOTA_PARTIC",
-      "LE_MANAGER_EVENT_CHANGE_CONTROL_POINT_AT" +
-      "TACHMENT\020\r\0226\n2DOTA_PARTICLE_MANAGER_EVEN" +
-      "T_UPDATE_ENTITY_POSITION\020\016\0222\n.DOTA_PARTI" +
-      "CLE_MANAGER_EVENT_SET_FOW_PROPERTIES\020\017\022(" +
-      "\n$DOTA_PARTICLE_MANAGER_EVENT_SET_TEXT\020\020" +
-      "*\261\005\n\023DOTA_OVERHEAD_ALERT\022\027\n\023OVERHEAD_ALE" +
-      "RT_GOLD\020\000\022\027\n\023OVERHEAD_ALERT_DENY\020\001\022\033\n\027OV" +
-      "ERHEAD_ALERT_CRITICAL\020\002\022\025\n\021OVERHEAD_ALER" +
-      "T_XP\020\003\022%\n!OVERHEAD_ALERT_BONUS_SPELL_DAM" +
-      "AGE\020\004\022\027\n\023OVERHEAD_ALERT_MISS\020\005\022\031\n\025OVERHE",
-      "AD_ALERT_DAMAGE\020\006\022\030\n\024OVERHEAD_ALERT_EVAD" +
-      "E\020\007\022\030\n\024OVERHEAD_ALERT_BLOCK\020\010\022&\n\"OVERHEA" +
-      "D_ALERT_BONUS_POISON_DAMAGE\020\t\022\027\n\023OVERHEA" +
-      "D_ALERT_HEAL\020\n\022\033\n\027OVERHEAD_ALERT_MANA_AD" +
-      "D\020\013\022\034\n\030OVERHEAD_ALERT_MANA_LOSS\020\014\022!\n\035OVE" +
-      "RHEAD_ALERT_LAST_HIT_EARLY\020\r\022!\n\035OVERHEAD" +
-      "_ALERT_LAST_HIT_CLOSE\020\016\022 \n\034OVERHEAD_ALER" +
-      "T_LAST_HIT_MISS\020\017\022 \n\034OVERHEAD_ALERT_MAGI" +
-      "CAL_BLOCK\020\020\022\"\n\036OVERHEAD_ALERT_INCOMING_D" +
-      "AMAGE\020\021\022\"\n\036OVERHEAD_ALERT_OUTGOING_DAMAG",
-      "E\020\022\022!\n\035OVERHEAD_ALERT_DISABLE_RESIST\020\023\022\030" +
-      "\n\024OVERHEAD_ALERT_DEATH\020\024\022\032\n\026OVERHEAD_ALE" +
-      "RT_BLOCKED\020\025*k\n\021DOTA_ROSHAN_PHASE\022\027\n\023k_S" +
-      "RSP_ROSHAN_ALIVE\020\000\022\034\n\030k_SRSP_ROSHAN_BASE" +
-      "_TIMER\020\001\022\037\n\033k_SRSP_ROSHAN_VISIBLE_TIMER\020" +
-      "\002*\201\004\n\026DOTA_POSITION_CATEGORY\022\026\n\022DOTA_POS" +
-      "ITION_NONE\020\000\022\035\n\031DOTA_POSITION_BOTTOM_LAN" +
-      "E\020\001\022\032\n\026DOTA_POSITION_MID_LANE\020\002\022\032\n\026DOTA_" +
-      "POSITION_TOP_LANE\020\003\022 \n\034DOTA_POSITION_RAD" +
-      "IANT_JUNGLE\020\004\022\035\n\031DOTA_POSITION_DIRE_JUNG",
-      "LE\020\005\022\"\n\036DOTA_POSITION_RADIANT_ANCIENTS\020\006" +
-      "\022\037\n\033DOTA_POSITION_DIRE_ANCIENTS\020\007\022%\n!DOT" +
-      "A_POSITION_RADIANT_SECRET_SHOP\020\010\022\"\n\036DOTA" +
-      "_POSITION_DIRE_SECRET_SHOP\020\t\022\027\n\023DOTA_POS" +
-      "ITION_RIVER\020\n\022\034\n\030DOTA_POSITION_ROSHAN_PI" +
-      "T\020\013\022\036\n\032DOTA_POSITION_RADIANT_BASE\020\014\022\033\n\027D" +
-      "OTA_POSITION_DIRE_BASE\020\r\022\032\n\026DOTA_POSITIO" +
-      "N_FOUNTAIN\020\016\022\027\n\023DOTA_POSITION_OTHER\020\017*\346\001" +
-      "\n\030DOTA_ABILITY_TARGET_TYPE\022\034\n\030DOTA_ABILI" +
-      "TY_TARGET_NONE\020\000\022\034\n\030DOTA_ABILITY_TARGET_",
-      "SELF\020\001\022!\n\035DOTA_ABILITY_TARGET_ALLY_HERO\020" +
-      "\002\022\"\n\036DOTA_ABILITY_TARGET_ALLY_CREEP\020\003\022\"\n" +
-      "\036DOTA_ABILITY_TARGET_ENEMY_HERO\020\004\022#\n\037DOT" +
-      "A_ABILITY_TARGET_ENEMY_CREEP\020\005*\230\010\n\rEHero" +
-      "StatType\022\030\n\024k_EHeroStatType_None\020\000\022#\n\036k_" +
-      "EHeroStatType_AxeTotalDamage\020\320\017\022\'\n\"k_EHe" +
-      "roStatType_BattleHungerDamage\020\321\017\022\'\n\"k_EH" +
-      "eroStatType_CounterHelixDamage\020\322\017\022\'\n\"k_E" +
-      "HeroStatType_CullingBladeDamage\020\323\017\022,\n\'k_" +
-      "EHeroStatType_BerserkersCallCastCount\020\324\017",
-      "\0223\n.k_EHeroStatType_BerserkersCallHeroes" +
-      "HitAverage\020\325\017\0220\n+k_EHeroStatType_Berserk" +
-      "ersCallOtherUnitsHit\020\326\017\0223\n.k_EHeroStatTy" +
-      "pe_BerserkersCallHeroAttacksTaken\020\327\017\0224\n/" +
-      "k_EHeroStatType_BerserkersCallOtherAttac" +
-      "ksTaken\020\330\017\022*\n%k_EHeroStatType_BattleHung" +
-      "erCastCount\020\331\017\0222\n-k_EHeroStatType_Battle" +
-      "HungerPotentialDuration\020\332\017\0220\n+k_EHeroSta" +
-      "tType_BattleHungerAverageDuration\020\333\017\022*\n%" +
-      "k_EHeroStatType_CounterHelixProcCount\020\334\017",
-      "\022.\n)k_EHeroStatType_CounterHelixHeroProc" +
-      "Count\020\335\017\0221\n,k_EHeroStatType_CounterHelix" +
-      "HeroesHitAverage\020\336\017\0223\n.k_EHeroStatType_C" +
-      "ounterHelixOtherUnitsHitCount\020\337\017\022*\n%k_EH" +
-      "eroStatType_CullingBladeCastCount\020\340\017\022*\n%" +
-      "k_EHeroStatType_CullingBladeKillCount\020\341\017" +
-      "\0224\n/k_EHeroStatType_CullingBladeAverageH" +
-      "ealthCulled\020\342\017\0227\n2k_EHeroStatType_Cullin" +
-      "gBladeAverageDamageAvailable\020\343\017\0220\n+k_EHe" +
-      "roStatType_CullingBladeHeroBuffAverage\020\344",
-      "\017*\251\004\n\027EPlayerVoiceListenState\022\016\n\nkPVLS_N" +
-      "one\020\000\022\032\n\026kPVLS_DeniedChatBanned\020\001\022\027\n\023kPV" +
-      "LS_DeniedPartner\020\002\022&\n\"kPVLS_DeniedHLTVTa" +
-      "lkerNotSpectator\020\003\022$\n kPVLS_DeniedHLTVNo" +
-      "TalkerPlayerID\020\004\022(\n$kPVLS_DeniedHLTVTalk" +
-      "erNotBroadcaster\020\005\022\035\n\031kPVLS_DeniedTeamSp" +
-      "ectator\020\006\022\027\n\023kPVLS_DeniedStudent\020\010\022\020\n\014kP" +
-      "VLS_Denied\020@\022&\n\"kPVLS_AllowHLTVTalkerIsB" +
-      "roadcaster\020A\022\034\n\030kPVLS_AllowCoBroadcaster" +
-      "\020B\022\026\n\022kPVLS_AllowAllChat\020C\022\035\n\031kPVLS_Allo",
-      "wStudentToCoach\020D\022\034\n\030kPVLS_AllowFellowSt" +
-      "udent\020E\022\034\n\030kPVLS_AllowTalkerIsCoach\020F\022\034\n" +
-      "\030kPVLS_AllowCoachHearTeam\020G\022\027\n\023kPVLS_All" +
-      "owSameTeam\020H\022\027\n\023kPVLS_AllowShowcase\020I*B\n" +
-      "\020EProjectionEvent\022\022\n\016ePE_FirstBlood\020\000\022\032\n" +
-      "\026ePE_Killstreak_godlike\020\001B=\n$skadistats." +
-      "clarity.wire.common.protoB\020DotaUserMessa" +
-      "gesH\001\200\001\000"
+      " \001(\r\022\027\n\017target_entindex\030\002 \001(\r\022\027\n\017show_ra",
+      "w_values\030\003 \001(\010\"\343\001\n\037CDOTAUserMsg_CourierK" +
+      "illedAlert\022\014\n\004team\030\001 \001(\r\022\022\n\ngold_value\030\002" +
+      " \001(\r\022\025\n\rentity_handle\030\003 \001(\005\022\021\n\ttimestamp" +
+      "\030\004 \001(\005\022=\n\nlost_items\030\005 \003(\0132).CDOTAUserMs" +
+      "g_CourierKilledAlert.LostItem\0325\n\010LostIte" +
+      "m\022\027\n\017item_ability_id\030\001 \001(\005\022\020\n\010quantity\030\002" +
+      " \001(\r\"\214\001\n\031CDOTAUserMsg_MinimapEvent\022\022\n\nev" +
+      "ent_type\030\001 \001(\005\022\025\n\rentity_handle\030\002 \001(\005\022\t\n" +
+      "\001x\030\003 \001(\005\022\t\n\001y\030\004 \001(\005\022\020\n\010duration\030\005 \001(\005\022\034\n" +
+      "\024target_entity_handle\030\006 \001(\005\"M\n\024CDOTAUser",
+      "Msg_MapLine\022\021\n\tplayer_id\030\001 \001(\005\022\"\n\007maplin" +
+      "e\030\002 \001(\0132\021.CDOTAMsg_MapLine\"\247\002\n#CDOTAUser" +
+      "Msg_CreateLinearProjectile\022\033\n\006origin\030\001 \001" +
+      "(\0132\013.CMsgVector\022\037\n\010velocity\030\002 \001(\0132\r.CMsg" +
+      "Vector2D\022\017\n\007latency\030\003 \001(\005\022\020\n\010entindex\030\004 " +
+      "\001(\005\022\026\n\016particle_index\030\005 \001(\004\022\016\n\006handle\030\006 " +
+      "\001(\005\022#\n\014acceleration\030\007 \001(\0132\r.CMsgVector2D" +
+      "\022\021\n\tmax_speed\030\010 \001(\002\022\022\n\nfow_radius\030\t \001(\002\022" +
+      "\031\n\021sticky_fow_reveal\030\n \001(\010\022\020\n\010distance\030\013" +
+      " \001(\002\"6\n$CDOTAUserMsg_DestroyLinearProjec",
+      "tile\022\016\n\006handle\030\001 \001(\005\"O\n%CDOTAUserMsg_Dod" +
+      "geTrackingProjectiles\022\020\n\010entindex\030\001 \002(\005\022" +
+      "\024\n\014attacks_only\030\002 \001(\010\"_\n!CDOTAUserMsg_Sp" +
+      "ectatorPlayerClick\022\020\n\010entindex\030\001 \002(\005\022\022\n\n" +
+      "order_type\030\002 \001(\005\022\024\n\014target_index\030\003 \001(\005\"\316" +
+      "\001\n&CDOTAUserMsg_SpectatorPlayerUnitOrder" +
+      "s\022\020\n\010entindex\030\001 \001(\005\022\022\n\norder_type\030\002 \001(\005\022" +
+      "\r\n\005units\030\003 \003(\005\022\024\n\014target_index\030\004 \001(\005\022\022\n\n" +
+      "ability_id\030\005 \001(\005\022\035\n\010position\030\006 \001(\0132\013.CMs" +
+      "gVector\022\r\n\005queue\030\007 \001(\010\022\027\n\017sequence_numbe",
+      "r\030\010 \001(\005\"s\n\035CDOTAUserMsg_NevermoreRequiem" +
+      "\022\025\n\rentity_handle\030\001 \001(\005\022\r\n\005lines\030\002 \001(\005\022\033" +
+      "\n\006origin\030\003 \001(\0132\013.CMsgVector\022\017\n\007reverse\030\004" +
+      " \001(\010\")\n\025CDOTAUserMsg_HudError\022\020\n\010order_i" +
+      "d\030\001 \001(\005\"c\n\033CDOTAUserMsg_SharedCooldown\022\020" +
+      "\n\010entindex\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\020\n\010cooldo" +
+      "wn\030\003 \001(\002\022\022\n\nname_index\030\004 \001(\005\"X\n\033CDOTAUse" +
+      "rMsg_HalloweenDrops\022\021\n\titem_defs\030\001 \003(\r\022\022" +
+      "\n\nplayer_ids\030\002 \003(\r\022\022\n\nprize_list\030\003 \001(\r\"\223" +
+      "\003\n\035CDOTAUserMsg_PredictionResult\022\022\n\nacco",
+      "unt_id\030\001 \001(\r\022\020\n\010match_id\030\002 \001(\004\022\017\n\007correc" +
+      "t\030\003 \001(\010\022>\n\013predictions\030\004 \003(\0132).CDOTAUser" +
+      "Msg_PredictionResult.Prediction\032\372\001\n\nPred" +
+      "iction\022\020\n\010item_def\030\001 \001(\r\022\023\n\013num_correct\030" +
+      "\002 \001(\r\022\021\n\tnum_fails\030\003 \001(\r\022X\n\006result\030\004 \001(\016" +
+      "21.CDOTAUserMsg_PredictionResult.Predict" +
+      "ion.EResult:\025k_eResult_ItemGranted\022\031\n\021gr" +
+      "anted_item_defs\030\006 \003(\r\"=\n\007EResult\022\031\n\025k_eR" +
+      "esult_ItemGranted\020\001\022\027\n\023k_eResult_Destroy" +
+      "ed\020\002\"\376\001\n\034CDOTAResponseQuerySerialized\0221\n",
+      "\005facts\030\001 \003(\0132\".CDOTAResponseQuerySeriali" +
+      "zed.Fact\032\252\001\n\004Fact\022\013\n\003key\030\001 \002(\005\022F\n\007valtyp" +
+      "e\030\002 \002(\0162,.CDOTAResponseQuerySerialized.F" +
+      "act.ValueType:\007NUMERIC\022\023\n\013val_numeric\030\003 " +
+      "\001(\002\022\022\n\nval_string\030\004 \001(\t\"$\n\tValueType\022\013\n\007" +
+      "NUMERIC\020\001\022\n\n\006STRING\020\002\"\220\001\n\030CDOTASpeechMat" +
+      "chOnClient\022\017\n\007concept\030\001 \001(\005\022\026\n\016recipient" +
+      "_type\030\002 \001(\005\0224\n\rresponsequery\030\003 \001(\0132\035.CDO" +
+      "TAResponseQuerySerialized\022\025\n\nrandomseed\030" +
+      "\004 \001(\017:\0010\"\350\006\n\026CDOTAUserMsg_UnitEvent\0228\n\010m",
+      "sg_type\030\001 \002(\0162\024.EDotaEntityMessages:\020DOT" +
+      "A_UNIT_SPEECH\022\024\n\014entity_index\030\002 \002(\005\022.\n\006s" +
+      "peech\030\003 \001(\0132\036.CDOTAUserMsg_UnitEvent.Spe" +
+      "ech\0227\n\013speech_mute\030\004 \001(\0132\".CDOTAUserMsg_" +
+      "UnitEvent.SpeechMute\0227\n\013add_gesture\030\005 \001(" +
+      "\0132\".CDOTAUserMsg_UnitEvent.AddGesture\022=\n" +
+      "\016remove_gesture\030\006 \001(\0132%.CDOTAUserMsg_Uni" +
+      "tEvent.RemoveGesture\0229\n\014blood_impact\030\007 \001" +
+      "(\0132#.CDOTAUserMsg_UnitEvent.BloodImpact\022" +
+      "9\n\014fade_gesture\030\010 \001(\0132#.CDOTAUserMsg_Uni",
+      "tEvent.FadeGesture\0229\n\026speech_match_on_cl" +
+      "ient\030\t \001(\0132\031.CDOTASpeechMatchOnClient\032k\n" +
+      "\006Speech\022\017\n\007concept\030\001 \001(\005\022\020\n\010response\030\002 \001" +
+      "(\t\022\026\n\016recipient_type\030\003 \001(\005\022\r\n\005level\030\004 \001(" +
+      "\005\022\027\n\010muteable\030\005 \001(\010:\005false\032 \n\nSpeechMute" +
+      "\022\022\n\005delay\030\001 \001(\002:\0030.5\032W\n\nAddGesture\022\020\n\010ac" +
+      "tivity\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\022\022\n\007fade_in\030\003 " +
+      "\001(\002:\0010\022\025\n\010fade_out\030\004 \001(\002:\0030.1\032!\n\rRemoveG" +
+      "esture\022\020\n\010activity\030\001 \001(\005\032@\n\013BloodImpact\022" +
+      "\r\n\005scale\030\001 \001(\005\022\020\n\010x_normal\030\002 \001(\005\022\020\n\010y_no",
+      "rmal\030\003 \001(\005\032\037\n\013FadeGesture\022\020\n\010activity\030\001 " +
+      "\001(\005\"5\n\032CDOTAUserMsg_ItemPurchased\022\027\n\017ite" +
+      "m_ability_id\030\001 \001(\005\"\337\026\n\034CDOTAUserMsg_Part" +
+      "icleManager\022H\n\004type\030\001 \001(\0162\026.DOTA_PARTICL" +
+      "E_MESSAGE:\"DOTA_PARTICLE_MANAGER_EVENT_C" +
+      "REATE\022\r\n\005index\030\002 \002(\r\022R\n\026release_particle" +
+      "_index\030\003 \001(\01322.CDOTAUserMsg_ParticleMana" +
+      "ger.ReleaseParticleIndex\022E\n\017create_parti" +
+      "cle\030\004 \001(\0132,.CDOTAUserMsg_ParticleManager" +
+      ".CreateParticle\022G\n\020destroy_particle\030\005 \001(",
+      "\0132-.CDOTAUserMsg_ParticleManager.Destroy" +
+      "Particle\022Z\n\032destroy_particle_involving\030\006" +
+      " \001(\01326.CDOTAUserMsg_ParticleManager.Dest" +
+      "royParticleInvolving\022E\n\017update_particle\030" +
+      "\007 \001(\0132,.CDOTAUserMsg_ParticleManager.Upd" +
+      "ateParticle\022L\n\023update_particle_fwd\030\010 \001(\013" +
+      "2/.CDOTAUserMsg_ParticleManager.UpdatePa" +
+      "rticleFwd\022R\n\026update_particle_orient\030\t \001(" +
+      "\01322.CDOTAUserMsg_ParticleManager.UpdateP" +
+      "articleOrient\022V\n\030update_particle_fallbac",
+      "k\030\n \001(\01324.CDOTAUserMsg_ParticleManager.U" +
+      "pdateParticleFallback\022R\n\026update_particle" +
+      "_offset\030\013 \001(\01322.CDOTAUserMsg_ParticleMan" +
+      "ager.UpdateParticleOffset\022L\n\023update_part" +
+      "icle_ent\030\014 \001(\0132/.CDOTAUserMsg_ParticleMa" +
+      "nager.UpdateParticleEnt\022[\n\033update_partic" +
+      "le_should_draw\030\016 \001(\01326.CDOTAUserMsg_Part" +
+      "icleManager.UpdateParticleShouldDraw\022Y\n\032" +
+      "update_particle_set_frozen\030\017 \001(\01325.CDOTA" +
+      "UserMsg_ParticleManager.UpdateParticleSe",
+      "tFrozen\022c\n\037change_control_point_attachme" +
+      "nt\030\020 \001(\0132:.CDOTAUserMsg_ParticleManager." +
+      "ChangeControlPointAttachment\022R\n\026update_e" +
+      "ntity_position\030\021 \001(\01322.CDOTAUserMsg_Part" +
+      "icleManager.UpdateEntityPosition\022[\n\033set_" +
+      "particle_fow_properties\030\022 \001(\01326.CDOTAUse" +
+      "rMsg_ParticleManager.SetParticleFoWPrope" +
+      "rties\022H\n\021set_particle_text\030\023 \001(\0132-.CDOTA" +
+      "UserMsg_ParticleManager.SetParticleText\022" +
+      "^\n\035set_particle_should_check_fow\030\024 \001(\01327",
+      ".CDOTAUserMsg_ParticleManager.SetParticl" +
+      "eShouldCheckFoW\032\026\n\024ReleaseParticleIndex\032" +
+      "~\n\016CreateParticle\022\033\n\023particle_name_index" +
+      "\030\001 \001(\006\022\023\n\013attach_type\030\002 \001(\005\022\025\n\rentity_ha" +
+      "ndle\030\003 \001(\005\022#\n\033entity_handle_for_modifier" +
+      "s\030\004 \001(\005\032.\n\017DestroyParticle\022\033\n\023destroy_im" +
+      "mediately\030\001 \001(\010\032N\n\030DestroyParticleInvolv" +
+      "ing\022\033\n\023destroy_immediately\030\001 \001(\010\022\025\n\renti" +
+      "ty_handle\030\003 \001(\005\032F\n\016UpdateParticle\022\025\n\rcon" +
+      "trol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMs",
+      "gVector\032H\n\021UpdateParticleFwd\022\025\n\rcontrol_" +
+      "point\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVecto" +
+      "r\032\200\001\n\024UpdateParticleOrient\022\025\n\rcontrol_po" +
+      "int\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVector\022" +
+      "\032\n\005right\030\003 \001(\0132\013.CMsgVector\022\027\n\002up\030\004 \001(\0132" +
+      "\013.CMsgVector\032N\n\026UpdateParticleFallback\022\025" +
+      "\n\rcontrol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132" +
+      "\013.CMsgVector\032Q\n\024UpdateParticleOffset\022\025\n\r" +
+      "control_point\030\001 \001(\005\022\"\n\rorigin_offset\030\002 \001" +
+      "(\0132\013.CMsgVector\032\255\001\n\021UpdateParticleEnt\022\025\n",
+      "\rcontrol_point\030\001 \001(\005\022\025\n\rentity_handle\030\002 " +
+      "\001(\005\022\023\n\013attach_type\030\003 \001(\005\022\022\n\nattachment\030\004" +
+      " \001(\005\022&\n\021fallback_position\030\005 \001(\0132\013.CMsgVe" +
+      "ctor\022\031\n\021include_wearables\030\006 \001(\010\032-\n\027Updat" +
+      "eParticleSetFrozen\022\022\n\nset_frozen\030\001 \001(\010\032/" +
+      "\n\030UpdateParticleShouldDraw\022\023\n\013should_dra" +
+      "w\030\001 \001(\010\032e\n\034ChangeControlPointAttachment\022" +
+      "\026\n\016attachment_old\030\001 \001(\005\022\026\n\016attachment_ne" +
+      "w\030\002 \001(\005\022\025\n\rentity_handle\030\003 \001(\005\032L\n\024Update" +
+      "EntityPosition\022\025\n\rentity_handle\030\001 \001(\005\022\035\n",
+      "\010position\030\002 \001(\0132\013.CMsgVector\032e\n\030SetParti" +
+      "cleFoWProperties\022\031\n\021fow_control_point\030\001 " +
+      "\001(\005\022\032\n\022fow_control_point2\030\002 \001(\005\022\022\n\nfow_r" +
+      "adius\030\003 \001(\002\032.\n\031SetParticleShouldCheckFoW" +
+      "\022\021\n\tcheck_fow\030\001 \001(\010\032\037\n\017SetParticleText\022\014" +
+      "\n\004text\030\001 \001(\t\"\305\001\n\032CDOTAUserMsg_OverheadEv" +
+      "ent\022?\n\014message_type\030\001 \001(\0162\024.DOTA_OVERHEA" +
+      "D_ALERT:\023OVERHEAD_ALERT_GOLD\022\r\n\005value\030\002 " +
+      "\001(\005\022\036\n\026target_player_entindex\030\003 \001(\005\022\027\n\017t" +
+      "arget_entindex\030\004 \001(\005\022\036\n\026source_player_en",
+      "tindex\030\005 \001(\005\"S\n\026CDOTAUserMsg_WorldLine\022\021" +
+      "\n\tplayer_id\030\001 \001(\005\022&\n\tworldline\030\002 \001(\0132\023.C" +
+      "DOTAMsg_WorldLine\"o\n\026CDOTAUserMsg_ChatWh" +
+      "eel\022\027\n\017chat_message_id\030\001 \001(\r\022\021\n\tplayer_i" +
+      "d\030\002 \001(\r\022\022\n\naccount_id\030\003 \001(\r\022\025\n\rparam_her" +
+      "o_id\030\004 \001(\r\"3\n\"CDOTAUserMsg_GamerulesStat" +
+      "eChanged\022\r\n\005state\030\001 \001(\r\"[\n\032CDOTAUserMsg_" +
+      "SendStatPopup\022\021\n\tplayer_id\030\001 \001(\005\022*\n\tstat" +
+      "popup\030\002 \001(\0132\027.CDOTAMsg_SendStatPopup\"Z\n!" +
+      "CDOTAUserMsg_DismissAllStatPopups\0225\n\rdis",
+      "missallmsg\030\001 \001(\0132\036.CDOTAMsg_DismissAllSt" +
+      "atPopups\"\217\001\n%CDOTAUserMsg_SendRoshanSpec" +
+      "tatorPhase\0226\n\005phase\030\001 \001(\0162\022.DOTA_ROSHAN_" +
+      "PHASE:\023k_SRSP_ROSHAN_ALIVE\022\030\n\020phase_star" +
+      "t_time\030\002 \001(\005\022\024\n\014phase_length\030\003 \001(\005\"C\n\034CD" +
+      "OTAUserMsg_SendRoshanPopup\022\021\n\treclaimed\030" +
+      "\001 \001(\010\022\020\n\010gametime\030\002 \001(\005\"\310\002\n\032CDOTAUserMsg" +
+      "_TE_Projectile\022\017\n\007hSource\030\001 \001(\005\022\017\n\007hTarg" +
+      "et\030\002 \001(\005\022\021\n\tmoveSpeed\030\003 \001(\005\022\030\n\020sourceAtt" +
+      "achment\030\004 \001(\005\022\034\n\024particleSystemHandle\030\005 ",
+      "\001(\003\022\021\n\tdodgeable\030\006 \001(\010\022\020\n\010isAttack\030\007 \001(\010" +
+      "\022\020\n\010isEvaded\030\010 \001(\010\022\022\n\nexpireTime\030\t \001(\002\022\025" +
+      "\n\rmaximpacttime\030\n \001(\002\022\025\n\rcolorgemcolor\030\013" +
+      " \001(\007\022\023\n\013launch_tick\030\014 \001(\005\022\016\n\006handle\030\r \001(" +
+      "\005\022\037\n\nvTargetLoc\030\016 \001(\0132\013.CMsgVector\"\252\002\n\035C" +
+      "DOTAUserMsg_TE_ProjectileLoc\022\037\n\nvSourceL" +
+      "oc\030\001 \001(\0132\013.CMsgVector\022\017\n\007hTarget\030\002 \001(\005\022\021" +
+      "\n\tmoveSpeed\030\003 \001(\005\022\034\n\024particleSystemHandl" +
+      "e\030\004 \001(\003\022\021\n\tdodgeable\030\005 \001(\010\022\020\n\010isAttack\030\006" +
+      " \001(\010\022\020\n\010isEvaded\030\010 \001(\010\022\022\n\nexpireTime\030\t \001",
+      "(\002\022\037\n\nvTargetLoc\030\n \001(\0132\013.CMsgVector\022\025\n\rc" +
+      "olorgemcolor\030\013 \001(\007\022\023\n\013launch_tick\030\014 \001(\005\022" +
+      "\016\n\006handle\030\r \001(\005\"3\n!CDOTAUserMsg_TE_Destr" +
+      "oyProjectile\022\016\n\006handle\030\001 \001(\005\"b\n\037CDOTAUse" +
+      "rMsg_TE_DotaBloodImpact\022\016\n\006entity\030\001 \001(\005\022" +
+      "\r\n\005scale\030\002 \001(\002\022\017\n\007xnormal\030\003 \001(\002\022\017\n\007ynorm" +
+      "al\030\004 \001(\002\"\221\001\n\035CDOTAUserMsg_TE_UnitAnimati" +
+      "on\022\016\n\006entity\030\001 \001(\005\022\027\n\017sequenceVariant\030\002 " +
+      "\001(\005\022\024\n\014playbackrate\030\003 \001(\002\022\021\n\tcastpoint\030\004" +
+      " \001(\002\022\014\n\004type\030\005 \001(\005\022\020\n\010activity\030\006 \001(\005\"@\n ",
+      "CDOTAUserMsg_TE_UnitAnimationEnd\022\016\n\006enti" +
+      "ty\030\001 \001(\005\022\014\n\004snap\030\002 \001(\010\"Y\n\031CDOTAUserMsg_A" +
+      "bilitySteal\022\021\n\tplayer_id\030\001 \001(\r\022\022\n\nabilit" +
+      "y_id\030\002 \001(\r\022\025\n\rability_level\030\003 \001(\r\"f\n\034CDO" +
+      "TAUserMsg_StatsHeroLookup\022\021\n\tplayer_id\030\001" +
+      " \001(\005\022\017\n\007hero_id\030\002 \001(\005\022\021\n\thero_name\030\003 \001(\t" +
+      "\022\017\n\007persona\030\004 \001(\t\"\372\001\n\"CDOTAUserMsg_Stats" +
+      "HeroPositionInfo\022\030\n\020average_position\030\001 \001" +
+      "(\002\022J\n\020position_details\030\002 \003(\01320.CDOTAUser" +
+      "Msg_StatsHeroPositionInfo.PositionPair\032n",
+      "\n\014PositionPair\022F\n\021position_category\030\001 \001(" +
+      "\0162\027.DOTA_POSITION_CATEGORY:\022DOTA_POSITIO" +
+      "N_NONE\022\026\n\016position_count\030\002 \001(\r\"\254\001\n!CDOTA" +
+      "UserMsg_StatsPlayerKillShare\022\021\n\tplayer_i" +
+      "d\030\001 \001(\005\022\032\n\022kill_share_percent\030\002 \001(\002\022\024\n\014p" +
+      "layer_loc_x\030\003 \001(\002\022\024\n\014player_loc_y\030\004 \001(\002\022" +
+      "\026\n\016health_percent\030\005 \001(\002\022\024\n\014mana_percent\030" +
+      "\006 \001(\002\"\304\001\n\035CDOTAUserMsg_StatsKillDetails\022" +
+      "\021\n\tvictim_id\030\001 \001(\r\0227\n\013kill_shares\030\002 \003(\0132" +
+      "\".CDOTAUserMsg_StatsPlayerKillShare\022\026\n\016d",
+      "amage_to_kill\030\003 \001(\r\022\030\n\020effective_health\030" +
+      "\004 \001(\r\022\022\n\ndeath_time\030\005 \001(\002\022\021\n\tkiller_id\030\006" +
+      " \001(\r\"v\n\023CMsgHeroAbilityStat\0227\n\tstat_type" +
+      "\030\001 \001(\0162\016.EHeroStatType:\024k_EHeroStatType_" +
+      "None\022\021\n\tint_value\030\002 \001(\005\022\023\n\013float_value\030\003" +
+      " \001(\002\"d\n\034CMsgCombatAnalyzerPlayerStat\022\022\n\n" +
+      "account_id\030\001 \001(\r\0220\n\022hero_ability_stats\030\002" +
+      " \003(\0132\024.CMsgHeroAbilityStat\"`\n\027CMsgCombat" +
+      "AnalyzerStats\022\020\n\010match_id\030\001 \001(\004\0223\n\014playe" +
+      "r_stats\030\002 \003(\0132\035.CMsgCombatAnalyzerPlayer",
+      "Stat\"\334\001\n\036CDOTAUserMsg_ProjectionAbility\022" +
+      "\022\n\nability_id\030\001 \001(\r\022\030\n\020caster_ent_index\030" +
+      "\002 \001(\005\022\023\n\013caster_team\030\003 \001(\005\022\023\n\013channel_en" +
+      "d\030\004 \001(\010\022\033\n\006origin\030\005 \001(\0132\013.CMsgVector\022\031\n\021" +
+      "track_caster_only\030\006 \001(\010\022\020\n\010end_time\030\007 \001(" +
+      "\002\022\030\n\020victim_ent_index\030\010 \001(\005\"a\n\034CDOTAUser" +
+      "Msg_ProjectionEvent\0223\n\010event_id\030\001 \001(\0162\021." +
+      "EProjectionEvent:\016ePE_FirstBlood\022\014\n\004team" +
+      "\030\002 \001(\r\"B\n\024CDOTAUserMsg_XPAlert\022\021\n\tplayer" +
+      "_id\030\001 \001(\r\022\027\n\017target_entindex\030\002 \001(\r\"A\n\036CD",
+      "OTAUserMsg_SelectPenaltyGold\022\021\n\tplayer_i" +
+      "d\030\001 \002(\r\022\014\n\004cost\030\002 \001(\021\"z\n\033CDOTAUserMsg_Ro" +
+      "llDiceResult\022\021\n\tplayer_id\030\001 \001(\r\022\024\n\014chann" +
+      "el_type\030\002 \001(\r\022\020\n\010roll_min\030\003 \001(\r\022\020\n\010roll_" +
+      "max\030\004 \001(\r\022\016\n\006result\030\005 \001(\r\"V\n\033CDOTAUserMs" +
+      "g_FlipCoinResult\022\021\n\tplayer_id\030\001 \001(\r\022\024\n\014c" +
+      "hannel_type\030\002 \001(\r\022\016\n\006result\030\003 \001(\010\"N\n#CDO" +
+      "TAUserMessage_TeamCaptainChanged\022\014\n\004team" +
+      "\030\001 \001(\r\022\031\n\021captain_player_id\030\002 \001(\r\"k\n\036CDO" +
+      "TAUserMsg_HeroRelicProgress\022\027\n\017hero_reli",
+      "c_type\030\001 \001(\r\022\r\n\005value\030\002 \001(\r\022\017\n\007ehandle\030\003" +
+      " \001(\r\022\020\n\010event_id\030\004 \001(\r\"c\n\031CDOTAUserMsg_S" +
+      "alutePlayer\022\030\n\020source_player_id\030\001 \001(\005\022\030\n" +
+      "\020target_player_id\030\002 \001(\005\022\022\n\ntip_amount\030\003 " +
+      "\001(\r\"\274\016\n\026CMsgDOTACombatLogEntry\022:\n\004type\030\001" +
+      " \001(\0162\025.DOTA_COMBATLOG_TYPES:\025DOTA_COMBAT" +
+      "LOG_DAMAGE\022\023\n\013target_name\030\002 \001(\r\022\032\n\022targe" +
+      "t_source_name\030\003 \001(\r\022\025\n\rattacker_name\030\004 \001" +
+      "(\r\022\032\n\022damage_source_name\030\005 \001(\r\022\026\n\016inflic" +
+      "tor_name\030\006 \001(\r\022\034\n\024is_attacker_illusion\030\007",
+      " \001(\010\022\030\n\020is_attacker_hero\030\010 \001(\010\022\032\n\022is_tar" +
+      "get_illusion\030\t \001(\010\022\026\n\016is_target_hero\030\n \001" +
+      "(\010\022\032\n\022is_visible_radiant\030\013 \001(\010\022\027\n\017is_vis" +
+      "ible_dire\030\014 \001(\010\022\r\n\005value\030\r \001(\r\022\016\n\006health" +
+      "\030\016 \001(\005\022\021\n\ttimestamp\030\017 \001(\002\022\025\n\rstun_durati" +
+      "on\030\020 \001(\002\022\025\n\rslow_duration\030\021 \001(\002\022\034\n\024is_ab" +
+      "ility_toggle_on\030\022 \001(\010\022\035\n\025is_ability_togg" +
+      "le_off\030\023 \001(\010\022\025\n\rability_level\030\024 \001(\r\022\022\n\nl" +
+      "ocation_x\030\025 \001(\002\022\022\n\nlocation_y\030\026 \001(\002\022\023\n\013g" +
+      "old_reason\030\027 \001(\r\022\025\n\rtimestamp_raw\030\030 \001(\002\022",
+      "\031\n\021modifier_duration\030\031 \001(\002\022\021\n\txp_reason\030" +
+      "\032 \001(\r\022\021\n\tlast_hits\030\033 \001(\r\022\025\n\rattacker_tea" +
+      "m\030\034 \001(\r\022\023\n\013target_team\030\035 \001(\r\022\030\n\020obs_ward" +
+      "s_placed\030\036 \001(\r\022\026\n\016assist_player0\030\037 \001(\r\022\026" +
+      "\n\016assist_player1\030  \001(\r\022\026\n\016assist_player2" +
+      "\030! \001(\r\022\026\n\016assist_player3\030\" \001(\r\022\023\n\013stack_" +
+      "count\030# \001(\r\022\027\n\017hidden_modifier\030$ \001(\010\022\032\n\022" +
+      "is_target_building\030% \001(\010\022\031\n\021neutral_camp" +
+      "_type\030& \001(\r\022\021\n\trune_type\030\' \001(\r\022\026\n\016assist" +
+      "_players\030( \003(\r\022\024\n\014is_heal_save\030) \001(\010\022\033\n\023",
+      "is_ultimate_ability\030* \001(\010\022\033\n\023attacker_he" +
+      "ro_level\030+ \001(\r\022\031\n\021target_hero_level\030, \001(" +
+      "\r\022\013\n\003xpm\030- \001(\r\022\013\n\003gpm\030. \001(\r\022\026\n\016event_loc" +
+      "ation\030/ \001(\r\022\026\n\016target_is_self\0300 \001(\010\022\023\n\013d" +
+      "amage_type\0301 \001(\r\022\035\n\025invisibility_modifie" +
+      "r\0302 \001(\010\022\027\n\017damage_category\0303 \001(\r\022\020\n\010netw" +
+      "orth\0304 \001(\r\022\025\n\rbuilding_type\0305 \001(\r\022!\n\031mod" +
+      "ifier_elapsed_duration\0306 \001(\002\022\030\n\020silence_" +
+      "modifier\0307 \001(\010\022\033\n\023heal_from_lifesteal\0308 " +
+      "\001(\010\022\027\n\017modifier_purged\0309 \001(\010\022\024\n\014spell_ev",
+      "aded\030: \001(\010\022\"\n\032motion_controller_modifier" +
+      "\030; \001(\010\022\027\n\017long_range_kill\030< \001(\010\022\036\n\026modif" +
+      "ier_purge_ability\030= \001(\r\022\032\n\022modifier_purg" +
+      "e_npc\030> \001(\r\022\025\n\rroot_modifier\030? \001(\010\022\036\n\026to" +
+      "tal_unit_death_count\030@ \001(\r\022\025\n\raura_modif" +
+      "ier\030A \001(\010\022\035\n\025armor_debuff_modifier\030B \001(\010" +
+      "\022#\n\033no_physical_damage_modifier\030C \001(\010\022\030\n" +
+      "\020modifier_ability\030D \001(\r\022\027\n\017modifier_hidd" +
+      "en\030E \001(\010\022#\n\033inflictor_is_stolen_ability\030" +
+      "F \001(\010\022\030\n\020kill_eater_event\030G \001(\r\022\031\n\021unit_",
+      "status_label\030H \001(\r*\277\013\n\024DOTA_COMBATLOG_TY" +
+      "PES\022#\n\026DOTA_COMBATLOG_INVALID\020\377\377\377\377\377\377\377\377\377\001" +
+      "\022\031\n\025DOTA_COMBATLOG_DAMAGE\020\000\022\027\n\023DOTA_COMB" +
+      "ATLOG_HEAL\020\001\022\037\n\033DOTA_COMBATLOG_MODIFIER_" +
+      "ADD\020\002\022\"\n\036DOTA_COMBATLOG_MODIFIER_REMOVE\020" +
+      "\003\022\030\n\024DOTA_COMBATLOG_DEATH\020\004\022\032\n\026DOTA_COMB" +
+      "ATLOG_ABILITY\020\005\022\027\n\023DOTA_COMBATLOG_ITEM\020\006" +
+      "\022\033\n\027DOTA_COMBATLOG_LOCATION\020\007\022\027\n\023DOTA_CO" +
+      "MBATLOG_GOLD\020\010\022\035\n\031DOTA_COMBATLOG_GAME_ST" +
+      "ATE\020\t\022\025\n\021DOTA_COMBATLOG_XP\020\n\022\033\n\027DOTA_COM",
+      "BATLOG_PURCHASE\020\013\022\032\n\026DOTA_COMBATLOG_BUYB" +
+      "ACK\020\014\022\"\n\036DOTA_COMBATLOG_ABILITY_TRIGGER\020" +
+      "\r\022\036\n\032DOTA_COMBATLOG_PLAYERSTATS\020\016\022\034\n\030DOT" +
+      "A_COMBATLOG_MULTIKILL\020\017\022\035\n\031DOTA_COMBATLO" +
+      "G_KILLSTREAK\020\020\022%\n!DOTA_COMBATLOG_TEAM_BU" +
+      "ILDING_KILL\020\021\022\036\n\032DOTA_COMBATLOG_FIRST_BL" +
+      "OOD\020\022\022\'\n#DOTA_COMBATLOG_MODIFIER_STACK_E" +
+      "VENT\020\023\022%\n!DOTA_COMBATLOG_NEUTRAL_CAMP_ST" +
+      "ACK\020\024\022\036\n\032DOTA_COMBATLOG_PICKUP_RUNE\020\025\022%\n" +
+      "!DOTA_COMBATLOG_REVEALED_INVISIBLE\020\026\022\035\n\031",
+      "DOTA_COMBATLOG_HERO_SAVED\020\027\022 \n\034DOTA_COMB" +
+      "ATLOG_MANA_RESTORED\020\030\022\037\n\033DOTA_COMBATLOG_" +
+      "HERO_LEVELUP\020\031\022#\n\037DOTA_COMBATLOG_BOTTLE_" +
+      "HEAL_ALLY\020\032\022 \n\034DOTA_COMBATLOG_ENDGAME_ST" +
+      "ATS\020\033\022$\n DOTA_COMBATLOG_INTERRUPT_CHANNE" +
+      "L\020\034\022\036\n\032DOTA_COMBATLOG_ALLIED_GOLD\020\035\022\036\n\032D" +
+      "OTA_COMBATLOG_AEGIS_TAKEN\020\036\022\036\n\032DOTA_COMB" +
+      "ATLOG_MANA_DAMAGE\020\037\022,\n(DOTA_COMBATLOG_PH" +
+      "YSICAL_DAMAGE_PREVENTED\020 \022 \n\034DOTA_COMBAT" +
+      "LOG_UNIT_SUMMONED\020!\022\037\n\033DOTA_COMBATLOG_AT",
+      "TACK_EVADE\020\"\022\033\n\027DOTA_COMBATLOG_TREE_CUT\020" +
+      "#\022\"\n\036DOTA_COMBATLOG_SUCCESSFUL_SCAN\020$\022!\n" +
+      "\035DOTA_COMBATLOG_END_KILLSTREAK\020%\022$\n DOTA" +
+      "_COMBATLOG_BLOODSTONE_CHARGE\020&\022\"\n\036DOTA_C" +
+      "OMBATLOG_CRITICAL_DAMAGE\020\'\022\037\n\033DOTA_COMBA" +
+      "TLOG_SPELL_ABSORB\020(\022\"\n\036DOTA_COMBATLOG_UN" +
+      "IT_TELEPORTED\020)\022#\n\037DOTA_COMBATLOG_KILL_E" +
+      "ATER_EVENT\020**\233\033\n\021DOTA_CHAT_MESSAGE\022!\n\024CH" +
+      "AT_MESSAGE_INVALID\020\377\377\377\377\377\377\377\377\377\001\022\032\n\026CHAT_ME" +
+      "SSAGE_HERO_KILL\020\000\022\032\n\026CHAT_MESSAGE_HERO_D",
+      "ENY\020\001\022\036\n\032CHAT_MESSAGE_BARRACKS_KILL\020\002\022\033\n" +
+      "\027CHAT_MESSAGE_TOWER_KILL\020\003\022\033\n\027CHAT_MESSA" +
+      "GE_TOWER_DENY\020\004\022\033\n\027CHAT_MESSAGE_FIRSTBLO" +
+      "OD\020\005\022\034\n\030CHAT_MESSAGE_STREAK_KILL\020\006\022\030\n\024CH" +
+      "AT_MESSAGE_BUYBACK\020\007\022\026\n\022CHAT_MESSAGE_AEG" +
+      "IS\020\010\022\034\n\030CHAT_MESSAGE_ROSHAN_KILL\020\t\022\035\n\031CH" +
+      "AT_MESSAGE_COURIER_LOST\020\n\022\"\n\036CHAT_MESSAG" +
+      "E_COURIER_RESPAWNED\020\013\022\033\n\027CHAT_MESSAGE_GL" +
+      "YPH_USED\020\014\022\036\n\032CHAT_MESSAGE_ITEM_PURCHASE" +
+      "\020\r\022\030\n\024CHAT_MESSAGE_CONNECT\020\016\022\033\n\027CHAT_MES",
+      "SAGE_DISCONNECT\020\017\022.\n*CHAT_MESSAGE_DISCON" +
+      "NECT_WAIT_FOR_RECONNECT\020\020\022*\n&CHAT_MESSAG" +
+      "E_DISCONNECT_TIME_REMAINING\020\021\0221\n-CHAT_ME" +
+      "SSAGE_DISCONNECT_TIME_REMAINING_PLURAL\020\022" +
+      "\022\032\n\026CHAT_MESSAGE_RECONNECT\020\023\022\034\n\030CHAT_MES" +
+      "SAGE_PLAYER_LEFT\020\024\022\036\n\032CHAT_MESSAGE_SAFE_" +
+      "TO_LEAVE\020\025\022\034\n\030CHAT_MESSAGE_RUNE_PICKUP\020\026" +
+      "\022\034\n\030CHAT_MESSAGE_RUNE_BOTTLE\020\027\022\031\n\025CHAT_M" +
+      "ESSAGE_INTHEBAG\020\030\022\033\n\027CHAT_MESSAGE_SECRET" +
+      "SHOP\020\031\022#\n\037CHAT_MESSAGE_ITEM_AUTOPURCHASE",
+      "D\020\032\022\037\n\033CHAT_MESSAGE_ITEMS_COMBINED\020\033\022\035\n\031" +
+      "CHAT_MESSAGE_SUPER_CREEPS\020\034\022%\n!CHAT_MESS" +
+      "AGE_CANT_USE_ACTION_ITEM\020\035\022\"\n\036CHAT_MESSA" +
+      "GE_CHARGES_EXHAUSTED\020\036\022\032\n\026CHAT_MESSAGE_C" +
+      "ANTPAUSE\020\037\022\035\n\031CHAT_MESSAGE_NOPAUSESLEFT\020" +
+      " \022\035\n\031CHAT_MESSAGE_CANTPAUSEYET\020!\022\027\n\023CHAT" +
+      "_MESSAGE_PAUSED\020\"\022\"\n\036CHAT_MESSAGE_UNPAUS" +
+      "E_COUNTDOWN\020#\022\031\n\025CHAT_MESSAGE_UNPAUSED\020$" +
+      "\022\036\n\032CHAT_MESSAGE_AUTO_UNPAUSED\020%\022\032\n\026CHAT" +
+      "_MESSAGE_YOUPAUSED\020&\022 \n\034CHAT_MESSAGE_CAN",
+      "TUNPAUSETEAM\020\'\022\"\n\036CHAT_MESSAGE_VOICE_TEX" +
+      "T_BANNED\020)\022.\n*CHAT_MESSAGE_SPECTATORS_WA" +
+      "TCHING_THIS_GAME\020*\022 \n\034CHAT_MESSAGE_REPOR" +
+      "T_REMINDER\020+\022\032\n\026CHAT_MESSAGE_ECON_ITEM\020," +
+      "\022\026\n\022CHAT_MESSAGE_TAUNT\020-\022\027\n\023CHAT_MESSAGE" +
+      "_RANDOM\020.\022\030\n\024CHAT_MESSAGE_RD_TURN\020/\022 \n\034C" +
+      "HAT_MESSAGE_DROP_RATE_BONUS\0201\022!\n\035CHAT_ME" +
+      "SSAGE_NO_BATTLE_POINTS\0202\022\035\n\031CHAT_MESSAGE" +
+      "_DENIED_AEGIS\0203\022\036\n\032CHAT_MESSAGE_INFORMAT" +
+      "IONAL\0204\022\035\n\031CHAT_MESSAGE_AEGIS_STOLEN\0205\022\035",
+      "\n\031CHAT_MESSAGE_ROSHAN_CANDY\0206\022\034\n\030CHAT_ME" +
+      "SSAGE_ITEM_GIFTED\0207\022\'\n#CHAT_MESSAGE_HERO" +
+      "_KILL_WITH_GREEVIL\0208\022(\n$CHAT_MESSAGE_HOL" +
+      "DOUT_TOWER_DESTROYED\0209\022\'\n#CHAT_MESSAGE_H" +
+      "OLDOUT_WALL_DESTROYED\020:\022&\n\"CHAT_MESSAGE_" +
+      "HOLDOUT_WALL_FINISHED\020;\022)\n%CHAT_MESSAGE_" +
+      "PLAYER_LEFT_LIMITED_HERO\020>\0221\n-CHAT_MESSA" +
+      "GE_ABANDON_LIMITED_HERO_EXPLANATION\020?\022(\n" +
+      "$CHAT_MESSAGE_DISCONNECT_LIMITED_HERO\020@\022" +
+      "3\n/CHAT_MESSAGE_LOW_PRIORITY_COMPLETED_E",
+      "XPLANATION\020A\022,\n(CHAT_MESSAGE_RECRUITMENT" +
+      "_DROP_RATE_BONUS\020B\0221\n-CHAT_MESSAGE_FROST" +
+      "IVUS_SHINING_BOOSTER_ACTIVE\020C\022 \n\034CHAT_ME" +
+      "SSAGE_PLAYER_LEFT_AFK\020I\0222\n.CHAT_MESSAGE_" +
+      "PLAYER_LEFT_DISCONNECTED_TOO_LONG\020J\022!\n\035C" +
+      "HAT_MESSAGE_PLAYER_ABANDONED\020K\022%\n!CHAT_M" +
+      "ESSAGE_PLAYER_ABANDONED_AFK\020L\0227\n3CHAT_ME" +
+      "SSAGE_PLAYER_ABANDONED_DISCONNECTED_TOO_" +
+      "LONG\020M\022#\n\037CHAT_MESSAGE_WILL_NOT_BE_SCORE" +
+      "D\020N\022*\n&CHAT_MESSAGE_WILL_NOT_BE_SCORED_R",
+      "ANKED\020O\022+\n\'CHAT_MESSAGE_WILL_NOT_BE_SCOR" +
+      "ED_NETWORK\020P\0222\n.CHAT_MESSAGE_WILL_NOT_BE" +
+      "_SCORED_NETWORK_RANKED\020Q\022)\n%CHAT_MESSAGE" +
+      "_CAN_QUIT_WITHOUT_ABANDON\020R\022:\n6CHAT_MESS" +
+      "AGE_RANKED_GAME_STILL_SCORED_LEAVERS_GET" +
+      "_LOSS\020S\0228\n4CHAT_MESSAGE_ABANDON_RANKED_B" +
+      "EFORE_FIRST_BLOOD_PARTY\020T\022!\n\035CHAT_MESSAG" +
+      "E_COMPENDIUM_LEVEL\020U\022*\n&CHAT_MESSAGE_VIC" +
+      "TORY_PREDICTION_STREAK\020V\022\"\n\036CHAT_MESSAGE" +
+      "_ASSASSIN_ANNOUNCE\020W\022!\n\035CHAT_MESSAGE_ASS",
+      "ASSIN_SUCCESS\020X\022 \n\034CHAT_MESSAGE_ASSASSIN" +
+      "_DENIED\020Y\0227\n3CHAT_MESSAGE_VICTORY_PREDIC" +
+      "TION_SINGLE_USER_CONFIRM\020Z\022\034\n\030CHAT_MESSA" +
+      "GE_EFFIGY_KILL\020[\022+\n\'CHAT_MESSAGE_VOICE_T" +
+      "EXT_BANNED_OVERFLOW\020\\\022\"\n\036CHAT_MESSAGE_YE" +
+      "AR_BEAST_KILLED\020]\022 \n\034CHAT_MESSAGE_PAUSE_" +
+      "COUNTDOWN\020^\022\036\n\032CHAT_MESSAGE_COINS_WAGERE" +
+      "D\020_\022#\n\037CHAT_MESSAGE_HERO_NOMINATED_BAN\020`" +
+      "\022\034\n\030CHAT_MESSAGE_HERO_BANNED\020a\022\037\n\033CHAT_M" +
+      "ESSAGE_HERO_BAN_COUNT\020b\022\036\n\032CHAT_MESSAGE_",
+      "RIVER_PAINTED\020c\022\032\n\026CHAT_MESSAGE_SCAN_USE" +
+      "D\020d\022\036\n\032CHAT_MESSAGE_SHRINE_KILLED\020e\022\"\n\036C" +
+      "HAT_MESSAGE_WAGER_TOKEN_SPENT\020f\022\033\n\027CHAT_" +
+      "MESSAGE_RANK_WAGER\020g\022$\n CHAT_MESSAGE_NEW" +
+      "_PLAYER_REMINDER\020h*\262\001\n\035DOTA_NO_BATTLE_PO" +
+      "INTS_REASONS\022%\n!NO_BATTLE_POINTS_WRONG_L" +
+      "OBBY_TYPE\020\001\022\"\n\036NO_BATTLE_POINTS_PRACTICE" +
+      "_BOTS\020\002\022#\n\037NO_BATTLE_POINTS_CHEATS_ENABL" +
+      "ED\020\003\022!\n\035NO_BATTLE_POINTS_LOW_PRIORITY\020\004*" +
+      "\273\001\n\027DOTA_REPLAY_STATE_EVENT\022&\n\"DOTA_REPL",
+      "AY_STATE_EVENT_GAME_START\020\001\022)\n%DOTA_REPL" +
+      "AY_STATE_EVENT_STARTING_HORN\020\002\022\'\n#DOTA_R" +
+      "EPLAY_STATE_EVENT_FIRST_BLOOD\020\003\022$\n DOTA_" +
+      "REPLAY_STATE_EVENT_SHOWCASE\020\004*\317\001\n\027DOTA_C" +
+      "HAT_INFORMATIONAL\022!\n\035INFO_COOP_BATTLE_PO" +
+      "INTS_RULES\020\001\022#\n\037INFO_FROSTIVUS_ABANDON_R" +
+      "EMINDER\020\002\022\030\n\024INFO_RANKED_REMINDER\020\003\022+\n\'I" +
+      "NFO_COOP_LOW_PRIORITY_PASSIVE_REMINDER\020\004" +
+      "\022%\n!INFO_CUSTOM_GAME_PENALTY_REMINDER\020\005*" +
+      "\200\002\n\026DOTA_ABILITY_PING_TYPE\022\026\n\022ABILITY_PI",
+      "NG_READY\020\001\022\025\n\021ABILITY_PING_MANA\020\002\022\031\n\025ABI" +
+      "LITY_PING_COOLDOWN\020\003\022\026\n\022ABILITY_PING_ENE" +
+      "MY\020\004\022\032\n\026ABILITY_PING_UNLEARNED\020\005\022\033\n\027ABIL" +
+      "ITY_PING_INBACKPACK\020\006\022\030\n\024ABILITY_PING_IN" +
+      "STASH\020\007\022\032\n\026ABILITY_PING_ONCOURIER\020\010\022\025\n\021A" +
+      "BILITY_PING_ALLY\020\t*\345\001\n\023EDotaEntityMessag" +
+      "es\022\024\n\020DOTA_UNIT_SPEECH\020\000\022\031\n\025DOTA_UNIT_SP" +
+      "EECH_MUTE\020\001\022\031\n\025DOTA_UNIT_ADD_GESTURE\020\002\022\034" +
+      "\n\030DOTA_UNIT_REMOVE_GESTURE\020\003\022!\n\035DOTA_UNI" +
+      "T_REMOVE_ALL_GESTURES\020\004\022\032\n\026DOTA_UNIT_FAD",
+      "E_GESTURE\020\006\022%\n!DOTA_UNIT_SPEECH_CLIENTSI" +
+      "DE_RULES\020\007*\347\006\n\025DOTA_PARTICLE_MESSAGE\022&\n\"" +
+      "DOTA_PARTICLE_MANAGER_EVENT_CREATE\020\000\022&\n\"" +
+      "DOTA_PARTICLE_MANAGER_EVENT_UPDATE\020\001\022.\n*" +
+      "DOTA_PARTICLE_MANAGER_EVENT_UPDATE_FORWA" +
+      "RD\020\002\0222\n.DOTA_PARTICLE_MANAGER_EVENT_UPDA" +
+      "TE_ORIENTATION\020\003\022/\n+DOTA_PARTICLE_MANAGE" +
+      "R_EVENT_UPDATE_FALLBACK\020\004\022*\n&DOTA_PARTIC" +
+      "LE_MANAGER_EVENT_UPDATE_ENT\020\005\022-\n)DOTA_PA" +
+      "RTICLE_MANAGER_EVENT_UPDATE_OFFSET\020\006\022\'\n#",
+      "DOTA_PARTICLE_MANAGER_EVENT_DESTROY\020\007\0221\n" +
+      "-DOTA_PARTICLE_MANAGER_EVENT_DESTROY_INV" +
+      "OLVING\020\010\022\'\n#DOTA_PARTICLE_MANAGER_EVENT_" +
+      "RELEASE\020\t\022\'\n#DOTA_PARTICLE_MANAGER_EVENT" +
+      "_LATENCY\020\n\022+\n\'DOTA_PARTICLE_MANAGER_EVEN" +
+      "T_SHOULD_DRAW\020\013\022&\n\"DOTA_PARTICLE_MANAGER" +
+      "_EVENT_FROZEN\020\014\022?\n;DOTA_PARTICLE_MANAGER" +
+      "_EVENT_CHANGE_CONTROL_POINT_ATTACHMENT\020\r" +
+      "\0226\n2DOTA_PARTICLE_MANAGER_EVENT_UPDATE_E" +
+      "NTITY_POSITION\020\016\0222\n.DOTA_PARTICLE_MANAGE",
+      "R_EVENT_SET_FOW_PROPERTIES\020\017\022(\n$DOTA_PAR" +
+      "TICLE_MANAGER_EVENT_SET_TEXT\020\020\0224\n0GAME_P" +
+      "ARTICLE_MANAGER_EVENT_SET_SHOULD_CHECK_F" +
+      "OW\020\021*\261\005\n\023DOTA_OVERHEAD_ALERT\022\027\n\023OVERHEAD" +
+      "_ALERT_GOLD\020\000\022\027\n\023OVERHEAD_ALERT_DENY\020\001\022\033" +
+      "\n\027OVERHEAD_ALERT_CRITICAL\020\002\022\025\n\021OVERHEAD_" +
+      "ALERT_XP\020\003\022%\n!OVERHEAD_ALERT_BONUS_SPELL" +
+      "_DAMAGE\020\004\022\027\n\023OVERHEAD_ALERT_MISS\020\005\022\031\n\025OV" +
+      "ERHEAD_ALERT_DAMAGE\020\006\022\030\n\024OVERHEAD_ALERT_" +
+      "EVADE\020\007\022\030\n\024OVERHEAD_ALERT_BLOCK\020\010\022&\n\"OVE",
+      "RHEAD_ALERT_BONUS_POISON_DAMAGE\020\t\022\027\n\023OVE" +
+      "RHEAD_ALERT_HEAL\020\n\022\033\n\027OVERHEAD_ALERT_MAN" +
+      "A_ADD\020\013\022\034\n\030OVERHEAD_ALERT_MANA_LOSS\020\014\022!\n" +
+      "\035OVERHEAD_ALERT_LAST_HIT_EARLY\020\r\022!\n\035OVER" +
+      "HEAD_ALERT_LAST_HIT_CLOSE\020\016\022 \n\034OVERHEAD_" +
+      "ALERT_LAST_HIT_MISS\020\017\022 \n\034OVERHEAD_ALERT_" +
+      "MAGICAL_BLOCK\020\020\022\"\n\036OVERHEAD_ALERT_INCOMI" +
+      "NG_DAMAGE\020\021\022\"\n\036OVERHEAD_ALERT_OUTGOING_D" +
+      "AMAGE\020\022\022!\n\035OVERHEAD_ALERT_DISABLE_RESIST" +
+      "\020\023\022\030\n\024OVERHEAD_ALERT_DEATH\020\024\022\032\n\026OVERHEAD",
+      "_ALERT_BLOCKED\020\025*k\n\021DOTA_ROSHAN_PHASE\022\027\n" +
+      "\023k_SRSP_ROSHAN_ALIVE\020\000\022\034\n\030k_SRSP_ROSHAN_" +
+      "BASE_TIMER\020\001\022\037\n\033k_SRSP_ROSHAN_VISIBLE_TI" +
+      "MER\020\002*\201\004\n\026DOTA_POSITION_CATEGORY\022\026\n\022DOTA" +
+      "_POSITION_NONE\020\000\022\035\n\031DOTA_POSITION_BOTTOM" +
+      "_LANE\020\001\022\032\n\026DOTA_POSITION_MID_LANE\020\002\022\032\n\026D" +
+      "OTA_POSITION_TOP_LANE\020\003\022 \n\034DOTA_POSITION" +
+      "_RADIANT_JUNGLE\020\004\022\035\n\031DOTA_POSITION_DIRE_" +
+      "JUNGLE\020\005\022\"\n\036DOTA_POSITION_RADIANT_ANCIEN" +
+      "TS\020\006\022\037\n\033DOTA_POSITION_DIRE_ANCIENTS\020\007\022%\n",
+      "!DOTA_POSITION_RADIANT_SECRET_SHOP\020\010\022\"\n\036" +
+      "DOTA_POSITION_DIRE_SECRET_SHOP\020\t\022\027\n\023DOTA" +
+      "_POSITION_RIVER\020\n\022\034\n\030DOTA_POSITION_ROSHA" +
+      "N_PIT\020\013\022\036\n\032DOTA_POSITION_RADIANT_BASE\020\014\022" +
+      "\033\n\027DOTA_POSITION_DIRE_BASE\020\r\022\032\n\026DOTA_POS" +
+      "ITION_FOUNTAIN\020\016\022\027\n\023DOTA_POSITION_OTHER\020" +
+      "\017*\346\001\n\030DOTA_ABILITY_TARGET_TYPE\022\034\n\030DOTA_A" +
+      "BILITY_TARGET_NONE\020\000\022\034\n\030DOTA_ABILITY_TAR" +
+      "GET_SELF\020\001\022!\n\035DOTA_ABILITY_TARGET_ALLY_H" +
+      "ERO\020\002\022\"\n\036DOTA_ABILITY_TARGET_ALLY_CREEP\020",
+      "\003\022\"\n\036DOTA_ABILITY_TARGET_ENEMY_HERO\020\004\022#\n" +
+      "\037DOTA_ABILITY_TARGET_ENEMY_CREEP\020\005*\230\010\n\rE" +
+      "HeroStatType\022\030\n\024k_EHeroStatType_None\020\000\022#" +
+      "\n\036k_EHeroStatType_AxeTotalDamage\020\320\017\022\'\n\"k" +
+      "_EHeroStatType_BattleHungerDamage\020\321\017\022\'\n\"" +
+      "k_EHeroStatType_CounterHelixDamage\020\322\017\022\'\n" +
+      "\"k_EHeroStatType_CullingBladeDamage\020\323\017\022," +
+      "\n\'k_EHeroStatType_BerserkersCallCastCoun" +
+      "t\020\324\017\0223\n.k_EHeroStatType_BerserkersCallHe" +
+      "roesHitAverage\020\325\017\0220\n+k_EHeroStatType_Ber",
+      "serkersCallOtherUnitsHit\020\326\017\0223\n.k_EHeroSt" +
+      "atType_BerserkersCallHeroAttacksTaken\020\327\017" +
+      "\0224\n/k_EHeroStatType_BerserkersCallOtherA" +
+      "ttacksTaken\020\330\017\022*\n%k_EHeroStatType_Battle" +
+      "HungerCastCount\020\331\017\0222\n-k_EHeroStatType_Ba" +
+      "ttleHungerPotentialDuration\020\332\017\0220\n+k_EHer" +
+      "oStatType_BattleHungerAverageDuration\020\333\017" +
+      "\022*\n%k_EHeroStatType_CounterHelixProcCoun" +
+      "t\020\334\017\022.\n)k_EHeroStatType_CounterHelixHero" +
+      "ProcCount\020\335\017\0221\n,k_EHeroStatType_CounterH",
+      "elixHeroesHitAverage\020\336\017\0223\n.k_EHeroStatTy" +
+      "pe_CounterHelixOtherUnitsHitCount\020\337\017\022*\n%" +
+      "k_EHeroStatType_CullingBladeCastCount\020\340\017" +
+      "\022*\n%k_EHeroStatType_CullingBladeKillCoun" +
+      "t\020\341\017\0224\n/k_EHeroStatType_CullingBladeAver" +
+      "ageHealthCulled\020\342\017\0227\n2k_EHeroStatType_Cu" +
+      "llingBladeAverageDamageAvailable\020\343\017\0220\n+k" +
+      "_EHeroStatType_CullingBladeHeroBuffAvera" +
+      "ge\020\344\017*\251\004\n\027EPlayerVoiceListenState\022\016\n\nkPV" +
+      "LS_None\020\000\022\032\n\026kPVLS_DeniedChatBanned\020\001\022\027\n",
+      "\023kPVLS_DeniedPartner\020\002\022&\n\"kPVLS_DeniedHL" +
+      "TVTalkerNotSpectator\020\003\022$\n kPVLS_DeniedHL" +
+      "TVNoTalkerPlayerID\020\004\022(\n$kPVLS_DeniedHLTV" +
+      "TalkerNotBroadcaster\020\005\022\035\n\031kPVLS_DeniedTe" +
+      "amSpectator\020\006\022\027\n\023kPVLS_DeniedStudent\020\010\022\020" +
+      "\n\014kPVLS_Denied\020@\022&\n\"kPVLS_AllowHLTVTalke" +
+      "rIsBroadcaster\020A\022\034\n\030kPVLS_AllowCoBroadca" +
+      "ster\020B\022\026\n\022kPVLS_AllowAllChat\020C\022\035\n\031kPVLS_" +
+      "AllowStudentToCoach\020D\022\034\n\030kPVLS_AllowFell" +
+      "owStudent\020E\022\034\n\030kPVLS_AllowTalkerIsCoach\020",
+      "F\022\034\n\030kPVLS_AllowCoachHearTeam\020G\022\027\n\023kPVLS" +
+      "_AllowSameTeam\020H\022\027\n\023kPVLS_AllowShowcase\020" +
+      "I*B\n\020EProjectionEvent\022\022\n\016ePE_FirstBlood\020" +
+      "\000\022\032\n\026ePE_Killstreak_godlike\020\001B=\n$skadist" +
+      "ats.clarity.wire.common.protoB\020DotaUserM" +
+      "essagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -72196,7 +73440,7 @@ public final class DotaUserMessages {
     internal_static_CDOTAUserMsg_HPManaAlert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_HPManaAlert_descriptor,
-        new java.lang.String[] { "PlayerId", "TargetEntindex", });
+        new java.lang.String[] { "PlayerId", "TargetEntindex", "ShowRawValues", });
     internal_static_CDOTAUserMsg_CourierKilledAlert_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_CDOTAUserMsg_CourierKilledAlert_fieldAccessorTable = new
@@ -72358,7 +73602,7 @@ public final class DotaUserMessages {
     internal_static_CDOTAUserMsg_ParticleManager_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_ParticleManager_descriptor,
-        new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", });
+        new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", "SetParticleShouldCheckFow", });
     internal_static_CDOTAUserMsg_ParticleManager_ReleaseParticleIndex_descriptor =
       internal_static_CDOTAUserMsg_ParticleManager_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable = new
@@ -72449,8 +73693,14 @@ public final class DotaUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_ParticleManager_SetParticleFoWProperties_descriptor,
         new java.lang.String[] { "FowControlPoint", "FowControlPoint2", "FowRadius", });
-    internal_static_CDOTAUserMsg_ParticleManager_SetParticleText_descriptor =
+    internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor =
       internal_static_CDOTAUserMsg_ParticleManager_descriptor.getNestedTypes().get(15);
+    internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor,
+        new java.lang.String[] { "CheckFow", });
+    internal_static_CDOTAUserMsg_ParticleManager_SetParticleText_descriptor =
+      internal_static_CDOTAUserMsg_ParticleManager_descriptor.getNestedTypes().get(16);
     internal_static_CDOTAUserMsg_ParticleManager_SetParticleText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_ParticleManager_SetParticleText_descriptor,
@@ -72641,8 +73891,14 @@ public final class DotaUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAUserMsg_HeroRelicProgress_descriptor,
         new java.lang.String[] { "HeroRelicType", "Value", "Ehandle", "EventId", });
-    internal_static_CMsgDOTACombatLogEntry_descriptor =
+    internal_static_CDOTAUserMsg_SalutePlayer_descriptor =
       getDescriptor().getMessageTypes().get(58);
+    internal_static_CDOTAUserMsg_SalutePlayer_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAUserMsg_SalutePlayer_descriptor,
+        new java.lang.String[] { "SourcePlayerId", "TargetPlayerId", "TipAmount", });
+    internal_static_CMsgDOTACombatLogEntry_descriptor =
+      getDescriptor().getMessageTypes().get(59);
     internal_static_CMsgDOTACombatLogEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTACombatLogEntry_descriptor,

@@ -116,4 +116,5 @@ enum EDotaUserMessages {
 	DOTA_UM_AbilityDraftRequestAbility = 573;
 	DOTA_UM_ItemSold = 574;
 	DOTA_UM_DamageReport = 575;
+	DOTA_UM_SalutePlayer = 576;
 }
