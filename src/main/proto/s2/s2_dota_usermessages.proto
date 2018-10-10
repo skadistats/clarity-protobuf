@@ -117,4 +117,6 @@ enum EDotaUserMessages {
 	DOTA_UM_ItemSold = 574;
 	DOTA_UM_DamageReport = 575;
 	DOTA_UM_SalutePlayer = 576;
+    DOTA_UM_TipAlert = 577;
+    DOTA_UM_ReplaceQueryUnit = 578;
 }

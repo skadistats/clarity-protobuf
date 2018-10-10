@@ -159,7 +159,9 @@ public class EmbeddedPackets {
         /* 567 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TeamCaptainChanged_VALUE, DotaUserMessages.CDOTAUserMessage_TeamCaptainChanged.class);
         /* 568 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanSpectatorPhase_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanSpectatorPhase.class);
         /* 572 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HeroRelicProgress_VALUE, DotaUserMessages.CDOTAUserMsg_HeroRelicProgress.class);
+        /* 575 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DamageReport_VALUE, DotaUserMessages.CDOTAUserMsg_DamageReport.class);
         /* 576 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SalutePlayer_VALUE, DotaUserMessages.CDOTAUserMsg_SalutePlayer.class);
+        /* 577 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TipAlert_VALUE, DotaUserMessages.CDOTAUserMsg_TipAlert.class);
 
 //        /* 464 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);
@@ -222,7 +224,7 @@ public class EmbeddedPackets {
 //        /* 571 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_DestroyProjectile_VALUE, DotaUserMessages.CDOTAUserMessage_TE_DestroyProjectile.class);
 //        /* 573 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AbilityDraftRequestAbility_VALUE, DotaUserMessages.CDOTAUserMessage_AbilityDraftRequestAbility.class);
 //        /* 574 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemSold_VALUE, DotaUserMessages.CDOTAUserMessage_ItemSold.class);
-//        /* 575 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DamageReport_VALUE, DotaUserMessages.CDOTAUserMessage_DamageReport.class);
+//        /* 578 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ReplaceQueryUnit_VALUE, DotaUserMessages.CDOTAUserMsg_ReplaceQueryUnit.class);
 
         REVERSE = new HashMap<>();
         for (Map.Entry<Integer, Class<? extends GeneratedMessage>> e : EMBED.entrySet()) {
