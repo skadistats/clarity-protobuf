@@ -21674,6 +21674,826 @@ public final class NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_FullFrameSplit)
   }
 
+  public interface CSVCMsg_BSPDecalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_BSPDecal)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CMsgVector pos = 1;</code>
+     */
+    boolean hasPos();
+    /**
+     * <code>optional .CMsgVector pos = 1;</code>
+     */
+    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getPos();
+    /**
+     * <code>optional .CMsgVector pos = 1;</code>
+     */
+    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getPosOrBuilder();
+
+    /**
+     * <code>optional int32 decal_texture_index = 2;</code>
+     */
+    boolean hasDecalTextureIndex();
+    /**
+     * <code>optional int32 decal_texture_index = 2;</code>
+     */
+    int getDecalTextureIndex();
+
+    /**
+     * <code>optional int32 entity_index = 3;</code>
+     */
+    boolean hasEntityIndex();
+    /**
+     * <code>optional int32 entity_index = 3;</code>
+     */
+    int getEntityIndex();
+
+    /**
+     * <code>optional int32 model_index = 4;</code>
+     */
+    boolean hasModelIndex();
+    /**
+     * <code>optional int32 model_index = 4;</code>
+     */
+    int getModelIndex();
+
+    /**
+     * <code>optional bool low_priority = 5;</code>
+     */
+    boolean hasLowPriority();
+    /**
+     * <code>optional bool low_priority = 5;</code>
+     */
+    boolean getLowPriority();
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_BSPDecal}
+   */
+  public static final class CSVCMsg_BSPDecal extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_BSPDecal)
+      CSVCMsg_BSPDecalOrBuilder {
+    // Use CSVCMsg_BSPDecal.newBuilder() to construct.
+    private CSVCMsg_BSPDecal(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_BSPDecal(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_BSPDecal defaultInstance;
+    public static CSVCMsg_BSPDecal getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_BSPDecal getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_BSPDecal(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = pos_.toBuilder();
+              }
+              pos_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(pos_);
+                pos_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              decalTextureIndex_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              entityIndex_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              modelIndex_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              lowPriority_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_BSPDecal_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_BSPDecal_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.class, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_BSPDecal> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_BSPDecal>() {
+      public CSVCMsg_BSPDecal parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_BSPDecal(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_BSPDecal> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int POS_FIELD_NUMBER = 1;
+    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector pos_;
+    /**
+     * <code>optional .CMsgVector pos = 1;</code>
+     */
+    public boolean hasPos() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .CMsgVector pos = 1;</code>
+     */
+    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getPos() {
+      return pos_;
+    }
+    /**
+     * <code>optional .CMsgVector pos = 1;</code>
+     */
+    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getPosOrBuilder() {
+      return pos_;
+    }
+
+    public static final int DECAL_TEXTURE_INDEX_FIELD_NUMBER = 2;
+    private int decalTextureIndex_;
+    /**
+     * <code>optional int32 decal_texture_index = 2;</code>
+     */
+    public boolean hasDecalTextureIndex() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 decal_texture_index = 2;</code>
+     */
+    public int getDecalTextureIndex() {
+      return decalTextureIndex_;
+    }
+
+    public static final int ENTITY_INDEX_FIELD_NUMBER = 3;
+    private int entityIndex_;
+    /**
+     * <code>optional int32 entity_index = 3;</code>
+     */
+    public boolean hasEntityIndex() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 entity_index = 3;</code>
+     */
+    public int getEntityIndex() {
+      return entityIndex_;
+    }
+
+    public static final int MODEL_INDEX_FIELD_NUMBER = 4;
+    private int modelIndex_;
+    /**
+     * <code>optional int32 model_index = 4;</code>
+     */
+    public boolean hasModelIndex() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 model_index = 4;</code>
+     */
+    public int getModelIndex() {
+      return modelIndex_;
+    }
+
+    public static final int LOW_PRIORITY_FIELD_NUMBER = 5;
+    private boolean lowPriority_;
+    /**
+     * <code>optional bool low_priority = 5;</code>
+     */
+    public boolean hasLowPriority() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional bool low_priority = 5;</code>
+     */
+    public boolean getLowPriority() {
+      return lowPriority_;
+    }
+
+    private void initFields() {
+      pos_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      decalTextureIndex_ = 0;
+      entityIndex_ = 0;
+      modelIndex_ = 0;
+      lowPriority_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, pos_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, decalTextureIndex_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, entityIndex_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, modelIndex_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBool(5, lowPriority_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, pos_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, decalTextureIndex_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, entityIndex_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, modelIndex_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(5, lowPriority_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_BSPDecal}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_BSPDecal)
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_BSPDecal_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_BSPDecal_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.class, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPosFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (posBuilder_ == null) {
+          pos_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          posBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        decalTextureIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        entityIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        modelIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        lowPriority_ = false;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_BSPDecal_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal build() {
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal buildPartial() {
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal result = new skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (posBuilder_ == null) {
+          result.pos_ = pos_;
+        } else {
+          result.pos_ = posBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.decalTextureIndex_ = decalTextureIndex_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.entityIndex_ = entityIndex_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.modelIndex_ = modelIndex_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.lowPriority_ = lowPriority_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal other) {
+        if (other == skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal.getDefaultInstance()) return this;
+        if (other.hasPos()) {
+          mergePos(other.getPos());
+        }
+        if (other.hasDecalTextureIndex()) {
+          setDecalTextureIndex(other.getDecalTextureIndex());
+        }
+        if (other.hasEntityIndex()) {
+          setEntityIndex(other.getEntityIndex());
+        }
+        if (other.hasModelIndex()) {
+          setModelIndex(other.getModelIndex());
+        }
+        if (other.hasLowPriority()) {
+          setLowPriority(other.getLowPriority());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_BSPDecal) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector pos_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> posBuilder_;
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public boolean hasPos() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getPos() {
+        if (posBuilder_ == null) {
+          return pos_;
+        } else {
+          return posBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public Builder setPos(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+        if (posBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          pos_ = value;
+          onChanged();
+        } else {
+          posBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public Builder setPos(
+          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (posBuilder_ == null) {
+          pos_ = builderForValue.build();
+          onChanged();
+        } else {
+          posBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public Builder mergePos(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+        if (posBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              pos_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            pos_ =
+              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(pos_).mergeFrom(value).buildPartial();
+          } else {
+            pos_ = value;
+          }
+          onChanged();
+        } else {
+          posBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public Builder clearPos() {
+        if (posBuilder_ == null) {
+          pos_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          posBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder getPosBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getPosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getPosOrBuilder() {
+        if (posBuilder_ != null) {
+          return posBuilder_.getMessageOrBuilder();
+        } else {
+          return pos_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector pos = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          getPosFieldBuilder() {
+        if (posBuilder_ == null) {
+          posBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getPos(),
+                  getParentForChildren(),
+                  isClean());
+          pos_ = null;
+        }
+        return posBuilder_;
+      }
+
+      private int decalTextureIndex_ ;
+      /**
+       * <code>optional int32 decal_texture_index = 2;</code>
+       */
+      public boolean hasDecalTextureIndex() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 decal_texture_index = 2;</code>
+       */
+      public int getDecalTextureIndex() {
+        return decalTextureIndex_;
+      }
+      /**
+       * <code>optional int32 decal_texture_index = 2;</code>
+       */
+      public Builder setDecalTextureIndex(int value) {
+        bitField0_ |= 0x00000002;
+        decalTextureIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 decal_texture_index = 2;</code>
+       */
+      public Builder clearDecalTextureIndex() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        decalTextureIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int entityIndex_ ;
+      /**
+       * <code>optional int32 entity_index = 3;</code>
+       */
+      public boolean hasEntityIndex() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 entity_index = 3;</code>
+       */
+      public int getEntityIndex() {
+        return entityIndex_;
+      }
+      /**
+       * <code>optional int32 entity_index = 3;</code>
+       */
+      public Builder setEntityIndex(int value) {
+        bitField0_ |= 0x00000004;
+        entityIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 entity_index = 3;</code>
+       */
+      public Builder clearEntityIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        entityIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int modelIndex_ ;
+      /**
+       * <code>optional int32 model_index = 4;</code>
+       */
+      public boolean hasModelIndex() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 model_index = 4;</code>
+       */
+      public int getModelIndex() {
+        return modelIndex_;
+      }
+      /**
+       * <code>optional int32 model_index = 4;</code>
+       */
+      public Builder setModelIndex(int value) {
+        bitField0_ |= 0x00000008;
+        modelIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 model_index = 4;</code>
+       */
+      public Builder clearModelIndex() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        modelIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean lowPriority_ ;
+      /**
+       * <code>optional bool low_priority = 5;</code>
+       */
+      public boolean hasLowPriority() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional bool low_priority = 5;</code>
+       */
+      public boolean getLowPriority() {
+        return lowPriority_;
+      }
+      /**
+       * <code>optional bool low_priority = 5;</code>
+       */
+      public Builder setLowPriority(boolean value) {
+        bitField0_ |= 0x00000010;
+        lowPriority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool low_priority = 5;</code>
+       */
+      public Builder clearLowPriority() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        lowPriority_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_BSPDecal)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_BSPDecal(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_BSPDecal)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCLCMsg_ClientInfo_descriptor;
   private static
@@ -21824,6 +22644,11 @@ public final class NetMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_FullFrameSplit_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_BSPDecal_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_BSPDecal_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -21915,12 +22740,15 @@ public final class NetMessages {
       "\022\033\n\023num_changed_entries\030\002 \001(\005\022\023\n\013string_",
       "data\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004" +
       "tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001" +
-      "(\005\022\014\n\004data\030\004 \001(\014*L\n\021VoiceDataFormat_t\022\032\n" +
-      "\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_F" +
-      "ORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_P" +
-      "AUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE" +
-      "\020\002B6\n$skadistats.clarity.wire.common.pro" +
-      "toB\013NetMessages\200\001\000"
+      "(\005\022\014\n\004data\030\004 \001(\014\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n" +
+      "\003pos\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_texture" +
+      "_index\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013mo" +
+      "del_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010*L\n" +
+      "\021VoiceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_S" +
+      "TEAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001*B\n\016R" +
+      "equestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUS" +
+      "E\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002B6\n$skadistats.cl",
+      "arity.wire.common.protoB\013NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22115,6 +22943,12 @@ public final class NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_FullFrameSplit_descriptor,
         new java.lang.String[] { "Tick", "Section", "Total", "Data", });
+    internal_static_CSVCMsg_BSPDecal_descriptor =
+      getDescriptor().getMessageTypes().get(26);
+    internal_static_CSVCMsg_BSPDecal_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_BSPDecal_descriptor,
+        new java.lang.String[] { "Pos", "DecalTextureIndex", "EntityIndex", "ModelIndex", "LowPriority", });
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor();
   }
 

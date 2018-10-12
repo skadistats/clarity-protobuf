@@ -29,6 +29,7 @@ public class EmbeddedPackets {
         /*  16 */ EMBED.put(S1NetMessages.SVC_Messages.svc_Print_VALUE, NetMessages.CSVCMsg_Print.class);
         /*  17 */ EMBED.put(S1NetMessages.SVC_Messages.svc_Sounds_VALUE, NetMessages.CSVCMsg_Sounds.class);
         /*  18 */ EMBED.put(S1NetMessages.SVC_Messages.svc_SetView_VALUE, NetMessages.CSVCMsg_SetView.class);
+        /*  21 */ EMBED.put(S1NetMessages.SVC_Messages.svc_BSPDecal_VALUE, NetMessages.CSVCMsg_BSPDecal.class);
         /*  23 */ EMBED.put(S1NetMessages.SVC_Messages.svc_UserMessage_VALUE, NetworkBaseTypes.CSVCMsg_UserMessage.class);
         /*  25 */ EMBED.put(S1NetMessages.SVC_Messages.svc_GameEvent_VALUE, NetworkBaseTypes.CSVCMsg_GameEvent.class);
         /*  26 */ EMBED.put(S1NetMessages.SVC_Messages.svc_PacketEntities_VALUE, NetMessages.CSVCMsg_PacketEntities.class);
