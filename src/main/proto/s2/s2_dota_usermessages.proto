@@ -119,4 +119,5 @@ enum EDotaUserMessages {
 	DOTA_UM_SalutePlayer = 576;
     DOTA_UM_TipAlert = 577;
     DOTA_UM_ReplaceQueryUnit = 578;
+    DOTA_UM_EmptyTeleportAlert = 579;
 }

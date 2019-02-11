@@ -6674,6 +6674,15 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 team_wager_amount = 15;</code>
          */
         int getTeamWagerAmount();
+
+        /**
+         * <code>optional uint32 periodic_point_adjustments = 16;</code>
+         */
+        boolean hasPeriodicPointAdjustments();
+        /**
+         * <code>optional uint32 periodic_point_adjustments = 16;</code>
+         */
+        int getPeriodicPointAdjustments();
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.EventData}
@@ -6803,6 +6812,11 @@ public final class S2DotaMatchMetadata {
                 case 120: {
                   bitField0_ |= 0x00002000;
                   teamWagerAmount_ = input.readUInt32();
+                  break;
+                }
+                case 128: {
+                  bitField0_ |= 0x00004000;
+                  periodicPointAdjustments_ = input.readUInt32();
                   break;
                 }
               }
@@ -7093,6 +7107,21 @@ public final class S2DotaMatchMetadata {
           return teamWagerAmount_;
         }
 
+        public static final int PERIODIC_POINT_ADJUSTMENTS_FIELD_NUMBER = 16;
+        private int periodicPointAdjustments_;
+        /**
+         * <code>optional uint32 periodic_point_adjustments = 16;</code>
+         */
+        public boolean hasPeriodicPointAdjustments() {
+          return ((bitField0_ & 0x00004000) == 0x00004000);
+        }
+        /**
+         * <code>optional uint32 periodic_point_adjustments = 16;</code>
+         */
+        public int getPeriodicPointAdjustments() {
+          return periodicPointAdjustments_;
+        }
+
         private void initFields() {
           eventId_ = 0;
           eventPoints_ = 0;
@@ -7109,6 +7138,7 @@ public final class S2DotaMatchMetadata {
           cavernChallengeWinnings_ = 0;
           amountWagered_ = 0;
           teamWagerAmount_ = 0;
+          periodicPointAdjustments_ = 0;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -7167,6 +7197,9 @@ public final class S2DotaMatchMetadata {
           }
           if (((bitField0_ & 0x00002000) == 0x00002000)) {
             output.writeUInt32(15, teamWagerAmount_);
+          }
+          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+            output.writeUInt32(16, periodicPointAdjustments_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -7236,6 +7269,10 @@ public final class S2DotaMatchMetadata {
           if (((bitField0_ & 0x00002000) == 0x00002000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(15, teamWagerAmount_);
+          }
+          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(16, periodicPointAdjustments_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -7389,6 +7426,8 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00002000);
             teamWagerAmount_ = 0;
             bitField0_ = (bitField0_ & ~0x00004000);
+            periodicPointAdjustments_ = 0;
+            bitField0_ = (bitField0_ & ~0x00008000);
             return this;
           }
 
@@ -7482,6 +7521,10 @@ public final class S2DotaMatchMetadata {
               to_bitField0_ |= 0x00002000;
             }
             result.teamWagerAmount_ = teamWagerAmount_;
+            if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+              to_bitField0_ |= 0x00004000;
+            }
+            result.periodicPointAdjustments_ = periodicPointAdjustments_;
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -7565,6 +7608,9 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasTeamWagerAmount()) {
               setTeamWagerAmount(other.getTeamWagerAmount());
+            }
+            if (other.hasPeriodicPointAdjustments()) {
+              setPeriodicPointAdjustments(other.getPeriodicPointAdjustments());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -8277,6 +8323,38 @@ public final class S2DotaMatchMetadata {
           public Builder clearTeamWagerAmount() {
             bitField0_ = (bitField0_ & ~0x00004000);
             teamWagerAmount_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int periodicPointAdjustments_ ;
+          /**
+           * <code>optional uint32 periodic_point_adjustments = 16;</code>
+           */
+          public boolean hasPeriodicPointAdjustments() {
+            return ((bitField0_ & 0x00008000) == 0x00008000);
+          }
+          /**
+           * <code>optional uint32 periodic_point_adjustments = 16;</code>
+           */
+          public int getPeriodicPointAdjustments() {
+            return periodicPointAdjustments_;
+          }
+          /**
+           * <code>optional uint32 periodic_point_adjustments = 16;</code>
+           */
+          public Builder setPeriodicPointAdjustments(int value) {
+            bitField0_ |= 0x00008000;
+            periodicPointAdjustments_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 periodic_point_adjustments = 16;</code>
+           */
+          public Builder clearPeriodicPointAdjustments() {
+            bitField0_ = (bitField0_ & ~0x00008000);
+            periodicPointAdjustments_ = 0;
             onChanged();
             return this;
           }
@@ -25129,14 +25207,14 @@ public final class S2DotaMatchMetadata {
       "t_id\030\005 \001(\r\022\016\n\006origin\030\006 \001(\r\"|\n\026CDOTAMatch" +
       "MetadataFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_i" +
       "d\030\002 \002(\004\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMe" +
-      "tadata\022\030\n\020private_metadata\030\005 \001(\014\"\354\025\n\022CDO" +
+      "tadata\022\030\n\020private_metadata\030\005 \001(\014\"\220\026\n\022CDO" +
       "TAMatchMetadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMa",
       "tchMetadata.Team\022/\n\014item_rewards\030\002 \003(\0132\031" +
       ".CLobbyTimedRewardDetails\022\020\n\010lobby_id\030\003 " +
       "\001(\006\022\031\n\021report_until_time\030\004 \001(\006\022\037\n\027event_" +
       "game_custom_table\030\005 \001(\014\022\030\n\020primary_event" +
       "_id\030\006 \001(\r\022\"\n\nmatch_tips\030\007 \003(\0132\016.CMsgMatc" +
-      "hTips\032\357\023\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0220\n\007pla" +
+      "hTips\032\223\024\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0220\n\007pla" +
       "yers\030\002 \003(\0132\037.CDOTAMatchMetadata.Team.Pla" +
       "yer\022\030\n\020graph_experience\030\003 \003(\002\022\031\n\021graph_g" +
       "old_earned\030\004 \003(\002\022\027\n\017graph_net_worth\030\005 \003(" +
@@ -25159,7 +25237,7 @@ public final class S2DotaMatchMetadata {
       "ef_index\030\002 \001(\r\022\026\n\016starting_value\030\003 \001(\r\022\022" +
       "\n\nis_victory\030\004 \001(\010\032Z\n\014SubChallenge\022\017\n\007sl" +
       "ot_id\030\001 \001(\r\022\023\n\013start_value\030\002 \001(\r\022\021\n\tend_" +
-      "value\030\003 \001(\r\022\021\n\tcompleted\030\004 \001(\010\032\361\003\n\tEvent" +
+      "value\030\003 \001(\r\022\021\n\tcompleted\030\004 \001(\010\032\225\004\n\tEvent" +
       "Data\022\020\n\010event_id\030\001 \001(\r\022\024\n\014event_points\030\002",
       " \001(\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\032\n\022c" +
       "hallenge_quest_id\030\004 \001(\r\022$\n\034challenge_que" +
@@ -25172,69 +25250,70 @@ public final class S2DotaMatchMetadata {
       "nings\030\013 \001(\r\022\037\n\027cavern_challenge_active\030\014" +
       " \001(\010\022!\n\031cavern_challenge_winnings\030\r \001(\r\022",
       "\026\n\016amount_wagered\030\016 \001(\r\022\031\n\021team_wager_am" +
-      "ount\030\017 \001(\r\032\312\010\n\006Player\022\022\n\naccount_id\030\001 \001(" +
-      "\r\022\030\n\020ability_upgrades\030\002 \003(\r\022\023\n\013player_sl" +
-      "ot\030\003 \001(\r\022)\n\023equipped_econ_items\030\004 \003(\0132\014." +
-      "CSOEconItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchM" +
-      "etadata.Team.PlayerKill\0224\n\005items\030\006 \003(\0132%" +
-      ".CDOTAMatchMetadata.Team.ItemPurchase\022\025\n" +
-      "\ravg_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010" +
-      " \001(\r\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm" +
-      "_x16\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_",
-      "kills_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(" +
-      "\r\022\024\n\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030" +
-      "\017 \001(\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_win_st" +
-      "reak\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_" +
-      "score\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npu" +
-      "sh_score\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027" +
-      "\n\017graph_net_worth\030\027 \003(\002\022F\n\022inventory_sna" +
-      "pshot\030\030 \003(\0132*.CDOTAMatchMetadata.Team.In" +
-      "ventorySnapshot\022\034\n\024avg_stats_calibrated\030" +
-      "\031 \001(\010\022G\n\023auto_style_criteria\030\032 \003(\0132*.CDO",
-      "TAMatchMetadata.Team.AutoStyleCriteria\022\020" +
-      "\n\010event_id\030\033 \001(\r\022\024\n\014event_points\030\034 \001(\r\0226" +
-      "\n\nevent_data\030\035 \003(\0132\".CDOTAMatchMetadata." +
-      "Team.EventData\022I\n\024strange_gem_progress\030\036" +
-      " \003(\0132+.CDOTAMatchMetadata.Team.StrangeGe" +
-      "mProgress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stac" +
-      "ked\030  \001(\r\022F\n\022victory_prediction\030! \003(\0132*." +
-      "CDOTAMatchMetadata.Team.VictoryPredictio" +
-      "n\022\034\n\024lane_selection_flags\030\" \001(\r\"\244\n\n\031CDOT" +
-      "AMatchPrivateMetadata\022.\n\005teams\030\001 \003(\0132\037.C",
-      "DOTAMatchPrivateMetadata.Team\022\035\n\025graph_w" +
-      "in_probability\030\002 \003(\002\032\267\t\n\004Team\022\021\n\tdota_te" +
-      "am\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatchPr" +
-      "ivateMetadata.Team.Player\022;\n\tbuildings\030\003" +
-      " \003(\0132(.CDOTAMatchPrivateMetadata.Team.Bu" +
-      "ilding\032\276\007\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n" +
-      "\013player_slot\030\002 \001(\r\022\027\n\017position_stream\030\003 " +
-      "\001(\014\022M\n\017combat_segments\030\004 \003(\01324.CDOTAMatc" +
-      "hPrivateMetadata.Team.Player.CombatSegme" +
-      "nt\022\031\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_re",
-      "cords\030\006 \003(\01321.CDOTAMatchPrivateMetadata." +
-      "Team.Player.BuffRecord\022\023\n\013graph_kills\030\007 " +
-      "\003(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_assis" +
-      "ts\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014grap" +
-      "h_denies\030\013 \003(\002\032\343\002\n\rCombatSegment\022\021\n\tgame" +
-      "_time\030\001 \001(\005\022_\n\021damage_by_ability\030\002 \003(\0132D" +
-      ".CDOTAMatchPrivateMetadata.Team.Player.C" +
-      "ombatSegment.DamageByAbility\032\335\001\n\017DamageB" +
-      "yAbility\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\na" +
-      "bility_id\030\001 \001(\r\022j\n\017by_hero_targets\030\002 \003(\013",
-      "2Q.CDOTAMatchPrivateMetadata.Team.Player" +
-      ".CombatSegment.DamageByAbility.ByHeroTar" +
-      "get\032/\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006" +
-      "damage\030\002 \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_abil" +
-      "ity_id\030\001 \001(\r\022\032\n\022buff_modifier_name\030\003 \001(\t" +
-      "\022W\n\017by_hero_targets\030\002 \003(\0132>.CDOTAMatchPr" +
-      "ivateMetadata.Team.Player.BuffRecord.ByH" +
-      "eroTarget\032L\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001" +
-      "(\r\022\030\n\020elapsed_duration\030\002 \001(\002\022\021\n\tis_hidde" +
-      "n\030\003 \001(\010\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030",
-      "\n\020position_quant_x\030\002 \001(\r\022\030\n\020position_qua" +
-      "nt_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002B:\n skadis" +
-      "tats.clarity.wire.s2.protoB\023S2DotaMatchM" +
-      "etadata\200\001\000"
+      "ount\030\017 \001(\r\022\"\n\032periodic_point_adjustments" +
+      "\030\020 \001(\r\032\312\010\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n" +
+      "\020ability_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003" +
+      " \001(\r\022)\n\023equipped_econ_items\030\004 \003(\0132\014.CSOE" +
+      "conItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetad" +
+      "ata.Team.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDO" +
+      "TAMatchMetadata.Team.ItemPurchase\022\025\n\ravg" +
+      "_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r" +
+      "\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16",
+      "\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kill" +
+      "s_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n" +
+      "\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(" +
+      "\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_win_streak" +
+      "\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_scor" +
+      "e\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_s" +
+      "core\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017gr" +
+      "aph_net_worth\030\027 \003(\002\022F\n\022inventory_snapsho" +
+      "t\030\030 \003(\0132*.CDOTAMatchMetadata.Team.Invent" +
+      "orySnapshot\022\034\n\024avg_stats_calibrated\030\031 \001(",
+      "\010\022G\n\023auto_style_criteria\030\032 \003(\0132*.CDOTAMa" +
+      "tchMetadata.Team.AutoStyleCriteria\022\020\n\010ev" +
+      "ent_id\030\033 \001(\r\022\024\n\014event_points\030\034 \001(\r\0226\n\nev" +
+      "ent_data\030\035 \003(\0132\".CDOTAMatchMetadata.Team" +
+      ".EventData\022I\n\024strange_gem_progress\030\036 \003(\013" +
+      "2+.CDOTAMatchMetadata.Team.StrangeGemPro" +
+      "gress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked\030" +
+      "  \001(\r\022F\n\022victory_prediction\030! \003(\0132*.CDOT" +
+      "AMatchMetadata.Team.VictoryPrediction\022\034\n" +
+      "\024lane_selection_flags\030\" \001(\r\"\244\n\n\031CDOTAMat",
+      "chPrivateMetadata\022.\n\005teams\030\001 \003(\0132\037.CDOTA" +
+      "MatchPrivateMetadata.Team\022\035\n\025graph_win_p" +
+      "robability\030\002 \003(\002\032\267\t\n\004Team\022\021\n\tdota_team\030\001" +
+      " \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatchPrivat" +
+      "eMetadata.Team.Player\022;\n\tbuildings\030\003 \003(\013" +
+      "2(.CDOTAMatchPrivateMetadata.Team.Buildi" +
+      "ng\032\276\007\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013pla" +
+      "yer_slot\030\002 \001(\r\022\027\n\017position_stream\030\003 \001(\014\022" +
+      "M\n\017combat_segments\030\004 \003(\01324.CDOTAMatchPri" +
+      "vateMetadata.Team.Player.CombatSegment\022\031",
+      "\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_record" +
+      "s\030\006 \003(\01321.CDOTAMatchPrivateMetadata.Team" +
+      ".Player.BuffRecord\022\023\n\013graph_kills\030\007 \003(\002\022" +
+      "\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_assists\030\t" +
+      " \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014graph_de" +
+      "nies\030\013 \003(\002\032\343\002\n\rCombatSegment\022\021\n\tgame_tim" +
+      "e\030\001 \001(\005\022_\n\021damage_by_ability\030\002 \003(\0132D.CDO" +
+      "TAMatchPrivateMetadata.Team.Player.Comba" +
+      "tSegment.DamageByAbility\032\335\001\n\017DamageByAbi" +
+      "lity\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\nabili",
+      "ty_id\030\001 \001(\r\022j\n\017by_hero_targets\030\002 \003(\0132Q.C" +
+      "DOTAMatchPrivateMetadata.Team.Player.Com" +
+      "batSegment.DamageByAbility.ByHeroTarget\032" +
+      "/\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006dama" +
+      "ge\030\002 \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_ability_" +
+      "id\030\001 \001(\r\022\032\n\022buff_modifier_name\030\003 \001(\t\022W\n\017" +
+      "by_hero_targets\030\002 \003(\0132>.CDOTAMatchPrivat" +
+      "eMetadata.Team.Player.BuffRecord.ByHeroT" +
+      "arget\032L\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\030" +
+      "\n\020elapsed_duration\030\002 \001(\002\022\021\n\tis_hidden\030\003 ",
+      "\001(\010\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020po" +
+      "sition_quant_x\030\002 \001(\r\022\030\n\020position_quant_y" +
+      "\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002B:\n skadistats" +
+      ".clarity.wire.s2.protoB\023S2DotaMatchMetad" +
+      "ata\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25321,7 +25400,7 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_Team_EventData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_EventData_descriptor,
-        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "TeamWagerAmount", });
+        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "TeamWagerAmount", "PeriodicPointAdjustments", });
     internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
       internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(8);
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new

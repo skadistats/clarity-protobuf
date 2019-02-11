@@ -469,6 +469,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ReplaceQueryUnit = 578;</code>
      */
     DOTA_UM_ReplaceQueryUnit(113, 578),
+    /**
+     * <code>DOTA_UM_EmptyTeleportAlert = 579;</code>
+     */
+    DOTA_UM_EmptyTeleportAlert(114, 579),
     ;
 
     /**
@@ -927,6 +931,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ReplaceQueryUnit = 578;</code>
      */
     public static final int DOTA_UM_ReplaceQueryUnit_VALUE = 578;
+    /**
+     * <code>DOTA_UM_EmptyTeleportAlert = 579;</code>
+     */
+    public static final int DOTA_UM_EmptyTeleportAlert_VALUE = 579;
 
 
     public final int getNumber() { return value; }
@@ -1047,6 +1055,7 @@ public final class S2DotaUserMessages {
         case 576: return DOTA_UM_SalutePlayer;
         case 577: return DOTA_UM_TipAlert;
         case 578: return DOTA_UM_ReplaceQueryUnit;
+        case 579: return DOTA_UM_EmptyTeleportAlert;
         default: return null;
       }
     }
@@ -1107,7 +1116,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\337\032\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\200\033\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1193,8 +1202,9 @@ public final class S2DotaUserMessages {
       "\020\275\004\022\025\n\020DOTA_UM_ItemSold\020\276\004\022\031\n\024DOTA_UM_Da" +
       "mageReport\020\277\004\022\031\n\024DOTA_UM_SalutePlayer\020\300\004" +
       "\022\025\n\020DOTA_UM_TipAlert\020\301\004\022\035\n\030DOTA_UM_Repla" +
-      "ceQueryUnit\020\302\004B;\n skadistats.clarity.wir" +
-      "e.s2.protoB\022S2DotaUserMessagesH\001\200\001\000"
+      "ceQueryUnit\020\302\004\022\037\n\032DOTA_UM_EmptyTeleportA" +
+      "lert\020\303\004B;\n skadistats.clarity.wire.s2.pr" +
+      "otoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

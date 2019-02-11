@@ -395,9 +395,17 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_INTERNATIONAL_2018(22, 22),
     /**
-     * <code>EVENT_ID_COUNT = 23;</code>
+     * <code>EVENT_ID_FROSTIVUS_2018 = 23;</code>
      */
-    EVENT_ID_COUNT(23, 23),
+    EVENT_ID_FROSTIVUS_2018(23, 23),
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2019 = 24;</code>
+     */
+    EVENT_ID_NEW_BLOOM_2019(24, 24),
+    /**
+     * <code>EVENT_ID_COUNT = 25;</code>
+     */
+    EVENT_ID_COUNT(25, 25),
     ;
 
     /**
@@ -493,9 +501,17 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_INTERNATIONAL_2018_VALUE = 22;
     /**
-     * <code>EVENT_ID_COUNT = 23;</code>
+     * <code>EVENT_ID_FROSTIVUS_2018 = 23;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 23;
+    public static final int EVENT_ID_FROSTIVUS_2018_VALUE = 23;
+    /**
+     * <code>EVENT_ID_NEW_BLOOM_2019 = 24;</code>
+     */
+    public static final int EVENT_ID_NEW_BLOOM_2019_VALUE = 24;
+    /**
+     * <code>EVENT_ID_COUNT = 25;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 25;
 
 
     public final int getNumber() { return value; }
@@ -525,7 +541,9 @@ public final class S2DotaGcCommon {
         case 20: return EVENT_ID_SINGLES_DAY_2017;
         case 21: return EVENT_ID_FROSTIVUS_2017;
         case 22: return EVENT_ID_INTERNATIONAL_2018;
-        case 23: return EVENT_ID_COUNT;
+        case 23: return EVENT_ID_FROSTIVUS_2018;
+        case 24: return EVENT_ID_NEW_BLOOM_2019;
+        case 25: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -18967,7 +18985,7 @@ public final class S2DotaGcCommon {
       "ODE_EVENT\020\023\022\026\n\022DOTA_GAMEMODE_ARDM\020\024\022\030\n\024D" +
       "OTA_GAMEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_A" +
       "LL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026D",
-      "OTA_GAMEMODE_MUTATION\020\030*\303\005\n\006EEvent\022\021\n\rEV" +
+      "OTA_GAMEMODE_MUTATION\020\030*\375\005\n\006EEvent\022\021\n\rEV" +
       "ENT_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030" +
       "EVENT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_F" +
       "ROSTIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2" +
@@ -18984,17 +19002,19 @@ public final class S2DotaGcCommon {
       "VENT_ID_INTERNATIONAL_2017\020\022\022\036\n\032EVENT_ID" +
       "_PLUS_SUBSCRIPTION\020\023\022\035\n\031EVENT_ID_SINGLES" +
       "_DAY_2017\020\024\022\033\n\027EVENT_ID_FROSTIVUS_2017\020\025" +
-      "\022\037\n\033EVENT_ID_INTERNATIONAL_2018\020\026\022\022\n\016EVE" +
-      "NT_ID_COUNT\020\027*\307\002\n\rEMatchOutcome\022\033\n\027k_EMa" +
-      "tchOutcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_",
-      "RadVictory\020\002\022\037\n\033k_EMatchOutcome_DireVict" +
-      "ory\020\003\0223\n/k_EMatchOutcome_NotScored_PoorN" +
-      "etworkConditions\020@\022$\n k_EMatchOutcome_No" +
-      "tScored_Leaver\020A\022)\n%k_EMatchOutcome_NotS" +
-      "cored_ServerCrash\020B\022*\n&k_EMatchOutcome_N" +
-      "otScored_NeverStarted\020C\022&\n\"k_EMatchOutco" +
-      "me_NotScored_Canceled\020DB7\n skadistats.cl" +
-      "arity.wire.s2.protoB\016S2DotaGcCommonH\001\200\001\000"
+      "\022\037\n\033EVENT_ID_INTERNATIONAL_2018\020\026\022\033\n\027EVE" +
+      "NT_ID_FROSTIVUS_2018\020\027\022\033\n\027EVENT_ID_NEW_B" +
+      "LOOM_2019\020\030\022\022\n\016EVENT_ID_COUNT\020\031*\307\002\n\rEMat",
+      "chOutcome\022\033\n\027k_EMatchOutcome_Unknown\020\000\022\036" +
+      "\n\032k_EMatchOutcome_RadVictory\020\002\022\037\n\033k_EMat" +
+      "chOutcome_DireVictory\020\003\0223\n/k_EMatchOutco" +
+      "me_NotScored_PoorNetworkConditions\020@\022$\n " +
+      "k_EMatchOutcome_NotScored_Leaver\020A\022)\n%k_" +
+      "EMatchOutcome_NotScored_ServerCrash\020B\022*\n" +
+      "&k_EMatchOutcome_NotScored_NeverStarted\020" +
+      "C\022&\n\"k_EMatchOutcome_NotScored_Canceled\020" +
+      "DB7\n skadistats.clarity.wire.s2.protoB\016S" +
+      "2DotaGcCommonH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

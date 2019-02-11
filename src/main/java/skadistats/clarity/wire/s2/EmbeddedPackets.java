@@ -225,6 +225,7 @@ public class EmbeddedPackets {
 //        /* 573 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AbilityDraftRequestAbility_VALUE, DotaUserMessages.CDOTAUserMessage_AbilityDraftRequestAbility.class);
 //        /* 574 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemSold_VALUE, DotaUserMessages.CDOTAUserMessage_ItemSold.class);
 //        /* 578 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ReplaceQueryUnit_VALUE, DotaUserMessages.CDOTAUserMsg_ReplaceQueryUnit.class);
+//        /* 579 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EmptyTeleportAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EmptyTeleportAlert.class);
 
         REVERSE = new HashMap<>();
         for (Map.Entry<Integer, Class<? extends GeneratedMessage>> e : EMBED.entrySet()) {
