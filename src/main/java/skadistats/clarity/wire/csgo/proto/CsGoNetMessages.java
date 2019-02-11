@@ -8,6 +8,115 @@ public final class CsGoNetMessages {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code SVC_Messages_CsGo}
+   */
+  public enum SVC_Messages_CsGo
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>svc_PaintmapData = 33;</code>
+     */
+    svc_PaintmapData(0, 33),
+    /**
+     * <code>svc_CmdKeyValues = 34;</code>
+     */
+    svc_CmdKeyValues(1, 34),
+    /**
+     * <code>svc_EncryptedData = 35;</code>
+     */
+    svc_EncryptedData(2, 35),
+    /**
+     * <code>svc_HltvReplay = 36;</code>
+     */
+    svc_HltvReplay(3, 36),
+    /**
+     * <code>svc_Broadcast_Command = 38;</code>
+     */
+    svc_Broadcast_Command(4, 38),
+    ;
+
+    /**
+     * <code>svc_PaintmapData = 33;</code>
+     */
+    public static final int svc_PaintmapData_VALUE = 33;
+    /**
+     * <code>svc_CmdKeyValues = 34;</code>
+     */
+    public static final int svc_CmdKeyValues_VALUE = 34;
+    /**
+     * <code>svc_EncryptedData = 35;</code>
+     */
+    public static final int svc_EncryptedData_VALUE = 35;
+    /**
+     * <code>svc_HltvReplay = 36;</code>
+     */
+    public static final int svc_HltvReplay_VALUE = 36;
+    /**
+     * <code>svc_Broadcast_Command = 38;</code>
+     */
+    public static final int svc_Broadcast_Command_VALUE = 38;
+
+
+    public final int getNumber() { return value; }
+
+    public static SVC_Messages_CsGo valueOf(int value) {
+      switch (value) {
+        case 33: return svc_PaintmapData;
+        case 34: return svc_CmdKeyValues;
+        case 35: return svc_EncryptedData;
+        case 36: return svc_HltvReplay;
+        case 38: return svc_Broadcast_Command;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<SVC_Messages_CsGo>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<SVC_Messages_CsGo>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<SVC_Messages_CsGo>() {
+            public SVC_Messages_CsGo findValueByNumber(int number) {
+              return SVC_Messages_CsGo.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final SVC_Messages_CsGo[] VALUES = values();
+
+    public static SVC_Messages_CsGo valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private SVC_Messages_CsGo(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:SVC_Messages_CsGo)
+  }
+
   public interface CSVCMsg_ServerInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_ServerInfo)
       com.google.protobuf.MessageOrBuilder {
@@ -3048,11 +3157,416 @@ public final class CsGoNetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_ServerInfo)
   }
 
+  public interface CSVCMsg_CmdKeyValuesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_CmdKeyValues)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bytes keyvalues = 1;</code>
+     */
+    boolean hasKeyvalues();
+    /**
+     * <code>optional bytes keyvalues = 1;</code>
+     */
+    com.google.protobuf.ByteString getKeyvalues();
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_CmdKeyValues}
+   */
+  public static final class CSVCMsg_CmdKeyValues extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_CmdKeyValues)
+      CSVCMsg_CmdKeyValuesOrBuilder {
+    // Use CSVCMsg_CmdKeyValues.newBuilder() to construct.
+    private CSVCMsg_CmdKeyValues(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_CmdKeyValues(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_CmdKeyValues defaultInstance;
+    public static CSVCMsg_CmdKeyValues getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_CmdKeyValues getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_CmdKeyValues(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              keyvalues_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.internal_static_CSVCMsg_CmdKeyValues_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.internal_static_CSVCMsg_CmdKeyValues_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.class, skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_CmdKeyValues> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_CmdKeyValues>() {
+      public CSVCMsg_CmdKeyValues parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_CmdKeyValues(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_CmdKeyValues> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int KEYVALUES_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString keyvalues_;
+    /**
+     * <code>optional bytes keyvalues = 1;</code>
+     */
+    public boolean hasKeyvalues() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional bytes keyvalues = 1;</code>
+     */
+    public com.google.protobuf.ByteString getKeyvalues() {
+      return keyvalues_;
+    }
+
+    private void initFields() {
+      keyvalues_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, keyvalues_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, keyvalues_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_CmdKeyValues}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_CmdKeyValues)
+        skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValuesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.internal_static_CSVCMsg_CmdKeyValues_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.internal_static_CSVCMsg_CmdKeyValues_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.class, skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        keyvalues_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.internal_static_CSVCMsg_CmdKeyValues_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues build() {
+        skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues buildPartial() {
+        skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues result = new skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.keyvalues_ = keyvalues_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues) {
+          return mergeFrom((skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues other) {
+        if (other == skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues.getDefaultInstance()) return this;
+        if (other.hasKeyvalues()) {
+          setKeyvalues(other.getKeyvalues());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.proto.CsGoNetMessages.CSVCMsg_CmdKeyValues) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString keyvalues_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes keyvalues = 1;</code>
+       */
+      public boolean hasKeyvalues() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bytes keyvalues = 1;</code>
+       */
+      public com.google.protobuf.ByteString getKeyvalues() {
+        return keyvalues_;
+      }
+      /**
+       * <code>optional bytes keyvalues = 1;</code>
+       */
+      public Builder setKeyvalues(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        keyvalues_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes keyvalues = 1;</code>
+       */
+      public Builder clearKeyvalues() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        keyvalues_ = getDefaultInstance().getKeyvalues();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_CmdKeyValues)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_CmdKeyValues(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_CmdKeyValues)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_ServerInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_ServerInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_CmdKeyValues_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_CmdKeyValues_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3074,8 +3588,13 @@ public final class CsGoNetMessages {
       "\n\rtick_interval\030\016 \001(\002\022\020\n\010game_dir\030\017 \001(\t\022",
       "\020\n\010map_name\030\020 \001(\t\022\026\n\016map_group_name\030\021 \001(" +
       "\t\022\020\n\010sky_name\030\022 \001(\t\022\021\n\thost_name\030\023 \001(\t\022\022" +
-      "\n\nugc_map_id\030\026 \001(\004B8\n\"skadistats.clarity" +
-      ".wire.csgo.protoB\017CsGoNetMessages\200\001\000"
+      "\n\nugc_map_id\030\026 \001(\004\")\n\024CSVCMsg_CmdKeyValu" +
+      "es\022\021\n\tkeyvalues\030\001 \001(\014*\205\001\n\021SVC_Messages_C" +
+      "sGo\022\024\n\020svc_PaintmapData\020!\022\024\n\020svc_CmdKeyV" +
+      "alues\020\"\022\025\n\021svc_EncryptedData\020#\022\022\n\016svc_Hl" +
+      "tvReplay\020$\022\031\n\025svc_Broadcast_Command\020&B8\n" +
+      "\"skadistats.clarity.wire.csgo.protoB\017CsG" +
+      "oNetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3095,6 +3614,12 @@ public final class CsGoNetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ServerInfo_descriptor,
         new java.lang.String[] { "Protocol", "ServerCount", "IsDedicated", "IsOfficialValveServer", "IsHltv", "IsReplay", "IsRedirectingToProxyRelay", "COs", "MapCrc", "ClientCrc", "StringTableCrc", "MaxClients", "MaxClasses", "PlayerSlot", "TickInterval", "GameDir", "MapName", "MapGroupName", "SkyName", "HostName", "UgcMapId", });
+    internal_static_CSVCMsg_CmdKeyValues_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_CSVCMsg_CmdKeyValues_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_CmdKeyValues_descriptor,
+        new java.lang.String[] { "Keyvalues", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

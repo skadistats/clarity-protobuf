@@ -1,8 +1,6 @@
 package skadistats.clarity.wire.csgo;
 
 import com.google.protobuf.GeneratedMessage;
-import skadistats.clarity.wire.common.proto.NetMessages;
-import skadistats.clarity.wire.common.proto.NetworkBaseTypes;
 import skadistats.clarity.wire.csgo.proto.CsGoNetMessages;
 import skadistats.clarity.wire.s1.proto.S1NetMessages;
 
@@ -16,6 +14,7 @@ public class EmbeddedPackets {
         OVERRIDES = new HashMap<>();
 
         /*  8 */ OVERRIDES.put(S1NetMessages.SVC_Messages.svc_ServerInfo_VALUE, CsGoNetMessages.CSVCMsg_ServerInfo.class);
+        /* 34 */ OVERRIDES.put(CsGoNetMessages.SVC_Messages_CsGo.svc_CmdKeyValues_VALUE, CsGoNetMessages.CSVCMsg_CmdKeyValues.class);
 
     }
 

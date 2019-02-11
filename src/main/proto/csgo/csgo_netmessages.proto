@@ -3,6 +3,14 @@ option java_outer_classname = "CsGoNetMessages";
 
 option cc_generic_services = false;
 
+enum SVC_Messages_CsGo {
+    svc_PaintmapData = 33;
+    svc_CmdKeyValues = 34;
+    svc_EncryptedData = 35;
+    svc_HltvReplay = 36;
+    svc_Broadcast_Command = 38;
+}
+
 message CSVCMsg_ServerInfo
 {
 	optional int32 protocol = 1;			// protocol version
@@ -28,5 +36,8 @@ message CSVCMsg_ServerInfo
 	optional uint64 ugc_map_id = 22;
 }
 
+message CSVCMsg_CmdKeyValues {
+    optional bytes keyvalues = 1;
+}
 
 
