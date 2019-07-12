@@ -15,6 +15,7 @@ public class EmbeddedPackets {
 
         /*  8 */ OVERRIDES.put(S1NetMessages.SVC_Messages.svc_ServerInfo_VALUE, CsGoNetMessages.CSVCMsg_ServerInfo.class);
         /* 34 */ OVERRIDES.put(CsGoNetMessages.SVC_Messages_CsGo.svc_CmdKeyValues_VALUE, CsGoNetMessages.CSVCMsg_CmdKeyValues.class);
+        /* 35 */ OVERRIDES.put(CsGoNetMessages.SVC_Messages_CsGo.svc_EncryptedData_VALUE, CsGoNetMessages.CSVCMsg_EncryptedData.class);
 
     }
 

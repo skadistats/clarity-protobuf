@@ -40,4 +40,8 @@ message CSVCMsg_CmdKeyValues {
     optional bytes keyvalues = 1;
 }
 
+message CSVCMsg_EncryptedData {
+    optional bytes encrypted = 1;
+    optional int32 key_type = 2;
+}
 
