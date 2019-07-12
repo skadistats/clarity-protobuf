@@ -162,6 +162,13 @@ public class EmbeddedPackets {
         /* 575 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DamageReport_VALUE, DotaUserMessages.CDOTAUserMsg_DamageReport.class);
         /* 576 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SalutePlayer_VALUE, DotaUserMessages.CDOTAUserMsg_SalutePlayer.class);
         /* 577 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TipAlert_VALUE, DotaUserMessages.CDOTAUserMsg_TipAlert.class);
+        /* 580 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MarsArenaOfBloodAttack_VALUE, DotaUserMessages.CDOTAUserMsg_MarsArenaOfBloodAttack.class);
+        /* 581 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ESArcanaCombo_VALUE, DotaUserMessages.CDOTAUserMsg_ESArcanaCombo.class);
+        /* 582 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ESArcanaComboSummary_VALUE, DotaUserMessages.CDOTAUserMsg_ESArcanaComboSummary.class);
+        /* 583 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HighFiveLeftHanging_VALUE, DotaUserMessages.CDOTAUserMsg_HighFiveLeftHanging.class);
+        /* 584 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HighFiveCompleted_VALUE, DotaUserMessages.CDOTAUserMsg_HighFiveCompleted.class);
+        /* 585 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ShovelUnearth_VALUE, DotaUserMessages.CDOTAUserMsg_ShovelUnearth.class);
+        /* 586 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_EM_InvokerSpellCast_VALUE, DotaUserMessages.CDOTAEntityMsg_InvokerSpellCast.class);
 
 //        /* 464 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ EMBED.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);

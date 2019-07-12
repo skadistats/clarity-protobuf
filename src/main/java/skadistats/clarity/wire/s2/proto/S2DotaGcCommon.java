@@ -113,6 +113,10 @@ public final class S2DotaGcCommon {
      * <code>DOTA_GAMEMODE_MUTATION = 24;</code>
      */
     DOTA_GAMEMODE_MUTATION(24, 24),
+    /**
+     * <code>DOTA_GAMEMODE_COACHES_CHALLENGE = 25;</code>
+     */
+    DOTA_GAMEMODE_COACHES_CHALLENGE(25, 25),
     ;
 
     /**
@@ -215,6 +219,10 @@ public final class S2DotaGcCommon {
      * <code>DOTA_GAMEMODE_MUTATION = 24;</code>
      */
     public static final int DOTA_GAMEMODE_MUTATION_VALUE = 24;
+    /**
+     * <code>DOTA_GAMEMODE_COACHES_CHALLENGE = 25;</code>
+     */
+    public static final int DOTA_GAMEMODE_COACHES_CHALLENGE_VALUE = 25;
 
 
     public final int getNumber() { return value; }
@@ -246,6 +254,7 @@ public final class S2DotaGcCommon {
         case 22: return DOTA_GAMEMODE_ALL_DRAFT;
         case 23: return DOTA_GAMEMODE_TURBO;
         case 24: return DOTA_GAMEMODE_MUTATION;
+        case 25: return DOTA_GAMEMODE_COACHES_CHALLENGE;
         default: return null;
       }
     }
@@ -403,9 +412,13 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_NEW_BLOOM_2019(24, 24),
     /**
-     * <code>EVENT_ID_COUNT = 25;</code>
+     * <code>EVENT_ID_INTERNATIONAL_2019 = 25;</code>
      */
-    EVENT_ID_COUNT(25, 25),
+    EVENT_ID_INTERNATIONAL_2019(25, 25),
+    /**
+     * <code>EVENT_ID_COUNT = 26;</code>
+     */
+    EVENT_ID_COUNT(26, 26),
     ;
 
     /**
@@ -509,9 +522,13 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_NEW_BLOOM_2019_VALUE = 24;
     /**
-     * <code>EVENT_ID_COUNT = 25;</code>
+     * <code>EVENT_ID_INTERNATIONAL_2019 = 25;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 25;
+    public static final int EVENT_ID_INTERNATIONAL_2019_VALUE = 25;
+    /**
+     * <code>EVENT_ID_COUNT = 26;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 26;
 
 
     public final int getNumber() { return value; }
@@ -543,7 +560,8 @@ public final class S2DotaGcCommon {
         case 22: return EVENT_ID_INTERNATIONAL_2018;
         case 23: return EVENT_ID_FROSTIVUS_2018;
         case 24: return EVENT_ID_NEW_BLOOM_2019;
-        case 25: return EVENT_ID_COUNT;
+        case 25: return EVENT_ID_INTERNATIONAL_2019;
+        case 26: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -18969,7 +18987,7 @@ public final class S2DotaGcCommon {
       "2\007.EEvent:\rEVENT_ID_NONE\022&\n\004tips\030\002 \003(\0132\030" +
       ".CMsgMatchTips.SingleTip\032U\n\tSingleTip\022\031\n" +
       "\021source_account_id\030\001 \001(\r\022\031\n\021target_accou" +
-      "nt_id\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(\r*\365\004\n\rDOTA" +
+      "nt_id\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(\r*\232\005\n\rDOTA" +
       "_GameMode\022\026\n\022DOTA_GAMEMODE_NONE\020\000\022\024\n\020DOT" +
       "A_GAMEMODE_AP\020\001\022\024\n\020DOTA_GAMEMODE_CM\020\002\022\024\n" +
       "\020DOTA_GAMEMODE_RD\020\003\022\024\n\020DOTA_GAMEMODE_SD\020" +
@@ -18985,36 +19003,38 @@ public final class S2DotaGcCommon {
       "ODE_EVENT\020\023\022\026\n\022DOTA_GAMEMODE_ARDM\020\024\022\030\n\024D" +
       "OTA_GAMEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_A" +
       "LL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026D",
-      "OTA_GAMEMODE_MUTATION\020\030*\375\005\n\006EEvent\022\021\n\rEV" +
-      "ENT_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030" +
-      "EVENT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_F" +
-      "ROSTIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2" +
-      "014\020\004\022\032\n\026EVENT_ID_NEXON_PC_BANG\020\005\022\032\n\026EVE" +
-      "NT_ID_PWRD_DAC_2015\020\006\022\033\n\027EVENT_ID_NEW_BL" +
-      "OOM_2015\020\007\022\037\n\033EVENT_ID_INTERNATIONAL_201" +
-      "5\020\010\022\034\n\030EVENT_ID_FALL_MAJOR_2015\020\t\022\026\n\022EVE" +
-      "NT_ID_ORACLE_PA\020\n\022$\n EVENT_ID_NEW_BLOOM_" +
-      "2015_PREBEAST\020\013\022\026\n\022EVENT_ID_FROSTIVUS\020\014\022",
-      "\036\n\032EVENT_ID_WINTER_MAJOR_2016\020\r\022\037\n\033EVENT" +
-      "_ID_INTERNATIONAL_2016\020\016\022\034\n\030EVENT_ID_FAL" +
-      "L_MAJOR_2016\020\017\022\036\n\032EVENT_ID_WINTER_MAJOR_" +
-      "2017\020\020\022\033\n\027EVENT_ID_NEW_BLOOM_2017\020\021\022\037\n\033E" +
-      "VENT_ID_INTERNATIONAL_2017\020\022\022\036\n\032EVENT_ID" +
-      "_PLUS_SUBSCRIPTION\020\023\022\035\n\031EVENT_ID_SINGLES" +
-      "_DAY_2017\020\024\022\033\n\027EVENT_ID_FROSTIVUS_2017\020\025" +
-      "\022\037\n\033EVENT_ID_INTERNATIONAL_2018\020\026\022\033\n\027EVE" +
-      "NT_ID_FROSTIVUS_2018\020\027\022\033\n\027EVENT_ID_NEW_B" +
-      "LOOM_2019\020\030\022\022\n\016EVENT_ID_COUNT\020\031*\307\002\n\rEMat",
-      "chOutcome\022\033\n\027k_EMatchOutcome_Unknown\020\000\022\036" +
-      "\n\032k_EMatchOutcome_RadVictory\020\002\022\037\n\033k_EMat" +
-      "chOutcome_DireVictory\020\003\0223\n/k_EMatchOutco" +
-      "me_NotScored_PoorNetworkConditions\020@\022$\n " +
-      "k_EMatchOutcome_NotScored_Leaver\020A\022)\n%k_" +
-      "EMatchOutcome_NotScored_ServerCrash\020B\022*\n" +
-      "&k_EMatchOutcome_NotScored_NeverStarted\020" +
-      "C\022&\n\"k_EMatchOutcome_NotScored_Canceled\020" +
-      "DB7\n skadistats.clarity.wire.s2.protoB\016S" +
-      "2DotaGcCommonH\001\200\001\000"
+      "OTA_GAMEMODE_MUTATION\020\030\022#\n\037DOTA_GAMEMODE" +
+      "_COACHES_CHALLENGE\020\031*\236\006\n\006EEvent\022\021\n\rEVENT" +
+      "_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVE" +
+      "NT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROS" +
+      "TIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2014" +
+      "\020\004\022\032\n\026EVENT_ID_NEXON_PC_BANG\020\005\022\032\n\026EVENT_" +
+      "ID_PWRD_DAC_2015\020\006\022\033\n\027EVENT_ID_NEW_BLOOM" +
+      "_2015\020\007\022\037\n\033EVENT_ID_INTERNATIONAL_2015\020\010" +
+      "\022\034\n\030EVENT_ID_FALL_MAJOR_2015\020\t\022\026\n\022EVENT_" +
+      "ID_ORACLE_PA\020\n\022$\n EVENT_ID_NEW_BLOOM_201",
+      "5_PREBEAST\020\013\022\026\n\022EVENT_ID_FROSTIVUS\020\014\022\036\n\032" +
+      "EVENT_ID_WINTER_MAJOR_2016\020\r\022\037\n\033EVENT_ID" +
+      "_INTERNATIONAL_2016\020\016\022\034\n\030EVENT_ID_FALL_M" +
+      "AJOR_2016\020\017\022\036\n\032EVENT_ID_WINTER_MAJOR_201" +
+      "7\020\020\022\033\n\027EVENT_ID_NEW_BLOOM_2017\020\021\022\037\n\033EVEN" +
+      "T_ID_INTERNATIONAL_2017\020\022\022\036\n\032EVENT_ID_PL" +
+      "US_SUBSCRIPTION\020\023\022\035\n\031EVENT_ID_SINGLES_DA" +
+      "Y_2017\020\024\022\033\n\027EVENT_ID_FROSTIVUS_2017\020\025\022\037\n" +
+      "\033EVENT_ID_INTERNATIONAL_2018\020\026\022\033\n\027EVENT_" +
+      "ID_FROSTIVUS_2018\020\027\022\033\n\027EVENT_ID_NEW_BLOO",
+      "M_2019\020\030\022\037\n\033EVENT_ID_INTERNATIONAL_2019\020" +
+      "\031\022\022\n\016EVENT_ID_COUNT\020\032*\307\002\n\rEMatchOutcome\022" +
+      "\033\n\027k_EMatchOutcome_Unknown\020\000\022\036\n\032k_EMatch" +
+      "Outcome_RadVictory\020\002\022\037\n\033k_EMatchOutcome_" +
+      "DireVictory\020\003\0223\n/k_EMatchOutcome_NotScor" +
+      "ed_PoorNetworkConditions\020@\022$\n k_EMatchOu" +
+      "tcome_NotScored_Leaver\020A\022)\n%k_EMatchOutc" +
+      "ome_NotScored_ServerCrash\020B\022*\n&k_EMatchO" +
+      "utcome_NotScored_NeverStarted\020C\022&\n\"k_EMa" +
+      "tchOutcome_NotScored_Canceled\020DB7\n skadi",
+      "stats.clarity.wire.s2.protoB\016S2DotaGcCom" +
+      "monH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

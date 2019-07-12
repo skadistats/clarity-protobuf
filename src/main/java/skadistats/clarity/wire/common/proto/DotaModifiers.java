@@ -433,6 +433,15 @@ public final class DotaModifiers {
      * <code>optional int32 attack_speed = 33;</code>
      */
     int getAttackSpeed();
+
+    /**
+     * <code>optional int32 aura_owner = 34;</code>
+     */
+    boolean hasAuraOwner();
+    /**
+     * <code>optional int32 aura_owner = 34;</code>
+     */
+    int getAuraOwner();
   }
   /**
    * Protobuf type {@code CDOTAModifierBuffTableEntry}
@@ -679,6 +688,11 @@ public final class DotaModifiers {
             case 264: {
               bitField1_ |= 0x00000001;
               attackSpeed_ = input.readInt32();
+              break;
+            }
+            case 272: {
+              bitField1_ |= 0x00000002;
+              auraOwner_ = input.readInt32();
               break;
             }
           }
@@ -1418,6 +1432,21 @@ public final class DotaModifiers {
       return attackSpeed_;
     }
 
+    public static final int AURA_OWNER_FIELD_NUMBER = 34;
+    private int auraOwner_;
+    /**
+     * <code>optional int32 aura_owner = 34;</code>
+     */
+    public boolean hasAuraOwner() {
+      return ((bitField1_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 aura_owner = 34;</code>
+     */
+    public int getAuraOwner() {
+      return auraOwner_;
+    }
+
     private void initFields() {
       entryType_ = skadistats.clarity.wire.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       parent_ = 0;
@@ -1452,6 +1481,7 @@ public final class DotaModifiers {
       playerIds_ = "";
       luaName_ = "";
       attackSpeed_ = 0;
+      auraOwner_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1580,6 +1610,9 @@ public final class DotaModifiers {
       }
       if (((bitField1_ & 0x00000001) == 0x00000001)) {
         output.writeInt32(33, attackSpeed_);
+      }
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(34, auraOwner_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1721,6 +1754,10 @@ public final class DotaModifiers {
       if (((bitField1_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(33, attackSpeed_);
+      }
+      if (((bitField1_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(34, auraOwner_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1915,6 +1952,8 @@ public final class DotaModifiers {
         bitField0_ = (bitField0_ & ~0x80000000);
         attackSpeed_ = 0;
         bitField1_ = (bitField1_ & ~0x00000001);
+        auraOwner_ = 0;
+        bitField1_ = (bitField1_ & ~0x00000002);
         return this;
       }
 
@@ -2085,6 +2124,10 @@ public final class DotaModifiers {
           to_bitField1_ |= 0x00000001;
         }
         result.attackSpeed_ = attackSpeed_;
+        if (((from_bitField1_ & 0x00000002) == 0x00000002)) {
+          to_bitField1_ |= 0x00000002;
+        }
+        result.auraOwner_ = auraOwner_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -2214,6 +2257,9 @@ public final class DotaModifiers {
         }
         if (other.hasAttackSpeed()) {
           setAttackSpeed(other.getAttackSpeed());
+        }
+        if (other.hasAuraOwner()) {
+          setAuraOwner(other.getAuraOwner());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3794,6 +3840,38 @@ public final class DotaModifiers {
         return this;
       }
 
+      private int auraOwner_ ;
+      /**
+       * <code>optional int32 aura_owner = 34;</code>
+       */
+      public boolean hasAuraOwner() {
+        return ((bitField1_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 aura_owner = 34;</code>
+       */
+      public int getAuraOwner() {
+        return auraOwner_;
+      }
+      /**
+       * <code>optional int32 aura_owner = 34;</code>
+       */
+      public Builder setAuraOwner(int value) {
+        bitField1_ |= 0x00000002;
+        auraOwner_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 aura_owner = 34;</code>
+       */
+      public Builder clearAuraOwner() {
+        bitField1_ = (bitField1_ & ~0x00000002);
+        auraOwner_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CDOTAModifierBuffTableEntry)
     }
 
@@ -4395,7 +4473,7 @@ public final class DotaModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\026networkbasetypes" +
-      ".proto\"\223\006\n\033CDOTAModifierBuffTableEntry\022N" +
+      ".proto\"\247\006\n\033CDOTAModifierBuffTableEntry\022N" +
       "\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIER_ENTRY" +
       "_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_ACTIVE\022\016" +
       "\n\006parent\030\002 \002(\005\022\r\n\005index\030\003 \002(\005\022\022\n\nserial_" +
@@ -4414,13 +4492,14 @@ public final class DotaModifiers {
       "\030\032 \001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005\022\025\n\rdd_" +
       "ability_id\030\034 \001(\005\022\026\n\016illusion_label\030\035 \001(\t" +
       "\022\016\n\006active\030\036 \001(\010\022\022\n\nplayer_ids\030\037 \001(\t\022\020\n\010",
-      "lua_name\030  \001(\t\022\024\n\014attack_speed\030! \001(\005\"I\n\025" +
-      "CDOTALuaModifierEntry\022\025\n\rmodifier_type\030\001" +
-      " \002(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_" +
-      "MODIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENT" +
-      "RY_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_" +
-      "TYPE_REMOVED\020\002B:\n$skadistats.clarity.wir" +
-      "e.common.protoB\rDotaModifiersH\001\200\001\000"
+      "lua_name\030  \001(\t\022\024\n\014attack_speed\030! \001(\005\022\022\n\n" +
+      "aura_owner\030\" \001(\005\"I\n\025CDOTALuaModifierEntr" +
+      "y\022\025\n\rmodifier_type\030\001 \002(\005\022\031\n\021modifier_fil" +
+      "ename\030\002 \002(\t*e\n\030DOTA_MODIFIER_ENTRY_TYPE\022" +
+      "#\n\037DOTA_MODIFIER_ENTRY_TYPE_ACTIVE\020\001\022$\n " +
+      "DOTA_MODIFIER_ENTRY_TYPE_REMOVED\020\002B:\n$sk" +
+      "adistats.clarity.wire.common.protoB\rDota" +
+      "ModifiersH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4440,7 +4519,7 @@ public final class DotaModifiers {
     internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAModifierBuffTableEntry_descriptor,
-        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", });
+        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", });
     internal_static_CDOTALuaModifierEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTALuaModifierEntry_fieldAccessorTable = new

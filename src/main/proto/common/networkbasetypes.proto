@@ -125,6 +125,10 @@ message CMsgRGBA {
 	optional int32 a = 4;
 }
 
+message CEntityMsg {
+    optional uint32 target_entity = 1;
+}
+
 message CMsgPlayerInfo {
 	optional string name = 1;
 	optional fixed64 xuid = 2;

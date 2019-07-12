@@ -473,6 +473,34 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_EmptyTeleportAlert = 579;</code>
      */
     DOTA_UM_EmptyTeleportAlert(114, 579),
+    /**
+     * <code>DOTA_UM_MarsArenaOfBloodAttack = 580;</code>
+     */
+    DOTA_UM_MarsArenaOfBloodAttack(115, 580),
+    /**
+     * <code>DOTA_UM_ESArcanaCombo = 581;</code>
+     */
+    DOTA_UM_ESArcanaCombo(116, 581),
+    /**
+     * <code>DOTA_UM_ESArcanaComboSummary = 582;</code>
+     */
+    DOTA_UM_ESArcanaComboSummary(117, 582),
+    /**
+     * <code>DOTA_UM_HighFiveLeftHanging = 583;</code>
+     */
+    DOTA_UM_HighFiveLeftHanging(118, 583),
+    /**
+     * <code>DOTA_UM_HighFiveCompleted = 584;</code>
+     */
+    DOTA_UM_HighFiveCompleted(119, 584),
+    /**
+     * <code>DOTA_UM_ShovelUnearth = 585;</code>
+     */
+    DOTA_UM_ShovelUnearth(120, 585),
+    /**
+     * <code>DOTA_EM_InvokerSpellCast = 586;</code>
+     */
+    DOTA_EM_InvokerSpellCast(121, 586),
     ;
 
     /**
@@ -935,6 +963,34 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_EmptyTeleportAlert = 579;</code>
      */
     public static final int DOTA_UM_EmptyTeleportAlert_VALUE = 579;
+    /**
+     * <code>DOTA_UM_MarsArenaOfBloodAttack = 580;</code>
+     */
+    public static final int DOTA_UM_MarsArenaOfBloodAttack_VALUE = 580;
+    /**
+     * <code>DOTA_UM_ESArcanaCombo = 581;</code>
+     */
+    public static final int DOTA_UM_ESArcanaCombo_VALUE = 581;
+    /**
+     * <code>DOTA_UM_ESArcanaComboSummary = 582;</code>
+     */
+    public static final int DOTA_UM_ESArcanaComboSummary_VALUE = 582;
+    /**
+     * <code>DOTA_UM_HighFiveLeftHanging = 583;</code>
+     */
+    public static final int DOTA_UM_HighFiveLeftHanging_VALUE = 583;
+    /**
+     * <code>DOTA_UM_HighFiveCompleted = 584;</code>
+     */
+    public static final int DOTA_UM_HighFiveCompleted_VALUE = 584;
+    /**
+     * <code>DOTA_UM_ShovelUnearth = 585;</code>
+     */
+    public static final int DOTA_UM_ShovelUnearth_VALUE = 585;
+    /**
+     * <code>DOTA_EM_InvokerSpellCast = 586;</code>
+     */
+    public static final int DOTA_EM_InvokerSpellCast_VALUE = 586;
 
 
     public final int getNumber() { return value; }
@@ -1056,6 +1112,13 @@ public final class S2DotaUserMessages {
         case 577: return DOTA_UM_TipAlert;
         case 578: return DOTA_UM_ReplaceQueryUnit;
         case 579: return DOTA_UM_EmptyTeleportAlert;
+        case 580: return DOTA_UM_MarsArenaOfBloodAttack;
+        case 581: return DOTA_UM_ESArcanaCombo;
+        case 582: return DOTA_UM_ESArcanaComboSummary;
+        case 583: return DOTA_UM_HighFiveLeftHanging;
+        case 584: return DOTA_UM_HighFiveCompleted;
+        case 585: return DOTA_UM_ShovelUnearth;
+        case 586: return DOTA_EM_InvokerSpellCast;
         default: return null;
       }
     }
@@ -1116,7 +1179,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\200\033\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\341\034\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1203,8 +1266,14 @@ public final class S2DotaUserMessages {
       "mageReport\020\277\004\022\031\n\024DOTA_UM_SalutePlayer\020\300\004" +
       "\022\025\n\020DOTA_UM_TipAlert\020\301\004\022\035\n\030DOTA_UM_Repla" +
       "ceQueryUnit\020\302\004\022\037\n\032DOTA_UM_EmptyTeleportA" +
-      "lert\020\303\004B;\n skadistats.clarity.wire.s2.pr" +
-      "otoB\022S2DotaUserMessagesH\001\200\001\000"
+      "lert\020\303\004\022#\n\036DOTA_UM_MarsArenaOfBloodAttac" +
+      "k\020\304\004\022\032\n\025DOTA_UM_ESArcanaCombo\020\305\004\022!\n\034DOTA" +
+      "_UM_ESArcanaComboSummary\020\306\004\022 \n\033DOTA_UM_H",
+      "ighFiveLeftHanging\020\307\004\022\036\n\031DOTA_UM_HighFiv" +
+      "eCompleted\020\310\004\022\032\n\025DOTA_UM_ShovelUnearth\020\311" +
+      "\004\022\035\n\030DOTA_EM_InvokerSpellCast\020\312\004B;\n skad" +
+      "istats.clarity.wire.s2.protoB\022S2DotaUser" +
+      "MessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

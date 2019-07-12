@@ -120,4 +120,11 @@ enum EDotaUserMessages {
     DOTA_UM_TipAlert = 577;
     DOTA_UM_ReplaceQueryUnit = 578;
     DOTA_UM_EmptyTeleportAlert = 579;
+    DOTA_UM_MarsArenaOfBloodAttack = 580;
+    DOTA_UM_ESArcanaCombo = 581;
+    DOTA_UM_ESArcanaComboSummary = 582;
+    DOTA_UM_HighFiveLeftHanging = 583;
+    DOTA_UM_HighFiveCompleted = 584;
+    DOTA_UM_ShovelUnearth = 585;
+    DOTA_EM_InvokerSpellCast = 586;
 }
