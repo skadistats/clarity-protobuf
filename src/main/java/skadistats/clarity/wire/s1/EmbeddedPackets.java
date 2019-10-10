@@ -13,6 +13,7 @@ public class EmbeddedPackets {
     private static final Map<Integer, Class<? extends GeneratedMessage>> EMBED;
     static {
         EMBED = new HashMap<>();
+        /*   0 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
 
         /*   4 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
         /*   5 */ EMBED.put(NetworkBaseTypes.NET_Messages.net_StringCmd_VALUE, NetworkBaseTypes.CNETMsg_StringCmd.class);
