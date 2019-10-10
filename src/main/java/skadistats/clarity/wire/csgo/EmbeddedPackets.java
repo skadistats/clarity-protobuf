@@ -15,8 +15,10 @@ public class EmbeddedPackets {
         OVERRIDES = new HashMap<>();
 
         /*  8 */ OVERRIDES.put(S1NetMessages.SVC_Messages.svc_ServerInfo_VALUE, CsGoNetMessages.CSVCMsg_ServerInfo.class);
+        /* 19 */ OVERRIDES.put(S1NetMessages.SVC_Messages.svc_FixAngle_VALUE, CsGoNetMessages.CSVCMsg_FixAngle.class);
         /* 34 */ OVERRIDES.put(CsGoNetMessages.SVC_Messages_CsGo.svc_CmdKeyValues_VALUE, CsGoNetMessages.CSVCMsg_CmdKeyValues.class);
         /* 35 */ OVERRIDES.put(CsGoNetMessages.SVC_Messages_CsGo.svc_EncryptedData_VALUE, CsGoNetMessages.CSVCMsg_EncryptedData.class);
+        /* 36 */ OVERRIDES.put(CsGoNetMessages.SVC_Messages_CsGo.svc_HltvReplay_VALUE, CsGoNetMessages.CSVCMsg_HltvReplay.class);
 
     }
 
@@ -24,6 +26,7 @@ public class EmbeddedPackets {
     static {
         CLC = new HashMap<>();
         /*   0 */ CLC.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
+        /*   1 */ CLC.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, NetworkBaseTypes.CNETMsg_Disconnect.class);
 
         /*   4 */ CLC.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
         /*   5 */ CLC.put(NetworkBaseTypes.NET_Messages.net_StringCmd_VALUE, NetworkBaseTypes.CNETMsg_StringCmd.class);

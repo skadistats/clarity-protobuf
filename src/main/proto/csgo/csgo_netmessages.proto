@@ -60,6 +60,26 @@ message CSVCMsg_EncryptedData {
     optional int32 key_type = 2;
 }
 
+message CMsgQAngle {
+    optional float x = 1;
+    optional float y = 2;
+    optional float z = 3;
+}
+message CSVCMsg_FixAngle {
+    optional bool relative = 1;
+    optional .CMsgQAngle angle = 2;
+}
+
+message CSVCMsg_HltvReplay {
+    optional int32 delay = 1;
+    optional int32 primary_target = 2;
+    optional int32 replay_stop_at = 3;
+    optional int32 replay_start_at = 4;
+    optional int32 replay_slowdown_begin = 5;
+    optional int32 replay_slowdown_end = 6;
+    optional float replay_slowdown_rate = 7;
+}
+
 message CMsg_CVars {
     message CVar {
         optional string name = 1;
@@ -73,8 +93,6 @@ message CMsg_CVars {
 message CNETMsg_SetConVar {
     optional CMsg_CVars convars = 1;
 }
-
-
 
 enum VoiceDataFormat_t {
     VOICEDATA_FORMAT_STEAM = 0;
