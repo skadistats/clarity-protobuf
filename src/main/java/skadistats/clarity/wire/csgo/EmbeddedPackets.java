@@ -54,6 +54,14 @@ public class EmbeddedPackets {
         return cls;
     }
 
+    public static int kindForClass(Class<? extends GeneratedMessage> clazz) {
+        return OVERRIDES.entrySet().stream()
+                .filter(e -> e.getValue() == clazz)
+                .mapToInt(Map.Entry::getKey)
+                .findFirst()
+                .orElse(skadistats.clarity.wire.s1.EmbeddedPackets.kindForClass(clazz));
+    }
+
     public static Class<? extends GeneratedMessage> clientToServerForKind(int kind) {
         return CLC.get(kind);
     }

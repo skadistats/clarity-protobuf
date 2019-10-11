@@ -47,4 +47,12 @@ public class EmbeddedPackets {
         return EMBED.get(kind);
     }
 
+    public static int kindForClass(Class<? extends GeneratedMessage> clazz) {
+        return EMBED.entrySet().stream()
+                .filter(e -> e.getValue() == clazz)
+                .mapToInt(Map.Entry::getKey)
+                .findFirst()
+                .orElse(-1);
+    }
+
 }
