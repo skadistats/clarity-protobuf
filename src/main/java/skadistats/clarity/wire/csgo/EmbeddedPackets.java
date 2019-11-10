@@ -53,7 +53,7 @@ public class EmbeddedPackets {
 
         /*   4 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
         /*   5 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_StringCmd_VALUE, NetworkBaseTypes.CNETMsg_StringCmd.class);
-        /*   6 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_SetConVar_VALUE, NetworkBaseTypes.CNETMsg_SetConVar.class);
+        /*   6 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_SetConVar_VALUE, CsGoNetMessages.CNETMsg_SetConVar.class);
         /*   7 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_SignonState_VALUE, NetworkBaseTypes.CNETMsg_SignonState.class);
 
         /*   8 */ K2C_SENT.put(CsGoNetMessages.CLC_Messages.clc_ClientInfo_VALUE, CsGoNetMessages.CCLCMsg_ClientInfo.class);
