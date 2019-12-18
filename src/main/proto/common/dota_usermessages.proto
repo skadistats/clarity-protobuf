@@ -397,7 +397,7 @@ message CDOTAUserMsg_EnemyItemAlert {
 	optional uint32 player_id = 1;
 	optional uint32 target_player_id = 2;
 	optional int32 item_ability_id = 3;
-	optional uint32 rune_type = 4;
+    optional int32 rune_type = 4 [default = -1];
 	optional int32 entity_id = 5;
 	optional int32 item_level = 6 [default = -1];
 	optional int32 primary_charges = 7 [default = -1];
@@ -417,6 +417,16 @@ message CDOTAUserMsg_HPManaAlert {
     optional uint32 player_id = 1;
     optional uint32 target_entindex = 2;
 	optional bool show_raw_values = 3;
+}
+
+message CDOTAUserMsg_GlyphAlert {
+    optional uint32 player_id = 1;
+    optional bool negative = 2;
+}
+
+message CDOTAUserMsg_RadarAlert {
+    optional uint32 player_id = 1;
+    optional bool negative = 2;
 }
 
 message CDOTAUserMsg_MarsArenaOfBloodAttack {
@@ -441,6 +451,8 @@ message CDOTAUserMsg_CourierKilledAlert {
 	optional int32 entity_handle = 3;
 	optional int32 timestamp = 4;
 	repeated .CDOTAUserMsg_CourierKilledAlert.LostItem lost_items = 5;
+    optional int32 killer_player_id = 6;
+    optional int32 owning_player_id = 7;
 }
 
 message CDOTAUserMsg_MinimapEvent {
@@ -496,6 +508,7 @@ message CDOTAUserMsg_SpectatorPlayerUnitOrders {
     optional CMsgVector position = 6;
     optional bool queue = 7;
     optional int32 sequence_number = 8;
+    optional uint32 flags = 9;
 }
 
 message CDOTAUserMsg_NevermoreRequiem {
@@ -626,6 +639,7 @@ message CDOTAUserMsg_ParticleManager {
         optional int32 entity_handle = 3;
         optional int32 entity_handle_for_modifiers = 4;
         optional bool apply_voice_ban_rules = 5;
+        optional int32 team_behavior = 6;
     }
 
     message DestroyParticle {
@@ -927,6 +941,14 @@ message CDOTAUserMsg_XPAlert {
 	optional uint32 target_entindex = 2;
 }
 
+message CDOTAUserMsg_TalentTreeAlert {
+    optional uint32 player_id = 1;
+    optional uint32 target_entindex = 2;
+    optional int32 ability_id = 3;
+    optional int32 slot = 4;
+    optional bool learned = 5;
+}
+
 message CDOTAUserMsg_SelectPenaltyGold {
     required uint32 player_id = 1;
     optional sint32 cost = 2;
@@ -990,6 +1012,13 @@ message CDOTAUserMsg_ESArcanaComboSummary {
     optional uint32 damage_amount = 3;
 }
 
+message CDOTAUserMsg_OMArcanaCombo {
+    optional uint32 ehandle = 1;
+    optional uint32 multicast_amount = 2;
+    optional uint32 arcana_level = 3;
+    optional uint32 multicast_chance = 4;
+}
+
 message CDOTAUserMsg_HighFiveCompleted {
     optional uint32 player_id_1 = 1;
     optional uint32 player_id_2 = 2;
@@ -1005,6 +1034,49 @@ message CDOTAUserMsg_ShovelUnearth {
     optional bool all_chat = 3;
 }
 
+message CDOTAUserMsg_AllStarEvent {
+    message PlayerScore {
+        optional int32 player_id = 1;
+        optional uint32 score_sans_kda = 2;
+    }
+
+    optional int32 source_player_id = 1;
+    optional int32 target_player_id = 2;
+    optional uint32 point_amount = 3;
+    optional uint32 event_id = 4;
+    repeated .CDOTAUserMsg_AllStarEvent.PlayerScore player_scores = 5;
+}
+
+message CDOTAUserMsg_QueuedOrderRemoved {
+    repeated uint32 unit_order_sequence = 1;
+}
+
+message CDOTAUserMsg_DebugChallenge {
+    required uint32 challenge_type = 1;
+    required uint32 challenge_query_id = 2;
+    required uint32 event_id = 3;
+    optional uint32 instance_id = 4;
+    optional uint32 challenge_var_0 = 5;
+    optional uint32 challenge_var_1 = 6;
+    optional uint32 challenge_max_rank = 7;
+}
+
+message CDOTAUserMsg_FoundNeutralItem {
+    optional uint32 player_id = 1;
+    optional uint32 item_ability_id = 2;
+    optional uint32 item_tier = 3;
+    optional uint32 tier_item_count = 4;
+}
+
+message CDOTAUserMsg_OutpostCaptured {
+    optional uint32 outpost_entindex = 1;
+    optional uint32 team_id = 2;
+}
+
+message CDOTAUserMsg_OutpostGrantedXP {
+    optional uint32 team_id = 1;
+    optional uint32 xp_amount = 2;
+}
 
 message CMsgDOTACombatLogEntry {
     optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
@@ -1079,4 +1151,7 @@ message CMsgDOTACombatLogEntry {
 	optional bool inflictor_is_stolen_ability = 70;
 	optional uint32 kill_eater_event = 71;
 	optional uint32 unit_status_label = 72;
+    optional bool spell_generated_attack = 73;
+    optional bool at_night_time = 74;
+    optional bool attacker_has_scepter = 75;
 }

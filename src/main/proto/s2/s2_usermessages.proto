@@ -45,9 +45,9 @@ enum EBaseUserMessages {
 	UM_ParticleManager = 145;
 	UM_HudError = 146;
 	UM_CustomGameEvent = 148;
-	UM_HandHapticPulse = 149;
-	UM_AnimGraphUpdate = 150;
-	UM_HandHapticPulsePrecise = 151;
+    UM_AnimGraphUpdate = 149;
+    UM_HapticsManagerPulse = 150;
+    UM_HapticsManagerEffect = 151;
 	UM_MAX_BASE = 200;
 }
 

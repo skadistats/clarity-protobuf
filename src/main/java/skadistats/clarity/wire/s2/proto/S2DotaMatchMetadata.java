@@ -8,6 +8,106 @@ public final class S2DotaMatchMetadata {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
+  /**
+   * Protobuf enum {@code EMatchBehaviorScoreVariance}
+   */
+  public enum EMatchBehaviorScoreVariance
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_Invalid = 0;</code>
+     */
+    k_EMatchBehaviorScoreVariance_Invalid(0, 0),
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_Low = 1;</code>
+     */
+    k_EMatchBehaviorScoreVariance_Low(1, 1),
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_Medium = 2;</code>
+     */
+    k_EMatchBehaviorScoreVariance_Medium(2, 2),
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_High = 3;</code>
+     */
+    k_EMatchBehaviorScoreVariance_High(3, 3),
+    ;
+
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_Invalid = 0;</code>
+     */
+    public static final int k_EMatchBehaviorScoreVariance_Invalid_VALUE = 0;
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_Low = 1;</code>
+     */
+    public static final int k_EMatchBehaviorScoreVariance_Low_VALUE = 1;
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_Medium = 2;</code>
+     */
+    public static final int k_EMatchBehaviorScoreVariance_Medium_VALUE = 2;
+    /**
+     * <code>k_EMatchBehaviorScoreVariance_High = 3;</code>
+     */
+    public static final int k_EMatchBehaviorScoreVariance_High_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static EMatchBehaviorScoreVariance valueOf(int value) {
+      switch (value) {
+        case 0: return k_EMatchBehaviorScoreVariance_Invalid;
+        case 1: return k_EMatchBehaviorScoreVariance_Low;
+        case 2: return k_EMatchBehaviorScoreVariance_Medium;
+        case 3: return k_EMatchBehaviorScoreVariance_High;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EMatchBehaviorScoreVariance>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EMatchBehaviorScoreVariance>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EMatchBehaviorScoreVariance>() {
+            public EMatchBehaviorScoreVariance findValueByNumber(int number) {
+              return EMatchBehaviorScoreVariance.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final EMatchBehaviorScoreVariance[] VALUES = values();
+
+    public static EMatchBehaviorScoreVariance valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EMatchBehaviorScoreVariance(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EMatchBehaviorScoreVariance)
+  }
+
   public interface CLobbyTimedRewardDetailsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CLobbyTimedRewardDetails)
       com.google.protobuf.MessageOrBuilder {
@@ -1589,6 +1689,19 @@ public final class S2DotaMatchMetadata {
      */
     skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOrBuilder(
         int index);
+
+    /**
+     * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+     */
+    boolean hasMatchmakingStats();
+    /**
+     * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getMatchmakingStats();
+    /**
+     * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAMatchMetadata}
@@ -1684,6 +1797,19 @@ public final class S2DotaMatchMetadata {
                 mutable_bitField0_ |= 0x00000040;
               }
               matchTips_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.PARSER, extensionRegistry));
+              break;
+            }
+            case 66: {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                subBuilder = matchmakingStats_.toBuilder();
+              }
+              matchmakingStats_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(matchmakingStats_);
+                matchmakingStats_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000010;
               break;
             }
           }
@@ -6521,6 +6647,1034 @@ public final class S2DotaMatchMetadata {
         // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.SubChallenge)
       }
 
+      public interface CavernChallengeResultOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.CavernChallengeResult)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 completed_path_id = 1;</code>
+         */
+        boolean hasCompletedPathId();
+        /**
+         * <code>optional uint32 completed_path_id = 1;</code>
+         */
+        int getCompletedPathId();
+
+        /**
+         * <code>optional uint32 claimed_room_id = 2;</code>
+         */
+        boolean hasClaimedRoomId();
+        /**
+         * <code>optional uint32 claimed_room_id = 2;</code>
+         */
+        int getClaimedRoomId();
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.Team.CavernChallengeResult}
+       */
+      public static final class CavernChallengeResult extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Team.CavernChallengeResult)
+          CavernChallengeResultOrBuilder {
+        // Use CavernChallengeResult.newBuilder() to construct.
+        private CavernChallengeResult(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private CavernChallengeResult(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final CavernChallengeResult defaultInstance;
+        public static CavernChallengeResult getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public CavernChallengeResult getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private CavernChallengeResult(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  completedPathId_ = input.readUInt32();
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000002;
+                  claimedRoomId_ = input.readUInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<CavernChallengeResult> PARSER =
+            new com.google.protobuf.AbstractParser<CavernChallengeResult>() {
+          public CavernChallengeResult parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new CavernChallengeResult(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<CavernChallengeResult> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int COMPLETED_PATH_ID_FIELD_NUMBER = 1;
+        private int completedPathId_;
+        /**
+         * <code>optional uint32 completed_path_id = 1;</code>
+         */
+        public boolean hasCompletedPathId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 completed_path_id = 1;</code>
+         */
+        public int getCompletedPathId() {
+          return completedPathId_;
+        }
+
+        public static final int CLAIMED_ROOM_ID_FIELD_NUMBER = 2;
+        private int claimedRoomId_;
+        /**
+         * <code>optional uint32 claimed_room_id = 2;</code>
+         */
+        public boolean hasClaimedRoomId() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 claimed_room_id = 2;</code>
+         */
+        public int getClaimedRoomId() {
+          return claimedRoomId_;
+        }
+
+        private void initFields() {
+          completedPathId_ = 0;
+          claimedRoomId_ = 0;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(1, completedPathId_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeUInt32(2, claimedRoomId_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, completedPathId_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(2, claimedRoomId_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.Team.CavernChallengeResult}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Team.CavernChallengeResult)
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            completedPathId_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            claimedRoomId_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_descriptor;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult getDefaultInstanceForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult build() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult buildPartial() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.completedPathId_ = completedPathId_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.claimedRoomId_ = claimedRoomId_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult) {
+              return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult other) {
+            if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.getDefaultInstance()) return this;
+            if (other.hasCompletedPathId()) {
+              setCompletedPathId(other.getCompletedPathId());
+            }
+            if (other.hasClaimedRoomId()) {
+              setClaimedRoomId(other.getClaimedRoomId());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int completedPathId_ ;
+          /**
+           * <code>optional uint32 completed_path_id = 1;</code>
+           */
+          public boolean hasCompletedPathId() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 completed_path_id = 1;</code>
+           */
+          public int getCompletedPathId() {
+            return completedPathId_;
+          }
+          /**
+           * <code>optional uint32 completed_path_id = 1;</code>
+           */
+          public Builder setCompletedPathId(int value) {
+            bitField0_ |= 0x00000001;
+            completedPathId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 completed_path_id = 1;</code>
+           */
+          public Builder clearCompletedPathId() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            completedPathId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int claimedRoomId_ ;
+          /**
+           * <code>optional uint32 claimed_room_id = 2;</code>
+           */
+          public boolean hasClaimedRoomId() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 claimed_room_id = 2;</code>
+           */
+          public int getClaimedRoomId() {
+            return claimedRoomId_;
+          }
+          /**
+           * <code>optional uint32 claimed_room_id = 2;</code>
+           */
+          public Builder setClaimedRoomId(int value) {
+            bitField0_ |= 0x00000002;
+            claimedRoomId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 claimed_room_id = 2;</code>
+           */
+          public Builder clearClaimedRoomId() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            claimedRoomId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.CavernChallengeResult)
+        }
+
+        static {
+          defaultInstance = new CavernChallengeResult(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.CavernChallengeResult)
+      }
+
+      public interface ActionGrantOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.ActionGrant)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 action_id = 1;</code>
+         */
+        boolean hasActionId();
+        /**
+         * <code>optional uint32 action_id = 1;</code>
+         */
+        int getActionId();
+
+        /**
+         * <code>optional uint32 quantity = 2;</code>
+         */
+        boolean hasQuantity();
+        /**
+         * <code>optional uint32 quantity = 2;</code>
+         */
+        int getQuantity();
+
+        /**
+         * <code>optional uint32 audit = 3;</code>
+         */
+        boolean hasAudit();
+        /**
+         * <code>optional uint32 audit = 3;</code>
+         */
+        int getAudit();
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.Team.ActionGrant}
+       */
+      public static final class ActionGrant extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Team.ActionGrant)
+          ActionGrantOrBuilder {
+        // Use ActionGrant.newBuilder() to construct.
+        private ActionGrant(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private ActionGrant(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final ActionGrant defaultInstance;
+        public static ActionGrant getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public ActionGrant getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private ActionGrant(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  actionId_ = input.readUInt32();
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000002;
+                  quantity_ = input.readUInt32();
+                  break;
+                }
+                case 24: {
+                  bitField0_ |= 0x00000004;
+                  audit_ = input.readUInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_ActionGrant_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<ActionGrant> PARSER =
+            new com.google.protobuf.AbstractParser<ActionGrant>() {
+          public ActionGrant parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new ActionGrant(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<ActionGrant> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int ACTION_ID_FIELD_NUMBER = 1;
+        private int actionId_;
+        /**
+         * <code>optional uint32 action_id = 1;</code>
+         */
+        public boolean hasActionId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 action_id = 1;</code>
+         */
+        public int getActionId() {
+          return actionId_;
+        }
+
+        public static final int QUANTITY_FIELD_NUMBER = 2;
+        private int quantity_;
+        /**
+         * <code>optional uint32 quantity = 2;</code>
+         */
+        public boolean hasQuantity() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 quantity = 2;</code>
+         */
+        public int getQuantity() {
+          return quantity_;
+        }
+
+        public static final int AUDIT_FIELD_NUMBER = 3;
+        private int audit_;
+        /**
+         * <code>optional uint32 audit = 3;</code>
+         */
+        public boolean hasAudit() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 audit = 3;</code>
+         */
+        public int getAudit() {
+          return audit_;
+        }
+
+        private void initFields() {
+          actionId_ = 0;
+          quantity_ = 0;
+          audit_ = 0;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(1, actionId_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeUInt32(2, quantity_);
+          }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            output.writeUInt32(3, audit_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, actionId_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(2, quantity_);
+          }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(3, audit_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.Team.ActionGrant}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Team.ActionGrant)
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_ActionGrant_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            actionId_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            quantity_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            audit_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant getDefaultInstanceForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant build() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant buildPartial() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.actionId_ = actionId_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.quantity_ = quantity_;
+            if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+              to_bitField0_ |= 0x00000004;
+            }
+            result.audit_ = audit_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant) {
+              return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant other) {
+            if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.getDefaultInstance()) return this;
+            if (other.hasActionId()) {
+              setActionId(other.getActionId());
+            }
+            if (other.hasQuantity()) {
+              setQuantity(other.getQuantity());
+            }
+            if (other.hasAudit()) {
+              setAudit(other.getAudit());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int actionId_ ;
+          /**
+           * <code>optional uint32 action_id = 1;</code>
+           */
+          public boolean hasActionId() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 action_id = 1;</code>
+           */
+          public int getActionId() {
+            return actionId_;
+          }
+          /**
+           * <code>optional uint32 action_id = 1;</code>
+           */
+          public Builder setActionId(int value) {
+            bitField0_ |= 0x00000001;
+            actionId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 action_id = 1;</code>
+           */
+          public Builder clearActionId() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            actionId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int quantity_ ;
+          /**
+           * <code>optional uint32 quantity = 2;</code>
+           */
+          public boolean hasQuantity() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 quantity = 2;</code>
+           */
+          public int getQuantity() {
+            return quantity_;
+          }
+          /**
+           * <code>optional uint32 quantity = 2;</code>
+           */
+          public Builder setQuantity(int value) {
+            bitField0_ |= 0x00000002;
+            quantity_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 quantity = 2;</code>
+           */
+          public Builder clearQuantity() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            quantity_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int audit_ ;
+          /**
+           * <code>optional uint32 audit = 3;</code>
+           */
+          public boolean hasAudit() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 audit = 3;</code>
+           */
+          public int getAudit() {
+            return audit_;
+          }
+          /**
+           * <code>optional uint32 audit = 3;</code>
+           */
+          public Builder setAudit(int value) {
+            bitField0_ |= 0x00000004;
+            audit_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 audit = 3;</code>
+           */
+          public Builder clearAudit() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            audit_ = 0;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.ActionGrant)
+        }
+
+        static {
+          defaultInstance = new ActionGrant(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.ActionGrant)
+      }
+
       public interface EventDataOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.EventData)
           com.google.protobuf.MessageOrBuilder {
@@ -6683,6 +7837,63 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 periodic_point_adjustments = 16;</code>
          */
         int getPeriodicPointAdjustments();
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> 
+            getCavernChallengeMapResultsList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult getCavernChallengeMapResults(int index);
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        int getCavernChallengeMapResultsCount();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder> 
+            getCavernChallengeMapResultsOrBuilderList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder getCavernChallengeMapResultsOrBuilder(
+            int index);
+
+        /**
+         * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+         */
+        boolean hasCavernChallengePlusShardWinnings();
+        /**
+         * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+         */
+        int getCavernChallengePlusShardWinnings();
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> 
+            getActionsGrantedList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant getActionsGranted(int index);
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        int getActionsGrantedCount();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder> 
+            getActionsGrantedOrBuilderList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder getActionsGrantedOrBuilder(
+            int index);
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.EventData}
@@ -6819,6 +8030,27 @@ public final class S2DotaMatchMetadata {
                   periodicPointAdjustments_ = input.readUInt32();
                   break;
                 }
+                case 138: {
+                  if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                    cavernChallengeMapResults_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult>();
+                    mutable_bitField0_ |= 0x00010000;
+                  }
+                  cavernChallengeMapResults_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.PARSER, extensionRegistry));
+                  break;
+                }
+                case 144: {
+                  bitField0_ |= 0x00008000;
+                  cavernChallengePlusShardWinnings_ = input.readUInt32();
+                  break;
+                }
+                case 154: {
+                  if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+                    actionsGranted_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant>();
+                    mutable_bitField0_ |= 0x00040000;
+                  }
+                  actionsGranted_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.PARSER, extensionRegistry));
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -6829,6 +8061,12 @@ public final class S2DotaMatchMetadata {
           } finally {
             if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
               subChallengesWithProgress_ = java.util.Collections.unmodifiableList(subChallengesWithProgress_);
+            }
+            if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+              cavernChallengeMapResults_ = java.util.Collections.unmodifiableList(cavernChallengeMapResults_);
+            }
+            if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+              actionsGranted_ = java.util.Collections.unmodifiableList(actionsGranted_);
             }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
@@ -7122,6 +8360,91 @@ public final class S2DotaMatchMetadata {
           return periodicPointAdjustments_;
         }
 
+        public static final int CAVERN_CHALLENGE_MAP_RESULTS_FIELD_NUMBER = 17;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> cavernChallengeMapResults_;
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> getCavernChallengeMapResultsList() {
+          return cavernChallengeMapResults_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder> 
+            getCavernChallengeMapResultsOrBuilderList() {
+          return cavernChallengeMapResults_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        public int getCavernChallengeMapResultsCount() {
+          return cavernChallengeMapResults_.size();
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult getCavernChallengeMapResults(int index) {
+          return cavernChallengeMapResults_.get(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder getCavernChallengeMapResultsOrBuilder(
+            int index) {
+          return cavernChallengeMapResults_.get(index);
+        }
+
+        public static final int CAVERN_CHALLENGE_PLUS_SHARD_WINNINGS_FIELD_NUMBER = 18;
+        private int cavernChallengePlusShardWinnings_;
+        /**
+         * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+         */
+        public boolean hasCavernChallengePlusShardWinnings() {
+          return ((bitField0_ & 0x00008000) == 0x00008000);
+        }
+        /**
+         * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+         */
+        public int getCavernChallengePlusShardWinnings() {
+          return cavernChallengePlusShardWinnings_;
+        }
+
+        public static final int ACTIONS_GRANTED_FIELD_NUMBER = 19;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> actionsGranted_;
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> getActionsGrantedList() {
+          return actionsGranted_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder> 
+            getActionsGrantedOrBuilderList() {
+          return actionsGranted_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        public int getActionsGrantedCount() {
+          return actionsGranted_.size();
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant getActionsGranted(int index) {
+          return actionsGranted_.get(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder getActionsGrantedOrBuilder(
+            int index) {
+          return actionsGranted_.get(index);
+        }
+
         private void initFields() {
           eventId_ = 0;
           eventPoints_ = 0;
@@ -7139,6 +8462,9 @@ public final class S2DotaMatchMetadata {
           amountWagered_ = 0;
           teamWagerAmount_ = 0;
           periodicPointAdjustments_ = 0;
+          cavernChallengeMapResults_ = java.util.Collections.emptyList();
+          cavernChallengePlusShardWinnings_ = 0;
+          actionsGranted_ = java.util.Collections.emptyList();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -7200,6 +8526,15 @@ public final class S2DotaMatchMetadata {
           }
           if (((bitField0_ & 0x00004000) == 0x00004000)) {
             output.writeUInt32(16, periodicPointAdjustments_);
+          }
+          for (int i = 0; i < cavernChallengeMapResults_.size(); i++) {
+            output.writeMessage(17, cavernChallengeMapResults_.get(i));
+          }
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+            output.writeUInt32(18, cavernChallengePlusShardWinnings_);
+          }
+          for (int i = 0; i < actionsGranted_.size(); i++) {
+            output.writeMessage(19, actionsGranted_.get(i));
           }
           getUnknownFields().writeTo(output);
         }
@@ -7273,6 +8608,18 @@ public final class S2DotaMatchMetadata {
           if (((bitField0_ & 0x00004000) == 0x00004000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(16, periodicPointAdjustments_);
+          }
+          for (int i = 0; i < cavernChallengeMapResults_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(17, cavernChallengeMapResults_.get(i));
+          }
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(18, cavernChallengePlusShardWinnings_);
+          }
+          for (int i = 0; i < actionsGranted_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(19, actionsGranted_.get(i));
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -7384,6 +8731,8 @@ public final class S2DotaMatchMetadata {
           private void maybeForceBuilderInitialization() {
             if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
               getSubChallengesWithProgressFieldBuilder();
+              getCavernChallengeMapResultsFieldBuilder();
+              getActionsGrantedFieldBuilder();
             }
           }
           private static Builder create() {
@@ -7428,6 +8777,20 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00004000);
             periodicPointAdjustments_ = 0;
             bitField0_ = (bitField0_ & ~0x00008000);
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              cavernChallengeMapResults_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00010000);
+            } else {
+              cavernChallengeMapResultsBuilder_.clear();
+            }
+            cavernChallengePlusShardWinnings_ = 0;
+            bitField0_ = (bitField0_ & ~0x00020000);
+            if (actionsGrantedBuilder_ == null) {
+              actionsGranted_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00040000);
+            } else {
+              actionsGrantedBuilder_.clear();
+            }
             return this;
           }
 
@@ -7525,6 +8888,28 @@ public final class S2DotaMatchMetadata {
               to_bitField0_ |= 0x00004000;
             }
             result.periodicPointAdjustments_ = periodicPointAdjustments_;
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              if (((bitField0_ & 0x00010000) == 0x00010000)) {
+                cavernChallengeMapResults_ = java.util.Collections.unmodifiableList(cavernChallengeMapResults_);
+                bitField0_ = (bitField0_ & ~0x00010000);
+              }
+              result.cavernChallengeMapResults_ = cavernChallengeMapResults_;
+            } else {
+              result.cavernChallengeMapResults_ = cavernChallengeMapResultsBuilder_.build();
+            }
+            if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+              to_bitField0_ |= 0x00008000;
+            }
+            result.cavernChallengePlusShardWinnings_ = cavernChallengePlusShardWinnings_;
+            if (actionsGrantedBuilder_ == null) {
+              if (((bitField0_ & 0x00040000) == 0x00040000)) {
+                actionsGranted_ = java.util.Collections.unmodifiableList(actionsGranted_);
+                bitField0_ = (bitField0_ & ~0x00040000);
+              }
+              result.actionsGranted_ = actionsGranted_;
+            } else {
+              result.actionsGranted_ = actionsGrantedBuilder_.build();
+            }
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -7611,6 +8996,61 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasPeriodicPointAdjustments()) {
               setPeriodicPointAdjustments(other.getPeriodicPointAdjustments());
+            }
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              if (!other.cavernChallengeMapResults_.isEmpty()) {
+                if (cavernChallengeMapResults_.isEmpty()) {
+                  cavernChallengeMapResults_ = other.cavernChallengeMapResults_;
+                  bitField0_ = (bitField0_ & ~0x00010000);
+                } else {
+                  ensureCavernChallengeMapResultsIsMutable();
+                  cavernChallengeMapResults_.addAll(other.cavernChallengeMapResults_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.cavernChallengeMapResults_.isEmpty()) {
+                if (cavernChallengeMapResultsBuilder_.isEmpty()) {
+                  cavernChallengeMapResultsBuilder_.dispose();
+                  cavernChallengeMapResultsBuilder_ = null;
+                  cavernChallengeMapResults_ = other.cavernChallengeMapResults_;
+                  bitField0_ = (bitField0_ & ~0x00010000);
+                  cavernChallengeMapResultsBuilder_ = 
+                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                       getCavernChallengeMapResultsFieldBuilder() : null;
+                } else {
+                  cavernChallengeMapResultsBuilder_.addAllMessages(other.cavernChallengeMapResults_);
+                }
+              }
+            }
+            if (other.hasCavernChallengePlusShardWinnings()) {
+              setCavernChallengePlusShardWinnings(other.getCavernChallengePlusShardWinnings());
+            }
+            if (actionsGrantedBuilder_ == null) {
+              if (!other.actionsGranted_.isEmpty()) {
+                if (actionsGranted_.isEmpty()) {
+                  actionsGranted_ = other.actionsGranted_;
+                  bitField0_ = (bitField0_ & ~0x00040000);
+                } else {
+                  ensureActionsGrantedIsMutable();
+                  actionsGranted_.addAll(other.actionsGranted_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.actionsGranted_.isEmpty()) {
+                if (actionsGrantedBuilder_.isEmpty()) {
+                  actionsGrantedBuilder_.dispose();
+                  actionsGrantedBuilder_ = null;
+                  actionsGranted_ = other.actionsGranted_;
+                  bitField0_ = (bitField0_ & ~0x00040000);
+                  actionsGrantedBuilder_ = 
+                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                       getActionsGrantedFieldBuilder() : null;
+                } else {
+                  actionsGrantedBuilder_.addAllMessages(other.actionsGranted_);
+                }
+              }
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -8359,6 +9799,518 @@ public final class S2DotaMatchMetadata {
             return this;
           }
 
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> cavernChallengeMapResults_ =
+            java.util.Collections.emptyList();
+          private void ensureCavernChallengeMapResultsIsMutable() {
+            if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+              cavernChallengeMapResults_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult>(cavernChallengeMapResults_);
+              bitField0_ |= 0x00010000;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder> cavernChallengeMapResultsBuilder_;
+
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> getCavernChallengeMapResultsList() {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(cavernChallengeMapResults_);
+            } else {
+              return cavernChallengeMapResultsBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public int getCavernChallengeMapResultsCount() {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              return cavernChallengeMapResults_.size();
+            } else {
+              return cavernChallengeMapResultsBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult getCavernChallengeMapResults(int index) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              return cavernChallengeMapResults_.get(index);
+            } else {
+              return cavernChallengeMapResultsBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder setCavernChallengeMapResults(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult value) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.set(index, value);
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder setCavernChallengeMapResults(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder builderForValue) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder addCavernChallengeMapResults(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult value) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.add(value);
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder addCavernChallengeMapResults(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult value) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.add(index, value);
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder addCavernChallengeMapResults(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder builderForValue) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.add(builderForValue.build());
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder addCavernChallengeMapResults(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder builderForValue) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder addAllCavernChallengeMapResults(
+              java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> values) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              ensureCavernChallengeMapResultsIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, cavernChallengeMapResults_);
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder clearCavernChallengeMapResults() {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              cavernChallengeMapResults_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00010000);
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public Builder removeCavernChallengeMapResults(int index) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              ensureCavernChallengeMapResultsIsMutable();
+              cavernChallengeMapResults_.remove(index);
+              onChanged();
+            } else {
+              cavernChallengeMapResultsBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder getCavernChallengeMapResultsBuilder(
+              int index) {
+            return getCavernChallengeMapResultsFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder getCavernChallengeMapResultsOrBuilder(
+              int index) {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              return cavernChallengeMapResults_.get(index);  } else {
+              return cavernChallengeMapResultsBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder> 
+               getCavernChallengeMapResultsOrBuilderList() {
+            if (cavernChallengeMapResultsBuilder_ != null) {
+              return cavernChallengeMapResultsBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(cavernChallengeMapResults_);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder addCavernChallengeMapResultsBuilder() {
+            return getCavernChallengeMapResultsFieldBuilder().addBuilder(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder addCavernChallengeMapResultsBuilder(
+              int index) {
+            return getCavernChallengeMapResultsFieldBuilder().addBuilder(
+                index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CavernChallengeResult cavern_challenge_map_results = 17;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder> 
+               getCavernChallengeMapResultsBuilderList() {
+            return getCavernChallengeMapResultsFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder> 
+              getCavernChallengeMapResultsFieldBuilder() {
+            if (cavernChallengeMapResultsBuilder_ == null) {
+              cavernChallengeMapResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder>(
+                      cavernChallengeMapResults_,
+                      ((bitField0_ & 0x00010000) == 0x00010000),
+                      getParentForChildren(),
+                      isClean());
+              cavernChallengeMapResults_ = null;
+            }
+            return cavernChallengeMapResultsBuilder_;
+          }
+
+          private int cavernChallengePlusShardWinnings_ ;
+          /**
+           * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+           */
+          public boolean hasCavernChallengePlusShardWinnings() {
+            return ((bitField0_ & 0x00020000) == 0x00020000);
+          }
+          /**
+           * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+           */
+          public int getCavernChallengePlusShardWinnings() {
+            return cavernChallengePlusShardWinnings_;
+          }
+          /**
+           * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+           */
+          public Builder setCavernChallengePlusShardWinnings(int value) {
+            bitField0_ |= 0x00020000;
+            cavernChallengePlusShardWinnings_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
+           */
+          public Builder clearCavernChallengePlusShardWinnings() {
+            bitField0_ = (bitField0_ & ~0x00020000);
+            cavernChallengePlusShardWinnings_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> actionsGranted_ =
+            java.util.Collections.emptyList();
+          private void ensureActionsGrantedIsMutable() {
+            if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+              actionsGranted_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant>(actionsGranted_);
+              bitField0_ |= 0x00040000;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder> actionsGrantedBuilder_;
+
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> getActionsGrantedList() {
+            if (actionsGrantedBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(actionsGranted_);
+            } else {
+              return actionsGrantedBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public int getActionsGrantedCount() {
+            if (actionsGrantedBuilder_ == null) {
+              return actionsGranted_.size();
+            } else {
+              return actionsGrantedBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant getActionsGranted(int index) {
+            if (actionsGrantedBuilder_ == null) {
+              return actionsGranted_.get(index);
+            } else {
+              return actionsGrantedBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder setActionsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant value) {
+            if (actionsGrantedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.set(index, value);
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder setActionsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder builderForValue) {
+            if (actionsGrantedBuilder_ == null) {
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder addActionsGranted(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant value) {
+            if (actionsGrantedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.add(value);
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder addActionsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant value) {
+            if (actionsGrantedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.add(index, value);
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder addActionsGranted(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder builderForValue) {
+            if (actionsGrantedBuilder_ == null) {
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.add(builderForValue.build());
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder addActionsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder builderForValue) {
+            if (actionsGrantedBuilder_ == null) {
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder addAllActionsGranted(
+              java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> values) {
+            if (actionsGrantedBuilder_ == null) {
+              ensureActionsGrantedIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, actionsGranted_);
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder clearActionsGranted() {
+            if (actionsGrantedBuilder_ == null) {
+              actionsGranted_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00040000);
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public Builder removeActionsGranted(int index) {
+            if (actionsGrantedBuilder_ == null) {
+              ensureActionsGrantedIsMutable();
+              actionsGranted_.remove(index);
+              onChanged();
+            } else {
+              actionsGrantedBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder getActionsGrantedBuilder(
+              int index) {
+            return getActionsGrantedFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder getActionsGrantedOrBuilder(
+              int index) {
+            if (actionsGrantedBuilder_ == null) {
+              return actionsGranted_.get(index);  } else {
+              return actionsGrantedBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder> 
+               getActionsGrantedOrBuilderList() {
+            if (actionsGrantedBuilder_ != null) {
+              return actionsGrantedBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(actionsGranted_);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder addActionsGrantedBuilder() {
+            return getActionsGrantedFieldBuilder().addBuilder(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder addActionsGrantedBuilder(
+              int index) {
+            return getActionsGrantedFieldBuilder().addBuilder(
+                index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.ActionGrant actions_granted = 19;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder> 
+               getActionsGrantedBuilderList() {
+            return getActionsGrantedFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder> 
+              getActionsGrantedFieldBuilder() {
+            if (actionsGrantedBuilder_ == null) {
+              actionsGrantedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder>(
+                      actionsGranted_,
+                      ((bitField0_ & 0x00040000) == 0x00040000),
+                      getParentForChildren(),
+                      isClean());
+              actionsGranted_ = null;
+            }
+            return actionsGrantedBuilder_;
+          }
+
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.EventData)
         }
 
@@ -8696,24 +10648,6 @@ public final class S2DotaMatchMetadata {
             int index);
 
         /**
-         * <code>optional uint32 event_id = 27;</code>
-         */
-        boolean hasEventId();
-        /**
-         * <code>optional uint32 event_id = 27;</code>
-         */
-        int getEventId();
-
-        /**
-         * <code>optional uint32 event_points = 28;</code>
-         */
-        boolean hasEventPoints();
-        /**
-         * <code>optional uint32 event_points = 28;</code>
-         */
-        int getEventPoints();
-
-        /**
          * <code>repeated .CDOTAMatchMetadata.Team.EventData event_data = 29;</code>
          */
         java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData> 
@@ -8811,6 +10745,114 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 lane_selection_flags = 34;</code>
          */
         int getLaneSelectionFlags();
+
+        /**
+         * <code>optional uint32 rampages = 35;</code>
+         */
+        boolean hasRampages();
+        /**
+         * <code>optional uint32 rampages = 35;</code>
+         */
+        int getRampages();
+
+        /**
+         * <code>optional uint32 triple_kills = 36;</code>
+         */
+        boolean hasTripleKills();
+        /**
+         * <code>optional uint32 triple_kills = 36;</code>
+         */
+        int getTripleKills();
+
+        /**
+         * <code>optional uint32 aegis_snatched = 37;</code>
+         */
+        boolean hasAegisSnatched();
+        /**
+         * <code>optional uint32 aegis_snatched = 37;</code>
+         */
+        int getAegisSnatched();
+
+        /**
+         * <code>optional uint32 rapiers_purchased = 38;</code>
+         */
+        boolean hasRapiersPurchased();
+        /**
+         * <code>optional uint32 rapiers_purchased = 38;</code>
+         */
+        int getRapiersPurchased();
+
+        /**
+         * <code>optional uint32 couriers_killed = 39;</code>
+         */
+        boolean hasCouriersKilled();
+        /**
+         * <code>optional uint32 couriers_killed = 39;</code>
+         */
+        int getCouriersKilled();
+
+        /**
+         * <code>optional uint32 net_worth_rank = 40;</code>
+         */
+        boolean hasNetWorthRank();
+        /**
+         * <code>optional uint32 net_worth_rank = 40;</code>
+         */
+        int getNetWorthRank();
+
+        /**
+         * <code>optional uint32 support_gold_spent = 41;</code>
+         */
+        boolean hasSupportGoldSpent();
+        /**
+         * <code>optional uint32 support_gold_spent = 41;</code>
+         */
+        int getSupportGoldSpent();
+
+        /**
+         * <code>optional uint32 observer_wards_placed = 42;</code>
+         */
+        boolean hasObserverWardsPlaced();
+        /**
+         * <code>optional uint32 observer_wards_placed = 42;</code>
+         */
+        int getObserverWardsPlaced();
+
+        /**
+         * <code>optional uint32 sentry_wards_placed = 43;</code>
+         */
+        boolean hasSentryWardsPlaced();
+        /**
+         * <code>optional uint32 sentry_wards_placed = 43;</code>
+         */
+        int getSentryWardsPlaced();
+
+        /**
+         * <code>optional uint32 wards_dewarded = 44;</code>
+         */
+        boolean hasWardsDewarded();
+        /**
+         * <code>optional uint32 wards_dewarded = 44;</code>
+         */
+        int getWardsDewarded();
+
+        /**
+         * <code>optional float stun_duration = 45;</code>
+         */
+        boolean hasStunDuration();
+        /**
+         * <code>optional float stun_duration = 45;</code>
+         */
+        float getStunDuration();
+
+        /**
+         * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+         */
+        boolean hasRankMmrBoostType();
+        /**
+         * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType getRankMmrBoostType();
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -9058,53 +11100,109 @@ public final class S2DotaMatchMetadata {
                   autoStyleCriteria_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.AutoStyleCriteria.PARSER, extensionRegistry));
                   break;
                 }
-                case 216: {
-                  bitField0_ |= 0x00040000;
-                  eventId_ = input.readUInt32();
-                  break;
-                }
-                case 224: {
-                  bitField0_ |= 0x00080000;
-                  eventPoints_ = input.readUInt32();
-                  break;
-                }
                 case 234: {
-                  if (!((mutable_bitField0_ & 0x10000000) == 0x10000000)) {
+                  if (!((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
                     eventData_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData>();
-                    mutable_bitField0_ |= 0x10000000;
+                    mutable_bitField0_ |= 0x04000000;
                   }
                   eventData_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData.PARSER, extensionRegistry));
                   break;
                 }
                 case 242: {
-                  if (!((mutable_bitField0_ & 0x20000000) == 0x20000000)) {
+                  if (!((mutable_bitField0_ & 0x08000000) == 0x08000000)) {
                     strangeGemProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgress>();
-                    mutable_bitField0_ |= 0x20000000;
+                    mutable_bitField0_ |= 0x08000000;
                   }
                   strangeGemProgress_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgress.PARSER, extensionRegistry));
                   break;
                 }
                 case 248: {
-                  bitField0_ |= 0x00100000;
+                  bitField0_ |= 0x00040000;
                   heroXp_ = input.readUInt32();
                   break;
                 }
                 case 256: {
-                  bitField0_ |= 0x00200000;
+                  bitField0_ |= 0x00080000;
                   campsStacked_ = input.readUInt32();
                   break;
                 }
                 case 266: {
-                  if (!((mutable_bitField1_ & 0x00000001) == 0x00000001)) {
+                  if (!((mutable_bitField0_ & 0x40000000) == 0x40000000)) {
                     victoryPrediction_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPrediction>();
-                    mutable_bitField1_ |= 0x00000001;
+                    mutable_bitField0_ |= 0x40000000;
                   }
                   victoryPrediction_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPrediction.PARSER, extensionRegistry));
                   break;
                 }
                 case 272: {
-                  bitField0_ |= 0x00400000;
+                  bitField0_ |= 0x00100000;
                   laneSelectionFlags_ = input.readUInt32();
+                  break;
+                }
+                case 280: {
+                  bitField0_ |= 0x00200000;
+                  rampages_ = input.readUInt32();
+                  break;
+                }
+                case 288: {
+                  bitField0_ |= 0x00400000;
+                  tripleKills_ = input.readUInt32();
+                  break;
+                }
+                case 296: {
+                  bitField0_ |= 0x00800000;
+                  aegisSnatched_ = input.readUInt32();
+                  break;
+                }
+                case 304: {
+                  bitField0_ |= 0x01000000;
+                  rapiersPurchased_ = input.readUInt32();
+                  break;
+                }
+                case 312: {
+                  bitField0_ |= 0x02000000;
+                  couriersKilled_ = input.readUInt32();
+                  break;
+                }
+                case 320: {
+                  bitField0_ |= 0x04000000;
+                  netWorthRank_ = input.readUInt32();
+                  break;
+                }
+                case 328: {
+                  bitField0_ |= 0x08000000;
+                  supportGoldSpent_ = input.readUInt32();
+                  break;
+                }
+                case 336: {
+                  bitField0_ |= 0x10000000;
+                  observerWardsPlaced_ = input.readUInt32();
+                  break;
+                }
+                case 344: {
+                  bitField0_ |= 0x20000000;
+                  sentryWardsPlaced_ = input.readUInt32();
+                  break;
+                }
+                case 352: {
+                  bitField0_ |= 0x40000000;
+                  wardsDewarded_ = input.readUInt32();
+                  break;
+                }
+                case 365: {
+                  bitField0_ |= 0x80000000;
+                  stunDuration_ = input.readFloat();
+                  break;
+                }
+                case 368: {
+                  int rawValue = input.readEnum();
+                  skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType value = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.valueOf(rawValue);
+                  if (value == null) {
+                    unknownFields.mergeVarintField(46, rawValue);
+                  } else {
+                    bitField1_ |= 0x00000001;
+                    rankMmrBoostType_ = value;
+                  }
                   break;
                 }
               }
@@ -9139,13 +11237,13 @@ public final class S2DotaMatchMetadata {
             if (((mutable_bitField0_ & 0x02000000) == 0x02000000)) {
               autoStyleCriteria_ = java.util.Collections.unmodifiableList(autoStyleCriteria_);
             }
-            if (((mutable_bitField0_ & 0x10000000) == 0x10000000)) {
+            if (((mutable_bitField0_ & 0x04000000) == 0x04000000)) {
               eventData_ = java.util.Collections.unmodifiableList(eventData_);
             }
-            if (((mutable_bitField0_ & 0x20000000) == 0x20000000)) {
+            if (((mutable_bitField0_ & 0x08000000) == 0x08000000)) {
               strangeGemProgress_ = java.util.Collections.unmodifiableList(strangeGemProgress_);
             }
-            if (((mutable_bitField1_ & 0x00000001) == 0x00000001)) {
+            if (((mutable_bitField0_ & 0x40000000) == 0x40000000)) {
               victoryPrediction_ = java.util.Collections.unmodifiableList(victoryPrediction_);
             }
             this.unknownFields = unknownFields.build();
@@ -9180,6 +11278,7 @@ public final class S2DotaMatchMetadata {
         }
 
         private int bitField0_;
+        private int bitField1_;
         public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
         private int accountId_;
         /**
@@ -9691,36 +11790,6 @@ public final class S2DotaMatchMetadata {
           return autoStyleCriteria_.get(index);
         }
 
-        public static final int EVENT_ID_FIELD_NUMBER = 27;
-        private int eventId_;
-        /**
-         * <code>optional uint32 event_id = 27;</code>
-         */
-        public boolean hasEventId() {
-          return ((bitField0_ & 0x00040000) == 0x00040000);
-        }
-        /**
-         * <code>optional uint32 event_id = 27;</code>
-         */
-        public int getEventId() {
-          return eventId_;
-        }
-
-        public static final int EVENT_POINTS_FIELD_NUMBER = 28;
-        private int eventPoints_;
-        /**
-         * <code>optional uint32 event_points = 28;</code>
-         */
-        public boolean hasEventPoints() {
-          return ((bitField0_ & 0x00080000) == 0x00080000);
-        }
-        /**
-         * <code>optional uint32 event_points = 28;</code>
-         */
-        public int getEventPoints() {
-          return eventPoints_;
-        }
-
         public static final int EVENT_DATA_FIELD_NUMBER = 29;
         private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData> eventData_;
         /**
@@ -9797,7 +11866,7 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 hero_xp = 31;</code>
          */
         public boolean hasHeroXp() {
-          return ((bitField0_ & 0x00100000) == 0x00100000);
+          return ((bitField0_ & 0x00040000) == 0x00040000);
         }
         /**
          * <code>optional uint32 hero_xp = 31;</code>
@@ -9812,7 +11881,7 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 camps_stacked = 32;</code>
          */
         public boolean hasCampsStacked() {
-          return ((bitField0_ & 0x00200000) == 0x00200000);
+          return ((bitField0_ & 0x00080000) == 0x00080000);
         }
         /**
          * <code>optional uint32 camps_stacked = 32;</code>
@@ -9862,13 +11931,193 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 lane_selection_flags = 34;</code>
          */
         public boolean hasLaneSelectionFlags() {
-          return ((bitField0_ & 0x00400000) == 0x00400000);
+          return ((bitField0_ & 0x00100000) == 0x00100000);
         }
         /**
          * <code>optional uint32 lane_selection_flags = 34;</code>
          */
         public int getLaneSelectionFlags() {
           return laneSelectionFlags_;
+        }
+
+        public static final int RAMPAGES_FIELD_NUMBER = 35;
+        private int rampages_;
+        /**
+         * <code>optional uint32 rampages = 35;</code>
+         */
+        public boolean hasRampages() {
+          return ((bitField0_ & 0x00200000) == 0x00200000);
+        }
+        /**
+         * <code>optional uint32 rampages = 35;</code>
+         */
+        public int getRampages() {
+          return rampages_;
+        }
+
+        public static final int TRIPLE_KILLS_FIELD_NUMBER = 36;
+        private int tripleKills_;
+        /**
+         * <code>optional uint32 triple_kills = 36;</code>
+         */
+        public boolean hasTripleKills() {
+          return ((bitField0_ & 0x00400000) == 0x00400000);
+        }
+        /**
+         * <code>optional uint32 triple_kills = 36;</code>
+         */
+        public int getTripleKills() {
+          return tripleKills_;
+        }
+
+        public static final int AEGIS_SNATCHED_FIELD_NUMBER = 37;
+        private int aegisSnatched_;
+        /**
+         * <code>optional uint32 aegis_snatched = 37;</code>
+         */
+        public boolean hasAegisSnatched() {
+          return ((bitField0_ & 0x00800000) == 0x00800000);
+        }
+        /**
+         * <code>optional uint32 aegis_snatched = 37;</code>
+         */
+        public int getAegisSnatched() {
+          return aegisSnatched_;
+        }
+
+        public static final int RAPIERS_PURCHASED_FIELD_NUMBER = 38;
+        private int rapiersPurchased_;
+        /**
+         * <code>optional uint32 rapiers_purchased = 38;</code>
+         */
+        public boolean hasRapiersPurchased() {
+          return ((bitField0_ & 0x01000000) == 0x01000000);
+        }
+        /**
+         * <code>optional uint32 rapiers_purchased = 38;</code>
+         */
+        public int getRapiersPurchased() {
+          return rapiersPurchased_;
+        }
+
+        public static final int COURIERS_KILLED_FIELD_NUMBER = 39;
+        private int couriersKilled_;
+        /**
+         * <code>optional uint32 couriers_killed = 39;</code>
+         */
+        public boolean hasCouriersKilled() {
+          return ((bitField0_ & 0x02000000) == 0x02000000);
+        }
+        /**
+         * <code>optional uint32 couriers_killed = 39;</code>
+         */
+        public int getCouriersKilled() {
+          return couriersKilled_;
+        }
+
+        public static final int NET_WORTH_RANK_FIELD_NUMBER = 40;
+        private int netWorthRank_;
+        /**
+         * <code>optional uint32 net_worth_rank = 40;</code>
+         */
+        public boolean hasNetWorthRank() {
+          return ((bitField0_ & 0x04000000) == 0x04000000);
+        }
+        /**
+         * <code>optional uint32 net_worth_rank = 40;</code>
+         */
+        public int getNetWorthRank() {
+          return netWorthRank_;
+        }
+
+        public static final int SUPPORT_GOLD_SPENT_FIELD_NUMBER = 41;
+        private int supportGoldSpent_;
+        /**
+         * <code>optional uint32 support_gold_spent = 41;</code>
+         */
+        public boolean hasSupportGoldSpent() {
+          return ((bitField0_ & 0x08000000) == 0x08000000);
+        }
+        /**
+         * <code>optional uint32 support_gold_spent = 41;</code>
+         */
+        public int getSupportGoldSpent() {
+          return supportGoldSpent_;
+        }
+
+        public static final int OBSERVER_WARDS_PLACED_FIELD_NUMBER = 42;
+        private int observerWardsPlaced_;
+        /**
+         * <code>optional uint32 observer_wards_placed = 42;</code>
+         */
+        public boolean hasObserverWardsPlaced() {
+          return ((bitField0_ & 0x10000000) == 0x10000000);
+        }
+        /**
+         * <code>optional uint32 observer_wards_placed = 42;</code>
+         */
+        public int getObserverWardsPlaced() {
+          return observerWardsPlaced_;
+        }
+
+        public static final int SENTRY_WARDS_PLACED_FIELD_NUMBER = 43;
+        private int sentryWardsPlaced_;
+        /**
+         * <code>optional uint32 sentry_wards_placed = 43;</code>
+         */
+        public boolean hasSentryWardsPlaced() {
+          return ((bitField0_ & 0x20000000) == 0x20000000);
+        }
+        /**
+         * <code>optional uint32 sentry_wards_placed = 43;</code>
+         */
+        public int getSentryWardsPlaced() {
+          return sentryWardsPlaced_;
+        }
+
+        public static final int WARDS_DEWARDED_FIELD_NUMBER = 44;
+        private int wardsDewarded_;
+        /**
+         * <code>optional uint32 wards_dewarded = 44;</code>
+         */
+        public boolean hasWardsDewarded() {
+          return ((bitField0_ & 0x40000000) == 0x40000000);
+        }
+        /**
+         * <code>optional uint32 wards_dewarded = 44;</code>
+         */
+        public int getWardsDewarded() {
+          return wardsDewarded_;
+        }
+
+        public static final int STUN_DURATION_FIELD_NUMBER = 45;
+        private float stunDuration_;
+        /**
+         * <code>optional float stun_duration = 45;</code>
+         */
+        public boolean hasStunDuration() {
+          return ((bitField0_ & 0x80000000) == 0x80000000);
+        }
+        /**
+         * <code>optional float stun_duration = 45;</code>
+         */
+        public float getStunDuration() {
+          return stunDuration_;
+        }
+
+        public static final int RANK_MMR_BOOST_TYPE_FIELD_NUMBER = 46;
+        private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType rankMmrBoostType_;
+        /**
+         * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+         */
+        public boolean hasRankMmrBoostType() {
+          return ((bitField1_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType getRankMmrBoostType() {
+          return rankMmrBoostType_;
         }
 
         private void initFields() {
@@ -9898,14 +12147,24 @@ public final class S2DotaMatchMetadata {
           inventorySnapshot_ = java.util.Collections.emptyList();
           avgStatsCalibrated_ = false;
           autoStyleCriteria_ = java.util.Collections.emptyList();
-          eventId_ = 0;
-          eventPoints_ = 0;
           eventData_ = java.util.Collections.emptyList();
           strangeGemProgress_ = java.util.Collections.emptyList();
           heroXp_ = 0;
           campsStacked_ = 0;
           victoryPrediction_ = java.util.Collections.emptyList();
           laneSelectionFlags_ = 0;
+          rampages_ = 0;
+          tripleKills_ = 0;
+          aegisSnatched_ = 0;
+          rapiersPurchased_ = 0;
+          couriersKilled_ = 0;
+          netWorthRank_ = 0;
+          supportGoldSpent_ = 0;
+          observerWardsPlaced_ = 0;
+          sentryWardsPlaced_ = 0;
+          wardsDewarded_ = 0;
+          stunDuration_ = 0F;
+          rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -9998,29 +12257,59 @@ public final class S2DotaMatchMetadata {
           for (int i = 0; i < autoStyleCriteria_.size(); i++) {
             output.writeMessage(26, autoStyleCriteria_.get(i));
           }
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
-            output.writeUInt32(27, eventId_);
-          }
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
-            output.writeUInt32(28, eventPoints_);
-          }
           for (int i = 0; i < eventData_.size(); i++) {
             output.writeMessage(29, eventData_.get(i));
           }
           for (int i = 0; i < strangeGemProgress_.size(); i++) {
             output.writeMessage(30, strangeGemProgress_.get(i));
           }
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00040000) == 0x00040000)) {
             output.writeUInt32(31, heroXp_);
           }
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00080000) == 0x00080000)) {
             output.writeUInt32(32, campsStacked_);
           }
           for (int i = 0; i < victoryPrediction_.size(); i++) {
             output.writeMessage(33, victoryPrediction_.get(i));
           }
-          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          if (((bitField0_ & 0x00100000) == 0x00100000)) {
             output.writeUInt32(34, laneSelectionFlags_);
+          }
+          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+            output.writeUInt32(35, rampages_);
+          }
+          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+            output.writeUInt32(36, tripleKills_);
+          }
+          if (((bitField0_ & 0x00800000) == 0x00800000)) {
+            output.writeUInt32(37, aegisSnatched_);
+          }
+          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+            output.writeUInt32(38, rapiersPurchased_);
+          }
+          if (((bitField0_ & 0x02000000) == 0x02000000)) {
+            output.writeUInt32(39, couriersKilled_);
+          }
+          if (((bitField0_ & 0x04000000) == 0x04000000)) {
+            output.writeUInt32(40, netWorthRank_);
+          }
+          if (((bitField0_ & 0x08000000) == 0x08000000)) {
+            output.writeUInt32(41, supportGoldSpent_);
+          }
+          if (((bitField0_ & 0x10000000) == 0x10000000)) {
+            output.writeUInt32(42, observerWardsPlaced_);
+          }
+          if (((bitField0_ & 0x20000000) == 0x20000000)) {
+            output.writeUInt32(43, sentryWardsPlaced_);
+          }
+          if (((bitField0_ & 0x40000000) == 0x40000000)) {
+            output.writeUInt32(44, wardsDewarded_);
+          }
+          if (((bitField0_ & 0x80000000) == 0x80000000)) {
+            output.writeFloat(45, stunDuration_);
+          }
+          if (((bitField1_ & 0x00000001) == 0x00000001)) {
+            output.writeEnum(46, rankMmrBoostType_.getNumber());
           }
           getUnknownFields().writeTo(output);
         }
@@ -10147,14 +12436,6 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(26, autoStyleCriteria_.get(i));
           }
-          if (((bitField0_ & 0x00040000) == 0x00040000)) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(27, eventId_);
-          }
-          if (((bitField0_ & 0x00080000) == 0x00080000)) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(28, eventPoints_);
-          }
           for (int i = 0; i < eventData_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(29, eventData_.get(i));
@@ -10163,11 +12444,11 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(30, strangeGemProgress_.get(i));
           }
-          if (((bitField0_ & 0x00100000) == 0x00100000)) {
+          if (((bitField0_ & 0x00040000) == 0x00040000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(31, heroXp_);
           }
-          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+          if (((bitField0_ & 0x00080000) == 0x00080000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(32, campsStacked_);
           }
@@ -10175,9 +12456,57 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(33, victoryPrediction_.get(i));
           }
-          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+          if (((bitField0_ & 0x00100000) == 0x00100000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(34, laneSelectionFlags_);
+          }
+          if (((bitField0_ & 0x00200000) == 0x00200000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(35, rampages_);
+          }
+          if (((bitField0_ & 0x00400000) == 0x00400000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(36, tripleKills_);
+          }
+          if (((bitField0_ & 0x00800000) == 0x00800000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(37, aegisSnatched_);
+          }
+          if (((bitField0_ & 0x01000000) == 0x01000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(38, rapiersPurchased_);
+          }
+          if (((bitField0_ & 0x02000000) == 0x02000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(39, couriersKilled_);
+          }
+          if (((bitField0_ & 0x04000000) == 0x04000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(40, netWorthRank_);
+          }
+          if (((bitField0_ & 0x08000000) == 0x08000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(41, supportGoldSpent_);
+          }
+          if (((bitField0_ & 0x10000000) == 0x10000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(42, observerWardsPlaced_);
+          }
+          if (((bitField0_ & 0x20000000) == 0x20000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(43, sentryWardsPlaced_);
+          }
+          if (((bitField0_ & 0x40000000) == 0x40000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(44, wardsDewarded_);
+          }
+          if (((bitField0_ & 0x80000000) == 0x80000000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(45, stunDuration_);
+          }
+          if (((bitField1_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeEnumSize(46, rankMmrBoostType_.getNumber());
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -10376,34 +12705,54 @@ public final class S2DotaMatchMetadata {
             } else {
               autoStyleCriteriaBuilder_.clear();
             }
-            eventId_ = 0;
-            bitField0_ = (bitField0_ & ~0x04000000);
-            eventPoints_ = 0;
-            bitField0_ = (bitField0_ & ~0x08000000);
             if (eventDataBuilder_ == null) {
               eventData_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x10000000);
+              bitField0_ = (bitField0_ & ~0x04000000);
             } else {
               eventDataBuilder_.clear();
             }
             if (strangeGemProgressBuilder_ == null) {
               strangeGemProgress_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x20000000);
+              bitField0_ = (bitField0_ & ~0x08000000);
             } else {
               strangeGemProgressBuilder_.clear();
             }
             heroXp_ = 0;
-            bitField0_ = (bitField0_ & ~0x40000000);
+            bitField0_ = (bitField0_ & ~0x10000000);
             campsStacked_ = 0;
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField0_ = (bitField0_ & ~0x20000000);
             if (victoryPredictionBuilder_ == null) {
               victoryPrediction_ = java.util.Collections.emptyList();
-              bitField1_ = (bitField1_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x40000000);
             } else {
               victoryPredictionBuilder_.clear();
             }
             laneSelectionFlags_ = 0;
+            bitField0_ = (bitField0_ & ~0x80000000);
+            rampages_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000001);
+            tripleKills_ = 0;
             bitField1_ = (bitField1_ & ~0x00000002);
+            aegisSnatched_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000004);
+            rapiersPurchased_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000008);
+            couriersKilled_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000010);
+            netWorthRank_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000020);
+            supportGoldSpent_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000040);
+            observerWardsPlaced_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000080);
+            sentryWardsPlaced_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000100);
+            wardsDewarded_ = 0;
+            bitField1_ = (bitField1_ & ~0x00000200);
+            stunDuration_ = 0F;
+            bitField1_ = (bitField1_ & ~0x00000400);
+            rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
+            bitField1_ = (bitField1_ & ~0x00000800);
             return this;
           }
 
@@ -10433,6 +12782,7 @@ public final class S2DotaMatchMetadata {
             int from_bitField0_ = bitField0_;
             int from_bitField1_ = bitField1_;
             int to_bitField0_ = 0;
+            int to_bitField1_ = 0;
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
               to_bitField0_ |= 0x00000001;
             }
@@ -10565,54 +12915,95 @@ public final class S2DotaMatchMetadata {
             } else {
               result.autoStyleCriteria_ = autoStyleCriteriaBuilder_.build();
             }
-            if (((from_bitField0_ & 0x04000000) == 0x04000000)) {
-              to_bitField0_ |= 0x00040000;
-            }
-            result.eventId_ = eventId_;
-            if (((from_bitField0_ & 0x08000000) == 0x08000000)) {
-              to_bitField0_ |= 0x00080000;
-            }
-            result.eventPoints_ = eventPoints_;
             if (eventDataBuilder_ == null) {
-              if (((bitField0_ & 0x10000000) == 0x10000000)) {
+              if (((bitField0_ & 0x04000000) == 0x04000000)) {
                 eventData_ = java.util.Collections.unmodifiableList(eventData_);
-                bitField0_ = (bitField0_ & ~0x10000000);
+                bitField0_ = (bitField0_ & ~0x04000000);
               }
               result.eventData_ = eventData_;
             } else {
               result.eventData_ = eventDataBuilder_.build();
             }
             if (strangeGemProgressBuilder_ == null) {
-              if (((bitField0_ & 0x20000000) == 0x20000000)) {
+              if (((bitField0_ & 0x08000000) == 0x08000000)) {
                 strangeGemProgress_ = java.util.Collections.unmodifiableList(strangeGemProgress_);
-                bitField0_ = (bitField0_ & ~0x20000000);
+                bitField0_ = (bitField0_ & ~0x08000000);
               }
               result.strangeGemProgress_ = strangeGemProgress_;
             } else {
               result.strangeGemProgress_ = strangeGemProgressBuilder_.build();
             }
-            if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
-              to_bitField0_ |= 0x00100000;
+            if (((from_bitField0_ & 0x10000000) == 0x10000000)) {
+              to_bitField0_ |= 0x00040000;
             }
             result.heroXp_ = heroXp_;
-            if (((from_bitField0_ & 0x80000000) == 0x80000000)) {
-              to_bitField0_ |= 0x00200000;
+            if (((from_bitField0_ & 0x20000000) == 0x20000000)) {
+              to_bitField0_ |= 0x00080000;
             }
             result.campsStacked_ = campsStacked_;
             if (victoryPredictionBuilder_ == null) {
-              if (((bitField1_ & 0x00000001) == 0x00000001)) {
+              if (((bitField0_ & 0x40000000) == 0x40000000)) {
                 victoryPrediction_ = java.util.Collections.unmodifiableList(victoryPrediction_);
-                bitField1_ = (bitField1_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x40000000);
               }
               result.victoryPrediction_ = victoryPrediction_;
             } else {
               result.victoryPrediction_ = victoryPredictionBuilder_.build();
             }
+            if (((from_bitField0_ & 0x80000000) == 0x80000000)) {
+              to_bitField0_ |= 0x00100000;
+            }
+            result.laneSelectionFlags_ = laneSelectionFlags_;
+            if (((from_bitField1_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00200000;
+            }
+            result.rampages_ = rampages_;
             if (((from_bitField1_ & 0x00000002) == 0x00000002)) {
               to_bitField0_ |= 0x00400000;
             }
-            result.laneSelectionFlags_ = laneSelectionFlags_;
+            result.tripleKills_ = tripleKills_;
+            if (((from_bitField1_ & 0x00000004) == 0x00000004)) {
+              to_bitField0_ |= 0x00800000;
+            }
+            result.aegisSnatched_ = aegisSnatched_;
+            if (((from_bitField1_ & 0x00000008) == 0x00000008)) {
+              to_bitField0_ |= 0x01000000;
+            }
+            result.rapiersPurchased_ = rapiersPurchased_;
+            if (((from_bitField1_ & 0x00000010) == 0x00000010)) {
+              to_bitField0_ |= 0x02000000;
+            }
+            result.couriersKilled_ = couriersKilled_;
+            if (((from_bitField1_ & 0x00000020) == 0x00000020)) {
+              to_bitField0_ |= 0x04000000;
+            }
+            result.netWorthRank_ = netWorthRank_;
+            if (((from_bitField1_ & 0x00000040) == 0x00000040)) {
+              to_bitField0_ |= 0x08000000;
+            }
+            result.supportGoldSpent_ = supportGoldSpent_;
+            if (((from_bitField1_ & 0x00000080) == 0x00000080)) {
+              to_bitField0_ |= 0x10000000;
+            }
+            result.observerWardsPlaced_ = observerWardsPlaced_;
+            if (((from_bitField1_ & 0x00000100) == 0x00000100)) {
+              to_bitField0_ |= 0x20000000;
+            }
+            result.sentryWardsPlaced_ = sentryWardsPlaced_;
+            if (((from_bitField1_ & 0x00000200) == 0x00000200)) {
+              to_bitField0_ |= 0x40000000;
+            }
+            result.wardsDewarded_ = wardsDewarded_;
+            if (((from_bitField1_ & 0x00000400) == 0x00000400)) {
+              to_bitField0_ |= 0x80000000;
+            }
+            result.stunDuration_ = stunDuration_;
+            if (((from_bitField1_ & 0x00000800) == 0x00000800)) {
+              to_bitField1_ |= 0x00000001;
+            }
+            result.rankMmrBoostType_ = rankMmrBoostType_;
             result.bitField0_ = to_bitField0_;
+            result.bitField1_ = to_bitField1_;
             onBuilt();
             return result;
           }
@@ -10842,17 +13233,11 @@ public final class S2DotaMatchMetadata {
                 }
               }
             }
-            if (other.hasEventId()) {
-              setEventId(other.getEventId());
-            }
-            if (other.hasEventPoints()) {
-              setEventPoints(other.getEventPoints());
-            }
             if (eventDataBuilder_ == null) {
               if (!other.eventData_.isEmpty()) {
                 if (eventData_.isEmpty()) {
                   eventData_ = other.eventData_;
-                  bitField0_ = (bitField0_ & ~0x10000000);
+                  bitField0_ = (bitField0_ & ~0x04000000);
                 } else {
                   ensureEventDataIsMutable();
                   eventData_.addAll(other.eventData_);
@@ -10865,7 +13250,7 @@ public final class S2DotaMatchMetadata {
                   eventDataBuilder_.dispose();
                   eventDataBuilder_ = null;
                   eventData_ = other.eventData_;
-                  bitField0_ = (bitField0_ & ~0x10000000);
+                  bitField0_ = (bitField0_ & ~0x04000000);
                   eventDataBuilder_ = 
                     com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                        getEventDataFieldBuilder() : null;
@@ -10878,7 +13263,7 @@ public final class S2DotaMatchMetadata {
               if (!other.strangeGemProgress_.isEmpty()) {
                 if (strangeGemProgress_.isEmpty()) {
                   strangeGemProgress_ = other.strangeGemProgress_;
-                  bitField0_ = (bitField0_ & ~0x20000000);
+                  bitField0_ = (bitField0_ & ~0x08000000);
                 } else {
                   ensureStrangeGemProgressIsMutable();
                   strangeGemProgress_.addAll(other.strangeGemProgress_);
@@ -10891,7 +13276,7 @@ public final class S2DotaMatchMetadata {
                   strangeGemProgressBuilder_.dispose();
                   strangeGemProgressBuilder_ = null;
                   strangeGemProgress_ = other.strangeGemProgress_;
-                  bitField0_ = (bitField0_ & ~0x20000000);
+                  bitField0_ = (bitField0_ & ~0x08000000);
                   strangeGemProgressBuilder_ = 
                     com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                        getStrangeGemProgressFieldBuilder() : null;
@@ -10910,7 +13295,7 @@ public final class S2DotaMatchMetadata {
               if (!other.victoryPrediction_.isEmpty()) {
                 if (victoryPrediction_.isEmpty()) {
                   victoryPrediction_ = other.victoryPrediction_;
-                  bitField1_ = (bitField1_ & ~0x00000001);
+                  bitField0_ = (bitField0_ & ~0x40000000);
                 } else {
                   ensureVictoryPredictionIsMutable();
                   victoryPrediction_.addAll(other.victoryPrediction_);
@@ -10923,7 +13308,7 @@ public final class S2DotaMatchMetadata {
                   victoryPredictionBuilder_.dispose();
                   victoryPredictionBuilder_ = null;
                   victoryPrediction_ = other.victoryPrediction_;
-                  bitField1_ = (bitField1_ & ~0x00000001);
+                  bitField0_ = (bitField0_ & ~0x40000000);
                   victoryPredictionBuilder_ = 
                     com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                        getVictoryPredictionFieldBuilder() : null;
@@ -10934,6 +13319,42 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasLaneSelectionFlags()) {
               setLaneSelectionFlags(other.getLaneSelectionFlags());
+            }
+            if (other.hasRampages()) {
+              setRampages(other.getRampages());
+            }
+            if (other.hasTripleKills()) {
+              setTripleKills(other.getTripleKills());
+            }
+            if (other.hasAegisSnatched()) {
+              setAegisSnatched(other.getAegisSnatched());
+            }
+            if (other.hasRapiersPurchased()) {
+              setRapiersPurchased(other.getRapiersPurchased());
+            }
+            if (other.hasCouriersKilled()) {
+              setCouriersKilled(other.getCouriersKilled());
+            }
+            if (other.hasNetWorthRank()) {
+              setNetWorthRank(other.getNetWorthRank());
+            }
+            if (other.hasSupportGoldSpent()) {
+              setSupportGoldSpent(other.getSupportGoldSpent());
+            }
+            if (other.hasObserverWardsPlaced()) {
+              setObserverWardsPlaced(other.getObserverWardsPlaced());
+            }
+            if (other.hasSentryWardsPlaced()) {
+              setSentryWardsPlaced(other.getSentryWardsPlaced());
+            }
+            if (other.hasWardsDewarded()) {
+              setWardsDewarded(other.getWardsDewarded());
+            }
+            if (other.hasStunDuration()) {
+              setStunDuration(other.getStunDuration());
+            }
+            if (other.hasRankMmrBoostType()) {
+              setRankMmrBoostType(other.getRankMmrBoostType());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -12937,76 +15358,12 @@ public final class S2DotaMatchMetadata {
             return autoStyleCriteriaBuilder_;
           }
 
-          private int eventId_ ;
-          /**
-           * <code>optional uint32 event_id = 27;</code>
-           */
-          public boolean hasEventId() {
-            return ((bitField0_ & 0x04000000) == 0x04000000);
-          }
-          /**
-           * <code>optional uint32 event_id = 27;</code>
-           */
-          public int getEventId() {
-            return eventId_;
-          }
-          /**
-           * <code>optional uint32 event_id = 27;</code>
-           */
-          public Builder setEventId(int value) {
-            bitField0_ |= 0x04000000;
-            eventId_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional uint32 event_id = 27;</code>
-           */
-          public Builder clearEventId() {
-            bitField0_ = (bitField0_ & ~0x04000000);
-            eventId_ = 0;
-            onChanged();
-            return this;
-          }
-
-          private int eventPoints_ ;
-          /**
-           * <code>optional uint32 event_points = 28;</code>
-           */
-          public boolean hasEventPoints() {
-            return ((bitField0_ & 0x08000000) == 0x08000000);
-          }
-          /**
-           * <code>optional uint32 event_points = 28;</code>
-           */
-          public int getEventPoints() {
-            return eventPoints_;
-          }
-          /**
-           * <code>optional uint32 event_points = 28;</code>
-           */
-          public Builder setEventPoints(int value) {
-            bitField0_ |= 0x08000000;
-            eventPoints_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional uint32 event_points = 28;</code>
-           */
-          public Builder clearEventPoints() {
-            bitField0_ = (bitField0_ & ~0x08000000);
-            eventPoints_ = 0;
-            onChanged();
-            return this;
-          }
-
           private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData> eventData_ =
             java.util.Collections.emptyList();
           private void ensureEventDataIsMutable() {
-            if (!((bitField0_ & 0x10000000) == 0x10000000)) {
+            if (!((bitField0_ & 0x04000000) == 0x04000000)) {
               eventData_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData>(eventData_);
-              bitField0_ |= 0x10000000;
+              bitField0_ |= 0x04000000;
              }
           }
 
@@ -13156,7 +15513,7 @@ public final class S2DotaMatchMetadata {
           public Builder clearEventData() {
             if (eventDataBuilder_ == null) {
               eventData_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x10000000);
+              bitField0_ = (bitField0_ & ~0x04000000);
               onChanged();
             } else {
               eventDataBuilder_.clear();
@@ -13233,7 +15590,7 @@ public final class S2DotaMatchMetadata {
               eventDataBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                   skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventData.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.EventDataOrBuilder>(
                       eventData_,
-                      ((bitField0_ & 0x10000000) == 0x10000000),
+                      ((bitField0_ & 0x04000000) == 0x04000000),
                       getParentForChildren(),
                       isClean());
               eventData_ = null;
@@ -13244,9 +15601,9 @@ public final class S2DotaMatchMetadata {
           private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgress> strangeGemProgress_ =
             java.util.Collections.emptyList();
           private void ensureStrangeGemProgressIsMutable() {
-            if (!((bitField0_ & 0x20000000) == 0x20000000)) {
+            if (!((bitField0_ & 0x08000000) == 0x08000000)) {
               strangeGemProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgress>(strangeGemProgress_);
-              bitField0_ |= 0x20000000;
+              bitField0_ |= 0x08000000;
              }
           }
 
@@ -13396,7 +15753,7 @@ public final class S2DotaMatchMetadata {
           public Builder clearStrangeGemProgress() {
             if (strangeGemProgressBuilder_ == null) {
               strangeGemProgress_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x20000000);
+              bitField0_ = (bitField0_ & ~0x08000000);
               onChanged();
             } else {
               strangeGemProgressBuilder_.clear();
@@ -13473,7 +15830,7 @@ public final class S2DotaMatchMetadata {
               strangeGemProgressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                   skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.StrangeGemProgressOrBuilder>(
                       strangeGemProgress_,
-                      ((bitField0_ & 0x20000000) == 0x20000000),
+                      ((bitField0_ & 0x08000000) == 0x08000000),
                       getParentForChildren(),
                       isClean());
               strangeGemProgress_ = null;
@@ -13486,7 +15843,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 hero_xp = 31;</code>
            */
           public boolean hasHeroXp() {
-            return ((bitField0_ & 0x40000000) == 0x40000000);
+            return ((bitField0_ & 0x10000000) == 0x10000000);
           }
           /**
            * <code>optional uint32 hero_xp = 31;</code>
@@ -13498,7 +15855,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 hero_xp = 31;</code>
            */
           public Builder setHeroXp(int value) {
-            bitField0_ |= 0x40000000;
+            bitField0_ |= 0x10000000;
             heroXp_ = value;
             onChanged();
             return this;
@@ -13507,7 +15864,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 hero_xp = 31;</code>
            */
           public Builder clearHeroXp() {
-            bitField0_ = (bitField0_ & ~0x40000000);
+            bitField0_ = (bitField0_ & ~0x10000000);
             heroXp_ = 0;
             onChanged();
             return this;
@@ -13518,7 +15875,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 camps_stacked = 32;</code>
            */
           public boolean hasCampsStacked() {
-            return ((bitField0_ & 0x80000000) == 0x80000000);
+            return ((bitField0_ & 0x20000000) == 0x20000000);
           }
           /**
            * <code>optional uint32 camps_stacked = 32;</code>
@@ -13530,7 +15887,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 camps_stacked = 32;</code>
            */
           public Builder setCampsStacked(int value) {
-            bitField0_ |= 0x80000000;
+            bitField0_ |= 0x20000000;
             campsStacked_ = value;
             onChanged();
             return this;
@@ -13539,7 +15896,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 camps_stacked = 32;</code>
            */
           public Builder clearCampsStacked() {
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField0_ = (bitField0_ & ~0x20000000);
             campsStacked_ = 0;
             onChanged();
             return this;
@@ -13548,9 +15905,9 @@ public final class S2DotaMatchMetadata {
           private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPrediction> victoryPrediction_ =
             java.util.Collections.emptyList();
           private void ensureVictoryPredictionIsMutable() {
-            if (!((bitField1_ & 0x00000001) == 0x00000001)) {
+            if (!((bitField0_ & 0x40000000) == 0x40000000)) {
               victoryPrediction_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPrediction>(victoryPrediction_);
-              bitField1_ |= 0x00000001;
+              bitField0_ |= 0x40000000;
              }
           }
 
@@ -13700,7 +16057,7 @@ public final class S2DotaMatchMetadata {
           public Builder clearVictoryPrediction() {
             if (victoryPredictionBuilder_ == null) {
               victoryPrediction_ = java.util.Collections.emptyList();
-              bitField1_ = (bitField1_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x40000000);
               onChanged();
             } else {
               victoryPredictionBuilder_.clear();
@@ -13777,7 +16134,7 @@ public final class S2DotaMatchMetadata {
               victoryPredictionBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                   skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPrediction, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPrediction.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.VictoryPredictionOrBuilder>(
                       victoryPrediction_,
-                      ((bitField1_ & 0x00000001) == 0x00000001),
+                      ((bitField0_ & 0x40000000) == 0x40000000),
                       getParentForChildren(),
                       isClean());
               victoryPrediction_ = null;
@@ -13790,7 +16147,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 lane_selection_flags = 34;</code>
            */
           public boolean hasLaneSelectionFlags() {
-            return ((bitField1_ & 0x00000002) == 0x00000002);
+            return ((bitField0_ & 0x80000000) == 0x80000000);
           }
           /**
            * <code>optional uint32 lane_selection_flags = 34;</code>
@@ -13802,7 +16159,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 lane_selection_flags = 34;</code>
            */
           public Builder setLaneSelectionFlags(int value) {
-            bitField1_ |= 0x00000002;
+            bitField0_ |= 0x80000000;
             laneSelectionFlags_ = value;
             onChanged();
             return this;
@@ -13811,8 +16168,395 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 lane_selection_flags = 34;</code>
            */
           public Builder clearLaneSelectionFlags() {
-            bitField1_ = (bitField1_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x80000000);
             laneSelectionFlags_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int rampages_ ;
+          /**
+           * <code>optional uint32 rampages = 35;</code>
+           */
+          public boolean hasRampages() {
+            return ((bitField1_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 rampages = 35;</code>
+           */
+          public int getRampages() {
+            return rampages_;
+          }
+          /**
+           * <code>optional uint32 rampages = 35;</code>
+           */
+          public Builder setRampages(int value) {
+            bitField1_ |= 0x00000001;
+            rampages_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 rampages = 35;</code>
+           */
+          public Builder clearRampages() {
+            bitField1_ = (bitField1_ & ~0x00000001);
+            rampages_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int tripleKills_ ;
+          /**
+           * <code>optional uint32 triple_kills = 36;</code>
+           */
+          public boolean hasTripleKills() {
+            return ((bitField1_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 triple_kills = 36;</code>
+           */
+          public int getTripleKills() {
+            return tripleKills_;
+          }
+          /**
+           * <code>optional uint32 triple_kills = 36;</code>
+           */
+          public Builder setTripleKills(int value) {
+            bitField1_ |= 0x00000002;
+            tripleKills_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 triple_kills = 36;</code>
+           */
+          public Builder clearTripleKills() {
+            bitField1_ = (bitField1_ & ~0x00000002);
+            tripleKills_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int aegisSnatched_ ;
+          /**
+           * <code>optional uint32 aegis_snatched = 37;</code>
+           */
+          public boolean hasAegisSnatched() {
+            return ((bitField1_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 aegis_snatched = 37;</code>
+           */
+          public int getAegisSnatched() {
+            return aegisSnatched_;
+          }
+          /**
+           * <code>optional uint32 aegis_snatched = 37;</code>
+           */
+          public Builder setAegisSnatched(int value) {
+            bitField1_ |= 0x00000004;
+            aegisSnatched_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 aegis_snatched = 37;</code>
+           */
+          public Builder clearAegisSnatched() {
+            bitField1_ = (bitField1_ & ~0x00000004);
+            aegisSnatched_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int rapiersPurchased_ ;
+          /**
+           * <code>optional uint32 rapiers_purchased = 38;</code>
+           */
+          public boolean hasRapiersPurchased() {
+            return ((bitField1_ & 0x00000008) == 0x00000008);
+          }
+          /**
+           * <code>optional uint32 rapiers_purchased = 38;</code>
+           */
+          public int getRapiersPurchased() {
+            return rapiersPurchased_;
+          }
+          /**
+           * <code>optional uint32 rapiers_purchased = 38;</code>
+           */
+          public Builder setRapiersPurchased(int value) {
+            bitField1_ |= 0x00000008;
+            rapiersPurchased_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 rapiers_purchased = 38;</code>
+           */
+          public Builder clearRapiersPurchased() {
+            bitField1_ = (bitField1_ & ~0x00000008);
+            rapiersPurchased_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int couriersKilled_ ;
+          /**
+           * <code>optional uint32 couriers_killed = 39;</code>
+           */
+          public boolean hasCouriersKilled() {
+            return ((bitField1_ & 0x00000010) == 0x00000010);
+          }
+          /**
+           * <code>optional uint32 couriers_killed = 39;</code>
+           */
+          public int getCouriersKilled() {
+            return couriersKilled_;
+          }
+          /**
+           * <code>optional uint32 couriers_killed = 39;</code>
+           */
+          public Builder setCouriersKilled(int value) {
+            bitField1_ |= 0x00000010;
+            couriersKilled_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 couriers_killed = 39;</code>
+           */
+          public Builder clearCouriersKilled() {
+            bitField1_ = (bitField1_ & ~0x00000010);
+            couriersKilled_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int netWorthRank_ ;
+          /**
+           * <code>optional uint32 net_worth_rank = 40;</code>
+           */
+          public boolean hasNetWorthRank() {
+            return ((bitField1_ & 0x00000020) == 0x00000020);
+          }
+          /**
+           * <code>optional uint32 net_worth_rank = 40;</code>
+           */
+          public int getNetWorthRank() {
+            return netWorthRank_;
+          }
+          /**
+           * <code>optional uint32 net_worth_rank = 40;</code>
+           */
+          public Builder setNetWorthRank(int value) {
+            bitField1_ |= 0x00000020;
+            netWorthRank_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 net_worth_rank = 40;</code>
+           */
+          public Builder clearNetWorthRank() {
+            bitField1_ = (bitField1_ & ~0x00000020);
+            netWorthRank_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int supportGoldSpent_ ;
+          /**
+           * <code>optional uint32 support_gold_spent = 41;</code>
+           */
+          public boolean hasSupportGoldSpent() {
+            return ((bitField1_ & 0x00000040) == 0x00000040);
+          }
+          /**
+           * <code>optional uint32 support_gold_spent = 41;</code>
+           */
+          public int getSupportGoldSpent() {
+            return supportGoldSpent_;
+          }
+          /**
+           * <code>optional uint32 support_gold_spent = 41;</code>
+           */
+          public Builder setSupportGoldSpent(int value) {
+            bitField1_ |= 0x00000040;
+            supportGoldSpent_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 support_gold_spent = 41;</code>
+           */
+          public Builder clearSupportGoldSpent() {
+            bitField1_ = (bitField1_ & ~0x00000040);
+            supportGoldSpent_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int observerWardsPlaced_ ;
+          /**
+           * <code>optional uint32 observer_wards_placed = 42;</code>
+           */
+          public boolean hasObserverWardsPlaced() {
+            return ((bitField1_ & 0x00000080) == 0x00000080);
+          }
+          /**
+           * <code>optional uint32 observer_wards_placed = 42;</code>
+           */
+          public int getObserverWardsPlaced() {
+            return observerWardsPlaced_;
+          }
+          /**
+           * <code>optional uint32 observer_wards_placed = 42;</code>
+           */
+          public Builder setObserverWardsPlaced(int value) {
+            bitField1_ |= 0x00000080;
+            observerWardsPlaced_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 observer_wards_placed = 42;</code>
+           */
+          public Builder clearObserverWardsPlaced() {
+            bitField1_ = (bitField1_ & ~0x00000080);
+            observerWardsPlaced_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int sentryWardsPlaced_ ;
+          /**
+           * <code>optional uint32 sentry_wards_placed = 43;</code>
+           */
+          public boolean hasSentryWardsPlaced() {
+            return ((bitField1_ & 0x00000100) == 0x00000100);
+          }
+          /**
+           * <code>optional uint32 sentry_wards_placed = 43;</code>
+           */
+          public int getSentryWardsPlaced() {
+            return sentryWardsPlaced_;
+          }
+          /**
+           * <code>optional uint32 sentry_wards_placed = 43;</code>
+           */
+          public Builder setSentryWardsPlaced(int value) {
+            bitField1_ |= 0x00000100;
+            sentryWardsPlaced_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 sentry_wards_placed = 43;</code>
+           */
+          public Builder clearSentryWardsPlaced() {
+            bitField1_ = (bitField1_ & ~0x00000100);
+            sentryWardsPlaced_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int wardsDewarded_ ;
+          /**
+           * <code>optional uint32 wards_dewarded = 44;</code>
+           */
+          public boolean hasWardsDewarded() {
+            return ((bitField1_ & 0x00000200) == 0x00000200);
+          }
+          /**
+           * <code>optional uint32 wards_dewarded = 44;</code>
+           */
+          public int getWardsDewarded() {
+            return wardsDewarded_;
+          }
+          /**
+           * <code>optional uint32 wards_dewarded = 44;</code>
+           */
+          public Builder setWardsDewarded(int value) {
+            bitField1_ |= 0x00000200;
+            wardsDewarded_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 wards_dewarded = 44;</code>
+           */
+          public Builder clearWardsDewarded() {
+            bitField1_ = (bitField1_ & ~0x00000200);
+            wardsDewarded_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private float stunDuration_ ;
+          /**
+           * <code>optional float stun_duration = 45;</code>
+           */
+          public boolean hasStunDuration() {
+            return ((bitField1_ & 0x00000400) == 0x00000400);
+          }
+          /**
+           * <code>optional float stun_duration = 45;</code>
+           */
+          public float getStunDuration() {
+            return stunDuration_;
+          }
+          /**
+           * <code>optional float stun_duration = 45;</code>
+           */
+          public Builder setStunDuration(float value) {
+            bitField1_ |= 0x00000400;
+            stunDuration_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional float stun_duration = 45;</code>
+           */
+          public Builder clearStunDuration() {
+            bitField1_ = (bitField1_ & ~0x00000400);
+            stunDuration_ = 0F;
+            onChanged();
+            return this;
+          }
+
+          private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
+          /**
+           * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+           */
+          public boolean hasRankMmrBoostType() {
+            return ((bitField1_ & 0x00000800) == 0x00000800);
+          }
+          /**
+           * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType getRankMmrBoostType() {
+            return rankMmrBoostType_;
+          }
+          /**
+           * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+           */
+          public Builder setRankMmrBoostType(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType value) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            bitField1_ |= 0x00000800;
+            rankMmrBoostType_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
+           */
+          public Builder clearRankMmrBoostType() {
+            bitField1_ = (bitField1_ & ~0x00000800);
+            rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
             onChanged();
             return this;
           }
@@ -15380,6 +18124,27 @@ public final class S2DotaMatchMetadata {
       return matchTips_.get(index);
     }
 
+    public static final int MATCHMAKING_STATS_FIELD_NUMBER = 8;
+    private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats matchmakingStats_;
+    /**
+     * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+     */
+    public boolean hasMatchmakingStats() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getMatchmakingStats() {
+      return matchmakingStats_;
+    }
+    /**
+     * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder() {
+      return matchmakingStats_;
+    }
+
     private void initFields() {
       teams_ = java.util.Collections.emptyList();
       itemRewards_ = java.util.Collections.emptyList();
@@ -15388,6 +18153,7 @@ public final class S2DotaMatchMetadata {
       eventGameCustomTable_ = com.google.protobuf.ByteString.EMPTY;
       primaryEventId_ = 0;
       matchTips_ = java.util.Collections.emptyList();
+      matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -15422,6 +18188,9 @@ public final class S2DotaMatchMetadata {
       }
       for (int i = 0; i < matchTips_.size(); i++) {
         output.writeMessage(7, matchTips_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeMessage(8, matchmakingStats_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -15459,6 +18228,10 @@ public final class S2DotaMatchMetadata {
       for (int i = 0; i < matchTips_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(7, matchTips_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, matchmakingStats_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -15572,6 +18345,7 @@ public final class S2DotaMatchMetadata {
           getTeamsFieldBuilder();
           getItemRewardsFieldBuilder();
           getMatchTipsFieldBuilder();
+          getMatchmakingStatsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -15606,6 +18380,12 @@ public final class S2DotaMatchMetadata {
         } else {
           matchTipsBuilder_.clear();
         }
+        if (matchmakingStatsBuilder_ == null) {
+          matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+        } else {
+          matchmakingStatsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -15676,6 +18456,14 @@ public final class S2DotaMatchMetadata {
           result.matchTips_ = matchTips_;
         } else {
           result.matchTips_ = matchTipsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        if (matchmakingStatsBuilder_ == null) {
+          result.matchmakingStats_ = matchmakingStats_;
+        } else {
+          result.matchmakingStats_ = matchmakingStatsBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -15782,6 +18570,9 @@ public final class S2DotaMatchMetadata {
               matchTipsBuilder_.addAllMessages(other.matchTips_);
             }
           }
+        }
+        if (other.hasMatchmakingStats()) {
+          mergeMatchmakingStats(other.getMatchmakingStats());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -16659,6 +19450,122 @@ public final class S2DotaMatchMetadata {
           matchTips_ = null;
         }
         return matchTipsBuilder_;
+      }
+
+      private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder> matchmakingStatsBuilder_;
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public boolean hasMatchmakingStats() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getMatchmakingStats() {
+        if (matchmakingStatsBuilder_ == null) {
+          return matchmakingStats_;
+        } else {
+          return matchmakingStatsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public Builder setMatchmakingStats(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats value) {
+        if (matchmakingStatsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          matchmakingStats_ = value;
+          onChanged();
+        } else {
+          matchmakingStatsBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public Builder setMatchmakingStats(
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder builderForValue) {
+        if (matchmakingStatsBuilder_ == null) {
+          matchmakingStats_ = builderForValue.build();
+          onChanged();
+        } else {
+          matchmakingStatsBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public Builder mergeMatchmakingStats(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats value) {
+        if (matchmakingStatsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              matchmakingStats_ != skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance()) {
+            matchmakingStats_ =
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.newBuilder(matchmakingStats_).mergeFrom(value).buildPartial();
+          } else {
+            matchmakingStats_ = value;
+          }
+          onChanged();
+        } else {
+          matchmakingStatsBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public Builder clearMatchmakingStats() {
+        if (matchmakingStatsBuilder_ == null) {
+          matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+          onChanged();
+        } else {
+          matchmakingStatsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder getMatchmakingStatsBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getMatchmakingStatsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder() {
+        if (matchmakingStatsBuilder_ != null) {
+          return matchmakingStatsBuilder_.getMessageOrBuilder();
+        } else {
+          return matchmakingStats_;
+        }
+      }
+      /**
+       * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder> 
+          getMatchmakingStatsFieldBuilder() {
+        if (matchmakingStatsBuilder_ == null) {
+          matchmakingStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder>(
+                  getMatchmakingStats(),
+                  getParentForChildren(),
+                  isClean());
+          matchmakingStats_ = null;
+        }
+        return matchmakingStatsBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata)
@@ -25080,6 +27987,568 @@ public final class S2DotaMatchMetadata {
     // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata)
   }
 
+  public interface CMsgMatchMatchmakingStatsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgMatchMatchmakingStats)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 average_queue_time = 1;</code>
+     */
+    boolean hasAverageQueueTime();
+    /**
+     * <code>optional uint32 average_queue_time = 1;</code>
+     */
+    int getAverageQueueTime();
+
+    /**
+     * <code>optional uint32 maximum_queue_time = 2;</code>
+     */
+    boolean hasMaximumQueueTime();
+    /**
+     * <code>optional uint32 maximum_queue_time = 2;</code>
+     */
+    int getMaximumQueueTime();
+
+    /**
+     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+     */
+    boolean hasBehaviorScoreVariance();
+    /**
+     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance getBehaviorScoreVariance();
+  }
+  /**
+   * Protobuf type {@code CMsgMatchMatchmakingStats}
+   */
+  public static final class CMsgMatchMatchmakingStats extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgMatchMatchmakingStats)
+      CMsgMatchMatchmakingStatsOrBuilder {
+    // Use CMsgMatchMatchmakingStats.newBuilder() to construct.
+    private CMsgMatchMatchmakingStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgMatchMatchmakingStats(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgMatchMatchmakingStats defaultInstance;
+    public static CMsgMatchMatchmakingStats getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgMatchMatchmakingStats getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgMatchMatchmakingStats(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              averageQueueTime_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              maximumQueueTime_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance value = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(3, rawValue);
+              } else {
+                bitField0_ |= 0x00000004;
+                behaviorScoreVariance_ = value;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CMsgMatchMatchmakingStats> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgMatchMatchmakingStats>() {
+      public CMsgMatchMatchmakingStats parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgMatchMatchmakingStats(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgMatchMatchmakingStats> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int AVERAGE_QUEUE_TIME_FIELD_NUMBER = 1;
+    private int averageQueueTime_;
+    /**
+     * <code>optional uint32 average_queue_time = 1;</code>
+     */
+    public boolean hasAverageQueueTime() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 average_queue_time = 1;</code>
+     */
+    public int getAverageQueueTime() {
+      return averageQueueTime_;
+    }
+
+    public static final int MAXIMUM_QUEUE_TIME_FIELD_NUMBER = 2;
+    private int maximumQueueTime_;
+    /**
+     * <code>optional uint32 maximum_queue_time = 2;</code>
+     */
+    public boolean hasMaximumQueueTime() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 maximum_queue_time = 2;</code>
+     */
+    public int getMaximumQueueTime() {
+      return maximumQueueTime_;
+    }
+
+    public static final int BEHAVIOR_SCORE_VARIANCE_FIELD_NUMBER = 3;
+    private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance behaviorScoreVariance_;
+    /**
+     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+     */
+    public boolean hasBehaviorScoreVariance() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance getBehaviorScoreVariance() {
+      return behaviorScoreVariance_;
+    }
+
+    private void initFields() {
+      averageQueueTime_ = 0;
+      maximumQueueTime_ = 0;
+      behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, averageQueueTime_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, maximumQueueTime_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeEnum(3, behaviorScoreVariance_.getNumber());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, averageQueueTime_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, maximumQueueTime_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, behaviorScoreVariance_.getNumber());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgMatchMatchmakingStats}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgMatchMatchmakingStats)
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        averageQueueTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        maximumQueueTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats build() {
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.averageQueueTime_ = averageQueueTime_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.maximumQueueTime_ = maximumQueueTime_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.behaviorScoreVariance_ = behaviorScoreVariance_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance()) return this;
+        if (other.hasAverageQueueTime()) {
+          setAverageQueueTime(other.getAverageQueueTime());
+        }
+        if (other.hasMaximumQueueTime()) {
+          setMaximumQueueTime(other.getMaximumQueueTime());
+        }
+        if (other.hasBehaviorScoreVariance()) {
+          setBehaviorScoreVariance(other.getBehaviorScoreVariance());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int averageQueueTime_ ;
+      /**
+       * <code>optional uint32 average_queue_time = 1;</code>
+       */
+      public boolean hasAverageQueueTime() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 average_queue_time = 1;</code>
+       */
+      public int getAverageQueueTime() {
+        return averageQueueTime_;
+      }
+      /**
+       * <code>optional uint32 average_queue_time = 1;</code>
+       */
+      public Builder setAverageQueueTime(int value) {
+        bitField0_ |= 0x00000001;
+        averageQueueTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 average_queue_time = 1;</code>
+       */
+      public Builder clearAverageQueueTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        averageQueueTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int maximumQueueTime_ ;
+      /**
+       * <code>optional uint32 maximum_queue_time = 2;</code>
+       */
+      public boolean hasMaximumQueueTime() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 maximum_queue_time = 2;</code>
+       */
+      public int getMaximumQueueTime() {
+        return maximumQueueTime_;
+      }
+      /**
+       * <code>optional uint32 maximum_queue_time = 2;</code>
+       */
+      public Builder setMaximumQueueTime(int value) {
+        bitField0_ |= 0x00000002;
+        maximumQueueTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 maximum_queue_time = 2;</code>
+       */
+      public Builder clearMaximumQueueTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        maximumQueueTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
+      /**
+       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+       */
+      public boolean hasBehaviorScoreVariance() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance getBehaviorScoreVariance() {
+        return behaviorScoreVariance_;
+      }
+      /**
+       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+       */
+      public Builder setBehaviorScoreVariance(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000004;
+        behaviorScoreVariance_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+       */
+      public Builder clearBehaviorScoreVariance() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgMatchMatchmakingStats)
+    }
+
+    static {
+      defaultInstance = new CMsgMatchMatchmakingStats(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgMatchMatchmakingStats)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CLobbyTimedRewardDetails_descriptor;
   private static
@@ -25136,6 +28605,16 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_Team_SubChallenge_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Team_ActionGrant_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchMetadata_Team_EventData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -25190,6 +28669,11 @@ public final class S2DotaMatchMetadata {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchPrivateMetadata_Team_Building_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgMatchMatchmakingStats_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -25207,113 +28691,140 @@ public final class S2DotaMatchMetadata {
       "t_id\030\005 \001(\r\022\016\n\006origin\030\006 \001(\r\"|\n\026CDOTAMatch" +
       "MetadataFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_i" +
       "d\030\002 \002(\004\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMe" +
-      "tadata\022\030\n\020private_metadata\030\005 \001(\014\"\220\026\n\022CDO" +
+      "tadata\022\030\n\020private_metadata\030\005 \001(\014\"\320\033\n\022CDO" +
       "TAMatchMetadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMa",
       "tchMetadata.Team\022/\n\014item_rewards\030\002 \003(\0132\031" +
       ".CLobbyTimedRewardDetails\022\020\n\010lobby_id\030\003 " +
       "\001(\006\022\031\n\021report_until_time\030\004 \001(\006\022\037\n\027event_" +
       "game_custom_table\030\005 \001(\014\022\030\n\020primary_event" +
       "_id\030\006 \001(\r\022\"\n\nmatch_tips\030\007 \003(\0132\016.CMsgMatc" +
-      "hTips\032\223\024\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0220\n\007pla" +
-      "yers\030\002 \003(\0132\037.CDOTAMatchMetadata.Team.Pla" +
-      "yer\022\030\n\020graph_experience\030\003 \003(\002\022\031\n\021graph_g" +
-      "old_earned\030\004 \003(\002\022\027\n\017graph_net_worth\030\005 \003(" +
-      "\002\022\025\n\rcm_first_pick\030\006 \001(\010\022\034\n\024cm_captain_p",
-      "layer_id\030\007 \001(\r\022\017\n\007cm_bans\030\010 \003(\r\022\020\n\010cm_pi" +
-      "cks\030\t \003(\r\022\022\n\ncm_penalty\030\n \001(\r\0320\n\nPlayerK" +
-      "ill\022\023\n\013victim_slot\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\032" +
-      "6\n\014ItemPurchase\022\017\n\007item_id\030\001 \001(\r\022\025\n\rpurc" +
-      "hase_time\030\002 \001(\005\032v\n\021InventorySnapshot\022\017\n\007" +
-      "item_id\030\001 \003(\r\022\021\n\tgame_time\030\002 \001(\005\022\r\n\005kill" +
-      "s\030\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017\n\007assists\030\005 \001(\r" +
-      "\022\r\n\005level\030\006 \001(\r\0326\n\021AutoStyleCriteria\022\022\n\n" +
-      "name_token\030\001 \001(\r\022\r\n\005value\030\002 \001(\002\032\306\001\n\022Stra" +
-      "ngeGemProgress\022\027\n\017kill_eater_type\030\001 \001(\r\022",
-      "\032\n\022gem_item_def_index\030\002 \001(\r\022\030\n\020required_" +
-      "hero_id\030\003 \001(\r\022\026\n\016starting_value\030\004 \001(\r\022\024\n" +
-      "\014ending_value\030\005 \001(\r\022\034\n\024owner_item_def_in" +
-      "dex\030\006 \001(\r\022\025\n\rowner_item_id\030\007 \001(\004\032h\n\021Vict" +
-      "oryPrediction\022\017\n\007item_id\030\001 \001(\004\022\026\n\016item_d" +
-      "ef_index\030\002 \001(\r\022\026\n\016starting_value\030\003 \001(\r\022\022" +
-      "\n\nis_victory\030\004 \001(\010\032Z\n\014SubChallenge\022\017\n\007sl" +
-      "ot_id\030\001 \001(\r\022\023\n\013start_value\030\002 \001(\r\022\021\n\tend_" +
-      "value\030\003 \001(\r\022\021\n\tcompleted\030\004 \001(\010\032\225\004\n\tEvent" +
-      "Data\022\020\n\010event_id\030\001 \001(\r\022\024\n\014event_points\030\002",
-      " \001(\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\032\n\022c" +
-      "hallenge_quest_id\030\004 \001(\r\022$\n\034challenge_que" +
-      "st_challenge_id\030\005 \001(\r\022\033\n\023challenge_compl" +
-      "eted\030\006 \001(\010\022 \n\030challenge_rank_completed\030\007" +
-      " \001(\r\022+\n#challenge_rank_previously_comple" +
-      "ted\030\010 \001(\r\022\023\n\013event_owned\030\t \001(\010\022K\n\034sub_ch" +
-      "allenges_with_progress\030\n \003(\0132%.CDOTAMatc" +
-      "hMetadata.Team.SubChallenge\022\026\n\016wager_win" +
-      "nings\030\013 \001(\r\022\037\n\027cavern_challenge_active\030\014" +
-      " \001(\010\022!\n\031cavern_challenge_winnings\030\r \001(\r\022",
-      "\026\n\016amount_wagered\030\016 \001(\r\022\031\n\021team_wager_am" +
-      "ount\030\017 \001(\r\022\"\n\032periodic_point_adjustments" +
-      "\030\020 \001(\r\032\312\010\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n" +
-      "\020ability_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003" +
-      " \001(\r\022)\n\023equipped_econ_items\030\004 \003(\0132\014.CSOE" +
-      "conItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetad" +
-      "ata.Team.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDO" +
-      "TAMatchMetadata.Team.ItemPurchase\022\025\n\ravg" +
-      "_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r" +
-      "\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16",
-      "\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kill" +
-      "s_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n" +
-      "\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(" +
-      "\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_win_streak" +
-      "\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_scor" +
-      "e\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_s" +
-      "core\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017gr" +
-      "aph_net_worth\030\027 \003(\002\022F\n\022inventory_snapsho" +
-      "t\030\030 \003(\0132*.CDOTAMatchMetadata.Team.Invent" +
-      "orySnapshot\022\034\n\024avg_stats_calibrated\030\031 \001(",
-      "\010\022G\n\023auto_style_criteria\030\032 \003(\0132*.CDOTAMa" +
-      "tchMetadata.Team.AutoStyleCriteria\022\020\n\010ev" +
-      "ent_id\030\033 \001(\r\022\024\n\014event_points\030\034 \001(\r\0226\n\nev" +
-      "ent_data\030\035 \003(\0132\".CDOTAMatchMetadata.Team" +
-      ".EventData\022I\n\024strange_gem_progress\030\036 \003(\013" +
-      "2+.CDOTAMatchMetadata.Team.StrangeGemPro" +
-      "gress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked\030" +
-      "  \001(\r\022F\n\022victory_prediction\030! \003(\0132*.CDOT" +
-      "AMatchMetadata.Team.VictoryPrediction\022\034\n" +
-      "\024lane_selection_flags\030\" \001(\r\"\244\n\n\031CDOTAMat",
-      "chPrivateMetadata\022.\n\005teams\030\001 \003(\0132\037.CDOTA" +
-      "MatchPrivateMetadata.Team\022\035\n\025graph_win_p" +
-      "robability\030\002 \003(\002\032\267\t\n\004Team\022\021\n\tdota_team\030\001" +
-      " \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatchPrivat" +
-      "eMetadata.Team.Player\022;\n\tbuildings\030\003 \003(\013" +
-      "2(.CDOTAMatchPrivateMetadata.Team.Buildi" +
-      "ng\032\276\007\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013pla" +
-      "yer_slot\030\002 \001(\r\022\027\n\017position_stream\030\003 \001(\014\022" +
-      "M\n\017combat_segments\030\004 \003(\01324.CDOTAMatchPri" +
-      "vateMetadata.Team.Player.CombatSegment\022\031",
-      "\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_record" +
-      "s\030\006 \003(\01321.CDOTAMatchPrivateMetadata.Team" +
-      ".Player.BuffRecord\022\023\n\013graph_kills\030\007 \003(\002\022" +
-      "\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_assists\030\t" +
-      " \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014graph_de" +
-      "nies\030\013 \003(\002\032\343\002\n\rCombatSegment\022\021\n\tgame_tim" +
-      "e\030\001 \001(\005\022_\n\021damage_by_ability\030\002 \003(\0132D.CDO" +
-      "TAMatchPrivateMetadata.Team.Player.Comba" +
-      "tSegment.DamageByAbility\032\335\001\n\017DamageByAbi" +
-      "lity\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\nabili",
-      "ty_id\030\001 \001(\r\022j\n\017by_hero_targets\030\002 \003(\0132Q.C" +
-      "DOTAMatchPrivateMetadata.Team.Player.Com" +
-      "batSegment.DamageByAbility.ByHeroTarget\032" +
-      "/\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006dama" +
-      "ge\030\002 \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_ability_" +
-      "id\030\001 \001(\r\022\032\n\022buff_modifier_name\030\003 \001(\t\022W\n\017" +
-      "by_hero_targets\030\002 \003(\0132>.CDOTAMatchPrivat" +
-      "eMetadata.Team.Player.BuffRecord.ByHeroT" +
-      "arget\032L\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\030" +
-      "\n\020elapsed_duration\030\002 \001(\002\022\021\n\tis_hidden\030\003 ",
-      "\001(\010\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020po" +
-      "sition_quant_x\030\002 \001(\r\022\030\n\020position_quant_y" +
-      "\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002B:\n skadistats" +
-      ".clarity.wire.s2.protoB\023S2DotaMatchMetad" +
-      "ata\200\001\000"
+      "hTips\0225\n\021matchmaking_stats\030\010 \001(\0132\032.CMsgM" +
+      "atchMatchmakingStats\032\234\031\n\004Team\022\021\n\tdota_te" +
+      "am\030\001 \001(\r\0220\n\007players\030\002 \003(\0132\037.CDOTAMatchMe" +
+      "tadata.Team.Player\022\030\n\020graph_experience\030\003" +
+      " \003(\002\022\031\n\021graph_gold_earned\030\004 \003(\002\022\027\n\017graph",
+      "_net_worth\030\005 \003(\002\022\025\n\rcm_first_pick\030\006 \001(\010\022" +
+      "\034\n\024cm_captain_player_id\030\007 \001(\r\022\017\n\007cm_bans" +
+      "\030\010 \003(\r\022\020\n\010cm_picks\030\t \003(\r\022\022\n\ncm_penalty\030\n" +
+      " \001(\r\0320\n\nPlayerKill\022\023\n\013victim_slot\030\001 \001(\r\022" +
+      "\r\n\005count\030\002 \001(\r\0326\n\014ItemPurchase\022\017\n\007item_i" +
+      "d\030\001 \001(\r\022\025\n\rpurchase_time\030\002 \001(\005\032v\n\021Invent" +
+      "orySnapshot\022\017\n\007item_id\030\001 \003(\r\022\021\n\tgame_tim" +
+      "e\030\002 \001(\005\022\r\n\005kills\030\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017" +
+      "\n\007assists\030\005 \001(\r\022\r\n\005level\030\006 \001(\r\0326\n\021AutoSt" +
+      "yleCriteria\022\022\n\nname_token\030\001 \001(\r\022\r\n\005value",
+      "\030\002 \001(\002\032\306\001\n\022StrangeGemProgress\022\027\n\017kill_ea" +
+      "ter_type\030\001 \001(\r\022\032\n\022gem_item_def_index\030\002 \001" +
+      "(\r\022\030\n\020required_hero_id\030\003 \001(\r\022\026\n\016starting" +
+      "_value\030\004 \001(\r\022\024\n\014ending_value\030\005 \001(\r\022\034\n\024ow" +
+      "ner_item_def_index\030\006 \001(\r\022\025\n\rowner_item_i" +
+      "d\030\007 \001(\004\032h\n\021VictoryPrediction\022\017\n\007item_id\030" +
+      "\001 \001(\004\022\026\n\016item_def_index\030\002 \001(\r\022\026\n\016startin" +
+      "g_value\030\003 \001(\r\022\022\n\nis_victory\030\004 \001(\010\032Z\n\014Sub" +
+      "Challenge\022\017\n\007slot_id\030\001 \001(\r\022\023\n\013start_valu" +
+      "e\030\002 \001(\r\022\021\n\tend_value\030\003 \001(\r\022\021\n\tcompleted\030",
+      "\004 \001(\010\032K\n\025CavernChallengeResult\022\031\n\021comple" +
+      "ted_path_id\030\001 \001(\r\022\027\n\017claimed_room_id\030\002 \001" +
+      "(\r\032A\n\013ActionGrant\022\021\n\taction_id\030\001 \001(\r\022\020\n\010" +
+      "quantity\030\002 \001(\r\022\r\n\005audit\030\003 \001(\r\032\330\005\n\tEventD" +
+      "ata\022\020\n\010event_id\030\001 \001(\r\022\024\n\014event_points\030\002 " +
+      "\001(\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\032\n\022ch" +
+      "allenge_quest_id\030\004 \001(\r\022$\n\034challenge_ques" +
+      "t_challenge_id\030\005 \001(\r\022\033\n\023challenge_comple" +
+      "ted\030\006 \001(\010\022 \n\030challenge_rank_completed\030\007 " +
+      "\001(\r\022+\n#challenge_rank_previously_complet",
+      "ed\030\010 \001(\r\022\023\n\013event_owned\030\t \001(\010\022K\n\034sub_cha" +
+      "llenges_with_progress\030\n \003(\0132%.CDOTAMatch" +
+      "Metadata.Team.SubChallenge\022\026\n\016wager_winn" +
+      "ings\030\013 \001(\r\022\037\n\027cavern_challenge_active\030\014 " +
+      "\001(\010\022!\n\031cavern_challenge_winnings\030\r \001(\r\022\026" +
+      "\n\016amount_wagered\030\016 \001(\r\022\031\n\021team_wager_amo" +
+      "unt\030\017 \001(\r\022\"\n\032periodic_point_adjustments\030" +
+      "\020 \001(\r\022T\n\034cavern_challenge_map_results\030\021 " +
+      "\003(\0132..CDOTAMatchMetadata.Team.CavernChal" +
+      "lengeResult\022,\n$cavern_challenge_plus_sha",
+      "rd_winnings\030\022 \001(\r\022=\n\017actions_granted\030\023 \003" +
+      "(\0132$.CDOTAMatchMetadata.Team.ActionGrant" +
+      "\032\200\013\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abili" +
+      "ty_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003 \001(\r\022)" +
+      "\n\023equipped_econ_items\030\004 \003(\0132\014.CSOEconIte" +
+      "m\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetadata.Te" +
+      "am.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDOTAMatc" +
+      "hMetadata.Team.ItemPurchase\022\025\n\ravg_kills" +
+      "_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r\022\027\n\017av" +
+      "g_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16\030\n \001(\r",
+      "\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kills_x16\030" +
+      "\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n\014best_" +
+      "gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(\r\022\022\n\nw" +
+      "in_streak\030\020 \001(\r\022\027\n\017best_win_streak\030\021 \001(\r" +
+      "\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_score\030\023 \001(" +
+      "\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_score\030\025" +
+      " \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017graph_ne" +
+      "t_worth\030\027 \003(\002\022F\n\022inventory_snapshot\030\030 \003(" +
+      "\0132*.CDOTAMatchMetadata.Team.InventorySna" +
+      "pshot\022\034\n\024avg_stats_calibrated\030\031 \001(\010\022G\n\023a",
+      "uto_style_criteria\030\032 \003(\0132*.CDOTAMatchMet" +
+      "adata.Team.AutoStyleCriteria\0226\n\nevent_da" +
+      "ta\030\035 \003(\0132\".CDOTAMatchMetadata.Team.Event" +
+      "Data\022I\n\024strange_gem_progress\030\036 \003(\0132+.CDO" +
+      "TAMatchMetadata.Team.StrangeGemProgress\022" +
+      "\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked\030  \001(\r\022" +
+      "F\n\022victory_prediction\030! \003(\0132*.CDOTAMatch" +
+      "Metadata.Team.VictoryPrediction\022\034\n\024lane_" +
+      "selection_flags\030\" \001(\r\022\020\n\010rampages\030# \001(\r\022" +
+      "\024\n\014triple_kills\030$ \001(\r\022\026\n\016aegis_snatched\030",
+      "% \001(\r\022\031\n\021rapiers_purchased\030& \001(\r\022\027\n\017cour" +
+      "iers_killed\030\' \001(\r\022\026\n\016net_worth_rank\030( \001(" +
+      "\r\022\032\n\022support_gold_spent\030) \001(\r\022\035\n\025observe" +
+      "r_wards_placed\030* \001(\r\022\033\n\023sentry_wards_pla" +
+      "ced\030+ \001(\r\022\026\n\016wards_dewarded\030, \001(\r\022\025\n\rstu" +
+      "n_duration\030- \001(\002\022I\n\023rank_mmr_boost_type\030" +
+      ". \001(\0162\022.EDOTAMMRBoostType:\030k_EDOTAMMRBoo" +
+      "stType_None\"\244\n\n\031CDOTAMatchPrivateMetadat" +
+      "a\022.\n\005teams\030\001 \003(\0132\037.CDOTAMatchPrivateMeta" +
+      "data.Team\022\035\n\025graph_win_probability\030\002 \003(\002",
+      "\032\267\t\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227\n\007players\030" +
+      "\002 \003(\0132&.CDOTAMatchPrivateMetadata.Team.P" +
+      "layer\022;\n\tbuildings\030\003 \003(\0132(.CDOTAMatchPri" +
+      "vateMetadata.Team.Building\032\276\007\n\006Player\022\022\n" +
+      "\naccount_id\030\001 \001(\r\022\023\n\013player_slot\030\002 \001(\r\022\027" +
+      "\n\017position_stream\030\003 \001(\014\022M\n\017combat_segmen" +
+      "ts\030\004 \003(\01324.CDOTAMatchPrivateMetadata.Tea" +
+      "m.Player.CombatSegment\022\031\n\021damage_unit_na" +
+      "mes\030\005 \003(\t\022G\n\014buff_records\030\006 \003(\01321.CDOTAM" +
+      "atchPrivateMetadata.Team.Player.BuffReco",
+      "rd\022\023\n\013graph_kills\030\007 \003(\002\022\024\n\014graph_deaths\030" +
+      "\010 \003(\002\022\025\n\rgraph_assists\030\t \003(\002\022\026\n\016graph_la" +
+      "sthits\030\n \003(\002\022\024\n\014graph_denies\030\013 \003(\002\032\343\002\n\rC" +
+      "ombatSegment\022\021\n\tgame_time\030\001 \001(\005\022_\n\021damag" +
+      "e_by_ability\030\002 \003(\0132D.CDOTAMatchPrivateMe" +
+      "tadata.Team.Player.CombatSegment.DamageB" +
+      "yAbility\032\335\001\n\017DamageByAbility\022\031\n\021source_u" +
+      "nit_index\030\003 \001(\r\022\022\n\nability_id\030\001 \001(\r\022j\n\017b" +
+      "y_hero_targets\030\002 \003(\0132Q.CDOTAMatchPrivate" +
+      "Metadata.Team.Player.CombatSegment.Damag",
+      "eByAbility.ByHeroTarget\032/\n\014ByHeroTarget\022" +
+      "\017\n\007hero_id\030\001 \001(\r\022\016\n\006damage\030\002 \001(\r\032\350\001\n\nBuf" +
+      "fRecord\022\027\n\017buff_ability_id\030\001 \001(\r\022\032\n\022buff" +
+      "_modifier_name\030\003 \001(\t\022W\n\017by_hero_targets\030" +
+      "\002 \003(\0132>.CDOTAMatchPrivateMetadata.Team.P" +
+      "layer.BuffRecord.ByHeroTarget\032L\n\014ByHeroT" +
+      "arget\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020elapsed_durati" +
+      "on\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032e\n\010Building\022" +
+      "\021\n\tunit_name\030\001 \001(\t\022\030\n\020position_quant_x\030\002" +
+      " \001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022\022\n\ndeath_",
+      "time\030\004 \001(\002\"\271\001\n\031CMsgMatchMatchmakingStats" +
+      "\022\032\n\022average_queue_time\030\001 \001(\r\022\032\n\022maximum_" +
+      "queue_time\030\002 \001(\r\022d\n\027behavior_score_varia" +
+      "nce\030\003 \001(\0162\034.EMatchBehaviorScoreVariance:" +
+      "%k_EMatchBehaviorScoreVariance_Invalid*\301" +
+      "\001\n\033EMatchBehaviorScoreVariance\022)\n%k_EMat" +
+      "chBehaviorScoreVariance_Invalid\020\000\022%\n!k_E" +
+      "MatchBehaviorScoreVariance_Low\020\001\022(\n$k_EM" +
+      "atchBehaviorScoreVariance_Medium\020\002\022&\n\"k_" +
+      "EMatchBehaviorScoreVariance_High\020\003B:\n sk",
+      "adistats.clarity.wire.s2.protoB\023S2DotaMa" +
+      "tchMetadata\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25346,7 +28857,7 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_descriptor,
-        new java.lang.String[] { "Teams", "ItemRewards", "LobbyId", "ReportUntilTime", "EventGameCustomTable", "PrimaryEventId", "MatchTips", });
+        new java.lang.String[] { "Teams", "ItemRewards", "LobbyId", "ReportUntilTime", "EventGameCustomTable", "PrimaryEventId", "MatchTips", "MatchmakingStats", });
     internal_static_CDOTAMatchMetadata_Team_descriptor =
       internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchMetadata_Team_fieldAccessorTable = new
@@ -25395,18 +28906,30 @@ public final class S2DotaMatchMetadata {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_SubChallenge_descriptor,
         new java.lang.String[] { "SlotId", "StartValue", "EndValue", "Completed", });
-    internal_static_CDOTAMatchMetadata_Team_EventData_descriptor =
+    internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_descriptor =
       internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(7);
+    internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Team_CavernChallengeResult_descriptor,
+        new java.lang.String[] { "CompletedPathId", "ClaimedRoomId", });
+    internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor =
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(8);
+    internal_static_CDOTAMatchMetadata_Team_ActionGrant_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor,
+        new java.lang.String[] { "ActionId", "Quantity", "Audit", });
+    internal_static_CDOTAMatchMetadata_Team_EventData_descriptor =
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(9);
     internal_static_CDOTAMatchMetadata_Team_EventData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_EventData_descriptor,
-        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "TeamWagerAmount", "PeriodicPointAdjustments", });
+        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "TeamWagerAmount", "PeriodicPointAdjustments", "CavernChallengeMapResults", "CavernChallengePlusShardWinnings", "ActionsGranted", });
     internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
-      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(8);
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(10);
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventId", "EventPoints", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", });
     internal_static_CDOTAMatchPrivateMetadata_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CDOTAMatchPrivateMetadata_fieldAccessorTable = new
@@ -25461,6 +28984,12 @@ public final class S2DotaMatchMetadata {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Building_descriptor,
         new java.lang.String[] { "UnitName", "PositionQuantX", "PositionQuantY", "DeathTime", });
+    internal_static_CMsgMatchMatchmakingStats_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgMatchMatchmakingStats_descriptor,
+        new java.lang.String[] { "AverageQueueTime", "MaximumQueueTime", "BehaviorScoreVariance", });
     skadistats.clarity.wire.s2.proto.S2BaseGcMessages.getDescriptor();
     skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor();
   }

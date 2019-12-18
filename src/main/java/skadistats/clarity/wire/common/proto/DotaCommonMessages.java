@@ -1117,6 +1117,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT = 36;</code>
      */
     DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT(36, 36),
+    /**
+     * <code>DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN = 37;</code>
+     */
+    DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN(37, 37),
     ;
 
     /**
@@ -1267,6 +1271,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT = 36;</code>
      */
     public static final int DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT_VALUE = 36;
+    /**
+     * <code>DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN = 37;</code>
+     */
+    public static final int DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN_VALUE = 37;
 
 
     public final int getNumber() { return value; }
@@ -1310,6 +1318,7 @@ public final class DotaCommonMessages {
         case 34: return DOTA_UNIT_ORDER_VECTOR_TARGET_CANCELED;
         case 35: return DOTA_UNIT_ORDER_CAST_RIVER_PAINT;
         case 36: return DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT;
+        case 37: return DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN;
         default: return null;
       }
     }
@@ -6728,7 +6737,7 @@ public final class DotaCommonMessages {
       "\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025\n\021k_EDOTA_SP" +
       "T_Basic\020\001\022\024\n\020k_EDOTA_SPT_Poll\020\002\022\024\n\020k_EDO" +
       "TA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT_DualImage\020\004" +
-      "\022\025\n\021k_EDOTA_SPT_Movie\020\005*\215\n\n\017dotaunitorde" +
+      "\022\025\n\021k_EDOTA_SPT_Movie\020\005*\270\n\n\017dotaunitorde" +
       "r_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020\000\022$\n DOTA_UN",
       "IT_ORDER_MOVE_TO_POSITION\020\001\022\"\n\036DOTA_UNIT" +
       "_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033DOTA_UNIT_ORD" +
@@ -6760,9 +6769,10 @@ public final class DotaCommonMessages {
       "OTA_UNIT_ORDER_CONTINUE\020!\022*\n&DOTA_UNIT_O" +
       "RDER_VECTOR_TARGET_CANCELED\020\"\022$\n DOTA_UN" +
       "IT_ORDER_CAST_RIVER_PAINT\020#\0222\n.DOTA_UNIT",
-      "_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT\020$B" +
-      "?\n$skadistats.clarity.wire.common.protoB" +
-      "\022DotaCommonMessagesH\001\200\001\000"
+      "_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT\020$\022" +
+      ")\n%DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN" +
+      "\020%B?\n$skadistats.clarity.wire.common.pro" +
+      "toB\022DotaCommonMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

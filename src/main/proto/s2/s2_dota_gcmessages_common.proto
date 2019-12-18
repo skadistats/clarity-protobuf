@@ -60,7 +60,8 @@ enum EEvent {
     EVENT_ID_FROSTIVUS_2018 = 23;
     EVENT_ID_NEW_BLOOM_2019 = 24;
     EVENT_ID_INTERNATIONAL_2019 = 25;
-    EVENT_ID_COUNT = 26;
+    EVENT_ID_NEW_PLAYER_EXPERIENCE = 26;
+    EVENT_ID_COUNT = 27;
 }
 
 enum EMatchOutcome {
@@ -72,6 +73,24 @@ enum EMatchOutcome {
     k_EMatchOutcome_NotScored_ServerCrash = 66;
     k_EMatchOutcome_NotScored_NeverStarted = 67;
     k_EMatchOutcome_NotScored_Canceled = 68;
+}
+
+enum EDOTAPlayerMMRType {
+    k_EDOTAPlayerMMRType_Invalid = 0;
+    k_EDOTAPlayerMMRType_GeneralHidden = 1;
+    k_EDOTAPlayerMMRType_GeneralCompetitive2019 = 3;
+    k_EDOTAPlayerMMRType_SoloCompetitive2019 = 4;
+    k_EDOTAPlayerMMRType_1v1Competitive_UNUSED = 5;
+    k_EDOTAPlayerMMRType_GeneralSeasonalRanked = 6;
+    k_EDOTAPlayerMMRType_SoloSeasonalRanked = 7;
+    k_EDOTAPlayerMMRType_Competitive_Core = 8;
+    k_EDOTAPlayerMMRType_Competitive_Support = 9;
+}
+
+enum EDOTAMMRBoostType {
+    k_EDOTAMMRBoostType_None = 0;
+    k_EDOTAMMRBoostType_Leader = 1;
+    k_EDOTAMMRBoostType_Follower = 2;
 }
 
 message CMatchPlayerAbilityUpgrade {

@@ -501,6 +501,42 @@ public final class S2DotaUserMessages {
      * <code>DOTA_EM_InvokerSpellCast = 586;</code>
      */
     DOTA_EM_InvokerSpellCast(121, 586),
+    /**
+     * <code>DOTA_UM_RadarAlert = 587;</code>
+     */
+    DOTA_UM_RadarAlert(122, 587),
+    /**
+     * <code>DOTA_UM_AllStarEvent = 588;</code>
+     */
+    DOTA_UM_AllStarEvent(123, 588),
+    /**
+     * <code>DOTA_UM_TalentTreeAlert = 589;</code>
+     */
+    DOTA_UM_TalentTreeAlert(124, 589),
+    /**
+     * <code>DOTA_UM_QueuedOrderRemoved = 590;</code>
+     */
+    DOTA_UM_QueuedOrderRemoved(125, 590),
+    /**
+     * <code>DOTA_UM_DebugChallenge = 591;</code>
+     */
+    DOTA_UM_DebugChallenge(126, 591),
+    /**
+     * <code>DOTA_UM_OMArcanaCombo = 592;</code>
+     */
+    DOTA_UM_OMArcanaCombo(127, 592),
+    /**
+     * <code>DOTA_UM_FoundNeutralItem = 593;</code>
+     */
+    DOTA_UM_FoundNeutralItem(128, 593),
+    /**
+     * <code>DOTA_UM_OutpostCaptured = 594;</code>
+     */
+    DOTA_UM_OutpostCaptured(129, 594),
+    /**
+     * <code>DOTA_UM_OutpostGrantedXP = 595;</code>
+     */
+    DOTA_UM_OutpostGrantedXP(130, 595),
     ;
 
     /**
@@ -991,6 +1027,42 @@ public final class S2DotaUserMessages {
      * <code>DOTA_EM_InvokerSpellCast = 586;</code>
      */
     public static final int DOTA_EM_InvokerSpellCast_VALUE = 586;
+    /**
+     * <code>DOTA_UM_RadarAlert = 587;</code>
+     */
+    public static final int DOTA_UM_RadarAlert_VALUE = 587;
+    /**
+     * <code>DOTA_UM_AllStarEvent = 588;</code>
+     */
+    public static final int DOTA_UM_AllStarEvent_VALUE = 588;
+    /**
+     * <code>DOTA_UM_TalentTreeAlert = 589;</code>
+     */
+    public static final int DOTA_UM_TalentTreeAlert_VALUE = 589;
+    /**
+     * <code>DOTA_UM_QueuedOrderRemoved = 590;</code>
+     */
+    public static final int DOTA_UM_QueuedOrderRemoved_VALUE = 590;
+    /**
+     * <code>DOTA_UM_DebugChallenge = 591;</code>
+     */
+    public static final int DOTA_UM_DebugChallenge_VALUE = 591;
+    /**
+     * <code>DOTA_UM_OMArcanaCombo = 592;</code>
+     */
+    public static final int DOTA_UM_OMArcanaCombo_VALUE = 592;
+    /**
+     * <code>DOTA_UM_FoundNeutralItem = 593;</code>
+     */
+    public static final int DOTA_UM_FoundNeutralItem_VALUE = 593;
+    /**
+     * <code>DOTA_UM_OutpostCaptured = 594;</code>
+     */
+    public static final int DOTA_UM_OutpostCaptured_VALUE = 594;
+    /**
+     * <code>DOTA_UM_OutpostGrantedXP = 595;</code>
+     */
+    public static final int DOTA_UM_OutpostGrantedXP_VALUE = 595;
 
 
     public final int getNumber() { return value; }
@@ -1119,6 +1191,15 @@ public final class S2DotaUserMessages {
         case 584: return DOTA_UM_HighFiveCompleted;
         case 585: return DOTA_UM_ShovelUnearth;
         case 586: return DOTA_EM_InvokerSpellCast;
+        case 587: return DOTA_UM_RadarAlert;
+        case 588: return DOTA_UM_AllStarEvent;
+        case 589: return DOTA_UM_TalentTreeAlert;
+        case 590: return DOTA_UM_QueuedOrderRemoved;
+        case 591: return DOTA_UM_DebugChallenge;
+        case 592: return DOTA_UM_OMArcanaCombo;
+        case 593: return DOTA_UM_FoundNeutralItem;
+        case 594: return DOTA_UM_OutpostCaptured;
+        case 595: return DOTA_UM_OutpostGrantedXP;
         default: return null;
       }
     }
@@ -1179,7 +1260,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\341\034\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\351\036\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1271,9 +1352,15 @@ public final class S2DotaUserMessages {
       "_UM_ESArcanaComboSummary\020\306\004\022 \n\033DOTA_UM_H",
       "ighFiveLeftHanging\020\307\004\022\036\n\031DOTA_UM_HighFiv" +
       "eCompleted\020\310\004\022\032\n\025DOTA_UM_ShovelUnearth\020\311" +
-      "\004\022\035\n\030DOTA_EM_InvokerSpellCast\020\312\004B;\n skad" +
-      "istats.clarity.wire.s2.protoB\022S2DotaUser" +
-      "MessagesH\001\200\001\000"
+      "\004\022\035\n\030DOTA_EM_InvokerSpellCast\020\312\004\022\027\n\022DOTA" +
+      "_UM_RadarAlert\020\313\004\022\031\n\024DOTA_UM_AllStarEven" +
+      "t\020\314\004\022\034\n\027DOTA_UM_TalentTreeAlert\020\315\004\022\037\n\032DO" +
+      "TA_UM_QueuedOrderRemoved\020\316\004\022\033\n\026DOTA_UM_D" +
+      "ebugChallenge\020\317\004\022\032\n\025DOTA_UM_OMArcanaComb" +
+      "o\020\320\004\022\035\n\030DOTA_UM_FoundNeutralItem\020\321\004\022\034\n\027D" +
+      "OTA_UM_OutpostCaptured\020\322\004\022\035\n\030DOTA_UM_Out" +
+      "postGrantedXP\020\323\004B;\n skadistats.clarity.w",
+      "ire.s2.protoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
