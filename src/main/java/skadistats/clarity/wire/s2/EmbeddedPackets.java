@@ -167,6 +167,15 @@ public class EmbeddedPackets {
         /* 584 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HighFiveCompleted_VALUE, DotaUserMessages.CDOTAUserMsg_HighFiveCompleted.class);
         /* 585 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ShovelUnearth_VALUE, DotaUserMessages.CDOTAUserMsg_ShovelUnearth.class);
         /* 586 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_EM_InvokerSpellCast_VALUE, DotaUserMessages.CDOTAEntityMsg_InvokerSpellCast.class);
+        /* 587 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RadarAlert_VALUE, DotaUserMessages.CDOTAUserMsg_RadarAlert.class);
+        /* 588 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AllStarEvent_VALUE, DotaUserMessages.CDOTAUserMsg_AllStarEvent.class);
+        /* 589 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TalentTreeAlert_VALUE, DotaUserMessages.CDOTAUserMsg_TalentTreeAlert.class);
+        /* 590 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QueuedOrderRemoved_VALUE, DotaUserMessages.CDOTAUserMsg_QueuedOrderRemoved.class);
+        /* 591 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DebugChallenge_VALUE, DotaUserMessages.CDOTAUserMsg_DebugChallenge.class);
+        /* 592 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_OMArcanaCombo_VALUE, DotaUserMessages.CDOTAUserMsg_OMArcanaCombo.class);
+        /* 593 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_FoundNeutralItem_VALUE, DotaUserMessages.CDOTAUserMsg_FoundNeutralItem.class);
+        /* 594 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_OutpostCaptured_VALUE, DotaUserMessages.CDOTAUserMsg_OutpostCaptured.class);
+        /* 595 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_OutpostGrantedXP_VALUE, DotaUserMessages.CDOTAUserMsg_OutpostGrantedXP.class);
 
 //        /* 464 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);

@@ -127,4 +127,13 @@ enum EDotaUserMessages {
     DOTA_UM_HighFiveCompleted = 584;
     DOTA_UM_ShovelUnearth = 585;
     DOTA_EM_InvokerSpellCast = 586;
+    DOTA_UM_RadarAlert = 587;
+    DOTA_UM_AllStarEvent = 588;
+    DOTA_UM_TalentTreeAlert = 589;
+    DOTA_UM_QueuedOrderRemoved = 590;
+    DOTA_UM_DebugChallenge = 591;
+    DOTA_UM_OMArcanaCombo = 592;
+    DOTA_UM_FoundNeutralItem = 593;
+    DOTA_UM_OutpostCaptured = 594;
+    DOTA_UM_OutpostGrantedXP = 595;
 }

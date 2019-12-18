@@ -416,9 +416,13 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_INTERNATIONAL_2019(25, 25),
     /**
-     * <code>EVENT_ID_COUNT = 26;</code>
+     * <code>EVENT_ID_NEW_PLAYER_EXPERIENCE = 26;</code>
      */
-    EVENT_ID_COUNT(26, 26),
+    EVENT_ID_NEW_PLAYER_EXPERIENCE(26, 26),
+    /**
+     * <code>EVENT_ID_COUNT = 27;</code>
+     */
+    EVENT_ID_COUNT(27, 27),
     ;
 
     /**
@@ -526,9 +530,13 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_INTERNATIONAL_2019_VALUE = 25;
     /**
-     * <code>EVENT_ID_COUNT = 26;</code>
+     * <code>EVENT_ID_NEW_PLAYER_EXPERIENCE = 26;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 26;
+    public static final int EVENT_ID_NEW_PLAYER_EXPERIENCE_VALUE = 26;
+    /**
+     * <code>EVENT_ID_COUNT = 27;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 27;
 
 
     public final int getNumber() { return value; }
@@ -561,7 +569,8 @@ public final class S2DotaGcCommon {
         case 23: return EVENT_ID_FROSTIVUS_2018;
         case 24: return EVENT_ID_NEW_BLOOM_2019;
         case 25: return EVENT_ID_INTERNATIONAL_2019;
-        case 26: return EVENT_ID_COUNT;
+        case 26: return EVENT_ID_NEW_PLAYER_EXPERIENCE;
+        case 27: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -747,6 +756,242 @@ public final class S2DotaGcCommon {
     }
 
     // @@protoc_insertion_point(enum_scope:EMatchOutcome)
+  }
+
+  /**
+   * Protobuf enum {@code EDOTAPlayerMMRType}
+   */
+  public enum EDOTAPlayerMMRType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EDOTAPlayerMMRType_Invalid = 0;</code>
+     */
+    k_EDOTAPlayerMMRType_Invalid(0, 0),
+    /**
+     * <code>k_EDOTAPlayerMMRType_GeneralHidden = 1;</code>
+     */
+    k_EDOTAPlayerMMRType_GeneralHidden(1, 1),
+    /**
+     * <code>k_EDOTAPlayerMMRType_GeneralCompetitive2019 = 3;</code>
+     */
+    k_EDOTAPlayerMMRType_GeneralCompetitive2019(2, 3),
+    /**
+     * <code>k_EDOTAPlayerMMRType_SoloCompetitive2019 = 4;</code>
+     */
+    k_EDOTAPlayerMMRType_SoloCompetitive2019(3, 4),
+    /**
+     * <code>k_EDOTAPlayerMMRType_1v1Competitive_UNUSED = 5;</code>
+     */
+    k_EDOTAPlayerMMRType_1v1Competitive_UNUSED(4, 5),
+    /**
+     * <code>k_EDOTAPlayerMMRType_GeneralSeasonalRanked = 6;</code>
+     */
+    k_EDOTAPlayerMMRType_GeneralSeasonalRanked(5, 6),
+    /**
+     * <code>k_EDOTAPlayerMMRType_SoloSeasonalRanked = 7;</code>
+     */
+    k_EDOTAPlayerMMRType_SoloSeasonalRanked(6, 7),
+    /**
+     * <code>k_EDOTAPlayerMMRType_Competitive_Core = 8;</code>
+     */
+    k_EDOTAPlayerMMRType_Competitive_Core(7, 8),
+    /**
+     * <code>k_EDOTAPlayerMMRType_Competitive_Support = 9;</code>
+     */
+    k_EDOTAPlayerMMRType_Competitive_Support(8, 9),
+    ;
+
+    /**
+     * <code>k_EDOTAPlayerMMRType_Invalid = 0;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_Invalid_VALUE = 0;
+    /**
+     * <code>k_EDOTAPlayerMMRType_GeneralHidden = 1;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_GeneralHidden_VALUE = 1;
+    /**
+     * <code>k_EDOTAPlayerMMRType_GeneralCompetitive2019 = 3;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_GeneralCompetitive2019_VALUE = 3;
+    /**
+     * <code>k_EDOTAPlayerMMRType_SoloCompetitive2019 = 4;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_SoloCompetitive2019_VALUE = 4;
+    /**
+     * <code>k_EDOTAPlayerMMRType_1v1Competitive_UNUSED = 5;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_1v1Competitive_UNUSED_VALUE = 5;
+    /**
+     * <code>k_EDOTAPlayerMMRType_GeneralSeasonalRanked = 6;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_GeneralSeasonalRanked_VALUE = 6;
+    /**
+     * <code>k_EDOTAPlayerMMRType_SoloSeasonalRanked = 7;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_SoloSeasonalRanked_VALUE = 7;
+    /**
+     * <code>k_EDOTAPlayerMMRType_Competitive_Core = 8;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_Competitive_Core_VALUE = 8;
+    /**
+     * <code>k_EDOTAPlayerMMRType_Competitive_Support = 9;</code>
+     */
+    public static final int k_EDOTAPlayerMMRType_Competitive_Support_VALUE = 9;
+
+
+    public final int getNumber() { return value; }
+
+    public static EDOTAPlayerMMRType valueOf(int value) {
+      switch (value) {
+        case 0: return k_EDOTAPlayerMMRType_Invalid;
+        case 1: return k_EDOTAPlayerMMRType_GeneralHidden;
+        case 3: return k_EDOTAPlayerMMRType_GeneralCompetitive2019;
+        case 4: return k_EDOTAPlayerMMRType_SoloCompetitive2019;
+        case 5: return k_EDOTAPlayerMMRType_1v1Competitive_UNUSED;
+        case 6: return k_EDOTAPlayerMMRType_GeneralSeasonalRanked;
+        case 7: return k_EDOTAPlayerMMRType_SoloSeasonalRanked;
+        case 8: return k_EDOTAPlayerMMRType_Competitive_Core;
+        case 9: return k_EDOTAPlayerMMRType_Competitive_Support;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>() {
+            public EDOTAPlayerMMRType findValueByNumber(int number) {
+              return EDOTAPlayerMMRType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final EDOTAPlayerMMRType[] VALUES = values();
+
+    public static EDOTAPlayerMMRType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EDOTAPlayerMMRType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EDOTAPlayerMMRType)
+  }
+
+  /**
+   * Protobuf enum {@code EDOTAMMRBoostType}
+   */
+  public enum EDOTAMMRBoostType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_EDOTAMMRBoostType_None = 0;</code>
+     */
+    k_EDOTAMMRBoostType_None(0, 0),
+    /**
+     * <code>k_EDOTAMMRBoostType_Leader = 1;</code>
+     */
+    k_EDOTAMMRBoostType_Leader(1, 1),
+    /**
+     * <code>k_EDOTAMMRBoostType_Follower = 2;</code>
+     */
+    k_EDOTAMMRBoostType_Follower(2, 2),
+    ;
+
+    /**
+     * <code>k_EDOTAMMRBoostType_None = 0;</code>
+     */
+    public static final int k_EDOTAMMRBoostType_None_VALUE = 0;
+    /**
+     * <code>k_EDOTAMMRBoostType_Leader = 1;</code>
+     */
+    public static final int k_EDOTAMMRBoostType_Leader_VALUE = 1;
+    /**
+     * <code>k_EDOTAMMRBoostType_Follower = 2;</code>
+     */
+    public static final int k_EDOTAMMRBoostType_Follower_VALUE = 2;
+
+
+    public final int getNumber() { return value; }
+
+    public static EDOTAMMRBoostType valueOf(int value) {
+      switch (value) {
+        case 0: return k_EDOTAMMRBoostType_None;
+        case 1: return k_EDOTAMMRBoostType_Leader;
+        case 2: return k_EDOTAMMRBoostType_Follower;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>() {
+            public EDOTAMMRBoostType findValueByNumber(int number) {
+              return EDOTAMMRBoostType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final EDOTAMMRBoostType[] VALUES = values();
+
+    public static EDOTAMMRBoostType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EDOTAMMRBoostType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EDOTAMMRBoostType)
   }
 
   public interface CMatchPlayerAbilityUpgradeOrBuilder extends
@@ -19004,7 +19249,7 @@ public final class S2DotaGcCommon {
       "OTA_GAMEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_A" +
       "LL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026D",
       "OTA_GAMEMODE_MUTATION\020\030\022#\n\037DOTA_GAMEMODE" +
-      "_COACHES_CHALLENGE\020\031*\236\006\n\006EEvent\022\021\n\rEVENT" +
+      "_COACHES_CHALLENGE\020\031*\302\006\n\006EEvent\022\021\n\rEVENT" +
       "_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVE" +
       "NT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROS" +
       "TIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2014" +
@@ -19024,17 +19269,31 @@ public final class S2DotaGcCommon {
       "\033EVENT_ID_INTERNATIONAL_2018\020\026\022\033\n\027EVENT_" +
       "ID_FROSTIVUS_2018\020\027\022\033\n\027EVENT_ID_NEW_BLOO",
       "M_2019\020\030\022\037\n\033EVENT_ID_INTERNATIONAL_2019\020" +
-      "\031\022\022\n\016EVENT_ID_COUNT\020\032*\307\002\n\rEMatchOutcome\022" +
-      "\033\n\027k_EMatchOutcome_Unknown\020\000\022\036\n\032k_EMatch" +
-      "Outcome_RadVictory\020\002\022\037\n\033k_EMatchOutcome_" +
-      "DireVictory\020\003\0223\n/k_EMatchOutcome_NotScor" +
-      "ed_PoorNetworkConditions\020@\022$\n k_EMatchOu" +
-      "tcome_NotScored_Leaver\020A\022)\n%k_EMatchOutc" +
-      "ome_NotScored_ServerCrash\020B\022*\n&k_EMatchO" +
-      "utcome_NotScored_NeverStarted\020C\022&\n\"k_EMa" +
-      "tchOutcome_NotScored_Canceled\020DB7\n skadi",
-      "stats.clarity.wire.s2.protoB\016S2DotaGcCom" +
-      "monH\001\200\001\000"
+      "\031\022\"\n\036EVENT_ID_NEW_PLAYER_EXPERIENCE\020\032\022\022\n" +
+      "\016EVENT_ID_COUNT\020\033*\307\002\n\rEMatchOutcome\022\033\n\027k" +
+      "_EMatchOutcome_Unknown\020\000\022\036\n\032k_EMatchOutc" +
+      "ome_RadVictory\020\002\022\037\n\033k_EMatchOutcome_Dire" +
+      "Victory\020\003\0223\n/k_EMatchOutcome_NotScored_P" +
+      "oorNetworkConditions\020@\022$\n k_EMatchOutcom" +
+      "e_NotScored_Leaver\020A\022)\n%k_EMatchOutcome_" +
+      "NotScored_ServerCrash\020B\022*\n&k_EMatchOutco" +
+      "me_NotScored_NeverStarted\020C\022&\n\"k_EMatchO",
+      "utcome_NotScored_Canceled\020D*\243\003\n\022EDOTAPla" +
+      "yerMMRType\022 \n\034k_EDOTAPlayerMMRType_Inval" +
+      "id\020\000\022&\n\"k_EDOTAPlayerMMRType_GeneralHidd" +
+      "en\020\001\022/\n+k_EDOTAPlayerMMRType_GeneralComp" +
+      "etitive2019\020\003\022,\n(k_EDOTAPlayerMMRType_So" +
+      "loCompetitive2019\020\004\022.\n*k_EDOTAPlayerMMRT" +
+      "ype_1v1Competitive_UNUSED\020\005\022.\n*k_EDOTAPl" +
+      "ayerMMRType_GeneralSeasonalRanked\020\006\022+\n\'k" +
+      "_EDOTAPlayerMMRType_SoloSeasonalRanked\020\007" +
+      "\022)\n%k_EDOTAPlayerMMRType_Competitive_Cor",
+      "e\020\010\022,\n(k_EDOTAPlayerMMRType_Competitive_" +
+      "Support\020\t*s\n\021EDOTAMMRBoostType\022\034\n\030k_EDOT" +
+      "AMMRBoostType_None\020\000\022\036\n\032k_EDOTAMMRBoostT" +
+      "ype_Leader\020\001\022 \n\034k_EDOTAMMRBoostType_Foll" +
+      "ower\020\002B7\n skadistats.clarity.wire.s2.pro" +
+      "toB\016S2DotaGcCommonH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

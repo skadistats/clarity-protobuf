@@ -166,17 +166,17 @@ public final class S2UserMessages {
      */
     UM_CustomGameEvent(37, 148),
     /**
-     * <code>UM_HandHapticPulse = 149;</code>
+     * <code>UM_AnimGraphUpdate = 149;</code>
      */
-    UM_HandHapticPulse(38, 149),
+    UM_AnimGraphUpdate(38, 149),
     /**
-     * <code>UM_AnimGraphUpdate = 150;</code>
+     * <code>UM_HapticsManagerPulse = 150;</code>
      */
-    UM_AnimGraphUpdate(39, 150),
+    UM_HapticsManagerPulse(39, 150),
     /**
-     * <code>UM_HandHapticPulsePrecise = 151;</code>
+     * <code>UM_HapticsManagerEffect = 151;</code>
      */
-    UM_HandHapticPulsePrecise(40, 151),
+    UM_HapticsManagerEffect(40, 151),
     /**
      * <code>UM_MAX_BASE = 200;</code>
      */
@@ -336,17 +336,17 @@ public final class S2UserMessages {
      */
     public static final int UM_CustomGameEvent_VALUE = 148;
     /**
-     * <code>UM_HandHapticPulse = 149;</code>
+     * <code>UM_AnimGraphUpdate = 149;</code>
      */
-    public static final int UM_HandHapticPulse_VALUE = 149;
+    public static final int UM_AnimGraphUpdate_VALUE = 149;
     /**
-     * <code>UM_AnimGraphUpdate = 150;</code>
+     * <code>UM_HapticsManagerPulse = 150;</code>
      */
-    public static final int UM_AnimGraphUpdate_VALUE = 150;
+    public static final int UM_HapticsManagerPulse_VALUE = 150;
     /**
-     * <code>UM_HandHapticPulsePrecise = 151;</code>
+     * <code>UM_HapticsManagerEffect = 151;</code>
      */
-    public static final int UM_HandHapticPulsePrecise_VALUE = 151;
+    public static final int UM_HapticsManagerEffect_VALUE = 151;
     /**
      * <code>UM_MAX_BASE = 200;</code>
      */
@@ -395,9 +395,9 @@ public final class S2UserMessages {
         case 145: return UM_ParticleManager;
         case 146: return UM_HudError;
         case 148: return UM_CustomGameEvent;
-        case 149: return UM_HandHapticPulse;
-        case 150: return UM_AnimGraphUpdate;
-        case 151: return UM_HandHapticPulsePrecise;
+        case 149: return UM_AnimGraphUpdate;
+        case 150: return UM_HapticsManagerPulse;
+        case 151: return UM_HapticsManagerEffect;
         case 200: return UM_MAX_BASE;
         default: return null;
       }
@@ -10909,7 +10909,7 @@ public final class S2UserMessages {
       "ustomGameEvent_ServerToClient\022\022\n\nevent_n" +
       "ame\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Trac" +
       "kedControllerInput_ClientToServer\022\014\n\004dat" +
-      "a\030\001 \001(\014*\361\006\n\021EBaseUserMessages\022\027\n\023UM_Achi" +
+      "a\030\001 \001(\014*\363\006\n\021EBaseUserMessages\022\027\n\023UM_Achi" +
       "evementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025U" +
       "M_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTime" +
       "scale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_F" +
@@ -10928,18 +10928,18 @@ public final class S2UserMessages {
       "\022\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_" +
       "CameraTransition\020\217\001\022\026\n\021UM_AudioParameter" +
       "\020\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudEr" +
-      "ror\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_Ha" +
-      "ndHapticPulse\020\225\001\022\027\n\022UM_AnimGraphUpdate\020\226" +
-      "\001\022\036\n\031UM_HandHapticPulsePrecise\020\227\001\022\020\n\013UM_" +
-      "MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\rE" +
-      "M_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027" +
-      "\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_PropagateF",
-      "orce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020" +
-      "\215\001*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAPTIC" +
-      "_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_M" +
-      "EDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG\020\002" +
-      "B7\n skadistats.clarity.wire.s2.protoB\016S2" +
-      "UserMessagesH\001\200\001\000"
+      "ror\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_An" +
+      "imGraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPul" +
+      "se\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\020\n\013U" +
+      "M_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n" +
+      "\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001" +
+      "\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Propagat",
+      "eForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngl" +
+      "e\020\215\001*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAPT" +
+      "IC_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE" +
+      "_MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG" +
+      "\020\002B7\n skadistats.clarity.wire.s2.protoB\016" +
+      "S2UserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
