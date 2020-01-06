@@ -14,7 +14,7 @@ public class EmbeddedPackets {
     static {
         K2C_RECV = new KindToClassMessageRegistry(30);
         /*   0 */ K2C_RECV.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
-        /*   1 */ K2C_RECV.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, NetworkBaseTypes.CNETMsg_Disconnect.class);
+        /*   1 */ K2C_RECV.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, CsGoNetMessages.CNETMsg_Disconnect.class);
 
         /*   4 */ K2C_RECV.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
         /*   5 */ K2C_RECV.put(NetworkBaseTypes.NET_Messages.net_StringCmd_VALUE, NetworkBaseTypes.CNETMsg_StringCmd.class);
@@ -49,7 +49,7 @@ public class EmbeddedPackets {
     static {
         K2C_SENT = new KindToClassMessageRegistry(20);
         /*   0 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
-        /*   1 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, NetworkBaseTypes.CNETMsg_Disconnect.class);
+        /*   1 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, CsGoNetMessages.CNETMsg_Disconnect.class);
 
         /*   4 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
         /*   5 */ K2C_SENT.put(NetworkBaseTypes.NET_Messages.net_StringCmd_VALUE, NetworkBaseTypes.CNETMsg_StringCmd.class);

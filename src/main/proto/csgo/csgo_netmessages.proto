@@ -94,6 +94,10 @@ message CNETMsg_SetConVar {
     optional CMsg_CVars convars = 1;
 }
 
+message CNETMsg_Disconnect {
+    optional string text = 1;
+}
+
 enum VoiceDataFormat_t {
     VOICEDATA_FORMAT_STEAM = 0;
     VOICEDATA_FORMAT_ENGINE = 1;
