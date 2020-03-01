@@ -429,6 +429,13 @@ message CDOTAUserMsg_RadarAlert {
     optional bool negative = 2;
 }
 
+message CDOTAUserMsg_WillPurchaseAlert {
+    optional int32 item_ability_id = 1;
+    optional int32 player_id = 2;
+    optional uint32 gold_remaining = 3;
+    optional int32 suggestion_player_id = 4;
+}
+
 message CDOTAUserMsg_MarsArenaOfBloodAttack {
     optional int32 source_ehandle = 1;
     optional int32 target_ehandle = 2;
@@ -438,6 +445,14 @@ message CDOTAUserMsg_MarsArenaOfBloodAttack {
 message CDOTAEntityMsg_InvokerSpellCast {
     optional .CEntityMsg entity_msg = 1;
     optional int32 cast_activity = 2;
+}
+
+message CDOTAUserMsg_QuickBuyAlert {
+    optional int32 player_id = 1;
+    optional int32 item_ability_id = 2;
+    optional int32 gold_cost = 3;
+    optional int32 item_cooldown_seconds = 4;
+    optional bool show_buyback = 5;
 }
 
 message CDOTAUserMsg_CourierKilledAlert {
@@ -626,6 +641,10 @@ message CDOTAUserMsg_UnitEvent {
 }
 
 message CDOTAUserMsg_ItemPurchased {
+    optional int32 item_ability_id = 1;
+}
+
+message CDOTAUserMsg_ItemSold {
     optional int32 item_ability_id = 1;
 }
 
@@ -849,6 +868,21 @@ message CDOTAUserMsg_TE_DotaBloodImpact {
     optional float ynormal = 4;
 }
 
+message CDOTAUserMsg_AbilityPing {
+    optional uint32 player_id = 1;
+    optional uint32 ability_id = 2;
+    optional .DOTA_ABILITY_PING_TYPE type = 3 [default = ABILITY_PING_READY];
+    optional uint32 cooldown_seconds = 4;
+    optional uint32 level = 5;
+    optional bool passive = 6;
+    optional uint32 mana_needed = 7;
+    optional uint32 entity_id = 8;
+    optional int32 primary_charges = 9;
+    optional int32 secondary_charges = 10;
+    optional uint32 caster_id = 11;
+    optional bool ctrl_held = 12;
+}
+
 message CDOTAUserMsg_TE_UnitAnimation {
     optional int32 entity = 1;
     optional int32 sequenceVariant = 2;
@@ -947,6 +981,9 @@ message CDOTAUserMsg_TalentTreeAlert {
     optional int32 ability_id = 3;
     optional int32 slot = 4;
     optional bool learned = 5;
+}
+
+message CDOTAUserMsg_UpdateQuestProgress {
 }
 
 message CDOTAUserMsg_SelectPenaltyGold {
