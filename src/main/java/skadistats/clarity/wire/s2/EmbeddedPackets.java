@@ -160,6 +160,7 @@ public class EmbeddedPackets {
         /* 565 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_FlipCoinResult_VALUE, DotaUserMessages.CDOTAUserMsg_FlipCoinResult.class);
         /* 567 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TeamCaptainChanged_VALUE, DotaUserMessages.CDOTAUserMessage_TeamCaptainChanged.class);
         /* 568 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendRoshanSpectatorPhase_VALUE, DotaUserMessages.CDOTAUserMsg_SendRoshanSpectatorPhase.class);
+        /* 571 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_DestroyProjectile_VALUE, DotaUserMessages.CDOTAUserMsg_TE_DestroyProjectile.class);
         /* 572 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HeroRelicProgress_VALUE, DotaUserMessages.CDOTAUserMsg_HeroRelicProgress.class);
         /* 574 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemSold_VALUE, DotaUserMessages.CDOTAUserMsg_ItemSold.class);
         /* 575 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DamageReport_VALUE, DotaUserMessages.CDOTAUserMsg_DamageReport.class);
@@ -236,7 +237,6 @@ public class EmbeddedPackets {
 //        /* 566 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RequestItemSuggestions_VALUE, DotaUserMessages.CDOTAUserMessage_RequestItemSuggestions.class);
 //        /* 569 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheelCooldown_VALUE, DotaUserMessages.CDOTAUserMessage_ChatWheelCooldown.class);
 //        /* 570 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DismissAllStatPopups_VALUE, DotaUserMessages.CDOTAUserMessage_DismissAllStatPopups.class);
-//        /* 571 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_DestroyProjectile_VALUE, DotaUserMessages.CDOTAUserMessage_TE_DestroyProjectile.class);
 //        /* 573 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AbilityDraftRequestAbility_VALUE, DotaUserMessages.CDOTAUserMessage_AbilityDraftRequestAbility.class);
 //        /* 578 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ReplaceQueryUnit_VALUE, DotaUserMessages.CDOTAUserMsg_ReplaceQueryUnit.class);
 //        /* 579 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EmptyTeleportAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EmptyTeleportAlert.class);
