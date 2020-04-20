@@ -39,6 +39,7 @@ public class EmbeddedPackets {
         /*  27 */ K2C_RECV.put(S1NetMessages.SVC_Messages.svc_TempEntities_VALUE, S1NetMessages.CSVCMsg_TempEntities.class);
         /*  28 */ K2C_RECV.put(S1NetMessages.SVC_Messages.svc_Prefetch_VALUE, S1NetMessages.CSVCMsg_Prefetch.class);
         /*  30 */ K2C_RECV.put(S1NetMessages.SVC_Messages.svc_GameEventList_VALUE, NetMessages.CSVCMsg_GameEventList.class);
+        /*  31 */ K2C_RECV.put(S1NetMessages.SVC_Messages.svc_GetCvarValue_VALUE, NetMessages.CSVCMsg_GetCvarValue.class);
         /*  33 */ K2C_RECV.put(S1NetMessages.SVC_Messages.svc_FullFrameSplit_VALUE, NetMessages.CSVCMsg_FullFrameSplit.class);
         /*  34 */ K2C_RECV.put(CsGoNetMessages.SVC_Messages_CsGo.svc_CmdKeyValues_VALUE, CsGoNetMessages.CSVCMsg_CmdKeyValues.class);
         /*  35 */ K2C_RECV.put(CsGoNetMessages.SVC_Messages_CsGo.svc_EncryptedData_VALUE, CsGoNetMessages.CSVCMsg_EncryptedData.class);

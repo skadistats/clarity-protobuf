@@ -231,5 +231,10 @@ message CSVCMsg_BSPDecal {
     optional bool low_priority = 5;
 }
 
+message CSVCMsg_GetCvarValue {
+	optional int32 cookie = 1;
+	optional string cvar_name = 2;
+}
+
 
 

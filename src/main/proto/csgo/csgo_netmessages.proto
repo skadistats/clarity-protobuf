@@ -19,6 +19,7 @@ enum CLC_Messages {
 }
 
 enum SVC_Messages_CsGo {
+    svc_GetCvarValue = 31;
     svc_PaintmapData = 33;
     svc_CmdKeyValues = 34;
     svc_EncryptedData = 35;

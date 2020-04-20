@@ -22494,6 +22494,560 @@ public final class NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_BSPDecal)
   }
 
+  public interface CSVCMsg_GetCvarValueOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_GetCvarValue)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 cookie = 1;</code>
+     */
+    boolean hasCookie();
+    /**
+     * <code>optional int32 cookie = 1;</code>
+     */
+    int getCookie();
+
+    /**
+     * <code>optional string cvar_name = 2;</code>
+     */
+    boolean hasCvarName();
+    /**
+     * <code>optional string cvar_name = 2;</code>
+     */
+    java.lang.String getCvarName();
+    /**
+     * <code>optional string cvar_name = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getCvarNameBytes();
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_GetCvarValue}
+   */
+  public static final class CSVCMsg_GetCvarValue extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_GetCvarValue)
+      CSVCMsg_GetCvarValueOrBuilder {
+    // Use CSVCMsg_GetCvarValue.newBuilder() to construct.
+    private CSVCMsg_GetCvarValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_GetCvarValue(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_GetCvarValue defaultInstance;
+    public static CSVCMsg_GetCvarValue getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_GetCvarValue getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_GetCvarValue(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              cookie_ = input.readInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              cvarName_ = bs;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_GetCvarValue_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_GetCvarValue_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.class, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_GetCvarValue> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_GetCvarValue>() {
+      public CSVCMsg_GetCvarValue parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_GetCvarValue(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_GetCvarValue> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int COOKIE_FIELD_NUMBER = 1;
+    private int cookie_;
+    /**
+     * <code>optional int32 cookie = 1;</code>
+     */
+    public boolean hasCookie() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 cookie = 1;</code>
+     */
+    public int getCookie() {
+      return cookie_;
+    }
+
+    public static final int CVAR_NAME_FIELD_NUMBER = 2;
+    private java.lang.Object cvarName_;
+    /**
+     * <code>optional string cvar_name = 2;</code>
+     */
+    public boolean hasCvarName() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string cvar_name = 2;</code>
+     */
+    public java.lang.String getCvarName() {
+      java.lang.Object ref = cvarName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          cvarName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string cvar_name = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getCvarNameBytes() {
+      java.lang.Object ref = cvarName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        cvarName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private void initFields() {
+      cookie_ = 0;
+      cvarName_ = "";
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, cookie_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getCvarNameBytes());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, cookie_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getCvarNameBytes());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_GetCvarValue}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_GetCvarValue)
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValueOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_GetCvarValue_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_GetCvarValue_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.class, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        cookie_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cvarName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_GetCvarValue_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue build() {
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue buildPartial() {
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue result = new skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.cookie_ = cookie_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.cvarName_ = cvarName_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue other) {
+        if (other == skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue.getDefaultInstance()) return this;
+        if (other.hasCookie()) {
+          setCookie(other.getCookie());
+        }
+        if (other.hasCvarName()) {
+          bitField0_ |= 0x00000002;
+          cvarName_ = other.cvarName_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_GetCvarValue) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int cookie_ ;
+      /**
+       * <code>optional int32 cookie = 1;</code>
+       */
+      public boolean hasCookie() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 cookie = 1;</code>
+       */
+      public int getCookie() {
+        return cookie_;
+      }
+      /**
+       * <code>optional int32 cookie = 1;</code>
+       */
+      public Builder setCookie(int value) {
+        bitField0_ |= 0x00000001;
+        cookie_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 cookie = 1;</code>
+       */
+      public Builder clearCookie() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cookie_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object cvarName_ = "";
+      /**
+       * <code>optional string cvar_name = 2;</code>
+       */
+      public boolean hasCvarName() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string cvar_name = 2;</code>
+       */
+      public java.lang.String getCvarName() {
+        java.lang.Object ref = cvarName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            cvarName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string cvar_name = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getCvarNameBytes() {
+        java.lang.Object ref = cvarName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          cvarName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string cvar_name = 2;</code>
+       */
+      public Builder setCvarName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        cvarName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string cvar_name = 2;</code>
+       */
+      public Builder clearCvarName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cvarName_ = getDefaultInstance().getCvarName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string cvar_name = 2;</code>
+       */
+      public Builder setCvarNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        cvarName_ = value;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_GetCvarValue)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_GetCvarValue(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_GetCvarValue)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCLCMsg_ClientInfo_descriptor;
   private static
@@ -22649,6 +23203,11 @@ public final class NetMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_BSPDecal_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_GetCvarValue_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_GetCvarValue_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -22743,12 +23302,14 @@ public final class NetMessages {
       "(\005\022\014\n\004data\030\004 \001(\014\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n" +
       "\003pos\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_texture" +
       "_index\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013mo" +
-      "del_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010*L\n" +
-      "\021VoiceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_S" +
-      "TEAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001*B\n\016R" +
-      "equestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUS" +
-      "E\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002B6\n$skadistats.cl",
-      "arity.wire.common.protoB\013NetMessages\200\001\000"
+      "del_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"9\n" +
+      "\024CSVCMsg_GetCvarValue\022\016\n\006cookie\030\001 \001(\005\022\021\n" +
+      "\tcvar_name\030\002 \001(\t*L\n\021VoiceDataFormat_t\022\032\n" +
+      "\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_F" +
+      "ORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_P",
+      "AUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE" +
+      "\020\002B6\n$skadistats.clarity.wire.common.pro" +
+      "toB\013NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22949,6 +23510,12 @@ public final class NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_BSPDecal_descriptor,
         new java.lang.String[] { "Pos", "DecalTextureIndex", "EntityIndex", "ModelIndex", "LowPriority", });
+    internal_static_CSVCMsg_GetCvarValue_descriptor =
+      getDescriptor().getMessageTypes().get(27);
+    internal_static_CSVCMsg_GetCvarValue_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_GetCvarValue_descriptor,
+        new java.lang.String[] { "Cookie", "CvarName", });
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor();
   }
 

@@ -186,27 +186,35 @@ public final class CsGoNetMessages {
   public enum SVC_Messages_CsGo
       implements com.google.protobuf.ProtocolMessageEnum {
     /**
+     * <code>svc_GetCvarValue = 31;</code>
+     */
+    svc_GetCvarValue(0, 31),
+    /**
      * <code>svc_PaintmapData = 33;</code>
      */
-    svc_PaintmapData(0, 33),
+    svc_PaintmapData(1, 33),
     /**
      * <code>svc_CmdKeyValues = 34;</code>
      */
-    svc_CmdKeyValues(1, 34),
+    svc_CmdKeyValues(2, 34),
     /**
      * <code>svc_EncryptedData = 35;</code>
      */
-    svc_EncryptedData(2, 35),
+    svc_EncryptedData(3, 35),
     /**
      * <code>svc_HltvReplay = 36;</code>
      */
-    svc_HltvReplay(3, 36),
+    svc_HltvReplay(4, 36),
     /**
      * <code>svc_Broadcast_Command = 38;</code>
      */
-    svc_Broadcast_Command(4, 38),
+    svc_Broadcast_Command(5, 38),
     ;
 
+    /**
+     * <code>svc_GetCvarValue = 31;</code>
+     */
+    public static final int svc_GetCvarValue_VALUE = 31;
     /**
      * <code>svc_PaintmapData = 33;</code>
      */
@@ -233,6 +241,7 @@ public final class CsGoNetMessages {
 
     public static SVC_Messages_CsGo valueOf(int value) {
       switch (value) {
+        case 31: return svc_GetCvarValue;
         case 33: return svc_PaintmapData;
         case 34: return svc_CmdKeyValues;
         case 35: return svc_EncryptedData;
@@ -15581,14 +15590,15 @@ public final class CsGoNetMessages {
       "dCvarValue\020\r\022\024\n\020clc_FileCRCCheck\020\016\022\027\n\023cl" +
       "c_LoadingProgress\020\017\022\032\n\026clc_SplitPlayerCo" +
       "nnect\020\020\022\025\n\021clc_ClientMessage\020\021\022\024\n\020clc_Cm",
-      "dKeyValues\020\022\022\022\n\016clc_HltvReplay\020\024*\205\001\n\021SVC" +
-      "_Messages_CsGo\022\024\n\020svc_PaintmapData\020!\022\024\n\020" +
-      "svc_CmdKeyValues\020\"\022\025\n\021svc_EncryptedData\020" +
-      "#\022\022\n\016svc_HltvReplay\020$\022\031\n\025svc_Broadcast_C" +
-      "ommand\020&*L\n\021VoiceDataFormat_t\022\032\n\026VOICEDA" +
-      "TA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FORMAT_EN" +
-      "GINE\020\001B8\n\"skadistats.clarity.wire.csgo.p" +
-      "rotoB\017CsGoNetMessages\200\001\000"
+      "dKeyValues\020\022\022\022\n\016clc_HltvReplay\020\024*\233\001\n\021SVC" +
+      "_Messages_CsGo\022\024\n\020svc_GetCvarValue\020\037\022\024\n\020" +
+      "svc_PaintmapData\020!\022\024\n\020svc_CmdKeyValues\020\"" +
+      "\022\025\n\021svc_EncryptedData\020#\022\022\n\016svc_HltvRepla" +
+      "y\020$\022\031\n\025svc_Broadcast_Command\020&*L\n\021VoiceD" +
+      "ataFormat_t\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022" +
+      "\033\n\027VOICEDATA_FORMAT_ENGINE\020\001B8\n\"skadista" +
+      "ts.clarity.wire.csgo.protoB\017CsGoNetMessa" +
+      "ges\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
