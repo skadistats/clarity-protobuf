@@ -44,6 +44,7 @@ public class EmbeddedPackets {
         /*  34 */ K2C_RECV.put(CsGoNetMessages.SVC_Messages_CsGo.svc_CmdKeyValues_VALUE, CsGoNetMessages.CSVCMsg_CmdKeyValues.class);
         /*  35 */ K2C_RECV.put(CsGoNetMessages.SVC_Messages_CsGo.svc_EncryptedData_VALUE, CsGoNetMessages.CSVCMsg_EncryptedData.class);
         /*  36 */ K2C_RECV.put(CsGoNetMessages.SVC_Messages_CsGo.svc_HltvReplay_VALUE, CsGoNetMessages.CSVCMsg_HltvReplay.class);
+        /* 100 */ K2C_RECV.put(NetworkBaseTypes.NET_Messages.net_PlayerAvatarData_VALUE, NetworkBaseTypes.CNETMsg_PlayerAvatarData.class);
     }
 
     private static final KindToClassMessageRegistry K2C_SENT;
