@@ -136,4 +136,11 @@ enum EDotaUserMessages {
     DOTA_UM_FoundNeutralItem = 593;
     DOTA_UM_OutpostCaptured = 594;
     DOTA_UM_OutpostGrantedXP = 595;
+	DOTA_UM_MoveCameraToUnit = 596;
+	DOTA_UM_PauseMinigameData = 597;
+	DOTA_UM_VersusScene_PlayerBehavior = 598;
+	DOTA_UM_QoP_ArcanaSummary = 600;
+	DOTA_UM_HotPotato_Created = 601;
+	DOTA_UM_HotPotato_Exploded = 602;
+	DOTA_UM_WK_Arcana_Progress = 603;
 }

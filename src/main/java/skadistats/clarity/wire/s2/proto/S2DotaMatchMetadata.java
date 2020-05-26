@@ -8,815 +8,6 @@ public final class S2DotaMatchMetadata {
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
-  /**
-   * Protobuf enum {@code EMatchBehaviorScoreVariance}
-   */
-  public enum EMatchBehaviorScoreVariance
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_Invalid = 0;</code>
-     */
-    k_EMatchBehaviorScoreVariance_Invalid(0, 0),
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_Low = 1;</code>
-     */
-    k_EMatchBehaviorScoreVariance_Low(1, 1),
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_Medium = 2;</code>
-     */
-    k_EMatchBehaviorScoreVariance_Medium(2, 2),
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_High = 3;</code>
-     */
-    k_EMatchBehaviorScoreVariance_High(3, 3),
-    ;
-
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_Invalid = 0;</code>
-     */
-    public static final int k_EMatchBehaviorScoreVariance_Invalid_VALUE = 0;
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_Low = 1;</code>
-     */
-    public static final int k_EMatchBehaviorScoreVariance_Low_VALUE = 1;
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_Medium = 2;</code>
-     */
-    public static final int k_EMatchBehaviorScoreVariance_Medium_VALUE = 2;
-    /**
-     * <code>k_EMatchBehaviorScoreVariance_High = 3;</code>
-     */
-    public static final int k_EMatchBehaviorScoreVariance_High_VALUE = 3;
-
-
-    public final int getNumber() { return value; }
-
-    public static EMatchBehaviorScoreVariance valueOf(int value) {
-      switch (value) {
-        case 0: return k_EMatchBehaviorScoreVariance_Invalid;
-        case 1: return k_EMatchBehaviorScoreVariance_Low;
-        case 2: return k_EMatchBehaviorScoreVariance_Medium;
-        case 3: return k_EMatchBehaviorScoreVariance_High;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<EMatchBehaviorScoreVariance>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static com.google.protobuf.Internal.EnumLiteMap<EMatchBehaviorScoreVariance>
-        internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EMatchBehaviorScoreVariance>() {
-            public EMatchBehaviorScoreVariance findValueByNumber(int number) {
-              return EMatchBehaviorScoreVariance.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final EMatchBehaviorScoreVariance[] VALUES = values();
-
-    public static EMatchBehaviorScoreVariance valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private EMatchBehaviorScoreVariance(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:EMatchBehaviorScoreVariance)
-  }
-
-  public interface CLobbyTimedRewardDetailsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CLobbyTimedRewardDetails)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>optional uint32 item_def_index = 2;</code>
-     */
-    boolean hasItemDefIndex();
-    /**
-     * <code>optional uint32 item_def_index = 2;</code>
-     */
-    int getItemDefIndex();
-
-    /**
-     * <code>optional bool is_supply_crate = 3;</code>
-     */
-    boolean hasIsSupplyCrate();
-    /**
-     * <code>optional bool is_supply_crate = 3;</code>
-     */
-    boolean getIsSupplyCrate();
-
-    /**
-     * <code>optional bool is_timed_drop = 4;</code>
-     */
-    boolean hasIsTimedDrop();
-    /**
-     * <code>optional bool is_timed_drop = 4;</code>
-     */
-    boolean getIsTimedDrop();
-
-    /**
-     * <code>optional uint32 account_id = 5;</code>
-     */
-    boolean hasAccountId();
-    /**
-     * <code>optional uint32 account_id = 5;</code>
-     */
-    int getAccountId();
-
-    /**
-     * <code>optional uint32 origin = 6;</code>
-     */
-    boolean hasOrigin();
-    /**
-     * <code>optional uint32 origin = 6;</code>
-     */
-    int getOrigin();
-  }
-  /**
-   * Protobuf type {@code CLobbyTimedRewardDetails}
-   */
-  public static final class CLobbyTimedRewardDetails extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:CLobbyTimedRewardDetails)
-      CLobbyTimedRewardDetailsOrBuilder {
-    // Use CLobbyTimedRewardDetails.newBuilder() to construct.
-    private CLobbyTimedRewardDetails(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-      this.unknownFields = builder.getUnknownFields();
-    }
-    private CLobbyTimedRewardDetails(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
-
-    private static final CLobbyTimedRewardDetails defaultInstance;
-    public static CLobbyTimedRewardDetails getDefaultInstance() {
-      return defaultInstance;
-    }
-
-    public CLobbyTimedRewardDetails getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-        getUnknownFields() {
-      return this.unknownFields;
-    }
-    private CLobbyTimedRewardDetails(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      initFields();
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000001;
-              itemDefIndex_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-              bitField0_ |= 0x00000002;
-              isSupplyCrate_ = input.readBool();
-              break;
-            }
-            case 32: {
-              bitField0_ |= 0x00000004;
-              isTimedDrop_ = input.readBool();
-              break;
-            }
-            case 40: {
-              bitField0_ |= 0x00000008;
-              accountId_ = input.readUInt32();
-              break;
-            }
-            case 48: {
-              bitField0_ |= 0x00000010;
-              origin_ = input.readUInt32();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e.getMessage()).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CLobbyTimedRewardDetails_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CLobbyTimedRewardDetails_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder.class);
-    }
-
-    public static com.google.protobuf.Parser<CLobbyTimedRewardDetails> PARSER =
-        new com.google.protobuf.AbstractParser<CLobbyTimedRewardDetails>() {
-      public CLobbyTimedRewardDetails parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CLobbyTimedRewardDetails(input, extensionRegistry);
-      }
-    };
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<CLobbyTimedRewardDetails> getParserForType() {
-      return PARSER;
-    }
-
-    private int bitField0_;
-    public static final int ITEM_DEF_INDEX_FIELD_NUMBER = 2;
-    private int itemDefIndex_;
-    /**
-     * <code>optional uint32 item_def_index = 2;</code>
-     */
-    public boolean hasItemDefIndex() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    /**
-     * <code>optional uint32 item_def_index = 2;</code>
-     */
-    public int getItemDefIndex() {
-      return itemDefIndex_;
-    }
-
-    public static final int IS_SUPPLY_CRATE_FIELD_NUMBER = 3;
-    private boolean isSupplyCrate_;
-    /**
-     * <code>optional bool is_supply_crate = 3;</code>
-     */
-    public boolean hasIsSupplyCrate() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    /**
-     * <code>optional bool is_supply_crate = 3;</code>
-     */
-    public boolean getIsSupplyCrate() {
-      return isSupplyCrate_;
-    }
-
-    public static final int IS_TIMED_DROP_FIELD_NUMBER = 4;
-    private boolean isTimedDrop_;
-    /**
-     * <code>optional bool is_timed_drop = 4;</code>
-     */
-    public boolean hasIsTimedDrop() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
-    }
-    /**
-     * <code>optional bool is_timed_drop = 4;</code>
-     */
-    public boolean getIsTimedDrop() {
-      return isTimedDrop_;
-    }
-
-    public static final int ACCOUNT_ID_FIELD_NUMBER = 5;
-    private int accountId_;
-    /**
-     * <code>optional uint32 account_id = 5;</code>
-     */
-    public boolean hasAccountId() {
-      return ((bitField0_ & 0x00000008) == 0x00000008);
-    }
-    /**
-     * <code>optional uint32 account_id = 5;</code>
-     */
-    public int getAccountId() {
-      return accountId_;
-    }
-
-    public static final int ORIGIN_FIELD_NUMBER = 6;
-    private int origin_;
-    /**
-     * <code>optional uint32 origin = 6;</code>
-     */
-    public boolean hasOrigin() {
-      return ((bitField0_ & 0x00000010) == 0x00000010);
-    }
-    /**
-     * <code>optional uint32 origin = 6;</code>
-     */
-    public int getOrigin() {
-      return origin_;
-    }
-
-    private void initFields() {
-      itemDefIndex_ = 0;
-      isSupplyCrate_ = false;
-      isTimedDrop_ = false;
-      accountId_ = 0;
-      origin_ = 0;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt32(2, itemDefIndex_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBool(3, isSupplyCrate_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeBool(4, isTimedDrop_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeUInt32(5, accountId_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeUInt32(6, origin_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, itemDefIndex_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(3, isSupplyCrate_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(4, isTimedDrop_);
-      }
-      if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(5, accountId_);
-      }
-      if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(6, origin_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseDelimitedFrom(input, extensionRegistry);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input);
-    }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return PARSER.parseFrom(input, extensionRegistry);
-    }
-
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code CLobbyTimedRewardDetails}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CLobbyTimedRewardDetails)
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CLobbyTimedRewardDetails_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CLobbyTimedRewardDetails_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder.class);
-      }
-
-      // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-
-      public Builder clear() {
-        super.clear();
-        itemDefIndex_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isSupplyCrate_ = false;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        isTimedDrop_ = false;
-        bitField0_ = (bitField0_ & ~0x00000004);
-        accountId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000008);
-        origin_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000010);
-        return this;
-      }
-
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CLobbyTimedRewardDetails_descriptor;
-      }
-
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.getDefaultInstance();
-      }
-
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails build() {
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails buildPartial() {
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.itemDefIndex_ = itemDefIndex_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.isSupplyCrate_ = isSupplyCrate_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
-        }
-        result.isTimedDrop_ = isTimedDrop_;
-        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-          to_bitField0_ |= 0x00000008;
-        }
-        result.accountId_ = accountId_;
-        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-          to_bitField0_ |= 0x00000010;
-        }
-        result.origin_ = origin_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails other) {
-        if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.getDefaultInstance()) return this;
-        if (other.hasItemDefIndex()) {
-          setItemDefIndex(other.getItemDefIndex());
-        }
-        if (other.hasIsSupplyCrate()) {
-          setIsSupplyCrate(other.getIsSupplyCrate());
-        }
-        if (other.hasIsTimedDrop()) {
-          setIsTimedDrop(other.getIsTimedDrop());
-        }
-        if (other.hasAccountId()) {
-          setAccountId(other.getAccountId());
-        }
-        if (other.hasOrigin()) {
-          setOrigin(other.getOrigin());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails) e.getUnfinishedMessage();
-          throw e;
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private int itemDefIndex_ ;
-      /**
-       * <code>optional uint32 item_def_index = 2;</code>
-       */
-      public boolean hasItemDefIndex() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      /**
-       * <code>optional uint32 item_def_index = 2;</code>
-       */
-      public int getItemDefIndex() {
-        return itemDefIndex_;
-      }
-      /**
-       * <code>optional uint32 item_def_index = 2;</code>
-       */
-      public Builder setItemDefIndex(int value) {
-        bitField0_ |= 0x00000001;
-        itemDefIndex_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 item_def_index = 2;</code>
-       */
-      public Builder clearItemDefIndex() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        itemDefIndex_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private boolean isSupplyCrate_ ;
-      /**
-       * <code>optional bool is_supply_crate = 3;</code>
-       */
-      public boolean hasIsSupplyCrate() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      /**
-       * <code>optional bool is_supply_crate = 3;</code>
-       */
-      public boolean getIsSupplyCrate() {
-        return isSupplyCrate_;
-      }
-      /**
-       * <code>optional bool is_supply_crate = 3;</code>
-       */
-      public Builder setIsSupplyCrate(boolean value) {
-        bitField0_ |= 0x00000002;
-        isSupplyCrate_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool is_supply_crate = 3;</code>
-       */
-      public Builder clearIsSupplyCrate() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        isSupplyCrate_ = false;
-        onChanged();
-        return this;
-      }
-
-      private boolean isTimedDrop_ ;
-      /**
-       * <code>optional bool is_timed_drop = 4;</code>
-       */
-      public boolean hasIsTimedDrop() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional bool is_timed_drop = 4;</code>
-       */
-      public boolean getIsTimedDrop() {
-        return isTimedDrop_;
-      }
-      /**
-       * <code>optional bool is_timed_drop = 4;</code>
-       */
-      public Builder setIsTimedDrop(boolean value) {
-        bitField0_ |= 0x00000004;
-        isTimedDrop_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool is_timed_drop = 4;</code>
-       */
-      public Builder clearIsTimedDrop() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        isTimedDrop_ = false;
-        onChanged();
-        return this;
-      }
-
-      private int accountId_ ;
-      /**
-       * <code>optional uint32 account_id = 5;</code>
-       */
-      public boolean hasAccountId() {
-        return ((bitField0_ & 0x00000008) == 0x00000008);
-      }
-      /**
-       * <code>optional uint32 account_id = 5;</code>
-       */
-      public int getAccountId() {
-        return accountId_;
-      }
-      /**
-       * <code>optional uint32 account_id = 5;</code>
-       */
-      public Builder setAccountId(int value) {
-        bitField0_ |= 0x00000008;
-        accountId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 account_id = 5;</code>
-       */
-      public Builder clearAccountId() {
-        bitField0_ = (bitField0_ & ~0x00000008);
-        accountId_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private int origin_ ;
-      /**
-       * <code>optional uint32 origin = 6;</code>
-       */
-      public boolean hasOrigin() {
-        return ((bitField0_ & 0x00000010) == 0x00000010);
-      }
-      /**
-       * <code>optional uint32 origin = 6;</code>
-       */
-      public int getOrigin() {
-        return origin_;
-      }
-      /**
-       * <code>optional uint32 origin = 6;</code>
-       */
-      public Builder setOrigin(int value) {
-        bitField0_ |= 0x00000010;
-        origin_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 origin = 6;</code>
-       */
-      public Builder clearOrigin() {
-        bitField0_ = (bitField0_ & ~0x00000010);
-        origin_ = 0;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:CLobbyTimedRewardDetails)
-    }
-
-    static {
-      defaultInstance = new CLobbyTimedRewardDetails(true);
-      defaultInstance.initFields();
-    }
-
-    // @@protoc_insertion_point(class_scope:CLobbyTimedRewardDetails)
-  }
-
   public interface CDOTAMatchMetadataFileOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadataFile)
       com.google.protobuf.MessageOrBuilder {
@@ -1609,12 +800,12 @@ public final class S2DotaMatchMetadata {
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails> 
+    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails> 
         getItemRewardsList();
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails getItemRewards(int index);
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails getItemRewards(int index);
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
@@ -1622,12 +813,12 @@ public final class S2DotaMatchMetadata {
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder> 
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder> 
         getItemRewardsOrBuilderList();
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder getItemRewardsOrBuilder(
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder getItemRewardsOrBuilder(
         int index);
 
     /**
@@ -1697,11 +888,48 @@ public final class S2DotaMatchMetadata {
     /**
      * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getMatchmakingStats();
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats getMatchmakingStats();
     /**
      * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder();
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder();
+
+    /**
+     * <code>optional .CMvpData mvp_data = 9;</code>
+     */
+    boolean hasMvpData();
+    /**
+     * <code>optional .CMvpData mvp_data = 9;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData getMvpData();
+    /**
+     * <code>optional .CMvpData mvp_data = 9;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpDataOrBuilder getMvpDataOrBuilder();
+
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress> 
+        getGuildChallengeProgressList();
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress getGuildChallengeProgress(int index);
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    int getGuildChallengeProgressCount();
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder> 
+        getGuildChallengeProgressOrBuilderList();
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder getGuildChallengeProgressOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code CDOTAMatchMetadata}
@@ -1765,10 +993,10 @@ public final class S2DotaMatchMetadata {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                itemRewards_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails>();
+                itemRewards_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              itemRewards_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.PARSER, extensionRegistry));
+              itemRewards_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.PARSER, extensionRegistry));
               break;
             }
             case 25: {
@@ -1800,16 +1028,37 @@ public final class S2DotaMatchMetadata {
               break;
             }
             case 66: {
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder subBuilder = null;
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.Builder subBuilder = null;
               if (((bitField0_ & 0x00000010) == 0x00000010)) {
                 subBuilder = matchmakingStats_.toBuilder();
               }
-              matchmakingStats_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.PARSER, extensionRegistry);
+              matchmakingStats_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(matchmakingStats_);
                 matchmakingStats_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000010;
+              break;
+            }
+            case 74: {
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = mvpData_.toBuilder();
+              }
+              mvpData_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(mvpData_);
+                mvpData_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 82: {
+              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+                guildChallengeProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress>();
+                mutable_bitField0_ |= 0x00000200;
+              }
+              guildChallengeProgress_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.PARSER, extensionRegistry));
               break;
             }
           }
@@ -1828,6 +1077,9 @@ public final class S2DotaMatchMetadata {
         }
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
           matchTips_ = java.util.Collections.unmodifiableList(matchTips_);
+        }
+        if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+          guildChallengeProgress_ = java.util.Collections.unmodifiableList(guildChallengeProgress_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -7821,15 +7073,6 @@ public final class S2DotaMatchMetadata {
         int getAmountWagered();
 
         /**
-         * <code>optional uint32 team_wager_amount = 15;</code>
-         */
-        boolean hasTeamWagerAmount();
-        /**
-         * <code>optional uint32 team_wager_amount = 15;</code>
-         */
-        int getTeamWagerAmount();
-
-        /**
          * <code>optional uint32 periodic_point_adjustments = 16;</code>
          */
         boolean hasPeriodicPointAdjustments();
@@ -7894,6 +7137,33 @@ public final class S2DotaMatchMetadata {
          */
         skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder getActionsGrantedOrBuilder(
             int index);
+
+        /**
+         * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+         */
+        boolean hasCavernCrawlMapVariant();
+        /**
+         * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+         */
+        int getCavernCrawlMapVariant();
+
+        /**
+         * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+         */
+        boolean hasTeamWagerBonusPct();
+        /**
+         * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+         */
+        int getTeamWagerBonusPct();
+
+        /**
+         * <code>optional uint32 wager_streak_pct = 22;</code>
+         */
+        boolean hasWagerStreakPct();
+        /**
+         * <code>optional uint32 wager_streak_pct = 22;</code>
+         */
+        int getWagerStreakPct();
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.EventData}
@@ -8020,35 +7290,45 @@ public final class S2DotaMatchMetadata {
                   amountWagered_ = input.readUInt32();
                   break;
                 }
-                case 120: {
-                  bitField0_ |= 0x00002000;
-                  teamWagerAmount_ = input.readUInt32();
-                  break;
-                }
                 case 128: {
-                  bitField0_ |= 0x00004000;
+                  bitField0_ |= 0x00002000;
                   periodicPointAdjustments_ = input.readUInt32();
                   break;
                 }
                 case 138: {
-                  if (!((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+                  if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
                     cavernChallengeMapResults_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult>();
-                    mutable_bitField0_ |= 0x00010000;
+                    mutable_bitField0_ |= 0x00008000;
                   }
                   cavernChallengeMapResults_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.PARSER, extensionRegistry));
                   break;
                 }
                 case 144: {
-                  bitField0_ |= 0x00008000;
+                  bitField0_ |= 0x00004000;
                   cavernChallengePlusShardWinnings_ = input.readUInt32();
                   break;
                 }
                 case 154: {
-                  if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+                  if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
                     actionsGranted_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant>();
-                    mutable_bitField0_ |= 0x00040000;
+                    mutable_bitField0_ |= 0x00020000;
                   }
                   actionsGranted_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.PARSER, extensionRegistry));
+                  break;
+                }
+                case 160: {
+                  bitField0_ |= 0x00008000;
+                  cavernCrawlMapVariant_ = input.readUInt32();
+                  break;
+                }
+                case 168: {
+                  bitField0_ |= 0x00010000;
+                  teamWagerBonusPct_ = input.readUInt32();
+                  break;
+                }
+                case 176: {
+                  bitField0_ |= 0x00020000;
+                  wagerStreakPct_ = input.readUInt32();
                   break;
                 }
               }
@@ -8062,10 +7342,10 @@ public final class S2DotaMatchMetadata {
             if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
               subChallengesWithProgress_ = java.util.Collections.unmodifiableList(subChallengesWithProgress_);
             }
-            if (((mutable_bitField0_ & 0x00010000) == 0x00010000)) {
+            if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
               cavernChallengeMapResults_ = java.util.Collections.unmodifiableList(cavernChallengeMapResults_);
             }
-            if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+            if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
               actionsGranted_ = java.util.Collections.unmodifiableList(actionsGranted_);
             }
             this.unknownFields = unknownFields.build();
@@ -8330,28 +7610,13 @@ public final class S2DotaMatchMetadata {
           return amountWagered_;
         }
 
-        public static final int TEAM_WAGER_AMOUNT_FIELD_NUMBER = 15;
-        private int teamWagerAmount_;
-        /**
-         * <code>optional uint32 team_wager_amount = 15;</code>
-         */
-        public boolean hasTeamWagerAmount() {
-          return ((bitField0_ & 0x00002000) == 0x00002000);
-        }
-        /**
-         * <code>optional uint32 team_wager_amount = 15;</code>
-         */
-        public int getTeamWagerAmount() {
-          return teamWagerAmount_;
-        }
-
         public static final int PERIODIC_POINT_ADJUSTMENTS_FIELD_NUMBER = 16;
         private int periodicPointAdjustments_;
         /**
          * <code>optional uint32 periodic_point_adjustments = 16;</code>
          */
         public boolean hasPeriodicPointAdjustments() {
-          return ((bitField0_ & 0x00004000) == 0x00004000);
+          return ((bitField0_ & 0x00002000) == 0x00002000);
         }
         /**
          * <code>optional uint32 periodic_point_adjustments = 16;</code>
@@ -8401,7 +7666,7 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
          */
         public boolean hasCavernChallengePlusShardWinnings() {
-          return ((bitField0_ & 0x00008000) == 0x00008000);
+          return ((bitField0_ & 0x00004000) == 0x00004000);
         }
         /**
          * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
@@ -8445,6 +7710,51 @@ public final class S2DotaMatchMetadata {
           return actionsGranted_.get(index);
         }
 
+        public static final int CAVERN_CRAWL_MAP_VARIANT_FIELD_NUMBER = 20;
+        private int cavernCrawlMapVariant_;
+        /**
+         * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+         */
+        public boolean hasCavernCrawlMapVariant() {
+          return ((bitField0_ & 0x00008000) == 0x00008000);
+        }
+        /**
+         * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+         */
+        public int getCavernCrawlMapVariant() {
+          return cavernCrawlMapVariant_;
+        }
+
+        public static final int TEAM_WAGER_BONUS_PCT_FIELD_NUMBER = 21;
+        private int teamWagerBonusPct_;
+        /**
+         * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+         */
+        public boolean hasTeamWagerBonusPct() {
+          return ((bitField0_ & 0x00010000) == 0x00010000);
+        }
+        /**
+         * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+         */
+        public int getTeamWagerBonusPct() {
+          return teamWagerBonusPct_;
+        }
+
+        public static final int WAGER_STREAK_PCT_FIELD_NUMBER = 22;
+        private int wagerStreakPct_;
+        /**
+         * <code>optional uint32 wager_streak_pct = 22;</code>
+         */
+        public boolean hasWagerStreakPct() {
+          return ((bitField0_ & 0x00020000) == 0x00020000);
+        }
+        /**
+         * <code>optional uint32 wager_streak_pct = 22;</code>
+         */
+        public int getWagerStreakPct() {
+          return wagerStreakPct_;
+        }
+
         private void initFields() {
           eventId_ = 0;
           eventPoints_ = 0;
@@ -8460,11 +7770,13 @@ public final class S2DotaMatchMetadata {
           cavernChallengeActive_ = false;
           cavernChallengeWinnings_ = 0;
           amountWagered_ = 0;
-          teamWagerAmount_ = 0;
           periodicPointAdjustments_ = 0;
           cavernChallengeMapResults_ = java.util.Collections.emptyList();
           cavernChallengePlusShardWinnings_ = 0;
           actionsGranted_ = java.util.Collections.emptyList();
+          cavernCrawlMapVariant_ = 0;
+          teamWagerBonusPct_ = 0;
+          wagerStreakPct_ = 0;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -8522,19 +7834,25 @@ public final class S2DotaMatchMetadata {
             output.writeUInt32(14, amountWagered_);
           }
           if (((bitField0_ & 0x00002000) == 0x00002000)) {
-            output.writeUInt32(15, teamWagerAmount_);
-          }
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
             output.writeUInt32(16, periodicPointAdjustments_);
           }
           for (int i = 0; i < cavernChallengeMapResults_.size(); i++) {
             output.writeMessage(17, cavernChallengeMapResults_.get(i));
           }
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00004000) == 0x00004000)) {
             output.writeUInt32(18, cavernChallengePlusShardWinnings_);
           }
           for (int i = 0; i < actionsGranted_.size(); i++) {
             output.writeMessage(19, actionsGranted_.get(i));
+          }
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+            output.writeUInt32(20, cavernCrawlMapVariant_);
+          }
+          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+            output.writeUInt32(21, teamWagerBonusPct_);
+          }
+          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+            output.writeUInt32(22, wagerStreakPct_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -8603,23 +7921,31 @@ public final class S2DotaMatchMetadata {
           }
           if (((bitField0_ & 0x00002000) == 0x00002000)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(15, teamWagerAmount_);
-          }
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
-            size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(16, periodicPointAdjustments_);
           }
           for (int i = 0; i < cavernChallengeMapResults_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(17, cavernChallengeMapResults_.get(i));
           }
-          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          if (((bitField0_ & 0x00004000) == 0x00004000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(18, cavernChallengePlusShardWinnings_);
           }
           for (int i = 0; i < actionsGranted_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(19, actionsGranted_.get(i));
+          }
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(20, cavernCrawlMapVariant_);
+          }
+          if (((bitField0_ & 0x00010000) == 0x00010000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(21, teamWagerBonusPct_);
+          }
+          if (((bitField0_ & 0x00020000) == 0x00020000)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(22, wagerStreakPct_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -8773,24 +8099,28 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00001000);
             amountWagered_ = 0;
             bitField0_ = (bitField0_ & ~0x00002000);
-            teamWagerAmount_ = 0;
-            bitField0_ = (bitField0_ & ~0x00004000);
             periodicPointAdjustments_ = 0;
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00004000);
             if (cavernChallengeMapResultsBuilder_ == null) {
               cavernChallengeMapResults_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               cavernChallengeMapResultsBuilder_.clear();
             }
             cavernChallengePlusShardWinnings_ = 0;
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00010000);
             if (actionsGrantedBuilder_ == null) {
               actionsGranted_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00020000);
             } else {
               actionsGrantedBuilder_.clear();
             }
+            cavernCrawlMapVariant_ = 0;
+            bitField0_ = (bitField0_ & ~0x00040000);
+            teamWagerBonusPct_ = 0;
+            bitField0_ = (bitField0_ & ~0x00080000);
+            wagerStreakPct_ = 0;
+            bitField0_ = (bitField0_ & ~0x00100000);
             return this;
           }
 
@@ -8883,33 +8213,41 @@ public final class S2DotaMatchMetadata {
             if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
               to_bitField0_ |= 0x00002000;
             }
-            result.teamWagerAmount_ = teamWagerAmount_;
-            if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
-              to_bitField0_ |= 0x00004000;
-            }
             result.periodicPointAdjustments_ = periodicPointAdjustments_;
             if (cavernChallengeMapResultsBuilder_ == null) {
-              if (((bitField0_ & 0x00010000) == 0x00010000)) {
+              if (((bitField0_ & 0x00008000) == 0x00008000)) {
                 cavernChallengeMapResults_ = java.util.Collections.unmodifiableList(cavernChallengeMapResults_);
-                bitField0_ = (bitField0_ & ~0x00010000);
+                bitField0_ = (bitField0_ & ~0x00008000);
               }
               result.cavernChallengeMapResults_ = cavernChallengeMapResults_;
             } else {
               result.cavernChallengeMapResults_ = cavernChallengeMapResultsBuilder_.build();
             }
-            if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
-              to_bitField0_ |= 0x00008000;
+            if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+              to_bitField0_ |= 0x00004000;
             }
             result.cavernChallengePlusShardWinnings_ = cavernChallengePlusShardWinnings_;
             if (actionsGrantedBuilder_ == null) {
-              if (((bitField0_ & 0x00040000) == 0x00040000)) {
+              if (((bitField0_ & 0x00020000) == 0x00020000)) {
                 actionsGranted_ = java.util.Collections.unmodifiableList(actionsGranted_);
-                bitField0_ = (bitField0_ & ~0x00040000);
+                bitField0_ = (bitField0_ & ~0x00020000);
               }
               result.actionsGranted_ = actionsGranted_;
             } else {
               result.actionsGranted_ = actionsGrantedBuilder_.build();
             }
+            if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+              to_bitField0_ |= 0x00008000;
+            }
+            result.cavernCrawlMapVariant_ = cavernCrawlMapVariant_;
+            if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+              to_bitField0_ |= 0x00010000;
+            }
+            result.teamWagerBonusPct_ = teamWagerBonusPct_;
+            if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+              to_bitField0_ |= 0x00020000;
+            }
+            result.wagerStreakPct_ = wagerStreakPct_;
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -8991,9 +8329,6 @@ public final class S2DotaMatchMetadata {
             if (other.hasAmountWagered()) {
               setAmountWagered(other.getAmountWagered());
             }
-            if (other.hasTeamWagerAmount()) {
-              setTeamWagerAmount(other.getTeamWagerAmount());
-            }
             if (other.hasPeriodicPointAdjustments()) {
               setPeriodicPointAdjustments(other.getPeriodicPointAdjustments());
             }
@@ -9001,7 +8336,7 @@ public final class S2DotaMatchMetadata {
               if (!other.cavernChallengeMapResults_.isEmpty()) {
                 if (cavernChallengeMapResults_.isEmpty()) {
                   cavernChallengeMapResults_ = other.cavernChallengeMapResults_;
-                  bitField0_ = (bitField0_ & ~0x00010000);
+                  bitField0_ = (bitField0_ & ~0x00008000);
                 } else {
                   ensureCavernChallengeMapResultsIsMutable();
                   cavernChallengeMapResults_.addAll(other.cavernChallengeMapResults_);
@@ -9014,7 +8349,7 @@ public final class S2DotaMatchMetadata {
                   cavernChallengeMapResultsBuilder_.dispose();
                   cavernChallengeMapResultsBuilder_ = null;
                   cavernChallengeMapResults_ = other.cavernChallengeMapResults_;
-                  bitField0_ = (bitField0_ & ~0x00010000);
+                  bitField0_ = (bitField0_ & ~0x00008000);
                   cavernChallengeMapResultsBuilder_ = 
                     com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                        getCavernChallengeMapResultsFieldBuilder() : null;
@@ -9030,7 +8365,7 @@ public final class S2DotaMatchMetadata {
               if (!other.actionsGranted_.isEmpty()) {
                 if (actionsGranted_.isEmpty()) {
                   actionsGranted_ = other.actionsGranted_;
-                  bitField0_ = (bitField0_ & ~0x00040000);
+                  bitField0_ = (bitField0_ & ~0x00020000);
                 } else {
                   ensureActionsGrantedIsMutable();
                   actionsGranted_.addAll(other.actionsGranted_);
@@ -9043,7 +8378,7 @@ public final class S2DotaMatchMetadata {
                   actionsGrantedBuilder_.dispose();
                   actionsGrantedBuilder_ = null;
                   actionsGranted_ = other.actionsGranted_;
-                  bitField0_ = (bitField0_ & ~0x00040000);
+                  bitField0_ = (bitField0_ & ~0x00020000);
                   actionsGrantedBuilder_ = 
                     com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                        getActionsGrantedFieldBuilder() : null;
@@ -9051,6 +8386,15 @@ public final class S2DotaMatchMetadata {
                   actionsGrantedBuilder_.addAllMessages(other.actionsGranted_);
                 }
               }
+            }
+            if (other.hasCavernCrawlMapVariant()) {
+              setCavernCrawlMapVariant(other.getCavernCrawlMapVariant());
+            }
+            if (other.hasTeamWagerBonusPct()) {
+              setTeamWagerBonusPct(other.getTeamWagerBonusPct());
+            }
+            if (other.hasWagerStreakPct()) {
+              setWagerStreakPct(other.getWagerStreakPct());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -9735,44 +9079,12 @@ public final class S2DotaMatchMetadata {
             return this;
           }
 
-          private int teamWagerAmount_ ;
-          /**
-           * <code>optional uint32 team_wager_amount = 15;</code>
-           */
-          public boolean hasTeamWagerAmount() {
-            return ((bitField0_ & 0x00004000) == 0x00004000);
-          }
-          /**
-           * <code>optional uint32 team_wager_amount = 15;</code>
-           */
-          public int getTeamWagerAmount() {
-            return teamWagerAmount_;
-          }
-          /**
-           * <code>optional uint32 team_wager_amount = 15;</code>
-           */
-          public Builder setTeamWagerAmount(int value) {
-            bitField0_ |= 0x00004000;
-            teamWagerAmount_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional uint32 team_wager_amount = 15;</code>
-           */
-          public Builder clearTeamWagerAmount() {
-            bitField0_ = (bitField0_ & ~0x00004000);
-            teamWagerAmount_ = 0;
-            onChanged();
-            return this;
-          }
-
           private int periodicPointAdjustments_ ;
           /**
            * <code>optional uint32 periodic_point_adjustments = 16;</code>
            */
           public boolean hasPeriodicPointAdjustments() {
-            return ((bitField0_ & 0x00008000) == 0x00008000);
+            return ((bitField0_ & 0x00004000) == 0x00004000);
           }
           /**
            * <code>optional uint32 periodic_point_adjustments = 16;</code>
@@ -9784,7 +9096,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 periodic_point_adjustments = 16;</code>
            */
           public Builder setPeriodicPointAdjustments(int value) {
-            bitField0_ |= 0x00008000;
+            bitField0_ |= 0x00004000;
             periodicPointAdjustments_ = value;
             onChanged();
             return this;
@@ -9793,7 +9105,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 periodic_point_adjustments = 16;</code>
            */
           public Builder clearPeriodicPointAdjustments() {
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00004000);
             periodicPointAdjustments_ = 0;
             onChanged();
             return this;
@@ -9802,9 +9114,9 @@ public final class S2DotaMatchMetadata {
           private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult> cavernChallengeMapResults_ =
             java.util.Collections.emptyList();
           private void ensureCavernChallengeMapResultsIsMutable() {
-            if (!((bitField0_ & 0x00010000) == 0x00010000)) {
+            if (!((bitField0_ & 0x00008000) == 0x00008000)) {
               cavernChallengeMapResults_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult>(cavernChallengeMapResults_);
-              bitField0_ |= 0x00010000;
+              bitField0_ |= 0x00008000;
              }
           }
 
@@ -9954,7 +9266,7 @@ public final class S2DotaMatchMetadata {
           public Builder clearCavernChallengeMapResults() {
             if (cavernChallengeMapResultsBuilder_ == null) {
               cavernChallengeMapResults_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00008000);
               onChanged();
             } else {
               cavernChallengeMapResultsBuilder_.clear();
@@ -10031,7 +9343,7 @@ public final class S2DotaMatchMetadata {
               cavernChallengeMapResultsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                   skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResult.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CavernChallengeResultOrBuilder>(
                       cavernChallengeMapResults_,
-                      ((bitField0_ & 0x00010000) == 0x00010000),
+                      ((bitField0_ & 0x00008000) == 0x00008000),
                       getParentForChildren(),
                       isClean());
               cavernChallengeMapResults_ = null;
@@ -10044,7 +9356,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
            */
           public boolean hasCavernChallengePlusShardWinnings() {
-            return ((bitField0_ & 0x00020000) == 0x00020000);
+            return ((bitField0_ & 0x00010000) == 0x00010000);
           }
           /**
            * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
@@ -10056,7 +9368,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
            */
           public Builder setCavernChallengePlusShardWinnings(int value) {
-            bitField0_ |= 0x00020000;
+            bitField0_ |= 0x00010000;
             cavernChallengePlusShardWinnings_ = value;
             onChanged();
             return this;
@@ -10065,7 +9377,7 @@ public final class S2DotaMatchMetadata {
            * <code>optional uint32 cavern_challenge_plus_shard_winnings = 18;</code>
            */
           public Builder clearCavernChallengePlusShardWinnings() {
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00010000);
             cavernChallengePlusShardWinnings_ = 0;
             onChanged();
             return this;
@@ -10074,9 +9386,9 @@ public final class S2DotaMatchMetadata {
           private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant> actionsGranted_ =
             java.util.Collections.emptyList();
           private void ensureActionsGrantedIsMutable() {
-            if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+            if (!((bitField0_ & 0x00020000) == 0x00020000)) {
               actionsGranted_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant>(actionsGranted_);
-              bitField0_ |= 0x00040000;
+              bitField0_ |= 0x00020000;
              }
           }
 
@@ -10226,7 +9538,7 @@ public final class S2DotaMatchMetadata {
           public Builder clearActionsGranted() {
             if (actionsGrantedBuilder_ == null) {
               actionsGranted_ = java.util.Collections.emptyList();
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00020000);
               onChanged();
             } else {
               actionsGrantedBuilder_.clear();
@@ -10303,12 +9615,108 @@ public final class S2DotaMatchMetadata {
               actionsGrantedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                   skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.ActionGrantOrBuilder>(
                       actionsGranted_,
-                      ((bitField0_ & 0x00040000) == 0x00040000),
+                      ((bitField0_ & 0x00020000) == 0x00020000),
                       getParentForChildren(),
                       isClean());
               actionsGranted_ = null;
             }
             return actionsGrantedBuilder_;
+          }
+
+          private int cavernCrawlMapVariant_ ;
+          /**
+           * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+           */
+          public boolean hasCavernCrawlMapVariant() {
+            return ((bitField0_ & 0x00040000) == 0x00040000);
+          }
+          /**
+           * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+           */
+          public int getCavernCrawlMapVariant() {
+            return cavernCrawlMapVariant_;
+          }
+          /**
+           * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+           */
+          public Builder setCavernCrawlMapVariant(int value) {
+            bitField0_ |= 0x00040000;
+            cavernCrawlMapVariant_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 cavern_crawl_map_variant = 20;</code>
+           */
+          public Builder clearCavernCrawlMapVariant() {
+            bitField0_ = (bitField0_ & ~0x00040000);
+            cavernCrawlMapVariant_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int teamWagerBonusPct_ ;
+          /**
+           * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+           */
+          public boolean hasTeamWagerBonusPct() {
+            return ((bitField0_ & 0x00080000) == 0x00080000);
+          }
+          /**
+           * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+           */
+          public int getTeamWagerBonusPct() {
+            return teamWagerBonusPct_;
+          }
+          /**
+           * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+           */
+          public Builder setTeamWagerBonusPct(int value) {
+            bitField0_ |= 0x00080000;
+            teamWagerBonusPct_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 team_wager_bonus_pct = 21;</code>
+           */
+          public Builder clearTeamWagerBonusPct() {
+            bitField0_ = (bitField0_ & ~0x00080000);
+            teamWagerBonusPct_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int wagerStreakPct_ ;
+          /**
+           * <code>optional uint32 wager_streak_pct = 22;</code>
+           */
+          public boolean hasWagerStreakPct() {
+            return ((bitField0_ & 0x00100000) == 0x00100000);
+          }
+          /**
+           * <code>optional uint32 wager_streak_pct = 22;</code>
+           */
+          public int getWagerStreakPct() {
+            return wagerStreakPct_;
+          }
+          /**
+           * <code>optional uint32 wager_streak_pct = 22;</code>
+           */
+          public Builder setWagerStreakPct(int value) {
+            bitField0_ |= 0x00100000;
+            wagerStreakPct_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 wager_streak_pct = 22;</code>
+           */
+          public Builder clearWagerStreakPct() {
+            bitField0_ = (bitField0_ & ~0x00100000);
+            wagerStreakPct_ = 0;
+            onChanged();
+            return this;
           }
 
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.EventData)
@@ -10320,6 +9728,559 @@ public final class S2DotaMatchMetadata {
         }
 
         // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.EventData)
+      }
+
+      public interface GauntletProgressOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.GauntletProgress)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 gauntlet_tier = 2;</code>
+         */
+        boolean hasGauntletTier();
+        /**
+         * <code>optional uint32 gauntlet_tier = 2;</code>
+         */
+        int getGauntletTier();
+
+        /**
+         * <code>optional uint32 gauntlet_wins = 3;</code>
+         */
+        boolean hasGauntletWins();
+        /**
+         * <code>optional uint32 gauntlet_wins = 3;</code>
+         */
+        int getGauntletWins();
+
+        /**
+         * <code>optional uint32 gauntlet_losses = 4;</code>
+         */
+        boolean hasGauntletLosses();
+        /**
+         * <code>optional uint32 gauntlet_losses = 4;</code>
+         */
+        int getGauntletLosses();
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.Team.GauntletProgress}
+       */
+      public static final class GauntletProgress extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Team.GauntletProgress)
+          GauntletProgressOrBuilder {
+        // Use GauntletProgress.newBuilder() to construct.
+        private GauntletProgress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private GauntletProgress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final GauntletProgress defaultInstance;
+        public static GauntletProgress getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public GauntletProgress getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private GauntletProgress(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000001;
+                  gauntletTier_ = input.readUInt32();
+                  break;
+                }
+                case 24: {
+                  bitField0_ |= 0x00000002;
+                  gauntletWins_ = input.readUInt32();
+                  break;
+                }
+                case 32: {
+                  bitField0_ |= 0x00000004;
+                  gauntletLosses_ = input.readUInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_GauntletProgress_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<GauntletProgress> PARSER =
+            new com.google.protobuf.AbstractParser<GauntletProgress>() {
+          public GauntletProgress parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new GauntletProgress(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<GauntletProgress> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int GAUNTLET_TIER_FIELD_NUMBER = 2;
+        private int gauntletTier_;
+        /**
+         * <code>optional uint32 gauntlet_tier = 2;</code>
+         */
+        public boolean hasGauntletTier() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 gauntlet_tier = 2;</code>
+         */
+        public int getGauntletTier() {
+          return gauntletTier_;
+        }
+
+        public static final int GAUNTLET_WINS_FIELD_NUMBER = 3;
+        private int gauntletWins_;
+        /**
+         * <code>optional uint32 gauntlet_wins = 3;</code>
+         */
+        public boolean hasGauntletWins() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 gauntlet_wins = 3;</code>
+         */
+        public int getGauntletWins() {
+          return gauntletWins_;
+        }
+
+        public static final int GAUNTLET_LOSSES_FIELD_NUMBER = 4;
+        private int gauntletLosses_;
+        /**
+         * <code>optional uint32 gauntlet_losses = 4;</code>
+         */
+        public boolean hasGauntletLosses() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 gauntlet_losses = 4;</code>
+         */
+        public int getGauntletLosses() {
+          return gauntletLosses_;
+        }
+
+        private void initFields() {
+          gauntletTier_ = 0;
+          gauntletWins_ = 0;
+          gauntletLosses_ = 0;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(2, gauntletTier_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeUInt32(3, gauntletWins_);
+          }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            output.writeUInt32(4, gauntletLosses_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(2, gauntletTier_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(3, gauntletWins_);
+          }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(4, gauntletLosses_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.Team.GauntletProgress}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Team.GauntletProgress)
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_GauntletProgress_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            gauntletTier_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            gauntletWins_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            gauntletLosses_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress getDefaultInstanceForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress build() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress buildPartial() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.gauntletTier_ = gauntletTier_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.gauntletWins_ = gauntletWins_;
+            if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+              to_bitField0_ |= 0x00000004;
+            }
+            result.gauntletLosses_ = gauntletLosses_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress) {
+              return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress other) {
+            if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance()) return this;
+            if (other.hasGauntletTier()) {
+              setGauntletTier(other.getGauntletTier());
+            }
+            if (other.hasGauntletWins()) {
+              setGauntletWins(other.getGauntletWins());
+            }
+            if (other.hasGauntletLosses()) {
+              setGauntletLosses(other.getGauntletLosses());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int gauntletTier_ ;
+          /**
+           * <code>optional uint32 gauntlet_tier = 2;</code>
+           */
+          public boolean hasGauntletTier() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 gauntlet_tier = 2;</code>
+           */
+          public int getGauntletTier() {
+            return gauntletTier_;
+          }
+          /**
+           * <code>optional uint32 gauntlet_tier = 2;</code>
+           */
+          public Builder setGauntletTier(int value) {
+            bitField0_ |= 0x00000001;
+            gauntletTier_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 gauntlet_tier = 2;</code>
+           */
+          public Builder clearGauntletTier() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            gauntletTier_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int gauntletWins_ ;
+          /**
+           * <code>optional uint32 gauntlet_wins = 3;</code>
+           */
+          public boolean hasGauntletWins() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 gauntlet_wins = 3;</code>
+           */
+          public int getGauntletWins() {
+            return gauntletWins_;
+          }
+          /**
+           * <code>optional uint32 gauntlet_wins = 3;</code>
+           */
+          public Builder setGauntletWins(int value) {
+            bitField0_ |= 0x00000002;
+            gauntletWins_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 gauntlet_wins = 3;</code>
+           */
+          public Builder clearGauntletWins() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            gauntletWins_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int gauntletLosses_ ;
+          /**
+           * <code>optional uint32 gauntlet_losses = 4;</code>
+           */
+          public boolean hasGauntletLosses() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 gauntlet_losses = 4;</code>
+           */
+          public int getGauntletLosses() {
+            return gauntletLosses_;
+          }
+          /**
+           * <code>optional uint32 gauntlet_losses = 4;</code>
+           */
+          public Builder setGauntletLosses(int value) {
+            bitField0_ |= 0x00000004;
+            gauntletLosses_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 gauntlet_losses = 4;</code>
+           */
+          public Builder clearGauntletLosses() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            gauntletLosses_ = 0;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.GauntletProgress)
+        }
+
+        static {
+          defaultInstance = new GauntletProgress(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.GauntletProgress)
       }
 
       public interface PlayerOrBuilder extends
@@ -10853,6 +10814,43 @@ public final class S2DotaMatchMetadata {
          * <code>optional .EDOTAMMRBoostType rank_mmr_boost_type = 46 [default = k_EDOTAMMRBoostType_None];</code>
          */
         skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType getRankMmrBoostType();
+
+        /**
+         * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+         */
+        boolean hasGauntletProgress();
+        /**
+         * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress getGauntletProgress();
+        /**
+         * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder getGauntletProgressOrBuilder();
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress> 
+            getContractProgressList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress getContractProgress(int index);
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        int getContractProgressCount();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder> 
+            getContractProgressOrBuilderList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder getContractProgressOrBuilder(
+            int index);
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -11205,6 +11203,27 @@ public final class S2DotaMatchMetadata {
                   }
                   break;
                 }
+                case 378: {
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder subBuilder = null;
+                  if (((bitField1_ & 0x00000002) == 0x00000002)) {
+                    subBuilder = gauntletProgress_.toBuilder();
+                  }
+                  gauntletProgress_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.PARSER, extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(gauntletProgress_);
+                    gauntletProgress_ = subBuilder.buildPartial();
+                  }
+                  bitField1_ |= 0x00000002;
+                  break;
+                }
+                case 386: {
+                  if (!((mutable_bitField1_ & 0x00002000) == 0x00002000)) {
+                    contractProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress>();
+                    mutable_bitField1_ |= 0x00002000;
+                  }
+                  contractProgress_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.PARSER, extensionRegistry));
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11246,6 +11265,9 @@ public final class S2DotaMatchMetadata {
             if (((mutable_bitField0_ & 0x40000000) == 0x40000000)) {
               victoryPrediction_ = java.util.Collections.unmodifiableList(victoryPrediction_);
             }
+            if (((mutable_bitField1_ & 0x00002000) == 0x00002000)) {
+              contractProgress_ = java.util.Collections.unmodifiableList(contractProgress_);
+            }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
@@ -11275,6 +11297,871 @@ public final class S2DotaMatchMetadata {
         @java.lang.Override
         public com.google.protobuf.Parser<Player> getParserForType() {
           return PARSER;
+        }
+
+        public interface ContractProgressOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.Player.ContractProgress)
+            com.google.protobuf.MessageOrBuilder {
+
+          /**
+           * <code>optional uint32 guild_id = 1;</code>
+           */
+          boolean hasGuildId();
+          /**
+           * <code>optional uint32 guild_id = 1;</code>
+           */
+          int getGuildId();
+
+          /**
+           * <code>optional uint32 event_id = 2;</code>
+           */
+          boolean hasEventId();
+          /**
+           * <code>optional uint32 event_id = 2;</code>
+           */
+          int getEventId();
+
+          /**
+           * <code>optional uint32 challenge_instance_id = 3;</code>
+           */
+          boolean hasChallengeInstanceId();
+          /**
+           * <code>optional uint32 challenge_instance_id = 3;</code>
+           */
+          int getChallengeInstanceId();
+
+          /**
+           * <code>optional uint32 challenge_parameter = 4;</code>
+           */
+          boolean hasChallengeParameter();
+          /**
+           * <code>optional uint32 challenge_parameter = 4;</code>
+           */
+          int getChallengeParameter();
+
+          /**
+           * <code>optional uint32 contract_stars = 5;</code>
+           */
+          boolean hasContractStars();
+          /**
+           * <code>optional uint32 contract_stars = 5;</code>
+           */
+          int getContractStars();
+
+          /**
+           * <code>optional uint32 contract_slot = 6;</code>
+           */
+          boolean hasContractSlot();
+          /**
+           * <code>optional uint32 contract_slot = 6;</code>
+           */
+          int getContractSlot();
+
+          /**
+           * <code>optional bool completed = 7;</code>
+           */
+          boolean hasCompleted();
+          /**
+           * <code>optional bool completed = 7;</code>
+           */
+          boolean getCompleted();
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.Team.Player.ContractProgress}
+         */
+        public static final class ContractProgress extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Team.Player.ContractProgress)
+            ContractProgressOrBuilder {
+          // Use ContractProgress.newBuilder() to construct.
+          private ContractProgress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
+          }
+          private ContractProgress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+          private static final ContractProgress defaultInstance;
+          public static ContractProgress getDefaultInstance() {
+            return defaultInstance;
+          }
+
+          public ContractProgress getDefaultInstanceForType() {
+            return defaultInstance;
+          }
+
+          private final com.google.protobuf.UnknownFieldSet unknownFields;
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+              getUnknownFields() {
+            return this.unknownFields;
+          }
+          private ContractProgress(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  default: {
+                    if (!parseUnknownField(input, unknownFields,
+                                           extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                  case 8: {
+                    bitField0_ |= 0x00000001;
+                    guildId_ = input.readUInt32();
+                    break;
+                  }
+                  case 16: {
+                    bitField0_ |= 0x00000002;
+                    eventId_ = input.readUInt32();
+                    break;
+                  }
+                  case 24: {
+                    bitField0_ |= 0x00000004;
+                    challengeInstanceId_ = input.readUInt32();
+                    break;
+                  }
+                  case 32: {
+                    bitField0_ |= 0x00000008;
+                    challengeParameter_ = input.readUInt32();
+                    break;
+                  }
+                  case 40: {
+                    bitField0_ |= 0x00000010;
+                    contractStars_ = input.readUInt32();
+                    break;
+                  }
+                  case 48: {
+                    bitField0_ |= 0x00000020;
+                    contractSlot_ = input.readUInt32();
+                    break;
+                  }
+                  case 56: {
+                    bitField0_ |= 0x00000040;
+                    completed_ = input.readBool();
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder.class);
+          }
+
+          public static com.google.protobuf.Parser<ContractProgress> PARSER =
+              new com.google.protobuf.AbstractParser<ContractProgress>() {
+            public ContractProgress parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new ContractProgress(input, extensionRegistry);
+            }
+          };
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<ContractProgress> getParserForType() {
+            return PARSER;
+          }
+
+          private int bitField0_;
+          public static final int GUILD_ID_FIELD_NUMBER = 1;
+          private int guildId_;
+          /**
+           * <code>optional uint32 guild_id = 1;</code>
+           */
+          public boolean hasGuildId() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 guild_id = 1;</code>
+           */
+          public int getGuildId() {
+            return guildId_;
+          }
+
+          public static final int EVENT_ID_FIELD_NUMBER = 2;
+          private int eventId_;
+          /**
+           * <code>optional uint32 event_id = 2;</code>
+           */
+          public boolean hasEventId() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 event_id = 2;</code>
+           */
+          public int getEventId() {
+            return eventId_;
+          }
+
+          public static final int CHALLENGE_INSTANCE_ID_FIELD_NUMBER = 3;
+          private int challengeInstanceId_;
+          /**
+           * <code>optional uint32 challenge_instance_id = 3;</code>
+           */
+          public boolean hasChallengeInstanceId() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 challenge_instance_id = 3;</code>
+           */
+          public int getChallengeInstanceId() {
+            return challengeInstanceId_;
+          }
+
+          public static final int CHALLENGE_PARAMETER_FIELD_NUMBER = 4;
+          private int challengeParameter_;
+          /**
+           * <code>optional uint32 challenge_parameter = 4;</code>
+           */
+          public boolean hasChallengeParameter() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+          }
+          /**
+           * <code>optional uint32 challenge_parameter = 4;</code>
+           */
+          public int getChallengeParameter() {
+            return challengeParameter_;
+          }
+
+          public static final int CONTRACT_STARS_FIELD_NUMBER = 5;
+          private int contractStars_;
+          /**
+           * <code>optional uint32 contract_stars = 5;</code>
+           */
+          public boolean hasContractStars() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+          }
+          /**
+           * <code>optional uint32 contract_stars = 5;</code>
+           */
+          public int getContractStars() {
+            return contractStars_;
+          }
+
+          public static final int CONTRACT_SLOT_FIELD_NUMBER = 6;
+          private int contractSlot_;
+          /**
+           * <code>optional uint32 contract_slot = 6;</code>
+           */
+          public boolean hasContractSlot() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+          }
+          /**
+           * <code>optional uint32 contract_slot = 6;</code>
+           */
+          public int getContractSlot() {
+            return contractSlot_;
+          }
+
+          public static final int COMPLETED_FIELD_NUMBER = 7;
+          private boolean completed_;
+          /**
+           * <code>optional bool completed = 7;</code>
+           */
+          public boolean hasCompleted() {
+            return ((bitField0_ & 0x00000040) == 0x00000040);
+          }
+          /**
+           * <code>optional bool completed = 7;</code>
+           */
+          public boolean getCompleted() {
+            return completed_;
+          }
+
+          private void initFields() {
+            guildId_ = 0;
+            eventId_ = 0;
+            challengeInstanceId_ = 0;
+            challengeParameter_ = 0;
+            contractStars_ = 0;
+            contractSlot_ = 0;
+            completed_ = false;
+          }
+          private byte memoizedIsInitialized = -1;
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              output.writeUInt32(1, guildId_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              output.writeUInt32(2, eventId_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              output.writeUInt32(3, challengeInstanceId_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              output.writeUInt32(4, challengeParameter_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              output.writeUInt32(5, contractStars_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              output.writeUInt32(6, contractSlot_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+              output.writeBool(7, completed_);
+            }
+            getUnknownFields().writeTo(output);
+          }
+
+          private int memoizedSerializedSize = -1;
+          public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(1, guildId_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(2, eventId_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(3, challengeInstanceId_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(4, challengeParameter_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(5, contractStars_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(6, contractSlot_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeBoolSize(7, completed_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+          }
+
+          private static final long serialVersionUID = 0L;
+          @java.lang.Override
+          protected java.lang.Object writeReplace()
+              throws java.io.ObjectStreamException {
+            return super.writeReplace();
+          }
+
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+          }
+
+          public static Builder newBuilder() { return Builder.create(); }
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress prototype) {
+            return newBuilder().mergeFrom(prototype);
+          }
+          public Builder toBuilder() { return newBuilder(this); }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code CDOTAMatchMetadata.Team.Player.ContractProgress}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Team.Player.ContractProgress)
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder.class);
+            }
+
+            // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+              }
+            }
+            private static Builder create() {
+              return new Builder();
+            }
+
+            public Builder clear() {
+              super.clear();
+              guildId_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              eventId_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              challengeInstanceId_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              challengeParameter_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              contractStars_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              contractSlot_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              completed_ = false;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              return this;
+            }
+
+            public Builder clone() {
+              return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor;
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress getDefaultInstanceForType() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.getDefaultInstance();
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress build() {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress buildPartial() {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress(this);
+              int from_bitField0_ = bitField0_;
+              int to_bitField0_ = 0;
+              if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                to_bitField0_ |= 0x00000001;
+              }
+              result.guildId_ = guildId_;
+              if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                to_bitField0_ |= 0x00000002;
+              }
+              result.eventId_ = eventId_;
+              if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+                to_bitField0_ |= 0x00000004;
+              }
+              result.challengeInstanceId_ = challengeInstanceId_;
+              if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+                to_bitField0_ |= 0x00000008;
+              }
+              result.challengeParameter_ = challengeParameter_;
+              if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                to_bitField0_ |= 0x00000010;
+              }
+              result.contractStars_ = contractStars_;
+              if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+                to_bitField0_ |= 0x00000020;
+              }
+              result.contractSlot_ = contractSlot_;
+              if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+                to_bitField0_ |= 0x00000040;
+              }
+              result.completed_ = completed_;
+              result.bitField0_ = to_bitField0_;
+              onBuilt();
+              return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress) {
+                return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress other) {
+              if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.getDefaultInstance()) return this;
+              if (other.hasGuildId()) {
+                setGuildId(other.getGuildId());
+              }
+              if (other.hasEventId()) {
+                setEventId(other.getEventId());
+              }
+              if (other.hasChallengeInstanceId()) {
+                setChallengeInstanceId(other.getChallengeInstanceId());
+              }
+              if (other.hasChallengeParameter()) {
+                setChallengeParameter(other.getChallengeParameter());
+              }
+              if (other.hasContractStars()) {
+                setContractStars(other.getContractStars());
+              }
+              if (other.hasContractSlot()) {
+                setContractSlot(other.getContractSlot());
+              }
+              if (other.hasCompleted()) {
+                setCompleted(other.getCompleted());
+              }
+              this.mergeUnknownFields(other.getUnknownFields());
+              return this;
+            }
+
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress) e.getUnfinishedMessage();
+                throw e;
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+            private int bitField0_;
+
+            private int guildId_ ;
+            /**
+             * <code>optional uint32 guild_id = 1;</code>
+             */
+            public boolean hasGuildId() {
+              return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+            /**
+             * <code>optional uint32 guild_id = 1;</code>
+             */
+            public int getGuildId() {
+              return guildId_;
+            }
+            /**
+             * <code>optional uint32 guild_id = 1;</code>
+             */
+            public Builder setGuildId(int value) {
+              bitField0_ |= 0x00000001;
+              guildId_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 guild_id = 1;</code>
+             */
+            public Builder clearGuildId() {
+              bitField0_ = (bitField0_ & ~0x00000001);
+              guildId_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int eventId_ ;
+            /**
+             * <code>optional uint32 event_id = 2;</code>
+             */
+            public boolean hasEventId() {
+              return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+            /**
+             * <code>optional uint32 event_id = 2;</code>
+             */
+            public int getEventId() {
+              return eventId_;
+            }
+            /**
+             * <code>optional uint32 event_id = 2;</code>
+             */
+            public Builder setEventId(int value) {
+              bitField0_ |= 0x00000002;
+              eventId_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 event_id = 2;</code>
+             */
+            public Builder clearEventId() {
+              bitField0_ = (bitField0_ & ~0x00000002);
+              eventId_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int challengeInstanceId_ ;
+            /**
+             * <code>optional uint32 challenge_instance_id = 3;</code>
+             */
+            public boolean hasChallengeInstanceId() {
+              return ((bitField0_ & 0x00000004) == 0x00000004);
+            }
+            /**
+             * <code>optional uint32 challenge_instance_id = 3;</code>
+             */
+            public int getChallengeInstanceId() {
+              return challengeInstanceId_;
+            }
+            /**
+             * <code>optional uint32 challenge_instance_id = 3;</code>
+             */
+            public Builder setChallengeInstanceId(int value) {
+              bitField0_ |= 0x00000004;
+              challengeInstanceId_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 challenge_instance_id = 3;</code>
+             */
+            public Builder clearChallengeInstanceId() {
+              bitField0_ = (bitField0_ & ~0x00000004);
+              challengeInstanceId_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int challengeParameter_ ;
+            /**
+             * <code>optional uint32 challenge_parameter = 4;</code>
+             */
+            public boolean hasChallengeParameter() {
+              return ((bitField0_ & 0x00000008) == 0x00000008);
+            }
+            /**
+             * <code>optional uint32 challenge_parameter = 4;</code>
+             */
+            public int getChallengeParameter() {
+              return challengeParameter_;
+            }
+            /**
+             * <code>optional uint32 challenge_parameter = 4;</code>
+             */
+            public Builder setChallengeParameter(int value) {
+              bitField0_ |= 0x00000008;
+              challengeParameter_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 challenge_parameter = 4;</code>
+             */
+            public Builder clearChallengeParameter() {
+              bitField0_ = (bitField0_ & ~0x00000008);
+              challengeParameter_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int contractStars_ ;
+            /**
+             * <code>optional uint32 contract_stars = 5;</code>
+             */
+            public boolean hasContractStars() {
+              return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+            /**
+             * <code>optional uint32 contract_stars = 5;</code>
+             */
+            public int getContractStars() {
+              return contractStars_;
+            }
+            /**
+             * <code>optional uint32 contract_stars = 5;</code>
+             */
+            public Builder setContractStars(int value) {
+              bitField0_ |= 0x00000010;
+              contractStars_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 contract_stars = 5;</code>
+             */
+            public Builder clearContractStars() {
+              bitField0_ = (bitField0_ & ~0x00000010);
+              contractStars_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int contractSlot_ ;
+            /**
+             * <code>optional uint32 contract_slot = 6;</code>
+             */
+            public boolean hasContractSlot() {
+              return ((bitField0_ & 0x00000020) == 0x00000020);
+            }
+            /**
+             * <code>optional uint32 contract_slot = 6;</code>
+             */
+            public int getContractSlot() {
+              return contractSlot_;
+            }
+            /**
+             * <code>optional uint32 contract_slot = 6;</code>
+             */
+            public Builder setContractSlot(int value) {
+              bitField0_ |= 0x00000020;
+              contractSlot_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 contract_slot = 6;</code>
+             */
+            public Builder clearContractSlot() {
+              bitField0_ = (bitField0_ & ~0x00000020);
+              contractSlot_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private boolean completed_ ;
+            /**
+             * <code>optional bool completed = 7;</code>
+             */
+            public boolean hasCompleted() {
+              return ((bitField0_ & 0x00000040) == 0x00000040);
+            }
+            /**
+             * <code>optional bool completed = 7;</code>
+             */
+            public boolean getCompleted() {
+              return completed_;
+            }
+            /**
+             * <code>optional bool completed = 7;</code>
+             */
+            public Builder setCompleted(boolean value) {
+              bitField0_ |= 0x00000040;
+              completed_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional bool completed = 7;</code>
+             */
+            public Builder clearCompleted() {
+              bitField0_ = (bitField0_ & ~0x00000040);
+              completed_ = false;
+              onChanged();
+              return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player.ContractProgress)
+          }
+
+          static {
+            defaultInstance = new ContractProgress(true);
+            defaultInstance.initFields();
+          }
+
+          // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.Player.ContractProgress)
         }
 
         private int bitField0_;
@@ -12120,6 +13007,62 @@ public final class S2DotaMatchMetadata {
           return rankMmrBoostType_;
         }
 
+        public static final int GAUNTLET_PROGRESS_FIELD_NUMBER = 47;
+        private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress gauntletProgress_;
+        /**
+         * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+         */
+        public boolean hasGauntletProgress() {
+          return ((bitField1_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress getGauntletProgress() {
+          return gauntletProgress_;
+        }
+        /**
+         * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder getGauntletProgressOrBuilder() {
+          return gauntletProgress_;
+        }
+
+        public static final int CONTRACT_PROGRESS_FIELD_NUMBER = 48;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress> contractProgress_;
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress> getContractProgressList() {
+          return contractProgress_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder> 
+            getContractProgressOrBuilderList() {
+          return contractProgress_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        public int getContractProgressCount() {
+          return contractProgress_.size();
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress getContractProgress(int index) {
+          return contractProgress_.get(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder getContractProgressOrBuilder(
+            int index) {
+          return contractProgress_.get(index);
+        }
+
         private void initFields() {
           accountId_ = 0;
           abilityUpgrades_ = java.util.Collections.emptyList();
@@ -12165,6 +13108,8 @@ public final class S2DotaMatchMetadata {
           wardsDewarded_ = 0;
           stunDuration_ = 0F;
           rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
+          gauntletProgress_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance();
+          contractProgress_ = java.util.Collections.emptyList();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -12310,6 +13255,12 @@ public final class S2DotaMatchMetadata {
           }
           if (((bitField1_ & 0x00000001) == 0x00000001)) {
             output.writeEnum(46, rankMmrBoostType_.getNumber());
+          }
+          if (((bitField1_ & 0x00000002) == 0x00000002)) {
+            output.writeMessage(47, gauntletProgress_);
+          }
+          for (int i = 0; i < contractProgress_.size(); i++) {
+            output.writeMessage(48, contractProgress_.get(i));
           }
           getUnknownFields().writeTo(output);
         }
@@ -12508,6 +13459,14 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(46, rankMmrBoostType_.getNumber());
           }
+          if (((bitField1_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(47, gauntletProgress_);
+          }
+          for (int i = 0; i < contractProgress_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(48, contractProgress_.get(i));
+          }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
           return size;
@@ -12625,6 +13584,8 @@ public final class S2DotaMatchMetadata {
               getEventDataFieldBuilder();
               getStrangeGemProgressFieldBuilder();
               getVictoryPredictionFieldBuilder();
+              getGauntletProgressFieldBuilder();
+              getContractProgressFieldBuilder();
             }
           }
           private static Builder create() {
@@ -12753,6 +13714,18 @@ public final class S2DotaMatchMetadata {
             bitField1_ = (bitField1_ & ~0x00000400);
             rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
             bitField1_ = (bitField1_ & ~0x00000800);
+            if (gauntletProgressBuilder_ == null) {
+              gauntletProgress_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance();
+            } else {
+              gauntletProgressBuilder_.clear();
+            }
+            bitField1_ = (bitField1_ & ~0x00001000);
+            if (contractProgressBuilder_ == null) {
+              contractProgress_ = java.util.Collections.emptyList();
+              bitField1_ = (bitField1_ & ~0x00002000);
+            } else {
+              contractProgressBuilder_.clear();
+            }
             return this;
           }
 
@@ -13002,6 +13975,23 @@ public final class S2DotaMatchMetadata {
               to_bitField1_ |= 0x00000001;
             }
             result.rankMmrBoostType_ = rankMmrBoostType_;
+            if (((from_bitField1_ & 0x00001000) == 0x00001000)) {
+              to_bitField1_ |= 0x00000002;
+            }
+            if (gauntletProgressBuilder_ == null) {
+              result.gauntletProgress_ = gauntletProgress_;
+            } else {
+              result.gauntletProgress_ = gauntletProgressBuilder_.build();
+            }
+            if (contractProgressBuilder_ == null) {
+              if (((bitField1_ & 0x00002000) == 0x00002000)) {
+                contractProgress_ = java.util.Collections.unmodifiableList(contractProgress_);
+                bitField1_ = (bitField1_ & ~0x00002000);
+              }
+              result.contractProgress_ = contractProgress_;
+            } else {
+              result.contractProgress_ = contractProgressBuilder_.build();
+            }
             result.bitField0_ = to_bitField0_;
             result.bitField1_ = to_bitField1_;
             onBuilt();
@@ -13355,6 +14345,35 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasRankMmrBoostType()) {
               setRankMmrBoostType(other.getRankMmrBoostType());
+            }
+            if (other.hasGauntletProgress()) {
+              mergeGauntletProgress(other.getGauntletProgress());
+            }
+            if (contractProgressBuilder_ == null) {
+              if (!other.contractProgress_.isEmpty()) {
+                if (contractProgress_.isEmpty()) {
+                  contractProgress_ = other.contractProgress_;
+                  bitField1_ = (bitField1_ & ~0x00002000);
+                } else {
+                  ensureContractProgressIsMutable();
+                  contractProgress_.addAll(other.contractProgress_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.contractProgress_.isEmpty()) {
+                if (contractProgressBuilder_.isEmpty()) {
+                  contractProgressBuilder_.dispose();
+                  contractProgressBuilder_ = null;
+                  contractProgress_ = other.contractProgress_;
+                  bitField1_ = (bitField1_ & ~0x00002000);
+                  contractProgressBuilder_ = 
+                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                       getContractProgressFieldBuilder() : null;
+                } else {
+                  contractProgressBuilder_.addAllMessages(other.contractProgress_);
+                }
+              }
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -16561,6 +17580,362 @@ public final class S2DotaMatchMetadata {
             return this;
           }
 
+          private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress gauntletProgress_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance();
+          private com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder> gauntletProgressBuilder_;
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public boolean hasGauntletProgress() {
+            return ((bitField1_ & 0x00001000) == 0x00001000);
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress getGauntletProgress() {
+            if (gauntletProgressBuilder_ == null) {
+              return gauntletProgress_;
+            } else {
+              return gauntletProgressBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public Builder setGauntletProgress(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress value) {
+            if (gauntletProgressBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              gauntletProgress_ = value;
+              onChanged();
+            } else {
+              gauntletProgressBuilder_.setMessage(value);
+            }
+            bitField1_ |= 0x00001000;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public Builder setGauntletProgress(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder builderForValue) {
+            if (gauntletProgressBuilder_ == null) {
+              gauntletProgress_ = builderForValue.build();
+              onChanged();
+            } else {
+              gauntletProgressBuilder_.setMessage(builderForValue.build());
+            }
+            bitField1_ |= 0x00001000;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public Builder mergeGauntletProgress(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress value) {
+            if (gauntletProgressBuilder_ == null) {
+              if (((bitField1_ & 0x00001000) == 0x00001000) &&
+                  gauntletProgress_ != skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance()) {
+                gauntletProgress_ =
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.newBuilder(gauntletProgress_).mergeFrom(value).buildPartial();
+              } else {
+                gauntletProgress_ = value;
+              }
+              onChanged();
+            } else {
+              gauntletProgressBuilder_.mergeFrom(value);
+            }
+            bitField1_ |= 0x00001000;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public Builder clearGauntletProgress() {
+            if (gauntletProgressBuilder_ == null) {
+              gauntletProgress_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance();
+              onChanged();
+            } else {
+              gauntletProgressBuilder_.clear();
+            }
+            bitField1_ = (bitField1_ & ~0x00001000);
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder getGauntletProgressBuilder() {
+            bitField1_ |= 0x00001000;
+            onChanged();
+            return getGauntletProgressFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder getGauntletProgressOrBuilder() {
+            if (gauntletProgressBuilder_ != null) {
+              return gauntletProgressBuilder_.getMessageOrBuilder();
+            } else {
+              return gauntletProgress_;
+            }
+          }
+          /**
+           * <code>optional .CDOTAMatchMetadata.Team.GauntletProgress gauntlet_progress = 47;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder> 
+              getGauntletProgressFieldBuilder() {
+            if (gauntletProgressBuilder_ == null) {
+              gauntletProgressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgressOrBuilder>(
+                      getGauntletProgress(),
+                      getParentForChildren(),
+                      isClean());
+              gauntletProgress_ = null;
+            }
+            return gauntletProgressBuilder_;
+          }
+
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress> contractProgress_ =
+            java.util.Collections.emptyList();
+          private void ensureContractProgressIsMutable() {
+            if (!((bitField1_ & 0x00002000) == 0x00002000)) {
+              contractProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress>(contractProgress_);
+              bitField1_ |= 0x00002000;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder> contractProgressBuilder_;
+
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress> getContractProgressList() {
+            if (contractProgressBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(contractProgress_);
+            } else {
+              return contractProgressBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public int getContractProgressCount() {
+            if (contractProgressBuilder_ == null) {
+              return contractProgress_.size();
+            } else {
+              return contractProgressBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress getContractProgress(int index) {
+            if (contractProgressBuilder_ == null) {
+              return contractProgress_.get(index);
+            } else {
+              return contractProgressBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder setContractProgress(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress value) {
+            if (contractProgressBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureContractProgressIsMutable();
+              contractProgress_.set(index, value);
+              onChanged();
+            } else {
+              contractProgressBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder setContractProgress(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder builderForValue) {
+            if (contractProgressBuilder_ == null) {
+              ensureContractProgressIsMutable();
+              contractProgress_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              contractProgressBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder addContractProgress(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress value) {
+            if (contractProgressBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureContractProgressIsMutable();
+              contractProgress_.add(value);
+              onChanged();
+            } else {
+              contractProgressBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder addContractProgress(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress value) {
+            if (contractProgressBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureContractProgressIsMutable();
+              contractProgress_.add(index, value);
+              onChanged();
+            } else {
+              contractProgressBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder addContractProgress(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder builderForValue) {
+            if (contractProgressBuilder_ == null) {
+              ensureContractProgressIsMutable();
+              contractProgress_.add(builderForValue.build());
+              onChanged();
+            } else {
+              contractProgressBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder addContractProgress(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder builderForValue) {
+            if (contractProgressBuilder_ == null) {
+              ensureContractProgressIsMutable();
+              contractProgress_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              contractProgressBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder addAllContractProgress(
+              java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress> values) {
+            if (contractProgressBuilder_ == null) {
+              ensureContractProgressIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, contractProgress_);
+              onChanged();
+            } else {
+              contractProgressBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder clearContractProgress() {
+            if (contractProgressBuilder_ == null) {
+              contractProgress_ = java.util.Collections.emptyList();
+              bitField1_ = (bitField1_ & ~0x00002000);
+              onChanged();
+            } else {
+              contractProgressBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public Builder removeContractProgress(int index) {
+            if (contractProgressBuilder_ == null) {
+              ensureContractProgressIsMutable();
+              contractProgress_.remove(index);
+              onChanged();
+            } else {
+              contractProgressBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder getContractProgressBuilder(
+              int index) {
+            return getContractProgressFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder getContractProgressOrBuilder(
+              int index) {
+            if (contractProgressBuilder_ == null) {
+              return contractProgress_.get(index);  } else {
+              return contractProgressBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder> 
+               getContractProgressOrBuilderList() {
+            if (contractProgressBuilder_ != null) {
+              return contractProgressBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(contractProgress_);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder addContractProgressBuilder() {
+            return getContractProgressFieldBuilder().addBuilder(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder addContractProgressBuilder(
+              int index) {
+            return getContractProgressFieldBuilder().addBuilder(
+                index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.Player.ContractProgress contract_progress = 48;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder> 
+               getContractProgressBuilderList() {
+            return getContractProgressFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder> 
+              getContractProgressFieldBuilder() {
+            if (contractProgressBuilder_ == null) {
+              contractProgressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder>(
+                      contractProgress_,
+                      ((bitField1_ & 0x00002000) == 0x00002000),
+                      getParentForChildren(),
+                      isClean());
+              contractProgress_ = null;
+            }
+            return contractProgressBuilder_;
+          }
+
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player)
         }
 
@@ -17958,6 +19333,1715 @@ public final class S2DotaMatchMetadata {
       // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team)
     }
 
+    public interface GuildChallengeProgressOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.GuildChallengeProgress)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 guild_id = 1;</code>
+       */
+      boolean hasGuildId();
+      /**
+       * <code>optional uint32 guild_id = 1;</code>
+       */
+      int getGuildId();
+
+      /**
+       * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+       */
+      boolean hasEventId();
+      /**
+       * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId();
+
+      /**
+       * <code>optional uint32 challenge_instance_id = 3;</code>
+       */
+      boolean hasChallengeInstanceId();
+      /**
+       * <code>optional uint32 challenge_instance_id = 3;</code>
+       */
+      int getChallengeInstanceId();
+
+      /**
+       * <code>optional uint32 challenge_parameter = 4;</code>
+       */
+      boolean hasChallengeParameter();
+      /**
+       * <code>optional uint32 challenge_parameter = 4;</code>
+       */
+      int getChallengeParameter();
+
+      /**
+       * <code>optional uint32 challenge_timestamp = 5;</code>
+       */
+      boolean hasChallengeTimestamp();
+      /**
+       * <code>optional uint32 challenge_timestamp = 5;</code>
+       */
+      int getChallengeTimestamp();
+
+      /**
+       * <code>optional uint32 challenge_progress_at_start = 6;</code>
+       */
+      boolean hasChallengeProgressAtStart();
+      /**
+       * <code>optional uint32 challenge_progress_at_start = 6;</code>
+       */
+      int getChallengeProgressAtStart();
+
+      /**
+       * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+       */
+      boolean hasChallengeProgressAccumulated();
+      /**
+       * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+       */
+      int getChallengeProgressAccumulated();
+
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress> 
+          getIndividualProgressList();
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress getIndividualProgress(int index);
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      int getIndividualProgressCount();
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder> 
+          getIndividualProgressOrBuilderList();
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder getIndividualProgressOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code CDOTAMatchMetadata.GuildChallengeProgress}
+     */
+    public static final class GuildChallengeProgress extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.GuildChallengeProgress)
+        GuildChallengeProgressOrBuilder {
+      // Use GuildChallengeProgress.newBuilder() to construct.
+      private GuildChallengeProgress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private GuildChallengeProgress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final GuildChallengeProgress defaultInstance;
+      public static GuildChallengeProgress getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public GuildChallengeProgress getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private GuildChallengeProgress(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                guildId_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                int rawValue = input.readEnum();
+                skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent value = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(2, rawValue);
+                } else {
+                  bitField0_ |= 0x00000002;
+                  eventId_ = value;
+                }
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                challengeInstanceId_ = input.readUInt32();
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000008;
+                challengeParameter_ = input.readUInt32();
+                break;
+              }
+              case 40: {
+                bitField0_ |= 0x00000010;
+                challengeTimestamp_ = input.readUInt32();
+                break;
+              }
+              case 48: {
+                bitField0_ |= 0x00000020;
+                challengeProgressAtStart_ = input.readUInt32();
+                break;
+              }
+              case 56: {
+                bitField0_ |= 0x00000040;
+                challengeProgressAccumulated_ = input.readUInt32();
+                break;
+              }
+              case 66: {
+                if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                  individualProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress>();
+                  mutable_bitField0_ |= 0x00000080;
+                }
+                individualProgress_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.PARSER, extensionRegistry));
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+            individualProgress_ = java.util.Collections.unmodifiableList(individualProgress_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<GuildChallengeProgress> PARSER =
+          new com.google.protobuf.AbstractParser<GuildChallengeProgress>() {
+        public GuildChallengeProgress parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new GuildChallengeProgress(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<GuildChallengeProgress> getParserForType() {
+        return PARSER;
+      }
+
+      public interface IndividualProgressOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 account_id = 1;</code>
+         */
+        boolean hasAccountId();
+        /**
+         * <code>optional uint32 account_id = 1;</code>
+         */
+        int getAccountId();
+
+        /**
+         * <code>optional uint32 progress = 2;</code>
+         */
+        boolean hasProgress();
+        /**
+         * <code>optional uint32 progress = 2;</code>
+         */
+        int getProgress();
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress}
+       */
+      public static final class IndividualProgress extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress)
+          IndividualProgressOrBuilder {
+        // Use IndividualProgress.newBuilder() to construct.
+        private IndividualProgress(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private IndividualProgress(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final IndividualProgress defaultInstance;
+        public static IndividualProgress getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public IndividualProgress getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private IndividualProgress(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  accountId_ = input.readUInt32();
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000002;
+                  progress_ = input.readUInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<IndividualProgress> PARSER =
+            new com.google.protobuf.AbstractParser<IndividualProgress>() {
+          public IndividualProgress parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new IndividualProgress(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<IndividualProgress> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
+        private int accountId_;
+        /**
+         * <code>optional uint32 account_id = 1;</code>
+         */
+        public boolean hasAccountId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 account_id = 1;</code>
+         */
+        public int getAccountId() {
+          return accountId_;
+        }
+
+        public static final int PROGRESS_FIELD_NUMBER = 2;
+        private int progress_;
+        /**
+         * <code>optional uint32 progress = 2;</code>
+         */
+        public boolean hasProgress() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 progress = 2;</code>
+         */
+        public int getProgress() {
+          return progress_;
+        }
+
+        private void initFields() {
+          accountId_ = 0;
+          progress_ = 0;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(1, accountId_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeUInt32(2, progress_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, accountId_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(2, progress_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress)
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            accountId_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            progress_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress getDefaultInstanceForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress build() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress buildPartial() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.accountId_ = accountId_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.progress_ = progress_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress) {
+              return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress other) {
+            if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.getDefaultInstance()) return this;
+            if (other.hasAccountId()) {
+              setAccountId(other.getAccountId());
+            }
+            if (other.hasProgress()) {
+              setProgress(other.getProgress());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int accountId_ ;
+          /**
+           * <code>optional uint32 account_id = 1;</code>
+           */
+          public boolean hasAccountId() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 account_id = 1;</code>
+           */
+          public int getAccountId() {
+            return accountId_;
+          }
+          /**
+           * <code>optional uint32 account_id = 1;</code>
+           */
+          public Builder setAccountId(int value) {
+            bitField0_ |= 0x00000001;
+            accountId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 account_id = 1;</code>
+           */
+          public Builder clearAccountId() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            accountId_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int progress_ ;
+          /**
+           * <code>optional uint32 progress = 2;</code>
+           */
+          public boolean hasProgress() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 progress = 2;</code>
+           */
+          public int getProgress() {
+            return progress_;
+          }
+          /**
+           * <code>optional uint32 progress = 2;</code>
+           */
+          public Builder setProgress(int value) {
+            bitField0_ |= 0x00000002;
+            progress_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 progress = 2;</code>
+           */
+          public Builder clearProgress() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            progress_ = 0;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress)
+        }
+
+        static {
+          defaultInstance = new IndividualProgress(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress)
+      }
+
+      private int bitField0_;
+      public static final int GUILD_ID_FIELD_NUMBER = 1;
+      private int guildId_;
+      /**
+       * <code>optional uint32 guild_id = 1;</code>
+       */
+      public boolean hasGuildId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 guild_id = 1;</code>
+       */
+      public int getGuildId() {
+        return guildId_;
+      }
+
+      public static final int EVENT_ID_FIELD_NUMBER = 2;
+      private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent eventId_;
+      /**
+       * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+       */
+      public boolean hasEventId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId() {
+        return eventId_;
+      }
+
+      public static final int CHALLENGE_INSTANCE_ID_FIELD_NUMBER = 3;
+      private int challengeInstanceId_;
+      /**
+       * <code>optional uint32 challenge_instance_id = 3;</code>
+       */
+      public boolean hasChallengeInstanceId() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 challenge_instance_id = 3;</code>
+       */
+      public int getChallengeInstanceId() {
+        return challengeInstanceId_;
+      }
+
+      public static final int CHALLENGE_PARAMETER_FIELD_NUMBER = 4;
+      private int challengeParameter_;
+      /**
+       * <code>optional uint32 challenge_parameter = 4;</code>
+       */
+      public boolean hasChallengeParameter() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional uint32 challenge_parameter = 4;</code>
+       */
+      public int getChallengeParameter() {
+        return challengeParameter_;
+      }
+
+      public static final int CHALLENGE_TIMESTAMP_FIELD_NUMBER = 5;
+      private int challengeTimestamp_;
+      /**
+       * <code>optional uint32 challenge_timestamp = 5;</code>
+       */
+      public boolean hasChallengeTimestamp() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional uint32 challenge_timestamp = 5;</code>
+       */
+      public int getChallengeTimestamp() {
+        return challengeTimestamp_;
+      }
+
+      public static final int CHALLENGE_PROGRESS_AT_START_FIELD_NUMBER = 6;
+      private int challengeProgressAtStart_;
+      /**
+       * <code>optional uint32 challenge_progress_at_start = 6;</code>
+       */
+      public boolean hasChallengeProgressAtStart() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional uint32 challenge_progress_at_start = 6;</code>
+       */
+      public int getChallengeProgressAtStart() {
+        return challengeProgressAtStart_;
+      }
+
+      public static final int CHALLENGE_PROGRESS_ACCUMULATED_FIELD_NUMBER = 7;
+      private int challengeProgressAccumulated_;
+      /**
+       * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+       */
+      public boolean hasChallengeProgressAccumulated() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+       */
+      public int getChallengeProgressAccumulated() {
+        return challengeProgressAccumulated_;
+      }
+
+      public static final int INDIVIDUAL_PROGRESS_FIELD_NUMBER = 8;
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress> individualProgress_;
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress> getIndividualProgressList() {
+        return individualProgress_;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder> 
+          getIndividualProgressOrBuilderList() {
+        return individualProgress_;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      public int getIndividualProgressCount() {
+        return individualProgress_.size();
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress getIndividualProgress(int index) {
+        return individualProgress_.get(index);
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder getIndividualProgressOrBuilder(
+          int index) {
+        return individualProgress_.get(index);
+      }
+
+      private void initFields() {
+        guildId_ = 0;
+        eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+        challengeInstanceId_ = 0;
+        challengeParameter_ = 0;
+        challengeTimestamp_ = 0;
+        challengeProgressAtStart_ = 0;
+        challengeProgressAccumulated_ = 0;
+        individualProgress_ = java.util.Collections.emptyList();
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeUInt32(1, guildId_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeEnum(2, eventId_.getNumber());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeUInt32(3, challengeInstanceId_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeUInt32(4, challengeParameter_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeUInt32(5, challengeTimestamp_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          output.writeUInt32(6, challengeProgressAtStart_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeUInt32(7, challengeProgressAccumulated_);
+        }
+        for (int i = 0; i < individualProgress_.size(); i++) {
+          output.writeMessage(8, individualProgress_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, guildId_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(2, eventId_.getNumber());
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, challengeInstanceId_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(4, challengeParameter_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(5, challengeTimestamp_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(6, challengeProgressAtStart_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(7, challengeProgressAccumulated_);
+        }
+        for (int i = 0; i < individualProgress_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(8, individualProgress_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.GuildChallengeProgress}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.GuildChallengeProgress)
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getIndividualProgressFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          guildId_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          challengeInstanceId_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          challengeParameter_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          challengeTimestamp_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          challengeProgressAtStart_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000020);
+          challengeProgressAccumulated_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000040);
+          if (individualProgressBuilder_ == null) {
+            individualProgress_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            individualProgressBuilder_.clear();
+          }
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress getDefaultInstanceForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress build() {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress buildPartial() {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.guildId_ = guildId_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.eventId_ = eventId_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.challengeInstanceId_ = challengeInstanceId_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.challengeParameter_ = challengeParameter_;
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          result.challengeTimestamp_ = challengeTimestamp_;
+          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+            to_bitField0_ |= 0x00000020;
+          }
+          result.challengeProgressAtStart_ = challengeProgressAtStart_;
+          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+            to_bitField0_ |= 0x00000040;
+          }
+          result.challengeProgressAccumulated_ = challengeProgressAccumulated_;
+          if (individualProgressBuilder_ == null) {
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
+              individualProgress_ = java.util.Collections.unmodifiableList(individualProgress_);
+              bitField0_ = (bitField0_ & ~0x00000080);
+            }
+            result.individualProgress_ = individualProgress_;
+          } else {
+            result.individualProgress_ = individualProgressBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress) {
+            return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress other) {
+          if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.getDefaultInstance()) return this;
+          if (other.hasGuildId()) {
+            setGuildId(other.getGuildId());
+          }
+          if (other.hasEventId()) {
+            setEventId(other.getEventId());
+          }
+          if (other.hasChallengeInstanceId()) {
+            setChallengeInstanceId(other.getChallengeInstanceId());
+          }
+          if (other.hasChallengeParameter()) {
+            setChallengeParameter(other.getChallengeParameter());
+          }
+          if (other.hasChallengeTimestamp()) {
+            setChallengeTimestamp(other.getChallengeTimestamp());
+          }
+          if (other.hasChallengeProgressAtStart()) {
+            setChallengeProgressAtStart(other.getChallengeProgressAtStart());
+          }
+          if (other.hasChallengeProgressAccumulated()) {
+            setChallengeProgressAccumulated(other.getChallengeProgressAccumulated());
+          }
+          if (individualProgressBuilder_ == null) {
+            if (!other.individualProgress_.isEmpty()) {
+              if (individualProgress_.isEmpty()) {
+                individualProgress_ = other.individualProgress_;
+                bitField0_ = (bitField0_ & ~0x00000080);
+              } else {
+                ensureIndividualProgressIsMutable();
+                individualProgress_.addAll(other.individualProgress_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.individualProgress_.isEmpty()) {
+              if (individualProgressBuilder_.isEmpty()) {
+                individualProgressBuilder_.dispose();
+                individualProgressBuilder_ = null;
+                individualProgress_ = other.individualProgress_;
+                bitField0_ = (bitField0_ & ~0x00000080);
+                individualProgressBuilder_ = 
+                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                     getIndividualProgressFieldBuilder() : null;
+              } else {
+                individualProgressBuilder_.addAllMessages(other.individualProgress_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int guildId_ ;
+        /**
+         * <code>optional uint32 guild_id = 1;</code>
+         */
+        public boolean hasGuildId() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 guild_id = 1;</code>
+         */
+        public int getGuildId() {
+          return guildId_;
+        }
+        /**
+         * <code>optional uint32 guild_id = 1;</code>
+         */
+        public Builder setGuildId(int value) {
+          bitField0_ |= 0x00000001;
+          guildId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 guild_id = 1;</code>
+         */
+        public Builder clearGuildId() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          guildId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+        /**
+         * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+         */
+        public boolean hasEventId() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId() {
+          return eventId_;
+        }
+        /**
+         * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+         */
+        public Builder setEventId(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000002;
+          eventId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .EEvent event_id = 2 [default = EVENT_ID_NONE];</code>
+         */
+        public Builder clearEventId() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+          onChanged();
+          return this;
+        }
+
+        private int challengeInstanceId_ ;
+        /**
+         * <code>optional uint32 challenge_instance_id = 3;</code>
+         */
+        public boolean hasChallengeInstanceId() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 challenge_instance_id = 3;</code>
+         */
+        public int getChallengeInstanceId() {
+          return challengeInstanceId_;
+        }
+        /**
+         * <code>optional uint32 challenge_instance_id = 3;</code>
+         */
+        public Builder setChallengeInstanceId(int value) {
+          bitField0_ |= 0x00000004;
+          challengeInstanceId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 challenge_instance_id = 3;</code>
+         */
+        public Builder clearChallengeInstanceId() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          challengeInstanceId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int challengeParameter_ ;
+        /**
+         * <code>optional uint32 challenge_parameter = 4;</code>
+         */
+        public boolean hasChallengeParameter() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional uint32 challenge_parameter = 4;</code>
+         */
+        public int getChallengeParameter() {
+          return challengeParameter_;
+        }
+        /**
+         * <code>optional uint32 challenge_parameter = 4;</code>
+         */
+        public Builder setChallengeParameter(int value) {
+          bitField0_ |= 0x00000008;
+          challengeParameter_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 challenge_parameter = 4;</code>
+         */
+        public Builder clearChallengeParameter() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          challengeParameter_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int challengeTimestamp_ ;
+        /**
+         * <code>optional uint32 challenge_timestamp = 5;</code>
+         */
+        public boolean hasChallengeTimestamp() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional uint32 challenge_timestamp = 5;</code>
+         */
+        public int getChallengeTimestamp() {
+          return challengeTimestamp_;
+        }
+        /**
+         * <code>optional uint32 challenge_timestamp = 5;</code>
+         */
+        public Builder setChallengeTimestamp(int value) {
+          bitField0_ |= 0x00000010;
+          challengeTimestamp_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 challenge_timestamp = 5;</code>
+         */
+        public Builder clearChallengeTimestamp() {
+          bitField0_ = (bitField0_ & ~0x00000010);
+          challengeTimestamp_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int challengeProgressAtStart_ ;
+        /**
+         * <code>optional uint32 challenge_progress_at_start = 6;</code>
+         */
+        public boolean hasChallengeProgressAtStart() {
+          return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional uint32 challenge_progress_at_start = 6;</code>
+         */
+        public int getChallengeProgressAtStart() {
+          return challengeProgressAtStart_;
+        }
+        /**
+         * <code>optional uint32 challenge_progress_at_start = 6;</code>
+         */
+        public Builder setChallengeProgressAtStart(int value) {
+          bitField0_ |= 0x00000020;
+          challengeProgressAtStart_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 challenge_progress_at_start = 6;</code>
+         */
+        public Builder clearChallengeProgressAtStart() {
+          bitField0_ = (bitField0_ & ~0x00000020);
+          challengeProgressAtStart_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int challengeProgressAccumulated_ ;
+        /**
+         * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+         */
+        public boolean hasChallengeProgressAccumulated() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+         */
+        public int getChallengeProgressAccumulated() {
+          return challengeProgressAccumulated_;
+        }
+        /**
+         * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+         */
+        public Builder setChallengeProgressAccumulated(int value) {
+          bitField0_ |= 0x00000040;
+          challengeProgressAccumulated_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 challenge_progress_accumulated = 7;</code>
+         */
+        public Builder clearChallengeProgressAccumulated() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          challengeProgressAccumulated_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress> individualProgress_ =
+          java.util.Collections.emptyList();
+        private void ensureIndividualProgressIsMutable() {
+          if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+            individualProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress>(individualProgress_);
+            bitField0_ |= 0x00000080;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder> individualProgressBuilder_;
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress> getIndividualProgressList() {
+          if (individualProgressBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(individualProgress_);
+          } else {
+            return individualProgressBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public int getIndividualProgressCount() {
+          if (individualProgressBuilder_ == null) {
+            return individualProgress_.size();
+          } else {
+            return individualProgressBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress getIndividualProgress(int index) {
+          if (individualProgressBuilder_ == null) {
+            return individualProgress_.get(index);
+          } else {
+            return individualProgressBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder setIndividualProgress(
+            int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress value) {
+          if (individualProgressBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureIndividualProgressIsMutable();
+            individualProgress_.set(index, value);
+            onChanged();
+          } else {
+            individualProgressBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder setIndividualProgress(
+            int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder builderForValue) {
+          if (individualProgressBuilder_ == null) {
+            ensureIndividualProgressIsMutable();
+            individualProgress_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            individualProgressBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder addIndividualProgress(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress value) {
+          if (individualProgressBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureIndividualProgressIsMutable();
+            individualProgress_.add(value);
+            onChanged();
+          } else {
+            individualProgressBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder addIndividualProgress(
+            int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress value) {
+          if (individualProgressBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureIndividualProgressIsMutable();
+            individualProgress_.add(index, value);
+            onChanged();
+          } else {
+            individualProgressBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder addIndividualProgress(
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder builderForValue) {
+          if (individualProgressBuilder_ == null) {
+            ensureIndividualProgressIsMutable();
+            individualProgress_.add(builderForValue.build());
+            onChanged();
+          } else {
+            individualProgressBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder addIndividualProgress(
+            int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder builderForValue) {
+          if (individualProgressBuilder_ == null) {
+            ensureIndividualProgressIsMutable();
+            individualProgress_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            individualProgressBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder addAllIndividualProgress(
+            java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress> values) {
+          if (individualProgressBuilder_ == null) {
+            ensureIndividualProgressIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, individualProgress_);
+            onChanged();
+          } else {
+            individualProgressBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder clearIndividualProgress() {
+          if (individualProgressBuilder_ == null) {
+            individualProgress_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000080);
+            onChanged();
+          } else {
+            individualProgressBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public Builder removeIndividualProgress(int index) {
+          if (individualProgressBuilder_ == null) {
+            ensureIndividualProgressIsMutable();
+            individualProgress_.remove(index);
+            onChanged();
+          } else {
+            individualProgressBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder getIndividualProgressBuilder(
+            int index) {
+          return getIndividualProgressFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder getIndividualProgressOrBuilder(
+            int index) {
+          if (individualProgressBuilder_ == null) {
+            return individualProgress_.get(index);  } else {
+            return individualProgressBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder> 
+             getIndividualProgressOrBuilderList() {
+          if (individualProgressBuilder_ != null) {
+            return individualProgressBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(individualProgress_);
+          }
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder addIndividualProgressBuilder() {
+          return getIndividualProgressFieldBuilder().addBuilder(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder addIndividualProgressBuilder(
+            int index) {
+          return getIndividualProgressFieldBuilder().addBuilder(
+              index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress individual_progress = 8;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder> 
+             getIndividualProgressBuilderList() {
+          return getIndividualProgressFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder> 
+            getIndividualProgressFieldBuilder() {
+          if (individualProgressBuilder_ == null) {
+            individualProgressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgressOrBuilder>(
+                    individualProgress_,
+                    ((bitField0_ & 0x00000080) == 0x00000080),
+                    getParentForChildren(),
+                    isClean());
+            individualProgress_ = null;
+          }
+          return individualProgressBuilder_;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.GuildChallengeProgress)
+      }
+
+      static {
+        defaultInstance = new GuildChallengeProgress(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.GuildChallengeProgress)
+    }
+
     private int bitField0_;
     public static final int TEAMS_FIELD_NUMBER = 1;
     private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team> teams_;
@@ -17995,17 +21079,17 @@ public final class S2DotaMatchMetadata {
     }
 
     public static final int ITEM_REWARDS_FIELD_NUMBER = 2;
-    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails> itemRewards_;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails> itemRewards_;
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails> getItemRewardsList() {
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails> getItemRewardsList() {
       return itemRewards_;
     }
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder> 
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder> 
         getItemRewardsOrBuilderList() {
       return itemRewards_;
     }
@@ -18018,13 +21102,13 @@ public final class S2DotaMatchMetadata {
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails getItemRewards(int index) {
+    public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails getItemRewards(int index) {
       return itemRewards_.get(index);
     }
     /**
      * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder getItemRewardsOrBuilder(
+    public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder getItemRewardsOrBuilder(
         int index) {
       return itemRewards_.get(index);
     }
@@ -18125,7 +21209,7 @@ public final class S2DotaMatchMetadata {
     }
 
     public static final int MATCHMAKING_STATS_FIELD_NUMBER = 8;
-    private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats matchmakingStats_;
+    private skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats matchmakingStats_;
     /**
      * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
      */
@@ -18135,14 +21219,70 @@ public final class S2DotaMatchMetadata {
     /**
      * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getMatchmakingStats() {
+    public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats getMatchmakingStats() {
       return matchmakingStats_;
     }
     /**
      * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder() {
+    public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder() {
       return matchmakingStats_;
+    }
+
+    public static final int MVP_DATA_FIELD_NUMBER = 9;
+    private skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData mvpData_;
+    /**
+     * <code>optional .CMvpData mvp_data = 9;</code>
+     */
+    public boolean hasMvpData() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .CMvpData mvp_data = 9;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData getMvpData() {
+      return mvpData_;
+    }
+    /**
+     * <code>optional .CMvpData mvp_data = 9;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpDataOrBuilder getMvpDataOrBuilder() {
+      return mvpData_;
+    }
+
+    public static final int GUILD_CHALLENGE_PROGRESS_FIELD_NUMBER = 10;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress> guildChallengeProgress_;
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress> getGuildChallengeProgressList() {
+      return guildChallengeProgress_;
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder> 
+        getGuildChallengeProgressOrBuilderList() {
+      return guildChallengeProgress_;
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    public int getGuildChallengeProgressCount() {
+      return guildChallengeProgress_.size();
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress getGuildChallengeProgress(int index) {
+      return guildChallengeProgress_.get(index);
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder getGuildChallengeProgressOrBuilder(
+        int index) {
+      return guildChallengeProgress_.get(index);
     }
 
     private void initFields() {
@@ -18153,7 +21293,9 @@ public final class S2DotaMatchMetadata {
       eventGameCustomTable_ = com.google.protobuf.ByteString.EMPTY;
       primaryEventId_ = 0;
       matchTips_ = java.util.Collections.emptyList();
-      matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+      matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
+      mvpData_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.getDefaultInstance();
+      guildChallengeProgress_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -18191,6 +21333,12 @@ public final class S2DotaMatchMetadata {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeMessage(8, matchmakingStats_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(9, mvpData_);
+      }
+      for (int i = 0; i < guildChallengeProgress_.size(); i++) {
+        output.writeMessage(10, guildChallengeProgress_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -18232,6 +21380,14 @@ public final class S2DotaMatchMetadata {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, matchmakingStats_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, mvpData_);
+      }
+      for (int i = 0; i < guildChallengeProgress_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, guildChallengeProgress_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -18346,6 +21502,8 @@ public final class S2DotaMatchMetadata {
           getItemRewardsFieldBuilder();
           getMatchTipsFieldBuilder();
           getMatchmakingStatsFieldBuilder();
+          getMvpDataFieldBuilder();
+          getGuildChallengeProgressFieldBuilder();
         }
       }
       private static Builder create() {
@@ -18381,11 +21539,23 @@ public final class S2DotaMatchMetadata {
           matchTipsBuilder_.clear();
         }
         if (matchmakingStatsBuilder_ == null) {
-          matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+          matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
         } else {
           matchmakingStatsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000080);
+        if (mvpDataBuilder_ == null) {
+          mvpData_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.getDefaultInstance();
+        } else {
+          mvpDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        if (guildChallengeProgressBuilder_ == null) {
+          guildChallengeProgress_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+        } else {
+          guildChallengeProgressBuilder_.clear();
+        }
         return this;
       }
 
@@ -18464,6 +21634,23 @@ public final class S2DotaMatchMetadata {
           result.matchmakingStats_ = matchmakingStats_;
         } else {
           result.matchmakingStats_ = matchmakingStatsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (mvpDataBuilder_ == null) {
+          result.mvpData_ = mvpData_;
+        } else {
+          result.mvpData_ = mvpDataBuilder_.build();
+        }
+        if (guildChallengeProgressBuilder_ == null) {
+          if (((bitField0_ & 0x00000200) == 0x00000200)) {
+            guildChallengeProgress_ = java.util.Collections.unmodifiableList(guildChallengeProgress_);
+            bitField0_ = (bitField0_ & ~0x00000200);
+          }
+          result.guildChallengeProgress_ = guildChallengeProgress_;
+        } else {
+          result.guildChallengeProgress_ = guildChallengeProgressBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -18573,6 +21760,35 @@ public final class S2DotaMatchMetadata {
         }
         if (other.hasMatchmakingStats()) {
           mergeMatchmakingStats(other.getMatchmakingStats());
+        }
+        if (other.hasMvpData()) {
+          mergeMvpData(other.getMvpData());
+        }
+        if (guildChallengeProgressBuilder_ == null) {
+          if (!other.guildChallengeProgress_.isEmpty()) {
+            if (guildChallengeProgress_.isEmpty()) {
+              guildChallengeProgress_ = other.guildChallengeProgress_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+            } else {
+              ensureGuildChallengeProgressIsMutable();
+              guildChallengeProgress_.addAll(other.guildChallengeProgress_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.guildChallengeProgress_.isEmpty()) {
+            if (guildChallengeProgressBuilder_.isEmpty()) {
+              guildChallengeProgressBuilder_.dispose();
+              guildChallengeProgressBuilder_ = null;
+              guildChallengeProgress_ = other.guildChallengeProgress_;
+              bitField0_ = (bitField0_ & ~0x00000200);
+              guildChallengeProgressBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getGuildChallengeProgressFieldBuilder() : null;
+            } else {
+              guildChallengeProgressBuilder_.addAllMessages(other.guildChallengeProgress_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -18841,22 +22057,22 @@ public final class S2DotaMatchMetadata {
         return teamsBuilder_;
       }
 
-      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails> itemRewards_ =
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails> itemRewards_ =
         java.util.Collections.emptyList();
       private void ensureItemRewardsIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          itemRewards_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails>(itemRewards_);
+          itemRewards_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails>(itemRewards_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder> itemRewardsBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder> itemRewardsBuilder_;
 
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails> getItemRewardsList() {
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails> getItemRewardsList() {
         if (itemRewardsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(itemRewards_);
         } else {
@@ -18876,7 +22092,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails getItemRewards(int index) {
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails getItemRewards(int index) {
         if (itemRewardsBuilder_ == null) {
           return itemRewards_.get(index);
         } else {
@@ -18887,7 +22103,7 @@ public final class S2DotaMatchMetadata {
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
       public Builder setItemRewards(
-          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails value) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails value) {
         if (itemRewardsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18904,7 +22120,7 @@ public final class S2DotaMatchMetadata {
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
       public Builder setItemRewards(
-          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder builderForValue) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder builderForValue) {
         if (itemRewardsBuilder_ == null) {
           ensureItemRewardsIsMutable();
           itemRewards_.set(index, builderForValue.build());
@@ -18917,7 +22133,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public Builder addItemRewards(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails value) {
+      public Builder addItemRewards(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails value) {
         if (itemRewardsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18934,7 +22150,7 @@ public final class S2DotaMatchMetadata {
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
       public Builder addItemRewards(
-          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails value) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails value) {
         if (itemRewardsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -18951,7 +22167,7 @@ public final class S2DotaMatchMetadata {
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
       public Builder addItemRewards(
-          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder builderForValue) {
         if (itemRewardsBuilder_ == null) {
           ensureItemRewardsIsMutable();
           itemRewards_.add(builderForValue.build());
@@ -18965,7 +22181,7 @@ public final class S2DotaMatchMetadata {
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
       public Builder addItemRewards(
-          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder builderForValue) {
+          int index, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder builderForValue) {
         if (itemRewardsBuilder_ == null) {
           ensureItemRewardsIsMutable();
           itemRewards_.add(index, builderForValue.build());
@@ -18979,7 +22195,7 @@ public final class S2DotaMatchMetadata {
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
       public Builder addAllItemRewards(
-          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails> values) {
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails> values) {
         if (itemRewardsBuilder_ == null) {
           ensureItemRewardsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -19019,14 +22235,14 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder getItemRewardsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder getItemRewardsBuilder(
           int index) {
         return getItemRewardsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder getItemRewardsOrBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder getItemRewardsOrBuilder(
           int index) {
         if (itemRewardsBuilder_ == null) {
           return itemRewards_.get(index);  } else {
@@ -19036,7 +22252,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder> 
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder> 
            getItemRewardsOrBuilderList() {
         if (itemRewardsBuilder_ != null) {
           return itemRewardsBuilder_.getMessageOrBuilderList();
@@ -19047,31 +22263,31 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder addItemRewardsBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder addItemRewardsBuilder() {
         return getItemRewardsFieldBuilder().addBuilder(
-            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.getDefaultInstance());
+            skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.getDefaultInstance());
       }
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder addItemRewardsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder addItemRewardsBuilder(
           int index) {
         return getItemRewardsFieldBuilder().addBuilder(
-            index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.getDefaultInstance());
+            index, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.getDefaultInstance());
       }
       /**
        * <code>repeated .CLobbyTimedRewardDetails item_rewards = 2;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder> 
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder> 
            getItemRewardsBuilderList() {
         return getItemRewardsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder> 
           getItemRewardsFieldBuilder() {
         if (itemRewardsBuilder_ == null) {
           itemRewardsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetails.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CLobbyTimedRewardDetailsOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetails.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CLobbyTimedRewardDetailsOrBuilder>(
                   itemRewards_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -19452,9 +22668,9 @@ public final class S2DotaMatchMetadata {
         return matchTipsBuilder_;
       }
 
-      private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+      private skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder> matchmakingStatsBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStatsOrBuilder> matchmakingStatsBuilder_;
       /**
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
@@ -19464,7 +22680,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getMatchmakingStats() {
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats getMatchmakingStats() {
         if (matchmakingStatsBuilder_ == null) {
           return matchmakingStats_;
         } else {
@@ -19474,7 +22690,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
-      public Builder setMatchmakingStats(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats value) {
+      public Builder setMatchmakingStats(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats value) {
         if (matchmakingStatsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -19491,7 +22707,7 @@ public final class S2DotaMatchMetadata {
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
       public Builder setMatchmakingStats(
-          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder builderForValue) {
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.Builder builderForValue) {
         if (matchmakingStatsBuilder_ == null) {
           matchmakingStats_ = builderForValue.build();
           onChanged();
@@ -19504,12 +22720,12 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
-      public Builder mergeMatchmakingStats(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats value) {
+      public Builder mergeMatchmakingStats(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats value) {
         if (matchmakingStatsBuilder_ == null) {
           if (((bitField0_ & 0x00000080) == 0x00000080) &&
-              matchmakingStats_ != skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance()) {
+              matchmakingStats_ != skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance()) {
             matchmakingStats_ =
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.newBuilder(matchmakingStats_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.newBuilder(matchmakingStats_).mergeFrom(value).buildPartial();
           } else {
             matchmakingStats_ = value;
           }
@@ -19525,7 +22741,7 @@ public final class S2DotaMatchMetadata {
        */
       public Builder clearMatchmakingStats() {
         if (matchmakingStatsBuilder_ == null) {
-          matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+          matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
           onChanged();
         } else {
           matchmakingStatsBuilder_.clear();
@@ -19536,7 +22752,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder getMatchmakingStatsBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.Builder getMatchmakingStatsBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
         return getMatchmakingStatsFieldBuilder().getBuilder();
@@ -19544,7 +22760,7 @@ public final class S2DotaMatchMetadata {
       /**
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder() {
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStatsOrBuilder getMatchmakingStatsOrBuilder() {
         if (matchmakingStatsBuilder_ != null) {
           return matchmakingStatsBuilder_.getMessageOrBuilder();
         } else {
@@ -19555,17 +22771,373 @@ public final class S2DotaMatchMetadata {
        * <code>optional .CMsgMatchMatchmakingStats matchmaking_stats = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder> 
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStatsOrBuilder> 
           getMatchmakingStatsFieldBuilder() {
         if (matchmakingStatsBuilder_ == null) {
           matchmakingStatsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder>(
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStatsOrBuilder>(
                   getMatchmakingStats(),
                   getParentForChildren(),
                   isClean());
           matchmakingStats_ = null;
         }
         return matchmakingStatsBuilder_;
+      }
+
+      private skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData mvpData_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpDataOrBuilder> mvpDataBuilder_;
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public boolean hasMvpData() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData getMvpData() {
+        if (mvpDataBuilder_ == null) {
+          return mvpData_;
+        } else {
+          return mvpDataBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public Builder setMvpData(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData value) {
+        if (mvpDataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          mvpData_ = value;
+          onChanged();
+        } else {
+          mvpDataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public Builder setMvpData(
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.Builder builderForValue) {
+        if (mvpDataBuilder_ == null) {
+          mvpData_ = builderForValue.build();
+          onChanged();
+        } else {
+          mvpDataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public Builder mergeMvpData(skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData value) {
+        if (mvpDataBuilder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100) &&
+              mvpData_ != skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.getDefaultInstance()) {
+            mvpData_ =
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.newBuilder(mvpData_).mergeFrom(value).buildPartial();
+          } else {
+            mvpData_ = value;
+          }
+          onChanged();
+        } else {
+          mvpDataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public Builder clearMvpData() {
+        if (mvpDataBuilder_ == null) {
+          mvpData_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.getDefaultInstance();
+          onChanged();
+        } else {
+          mvpDataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000100);
+        return this;
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.Builder getMvpDataBuilder() {
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return getMvpDataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpDataOrBuilder getMvpDataOrBuilder() {
+        if (mvpDataBuilder_ != null) {
+          return mvpDataBuilder_.getMessageOrBuilder();
+        } else {
+          return mvpData_;
+        }
+      }
+      /**
+       * <code>optional .CMvpData mvp_data = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpDataOrBuilder> 
+          getMvpDataFieldBuilder() {
+        if (mvpDataBuilder_ == null) {
+          mvpDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpDataOrBuilder>(
+                  getMvpData(),
+                  getParentForChildren(),
+                  isClean());
+          mvpData_ = null;
+        }
+        return mvpDataBuilder_;
+      }
+
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress> guildChallengeProgress_ =
+        java.util.Collections.emptyList();
+      private void ensureGuildChallengeProgressIsMutable() {
+        if (!((bitField0_ & 0x00000200) == 0x00000200)) {
+          guildChallengeProgress_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress>(guildChallengeProgress_);
+          bitField0_ |= 0x00000200;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder> guildChallengeProgressBuilder_;
+
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress> getGuildChallengeProgressList() {
+        if (guildChallengeProgressBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(guildChallengeProgress_);
+        } else {
+          return guildChallengeProgressBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public int getGuildChallengeProgressCount() {
+        if (guildChallengeProgressBuilder_ == null) {
+          return guildChallengeProgress_.size();
+        } else {
+          return guildChallengeProgressBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress getGuildChallengeProgress(int index) {
+        if (guildChallengeProgressBuilder_ == null) {
+          return guildChallengeProgress_.get(index);
+        } else {
+          return guildChallengeProgressBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder setGuildChallengeProgress(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress value) {
+        if (guildChallengeProgressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.set(index, value);
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder setGuildChallengeProgress(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder builderForValue) {
+        if (guildChallengeProgressBuilder_ == null) {
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder addGuildChallengeProgress(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress value) {
+        if (guildChallengeProgressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.add(value);
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder addGuildChallengeProgress(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress value) {
+        if (guildChallengeProgressBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.add(index, value);
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder addGuildChallengeProgress(
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder builderForValue) {
+        if (guildChallengeProgressBuilder_ == null) {
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.add(builderForValue.build());
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder addGuildChallengeProgress(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder builderForValue) {
+        if (guildChallengeProgressBuilder_ == null) {
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder addAllGuildChallengeProgress(
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress> values) {
+        if (guildChallengeProgressBuilder_ == null) {
+          ensureGuildChallengeProgressIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, guildChallengeProgress_);
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder clearGuildChallengeProgress() {
+        if (guildChallengeProgressBuilder_ == null) {
+          guildChallengeProgress_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000200);
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public Builder removeGuildChallengeProgress(int index) {
+        if (guildChallengeProgressBuilder_ == null) {
+          ensureGuildChallengeProgressIsMutable();
+          guildChallengeProgress_.remove(index);
+          onChanged();
+        } else {
+          guildChallengeProgressBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder getGuildChallengeProgressBuilder(
+          int index) {
+        return getGuildChallengeProgressFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder getGuildChallengeProgressOrBuilder(
+          int index) {
+        if (guildChallengeProgressBuilder_ == null) {
+          return guildChallengeProgress_.get(index);  } else {
+          return guildChallengeProgressBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder> 
+           getGuildChallengeProgressOrBuilderList() {
+        if (guildChallengeProgressBuilder_ != null) {
+          return guildChallengeProgressBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(guildChallengeProgress_);
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder addGuildChallengeProgressBuilder() {
+        return getGuildChallengeProgressFieldBuilder().addBuilder(
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder addGuildChallengeProgressBuilder(
+          int index) {
+        return getGuildChallengeProgressFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.GuildChallengeProgress guild_challenge_progress = 10;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder> 
+           getGuildChallengeProgressBuilderList() {
+        return getGuildChallengeProgressFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder> 
+          getGuildChallengeProgressFieldBuilder() {
+        if (guildChallengeProgressBuilder_ == null) {
+          guildChallengeProgressBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgress.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.GuildChallengeProgressOrBuilder>(
+                  guildChallengeProgress_,
+                  ((bitField0_ & 0x00000200) == 0x00000200),
+                  getParentForChildren(),
+                  isClean());
+          guildChallengeProgress_ = null;
+        }
+        return guildChallengeProgressBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata)
@@ -20087,6 +23659,32 @@ public final class S2DotaMatchMetadata {
          * <code>repeated float graph_denies = 11;</code>
          */
         float getGraphDenies(int index);
+
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+         */
+        boolean hasGoldReceived();
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived getGoldReceived();
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder getGoldReceivedOrBuilder();
+
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+         */
+        boolean hasXpReceived();
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived getXpReceived();
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder getXpReceivedOrBuilder();
       }
       /**
        * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player}
@@ -20285,6 +23883,32 @@ public final class S2DotaMatchMetadata {
                   input.popLimit(limit);
                   break;
                 }
+                case 98: {
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder subBuilder = null;
+                  if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                    subBuilder = goldReceived_.toBuilder();
+                  }
+                  goldReceived_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.PARSER, extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(goldReceived_);
+                    goldReceived_ = subBuilder.buildPartial();
+                  }
+                  bitField0_ |= 0x00000008;
+                  break;
+                }
+                case 106: {
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder subBuilder = null;
+                  if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                    subBuilder = xpReceived_.toBuilder();
+                  }
+                  xpReceived_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.PARSER, extensionRegistry);
+                  if (subBuilder != null) {
+                    subBuilder.mergeFrom(xpReceived_);
+                    xpReceived_ = subBuilder.buildPartial();
+                  }
+                  bitField0_ |= 0x00000010;
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -20384,6 +24008,30 @@ public final class S2DotaMatchMetadata {
            */
           skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbilityOrBuilder getDamageByAbilityOrBuilder(
               int index);
+
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility> 
+              getHealingByAbilityList();
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility getHealingByAbility(int index);
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          int getHealingByAbilityCount();
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder> 
+              getHealingByAbilityOrBuilderList();
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder getHealingByAbilityOrBuilder(
+              int index);
         }
         /**
          * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.CombatSegment}
@@ -20450,6 +24098,14 @@ public final class S2DotaMatchMetadata {
                     damageByAbility_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility.PARSER, extensionRegistry));
                     break;
                   }
+                  case 26: {
+                    if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                      healingByAbility_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility>();
+                      mutable_bitField0_ |= 0x00000004;
+                    }
+                    healingByAbility_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.PARSER, extensionRegistry));
+                    break;
+                  }
                 }
               }
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -20460,6 +24116,9 @@ public final class S2DotaMatchMetadata {
             } finally {
               if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
                 damageByAbility_ = java.util.Collections.unmodifiableList(damageByAbility_);
+              }
+              if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                healingByAbility_ = java.util.Collections.unmodifiableList(healingByAbility_);
               }
               this.unknownFields = unknownFields.build();
               makeExtensionsImmutable();
@@ -21802,6 +25461,1316 @@ public final class S2DotaMatchMetadata {
             // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.DamageByAbility)
           }
 
+          public interface HealingByAbilityOrBuilder extends
+              // @@protoc_insertion_point(interface_extends:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility)
+              com.google.protobuf.MessageOrBuilder {
+
+            /**
+             * <code>optional uint32 source_unit_index = 3;</code>
+             */
+            boolean hasSourceUnitIndex();
+            /**
+             * <code>optional uint32 source_unit_index = 3;</code>
+             */
+            int getSourceUnitIndex();
+
+            /**
+             * <code>optional uint32 ability_id = 1;</code>
+             */
+            boolean hasAbilityId();
+            /**
+             * <code>optional uint32 ability_id = 1;</code>
+             */
+            int getAbilityId();
+
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget> 
+                getByHeroTargetsList();
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget getByHeroTargets(int index);
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            int getByHeroTargetsCount();
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder> 
+                getByHeroTargetsOrBuilderList();
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder getByHeroTargetsOrBuilder(
+                int index);
+          }
+          /**
+           * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility}
+           */
+          public static final class HealingByAbility extends
+              com.google.protobuf.GeneratedMessage implements
+              // @@protoc_insertion_point(message_implements:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility)
+              HealingByAbilityOrBuilder {
+            // Use HealingByAbility.newBuilder() to construct.
+            private HealingByAbility(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+              super(builder);
+              this.unknownFields = builder.getUnknownFields();
+            }
+            private HealingByAbility(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+            private static final HealingByAbility defaultInstance;
+            public static HealingByAbility getDefaultInstance() {
+              return defaultInstance;
+            }
+
+            public HealingByAbility getDefaultInstanceForType() {
+              return defaultInstance;
+            }
+
+            private final com.google.protobuf.UnknownFieldSet unknownFields;
+            @java.lang.Override
+            public final com.google.protobuf.UnknownFieldSet
+                getUnknownFields() {
+              return this.unknownFields;
+            }
+            private HealingByAbility(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              initFields();
+              int mutable_bitField0_ = 0;
+              com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                  com.google.protobuf.UnknownFieldSet.newBuilder();
+              try {
+                boolean done = false;
+                while (!done) {
+                  int tag = input.readTag();
+                  switch (tag) {
+                    case 0:
+                      done = true;
+                      break;
+                    default: {
+                      if (!parseUnknownField(input, unknownFields,
+                                             extensionRegistry, tag)) {
+                        done = true;
+                      }
+                      break;
+                    }
+                    case 8: {
+                      bitField0_ |= 0x00000002;
+                      abilityId_ = input.readUInt32();
+                      break;
+                    }
+                    case 18: {
+                      if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                        byHeroTargets_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget>();
+                        mutable_bitField0_ |= 0x00000004;
+                      }
+                      byHeroTargets_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.PARSER, extensionRegistry));
+                      break;
+                    }
+                    case 24: {
+                      bitField0_ |= 0x00000001;
+                      sourceUnitIndex_ = input.readUInt32();
+                      break;
+                    }
+                  }
+                }
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                throw e.setUnfinishedMessage(this);
+              } catch (java.io.IOException e) {
+                throw new com.google.protobuf.InvalidProtocolBufferException(
+                    e.getMessage()).setUnfinishedMessage(this);
+              } finally {
+                if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  byHeroTargets_ = java.util.Collections.unmodifiableList(byHeroTargets_);
+                }
+                this.unknownFields = unknownFields.build();
+                makeExtensionsImmutable();
+              }
+            }
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder.class);
+            }
+
+            public static com.google.protobuf.Parser<HealingByAbility> PARSER =
+                new com.google.protobuf.AbstractParser<HealingByAbility>() {
+              public HealingByAbility parsePartialFrom(
+                  com.google.protobuf.CodedInputStream input,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws com.google.protobuf.InvalidProtocolBufferException {
+                return new HealingByAbility(input, extensionRegistry);
+              }
+            };
+
+            @java.lang.Override
+            public com.google.protobuf.Parser<HealingByAbility> getParserForType() {
+              return PARSER;
+            }
+
+            public interface ByHeroTargetOrBuilder extends
+                // @@protoc_insertion_point(interface_extends:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget)
+                com.google.protobuf.MessageOrBuilder {
+
+              /**
+               * <code>optional uint32 hero_id = 1;</code>
+               */
+              boolean hasHeroId();
+              /**
+               * <code>optional uint32 hero_id = 1;</code>
+               */
+              int getHeroId();
+
+              /**
+               * <code>optional uint32 healing = 2;</code>
+               */
+              boolean hasHealing();
+              /**
+               * <code>optional uint32 healing = 2;</code>
+               */
+              int getHealing();
+            }
+            /**
+             * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget}
+             */
+            public static final class ByHeroTarget extends
+                com.google.protobuf.GeneratedMessage implements
+                // @@protoc_insertion_point(message_implements:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget)
+                ByHeroTargetOrBuilder {
+              // Use ByHeroTarget.newBuilder() to construct.
+              private ByHeroTarget(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+                super(builder);
+                this.unknownFields = builder.getUnknownFields();
+              }
+              private ByHeroTarget(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+              private static final ByHeroTarget defaultInstance;
+              public static ByHeroTarget getDefaultInstance() {
+                return defaultInstance;
+              }
+
+              public ByHeroTarget getDefaultInstanceForType() {
+                return defaultInstance;
+              }
+
+              private final com.google.protobuf.UnknownFieldSet unknownFields;
+              @java.lang.Override
+              public final com.google.protobuf.UnknownFieldSet
+                  getUnknownFields() {
+                return this.unknownFields;
+              }
+              private ByHeroTarget(
+                  com.google.protobuf.CodedInputStream input,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws com.google.protobuf.InvalidProtocolBufferException {
+                initFields();
+                int mutable_bitField0_ = 0;
+                com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                    com.google.protobuf.UnknownFieldSet.newBuilder();
+                try {
+                  boolean done = false;
+                  while (!done) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                      case 0:
+                        done = true;
+                        break;
+                      default: {
+                        if (!parseUnknownField(input, unknownFields,
+                                               extensionRegistry, tag)) {
+                          done = true;
+                        }
+                        break;
+                      }
+                      case 8: {
+                        bitField0_ |= 0x00000001;
+                        heroId_ = input.readUInt32();
+                        break;
+                      }
+                      case 16: {
+                        bitField0_ |= 0x00000002;
+                        healing_ = input.readUInt32();
+                        break;
+                      }
+                    }
+                  }
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                  throw e.setUnfinishedMessage(this);
+                } catch (java.io.IOException e) {
+                  throw new com.google.protobuf.InvalidProtocolBufferException(
+                      e.getMessage()).setUnfinishedMessage(this);
+                } finally {
+                  this.unknownFields = unknownFields.build();
+                  makeExtensionsImmutable();
+                }
+              }
+              public static final com.google.protobuf.Descriptors.Descriptor
+                  getDescriptor() {
+                return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_descriptor;
+              }
+
+              protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                  internalGetFieldAccessorTable() {
+                return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder.class);
+              }
+
+              public static com.google.protobuf.Parser<ByHeroTarget> PARSER =
+                  new com.google.protobuf.AbstractParser<ByHeroTarget>() {
+                public ByHeroTarget parsePartialFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                  return new ByHeroTarget(input, extensionRegistry);
+                }
+              };
+
+              @java.lang.Override
+              public com.google.protobuf.Parser<ByHeroTarget> getParserForType() {
+                return PARSER;
+              }
+
+              private int bitField0_;
+              public static final int HERO_ID_FIELD_NUMBER = 1;
+              private int heroId_;
+              /**
+               * <code>optional uint32 hero_id = 1;</code>
+               */
+              public boolean hasHeroId() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+              }
+              /**
+               * <code>optional uint32 hero_id = 1;</code>
+               */
+              public int getHeroId() {
+                return heroId_;
+              }
+
+              public static final int HEALING_FIELD_NUMBER = 2;
+              private int healing_;
+              /**
+               * <code>optional uint32 healing = 2;</code>
+               */
+              public boolean hasHealing() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+              }
+              /**
+               * <code>optional uint32 healing = 2;</code>
+               */
+              public int getHealing() {
+                return healing_;
+              }
+
+              private void initFields() {
+                heroId_ = 0;
+                healing_ = 0;
+              }
+              private byte memoizedIsInitialized = -1;
+              public final boolean isInitialized() {
+                byte isInitialized = memoizedIsInitialized;
+                if (isInitialized == 1) return true;
+                if (isInitialized == 0) return false;
+
+                memoizedIsInitialized = 1;
+                return true;
+              }
+
+              public void writeTo(com.google.protobuf.CodedOutputStream output)
+                                  throws java.io.IOException {
+                getSerializedSize();
+                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                  output.writeUInt32(1, heroId_);
+                }
+                if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                  output.writeUInt32(2, healing_);
+                }
+                getUnknownFields().writeTo(output);
+              }
+
+              private int memoizedSerializedSize = -1;
+              public int getSerializedSize() {
+                int size = memoizedSerializedSize;
+                if (size != -1) return size;
+
+                size = 0;
+                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                  size += com.google.protobuf.CodedOutputStream
+                    .computeUInt32Size(1, heroId_);
+                }
+                if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                  size += com.google.protobuf.CodedOutputStream
+                    .computeUInt32Size(2, healing_);
+                }
+                size += getUnknownFields().getSerializedSize();
+                memoizedSerializedSize = size;
+                return size;
+              }
+
+              private static final long serialVersionUID = 0L;
+              @java.lang.Override
+              protected java.lang.Object writeReplace()
+                  throws java.io.ObjectStreamException {
+                return super.writeReplace();
+              }
+
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(
+                  com.google.protobuf.ByteString data)
+                  throws com.google.protobuf.InvalidProtocolBufferException {
+                return PARSER.parseFrom(data);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(
+                  com.google.protobuf.ByteString data,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws com.google.protobuf.InvalidProtocolBufferException {
+                return PARSER.parseFrom(data, extensionRegistry);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(byte[] data)
+                  throws com.google.protobuf.InvalidProtocolBufferException {
+                return PARSER.parseFrom(data);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(
+                  byte[] data,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws com.google.protobuf.InvalidProtocolBufferException {
+                return PARSER.parseFrom(data, extensionRegistry);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(java.io.InputStream input)
+                  throws java.io.IOException {
+                return PARSER.parseFrom(input);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(
+                  java.io.InputStream input,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws java.io.IOException {
+                return PARSER.parseFrom(input, extensionRegistry);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseDelimitedFrom(java.io.InputStream input)
+                  throws java.io.IOException {
+                return PARSER.parseDelimitedFrom(input);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseDelimitedFrom(
+                  java.io.InputStream input,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws java.io.IOException {
+                return PARSER.parseDelimitedFrom(input, extensionRegistry);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(
+                  com.google.protobuf.CodedInputStream input)
+                  throws java.io.IOException {
+                return PARSER.parseFrom(input);
+              }
+              public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parseFrom(
+                  com.google.protobuf.CodedInputStream input,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws java.io.IOException {
+                return PARSER.parseFrom(input, extensionRegistry);
+              }
+
+              public static Builder newBuilder() { return Builder.create(); }
+              public Builder newBuilderForType() { return newBuilder(); }
+              public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget prototype) {
+                return newBuilder().mergeFrom(prototype);
+              }
+              public Builder toBuilder() { return newBuilder(this); }
+
+              @java.lang.Override
+              protected Builder newBuilderForType(
+                  com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                Builder builder = new Builder(parent);
+                return builder;
+              }
+              /**
+               * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget}
+               */
+              public static final class Builder extends
+                  com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                  // @@protoc_insertion_point(builder_implements:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget)
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder {
+                public static final com.google.protobuf.Descriptors.Descriptor
+                    getDescriptor() {
+                  return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_descriptor;
+                }
+
+                protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                    internalGetFieldAccessorTable() {
+                  return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_fieldAccessorTable
+                      .ensureFieldAccessorsInitialized(
+                          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder.class);
+                }
+
+                // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.newBuilder()
+                private Builder() {
+                  maybeForceBuilderInitialization();
+                }
+
+                private Builder(
+                    com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                  super(parent);
+                  maybeForceBuilderInitialization();
+                }
+                private void maybeForceBuilderInitialization() {
+                  if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                  }
+                }
+                private static Builder create() {
+                  return new Builder();
+                }
+
+                public Builder clear() {
+                  super.clear();
+                  heroId_ = 0;
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  healing_ = 0;
+                  bitField0_ = (bitField0_ & ~0x00000002);
+                  return this;
+                }
+
+                public Builder clone() {
+                  return create().mergeFrom(buildPartial());
+                }
+
+                public com.google.protobuf.Descriptors.Descriptor
+                    getDescriptorForType() {
+                  return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_descriptor;
+                }
+
+                public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget getDefaultInstanceForType() {
+                  return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.getDefaultInstance();
+                }
+
+                public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget build() {
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget result = buildPartial();
+                  if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                  }
+                  return result;
+                }
+
+                public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget buildPartial() {
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget(this);
+                  int from_bitField0_ = bitField0_;
+                  int to_bitField0_ = 0;
+                  if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                  }
+                  result.heroId_ = heroId_;
+                  if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                  }
+                  result.healing_ = healing_;
+                  result.bitField0_ = to_bitField0_;
+                  onBuilt();
+                  return result;
+                }
+
+                public Builder mergeFrom(com.google.protobuf.Message other) {
+                  if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget) {
+                    return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget)other);
+                  } else {
+                    super.mergeFrom(other);
+                    return this;
+                  }
+                }
+
+                public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget other) {
+                  if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.getDefaultInstance()) return this;
+                  if (other.hasHeroId()) {
+                    setHeroId(other.getHeroId());
+                  }
+                  if (other.hasHealing()) {
+                    setHealing(other.getHealing());
+                  }
+                  this.mergeUnknownFields(other.getUnknownFields());
+                  return this;
+                }
+
+                public final boolean isInitialized() {
+                  return true;
+                }
+
+                public Builder mergeFrom(
+                    com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                    throws java.io.IOException {
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget parsedMessage = null;
+                  try {
+                    parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                  } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                    parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget) e.getUnfinishedMessage();
+                    throw e;
+                  } finally {
+                    if (parsedMessage != null) {
+                      mergeFrom(parsedMessage);
+                    }
+                  }
+                  return this;
+                }
+                private int bitField0_;
+
+                private int heroId_ ;
+                /**
+                 * <code>optional uint32 hero_id = 1;</code>
+                 */
+                public boolean hasHeroId() {
+                  return ((bitField0_ & 0x00000001) == 0x00000001);
+                }
+                /**
+                 * <code>optional uint32 hero_id = 1;</code>
+                 */
+                public int getHeroId() {
+                  return heroId_;
+                }
+                /**
+                 * <code>optional uint32 hero_id = 1;</code>
+                 */
+                public Builder setHeroId(int value) {
+                  bitField0_ |= 0x00000001;
+                  heroId_ = value;
+                  onChanged();
+                  return this;
+                }
+                /**
+                 * <code>optional uint32 hero_id = 1;</code>
+                 */
+                public Builder clearHeroId() {
+                  bitField0_ = (bitField0_ & ~0x00000001);
+                  heroId_ = 0;
+                  onChanged();
+                  return this;
+                }
+
+                private int healing_ ;
+                /**
+                 * <code>optional uint32 healing = 2;</code>
+                 */
+                public boolean hasHealing() {
+                  return ((bitField0_ & 0x00000002) == 0x00000002);
+                }
+                /**
+                 * <code>optional uint32 healing = 2;</code>
+                 */
+                public int getHealing() {
+                  return healing_;
+                }
+                /**
+                 * <code>optional uint32 healing = 2;</code>
+                 */
+                public Builder setHealing(int value) {
+                  bitField0_ |= 0x00000002;
+                  healing_ = value;
+                  onChanged();
+                  return this;
+                }
+                /**
+                 * <code>optional uint32 healing = 2;</code>
+                 */
+                public Builder clearHealing() {
+                  bitField0_ = (bitField0_ & ~0x00000002);
+                  healing_ = 0;
+                  onChanged();
+                  return this;
+                }
+
+                // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget)
+              }
+
+              static {
+                defaultInstance = new ByHeroTarget(true);
+                defaultInstance.initFields();
+              }
+
+              // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget)
+            }
+
+            private int bitField0_;
+            public static final int SOURCE_UNIT_INDEX_FIELD_NUMBER = 3;
+            private int sourceUnitIndex_;
+            /**
+             * <code>optional uint32 source_unit_index = 3;</code>
+             */
+            public boolean hasSourceUnitIndex() {
+              return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+            /**
+             * <code>optional uint32 source_unit_index = 3;</code>
+             */
+            public int getSourceUnitIndex() {
+              return sourceUnitIndex_;
+            }
+
+            public static final int ABILITY_ID_FIELD_NUMBER = 1;
+            private int abilityId_;
+            /**
+             * <code>optional uint32 ability_id = 1;</code>
+             */
+            public boolean hasAbilityId() {
+              return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+            /**
+             * <code>optional uint32 ability_id = 1;</code>
+             */
+            public int getAbilityId() {
+              return abilityId_;
+            }
+
+            public static final int BY_HERO_TARGETS_FIELD_NUMBER = 2;
+            private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget> byHeroTargets_;
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget> getByHeroTargetsList() {
+              return byHeroTargets_;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder> 
+                getByHeroTargetsOrBuilderList() {
+              return byHeroTargets_;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            public int getByHeroTargetsCount() {
+              return byHeroTargets_.size();
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget getByHeroTargets(int index) {
+              return byHeroTargets_.get(index);
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder getByHeroTargetsOrBuilder(
+                int index) {
+              return byHeroTargets_.get(index);
+            }
+
+            private void initFields() {
+              sourceUnitIndex_ = 0;
+              abilityId_ = 0;
+              byHeroTargets_ = java.util.Collections.emptyList();
+            }
+            private byte memoizedIsInitialized = -1;
+            public final boolean isInitialized() {
+              byte isInitialized = memoizedIsInitialized;
+              if (isInitialized == 1) return true;
+              if (isInitialized == 0) return false;
+
+              memoizedIsInitialized = 1;
+              return true;
+            }
+
+            public void writeTo(com.google.protobuf.CodedOutputStream output)
+                                throws java.io.IOException {
+              getSerializedSize();
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeUInt32(1, abilityId_);
+              }
+              for (int i = 0; i < byHeroTargets_.size(); i++) {
+                output.writeMessage(2, byHeroTargets_.get(i));
+              }
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeUInt32(3, sourceUnitIndex_);
+              }
+              getUnknownFields().writeTo(output);
+            }
+
+            private int memoizedSerializedSize = -1;
+            public int getSerializedSize() {
+              int size = memoizedSerializedSize;
+              if (size != -1) return size;
+
+              size = 0;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream
+                  .computeUInt32Size(1, abilityId_);
+              }
+              for (int i = 0; i < byHeroTargets_.size(); i++) {
+                size += com.google.protobuf.CodedOutputStream
+                  .computeMessageSize(2, byHeroTargets_.get(i));
+              }
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream
+                  .computeUInt32Size(3, sourceUnitIndex_);
+              }
+              size += getUnknownFields().getSerializedSize();
+              memoizedSerializedSize = size;
+              return size;
+            }
+
+            private static final long serialVersionUID = 0L;
+            @java.lang.Override
+            protected java.lang.Object writeReplace()
+                throws java.io.ObjectStreamException {
+              return super.writeReplace();
+            }
+
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(
+                com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return PARSER.parseFrom(data);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(
+                com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return PARSER.parseFrom(data, extensionRegistry);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return PARSER.parseFrom(data);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(
+                byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return PARSER.parseFrom(data, extensionRegistry);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+              return PARSER.parseFrom(input);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              return PARSER.parseFrom(input, extensionRegistry);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+              return PARSER.parseDelimitedFrom(input);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseDelimitedFrom(
+                java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              return PARSER.parseDelimitedFrom(input, extensionRegistry);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(
+                com.google.protobuf.CodedInputStream input)
+                throws java.io.IOException {
+              return PARSER.parseFrom(input);
+            }
+            public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parseFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              return PARSER.parseFrom(input, extensionRegistry);
+            }
+
+            public static Builder newBuilder() { return Builder.create(); }
+            public Builder newBuilderForType() { return newBuilder(); }
+            public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility prototype) {
+              return newBuilder().mergeFrom(prototype);
+            }
+            public Builder toBuilder() { return newBuilder(this); }
+
+            @java.lang.Override
+            protected Builder newBuilderForType(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              Builder builder = new Builder(parent);
+              return builder;
+            }
+            /**
+             * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility}
+             */
+            public static final class Builder extends
+                com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+                // @@protoc_insertion_point(builder_implements:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility)
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder {
+              public static final com.google.protobuf.Descriptors.Descriptor
+                  getDescriptor() {
+                return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor;
+              }
+
+              protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                  internalGetFieldAccessorTable() {
+                return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_fieldAccessorTable
+                    .ensureFieldAccessorsInitialized(
+                        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder.class);
+              }
+
+              // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.newBuilder()
+              private Builder() {
+                maybeForceBuilderInitialization();
+              }
+
+              private Builder(
+                  com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+              }
+              private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                  getByHeroTargetsFieldBuilder();
+                }
+              }
+              private static Builder create() {
+                return new Builder();
+              }
+
+              public Builder clear() {
+                super.clear();
+                sourceUnitIndex_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                abilityId_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                if (byHeroTargetsBuilder_ == null) {
+                  byHeroTargets_ = java.util.Collections.emptyList();
+                  bitField0_ = (bitField0_ & ~0x00000004);
+                } else {
+                  byHeroTargetsBuilder_.clear();
+                }
+                return this;
+              }
+
+              public Builder clone() {
+                return create().mergeFrom(buildPartial());
+              }
+
+              public com.google.protobuf.Descriptors.Descriptor
+                  getDescriptorForType() {
+                return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor;
+              }
+
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility getDefaultInstanceForType() {
+                return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.getDefaultInstance();
+              }
+
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility build() {
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility result = buildPartial();
+                if (!result.isInitialized()) {
+                  throw newUninitializedMessageException(result);
+                }
+                return result;
+              }
+
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility buildPartial() {
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility(this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                  to_bitField0_ |= 0x00000001;
+                }
+                result.sourceUnitIndex_ = sourceUnitIndex_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                  to_bitField0_ |= 0x00000002;
+                }
+                result.abilityId_ = abilityId_;
+                if (byHeroTargetsBuilder_ == null) {
+                  if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                    byHeroTargets_ = java.util.Collections.unmodifiableList(byHeroTargets_);
+                    bitField0_ = (bitField0_ & ~0x00000004);
+                  }
+                  result.byHeroTargets_ = byHeroTargets_;
+                } else {
+                  result.byHeroTargets_ = byHeroTargetsBuilder_.build();
+                }
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+              }
+
+              public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility) {
+                  return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility)other);
+                } else {
+                  super.mergeFrom(other);
+                  return this;
+                }
+              }
+
+              public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility other) {
+                if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.getDefaultInstance()) return this;
+                if (other.hasSourceUnitIndex()) {
+                  setSourceUnitIndex(other.getSourceUnitIndex());
+                }
+                if (other.hasAbilityId()) {
+                  setAbilityId(other.getAbilityId());
+                }
+                if (byHeroTargetsBuilder_ == null) {
+                  if (!other.byHeroTargets_.isEmpty()) {
+                    if (byHeroTargets_.isEmpty()) {
+                      byHeroTargets_ = other.byHeroTargets_;
+                      bitField0_ = (bitField0_ & ~0x00000004);
+                    } else {
+                      ensureByHeroTargetsIsMutable();
+                      byHeroTargets_.addAll(other.byHeroTargets_);
+                    }
+                    onChanged();
+                  }
+                } else {
+                  if (!other.byHeroTargets_.isEmpty()) {
+                    if (byHeroTargetsBuilder_.isEmpty()) {
+                      byHeroTargetsBuilder_.dispose();
+                      byHeroTargetsBuilder_ = null;
+                      byHeroTargets_ = other.byHeroTargets_;
+                      bitField0_ = (bitField0_ & ~0x00000004);
+                      byHeroTargetsBuilder_ = 
+                        com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                           getByHeroTargetsFieldBuilder() : null;
+                    } else {
+                      byHeroTargetsBuilder_.addAllMessages(other.byHeroTargets_);
+                    }
+                  }
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+              }
+
+              public final boolean isInitialized() {
+                return true;
+              }
+
+              public Builder mergeFrom(
+                  com.google.protobuf.CodedInputStream input,
+                  com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                  throws java.io.IOException {
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility parsedMessage = null;
+                try {
+                  parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+                } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                  parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility) e.getUnfinishedMessage();
+                  throw e;
+                } finally {
+                  if (parsedMessage != null) {
+                    mergeFrom(parsedMessage);
+                  }
+                }
+                return this;
+              }
+              private int bitField0_;
+
+              private int sourceUnitIndex_ ;
+              /**
+               * <code>optional uint32 source_unit_index = 3;</code>
+               */
+              public boolean hasSourceUnitIndex() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+              }
+              /**
+               * <code>optional uint32 source_unit_index = 3;</code>
+               */
+              public int getSourceUnitIndex() {
+                return sourceUnitIndex_;
+              }
+              /**
+               * <code>optional uint32 source_unit_index = 3;</code>
+               */
+              public Builder setSourceUnitIndex(int value) {
+                bitField0_ |= 0x00000001;
+                sourceUnitIndex_ = value;
+                onChanged();
+                return this;
+              }
+              /**
+               * <code>optional uint32 source_unit_index = 3;</code>
+               */
+              public Builder clearSourceUnitIndex() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                sourceUnitIndex_ = 0;
+                onChanged();
+                return this;
+              }
+
+              private int abilityId_ ;
+              /**
+               * <code>optional uint32 ability_id = 1;</code>
+               */
+              public boolean hasAbilityId() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+              }
+              /**
+               * <code>optional uint32 ability_id = 1;</code>
+               */
+              public int getAbilityId() {
+                return abilityId_;
+              }
+              /**
+               * <code>optional uint32 ability_id = 1;</code>
+               */
+              public Builder setAbilityId(int value) {
+                bitField0_ |= 0x00000002;
+                abilityId_ = value;
+                onChanged();
+                return this;
+              }
+              /**
+               * <code>optional uint32 ability_id = 1;</code>
+               */
+              public Builder clearAbilityId() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                abilityId_ = 0;
+                onChanged();
+                return this;
+              }
+
+              private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget> byHeroTargets_ =
+                java.util.Collections.emptyList();
+              private void ensureByHeroTargetsIsMutable() {
+                if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+                  byHeroTargets_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget>(byHeroTargets_);
+                  bitField0_ |= 0x00000004;
+                 }
+              }
+
+              private com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder> byHeroTargetsBuilder_;
+
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget> getByHeroTargetsList() {
+                if (byHeroTargetsBuilder_ == null) {
+                  return java.util.Collections.unmodifiableList(byHeroTargets_);
+                } else {
+                  return byHeroTargetsBuilder_.getMessageList();
+                }
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public int getByHeroTargetsCount() {
+                if (byHeroTargetsBuilder_ == null) {
+                  return byHeroTargets_.size();
+                } else {
+                  return byHeroTargetsBuilder_.getCount();
+                }
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget getByHeroTargets(int index) {
+                if (byHeroTargetsBuilder_ == null) {
+                  return byHeroTargets_.get(index);
+                } else {
+                  return byHeroTargetsBuilder_.getMessage(index);
+                }
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder setByHeroTargets(
+                  int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget value) {
+                if (byHeroTargetsBuilder_ == null) {
+                  if (value == null) {
+                    throw new NullPointerException();
+                  }
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.set(index, value);
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.setMessage(index, value);
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder setByHeroTargets(
+                  int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder builderForValue) {
+                if (byHeroTargetsBuilder_ == null) {
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.set(index, builderForValue.build());
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.setMessage(index, builderForValue.build());
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder addByHeroTargets(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget value) {
+                if (byHeroTargetsBuilder_ == null) {
+                  if (value == null) {
+                    throw new NullPointerException();
+                  }
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.add(value);
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.addMessage(value);
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder addByHeroTargets(
+                  int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget value) {
+                if (byHeroTargetsBuilder_ == null) {
+                  if (value == null) {
+                    throw new NullPointerException();
+                  }
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.add(index, value);
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.addMessage(index, value);
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder addByHeroTargets(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder builderForValue) {
+                if (byHeroTargetsBuilder_ == null) {
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.add(builderForValue.build());
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.addMessage(builderForValue.build());
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder addByHeroTargets(
+                  int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder builderForValue) {
+                if (byHeroTargetsBuilder_ == null) {
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.add(index, builderForValue.build());
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.addMessage(index, builderForValue.build());
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder addAllByHeroTargets(
+                  java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget> values) {
+                if (byHeroTargetsBuilder_ == null) {
+                  ensureByHeroTargetsIsMutable();
+                  com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                      values, byHeroTargets_);
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.addAllMessages(values);
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder clearByHeroTargets() {
+                if (byHeroTargetsBuilder_ == null) {
+                  byHeroTargets_ = java.util.Collections.emptyList();
+                  bitField0_ = (bitField0_ & ~0x00000004);
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.clear();
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public Builder removeByHeroTargets(int index) {
+                if (byHeroTargetsBuilder_ == null) {
+                  ensureByHeroTargetsIsMutable();
+                  byHeroTargets_.remove(index);
+                  onChanged();
+                } else {
+                  byHeroTargetsBuilder_.remove(index);
+                }
+                return this;
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder getByHeroTargetsBuilder(
+                  int index) {
+                return getByHeroTargetsFieldBuilder().getBuilder(index);
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder getByHeroTargetsOrBuilder(
+                  int index) {
+                if (byHeroTargetsBuilder_ == null) {
+                  return byHeroTargets_.get(index);  } else {
+                  return byHeroTargetsBuilder_.getMessageOrBuilder(index);
+                }
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder> 
+                   getByHeroTargetsOrBuilderList() {
+                if (byHeroTargetsBuilder_ != null) {
+                  return byHeroTargetsBuilder_.getMessageOrBuilderList();
+                } else {
+                  return java.util.Collections.unmodifiableList(byHeroTargets_);
+                }
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder addByHeroTargetsBuilder() {
+                return getByHeroTargetsFieldBuilder().addBuilder(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.getDefaultInstance());
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder addByHeroTargetsBuilder(
+                  int index) {
+                return getByHeroTargetsFieldBuilder().addBuilder(
+                    index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.getDefaultInstance());
+              }
+              /**
+               * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget by_hero_targets = 2;</code>
+               */
+              public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder> 
+                   getByHeroTargetsBuilderList() {
+                return getByHeroTargetsFieldBuilder().getBuilderList();
+              }
+              private com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder> 
+                  getByHeroTargetsFieldBuilder() {
+                if (byHeroTargetsBuilder_ == null) {
+                  byHeroTargetsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTarget.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.ByHeroTargetOrBuilder>(
+                          byHeroTargets_,
+                          ((bitField0_ & 0x00000004) == 0x00000004),
+                          getParentForChildren(),
+                          isClean());
+                  byHeroTargets_ = null;
+                }
+                return byHeroTargetsBuilder_;
+              }
+
+              // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility)
+            }
+
+            static {
+              defaultInstance = new HealingByAbility(true);
+              defaultInstance.initFields();
+            }
+
+            // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility)
+          }
+
           private int bitField0_;
           public static final int GAME_TIME_FIELD_NUMBER = 1;
           private int gameTime_;
@@ -21853,9 +26822,45 @@ public final class S2DotaMatchMetadata {
             return damageByAbility_.get(index);
           }
 
+          public static final int HEALING_BY_ABILITY_FIELD_NUMBER = 3;
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility> healingByAbility_;
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility> getHealingByAbilityList() {
+            return healingByAbility_;
+          }
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder> 
+              getHealingByAbilityOrBuilderList() {
+            return healingByAbility_;
+          }
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          public int getHealingByAbilityCount() {
+            return healingByAbility_.size();
+          }
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility getHealingByAbility(int index) {
+            return healingByAbility_.get(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder getHealingByAbilityOrBuilder(
+              int index) {
+            return healingByAbility_.get(index);
+          }
+
           private void initFields() {
             gameTime_ = 0;
             damageByAbility_ = java.util.Collections.emptyList();
+            healingByAbility_ = java.util.Collections.emptyList();
           }
           private byte memoizedIsInitialized = -1;
           public final boolean isInitialized() {
@@ -21876,6 +26881,9 @@ public final class S2DotaMatchMetadata {
             for (int i = 0; i < damageByAbility_.size(); i++) {
               output.writeMessage(2, damageByAbility_.get(i));
             }
+            for (int i = 0; i < healingByAbility_.size(); i++) {
+              output.writeMessage(3, healingByAbility_.get(i));
+            }
             getUnknownFields().writeTo(output);
           }
 
@@ -21892,6 +26900,10 @@ public final class S2DotaMatchMetadata {
             for (int i = 0; i < damageByAbility_.size(); i++) {
               size += com.google.protobuf.CodedOutputStream
                 .computeMessageSize(2, damageByAbility_.get(i));
+            }
+            for (int i = 0; i < healingByAbility_.size(); i++) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeMessageSize(3, healingByAbility_.get(i));
             }
             size += getUnknownFields().getSerializedSize();
             memoizedSerializedSize = size;
@@ -22003,6 +27015,7 @@ public final class S2DotaMatchMetadata {
             private void maybeForceBuilderInitialization() {
               if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
                 getDamageByAbilityFieldBuilder();
+                getHealingByAbilityFieldBuilder();
               }
             }
             private static Builder create() {
@@ -22018,6 +27031,12 @@ public final class S2DotaMatchMetadata {
                 bitField0_ = (bitField0_ & ~0x00000002);
               } else {
                 damageByAbilityBuilder_.clear();
+              }
+              if (healingByAbilityBuilder_ == null) {
+                healingByAbility_ = java.util.Collections.emptyList();
+                bitField0_ = (bitField0_ & ~0x00000004);
+              } else {
+                healingByAbilityBuilder_.clear();
               }
               return this;
             }
@@ -22059,6 +27078,15 @@ public final class S2DotaMatchMetadata {
                 result.damageByAbility_ = damageByAbility_;
               } else {
                 result.damageByAbility_ = damageByAbilityBuilder_.build();
+              }
+              if (healingByAbilityBuilder_ == null) {
+                if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                  healingByAbility_ = java.util.Collections.unmodifiableList(healingByAbility_);
+                  bitField0_ = (bitField0_ & ~0x00000004);
+                }
+                result.healingByAbility_ = healingByAbility_;
+              } else {
+                result.healingByAbility_ = healingByAbilityBuilder_.build();
               }
               result.bitField0_ = to_bitField0_;
               onBuilt();
@@ -22102,6 +27130,32 @@ public final class S2DotaMatchMetadata {
                          getDamageByAbilityFieldBuilder() : null;
                   } else {
                     damageByAbilityBuilder_.addAllMessages(other.damageByAbility_);
+                  }
+                }
+              }
+              if (healingByAbilityBuilder_ == null) {
+                if (!other.healingByAbility_.isEmpty()) {
+                  if (healingByAbility_.isEmpty()) {
+                    healingByAbility_ = other.healingByAbility_;
+                    bitField0_ = (bitField0_ & ~0x00000004);
+                  } else {
+                    ensureHealingByAbilityIsMutable();
+                    healingByAbility_.addAll(other.healingByAbility_);
+                  }
+                  onChanged();
+                }
+              } else {
+                if (!other.healingByAbility_.isEmpty()) {
+                  if (healingByAbilityBuilder_.isEmpty()) {
+                    healingByAbilityBuilder_.dispose();
+                    healingByAbilityBuilder_ = null;
+                    healingByAbility_ = other.healingByAbility_;
+                    bitField0_ = (bitField0_ & ~0x00000004);
+                    healingByAbilityBuilder_ = 
+                      com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                         getHealingByAbilityFieldBuilder() : null;
+                  } else {
+                    healingByAbilityBuilder_.addAllMessages(other.healingByAbility_);
                   }
                 }
               }
@@ -22402,6 +27456,246 @@ public final class S2DotaMatchMetadata {
                 damageByAbility_ = null;
               }
               return damageByAbilityBuilder_;
+            }
+
+            private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility> healingByAbility_ =
+              java.util.Collections.emptyList();
+            private void ensureHealingByAbilityIsMutable() {
+              if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+                healingByAbility_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility>(healingByAbility_);
+                bitField0_ |= 0x00000004;
+               }
+            }
+
+            private com.google.protobuf.RepeatedFieldBuilder<
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder> healingByAbilityBuilder_;
+
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility> getHealingByAbilityList() {
+              if (healingByAbilityBuilder_ == null) {
+                return java.util.Collections.unmodifiableList(healingByAbility_);
+              } else {
+                return healingByAbilityBuilder_.getMessageList();
+              }
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public int getHealingByAbilityCount() {
+              if (healingByAbilityBuilder_ == null) {
+                return healingByAbility_.size();
+              } else {
+                return healingByAbilityBuilder_.getCount();
+              }
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility getHealingByAbility(int index) {
+              if (healingByAbilityBuilder_ == null) {
+                return healingByAbility_.get(index);
+              } else {
+                return healingByAbilityBuilder_.getMessage(index);
+              }
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder setHealingByAbility(
+                int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility value) {
+              if (healingByAbilityBuilder_ == null) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.set(index, value);
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.setMessage(index, value);
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder setHealingByAbility(
+                int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder builderForValue) {
+              if (healingByAbilityBuilder_ == null) {
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.set(index, builderForValue.build());
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.setMessage(index, builderForValue.build());
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder addHealingByAbility(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility value) {
+              if (healingByAbilityBuilder_ == null) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.add(value);
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.addMessage(value);
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder addHealingByAbility(
+                int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility value) {
+              if (healingByAbilityBuilder_ == null) {
+                if (value == null) {
+                  throw new NullPointerException();
+                }
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.add(index, value);
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.addMessage(index, value);
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder addHealingByAbility(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder builderForValue) {
+              if (healingByAbilityBuilder_ == null) {
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.add(builderForValue.build());
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.addMessage(builderForValue.build());
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder addHealingByAbility(
+                int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder builderForValue) {
+              if (healingByAbilityBuilder_ == null) {
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.add(index, builderForValue.build());
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.addMessage(index, builderForValue.build());
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder addAllHealingByAbility(
+                java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility> values) {
+              if (healingByAbilityBuilder_ == null) {
+                ensureHealingByAbilityIsMutable();
+                com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                    values, healingByAbility_);
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.addAllMessages(values);
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder clearHealingByAbility() {
+              if (healingByAbilityBuilder_ == null) {
+                healingByAbility_ = java.util.Collections.emptyList();
+                bitField0_ = (bitField0_ & ~0x00000004);
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.clear();
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public Builder removeHealingByAbility(int index) {
+              if (healingByAbilityBuilder_ == null) {
+                ensureHealingByAbilityIsMutable();
+                healingByAbility_.remove(index);
+                onChanged();
+              } else {
+                healingByAbilityBuilder_.remove(index);
+              }
+              return this;
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder getHealingByAbilityBuilder(
+                int index) {
+              return getHealingByAbilityFieldBuilder().getBuilder(index);
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder getHealingByAbilityOrBuilder(
+                int index) {
+              if (healingByAbilityBuilder_ == null) {
+                return healingByAbility_.get(index);  } else {
+                return healingByAbilityBuilder_.getMessageOrBuilder(index);
+              }
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder> 
+                 getHealingByAbilityOrBuilderList() {
+              if (healingByAbilityBuilder_ != null) {
+                return healingByAbilityBuilder_.getMessageOrBuilderList();
+              } else {
+                return java.util.Collections.unmodifiableList(healingByAbility_);
+              }
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder addHealingByAbilityBuilder() {
+              return getHealingByAbilityFieldBuilder().addBuilder(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.getDefaultInstance());
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder addHealingByAbilityBuilder(
+                int index) {
+              return getHealingByAbilityFieldBuilder().addBuilder(
+                  index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.getDefaultInstance());
+            }
+            /**
+             * <code>repeated .CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility healing_by_ability = 3;</code>
+             */
+            public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder> 
+                 getHealingByAbilityBuilderList() {
+              return getHealingByAbilityFieldBuilder().getBuilderList();
+            }
+            private com.google.protobuf.RepeatedFieldBuilder<
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder> 
+                getHealingByAbilityFieldBuilder() {
+              if (healingByAbilityBuilder_ == null) {
+                healingByAbilityBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbility.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.CombatSegment.HealingByAbilityOrBuilder>(
+                        healingByAbility_,
+                        ((bitField0_ & 0x00000004) == 0x00000004),
+                        getParentForChildren(),
+                        isClean());
+                healingByAbility_ = null;
+              }
+              return healingByAbilityBuilder_;
             }
 
             // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata.Team.Player.CombatSegment)
@@ -23882,6 +29176,1736 @@ public final class S2DotaMatchMetadata {
           // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata.Team.Player.BuffRecord)
         }
 
+        public interface GoldReceivedOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:CDOTAMatchPrivateMetadata.Team.Player.GoldReceived)
+            com.google.protobuf.MessageOrBuilder {
+
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          boolean hasCreep();
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          int getCreep();
+
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          boolean hasHeroes();
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          int getHeroes();
+
+          /**
+           * <code>optional uint32 bounty_runes = 3;</code>
+           */
+          boolean hasBountyRunes();
+          /**
+           * <code>optional uint32 bounty_runes = 3;</code>
+           */
+          int getBountyRunes();
+
+          /**
+           * <code>optional uint32 passive = 4;</code>
+           */
+          boolean hasPassive();
+          /**
+           * <code>optional uint32 passive = 4;</code>
+           */
+          int getPassive();
+
+          /**
+           * <code>optional uint32 buildings = 5;</code>
+           */
+          boolean hasBuildings();
+          /**
+           * <code>optional uint32 buildings = 5;</code>
+           */
+          int getBuildings();
+
+          /**
+           * <code>optional uint32 abilities = 6;</code>
+           */
+          boolean hasAbilities();
+          /**
+           * <code>optional uint32 abilities = 6;</code>
+           */
+          int getAbilities();
+
+          /**
+           * <code>optional uint32 wards = 7;</code>
+           */
+          boolean hasWards();
+          /**
+           * <code>optional uint32 wards = 7;</code>
+           */
+          int getWards();
+
+          /**
+           * <code>optional uint32 other = 8;</code>
+           */
+          boolean hasOther();
+          /**
+           * <code>optional uint32 other = 8;</code>
+           */
+          int getOther();
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.GoldReceived}
+         */
+        public static final class GoldReceived extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:CDOTAMatchPrivateMetadata.Team.Player.GoldReceived)
+            GoldReceivedOrBuilder {
+          // Use GoldReceived.newBuilder() to construct.
+          private GoldReceived(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
+          }
+          private GoldReceived(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+          private static final GoldReceived defaultInstance;
+          public static GoldReceived getDefaultInstance() {
+            return defaultInstance;
+          }
+
+          public GoldReceived getDefaultInstanceForType() {
+            return defaultInstance;
+          }
+
+          private final com.google.protobuf.UnknownFieldSet unknownFields;
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+              getUnknownFields() {
+            return this.unknownFields;
+          }
+          private GoldReceived(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  default: {
+                    if (!parseUnknownField(input, unknownFields,
+                                           extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                  case 8: {
+                    bitField0_ |= 0x00000001;
+                    creep_ = input.readUInt32();
+                    break;
+                  }
+                  case 16: {
+                    bitField0_ |= 0x00000002;
+                    heroes_ = input.readUInt32();
+                    break;
+                  }
+                  case 24: {
+                    bitField0_ |= 0x00000004;
+                    bountyRunes_ = input.readUInt32();
+                    break;
+                  }
+                  case 32: {
+                    bitField0_ |= 0x00000008;
+                    passive_ = input.readUInt32();
+                    break;
+                  }
+                  case 40: {
+                    bitField0_ |= 0x00000010;
+                    buildings_ = input.readUInt32();
+                    break;
+                  }
+                  case 48: {
+                    bitField0_ |= 0x00000020;
+                    abilities_ = input.readUInt32();
+                    break;
+                  }
+                  case 56: {
+                    bitField0_ |= 0x00000040;
+                    wards_ = input.readUInt32();
+                    break;
+                  }
+                  case 64: {
+                    bitField0_ |= 0x00000080;
+                    other_ = input.readUInt32();
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder.class);
+          }
+
+          public static com.google.protobuf.Parser<GoldReceived> PARSER =
+              new com.google.protobuf.AbstractParser<GoldReceived>() {
+            public GoldReceived parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new GoldReceived(input, extensionRegistry);
+            }
+          };
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<GoldReceived> getParserForType() {
+            return PARSER;
+          }
+
+          private int bitField0_;
+          public static final int CREEP_FIELD_NUMBER = 1;
+          private int creep_;
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          public boolean hasCreep() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          public int getCreep() {
+            return creep_;
+          }
+
+          public static final int HEROES_FIELD_NUMBER = 2;
+          private int heroes_;
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          public boolean hasHeroes() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          public int getHeroes() {
+            return heroes_;
+          }
+
+          public static final int BOUNTY_RUNES_FIELD_NUMBER = 3;
+          private int bountyRunes_;
+          /**
+           * <code>optional uint32 bounty_runes = 3;</code>
+           */
+          public boolean hasBountyRunes() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 bounty_runes = 3;</code>
+           */
+          public int getBountyRunes() {
+            return bountyRunes_;
+          }
+
+          public static final int PASSIVE_FIELD_NUMBER = 4;
+          private int passive_;
+          /**
+           * <code>optional uint32 passive = 4;</code>
+           */
+          public boolean hasPassive() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+          }
+          /**
+           * <code>optional uint32 passive = 4;</code>
+           */
+          public int getPassive() {
+            return passive_;
+          }
+
+          public static final int BUILDINGS_FIELD_NUMBER = 5;
+          private int buildings_;
+          /**
+           * <code>optional uint32 buildings = 5;</code>
+           */
+          public boolean hasBuildings() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+          }
+          /**
+           * <code>optional uint32 buildings = 5;</code>
+           */
+          public int getBuildings() {
+            return buildings_;
+          }
+
+          public static final int ABILITIES_FIELD_NUMBER = 6;
+          private int abilities_;
+          /**
+           * <code>optional uint32 abilities = 6;</code>
+           */
+          public boolean hasAbilities() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+          }
+          /**
+           * <code>optional uint32 abilities = 6;</code>
+           */
+          public int getAbilities() {
+            return abilities_;
+          }
+
+          public static final int WARDS_FIELD_NUMBER = 7;
+          private int wards_;
+          /**
+           * <code>optional uint32 wards = 7;</code>
+           */
+          public boolean hasWards() {
+            return ((bitField0_ & 0x00000040) == 0x00000040);
+          }
+          /**
+           * <code>optional uint32 wards = 7;</code>
+           */
+          public int getWards() {
+            return wards_;
+          }
+
+          public static final int OTHER_FIELD_NUMBER = 8;
+          private int other_;
+          /**
+           * <code>optional uint32 other = 8;</code>
+           */
+          public boolean hasOther() {
+            return ((bitField0_ & 0x00000080) == 0x00000080);
+          }
+          /**
+           * <code>optional uint32 other = 8;</code>
+           */
+          public int getOther() {
+            return other_;
+          }
+
+          private void initFields() {
+            creep_ = 0;
+            heroes_ = 0;
+            bountyRunes_ = 0;
+            passive_ = 0;
+            buildings_ = 0;
+            abilities_ = 0;
+            wards_ = 0;
+            other_ = 0;
+          }
+          private byte memoizedIsInitialized = -1;
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              output.writeUInt32(1, creep_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              output.writeUInt32(2, heroes_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              output.writeUInt32(3, bountyRunes_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              output.writeUInt32(4, passive_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              output.writeUInt32(5, buildings_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              output.writeUInt32(6, abilities_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+              output.writeUInt32(7, wards_);
+            }
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
+              output.writeUInt32(8, other_);
+            }
+            getUnknownFields().writeTo(output);
+          }
+
+          private int memoizedSerializedSize = -1;
+          public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(1, creep_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(2, heroes_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(3, bountyRunes_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(4, passive_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(5, buildings_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(6, abilities_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(7, wards_);
+            }
+            if (((bitField0_ & 0x00000080) == 0x00000080)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(8, other_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+          }
+
+          private static final long serialVersionUID = 0L;
+          @java.lang.Override
+          protected java.lang.Object writeReplace()
+              throws java.io.ObjectStreamException {
+            return super.writeReplace();
+          }
+
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+          }
+
+          public static Builder newBuilder() { return Builder.create(); }
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived prototype) {
+            return newBuilder().mergeFrom(prototype);
+          }
+          public Builder toBuilder() { return newBuilder(this); }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.GoldReceived}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:CDOTAMatchPrivateMetadata.Team.Player.GoldReceived)
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder.class);
+            }
+
+            // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+              }
+            }
+            private static Builder create() {
+              return new Builder();
+            }
+
+            public Builder clear() {
+              super.clear();
+              creep_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              heroes_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              bountyRunes_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              passive_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              buildings_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              abilities_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              wards_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000040);
+              other_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              return this;
+            }
+
+            public Builder clone() {
+              return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_descriptor;
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived getDefaultInstanceForType() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance();
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived build() {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived buildPartial() {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived(this);
+              int from_bitField0_ = bitField0_;
+              int to_bitField0_ = 0;
+              if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                to_bitField0_ |= 0x00000001;
+              }
+              result.creep_ = creep_;
+              if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                to_bitField0_ |= 0x00000002;
+              }
+              result.heroes_ = heroes_;
+              if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+                to_bitField0_ |= 0x00000004;
+              }
+              result.bountyRunes_ = bountyRunes_;
+              if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+                to_bitField0_ |= 0x00000008;
+              }
+              result.passive_ = passive_;
+              if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                to_bitField0_ |= 0x00000010;
+              }
+              result.buildings_ = buildings_;
+              if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+                to_bitField0_ |= 0x00000020;
+              }
+              result.abilities_ = abilities_;
+              if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+                to_bitField0_ |= 0x00000040;
+              }
+              result.wards_ = wards_;
+              if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+                to_bitField0_ |= 0x00000080;
+              }
+              result.other_ = other_;
+              result.bitField0_ = to_bitField0_;
+              onBuilt();
+              return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived) {
+                return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived other) {
+              if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance()) return this;
+              if (other.hasCreep()) {
+                setCreep(other.getCreep());
+              }
+              if (other.hasHeroes()) {
+                setHeroes(other.getHeroes());
+              }
+              if (other.hasBountyRunes()) {
+                setBountyRunes(other.getBountyRunes());
+              }
+              if (other.hasPassive()) {
+                setPassive(other.getPassive());
+              }
+              if (other.hasBuildings()) {
+                setBuildings(other.getBuildings());
+              }
+              if (other.hasAbilities()) {
+                setAbilities(other.getAbilities());
+              }
+              if (other.hasWards()) {
+                setWards(other.getWards());
+              }
+              if (other.hasOther()) {
+                setOther(other.getOther());
+              }
+              this.mergeUnknownFields(other.getUnknownFields());
+              return this;
+            }
+
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived) e.getUnfinishedMessage();
+                throw e;
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+            private int bitField0_;
+
+            private int creep_ ;
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public boolean hasCreep() {
+              return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public int getCreep() {
+              return creep_;
+            }
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public Builder setCreep(int value) {
+              bitField0_ |= 0x00000001;
+              creep_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public Builder clearCreep() {
+              bitField0_ = (bitField0_ & ~0x00000001);
+              creep_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int heroes_ ;
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public boolean hasHeroes() {
+              return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public int getHeroes() {
+              return heroes_;
+            }
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public Builder setHeroes(int value) {
+              bitField0_ |= 0x00000002;
+              heroes_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public Builder clearHeroes() {
+              bitField0_ = (bitField0_ & ~0x00000002);
+              heroes_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int bountyRunes_ ;
+            /**
+             * <code>optional uint32 bounty_runes = 3;</code>
+             */
+            public boolean hasBountyRunes() {
+              return ((bitField0_ & 0x00000004) == 0x00000004);
+            }
+            /**
+             * <code>optional uint32 bounty_runes = 3;</code>
+             */
+            public int getBountyRunes() {
+              return bountyRunes_;
+            }
+            /**
+             * <code>optional uint32 bounty_runes = 3;</code>
+             */
+            public Builder setBountyRunes(int value) {
+              bitField0_ |= 0x00000004;
+              bountyRunes_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 bounty_runes = 3;</code>
+             */
+            public Builder clearBountyRunes() {
+              bitField0_ = (bitField0_ & ~0x00000004);
+              bountyRunes_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int passive_ ;
+            /**
+             * <code>optional uint32 passive = 4;</code>
+             */
+            public boolean hasPassive() {
+              return ((bitField0_ & 0x00000008) == 0x00000008);
+            }
+            /**
+             * <code>optional uint32 passive = 4;</code>
+             */
+            public int getPassive() {
+              return passive_;
+            }
+            /**
+             * <code>optional uint32 passive = 4;</code>
+             */
+            public Builder setPassive(int value) {
+              bitField0_ |= 0x00000008;
+              passive_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 passive = 4;</code>
+             */
+            public Builder clearPassive() {
+              bitField0_ = (bitField0_ & ~0x00000008);
+              passive_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int buildings_ ;
+            /**
+             * <code>optional uint32 buildings = 5;</code>
+             */
+            public boolean hasBuildings() {
+              return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+            /**
+             * <code>optional uint32 buildings = 5;</code>
+             */
+            public int getBuildings() {
+              return buildings_;
+            }
+            /**
+             * <code>optional uint32 buildings = 5;</code>
+             */
+            public Builder setBuildings(int value) {
+              bitField0_ |= 0x00000010;
+              buildings_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 buildings = 5;</code>
+             */
+            public Builder clearBuildings() {
+              bitField0_ = (bitField0_ & ~0x00000010);
+              buildings_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int abilities_ ;
+            /**
+             * <code>optional uint32 abilities = 6;</code>
+             */
+            public boolean hasAbilities() {
+              return ((bitField0_ & 0x00000020) == 0x00000020);
+            }
+            /**
+             * <code>optional uint32 abilities = 6;</code>
+             */
+            public int getAbilities() {
+              return abilities_;
+            }
+            /**
+             * <code>optional uint32 abilities = 6;</code>
+             */
+            public Builder setAbilities(int value) {
+              bitField0_ |= 0x00000020;
+              abilities_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 abilities = 6;</code>
+             */
+            public Builder clearAbilities() {
+              bitField0_ = (bitField0_ & ~0x00000020);
+              abilities_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int wards_ ;
+            /**
+             * <code>optional uint32 wards = 7;</code>
+             */
+            public boolean hasWards() {
+              return ((bitField0_ & 0x00000040) == 0x00000040);
+            }
+            /**
+             * <code>optional uint32 wards = 7;</code>
+             */
+            public int getWards() {
+              return wards_;
+            }
+            /**
+             * <code>optional uint32 wards = 7;</code>
+             */
+            public Builder setWards(int value) {
+              bitField0_ |= 0x00000040;
+              wards_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 wards = 7;</code>
+             */
+            public Builder clearWards() {
+              bitField0_ = (bitField0_ & ~0x00000040);
+              wards_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int other_ ;
+            /**
+             * <code>optional uint32 other = 8;</code>
+             */
+            public boolean hasOther() {
+              return ((bitField0_ & 0x00000080) == 0x00000080);
+            }
+            /**
+             * <code>optional uint32 other = 8;</code>
+             */
+            public int getOther() {
+              return other_;
+            }
+            /**
+             * <code>optional uint32 other = 8;</code>
+             */
+            public Builder setOther(int value) {
+              bitField0_ |= 0x00000080;
+              other_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 other = 8;</code>
+             */
+            public Builder clearOther() {
+              bitField0_ = (bitField0_ & ~0x00000080);
+              other_ = 0;
+              onChanged();
+              return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata.Team.Player.GoldReceived)
+          }
+
+          static {
+            defaultInstance = new GoldReceived(true);
+            defaultInstance.initFields();
+          }
+
+          // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata.Team.Player.GoldReceived)
+        }
+
+        public interface XPReceivedOrBuilder extends
+            // @@protoc_insertion_point(interface_extends:CDOTAMatchPrivateMetadata.Team.Player.XPReceived)
+            com.google.protobuf.MessageOrBuilder {
+
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          boolean hasCreep();
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          int getCreep();
+
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          boolean hasHeroes();
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          int getHeroes();
+
+          /**
+           * <code>optional uint32 roshan = 3;</code>
+           */
+          boolean hasRoshan();
+          /**
+           * <code>optional uint32 roshan = 3;</code>
+           */
+          int getRoshan();
+
+          /**
+           * <code>optional uint32 tome_of_knowledge = 4;</code>
+           */
+          boolean hasTomeOfKnowledge();
+          /**
+           * <code>optional uint32 tome_of_knowledge = 4;</code>
+           */
+          int getTomeOfKnowledge();
+
+          /**
+           * <code>optional uint32 outpost = 5;</code>
+           */
+          boolean hasOutpost();
+          /**
+           * <code>optional uint32 outpost = 5;</code>
+           */
+          int getOutpost();
+
+          /**
+           * <code>optional uint32 other = 6;</code>
+           */
+          boolean hasOther();
+          /**
+           * <code>optional uint32 other = 6;</code>
+           */
+          int getOther();
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.XPReceived}
+         */
+        public static final class XPReceived extends
+            com.google.protobuf.GeneratedMessage implements
+            // @@protoc_insertion_point(message_implements:CDOTAMatchPrivateMetadata.Team.Player.XPReceived)
+            XPReceivedOrBuilder {
+          // Use XPReceived.newBuilder() to construct.
+          private XPReceived(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+            super(builder);
+            this.unknownFields = builder.getUnknownFields();
+          }
+          private XPReceived(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+          private static final XPReceived defaultInstance;
+          public static XPReceived getDefaultInstance() {
+            return defaultInstance;
+          }
+
+          public XPReceived getDefaultInstanceForType() {
+            return defaultInstance;
+          }
+
+          private final com.google.protobuf.UnknownFieldSet unknownFields;
+          @java.lang.Override
+          public final com.google.protobuf.UnknownFieldSet
+              getUnknownFields() {
+            return this.unknownFields;
+          }
+          private XPReceived(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            initFields();
+            int mutable_bitField0_ = 0;
+            com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+                com.google.protobuf.UnknownFieldSet.newBuilder();
+            try {
+              boolean done = false;
+              while (!done) {
+                int tag = input.readTag();
+                switch (tag) {
+                  case 0:
+                    done = true;
+                    break;
+                  default: {
+                    if (!parseUnknownField(input, unknownFields,
+                                           extensionRegistry, tag)) {
+                      done = true;
+                    }
+                    break;
+                  }
+                  case 8: {
+                    bitField0_ |= 0x00000001;
+                    creep_ = input.readUInt32();
+                    break;
+                  }
+                  case 16: {
+                    bitField0_ |= 0x00000002;
+                    heroes_ = input.readUInt32();
+                    break;
+                  }
+                  case 24: {
+                    bitField0_ |= 0x00000004;
+                    roshan_ = input.readUInt32();
+                    break;
+                  }
+                  case 32: {
+                    bitField0_ |= 0x00000008;
+                    tomeOfKnowledge_ = input.readUInt32();
+                    break;
+                  }
+                  case 40: {
+                    bitField0_ |= 0x00000010;
+                    outpost_ = input.readUInt32();
+                    break;
+                  }
+                  case 48: {
+                    bitField0_ |= 0x00000020;
+                    other_ = input.readUInt32();
+                    break;
+                  }
+                }
+              }
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(this);
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(
+                  e.getMessage()).setUnfinishedMessage(this);
+            } finally {
+              this.unknownFields = unknownFields.build();
+              makeExtensionsImmutable();
+            }
+          }
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder.class);
+          }
+
+          public static com.google.protobuf.Parser<XPReceived> PARSER =
+              new com.google.protobuf.AbstractParser<XPReceived>() {
+            public XPReceived parsePartialFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+              return new XPReceived(input, extensionRegistry);
+            }
+          };
+
+          @java.lang.Override
+          public com.google.protobuf.Parser<XPReceived> getParserForType() {
+            return PARSER;
+          }
+
+          private int bitField0_;
+          public static final int CREEP_FIELD_NUMBER = 1;
+          private int creep_;
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          public boolean hasCreep() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 creep = 1;</code>
+           */
+          public int getCreep() {
+            return creep_;
+          }
+
+          public static final int HEROES_FIELD_NUMBER = 2;
+          private int heroes_;
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          public boolean hasHeroes() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 heroes = 2;</code>
+           */
+          public int getHeroes() {
+            return heroes_;
+          }
+
+          public static final int ROSHAN_FIELD_NUMBER = 3;
+          private int roshan_;
+          /**
+           * <code>optional uint32 roshan = 3;</code>
+           */
+          public boolean hasRoshan() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 roshan = 3;</code>
+           */
+          public int getRoshan() {
+            return roshan_;
+          }
+
+          public static final int TOME_OF_KNOWLEDGE_FIELD_NUMBER = 4;
+          private int tomeOfKnowledge_;
+          /**
+           * <code>optional uint32 tome_of_knowledge = 4;</code>
+           */
+          public boolean hasTomeOfKnowledge() {
+            return ((bitField0_ & 0x00000008) == 0x00000008);
+          }
+          /**
+           * <code>optional uint32 tome_of_knowledge = 4;</code>
+           */
+          public int getTomeOfKnowledge() {
+            return tomeOfKnowledge_;
+          }
+
+          public static final int OUTPOST_FIELD_NUMBER = 5;
+          private int outpost_;
+          /**
+           * <code>optional uint32 outpost = 5;</code>
+           */
+          public boolean hasOutpost() {
+            return ((bitField0_ & 0x00000010) == 0x00000010);
+          }
+          /**
+           * <code>optional uint32 outpost = 5;</code>
+           */
+          public int getOutpost() {
+            return outpost_;
+          }
+
+          public static final int OTHER_FIELD_NUMBER = 6;
+          private int other_;
+          /**
+           * <code>optional uint32 other = 6;</code>
+           */
+          public boolean hasOther() {
+            return ((bitField0_ & 0x00000020) == 0x00000020);
+          }
+          /**
+           * <code>optional uint32 other = 6;</code>
+           */
+          public int getOther() {
+            return other_;
+          }
+
+          private void initFields() {
+            creep_ = 0;
+            heroes_ = 0;
+            roshan_ = 0;
+            tomeOfKnowledge_ = 0;
+            outpost_ = 0;
+            other_ = 0;
+          }
+          private byte memoizedIsInitialized = -1;
+          public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized == 1) return true;
+            if (isInitialized == 0) return false;
+
+            memoizedIsInitialized = 1;
+            return true;
+          }
+
+          public void writeTo(com.google.protobuf.CodedOutputStream output)
+                              throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              output.writeUInt32(1, creep_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              output.writeUInt32(2, heroes_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              output.writeUInt32(3, roshan_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              output.writeUInt32(4, tomeOfKnowledge_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              output.writeUInt32(5, outpost_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              output.writeUInt32(6, other_);
+            }
+            getUnknownFields().writeTo(output);
+          }
+
+          private int memoizedSerializedSize = -1;
+          public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1) return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(1, creep_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(2, heroes_);
+            }
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(3, roshan_);
+            }
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(4, tomeOfKnowledge_);
+            }
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(5, outpost_);
+            }
+            if (((bitField0_ & 0x00000020) == 0x00000020)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(6, other_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+          }
+
+          private static final long serialVersionUID = 0L;
+          @java.lang.Override
+          protected java.lang.Object writeReplace()
+              throws java.io.ObjectStreamException {
+            return super.writeReplace();
+          }
+
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(
+              com.google.protobuf.ByteString data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(
+              com.google.protobuf.ByteString data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(byte[] data)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(
+              byte[] data,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return PARSER.parseFrom(data, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseDelimitedFrom(java.io.InputStream input)
+              throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseDelimitedFrom(
+              java.io.InputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseDelimitedFrom(input, extensionRegistry);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(
+              com.google.protobuf.CodedInputStream input)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input);
+          }
+          public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parseFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            return PARSER.parseFrom(input, extensionRegistry);
+          }
+
+          public static Builder newBuilder() { return Builder.create(); }
+          public Builder newBuilderForType() { return newBuilder(); }
+          public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived prototype) {
+            return newBuilder().mergeFrom(prototype);
+          }
+          public Builder toBuilder() { return newBuilder(this); }
+
+          @java.lang.Override
+          protected Builder newBuilderForType(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+          }
+          /**
+           * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.XPReceived}
+           */
+          public static final class Builder extends
+              com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+              // @@protoc_insertion_point(builder_implements:CDOTAMatchPrivateMetadata.Team.Player.XPReceived)
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder {
+            public static final com.google.protobuf.Descriptors.Descriptor
+                getDescriptor() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+                internalGetFieldAccessorTable() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_fieldAccessorTable
+                  .ensureFieldAccessorsInitialized(
+                      skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder.class);
+            }
+
+            // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.newBuilder()
+            private Builder() {
+              maybeForceBuilderInitialization();
+            }
+
+            private Builder(
+                com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              super(parent);
+              maybeForceBuilderInitialization();
+            }
+            private void maybeForceBuilderInitialization() {
+              if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+              }
+            }
+            private static Builder create() {
+              return new Builder();
+            }
+
+            public Builder clear() {
+              super.clear();
+              creep_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              heroes_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              roshan_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              tomeOfKnowledge_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000008);
+              outpost_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000010);
+              other_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000020);
+              return this;
+            }
+
+            public Builder clone() {
+              return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor
+                getDescriptorForType() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor;
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived getDefaultInstanceForType() {
+              return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance();
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived build() {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived result = buildPartial();
+              if (!result.isInitialized()) {
+                throw newUninitializedMessageException(result);
+              }
+              return result;
+            }
+
+            public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived buildPartial() {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived(this);
+              int from_bitField0_ = bitField0_;
+              int to_bitField0_ = 0;
+              if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                to_bitField0_ |= 0x00000001;
+              }
+              result.creep_ = creep_;
+              if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                to_bitField0_ |= 0x00000002;
+              }
+              result.heroes_ = heroes_;
+              if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+                to_bitField0_ |= 0x00000004;
+              }
+              result.roshan_ = roshan_;
+              if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+                to_bitField0_ |= 0x00000008;
+              }
+              result.tomeOfKnowledge_ = tomeOfKnowledge_;
+              if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+                to_bitField0_ |= 0x00000010;
+              }
+              result.outpost_ = outpost_;
+              if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+                to_bitField0_ |= 0x00000020;
+              }
+              result.other_ = other_;
+              result.bitField0_ = to_bitField0_;
+              onBuilt();
+              return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+              if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived) {
+                return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived)other);
+              } else {
+                super.mergeFrom(other);
+                return this;
+              }
+            }
+
+            public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived other) {
+              if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance()) return this;
+              if (other.hasCreep()) {
+                setCreep(other.getCreep());
+              }
+              if (other.hasHeroes()) {
+                setHeroes(other.getHeroes());
+              }
+              if (other.hasRoshan()) {
+                setRoshan(other.getRoshan());
+              }
+              if (other.hasTomeOfKnowledge()) {
+                setTomeOfKnowledge(other.getTomeOfKnowledge());
+              }
+              if (other.hasOutpost()) {
+                setOutpost(other.getOutpost());
+              }
+              if (other.hasOther()) {
+                setOther(other.getOther());
+              }
+              this.mergeUnknownFields(other.getUnknownFields());
+              return this;
+            }
+
+            public final boolean isInitialized() {
+              return true;
+            }
+
+            public Builder mergeFrom(
+                com.google.protobuf.CodedInputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                throws java.io.IOException {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived parsedMessage = null;
+              try {
+                parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+              } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+                parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived) e.getUnfinishedMessage();
+                throw e;
+              } finally {
+                if (parsedMessage != null) {
+                  mergeFrom(parsedMessage);
+                }
+              }
+              return this;
+            }
+            private int bitField0_;
+
+            private int creep_ ;
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public boolean hasCreep() {
+              return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public int getCreep() {
+              return creep_;
+            }
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public Builder setCreep(int value) {
+              bitField0_ |= 0x00000001;
+              creep_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 creep = 1;</code>
+             */
+            public Builder clearCreep() {
+              bitField0_ = (bitField0_ & ~0x00000001);
+              creep_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int heroes_ ;
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public boolean hasHeroes() {
+              return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public int getHeroes() {
+              return heroes_;
+            }
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public Builder setHeroes(int value) {
+              bitField0_ |= 0x00000002;
+              heroes_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 heroes = 2;</code>
+             */
+            public Builder clearHeroes() {
+              bitField0_ = (bitField0_ & ~0x00000002);
+              heroes_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int roshan_ ;
+            /**
+             * <code>optional uint32 roshan = 3;</code>
+             */
+            public boolean hasRoshan() {
+              return ((bitField0_ & 0x00000004) == 0x00000004);
+            }
+            /**
+             * <code>optional uint32 roshan = 3;</code>
+             */
+            public int getRoshan() {
+              return roshan_;
+            }
+            /**
+             * <code>optional uint32 roshan = 3;</code>
+             */
+            public Builder setRoshan(int value) {
+              bitField0_ |= 0x00000004;
+              roshan_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 roshan = 3;</code>
+             */
+            public Builder clearRoshan() {
+              bitField0_ = (bitField0_ & ~0x00000004);
+              roshan_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int tomeOfKnowledge_ ;
+            /**
+             * <code>optional uint32 tome_of_knowledge = 4;</code>
+             */
+            public boolean hasTomeOfKnowledge() {
+              return ((bitField0_ & 0x00000008) == 0x00000008);
+            }
+            /**
+             * <code>optional uint32 tome_of_knowledge = 4;</code>
+             */
+            public int getTomeOfKnowledge() {
+              return tomeOfKnowledge_;
+            }
+            /**
+             * <code>optional uint32 tome_of_knowledge = 4;</code>
+             */
+            public Builder setTomeOfKnowledge(int value) {
+              bitField0_ |= 0x00000008;
+              tomeOfKnowledge_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 tome_of_knowledge = 4;</code>
+             */
+            public Builder clearTomeOfKnowledge() {
+              bitField0_ = (bitField0_ & ~0x00000008);
+              tomeOfKnowledge_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int outpost_ ;
+            /**
+             * <code>optional uint32 outpost = 5;</code>
+             */
+            public boolean hasOutpost() {
+              return ((bitField0_ & 0x00000010) == 0x00000010);
+            }
+            /**
+             * <code>optional uint32 outpost = 5;</code>
+             */
+            public int getOutpost() {
+              return outpost_;
+            }
+            /**
+             * <code>optional uint32 outpost = 5;</code>
+             */
+            public Builder setOutpost(int value) {
+              bitField0_ |= 0x00000010;
+              outpost_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 outpost = 5;</code>
+             */
+            public Builder clearOutpost() {
+              bitField0_ = (bitField0_ & ~0x00000010);
+              outpost_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int other_ ;
+            /**
+             * <code>optional uint32 other = 6;</code>
+             */
+            public boolean hasOther() {
+              return ((bitField0_ & 0x00000020) == 0x00000020);
+            }
+            /**
+             * <code>optional uint32 other = 6;</code>
+             */
+            public int getOther() {
+              return other_;
+            }
+            /**
+             * <code>optional uint32 other = 6;</code>
+             */
+            public Builder setOther(int value) {
+              bitField0_ |= 0x00000020;
+              other_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 other = 6;</code>
+             */
+            public Builder clearOther() {
+              bitField0_ = (bitField0_ & ~0x00000020);
+              other_ = 0;
+              onChanged();
+              return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata.Team.Player.XPReceived)
+          }
+
+          static {
+            defaultInstance = new XPReceived(true);
+            defaultInstance.initFields();
+          }
+
+          // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata.Team.Player.XPReceived)
+        }
+
         private int bitField0_;
         public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
         private int accountId_;
@@ -24137,6 +31161,48 @@ public final class S2DotaMatchMetadata {
           return graphDenies_.get(index);
         }
 
+        public static final int GOLD_RECEIVED_FIELD_NUMBER = 12;
+        private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived goldReceived_;
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+         */
+        public boolean hasGoldReceived() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived getGoldReceived() {
+          return goldReceived_;
+        }
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder getGoldReceivedOrBuilder() {
+          return goldReceived_;
+        }
+
+        public static final int XP_RECEIVED_FIELD_NUMBER = 13;
+        private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived xpReceived_;
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+         */
+        public boolean hasXpReceived() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived getXpReceived() {
+          return xpReceived_;
+        }
+        /**
+         * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder getXpReceivedOrBuilder() {
+          return xpReceived_;
+        }
+
         private void initFields() {
           accountId_ = 0;
           playerSlot_ = 0;
@@ -24149,6 +31215,8 @@ public final class S2DotaMatchMetadata {
           graphAssists_ = java.util.Collections.emptyList();
           graphLasthits_ = java.util.Collections.emptyList();
           graphDenies_ = java.util.Collections.emptyList();
+          goldReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance();
+          xpReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -24195,6 +31263,12 @@ public final class S2DotaMatchMetadata {
           }
           for (int i = 0; i < graphDenies_.size(); i++) {
             output.writeFloat(11, graphDenies_.get(i));
+          }
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            output.writeMessage(12, goldReceived_);
+          }
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            output.writeMessage(13, xpReceived_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -24263,6 +31337,14 @@ public final class S2DotaMatchMetadata {
             dataSize = 4 * getGraphDeniesList().size();
             size += dataSize;
             size += 1 * getGraphDeniesList().size();
+          }
+          if (((bitField0_ & 0x00000008) == 0x00000008)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(12, goldReceived_);
+          }
+          if (((bitField0_ & 0x00000010) == 0x00000010)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(13, xpReceived_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -24375,6 +31457,8 @@ public final class S2DotaMatchMetadata {
             if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
               getCombatSegmentsFieldBuilder();
               getBuffRecordsFieldBuilder();
+              getGoldReceivedFieldBuilder();
+              getXpReceivedFieldBuilder();
             }
           }
           private static Builder create() {
@@ -24413,6 +31497,18 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00000200);
             graphDenies_ = java.util.Collections.emptyList();
             bitField0_ = (bitField0_ & ~0x00000400);
+            if (goldReceivedBuilder_ == null) {
+              goldReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance();
+            } else {
+              goldReceivedBuilder_.clear();
+            }
+            bitField0_ = (bitField0_ & ~0x00000800);
+            if (xpReceivedBuilder_ == null) {
+              xpReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance();
+            } else {
+              xpReceivedBuilder_.clear();
+            }
+            bitField0_ = (bitField0_ & ~0x00001000);
             return this;
           }
 
@@ -24501,6 +31597,22 @@ public final class S2DotaMatchMetadata {
               bitField0_ = (bitField0_ & ~0x00000400);
             }
             result.graphDenies_ = graphDenies_;
+            if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+              to_bitField0_ |= 0x00000008;
+            }
+            if (goldReceivedBuilder_ == null) {
+              result.goldReceived_ = goldReceived_;
+            } else {
+              result.goldReceived_ = goldReceivedBuilder_.build();
+            }
+            if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+              to_bitField0_ |= 0x00000010;
+            }
+            if (xpReceivedBuilder_ == null) {
+              result.xpReceived_ = xpReceived_;
+            } else {
+              result.xpReceived_ = xpReceivedBuilder_.build();
+            }
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -24637,6 +31749,12 @@ public final class S2DotaMatchMetadata {
                 graphDenies_.addAll(other.graphDenies_);
               }
               onChanged();
+            }
+            if (other.hasGoldReceived()) {
+              mergeGoldReceived(other.getGoldReceived());
+            }
+            if (other.hasXpReceived()) {
+              mergeXpReceived(other.getXpReceived());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -25665,6 +32783,238 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00000400);
             onChanged();
             return this;
+          }
+
+          private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived goldReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance();
+          private com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder> goldReceivedBuilder_;
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public boolean hasGoldReceived() {
+            return ((bitField0_ & 0x00000800) == 0x00000800);
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived getGoldReceived() {
+            if (goldReceivedBuilder_ == null) {
+              return goldReceived_;
+            } else {
+              return goldReceivedBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public Builder setGoldReceived(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived value) {
+            if (goldReceivedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              goldReceived_ = value;
+              onChanged();
+            } else {
+              goldReceivedBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00000800;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public Builder setGoldReceived(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder builderForValue) {
+            if (goldReceivedBuilder_ == null) {
+              goldReceived_ = builderForValue.build();
+              onChanged();
+            } else {
+              goldReceivedBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00000800;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public Builder mergeGoldReceived(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived value) {
+            if (goldReceivedBuilder_ == null) {
+              if (((bitField0_ & 0x00000800) == 0x00000800) &&
+                  goldReceived_ != skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance()) {
+                goldReceived_ =
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.newBuilder(goldReceived_).mergeFrom(value).buildPartial();
+              } else {
+                goldReceived_ = value;
+              }
+              onChanged();
+            } else {
+              goldReceivedBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00000800;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public Builder clearGoldReceived() {
+            if (goldReceivedBuilder_ == null) {
+              goldReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.getDefaultInstance();
+              onChanged();
+            } else {
+              goldReceivedBuilder_.clear();
+            }
+            bitField0_ = (bitField0_ & ~0x00000800);
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder getGoldReceivedBuilder() {
+            bitField0_ |= 0x00000800;
+            onChanged();
+            return getGoldReceivedFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder getGoldReceivedOrBuilder() {
+            if (goldReceivedBuilder_ != null) {
+              return goldReceivedBuilder_.getMessageOrBuilder();
+            } else {
+              return goldReceived_;
+            }
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.GoldReceived gold_received = 12;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder> 
+              getGoldReceivedFieldBuilder() {
+            if (goldReceivedBuilder_ == null) {
+              goldReceivedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceived.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.GoldReceivedOrBuilder>(
+                      getGoldReceived(),
+                      getParentForChildren(),
+                      isClean());
+              goldReceived_ = null;
+            }
+            return goldReceivedBuilder_;
+          }
+
+          private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived xpReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance();
+          private com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder> xpReceivedBuilder_;
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public boolean hasXpReceived() {
+            return ((bitField0_ & 0x00001000) == 0x00001000);
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived getXpReceived() {
+            if (xpReceivedBuilder_ == null) {
+              return xpReceived_;
+            } else {
+              return xpReceivedBuilder_.getMessage();
+            }
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public Builder setXpReceived(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived value) {
+            if (xpReceivedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              xpReceived_ = value;
+              onChanged();
+            } else {
+              xpReceivedBuilder_.setMessage(value);
+            }
+            bitField0_ |= 0x00001000;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public Builder setXpReceived(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder builderForValue) {
+            if (xpReceivedBuilder_ == null) {
+              xpReceived_ = builderForValue.build();
+              onChanged();
+            } else {
+              xpReceivedBuilder_.setMessage(builderForValue.build());
+            }
+            bitField0_ |= 0x00001000;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public Builder mergeXpReceived(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived value) {
+            if (xpReceivedBuilder_ == null) {
+              if (((bitField0_ & 0x00001000) == 0x00001000) &&
+                  xpReceived_ != skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance()) {
+                xpReceived_ =
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.newBuilder(xpReceived_).mergeFrom(value).buildPartial();
+              } else {
+                xpReceived_ = value;
+              }
+              onChanged();
+            } else {
+              xpReceivedBuilder_.mergeFrom(value);
+            }
+            bitField0_ |= 0x00001000;
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public Builder clearXpReceived() {
+            if (xpReceivedBuilder_ == null) {
+              xpReceived_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.getDefaultInstance();
+              onChanged();
+            } else {
+              xpReceivedBuilder_.clear();
+            }
+            bitField0_ = (bitField0_ & ~0x00001000);
+            return this;
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder getXpReceivedBuilder() {
+            bitField0_ |= 0x00001000;
+            onChanged();
+            return getXpReceivedFieldBuilder().getBuilder();
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder getXpReceivedOrBuilder() {
+            if (xpReceivedBuilder_ != null) {
+              return xpReceivedBuilder_.getMessageOrBuilder();
+            } else {
+              return xpReceived_;
+            }
+          }
+          /**
+           * <code>optional .CDOTAMatchPrivateMetadata.Team.Player.XPReceived xp_received = 13;</code>
+           */
+          private com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder> 
+              getXpReceivedFieldBuilder() {
+            if (xpReceivedBuilder_ == null) {
+              xpReceivedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceived.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchPrivateMetadata.Team.Player.XPReceivedOrBuilder>(
+                      getXpReceived(),
+                      getParentForChildren(),
+                      isClean());
+              xpReceived_ = null;
+            }
+            return xpReceivedBuilder_;
           }
 
           // @@protoc_insertion_point(builder_scope:CDOTAMatchPrivateMetadata.Team.Player)
@@ -27987,57 +35337,56 @@ public final class S2DotaMatchMetadata {
     // @@protoc_insertion_point(class_scope:CDOTAMatchPrivateMetadata)
   }
 
-  public interface CMsgMatchMatchmakingStatsOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:CMsgMatchMatchmakingStats)
+  public interface CMsgDOTADPCMatchOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgDOTADPCMatch)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 average_queue_time = 1;</code>
+     * <code>optional .CMsgDOTAMatch match = 1;</code>
      */
-    boolean hasAverageQueueTime();
+    boolean hasMatch();
     /**
-     * <code>optional uint32 average_queue_time = 1;</code>
+     * <code>optional .CMsgDOTAMatch match = 1;</code>
      */
-    int getAverageQueueTime();
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch getMatch();
+    /**
+     * <code>optional .CMsgDOTAMatch match = 1;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatchOrBuilder getMatchOrBuilder();
 
     /**
-     * <code>optional uint32 maximum_queue_time = 2;</code>
+     * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
      */
-    boolean hasMaximumQueueTime();
+    boolean hasMetadata();
     /**
-     * <code>optional uint32 maximum_queue_time = 2;</code>
+     * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
      */
-    int getMaximumQueueTime();
-
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata getMetadata();
     /**
-     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+     * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
      */
-    boolean hasBehaviorScoreVariance();
-    /**
-     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
-     */
-    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance getBehaviorScoreVariance();
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadataOrBuilder getMetadataOrBuilder();
   }
   /**
-   * Protobuf type {@code CMsgMatchMatchmakingStats}
+   * Protobuf type {@code CMsgDOTADPCMatch}
    */
-  public static final class CMsgMatchMatchmakingStats extends
+  public static final class CMsgDOTADPCMatch extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:CMsgMatchMatchmakingStats)
-      CMsgMatchMatchmakingStatsOrBuilder {
-    // Use CMsgMatchMatchmakingStats.newBuilder() to construct.
-    private CMsgMatchMatchmakingStats(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      // @@protoc_insertion_point(message_implements:CMsgDOTADPCMatch)
+      CMsgDOTADPCMatchOrBuilder {
+    // Use CMsgDOTADPCMatch.newBuilder() to construct.
+    private CMsgDOTADPCMatch(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgMatchMatchmakingStats(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgDOTADPCMatch(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
-    private static final CMsgMatchMatchmakingStats defaultInstance;
-    public static CMsgMatchMatchmakingStats getDefaultInstance() {
+    private static final CMsgDOTADPCMatch defaultInstance;
+    public static CMsgDOTADPCMatch getDefaultInstance() {
       return defaultInstance;
     }
 
-    public CMsgMatchMatchmakingStats getDefaultInstanceForType() {
+    public CMsgDOTADPCMatch getDefaultInstanceForType() {
       return defaultInstance;
     }
 
@@ -28047,7 +35396,7 @@ public final class S2DotaMatchMetadata {
         getUnknownFields() {
       return this.unknownFields;
     }
-    private CMsgMatchMatchmakingStats(
+    private CMsgDOTADPCMatch(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -28070,25 +35419,30 @@ public final class S2DotaMatchMetadata {
               }
               break;
             }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              averageQueueTime_ = input.readUInt32();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              maximumQueueTime_ = input.readUInt32();
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance value = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.valueOf(rawValue);
-              if (value == null) {
-                unknownFields.mergeVarintField(3, rawValue);
-              } else {
-                bitField0_ |= 0x00000004;
-                behaviorScoreVariance_ = value;
+            case 10: {
+              skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = match_.toBuilder();
               }
+              match_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(match_);
+                match_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = metadata_.toBuilder();
+              }
+              metadata_ = input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(metadata_);
+                metadata_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
           }
@@ -28105,81 +35459,77 @@ public final class S2DotaMatchMetadata {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_descriptor;
+      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgDOTADPCMatch_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable
+      return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgDOTADPCMatch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder.class);
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgMatchMatchmakingStats> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgMatchMatchmakingStats>() {
-      public CMsgMatchMatchmakingStats parsePartialFrom(
+    public static com.google.protobuf.Parser<CMsgDOTADPCMatch> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgDOTADPCMatch>() {
+      public CMsgDOTADPCMatch parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new CMsgMatchMatchmakingStats(input, extensionRegistry);
+        return new CMsgDOTADPCMatch(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgMatchMatchmakingStats> getParserForType() {
+    public com.google.protobuf.Parser<CMsgDOTADPCMatch> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
-    public static final int AVERAGE_QUEUE_TIME_FIELD_NUMBER = 1;
-    private int averageQueueTime_;
+    public static final int MATCH_FIELD_NUMBER = 1;
+    private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch match_;
     /**
-     * <code>optional uint32 average_queue_time = 1;</code>
+     * <code>optional .CMsgDOTAMatch match = 1;</code>
      */
-    public boolean hasAverageQueueTime() {
+    public boolean hasMatch() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional uint32 average_queue_time = 1;</code>
+     * <code>optional .CMsgDOTAMatch match = 1;</code>
      */
-    public int getAverageQueueTime() {
-      return averageQueueTime_;
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch getMatch() {
+      return match_;
+    }
+    /**
+     * <code>optional .CMsgDOTAMatch match = 1;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatchOrBuilder getMatchOrBuilder() {
+      return match_;
     }
 
-    public static final int MAXIMUM_QUEUE_TIME_FIELD_NUMBER = 2;
-    private int maximumQueueTime_;
+    public static final int METADATA_FIELD_NUMBER = 2;
+    private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata metadata_;
     /**
-     * <code>optional uint32 maximum_queue_time = 2;</code>
+     * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
      */
-    public boolean hasMaximumQueueTime() {
+    public boolean hasMetadata() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional uint32 maximum_queue_time = 2;</code>
+     * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
      */
-    public int getMaximumQueueTime() {
-      return maximumQueueTime_;
-    }
-
-    public static final int BEHAVIOR_SCORE_VARIANCE_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance behaviorScoreVariance_;
-    /**
-     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
-     */
-    public boolean hasBehaviorScoreVariance() {
-      return ((bitField0_ & 0x00000004) == 0x00000004);
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata getMetadata() {
+      return metadata_;
     }
     /**
-     * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+     * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance getBehaviorScoreVariance() {
-      return behaviorScoreVariance_;
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadataOrBuilder getMetadataOrBuilder() {
+      return metadata_;
     }
 
     private void initFields() {
-      averageQueueTime_ = 0;
-      maximumQueueTime_ = 0;
-      behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
+      match_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.getDefaultInstance();
+      metadata_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -28195,13 +35545,10 @@ public final class S2DotaMatchMetadata {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt32(1, averageQueueTime_);
+        output.writeMessage(1, match_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeUInt32(2, maximumQueueTime_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeEnum(3, behaviorScoreVariance_.getNumber());
+        output.writeMessage(2, metadata_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -28214,15 +35561,11 @@ public final class S2DotaMatchMetadata {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, averageQueueTime_);
+          .computeMessageSize(1, match_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, maximumQueueTime_);
-      }
-      if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, behaviorScoreVariance_.getNumber());
+          .computeMessageSize(2, metadata_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -28236,53 +35579,53 @@ public final class S2DotaMatchMetadata {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(byte[] data)
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseDelimitedFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parseFrom(
+    public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -28291,7 +35634,7 @@ public final class S2DotaMatchMetadata {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -28303,25 +35646,25 @@ public final class S2DotaMatchMetadata {
       return builder;
     }
     /**
-     * Protobuf type {@code CMsgMatchMatchmakingStats}
+     * Protobuf type {@code CMsgDOTADPCMatch}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:CMsgMatchMatchmakingStats)
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStatsOrBuilder {
+        // @@protoc_insertion_point(builder_implements:CMsgDOTADPCMatch)
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatchOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgDOTADPCMatch_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgDOTADPCMatch_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.Builder.class);
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.newBuilder()
+      // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -28333,6 +35676,8 @@ public final class S2DotaMatchMetadata {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getMatchFieldBuilder();
+          getMetadataFieldBuilder();
         }
       }
       private static Builder create() {
@@ -28341,12 +35686,18 @@ public final class S2DotaMatchMetadata {
 
       public Builder clear() {
         super.clear();
-        averageQueueTime_ = 0;
+        if (matchBuilder_ == null) {
+          match_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.getDefaultInstance();
+        } else {
+          matchBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000001);
-        maximumQueueTime_ = 0;
+        if (metadataBuilder_ == null) {
+          metadata_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.getDefaultInstance();
+        } else {
+          metadataBuilder_.clear();
+        }
         bitField0_ = (bitField0_ & ~0x00000002);
-        behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -28356,61 +35707,62 @@ public final class S2DotaMatchMetadata {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgMatchMatchmakingStats_descriptor;
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CMsgDOTADPCMatch_descriptor;
       }
 
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats getDefaultInstanceForType() {
-        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance();
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats build() {
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats result = buildPartial();
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch build() {
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats buildPartial() {
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats(this);
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.averageQueueTime_ = averageQueueTime_;
+        if (matchBuilder_ == null) {
+          result.match_ = match_;
+        } else {
+          result.match_ = matchBuilder_.build();
+        }
         if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
           to_bitField0_ |= 0x00000002;
         }
-        result.maximumQueueTime_ = maximumQueueTime_;
-        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-          to_bitField0_ |= 0x00000004;
+        if (metadataBuilder_ == null) {
+          result.metadata_ = metadata_;
+        } else {
+          result.metadata_ = metadataBuilder_.build();
         }
-        result.behaviorScoreVariance_ = behaviorScoreVariance_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats) {
-          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats)other);
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats other) {
-        if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats.getDefaultInstance()) return this;
-        if (other.hasAverageQueueTime()) {
-          setAverageQueueTime(other.getAverageQueueTime());
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch.getDefaultInstance()) return this;
+        if (other.hasMatch()) {
+          mergeMatch(other.getMatch());
         }
-        if (other.hasMaximumQueueTime()) {
-          setMaximumQueueTime(other.getMaximumQueueTime());
-        }
-        if (other.hasBehaviorScoreVariance()) {
-          setBehaviorScoreVariance(other.getBehaviorScoreVariance());
+        if (other.hasMetadata()) {
+          mergeMetadata(other.getMetadata());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -28424,11 +35776,11 @@ public final class S2DotaMatchMetadata {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats parsedMessage = null;
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgMatchMatchmakingStats) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CMsgDOTADPCMatch) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -28439,121 +35791,249 @@ public final class S2DotaMatchMetadata {
       }
       private int bitField0_;
 
-      private int averageQueueTime_ ;
+      private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch match_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatchOrBuilder> matchBuilder_;
       /**
-       * <code>optional uint32 average_queue_time = 1;</code>
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
        */
-      public boolean hasAverageQueueTime() {
+      public boolean hasMatch() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional uint32 average_queue_time = 1;</code>
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
        */
-      public int getAverageQueueTime() {
-        return averageQueueTime_;
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch getMatch() {
+        if (matchBuilder_ == null) {
+          return match_;
+        } else {
+          return matchBuilder_.getMessage();
+        }
       }
       /**
-       * <code>optional uint32 average_queue_time = 1;</code>
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
        */
-      public Builder setAverageQueueTime(int value) {
+      public Builder setMatch(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch value) {
+        if (matchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          match_ = value;
+          onChanged();
+        } else {
+          matchBuilder_.setMessage(value);
+        }
         bitField0_ |= 0x00000001;
-        averageQueueTime_ = value;
-        onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 average_queue_time = 1;</code>
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
        */
-      public Builder clearAverageQueueTime() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        averageQueueTime_ = 0;
-        onChanged();
+      public Builder setMatch(
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Builder builderForValue) {
+        if (matchBuilder_ == null) {
+          match_ = builderForValue.build();
+          onChanged();
+        } else {
+          matchBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
         return this;
+      }
+      /**
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
+       */
+      public Builder mergeMatch(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch value) {
+        if (matchBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              match_ != skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.getDefaultInstance()) {
+            match_ =
+              skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.newBuilder(match_).mergeFrom(value).buildPartial();
+          } else {
+            match_ = value;
+          }
+          onChanged();
+        } else {
+          matchBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
+       */
+      public Builder clearMatch() {
+        if (matchBuilder_ == null) {
+          match_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.getDefaultInstance();
+          onChanged();
+        } else {
+          matchBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Builder getMatchBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getMatchFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatchOrBuilder getMatchOrBuilder() {
+        if (matchBuilder_ != null) {
+          return matchBuilder_.getMessageOrBuilder();
+        } else {
+          return match_;
+        }
+      }
+      /**
+       * <code>optional .CMsgDOTAMatch match = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatchOrBuilder> 
+          getMatchFieldBuilder() {
+        if (matchBuilder_ == null) {
+          matchBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatch.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgDOTAMatchOrBuilder>(
+                  getMatch(),
+                  getParentForChildren(),
+                  isClean());
+          match_ = null;
+        }
+        return matchBuilder_;
       }
 
-      private int maximumQueueTime_ ;
+      private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata metadata_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadataOrBuilder> metadataBuilder_;
       /**
-       * <code>optional uint32 maximum_queue_time = 2;</code>
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
        */
-      public boolean hasMaximumQueueTime() {
+      public boolean hasMetadata() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional uint32 maximum_queue_time = 2;</code>
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
        */
-      public int getMaximumQueueTime() {
-        return maximumQueueTime_;
-      }
-      /**
-       * <code>optional uint32 maximum_queue_time = 2;</code>
-       */
-      public Builder setMaximumQueueTime(int value) {
-        bitField0_ |= 0x00000002;
-        maximumQueueTime_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional uint32 maximum_queue_time = 2;</code>
-       */
-      public Builder clearMaximumQueueTime() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        maximumQueueTime_ = 0;
-        onChanged();
-        return this;
-      }
-
-      private skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
-      /**
-       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
-       */
-      public boolean hasBehaviorScoreVariance() {
-        return ((bitField0_ & 0x00000004) == 0x00000004);
-      }
-      /**
-       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
-       */
-      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance getBehaviorScoreVariance() {
-        return behaviorScoreVariance_;
-      }
-      /**
-       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
-       */
-      public Builder setBehaviorScoreVariance(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance value) {
-        if (value == null) {
-          throw new NullPointerException();
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata getMetadata() {
+        if (metadataBuilder_ == null) {
+          return metadata_;
+        } else {
+          return metadataBuilder_.getMessage();
         }
-        bitField0_ |= 0x00000004;
-        behaviorScoreVariance_ = value;
-        onChanged();
+      }
+      /**
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
+       */
+      public Builder setMetadata(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          metadata_ = value;
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
-       * <code>optional .EMatchBehaviorScoreVariance behavior_score_variance = 3 [default = k_EMatchBehaviorScoreVariance_Invalid];</code>
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
        */
-      public Builder clearBehaviorScoreVariance() {
-        bitField0_ = (bitField0_ & ~0x00000004);
-        behaviorScoreVariance_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.EMatchBehaviorScoreVariance.k_EMatchBehaviorScoreVariance_Invalid;
-        onChanged();
+      public Builder setMetadata(
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Builder builderForValue) {
+        if (metadataBuilder_ == null) {
+          metadata_ = builderForValue.build();
+          onChanged();
+        } else {
+          metadataBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
         return this;
       }
+      /**
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
+       */
+      public Builder mergeMetadata(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata value) {
+        if (metadataBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              metadata_ != skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.getDefaultInstance()) {
+            metadata_ =
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.newBuilder(metadata_).mergeFrom(value).buildPartial();
+          } else {
+            metadata_ = value;
+          }
+          onChanged();
+        } else {
+          metadataBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
+       */
+      public Builder clearMetadata() {
+        if (metadataBuilder_ == null) {
+          metadata_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.getDefaultInstance();
+          onChanged();
+        } else {
+          metadataBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Builder getMetadataBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getMetadataFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadataOrBuilder getMetadataOrBuilder() {
+        if (metadataBuilder_ != null) {
+          return metadataBuilder_.getMessageOrBuilder();
+        } else {
+          return metadata_;
+        }
+      }
+      /**
+       * <code>optional .CDOTAMatchMetadata metadata = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadataOrBuilder> 
+          getMetadataFieldBuilder() {
+        if (metadataBuilder_ == null) {
+          metadataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadataOrBuilder>(
+                  getMetadata(),
+                  getParentForChildren(),
+                  isClean());
+          metadata_ = null;
+        }
+        return metadataBuilder_;
+      }
 
-      // @@protoc_insertion_point(builder_scope:CMsgMatchMatchmakingStats)
+      // @@protoc_insertion_point(builder_scope:CMsgDOTADPCMatch)
     }
 
     static {
-      defaultInstance = new CMsgMatchMatchmakingStats(true);
+      defaultInstance = new CMsgDOTADPCMatch(true);
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:CMsgMatchMatchmakingStats)
+    // @@protoc_insertion_point(class_scope:CMsgDOTADPCMatch)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CLobbyTimedRewardDetails_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CLobbyTimedRewardDetails_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchMetadataFile_descriptor;
   private static
@@ -28620,10 +36100,30 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_Team_EventData_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Team_GauntletProgress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchMetadata_Team_Player_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_GuildChallengeProgress_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchPrivateMetadata_descriptor;
   private static
@@ -28655,6 +36155,16 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -28665,15 +36175,25 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchPrivateMetadata_Team_Building_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchPrivateMetadata_Team_Building_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_CMsgMatchMatchmakingStats_descriptor;
+    internal_static_CMsgDOTADPCMatch_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable;
+      internal_static_CMsgDOTADPCMatch_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -28685,146 +36205,180 @@ public final class S2DotaMatchMetadata {
     java.lang.String[] descriptorData = {
       "\n\034s2_dota_match_metadata.proto\032\030s2_base_" +
       "gcmessages.proto\032\037s2_dota_gcmessages_com" +
-      "mon.proto\"\206\001\n\030CLobbyTimedRewardDetails\022\026" +
-      "\n\016item_def_index\030\002 \001(\r\022\027\n\017is_supply_crat" +
-      "e\030\003 \001(\010\022\025\n\ris_timed_drop\030\004 \001(\010\022\022\n\naccoun" +
-      "t_id\030\005 \001(\r\022\016\n\006origin\030\006 \001(\r\"|\n\026CDOTAMatch" +
-      "MetadataFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_i" +
-      "d\030\002 \002(\004\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMe" +
-      "tadata\022\030\n\020private_metadata\030\005 \001(\014\"\320\033\n\022CDO" +
-      "TAMatchMetadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMa",
-      "tchMetadata.Team\022/\n\014item_rewards\030\002 \003(\0132\031" +
-      ".CLobbyTimedRewardDetails\022\020\n\010lobby_id\030\003 " +
-      "\001(\006\022\031\n\021report_until_time\030\004 \001(\006\022\037\n\027event_" +
-      "game_custom_table\030\005 \001(\014\022\030\n\020primary_event" +
-      "_id\030\006 \001(\r\022\"\n\nmatch_tips\030\007 \003(\0132\016.CMsgMatc" +
-      "hTips\0225\n\021matchmaking_stats\030\010 \001(\0132\032.CMsgM" +
-      "atchMatchmakingStats\032\234\031\n\004Team\022\021\n\tdota_te" +
-      "am\030\001 \001(\r\0220\n\007players\030\002 \003(\0132\037.CDOTAMatchMe" +
-      "tadata.Team.Player\022\030\n\020graph_experience\030\003" +
-      " \003(\002\022\031\n\021graph_gold_earned\030\004 \003(\002\022\027\n\017graph",
-      "_net_worth\030\005 \003(\002\022\025\n\rcm_first_pick\030\006 \001(\010\022" +
-      "\034\n\024cm_captain_player_id\030\007 \001(\r\022\017\n\007cm_bans" +
-      "\030\010 \003(\r\022\020\n\010cm_picks\030\t \003(\r\022\022\n\ncm_penalty\030\n" +
-      " \001(\r\0320\n\nPlayerKill\022\023\n\013victim_slot\030\001 \001(\r\022" +
-      "\r\n\005count\030\002 \001(\r\0326\n\014ItemPurchase\022\017\n\007item_i" +
-      "d\030\001 \001(\r\022\025\n\rpurchase_time\030\002 \001(\005\032v\n\021Invent" +
-      "orySnapshot\022\017\n\007item_id\030\001 \003(\r\022\021\n\tgame_tim" +
-      "e\030\002 \001(\005\022\r\n\005kills\030\003 \001(\r\022\016\n\006deaths\030\004 \001(\r\022\017" +
-      "\n\007assists\030\005 \001(\r\022\r\n\005level\030\006 \001(\r\0326\n\021AutoSt" +
-      "yleCriteria\022\022\n\nname_token\030\001 \001(\r\022\r\n\005value",
-      "\030\002 \001(\002\032\306\001\n\022StrangeGemProgress\022\027\n\017kill_ea" +
-      "ter_type\030\001 \001(\r\022\032\n\022gem_item_def_index\030\002 \001" +
-      "(\r\022\030\n\020required_hero_id\030\003 \001(\r\022\026\n\016starting" +
-      "_value\030\004 \001(\r\022\024\n\014ending_value\030\005 \001(\r\022\034\n\024ow" +
-      "ner_item_def_index\030\006 \001(\r\022\025\n\rowner_item_i" +
-      "d\030\007 \001(\004\032h\n\021VictoryPrediction\022\017\n\007item_id\030" +
-      "\001 \001(\004\022\026\n\016item_def_index\030\002 \001(\r\022\026\n\016startin" +
-      "g_value\030\003 \001(\r\022\022\n\nis_victory\030\004 \001(\010\032Z\n\014Sub" +
-      "Challenge\022\017\n\007slot_id\030\001 \001(\r\022\023\n\013start_valu" +
-      "e\030\002 \001(\r\022\021\n\tend_value\030\003 \001(\r\022\021\n\tcompleted\030",
-      "\004 \001(\010\032K\n\025CavernChallengeResult\022\031\n\021comple" +
-      "ted_path_id\030\001 \001(\r\022\027\n\017claimed_room_id\030\002 \001" +
-      "(\r\032A\n\013ActionGrant\022\021\n\taction_id\030\001 \001(\r\022\020\n\010" +
-      "quantity\030\002 \001(\r\022\r\n\005audit\030\003 \001(\r\032\330\005\n\tEventD" +
-      "ata\022\020\n\010event_id\030\001 \001(\r\022\024\n\014event_points\030\002 " +
-      "\001(\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\032\n\022ch" +
-      "allenge_quest_id\030\004 \001(\r\022$\n\034challenge_ques" +
-      "t_challenge_id\030\005 \001(\r\022\033\n\023challenge_comple" +
-      "ted\030\006 \001(\010\022 \n\030challenge_rank_completed\030\007 " +
-      "\001(\r\022+\n#challenge_rank_previously_complet",
-      "ed\030\010 \001(\r\022\023\n\013event_owned\030\t \001(\010\022K\n\034sub_cha" +
-      "llenges_with_progress\030\n \003(\0132%.CDOTAMatch" +
-      "Metadata.Team.SubChallenge\022\026\n\016wager_winn" +
-      "ings\030\013 \001(\r\022\037\n\027cavern_challenge_active\030\014 " +
-      "\001(\010\022!\n\031cavern_challenge_winnings\030\r \001(\r\022\026" +
-      "\n\016amount_wagered\030\016 \001(\r\022\031\n\021team_wager_amo" +
-      "unt\030\017 \001(\r\022\"\n\032periodic_point_adjustments\030" +
-      "\020 \001(\r\022T\n\034cavern_challenge_map_results\030\021 " +
-      "\003(\0132..CDOTAMatchMetadata.Team.CavernChal" +
-      "lengeResult\022,\n$cavern_challenge_plus_sha",
-      "rd_winnings\030\022 \001(\r\022=\n\017actions_granted\030\023 \003" +
-      "(\0132$.CDOTAMatchMetadata.Team.ActionGrant" +
-      "\032\200\013\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abili" +
-      "ty_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003 \001(\r\022)" +
-      "\n\023equipped_econ_items\030\004 \003(\0132\014.CSOEconIte" +
-      "m\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetadata.Te" +
-      "am.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDOTAMatc" +
-      "hMetadata.Team.ItemPurchase\022\025\n\ravg_kills" +
-      "_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r\022\027\n\017av" +
-      "g_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16\030\n \001(\r",
-      "\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kills_x16\030" +
-      "\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n\014best_" +
-      "gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(\r\022\022\n\nw" +
-      "in_streak\030\020 \001(\r\022\027\n\017best_win_streak\030\021 \001(\r" +
-      "\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_score\030\023 \001(" +
-      "\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_score\030\025" +
-      " \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017graph_ne" +
-      "t_worth\030\027 \003(\002\022F\n\022inventory_snapshot\030\030 \003(" +
-      "\0132*.CDOTAMatchMetadata.Team.InventorySna" +
-      "pshot\022\034\n\024avg_stats_calibrated\030\031 \001(\010\022G\n\023a",
-      "uto_style_criteria\030\032 \003(\0132*.CDOTAMatchMet" +
-      "adata.Team.AutoStyleCriteria\0226\n\nevent_da" +
-      "ta\030\035 \003(\0132\".CDOTAMatchMetadata.Team.Event" +
-      "Data\022I\n\024strange_gem_progress\030\036 \003(\0132+.CDO" +
-      "TAMatchMetadata.Team.StrangeGemProgress\022" +
-      "\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked\030  \001(\r\022" +
-      "F\n\022victory_prediction\030! \003(\0132*.CDOTAMatch" +
-      "Metadata.Team.VictoryPrediction\022\034\n\024lane_" +
-      "selection_flags\030\" \001(\r\022\020\n\010rampages\030# \001(\r\022" +
-      "\024\n\014triple_kills\030$ \001(\r\022\026\n\016aegis_snatched\030",
-      "% \001(\r\022\031\n\021rapiers_purchased\030& \001(\r\022\027\n\017cour" +
-      "iers_killed\030\' \001(\r\022\026\n\016net_worth_rank\030( \001(" +
-      "\r\022\032\n\022support_gold_spent\030) \001(\r\022\035\n\025observe" +
-      "r_wards_placed\030* \001(\r\022\033\n\023sentry_wards_pla" +
-      "ced\030+ \001(\r\022\026\n\016wards_dewarded\030, \001(\r\022\025\n\rstu" +
-      "n_duration\030- \001(\002\022I\n\023rank_mmr_boost_type\030" +
-      ". \001(\0162\022.EDOTAMMRBoostType:\030k_EDOTAMMRBoo" +
-      "stType_None\"\244\n\n\031CDOTAMatchPrivateMetadat" +
-      "a\022.\n\005teams\030\001 \003(\0132\037.CDOTAMatchPrivateMeta" +
-      "data.Team\022\035\n\025graph_win_probability\030\002 \003(\002",
-      "\032\267\t\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227\n\007players\030" +
-      "\002 \003(\0132&.CDOTAMatchPrivateMetadata.Team.P" +
-      "layer\022;\n\tbuildings\030\003 \003(\0132(.CDOTAMatchPri" +
-      "vateMetadata.Team.Building\032\276\007\n\006Player\022\022\n" +
-      "\naccount_id\030\001 \001(\r\022\023\n\013player_slot\030\002 \001(\r\022\027" +
-      "\n\017position_stream\030\003 \001(\014\022M\n\017combat_segmen" +
-      "ts\030\004 \003(\01324.CDOTAMatchPrivateMetadata.Tea" +
-      "m.Player.CombatSegment\022\031\n\021damage_unit_na" +
-      "mes\030\005 \003(\t\022G\n\014buff_records\030\006 \003(\01321.CDOTAM" +
-      "atchPrivateMetadata.Team.Player.BuffReco",
-      "rd\022\023\n\013graph_kills\030\007 \003(\002\022\024\n\014graph_deaths\030" +
-      "\010 \003(\002\022\025\n\rgraph_assists\030\t \003(\002\022\026\n\016graph_la" +
-      "sthits\030\n \003(\002\022\024\n\014graph_denies\030\013 \003(\002\032\343\002\n\rC" +
-      "ombatSegment\022\021\n\tgame_time\030\001 \001(\005\022_\n\021damag" +
-      "e_by_ability\030\002 \003(\0132D.CDOTAMatchPrivateMe" +
-      "tadata.Team.Player.CombatSegment.DamageB" +
-      "yAbility\032\335\001\n\017DamageByAbility\022\031\n\021source_u" +
-      "nit_index\030\003 \001(\r\022\022\n\nability_id\030\001 \001(\r\022j\n\017b" +
-      "y_hero_targets\030\002 \003(\0132Q.CDOTAMatchPrivate" +
-      "Metadata.Team.Player.CombatSegment.Damag",
-      "eByAbility.ByHeroTarget\032/\n\014ByHeroTarget\022" +
-      "\017\n\007hero_id\030\001 \001(\r\022\016\n\006damage\030\002 \001(\r\032\350\001\n\nBuf" +
-      "fRecord\022\027\n\017buff_ability_id\030\001 \001(\r\022\032\n\022buff" +
-      "_modifier_name\030\003 \001(\t\022W\n\017by_hero_targets\030" +
-      "\002 \003(\0132>.CDOTAMatchPrivateMetadata.Team.P" +
-      "layer.BuffRecord.ByHeroTarget\032L\n\014ByHeroT" +
-      "arget\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020elapsed_durati" +
-      "on\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032e\n\010Building\022" +
-      "\021\n\tunit_name\030\001 \001(\t\022\030\n\020position_quant_x\030\002" +
-      " \001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022\022\n\ndeath_",
-      "time\030\004 \001(\002\"\271\001\n\031CMsgMatchMatchmakingStats" +
-      "\022\032\n\022average_queue_time\030\001 \001(\r\022\032\n\022maximum_" +
-      "queue_time\030\002 \001(\r\022d\n\027behavior_score_varia" +
-      "nce\030\003 \001(\0162\034.EMatchBehaviorScoreVariance:" +
-      "%k_EMatchBehaviorScoreVariance_Invalid*\301" +
-      "\001\n\033EMatchBehaviorScoreVariance\022)\n%k_EMat" +
-      "chBehaviorScoreVariance_Invalid\020\000\022%\n!k_E" +
-      "MatchBehaviorScoreVariance_Low\020\001\022(\n$k_EM" +
-      "atchBehaviorScoreVariance_Medium\020\002\022&\n\"k_" +
-      "EMatchBehaviorScoreVariance_High\020\003B:\n sk",
-      "adistats.clarity.wire.s2.protoB\023S2DotaMa" +
-      "tchMetadata\200\001\000"
+      "mon.proto\0320s2_dota_gcmessages_common_mat" +
+      "ch_management.proto\"|\n\026CDOTAMatchMetadat" +
+      "aFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_id\030\002 \002(\004" +
+      "\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMetadata\022" +
+      "\030\n\020private_metadata\030\005 \001(\014\"\264#\n\022CDOTAMatch" +
+      "Metadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMatchMeta" +
+      "data.Team\022/\n\014item_rewards\030\002 \003(\0132\031.CLobby" +
+      "TimedRewardDetails\022\020\n\010lobby_id\030\003 \001(\006\022\031\n\021",
+      "report_until_time\030\004 \001(\006\022\037\n\027event_game_cu" +
+      "stom_table\030\005 \001(\014\022\030\n\020primary_event_id\030\006 \001" +
+      "(\r\022\"\n\nmatch_tips\030\007 \003(\0132\016.CMsgMatchTips\0225" +
+      "\n\021matchmaking_stats\030\010 \001(\0132\032.CMsgMatchMat" +
+      "chmakingStats\022\033\n\010mvp_data\030\t \001(\0132\t.CMvpDa" +
+      "ta\022L\n\030guild_challenge_progress\030\n \003(\0132*.C" +
+      "DOTAMatchMetadata.GuildChallengeProgress" +
+      "\032\200\035\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0220\n\007players\030" +
+      "\002 \003(\0132\037.CDOTAMatchMetadata.Team.Player\022\030" +
+      "\n\020graph_experience\030\003 \003(\002\022\031\n\021graph_gold_e",
+      "arned\030\004 \003(\002\022\027\n\017graph_net_worth\030\005 \003(\002\022\025\n\r" +
+      "cm_first_pick\030\006 \001(\010\022\034\n\024cm_captain_player" +
+      "_id\030\007 \001(\r\022\017\n\007cm_bans\030\010 \003(\r\022\020\n\010cm_picks\030\t" +
+      " \003(\r\022\022\n\ncm_penalty\030\n \001(\r\0320\n\nPlayerKill\022\023" +
+      "\n\013victim_slot\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\0326\n\014It" +
+      "emPurchase\022\017\n\007item_id\030\001 \001(\r\022\025\n\rpurchase_" +
+      "time\030\002 \001(\005\032v\n\021InventorySnapshot\022\017\n\007item_" +
+      "id\030\001 \003(\r\022\021\n\tgame_time\030\002 \001(\005\022\r\n\005kills\030\003 \001" +
+      "(\r\022\016\n\006deaths\030\004 \001(\r\022\017\n\007assists\030\005 \001(\r\022\r\n\005l" +
+      "evel\030\006 \001(\r\0326\n\021AutoStyleCriteria\022\022\n\nname_",
+      "token\030\001 \001(\r\022\r\n\005value\030\002 \001(\002\032\306\001\n\022StrangeGe" +
+      "mProgress\022\027\n\017kill_eater_type\030\001 \001(\r\022\032\n\022ge" +
+      "m_item_def_index\030\002 \001(\r\022\030\n\020required_hero_" +
+      "id\030\003 \001(\r\022\026\n\016starting_value\030\004 \001(\r\022\024\n\014endi" +
+      "ng_value\030\005 \001(\r\022\034\n\024owner_item_def_index\030\006" +
+      " \001(\r\022\025\n\rowner_item_id\030\007 \001(\004\032h\n\021VictoryPr" +
+      "ediction\022\017\n\007item_id\030\001 \001(\004\022\026\n\016item_def_in" +
+      "dex\030\002 \001(\r\022\026\n\016starting_value\030\003 \001(\r\022\022\n\nis_" +
+      "victory\030\004 \001(\010\032Z\n\014SubChallenge\022\017\n\007slot_id" +
+      "\030\001 \001(\r\022\023\n\013start_value\030\002 \001(\r\022\021\n\tend_value",
+      "\030\003 \001(\r\022\021\n\tcompleted\030\004 \001(\010\032K\n\025CavernChall" +
+      "engeResult\022\031\n\021completed_path_id\030\001 \001(\r\022\027\n" +
+      "\017claimed_room_id\030\002 \001(\r\032A\n\013ActionGrant\022\021\n" +
+      "\taction_id\030\001 \001(\r\022\020\n\010quantity\030\002 \001(\r\022\r\n\005au" +
+      "dit\030\003 \001(\r\032\227\006\n\tEventData\022\020\n\010event_id\030\001 \001(" +
+      "\r\022\024\n\014event_points\030\002 \001(\r\022\035\n\025challenge_ins" +
+      "tance_id\030\003 \001(\r\022\032\n\022challenge_quest_id\030\004 \001" +
+      "(\r\022$\n\034challenge_quest_challenge_id\030\005 \001(\r" +
+      "\022\033\n\023challenge_completed\030\006 \001(\010\022 \n\030challen" +
+      "ge_rank_completed\030\007 \001(\r\022+\n#challenge_ran",
+      "k_previously_completed\030\010 \001(\r\022\023\n\013event_ow" +
+      "ned\030\t \001(\010\022K\n\034sub_challenges_with_progres" +
+      "s\030\n \003(\0132%.CDOTAMatchMetadata.Team.SubCha" +
+      "llenge\022\026\n\016wager_winnings\030\013 \001(\r\022\037\n\027cavern" +
+      "_challenge_active\030\014 \001(\010\022!\n\031cavern_challe" +
+      "nge_winnings\030\r \001(\r\022\026\n\016amount_wagered\030\016 \001" +
+      "(\r\022\"\n\032periodic_point_adjustments\030\020 \001(\r\022T" +
+      "\n\034cavern_challenge_map_results\030\021 \003(\0132..C" +
+      "DOTAMatchMetadata.Team.CavernChallengeRe" +
+      "sult\022,\n$cavern_challenge_plus_shard_winn",
+      "ings\030\022 \001(\r\022=\n\017actions_granted\030\023 \003(\0132$.CD" +
+      "OTAMatchMetadata.Team.ActionGrant\022 \n\030cav" +
+      "ern_crawl_map_variant\030\024 \001(\r\022\034\n\024team_wage" +
+      "r_bonus_pct\030\025 \001(\r\022\030\n\020wager_streak_pct\030\026 " +
+      "\001(\r\032Y\n\020GauntletProgress\022\025\n\rgauntlet_tier" +
+      "\030\002 \001(\r\022\025\n\rgauntlet_wins\030\003 \001(\r\022\027\n\017gauntle" +
+      "t_losses\030\004 \001(\r\032\312\r\n\006Player\022\022\n\naccount_id\030" +
+      "\001 \001(\r\022\030\n\020ability_upgrades\030\002 \003(\r\022\023\n\013playe" +
+      "r_slot\030\003 \001(\r\022)\n\023equipped_econ_items\030\004 \003(" +
+      "\0132\014.CSOEconItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMa",
+      "tchMetadata.Team.PlayerKill\0224\n\005items\030\006 \003" +
+      "(\0132%.CDOTAMatchMetadata.Team.ItemPurchas" +
+      "e\022\025\n\ravg_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x" +
+      "16\030\010 \001(\r\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg" +
+      "_gpm_x16\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016b" +
+      "est_kills_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030" +
+      "\r \001(\r\022\024\n\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_" +
+      "x16\030\017 \001(\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_wi" +
+      "n_streak\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nf" +
+      "arm_score\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022",
+      "\n\npush_score\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003" +
+      "(\r\022\027\n\017graph_net_worth\030\027 \003(\002\022F\n\022inventory" +
+      "_snapshot\030\030 \003(\0132*.CDOTAMatchMetadata.Tea" +
+      "m.InventorySnapshot\022\034\n\024avg_stats_calibra" +
+      "ted\030\031 \001(\010\022G\n\023auto_style_criteria\030\032 \003(\0132*" +
+      ".CDOTAMatchMetadata.Team.AutoStyleCriter" +
+      "ia\0226\n\nevent_data\030\035 \003(\0132\".CDOTAMatchMetad" +
+      "ata.Team.EventData\022I\n\024strange_gem_progre" +
+      "ss\030\036 \003(\0132+.CDOTAMatchMetadata.Team.Stran" +
+      "geGemProgress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_",
+      "stacked\030  \001(\r\022F\n\022victory_prediction\030! \003(" +
+      "\0132*.CDOTAMatchMetadata.Team.VictoryPredi" +
+      "ction\022\034\n\024lane_selection_flags\030\" \001(\r\022\020\n\010r" +
+      "ampages\030# \001(\r\022\024\n\014triple_kills\030$ \001(\r\022\026\n\016a" +
+      "egis_snatched\030% \001(\r\022\031\n\021rapiers_purchased" +
+      "\030& \001(\r\022\027\n\017couriers_killed\030\' \001(\r\022\026\n\016net_w" +
+      "orth_rank\030( \001(\r\022\032\n\022support_gold_spent\030) " +
+      "\001(\r\022\035\n\025observer_wards_placed\030* \001(\r\022\033\n\023se" +
+      "ntry_wards_placed\030+ \001(\r\022\026\n\016wards_dewarde" +
+      "d\030, \001(\r\022\025\n\rstun_duration\030- \001(\002\022I\n\023rank_m",
+      "mr_boost_type\030. \001(\0162\022.EDOTAMMRBoostType:" +
+      "\030k_EDOTAMMRBoostType_None\022D\n\021gauntlet_pr" +
+      "ogress\030/ \001(\0132).CDOTAMatchMetadata.Team.G" +
+      "auntletProgress\022K\n\021contract_progress\0300 \003" +
+      "(\01320.CDOTAMatchMetadata.Team.Player.Cont" +
+      "ractProgress\032\264\001\n\020ContractProgress\022\020\n\010gui" +
+      "ld_id\030\001 \001(\r\022\020\n\010event_id\030\002 \001(\r\022\035\n\025challen" +
+      "ge_instance_id\030\003 \001(\r\022\033\n\023challenge_parame" +
+      "ter\030\004 \001(\r\022\026\n\016contract_stars\030\005 \001(\r\022\025\n\rcon" +
+      "tract_slot\030\006 \001(\r\022\021\n\tcompleted\030\007 \001(\010\032\222\003\n\026",
+      "GuildChallengeProgress\022\020\n\010guild_id\030\001 \001(\r" +
+      "\022(\n\010event_id\030\002 \001(\0162\007.EEvent:\rEVENT_ID_NO" +
+      "NE\022\035\n\025challenge_instance_id\030\003 \001(\r\022\033\n\023cha" +
+      "llenge_parameter\030\004 \001(\r\022\033\n\023challenge_time" +
+      "stamp\030\005 \001(\r\022#\n\033challenge_progress_at_sta" +
+      "rt\030\006 \001(\r\022&\n\036challenge_progress_accumulat" +
+      "ed\030\007 \001(\r\022Z\n\023individual_progress\030\010 \003(\0132=." +
+      "CDOTAMatchMetadata.GuildChallengeProgres" +
+      "s.IndividualProgress\032:\n\022IndividualProgre" +
+      "ss\022\022\n\naccount_id\030\001 \001(\r\022\020\n\010progress\030\002 \001(\r",
+      "\"\221\020\n\031CDOTAMatchPrivateMetadata\022.\n\005teams\030" +
+      "\001 \003(\0132\037.CDOTAMatchPrivateMetadata.Team\022\035" +
+      "\n\025graph_win_probability\030\002 \003(\002\032\244\017\n\004Team\022\021" +
+      "\n\tdota_team\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDO" +
+      "TAMatchPrivateMetadata.Team.Player\022;\n\tbu" +
+      "ildings\030\003 \003(\0132(.CDOTAMatchPrivateMetadat" +
+      "a.Team.Building\032\253\r\n\006Player\022\022\n\naccount_id" +
+      "\030\001 \001(\r\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_" +
+      "stream\030\003 \001(\014\022M\n\017combat_segments\030\004 \003(\01324." +
+      "CDOTAMatchPrivateMetadata.Team.Player.Co",
+      "mbatSegment\022\031\n\021damage_unit_names\030\005 \003(\t\022G" +
+      "\n\014buff_records\030\006 \003(\01321.CDOTAMatchPrivate" +
+      "Metadata.Team.Player.BuffRecord\022\023\n\013graph" +
+      "_kills\030\007 \003(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgr" +
+      "aph_assists\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(" +
+      "\002\022\024\n\014graph_denies\030\013 \003(\002\022J\n\rgold_received" +
+      "\030\014 \001(\01323.CDOTAMatchPrivateMetadata.Team." +
+      "Player.GoldReceived\022F\n\013xp_received\030\r \001(\013" +
+      "21.CDOTAMatchPrivateMetadata.Team.Player" +
+      ".XPReceived\032\251\005\n\rCombatSegment\022\021\n\tgame_ti",
+      "me\030\001 \001(\005\022_\n\021damage_by_ability\030\002 \003(\0132D.CD" +
+      "OTAMatchPrivateMetadata.Team.Player.Comb" +
+      "atSegment.DamageByAbility\022a\n\022healing_by_" +
+      "ability\030\003 \003(\0132E.CDOTAMatchPrivateMetadat" +
+      "a.Team.Player.CombatSegment.HealingByAbi" +
+      "lity\032\335\001\n\017DamageByAbility\022\031\n\021source_unit_" +
+      "index\030\003 \001(\r\022\022\n\nability_id\030\001 \001(\r\022j\n\017by_he" +
+      "ro_targets\030\002 \003(\0132Q.CDOTAMatchPrivateMeta" +
+      "data.Team.Player.CombatSegment.DamageByA" +
+      "bility.ByHeroTarget\032/\n\014ByHeroTarget\022\017\n\007h",
+      "ero_id\030\001 \001(\r\022\016\n\006damage\030\002 \001(\r\032\340\001\n\020Healing" +
+      "ByAbility\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\n" +
+      "ability_id\030\001 \001(\r\022k\n\017by_hero_targets\030\002 \003(" +
+      "\0132R.CDOTAMatchPrivateMetadata.Team.Playe" +
+      "r.CombatSegment.HealingByAbility.ByHeroT" +
+      "arget\0320\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\017" +
+      "\n\007healing\030\002 \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_a" +
+      "bility_id\030\001 \001(\r\022\032\n\022buff_modifier_name\030\003 " +
+      "\001(\t\022W\n\017by_hero_targets\030\002 \003(\0132>.CDOTAMatc" +
+      "hPrivateMetadata.Team.Player.BuffRecord.",
+      "ByHeroTarget\032L\n\014ByHeroTarget\022\017\n\007hero_id\030" +
+      "\001 \001(\r\022\030\n\020elapsed_duration\030\002 \001(\002\022\021\n\tis_hi" +
+      "dden\030\003 \001(\010\032\230\001\n\014GoldReceived\022\r\n\005creep\030\001 \001" +
+      "(\r\022\016\n\006heroes\030\002 \001(\r\022\024\n\014bounty_runes\030\003 \001(\r" +
+      "\022\017\n\007passive\030\004 \001(\r\022\021\n\tbuildings\030\005 \001(\r\022\021\n\t" +
+      "abilities\030\006 \001(\r\022\r\n\005wards\030\007 \001(\r\022\r\n\005other\030" +
+      "\010 \001(\r\032v\n\nXPReceived\022\r\n\005creep\030\001 \001(\r\022\016\n\006he" +
+      "roes\030\002 \001(\r\022\016\n\006roshan\030\003 \001(\r\022\031\n\021tome_of_kn" +
+      "owledge\030\004 \001(\r\022\017\n\007outpost\030\005 \001(\r\022\r\n\005other\030" +
+      "\006 \001(\r\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020",
+      "position_quant_x\030\002 \001(\r\022\030\n\020position_quant" +
+      "_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 \001(\002\"X\n\020CMsgDOTA" +
+      "DPCMatch\022\035\n\005match\030\001 \001(\0132\016.CMsgDOTAMatch\022" +
+      "%\n\010metadata\030\002 \001(\0132\023.CDOTAMatchMetadataB:" +
+      "\n skadistats.clarity.wire.s2.protoB\023S2Do" +
+      "taMatchMetadata\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -28839,25 +36393,20 @@ public final class S2DotaMatchMetadata {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.s2.proto.S2BaseGcMessages.getDescriptor(),
           skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor(),
+          skadistats.clarity.wire.s2.proto.S2DotaGcMM.getDescriptor(),
         }, assigner);
-    internal_static_CLobbyTimedRewardDetails_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_CLobbyTimedRewardDetails_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_CLobbyTimedRewardDetails_descriptor,
-        new java.lang.String[] { "ItemDefIndex", "IsSupplyCrate", "IsTimedDrop", "AccountId", "Origin", });
     internal_static_CDOTAMatchMetadataFile_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_CDOTAMatchMetadataFile_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadataFile_descriptor,
         new java.lang.String[] { "Version", "MatchId", "Metadata", "PrivateMetadata", });
     internal_static_CDOTAMatchMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTAMatchMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_descriptor,
-        new java.lang.String[] { "Teams", "ItemRewards", "LobbyId", "ReportUntilTime", "EventGameCustomTable", "PrimaryEventId", "MatchTips", "MatchmakingStats", });
+        new java.lang.String[] { "Teams", "ItemRewards", "LobbyId", "ReportUntilTime", "EventGameCustomTable", "PrimaryEventId", "MatchTips", "MatchmakingStats", "MvpData", "GuildChallengeProgress", });
     internal_static_CDOTAMatchMetadata_Team_descriptor =
       internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchMetadata_Team_fieldAccessorTable = new
@@ -28923,15 +36472,39 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_Team_EventData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_EventData_descriptor,
-        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "TeamWagerAmount", "PeriodicPointAdjustments", "CavernChallengeMapResults", "CavernChallengePlusShardWinnings", "ActionsGranted", });
-    internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
+        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "PeriodicPointAdjustments", "CavernChallengeMapResults", "CavernChallengePlusShardWinnings", "ActionsGranted", "CavernCrawlMapVariant", "TeamWagerBonusPct", "WagerStreakPct", });
+    internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor =
       internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(10);
+    internal_static_CDOTAMatchMetadata_Team_GauntletProgress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor,
+        new java.lang.String[] { "GauntletTier", "GauntletWins", "GauntletLosses", });
+    internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(11);
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", });
+    internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor =
+      internal_static_CDOTAMatchMetadata_Team_Player_descriptor.getNestedTypes().get(0);
+    internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor,
+        new java.lang.String[] { "GuildId", "EventId", "ChallengeInstanceId", "ChallengeParameter", "ContractStars", "ContractSlot", "Completed", });
+    internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor =
+      internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(1);
+    internal_static_CDOTAMatchMetadata_GuildChallengeProgress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor,
+        new java.lang.String[] { "GuildId", "EventId", "ChallengeInstanceId", "ChallengeParameter", "ChallengeTimestamp", "ChallengeProgressAtStart", "ChallengeProgressAccumulated", "IndividualProgress", });
+    internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor =
+      internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor.getNestedTypes().get(0);
+    internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor,
+        new java.lang.String[] { "AccountId", "Progress", });
     internal_static_CDOTAMatchPrivateMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CDOTAMatchPrivateMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_descriptor,
@@ -28947,13 +36520,13 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "PlayerSlot", "PositionStream", "CombatSegments", "DamageUnitNames", "BuffRecords", "GraphKills", "GraphDeaths", "GraphAssists", "GraphLasthits", "GraphDenies", });
+        new java.lang.String[] { "AccountId", "PlayerSlot", "PositionStream", "CombatSegments", "DamageUnitNames", "BuffRecords", "GraphKills", "GraphDeaths", "GraphAssists", "GraphLasthits", "GraphDenies", "GoldReceived", "XpReceived", });
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_descriptor =
       internal_static_CDOTAMatchPrivateMetadata_Team_Player_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_descriptor,
-        new java.lang.String[] { "GameTime", "DamageByAbility", });
+        new java.lang.String[] { "GameTime", "DamageByAbility", "HealingByAbility", });
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_descriptor =
       internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_fieldAccessorTable = new
@@ -28966,6 +36539,18 @@ public final class S2DotaMatchMetadata {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_DamageByAbility_ByHeroTarget_descriptor,
         new java.lang.String[] { "HeroId", "Damage", });
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor =
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_descriptor.getNestedTypes().get(1);
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor,
+        new java.lang.String[] { "SourceUnitIndex", "AbilityId", "ByHeroTargets", });
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_descriptor =
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_descriptor.getNestedTypes().get(0);
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchPrivateMetadata_Team_Player_CombatSegment_HealingByAbility_ByHeroTarget_descriptor,
+        new java.lang.String[] { "HeroId", "Healing", });
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_descriptor =
       internal_static_CDOTAMatchPrivateMetadata_Team_Player_descriptor.getNestedTypes().get(1);
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_fieldAccessorTable = new
@@ -28978,20 +36563,33 @@ public final class S2DotaMatchMetadata {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Player_BuffRecord_ByHeroTarget_descriptor,
         new java.lang.String[] { "HeroId", "ElapsedDuration", "IsHidden", });
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_descriptor =
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_descriptor.getNestedTypes().get(2);
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchPrivateMetadata_Team_Player_GoldReceived_descriptor,
+        new java.lang.String[] { "Creep", "Heroes", "BountyRunes", "Passive", "Buildings", "Abilities", "Wards", "Other", });
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor =
+      internal_static_CDOTAMatchPrivateMetadata_Team_Player_descriptor.getNestedTypes().get(3);
+    internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor,
+        new java.lang.String[] { "Creep", "Heroes", "Roshan", "TomeOfKnowledge", "Outpost", "Other", });
     internal_static_CDOTAMatchPrivateMetadata_Team_Building_descriptor =
       internal_static_CDOTAMatchPrivateMetadata_Team_descriptor.getNestedTypes().get(1);
     internal_static_CDOTAMatchPrivateMetadata_Team_Building_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Building_descriptor,
         new java.lang.String[] { "UnitName", "PositionQuantX", "PositionQuantY", "DeathTime", });
-    internal_static_CMsgMatchMatchmakingStats_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_CMsgMatchMatchmakingStats_fieldAccessorTable = new
+    internal_static_CMsgDOTADPCMatch_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_CMsgDOTADPCMatch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_CMsgMatchMatchmakingStats_descriptor,
-        new java.lang.String[] { "AverageQueueTime", "MaximumQueueTime", "BehaviorScoreVariance", });
+        internal_static_CMsgDOTADPCMatch_descriptor,
+        new java.lang.String[] { "Match", "Metadata", });
     skadistats.clarity.wire.s2.proto.S2BaseGcMessages.getDescriptor();
     skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor();
+    skadistats.clarity.wire.s2.proto.S2DotaGcMM.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

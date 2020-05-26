@@ -141,6 +141,13 @@ enum dotaunitorder_t {
 	DOTA_UNIT_ORDER_CAST_RIVER_PAINT = 35;
     DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT = 36;
     DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN = 37;
+	DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH = 38;
+}
+
+enum EDOTAVersusScenePlayerBehavior {
+	VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY = 1;
+	VS_PLAYER_BEHAVIOR_CHAT_WHEEL = 2;
+	VS_PLAYER_BEHAVIOR_PLAYBACK_RATE = 3;
 }
 
 message CDOTAMsg_LocationPing {
@@ -195,3 +202,24 @@ message CDOTAMsg_CoachHUDPing {
 	optional uint32 y = 2;
 	optional string tgtpath = 3;
 }
+
+message VersusScene_PlayActivity {
+	message ActivityInfo {
+		optional string activity = 1;
+		optional bool disable_auto_kill = 2;
+		optional bool force_looping = 3;
+	}
+
+	repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;
+	optional float playback_rate = 2;
+}
+
+message VersusScene_ChatWheel {
+	optional uint32 chat_message_id = 1;
+	optional uint32 emoticon_id = 2;
+}
+
+message VersusScene_PlaybackRate {
+	optional float rate = 1;
+}
+

@@ -11409,6 +11409,37 @@ public final class NetMessages {
      * <code>optional uint32 last_cmd_number = 11;</code>
      */
     int getLastCmdNumber();
+
+    /**
+     * <code>optional uint32 server_tick = 12;</code>
+     */
+    boolean hasServerTick();
+    /**
+     * <code>optional uint32 server_tick = 12;</code>
+     */
+    int getServerTick();
+
+    /**
+     * <code>optional bytes serialized_entities = 13;</code>
+     */
+    boolean hasSerializedEntities();
+    /**
+     * <code>optional bytes serialized_entities = 13;</code>
+     */
+    com.google.protobuf.ByteString getSerializedEntities();
+
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+     */
+    boolean hasCommandQueueInfo();
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+     */
+    skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t getCommandQueueInfo();
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+     */
+    skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder getCommandQueueInfoOrBuilder();
   }
   /**
    * Protobuf type {@code CSVCMsg_PacketEntities}
@@ -11517,6 +11548,29 @@ public final class NetMessages {
               lastCmdNumber_ = input.readUInt32();
               break;
             }
+            case 96: {
+              bitField0_ |= 0x00000800;
+              serverTick_ = input.readUInt32();
+              break;
+            }
+            case 106: {
+              bitField0_ |= 0x00001000;
+              serializedEntities_ = input.readBytes();
+              break;
+            }
+            case 114: {
+              skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder subBuilder = null;
+              if (((bitField0_ & 0x00002000) == 0x00002000)) {
+                subBuilder = commandQueueInfo_.toBuilder();
+              }
+              commandQueueInfo_ = input.readMessage(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(commandQueueInfo_);
+                commandQueueInfo_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00002000;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11554,6 +11608,637 @@ public final class NetMessages {
     @java.lang.Override
     public com.google.protobuf.Parser<CSVCMsg_PacketEntities> getParserForType() {
       return PARSER;
+    }
+
+    public interface command_queue_info_tOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CSVCMsg_PacketEntities.command_queue_info_t)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 commands_queued = 1;</code>
+       */
+      boolean hasCommandsQueued();
+      /**
+       * <code>optional uint32 commands_queued = 1;</code>
+       */
+      int getCommandsQueued();
+
+      /**
+       * <code>optional uint32 command_queue_desired_size = 2;</code>
+       */
+      boolean hasCommandQueueDesiredSize();
+      /**
+       * <code>optional uint32 command_queue_desired_size = 2;</code>
+       */
+      int getCommandQueueDesiredSize();
+
+      /**
+       * <code>optional uint32 starved_command_ticks = 3;</code>
+       */
+      boolean hasStarvedCommandTicks();
+      /**
+       * <code>optional uint32 starved_command_ticks = 3;</code>
+       */
+      int getStarvedCommandTicks();
+
+      /**
+       * <code>optional float time_dilation_percent = 4;</code>
+       */
+      boolean hasTimeDilationPercent();
+      /**
+       * <code>optional float time_dilation_percent = 4;</code>
+       */
+      float getTimeDilationPercent();
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_PacketEntities.command_queue_info_t}
+     */
+    public static final class command_queue_info_t extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CSVCMsg_PacketEntities.command_queue_info_t)
+        command_queue_info_tOrBuilder {
+      // Use command_queue_info_t.newBuilder() to construct.
+      private command_queue_info_t(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private command_queue_info_t(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final command_queue_info_t defaultInstance;
+      public static command_queue_info_t getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public command_queue_info_t getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private command_queue_info_t(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                commandsQueued_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                commandQueueDesiredSize_ = input.readUInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                starvedCommandTicks_ = input.readUInt32();
+                break;
+              }
+              case 37: {
+                bitField0_ |= 0x00000008;
+                timeDilationPercent_ = input.readFloat();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_PacketEntities_command_queue_info_t_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.class, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<command_queue_info_t> PARSER =
+          new com.google.protobuf.AbstractParser<command_queue_info_t>() {
+        public command_queue_info_t parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new command_queue_info_t(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<command_queue_info_t> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int COMMANDS_QUEUED_FIELD_NUMBER = 1;
+      private int commandsQueued_;
+      /**
+       * <code>optional uint32 commands_queued = 1;</code>
+       */
+      public boolean hasCommandsQueued() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 commands_queued = 1;</code>
+       */
+      public int getCommandsQueued() {
+        return commandsQueued_;
+      }
+
+      public static final int COMMAND_QUEUE_DESIRED_SIZE_FIELD_NUMBER = 2;
+      private int commandQueueDesiredSize_;
+      /**
+       * <code>optional uint32 command_queue_desired_size = 2;</code>
+       */
+      public boolean hasCommandQueueDesiredSize() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 command_queue_desired_size = 2;</code>
+       */
+      public int getCommandQueueDesiredSize() {
+        return commandQueueDesiredSize_;
+      }
+
+      public static final int STARVED_COMMAND_TICKS_FIELD_NUMBER = 3;
+      private int starvedCommandTicks_;
+      /**
+       * <code>optional uint32 starved_command_ticks = 3;</code>
+       */
+      public boolean hasStarvedCommandTicks() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 starved_command_ticks = 3;</code>
+       */
+      public int getStarvedCommandTicks() {
+        return starvedCommandTicks_;
+      }
+
+      public static final int TIME_DILATION_PERCENT_FIELD_NUMBER = 4;
+      private float timeDilationPercent_;
+      /**
+       * <code>optional float time_dilation_percent = 4;</code>
+       */
+      public boolean hasTimeDilationPercent() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float time_dilation_percent = 4;</code>
+       */
+      public float getTimeDilationPercent() {
+        return timeDilationPercent_;
+      }
+
+      private void initFields() {
+        commandsQueued_ = 0;
+        commandQueueDesiredSize_ = 0;
+        starvedCommandTicks_ = 0;
+        timeDilationPercent_ = 0F;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeUInt32(1, commandsQueued_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeUInt32(2, commandQueueDesiredSize_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeUInt32(3, starvedCommandTicks_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeFloat(4, timeDilationPercent_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, commandsQueued_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, commandQueueDesiredSize_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, starvedCommandTicks_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(4, timeDilationPercent_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CSVCMsg_PacketEntities.command_queue_info_t}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CSVCMsg_PacketEntities.command_queue_info_t)
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_PacketEntities_command_queue_info_t_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.class, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          commandsQueued_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          commandQueueDesiredSize_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          starvedCommandTicks_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          timeDilationPercent_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor;
+        }
+
+        public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t getDefaultInstanceForType() {
+          return skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t build() {
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t buildPartial() {
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t result = new skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.commandsQueued_ = commandsQueued_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.commandQueueDesiredSize_ = commandQueueDesiredSize_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.starvedCommandTicks_ = starvedCommandTicks_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.timeDilationPercent_ = timeDilationPercent_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t) {
+            return mergeFrom((skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t other) {
+          if (other == skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance()) return this;
+          if (other.hasCommandsQueued()) {
+            setCommandsQueued(other.getCommandsQueued());
+          }
+          if (other.hasCommandQueueDesiredSize()) {
+            setCommandQueueDesiredSize(other.getCommandQueueDesiredSize());
+          }
+          if (other.hasStarvedCommandTicks()) {
+            setStarvedCommandTicks(other.getStarvedCommandTicks());
+          }
+          if (other.hasTimeDilationPercent()) {
+            setTimeDilationPercent(other.getTimeDilationPercent());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int commandsQueued_ ;
+        /**
+         * <code>optional uint32 commands_queued = 1;</code>
+         */
+        public boolean hasCommandsQueued() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 commands_queued = 1;</code>
+         */
+        public int getCommandsQueued() {
+          return commandsQueued_;
+        }
+        /**
+         * <code>optional uint32 commands_queued = 1;</code>
+         */
+        public Builder setCommandsQueued(int value) {
+          bitField0_ |= 0x00000001;
+          commandsQueued_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 commands_queued = 1;</code>
+         */
+        public Builder clearCommandsQueued() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          commandsQueued_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int commandQueueDesiredSize_ ;
+        /**
+         * <code>optional uint32 command_queue_desired_size = 2;</code>
+         */
+        public boolean hasCommandQueueDesiredSize() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 command_queue_desired_size = 2;</code>
+         */
+        public int getCommandQueueDesiredSize() {
+          return commandQueueDesiredSize_;
+        }
+        /**
+         * <code>optional uint32 command_queue_desired_size = 2;</code>
+         */
+        public Builder setCommandQueueDesiredSize(int value) {
+          bitField0_ |= 0x00000002;
+          commandQueueDesiredSize_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 command_queue_desired_size = 2;</code>
+         */
+        public Builder clearCommandQueueDesiredSize() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          commandQueueDesiredSize_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int starvedCommandTicks_ ;
+        /**
+         * <code>optional uint32 starved_command_ticks = 3;</code>
+         */
+        public boolean hasStarvedCommandTicks() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 starved_command_ticks = 3;</code>
+         */
+        public int getStarvedCommandTicks() {
+          return starvedCommandTicks_;
+        }
+        /**
+         * <code>optional uint32 starved_command_ticks = 3;</code>
+         */
+        public Builder setStarvedCommandTicks(int value) {
+          bitField0_ |= 0x00000004;
+          starvedCommandTicks_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 starved_command_ticks = 3;</code>
+         */
+        public Builder clearStarvedCommandTicks() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          starvedCommandTicks_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private float timeDilationPercent_ ;
+        /**
+         * <code>optional float time_dilation_percent = 4;</code>
+         */
+        public boolean hasTimeDilationPercent() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional float time_dilation_percent = 4;</code>
+         */
+        public float getTimeDilationPercent() {
+          return timeDilationPercent_;
+        }
+        /**
+         * <code>optional float time_dilation_percent = 4;</code>
+         */
+        public Builder setTimeDilationPercent(float value) {
+          bitField0_ |= 0x00000008;
+          timeDilationPercent_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float time_dilation_percent = 4;</code>
+         */
+        public Builder clearTimeDilationPercent() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          timeDilationPercent_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CSVCMsg_PacketEntities.command_queue_info_t)
+      }
+
+      static {
+        defaultInstance = new command_queue_info_t(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CSVCMsg_PacketEntities.command_queue_info_t)
     }
 
     private int bitField0_;
@@ -11722,6 +12407,57 @@ public final class NetMessages {
       return lastCmdNumber_;
     }
 
+    public static final int SERVER_TICK_FIELD_NUMBER = 12;
+    private int serverTick_;
+    /**
+     * <code>optional uint32 server_tick = 12;</code>
+     */
+    public boolean hasServerTick() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional uint32 server_tick = 12;</code>
+     */
+    public int getServerTick() {
+      return serverTick_;
+    }
+
+    public static final int SERIALIZED_ENTITIES_FIELD_NUMBER = 13;
+    private com.google.protobuf.ByteString serializedEntities_;
+    /**
+     * <code>optional bytes serialized_entities = 13;</code>
+     */
+    public boolean hasSerializedEntities() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional bytes serialized_entities = 13;</code>
+     */
+    public com.google.protobuf.ByteString getSerializedEntities() {
+      return serializedEntities_;
+    }
+
+    public static final int COMMAND_QUEUE_INFO_FIELD_NUMBER = 14;
+    private skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t commandQueueInfo_;
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+     */
+    public boolean hasCommandQueueInfo() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+     */
+    public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t getCommandQueueInfo() {
+      return commandQueueInfo_;
+    }
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+     */
+    public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder getCommandQueueInfoOrBuilder() {
+      return commandQueueInfo_;
+    }
+
     private void initFields() {
       maxEntries_ = 0;
       updatedEntries_ = 0;
@@ -11734,6 +12470,9 @@ public final class NetMessages {
       activeSpawngroupHandle_ = 0;
       maxSpawngroupCreationsequence_ = 0;
       lastCmdNumber_ = 0;
+      serverTick_ = 0;
+      serializedEntities_ = com.google.protobuf.ByteString.EMPTY;
+      commandQueueInfo_ = skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -11780,6 +12519,15 @@ public final class NetMessages {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeUInt32(11, lastCmdNumber_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeUInt32(12, serverTick_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBytes(13, serializedEntities_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeMessage(14, commandQueueInfo_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -11833,6 +12581,18 @@ public final class NetMessages {
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(11, lastCmdNumber_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(12, serverTick_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, serializedEntities_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, commandQueueInfo_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -11943,6 +12703,7 @@ public final class NetMessages {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCommandQueueInfoFieldBuilder();
         }
       }
       private static Builder create() {
@@ -11973,6 +12734,16 @@ public final class NetMessages {
         bitField0_ = (bitField0_ & ~0x00000200);
         lastCmdNumber_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
+        serverTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        serializedEntities_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        if (commandQueueInfoBuilder_ == null) {
+          commandQueueInfo_ = skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
+        } else {
+          commandQueueInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00002000);
         return this;
       }
 
@@ -12045,6 +12816,22 @@ public final class NetMessages {
           to_bitField0_ |= 0x00000400;
         }
         result.lastCmdNumber_ = lastCmdNumber_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.serverTick_ = serverTick_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.serializedEntities_ = serializedEntities_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        if (commandQueueInfoBuilder_ == null) {
+          result.commandQueueInfo_ = commandQueueInfo_;
+        } else {
+          result.commandQueueInfo_ = commandQueueInfoBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -12093,6 +12880,15 @@ public final class NetMessages {
         }
         if (other.hasLastCmdNumber()) {
           setLastCmdNumber(other.getLastCmdNumber());
+        }
+        if (other.hasServerTick()) {
+          setServerTick(other.getServerTick());
+        }
+        if (other.hasSerializedEntities()) {
+          setSerializedEntities(other.getSerializedEntities());
+        }
+        if (other.hasCommandQueueInfo()) {
+          mergeCommandQueueInfo(other.getCommandQueueInfo());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -12474,6 +13270,189 @@ public final class NetMessages {
         lastCmdNumber_ = 0;
         onChanged();
         return this;
+      }
+
+      private int serverTick_ ;
+      /**
+       * <code>optional uint32 server_tick = 12;</code>
+       */
+      public boolean hasServerTick() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional uint32 server_tick = 12;</code>
+       */
+      public int getServerTick() {
+        return serverTick_;
+      }
+      /**
+       * <code>optional uint32 server_tick = 12;</code>
+       */
+      public Builder setServerTick(int value) {
+        bitField0_ |= 0x00000800;
+        serverTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 server_tick = 12;</code>
+       */
+      public Builder clearServerTick() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        serverTick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString serializedEntities_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes serialized_entities = 13;</code>
+       */
+      public boolean hasSerializedEntities() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional bytes serialized_entities = 13;</code>
+       */
+      public com.google.protobuf.ByteString getSerializedEntities() {
+        return serializedEntities_;
+      }
+      /**
+       * <code>optional bytes serialized_entities = 13;</code>
+       */
+      public Builder setSerializedEntities(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        serializedEntities_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes serialized_entities = 13;</code>
+       */
+      public Builder clearSerializedEntities() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        serializedEntities_ = getDefaultInstance().getSerializedEntities();
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t commandQueueInfo_ = skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder> commandQueueInfoBuilder_;
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public boolean hasCommandQueueInfo() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t getCommandQueueInfo() {
+        if (commandQueueInfoBuilder_ == null) {
+          return commandQueueInfo_;
+        } else {
+          return commandQueueInfoBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public Builder setCommandQueueInfo(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t value) {
+        if (commandQueueInfoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          commandQueueInfo_ = value;
+          onChanged();
+        } else {
+          commandQueueInfoBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public Builder setCommandQueueInfo(
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder builderForValue) {
+        if (commandQueueInfoBuilder_ == null) {
+          commandQueueInfo_ = builderForValue.build();
+          onChanged();
+        } else {
+          commandQueueInfoBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public Builder mergeCommandQueueInfo(skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t value) {
+        if (commandQueueInfoBuilder_ == null) {
+          if (((bitField0_ & 0x00002000) == 0x00002000) &&
+              commandQueueInfo_ != skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance()) {
+            commandQueueInfo_ =
+              skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.newBuilder(commandQueueInfo_).mergeFrom(value).buildPartial();
+          } else {
+            commandQueueInfo_ = value;
+          }
+          onChanged();
+        } else {
+          commandQueueInfoBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00002000;
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public Builder clearCommandQueueInfo() {
+        if (commandQueueInfoBuilder_ == null) {
+          commandQueueInfo_ = skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
+          onChanged();
+        } else {
+          commandQueueInfoBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00002000);
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder getCommandQueueInfoBuilder() {
+        bitField0_ |= 0x00002000;
+        onChanged();
+        return getCommandQueueInfoFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      public skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder getCommandQueueInfoOrBuilder() {
+        if (commandQueueInfoBuilder_ != null) {
+          return commandQueueInfoBuilder_.getMessageOrBuilder();
+        } else {
+          return commandQueueInfo_;
+        }
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder> 
+          getCommandQueueInfoFieldBuilder() {
+        if (commandQueueInfoBuilder_ == null) {
+          commandQueueInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder, skadistats.clarity.wire.common.proto.NetMessages.CSVCMsg_PacketEntities.command_queue_info_tOrBuilder>(
+                  getCommandQueueInfo(),
+                  getParentForChildren(),
+                  isClean());
+          commandQueueInfo_ = null;
+        }
+        return commandQueueInfoBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CSVCMsg_PacketEntities)
@@ -23149,6 +24128,11 @@ public final class NetMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_PacketEntities_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_PacketEntities_command_queue_info_t_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_ServerInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -23255,61 +24239,68 @@ public final class NetMessages {
       "_t\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032" +
       "Y\n\014descriptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name" +
       "\030\002 \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEvent" +
-      "List.key_t\"\254\002\n\026CSVCMsg_PacketEntities\022\023\n" +
+      "List.key_t\"\274\004\n\026CSVCMsg_PacketEntities\022\023\n" +
       "\013max_entries\030\001 \001(\005\022\027\n\017updated_entries\030\002 ",
       "\001(\005\022\020\n\010is_delta\030\003 \001(\010\022\027\n\017update_baseline" +
       "\030\004 \001(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006" +
       " \001(\005\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022pending_ful" +
       "l_frame\030\010 \001(\010\022 \n\030active_spawngroup_handl" +
       "e\030\t \001(\r\022\'\n\037max_spawngroup_creationsequen" +
-      "ce\030\n \001(\r\022\027\n\017last_cmd_number\030\013 \001(\r\"\325\003\n\022CS" +
-      "VCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n\014se" +
-      "rver_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(\010\022\017" +
-      "\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004c_" +
-      "os\030\006 \001(\005\022\017\n\007map_crc\030\007 \001(\007\022\022\n\nclient_crc\030",
-      "\010 \001(\007\022\030\n\020string_table_crc\030\t \001(\007\022\023\n\013max_c" +
-      "lients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\023\n\013pla" +
-      "yer_slot\030\014 \001(\005\022\025\n\rtick_interval\030\r \001(\002\022\020\n" +
-      "\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020\n\010sky" +
-      "_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n\naddon_" +
-      "name\030\022 \001(\t\022>\n\023game_session_config\030\023 \001(\0132" +
-      "!.CSVCMsg_GameSessionConfiguration\022\035\n\025ga" +
-      "me_session_manifest\030\024 \001(\014\"\244\001\n\021CSVCMsg_Cl" +
-      "assInfo\022\030\n\020create_on_client\030\001 \001(\010\022+\n\007cla" +
-      "sses\030\002 \003(\0132\032.CSVCMsg_ClassInfo.class_t\032H",
-      "\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017data_tabl" +
-      "e_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"5\n\017CSVC" +
-      "Msg_SetView\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004slo" +
-      "t\030\002 \001(\005\"\035\n\rCSVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G" +
-      "\n\021CSVCMsg_VoiceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005" +
-      "codec\030\002 \001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVC" +
-      "Msg_Sounds\022\026\n\016reliable_sound\030\001 \001(\010\022+\n\006so" +
-      "unds\030\002 \003(\0132\033.CSVCMsg_Sounds.sounddata_t\032" +
-      "\207\003\n\013sounddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010ori" +
-      "gin_y\030\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030",
-      "\004 \001(\r\022\023\n\013delay_value\030\005 \001(\002\022\027\n\017sequence_n" +
-      "umber\030\006 \001(\005\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007cha" +
-      "nnel\030\010 \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005" +
-      "\022\021\n\tsound_num\030\013 \001(\r\022\030\n\020sound_num_handle\030" +
-      "\014 \001(\007\022\026\n\016speaker_entity\030\r \001(\005\022\023\n\013random_" +
-      "seed\030\016 \001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_se" +
-      "ntence\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid" +
-      "\030\022 \001(\r\022\031\n\021sound_resource_id\030\023 \001(\006\"_\n\031CSV" +
-      "CMsg_UpdateStringTable\022\020\n\010table_id\030\001 \001(\005" +
-      "\022\033\n\023num_changed_entries\030\002 \001(\005\022\023\n\013string_",
-      "data\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004" +
-      "tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001" +
-      "(\005\022\014\n\004data\030\004 \001(\014\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n" +
-      "\003pos\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_texture" +
-      "_index\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013mo" +
-      "del_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"9\n" +
-      "\024CSVCMsg_GetCvarValue\022\016\n\006cookie\030\001 \001(\005\022\021\n" +
-      "\tcvar_name\030\002 \001(\t*L\n\021VoiceDataFormat_t\022\032\n" +
-      "\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_F" +
-      "ORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_P",
-      "AUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE" +
-      "\020\002B6\n$skadistats.clarity.wire.common.pro" +
-      "toB\013NetMessages\200\001\000"
+      "ce\030\n \001(\r\022\027\n\017last_cmd_number\030\013 \001(\r\022\023\n\013ser" +
+      "ver_tick\030\014 \001(\r\022\033\n\023serialized_entities\030\r " +
+      "\001(\014\022H\n\022command_queue_info\030\016 \001(\0132,.CSVCMs" +
+      "g_PacketEntities.command_queue_info_t\032\221\001" +
+      "\n\024command_queue_info_t\022\027\n\017commands_queue",
+      "d\030\001 \001(\r\022\"\n\032command_queue_desired_size\030\002 " +
+      "\001(\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035\n\025ti" +
+      "me_dilation_percent\030\004 \001(\002\"\325\003\n\022CSVCMsg_Se" +
+      "rverInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n\014server_cou" +
+      "nt\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(\010\022\017\n\007is_hlt" +
+      "v\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004c_os\030\006 \001(\005" +
+      "\022\017\n\007map_crc\030\007 \001(\007\022\022\n\nclient_crc\030\010 \001(\007\022\030\n" +
+      "\020string_table_crc\030\t \001(\007\022\023\n\013max_clients\030\n" +
+      " \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\023\n\013player_slot" +
+      "\030\014 \001(\005\022\025\n\rtick_interval\030\r \001(\002\022\020\n\010game_di",
+      "r\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020\n\010sky_name\030\020 " +
+      "\001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n\naddon_name\030\022 \001" +
+      "(\t\022>\n\023game_session_config\030\023 \001(\0132!.CSVCMs" +
+      "g_GameSessionConfiguration\022\035\n\025game_sessi" +
+      "on_manifest\030\024 \001(\014\"\244\001\n\021CSVCMsg_ClassInfo\022" +
+      "\030\n\020create_on_client\030\001 \001(\010\022+\n\007classes\030\002 \003" +
+      "(\0132\032.CSVCMsg_ClassInfo.class_t\032H\n\007class_" +
+      "t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017data_table_name\030\002" +
+      " \001(\t\022\022\n\nclass_name\030\003 \001(\t\"5\n\017CSVCMsg_SetV" +
+      "iew\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"",
+      "\035\n\rCSVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCMs" +
+      "g_VoiceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 " +
+      "\001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Soun" +
+      "ds\022\026\n\016reliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003" +
+      "(\0132\033.CSVCMsg_Sounds.sounddata_t\032\207\003\n\013soun" +
+      "ddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 " +
+      "\001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n" +
+      "\013delay_value\030\005 \001(\002\022\027\n\017sequence_number\030\006 " +
+      "\001(\005\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007channel\030\010 \001" +
+      "(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsoun",
+      "d_num\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n" +
+      "\016speaker_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001" +
+      "(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020" +
+      " \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031" +
+      "\n\021sound_resource_id\030\023 \001(\006\"_\n\031CSVCMsg_Upd" +
+      "ateStringTable\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_" +
+      "changed_entries\030\002 \001(\005\022\023\n\013string_data\030\003 \001" +
+      "(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004tick\030\001 \001" +
+      "(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004da" +
+      "ta\030\004 \001(\014\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n\003pos\030\001 \001",
+      "(\0132\013.CMsgVector\022\033\n\023decal_texture_index\030\002" +
+      " \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013model_inde" +
+      "x\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"9\n\024CSVCMsg" +
+      "_GetCvarValue\022\016\n\006cookie\030\001 \001(\005\022\021\n\tcvar_na" +
+      "me\030\002 \001(\t*L\n\021VoiceDataFormat_t\022\032\n\026VOICEDA" +
+      "TA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FORMAT_EN" +
+      "GINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016" +
+      "\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002B6\n$sk" +
+      "adistats.clarity.wire.common.protoB\013NetM" +
+      "essages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -23443,7 +24434,13 @@ public final class NetMessages {
     internal_static_CSVCMsg_PacketEntities_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PacketEntities_descriptor,
-        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumber", });
+        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumber", "ServerTick", "SerializedEntities", "CommandQueueInfo", });
+    internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor =
+      internal_static_CSVCMsg_PacketEntities_descriptor.getNestedTypes().get(0);
+    internal_static_CSVCMsg_PacketEntities_command_queue_info_t_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor,
+        new java.lang.String[] { "CommandsQueued", "CommandQueueDesiredSize", "StarvedCommandTicks", "TimeDilationPercent", });
     internal_static_CSVCMsg_ServerInfo_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_CSVCMsg_ServerInfo_fieldAccessorTable = new

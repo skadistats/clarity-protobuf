@@ -537,6 +537,34 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_OutpostGrantedXP = 595;</code>
      */
     DOTA_UM_OutpostGrantedXP(130, 595),
+    /**
+     * <code>DOTA_UM_MoveCameraToUnit = 596;</code>
+     */
+    DOTA_UM_MoveCameraToUnit(131, 596),
+    /**
+     * <code>DOTA_UM_PauseMinigameData = 597;</code>
+     */
+    DOTA_UM_PauseMinigameData(132, 597),
+    /**
+     * <code>DOTA_UM_VersusScene_PlayerBehavior = 598;</code>
+     */
+    DOTA_UM_VersusScene_PlayerBehavior(133, 598),
+    /**
+     * <code>DOTA_UM_QoP_ArcanaSummary = 600;</code>
+     */
+    DOTA_UM_QoP_ArcanaSummary(134, 600),
+    /**
+     * <code>DOTA_UM_HotPotato_Created = 601;</code>
+     */
+    DOTA_UM_HotPotato_Created(135, 601),
+    /**
+     * <code>DOTA_UM_HotPotato_Exploded = 602;</code>
+     */
+    DOTA_UM_HotPotato_Exploded(136, 602),
+    /**
+     * <code>DOTA_UM_WK_Arcana_Progress = 603;</code>
+     */
+    DOTA_UM_WK_Arcana_Progress(137, 603),
     ;
 
     /**
@@ -1063,6 +1091,34 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_OutpostGrantedXP = 595;</code>
      */
     public static final int DOTA_UM_OutpostGrantedXP_VALUE = 595;
+    /**
+     * <code>DOTA_UM_MoveCameraToUnit = 596;</code>
+     */
+    public static final int DOTA_UM_MoveCameraToUnit_VALUE = 596;
+    /**
+     * <code>DOTA_UM_PauseMinigameData = 597;</code>
+     */
+    public static final int DOTA_UM_PauseMinigameData_VALUE = 597;
+    /**
+     * <code>DOTA_UM_VersusScene_PlayerBehavior = 598;</code>
+     */
+    public static final int DOTA_UM_VersusScene_PlayerBehavior_VALUE = 598;
+    /**
+     * <code>DOTA_UM_QoP_ArcanaSummary = 600;</code>
+     */
+    public static final int DOTA_UM_QoP_ArcanaSummary_VALUE = 600;
+    /**
+     * <code>DOTA_UM_HotPotato_Created = 601;</code>
+     */
+    public static final int DOTA_UM_HotPotato_Created_VALUE = 601;
+    /**
+     * <code>DOTA_UM_HotPotato_Exploded = 602;</code>
+     */
+    public static final int DOTA_UM_HotPotato_Exploded_VALUE = 602;
+    /**
+     * <code>DOTA_UM_WK_Arcana_Progress = 603;</code>
+     */
+    public static final int DOTA_UM_WK_Arcana_Progress_VALUE = 603;
 
 
     public final int getNumber() { return value; }
@@ -1200,6 +1256,13 @@ public final class S2DotaUserMessages {
         case 593: return DOTA_UM_FoundNeutralItem;
         case 594: return DOTA_UM_OutpostCaptured;
         case 595: return DOTA_UM_OutpostGrantedXP;
+        case 596: return DOTA_UM_MoveCameraToUnit;
+        case 597: return DOTA_UM_PauseMinigameData;
+        case 598: return DOTA_UM_VersusScene_PlayerBehavior;
+        case 600: return DOTA_UM_QoP_ArcanaSummary;
+        case 601: return DOTA_UM_HotPotato_Created;
+        case 602: return DOTA_UM_HotPotato_Exploded;
+        case 603: return DOTA_UM_WK_Arcana_Progress;
         default: return null;
       }
     }
@@ -1260,7 +1323,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\351\036\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\323 \n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1359,8 +1422,14 @@ public final class S2DotaUserMessages {
       "ebugChallenge\020\317\004\022\032\n\025DOTA_UM_OMArcanaComb" +
       "o\020\320\004\022\035\n\030DOTA_UM_FoundNeutralItem\020\321\004\022\034\n\027D" +
       "OTA_UM_OutpostCaptured\020\322\004\022\035\n\030DOTA_UM_Out" +
-      "postGrantedXP\020\323\004B;\n skadistats.clarity.w",
-      "ire.s2.protoB\022S2DotaUserMessagesH\001\200\001\000"
+      "postGrantedXP\020\323\004\022\035\n\030DOTA_UM_MoveCameraTo",
+      "Unit\020\324\004\022\036\n\031DOTA_UM_PauseMinigameData\020\325\004\022" +
+      "\'\n\"DOTA_UM_VersusScene_PlayerBehavior\020\326\004" +
+      "\022\036\n\031DOTA_UM_QoP_ArcanaSummary\020\330\004\022\036\n\031DOTA" +
+      "_UM_HotPotato_Created\020\331\004\022\037\n\032DOTA_UM_HotP" +
+      "otato_Exploded\020\332\004\022\037\n\032DOTA_UM_WK_Arcana_P" +
+      "rogress\020\333\004B;\n skadistats.clarity.wire.s2" +
+      ".protoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1121,6 +1121,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN = 37;</code>
      */
     DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN(37, 37),
+    /**
+     * <code>DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH = 38;</code>
+     */
+    DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH(38, 38),
     ;
 
     /**
@@ -1275,6 +1279,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN = 37;</code>
      */
     public static final int DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN_VALUE = 37;
+    /**
+     * <code>DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH = 38;</code>
+     */
+    public static final int DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH_VALUE = 38;
 
 
     public final int getNumber() { return value; }
@@ -1319,6 +1327,7 @@ public final class DotaCommonMessages {
         case 35: return DOTA_UNIT_ORDER_CAST_RIVER_PAINT;
         case 36: return DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT;
         case 37: return DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN;
+        case 38: return DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH;
         default: return null;
       }
     }
@@ -1368,6 +1377,97 @@ public final class DotaCommonMessages {
     }
 
     // @@protoc_insertion_point(enum_scope:dotaunitorder_t)
+  }
+
+  /**
+   * Protobuf enum {@code EDOTAVersusScenePlayerBehavior}
+   */
+  public enum EDOTAVersusScenePlayerBehavior
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY = 1;</code>
+     */
+    VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY(0, 1),
+    /**
+     * <code>VS_PLAYER_BEHAVIOR_CHAT_WHEEL = 2;</code>
+     */
+    VS_PLAYER_BEHAVIOR_CHAT_WHEEL(1, 2),
+    /**
+     * <code>VS_PLAYER_BEHAVIOR_PLAYBACK_RATE = 3;</code>
+     */
+    VS_PLAYER_BEHAVIOR_PLAYBACK_RATE(2, 3),
+    ;
+
+    /**
+     * <code>VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY = 1;</code>
+     */
+    public static final int VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY_VALUE = 1;
+    /**
+     * <code>VS_PLAYER_BEHAVIOR_CHAT_WHEEL = 2;</code>
+     */
+    public static final int VS_PLAYER_BEHAVIOR_CHAT_WHEEL_VALUE = 2;
+    /**
+     * <code>VS_PLAYER_BEHAVIOR_PLAYBACK_RATE = 3;</code>
+     */
+    public static final int VS_PLAYER_BEHAVIOR_PLAYBACK_RATE_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static EDOTAVersusScenePlayerBehavior valueOf(int value) {
+      switch (value) {
+        case 1: return VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY;
+        case 2: return VS_PLAYER_BEHAVIOR_CHAT_WHEEL;
+        case 3: return VS_PLAYER_BEHAVIOR_PLAYBACK_RATE;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EDOTAVersusScenePlayerBehavior>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EDOTAVersusScenePlayerBehavior>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EDOTAVersusScenePlayerBehavior>() {
+            public EDOTAVersusScenePlayerBehavior findValueByNumber(int number) {
+              return EDOTAVersusScenePlayerBehavior.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(3);
+    }
+
+    private static final EDOTAVersusScenePlayerBehavior[] VALUES = values();
+
+    public static EDOTAVersusScenePlayerBehavior valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EDOTAVersusScenePlayerBehavior(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EDOTAVersusScenePlayerBehavior)
   }
 
   public interface CDOTAMsg_LocationPingOrBuilder extends
@@ -6610,6 +6710,2267 @@ public final class DotaCommonMessages {
     // @@protoc_insertion_point(class_scope:CDOTAMsg_CoachHUDPing)
   }
 
+  public interface VersusScene_PlayActivityOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VersusScene_PlayActivity)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    java.util.List<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo> 
+        getActivitiesList();
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo getActivities(int index);
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    int getActivitiesCount();
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder> 
+        getActivitiesOrBuilderList();
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder getActivitiesOrBuilder(
+        int index);
+
+    /**
+     * <code>optional float playback_rate = 2;</code>
+     */
+    boolean hasPlaybackRate();
+    /**
+     * <code>optional float playback_rate = 2;</code>
+     */
+    float getPlaybackRate();
+  }
+  /**
+   * Protobuf type {@code VersusScene_PlayActivity}
+   */
+  public static final class VersusScene_PlayActivity extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:VersusScene_PlayActivity)
+      VersusScene_PlayActivityOrBuilder {
+    // Use VersusScene_PlayActivity.newBuilder() to construct.
+    private VersusScene_PlayActivity(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private VersusScene_PlayActivity(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final VersusScene_PlayActivity defaultInstance;
+    public static VersusScene_PlayActivity getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public VersusScene_PlayActivity getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VersusScene_PlayActivity(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                activities_ = new java.util.ArrayList<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              activities_.add(input.readMessage(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.PARSER, extensionRegistry));
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000001;
+              playbackRate_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          activities_ = java.util.Collections.unmodifiableList(activities_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<VersusScene_PlayActivity> PARSER =
+        new com.google.protobuf.AbstractParser<VersusScene_PlayActivity>() {
+      public VersusScene_PlayActivity parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VersusScene_PlayActivity(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VersusScene_PlayActivity> getParserForType() {
+      return PARSER;
+    }
+
+    public interface ActivityInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:VersusScene_PlayActivity.ActivityInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string activity = 1;</code>
+       */
+      boolean hasActivity();
+      /**
+       * <code>optional string activity = 1;</code>
+       */
+      java.lang.String getActivity();
+      /**
+       * <code>optional string activity = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getActivityBytes();
+
+      /**
+       * <code>optional bool disable_auto_kill = 2;</code>
+       */
+      boolean hasDisableAutoKill();
+      /**
+       * <code>optional bool disable_auto_kill = 2;</code>
+       */
+      boolean getDisableAutoKill();
+
+      /**
+       * <code>optional bool force_looping = 3;</code>
+       */
+      boolean hasForceLooping();
+      /**
+       * <code>optional bool force_looping = 3;</code>
+       */
+      boolean getForceLooping();
+    }
+    /**
+     * Protobuf type {@code VersusScene_PlayActivity.ActivityInfo}
+     */
+    public static final class ActivityInfo extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:VersusScene_PlayActivity.ActivityInfo)
+        ActivityInfoOrBuilder {
+      // Use ActivityInfo.newBuilder() to construct.
+      private ActivityInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private ActivityInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final ActivityInfo defaultInstance;
+      public static ActivityInfo getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public ActivityInfo getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private ActivityInfo(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                activity_ = bs;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                disableAutoKill_ = input.readBool();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                forceLooping_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_ActivityInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<ActivityInfo> PARSER =
+          new com.google.protobuf.AbstractParser<ActivityInfo>() {
+        public ActivityInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new ActivityInfo(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<ActivityInfo> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int ACTIVITY_FIELD_NUMBER = 1;
+      private java.lang.Object activity_;
+      /**
+       * <code>optional string activity = 1;</code>
+       */
+      public boolean hasActivity() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string activity = 1;</code>
+       */
+      public java.lang.String getActivity() {
+        java.lang.Object ref = activity_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            activity_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string activity = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getActivityBytes() {
+        java.lang.Object ref = activity_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          activity_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int DISABLE_AUTO_KILL_FIELD_NUMBER = 2;
+      private boolean disableAutoKill_;
+      /**
+       * <code>optional bool disable_auto_kill = 2;</code>
+       */
+      public boolean hasDisableAutoKill() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bool disable_auto_kill = 2;</code>
+       */
+      public boolean getDisableAutoKill() {
+        return disableAutoKill_;
+      }
+
+      public static final int FORCE_LOOPING_FIELD_NUMBER = 3;
+      private boolean forceLooping_;
+      /**
+       * <code>optional bool force_looping = 3;</code>
+       */
+      public boolean hasForceLooping() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool force_looping = 3;</code>
+       */
+      public boolean getForceLooping() {
+        return forceLooping_;
+      }
+
+      private void initFields() {
+        activity_ = "";
+        disableAutoKill_ = false;
+        forceLooping_ = false;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBytes(1, getActivityBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBool(2, disableAutoKill_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeBool(3, forceLooping_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, getActivityBytes());
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, disableAutoKill_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(3, forceLooping_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code VersusScene_PlayActivity.ActivityInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:VersusScene_PlayActivity.ActivityInfo)
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_ActivityInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          activity_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          disableAutoKill_ = false;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          forceLooping_ = false;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor;
+        }
+
+        public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo getDefaultInstanceForType() {
+          return skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo build() {
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo buildPartial() {
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo result = new skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.activity_ = activity_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.disableAutoKill_ = disableAutoKill_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.forceLooping_ = forceLooping_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo) {
+            return mergeFrom((skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo other) {
+          if (other == skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.getDefaultInstance()) return this;
+          if (other.hasActivity()) {
+            bitField0_ |= 0x00000001;
+            activity_ = other.activity_;
+            onChanged();
+          }
+          if (other.hasDisableAutoKill()) {
+            setDisableAutoKill(other.getDisableAutoKill());
+          }
+          if (other.hasForceLooping()) {
+            setForceLooping(other.getForceLooping());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object activity_ = "";
+        /**
+         * <code>optional string activity = 1;</code>
+         */
+        public boolean hasActivity() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional string activity = 1;</code>
+         */
+        public java.lang.String getActivity() {
+          java.lang.Object ref = activity_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              activity_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string activity = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getActivityBytes() {
+          java.lang.Object ref = activity_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            activity_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string activity = 1;</code>
+         */
+        public Builder setActivity(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          activity_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string activity = 1;</code>
+         */
+        public Builder clearActivity() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          activity_ = getDefaultInstance().getActivity();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string activity = 1;</code>
+         */
+        public Builder setActivityBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          activity_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean disableAutoKill_ ;
+        /**
+         * <code>optional bool disable_auto_kill = 2;</code>
+         */
+        public boolean hasDisableAutoKill() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional bool disable_auto_kill = 2;</code>
+         */
+        public boolean getDisableAutoKill() {
+          return disableAutoKill_;
+        }
+        /**
+         * <code>optional bool disable_auto_kill = 2;</code>
+         */
+        public Builder setDisableAutoKill(boolean value) {
+          bitField0_ |= 0x00000002;
+          disableAutoKill_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool disable_auto_kill = 2;</code>
+         */
+        public Builder clearDisableAutoKill() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          disableAutoKill_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean forceLooping_ ;
+        /**
+         * <code>optional bool force_looping = 3;</code>
+         */
+        public boolean hasForceLooping() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional bool force_looping = 3;</code>
+         */
+        public boolean getForceLooping() {
+          return forceLooping_;
+        }
+        /**
+         * <code>optional bool force_looping = 3;</code>
+         */
+        public Builder setForceLooping(boolean value) {
+          bitField0_ |= 0x00000004;
+          forceLooping_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool force_looping = 3;</code>
+         */
+        public Builder clearForceLooping() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          forceLooping_ = false;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:VersusScene_PlayActivity.ActivityInfo)
+      }
+
+      static {
+        defaultInstance = new ActivityInfo(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:VersusScene_PlayActivity.ActivityInfo)
+    }
+
+    private int bitField0_;
+    public static final int ACTIVITIES_FIELD_NUMBER = 1;
+    private java.util.List<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo> activities_;
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo> getActivitiesList() {
+      return activities_;
+    }
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder> 
+        getActivitiesOrBuilderList() {
+      return activities_;
+    }
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    public int getActivitiesCount() {
+      return activities_.size();
+    }
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo getActivities(int index) {
+      return activities_.get(index);
+    }
+    /**
+     * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+     */
+    public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder getActivitiesOrBuilder(
+        int index) {
+      return activities_.get(index);
+    }
+
+    public static final int PLAYBACK_RATE_FIELD_NUMBER = 2;
+    private float playbackRate_;
+    /**
+     * <code>optional float playback_rate = 2;</code>
+     */
+    public boolean hasPlaybackRate() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional float playback_rate = 2;</code>
+     */
+    public float getPlaybackRate() {
+      return playbackRate_;
+    }
+
+    private void initFields() {
+      activities_ = java.util.Collections.emptyList();
+      playbackRate_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < activities_.size(); i++) {
+        output.writeMessage(1, activities_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeFloat(2, playbackRate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < activities_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, activities_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, playbackRate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VersusScene_PlayActivity}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VersusScene_PlayActivity)
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivityOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getActivitiesFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (activitiesBuilder_ == null) {
+          activities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          activitiesBuilder_.clear();
+        }
+        playbackRate_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlayActivity_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity build() {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity buildPartial() {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity result = new skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (activitiesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            activities_ = java.util.Collections.unmodifiableList(activities_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.activities_ = activities_;
+        } else {
+          result.activities_ = activitiesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.playbackRate_ = playbackRate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity other) {
+        if (other == skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.getDefaultInstance()) return this;
+        if (activitiesBuilder_ == null) {
+          if (!other.activities_.isEmpty()) {
+            if (activities_.isEmpty()) {
+              activities_ = other.activities_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureActivitiesIsMutable();
+              activities_.addAll(other.activities_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.activities_.isEmpty()) {
+            if (activitiesBuilder_.isEmpty()) {
+              activitiesBuilder_.dispose();
+              activitiesBuilder_ = null;
+              activities_ = other.activities_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              activitiesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getActivitiesFieldBuilder() : null;
+            } else {
+              activitiesBuilder_.addAllMessages(other.activities_);
+            }
+          }
+        }
+        if (other.hasPlaybackRate()) {
+          setPlaybackRate(other.getPlaybackRate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo> activities_ =
+        java.util.Collections.emptyList();
+      private void ensureActivitiesIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          activities_ = new java.util.ArrayList<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo>(activities_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder> activitiesBuilder_;
+
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo> getActivitiesList() {
+        if (activitiesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(activities_);
+        } else {
+          return activitiesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public int getActivitiesCount() {
+        if (activitiesBuilder_ == null) {
+          return activities_.size();
+        } else {
+          return activitiesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo getActivities(int index) {
+        if (activitiesBuilder_ == null) {
+          return activities_.get(index);
+        } else {
+          return activitiesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder setActivities(
+          int index, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo value) {
+        if (activitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActivitiesIsMutable();
+          activities_.set(index, value);
+          onChanged();
+        } else {
+          activitiesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder setActivities(
+          int index, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder builderForValue) {
+        if (activitiesBuilder_ == null) {
+          ensureActivitiesIsMutable();
+          activities_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          activitiesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder addActivities(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo value) {
+        if (activitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActivitiesIsMutable();
+          activities_.add(value);
+          onChanged();
+        } else {
+          activitiesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder addActivities(
+          int index, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo value) {
+        if (activitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureActivitiesIsMutable();
+          activities_.add(index, value);
+          onChanged();
+        } else {
+          activitiesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder addActivities(
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder builderForValue) {
+        if (activitiesBuilder_ == null) {
+          ensureActivitiesIsMutable();
+          activities_.add(builderForValue.build());
+          onChanged();
+        } else {
+          activitiesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder addActivities(
+          int index, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder builderForValue) {
+        if (activitiesBuilder_ == null) {
+          ensureActivitiesIsMutable();
+          activities_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          activitiesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder addAllActivities(
+          java.lang.Iterable<? extends skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo> values) {
+        if (activitiesBuilder_ == null) {
+          ensureActivitiesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, activities_);
+          onChanged();
+        } else {
+          activitiesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder clearActivities() {
+        if (activitiesBuilder_ == null) {
+          activities_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          activitiesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public Builder removeActivities(int index) {
+        if (activitiesBuilder_ == null) {
+          ensureActivitiesIsMutable();
+          activities_.remove(index);
+          onChanged();
+        } else {
+          activitiesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder getActivitiesBuilder(
+          int index) {
+        return getActivitiesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder getActivitiesOrBuilder(
+          int index) {
+        if (activitiesBuilder_ == null) {
+          return activities_.get(index);  } else {
+          return activitiesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder> 
+           getActivitiesOrBuilderList() {
+        if (activitiesBuilder_ != null) {
+          return activitiesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(activities_);
+        }
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder addActivitiesBuilder() {
+        return getActivitiesFieldBuilder().addBuilder(
+            skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder addActivitiesBuilder(
+          int index) {
+        return getActivitiesFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .VersusScene_PlayActivity.ActivityInfo activities = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder> 
+           getActivitiesBuilderList() {
+        return getActivitiesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder> 
+          getActivitiesFieldBuilder() {
+        if (activitiesBuilder_ == null) {
+          activitiesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfo.Builder, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlayActivity.ActivityInfoOrBuilder>(
+                  activities_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          activities_ = null;
+        }
+        return activitiesBuilder_;
+      }
+
+      private float playbackRate_ ;
+      /**
+       * <code>optional float playback_rate = 2;</code>
+       */
+      public boolean hasPlaybackRate() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float playback_rate = 2;</code>
+       */
+      public float getPlaybackRate() {
+        return playbackRate_;
+      }
+      /**
+       * <code>optional float playback_rate = 2;</code>
+       */
+      public Builder setPlaybackRate(float value) {
+        bitField0_ |= 0x00000002;
+        playbackRate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float playback_rate = 2;</code>
+       */
+      public Builder clearPlaybackRate() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        playbackRate_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:VersusScene_PlayActivity)
+    }
+
+    static {
+      defaultInstance = new VersusScene_PlayActivity(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:VersusScene_PlayActivity)
+  }
+
+  public interface VersusScene_ChatWheelOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VersusScene_ChatWheel)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 chat_message_id = 1;</code>
+     */
+    boolean hasChatMessageId();
+    /**
+     * <code>optional uint32 chat_message_id = 1;</code>
+     */
+    int getChatMessageId();
+
+    /**
+     * <code>optional uint32 emoticon_id = 2;</code>
+     */
+    boolean hasEmoticonId();
+    /**
+     * <code>optional uint32 emoticon_id = 2;</code>
+     */
+    int getEmoticonId();
+  }
+  /**
+   * Protobuf type {@code VersusScene_ChatWheel}
+   */
+  public static final class VersusScene_ChatWheel extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:VersusScene_ChatWheel)
+      VersusScene_ChatWheelOrBuilder {
+    // Use VersusScene_ChatWheel.newBuilder() to construct.
+    private VersusScene_ChatWheel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private VersusScene_ChatWheel(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final VersusScene_ChatWheel defaultInstance;
+    public static VersusScene_ChatWheel getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public VersusScene_ChatWheel getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VersusScene_ChatWheel(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              chatMessageId_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              emoticonId_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_ChatWheel_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_ChatWheel_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<VersusScene_ChatWheel> PARSER =
+        new com.google.protobuf.AbstractParser<VersusScene_ChatWheel>() {
+      public VersusScene_ChatWheel parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VersusScene_ChatWheel(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VersusScene_ChatWheel> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int CHAT_MESSAGE_ID_FIELD_NUMBER = 1;
+    private int chatMessageId_;
+    /**
+     * <code>optional uint32 chat_message_id = 1;</code>
+     */
+    public boolean hasChatMessageId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 chat_message_id = 1;</code>
+     */
+    public int getChatMessageId() {
+      return chatMessageId_;
+    }
+
+    public static final int EMOTICON_ID_FIELD_NUMBER = 2;
+    private int emoticonId_;
+    /**
+     * <code>optional uint32 emoticon_id = 2;</code>
+     */
+    public boolean hasEmoticonId() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 emoticon_id = 2;</code>
+     */
+    public int getEmoticonId() {
+      return emoticonId_;
+    }
+
+    private void initFields() {
+      chatMessageId_ = 0;
+      emoticonId_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, chatMessageId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, emoticonId_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, chatMessageId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, emoticonId_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VersusScene_ChatWheel}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VersusScene_ChatWheel)
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheelOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_ChatWheel_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_ChatWheel_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        chatMessageId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        emoticonId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_ChatWheel_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel build() {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel buildPartial() {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel result = new skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.chatMessageId_ = chatMessageId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.emoticonId_ = emoticonId_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel other) {
+        if (other == skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel.getDefaultInstance()) return this;
+        if (other.hasChatMessageId()) {
+          setChatMessageId(other.getChatMessageId());
+        }
+        if (other.hasEmoticonId()) {
+          setEmoticonId(other.getEmoticonId());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_ChatWheel) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int chatMessageId_ ;
+      /**
+       * <code>optional uint32 chat_message_id = 1;</code>
+       */
+      public boolean hasChatMessageId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 chat_message_id = 1;</code>
+       */
+      public int getChatMessageId() {
+        return chatMessageId_;
+      }
+      /**
+       * <code>optional uint32 chat_message_id = 1;</code>
+       */
+      public Builder setChatMessageId(int value) {
+        bitField0_ |= 0x00000001;
+        chatMessageId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 chat_message_id = 1;</code>
+       */
+      public Builder clearChatMessageId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        chatMessageId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int emoticonId_ ;
+      /**
+       * <code>optional uint32 emoticon_id = 2;</code>
+       */
+      public boolean hasEmoticonId() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 emoticon_id = 2;</code>
+       */
+      public int getEmoticonId() {
+        return emoticonId_;
+      }
+      /**
+       * <code>optional uint32 emoticon_id = 2;</code>
+       */
+      public Builder setEmoticonId(int value) {
+        bitField0_ |= 0x00000002;
+        emoticonId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 emoticon_id = 2;</code>
+       */
+      public Builder clearEmoticonId() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        emoticonId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:VersusScene_ChatWheel)
+    }
+
+    static {
+      defaultInstance = new VersusScene_ChatWheel(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:VersusScene_ChatWheel)
+  }
+
+  public interface VersusScene_PlaybackRateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:VersusScene_PlaybackRate)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional float rate = 1;</code>
+     */
+    boolean hasRate();
+    /**
+     * <code>optional float rate = 1;</code>
+     */
+    float getRate();
+  }
+  /**
+   * Protobuf type {@code VersusScene_PlaybackRate}
+   */
+  public static final class VersusScene_PlaybackRate extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:VersusScene_PlaybackRate)
+      VersusScene_PlaybackRateOrBuilder {
+    // Use VersusScene_PlaybackRate.newBuilder() to construct.
+    private VersusScene_PlaybackRate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private VersusScene_PlaybackRate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final VersusScene_PlaybackRate defaultInstance;
+    public static VersusScene_PlaybackRate getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public VersusScene_PlaybackRate getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private VersusScene_PlaybackRate(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 13: {
+              bitField0_ |= 0x00000001;
+              rate_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlaybackRate_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlaybackRate_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<VersusScene_PlaybackRate> PARSER =
+        new com.google.protobuf.AbstractParser<VersusScene_PlaybackRate>() {
+      public VersusScene_PlaybackRate parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new VersusScene_PlaybackRate(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<VersusScene_PlaybackRate> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int RATE_FIELD_NUMBER = 1;
+    private float rate_;
+    /**
+     * <code>optional float rate = 1;</code>
+     */
+    public boolean hasRate() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional float rate = 1;</code>
+     */
+    public float getRate() {
+      return rate_;
+    }
+
+    private void initFields() {
+      rate_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeFloat(1, rate_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, rate_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code VersusScene_PlaybackRate}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:VersusScene_PlaybackRate)
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlaybackRate_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlaybackRate_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.class, skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        rate_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.internal_static_VersusScene_PlaybackRate_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate build() {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate buildPartial() {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate result = new skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.rate_ = rate_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate other) {
+        if (other == skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate.getDefaultInstance()) return this;
+        if (other.hasRate()) {
+          setRate(other.getRate());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.DotaCommonMessages.VersusScene_PlaybackRate) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private float rate_ ;
+      /**
+       * <code>optional float rate = 1;</code>
+       */
+      public boolean hasRate() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float rate = 1;</code>
+       */
+      public float getRate() {
+        return rate_;
+      }
+      /**
+       * <code>optional float rate = 1;</code>
+       */
+      public Builder setRate(float value) {
+        bitField0_ |= 0x00000001;
+        rate_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float rate = 1;</code>
+       */
+      public Builder clearRate() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rate_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:VersusScene_PlaybackRate)
+    }
+
+    static {
+      defaultInstance = new VersusScene_PlaybackRate(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:VersusScene_PlaybackRate)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMsg_LocationPing_descriptor;
   private static
@@ -6650,6 +9011,26 @@ public final class DotaCommonMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMsg_CoachHUDPing_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VersusScene_PlayActivity_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_VersusScene_PlayActivity_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_VersusScene_PlayActivity_ActivityInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VersusScene_ChatWheel_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_VersusScene_ChatWheel_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VersusScene_PlaybackRate_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_VersusScene_PlaybackRate_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -6677,102 +9058,115 @@ public final class DotaCommonMessages {
       "_name\030\007 \001(\t\"3\n\035CDOTAMsg_DismissAllStatPo" +
       "pups\022\022\n\ntime_delay\030\001 \001(\002\">\n\025CDOTAMsg_Coa" +
       "chHUDPing\022\t\n\001x\030\001 \001(\r\022\t\n\001y\030\002 \001(\r\022\017\n\007tgtpa" +
-      "th\030\003 \001(\t*\305\021\n\025EDOTAChatWheelMessage\022\021\n\rk_" +
-      "EDOTA_CW_Ok\020\000\022\023\n\017k_EDOTA_CW_Care\020\001\022\026\n\022k_",
-      "EDOTA_CW_GetBack\020\002\022\030\n\024k_EDOTA_CW_NeedWar" +
-      "ds\020\003\022\023\n\017k_EDOTA_CW_Stun\020\004\022\023\n\017k_EDOTA_CW_" +
-      "Help\020\005\022\023\n\017k_EDOTA_CW_Push\020\006\022\026\n\022k_EDOTA_C" +
-      "W_GoodJob\020\007\022\026\n\022k_EDOTA_CW_Missing\020\010\022\032\n\026k" +
-      "_EDOTA_CW_Missing_Top\020\t\022\032\n\026k_EDOTA_CW_Mi" +
-      "ssing_Mid\020\n\022\035\n\031k_EDOTA_CW_Missing_Bottom" +
-      "\020\013\022\021\n\rk_EDOTA_CW_Go\020\014\022\027\n\023k_EDOTA_CW_Init" +
-      "iate\020\r\022\025\n\021k_EDOTA_CW_Follow\020\016\022\027\n\023k_EDOTA" +
-      "_CW_Group_Up\020\017\022\031\n\025k_EDOTA_CW_Spread_Out\020" +
-      "\020\022\031\n\025k_EDOTA_CW_Split_Farm\020\021\022\025\n\021k_EDOTA_",
-      "CW_Attack\020\022\022\022\n\016k_EDOTA_CW_BRB\020\023\022\023\n\017k_EDO" +
-      "TA_CW_Dive\020\024\022\022\n\016k_EDOTA_CW_OMW\020\025\022\030\n\024k_ED" +
-      "OTA_CW_Get_Ready\020\026\022\023\n\017k_EDOTA_CW_Bait\020\027\022" +
-      "\023\n\017k_EDOTA_CW_Heal\020\030\022\023\n\017k_EDOTA_CW_Mana\020" +
-      "\031\022\022\n\016k_EDOTA_CW_OOM\020\032\022\035\n\031k_EDOTA_CW_Skil" +
-      "l_Cooldown\020\033\022\031\n\025k_EDOTA_CW_Ulti_Ready\020\034\022" +
-      "\035\n\031k_EDOTA_CW_Enemy_Returned\020\035\022\032\n\026k_EDOT" +
-      "A_CW_All_Missing\020\036\022\035\n\031k_EDOTA_CW_Enemy_I" +
-      "ncoming\020\037\022\032\n\026k_EDOTA_CW_Invis_Enemy\020 \022\035\n" +
-      "\031k_EDOTA_CW_Enemy_Had_Rune\020!\022\031\n\025k_EDOTA_",
-      "CW_Split_Push\020\"\022\035\n\031k_EDOTA_CW_Coming_To_" +
-      "Gank\020#\022\033\n\027k_EDOTA_CW_Request_Gank\020$\022 \n\034k" +
-      "_EDOTA_CW_Fight_Under_Tower\020%\022\031\n\025k_EDOTA" +
-      "_CW_Deny_Tower\020&\022\032\n\026k_EDOTA_CW_Buy_Couri" +
-      "er\020\'\022\036\n\032k_EDOTA_CW_Upgrade_Courier\020(\022\035\n\031" +
-      "k_EDOTA_CW_Need_Detection\020)\022\"\n\036k_EDOTA_C" +
-      "W_They_Have_Detection\020*\022\025\n\021k_EDOTA_CW_Bu" +
-      "y_TP\020+\022\034\n\030k_EDOTA_CW_Reuse_Courier\020,\022\025\n\021" +
-      "k_EDOTA_CW_Deward\020-\022\033\n\027k_EDOTA_CW_Buildi" +
-      "ng_Mek\020.\022\034\n\030k_EDOTA_CW_Building_Pipe\020/\022\035",
-      "\n\031k_EDOTA_CW_Stack_And_Pull\0200\022\023\n\017k_EDOTA" +
-      "_CW_Pull\0201\022\026\n\022k_EDOTA_CW_Pulling\0202\022\024\n\020k_" +
-      "EDOTA_CW_Stack\0203\022\027\n\023k_EDOTA_CW_Jungling\020" +
-      "4\022\025\n\021k_EDOTA_CW_Roshan\0205\022\032\n\026k_EDOTA_CW_A" +
-      "ffirmative\0206\022\023\n\017k_EDOTA_CW_Wait\0207\022\024\n\020k_E" +
-      "DOTA_CW_Pause\0208\022\033\n\027k_EDOTA_CW_Current_Ti" +
-      "me\0209\022\032\n\026k_EDOTA_CW_Check_Runes\020:\022\031\n\025k_ED" +
-      "OTA_CW_Smoke_Gank\020;\022\023\n\017k_EDOTA_CW_GLHF\020<" +
-      "\022\023\n\017k_EDOTA_CW_Nice\020=\022\025\n\021k_EDOTA_CW_Than" +
-      "ks\020>\022\024\n\020k_EDOTA_CW_Sorry\020?\022\031\n\025k_EDOTA_CW",
-      "_No_Give_Up\020@\022\034\n\030k_EDOTA_CW_Just_Happene" +
-      "d\020A\022\033\n\027k_EDOTA_CW_Game_Is_Hard\020B\022\027\n\023k_ED" +
-      "OTA_CW_New_Meta\020C\022\025\n\021k_EDOTA_CW_My_Bad\020D" +
-      "\022\025\n\021k_EDOTA_CW_Regret\020E\022\024\n\020k_EDOTA_CW_Re" +
-      "lax\020F\022\032\n\026k_EDOTA_CW_MissingHero\020G\022\033\n\027k_E" +
-      "DOTA_CW_ReturnedHero\020H\022\021\n\rk_EDOTA_CW_GG\020" +
-      "I\022\023\n\017k_EDOTA_CW_GGWP\020J\022\025\n\021k_EDOTA_CW_All" +
-      "_GG\020K\022\027\n\023k_EDOTA_CW_All_GGWP\020L\022\032\n\026k_EDOT" +
-      "A_CW_What_To_Buy\020M\022\034\n\030k_EDOTA_CW_Im_Retr" +
-      "eating\020N\022\034\n\030k_EDOTA_CW_Space_Created\020O\022\025",
-      "\n\021k_EDOTA_CW_Whoops\020P\022\036\n\032k_EDOTA_CW_Towe" +
-      "r_then_Back\020Q\022!\n\035k_EDOTA_CW_Barracks_the" +
-      "n_Back\020R\022\037\n\033k_EDOTA_CW_Ward_Bottom_Rune\020" +
-      "S\022\034\n\030k_EDOTA_CW_Ward_Top_Rune\020T\022\027\n\023k_EDO" +
-      "TA_CW_Zeus_Ult\020U*\244\001\n\023EDOTAStatPopupTypes" +
-      "\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025\n\021k_EDOTA_SP" +
-      "T_Basic\020\001\022\024\n\020k_EDOTA_SPT_Poll\020\002\022\024\n\020k_EDO" +
-      "TA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT_DualImage\020\004" +
-      "\022\025\n\021k_EDOTA_SPT_Movie\020\005*\270\n\n\017dotaunitorde" +
-      "r_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020\000\022$\n DOTA_UN",
-      "IT_ORDER_MOVE_TO_POSITION\020\001\022\"\n\036DOTA_UNIT" +
-      "_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033DOTA_UNIT_ORD" +
-      "ER_ATTACK_MOVE\020\003\022!\n\035DOTA_UNIT_ORDER_ATTA" +
-      "CK_TARGET\020\004\022!\n\035DOTA_UNIT_ORDER_CAST_POSI" +
-      "TION\020\005\022\037\n\033DOTA_UNIT_ORDER_CAST_TARGET\020\006\022" +
-      "$\n DOTA_UNIT_ORDER_CAST_TARGET_TREE\020\007\022\"\n" +
-      "\036DOTA_UNIT_ORDER_CAST_NO_TARGET\020\010\022\037\n\033DOT" +
-      "A_UNIT_ORDER_CAST_TOGGLE\020\t\022!\n\035DOTA_UNIT_" +
-      "ORDER_HOLD_POSITION\020\n\022!\n\035DOTA_UNIT_ORDER" +
-      "_TRAIN_ABILITY\020\013\022\035\n\031DOTA_UNIT_ORDER_DROP",
-      "_ITEM\020\014\022\035\n\031DOTA_UNIT_ORDER_GIVE_ITEM\020\r\022\037" +
-      "\n\033DOTA_UNIT_ORDER_PICKUP_ITEM\020\016\022\037\n\033DOTA_" +
-      "UNIT_ORDER_PICKUP_RUNE\020\017\022!\n\035DOTA_UNIT_OR" +
-      "DER_PURCHASE_ITEM\020\020\022\035\n\031DOTA_UNIT_ORDER_S" +
-      "ELL_ITEM\020\021\022$\n DOTA_UNIT_ORDER_DISASSEMBL" +
-      "E_ITEM\020\022\022\035\n\031DOTA_UNIT_ORDER_MOVE_ITEM\020\023\022" +
-      "$\n DOTA_UNIT_ORDER_CAST_TOGGLE_AUTO\020\024\022\030\n" +
-      "\024DOTA_UNIT_ORDER_STOP\020\025\022\031\n\025DOTA_UNIT_ORD" +
-      "ER_TAUNT\020\026\022\033\n\027DOTA_UNIT_ORDER_BUYBACK\020\027\022" +
-      "\031\n\025DOTA_UNIT_ORDER_GLYPH\020\030\022)\n%DOTA_UNIT_",
-      "ORDER_EJECT_ITEM_FROM_STASH\020\031\022\035\n\031DOTA_UN" +
-      "IT_ORDER_CAST_RUNE\020\032\022 \n\034DOTA_UNIT_ORDER_" +
-      "PING_ABILITY\020\033\022%\n!DOTA_UNIT_ORDER_MOVE_T" +
-      "O_DIRECTION\020\034\022\032\n\026DOTA_UNIT_ORDER_PATROL\020" +
-      "\035\022*\n&DOTA_UNIT_ORDER_VECTOR_TARGET_POSIT" +
-      "ION\020\036\022\031\n\025DOTA_UNIT_ORDER_RADAR\020\037\022)\n%DOTA" +
-      "_UNIT_ORDER_SET_ITEM_COMBINE_LOCK\020 \022\034\n\030D" +
-      "OTA_UNIT_ORDER_CONTINUE\020!\022*\n&DOTA_UNIT_O" +
-      "RDER_VECTOR_TARGET_CANCELED\020\"\022$\n DOTA_UN" +
-      "IT_ORDER_CAST_RIVER_PAINT\020#\0222\n.DOTA_UNIT",
-      "_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT\020$\022" +
-      ")\n%DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN" +
-      "\020%B?\n$skadistats.clarity.wire.common.pro" +
-      "toB\022DotaCommonMessagesH\001\200\001\000"
+      "th\030\003 \001(\t\"\301\001\n\030VersusScene_PlayActivity\022:\n" +
+      "\nactivities\030\001 \003(\0132&.VersusScene_PlayActi",
+      "vity.ActivityInfo\022\025\n\rplayback_rate\030\002 \001(\002" +
+      "\032R\n\014ActivityInfo\022\020\n\010activity\030\001 \001(\t\022\031\n\021di" +
+      "sable_auto_kill\030\002 \001(\010\022\025\n\rforce_looping\030\003" +
+      " \001(\010\"E\n\025VersusScene_ChatWheel\022\027\n\017chat_me" +
+      "ssage_id\030\001 \001(\r\022\023\n\013emoticon_id\030\002 \001(\r\"(\n\030V" +
+      "ersusScene_PlaybackRate\022\014\n\004rate\030\001 \001(\002*\305\021" +
+      "\n\025EDOTAChatWheelMessage\022\021\n\rk_EDOTA_CW_Ok" +
+      "\020\000\022\023\n\017k_EDOTA_CW_Care\020\001\022\026\n\022k_EDOTA_CW_Ge" +
+      "tBack\020\002\022\030\n\024k_EDOTA_CW_NeedWards\020\003\022\023\n\017k_E" +
+      "DOTA_CW_Stun\020\004\022\023\n\017k_EDOTA_CW_Help\020\005\022\023\n\017k",
+      "_EDOTA_CW_Push\020\006\022\026\n\022k_EDOTA_CW_GoodJob\020\007" +
+      "\022\026\n\022k_EDOTA_CW_Missing\020\010\022\032\n\026k_EDOTA_CW_M" +
+      "issing_Top\020\t\022\032\n\026k_EDOTA_CW_Missing_Mid\020\n" +
+      "\022\035\n\031k_EDOTA_CW_Missing_Bottom\020\013\022\021\n\rk_EDO" +
+      "TA_CW_Go\020\014\022\027\n\023k_EDOTA_CW_Initiate\020\r\022\025\n\021k" +
+      "_EDOTA_CW_Follow\020\016\022\027\n\023k_EDOTA_CW_Group_U" +
+      "p\020\017\022\031\n\025k_EDOTA_CW_Spread_Out\020\020\022\031\n\025k_EDOT" +
+      "A_CW_Split_Farm\020\021\022\025\n\021k_EDOTA_CW_Attack\020\022" +
+      "\022\022\n\016k_EDOTA_CW_BRB\020\023\022\023\n\017k_EDOTA_CW_Dive\020" +
+      "\024\022\022\n\016k_EDOTA_CW_OMW\020\025\022\030\n\024k_EDOTA_CW_Get_",
+      "Ready\020\026\022\023\n\017k_EDOTA_CW_Bait\020\027\022\023\n\017k_EDOTA_" +
+      "CW_Heal\020\030\022\023\n\017k_EDOTA_CW_Mana\020\031\022\022\n\016k_EDOT" +
+      "A_CW_OOM\020\032\022\035\n\031k_EDOTA_CW_Skill_Cooldown\020" +
+      "\033\022\031\n\025k_EDOTA_CW_Ulti_Ready\020\034\022\035\n\031k_EDOTA_" +
+      "CW_Enemy_Returned\020\035\022\032\n\026k_EDOTA_CW_All_Mi" +
+      "ssing\020\036\022\035\n\031k_EDOTA_CW_Enemy_Incoming\020\037\022\032" +
+      "\n\026k_EDOTA_CW_Invis_Enemy\020 \022\035\n\031k_EDOTA_CW" +
+      "_Enemy_Had_Rune\020!\022\031\n\025k_EDOTA_CW_Split_Pu" +
+      "sh\020\"\022\035\n\031k_EDOTA_CW_Coming_To_Gank\020#\022\033\n\027k" +
+      "_EDOTA_CW_Request_Gank\020$\022 \n\034k_EDOTA_CW_F",
+      "ight_Under_Tower\020%\022\031\n\025k_EDOTA_CW_Deny_To" +
+      "wer\020&\022\032\n\026k_EDOTA_CW_Buy_Courier\020\'\022\036\n\032k_E" +
+      "DOTA_CW_Upgrade_Courier\020(\022\035\n\031k_EDOTA_CW_" +
+      "Need_Detection\020)\022\"\n\036k_EDOTA_CW_They_Have" +
+      "_Detection\020*\022\025\n\021k_EDOTA_CW_Buy_TP\020+\022\034\n\030k" +
+      "_EDOTA_CW_Reuse_Courier\020,\022\025\n\021k_EDOTA_CW_" +
+      "Deward\020-\022\033\n\027k_EDOTA_CW_Building_Mek\020.\022\034\n" +
+      "\030k_EDOTA_CW_Building_Pipe\020/\022\035\n\031k_EDOTA_C" +
+      "W_Stack_And_Pull\0200\022\023\n\017k_EDOTA_CW_Pull\0201\022" +
+      "\026\n\022k_EDOTA_CW_Pulling\0202\022\024\n\020k_EDOTA_CW_St",
+      "ack\0203\022\027\n\023k_EDOTA_CW_Jungling\0204\022\025\n\021k_EDOT" +
+      "A_CW_Roshan\0205\022\032\n\026k_EDOTA_CW_Affirmative\020" +
+      "6\022\023\n\017k_EDOTA_CW_Wait\0207\022\024\n\020k_EDOTA_CW_Pau" +
+      "se\0208\022\033\n\027k_EDOTA_CW_Current_Time\0209\022\032\n\026k_E" +
+      "DOTA_CW_Check_Runes\020:\022\031\n\025k_EDOTA_CW_Smok" +
+      "e_Gank\020;\022\023\n\017k_EDOTA_CW_GLHF\020<\022\023\n\017k_EDOTA" +
+      "_CW_Nice\020=\022\025\n\021k_EDOTA_CW_Thanks\020>\022\024\n\020k_E" +
+      "DOTA_CW_Sorry\020?\022\031\n\025k_EDOTA_CW_No_Give_Up" +
+      "\020@\022\034\n\030k_EDOTA_CW_Just_Happened\020A\022\033\n\027k_ED" +
+      "OTA_CW_Game_Is_Hard\020B\022\027\n\023k_EDOTA_CW_New_",
+      "Meta\020C\022\025\n\021k_EDOTA_CW_My_Bad\020D\022\025\n\021k_EDOTA" +
+      "_CW_Regret\020E\022\024\n\020k_EDOTA_CW_Relax\020F\022\032\n\026k_" +
+      "EDOTA_CW_MissingHero\020G\022\033\n\027k_EDOTA_CW_Ret" +
+      "urnedHero\020H\022\021\n\rk_EDOTA_CW_GG\020I\022\023\n\017k_EDOT" +
+      "A_CW_GGWP\020J\022\025\n\021k_EDOTA_CW_All_GG\020K\022\027\n\023k_" +
+      "EDOTA_CW_All_GGWP\020L\022\032\n\026k_EDOTA_CW_What_T" +
+      "o_Buy\020M\022\034\n\030k_EDOTA_CW_Im_Retreating\020N\022\034\n" +
+      "\030k_EDOTA_CW_Space_Created\020O\022\025\n\021k_EDOTA_C" +
+      "W_Whoops\020P\022\036\n\032k_EDOTA_CW_Tower_then_Back" +
+      "\020Q\022!\n\035k_EDOTA_CW_Barracks_then_Back\020R\022\037\n",
+      "\033k_EDOTA_CW_Ward_Bottom_Rune\020S\022\034\n\030k_EDOT" +
+      "A_CW_Ward_Top_Rune\020T\022\027\n\023k_EDOTA_CW_Zeus_" +
+      "Ult\020U*\244\001\n\023EDOTAStatPopupTypes\022\030\n\024k_EDOTA" +
+      "_SPT_Textline\020\000\022\025\n\021k_EDOTA_SPT_Basic\020\001\022\024" +
+      "\n\020k_EDOTA_SPT_Poll\020\002\022\024\n\020k_EDOTA_SPT_Grid" +
+      "\020\003\022\031\n\025k_EDOTA_SPT_DualImage\020\004\022\025\n\021k_EDOTA" +
+      "_SPT_Movie\020\005*\357\n\n\017dotaunitorder_t\022\030\n\024DOTA" +
+      "_UNIT_ORDER_NONE\020\000\022$\n DOTA_UNIT_ORDER_MO" +
+      "VE_TO_POSITION\020\001\022\"\n\036DOTA_UNIT_ORDER_MOVE" +
+      "_TO_TARGET\020\002\022\037\n\033DOTA_UNIT_ORDER_ATTACK_M",
+      "OVE\020\003\022!\n\035DOTA_UNIT_ORDER_ATTACK_TARGET\020\004" +
+      "\022!\n\035DOTA_UNIT_ORDER_CAST_POSITION\020\005\022\037\n\033D" +
+      "OTA_UNIT_ORDER_CAST_TARGET\020\006\022$\n DOTA_UNI" +
+      "T_ORDER_CAST_TARGET_TREE\020\007\022\"\n\036DOTA_UNIT_" +
+      "ORDER_CAST_NO_TARGET\020\010\022\037\n\033DOTA_UNIT_ORDE" +
+      "R_CAST_TOGGLE\020\t\022!\n\035DOTA_UNIT_ORDER_HOLD_" +
+      "POSITION\020\n\022!\n\035DOTA_UNIT_ORDER_TRAIN_ABIL" +
+      "ITY\020\013\022\035\n\031DOTA_UNIT_ORDER_DROP_ITEM\020\014\022\035\n\031" +
+      "DOTA_UNIT_ORDER_GIVE_ITEM\020\r\022\037\n\033DOTA_UNIT" +
+      "_ORDER_PICKUP_ITEM\020\016\022\037\n\033DOTA_UNIT_ORDER_",
+      "PICKUP_RUNE\020\017\022!\n\035DOTA_UNIT_ORDER_PURCHAS" +
+      "E_ITEM\020\020\022\035\n\031DOTA_UNIT_ORDER_SELL_ITEM\020\021\022" +
+      "$\n DOTA_UNIT_ORDER_DISASSEMBLE_ITEM\020\022\022\035\n" +
+      "\031DOTA_UNIT_ORDER_MOVE_ITEM\020\023\022$\n DOTA_UNI" +
+      "T_ORDER_CAST_TOGGLE_AUTO\020\024\022\030\n\024DOTA_UNIT_" +
+      "ORDER_STOP\020\025\022\031\n\025DOTA_UNIT_ORDER_TAUNT\020\026\022" +
+      "\033\n\027DOTA_UNIT_ORDER_BUYBACK\020\027\022\031\n\025DOTA_UNI" +
+      "T_ORDER_GLYPH\020\030\022)\n%DOTA_UNIT_ORDER_EJECT" +
+      "_ITEM_FROM_STASH\020\031\022\035\n\031DOTA_UNIT_ORDER_CA" +
+      "ST_RUNE\020\032\022 \n\034DOTA_UNIT_ORDER_PING_ABILIT",
+      "Y\020\033\022%\n!DOTA_UNIT_ORDER_MOVE_TO_DIRECTION" +
+      "\020\034\022\032\n\026DOTA_UNIT_ORDER_PATROL\020\035\022*\n&DOTA_U" +
+      "NIT_ORDER_VECTOR_TARGET_POSITION\020\036\022\031\n\025DO" +
+      "TA_UNIT_ORDER_RADAR\020\037\022)\n%DOTA_UNIT_ORDER" +
+      "_SET_ITEM_COMBINE_LOCK\020 \022\034\n\030DOTA_UNIT_OR" +
+      "DER_CONTINUE\020!\022*\n&DOTA_UNIT_ORDER_VECTOR" +
+      "_TARGET_CANCELED\020\"\022$\n DOTA_UNIT_ORDER_CA" +
+      "ST_RIVER_PAINT\020#\0222\n.DOTA_UNIT_ORDER_PREG" +
+      "AME_ADJUST_ITEM_ASSIGNMENT\020$\022)\n%DOTA_UNI" +
+      "T_ORDER_DROP_ITEM_AT_FOUNTAIN\020%\0225\n1DOTA_",
+      "UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_S" +
+      "TASH\020&*\217\001\n\036EDOTAVersusScenePlayerBehavio" +
+      "r\022$\n VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY\020\001\022" +
+      "!\n\035VS_PLAYER_BEHAVIOR_CHAT_WHEEL\020\002\022$\n VS" +
+      "_PLAYER_BEHAVIOR_PLAYBACK_RATE\020\003B?\n$skad" +
+      "istats.clarity.wire.common.protoB\022DotaCo" +
+      "mmonMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -6834,6 +9228,30 @@ public final class DotaCommonMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_CoachHUDPing_descriptor,
         new java.lang.String[] { "X", "Y", "Tgtpath", });
+    internal_static_VersusScene_PlayActivity_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_VersusScene_PlayActivity_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_VersusScene_PlayActivity_descriptor,
+        new java.lang.String[] { "Activities", "PlaybackRate", });
+    internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor =
+      internal_static_VersusScene_PlayActivity_descriptor.getNestedTypes().get(0);
+    internal_static_VersusScene_PlayActivity_ActivityInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor,
+        new java.lang.String[] { "Activity", "DisableAutoKill", "ForceLooping", });
+    internal_static_VersusScene_ChatWheel_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_VersusScene_ChatWheel_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_VersusScene_ChatWheel_descriptor,
+        new java.lang.String[] { "ChatMessageId", "EmoticonId", });
+    internal_static_VersusScene_PlaybackRate_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_VersusScene_PlaybackRate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_VersusScene_PlaybackRate_descriptor,
+        new java.lang.String[] { "Rate", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
