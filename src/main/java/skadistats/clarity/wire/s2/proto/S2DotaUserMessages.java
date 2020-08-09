@@ -565,6 +565,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_WK_Arcana_Progress = 603;</code>
      */
     DOTA_UM_WK_Arcana_Progress(137, 603),
+    /**
+     * <code>DOTA_UM_GuildChallenge_Progress = 604;</code>
+     */
+    DOTA_UM_GuildChallenge_Progress(138, 604),
     ;
 
     /**
@@ -1119,6 +1123,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_WK_Arcana_Progress = 603;</code>
      */
     public static final int DOTA_UM_WK_Arcana_Progress_VALUE = 603;
+    /**
+     * <code>DOTA_UM_GuildChallenge_Progress = 604;</code>
+     */
+    public static final int DOTA_UM_GuildChallenge_Progress_VALUE = 604;
 
 
     public final int getNumber() { return value; }
@@ -1263,6 +1271,7 @@ public final class S2DotaUserMessages {
         case 601: return DOTA_UM_HotPotato_Created;
         case 602: return DOTA_UM_HotPotato_Exploded;
         case 603: return DOTA_UM_WK_Arcana_Progress;
+        case 604: return DOTA_UM_GuildChallenge_Progress;
         default: return null;
       }
     }
@@ -1323,7 +1332,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\323 \n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\371 \n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1428,8 +1437,9 @@ public final class S2DotaUserMessages {
       "\022\036\n\031DOTA_UM_QoP_ArcanaSummary\020\330\004\022\036\n\031DOTA" +
       "_UM_HotPotato_Created\020\331\004\022\037\n\032DOTA_UM_HotP" +
       "otato_Exploded\020\332\004\022\037\n\032DOTA_UM_WK_Arcana_P" +
-      "rogress\020\333\004B;\n skadistats.clarity.wire.s2" +
-      ".protoB\022S2DotaUserMessagesH\001\200\001\000"
+      "rogress\020\333\004\022$\n\037DOTA_UM_GuildChallenge_Pro" +
+      "gress\020\334\004B;\n skadistats.clarity.wire.s2.p" +
+      "rotoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

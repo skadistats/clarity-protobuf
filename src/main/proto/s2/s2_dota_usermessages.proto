@@ -143,4 +143,5 @@ enum EDotaUserMessages {
 	DOTA_UM_HotPotato_Created = 601;
 	DOTA_UM_HotPotato_Exploded = 602;
 	DOTA_UM_WK_Arcana_Progress = 603;
+	DOTA_UM_GuildChallenge_Progress = 604;
 }

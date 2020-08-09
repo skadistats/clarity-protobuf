@@ -447,6 +447,12 @@ message CDOTAUserMsg_WillPurchaseAlert {
     optional int32 suggestion_player_id = 4;
 }
 
+message CDOTAUserMsg_EmptyTeleportAlert {
+    optional int32 source_player_id = 1;
+    optional int32 target_player_id = 2;
+    optional int32 cooldown_seconds = 3;
+}
+
 message CDOTAUserMsg_MarsArenaOfBloodAttack {
     optional int32 source_ehandle = 1;
     optional int32 target_ehandle = 2;
@@ -605,12 +611,19 @@ message CDOTASpeechMatchOnClient {
 }
 
 message CDOTAUserMsg_UnitEvent {
+    message Interval {
+        optional float start = 1;
+        optional float range = 2;
+    }
+
     message Speech {
         optional int32 concept = 1;
         optional string response = 2;
         optional int32 recipient_type = 3;
         optional int32 level = 4;
         optional bool muteable = 5 [default = false];
+        optional .CDOTAUserMsg_UnitEvent.Interval predelay = 6;
+        optional uint32 flags = 7;
     }
 
     message SpeechMute {
@@ -1181,6 +1194,27 @@ message CDOTAUserMsg_WK_Arcana_Progress {
     optional uint32 ehandle = 1;
     optional uint32 arcana_level = 2;
     optional uint32 hero_id = 3;
+}
+
+message CDOTAUserMsg_GuildChallenge_Progress {
+    message PlayerProgress {
+        optional uint32 player_id = 1;
+        optional uint32 progress = 6;
+    }
+
+    enum EChallengeType {
+        k_EChallengeType_Invalid = 0;
+        k_EChallengeType_Cooperative = 1;
+        k_EChallengeType_Contract = 2;
+    }
+
+    repeated .CDOTAUserMsg_GuildChallenge_Progress.PlayerProgress player_progress = 1;
+    optional uint32 guild_id = 2;
+    optional uint32 challenge_instance_id = 3;
+    optional uint32 challenge_parameter = 4;
+    optional .CDOTAUserMsg_GuildChallenge_Progress.EChallengeType challenge_type = 5 [default = k_EChallengeType_Invalid];
+    optional uint32 challenge_progress_at_start = 7;
+    optional bool complete = 8;
 }
 
 message CMsgDOTACombatLogEntry {

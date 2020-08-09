@@ -166,6 +166,7 @@ public class EmbeddedPackets {
         /* 575 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DamageReport_VALUE, DotaUserMessages.CDOTAUserMsg_DamageReport.class);
         /* 576 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SalutePlayer_VALUE, DotaUserMessages.CDOTAUserMsg_SalutePlayer.class);
         /* 577 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TipAlert_VALUE, DotaUserMessages.CDOTAUserMsg_TipAlert.class);
+        /* 579 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EmptyTeleportAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EmptyTeleportAlert.class);
         /* 580 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MarsArenaOfBloodAttack_VALUE, DotaUserMessages.CDOTAUserMsg_MarsArenaOfBloodAttack.class);
         /* 581 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ESArcanaCombo_VALUE, DotaUserMessages.CDOTAUserMsg_ESArcanaCombo.class);
         /* 582 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ESArcanaComboSummary_VALUE, DotaUserMessages.CDOTAUserMsg_ESArcanaComboSummary.class);
@@ -185,10 +186,11 @@ public class EmbeddedPackets {
         /* 596 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MoveCameraToUnit_VALUE, DotaUserMessages.CDOTAUserMsg_MoveCameraToUnit.class);
         /* 597 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_PauseMinigameData_VALUE, DotaUserMessages.CDOTAUserMsg_PauseMinigameData.class);
         /* 598 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_VersusScene_PlayerBehavior_VALUE, DotaUserMessages.CDOTAUserMsg_VersusScene_PlayerBehavior.class);
-        /* 599 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QoP_ArcanaSummary_VALUE, DotaUserMessages.CDOTAUserMsg_QoP_ArcanaSummary.class);
-        /* 600 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HotPotato_Created_VALUE, DotaUserMessages.CDOTAUserMsg_HotPotato_Created.class);
-        /* 601 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HotPotato_Exploded_VALUE, DotaUserMessages.CDOTAUserMsg_HotPotato_Exploded.class);
-        /* 602 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WK_Arcana_Progress_VALUE, DotaUserMessages.CDOTAUserMsg_WK_Arcana_Progress.class);
+        /* 600 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_QoP_ArcanaSummary_VALUE, DotaUserMessages.CDOTAUserMsg_QoP_ArcanaSummary.class);
+        /* 601 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HotPotato_Created_VALUE, DotaUserMessages.CDOTAUserMsg_HotPotato_Created.class);
+        /* 602 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HotPotato_Exploded_VALUE, DotaUserMessages.CDOTAUserMsg_HotPotato_Exploded.class);
+        /* 603 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WK_Arcana_Progress_VALUE, DotaUserMessages.CDOTAUserMsg_WK_Arcana_Progress.class);
+        /* 604 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GuildChallenge_Progress_VALUE, DotaUserMessages.CDOTAUserMsg_GuildChallenge_Progress.class);
 
 //        /* 464 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);
