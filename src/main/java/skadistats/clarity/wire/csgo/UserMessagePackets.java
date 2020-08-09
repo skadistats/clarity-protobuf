@@ -74,6 +74,7 @@ public class UserMessagePackets {
         /* 65 */ K2C.put(CsGoUserMessages.ECstrike15UserMessages.CS_UM_XpUpdate_VALUE, CsGoUserMessages.CCSUsrMsg_XpUpdate.class);
         /* 66 */ K2C.put(CsGoUserMessages.ECstrike15UserMessages.CS_UM_QuestProgress_VALUE, CsGoUserMessages.CCSUsrMsg_QuestProgress.class);
 
+        /* 75 */ K2C.put(CsGoUserMessages.ECstrike15UserMessages.CS_UM_EndOfMatchAllPlayersData_VALUE, CsGoUserMessages.CCSUsrMsg_EndOfMatchAllPlayersData.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {
