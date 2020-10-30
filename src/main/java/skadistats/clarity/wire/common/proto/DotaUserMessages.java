@@ -28429,11 +28429,11 @@ public final class DotaUserMessages {
       int getKey();
 
       /**
-       * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+       * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
        */
       boolean hasValtype();
       /**
-       * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+       * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
        */
       skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType getValtype();
 
@@ -28679,13 +28679,13 @@ public final class DotaUserMessages {
       public static final int VALTYPE_FIELD_NUMBER = 2;
       private skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType valtype_;
       /**
-       * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+       * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
        */
       public boolean hasValtype() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+       * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
        */
       public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType getValtype() {
         return valtype_;
@@ -28761,10 +28761,6 @@ public final class DotaUserMessages {
         if (isInitialized == 0) return false;
 
         if (!hasKey()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasValtype()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -29020,10 +29016,6 @@ public final class DotaUserMessages {
             
             return false;
           }
-          if (!hasValtype()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -29080,19 +29072,19 @@ public final class DotaUserMessages {
 
         private skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType valtype_ = skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType.NUMERIC;
         /**
-         * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+         * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
          */
         public boolean hasValtype() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+         * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
          */
         public skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType getValtype() {
           return valtype_;
         }
         /**
-         * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+         * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
          */
         public Builder setValtype(skadistats.clarity.wire.common.proto.DotaUserMessages.CDOTAResponseQuerySerialized.Fact.ValueType value) {
           if (value == null) {
@@ -29104,7 +29096,7 @@ public final class DotaUserMessages {
           return this;
         }
         /**
-         * <code>required .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
+         * <code>optional .CDOTAResponseQuerySerialized.Fact.ValueType valtype = 2 [default = NUMERIC];</code>
          */
         public Builder clearValtype() {
           bitField0_ = (bitField0_ & ~0x00000002);
@@ -101033,7 +101025,7 @@ public final class DotaUserMessages {
       "_eResult_Destroyed\020\002\"\376\001\n\034CDOTAResponseQu",
       "erySerialized\0221\n\005facts\030\001 \003(\0132\".CDOTAResp" +
       "onseQuerySerialized.Fact\032\252\001\n\004Fact\022\013\n\003key" +
-      "\030\001 \002(\005\022F\n\007valtype\030\002 \002(\0162,.CDOTAResponseQ" +
+      "\030\001 \002(\005\022F\n\007valtype\030\002 \001(\0162,.CDOTAResponseQ" +
       "uerySerialized.Fact.ValueType:\007NUMERIC\022\023" +
       "\n\013val_numeric\030\003 \001(\002\022\022\n\nval_string\030\004 \001(\t\"" +
       "$\n\tValueType\022\013\n\007NUMERIC\020\001\022\n\n\006STRING\020\002\"\220\001" +
