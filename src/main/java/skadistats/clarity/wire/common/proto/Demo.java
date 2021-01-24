@@ -375,6 +375,34 @@ public final class Demo {
      */
     com.google.protobuf.ByteString
         getAddonsBytes();
+
+    /**
+     * <code>optional string demo_version_name = 11;</code>
+     */
+    boolean hasDemoVersionName();
+    /**
+     * <code>optional string demo_version_name = 11;</code>
+     */
+    java.lang.String getDemoVersionName();
+    /**
+     * <code>optional string demo_version_name = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getDemoVersionNameBytes();
+
+    /**
+     * <code>optional string demo_version_guid = 12;</code>
+     */
+    boolean hasDemoVersionGuid();
+    /**
+     * <code>optional string demo_version_guid = 12;</code>
+     */
+    java.lang.String getDemoVersionGuid();
+    /**
+     * <code>optional string demo_version_guid = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getDemoVersionGuidBytes();
   }
   /**
    * Protobuf type {@code CDemoFileHeader}
@@ -482,6 +510,18 @@ public final class Demo {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000200;
               addons_ = bs;
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              demoVersionName_ = bs;
+              break;
+            }
+            case 98: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000800;
+              demoVersionGuid_ = bs;
               break;
             }
           }
@@ -836,6 +876,90 @@ public final class Demo {
       }
     }
 
+    public static final int DEMO_VERSION_NAME_FIELD_NUMBER = 11;
+    private java.lang.Object demoVersionName_;
+    /**
+     * <code>optional string demo_version_name = 11;</code>
+     */
+    public boolean hasDemoVersionName() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional string demo_version_name = 11;</code>
+     */
+    public java.lang.String getDemoVersionName() {
+      java.lang.Object ref = demoVersionName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          demoVersionName_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string demo_version_name = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDemoVersionNameBytes() {
+      java.lang.Object ref = demoVersionName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        demoVersionName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int DEMO_VERSION_GUID_FIELD_NUMBER = 12;
+    private java.lang.Object demoVersionGuid_;
+    /**
+     * <code>optional string demo_version_guid = 12;</code>
+     */
+    public boolean hasDemoVersionGuid() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional string demo_version_guid = 12;</code>
+     */
+    public java.lang.String getDemoVersionGuid() {
+      java.lang.Object ref = demoVersionGuid_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          demoVersionGuid_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string demo_version_guid = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDemoVersionGuidBytes() {
+      java.lang.Object ref = demoVersionGuid_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        demoVersionGuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       demoFileStamp_ = "";
       networkProtocol_ = 0;
@@ -847,6 +971,8 @@ public final class Demo {
       allowClientsideEntities_ = false;
       allowClientsideParticles_ = false;
       addons_ = "";
+      demoVersionName_ = "";
+      demoVersionGuid_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -894,6 +1020,12 @@ public final class Demo {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeBytes(10, getAddonsBytes());
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(11, getDemoVersionNameBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(12, getDemoVersionGuidBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -943,6 +1075,14 @@ public final class Demo {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(10, getAddonsBytes());
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getDemoVersionNameBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, getDemoVersionGuidBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1081,6 +1221,10 @@ public final class Demo {
         bitField0_ = (bitField0_ & ~0x00000100);
         addons_ = "";
         bitField0_ = (bitField0_ & ~0x00000200);
+        demoVersionName_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
+        demoVersionGuid_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -1149,6 +1293,14 @@ public final class Demo {
           to_bitField0_ |= 0x00000200;
         }
         result.addons_ = addons_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.demoVersionName_ = demoVersionName_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.demoVersionGuid_ = demoVersionGuid_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1205,6 +1357,16 @@ public final class Demo {
         if (other.hasAddons()) {
           bitField0_ |= 0x00000200;
           addons_ = other.addons_;
+          onChanged();
+        }
+        if (other.hasDemoVersionName()) {
+          bitField0_ |= 0x00000400;
+          demoVersionName_ = other.demoVersionName_;
+          onChanged();
+        }
+        if (other.hasDemoVersionGuid()) {
+          bitField0_ |= 0x00000800;
+          demoVersionGuid_ = other.demoVersionGuid_;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1818,6 +1980,158 @@ public final class Demo {
   }
   bitField0_ |= 0x00000200;
         addons_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object demoVersionName_ = "";
+      /**
+       * <code>optional string demo_version_name = 11;</code>
+       */
+      public boolean hasDemoVersionName() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional string demo_version_name = 11;</code>
+       */
+      public java.lang.String getDemoVersionName() {
+        java.lang.Object ref = demoVersionName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            demoVersionName_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string demo_version_name = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDemoVersionNameBytes() {
+        java.lang.Object ref = demoVersionName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          demoVersionName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string demo_version_name = 11;</code>
+       */
+      public Builder setDemoVersionName(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        demoVersionName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string demo_version_name = 11;</code>
+       */
+      public Builder clearDemoVersionName() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        demoVersionName_ = getDefaultInstance().getDemoVersionName();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string demo_version_name = 11;</code>
+       */
+      public Builder setDemoVersionNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        demoVersionName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object demoVersionGuid_ = "";
+      /**
+       * <code>optional string demo_version_guid = 12;</code>
+       */
+      public boolean hasDemoVersionGuid() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional string demo_version_guid = 12;</code>
+       */
+      public java.lang.String getDemoVersionGuid() {
+        java.lang.Object ref = demoVersionGuid_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            demoVersionGuid_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string demo_version_guid = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDemoVersionGuidBytes() {
+        java.lang.Object ref = demoVersionGuid_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          demoVersionGuid_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string demo_version_guid = 12;</code>
+       */
+      public Builder setDemoVersionGuid(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        demoVersionGuid_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string demo_version_guid = 12;</code>
+       */
+      public Builder clearDemoVersionGuid() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        demoVersionGuid_ = getDefaultInstance().getDemoVersionGuid();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string demo_version_guid = 12;</code>
+       */
+      public Builder setDemoVersionGuidBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        demoVersionGuid_ = value;
         onChanged();
         return this;
       }
@@ -15723,65 +16037,67 @@ public final class Demo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ndemo.proto\"\214\002\n\017CDemoFileHeader\022\027\n\017demo" +
+      "\n\ndemo.proto\"\302\002\n\017CDemoFileHeader\022\027\n\017demo" +
       "_file_stamp\030\001 \002(\t\022\030\n\020network_protocol\030\002 " +
       "\001(\005\022\023\n\013server_name\030\003 \001(\t\022\023\n\013client_name\030" +
       "\004 \001(\t\022\020\n\010map_name\030\005 \001(\t\022\026\n\016game_director" +
       "y\030\006 \001(\t\022\033\n\023fullpackets_version\030\007 \001(\005\022!\n\031" +
       "allow_clientside_entities\030\010 \001(\010\022\"\n\032allow" +
       "_clientside_particles\030\t \001(\010\022\016\n\006addons\030\n " +
-      "\001(\t\"\264\004\n\tCGameInfo\022&\n\004dota\030\004 \001(\0132\030.CGameI" +
-      "nfo.CDotaGameInfo\032\376\003\n\rCDotaGameInfo\022\020\n\010m" +
-      "atch_id\030\001 \001(\004\022\021\n\tgame_mode\030\002 \001(\005\022\023\n\013game",
-      "_winner\030\003 \001(\005\0229\n\013player_info\030\004 \003(\0132$.CGa" +
-      "meInfo.CDotaGameInfo.CPlayerInfo\022\020\n\010leag" +
-      "ueid\030\005 \001(\r\022=\n\npicks_bans\030\006 \003(\0132).CGameIn" +
-      "fo.CDotaGameInfo.CHeroSelectEvent\022\027\n\017rad" +
-      "iant_team_id\030\007 \001(\r\022\024\n\014dire_team_id\030\010 \001(\r" +
-      "\022\030\n\020radiant_team_tag\030\t \001(\t\022\025\n\rdire_team_" +
-      "tag\030\n \001(\t\022\020\n\010end_time\030\013 \001(\r\032q\n\013CPlayerIn" +
-      "fo\022\021\n\thero_name\030\001 \001(\t\022\023\n\013player_name\030\002 \001" +
-      "(\t\022\026\n\016is_fake_client\030\003 \001(\010\022\017\n\007steamid\030\004 " +
-      "\001(\004\022\021\n\tgame_team\030\005 \001(\005\032B\n\020CHeroSelectEve",
-      "nt\022\017\n\007is_pick\030\001 \001(\010\022\014\n\004team\030\002 \001(\r\022\017\n\007her" +
-      "o_id\030\003 \001(\r\"v\n\rCDemoFileInfo\022\025\n\rplayback_" +
-      "time\030\001 \001(\002\022\026\n\016playback_ticks\030\002 \001(\005\022\027\n\017pl" +
-      "ayback_frames\030\003 \001(\005\022\035\n\tgame_info\030\004 \001(\0132\n" +
-      ".CGameInfo\"J\n\013CDemoPacket\022\023\n\013sequence_in" +
-      "\030\001 \001(\005\022\030\n\020sequence_out_ack\030\002 \001(\005\022\014\n\004data" +
-      "\030\003 \001(\014\"Y\n\017CDemoFullPacket\022(\n\014string_tabl" +
-      "e\030\001 \001(\0132\022.CDemoStringTables\022\034\n\006packet\030\002 " +
-      "\001(\0132\014.CDemoPacket\"S\n\rCDemoSaveGame\022\014\n\004da" +
-      "ta\030\001 \001(\014\022\020\n\010steam_id\030\002 \001(\006\022\021\n\tsignature\030",
-      "\003 \001(\006\022\017\n\007version\030\004 \001(\005\"\017\n\rCDemoSyncTick\"" +
-      "$\n\017CDemoConsoleCmd\022\021\n\tcmdstring\030\001 \001(\t\"\037\n" +
-      "\017CDemoSendTables\022\014\n\004data\030\001 \001(\014\"\201\001\n\016CDemo" +
-      "ClassInfo\022(\n\007classes\030\001 \003(\0132\027.CDemoClassI" +
-      "nfo.class_t\032E\n\007class_t\022\020\n\010class_id\030\001 \001(\005" +
-      "\022\024\n\014network_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001" +
-      "(\t\"7\n\017CDemoCustomData\022\026\n\016callback_index\030" +
-      "\001 \001(\005\022\014\n\004data\030\002 \001(\014\"+\n\030CDemoCustomDataCa" +
-      "llbacks\022\017\n\007save_id\030\001 \003(\t\"\373\001\n\021CDemoString" +
-      "Tables\022*\n\006tables\030\001 \003(\0132\032.CDemoStringTabl",
-      "es.table_t\032$\n\007items_t\022\013\n\003str\030\001 \001(\t\022\014\n\004da" +
-      "ta\030\002 \001(\014\032\223\001\n\007table_t\022\022\n\ntable_name\030\001 \001(\t" +
-      "\022)\n\005items\030\002 \003(\0132\032.CDemoStringTables.item" +
-      "s_t\0224\n\020items_clientside\030\003 \003(\0132\032.CDemoStr" +
-      "ingTables.items_t\022\023\n\013table_flags\030\004 \001(\005\"\013" +
-      "\n\tCDemoStop\"0\n\014CDemoUserCmd\022\022\n\ncmd_numbe" +
-      "r\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\" \n\020CDemoSpawnGroup" +
-      "s\022\014\n\004msgs\030\003 \003(\014*\240\003\n\rEDemoCommands\022\026\n\tDEM" +
-      "_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010DEM_Stop\020\000\022\022\n\016DEM_F" +
-      "ileHeader\020\001\022\020\n\014DEM_FileInfo\020\002\022\020\n\014DEM_Syn",
-      "cTick\020\003\022\022\n\016DEM_SendTables\020\004\022\021\n\rDEM_Class" +
-      "Info\020\005\022\024\n\020DEM_StringTables\020\006\022\016\n\nDEM_Pack" +
-      "et\020\007\022\024\n\020DEM_SignonPacket\020\010\022\022\n\016DEM_Consol" +
-      "eCmd\020\t\022\022\n\016DEM_CustomData\020\n\022\033\n\027DEM_Custom" +
-      "DataCallbacks\020\013\022\017\n\013DEM_UserCmd\020\014\022\022\n\016DEM_" +
-      "FullPacket\020\r\022\020\n\014DEM_SaveGame\020\016\022\023\n\017DEM_Sp" +
-      "awnGroups\020\017\022\013\n\007DEM_Max\020\020\022\027\n\023DEM_IsCompre" +
-      "ssed_S1\020p\022\027\n\023DEM_IsCompressed_S2\020@B)\n$sk" +
-      "adistats.clarity.wire.common.proto\200\001\000"
+      "\001(\t\022\031\n\021demo_version_name\030\013 \001(\t\022\031\n\021demo_v" +
+      "ersion_guid\030\014 \001(\t\"\264\004\n\tCGameInfo\022&\n\004dota\030" +
+      "\004 \001(\0132\030.CGameInfo.CDotaGameInfo\032\376\003\n\rCDot",
+      "aGameInfo\022\020\n\010match_id\030\001 \001(\004\022\021\n\tgame_mode" +
+      "\030\002 \001(\005\022\023\n\013game_winner\030\003 \001(\005\0229\n\013player_in" +
+      "fo\030\004 \003(\0132$.CGameInfo.CDotaGameInfo.CPlay" +
+      "erInfo\022\020\n\010leagueid\030\005 \001(\r\022=\n\npicks_bans\030\006" +
+      " \003(\0132).CGameInfo.CDotaGameInfo.CHeroSele" +
+      "ctEvent\022\027\n\017radiant_team_id\030\007 \001(\r\022\024\n\014dire" +
+      "_team_id\030\010 \001(\r\022\030\n\020radiant_team_tag\030\t \001(\t" +
+      "\022\025\n\rdire_team_tag\030\n \001(\t\022\020\n\010end_time\030\013 \001(" +
+      "\r\032q\n\013CPlayerInfo\022\021\n\thero_name\030\001 \001(\t\022\023\n\013p" +
+      "layer_name\030\002 \001(\t\022\026\n\016is_fake_client\030\003 \001(\010",
+      "\022\017\n\007steamid\030\004 \001(\004\022\021\n\tgame_team\030\005 \001(\005\032B\n\020" +
+      "CHeroSelectEvent\022\017\n\007is_pick\030\001 \001(\010\022\014\n\004tea" +
+      "m\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\"v\n\rCDemoFileInf" +
+      "o\022\025\n\rplayback_time\030\001 \001(\002\022\026\n\016playback_tic" +
+      "ks\030\002 \001(\005\022\027\n\017playback_frames\030\003 \001(\005\022\035\n\tgam" +
+      "e_info\030\004 \001(\0132\n.CGameInfo\"J\n\013CDemoPacket\022" +
+      "\023\n\013sequence_in\030\001 \001(\005\022\030\n\020sequence_out_ack" +
+      "\030\002 \001(\005\022\014\n\004data\030\003 \001(\014\"Y\n\017CDemoFullPacket\022" +
+      "(\n\014string_table\030\001 \001(\0132\022.CDemoStringTable" +
+      "s\022\034\n\006packet\030\002 \001(\0132\014.CDemoPacket\"S\n\rCDemo",
+      "SaveGame\022\014\n\004data\030\001 \001(\014\022\020\n\010steam_id\030\002 \001(\006" +
+      "\022\021\n\tsignature\030\003 \001(\006\022\017\n\007version\030\004 \001(\005\"\017\n\r" +
+      "CDemoSyncTick\"$\n\017CDemoConsoleCmd\022\021\n\tcmds" +
+      "tring\030\001 \001(\t\"\037\n\017CDemoSendTables\022\014\n\004data\030\001" +
+      " \001(\014\"\201\001\n\016CDemoClassInfo\022(\n\007classes\030\001 \003(\013" +
+      "2\027.CDemoClassInfo.class_t\032E\n\007class_t\022\020\n\010" +
+      "class_id\030\001 \001(\005\022\024\n\014network_name\030\002 \001(\t\022\022\n\n" +
+      "table_name\030\003 \001(\t\"7\n\017CDemoCustomData\022\026\n\016c" +
+      "allback_index\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"+\n\030CDe" +
+      "moCustomDataCallbacks\022\017\n\007save_id\030\001 \003(\t\"\373",
+      "\001\n\021CDemoStringTables\022*\n\006tables\030\001 \003(\0132\032.C" +
+      "DemoStringTables.table_t\032$\n\007items_t\022\013\n\003s" +
+      "tr\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\032\223\001\n\007table_t\022\022\n\nta" +
+      "ble_name\030\001 \001(\t\022)\n\005items\030\002 \003(\0132\032.CDemoStr" +
+      "ingTables.items_t\0224\n\020items_clientside\030\003 " +
+      "\003(\0132\032.CDemoStringTables.items_t\022\023\n\013table" +
+      "_flags\030\004 \001(\005\"\013\n\tCDemoStop\"0\n\014CDemoUserCm" +
+      "d\022\022\n\ncmd_number\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\" \n\020C" +
+      "DemoSpawnGroups\022\014\n\004msgs\030\003 \003(\014*\240\003\n\rEDemoC" +
+      "ommands\022\026\n\tDEM_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010DEM_S",
+      "top\020\000\022\022\n\016DEM_FileHeader\020\001\022\020\n\014DEM_FileInf" +
+      "o\020\002\022\020\n\014DEM_SyncTick\020\003\022\022\n\016DEM_SendTables\020" +
+      "\004\022\021\n\rDEM_ClassInfo\020\005\022\024\n\020DEM_StringTables" +
+      "\020\006\022\016\n\nDEM_Packet\020\007\022\024\n\020DEM_SignonPacket\020\010" +
+      "\022\022\n\016DEM_ConsoleCmd\020\t\022\022\n\016DEM_CustomData\020\n" +
+      "\022\033\n\027DEM_CustomDataCallbacks\020\013\022\017\n\013DEM_Use" +
+      "rCmd\020\014\022\022\n\016DEM_FullPacket\020\r\022\020\n\014DEM_SaveGa" +
+      "me\020\016\022\023\n\017DEM_SpawnGroups\020\017\022\013\n\007DEM_Max\020\020\022\027" +
+      "\n\023DEM_IsCompressed_S1\020p\022\027\n\023DEM_IsCompres" +
+      "sed_S2\020@B)\n$skadistats.clarity.wire.comm",
+      "on.proto\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -15800,7 +16116,7 @@ public final class Demo {
     internal_static_CDemoFileHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoFileHeader_descriptor,
-        new java.lang.String[] { "DemoFileStamp", "NetworkProtocol", "ServerName", "ClientName", "MapName", "GameDirectory", "FullpacketsVersion", "AllowClientsideEntities", "AllowClientsideParticles", "Addons", });
+        new java.lang.String[] { "DemoFileStamp", "NetworkProtocol", "ServerName", "ClientName", "MapName", "GameDirectory", "FullpacketsVersion", "AllowClientsideEntities", "AllowClientsideParticles", "Addons", "DemoVersionName", "DemoVersionGuid", });
     internal_static_CGameInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CGameInfo_fieldAccessorTable = new

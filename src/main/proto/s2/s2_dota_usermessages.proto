@@ -144,4 +144,10 @@ enum EDotaUserMessages {
 	DOTA_UM_HotPotato_Exploded = 602;
 	DOTA_UM_WK_Arcana_Progress = 603;
 	DOTA_UM_GuildChallenge_Progress = 604;
+	DOTA_UM_WRArcanaProgress = 605;
+	DOTA_UM_WRArcanaSummary = 606;
+	DOTA_UM_EmptyItemSlotAlert = 607;
+	DOTA_UM_AghsStatusAlert = 608;
+	DOTA_UM_PingConfirmation = 609;
+	DOTA_UM_MutedPlayers = 610;
 }

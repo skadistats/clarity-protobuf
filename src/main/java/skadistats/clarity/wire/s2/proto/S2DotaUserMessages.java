@@ -569,6 +569,30 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_GuildChallenge_Progress = 604;</code>
      */
     DOTA_UM_GuildChallenge_Progress(138, 604),
+    /**
+     * <code>DOTA_UM_WRArcanaProgress = 605;</code>
+     */
+    DOTA_UM_WRArcanaProgress(139, 605),
+    /**
+     * <code>DOTA_UM_WRArcanaSummary = 606;</code>
+     */
+    DOTA_UM_WRArcanaSummary(140, 606),
+    /**
+     * <code>DOTA_UM_EmptyItemSlotAlert = 607;</code>
+     */
+    DOTA_UM_EmptyItemSlotAlert(141, 607),
+    /**
+     * <code>DOTA_UM_AghsStatusAlert = 608;</code>
+     */
+    DOTA_UM_AghsStatusAlert(142, 608),
+    /**
+     * <code>DOTA_UM_PingConfirmation = 609;</code>
+     */
+    DOTA_UM_PingConfirmation(143, 609),
+    /**
+     * <code>DOTA_UM_MutedPlayers = 610;</code>
+     */
+    DOTA_UM_MutedPlayers(144, 610),
     ;
 
     /**
@@ -1127,6 +1151,30 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_GuildChallenge_Progress = 604;</code>
      */
     public static final int DOTA_UM_GuildChallenge_Progress_VALUE = 604;
+    /**
+     * <code>DOTA_UM_WRArcanaProgress = 605;</code>
+     */
+    public static final int DOTA_UM_WRArcanaProgress_VALUE = 605;
+    /**
+     * <code>DOTA_UM_WRArcanaSummary = 606;</code>
+     */
+    public static final int DOTA_UM_WRArcanaSummary_VALUE = 606;
+    /**
+     * <code>DOTA_UM_EmptyItemSlotAlert = 607;</code>
+     */
+    public static final int DOTA_UM_EmptyItemSlotAlert_VALUE = 607;
+    /**
+     * <code>DOTA_UM_AghsStatusAlert = 608;</code>
+     */
+    public static final int DOTA_UM_AghsStatusAlert_VALUE = 608;
+    /**
+     * <code>DOTA_UM_PingConfirmation = 609;</code>
+     */
+    public static final int DOTA_UM_PingConfirmation_VALUE = 609;
+    /**
+     * <code>DOTA_UM_MutedPlayers = 610;</code>
+     */
+    public static final int DOTA_UM_MutedPlayers_VALUE = 610;
 
 
     public final int getNumber() { return value; }
@@ -1272,6 +1320,12 @@ public final class S2DotaUserMessages {
         case 602: return DOTA_UM_HotPotato_Exploded;
         case 603: return DOTA_UM_WK_Arcana_Progress;
         case 604: return DOTA_UM_GuildChallenge_Progress;
+        case 605: return DOTA_UM_WRArcanaProgress;
+        case 606: return DOTA_UM_WRArcanaSummary;
+        case 607: return DOTA_UM_EmptyItemSlotAlert;
+        case 608: return DOTA_UM_AghsStatusAlert;
+        case 609: return DOTA_UM_PingConfirmation;
+        case 610: return DOTA_UM_MutedPlayers;
         default: return null;
       }
     }
@@ -1332,7 +1386,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\371 \n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\257\"\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1438,8 +1492,13 @@ public final class S2DotaUserMessages {
       "_UM_HotPotato_Created\020\331\004\022\037\n\032DOTA_UM_HotP" +
       "otato_Exploded\020\332\004\022\037\n\032DOTA_UM_WK_Arcana_P" +
       "rogress\020\333\004\022$\n\037DOTA_UM_GuildChallenge_Pro" +
-      "gress\020\334\004B;\n skadistats.clarity.wire.s2.p" +
-      "rotoB\022S2DotaUserMessagesH\001\200\001\000"
+      "gress\020\334\004\022\035\n\030DOTA_UM_WRArcanaProgress\020\335\004\022" +
+      "\034\n\027DOTA_UM_WRArcanaSummary\020\336\004\022\037\n\032DOTA_UM" +
+      "_EmptyItemSlotAlert\020\337\004\022\034\n\027DOTA_UM_AghsSt" +
+      "atusAlert\020\340\004\022\035\n\030DOTA_UM_PingConfirmation",
+      "\020\341\004\022\031\n\024DOTA_UM_MutedPlayers\020\342\004B;\n skadis" +
+      "tats.clarity.wire.s2.protoB\022S2DotaUserMe" +
+      "ssagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

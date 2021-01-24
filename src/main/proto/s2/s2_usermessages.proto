@@ -66,6 +66,13 @@ enum EHapticPulseType {
 	VR_HAND_HAPTIC_PULSE_STRONG = 2;
 }
 
+message CUserMessageFade {
+	optional uint32 duration = 1;
+	optional uint32 hold_time = 2;
+	optional uint32 flags = 3;
+	optional fixed32 color = 4;
+}
+
 message CUserMessageSayText2 {
 	optional uint32 entityindex = 1;
 	optional bool chat = 2;
@@ -87,6 +94,13 @@ message CUserMessageResetHUD {
 message CUserMessageSendAudio {
 	optional string soundname = 1;
 	optional bool stop = 2;
+}
+
+message CUserMessageAudioParameter {
+	optional uint32 parameter_type = 1;
+	optional uint32 name_hash_code = 2;
+	optional float value = 3;
+	optional uint32 int_value = 4;
 }
 
 message CUserMessageVoiceMask {

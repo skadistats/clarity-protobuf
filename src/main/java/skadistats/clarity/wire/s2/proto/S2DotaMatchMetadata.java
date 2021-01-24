@@ -6927,6 +6927,481 @@ public final class S2DotaMatchMetadata {
         // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.ActionGrant)
       }
 
+      public interface CandyGrantOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.CandyGrant)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 points = 1;</code>
+         */
+        boolean hasPoints();
+        /**
+         * <code>optional uint32 points = 1;</code>
+         */
+        int getPoints();
+
+        /**
+         * <code>optional uint32 reason = 2;</code>
+         */
+        boolean hasReason();
+        /**
+         * <code>optional uint32 reason = 2;</code>
+         */
+        int getReason();
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.Team.CandyGrant}
+       */
+      public static final class CandyGrant extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Team.CandyGrant)
+          CandyGrantOrBuilder {
+        // Use CandyGrant.newBuilder() to construct.
+        private CandyGrant(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private CandyGrant(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final CandyGrant defaultInstance;
+        public static CandyGrant getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public CandyGrant getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private CandyGrant(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  points_ = input.readUInt32();
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000002;
+                  reason_ = input.readUInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CandyGrant_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CandyGrant_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<CandyGrant> PARSER =
+            new com.google.protobuf.AbstractParser<CandyGrant>() {
+          public CandyGrant parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new CandyGrant(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<CandyGrant> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int POINTS_FIELD_NUMBER = 1;
+        private int points_;
+        /**
+         * <code>optional uint32 points = 1;</code>
+         */
+        public boolean hasPoints() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 points = 1;</code>
+         */
+        public int getPoints() {
+          return points_;
+        }
+
+        public static final int REASON_FIELD_NUMBER = 2;
+        private int reason_;
+        /**
+         * <code>optional uint32 reason = 2;</code>
+         */
+        public boolean hasReason() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 reason = 2;</code>
+         */
+        public int getReason() {
+          return reason_;
+        }
+
+        private void initFields() {
+          points_ = 0;
+          reason_ = 0;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(1, points_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeUInt32(2, reason_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, points_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(2, reason_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CDOTAMatchMetadata.Team.CandyGrant}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Team.CandyGrant)
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CandyGrant_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CandyGrant_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            points_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            reason_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Team_CandyGrant_descriptor;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant getDefaultInstanceForType() {
+            return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant build() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant buildPartial() {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.points_ = points_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.reason_ = reason_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant) {
+              return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant other) {
+            if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.getDefaultInstance()) return this;
+            if (other.hasPoints()) {
+              setPoints(other.getPoints());
+            }
+            if (other.hasReason()) {
+              setReason(other.getReason());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int points_ ;
+          /**
+           * <code>optional uint32 points = 1;</code>
+           */
+          public boolean hasPoints() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 points = 1;</code>
+           */
+          public int getPoints() {
+            return points_;
+          }
+          /**
+           * <code>optional uint32 points = 1;</code>
+           */
+          public Builder setPoints(int value) {
+            bitField0_ |= 0x00000001;
+            points_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 points = 1;</code>
+           */
+          public Builder clearPoints() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            points_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int reason_ ;
+          /**
+           * <code>optional uint32 reason = 2;</code>
+           */
+          public boolean hasReason() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 reason = 2;</code>
+           */
+          public int getReason() {
+            return reason_;
+          }
+          /**
+           * <code>optional uint32 reason = 2;</code>
+           */
+          public Builder setReason(int value) {
+            bitField0_ |= 0x00000002;
+            reason_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 reason = 2;</code>
+           */
+          public Builder clearReason() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            reason_ = 0;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.CandyGrant)
+        }
+
+        static {
+          defaultInstance = new CandyGrant(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Team.CandyGrant)
+      }
+
       public interface EventDataOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Team.EventData)
           com.google.protobuf.MessageOrBuilder {
@@ -7164,6 +7639,30 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 wager_streak_pct = 22;</code>
          */
         int getWagerStreakPct();
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant> 
+            getCandyPointsGrantedList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant getCandyPointsGranted(int index);
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        int getCandyPointsGrantedCount();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder> 
+            getCandyPointsGrantedOrBuilderList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder getCandyPointsGrantedOrBuilder(
+            int index);
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.EventData}
@@ -7331,6 +7830,14 @@ public final class S2DotaMatchMetadata {
                   wagerStreakPct_ = input.readUInt32();
                   break;
                 }
+                case 186: {
+                  if (!((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+                    candyPointsGranted_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant>();
+                    mutable_bitField0_ |= 0x00200000;
+                  }
+                  candyPointsGranted_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.PARSER, extensionRegistry));
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -7347,6 +7854,9 @@ public final class S2DotaMatchMetadata {
             }
             if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
               actionsGranted_ = java.util.Collections.unmodifiableList(actionsGranted_);
+            }
+            if (((mutable_bitField0_ & 0x00200000) == 0x00200000)) {
+              candyPointsGranted_ = java.util.Collections.unmodifiableList(candyPointsGranted_);
             }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
@@ -7755,6 +8265,41 @@ public final class S2DotaMatchMetadata {
           return wagerStreakPct_;
         }
 
+        public static final int CANDY_POINTS_GRANTED_FIELD_NUMBER = 23;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant> candyPointsGranted_;
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant> getCandyPointsGrantedList() {
+          return candyPointsGranted_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder> 
+            getCandyPointsGrantedOrBuilderList() {
+          return candyPointsGranted_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        public int getCandyPointsGrantedCount() {
+          return candyPointsGranted_.size();
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant getCandyPointsGranted(int index) {
+          return candyPointsGranted_.get(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder getCandyPointsGrantedOrBuilder(
+            int index) {
+          return candyPointsGranted_.get(index);
+        }
+
         private void initFields() {
           eventId_ = 0;
           eventPoints_ = 0;
@@ -7777,6 +8322,7 @@ public final class S2DotaMatchMetadata {
           cavernCrawlMapVariant_ = 0;
           teamWagerBonusPct_ = 0;
           wagerStreakPct_ = 0;
+          candyPointsGranted_ = java.util.Collections.emptyList();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -7853,6 +8399,9 @@ public final class S2DotaMatchMetadata {
           }
           if (((bitField0_ & 0x00020000) == 0x00020000)) {
             output.writeUInt32(22, wagerStreakPct_);
+          }
+          for (int i = 0; i < candyPointsGranted_.size(); i++) {
+            output.writeMessage(23, candyPointsGranted_.get(i));
           }
           getUnknownFields().writeTo(output);
         }
@@ -7946,6 +8495,10 @@ public final class S2DotaMatchMetadata {
           if (((bitField0_ & 0x00020000) == 0x00020000)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(22, wagerStreakPct_);
+          }
+          for (int i = 0; i < candyPointsGranted_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(23, candyPointsGranted_.get(i));
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -8059,6 +8612,7 @@ public final class S2DotaMatchMetadata {
               getSubChallengesWithProgressFieldBuilder();
               getCavernChallengeMapResultsFieldBuilder();
               getActionsGrantedFieldBuilder();
+              getCandyPointsGrantedFieldBuilder();
             }
           }
           private static Builder create() {
@@ -8121,6 +8675,12 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00080000);
             wagerStreakPct_ = 0;
             bitField0_ = (bitField0_ & ~0x00100000);
+            if (candyPointsGrantedBuilder_ == null) {
+              candyPointsGranted_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00200000);
+            } else {
+              candyPointsGrantedBuilder_.clear();
+            }
             return this;
           }
 
@@ -8248,6 +8808,15 @@ public final class S2DotaMatchMetadata {
               to_bitField0_ |= 0x00020000;
             }
             result.wagerStreakPct_ = wagerStreakPct_;
+            if (candyPointsGrantedBuilder_ == null) {
+              if (((bitField0_ & 0x00200000) == 0x00200000)) {
+                candyPointsGranted_ = java.util.Collections.unmodifiableList(candyPointsGranted_);
+                bitField0_ = (bitField0_ & ~0x00200000);
+              }
+              result.candyPointsGranted_ = candyPointsGranted_;
+            } else {
+              result.candyPointsGranted_ = candyPointsGrantedBuilder_.build();
+            }
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -8395,6 +8964,32 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasWagerStreakPct()) {
               setWagerStreakPct(other.getWagerStreakPct());
+            }
+            if (candyPointsGrantedBuilder_ == null) {
+              if (!other.candyPointsGranted_.isEmpty()) {
+                if (candyPointsGranted_.isEmpty()) {
+                  candyPointsGranted_ = other.candyPointsGranted_;
+                  bitField0_ = (bitField0_ & ~0x00200000);
+                } else {
+                  ensureCandyPointsGrantedIsMutable();
+                  candyPointsGranted_.addAll(other.candyPointsGranted_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.candyPointsGranted_.isEmpty()) {
+                if (candyPointsGrantedBuilder_.isEmpty()) {
+                  candyPointsGrantedBuilder_.dispose();
+                  candyPointsGrantedBuilder_ = null;
+                  candyPointsGranted_ = other.candyPointsGranted_;
+                  bitField0_ = (bitField0_ & ~0x00200000);
+                  candyPointsGrantedBuilder_ = 
+                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                       getCandyPointsGrantedFieldBuilder() : null;
+                } else {
+                  candyPointsGrantedBuilder_.addAllMessages(other.candyPointsGranted_);
+                }
+              }
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -9719,6 +10314,246 @@ public final class S2DotaMatchMetadata {
             return this;
           }
 
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant> candyPointsGranted_ =
+            java.util.Collections.emptyList();
+          private void ensureCandyPointsGrantedIsMutable() {
+            if (!((bitField0_ & 0x00200000) == 0x00200000)) {
+              candyPointsGranted_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant>(candyPointsGranted_);
+              bitField0_ |= 0x00200000;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder> candyPointsGrantedBuilder_;
+
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant> getCandyPointsGrantedList() {
+            if (candyPointsGrantedBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(candyPointsGranted_);
+            } else {
+              return candyPointsGrantedBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public int getCandyPointsGrantedCount() {
+            if (candyPointsGrantedBuilder_ == null) {
+              return candyPointsGranted_.size();
+            } else {
+              return candyPointsGrantedBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant getCandyPointsGranted(int index) {
+            if (candyPointsGrantedBuilder_ == null) {
+              return candyPointsGranted_.get(index);
+            } else {
+              return candyPointsGrantedBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder setCandyPointsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant value) {
+            if (candyPointsGrantedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.set(index, value);
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder setCandyPointsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder builderForValue) {
+            if (candyPointsGrantedBuilder_ == null) {
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder addCandyPointsGranted(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant value) {
+            if (candyPointsGrantedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.add(value);
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder addCandyPointsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant value) {
+            if (candyPointsGrantedBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.add(index, value);
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder addCandyPointsGranted(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder builderForValue) {
+            if (candyPointsGrantedBuilder_ == null) {
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.add(builderForValue.build());
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder addCandyPointsGranted(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder builderForValue) {
+            if (candyPointsGrantedBuilder_ == null) {
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder addAllCandyPointsGranted(
+              java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant> values) {
+            if (candyPointsGrantedBuilder_ == null) {
+              ensureCandyPointsGrantedIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, candyPointsGranted_);
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder clearCandyPointsGranted() {
+            if (candyPointsGrantedBuilder_ == null) {
+              candyPointsGranted_ = java.util.Collections.emptyList();
+              bitField0_ = (bitField0_ & ~0x00200000);
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public Builder removeCandyPointsGranted(int index) {
+            if (candyPointsGrantedBuilder_ == null) {
+              ensureCandyPointsGrantedIsMutable();
+              candyPointsGranted_.remove(index);
+              onChanged();
+            } else {
+              candyPointsGrantedBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder getCandyPointsGrantedBuilder(
+              int index) {
+            return getCandyPointsGrantedFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder getCandyPointsGrantedOrBuilder(
+              int index) {
+            if (candyPointsGrantedBuilder_ == null) {
+              return candyPointsGranted_.get(index);  } else {
+              return candyPointsGrantedBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder> 
+               getCandyPointsGrantedOrBuilderList() {
+            if (candyPointsGrantedBuilder_ != null) {
+              return candyPointsGrantedBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(candyPointsGranted_);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder addCandyPointsGrantedBuilder() {
+            return getCandyPointsGrantedFieldBuilder().addBuilder(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder addCandyPointsGrantedBuilder(
+              int index) {
+            return getCandyPointsGrantedFieldBuilder().addBuilder(
+                index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.Team.CandyGrant candy_points_granted = 23;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder> 
+               getCandyPointsGrantedBuilderList() {
+            return getCandyPointsGrantedFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder> 
+              getCandyPointsGrantedFieldBuilder() {
+            if (candyPointsGrantedBuilder_ == null) {
+              candyPointsGrantedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrant.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.CandyGrantOrBuilder>(
+                      candyPointsGranted_,
+                      ((bitField0_ & 0x00200000) == 0x00200000),
+                      getParentForChildren(),
+                      isClean());
+              candyPointsGranted_ = null;
+            }
+            return candyPointsGrantedBuilder_;
+          }
+
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.EventData)
         }
 
@@ -10851,6 +11686,19 @@ public final class S2DotaMatchMetadata {
          */
         skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgressOrBuilder getContractProgressOrBuilder(
             int index);
+
+        /**
+         * <code>repeated uint32 guild_ids = 49;</code>
+         */
+        java.util.List<java.lang.Integer> getGuildIdsList();
+        /**
+         * <code>repeated uint32 guild_ids = 49;</code>
+         */
+        int getGuildIdsCount();
+        /**
+         * <code>repeated uint32 guild_ids = 49;</code>
+         */
+        int getGuildIds(int index);
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -11224,6 +12072,27 @@ public final class S2DotaMatchMetadata {
                   contractProgress_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.Player.ContractProgress.PARSER, extensionRegistry));
                   break;
                 }
+                case 392: {
+                  if (!((mutable_bitField1_ & 0x00004000) == 0x00004000)) {
+                    guildIds_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField1_ |= 0x00004000;
+                  }
+                  guildIds_.add(input.readUInt32());
+                  break;
+                }
+                case 394: {
+                  int length = input.readRawVarint32();
+                  int limit = input.pushLimit(length);
+                  if (!((mutable_bitField1_ & 0x00004000) == 0x00004000) && input.getBytesUntilLimit() > 0) {
+                    guildIds_ = new java.util.ArrayList<java.lang.Integer>();
+                    mutable_bitField1_ |= 0x00004000;
+                  }
+                  while (input.getBytesUntilLimit() > 0) {
+                    guildIds_.add(input.readUInt32());
+                  }
+                  input.popLimit(limit);
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -11267,6 +12136,9 @@ public final class S2DotaMatchMetadata {
             }
             if (((mutable_bitField1_ & 0x00002000) == 0x00002000)) {
               contractProgress_ = java.util.Collections.unmodifiableList(contractProgress_);
+            }
+            if (((mutable_bitField1_ & 0x00004000) == 0x00004000)) {
+              guildIds_ = java.util.Collections.unmodifiableList(guildIds_);
             }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
@@ -13063,6 +13935,28 @@ public final class S2DotaMatchMetadata {
           return contractProgress_.get(index);
         }
 
+        public static final int GUILD_IDS_FIELD_NUMBER = 49;
+        private java.util.List<java.lang.Integer> guildIds_;
+        /**
+         * <code>repeated uint32 guild_ids = 49;</code>
+         */
+        public java.util.List<java.lang.Integer>
+            getGuildIdsList() {
+          return guildIds_;
+        }
+        /**
+         * <code>repeated uint32 guild_ids = 49;</code>
+         */
+        public int getGuildIdsCount() {
+          return guildIds_.size();
+        }
+        /**
+         * <code>repeated uint32 guild_ids = 49;</code>
+         */
+        public int getGuildIds(int index) {
+          return guildIds_.get(index);
+        }
+
         private void initFields() {
           accountId_ = 0;
           abilityUpgrades_ = java.util.Collections.emptyList();
@@ -13110,6 +14004,7 @@ public final class S2DotaMatchMetadata {
           rankMmrBoostType_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EDOTAMMRBoostType.k_EDOTAMMRBoostType_None;
           gauntletProgress_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.GauntletProgress.getDefaultInstance();
           contractProgress_ = java.util.Collections.emptyList();
+          guildIds_ = java.util.Collections.emptyList();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -13261,6 +14156,9 @@ public final class S2DotaMatchMetadata {
           }
           for (int i = 0; i < contractProgress_.size(); i++) {
             output.writeMessage(48, contractProgress_.get(i));
+          }
+          for (int i = 0; i < guildIds_.size(); i++) {
+            output.writeUInt32(49, guildIds_.get(i));
           }
           getUnknownFields().writeTo(output);
         }
@@ -13466,6 +14364,15 @@ public final class S2DotaMatchMetadata {
           for (int i = 0; i < contractProgress_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(48, contractProgress_.get(i));
+          }
+          {
+            int dataSize = 0;
+            for (int i = 0; i < guildIds_.size(); i++) {
+              dataSize += com.google.protobuf.CodedOutputStream
+                .computeUInt32SizeNoTag(guildIds_.get(i));
+            }
+            size += dataSize;
+            size += 2 * getGuildIdsList().size();
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -13726,6 +14633,8 @@ public final class S2DotaMatchMetadata {
             } else {
               contractProgressBuilder_.clear();
             }
+            guildIds_ = java.util.Collections.emptyList();
+            bitField1_ = (bitField1_ & ~0x00004000);
             return this;
           }
 
@@ -13992,6 +14901,11 @@ public final class S2DotaMatchMetadata {
             } else {
               result.contractProgress_ = contractProgressBuilder_.build();
             }
+            if (((bitField1_ & 0x00004000) == 0x00004000)) {
+              guildIds_ = java.util.Collections.unmodifiableList(guildIds_);
+              bitField1_ = (bitField1_ & ~0x00004000);
+            }
+            result.guildIds_ = guildIds_;
             result.bitField0_ = to_bitField0_;
             result.bitField1_ = to_bitField1_;
             onBuilt();
@@ -14374,6 +15288,16 @@ public final class S2DotaMatchMetadata {
                   contractProgressBuilder_.addAllMessages(other.contractProgress_);
                 }
               }
+            }
+            if (!other.guildIds_.isEmpty()) {
+              if (guildIds_.isEmpty()) {
+                guildIds_ = other.guildIds_;
+                bitField1_ = (bitField1_ & ~0x00004000);
+              } else {
+                ensureGuildIdsIsMutable();
+                guildIds_.addAll(other.guildIds_);
+              }
+              onChanged();
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -17934,6 +18858,72 @@ public final class S2DotaMatchMetadata {
               contractProgress_ = null;
             }
             return contractProgressBuilder_;
+          }
+
+          private java.util.List<java.lang.Integer> guildIds_ = java.util.Collections.emptyList();
+          private void ensureGuildIdsIsMutable() {
+            if (!((bitField1_ & 0x00004000) == 0x00004000)) {
+              guildIds_ = new java.util.ArrayList<java.lang.Integer>(guildIds_);
+              bitField1_ |= 0x00004000;
+             }
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public java.util.List<java.lang.Integer>
+              getGuildIdsList() {
+            return java.util.Collections.unmodifiableList(guildIds_);
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public int getGuildIdsCount() {
+            return guildIds_.size();
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public int getGuildIds(int index) {
+            return guildIds_.get(index);
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public Builder setGuildIds(
+              int index, int value) {
+            ensureGuildIdsIsMutable();
+            guildIds_.set(index, value);
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public Builder addGuildIds(int value) {
+            ensureGuildIdsIsMutable();
+            guildIds_.add(value);
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public Builder addAllGuildIds(
+              java.lang.Iterable<? extends java.lang.Integer> values) {
+            ensureGuildIdsIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, guildIds_);
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>repeated uint32 guild_ids = 49;</code>
+           */
+          public Builder clearGuildIds() {
+            guildIds_ = java.util.Collections.emptyList();
+            bitField1_ = (bitField1_ & ~0x00004000);
+            onChanged();
+            return this;
           }
 
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player)
@@ -37009,6 +37999,11 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_Team_ActionGrant_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Team_CandyGrant_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Team_CandyGrant_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchMetadata_Team_EventData_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -37128,7 +38123,7 @@ public final class S2DotaMatchMetadata {
       "ch_management.proto\"|\n\026CDOTAMatchMetadat" +
       "aFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_id\030\002 \002(\004" +
       "\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMetadata\022" +
-      "\030\n\020private_metadata\030\005 \001(\014\"\264#\n\022CDOTAMatch" +
+      "\030\n\020private_metadata\030\005 \001(\014\"\270$\n\022CDOTAMatch" +
       "Metadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMatchMeta" +
       "data.Team\022/\n\014item_rewards\030\002 \003(\0132\031.CLobby" +
       "TimedRewardDetails\022\020\n\010lobby_id\030\003 \001(\006\022\031\n\021",
@@ -37139,7 +38134,7 @@ public final class S2DotaMatchMetadata {
       "chmakingStats\022\033\n\010mvp_data\030\t \001(\0132\t.CMvpDa" +
       "ta\022L\n\030guild_challenge_progress\030\n \003(\0132*.C" +
       "DOTAMatchMetadata.GuildChallengeProgress" +
-      "\032\200\035\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0220\n\007players\030" +
+      "\032\204\036\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0220\n\007players\030" +
       "\002 \003(\0132\037.CDOTAMatchMetadata.Team.Player\022\030" +
       "\n\020graph_experience\030\003 \003(\002\022\031\n\021graph_gold_e",
       "arned\030\004 \003(\002\022\027\n\017graph_net_worth\030\005 \003(\002\022\025\n\r" +
@@ -37166,140 +38161,144 @@ public final class S2DotaMatchMetadata {
       "engeResult\022\031\n\021completed_path_id\030\001 \001(\r\022\027\n" +
       "\017claimed_room_id\030\002 \001(\r\032A\n\013ActionGrant\022\021\n" +
       "\taction_id\030\001 \001(\r\022\020\n\010quantity\030\002 \001(\r\022\r\n\005au" +
-      "dit\030\003 \001(\r\032\227\006\n\tEventData\022\020\n\010event_id\030\001 \001(" +
-      "\r\022\024\n\014event_points\030\002 \001(\r\022\035\n\025challenge_ins" +
-      "tance_id\030\003 \001(\r\022\032\n\022challenge_quest_id\030\004 \001" +
-      "(\r\022$\n\034challenge_quest_challenge_id\030\005 \001(\r" +
-      "\022\033\n\023challenge_completed\030\006 \001(\010\022 \n\030challen" +
-      "ge_rank_completed\030\007 \001(\r\022+\n#challenge_ran",
-      "k_previously_completed\030\010 \001(\r\022\023\n\013event_ow" +
-      "ned\030\t \001(\010\022K\n\034sub_challenges_with_progres" +
-      "s\030\n \003(\0132%.CDOTAMatchMetadata.Team.SubCha" +
-      "llenge\022\026\n\016wager_winnings\030\013 \001(\r\022\037\n\027cavern" +
-      "_challenge_active\030\014 \001(\010\022!\n\031cavern_challe" +
-      "nge_winnings\030\r \001(\r\022\026\n\016amount_wagered\030\016 \001" +
-      "(\r\022\"\n\032periodic_point_adjustments\030\020 \001(\r\022T" +
-      "\n\034cavern_challenge_map_results\030\021 \003(\0132..C" +
-      "DOTAMatchMetadata.Team.CavernChallengeRe" +
-      "sult\022,\n$cavern_challenge_plus_shard_winn",
-      "ings\030\022 \001(\r\022=\n\017actions_granted\030\023 \003(\0132$.CD" +
-      "OTAMatchMetadata.Team.ActionGrant\022 \n\030cav" +
-      "ern_crawl_map_variant\030\024 \001(\r\022\034\n\024team_wage" +
-      "r_bonus_pct\030\025 \001(\r\022\030\n\020wager_streak_pct\030\026 " +
-      "\001(\r\032Y\n\020GauntletProgress\022\025\n\rgauntlet_tier" +
-      "\030\002 \001(\r\022\025\n\rgauntlet_wins\030\003 \001(\r\022\027\n\017gauntle" +
-      "t_losses\030\004 \001(\r\032\312\r\n\006Player\022\022\n\naccount_id\030" +
-      "\001 \001(\r\022\030\n\020ability_upgrades\030\002 \003(\r\022\023\n\013playe" +
-      "r_slot\030\003 \001(\r\022)\n\023equipped_econ_items\030\004 \003(" +
-      "\0132\014.CSOEconItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMa",
-      "tchMetadata.Team.PlayerKill\0224\n\005items\030\006 \003" +
-      "(\0132%.CDOTAMatchMetadata.Team.ItemPurchas" +
-      "e\022\025\n\ravg_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x" +
-      "16\030\010 \001(\r\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg" +
-      "_gpm_x16\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016b" +
-      "est_kills_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030" +
-      "\r \001(\r\022\024\n\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_" +
-      "x16\030\017 \001(\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_wi" +
-      "n_streak\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nf" +
-      "arm_score\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022",
-      "\n\npush_score\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003" +
-      "(\r\022\027\n\017graph_net_worth\030\027 \003(\002\022F\n\022inventory" +
-      "_snapshot\030\030 \003(\0132*.CDOTAMatchMetadata.Tea" +
-      "m.InventorySnapshot\022\034\n\024avg_stats_calibra" +
-      "ted\030\031 \001(\010\022G\n\023auto_style_criteria\030\032 \003(\0132*" +
-      ".CDOTAMatchMetadata.Team.AutoStyleCriter" +
-      "ia\0226\n\nevent_data\030\035 \003(\0132\".CDOTAMatchMetad" +
-      "ata.Team.EventData\022I\n\024strange_gem_progre" +
-      "ss\030\036 \003(\0132+.CDOTAMatchMetadata.Team.Stran" +
-      "geGemProgress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_",
-      "stacked\030  \001(\r\022F\n\022victory_prediction\030! \003(" +
-      "\0132*.CDOTAMatchMetadata.Team.VictoryPredi" +
-      "ction\022\034\n\024lane_selection_flags\030\" \001(\r\022\020\n\010r" +
-      "ampages\030# \001(\r\022\024\n\014triple_kills\030$ \001(\r\022\026\n\016a" +
-      "egis_snatched\030% \001(\r\022\031\n\021rapiers_purchased" +
-      "\030& \001(\r\022\027\n\017couriers_killed\030\' \001(\r\022\026\n\016net_w" +
-      "orth_rank\030( \001(\r\022\032\n\022support_gold_spent\030) " +
-      "\001(\r\022\035\n\025observer_wards_placed\030* \001(\r\022\033\n\023se" +
-      "ntry_wards_placed\030+ \001(\r\022\026\n\016wards_dewarde" +
-      "d\030, \001(\r\022\025\n\rstun_duration\030- \001(\002\022I\n\023rank_m",
-      "mr_boost_type\030. \001(\0162\022.EDOTAMMRBoostType:" +
-      "\030k_EDOTAMMRBoostType_None\022D\n\021gauntlet_pr" +
-      "ogress\030/ \001(\0132).CDOTAMatchMetadata.Team.G" +
-      "auntletProgress\022K\n\021contract_progress\0300 \003" +
-      "(\01320.CDOTAMatchMetadata.Team.Player.Cont" +
-      "ractProgress\032\264\001\n\020ContractProgress\022\020\n\010gui" +
-      "ld_id\030\001 \001(\r\022\020\n\010event_id\030\002 \001(\r\022\035\n\025challen" +
-      "ge_instance_id\030\003 \001(\r\022\033\n\023challenge_parame" +
-      "ter\030\004 \001(\r\022\026\n\016contract_stars\030\005 \001(\r\022\025\n\rcon" +
-      "tract_slot\030\006 \001(\r\022\021\n\tcompleted\030\007 \001(\010\032\222\003\n\026",
-      "GuildChallengeProgress\022\020\n\010guild_id\030\001 \001(\r" +
-      "\022(\n\010event_id\030\002 \001(\0162\007.EEvent:\rEVENT_ID_NO" +
-      "NE\022\035\n\025challenge_instance_id\030\003 \001(\r\022\033\n\023cha" +
-      "llenge_parameter\030\004 \001(\r\022\033\n\023challenge_time" +
-      "stamp\030\005 \001(\r\022#\n\033challenge_progress_at_sta" +
-      "rt\030\006 \001(\r\022&\n\036challenge_progress_accumulat" +
-      "ed\030\007 \001(\r\022Z\n\023individual_progress\030\010 \003(\0132=." +
-      "CDOTAMatchMetadata.GuildChallengeProgres" +
-      "s.IndividualProgress\032:\n\022IndividualProgre" +
-      "ss\022\022\n\naccount_id\030\001 \001(\r\022\020\n\010progress\030\002 \001(\r",
-      "\"\366\020\n\031CDOTAMatchPrivateMetadata\022.\n\005teams\030" +
-      "\001 \003(\0132\037.CDOTAMatchPrivateMetadata.Team\022\035" +
-      "\n\025graph_win_probability\030\002 \003(\002\022;\n\014string_" +
-      "names\030\003 \003(\0132%.CDOTAMatchPrivateMetadata." +
-      "StringName\032&\n\nStringName\022\n\n\002id\030\001 \001(\r\022\014\n\004" +
-      "name\030\002 \001(\t\032\244\017\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227" +
-      "\n\007players\030\002 \003(\0132&.CDOTAMatchPrivateMetad" +
-      "ata.Team.Player\022;\n\tbuildings\030\003 \003(\0132(.CDO" +
-      "TAMatchPrivateMetadata.Team.Building\032\253\r\n" +
-      "\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013player_sl",
-      "ot\030\002 \001(\r\022\027\n\017position_stream\030\003 \001(\014\022M\n\017com" +
-      "bat_segments\030\004 \003(\01324.CDOTAMatchPrivateMe" +
-      "tadata.Team.Player.CombatSegment\022\031\n\021dama" +
-      "ge_unit_names\030\005 \003(\t\022G\n\014buff_records\030\006 \003(" +
-      "\01321.CDOTAMatchPrivateMetadata.Team.Playe" +
-      "r.BuffRecord\022\023\n\013graph_kills\030\007 \003(\002\022\024\n\014gra" +
-      "ph_deaths\030\010 \003(\002\022\025\n\rgraph_assists\030\t \003(\002\022\026" +
-      "\n\016graph_lasthits\030\n \003(\002\022\024\n\014graph_denies\030\013" +
-      " \003(\002\022J\n\rgold_received\030\014 \001(\01323.CDOTAMatch" +
-      "PrivateMetadata.Team.Player.GoldReceived",
-      "\022F\n\013xp_received\030\r \001(\01321.CDOTAMatchPrivat" +
-      "eMetadata.Team.Player.XPReceived\032\251\005\n\rCom" +
-      "batSegment\022\021\n\tgame_time\030\001 \001(\005\022_\n\021damage_" +
-      "by_ability\030\002 \003(\0132D.CDOTAMatchPrivateMeta" +
-      "data.Team.Player.CombatSegment.DamageByA" +
-      "bility\022a\n\022healing_by_ability\030\003 \003(\0132E.CDO" +
-      "TAMatchPrivateMetadata.Team.Player.Comba" +
-      "tSegment.HealingByAbility\032\335\001\n\017DamageByAb" +
-      "ility\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\nabil" +
-      "ity_id\030\001 \001(\r\022j\n\017by_hero_targets\030\002 \003(\0132Q.",
-      "CDOTAMatchPrivateMetadata.Team.Player.Co" +
-      "mbatSegment.DamageByAbility.ByHeroTarget" +
-      "\032/\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006dam" +
-      "age\030\002 \001(\r\032\340\001\n\020HealingByAbility\022\031\n\021source" +
-      "_unit_index\030\003 \001(\r\022\022\n\nability_id\030\001 \001(\r\022k\n" +
-      "\017by_hero_targets\030\002 \003(\0132R.CDOTAMatchPriva" +
-      "teMetadata.Team.Player.CombatSegment.Hea" +
-      "lingByAbility.ByHeroTarget\0320\n\014ByHeroTarg" +
-      "et\022\017\n\007hero_id\030\001 \001(\r\022\017\n\007healing\030\002 \001(\r\032\350\001\n" +
-      "\nBuffRecord\022\027\n\017buff_ability_id\030\001 \001(\r\022\032\n\022",
-      "buff_modifier_name\030\003 \001(\t\022W\n\017by_hero_targ" +
-      "ets\030\002 \003(\0132>.CDOTAMatchPrivateMetadata.Te" +
-      "am.Player.BuffRecord.ByHeroTarget\032L\n\014ByH" +
-      "eroTarget\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020elapsed_du" +
-      "ration\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032\230\001\n\014Gold" +
-      "Received\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022" +
-      "\024\n\014bounty_runes\030\003 \001(\r\022\017\n\007passive\030\004 \001(\r\022\021" +
-      "\n\tbuildings\030\005 \001(\r\022\021\n\tabilities\030\006 \001(\r\022\r\n\005" +
-      "wards\030\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v\n\nXPReceived" +
-      "\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\016\n\006rosha",
-      "n\030\003 \001(\r\022\031\n\021tome_of_knowledge\030\004 \001(\r\022\017\n\007ou" +
-      "tpost\030\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e\n\010Building\022\021" +
-      "\n\tunit_name\030\001 \001(\t\022\030\n\020position_quant_x\030\002 " +
-      "\001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022\022\n\ndeath_t" +
-      "ime\030\004 \001(\002\"X\n\020CMsgDOTADPCMatch\022\035\n\005match\030\001" +
-      " \001(\0132\016.CMsgDOTAMatch\022%\n\010metadata\030\002 \001(\0132\023" +
-      ".CDOTAMatchMetadataB:\n skadistats.clarit" +
-      "y.wire.s2.protoB\023S2DotaMatchMetadata\200\001\000"
+      "dit\030\003 \001(\r\032,\n\nCandyGrant\022\016\n\006points\030\001 \001(\r\022" +
+      "\016\n\006reason\030\002 \001(\r\032\332\006\n\tEventData\022\020\n\010event_i" +
+      "d\030\001 \001(\r\022\024\n\014event_points\030\002 \001(\r\022\035\n\025challen" +
+      "ge_instance_id\030\003 \001(\r\022\032\n\022challenge_quest_" +
+      "id\030\004 \001(\r\022$\n\034challenge_quest_challenge_id" +
+      "\030\005 \001(\r\022\033\n\023challenge_completed\030\006 \001(\010\022 \n\030c",
+      "hallenge_rank_completed\030\007 \001(\r\022+\n#challen" +
+      "ge_rank_previously_completed\030\010 \001(\r\022\023\n\013ev" +
+      "ent_owned\030\t \001(\010\022K\n\034sub_challenges_with_p" +
+      "rogress\030\n \003(\0132%.CDOTAMatchMetadata.Team." +
+      "SubChallenge\022\026\n\016wager_winnings\030\013 \001(\r\022\037\n\027" +
+      "cavern_challenge_active\030\014 \001(\010\022!\n\031cavern_" +
+      "challenge_winnings\030\r \001(\r\022\026\n\016amount_wager" +
+      "ed\030\016 \001(\r\022\"\n\032periodic_point_adjustments\030\020" +
+      " \001(\r\022T\n\034cavern_challenge_map_results\030\021 \003" +
+      "(\0132..CDOTAMatchMetadata.Team.CavernChall",
+      "engeResult\022,\n$cavern_challenge_plus_shar" +
+      "d_winnings\030\022 \001(\r\022=\n\017actions_granted\030\023 \003(" +
+      "\0132$.CDOTAMatchMetadata.Team.ActionGrant\022" +
+      " \n\030cavern_crawl_map_variant\030\024 \001(\r\022\034\n\024tea" +
+      "m_wager_bonus_pct\030\025 \001(\r\022\030\n\020wager_streak_" +
+      "pct\030\026 \001(\r\022A\n\024candy_points_granted\030\027 \003(\0132" +
+      "#.CDOTAMatchMetadata.Team.CandyGrant\032Y\n\020" +
+      "GauntletProgress\022\025\n\rgauntlet_tier\030\002 \001(\r\022" +
+      "\025\n\rgauntlet_wins\030\003 \001(\r\022\027\n\017gauntlet_losse" +
+      "s\030\004 \001(\r\032\335\r\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030",
+      "\n\020ability_upgrades\030\002 \003(\r\022\023\n\013player_slot\030" +
+      "\003 \001(\r\022)\n\023equipped_econ_items\030\004 \003(\0132\014.CSO" +
+      "EconItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMeta" +
+      "data.Team.PlayerKill\0224\n\005items\030\006 \003(\0132%.CD" +
+      "OTAMatchMetadata.Team.ItemPurchase\022\025\n\rav" +
+      "g_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(" +
+      "\r\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x1" +
+      "6\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kil" +
+      "ls_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024" +
+      "\n\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001",
+      "(\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_win_strea" +
+      "k\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_sco" +
+      "re\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_" +
+      "score\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017g" +
+      "raph_net_worth\030\027 \003(\002\022F\n\022inventory_snapsh" +
+      "ot\030\030 \003(\0132*.CDOTAMatchMetadata.Team.Inven" +
+      "torySnapshot\022\034\n\024avg_stats_calibrated\030\031 \001" +
+      "(\010\022G\n\023auto_style_criteria\030\032 \003(\0132*.CDOTAM" +
+      "atchMetadata.Team.AutoStyleCriteria\0226\n\ne" +
+      "vent_data\030\035 \003(\0132\".CDOTAMatchMetadata.Tea",
+      "m.EventData\022I\n\024strange_gem_progress\030\036 \003(" +
+      "\0132+.CDOTAMatchMetadata.Team.StrangeGemPr" +
+      "ogress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked" +
+      "\030  \001(\r\022F\n\022victory_prediction\030! \003(\0132*.CDO" +
+      "TAMatchMetadata.Team.VictoryPrediction\022\034" +
+      "\n\024lane_selection_flags\030\" \001(\r\022\020\n\010rampages" +
+      "\030# \001(\r\022\024\n\014triple_kills\030$ \001(\r\022\026\n\016aegis_sn" +
+      "atched\030% \001(\r\022\031\n\021rapiers_purchased\030& \001(\r\022" +
+      "\027\n\017couriers_killed\030\' \001(\r\022\026\n\016net_worth_ra" +
+      "nk\030( \001(\r\022\032\n\022support_gold_spent\030) \001(\r\022\035\n\025",
+      "observer_wards_placed\030* \001(\r\022\033\n\023sentry_wa" +
+      "rds_placed\030+ \001(\r\022\026\n\016wards_dewarded\030, \001(\r" +
+      "\022\025\n\rstun_duration\030- \001(\002\022I\n\023rank_mmr_boos" +
+      "t_type\030. \001(\0162\022.EDOTAMMRBoostType:\030k_EDOT" +
+      "AMMRBoostType_None\022D\n\021gauntlet_progress\030" +
+      "/ \001(\0132).CDOTAMatchMetadata.Team.Gauntlet" +
+      "Progress\022K\n\021contract_progress\0300 \003(\01320.CD" +
+      "OTAMatchMetadata.Team.Player.ContractPro" +
+      "gress\022\021\n\tguild_ids\0301 \003(\r\032\264\001\n\020ContractPro" +
+      "gress\022\020\n\010guild_id\030\001 \001(\r\022\020\n\010event_id\030\002 \001(",
+      "\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\033\n\023chal" +
+      "lenge_parameter\030\004 \001(\r\022\026\n\016contract_stars\030" +
+      "\005 \001(\r\022\025\n\rcontract_slot\030\006 \001(\r\022\021\n\tcomplete" +
+      "d\030\007 \001(\010\032\222\003\n\026GuildChallengeProgress\022\020\n\010gu" +
+      "ild_id\030\001 \001(\r\022(\n\010event_id\030\002 \001(\0162\007.EEvent:" +
+      "\rEVENT_ID_NONE\022\035\n\025challenge_instance_id\030" +
+      "\003 \001(\r\022\033\n\023challenge_parameter\030\004 \001(\r\022\033\n\023ch" +
+      "allenge_timestamp\030\005 \001(\r\022#\n\033challenge_pro" +
+      "gress_at_start\030\006 \001(\r\022&\n\036challenge_progre" +
+      "ss_accumulated\030\007 \001(\r\022Z\n\023individual_progr",
+      "ess\030\010 \003(\0132=.CDOTAMatchMetadata.GuildChal" +
+      "lengeProgress.IndividualProgress\032:\n\022Indi" +
+      "vidualProgress\022\022\n\naccount_id\030\001 \001(\r\022\020\n\010pr" +
+      "ogress\030\002 \001(\r\"\366\020\n\031CDOTAMatchPrivateMetada" +
+      "ta\022.\n\005teams\030\001 \003(\0132\037.CDOTAMatchPrivateMet" +
+      "adata.Team\022\035\n\025graph_win_probability\030\002 \003(" +
+      "\002\022;\n\014string_names\030\003 \003(\0132%.CDOTAMatchPriv" +
+      "ateMetadata.StringName\032&\n\nStringName\022\n\n\002" +
+      "id\030\001 \001(\r\022\014\n\004name\030\002 \001(\t\032\244\017\n\004Team\022\021\n\tdota_" +
+      "team\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatch",
+      "PrivateMetadata.Team.Player\022;\n\tbuildings" +
+      "\030\003 \003(\0132(.CDOTAMatchPrivateMetadata.Team." +
+      "Building\032\253\r\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022" +
+      "\023\n\013player_slot\030\002 \001(\r\022\027\n\017position_stream\030" +
+      "\003 \001(\014\022M\n\017combat_segments\030\004 \003(\01324.CDOTAMa" +
+      "tchPrivateMetadata.Team.Player.CombatSeg" +
+      "ment\022\031\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_" +
+      "records\030\006 \003(\01321.CDOTAMatchPrivateMetadat" +
+      "a.Team.Player.BuffRecord\022\023\n\013graph_kills\030" +
+      "\007 \003(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_ass",
+      "ists\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014gr" +
+      "aph_denies\030\013 \003(\002\022J\n\rgold_received\030\014 \001(\0132" +
+      "3.CDOTAMatchPrivateMetadata.Team.Player." +
+      "GoldReceived\022F\n\013xp_received\030\r \001(\01321.CDOT" +
+      "AMatchPrivateMetadata.Team.Player.XPRece" +
+      "ived\032\251\005\n\rCombatSegment\022\021\n\tgame_time\030\001 \001(" +
+      "\005\022_\n\021damage_by_ability\030\002 \003(\0132D.CDOTAMatc" +
+      "hPrivateMetadata.Team.Player.CombatSegme" +
+      "nt.DamageByAbility\022a\n\022healing_by_ability" +
+      "\030\003 \003(\0132E.CDOTAMatchPrivateMetadata.Team.",
+      "Player.CombatSegment.HealingByAbility\032\335\001" +
+      "\n\017DamageByAbility\022\031\n\021source_unit_index\030\003" +
+      " \001(\r\022\022\n\nability_id\030\001 \001(\r\022j\n\017by_hero_targ" +
+      "ets\030\002 \003(\0132Q.CDOTAMatchPrivateMetadata.Te" +
+      "am.Player.CombatSegment.DamageByAbility." +
+      "ByHeroTarget\032/\n\014ByHeroTarget\022\017\n\007hero_id\030" +
+      "\001 \001(\r\022\016\n\006damage\030\002 \001(\r\032\340\001\n\020HealingByAbili" +
+      "ty\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\nability" +
+      "_id\030\001 \001(\r\022k\n\017by_hero_targets\030\002 \003(\0132R.CDO" +
+      "TAMatchPrivateMetadata.Team.Player.Comba",
+      "tSegment.HealingByAbility.ByHeroTarget\0320" +
+      "\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\017\n\007heali" +
+      "ng\030\002 \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_ability_" +
+      "id\030\001 \001(\r\022\032\n\022buff_modifier_name\030\003 \001(\t\022W\n\017" +
+      "by_hero_targets\030\002 \003(\0132>.CDOTAMatchPrivat" +
+      "eMetadata.Team.Player.BuffRecord.ByHeroT" +
+      "arget\032L\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\030" +
+      "\n\020elapsed_duration\030\002 \001(\002\022\021\n\tis_hidden\030\003 " +
+      "\001(\010\032\230\001\n\014GoldReceived\022\r\n\005creep\030\001 \001(\r\022\016\n\006h" +
+      "eroes\030\002 \001(\r\022\024\n\014bounty_runes\030\003 \001(\r\022\017\n\007pas",
+      "sive\030\004 \001(\r\022\021\n\tbuildings\030\005 \001(\r\022\021\n\tabiliti" +
+      "es\030\006 \001(\r\022\r\n\005wards\030\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v" +
+      "\n\nXPReceived\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 " +
+      "\001(\r\022\016\n\006roshan\030\003 \001(\r\022\031\n\021tome_of_knowledge" +
+      "\030\004 \001(\r\022\017\n\007outpost\030\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e" +
+      "\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020positio" +
+      "n_quant_x\030\002 \001(\r\022\030\n\020position_quant_y\030\003 \001(" +
+      "\r\022\022\n\ndeath_time\030\004 \001(\002\"X\n\020CMsgDOTADPCMatc" +
+      "h\022\035\n\005match\030\001 \001(\0132\016.CMsgDOTAMatch\022%\n\010meta" +
+      "data\030\002 \001(\0132\023.CDOTAMatchMetadataB:\n skadi",
+      "stats.clarity.wire.s2.protoB\023S2DotaMatch" +
+      "Metadata\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -37388,24 +38387,30 @@ public final class S2DotaMatchMetadata {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_ActionGrant_descriptor,
         new java.lang.String[] { "ActionId", "Quantity", "Audit", });
-    internal_static_CDOTAMatchMetadata_Team_EventData_descriptor =
+    internal_static_CDOTAMatchMetadata_Team_CandyGrant_descriptor =
       internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(9);
+    internal_static_CDOTAMatchMetadata_Team_CandyGrant_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Team_CandyGrant_descriptor,
+        new java.lang.String[] { "Points", "Reason", });
+    internal_static_CDOTAMatchMetadata_Team_EventData_descriptor =
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(10);
     internal_static_CDOTAMatchMetadata_Team_EventData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_EventData_descriptor,
-        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "PeriodicPointAdjustments", "CavernChallengeMapResults", "CavernChallengePlusShardWinnings", "ActionsGranted", "CavernCrawlMapVariant", "TeamWagerBonusPct", "WagerStreakPct", });
+        new java.lang.String[] { "EventId", "EventPoints", "ChallengeInstanceId", "ChallengeQuestId", "ChallengeQuestChallengeId", "ChallengeCompleted", "ChallengeRankCompleted", "ChallengeRankPreviouslyCompleted", "EventOwned", "SubChallengesWithProgress", "WagerWinnings", "CavernChallengeActive", "CavernChallengeWinnings", "AmountWagered", "PeriodicPointAdjustments", "CavernChallengeMapResults", "CavernChallengePlusShardWinnings", "ActionsGranted", "CavernCrawlMapVariant", "TeamWagerBonusPct", "WagerStreakPct", "CandyPointsGranted", });
     internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor =
-      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(10);
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(11);
     internal_static_CDOTAMatchMetadata_Team_GauntletProgress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_GauntletProgress_descriptor,
         new java.lang.String[] { "GauntletTier", "GauntletWins", "GauntletLosses", });
     internal_static_CDOTAMatchMetadata_Team_Player_descriptor =
-      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(11);
+      internal_static_CDOTAMatchMetadata_Team_descriptor.getNestedTypes().get(12);
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", "GuildIds", });
     internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor =
       internal_static_CDOTAMatchMetadata_Team_Player_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable = new

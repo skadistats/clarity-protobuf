@@ -436,9 +436,17 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_TEAM_FANDOM(30, 30),
     /**
-     * <code>EVENT_ID_COUNT = 31;</code>
+     * <code>EVENT_ID_DIRETIDE_2020 = 31;</code>
      */
-    EVENT_ID_COUNT(31, 31),
+    EVENT_ID_DIRETIDE_2020(31, 31),
+    /**
+     * <code>EVENT_ID_SPRING_2021 = 32;</code>
+     */
+    EVENT_ID_SPRING_2021(32, 32),
+    /**
+     * <code>EVENT_ID_COUNT = 33;</code>
+     */
+    EVENT_ID_COUNT(33, 33),
     ;
 
     /**
@@ -566,9 +574,17 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_TEAM_FANDOM_VALUE = 30;
     /**
-     * <code>EVENT_ID_COUNT = 31;</code>
+     * <code>EVENT_ID_DIRETIDE_2020 = 31;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 31;
+    public static final int EVENT_ID_DIRETIDE_2020_VALUE = 31;
+    /**
+     * <code>EVENT_ID_SPRING_2021 = 32;</code>
+     */
+    public static final int EVENT_ID_SPRING_2021_VALUE = 32;
+    /**
+     * <code>EVENT_ID_COUNT = 33;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 33;
 
 
     public final int getNumber() { return value; }
@@ -606,7 +622,9 @@ public final class S2DotaGcCommon {
         case 28: return EVENT_ID_NEW_BLOOM_2020;
         case 29: return EVENT_ID_INTERNATIONAL_2020;
         case 30: return EVENT_ID_TEAM_FANDOM;
-        case 31: return EVENT_ID_COUNT;
+        case 31: return EVENT_ID_DIRETIDE_2020;
+        case 32: return EVENT_ID_SPRING_2021;
+        case 33: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -19303,7 +19321,7 @@ public final class S2DotaGcCommon {
       "OTA_GAMEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_A" +
       "LL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026D",
       "OTA_GAMEMODE_MUTATION\020\030\022#\n\037DOTA_GAMEMODE" +
-      "_COACHES_CHALLENGE\020\031*\267\007\n\006EEvent\022\021\n\rEVENT" +
+      "_COACHES_CHALLENGE\020\031*\355\007\n\006EEvent\022\021\n\rEVENT" +
       "_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVE" +
       "NT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROS" +
       "TIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2014" +
@@ -19326,33 +19344,35 @@ public final class S2DotaGcCommon {
       "\031\022\"\n\036EVENT_ID_NEW_PLAYER_EXPERIENCE\020\032\022\033\n" +
       "\027EVENT_ID_FROSTIVUS_2019\020\033\022\033\n\027EVENT_ID_N" +
       "EW_BLOOM_2020\020\034\022\037\n\033EVENT_ID_INTERNATIONA" +
-      "L_2020\020\035\022\030\n\024EVENT_ID_TEAM_FANDOM\020\036\022\022\n\016EV" +
-      "ENT_ID_COUNT\020\037*\361\002\n\rEMatchOutcome\022\033\n\027k_EM" +
-      "atchOutcome_Unknown\020\000\022\036\n\032k_EMatchOutcome" +
-      "_RadVictory\020\002\022\037\n\033k_EMatchOutcome_DireVic" +
-      "tory\020\003\0223\n/k_EMatchOutcome_NotScored_Poor" +
-      "NetworkConditions\020@\022$\n k_EMatchOutcome_N",
-      "otScored_Leaver\020A\022)\n%k_EMatchOutcome_Not" +
-      "Scored_ServerCrash\020B\022*\n&k_EMatchOutcome_" +
-      "NotScored_NeverStarted\020C\022&\n\"k_EMatchOutc" +
-      "ome_NotScored_Canceled\020D\022(\n$k_EMatchOutc" +
-      "ome_NotScored_Suspicious\020E*\321\003\n\022EDOTAPlay" +
-      "erMMRType\022 \n\034k_EDOTAPlayerMMRType_Invali" +
-      "d\020\000\022&\n\"k_EDOTAPlayerMMRType_GeneralHidde" +
-      "n\020\001\022/\n+k_EDOTAPlayerMMRType_GeneralCompe" +
-      "titive2019\020\003\022,\n(k_EDOTAPlayerMMRType_Sol" +
-      "oCompetitive2019\020\004\022.\n*k_EDOTAPlayerMMRTy",
-      "pe_1v1Competitive_UNUSED\020\005\022.\n*k_EDOTAPla" +
-      "yerMMRType_GeneralSeasonalRanked\020\006\022+\n\'k_" +
-      "EDOTAPlayerMMRType_SoloSeasonalRanked\020\007\022" +
-      ")\n%k_EDOTAPlayerMMRType_Competitive_Core" +
-      "\020\010\022,\n(k_EDOTAPlayerMMRType_Competitive_S" +
-      "upport\020\t\022,\n(k_EDOTAPlayerMMRType_Competi" +
-      "tive_Classic\020\n*s\n\021EDOTAMMRBoostType\022\034\n\030k" +
-      "_EDOTAMMRBoostType_None\020\000\022\036\n\032k_EDOTAMMRB" +
-      "oostType_Leader\020\001\022 \n\034k_EDOTAMMRBoostType" +
-      "_Follower\020\002B7\n skadistats.clarity.wire.s",
-      "2.protoB\016S2DotaGcCommonH\001\200\001\000"
+      "L_2020\020\035\022\030\n\024EVENT_ID_TEAM_FANDOM\020\036\022\032\n\026EV" +
+      "ENT_ID_DIRETIDE_2020\020\037\022\030\n\024EVENT_ID_SPRIN" +
+      "G_2021\020 \022\022\n\016EVENT_ID_COUNT\020!*\361\002\n\rEMatchO" +
+      "utcome\022\033\n\027k_EMatchOutcome_Unknown\020\000\022\036\n\032k" +
+      "_EMatchOutcome_RadVictory\020\002\022\037\n\033k_EMatchO" +
+      "utcome_DireVictory\020\003\0223\n/k_EMatchOutcome_",
+      "NotScored_PoorNetworkConditions\020@\022$\n k_E" +
+      "MatchOutcome_NotScored_Leaver\020A\022)\n%k_EMa" +
+      "tchOutcome_NotScored_ServerCrash\020B\022*\n&k_" +
+      "EMatchOutcome_NotScored_NeverStarted\020C\022&" +
+      "\n\"k_EMatchOutcome_NotScored_Canceled\020D\022(" +
+      "\n$k_EMatchOutcome_NotScored_Suspicious\020E" +
+      "*\321\003\n\022EDOTAPlayerMMRType\022 \n\034k_EDOTAPlayer" +
+      "MMRType_Invalid\020\000\022&\n\"k_EDOTAPlayerMMRTyp" +
+      "e_GeneralHidden\020\001\022/\n+k_EDOTAPlayerMMRTyp" +
+      "e_GeneralCompetitive2019\020\003\022,\n(k_EDOTAPla",
+      "yerMMRType_SoloCompetitive2019\020\004\022.\n*k_ED" +
+      "OTAPlayerMMRType_1v1Competitive_UNUSED\020\005" +
+      "\022.\n*k_EDOTAPlayerMMRType_GeneralSeasonal" +
+      "Ranked\020\006\022+\n\'k_EDOTAPlayerMMRType_SoloSea" +
+      "sonalRanked\020\007\022)\n%k_EDOTAPlayerMMRType_Co" +
+      "mpetitive_Core\020\010\022,\n(k_EDOTAPlayerMMRType" +
+      "_Competitive_Support\020\t\022,\n(k_EDOTAPlayerM" +
+      "MRType_Competitive_Classic\020\n*s\n\021EDOTAMMR" +
+      "BoostType\022\034\n\030k_EDOTAMMRBoostType_None\020\000\022" +
+      "\036\n\032k_EDOTAMMRBoostType_Leader\020\001\022 \n\034k_EDO",
+      "TAMMRBoostType_Follower\020\002B7\n skadistats." +
+      "clarity.wire.s2.protoB\016S2DotaGcCommonH\001\200" +
+      "\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -659,6 +659,637 @@ public final class S2UserMessages {
     // @@protoc_insertion_point(enum_scope:EHapticPulseType)
   }
 
+  public interface CUserMessageFadeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessageFade)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 duration = 1;</code>
+     */
+    boolean hasDuration();
+    /**
+     * <code>optional uint32 duration = 1;</code>
+     */
+    int getDuration();
+
+    /**
+     * <code>optional uint32 hold_time = 2;</code>
+     */
+    boolean hasHoldTime();
+    /**
+     * <code>optional uint32 hold_time = 2;</code>
+     */
+    int getHoldTime();
+
+    /**
+     * <code>optional uint32 flags = 3;</code>
+     */
+    boolean hasFlags();
+    /**
+     * <code>optional uint32 flags = 3;</code>
+     */
+    int getFlags();
+
+    /**
+     * <code>optional fixed32 color = 4;</code>
+     */
+    boolean hasColor();
+    /**
+     * <code>optional fixed32 color = 4;</code>
+     */
+    int getColor();
+  }
+  /**
+   * Protobuf type {@code CUserMessageFade}
+   */
+  public static final class CUserMessageFade extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessageFade)
+      CUserMessageFadeOrBuilder {
+    // Use CUserMessageFade.newBuilder() to construct.
+    private CUserMessageFade(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessageFade(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessageFade defaultInstance;
+    public static CUserMessageFade getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessageFade getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessageFade(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              duration_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              holdTime_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              flags_ = input.readUInt32();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000008;
+              color_ = input.readFixed32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageFade_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageFade_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessageFade> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessageFade>() {
+      public CUserMessageFade parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessageFade(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessageFade> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DURATION_FIELD_NUMBER = 1;
+    private int duration_;
+    /**
+     * <code>optional uint32 duration = 1;</code>
+     */
+    public boolean hasDuration() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 duration = 1;</code>
+     */
+    public int getDuration() {
+      return duration_;
+    }
+
+    public static final int HOLD_TIME_FIELD_NUMBER = 2;
+    private int holdTime_;
+    /**
+     * <code>optional uint32 hold_time = 2;</code>
+     */
+    public boolean hasHoldTime() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 hold_time = 2;</code>
+     */
+    public int getHoldTime() {
+      return holdTime_;
+    }
+
+    public static final int FLAGS_FIELD_NUMBER = 3;
+    private int flags_;
+    /**
+     * <code>optional uint32 flags = 3;</code>
+     */
+    public boolean hasFlags() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional uint32 flags = 3;</code>
+     */
+    public int getFlags() {
+      return flags_;
+    }
+
+    public static final int COLOR_FIELD_NUMBER = 4;
+    private int color_;
+    /**
+     * <code>optional fixed32 color = 4;</code>
+     */
+    public boolean hasColor() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional fixed32 color = 4;</code>
+     */
+    public int getColor() {
+      return color_;
+    }
+
+    private void initFields() {
+      duration_ = 0;
+      holdTime_ = 0;
+      flags_ = 0;
+      color_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, duration_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, holdTime_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeUInt32(3, flags_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFixed32(4, color_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, duration_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, holdTime_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, flags_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFixed32Size(4, color_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessageFade}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessageFade)
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFadeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageFade_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageFade_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        duration_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        holdTime_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        flags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        color_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageFade_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade build() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade result = new skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.duration_ = duration_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.holdTime_ = holdTime_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.flags_ = flags_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.color_ = color_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade.getDefaultInstance()) return this;
+        if (other.hasDuration()) {
+          setDuration(other.getDuration());
+        }
+        if (other.hasHoldTime()) {
+          setHoldTime(other.getHoldTime());
+        }
+        if (other.hasFlags()) {
+          setFlags(other.getFlags());
+        }
+        if (other.hasColor()) {
+          setColor(other.getColor());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageFade) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int duration_ ;
+      /**
+       * <code>optional uint32 duration = 1;</code>
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 duration = 1;</code>
+       */
+      public int getDuration() {
+        return duration_;
+      }
+      /**
+       * <code>optional uint32 duration = 1;</code>
+       */
+      public Builder setDuration(int value) {
+        bitField0_ |= 0x00000001;
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 duration = 1;</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        duration_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int holdTime_ ;
+      /**
+       * <code>optional uint32 hold_time = 2;</code>
+       */
+      public boolean hasHoldTime() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 hold_time = 2;</code>
+       */
+      public int getHoldTime() {
+        return holdTime_;
+      }
+      /**
+       * <code>optional uint32 hold_time = 2;</code>
+       */
+      public Builder setHoldTime(int value) {
+        bitField0_ |= 0x00000002;
+        holdTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 hold_time = 2;</code>
+       */
+      public Builder clearHoldTime() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        holdTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int flags_ ;
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       */
+      public boolean hasFlags() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       */
+      public int getFlags() {
+        return flags_;
+      }
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       */
+      public Builder setFlags(int value) {
+        bitField0_ |= 0x00000004;
+        flags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 flags = 3;</code>
+       */
+      public Builder clearFlags() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        flags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int color_ ;
+      /**
+       * <code>optional fixed32 color = 4;</code>
+       */
+      public boolean hasColor() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional fixed32 color = 4;</code>
+       */
+      public int getColor() {
+        return color_;
+      }
+      /**
+       * <code>optional fixed32 color = 4;</code>
+       */
+      public Builder setColor(int value) {
+        bitField0_ |= 0x00000008;
+        color_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional fixed32 color = 4;</code>
+       */
+      public Builder clearColor() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        color_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessageFade)
+    }
+
+    static {
+      defaultInstance = new CUserMessageFade(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessageFade)
+  }
+
   public interface CUserMessageSayText2OrBuilder extends
       // @@protoc_insertion_point(interface_extends:CUserMessageSayText2)
       com.google.protobuf.MessageOrBuilder {
@@ -3364,6 +3995,637 @@ public final class S2UserMessages {
     }
 
     // @@protoc_insertion_point(class_scope:CUserMessageSendAudio)
+  }
+
+  public interface CUserMessageAudioParameterOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessageAudioParameter)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 parameter_type = 1;</code>
+     */
+    boolean hasParameterType();
+    /**
+     * <code>optional uint32 parameter_type = 1;</code>
+     */
+    int getParameterType();
+
+    /**
+     * <code>optional uint32 name_hash_code = 2;</code>
+     */
+    boolean hasNameHashCode();
+    /**
+     * <code>optional uint32 name_hash_code = 2;</code>
+     */
+    int getNameHashCode();
+
+    /**
+     * <code>optional float value = 3;</code>
+     */
+    boolean hasValue();
+    /**
+     * <code>optional float value = 3;</code>
+     */
+    float getValue();
+
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    boolean hasIntValue();
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    int getIntValue();
+  }
+  /**
+   * Protobuf type {@code CUserMessageAudioParameter}
+   */
+  public static final class CUserMessageAudioParameter extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessageAudioParameter)
+      CUserMessageAudioParameterOrBuilder {
+    // Use CUserMessageAudioParameter.newBuilder() to construct.
+    private CUserMessageAudioParameter(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessageAudioParameter(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessageAudioParameter defaultInstance;
+    public static CUserMessageAudioParameter getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessageAudioParameter getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessageAudioParameter(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              parameterType_ = input.readUInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              nameHashCode_ = input.readUInt32();
+              break;
+            }
+            case 29: {
+              bitField0_ |= 0x00000004;
+              value_ = input.readFloat();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              intValue_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageAudioParameter_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageAudioParameter_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessageAudioParameter> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessageAudioParameter>() {
+      public CUserMessageAudioParameter parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessageAudioParameter(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessageAudioParameter> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PARAMETER_TYPE_FIELD_NUMBER = 1;
+    private int parameterType_;
+    /**
+     * <code>optional uint32 parameter_type = 1;</code>
+     */
+    public boolean hasParameterType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 parameter_type = 1;</code>
+     */
+    public int getParameterType() {
+      return parameterType_;
+    }
+
+    public static final int NAME_HASH_CODE_FIELD_NUMBER = 2;
+    private int nameHashCode_;
+    /**
+     * <code>optional uint32 name_hash_code = 2;</code>
+     */
+    public boolean hasNameHashCode() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 name_hash_code = 2;</code>
+     */
+    public int getNameHashCode() {
+      return nameHashCode_;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 3;
+    private float value_;
+    /**
+     * <code>optional float value = 3;</code>
+     */
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional float value = 3;</code>
+     */
+    public float getValue() {
+      return value_;
+    }
+
+    public static final int INT_VALUE_FIELD_NUMBER = 4;
+    private int intValue_;
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    public boolean hasIntValue() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional uint32 int_value = 4;</code>
+     */
+    public int getIntValue() {
+      return intValue_;
+    }
+
+    private void initFields() {
+      parameterType_ = 0;
+      nameHashCode_ = 0;
+      value_ = 0F;
+      intValue_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, parameterType_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, nameHashCode_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeFloat(3, value_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeUInt32(4, intValue_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, parameterType_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, nameHashCode_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, value_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, intValue_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessageAudioParameter}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessageAudioParameter)
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameterOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageAudioParameter_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageAudioParameter_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        parameterType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        nameHashCode_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        intValue_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageAudioParameter_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter build() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter result = new skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.parameterType_ = parameterType_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.nameHashCode_ = nameHashCode_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.value_ = value_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.intValue_ = intValue_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter.getDefaultInstance()) return this;
+        if (other.hasParameterType()) {
+          setParameterType(other.getParameterType());
+        }
+        if (other.hasNameHashCode()) {
+          setNameHashCode(other.getNameHashCode());
+        }
+        if (other.hasValue()) {
+          setValue(other.getValue());
+        }
+        if (other.hasIntValue()) {
+          setIntValue(other.getIntValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageAudioParameter) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int parameterType_ ;
+      /**
+       * <code>optional uint32 parameter_type = 1;</code>
+       */
+      public boolean hasParameterType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 parameter_type = 1;</code>
+       */
+      public int getParameterType() {
+        return parameterType_;
+      }
+      /**
+       * <code>optional uint32 parameter_type = 1;</code>
+       */
+      public Builder setParameterType(int value) {
+        bitField0_ |= 0x00000001;
+        parameterType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 parameter_type = 1;</code>
+       */
+      public Builder clearParameterType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        parameterType_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int nameHashCode_ ;
+      /**
+       * <code>optional uint32 name_hash_code = 2;</code>
+       */
+      public boolean hasNameHashCode() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 name_hash_code = 2;</code>
+       */
+      public int getNameHashCode() {
+        return nameHashCode_;
+      }
+      /**
+       * <code>optional uint32 name_hash_code = 2;</code>
+       */
+      public Builder setNameHashCode(int value) {
+        bitField0_ |= 0x00000002;
+        nameHashCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 name_hash_code = 2;</code>
+       */
+      public Builder clearNameHashCode() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        nameHashCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float value_ ;
+      /**
+       * <code>optional float value = 3;</code>
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float value = 3;</code>
+       */
+      public float getValue() {
+        return value_;
+      }
+      /**
+       * <code>optional float value = 3;</code>
+       */
+      public Builder setValue(float value) {
+        bitField0_ |= 0x00000004;
+        value_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float value = 3;</code>
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        value_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int intValue_ ;
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public boolean hasIntValue() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public int getIntValue() {
+        return intValue_;
+      }
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public Builder setIntValue(int value) {
+        bitField0_ |= 0x00000008;
+        intValue_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 int_value = 4;</code>
+       */
+      public Builder clearIntValue() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        intValue_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessageAudioParameter)
+    }
+
+    static {
+      defaultInstance = new CUserMessageAudioParameter(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessageAudioParameter)
   }
 
   public interface CUserMessageVoiceMaskOrBuilder extends
@@ -10786,6 +12048,11 @@ public final class S2UserMessages {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessageFade_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessageFade_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserMessageSayText2_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -10805,6 +12072,11 @@ public final class S2UserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMessageSendAudio_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessageAudioParameter_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessageAudioParameter_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserMessageVoiceMask_descriptor;
   private static
@@ -10875,71 +12147,76 @@ public final class S2UserMessages {
   static {
     java.lang.String[] descriptorData = {
       "\n\025s2_usermessages.proto\032\026networkbasetype" +
-      "s.proto\"\216\001\n\024CUserMessageSayText2\022\023\n\013enti" +
-      "tyindex\030\001 \001(\r\022\014\n\004chat\030\002 \001(\010\022\023\n\013messagena" +
-      "me\030\003 \001(\t\022\016\n\006param1\030\004 \001(\t\022\016\n\006param2\030\005 \001(\t" +
-      "\022\016\n\006param3\030\006 \001(\t\022\016\n\006param4\030\007 \001(\t\"2\n\023CUse" +
-      "rMessageTextMsg\022\014\n\004dest\030\001 \001(\r\022\r\n\005param\030\002" +
-      " \003(\t\"\026\n\024CUserMessageResetHUD\"8\n\025CUserMes" +
-      "sageSendAudio\022\021\n\tsoundname\030\001 \001(\t\022\014\n\004stop" +
-      "\030\002 \001(\010\"W\n\025CUserMessageVoiceMask\022\027\n\017gamer" +
-      "ules_masks\030\001 \003(\r\022\021\n\tban_masks\030\002 \003(\r\022\022\n\nm",
-      "od_enable\030\003 \001(\010\";\n\030CEntityMessagePlayJin" +
-      "gle\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg\"m\n\027" +
-      "CUserMessageHapticPulse\022\017\n\007hand_id\030\001 \001(\005" +
-      "\022A\n\npulse_type\030\002 \001(\0162\021.EHapticPulseType:" +
-      "\032VR_HAND_HAPTIC_PULSE_LIGHT\"T\n\033CEntityMe" +
-      "ssageScreenOverlay\022\024\n\014start_effect\030\001 \001(\010" +
-      "\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMsg\"W\n\035CEn" +
-      "tityMessageRemoveAllDecals\022\025\n\rremove_dec" +
-      "als\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntityM" +
-      "sg\"]\n\034CEntityMessagePropagateForce\022\034\n\007im",
-      "pulse\030\001 \001(\0132\013.CMsgVector\022\037\n\nentity_msg\030\002" +
-      " \001(\0132\013.CEntityMsg\"\271\001\n\025CEntityMessageDoSp" +
-      "ark\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\023\n\013enti" +
-      "tyindex\030\002 \001(\r\022\016\n\006radius\030\003 \001(\002\022\r\n\005color\030\004" +
-      " \001(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010du" +
-      "ration\030\007 \001(\002\022\037\n\nentity_msg\030\010 \001(\0132\013.CEnti" +
-      "tyMsg\"g\n\026CEntityMessageFixAngle\022\020\n\010relat" +
-      "ive\030\001 \001(\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngle\022\037\n" +
-      "\nentity_msg\030\003 \001(\0132\013.CEntityMsg\"%\n\021CUserM" +
-      "sg_HudError\022\020\n\010order_id\030\001 \001(\005\"K\n\'CUserMs",
-      "g_CustomGameEvent_ClientToServer\022\022\n\neven" +
-      "t_name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"K\n\'CUserMsg_C" +
-      "ustomGameEvent_ServerToClient\022\022\n\nevent_n" +
-      "ame\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Trac" +
-      "kedControllerInput_ClientToServer\022\014\n\004dat" +
-      "a\030\001 \001(\014*\363\006\n\021EBaseUserMessages\022\027\n\023UM_Achi" +
-      "evementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025U" +
-      "M_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTime" +
-      "scale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_F" +
-      "ade\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013UM_HintText\020m",
-      "\022\r\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_Ke" +
-      "yHintText\020p\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Re" +
-      "questState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumb" +
-      "le\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n" +
-      "\021UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM" +
-      "_ShakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_Screen" +
-      "Tilt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n" +
-      "\014UM_VoiceMask\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022" +
-      "\021\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022" +
-      "\n\rUM_AmmoDenied\020\204\001\022\026\n\021UM_CrosshairAngle\020",
-      "\205\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001" +
-      "\022\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_" +
-      "CameraTransition\020\217\001\022\026\n\021UM_AudioParameter" +
-      "\020\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudEr" +
-      "ror\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_An" +
-      "imGraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPul" +
-      "se\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\020\n\013U" +
-      "M_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n" +
-      "\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001" +
-      "\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Propagat",
-      "eForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngl" +
-      "e\020\215\001*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAPT" +
-      "IC_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE" +
-      "_MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG" +
-      "\020\002B7\n skadistats.clarity.wire.s2.protoB\016" +
-      "S2UserMessagesH\001\200\001\000"
+      "s.proto\"U\n\020CUserMessageFade\022\020\n\010duration\030" +
+      "\001 \001(\r\022\021\n\thold_time\030\002 \001(\r\022\r\n\005flags\030\003 \001(\r\022" +
+      "\r\n\005color\030\004 \001(\007\"\216\001\n\024CUserMessageSayText2\022" +
+      "\023\n\013entityindex\030\001 \001(\r\022\014\n\004chat\030\002 \001(\010\022\023\n\013me" +
+      "ssagename\030\003 \001(\t\022\016\n\006param1\030\004 \001(\t\022\016\n\006param" +
+      "2\030\005 \001(\t\022\016\n\006param3\030\006 \001(\t\022\016\n\006param4\030\007 \001(\t\"" +
+      "2\n\023CUserMessageTextMsg\022\014\n\004dest\030\001 \001(\r\022\r\n\005" +
+      "param\030\002 \003(\t\"\026\n\024CUserMessageResetHUD\"8\n\025C" +
+      "UserMessageSendAudio\022\021\n\tsoundname\030\001 \001(\t\022",
+      "\014\n\004stop\030\002 \001(\010\"n\n\032CUserMessageAudioParame" +
+      "ter\022\026\n\016parameter_type\030\001 \001(\r\022\026\n\016name_hash" +
+      "_code\030\002 \001(\r\022\r\n\005value\030\003 \001(\002\022\021\n\tint_value\030" +
+      "\004 \001(\r\"W\n\025CUserMessageVoiceMask\022\027\n\017gameru" +
+      "les_masks\030\001 \003(\r\022\021\n\tban_masks\030\002 \003(\r\022\022\n\nmo" +
+      "d_enable\030\003 \001(\010\";\n\030CEntityMessagePlayJing" +
+      "le\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg\"m\n\027C" +
+      "UserMessageHapticPulse\022\017\n\007hand_id\030\001 \001(\005\022" +
+      "A\n\npulse_type\030\002 \001(\0162\021.EHapticPulseType:\032" +
+      "VR_HAND_HAPTIC_PULSE_LIGHT\"T\n\033CEntityMes",
+      "sageScreenOverlay\022\024\n\014start_effect\030\001 \001(\010\022" +
+      "\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMsg\"W\n\035CEnt" +
+      "ityMessageRemoveAllDecals\022\025\n\rremove_deca" +
+      "ls\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMs" +
+      "g\"]\n\034CEntityMessagePropagateForce\022\034\n\007imp" +
+      "ulse\030\001 \001(\0132\013.CMsgVector\022\037\n\nentity_msg\030\002 " +
+      "\001(\0132\013.CEntityMsg\"\271\001\n\025CEntityMessageDoSpa" +
+      "rk\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\023\n\013entit" +
+      "yindex\030\002 \001(\r\022\016\n\006radius\030\003 \001(\002\022\r\n\005color\030\004 " +
+      "\001(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010dur",
+      "ation\030\007 \001(\002\022\037\n\nentity_msg\030\010 \001(\0132\013.CEntit" +
+      "yMsg\"g\n\026CEntityMessageFixAngle\022\020\n\010relati" +
+      "ve\030\001 \001(\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngle\022\037\n\n" +
+      "entity_msg\030\003 \001(\0132\013.CEntityMsg\"%\n\021CUserMs" +
+      "g_HudError\022\020\n\010order_id\030\001 \001(\005\"K\n\'CUserMsg" +
+      "_CustomGameEvent_ClientToServer\022\022\n\nevent" +
+      "_name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"K\n\'CUserMsg_Cu" +
+      "stomGameEvent_ServerToClient\022\022\n\nevent_na" +
+      "me\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Track" +
+      "edControllerInput_ClientToServer\022\014\n\004data",
+      "\030\001 \001(\014*\363\006\n\021EBaseUserMessages\022\027\n\023UM_Achie" +
+      "vementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM" +
+      "_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimes" +
+      "cale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fa" +
+      "de\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013UM_HintText\020m\022" +
+      "\r\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_Key" +
+      "HintText\020p\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Req" +
+      "uestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumbl" +
+      "e\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021" +
+      "UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_",
+      "ShakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_ScreenT" +
+      "ilt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n\014" +
+      "UM_VoiceMask\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022\021" +
+      "\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n" +
+      "\rUM_AmmoDenied\020\204\001\022\026\n\021UM_CrosshairAngle\020\205" +
+      "\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022" +
+      "\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_C" +
+      "ameraTransition\020\217\001\022\026\n\021UM_AudioParameter\020" +
+      "\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudErr" +
+      "or\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_Ani",
+      "mGraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPuls" +
+      "e\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\020\n\013UM" +
+      "_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\r" +
+      "EM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022" +
+      "\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Propagate" +
+      "Force\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle" +
+      "\020\215\001*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAPTI" +
+      "C_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_" +
+      "MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG\020" +
+      "\002B7\n skadistats.clarity.wire.s2.protoB\016S",
+      "2UserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10954,98 +12231,110 @@ public final class S2UserMessages {
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor(),
         }, assigner);
-    internal_static_CUserMessageSayText2_descriptor =
+    internal_static_CUserMessageFade_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_CUserMessageFade_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessageFade_descriptor,
+        new java.lang.String[] { "Duration", "HoldTime", "Flags", "Color", });
+    internal_static_CUserMessageSayText2_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_CUserMessageSayText2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageSayText2_descriptor,
         new java.lang.String[] { "Entityindex", "Chat", "Messagename", "Param1", "Param2", "Param3", "Param4", });
     internal_static_CUserMessageTextMsg_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CUserMessageTextMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageTextMsg_descriptor,
         new java.lang.String[] { "Dest", "Param", });
     internal_static_CUserMessageResetHUD_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CUserMessageResetHUD_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageResetHUD_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMessageSendAudio_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CUserMessageSendAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageSendAudio_descriptor,
         new java.lang.String[] { "Soundname", "Stop", });
+    internal_static_CUserMessageAudioParameter_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_CUserMessageAudioParameter_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessageAudioParameter_descriptor,
+        new java.lang.String[] { "ParameterType", "NameHashCode", "Value", "IntValue", });
     internal_static_CUserMessageVoiceMask_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CUserMessageVoiceMask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageVoiceMask_descriptor,
         new java.lang.String[] { "GamerulesMasks", "BanMasks", "ModEnable", });
     internal_static_CEntityMessagePlayJingle_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CEntityMessagePlayJingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePlayJingle_descriptor,
         new java.lang.String[] { "EntityMsg", });
     internal_static_CUserMessageHapticPulse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CUserMessageHapticPulse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHapticPulse_descriptor,
         new java.lang.String[] { "HandId", "PulseType", });
     internal_static_CEntityMessageScreenOverlay_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CEntityMessageScreenOverlay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageScreenOverlay_descriptor,
         new java.lang.String[] { "StartEffect", "EntityMsg", });
     internal_static_CEntityMessageRemoveAllDecals_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CEntityMessageRemoveAllDecals_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageRemoveAllDecals_descriptor,
         new java.lang.String[] { "RemoveDecals", "EntityMsg", });
     internal_static_CEntityMessagePropagateForce_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CEntityMessagePropagateForce_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePropagateForce_descriptor,
         new java.lang.String[] { "Impulse", "EntityMsg", });
     internal_static_CEntityMessageDoSpark_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CEntityMessageDoSpark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageDoSpark_descriptor,
         new java.lang.String[] { "Origin", "Entityindex", "Radius", "Color", "Beams", "Thick", "Duration", "EntityMsg", });
     internal_static_CEntityMessageFixAngle_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CEntityMessageFixAngle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageFixAngle_descriptor,
         new java.lang.String[] { "Relative", "Angle", "EntityMsg", });
     internal_static_CUserMsg_HudError_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CUserMsg_HudError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_HudError_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMsg_CustomGameEvent_ServerToClient_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CUserMsg_CustomGameEvent_ServerToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_ServerToClient_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CUserMsg_TrackedControllerInput_ClientToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor,
