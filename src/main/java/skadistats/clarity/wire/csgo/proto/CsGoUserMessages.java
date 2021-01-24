@@ -46472,6 +46472,872 @@ public final class CsGoUserMessages {
     // @@protoc_insertion_point(class_scope:CCSUsrMsg_ServerRankRevealAll)
   }
 
+  public interface CCSUsrMsg_WeaponSoundOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_WeaponSound)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 entidx = 1;</code>
+     */
+    boolean hasEntidx();
+    /**
+     * <code>optional int32 entidx = 1;</code>
+     */
+    int getEntidx();
+
+    /**
+     * <code>optional float origin_x = 2;</code>
+     */
+    boolean hasOriginX();
+    /**
+     * <code>optional float origin_x = 2;</code>
+     */
+    float getOriginX();
+
+    /**
+     * <code>optional float origin_y = 3;</code>
+     */
+    boolean hasOriginY();
+    /**
+     * <code>optional float origin_y = 3;</code>
+     */
+    float getOriginY();
+
+    /**
+     * <code>optional float origin_z = 4;</code>
+     */
+    boolean hasOriginZ();
+    /**
+     * <code>optional float origin_z = 4;</code>
+     */
+    float getOriginZ();
+
+    /**
+     * <code>optional string sound = 5;</code>
+     */
+    boolean hasSound();
+    /**
+     * <code>optional string sound = 5;</code>
+     */
+    java.lang.String getSound();
+    /**
+     * <code>optional string sound = 5;</code>
+     */
+    com.google.protobuf.ByteString
+        getSoundBytes();
+
+    /**
+     * <code>optional float timestamp = 6;</code>
+     */
+    boolean hasTimestamp();
+    /**
+     * <code>optional float timestamp = 6;</code>
+     */
+    float getTimestamp();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_WeaponSound}
+   */
+  public static final class CCSUsrMsg_WeaponSound extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_WeaponSound)
+      CCSUsrMsg_WeaponSoundOrBuilder {
+    // Use CCSUsrMsg_WeaponSound.newBuilder() to construct.
+    private CCSUsrMsg_WeaponSound(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCSUsrMsg_WeaponSound(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCSUsrMsg_WeaponSound defaultInstance;
+    public static CCSUsrMsg_WeaponSound getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCSUsrMsg_WeaponSound getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_WeaponSound(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              entidx_ = input.readInt32();
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              originX_ = input.readFloat();
+              break;
+            }
+            case 29: {
+              bitField0_ |= 0x00000004;
+              originY_ = input.readFloat();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000008;
+              originZ_ = input.readFloat();
+              break;
+            }
+            case 42: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000010;
+              sound_ = bs;
+              break;
+            }
+            case 53: {
+              bitField0_ |= 0x00000020;
+              timestamp_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.proto.CsGoUserMessages.internal_static_CCSUsrMsg_WeaponSound_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.proto.CsGoUserMessages.internal_static_CCSUsrMsg_WeaponSound_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.class, skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_WeaponSound> PARSER =
+        new com.google.protobuf.AbstractParser<CCSUsrMsg_WeaponSound>() {
+      public CCSUsrMsg_WeaponSound parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_WeaponSound(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_WeaponSound> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ENTIDX_FIELD_NUMBER = 1;
+    private int entidx_;
+    /**
+     * <code>optional int32 entidx = 1;</code>
+     */
+    public boolean hasEntidx() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 entidx = 1;</code>
+     */
+    public int getEntidx() {
+      return entidx_;
+    }
+
+    public static final int ORIGIN_X_FIELD_NUMBER = 2;
+    private float originX_;
+    /**
+     * <code>optional float origin_x = 2;</code>
+     */
+    public boolean hasOriginX() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional float origin_x = 2;</code>
+     */
+    public float getOriginX() {
+      return originX_;
+    }
+
+    public static final int ORIGIN_Y_FIELD_NUMBER = 3;
+    private float originY_;
+    /**
+     * <code>optional float origin_y = 3;</code>
+     */
+    public boolean hasOriginY() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional float origin_y = 3;</code>
+     */
+    public float getOriginY() {
+      return originY_;
+    }
+
+    public static final int ORIGIN_Z_FIELD_NUMBER = 4;
+    private float originZ_;
+    /**
+     * <code>optional float origin_z = 4;</code>
+     */
+    public boolean hasOriginZ() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional float origin_z = 4;</code>
+     */
+    public float getOriginZ() {
+      return originZ_;
+    }
+
+    public static final int SOUND_FIELD_NUMBER = 5;
+    private java.lang.Object sound_;
+    /**
+     * <code>optional string sound = 5;</code>
+     */
+    public boolean hasSound() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional string sound = 5;</code>
+     */
+    public java.lang.String getSound() {
+      java.lang.Object ref = sound_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          sound_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string sound = 5;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSoundBytes() {
+      java.lang.Object ref = sound_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sound_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TIMESTAMP_FIELD_NUMBER = 6;
+    private float timestamp_;
+    /**
+     * <code>optional float timestamp = 6;</code>
+     */
+    public boolean hasTimestamp() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional float timestamp = 6;</code>
+     */
+    public float getTimestamp() {
+      return timestamp_;
+    }
+
+    private void initFields() {
+      entidx_ = 0;
+      originX_ = 0F;
+      originY_ = 0F;
+      originZ_ = 0F;
+      sound_ = "";
+      timestamp_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, entidx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, originX_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeFloat(3, originY_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFloat(4, originZ_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeBytes(5, getSoundBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeFloat(6, timestamp_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, entidx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, originX_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, originY_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, originZ_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(5, getSoundBytes());
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(6, timestamp_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_WeaponSound}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_WeaponSound)
+        skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSoundOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.proto.CsGoUserMessages.internal_static_CCSUsrMsg_WeaponSound_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.proto.CsGoUserMessages.internal_static_CCSUsrMsg_WeaponSound_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.class, skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        entidx_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        originX_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        originY_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        originZ_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        sound_ = "";
+        bitField0_ = (bitField0_ & ~0x00000010);
+        timestamp_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.proto.CsGoUserMessages.internal_static_CCSUsrMsg_WeaponSound_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound build() {
+        skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound buildPartial() {
+        skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound result = new skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.entidx_ = entidx_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.originX_ = originX_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.originY_ = originY_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.originZ_ = originZ_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.sound_ = sound_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.timestamp_ = timestamp_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound) {
+          return mergeFrom((skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound other) {
+        if (other == skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound.getDefaultInstance()) return this;
+        if (other.hasEntidx()) {
+          setEntidx(other.getEntidx());
+        }
+        if (other.hasOriginX()) {
+          setOriginX(other.getOriginX());
+        }
+        if (other.hasOriginY()) {
+          setOriginY(other.getOriginY());
+        }
+        if (other.hasOriginZ()) {
+          setOriginZ(other.getOriginZ());
+        }
+        if (other.hasSound()) {
+          bitField0_ |= 0x00000010;
+          sound_ = other.sound_;
+          onChanged();
+        }
+        if (other.hasTimestamp()) {
+          setTimestamp(other.getTimestamp());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.proto.CsGoUserMessages.CCSUsrMsg_WeaponSound) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int entidx_ ;
+      /**
+       * <code>optional int32 entidx = 1;</code>
+       */
+      public boolean hasEntidx() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 entidx = 1;</code>
+       */
+      public int getEntidx() {
+        return entidx_;
+      }
+      /**
+       * <code>optional int32 entidx = 1;</code>
+       */
+      public Builder setEntidx(int value) {
+        bitField0_ |= 0x00000001;
+        entidx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 entidx = 1;</code>
+       */
+      public Builder clearEntidx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entidx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float originX_ ;
+      /**
+       * <code>optional float origin_x = 2;</code>
+       */
+      public boolean hasOriginX() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float origin_x = 2;</code>
+       */
+      public float getOriginX() {
+        return originX_;
+      }
+      /**
+       * <code>optional float origin_x = 2;</code>
+       */
+      public Builder setOriginX(float value) {
+        bitField0_ |= 0x00000002;
+        originX_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float origin_x = 2;</code>
+       */
+      public Builder clearOriginX() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        originX_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float originY_ ;
+      /**
+       * <code>optional float origin_y = 3;</code>
+       */
+      public boolean hasOriginY() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float origin_y = 3;</code>
+       */
+      public float getOriginY() {
+        return originY_;
+      }
+      /**
+       * <code>optional float origin_y = 3;</code>
+       */
+      public Builder setOriginY(float value) {
+        bitField0_ |= 0x00000004;
+        originY_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float origin_y = 3;</code>
+       */
+      public Builder clearOriginY() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        originY_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float originZ_ ;
+      /**
+       * <code>optional float origin_z = 4;</code>
+       */
+      public boolean hasOriginZ() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float origin_z = 4;</code>
+       */
+      public float getOriginZ() {
+        return originZ_;
+      }
+      /**
+       * <code>optional float origin_z = 4;</code>
+       */
+      public Builder setOriginZ(float value) {
+        bitField0_ |= 0x00000008;
+        originZ_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float origin_z = 4;</code>
+       */
+      public Builder clearOriginZ() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        originZ_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sound_ = "";
+      /**
+       * <code>optional string sound = 5;</code>
+       */
+      public boolean hasSound() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional string sound = 5;</code>
+       */
+      public java.lang.String getSound() {
+        java.lang.Object ref = sound_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            sound_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string sound = 5;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSoundBytes() {
+        java.lang.Object ref = sound_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sound_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string sound = 5;</code>
+       */
+      public Builder setSound(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        sound_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sound = 5;</code>
+       */
+      public Builder clearSound() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        sound_ = getDefaultInstance().getSound();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string sound = 5;</code>
+       */
+      public Builder setSoundBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000010;
+        sound_ = value;
+        onChanged();
+        return this;
+      }
+
+      private float timestamp_ ;
+      /**
+       * <code>optional float timestamp = 6;</code>
+       */
+      public boolean hasTimestamp() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional float timestamp = 6;</code>
+       */
+      public float getTimestamp() {
+        return timestamp_;
+      }
+      /**
+       * <code>optional float timestamp = 6;</code>
+       */
+      public Builder setTimestamp(float value) {
+        bitField0_ |= 0x00000020;
+        timestamp_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float timestamp = 6;</code>
+       */
+      public Builder clearTimestamp() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        timestamp_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_WeaponSound)
+    }
+
+    static {
+      defaultInstance = new CCSUsrMsg_WeaponSound(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_WeaponSound)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_VGUIMenu_descriptor;
   private static
@@ -46842,6 +47708,11 @@ public final class CsGoUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCSUsrMsg_ServerRankRevealAll_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_WeaponSound_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsg_WeaponSound_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -47003,53 +47874,56 @@ public final class CsGoUserMessages {
       "CCSUsrMsg_WarmupHasEnded\022\r\n\005dummy\030\001 \001(\005\"",
       "%\n\024CCSUsrMsg_ClientInfo\022\r\n\005dummy\030\001 \001(\005\">" +
       "\n\035CCSUsrMsg_ServerRankRevealAll\022\035\n\025secon" +
-      "ds_till_shutdown\030\001 \001(\005*\336\r\n\026ECstrike15Use" +
-      "rMessages\022\022\n\016CS_UM_VGUIMenu\020\001\022\020\n\014CS_UM_G" +
-      "eiger\020\002\022\017\n\013CS_UM_Train\020\003\022\021\n\rCS_UM_HudTex" +
-      "t\020\004\022\021\n\rCS_UM_SayText\020\005\022\022\n\016CS_UM_SayText2" +
-      "\020\006\022\021\n\rCS_UM_TextMsg\020\007\022\020\n\014CS_UM_HudMsg\020\010\022" +
-      "\022\n\016CS_UM_ResetHud\020\t\022\023\n\017CS_UM_GameTitle\020\n" +
-      "\022\017\n\013CS_UM_Shake\020\014\022\016\n\nCS_UM_Fade\020\r\022\020\n\014CS_" +
-      "UM_Rumble\020\016\022\026\n\022CS_UM_CloseCaption\020\017\022\034\n\030C",
-      "S_UM_CloseCaptionDirect\020\020\022\023\n\017CS_UM_SendA" +
-      "udio\020\021\022\022\n\016CS_UM_RawAudio\020\022\022\023\n\017CS_UM_Voic" +
-      "eMask\020\023\022\026\n\022CS_UM_RequestState\020\024\022\020\n\014CS_UM" +
-      "_Damage\020\025\022\023\n\017CS_UM_RadioText\020\026\022\022\n\016CS_UM_" +
-      "HintText\020\027\022\025\n\021CS_UM_KeyHintText\020\030\022$\n CS_" +
-      "UM_ProcessSpottedEntityUpdate\020\031\022\026\n\022CS_UM" +
-      "_ReloadEffect\020\032\022\025\n\021CS_UM_AdjustMoney\020\033\022\031" +
-      "\n\025CS_UM_UpdateTeamMoney\020\034\022\033\n\027CS_UM_StopS" +
-      "pectatorMode\020\035\022\021\n\rCS_UM_KillCam\020\036\022\032\n\026CS_" +
-      "UM_DesiredTimescale\020\037\022\032\n\026CS_UM_CurrentTi",
-      "mescale\020 \022\032\n\026CS_UM_AchievementEvent\020!\022\034\n" +
-      "\030CS_UM_MatchEndConditions\020\"\022\033\n\027CS_UM_Dis" +
-      "connectToLobby\020#\022\033\n\027CS_UM_PlayerStatsUpd" +
-      "ate\020$\022\032\n\026CS_UM_DisplayInventory\020%\022\030\n\024CS_" +
-      "UM_WarmupHasEnded\020&\022\024\n\020CS_UM_ClientInfo\020" +
-      "\'\022\022\n\016CS_UM_XRankGet\020(\022\022\n\016CS_UM_XRankUpd\020" +
-      ")\022\030\n\024CS_UM_CallVoteFailed\020-\022\023\n\017CS_UM_Vot" +
-      "eStart\020.\022\022\n\016CS_UM_VotePass\020/\022\024\n\020CS_UM_Vo" +
-      "teFailed\0200\022\023\n\017CS_UM_VoteSetup\0201\022\035\n\031CS_UM" +
-      "_ServerRankRevealAll\0202\022&\n\"CS_UM_SendLast",
-      "KillerDamageToClient\0203\022\032\n\026CS_UM_ServerRa" +
-      "nkUpdate\0204\022\024\n\020CS_UM_ItemPickup\0205\022\022\n\016CS_U" +
-      "M_ShowMenu\0206\022\021\n\rCS_UM_BarTime\0207\022\024\n\020CS_UM" +
-      "_AmmoDenied\0208\022\031\n\025CS_UM_MarkAchievement\0209" +
-      "\022\032\n\026CS_UM_MatchStatsUpdate\020:\022\022\n\016CS_UM_It" +
-      "emDrop\020;\022\031\n\025CS_UM_GlowPropTurnOff\020<\022\035\n\031C" +
-      "S_UM_SendPlayerItemDrops\020=\022\036\n\032CS_UM_Roun" +
-      "dBackupFilenames\020>\022\035\n\031CS_UM_SendPlayerIt" +
-      "emFound\020?\022\023\n\017CS_UM_ReportHit\020@\022\022\n\016CS_UM_" +
-      "XpUpdate\020A\022\027\n\023CS_UM_QuestProgress\020B\022\036\n\032C",
-      "S_UM_ScoreLeaderboardData\020C\022%\n!CS_UM_Pla" +
-      "yerDecalDigitalSignature\020D\022\025\n\021CS_UM_Weap" +
-      "onSound\020E\022\037\n\033CS_UM_UpdateScreenHealthBar" +
-      "\020F\022 \n\034CS_UM_EntityOutlineHighlight\020G\022\016\n\n" +
-      "CS_UM_SSUI\020H\022\027\n\023CS_UM_SurvivalStats\020I\022\034\n" +
-      "\030CS_UM_DisconnectToLobby2\020J\022\"\n\036CS_UM_End" +
-      "OfMatchAllPlayersData\020KB;\n\"skadistats.cl" +
-      "arity.wire.csgo.protoB\020CsGoUserMessagesH" +
-      "\001\200\001\000"
+      "ds_till_shutdown\030\001 \001(\005\"\177\n\025CCSUsrMsg_Weap" +
+      "onSound\022\016\n\006entidx\030\001 \001(\005\022\020\n\010origin_x\030\002 \001(" +
+      "\002\022\020\n\010origin_y\030\003 \001(\002\022\020\n\010origin_z\030\004 \001(\002\022\r\n" +
+      "\005sound\030\005 \001(\t\022\021\n\ttimestamp\030\006 \001(\002*\336\r\n\026ECst" +
+      "rike15UserMessages\022\022\n\016CS_UM_VGUIMenu\020\001\022\020" +
+      "\n\014CS_UM_Geiger\020\002\022\017\n\013CS_UM_Train\020\003\022\021\n\rCS_" +
+      "UM_HudText\020\004\022\021\n\rCS_UM_SayText\020\005\022\022\n\016CS_UM" +
+      "_SayText2\020\006\022\021\n\rCS_UM_TextMsg\020\007\022\020\n\014CS_UM_",
+      "HudMsg\020\010\022\022\n\016CS_UM_ResetHud\020\t\022\023\n\017CS_UM_Ga" +
+      "meTitle\020\n\022\017\n\013CS_UM_Shake\020\014\022\016\n\nCS_UM_Fade" +
+      "\020\r\022\020\n\014CS_UM_Rumble\020\016\022\026\n\022CS_UM_CloseCapti" +
+      "on\020\017\022\034\n\030CS_UM_CloseCaptionDirect\020\020\022\023\n\017CS" +
+      "_UM_SendAudio\020\021\022\022\n\016CS_UM_RawAudio\020\022\022\023\n\017C" +
+      "S_UM_VoiceMask\020\023\022\026\n\022CS_UM_RequestState\020\024" +
+      "\022\020\n\014CS_UM_Damage\020\025\022\023\n\017CS_UM_RadioText\020\026\022" +
+      "\022\n\016CS_UM_HintText\020\027\022\025\n\021CS_UM_KeyHintText" +
+      "\020\030\022$\n CS_UM_ProcessSpottedEntityUpdate\020\031" +
+      "\022\026\n\022CS_UM_ReloadEffect\020\032\022\025\n\021CS_UM_Adjust",
+      "Money\020\033\022\031\n\025CS_UM_UpdateTeamMoney\020\034\022\033\n\027CS" +
+      "_UM_StopSpectatorMode\020\035\022\021\n\rCS_UM_KillCam" +
+      "\020\036\022\032\n\026CS_UM_DesiredTimescale\020\037\022\032\n\026CS_UM_" +
+      "CurrentTimescale\020 \022\032\n\026CS_UM_AchievementE" +
+      "vent\020!\022\034\n\030CS_UM_MatchEndConditions\020\"\022\033\n\027" +
+      "CS_UM_DisconnectToLobby\020#\022\033\n\027CS_UM_Playe" +
+      "rStatsUpdate\020$\022\032\n\026CS_UM_DisplayInventory" +
+      "\020%\022\030\n\024CS_UM_WarmupHasEnded\020&\022\024\n\020CS_UM_Cl" +
+      "ientInfo\020\'\022\022\n\016CS_UM_XRankGet\020(\022\022\n\016CS_UM_" +
+      "XRankUpd\020)\022\030\n\024CS_UM_CallVoteFailed\020-\022\023\n\017",
+      "CS_UM_VoteStart\020.\022\022\n\016CS_UM_VotePass\020/\022\024\n" +
+      "\020CS_UM_VoteFailed\0200\022\023\n\017CS_UM_VoteSetup\0201" +
+      "\022\035\n\031CS_UM_ServerRankRevealAll\0202\022&\n\"CS_UM" +
+      "_SendLastKillerDamageToClient\0203\022\032\n\026CS_UM" +
+      "_ServerRankUpdate\0204\022\024\n\020CS_UM_ItemPickup\020" +
+      "5\022\022\n\016CS_UM_ShowMenu\0206\022\021\n\rCS_UM_BarTime\0207" +
+      "\022\024\n\020CS_UM_AmmoDenied\0208\022\031\n\025CS_UM_MarkAchi" +
+      "evement\0209\022\032\n\026CS_UM_MatchStatsUpdate\020:\022\022\n" +
+      "\016CS_UM_ItemDrop\020;\022\031\n\025CS_UM_GlowPropTurnO" +
+      "ff\020<\022\035\n\031CS_UM_SendPlayerItemDrops\020=\022\036\n\032C",
+      "S_UM_RoundBackupFilenames\020>\022\035\n\031CS_UM_Sen" +
+      "dPlayerItemFound\020?\022\023\n\017CS_UM_ReportHit\020@\022" +
+      "\022\n\016CS_UM_XpUpdate\020A\022\027\n\023CS_UM_QuestProgre" +
+      "ss\020B\022\036\n\032CS_UM_ScoreLeaderboardData\020C\022%\n!" +
+      "CS_UM_PlayerDecalDigitalSignature\020D\022\025\n\021C" +
+      "S_UM_WeaponSound\020E\022\037\n\033CS_UM_UpdateScreen" +
+      "HealthBar\020F\022 \n\034CS_UM_EntityOutlineHighli" +
+      "ght\020G\022\016\n\nCS_UM_SSUI\020H\022\027\n\023CS_UM_SurvivalS" +
+      "tats\020I\022\034\n\030CS_UM_DisconnectToLobby2\020J\022\"\n\036" +
+      "CS_UM_EndOfMatchAllPlayersData\020KB;\n\"skad",
+      "istats.clarity.wire.csgo.protoB\020CsGoUser" +
+      "MessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -47509,6 +48383,12 @@ public final class CsGoUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCSUsrMsg_ServerRankRevealAll_descriptor,
         new java.lang.String[] { "SecondsTillShutdown", });
+    internal_static_CCSUsrMsg_WeaponSound_descriptor =
+      getDescriptor().getMessageTypes().get(64);
+    internal_static_CCSUsrMsg_WeaponSound_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsg_WeaponSound_descriptor,
+        new java.lang.String[] { "Entidx", "OriginX", "OriginY", "OriginZ", "Sound", "Timestamp", });
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.csgo.proto.CsGoGcMessages.getDescriptor();
   }

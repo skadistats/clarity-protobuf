@@ -506,3 +506,11 @@ message CCSUsrMsg_ServerRankRevealAll {
 	optional int32 seconds_till_shutdown = 1;
 }
 
+message CCSUsrMsg_WeaponSound {
+	optional int32 entidx = 1;
+	optional float origin_x = 2;
+	optional float origin_y = 3;
+	optional float origin_z = 4;
+	optional string sound = 5;
+	optional float timestamp = 6;
+}
