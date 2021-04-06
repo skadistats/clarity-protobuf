@@ -9163,6 +9163,406 @@ public final class NetMessages {
     // @@protoc_insertion_point(class_scope:CCLCMsg_CmdKeyValues)
   }
 
+  public interface CCLCMsg_RconServerDetailsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCLCMsg_RconServerDetails)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bytes token = 1;</code>
+     */
+    boolean hasToken();
+    /**
+     * <code>optional bytes token = 1;</code>
+     */
+    com.google.protobuf.ByteString getToken();
+  }
+  /**
+   * Protobuf type {@code CCLCMsg_RconServerDetails}
+   */
+  public static final class CCLCMsg_RconServerDetails extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCLCMsg_RconServerDetails)
+      CCLCMsg_RconServerDetailsOrBuilder {
+    // Use CCLCMsg_RconServerDetails.newBuilder() to construct.
+    private CCLCMsg_RconServerDetails(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCLCMsg_RconServerDetails(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCLCMsg_RconServerDetails defaultInstance;
+    public static CCLCMsg_RconServerDetails getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCLCMsg_RconServerDetails getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCLCMsg_RconServerDetails(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              token_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CCLCMsg_RconServerDetails_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CCLCMsg_RconServerDetails_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.class, skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCLCMsg_RconServerDetails> PARSER =
+        new com.google.protobuf.AbstractParser<CCLCMsg_RconServerDetails>() {
+      public CCLCMsg_RconServerDetails parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCLCMsg_RconServerDetails(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCLCMsg_RconServerDetails> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int TOKEN_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString token_;
+    /**
+     * <code>optional bytes token = 1;</code>
+     */
+    public boolean hasToken() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional bytes token = 1;</code>
+     */
+    public com.google.protobuf.ByteString getToken() {
+      return token_;
+    }
+
+    private void initFields() {
+      token_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, token_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, token_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCLCMsg_RconServerDetails}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCLCMsg_RconServerDetails)
+        skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetailsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CCLCMsg_RconServerDetails_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CCLCMsg_RconServerDetails_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.class, skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        token_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.common.proto.NetMessages.internal_static_CCLCMsg_RconServerDetails_descriptor;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails getDefaultInstanceForType() {
+        return skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails build() {
+        skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails buildPartial() {
+        skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails result = new skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.token_ = token_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails) {
+          return mergeFrom((skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails other) {
+        if (other == skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails.getDefaultInstance()) return this;
+        if (other.hasToken()) {
+          setToken(other.getToken());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.common.proto.NetMessages.CCLCMsg_RconServerDetails) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString token_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes token = 1;</code>
+       */
+      public boolean hasToken() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bytes token = 1;</code>
+       */
+      public com.google.protobuf.ByteString getToken() {
+        return token_;
+      }
+      /**
+       * <code>optional bytes token = 1;</code>
+       */
+      public Builder setToken(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        token_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes token = 1;</code>
+       */
+      public Builder clearToken() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        token_ = getDefaultInstance().getToken();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCLCMsg_RconServerDetails)
+    }
+
+    static {
+      defaultInstance = new CCLCMsg_RconServerDetails(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCLCMsg_RconServerDetails)
+  }
+
   public interface CSVCMsg_GameEventListOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_GameEventList)
       com.google.protobuf.MessageOrBuilder {
@@ -24186,6 +24586,11 @@ public final class NetMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCLCMsg_CmdKeyValues_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCLCMsg_RconServerDetails_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCLCMsg_RconServerDetails_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_GameEventList_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -24311,75 +24716,76 @@ public final class NetMessages {
       "\030\001 \001(\010\"\024\n\022CCLCMsg_ServerPing\"Z\n\024CCLCMsg_",
       "RequestPause\022-\n\npause_type\030\001 \001(\0162\017.Reque" +
       "stPause_t:\010RP_PAUSE\022\023\n\013pause_group\030\002 \001(\005" +
-      "\"$\n\024CCLCMsg_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"\321" +
-      "\001\n\025CSVCMsg_GameEventList\0228\n\013descriptors\030" +
-      "\001 \003(\0132#.CSVCMsg_GameEventList.descriptor" +
-      "_t\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032" +
-      "Y\n\014descriptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name" +
-      "\030\002 \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEvent" +
-      "List.key_t\"\335\004\n\026CSVCMsg_PacketEntities\022\023\n" +
-      "\013max_entries\030\001 \001(\005\022\027\n\017updated_entries\030\002 ",
-      "\001(\005\022\020\n\010is_delta\030\003 \001(\010\022\027\n\017update_baseline" +
-      "\030\004 \001(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006" +
-      " \001(\005\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022pending_ful" +
-      "l_frame\030\010 \001(\010\022 \n\030active_spawngroup_handl" +
-      "e\030\t \001(\r\022\'\n\037max_spawngroup_creationsequen" +
-      "ce\030\n \001(\r\022\027\n\017last_cmd_number\030\013 \001(\r\022\023\n\013ser" +
-      "ver_tick\030\014 \001(\r\022\033\n\023serialized_entities\030\r " +
-      "\001(\014\022H\n\022command_queue_info\030\016 \001(\0132,.CSVCMs" +
-      "g_PacketEntities.command_queue_info_t\032\262\001" +
-      "\n\024command_queue_info_t\022\027\n\017commands_queue",
-      "d\030\001 \001(\r\022\"\n\032command_queue_desired_size\030\002 " +
-      "\001(\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035\n\025ti" +
-      "me_dilation_percent\030\004 \001(\002\022\037\n\027discarded_c" +
-      "ommand_ticks\030\005 \001(\r\"\325\003\n\022CSVCMsg_ServerInf" +
-      "o\022\020\n\010protocol\030\001 \001(\005\022\024\n\014server_count\030\002 \001(" +
-      "\005\022\024\n\014is_dedicated\030\003 \001(\010\022\017\n\007is_hltv\030\004 \001(\010" +
-      "\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004c_os\030\006 \001(\005\022\017\n\007map" +
-      "_crc\030\007 \001(\007\022\022\n\nclient_crc\030\010 \001(\007\022\030\n\020string" +
-      "_table_crc\030\t \001(\007\022\023\n\013max_clients\030\n \001(\005\022\023\n" +
-      "\013max_classes\030\013 \001(\005\022\023\n\013player_slot\030\014 \001(\005\022",
-      "\025\n\rtick_interval\030\r \001(\002\022\020\n\010game_dir\030\016 \001(\t" +
-      "\022\020\n\010map_name\030\017 \001(\t\022\020\n\010sky_name\030\020 \001(\t\022\021\n\t" +
-      "host_name\030\021 \001(\t\022\022\n\naddon_name\030\022 \001(\t\022>\n\023g" +
-      "ame_session_config\030\023 \001(\0132!.CSVCMsg_GameS" +
-      "essionConfiguration\022\035\n\025game_session_mani" +
-      "fest\030\024 \001(\014\"\244\001\n\021CSVCMsg_ClassInfo\022\030\n\020crea" +
-      "te_on_client\030\001 \001(\010\022+\n\007classes\030\002 \003(\0132\032.CS" +
-      "VCMsg_ClassInfo.class_t\032H\n\007class_t\022\020\n\010cl" +
-      "ass_id\030\001 \001(\005\022\027\n\017data_table_name\030\002 \001(\t\022\022\n" +
-      "\nclass_name\030\003 \001(\t\"5\n\017CSVCMsg_SetView\022\024\n\014",
-      "entity_index\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"\035\n\rCSVC" +
-      "Msg_Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCMsg_Voice" +
-      "Init\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022\022\n\007" +
-      "version\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Sounds\022\026\n\016r" +
-      "eliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003(\0132\033.CS" +
-      "VCMsg_Sounds.sounddata_t\032\207\003\n\013sounddata_t" +
-      "\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021\022\020\n\010" +
-      "origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013delay_" +
-      "value\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005\022\024\n\014" +
-      "entity_index\030\007 \001(\005\022\017\n\007channel\030\010 \001(\005\022\r\n\005p",
-      "itch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_num\030\013" +
-      " \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016speake" +
-      "r_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022\023\n\013s" +
-      "ound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001(\010\022\022\n" +
-      "\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021sound" +
-      "_resource_id\030\023 \001(\006\"_\n\031CSVCMsg_UpdateStri" +
-      "ngTable\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_changed" +
-      "_entries\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014\"T\n\026C" +
-      "SVCMsg_FullFrameSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007s" +
-      "ection\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(",
-      "\014\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n\003pos\030\001 \001(\0132\013.CM" +
-      "sgVector\022\033\n\023decal_texture_index\030\002 \001(\005\022\024\n" +
-      "\014entity_index\030\003 \001(\005\022\023\n\013model_index\030\004 \001(\005" +
-      "\022\024\n\014low_priority\030\005 \001(\010\"9\n\024CSVCMsg_GetCva" +
-      "rValue\022\016\n\006cookie\030\001 \001(\005\022\021\n\tcvar_name\030\002 \001(" +
-      "\t*L\n\021VoiceDataFormat_t\022\032\n\026VOICEDATA_FORM" +
-      "AT_STEAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001*" +
-      "B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UN" +
-      "PAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002B6\n$skadistat" +
-      "s.clarity.wire.common.protoB\013NetMessages",
-      "\200\001\000"
+      "\"$\n\024CCLCMsg_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"*" +
+      "\n\031CCLCMsg_RconServerDetails\022\r\n\005token\030\001 \001" +
+      "(\014\"\321\001\n\025CSVCMsg_GameEventList\0228\n\013descript" +
+      "ors\030\001 \003(\0132#.CSVCMsg_GameEventList.descri" +
+      "ptor_t\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 " +
+      "\001(\t\032Y\n\014descriptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004" +
+      "name\030\002 \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameE" +
+      "ventList.key_t\"\335\004\n\026CSVCMsg_PacketEntitie",
+      "s\022\023\n\013max_entries\030\001 \001(\005\022\027\n\017updated_entrie" +
+      "s\030\002 \001(\005\022\020\n\010is_delta\030\003 \001(\010\022\027\n\017update_base" +
+      "line\030\004 \001(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_fr" +
+      "om\030\006 \001(\005\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022pending" +
+      "_full_frame\030\010 \001(\010\022 \n\030active_spawngroup_h" +
+      "andle\030\t \001(\r\022\'\n\037max_spawngroup_creationse" +
+      "quence\030\n \001(\r\022\027\n\017last_cmd_number\030\013 \001(\r\022\023\n" +
+      "\013server_tick\030\014 \001(\r\022\033\n\023serialized_entitie" +
+      "s\030\r \001(\014\022H\n\022command_queue_info\030\016 \001(\0132,.CS" +
+      "VCMsg_PacketEntities.command_queue_info_",
+      "t\032\262\001\n\024command_queue_info_t\022\027\n\017commands_q" +
+      "ueued\030\001 \001(\r\022\"\n\032command_queue_desired_siz" +
+      "e\030\002 \001(\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035" +
+      "\n\025time_dilation_percent\030\004 \001(\002\022\037\n\027discard" +
+      "ed_command_ticks\030\005 \001(\r\"\325\003\n\022CSVCMsg_Serve" +
+      "rInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n\014server_count\030" +
+      "\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(\010\022\017\n\007is_hltv\030\004" +
+      " \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004c_os\030\006 \001(\005\022\017\n" +
+      "\007map_crc\030\007 \001(\007\022\022\n\nclient_crc\030\010 \001(\007\022\030\n\020st" +
+      "ring_table_crc\030\t \001(\007\022\023\n\013max_clients\030\n \001(",
+      "\005\022\023\n\013max_classes\030\013 \001(\005\022\023\n\013player_slot\030\014 " +
+      "\001(\005\022\025\n\rtick_interval\030\r \001(\002\022\020\n\010game_dir\030\016" +
+      " \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020\n\010sky_name\030\020 \001(\t" +
+      "\022\021\n\thost_name\030\021 \001(\t\022\022\n\naddon_name\030\022 \001(\t\022" +
+      ">\n\023game_session_config\030\023 \001(\0132!.CSVCMsg_G" +
+      "ameSessionConfiguration\022\035\n\025game_session_" +
+      "manifest\030\024 \001(\014\"\244\001\n\021CSVCMsg_ClassInfo\022\030\n\020" +
+      "create_on_client\030\001 \001(\010\022+\n\007classes\030\002 \003(\0132" +
+      "\032.CSVCMsg_ClassInfo.class_t\032H\n\007class_t\022\020" +
+      "\n\010class_id\030\001 \001(\005\022\027\n\017data_table_name\030\002 \001(",
+      "\t\022\022\n\nclass_name\030\003 \001(\t\"5\n\017CSVCMsg_SetView" +
+      "\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"\035\n\r" +
+      "CSVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCMsg_V" +
+      "oiceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t" +
+      "\022\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Sounds\022" +
+      "\026\n\016reliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003(\0132" +
+      "\033.CSVCMsg_Sounds.sounddata_t\032\207\003\n\013soundda" +
+      "ta_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021" +
+      "\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013de" +
+      "lay_value\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005",
+      "\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007channel\030\010 \001(\005\022" +
+      "\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_n" +
+      "um\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016sp" +
+      "eaker_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022" +
+      "\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001(" +
+      "\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021s" +
+      "ound_resource_id\030\023 \001(\006\"_\n\031CSVCMsg_Update" +
+      "StringTable\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_cha" +
+      "nged_entries\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014\"" +
+      "T\n\026CSVCMsg_FullFrameSplit\022\014\n\004tick\030\001 \001(\005\022",
+      "\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030" +
+      "\004 \001(\014\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n\003pos\030\001 \001(\0132" +
+      "\013.CMsgVector\022\033\n\023decal_texture_index\030\002 \001(" +
+      "\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013model_index\030\004" +
+      " \001(\005\022\024\n\014low_priority\030\005 \001(\010\"9\n\024CSVCMsg_Ge" +
+      "tCvarValue\022\016\n\006cookie\030\001 \001(\005\022\021\n\tcvar_name\030" +
+      "\002 \001(\t*L\n\021VoiceDataFormat_t\022\032\n\026VOICEDATA_" +
+      "FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGIN" +
+      "E\020\001*B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nR" +
+      "P_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002B6\n$skadi",
+      "stats.clarity.wire.common.protoB\013NetMess" +
+      "ages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -24490,8 +24896,14 @@ public final class NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCLCMsg_CmdKeyValues_descriptor,
         new java.lang.String[] { "Data", });
-    internal_static_CSVCMsg_GameEventList_descriptor =
+    internal_static_CCLCMsg_RconServerDetails_descriptor =
       getDescriptor().getMessageTypes().get(16);
+    internal_static_CCLCMsg_RconServerDetails_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCLCMsg_RconServerDetails_descriptor,
+        new java.lang.String[] { "Token", });
+    internal_static_CSVCMsg_GameEventList_descriptor =
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CSVCMsg_GameEventList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_GameEventList_descriptor,
@@ -24509,7 +24921,7 @@ public final class NetMessages {
         internal_static_CSVCMsg_GameEventList_descriptor_t_descriptor,
         new java.lang.String[] { "Eventid", "Name", "Keys", });
     internal_static_CSVCMsg_PacketEntities_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CSVCMsg_PacketEntities_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PacketEntities_descriptor,
@@ -24521,13 +24933,13 @@ public final class NetMessages {
         internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor,
         new java.lang.String[] { "CommandsQueued", "CommandQueueDesiredSize", "StarvedCommandTicks", "TimeDilationPercent", "DiscardedCommandTicks", });
     internal_static_CSVCMsg_ServerInfo_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CSVCMsg_ServerInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ServerInfo_descriptor,
         new java.lang.String[] { "Protocol", "ServerCount", "IsDedicated", "IsHltv", "IsReplay", "COs", "MapCrc", "ClientCrc", "StringTableCrc", "MaxClients", "MaxClasses", "PlayerSlot", "TickInterval", "GameDir", "MapName", "SkyName", "HostName", "AddonName", "GameSessionConfig", "GameSessionManifest", });
     internal_static_CSVCMsg_ClassInfo_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CSVCMsg_ClassInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ClassInfo_descriptor,
@@ -24539,25 +24951,25 @@ public final class NetMessages {
         internal_static_CSVCMsg_ClassInfo_class_t_descriptor,
         new java.lang.String[] { "ClassId", "DataTableName", "ClassName", });
     internal_static_CSVCMsg_SetView_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CSVCMsg_SetView_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_SetView_descriptor,
         new java.lang.String[] { "EntityIndex", "Slot", });
     internal_static_CSVCMsg_Print_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CSVCMsg_Print_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_Print_descriptor,
         new java.lang.String[] { "Text", });
     internal_static_CSVCMsg_VoiceInit_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CSVCMsg_VoiceInit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceInit_descriptor,
         new java.lang.String[] { "Quality", "Codec", "Version", });
     internal_static_CSVCMsg_Sounds_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CSVCMsg_Sounds_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_Sounds_descriptor,
@@ -24569,25 +24981,25 @@ public final class NetMessages {
         internal_static_CSVCMsg_Sounds_sounddata_t_descriptor,
         new java.lang.String[] { "OriginX", "OriginY", "OriginZ", "Volume", "DelayValue", "SequenceNumber", "EntityIndex", "Channel", "Pitch", "Flags", "SoundNum", "SoundNumHandle", "SpeakerEntity", "RandomSeed", "SoundLevel", "IsSentence", "IsAmbient", "Guid", "SoundResourceId", });
     internal_static_CSVCMsg_UpdateStringTable_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CSVCMsg_UpdateStringTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_UpdateStringTable_descriptor,
         new java.lang.String[] { "TableId", "NumChangedEntries", "StringData", });
     internal_static_CSVCMsg_FullFrameSplit_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CSVCMsg_FullFrameSplit_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_FullFrameSplit_descriptor,
         new java.lang.String[] { "Tick", "Section", "Total", "Data", });
     internal_static_CSVCMsg_BSPDecal_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_CSVCMsg_BSPDecal_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_BSPDecal_descriptor,
         new java.lang.String[] { "Pos", "DecalTextureIndex", "EntityIndex", "ModelIndex", "LowPriority", });
     internal_static_CSVCMsg_GetCvarValue_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CSVCMsg_GetCvarValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_GetCvarValue_descriptor,

@@ -105,6 +105,10 @@ message CCLCMsg_CmdKeyValues {
 	optional bytes data = 1;
 }
 
+message CCLCMsg_RconServerDetails {
+	optional bytes token = 1;
+}
+
 message CSVCMsg_GameEventList {
 	message key_t {
 		optional int32 type = 1;
