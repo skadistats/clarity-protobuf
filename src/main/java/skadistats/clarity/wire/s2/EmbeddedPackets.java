@@ -193,8 +193,6 @@ public class EmbeddedPackets {
         /* 604 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GuildChallenge_Progress_VALUE, DotaUserMessages.CDOTAUserMsg_GuildChallenge_Progress.class);
         /* 605 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WRArcanaProgress_VALUE, DotaUserMessages.CDOTAUserMsg_WRArcanaProgress.class);
         /* 606 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WRArcanaSummary_VALUE, DotaUserMessages.CDOTAUserMsg_WRArcanaSummary.class);
-        /* 605 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WRArcanaProgress_VALUE, DotaUserMessages.CDOTAUserMsg_WRArcanaProgress.class);
-        /* 606 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WRArcanaSummary_VALUE, DotaUserMessages.CDOTAUserMsg_WRArcanaSummary.class);
         /* 612 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatMessage_VALUE, DotaUserMessages.CDOTAUserMsg_ChatMessage.class);
 
 //        /* 464 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
