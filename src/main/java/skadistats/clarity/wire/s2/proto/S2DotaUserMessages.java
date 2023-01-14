@@ -601,6 +601,30 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ChatMessage = 612;</code>
      */
     DOTA_UM_ChatMessage(146, 612),
+    /**
+     * <code>DOTA_UM_NeutralCampAlert = 613;</code>
+     */
+    DOTA_UM_NeutralCampAlert(147, 613),
+    /**
+     * <code>DOTA_UM_RockPaperScissorsStarted = 614;</code>
+     */
+    DOTA_UM_RockPaperScissorsStarted(148, 614),
+    /**
+     * <code>DOTA_UM_RockPaperScissorsFinished = 615;</code>
+     */
+    DOTA_UM_RockPaperScissorsFinished(149, 615),
+    /**
+     * <code>DOTA_UM_DuelOpponentKilled = 616;</code>
+     */
+    DOTA_UM_DuelOpponentKilled(150, 616),
+    /**
+     * <code>DOTA_UM_DuelAccepted = 617;</code>
+     */
+    DOTA_UM_DuelAccepted(151, 617),
+    /**
+     * <code>DOTA_UM_DuelRequested = 618;</code>
+     */
+    DOTA_UM_DuelRequested(152, 618),
     ;
 
     /**
@@ -1191,6 +1215,30 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_ChatMessage = 612;</code>
      */
     public static final int DOTA_UM_ChatMessage_VALUE = 612;
+    /**
+     * <code>DOTA_UM_NeutralCampAlert = 613;</code>
+     */
+    public static final int DOTA_UM_NeutralCampAlert_VALUE = 613;
+    /**
+     * <code>DOTA_UM_RockPaperScissorsStarted = 614;</code>
+     */
+    public static final int DOTA_UM_RockPaperScissorsStarted_VALUE = 614;
+    /**
+     * <code>DOTA_UM_RockPaperScissorsFinished = 615;</code>
+     */
+    public static final int DOTA_UM_RockPaperScissorsFinished_VALUE = 615;
+    /**
+     * <code>DOTA_UM_DuelOpponentKilled = 616;</code>
+     */
+    public static final int DOTA_UM_DuelOpponentKilled_VALUE = 616;
+    /**
+     * <code>DOTA_UM_DuelAccepted = 617;</code>
+     */
+    public static final int DOTA_UM_DuelAccepted_VALUE = 617;
+    /**
+     * <code>DOTA_UM_DuelRequested = 618;</code>
+     */
+    public static final int DOTA_UM_DuelRequested_VALUE = 618;
 
 
     public final int getNumber() { return value; }
@@ -1344,6 +1392,12 @@ public final class S2DotaUserMessages {
         case 610: return DOTA_UM_MutedPlayers;
         case 611: return DOTA_UM_ContextualTip;
         case 612: return DOTA_UM_ChatMessage;
+        case 613: return DOTA_UM_NeutralCampAlert;
+        case 614: return DOTA_UM_RockPaperScissorsStarted;
+        case 615: return DOTA_UM_RockPaperScissorsFinished;
+        case 616: return DOTA_UM_DuelOpponentKilled;
+        case 617: return DOTA_UM_DuelAccepted;
+        case 618: return DOTA_UM_DuelRequested;
         default: return null;
       }
     }
@@ -1404,7 +1458,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\345\"\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\253$\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1516,8 +1570,13 @@ public final class S2DotaUserMessages {
       "atusAlert\020\340\004\022\035\n\030DOTA_UM_PingConfirmation",
       "\020\341\004\022\031\n\024DOTA_UM_MutedPlayers\020\342\004\022\032\n\025DOTA_U" +
       "M_ContextualTip\020\343\004\022\030\n\023DOTA_UM_ChatMessag" +
-      "e\020\344\004B;\n skadistats.clarity.wire.s2.proto" +
-      "B\022S2DotaUserMessagesH\001\200\001\000"
+      "e\020\344\004\022\035\n\030DOTA_UM_NeutralCampAlert\020\345\004\022%\n D" +
+      "OTA_UM_RockPaperScissorsStarted\020\346\004\022&\n!DO" +
+      "TA_UM_RockPaperScissorsFinished\020\347\004\022\037\n\032DO" +
+      "TA_UM_DuelOpponentKilled\020\350\004\022\031\n\024DOTA_UM_D" +
+      "uelAccepted\020\351\004\022\032\n\025DOTA_UM_DuelRequested\020" +
+      "\352\004B;\n skadistats.clarity.wire.s2.protoB\022" +
+      "S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

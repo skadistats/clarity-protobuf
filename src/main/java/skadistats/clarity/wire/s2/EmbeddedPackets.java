@@ -52,6 +52,7 @@ public class EmbeddedPackets {
         /*  70 */ K2C.put(S2NetMessages.SVC_Messages.svc_FullFrameSplit_VALUE, NetMessages.CSVCMsg_FullFrameSplit.class);
 
         /* 106 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_Fade_VALUE, S2UserMessages.CUserMessageFade.class);
+        /* 114 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_RequestState_VALUE, S2UserMessages.CUserMessageRequestState.class);
         /* 115 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_ResetHUD_VALUE, S2UserMessages.CUserMessageResetHUD.class);
         /* 118 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_SayText2_VALUE, S2UserMessages.CUserMessageSayText2.class);
         /* 124 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_TextMsg_VALUE, S2UserMessages.CUserMessageTextMsg.class);
@@ -59,6 +60,7 @@ public class EmbeddedPackets {
         /* 130 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_SendAudio_VALUE, S2UserMessages.CUserMessageSendAudio.class);
         /* 144 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_AudioParameter_VALUE, S2UserMessages.CUserMessageAudioParameter.class);
         /* 145 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
+        /* 154 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_ServerFrameTime_VALUE, S2UserMessages.CUserMessageServerFrameTime.class);
 
 //        /* 101 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
 //        /* 102 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_CloseCaption_VALUE, S2UserMessages.CUserMessageCloseCaption.class);
@@ -71,7 +73,6 @@ public class EmbeddedPackets {
 //        /* 111 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_HudText_VALUE, S2UserMessages.CUserMessageHudText.class);
 //        /* 112 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_KeyHintText_VALUE, S2UserMessages.CUserMessageKeyHintText.class);
 //        /* 113 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_ColoredText_VALUE, S2UserMessages.CUserMessageColoredText.class);
-//        /* 114 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_RequestState_VALUE, S2UserMessages.CUserMessageRequestState.class);
 //        /* 116 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_Rumble_VALUE, S2UserMessages.CUserMessageRumble.class);
 //        /* 117 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_SayText_VALUE, S2UserMessages.CUserMessageSayText.class);
 //        /* 119 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_SayTextChannel_VALUE, S2UserMessages.CUserMessageSayTextChannel.class);
@@ -89,7 +90,14 @@ public class EmbeddedPackets {
 //        /* 142 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_CloseCaptionPlaceholder_VALUE, S2UserMessages.CUserMessageCloseCaptionPlaceholder.class);
 //        /* 143 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_CameraTransition_VALUE, S2UserMessages.CUserMessageCameraTransition.class);
 //        /* 148 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_CustomGameEvent_VALUE, null);
-//        /* 149 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_HandHapticPulse_VALUE, null);
+//        /* 149 */ K2C.put(S2UserMessages.EBaseUserMessages.UM_AnimGraphUpdate_VALUE, null);
+//        /* 150 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_HapticsManagerPulse_VALUE, null);
+//        /* 151 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_HapticsManagerEffect_VALUE, null);
+//        /* 152 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_CommandQueueState_VALUE, null);
+//        /* 153 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_UpdateCssClasses_VALUE, null);
+//        /* 155 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_LagCompensationError_VALUE, null);
+//        /* 156 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_RequestDllStatus_VALUE, null);
+//        /* 154 */  K2C.put(S2UserMessages.EBaseUserMessages.UM_RequestUtilAction_VALUE, null);
 
         /* 205 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, NetMessages.CSVCMsg_GameEventList.class);
         /* 206 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);
@@ -128,7 +136,9 @@ public class EmbeddedPackets {
         /* 490 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_BotChat_VALUE, DotaUserMessages.CDOTAUserMsg_BotChat.class);
         /* 491 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HudError_VALUE, DotaUserMessages.CDOTAUserMsg_HudError.class);
         /* 492 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemPurchased_VALUE, DotaUserMessages.CDOTAUserMsg_ItemPurchased.class);
+        /* 496 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SwapVerify_VALUE, DotaUserMessages.CDOTAUserMsg_SwapVerify.class);
         /* 497 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);
+        /* 499 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_ItemAlert.class);
         /* 501 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatWheel_VALUE, DotaUserMessages.CDOTAUserMsg_ChatWheel.class);
         /* 506 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GamerulesStateChanged_VALUE, DotaUserMessages.CDOTAUserMsg_GamerulesStateChanged.class);
         /* 510 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SendStatPopup_VALUE, DotaUserMessages.CDOTAUserMsg_SendStatPopup.class);
@@ -140,6 +150,7 @@ public class EmbeddedPackets {
         /* 522 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TE_UnitAnimationEnd_VALUE, DotaUserMessages.CDOTAUserMsg_TE_UnitAnimationEnd.class);
         /* 523 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AbilityPing_VALUE, DotaUserMessages.CDOTAUserMsg_AbilityPing.class);
         /* 529 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WillPurchaseAlert_VALUE, DotaUserMessages.CDOTAUserMsg_WillPurchaseAlert.class);
+        /* 531 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_PlayerMMR_VALUE, DotaUserMessages.CDOTAUserMsg_PlayerMMR.class);
         /* 532 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AbilitySteal_VALUE, DotaUserMessages.CDOTAUserMsg_AbilitySteal.class);
         /* 533 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CourierKilledAlert_VALUE, DotaUserMessages.CDOTAUserMsg_CourierKilledAlert.class);
         /* 534 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EnemyItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EnemyItemAlert.class);
@@ -155,6 +166,7 @@ public class EmbeddedPackets {
         /* 556 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UpdateQuestProgress_VALUE, DotaUserMessages.CDOTAUserMsg_UpdateQuestProgress.class);
         /* 557 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MatchMetadata_VALUE, S2DotaMatchMetadata.CDOTAMatchMetadataFile.class);
         /* 558 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MatchDetails_VALUE, S2DotaGcCommon.CMsgDOTAMatch.class);
+        /* 562 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_KillcamDamageTaken_VALUE, DotaUserMessages.CDOTAUserMsg_KillcamDamageTaken.class);
         /* 563 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SelectPenaltyGold_VALUE, DotaUserMessages.CDOTAUserMsg_SelectPenaltyGold.class);
         /* 564 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RollDiceResult_VALUE, DotaUserMessages.CDOTAUserMsg_RollDiceResult.class);
         /* 565 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_FlipCoinResult_VALUE, DotaUserMessages.CDOTAUserMsg_FlipCoinResult.class);
@@ -193,7 +205,11 @@ public class EmbeddedPackets {
         /* 604 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_GuildChallenge_Progress_VALUE, DotaUserMessages.CDOTAUserMsg_GuildChallenge_Progress.class);
         /* 605 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WRArcanaProgress_VALUE, DotaUserMessages.CDOTAUserMsg_WRArcanaProgress.class);
         /* 606 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_WRArcanaSummary_VALUE, DotaUserMessages.CDOTAUserMsg_WRArcanaSummary.class);
+        /* 608 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AghsStatusAlert_VALUE, DotaUserMessages.CDOTAUserMsg_AghsStatusAlert.class);
+        /* 611 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ContextualTip_VALUE, DotaUserMessages.CDOTAUserMsg_ContextualTip.class);
         /* 612 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatMessage_VALUE, DotaUserMessages.CDOTAUserMsg_ChatMessage.class);
+        /* 616 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DuelOpponentKilled_VALUE, DotaUserMessages.CDOTAUserMsg_DuelOpponentKilled.class);
+        /* 617 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DuelAccepted_VALUE, DotaUserMessages.CDOTAUserMsg_DuelAccepted.class);
 
 //        /* 464 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);
@@ -206,9 +222,7 @@ public class EmbeddedPackets {
 //        /* 493 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_Ping_VALUE, DotaUserMessages.CDOTAUserMsg_Ping.class);
 //        /* 494 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemFound_VALUE, DotaUserMessages.CDOTAUserMsg_ItemFound.class);
 //        /* 495 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_CharacterSpeakConcept_VALUE, null);
-//        /* 496 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SwapVerify_VALUE, DotaUserMessages.CDOTAUserMsg_SwapVerify.class);
 //        /* 498 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_TournamentDrop_VALUE, null);
-//        /* 499 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemAlert_VALUE, DotaUserMessages.CDOTAUserMsg_ItemAlert.class);
 //        /* 500 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HalloweenDrops_VALUE, DotaUserMessages.CDOTAUserMsg_HalloweenDrops.class);
 //        /* 502 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ReceivedXmasGift_VALUE, DotaUserMessages.CDOTAUserMsg_ReceivedXmasGift.class);
 //        /* 503 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UpdateSharedContent_VALUE, DotaUserMessages.CDOTAUserMsg_UpdateSharedContent.class);
@@ -253,10 +267,14 @@ public class EmbeddedPackets {
 //        /* 578 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ReplaceQueryUnit_VALUE, DotaUserMessages.CDOTAUserMsg_ReplaceQueryUnit.class);
 //        /* 579 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EmptyTeleportAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EmptyTeleportAlert.class);
 //        /* 607 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_EmptyItemSlotAlert_VALUE, DotaUserMessages.CDOTAUserMsg_EmptyItemSlotAlert.class);
-//        /* 608 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AghsStatusAlert_VALUE, DotaUserMessages.CDOTAUserMsg_AghsStatusAlert.class);
 //        /* 609 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_PingConfirmation_VALUE, DotaUserMessages.CDOTAUserMsg_PingConfirmation.class);
 //        /* 610 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MutedPlayers_VALUE, DotaUserMessages.CDOTAUserMsg_MutedPlayers.class);
 //        /* 611 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ContextualTip_VALUE, DotaUserMessages.CDOTAUserMsg_ContextualTip.class);
+//        /* 612 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatMessage_VALUE, DotaUserMessages.CDOTAUserMsg_ChatMessage.class);
+//        /* 613 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_NeutralCampAlert_VALUE, DotaUserMessages.CDOTAUserMsg_NeutralCampAlert.class);
+//        /* 614 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RockPaperScissorsStarted_VALUE, DotaUserMessages.CDOTAUserMsg_RockPaperScissorsStarted.class);
+//        /* 615 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_RockPaperScissorsFinished_VALUE, DotaUserMessages.CDOTAUserMsg_RockPaperScissorsFinished.class);
+//        /* 618 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DuelRequested_VALUE, DotaUserMessages.CDOTAUserMsg_DuelRequested.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {

@@ -22,6 +22,7 @@ enum CLC_Messages {
 	clc_RequestPause = 33;
 	clc_CmdKeyValues = 34;
 	clc_RconServerDetails = 35;
+	clc_HltvReplay = 36;
 }
 
 enum SVC_Messages {
@@ -51,6 +52,10 @@ enum SVC_Messages {
 	svc_ServerSteamID = 63;
 	svc_FullFrameSplit = 70;
 	svc_RconServerDetails = 71;
+	svc_UserMessage = 72;
+	svc_HltvReplay = 73;
+	svc_Broadcast_Command = 74;
+	svc_HltvFixupOperatorStatus = 75;
 }
 
 message CSVCMsg_CreateStringTable {

@@ -178,9 +178,33 @@ public final class S2UserMessages {
      */
     UM_HapticsManagerEffect(40, 151),
     /**
+     * <code>UM_CommandQueueState = 152;</code>
+     */
+    UM_CommandQueueState(41, 152),
+    /**
+     * <code>UM_UpdateCssClasses = 153;</code>
+     */
+    UM_UpdateCssClasses(42, 153),
+    /**
+     * <code>UM_ServerFrameTime = 154;</code>
+     */
+    UM_ServerFrameTime(43, 154),
+    /**
+     * <code>UM_LagCompensationError = 155;</code>
+     */
+    UM_LagCompensationError(44, 155),
+    /**
+     * <code>UM_RequestDllStatus = 156;</code>
+     */
+    UM_RequestDllStatus(45, 156),
+    /**
+     * <code>UM_RequestUtilAction = 157;</code>
+     */
+    UM_RequestUtilAction(46, 157),
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
-    UM_MAX_BASE(41, 200),
+    UM_MAX_BASE(47, 200),
     ;
 
     /**
@@ -348,6 +372,30 @@ public final class S2UserMessages {
      */
     public static final int UM_HapticsManagerEffect_VALUE = 151;
     /**
+     * <code>UM_CommandQueueState = 152;</code>
+     */
+    public static final int UM_CommandQueueState_VALUE = 152;
+    /**
+     * <code>UM_UpdateCssClasses = 153;</code>
+     */
+    public static final int UM_UpdateCssClasses_VALUE = 153;
+    /**
+     * <code>UM_ServerFrameTime = 154;</code>
+     */
+    public static final int UM_ServerFrameTime_VALUE = 154;
+    /**
+     * <code>UM_LagCompensationError = 155;</code>
+     */
+    public static final int UM_LagCompensationError_VALUE = 155;
+    /**
+     * <code>UM_RequestDllStatus = 156;</code>
+     */
+    public static final int UM_RequestDllStatus_VALUE = 156;
+    /**
+     * <code>UM_RequestUtilAction = 157;</code>
+     */
+    public static final int UM_RequestUtilAction_VALUE = 157;
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
     public static final int UM_MAX_BASE_VALUE = 200;
@@ -398,6 +446,12 @@ public final class S2UserMessages {
         case 149: return UM_AnimGraphUpdate;
         case 150: return UM_HapticsManagerPulse;
         case 151: return UM_HapticsManagerEffect;
+        case 152: return UM_CommandQueueState;
+        case 153: return UM_UpdateCssClasses;
+        case 154: return UM_ServerFrameTime;
+        case 155: return UM_LagCompensationError;
+        case 156: return UM_RequestDllStatus;
+        case 157: return UM_RequestUtilAction;
         case 200: return UM_MAX_BASE;
         default: return null;
       }
@@ -1295,11 +1349,11 @@ public final class S2UserMessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 entityindex = 1;</code>
+     * <code>optional int32 entityindex = 1;</code>
      */
     boolean hasEntityindex();
     /**
-     * <code>optional uint32 entityindex = 1;</code>
+     * <code>optional int32 entityindex = 1;</code>
      */
     int getEntityindex();
 
@@ -1436,7 +1490,7 @@ public final class S2UserMessages {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              entityindex_ = input.readUInt32();
+              entityindex_ = input.readInt32();
               break;
             }
             case 16: {
@@ -1517,13 +1571,13 @@ public final class S2UserMessages {
     public static final int ENTITYINDEX_FIELD_NUMBER = 1;
     private int entityindex_;
     /**
-     * <code>optional uint32 entityindex = 1;</code>
+     * <code>optional int32 entityindex = 1;</code>
      */
     public boolean hasEntityindex() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional uint32 entityindex = 1;</code>
+     * <code>optional int32 entityindex = 1;</code>
      */
     public int getEntityindex() {
       return entityindex_;
@@ -1777,7 +1831,7 @@ public final class S2UserMessages {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt32(1, entityindex_);
+        output.writeInt32(1, entityindex_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeBool(2, chat_);
@@ -1808,7 +1862,7 @@ public final class S2UserMessages {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, entityindex_);
+          .computeInt32Size(1, entityindex_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2097,19 +2151,19 @@ public final class S2UserMessages {
 
       private int entityindex_ ;
       /**
-       * <code>optional uint32 entityindex = 1;</code>
+       * <code>optional int32 entityindex = 1;</code>
        */
       public boolean hasEntityindex() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional uint32 entityindex = 1;</code>
+       * <code>optional int32 entityindex = 1;</code>
        */
       public int getEntityindex() {
         return entityindex_;
       }
       /**
-       * <code>optional uint32 entityindex = 1;</code>
+       * <code>optional int32 entityindex = 1;</code>
        */
       public Builder setEntityindex(int value) {
         bitField0_ |= 0x00000001;
@@ -2118,7 +2172,7 @@ public final class S2UserMessages {
         return this;
       }
       /**
-       * <code>optional uint32 entityindex = 1;</code>
+       * <code>optional int32 entityindex = 1;</code>
        */
       public Builder clearEntityindex() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -5335,6 +5389,319 @@ public final class S2UserMessages {
     // @@protoc_insertion_point(class_scope:CUserMessageVoiceMask)
   }
 
+  public interface CUserMessageRequestStateOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessageRequestState)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code CUserMessageRequestState}
+   */
+  public static final class CUserMessageRequestState extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessageRequestState)
+      CUserMessageRequestStateOrBuilder {
+    // Use CUserMessageRequestState.newBuilder() to construct.
+    private CUserMessageRequestState(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessageRequestState(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessageRequestState defaultInstance;
+    public static CUserMessageRequestState getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessageRequestState getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessageRequestState(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageRequestState_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageRequestState_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessageRequestState> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessageRequestState>() {
+      public CUserMessageRequestState parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessageRequestState(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessageRequestState> getParserForType() {
+      return PARSER;
+    }
+
+    private void initFields() {
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessageRequestState}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessageRequestState)
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestStateOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageRequestState_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageRequestState_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageRequestState_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState build() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState result = new skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState(this);
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageRequestState) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessageRequestState)
+    }
+
+    static {
+      defaultInstance = new CUserMessageRequestState(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessageRequestState)
+  }
+
   public interface CEntityMessagePlayJingleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CEntityMessagePlayJingle)
       com.google.protobuf.MessageOrBuilder {
@@ -8214,11 +8581,11 @@ public final class S2UserMessages {
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder();
 
     /**
-     * <code>optional uint32 entityindex = 2;</code>
+     * <code>optional int32 entityindex = 2;</code>
      */
     boolean hasEntityindex();
     /**
-     * <code>optional uint32 entityindex = 2;</code>
+     * <code>optional int32 entityindex = 2;</code>
      */
     int getEntityindex();
 
@@ -8347,7 +8714,7 @@ public final class S2UserMessages {
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              entityindex_ = input.readUInt32();
+              entityindex_ = input.readInt32();
               break;
             }
             case 29: {
@@ -8452,13 +8819,13 @@ public final class S2UserMessages {
     public static final int ENTITYINDEX_FIELD_NUMBER = 2;
     private int entityindex_;
     /**
-     * <code>optional uint32 entityindex = 2;</code>
+     * <code>optional int32 entityindex = 2;</code>
      */
     public boolean hasEntityindex() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional uint32 entityindex = 2;</code>
+     * <code>optional int32 entityindex = 2;</code>
      */
     public int getEntityindex() {
       return entityindex_;
@@ -8587,7 +8954,7 @@ public final class S2UserMessages {
         output.writeMessage(1, origin_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeUInt32(2, entityindex_);
+        output.writeInt32(2, entityindex_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         output.writeFloat(3, radius_);
@@ -8622,7 +8989,7 @@ public final class S2UserMessages {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, entityindex_);
+          .computeInt32Size(2, entityindex_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
@@ -9044,19 +9411,19 @@ public final class S2UserMessages {
 
       private int entityindex_ ;
       /**
-       * <code>optional uint32 entityindex = 2;</code>
+       * <code>optional int32 entityindex = 2;</code>
        */
       public boolean hasEntityindex() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional uint32 entityindex = 2;</code>
+       * <code>optional int32 entityindex = 2;</code>
        */
       public int getEntityindex() {
         return entityindex_;
       }
       /**
-       * <code>optional uint32 entityindex = 2;</code>
+       * <code>optional int32 entityindex = 2;</code>
        */
       public Builder setEntityindex(int value) {
         bitField0_ |= 0x00000002;
@@ -9065,7 +9432,7 @@ public final class S2UserMessages {
         return this;
       }
       /**
-       * <code>optional uint32 entityindex = 2;</code>
+       * <code>optional int32 entityindex = 2;</code>
        */
       public Builder clearEntityindex() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -10531,6 +10898,403 @@ public final class S2UserMessages {
     }
 
     // @@protoc_insertion_point(class_scope:CUserMsg_HudError)
+  }
+
+  public interface CUserMessageServerFrameTimeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessageServerFrameTime)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional float frame_time = 1;</code>
+     */
+    boolean hasFrameTime();
+    /**
+     * <code>optional float frame_time = 1;</code>
+     */
+    float getFrameTime();
+  }
+  /**
+   * Protobuf type {@code CUserMessageServerFrameTime}
+   */
+  public static final class CUserMessageServerFrameTime extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessageServerFrameTime)
+      CUserMessageServerFrameTimeOrBuilder {
+    // Use CUserMessageServerFrameTime.newBuilder() to construct.
+    private CUserMessageServerFrameTime(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessageServerFrameTime(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessageServerFrameTime defaultInstance;
+    public static CUserMessageServerFrameTime getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessageServerFrameTime getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessageServerFrameTime(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 13: {
+              bitField0_ |= 0x00000001;
+              frameTime_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageServerFrameTime_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageServerFrameTime_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessageServerFrameTime> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessageServerFrameTime>() {
+      public CUserMessageServerFrameTime parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessageServerFrameTime(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessageServerFrameTime> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int FRAME_TIME_FIELD_NUMBER = 1;
+    private float frameTime_;
+    /**
+     * <code>optional float frame_time = 1;</code>
+     */
+    public boolean hasFrameTime() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional float frame_time = 1;</code>
+     */
+    public float getFrameTime() {
+      return frameTime_;
+    }
+
+    private void initFields() {
+      frameTime_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeFloat(1, frameTime_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, frameTime_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessageServerFrameTime}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessageServerFrameTime)
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTimeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageServerFrameTime_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageServerFrameTime_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.class, skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        frameTime_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.internal_static_CUserMessageServerFrameTime_descriptor;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime getDefaultInstanceForType() {
+        return skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime build() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime buildPartial() {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime result = new skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.frameTime_ = frameTime_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime) {
+          return mergeFrom((skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime other) {
+        if (other == skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime.getDefaultInstance()) return this;
+        if (other.hasFrameTime()) {
+          setFrameTime(other.getFrameTime());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.s2.proto.S2UserMessages.CUserMessageServerFrameTime) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private float frameTime_ ;
+      /**
+       * <code>optional float frame_time = 1;</code>
+       */
+      public boolean hasFrameTime() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float frame_time = 1;</code>
+       */
+      public float getFrameTime() {
+        return frameTime_;
+      }
+      /**
+       * <code>optional float frame_time = 1;</code>
+       */
+      public Builder setFrameTime(float value) {
+        bitField0_ |= 0x00000001;
+        frameTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float frame_time = 1;</code>
+       */
+      public Builder clearFrameTime() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        frameTime_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessageServerFrameTime)
+    }
+
+    static {
+      defaultInstance = new CUserMessageServerFrameTime(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessageServerFrameTime)
   }
 
   public interface CUserMsg_CustomGameEvent_ClientToServerOrBuilder extends
@@ -12083,6 +12847,11 @@ public final class S2UserMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMessageVoiceMask_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessageRequestState_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessageRequestState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CEntityMessagePlayJingle_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -12123,6 +12892,11 @@ public final class S2UserMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_HudError_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessageServerFrameTime_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessageServerFrameTime_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -12150,7 +12924,7 @@ public final class S2UserMessages {
       "s.proto\"U\n\020CUserMessageFade\022\020\n\010duration\030" +
       "\001 \001(\r\022\021\n\thold_time\030\002 \001(\r\022\r\n\005flags\030\003 \001(\r\022" +
       "\r\n\005color\030\004 \001(\007\"\216\001\n\024CUserMessageSayText2\022" +
-      "\023\n\013entityindex\030\001 \001(\r\022\014\n\004chat\030\002 \001(\010\022\023\n\013me" +
+      "\023\n\013entityindex\030\001 \001(\005\022\014\n\004chat\030\002 \001(\010\022\023\n\013me" +
       "ssagename\030\003 \001(\t\022\016\n\006param1\030\004 \001(\t\022\016\n\006param" +
       "2\030\005 \001(\t\022\016\n\006param3\030\006 \001(\t\022\016\n\006param4\030\007 \001(\t\"" +
       "2\n\023CUserMessageTextMsg\022\014\n\004dest\030\001 \001(\r\022\r\n\005" +
@@ -12161,61 +12935,67 @@ public final class S2UserMessages {
       "_code\030\002 \001(\r\022\r\n\005value\030\003 \001(\002\022\021\n\tint_value\030" +
       "\004 \001(\r\"W\n\025CUserMessageVoiceMask\022\027\n\017gameru" +
       "les_masks\030\001 \003(\r\022\021\n\tban_masks\030\002 \003(\r\022\022\n\nmo" +
-      "d_enable\030\003 \001(\010\";\n\030CEntityMessagePlayJing" +
-      "le\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg\"m\n\027C" +
-      "UserMessageHapticPulse\022\017\n\007hand_id\030\001 \001(\005\022" +
-      "A\n\npulse_type\030\002 \001(\0162\021.EHapticPulseType:\032" +
-      "VR_HAND_HAPTIC_PULSE_LIGHT\"T\n\033CEntityMes",
-      "sageScreenOverlay\022\024\n\014start_effect\030\001 \001(\010\022" +
-      "\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMsg\"W\n\035CEnt" +
-      "ityMessageRemoveAllDecals\022\025\n\rremove_deca" +
-      "ls\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMs" +
-      "g\"]\n\034CEntityMessagePropagateForce\022\034\n\007imp" +
-      "ulse\030\001 \001(\0132\013.CMsgVector\022\037\n\nentity_msg\030\002 " +
-      "\001(\0132\013.CEntityMsg\"\271\001\n\025CEntityMessageDoSpa" +
-      "rk\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\023\n\013entit" +
-      "yindex\030\002 \001(\r\022\016\n\006radius\030\003 \001(\002\022\r\n\005color\030\004 " +
-      "\001(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010dur",
-      "ation\030\007 \001(\002\022\037\n\nentity_msg\030\010 \001(\0132\013.CEntit" +
-      "yMsg\"g\n\026CEntityMessageFixAngle\022\020\n\010relati" +
-      "ve\030\001 \001(\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngle\022\037\n\n" +
-      "entity_msg\030\003 \001(\0132\013.CEntityMsg\"%\n\021CUserMs" +
-      "g_HudError\022\020\n\010order_id\030\001 \001(\005\"K\n\'CUserMsg" +
-      "_CustomGameEvent_ClientToServer\022\022\n\nevent" +
-      "_name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"K\n\'CUserMsg_Cu" +
-      "stomGameEvent_ServerToClient\022\022\n\nevent_na" +
-      "me\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Track" +
-      "edControllerInput_ClientToServer\022\014\n\004data",
-      "\030\001 \001(\014*\363\006\n\021EBaseUserMessages\022\027\n\023UM_Achie" +
-      "vementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM" +
-      "_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimes" +
-      "cale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fa" +
-      "de\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013UM_HintText\020m\022" +
-      "\r\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_Key" +
-      "HintText\020p\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Req" +
-      "uestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumbl" +
-      "e\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021" +
-      "UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_",
-      "ShakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_ScreenT" +
-      "ilt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n\014" +
-      "UM_VoiceMask\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022\021" +
-      "\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n" +
-      "\rUM_AmmoDenied\020\204\001\022\026\n\021UM_CrosshairAngle\020\205" +
-      "\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022" +
-      "\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_C" +
-      "ameraTransition\020\217\001\022\026\n\021UM_AudioParameter\020" +
-      "\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudErr" +
-      "or\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_Ani",
-      "mGraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPuls" +
-      "e\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\020\n\013UM" +
+      "d_enable\030\003 \001(\010\"\032\n\030CUserMessageRequestSta" +
+      "te\";\n\030CEntityMessagePlayJingle\022\037\n\nentity" +
+      "_msg\030\001 \001(\0132\013.CEntityMsg\"m\n\027CUserMessageH" +
+      "apticPulse\022\017\n\007hand_id\030\001 \001(\005\022A\n\npulse_typ" +
+      "e\030\002 \001(\0162\021.EHapticPulseType:\032VR_HAND_HAPT",
+      "IC_PULSE_LIGHT\"T\n\033CEntityMessageScreenOv" +
+      "erlay\022\024\n\014start_effect\030\001 \001(\010\022\037\n\nentity_ms" +
+      "g\030\002 \001(\0132\013.CEntityMsg\"W\n\035CEntityMessageRe" +
+      "moveAllDecals\022\025\n\rremove_decals\030\001 \001(\010\022\037\n\n" +
+      "entity_msg\030\002 \001(\0132\013.CEntityMsg\"]\n\034CEntity" +
+      "MessagePropagateForce\022\034\n\007impulse\030\001 \001(\0132\013" +
+      ".CMsgVector\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntit" +
+      "yMsg\"\271\001\n\025CEntityMessageDoSpark\022\033\n\006origin" +
+      "\030\001 \001(\0132\013.CMsgVector\022\023\n\013entityindex\030\002 \001(\005" +
+      "\022\016\n\006radius\030\003 \001(\002\022\r\n\005color\030\004 \001(\007\022\r\n\005beams",
+      "\030\005 \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010duration\030\007 \001(\002\022" +
+      "\037\n\nentity_msg\030\010 \001(\0132\013.CEntityMsg\"g\n\026CEnt" +
+      "ityMessageFixAngle\022\020\n\010relative\030\001 \001(\010\022\032\n\005" +
+      "angle\030\002 \001(\0132\013.CMsgQAngle\022\037\n\nentity_msg\030\003" +
+      " \001(\0132\013.CEntityMsg\"%\n\021CUserMsg_HudError\022\020" +
+      "\n\010order_id\030\001 \001(\005\"1\n\033CUserMessageServerFr" +
+      "ameTime\022\022\n\nframe_time\030\001 \001(\002\"K\n\'CUserMsg_" +
+      "CustomGameEvent_ClientToServer\022\022\n\nevent_" +
+      "name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"K\n\'CUserMsg_Cus" +
+      "tomGameEvent_ServerToClient\022\022\n\nevent_nam",
+      "e\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Tracke" +
+      "dControllerInput_ClientToServer\022\014\n\004data\030" +
+      "\001 \001(\014*\224\010\n\021EBaseUserMessages\022\027\n\023UM_Achiev" +
+      "ementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM_" +
+      "CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimesc" +
+      "ale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fad" +
+      "e\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013UM_HintText\020m\022\r" +
+      "\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_KeyH" +
+      "intText\020p\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Requ" +
+      "estState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumble",
+      "\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021U" +
+      "M_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_S" +
+      "hakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_ScreenTi" +
+      "lt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n\014U" +
+      "M_VoiceMask\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022\021\n" +
+      "\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n\r" +
+      "UM_AmmoDenied\020\204\001\022\026\n\021UM_CrosshairAngle\020\205\001" +
+      "\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022\037" +
+      "\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_Ca" +
+      "meraTransition\020\217\001\022\026\n\021UM_AudioParameter\020\220",
+      "\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudErro" +
+      "r\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_Anim" +
+      "GraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPulse" +
+      "\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\031\n\024UM_" +
+      "CommandQueueState\020\230\001\022\030\n\023UM_UpdateCssClas" +
+      "ses\020\231\001\022\027\n\022UM_ServerFrameTime\020\232\001\022\034\n\027UM_La" +
+      "gCompensationError\020\233\001\022\030\n\023UM_RequestDllSt" +
+      "atus\020\234\001\022\031\n\024UM_RequestUtilAction\020\235\001\022\020\n\013UM" +
       "_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\r" +
-      "EM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022" +
+      "EM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022",
       "\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Propagate" +
       "Force\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle" +
       "\020\215\001*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAPTI" +
       "C_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_" +
       "MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG\020" +
-      "\002B7\n skadistats.clarity.wire.s2.protoB\016S",
+      "\002B7\n skadistats.clarity.wire.s2.protoB\016S" +
       "2UserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
@@ -12273,68 +13053,80 @@ public final class S2UserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageVoiceMask_descriptor,
         new java.lang.String[] { "GamerulesMasks", "BanMasks", "ModEnable", });
-    internal_static_CEntityMessagePlayJingle_descriptor =
+    internal_static_CUserMessageRequestState_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_CUserMessageRequestState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessageRequestState_descriptor,
+        new java.lang.String[] { });
+    internal_static_CEntityMessagePlayJingle_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CEntityMessagePlayJingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePlayJingle_descriptor,
         new java.lang.String[] { "EntityMsg", });
     internal_static_CUserMessageHapticPulse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CUserMessageHapticPulse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHapticPulse_descriptor,
         new java.lang.String[] { "HandId", "PulseType", });
     internal_static_CEntityMessageScreenOverlay_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CEntityMessageScreenOverlay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageScreenOverlay_descriptor,
         new java.lang.String[] { "StartEffect", "EntityMsg", });
     internal_static_CEntityMessageRemoveAllDecals_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CEntityMessageRemoveAllDecals_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageRemoveAllDecals_descriptor,
         new java.lang.String[] { "RemoveDecals", "EntityMsg", });
     internal_static_CEntityMessagePropagateForce_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CEntityMessagePropagateForce_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePropagateForce_descriptor,
         new java.lang.String[] { "Impulse", "EntityMsg", });
     internal_static_CEntityMessageDoSpark_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CEntityMessageDoSpark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageDoSpark_descriptor,
         new java.lang.String[] { "Origin", "Entityindex", "Radius", "Color", "Beams", "Thick", "Duration", "EntityMsg", });
     internal_static_CEntityMessageFixAngle_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CEntityMessageFixAngle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageFixAngle_descriptor,
         new java.lang.String[] { "Relative", "Angle", "EntityMsg", });
     internal_static_CUserMsg_HudError_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CUserMsg_HudError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_HudError_descriptor,
         new java.lang.String[] { "OrderId", });
+    internal_static_CUserMessageServerFrameTime_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_CUserMessageServerFrameTime_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessageServerFrameTime_descriptor,
+        new java.lang.String[] { "FrameTime", });
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CUserMsg_CustomGameEvent_ClientToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_ClientToServer_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMsg_CustomGameEvent_ServerToClient_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CUserMsg_CustomGameEvent_ServerToClient_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_ServerToClient_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CUserMsg_TrackedControllerInput_ClientToServer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor,

@@ -2935,6 +2935,15 @@ public final class S2GameEvents {
      */
     skadistats.clarity.wire.s2.proto.S2GameEvents.CMsgSource1LegacyGameEvent.key_tOrBuilder getKeysOrBuilder(
         int index);
+
+    /**
+     * <code>optional int32 server_tick = 4;</code>
+     */
+    boolean hasServerTick();
+    /**
+     * <code>optional int32 server_tick = 4;</code>
+     */
+    int getServerTick();
   }
   /**
    * Protobuf type {@code CMsgSource1LegacyGameEvent}
@@ -3005,6 +3014,11 @@ public final class S2GameEvents {
                 mutable_bitField0_ |= 0x00000004;
               }
               keys_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2GameEvents.CMsgSource1LegacyGameEvent.key_t.PARSER, extensionRegistry));
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000004;
+              serverTick_ = input.readInt32();
               break;
             }
           }
@@ -4164,10 +4178,26 @@ public final class S2GameEvents {
       return keys_.get(index);
     }
 
+    public static final int SERVER_TICK_FIELD_NUMBER = 4;
+    private int serverTick_;
+    /**
+     * <code>optional int32 server_tick = 4;</code>
+     */
+    public boolean hasServerTick() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 server_tick = 4;</code>
+     */
+    public int getServerTick() {
+      return serverTick_;
+    }
+
     private void initFields() {
       eventName_ = "";
       eventid_ = 0;
       keys_ = java.util.Collections.emptyList();
+      serverTick_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4191,6 +4221,9 @@ public final class S2GameEvents {
       for (int i = 0; i < keys_.size(); i++) {
         output.writeMessage(3, keys_.get(i));
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(4, serverTick_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4211,6 +4244,10 @@ public final class S2GameEvents {
       for (int i = 0; i < keys_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, keys_.get(i));
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, serverTick_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4340,6 +4377,8 @@ public final class S2GameEvents {
         } else {
           keysBuilder_.clear();
         }
+        serverTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -4385,6 +4424,10 @@ public final class S2GameEvents {
         } else {
           result.keys_ = keysBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.serverTick_ = serverTick_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4434,6 +4477,9 @@ public final class S2GameEvents {
               keysBuilder_.addAllMessages(other.keys_);
             }
           }
+        }
+        if (other.hasServerTick()) {
+          setServerTick(other.getServerTick());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4808,6 +4854,38 @@ public final class S2GameEvents {
           keys_ = null;
         }
         return keysBuilder_;
+      }
+
+      private int serverTick_ ;
+      /**
+       * <code>optional int32 server_tick = 4;</code>
+       */
+      public boolean hasServerTick() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 server_tick = 4;</code>
+       */
+      public int getServerTick() {
+        return serverTick_;
+      }
+      /**
+       * <code>optional int32 server_tick = 4;</code>
+       */
+      public Builder setServerTick(int value) {
+        bitField0_ |= 0x00000008;
+        serverTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 server_tick = 4;</code>
+       */
+      public Builder clearServerTick() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        serverTick_ = 0;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:CMsgSource1LegacyGameEvent)
@@ -7028,36 +7106,36 @@ public final class S2GameEvents {
       "e\030\002 \001(\t\0223\n\004keys\030\003 \003(\0132%.CMsgSource1Legac" +
       "yGameEventList.key_t\"K\n\035CMsgSource1Legac" +
       "yListenEvents\022\022\n\nplayerslot\030\001 \001(\005\022\026\n\016eve" +
-      "ntarraybits\030\002 \003(\r\"\216\002\n\032CMsgSource1LegacyG" +
+      "ntarraybits\030\002 \003(\r\"\243\002\n\032CMsgSource1LegacyG" +
       "ameEvent\022\022\n\nevent_name\030\001 \001(\t\022\017\n\007eventid\030",
       "\002 \001(\005\022/\n\004keys\030\003 \003(\0132!.CMsgSource1LegacyG" +
-      "ameEvent.key_t\032\231\001\n\005key_t\022\014\n\004type\030\001 \001(\005\022\022" +
-      "\n\nval_string\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020\n" +
-      "\010val_long\030\004 \001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010va" +
-      "l_byte\030\006 \001(\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_ui" +
-      "nt64\030\010 \001(\004\"\240\001\n\026CMsgSosStartSoundEvent\022\027\n" +
-      "\017soundevent_guid\030\001 \001(\005\022\027\n\017soundevent_has" +
-      "h\030\002 \001(\007\022\033\n\023source_entity_index\030\003 \001(\005\022\014\n\004" +
-      "seed\030\004 \001(\005\022\025\n\rpacked_params\030\005 \001(\014\022\022\n\nsta" +
-      "rt_time\030\006 \001(\002\"0\n\025CMsgSosStopSoundEvent\022\027",
-      "\n\017soundevent_guid\030\001 \001(\005\"Q\n\031CMsgSosStopSo" +
-      "undEventHash\022\027\n\017soundevent_hash\030\001 \001(\007\022\033\n" +
-      "\023source_entity_index\030\002 \001(\005\"L\n\032CMsgSosSet" +
-      "SoundEventParams\022\027\n\017soundevent_guid\030\001 \001(" +
-      "\005\022\025\n\rpacked_params\030\005 \001(\014*\267\003\n\017EBaseGameEv" +
-      "ents\022 \n\033GE_VDebugGameSessionIDEvent\020\310\001\022\027" +
-      "\n\022GE_PlaceDecalEvent\020\311\001\022\035\n\030GE_ClearWorld" +
-      "DecalsEvent\020\312\001\022\036\n\031GE_ClearEntityDecalsEv" +
-      "ent\020\313\001\022+\n&GE_ClearDecalsForSkeletonInsta" +
-      "nceEvent\020\314\001\022\"\n\035GE_Source1LegacyGameEvent",
-      "List\020\315\001\022!\n\034GE_Source1LegacyListenEvents\020" +
-      "\316\001\022\036\n\031GE_Source1LegacyGameEvent\020\317\001\022\032\n\025GE" +
-      "_SosStartSoundEvent\020\320\001\022\031\n\024GE_SosStopSoun" +
-      "dEvent\020\321\001\022\036\n\031GE_SosSetSoundEventParams\020\322" +
-      "\001\022 \n\033GE_SosSetLibraryStackFields\020\323\001\022\035\n\030G" +
-      "E_SosStopSoundEventHash\020\324\001B5\n skadistats" +
-      ".clarity.wire.s2.protoB\014S2GameEventsH\001\200\001" +
-      "\000"
+      "ameEvent.key_t\022\023\n\013server_tick\030\004 \001(\005\032\231\001\n\005" +
+      "key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_string\030\002 \001(\t\022" +
+      "\021\n\tval_float\030\003 \001(\002\022\020\n\010val_long\030\004 \001(\005\022\021\n\t" +
+      "val_short\030\005 \001(\005\022\020\n\010val_byte\030\006 \001(\005\022\020\n\010val" +
+      "_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010 \001(\004\"\240\001\n\026CMsg" +
+      "SosStartSoundEvent\022\027\n\017soundevent_guid\030\001 " +
+      "\001(\005\022\027\n\017soundevent_hash\030\002 \001(\007\022\033\n\023source_e" +
+      "ntity_index\030\003 \001(\005\022\014\n\004seed\030\004 \001(\005\022\025\n\rpacke" +
+      "d_params\030\005 \001(\014\022\022\n\nstart_time\030\006 \001(\002\"0\n\025CM",
+      "sgSosStopSoundEvent\022\027\n\017soundevent_guid\030\001" +
+      " \001(\005\"Q\n\031CMsgSosStopSoundEventHash\022\027\n\017sou" +
+      "ndevent_hash\030\001 \001(\007\022\033\n\023source_entity_inde" +
+      "x\030\002 \001(\005\"L\n\032CMsgSosSetSoundEventParams\022\027\n" +
+      "\017soundevent_guid\030\001 \001(\005\022\025\n\rpacked_params\030" +
+      "\005 \001(\014*\267\003\n\017EBaseGameEvents\022 \n\033GE_VDebugGa" +
+      "meSessionIDEvent\020\310\001\022\027\n\022GE_PlaceDecalEven" +
+      "t\020\311\001\022\035\n\030GE_ClearWorldDecalsEvent\020\312\001\022\036\n\031G" +
+      "E_ClearEntityDecalsEvent\020\313\001\022+\n&GE_ClearD" +
+      "ecalsForSkeletonInstanceEvent\020\314\001\022\"\n\035GE_S",
+      "ource1LegacyGameEventList\020\315\001\022!\n\034GE_Sourc" +
+      "e1LegacyListenEvents\020\316\001\022\036\n\031GE_Source1Leg" +
+      "acyGameEvent\020\317\001\022\032\n\025GE_SosStartSoundEvent" +
+      "\020\320\001\022\031\n\024GE_SosStopSoundEvent\020\321\001\022\036\n\031GE_Sos" +
+      "SetSoundEventParams\020\322\001\022 \n\033GE_SosSetLibra" +
+      "ryStackFields\020\323\001\022\035\n\030GE_SosStopSoundEvent" +
+      "Hash\020\324\001B5\n skadistats.clarity.wire.s2.pr" +
+      "otoB\014S2GameEventsH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7100,7 +7178,7 @@ public final class S2GameEvents {
     internal_static_CMsgSource1LegacyGameEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgSource1LegacyGameEvent_descriptor,
-        new java.lang.String[] { "EventName", "Eventid", "Keys", });
+        new java.lang.String[] { "EventName", "Eventid", "Keys", "ServerTick", });
     internal_static_CMsgSource1LegacyGameEvent_key_t_descriptor =
       internal_static_CMsgSource1LegacyGameEvent_descriptor.getNestedTypes().get(0);
     internal_static_CMsgSource1LegacyGameEvent_key_t_fieldAccessorTable = new

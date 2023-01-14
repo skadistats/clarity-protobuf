@@ -77,6 +77,10 @@ public final class S2NetMessages {
      * <code>clc_RconServerDetails = 35;</code>
      */
     clc_RconServerDetails(15, 35),
+    /**
+     * <code>clc_HltvReplay = 36;</code>
+     */
+    clc_HltvReplay(16, 36),
     ;
 
     /**
@@ -143,6 +147,10 @@ public final class S2NetMessages {
      * <code>clc_RconServerDetails = 35;</code>
      */
     public static final int clc_RconServerDetails_VALUE = 35;
+    /**
+     * <code>clc_HltvReplay = 36;</code>
+     */
+    public static final int clc_HltvReplay_VALUE = 36;
 
 
     public final int getNumber() { return value; }
@@ -165,6 +173,7 @@ public final class S2NetMessages {
         case 33: return clc_RequestPause;
         case 34: return clc_CmdKeyValues;
         case 35: return clc_RconServerDetails;
+        case 36: return clc_HltvReplay;
         default: return null;
       }
     }
@@ -325,6 +334,22 @@ public final class S2NetMessages {
      * <code>svc_RconServerDetails = 71;</code>
      */
     svc_RconServerDetails(25, 71),
+    /**
+     * <code>svc_UserMessage = 72;</code>
+     */
+    svc_UserMessage(26, 72),
+    /**
+     * <code>svc_HltvReplay = 73;</code>
+     */
+    svc_HltvReplay(27, 73),
+    /**
+     * <code>svc_Broadcast_Command = 74;</code>
+     */
+    svc_Broadcast_Command(28, 74),
+    /**
+     * <code>svc_HltvFixupOperatorStatus = 75;</code>
+     */
+    svc_HltvFixupOperatorStatus(29, 75),
     ;
 
     /**
@@ -431,6 +456,22 @@ public final class S2NetMessages {
      * <code>svc_RconServerDetails = 71;</code>
      */
     public static final int svc_RconServerDetails_VALUE = 71;
+    /**
+     * <code>svc_UserMessage = 72;</code>
+     */
+    public static final int svc_UserMessage_VALUE = 72;
+    /**
+     * <code>svc_HltvReplay = 73;</code>
+     */
+    public static final int svc_HltvReplay_VALUE = 73;
+    /**
+     * <code>svc_Broadcast_Command = 74;</code>
+     */
+    public static final int svc_Broadcast_Command_VALUE = 74;
+    /**
+     * <code>svc_HltvFixupOperatorStatus = 75;</code>
+     */
+    public static final int svc_HltvFixupOperatorStatus_VALUE = 75;
 
 
     public final int getNumber() { return value; }
@@ -463,6 +504,10 @@ public final class S2NetMessages {
         case 63: return svc_ServerSteamID;
         case 70: return svc_FullFrameSplit;
         case 71: return svc_RconServerDetails;
+        case 72: return svc_UserMessage;
+        case 73: return svc_HltvReplay;
+        case 74: return svc_Broadcast_Command;
+        case 75: return svc_HltvFixupOperatorStatus;
         default: return null;
       }
     }
@@ -10242,7 +10287,7 @@ public final class S2NetMessages {
       "amID\022\020\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKey" +
       "Values\022\014\n\004data\030\001 \001(\014\";\n\031CSVCMsg_RconServ" +
       "erDetails\022\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(" +
-      "\t*\372\002\n\014CLC_Messages\022\022\n\016clc_ClientInfo\020\024\022\014" +
+      "\t*\216\003\n\014CLC_Messages\022\022\n\016clc_ClientInfo\020\024\022\014" +
       "\n\010clc_Move\020\025\022\021\n\rclc_VoiceData\020\026\022\023\n\017clc_B",
       "aselineAck\020\027\022\024\n\020clc_ListenEvents\020\030\022\030\n\024cl" +
       "c_RespondCvarValue\020\031\022\024\n\020clc_FileCRCCheck" +
@@ -10251,23 +10296,26 @@ public final class S2NetMessages {
       "\n\031clc_SplitPlayerDisconnect\020\036\022\024\n\020clc_Ser" +
       "verStatus\020\037\022\022\n\016clc_ServerPing\020 \022\024\n\020clc_R" +
       "equestPause\020!\022\024\n\020clc_CmdKeyValues\020\"\022\031\n\025c" +
-      "lc_RconServerDetails\020#*\264\004\n\014SVC_Messages\022" +
-      "\022\n\016svc_ServerInfo\020(\022\033\n\027svc_FlattenedSeri" +
-      "alizer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPa",
-      "use\020+\022\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_" +
-      "UpdateStringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021" +
-      "\n\rsvc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_" +
-      "Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAl" +
-      "lStringTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n" +
-      "\014svc_BSPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022" +
-      "svc_PacketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014" +
-      "\n\010svc_Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsv" +
-      "c_StopSound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_P" +
-      "acketReliable\020=\022\022\n\016svc_HLTVStatus\020>\022\025\n\021s",
-      "vc_ServerSteamID\020?\022\026\n\022svc_FullFrameSplit" +
-      "\020F\022\031\n\025svc_RconServerDetails\020GB4\n skadist" +
-      "ats.clarity.wire.s2.protoB\rS2NetMessages" +
-      "\200\001\000"
+      "lc_RconServerDetails\020#\022\022\n\016clc_HltvReplay" +
+      "\020$*\231\005\n\014SVC_Messages\022\022\n\016svc_ServerInfo\020(\022" +
+      "\033\n\027svc_FlattenedSerializer\020)\022\021\n\rsvc_Clas",
+      "sInfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025svc_CreateS" +
+      "tringTable\020,\022\031\n\025svc_UpdateStringTable\020-\022" +
+      "\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_VoiceData\020/\022\r\n" +
+      "\tsvc_Print\0200\022\016\n\nsvc_Sounds\0201\022\017\n\013svc_SetV" +
+      "iew\0202\022\034\n\030svc_ClearAllStringTables\0203\022\024\n\020s" +
+      "vc_CmdKeyValues\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017s" +
+      "vc_SplitScreen\0206\022\026\n\022svc_PacketEntities\0207" +
+      "\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_" +
+      "GetCvarValue\020:\022\021\n\rsvc_StopSound\020;\022\020\n\014svc" +
+      "_PeerList\020<\022\026\n\022svc_PacketReliable\020=\022\022\n\016s",
+      "vc_HLTVStatus\020>\022\025\n\021svc_ServerSteamID\020?\022\026" +
+      "\n\022svc_FullFrameSplit\020F\022\031\n\025svc_RconServer" +
+      "Details\020G\022\023\n\017svc_UserMessage\020H\022\022\n\016svc_Hl" +
+      "tvReplay\020I\022\031\n\025svc_Broadcast_Command\020J\022\037\n" +
+      "\033svc_HltvFixupOperatorStatus\020KB4\n skadis" +
+      "tats.clarity.wire.s2.protoB\rS2NetMessage" +
+      "s\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

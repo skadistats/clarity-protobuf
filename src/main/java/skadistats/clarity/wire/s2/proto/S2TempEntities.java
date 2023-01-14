@@ -7032,11 +7032,11 @@ public final class S2TempEntities {
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getSaxisOrBuilder();
 
     /**
-     * <code>optional uint32 entity = 4;</code>
+     * <code>optional int32 entity = 4;</code>
      */
     boolean hasEntity();
     /**
-     * <code>optional uint32 entity = 4;</code>
+     * <code>optional int32 entity = 4;</code>
      */
     int getEntity();
 
@@ -7142,7 +7142,7 @@ public final class S2TempEntities {
             }
             case 32: {
               bitField0_ |= 0x00000008;
-              entity_ = input.readUInt32();
+              entity_ = input.readInt32();
               break;
             }
             case 40: {
@@ -7256,13 +7256,13 @@ public final class S2TempEntities {
     public static final int ENTITY_FIELD_NUMBER = 4;
     private int entity_;
     /**
-     * <code>optional uint32 entity = 4;</code>
+     * <code>optional int32 entity = 4;</code>
      */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional uint32 entity = 4;</code>
+     * <code>optional int32 entity = 4;</code>
      */
     public int getEntity() {
       return entity_;
@@ -7313,7 +7313,7 @@ public final class S2TempEntities {
         output.writeMessage(3, saxis_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        output.writeUInt32(4, entity_);
+        output.writeInt32(4, entity_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeUInt32(5, index_);
@@ -7341,7 +7341,7 @@ public final class S2TempEntities {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(4, entity_);
+          .computeInt32Size(4, entity_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -7957,19 +7957,19 @@ public final class S2TempEntities {
 
       private int entity_ ;
       /**
-       * <code>optional uint32 entity = 4;</code>
+       * <code>optional int32 entity = 4;</code>
        */
       public boolean hasEntity() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional uint32 entity = 4;</code>
+       * <code>optional int32 entity = 4;</code>
        */
       public int getEntity() {
         return entity_;
       }
       /**
-       * <code>optional uint32 entity = 4;</code>
+       * <code>optional int32 entity = 4;</code>
        */
       public Builder setEntity(int value) {
         bitField0_ |= 0x00000008;
@@ -7978,7 +7978,7 @@ public final class S2TempEntities {
         return this;
       }
       /**
-       * <code>optional uint32 entity = 4;</code>
+       * <code>optional int32 entity = 4;</code>
        */
       public Builder clearEntity() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -9923,11 +9923,11 @@ public final class S2TempEntities {
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getStartOrBuilder();
 
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     boolean hasEntity();
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     int getEntity();
 
@@ -10029,7 +10029,7 @@ public final class S2TempEntities {
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              entity_ = input.readUInt32();
+              entity_ = input.readInt32();
               break;
             }
             case 32: {
@@ -10127,13 +10127,13 @@ public final class S2TempEntities {
     public static final int ENTITY_FIELD_NUMBER = 3;
     private int entity_;
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     public int getEntity() {
       return entity_;
@@ -10196,7 +10196,7 @@ public final class S2TempEntities {
         output.writeMessage(2, start_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeUInt32(3, entity_);
+        output.writeInt32(3, entity_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeUInt32(4, hitbox_);
@@ -10223,7 +10223,7 @@ public final class S2TempEntities {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, entity_);
+          .computeInt32Size(3, entity_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
@@ -10718,19 +10718,19 @@ public final class S2TempEntities {
 
       private int entity_ ;
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public boolean hasEntity() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public int getEntity() {
         return entity_;
       }
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public Builder setEntity(int value) {
         bitField0_ |= 0x00000004;
@@ -10739,7 +10739,7 @@ public final class S2TempEntities {
         return this;
       }
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public Builder clearEntity() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -14356,11 +14356,11 @@ public final class S2TempEntities {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 entity = 1;</code>
+     * <code>optional int32 entity = 1;</code>
      */
     boolean hasEntity();
     /**
-     * <code>optional uint32 entity = 1;</code>
+     * <code>optional int32 entity = 1;</code>
      */
     int getEntity();
 
@@ -14436,7 +14436,7 @@ public final class S2TempEntities {
             }
             case 8: {
               bitField0_ |= 0x00000001;
-              entity_ = input.readUInt32();
+              entity_ = input.readInt32();
               break;
             }
             case 16: {
@@ -14492,13 +14492,13 @@ public final class S2TempEntities {
     public static final int ENTITY_FIELD_NUMBER = 1;
     private int entity_;
     /**
-     * <code>optional uint32 entity = 1;</code>
+     * <code>optional int32 entity = 1;</code>
      */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional uint32 entity = 1;</code>
+     * <code>optional int32 entity = 1;</code>
      */
     public int getEntity() {
       return entity_;
@@ -14553,7 +14553,7 @@ public final class S2TempEntities {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeUInt32(1, entity_);
+        output.writeInt32(1, entity_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeUInt32(2, density_);
@@ -14572,7 +14572,7 @@ public final class S2TempEntities {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(1, entity_);
+          .computeInt32Size(1, entity_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
@@ -14799,19 +14799,19 @@ public final class S2TempEntities {
 
       private int entity_ ;
       /**
-       * <code>optional uint32 entity = 1;</code>
+       * <code>optional int32 entity = 1;</code>
        */
       public boolean hasEntity() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional uint32 entity = 1;</code>
+       * <code>optional int32 entity = 1;</code>
        */
       public int getEntity() {
         return entity_;
       }
       /**
-       * <code>optional uint32 entity = 1;</code>
+       * <code>optional int32 entity = 1;</code>
        */
       public Builder setEntity(int value) {
         bitField0_ |= 0x00000001;
@@ -14820,7 +14820,7 @@ public final class S2TempEntities {
         return this;
       }
       /**
-       * <code>optional uint32 entity = 1;</code>
+       * <code>optional int32 entity = 1;</code>
        */
       public Builder clearEntity() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -24655,20 +24655,20 @@ public final class S2TempEntities {
     skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder();
 
     /**
-     * <code>optional uint32 player = 2;</code>
+     * <code>optional int32 player = 2;</code>
      */
     boolean hasPlayer();
     /**
-     * <code>optional uint32 player = 2;</code>
+     * <code>optional int32 player = 2;</code>
      */
     int getPlayer();
 
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     boolean hasEntity();
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     int getEntity();
   }
@@ -24739,12 +24739,12 @@ public final class S2TempEntities {
             }
             case 16: {
               bitField0_ |= 0x00000002;
-              player_ = input.readUInt32();
+              player_ = input.readInt32();
               break;
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              entity_ = input.readUInt32();
+              entity_ = input.readInt32();
               break;
             }
           }
@@ -24811,13 +24811,13 @@ public final class S2TempEntities {
     public static final int PLAYER_FIELD_NUMBER = 2;
     private int player_;
     /**
-     * <code>optional uint32 player = 2;</code>
+     * <code>optional int32 player = 2;</code>
      */
     public boolean hasPlayer() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional uint32 player = 2;</code>
+     * <code>optional int32 player = 2;</code>
      */
     public int getPlayer() {
       return player_;
@@ -24826,13 +24826,13 @@ public final class S2TempEntities {
     public static final int ENTITY_FIELD_NUMBER = 3;
     private int entity_;
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     public boolean hasEntity() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional uint32 entity = 3;</code>
+     * <code>optional int32 entity = 3;</code>
      */
     public int getEntity() {
       return entity_;
@@ -24860,10 +24860,10 @@ public final class S2TempEntities {
         output.writeMessage(1, origin_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeUInt32(2, player_);
+        output.writeInt32(2, player_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeUInt32(3, entity_);
+        output.writeInt32(3, entity_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -24880,11 +24880,11 @@ public final class S2TempEntities {
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(2, player_);
+          .computeInt32Size(2, player_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, entity_);
+          .computeInt32Size(3, entity_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -25228,19 +25228,19 @@ public final class S2TempEntities {
 
       private int player_ ;
       /**
-       * <code>optional uint32 player = 2;</code>
+       * <code>optional int32 player = 2;</code>
        */
       public boolean hasPlayer() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional uint32 player = 2;</code>
+       * <code>optional int32 player = 2;</code>
        */
       public int getPlayer() {
         return player_;
       }
       /**
-       * <code>optional uint32 player = 2;</code>
+       * <code>optional int32 player = 2;</code>
        */
       public Builder setPlayer(int value) {
         bitField0_ |= 0x00000002;
@@ -25249,7 +25249,7 @@ public final class S2TempEntities {
         return this;
       }
       /**
-       * <code>optional uint32 player = 2;</code>
+       * <code>optional int32 player = 2;</code>
        */
       public Builder clearPlayer() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -25260,19 +25260,19 @@ public final class S2TempEntities {
 
       private int entity_ ;
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public boolean hasEntity() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public int getEntity() {
         return entity_;
       }
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public Builder setEntity(int value) {
         bitField0_ |= 0x00000004;
@@ -25281,7 +25281,7 @@ public final class S2TempEntities {
         return this;
       }
       /**
-       * <code>optional uint32 entity = 3;</code>
+       * <code>optional int32 entity = 3;</code>
        */
       public Builder clearEntity() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -27696,7 +27696,7 @@ public final class S2TempEntities {
       "\030\007 \001(\r\022\014\n\004time\030\010 \001(\002\022\r\n\005flags\030\t \001(\r\"\205\001\n\016" +
       "CMsgTEBSPDecal\022\033\n\006origin\030\001 \001(\0132\013.CMsgVec" +
       "tor\022\033\n\006normal\030\002 \001(\0132\013.CMsgVector\022\032\n\005saxi" +
-      "s\030\003 \001(\0132\013.CMsgVector\022\016\n\006entity\030\004 \001(\r\022\r\n\005" +
+      "s\030\003 \001(\0132\013.CMsgVector\022\016\n\006entity\030\004 \001(\005\022\r\n\005" +
       "index\030\005 \001(\r\"s\n\rCMsgTEBubbles\022\031\n\004mins\030\001 \001" +
       "(\0132\013.CMsgVector\022\031\n\004maxs\030\002 \001(\0132\013.CMsgVect",
       "or\022\016\n\006height\030\003 \001(\002\022\r\n\005count\030\004 \001(\r\022\r\n\005spe" +
@@ -27705,7 +27705,7 @@ public final class S2TempEntities {
       "tor\022\016\n\006waterz\030\003 \001(\002\022\r\n\005count\030\004 \001(\r\022\r\n\005sp" +
       "eed\030\005 \001(\002\"u\n\013CMsgTEDecal\022\033\n\006origin\030\001 \001(\013" +
       "2\013.CMsgVector\022\032\n\005start\030\002 \001(\0132\013.CMsgVecto" +
-      "r\022\016\n\006entity\030\003 \001(\r\022\016\n\006hitbox\030\004 \001(\r\022\r\n\005ind" +
+      "r\022\016\n\006entity\030\003 \001(\005\022\016\n\006hitbox\030\004 \001(\r\022\r\n\005ind" +
       "ex\030\005 \001(\r\"\235\003\n\016CMsgEffectData\022\033\n\006origin\030\001 " +
       "\001(\0132\013.CMsgVector\022\032\n\005start\030\002 \001(\0132\013.CMsgVe" +
       "ctor\022\033\n\006normal\030\003 \001(\0132\013.CMsgVector\022\033\n\006ang",
@@ -27721,7 +27721,7 @@ public final class S2TempEntities {
       "tData\"[\n\022CMsgTEEnergySplash\022\030\n\003pos\030\001 \001(\013",
       "2\013.CMsgVector\022\030\n\003dir\030\002 \001(\0132\013.CMsgVector\022" +
       "\021\n\texplosive\030\003 \001(\010\">\n\nCMsgTEFizz\022\016\n\006enti" +
-      "ty\030\001 \001(\r\022\017\n\007density\030\002 \001(\r\022\017\n\007current\030\003 \001" +
+      "ty\030\001 \001(\005\022\017\n\007density\030\002 \001(\r\022\017\n\007current\030\003 \001" +
       "(\005\"\371\001\n\024CMsgTEShatterSurface\022\033\n\006origin\030\001 " +
       "\001(\0132\013.CMsgVector\022\033\n\006angles\030\002 \001(\0132\013.CMsgQ" +
       "Angle\022\032\n\005force\030\003 \001(\0132\013.CMsgVector\022\035\n\010for" +
@@ -27758,7 +27758,7 @@ public final class S2TempEntities {
       "\030\007 \001(\007\022\022\n\nmodelindex\030\010 \001(\006\022\034\n\024breakmodel" +
       "snottomake\030\t \001(\r\022\r\n\005scale\030\n \001(\002\"P\n\021CMsgT" +
       "EPlayerDecal\022\033\n\006origin\030\001 \001(\0132\013.CMsgVecto" +
-      "r\022\016\n\006player\030\002 \001(\r\022\016\n\006entity\030\003 \001(\r\"q\n\024CMs",
+      "r\022\016\n\006player\030\002 \001(\005\022\016\n\006entity\030\003 \001(\005\"q\n\024CMs",
       "gTEProjectedDecal\022\033\n\006origin\030\001 \001(\0132\013.CMsg" +
       "Vector\022\033\n\006angles\030\002 \001(\0132\013.CMsgQAngle\022\r\n\005i" +
       "ndex\030\003 \001(\r\022\020\n\010distance\030\004 \001(\002\"9\n\013CMsgTESm" +

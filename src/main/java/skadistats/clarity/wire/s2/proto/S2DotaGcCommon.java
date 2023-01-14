@@ -307,6 +307,205 @@ public final class S2DotaGcCommon {
   }
 
   /**
+   * Protobuf enum {@code DOTA_GC_TEAM}
+   */
+  public enum DOTA_GC_TEAM
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>DOTA_GC_TEAM_GOOD_GUYS = 0;</code>
+     */
+    DOTA_GC_TEAM_GOOD_GUYS(0, 0),
+    /**
+     * <code>DOTA_GC_TEAM_BAD_GUYS = 1;</code>
+     */
+    DOTA_GC_TEAM_BAD_GUYS(1, 1),
+    /**
+     * <code>DOTA_GC_TEAM_BROADCASTER = 2;</code>
+     */
+    DOTA_GC_TEAM_BROADCASTER(2, 2),
+    /**
+     * <code>DOTA_GC_TEAM_SPECTATOR = 3;</code>
+     */
+    DOTA_GC_TEAM_SPECTATOR(3, 3),
+    /**
+     * <code>DOTA_GC_TEAM_PLAYER_POOL = 4;</code>
+     */
+    DOTA_GC_TEAM_PLAYER_POOL(4, 4),
+    /**
+     * <code>DOTA_GC_TEAM_NOTEAM = 5;</code>
+     */
+    DOTA_GC_TEAM_NOTEAM(5, 5),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_1 = 6;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_1(6, 6),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_2 = 7;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_2(7, 7),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_3 = 8;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_3(8, 8),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_4 = 9;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_4(9, 9),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_5 = 10;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_5(10, 10),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_6 = 11;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_6(11, 11),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_7 = 12;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_7(12, 12),
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_8 = 13;</code>
+     */
+    DOTA_GC_TEAM_CUSTOM_8(13, 13),
+    /**
+     * <code>DOTA_GC_TEAM_NEUTRALS = 14;</code>
+     */
+    DOTA_GC_TEAM_NEUTRALS(14, 14),
+    ;
+
+    /**
+     * <code>DOTA_GC_TEAM_GOOD_GUYS = 0;</code>
+     */
+    public static final int DOTA_GC_TEAM_GOOD_GUYS_VALUE = 0;
+    /**
+     * <code>DOTA_GC_TEAM_BAD_GUYS = 1;</code>
+     */
+    public static final int DOTA_GC_TEAM_BAD_GUYS_VALUE = 1;
+    /**
+     * <code>DOTA_GC_TEAM_BROADCASTER = 2;</code>
+     */
+    public static final int DOTA_GC_TEAM_BROADCASTER_VALUE = 2;
+    /**
+     * <code>DOTA_GC_TEAM_SPECTATOR = 3;</code>
+     */
+    public static final int DOTA_GC_TEAM_SPECTATOR_VALUE = 3;
+    /**
+     * <code>DOTA_GC_TEAM_PLAYER_POOL = 4;</code>
+     */
+    public static final int DOTA_GC_TEAM_PLAYER_POOL_VALUE = 4;
+    /**
+     * <code>DOTA_GC_TEAM_NOTEAM = 5;</code>
+     */
+    public static final int DOTA_GC_TEAM_NOTEAM_VALUE = 5;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_1 = 6;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_1_VALUE = 6;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_2 = 7;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_2_VALUE = 7;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_3 = 8;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_3_VALUE = 8;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_4 = 9;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_4_VALUE = 9;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_5 = 10;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_5_VALUE = 10;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_6 = 11;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_6_VALUE = 11;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_7 = 12;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_7_VALUE = 12;
+    /**
+     * <code>DOTA_GC_TEAM_CUSTOM_8 = 13;</code>
+     */
+    public static final int DOTA_GC_TEAM_CUSTOM_8_VALUE = 13;
+    /**
+     * <code>DOTA_GC_TEAM_NEUTRALS = 14;</code>
+     */
+    public static final int DOTA_GC_TEAM_NEUTRALS_VALUE = 14;
+
+
+    public final int getNumber() { return value; }
+
+    public static DOTA_GC_TEAM valueOf(int value) {
+      switch (value) {
+        case 0: return DOTA_GC_TEAM_GOOD_GUYS;
+        case 1: return DOTA_GC_TEAM_BAD_GUYS;
+        case 2: return DOTA_GC_TEAM_BROADCASTER;
+        case 3: return DOTA_GC_TEAM_SPECTATOR;
+        case 4: return DOTA_GC_TEAM_PLAYER_POOL;
+        case 5: return DOTA_GC_TEAM_NOTEAM;
+        case 6: return DOTA_GC_TEAM_CUSTOM_1;
+        case 7: return DOTA_GC_TEAM_CUSTOM_2;
+        case 8: return DOTA_GC_TEAM_CUSTOM_3;
+        case 9: return DOTA_GC_TEAM_CUSTOM_4;
+        case 10: return DOTA_GC_TEAM_CUSTOM_5;
+        case 11: return DOTA_GC_TEAM_CUSTOM_6;
+        case 12: return DOTA_GC_TEAM_CUSTOM_7;
+        case 13: return DOTA_GC_TEAM_CUSTOM_8;
+        case 14: return DOTA_GC_TEAM_NEUTRALS;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>() {
+            public DOTA_GC_TEAM findValueByNumber(int number) {
+              return DOTA_GC_TEAM.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final DOTA_GC_TEAM[] VALUES = values();
+
+    public static DOTA_GC_TEAM valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private DOTA_GC_TEAM(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:DOTA_GC_TEAM)
+  }
+
+  /**
    * Protobuf enum {@code EEvent}
    */
   public enum EEvent
@@ -444,9 +643,41 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_SPRING_2021(32, 32),
     /**
-     * <code>EVENT_ID_COUNT = 33;</code>
+     * <code>EVENT_ID_FALL_2021 = 33;</code>
      */
-    EVENT_ID_COUNT(33, 33),
+    EVENT_ID_FALL_2021(33, 33),
+    /**
+     * <code>EVENT_ID_TEAM_FANDOM_FALL_2021 = 34;</code>
+     */
+    EVENT_ID_TEAM_FANDOM_FALL_2021(34, 34),
+    /**
+     * <code>EVENT_ID_TEAM_2021_2022_TOUR2 = 35;</code>
+     */
+    EVENT_ID_TEAM_2021_2022_TOUR2(35, 35),
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2022 = 36;</code>
+     */
+    EVENT_ID_INTERNATIONAL_2022(36, 36),
+    /**
+     * <code>EVENT_ID_TEAM_2021_2022_TOUR3 = 37;</code>
+     */
+    EVENT_ID_TEAM_2021_2022_TOUR3(37, 37),
+    /**
+     * <code>EVENT_ID_TEAM_INTERNATIONAL_2022 = 38;</code>
+     */
+    EVENT_ID_TEAM_INTERNATIONAL_2022(38, 38),
+    /**
+     * <code>EVENT_ID_PERMANENT_GRANTS = 39;</code>
+     */
+    EVENT_ID_PERMANENT_GRANTS(39, 39),
+    /**
+     * <code>EVENT_ID_TEAM_2023_TOUR1 = 41;</code>
+     */
+    EVENT_ID_TEAM_2023_TOUR1(40, 41),
+    /**
+     * <code>EVENT_ID_COUNT = 42;</code>
+     */
+    EVENT_ID_COUNT(41, 42),
     ;
 
     /**
@@ -582,9 +813,41 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_SPRING_2021_VALUE = 32;
     /**
-     * <code>EVENT_ID_COUNT = 33;</code>
+     * <code>EVENT_ID_FALL_2021 = 33;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 33;
+    public static final int EVENT_ID_FALL_2021_VALUE = 33;
+    /**
+     * <code>EVENT_ID_TEAM_FANDOM_FALL_2021 = 34;</code>
+     */
+    public static final int EVENT_ID_TEAM_FANDOM_FALL_2021_VALUE = 34;
+    /**
+     * <code>EVENT_ID_TEAM_2021_2022_TOUR2 = 35;</code>
+     */
+    public static final int EVENT_ID_TEAM_2021_2022_TOUR2_VALUE = 35;
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2022 = 36;</code>
+     */
+    public static final int EVENT_ID_INTERNATIONAL_2022_VALUE = 36;
+    /**
+     * <code>EVENT_ID_TEAM_2021_2022_TOUR3 = 37;</code>
+     */
+    public static final int EVENT_ID_TEAM_2021_2022_TOUR3_VALUE = 37;
+    /**
+     * <code>EVENT_ID_TEAM_INTERNATIONAL_2022 = 38;</code>
+     */
+    public static final int EVENT_ID_TEAM_INTERNATIONAL_2022_VALUE = 38;
+    /**
+     * <code>EVENT_ID_PERMANENT_GRANTS = 39;</code>
+     */
+    public static final int EVENT_ID_PERMANENT_GRANTS_VALUE = 39;
+    /**
+     * <code>EVENT_ID_TEAM_2023_TOUR1 = 41;</code>
+     */
+    public static final int EVENT_ID_TEAM_2023_TOUR1_VALUE = 41;
+    /**
+     * <code>EVENT_ID_COUNT = 42;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 42;
 
 
     public final int getNumber() { return value; }
@@ -624,7 +887,15 @@ public final class S2DotaGcCommon {
         case 30: return EVENT_ID_TEAM_FANDOM;
         case 31: return EVENT_ID_DIRETIDE_2020;
         case 32: return EVENT_ID_SPRING_2021;
-        case 33: return EVENT_ID_COUNT;
+        case 33: return EVENT_ID_FALL_2021;
+        case 34: return EVENT_ID_TEAM_FANDOM_FALL_2021;
+        case 35: return EVENT_ID_TEAM_2021_2022_TOUR2;
+        case 36: return EVENT_ID_INTERNATIONAL_2022;
+        case 37: return EVENT_ID_TEAM_2021_2022_TOUR3;
+        case 38: return EVENT_ID_TEAM_INTERNATIONAL_2022;
+        case 39: return EVENT_ID_PERMANENT_GRANTS;
+        case 41: return EVENT_ID_TEAM_2023_TOUR1;
+        case 42: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -651,7 +922,7 @@ public final class S2DotaGcCommon {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(1);
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final EEvent[] VALUES = values();
@@ -694,29 +965,69 @@ public final class S2DotaGcCommon {
      */
     k_EMatchOutcome_DireVictory(2, 3),
     /**
+     * <code>k_EMatchOutcome_NeutralVictory = 4;</code>
+     */
+    k_EMatchOutcome_NeutralVictory(3, 4),
+    /**
+     * <code>k_EMatchOutcome_NoTeamWinner = 5;</code>
+     */
+    k_EMatchOutcome_NoTeamWinner(4, 5),
+    /**
+     * <code>k_EMatchOutcome_Custom1Victory = 6;</code>
+     */
+    k_EMatchOutcome_Custom1Victory(5, 6),
+    /**
+     * <code>k_EMatchOutcome_Custom2Victory = 7;</code>
+     */
+    k_EMatchOutcome_Custom2Victory(6, 7),
+    /**
+     * <code>k_EMatchOutcome_Custom3Victory = 8;</code>
+     */
+    k_EMatchOutcome_Custom3Victory(7, 8),
+    /**
+     * <code>k_EMatchOutcome_Custom4Victory = 9;</code>
+     */
+    k_EMatchOutcome_Custom4Victory(8, 9),
+    /**
+     * <code>k_EMatchOutcome_Custom5Victory = 10;</code>
+     */
+    k_EMatchOutcome_Custom5Victory(9, 10),
+    /**
+     * <code>k_EMatchOutcome_Custom6Victory = 11;</code>
+     */
+    k_EMatchOutcome_Custom6Victory(10, 11),
+    /**
+     * <code>k_EMatchOutcome_Custom7Victory = 12;</code>
+     */
+    k_EMatchOutcome_Custom7Victory(11, 12),
+    /**
+     * <code>k_EMatchOutcome_Custom8Victory = 13;</code>
+     */
+    k_EMatchOutcome_Custom8Victory(12, 13),
+    /**
      * <code>k_EMatchOutcome_NotScored_PoorNetworkConditions = 64;</code>
      */
-    k_EMatchOutcome_NotScored_PoorNetworkConditions(3, 64),
+    k_EMatchOutcome_NotScored_PoorNetworkConditions(13, 64),
     /**
      * <code>k_EMatchOutcome_NotScored_Leaver = 65;</code>
      */
-    k_EMatchOutcome_NotScored_Leaver(4, 65),
+    k_EMatchOutcome_NotScored_Leaver(14, 65),
     /**
      * <code>k_EMatchOutcome_NotScored_ServerCrash = 66;</code>
      */
-    k_EMatchOutcome_NotScored_ServerCrash(5, 66),
+    k_EMatchOutcome_NotScored_ServerCrash(15, 66),
     /**
      * <code>k_EMatchOutcome_NotScored_NeverStarted = 67;</code>
      */
-    k_EMatchOutcome_NotScored_NeverStarted(6, 67),
+    k_EMatchOutcome_NotScored_NeverStarted(16, 67),
     /**
      * <code>k_EMatchOutcome_NotScored_Canceled = 68;</code>
      */
-    k_EMatchOutcome_NotScored_Canceled(7, 68),
+    k_EMatchOutcome_NotScored_Canceled(17, 68),
     /**
      * <code>k_EMatchOutcome_NotScored_Suspicious = 69;</code>
      */
-    k_EMatchOutcome_NotScored_Suspicious(8, 69),
+    k_EMatchOutcome_NotScored_Suspicious(18, 69),
     ;
 
     /**
@@ -731,6 +1042,46 @@ public final class S2DotaGcCommon {
      * <code>k_EMatchOutcome_DireVictory = 3;</code>
      */
     public static final int k_EMatchOutcome_DireVictory_VALUE = 3;
+    /**
+     * <code>k_EMatchOutcome_NeutralVictory = 4;</code>
+     */
+    public static final int k_EMatchOutcome_NeutralVictory_VALUE = 4;
+    /**
+     * <code>k_EMatchOutcome_NoTeamWinner = 5;</code>
+     */
+    public static final int k_EMatchOutcome_NoTeamWinner_VALUE = 5;
+    /**
+     * <code>k_EMatchOutcome_Custom1Victory = 6;</code>
+     */
+    public static final int k_EMatchOutcome_Custom1Victory_VALUE = 6;
+    /**
+     * <code>k_EMatchOutcome_Custom2Victory = 7;</code>
+     */
+    public static final int k_EMatchOutcome_Custom2Victory_VALUE = 7;
+    /**
+     * <code>k_EMatchOutcome_Custom3Victory = 8;</code>
+     */
+    public static final int k_EMatchOutcome_Custom3Victory_VALUE = 8;
+    /**
+     * <code>k_EMatchOutcome_Custom4Victory = 9;</code>
+     */
+    public static final int k_EMatchOutcome_Custom4Victory_VALUE = 9;
+    /**
+     * <code>k_EMatchOutcome_Custom5Victory = 10;</code>
+     */
+    public static final int k_EMatchOutcome_Custom5Victory_VALUE = 10;
+    /**
+     * <code>k_EMatchOutcome_Custom6Victory = 11;</code>
+     */
+    public static final int k_EMatchOutcome_Custom6Victory_VALUE = 11;
+    /**
+     * <code>k_EMatchOutcome_Custom7Victory = 12;</code>
+     */
+    public static final int k_EMatchOutcome_Custom7Victory_VALUE = 12;
+    /**
+     * <code>k_EMatchOutcome_Custom8Victory = 13;</code>
+     */
+    public static final int k_EMatchOutcome_Custom8Victory_VALUE = 13;
     /**
      * <code>k_EMatchOutcome_NotScored_PoorNetworkConditions = 64;</code>
      */
@@ -764,6 +1115,16 @@ public final class S2DotaGcCommon {
         case 0: return k_EMatchOutcome_Unknown;
         case 2: return k_EMatchOutcome_RadVictory;
         case 3: return k_EMatchOutcome_DireVictory;
+        case 4: return k_EMatchOutcome_NeutralVictory;
+        case 5: return k_EMatchOutcome_NoTeamWinner;
+        case 6: return k_EMatchOutcome_Custom1Victory;
+        case 7: return k_EMatchOutcome_Custom2Victory;
+        case 8: return k_EMatchOutcome_Custom3Victory;
+        case 9: return k_EMatchOutcome_Custom4Victory;
+        case 10: return k_EMatchOutcome_Custom5Victory;
+        case 11: return k_EMatchOutcome_Custom6Victory;
+        case 12: return k_EMatchOutcome_Custom7Victory;
+        case 13: return k_EMatchOutcome_Custom8Victory;
         case 64: return k_EMatchOutcome_NotScored_PoorNetworkConditions;
         case 65: return k_EMatchOutcome_NotScored_Leaver;
         case 66: return k_EMatchOutcome_NotScored_ServerCrash;
@@ -796,7 +1157,7 @@ public final class S2DotaGcCommon {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(2);
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final EMatchOutcome[] VALUES = values();
@@ -950,7 +1311,7 @@ public final class S2DotaGcCommon {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(3);
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final EDOTAPlayerMMRType[] VALUES = values();
@@ -1041,7 +1402,7 @@ public final class S2DotaGcCommon {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(4);
+      return skadistats.clarity.wire.s2.proto.S2DotaGcCommon.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final EDOTAMMRBoostType[] VALUES = values();
@@ -19321,58 +19682,84 @@ public final class S2DotaGcCommon {
       "OTA_GAMEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_A" +
       "LL_DRAFT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026D",
       "OTA_GAMEMODE_MUTATION\020\030\022#\n\037DOTA_GAMEMODE" +
-      "_COACHES_CHALLENGE\020\031*\355\007\n\006EEvent\022\021\n\rEVENT" +
-      "_ID_NONE\020\000\022\025\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVE" +
-      "NT_ID_SPRING_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROS" +
-      "TIVUS_2013\020\003\022\034\n\030EVENT_ID_COMPENDIUM_2014" +
-      "\020\004\022\032\n\026EVENT_ID_NEXON_PC_BANG\020\005\022\032\n\026EVENT_" +
-      "ID_PWRD_DAC_2015\020\006\022\033\n\027EVENT_ID_NEW_BLOOM" +
-      "_2015\020\007\022\037\n\033EVENT_ID_INTERNATIONAL_2015\020\010" +
-      "\022\034\n\030EVENT_ID_FALL_MAJOR_2015\020\t\022\026\n\022EVENT_" +
-      "ID_ORACLE_PA\020\n\022$\n EVENT_ID_NEW_BLOOM_201",
-      "5_PREBEAST\020\013\022\026\n\022EVENT_ID_FROSTIVUS\020\014\022\036\n\032" +
-      "EVENT_ID_WINTER_MAJOR_2016\020\r\022\037\n\033EVENT_ID" +
-      "_INTERNATIONAL_2016\020\016\022\034\n\030EVENT_ID_FALL_M" +
-      "AJOR_2016\020\017\022\036\n\032EVENT_ID_WINTER_MAJOR_201" +
-      "7\020\020\022\033\n\027EVENT_ID_NEW_BLOOM_2017\020\021\022\037\n\033EVEN" +
-      "T_ID_INTERNATIONAL_2017\020\022\022\036\n\032EVENT_ID_PL" +
-      "US_SUBSCRIPTION\020\023\022\035\n\031EVENT_ID_SINGLES_DA" +
-      "Y_2017\020\024\022\033\n\027EVENT_ID_FROSTIVUS_2017\020\025\022\037\n" +
-      "\033EVENT_ID_INTERNATIONAL_2018\020\026\022\033\n\027EVENT_" +
-      "ID_FROSTIVUS_2018\020\027\022\033\n\027EVENT_ID_NEW_BLOO",
-      "M_2019\020\030\022\037\n\033EVENT_ID_INTERNATIONAL_2019\020" +
-      "\031\022\"\n\036EVENT_ID_NEW_PLAYER_EXPERIENCE\020\032\022\033\n" +
-      "\027EVENT_ID_FROSTIVUS_2019\020\033\022\033\n\027EVENT_ID_N" +
-      "EW_BLOOM_2020\020\034\022\037\n\033EVENT_ID_INTERNATIONA" +
-      "L_2020\020\035\022\030\n\024EVENT_ID_TEAM_FANDOM\020\036\022\032\n\026EV" +
-      "ENT_ID_DIRETIDE_2020\020\037\022\030\n\024EVENT_ID_SPRIN" +
-      "G_2021\020 \022\022\n\016EVENT_ID_COUNT\020!*\361\002\n\rEMatchO" +
-      "utcome\022\033\n\027k_EMatchOutcome_Unknown\020\000\022\036\n\032k" +
-      "_EMatchOutcome_RadVictory\020\002\022\037\n\033k_EMatchO" +
-      "utcome_DireVictory\020\003\0223\n/k_EMatchOutcome_",
-      "NotScored_PoorNetworkConditions\020@\022$\n k_E" +
-      "MatchOutcome_NotScored_Leaver\020A\022)\n%k_EMa" +
-      "tchOutcome_NotScored_ServerCrash\020B\022*\n&k_" +
-      "EMatchOutcome_NotScored_NeverStarted\020C\022&" +
-      "\n\"k_EMatchOutcome_NotScored_Canceled\020D\022(" +
-      "\n$k_EMatchOutcome_NotScored_Suspicious\020E" +
-      "*\321\003\n\022EDOTAPlayerMMRType\022 \n\034k_EDOTAPlayer" +
-      "MMRType_Invalid\020\000\022&\n\"k_EDOTAPlayerMMRTyp" +
-      "e_GeneralHidden\020\001\022/\n+k_EDOTAPlayerMMRTyp" +
-      "e_GeneralCompetitive2019\020\003\022,\n(k_EDOTAPla",
-      "yerMMRType_SoloCompetitive2019\020\004\022.\n*k_ED" +
-      "OTAPlayerMMRType_1v1Competitive_UNUSED\020\005" +
-      "\022.\n*k_EDOTAPlayerMMRType_GeneralSeasonal" +
-      "Ranked\020\006\022+\n\'k_EDOTAPlayerMMRType_SoloSea" +
-      "sonalRanked\020\007\022)\n%k_EDOTAPlayerMMRType_Co" +
-      "mpetitive_Core\020\010\022,\n(k_EDOTAPlayerMMRType" +
-      "_Competitive_Support\020\t\022,\n(k_EDOTAPlayerM" +
-      "MRType_Competitive_Classic\020\n*s\n\021EDOTAMMR" +
-      "BoostType\022\034\n\030k_EDOTAMMRBoostType_None\020\000\022" +
-      "\036\n\032k_EDOTAMMRBoostType_Leader\020\001\022 \n\034k_EDO",
-      "TAMMRBoostType_Follower\020\002B7\n skadistats." +
-      "clarity.wire.s2.protoB\016S2DotaGcCommonH\001\200" +
-      "\001\000"
+      "_COACHES_CHALLENGE\020\031*\251\003\n\014DOTA_GC_TEAM\022\032\n" +
+      "\026DOTA_GC_TEAM_GOOD_GUYS\020\000\022\031\n\025DOTA_GC_TEA" +
+      "M_BAD_GUYS\020\001\022\034\n\030DOTA_GC_TEAM_BROADCASTER" +
+      "\020\002\022\032\n\026DOTA_GC_TEAM_SPECTATOR\020\003\022\034\n\030DOTA_G" +
+      "C_TEAM_PLAYER_POOL\020\004\022\027\n\023DOTA_GC_TEAM_NOT" +
+      "EAM\020\005\022\031\n\025DOTA_GC_TEAM_CUSTOM_1\020\006\022\031\n\025DOTA" +
+      "_GC_TEAM_CUSTOM_2\020\007\022\031\n\025DOTA_GC_TEAM_CUST" +
+      "OM_3\020\010\022\031\n\025DOTA_GC_TEAM_CUSTOM_4\020\t\022\031\n\025DOT" +
+      "A_GC_TEAM_CUSTOM_5\020\n\022\031\n\025DOTA_GC_TEAM_CUS",
+      "TOM_6\020\013\022\031\n\025DOTA_GC_TEAM_CUSTOM_7\020\014\022\031\n\025DO" +
+      "TA_GC_TEAM_CUSTOM_8\020\r\022\031\n\025DOTA_GC_TEAM_NE" +
+      "UTRALS\020\016*\363\t\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025" +
+      "\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVENT_ID_SPRING" +
+      "_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROSTIVUS_2013\020\003" +
+      "\022\034\n\030EVENT_ID_COMPENDIUM_2014\020\004\022\032\n\026EVENT_" +
+      "ID_NEXON_PC_BANG\020\005\022\032\n\026EVENT_ID_PWRD_DAC_" +
+      "2015\020\006\022\033\n\027EVENT_ID_NEW_BLOOM_2015\020\007\022\037\n\033E" +
+      "VENT_ID_INTERNATIONAL_2015\020\010\022\034\n\030EVENT_ID" +
+      "_FALL_MAJOR_2015\020\t\022\026\n\022EVENT_ID_ORACLE_PA",
+      "\020\n\022$\n EVENT_ID_NEW_BLOOM_2015_PREBEAST\020\013" +
+      "\022\026\n\022EVENT_ID_FROSTIVUS\020\014\022\036\n\032EVENT_ID_WIN" +
+      "TER_MAJOR_2016\020\r\022\037\n\033EVENT_ID_INTERNATION" +
+      "AL_2016\020\016\022\034\n\030EVENT_ID_FALL_MAJOR_2016\020\017\022" +
+      "\036\n\032EVENT_ID_WINTER_MAJOR_2017\020\020\022\033\n\027EVENT" +
+      "_ID_NEW_BLOOM_2017\020\021\022\037\n\033EVENT_ID_INTERNA" +
+      "TIONAL_2017\020\022\022\036\n\032EVENT_ID_PLUS_SUBSCRIPT" +
+      "ION\020\023\022\035\n\031EVENT_ID_SINGLES_DAY_2017\020\024\022\033\n\027" +
+      "EVENT_ID_FROSTIVUS_2017\020\025\022\037\n\033EVENT_ID_IN" +
+      "TERNATIONAL_2018\020\026\022\033\n\027EVENT_ID_FROSTIVUS",
+      "_2018\020\027\022\033\n\027EVENT_ID_NEW_BLOOM_2019\020\030\022\037\n\033" +
+      "EVENT_ID_INTERNATIONAL_2019\020\031\022\"\n\036EVENT_I" +
+      "D_NEW_PLAYER_EXPERIENCE\020\032\022\033\n\027EVENT_ID_FR" +
+      "OSTIVUS_2019\020\033\022\033\n\027EVENT_ID_NEW_BLOOM_202" +
+      "0\020\034\022\037\n\033EVENT_ID_INTERNATIONAL_2020\020\035\022\030\n\024" +
+      "EVENT_ID_TEAM_FANDOM\020\036\022\032\n\026EVENT_ID_DIRET" +
+      "IDE_2020\020\037\022\030\n\024EVENT_ID_SPRING_2021\020 \022\026\n\022" +
+      "EVENT_ID_FALL_2021\020!\022\"\n\036EVENT_ID_TEAM_FA" +
+      "NDOM_FALL_2021\020\"\022!\n\035EVENT_ID_TEAM_2021_2" +
+      "022_TOUR2\020#\022\037\n\033EVENT_ID_INTERNATIONAL_20",
+      "22\020$\022!\n\035EVENT_ID_TEAM_2021_2022_TOUR3\020%\022" +
+      "$\n EVENT_ID_TEAM_INTERNATIONAL_2022\020&\022\035\n" +
+      "\031EVENT_ID_PERMANENT_GRANTS\020\'\022\034\n\030EVENT_ID" +
+      "_TEAM_2023_TOUR1\020)\022\022\n\016EVENT_ID_COUNT\020**\327" +
+      "\005\n\rEMatchOutcome\022\033\n\027k_EMatchOutcome_Unkn" +
+      "own\020\000\022\036\n\032k_EMatchOutcome_RadVictory\020\002\022\037\n" +
+      "\033k_EMatchOutcome_DireVictory\020\003\022\"\n\036k_EMat" +
+      "chOutcome_NeutralVictory\020\004\022 \n\034k_EMatchOu" +
+      "tcome_NoTeamWinner\020\005\022\"\n\036k_EMatchOutcome_" +
+      "Custom1Victory\020\006\022\"\n\036k_EMatchOutcome_Cust",
+      "om2Victory\020\007\022\"\n\036k_EMatchOutcome_Custom3V" +
+      "ictory\020\010\022\"\n\036k_EMatchOutcome_Custom4Victo" +
+      "ry\020\t\022\"\n\036k_EMatchOutcome_Custom5Victory\020\n" +
+      "\022\"\n\036k_EMatchOutcome_Custom6Victory\020\013\022\"\n\036" +
+      "k_EMatchOutcome_Custom7Victory\020\014\022\"\n\036k_EM" +
+      "atchOutcome_Custom8Victory\020\r\0223\n/k_EMatch" +
+      "Outcome_NotScored_PoorNetworkConditions\020" +
+      "@\022$\n k_EMatchOutcome_NotScored_Leaver\020A\022" +
+      ")\n%k_EMatchOutcome_NotScored_ServerCrash" +
+      "\020B\022*\n&k_EMatchOutcome_NotScored_NeverSta",
+      "rted\020C\022&\n\"k_EMatchOutcome_NotScored_Canc" +
+      "eled\020D\022(\n$k_EMatchOutcome_NotScored_Susp" +
+      "icious\020E*\321\003\n\022EDOTAPlayerMMRType\022 \n\034k_EDO" +
+      "TAPlayerMMRType_Invalid\020\000\022&\n\"k_EDOTAPlay" +
+      "erMMRType_GeneralHidden\020\001\022/\n+k_EDOTAPlay" +
+      "erMMRType_GeneralCompetitive2019\020\003\022,\n(k_" +
+      "EDOTAPlayerMMRType_SoloCompetitive2019\020\004" +
+      "\022.\n*k_EDOTAPlayerMMRType_1v1Competitive_" +
+      "UNUSED\020\005\022.\n*k_EDOTAPlayerMMRType_General" +
+      "SeasonalRanked\020\006\022+\n\'k_EDOTAPlayerMMRType",
+      "_SoloSeasonalRanked\020\007\022)\n%k_EDOTAPlayerMM" +
+      "RType_Competitive_Core\020\010\022,\n(k_EDOTAPlaye" +
+      "rMMRType_Competitive_Support\020\t\022,\n(k_EDOT" +
+      "APlayerMMRType_Competitive_Classic\020\n*s\n\021" +
+      "EDOTAMMRBoostType\022\034\n\030k_EDOTAMMRBoostType" +
+      "_None\020\000\022\036\n\032k_EDOTAMMRBoostType_Leader\020\001\022" +
+      " \n\034k_EDOTAMMRBoostType_Follower\020\002B7\n ska" +
+      "distats.clarity.wire.s2.protoB\016S2DotaGcC" +
+      "ommonH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

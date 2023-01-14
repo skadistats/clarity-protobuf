@@ -1125,6 +1125,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH = 38;</code>
      */
     DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH(38, 38),
+    /**
+     * <code>DOTA_UNIT_ORDER_MOVE_RELATIVE = 39;</code>
+     */
+    DOTA_UNIT_ORDER_MOVE_RELATIVE(39, 39),
     ;
 
     /**
@@ -1283,6 +1287,10 @@ public final class DotaCommonMessages {
      * <code>DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH = 38;</code>
      */
     public static final int DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH_VALUE = 38;
+    /**
+     * <code>DOTA_UNIT_ORDER_MOVE_RELATIVE = 39;</code>
+     */
+    public static final int DOTA_UNIT_ORDER_MOVE_RELATIVE_VALUE = 39;
 
 
     public final int getNumber() { return value; }
@@ -1328,6 +1336,7 @@ public final class DotaCommonMessages {
         case 36: return DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIGNMENT;
         case 37: return DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN;
         case 38: return DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH;
+        case 39: return DOTA_UNIT_ORDER_MOVE_RELATIVE;
         default: return null;
       }
     }
@@ -1470,6 +1479,106 @@ public final class DotaCommonMessages {
     // @@protoc_insertion_point(enum_scope:EDOTAVersusScenePlayerBehavior)
   }
 
+  /**
+   * Protobuf enum {@code EPingSource}
+   */
+  public enum EPingSource
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ePingSource_Default = 0;</code>
+     */
+    k_ePingSource_Default(0, 0),
+    /**
+     * <code>k_ePingSource_Warning = 1;</code>
+     */
+    k_ePingSource_Warning(1, 1),
+    /**
+     * <code>k_ePingSource_Wheel = 2;</code>
+     */
+    k_ePingSource_Wheel(2, 2),
+    /**
+     * <code>k_ePingSource_System = 3;</code>
+     */
+    k_ePingSource_System(3, 3),
+    ;
+
+    /**
+     * <code>k_ePingSource_Default = 0;</code>
+     */
+    public static final int k_ePingSource_Default_VALUE = 0;
+    /**
+     * <code>k_ePingSource_Warning = 1;</code>
+     */
+    public static final int k_ePingSource_Warning_VALUE = 1;
+    /**
+     * <code>k_ePingSource_Wheel = 2;</code>
+     */
+    public static final int k_ePingSource_Wheel_VALUE = 2;
+    /**
+     * <code>k_ePingSource_System = 3;</code>
+     */
+    public static final int k_ePingSource_System_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static EPingSource valueOf(int value) {
+      switch (value) {
+        case 0: return k_ePingSource_Default;
+        case 1: return k_ePingSource_Warning;
+        case 2: return k_ePingSource_Wheel;
+        case 3: return k_ePingSource_System;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EPingSource>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EPingSource>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EPingSource>() {
+            public EPingSource findValueByNumber(int number) {
+              return EPingSource.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(4);
+    }
+
+    private static final EPingSource[] VALUES = values();
+
+    public static EPingSource valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EPingSource(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EPingSource)
+  }
+
   public interface CDOTAMsg_LocationPingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CDOTAMsg_LocationPing)
       com.google.protobuf.MessageOrBuilder {
@@ -1518,6 +1627,15 @@ public final class DotaCommonMessages {
      * <code>optional int32 type = 5;</code>
      */
     int getType();
+
+    /**
+     * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+     */
+    boolean hasPingSource();
+    /**
+     * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+     */
+    skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource getPingSource();
   }
   /**
    * Protobuf type {@code CDOTAMsg_LocationPing}
@@ -1594,6 +1712,17 @@ public final class DotaCommonMessages {
             case 40: {
               bitField0_ |= 0x00000010;
               type_ = input.readInt32();
+              break;
+            }
+            case 48: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource value = skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(6, rawValue);
+              } else {
+                bitField0_ |= 0x00000020;
+                pingSource_ = value;
+              }
               break;
             }
           }
@@ -1711,12 +1840,28 @@ public final class DotaCommonMessages {
       return type_;
     }
 
+    public static final int PING_SOURCE_FIELD_NUMBER = 6;
+    private skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource pingSource_;
+    /**
+     * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+     */
+    public boolean hasPingSource() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+     */
+    public skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource getPingSource() {
+      return pingSource_;
+    }
+
     private void initFields() {
       x_ = 0;
       y_ = 0;
       target_ = 0;
       directPing_ = false;
       type_ = 0;
+      pingSource_ = skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource.k_ePingSource_Default;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1746,6 +1891,9 @@ public final class DotaCommonMessages {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeInt32(5, type_);
       }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeEnum(6, pingSource_.getNumber());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1774,6 +1922,10 @@ public final class DotaCommonMessages {
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(5, type_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(6, pingSource_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1902,6 +2054,8 @@ public final class DotaCommonMessages {
         bitField0_ = (bitField0_ & ~0x00000008);
         type_ = 0;
         bitField0_ = (bitField0_ & ~0x00000010);
+        pingSource_ = skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource.k_ePingSource_Default;
+        bitField0_ = (bitField0_ & ~0x00000020);
         return this;
       }
 
@@ -1950,6 +2104,10 @@ public final class DotaCommonMessages {
           to_bitField0_ |= 0x00000010;
         }
         result.type_ = type_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.pingSource_ = pingSource_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1980,6 +2138,9 @@ public final class DotaCommonMessages {
         }
         if (other.hasType()) {
           setType(other.getType());
+        }
+        if (other.hasPingSource()) {
+          setPingSource(other.getPingSource());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2164,6 +2325,41 @@ public final class DotaCommonMessages {
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000010);
         type_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource pingSource_ = skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource.k_ePingSource_Default;
+      /**
+       * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+       */
+      public boolean hasPingSource() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+       */
+      public skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource getPingSource() {
+        return pingSource_;
+      }
+      /**
+       * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+       */
+      public Builder setPingSource(skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000020;
+        pingSource_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
+       */
+      public Builder clearPingSource() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        pingSource_ = skadistats.clarity.wire.common.proto.DotaCommonMessages.EPingSource.k_ePingSource_Default;
         onChanged();
         return this;
       }
@@ -9040,133 +9236,138 @@ public final class DotaCommonMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031dota_commonmessages.proto\"`\n\025CDOTAMsg_" +
-      "LocationPing\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\016\n\006ta" +
-      "rget\030\003 \001(\005\022\023\n\013direct_ping\030\004 \001(\010\022\014\n\004type\030" +
-      "\005 \001(\005\"C\n\022CDOTAMsg_ItemAlert\022\t\n\001x\030\001 \001(\005\022\t" +
-      "\n\001y\030\002 \001(\005\022\027\n\017item_ability_id\030\003 \001(\005\"<\n\027CD" +
-      "OTAMsg_EnemyItemAlert\022\021\n\tplayer_id\030\001 \001(\r" +
-      "\022\016\n\006itemid\030\002 \001(\005\"9\n\020CDOTAMsg_MapLine\022\t\n\001" +
-      "x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\017\n\007initial\030\003 \001(\010\"S\n\022C" +
-      "DOTAMsg_WorldLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022" +
-      "\t\n\001z\030\003 \001(\005\022\017\n\007initial\030\004 \001(\010\022\013\n\003end\030\005 \001(\010",
-      "\"\320\001\n\026CDOTAMsg_SendStatPopup\0229\n\005style\030\001 \001" +
-      "(\0162\024.EDOTAStatPopupTypes:\024k_EDOTA_SPT_Te" +
-      "xtline\022\024\n\014stat_strings\030\002 \003(\t\022\023\n\013stat_ima" +
-      "ges\030\003 \003(\005\022\030\n\020stat_image_types\030\004 \003(\005\022\020\n\010d" +
-      "uration\030\005 \001(\002\022\020\n\010use_html\030\006 \001(\010\022\022\n\nmovie" +
-      "_name\030\007 \001(\t\"3\n\035CDOTAMsg_DismissAllStatPo" +
-      "pups\022\022\n\ntime_delay\030\001 \001(\002\">\n\025CDOTAMsg_Coa" +
-      "chHUDPing\022\t\n\001x\030\001 \001(\r\022\t\n\001y\030\002 \001(\r\022\017\n\007tgtpa" +
-      "th\030\003 \001(\t\"\301\001\n\030VersusScene_PlayActivity\022:\n" +
-      "\nactivities\030\001 \003(\0132&.VersusScene_PlayActi",
-      "vity.ActivityInfo\022\025\n\rplayback_rate\030\002 \001(\002" +
-      "\032R\n\014ActivityInfo\022\020\n\010activity\030\001 \001(\t\022\031\n\021di" +
-      "sable_auto_kill\030\002 \001(\010\022\025\n\rforce_looping\030\003" +
-      " \001(\010\"E\n\025VersusScene_ChatWheel\022\027\n\017chat_me" +
-      "ssage_id\030\001 \001(\r\022\023\n\013emoticon_id\030\002 \001(\r\"(\n\030V" +
-      "ersusScene_PlaybackRate\022\014\n\004rate\030\001 \001(\002*\305\021" +
-      "\n\025EDOTAChatWheelMessage\022\021\n\rk_EDOTA_CW_Ok" +
-      "\020\000\022\023\n\017k_EDOTA_CW_Care\020\001\022\026\n\022k_EDOTA_CW_Ge" +
-      "tBack\020\002\022\030\n\024k_EDOTA_CW_NeedWards\020\003\022\023\n\017k_E" +
-      "DOTA_CW_Stun\020\004\022\023\n\017k_EDOTA_CW_Help\020\005\022\023\n\017k",
-      "_EDOTA_CW_Push\020\006\022\026\n\022k_EDOTA_CW_GoodJob\020\007" +
-      "\022\026\n\022k_EDOTA_CW_Missing\020\010\022\032\n\026k_EDOTA_CW_M" +
-      "issing_Top\020\t\022\032\n\026k_EDOTA_CW_Missing_Mid\020\n" +
-      "\022\035\n\031k_EDOTA_CW_Missing_Bottom\020\013\022\021\n\rk_EDO" +
-      "TA_CW_Go\020\014\022\027\n\023k_EDOTA_CW_Initiate\020\r\022\025\n\021k" +
-      "_EDOTA_CW_Follow\020\016\022\027\n\023k_EDOTA_CW_Group_U" +
-      "p\020\017\022\031\n\025k_EDOTA_CW_Spread_Out\020\020\022\031\n\025k_EDOT" +
-      "A_CW_Split_Farm\020\021\022\025\n\021k_EDOTA_CW_Attack\020\022" +
-      "\022\022\n\016k_EDOTA_CW_BRB\020\023\022\023\n\017k_EDOTA_CW_Dive\020" +
-      "\024\022\022\n\016k_EDOTA_CW_OMW\020\025\022\030\n\024k_EDOTA_CW_Get_",
-      "Ready\020\026\022\023\n\017k_EDOTA_CW_Bait\020\027\022\023\n\017k_EDOTA_" +
-      "CW_Heal\020\030\022\023\n\017k_EDOTA_CW_Mana\020\031\022\022\n\016k_EDOT" +
-      "A_CW_OOM\020\032\022\035\n\031k_EDOTA_CW_Skill_Cooldown\020" +
-      "\033\022\031\n\025k_EDOTA_CW_Ulti_Ready\020\034\022\035\n\031k_EDOTA_" +
-      "CW_Enemy_Returned\020\035\022\032\n\026k_EDOTA_CW_All_Mi" +
-      "ssing\020\036\022\035\n\031k_EDOTA_CW_Enemy_Incoming\020\037\022\032" +
-      "\n\026k_EDOTA_CW_Invis_Enemy\020 \022\035\n\031k_EDOTA_CW" +
-      "_Enemy_Had_Rune\020!\022\031\n\025k_EDOTA_CW_Split_Pu" +
-      "sh\020\"\022\035\n\031k_EDOTA_CW_Coming_To_Gank\020#\022\033\n\027k" +
-      "_EDOTA_CW_Request_Gank\020$\022 \n\034k_EDOTA_CW_F",
-      "ight_Under_Tower\020%\022\031\n\025k_EDOTA_CW_Deny_To" +
-      "wer\020&\022\032\n\026k_EDOTA_CW_Buy_Courier\020\'\022\036\n\032k_E" +
-      "DOTA_CW_Upgrade_Courier\020(\022\035\n\031k_EDOTA_CW_" +
-      "Need_Detection\020)\022\"\n\036k_EDOTA_CW_They_Have" +
-      "_Detection\020*\022\025\n\021k_EDOTA_CW_Buy_TP\020+\022\034\n\030k" +
-      "_EDOTA_CW_Reuse_Courier\020,\022\025\n\021k_EDOTA_CW_" +
-      "Deward\020-\022\033\n\027k_EDOTA_CW_Building_Mek\020.\022\034\n" +
-      "\030k_EDOTA_CW_Building_Pipe\020/\022\035\n\031k_EDOTA_C" +
-      "W_Stack_And_Pull\0200\022\023\n\017k_EDOTA_CW_Pull\0201\022" +
-      "\026\n\022k_EDOTA_CW_Pulling\0202\022\024\n\020k_EDOTA_CW_St",
-      "ack\0203\022\027\n\023k_EDOTA_CW_Jungling\0204\022\025\n\021k_EDOT" +
-      "A_CW_Roshan\0205\022\032\n\026k_EDOTA_CW_Affirmative\020" +
-      "6\022\023\n\017k_EDOTA_CW_Wait\0207\022\024\n\020k_EDOTA_CW_Pau" +
-      "se\0208\022\033\n\027k_EDOTA_CW_Current_Time\0209\022\032\n\026k_E" +
-      "DOTA_CW_Check_Runes\020:\022\031\n\025k_EDOTA_CW_Smok" +
-      "e_Gank\020;\022\023\n\017k_EDOTA_CW_GLHF\020<\022\023\n\017k_EDOTA" +
-      "_CW_Nice\020=\022\025\n\021k_EDOTA_CW_Thanks\020>\022\024\n\020k_E" +
-      "DOTA_CW_Sorry\020?\022\031\n\025k_EDOTA_CW_No_Give_Up" +
-      "\020@\022\034\n\030k_EDOTA_CW_Just_Happened\020A\022\033\n\027k_ED" +
-      "OTA_CW_Game_Is_Hard\020B\022\027\n\023k_EDOTA_CW_New_",
-      "Meta\020C\022\025\n\021k_EDOTA_CW_My_Bad\020D\022\025\n\021k_EDOTA" +
-      "_CW_Regret\020E\022\024\n\020k_EDOTA_CW_Relax\020F\022\032\n\026k_" +
-      "EDOTA_CW_MissingHero\020G\022\033\n\027k_EDOTA_CW_Ret" +
-      "urnedHero\020H\022\021\n\rk_EDOTA_CW_GG\020I\022\023\n\017k_EDOT" +
-      "A_CW_GGWP\020J\022\025\n\021k_EDOTA_CW_All_GG\020K\022\027\n\023k_" +
-      "EDOTA_CW_All_GGWP\020L\022\032\n\026k_EDOTA_CW_What_T" +
-      "o_Buy\020M\022\034\n\030k_EDOTA_CW_Im_Retreating\020N\022\034\n" +
-      "\030k_EDOTA_CW_Space_Created\020O\022\025\n\021k_EDOTA_C" +
-      "W_Whoops\020P\022\036\n\032k_EDOTA_CW_Tower_then_Back" +
-      "\020Q\022!\n\035k_EDOTA_CW_Barracks_then_Back\020R\022\037\n",
-      "\033k_EDOTA_CW_Ward_Bottom_Rune\020S\022\034\n\030k_EDOT" +
-      "A_CW_Ward_Top_Rune\020T\022\027\n\023k_EDOTA_CW_Zeus_" +
-      "Ult\020U*\244\001\n\023EDOTAStatPopupTypes\022\030\n\024k_EDOTA" +
-      "_SPT_Textline\020\000\022\025\n\021k_EDOTA_SPT_Basic\020\001\022\024" +
-      "\n\020k_EDOTA_SPT_Poll\020\002\022\024\n\020k_EDOTA_SPT_Grid" +
-      "\020\003\022\031\n\025k_EDOTA_SPT_DualImage\020\004\022\025\n\021k_EDOTA" +
-      "_SPT_Movie\020\005*\357\n\n\017dotaunitorder_t\022\030\n\024DOTA" +
-      "_UNIT_ORDER_NONE\020\000\022$\n DOTA_UNIT_ORDER_MO" +
-      "VE_TO_POSITION\020\001\022\"\n\036DOTA_UNIT_ORDER_MOVE" +
-      "_TO_TARGET\020\002\022\037\n\033DOTA_UNIT_ORDER_ATTACK_M",
-      "OVE\020\003\022!\n\035DOTA_UNIT_ORDER_ATTACK_TARGET\020\004" +
-      "\022!\n\035DOTA_UNIT_ORDER_CAST_POSITION\020\005\022\037\n\033D" +
-      "OTA_UNIT_ORDER_CAST_TARGET\020\006\022$\n DOTA_UNI" +
-      "T_ORDER_CAST_TARGET_TREE\020\007\022\"\n\036DOTA_UNIT_" +
-      "ORDER_CAST_NO_TARGET\020\010\022\037\n\033DOTA_UNIT_ORDE" +
-      "R_CAST_TOGGLE\020\t\022!\n\035DOTA_UNIT_ORDER_HOLD_" +
-      "POSITION\020\n\022!\n\035DOTA_UNIT_ORDER_TRAIN_ABIL" +
-      "ITY\020\013\022\035\n\031DOTA_UNIT_ORDER_DROP_ITEM\020\014\022\035\n\031" +
-      "DOTA_UNIT_ORDER_GIVE_ITEM\020\r\022\037\n\033DOTA_UNIT" +
-      "_ORDER_PICKUP_ITEM\020\016\022\037\n\033DOTA_UNIT_ORDER_",
-      "PICKUP_RUNE\020\017\022!\n\035DOTA_UNIT_ORDER_PURCHAS" +
-      "E_ITEM\020\020\022\035\n\031DOTA_UNIT_ORDER_SELL_ITEM\020\021\022" +
-      "$\n DOTA_UNIT_ORDER_DISASSEMBLE_ITEM\020\022\022\035\n" +
-      "\031DOTA_UNIT_ORDER_MOVE_ITEM\020\023\022$\n DOTA_UNI" +
-      "T_ORDER_CAST_TOGGLE_AUTO\020\024\022\030\n\024DOTA_UNIT_" +
-      "ORDER_STOP\020\025\022\031\n\025DOTA_UNIT_ORDER_TAUNT\020\026\022" +
-      "\033\n\027DOTA_UNIT_ORDER_BUYBACK\020\027\022\031\n\025DOTA_UNI" +
-      "T_ORDER_GLYPH\020\030\022)\n%DOTA_UNIT_ORDER_EJECT" +
-      "_ITEM_FROM_STASH\020\031\022\035\n\031DOTA_UNIT_ORDER_CA" +
-      "ST_RUNE\020\032\022 \n\034DOTA_UNIT_ORDER_PING_ABILIT",
-      "Y\020\033\022%\n!DOTA_UNIT_ORDER_MOVE_TO_DIRECTION" +
-      "\020\034\022\032\n\026DOTA_UNIT_ORDER_PATROL\020\035\022*\n&DOTA_U" +
-      "NIT_ORDER_VECTOR_TARGET_POSITION\020\036\022\031\n\025DO" +
-      "TA_UNIT_ORDER_RADAR\020\037\022)\n%DOTA_UNIT_ORDER" +
-      "_SET_ITEM_COMBINE_LOCK\020 \022\034\n\030DOTA_UNIT_OR" +
-      "DER_CONTINUE\020!\022*\n&DOTA_UNIT_ORDER_VECTOR" +
-      "_TARGET_CANCELED\020\"\022$\n DOTA_UNIT_ORDER_CA" +
-      "ST_RIVER_PAINT\020#\0222\n.DOTA_UNIT_ORDER_PREG" +
-      "AME_ADJUST_ITEM_ASSIGNMENT\020$\022)\n%DOTA_UNI" +
-      "T_ORDER_DROP_ITEM_AT_FOUNTAIN\020%\0225\n1DOTA_",
-      "UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_S" +
-      "TASH\020&*\217\001\n\036EDOTAVersusScenePlayerBehavio" +
-      "r\022$\n VS_PLAYER_BEHAVIOR_PLAY_ACTIVITY\020\001\022" +
-      "!\n\035VS_PLAYER_BEHAVIOR_CHAT_WHEEL\020\002\022$\n VS" +
-      "_PLAYER_BEHAVIOR_PLAYBACK_RATE\020\003B?\n$skad" +
-      "istats.clarity.wire.common.protoB\022DotaCo" +
-      "mmonMessagesH\001\200\001\000"
+      "\n\031dota_commonmessages.proto\"\232\001\n\025CDOTAMsg" +
+      "_LocationPing\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\016\n\006t" +
+      "arget\030\003 \001(\005\022\023\n\013direct_ping\030\004 \001(\010\022\014\n\004type" +
+      "\030\005 \001(\005\0228\n\013ping_source\030\006 \001(\0162\014.EPingSourc" +
+      "e:\025k_ePingSource_Default\"C\n\022CDOTAMsg_Ite" +
+      "mAlert\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\027\n\017item_abi" +
+      "lity_id\030\003 \001(\005\"<\n\027CDOTAMsg_EnemyItemAlert" +
+      "\022\021\n\tplayer_id\030\001 \001(\r\022\016\n\006itemid\030\002 \001(\005\"9\n\020C" +
+      "DOTAMsg_MapLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\017\n" +
+      "\007initial\030\003 \001(\010\"S\n\022CDOTAMsg_WorldLine\022\t\n\001",
+      "x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\t\n\001z\030\003 \001(\005\022\017\n\007initial" +
+      "\030\004 \001(\010\022\013\n\003end\030\005 \001(\010\"\320\001\n\026CDOTAMsg_SendSta" +
+      "tPopup\0229\n\005style\030\001 \001(\0162\024.EDOTAStatPopupTy" +
+      "pes:\024k_EDOTA_SPT_Textline\022\024\n\014stat_string" +
+      "s\030\002 \003(\t\022\023\n\013stat_images\030\003 \003(\005\022\030\n\020stat_ima" +
+      "ge_types\030\004 \003(\005\022\020\n\010duration\030\005 \001(\002\022\020\n\010use_" +
+      "html\030\006 \001(\010\022\022\n\nmovie_name\030\007 \001(\t\"3\n\035CDOTAM" +
+      "sg_DismissAllStatPopups\022\022\n\ntime_delay\030\001 " +
+      "\001(\002\">\n\025CDOTAMsg_CoachHUDPing\022\t\n\001x\030\001 \001(\r\022" +
+      "\t\n\001y\030\002 \001(\r\022\017\n\007tgtpath\030\003 \001(\t\"\301\001\n\030VersusSc",
+      "ene_PlayActivity\022:\n\nactivities\030\001 \003(\0132&.V" +
+      "ersusScene_PlayActivity.ActivityInfo\022\025\n\r" +
+      "playback_rate\030\002 \001(\002\032R\n\014ActivityInfo\022\020\n\010a" +
+      "ctivity\030\001 \001(\t\022\031\n\021disable_auto_kill\030\002 \001(\010" +
+      "\022\025\n\rforce_looping\030\003 \001(\010\"E\n\025VersusScene_C" +
+      "hatWheel\022\027\n\017chat_message_id\030\001 \001(\r\022\023\n\013emo" +
+      "ticon_id\030\002 \001(\r\"(\n\030VersusScene_PlaybackRa" +
+      "te\022\014\n\004rate\030\001 \001(\002*\305\021\n\025EDOTAChatWheelMessa" +
+      "ge\022\021\n\rk_EDOTA_CW_Ok\020\000\022\023\n\017k_EDOTA_CW_Care" +
+      "\020\001\022\026\n\022k_EDOTA_CW_GetBack\020\002\022\030\n\024k_EDOTA_CW",
+      "_NeedWards\020\003\022\023\n\017k_EDOTA_CW_Stun\020\004\022\023\n\017k_E" +
+      "DOTA_CW_Help\020\005\022\023\n\017k_EDOTA_CW_Push\020\006\022\026\n\022k" +
+      "_EDOTA_CW_GoodJob\020\007\022\026\n\022k_EDOTA_CW_Missin" +
+      "g\020\010\022\032\n\026k_EDOTA_CW_Missing_Top\020\t\022\032\n\026k_EDO" +
+      "TA_CW_Missing_Mid\020\n\022\035\n\031k_EDOTA_CW_Missin" +
+      "g_Bottom\020\013\022\021\n\rk_EDOTA_CW_Go\020\014\022\027\n\023k_EDOTA" +
+      "_CW_Initiate\020\r\022\025\n\021k_EDOTA_CW_Follow\020\016\022\027\n" +
+      "\023k_EDOTA_CW_Group_Up\020\017\022\031\n\025k_EDOTA_CW_Spr" +
+      "ead_Out\020\020\022\031\n\025k_EDOTA_CW_Split_Farm\020\021\022\025\n\021" +
+      "k_EDOTA_CW_Attack\020\022\022\022\n\016k_EDOTA_CW_BRB\020\023\022",
+      "\023\n\017k_EDOTA_CW_Dive\020\024\022\022\n\016k_EDOTA_CW_OMW\020\025" +
+      "\022\030\n\024k_EDOTA_CW_Get_Ready\020\026\022\023\n\017k_EDOTA_CW" +
+      "_Bait\020\027\022\023\n\017k_EDOTA_CW_Heal\020\030\022\023\n\017k_EDOTA_" +
+      "CW_Mana\020\031\022\022\n\016k_EDOTA_CW_OOM\020\032\022\035\n\031k_EDOTA" +
+      "_CW_Skill_Cooldown\020\033\022\031\n\025k_EDOTA_CW_Ulti_" +
+      "Ready\020\034\022\035\n\031k_EDOTA_CW_Enemy_Returned\020\035\022\032" +
+      "\n\026k_EDOTA_CW_All_Missing\020\036\022\035\n\031k_EDOTA_CW" +
+      "_Enemy_Incoming\020\037\022\032\n\026k_EDOTA_CW_Invis_En" +
+      "emy\020 \022\035\n\031k_EDOTA_CW_Enemy_Had_Rune\020!\022\031\n\025" +
+      "k_EDOTA_CW_Split_Push\020\"\022\035\n\031k_EDOTA_CW_Co",
+      "ming_To_Gank\020#\022\033\n\027k_EDOTA_CW_Request_Gan" +
+      "k\020$\022 \n\034k_EDOTA_CW_Fight_Under_Tower\020%\022\031\n" +
+      "\025k_EDOTA_CW_Deny_Tower\020&\022\032\n\026k_EDOTA_CW_B" +
+      "uy_Courier\020\'\022\036\n\032k_EDOTA_CW_Upgrade_Couri" +
+      "er\020(\022\035\n\031k_EDOTA_CW_Need_Detection\020)\022\"\n\036k" +
+      "_EDOTA_CW_They_Have_Detection\020*\022\025\n\021k_EDO" +
+      "TA_CW_Buy_TP\020+\022\034\n\030k_EDOTA_CW_Reuse_Couri" +
+      "er\020,\022\025\n\021k_EDOTA_CW_Deward\020-\022\033\n\027k_EDOTA_C" +
+      "W_Building_Mek\020.\022\034\n\030k_EDOTA_CW_Building_" +
+      "Pipe\020/\022\035\n\031k_EDOTA_CW_Stack_And_Pull\0200\022\023\n",
+      "\017k_EDOTA_CW_Pull\0201\022\026\n\022k_EDOTA_CW_Pulling" +
+      "\0202\022\024\n\020k_EDOTA_CW_Stack\0203\022\027\n\023k_EDOTA_CW_J" +
+      "ungling\0204\022\025\n\021k_EDOTA_CW_Roshan\0205\022\032\n\026k_ED" +
+      "OTA_CW_Affirmative\0206\022\023\n\017k_EDOTA_CW_Wait\020" +
+      "7\022\024\n\020k_EDOTA_CW_Pause\0208\022\033\n\027k_EDOTA_CW_Cu" +
+      "rrent_Time\0209\022\032\n\026k_EDOTA_CW_Check_Runes\020:" +
+      "\022\031\n\025k_EDOTA_CW_Smoke_Gank\020;\022\023\n\017k_EDOTA_C" +
+      "W_GLHF\020<\022\023\n\017k_EDOTA_CW_Nice\020=\022\025\n\021k_EDOTA" +
+      "_CW_Thanks\020>\022\024\n\020k_EDOTA_CW_Sorry\020?\022\031\n\025k_" +
+      "EDOTA_CW_No_Give_Up\020@\022\034\n\030k_EDOTA_CW_Just",
+      "_Happened\020A\022\033\n\027k_EDOTA_CW_Game_Is_Hard\020B" +
+      "\022\027\n\023k_EDOTA_CW_New_Meta\020C\022\025\n\021k_EDOTA_CW_" +
+      "My_Bad\020D\022\025\n\021k_EDOTA_CW_Regret\020E\022\024\n\020k_EDO" +
+      "TA_CW_Relax\020F\022\032\n\026k_EDOTA_CW_MissingHero\020" +
+      "G\022\033\n\027k_EDOTA_CW_ReturnedHero\020H\022\021\n\rk_EDOT" +
+      "A_CW_GG\020I\022\023\n\017k_EDOTA_CW_GGWP\020J\022\025\n\021k_EDOT" +
+      "A_CW_All_GG\020K\022\027\n\023k_EDOTA_CW_All_GGWP\020L\022\032" +
+      "\n\026k_EDOTA_CW_What_To_Buy\020M\022\034\n\030k_EDOTA_CW" +
+      "_Im_Retreating\020N\022\034\n\030k_EDOTA_CW_Space_Cre" +
+      "ated\020O\022\025\n\021k_EDOTA_CW_Whoops\020P\022\036\n\032k_EDOTA",
+      "_CW_Tower_then_Back\020Q\022!\n\035k_EDOTA_CW_Barr" +
+      "acks_then_Back\020R\022\037\n\033k_EDOTA_CW_Ward_Bott" +
+      "om_Rune\020S\022\034\n\030k_EDOTA_CW_Ward_Top_Rune\020T\022" +
+      "\027\n\023k_EDOTA_CW_Zeus_Ult\020U*\244\001\n\023EDOTAStatPo" +
+      "pupTypes\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025\n\021k_" +
+      "EDOTA_SPT_Basic\020\001\022\024\n\020k_EDOTA_SPT_Poll\020\002\022" +
+      "\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT_Dua" +
+      "lImage\020\004\022\025\n\021k_EDOTA_SPT_Movie\020\005*\222\013\n\017dota" +
+      "unitorder_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020\000\022$\n" +
+      " DOTA_UNIT_ORDER_MOVE_TO_POSITION\020\001\022\"\n\036D",
+      "OTA_UNIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033DOTA_" +
+      "UNIT_ORDER_ATTACK_MOVE\020\003\022!\n\035DOTA_UNIT_OR" +
+      "DER_ATTACK_TARGET\020\004\022!\n\035DOTA_UNIT_ORDER_C" +
+      "AST_POSITION\020\005\022\037\n\033DOTA_UNIT_ORDER_CAST_T" +
+      "ARGET\020\006\022$\n DOTA_UNIT_ORDER_CAST_TARGET_T" +
+      "REE\020\007\022\"\n\036DOTA_UNIT_ORDER_CAST_NO_TARGET\020" +
+      "\010\022\037\n\033DOTA_UNIT_ORDER_CAST_TOGGLE\020\t\022!\n\035DO" +
+      "TA_UNIT_ORDER_HOLD_POSITION\020\n\022!\n\035DOTA_UN" +
+      "IT_ORDER_TRAIN_ABILITY\020\013\022\035\n\031DOTA_UNIT_OR" +
+      "DER_DROP_ITEM\020\014\022\035\n\031DOTA_UNIT_ORDER_GIVE_",
+      "ITEM\020\r\022\037\n\033DOTA_UNIT_ORDER_PICKUP_ITEM\020\016\022" +
+      "\037\n\033DOTA_UNIT_ORDER_PICKUP_RUNE\020\017\022!\n\035DOTA" +
+      "_UNIT_ORDER_PURCHASE_ITEM\020\020\022\035\n\031DOTA_UNIT" +
+      "_ORDER_SELL_ITEM\020\021\022$\n DOTA_UNIT_ORDER_DI" +
+      "SASSEMBLE_ITEM\020\022\022\035\n\031DOTA_UNIT_ORDER_MOVE" +
+      "_ITEM\020\023\022$\n DOTA_UNIT_ORDER_CAST_TOGGLE_A" +
+      "UTO\020\024\022\030\n\024DOTA_UNIT_ORDER_STOP\020\025\022\031\n\025DOTA_" +
+      "UNIT_ORDER_TAUNT\020\026\022\033\n\027DOTA_UNIT_ORDER_BU" +
+      "YBACK\020\027\022\031\n\025DOTA_UNIT_ORDER_GLYPH\020\030\022)\n%DO" +
+      "TA_UNIT_ORDER_EJECT_ITEM_FROM_STASH\020\031\022\035\n",
+      "\031DOTA_UNIT_ORDER_CAST_RUNE\020\032\022 \n\034DOTA_UNI" +
+      "T_ORDER_PING_ABILITY\020\033\022%\n!DOTA_UNIT_ORDE" +
+      "R_MOVE_TO_DIRECTION\020\034\022\032\n\026DOTA_UNIT_ORDER" +
+      "_PATROL\020\035\022*\n&DOTA_UNIT_ORDER_VECTOR_TARG" +
+      "ET_POSITION\020\036\022\031\n\025DOTA_UNIT_ORDER_RADAR\020\037" +
+      "\022)\n%DOTA_UNIT_ORDER_SET_ITEM_COMBINE_LOC" +
+      "K\020 \022\034\n\030DOTA_UNIT_ORDER_CONTINUE\020!\022*\n&DOT" +
+      "A_UNIT_ORDER_VECTOR_TARGET_CANCELED\020\"\022$\n" +
+      " DOTA_UNIT_ORDER_CAST_RIVER_PAINT\020#\0222\n.D" +
+      "OTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIG",
+      "NMENT\020$\022)\n%DOTA_UNIT_ORDER_DROP_ITEM_AT_" +
+      "FOUNTAIN\020%\0225\n1DOTA_UNIT_ORDER_TAKE_ITEM_" +
+      "FROM_NEUTRAL_ITEM_STASH\020&\022!\n\035DOTA_UNIT_O" +
+      "RDER_MOVE_RELATIVE\020\'*\217\001\n\036EDOTAVersusScen" +
+      "ePlayerBehavior\022$\n VS_PLAYER_BEHAVIOR_PL" +
+      "AY_ACTIVITY\020\001\022!\n\035VS_PLAYER_BEHAVIOR_CHAT" +
+      "_WHEEL\020\002\022$\n VS_PLAYER_BEHAVIOR_PLAYBACK_" +
+      "RATE\020\003*v\n\013EPingSource\022\031\n\025k_ePingSource_D" +
+      "efault\020\000\022\031\n\025k_ePingSource_Warning\020\001\022\027\n\023k" +
+      "_ePingSource_Wheel\020\002\022\030\n\024k_ePingSource_Sy",
+      "stem\020\003B?\n$skadistats.clarity.wire.common" +
+      ".protoB\022DotaCommonMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9185,7 +9386,7 @@ public final class DotaCommonMessages {
     internal_static_CDOTAMsg_LocationPing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_LocationPing_descriptor,
-        new java.lang.String[] { "X", "Y", "Target", "DirectPing", "Type", });
+        new java.lang.String[] { "X", "Y", "Target", "DirectPing", "Type", "PingSource", });
     internal_static_CDOTAMsg_ItemAlert_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTAMsg_ItemAlert_fieldAccessorTable = new
