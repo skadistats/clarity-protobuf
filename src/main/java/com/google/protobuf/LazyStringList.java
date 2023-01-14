@@ -72,7 +72,7 @@ public interface LazyStringList extends ProtocolStringList {
    * operation).
    *
    * @param element element to be appended to this list
-   * @throws UnsupportedOperationException if the <tt>add</tt> operation
+   * @throws UnsupportedOperationException if the <code>add</code> operation
    *         is not supported by this list
    */
   void add(ByteString element);
@@ -82,7 +82,7 @@ public interface LazyStringList extends ProtocolStringList {
    * operation).
    *
    * @param element element to be appended to this list
-   * @throws UnsupportedOperationException if the <tt>add</tt> operation
+   * @throws UnsupportedOperationException if the <code>add</code> operation
    *         is not supported by this list
    */
   void add(byte[] element);
@@ -93,7 +93,7 @@ public interface LazyStringList extends ProtocolStringList {
    *
    * @param index index of the element to replace
    * @param element the element to be stored at the specified position
-   * @throws UnsupportedOperationException if the <tt>set</tt> operation
+   * @throws UnsupportedOperationException if the <code>set</code> operation
    *         is not supported by this list
    *         IndexOutOfBoundsException if the index is out of range
    *         ({@code index < 0 || index >= size()})
@@ -106,7 +106,7 @@ public interface LazyStringList extends ProtocolStringList {
    *
    * @param index index of the element to replace
    * @param element the element to be stored at the specified position
-   * @throws UnsupportedOperationException if the <tt>set</tt> operation
+   * @throws UnsupportedOperationException if the <code>set</code> operation
    *         is not supported by this list
    *         IndexOutOfBoundsException if the index is out of range
    *         ({@code index < 0 || index >= size()})
@@ -119,7 +119,7 @@ public interface LazyStringList extends ProtocolStringList {
    *
    * @param c collection whose elements are to be added to this list
    * @return true if this list changed as a result of the call
-   * @throws UnsupportedOperationException if the <tt>addAllByteString</tt>
+   * @throws UnsupportedOperationException if the <code>addAllByteString</code>
    *         operation is not supported by this list
    */
   boolean addAllByteString(Collection<? extends ByteString> c);
@@ -130,7 +130,7 @@ public interface LazyStringList extends ProtocolStringList {
    *
    * @param c collection whose elements are to be added to this list
    * @return true if this list changed as a result of the call
-   * @throws UnsupportedOperationException if the <tt>addAllByteArray</tt>
+   * @throws UnsupportedOperationException if the <code>addAllByteArray</code>
    *         operation is not supported by this list
    */
   boolean addAllByteArray(Collection<byte[]> c);

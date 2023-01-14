@@ -316,5 +316,6 @@ public interface MessageLite extends MessageLiteOrBuilder {
     boolean mergeDelimitedFrom(InputStream input,
                                ExtensionRegistryLite extensionRegistry)
                                throws IOException;
+
   }
 }

@@ -106,7 +106,7 @@ public class Internal {
    * Helper called by generated code to construct default values for bytes
    * fields.
    * <p>
-   * This is like {@link #bytesDefaultValue}, but returns a byte array. 
+   * This is like {@link #bytesDefaultValue}, but returns a byte array.
    */
   public static byte[] byteArrayDefaultValue(String bytes) {
     try {
@@ -123,7 +123,7 @@ public class Internal {
    * Helper called by generated code to construct default values for bytes
    * fields.
    * <p>
-   * This is like {@link #bytesDefaultValue}, but returns a ByteBuffer. 
+   * This is like {@link #bytesDefaultValue}, but returns a ByteBuffer.
    */
   public static ByteBuffer byteBufferDefaultValue(String bytes) {
     return ByteBuffer.wrap(byteArrayDefaultValue(bytes));
@@ -166,8 +166,8 @@ public class Internal {
    * but currently (2011) still accepts 3-byte surrogate character
    * byte sequences.
    *
-   * <p>See the Unicode Standard,</br>
-   * Table 3-6. <em>UTF-8 Bit Distribution</em>,</br>
+   * <p>See the Unicode Standard,<br>
+   * Table 3-6. <em>UTF-8 Bit Distribution</em>,<br>
    * Table 3-7. <em>Well Formed UTF-8 Byte Sequences</em>.
    *
    * <p>As of 2011-02, this method simply returns the result of {@link
@@ -179,7 +179,7 @@ public class Internal {
   public static boolean isValidUtf8(ByteString byteString) {
     return byteString.isValidUtf8();
   }
-  
+
   /**
    * Like {@link #isValidUtf8(ByteString)} but for byte arrays.
    */
@@ -197,7 +197,7 @@ public class Internal {
       throw new RuntimeException("UTF-8 not supported?", e);
     }
   }
-  
+
   /**
    * Helper method to convert a byte array to a string using UTF-8 encoding.
    */
@@ -230,7 +230,7 @@ public class Internal {
   }
 
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for longs.
+   * Helper method for implementing <code>hashCode</code> for longs.
    * @see Long#hashCode()
    */
   public static int hashLong(long n) {
@@ -238,7 +238,7 @@ public class Internal {
   }
 
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for
+   * Helper method for implementing <code>hashCode</code> for
    * booleans.
    * @see Boolean#hashCode()
    */
@@ -247,7 +247,7 @@ public class Internal {
   }
 
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for enums.
+   * Helper method for implementing <code>hashCode</code> for enums.
    * <p>
    * This is needed because {@link java.lang.Enum#hashCode()} is final, but we
    * need to use the field number as the hash code to ensure compatibility
@@ -258,7 +258,7 @@ public class Internal {
   }
 
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for
+   * Helper method for implementing <code>hashCode</code> for
    * enum lists.
    */
   public static int hashEnumList(List<? extends EnumLite> list) {
@@ -268,9 +268,9 @@ public class Internal {
     }
     return hash;
   }
-  
+
   /**
-   * Helper method for implementing {@link MessageLite#equals()} for bytes field.
+   * Helper method for implementing <code>equals()</code> for bytes field.
    */
   public static boolean equals(List<byte[]> a, List<byte[]> b) {
     if (a.size() != b.size()) return false;
@@ -283,7 +283,7 @@ public class Internal {
   }
 
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for bytes field.
+   * Helper method for implementing <code>hashCode</code> for bytes field.
    */
   public static int hashCode(List<byte[]> list) {
     int hash = 1;
@@ -292,9 +292,9 @@ public class Internal {
     }
     return hash;
   }
-  
+
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for bytes field.
+   * Helper method for implementing <code>hashCode</code> for bytes field.
    */
   public static int hashCode(byte[] bytes) {
     // The hash code for a byte array should be the same as the hash code for a
@@ -303,9 +303,9 @@ public class Internal {
     // based hashCode() method.
     return LiteralByteString.hashCode(bytes);
   }
-  
+
   /**
-   * Helper method for implementing {@link MessageLite#equals()} for bytes
+   * Helper method for implementing <code>equals()</code> for bytes
    * field.
    */
   public static boolean equalsByteBuffer(ByteBuffer a, ByteBuffer b) {
@@ -316,9 +316,9 @@ public class Internal {
     // compare all the content.
     return a.duplicate().clear().equals(b.duplicate().clear());
   }
-  
+
   /**
-   * Helper method for implementing {@link MessageLite#equals()} for bytes
+   * Helper method for implementing <code>equals()</code> for bytes
    * field.
    */
   public static boolean equalsByteBuffer(
@@ -335,7 +335,7 @@ public class Internal {
   }
 
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for bytes
+   * Helper method for implementing <code>hashCode</code> for bytes
    * field.
    */
   public static int hashCodeByteBuffer(List<ByteBuffer> list) {
@@ -345,11 +345,11 @@ public class Internal {
     }
     return hash;
   }
-  
+
   private static final int DEFAULT_BUFFER_SIZE = 4096;
-  
+
   /**
-   * Helper method for implementing {@link MessageLite#hashCode()} for bytes
+   * Helper method for implementing <code>hashCode</code> for bytes
    * field.
    */
   public static int hashCodeByteBuffer(ByteBuffer bytes) {
@@ -376,12 +376,12 @@ public class Internal {
       return h == 0 ? 1 : h;
     }
   }
-  
+
   /**
    * An empty byte array constant used in generated code.
    */
   public static final byte[] EMPTY_BYTE_ARRAY = new byte[0];
-  
+
   /**
    * An empty byte array constant used in generated code.
    */

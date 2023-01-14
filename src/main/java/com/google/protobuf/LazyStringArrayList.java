@@ -45,7 +45,7 @@ import java.util.RandomAccess;
  * usage while satisfying the most common use cases.
  * <p>
  * <strong>Note that this implementation is not synchronized.</strong>
- * If multiple threads access an <tt>ArrayList</tt> instance concurrently,
+ * If multiple threads access an <code>ArrayList</code> instance concurrently,
  * and at least one of the threads modifies the list structurally, it
  * <i>must</i> be synchronized externally.  (A structural modification is
  * any operation that adds or deletes one or more elements, or explicitly

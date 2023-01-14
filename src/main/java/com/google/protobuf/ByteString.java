@@ -91,7 +91,7 @@ public abstract class ByteString implements Iterable<Byte> {
    *
    * @param index index of byte
    * @return the value
-   * @throws ArrayIndexOutOfBoundsException {@code index} is < 0 or >= size
+   * @throws ArrayIndexOutOfBoundsException {@code index} is &lt; 0 or &gt;= size
    */
   public abstract byte byteAt(int index);
 
@@ -502,9 +502,9 @@ public abstract class ByteString implements Iterable<Byte> {
 
   /**
    * Internal (package private) implementation of
-   * @link{#copyTo(byte[],int,int,int}.
-   * It assumes that all error checking has already been performed and that 
-   * @code{numberToCopy > 0}.
+   * {@link #copyTo(byte[],int,int,int)}
+   * It assumes that all error checking has already been performed and that
+   * {@code numberToCopy > 0}.
    */
   protected abstract void copyToInternal(byte[] target, int sourceOffset,
       int targetOffset, int numberToCopy);
@@ -542,7 +542,7 @@ public abstract class ByteString implements Iterable<Byte> {
    * @throws IOException  if an I/O error occurs.
    */
   public abstract void writeTo(OutputStream out) throws IOException;
-  
+
   /**
    * Writes a specified part of this byte string to an output stream.
    *
@@ -568,7 +568,7 @@ public abstract class ByteString implements Iterable<Byte> {
     if (numberToWrite > 0) {
       writeToInternal(out, sourceOffset, numberToWrite);
     }
-    
+
   }
 
   /**
@@ -595,7 +595,7 @@ public abstract class ByteString implements Iterable<Byte> {
    * <p>
    * By returning a list, implementations of this method may be able to avoid
    * copying even when there are multiple backing arrays.
-   * 
+   *
    * @return a list of wrapped bytes
    */
   public abstract List<ByteBuffer> asReadOnlyByteBufferList();
@@ -645,8 +645,8 @@ public abstract class ByteString implements Iterable<Byte> {
    * sequences, but (as of 2011) still accepts 3-byte surrogate
    * character byte sequences.
    *
-   * <p>See the Unicode Standard,</br>
-   * Table 3-6. <em>UTF-8 Bit Distribution</em>,</br>
+   * <p>See the Unicode Standard,<br>
+   * Table 3-6. <em>UTF-8 Bit Distribution</em>,<br>
    * Table 3-7. <em>Well Formed UTF-8 Byte Sequences</em>.
    *
    * @return whether the bytes in this {@code ByteString} are a
@@ -699,7 +699,7 @@ public abstract class ByteString implements Iterable<Byte> {
    * The {@link InputStream} returned by this method is guaranteed to be
    * completely non-blocking.  The method {@link InputStream#available()}
    * returns the number of bytes remaining in the stream. The methods
-   * {@link InputStream#read(byte[]), {@link InputStream#read(byte[],int,int)}
+   * {@link InputStream#read(byte[])}, {@link InputStream#read(byte[],int,int)}
    * and {@link InputStream#skip(long)} will read/skip as many bytes as are
    * available.
    * <p>
@@ -827,7 +827,7 @@ public abstract class ByteString implements Iterable<Byte> {
       flushLastBuffer();
       return ByteString.copyFrom(flushedBuffers);
     }
-    
+
     /**
      * Implement java.util.Arrays.copyOf() for jdk 1.5.
      */
