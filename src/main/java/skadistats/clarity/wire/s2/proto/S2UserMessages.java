@@ -202,9 +202,25 @@ public final class S2UserMessages {
      */
     UM_RequestUtilAction(46, 157),
     /**
+     * <code>UM_UtilActionResponse = 158;</code>
+     */
+    UM_UtilActionResponse(47, 158),
+    /**
+     * <code>UM_DllStatusResponse = 159;</code>
+     */
+    UM_DllStatusResponse(48, 159),
+    /**
+     * <code>UM_RequestInventory = 160;</code>
+     */
+    UM_RequestInventory(49, 160),
+    /**
+     * <code>UM_InventoryResponse = 161;</code>
+     */
+    UM_InventoryResponse(50, 161),
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
-    UM_MAX_BASE(47, 200),
+    UM_MAX_BASE(51, 200),
     ;
 
     /**
@@ -396,6 +412,22 @@ public final class S2UserMessages {
      */
     public static final int UM_RequestUtilAction_VALUE = 157;
     /**
+     * <code>UM_UtilActionResponse = 158;</code>
+     */
+    public static final int UM_UtilActionResponse_VALUE = 158;
+    /**
+     * <code>UM_DllStatusResponse = 159;</code>
+     */
+    public static final int UM_DllStatusResponse_VALUE = 159;
+    /**
+     * <code>UM_RequestInventory = 160;</code>
+     */
+    public static final int UM_RequestInventory_VALUE = 160;
+    /**
+     * <code>UM_InventoryResponse = 161;</code>
+     */
+    public static final int UM_InventoryResponse_VALUE = 161;
+    /**
      * <code>UM_MAX_BASE = 200;</code>
      */
     public static final int UM_MAX_BASE_VALUE = 200;
@@ -452,6 +484,10 @@ public final class S2UserMessages {
         case 155: return UM_LagCompensationError;
         case 156: return UM_RequestDllStatus;
         case 157: return UM_RequestUtilAction;
+        case 158: return UM_UtilActionResponse;
+        case 159: return UM_DllStatusResponse;
+        case 160: return UM_RequestInventory;
+        case 161: return UM_InventoryResponse;
         case 200: return UM_MAX_BASE;
         default: return null;
       }
@@ -12962,7 +12998,7 @@ public final class S2UserMessages {
       "tomGameEvent_ServerToClient\022\022\n\nevent_nam",
       "e\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Tracke" +
       "dControllerInput_ClientToServer\022\014\n\004data\030" +
-      "\001 \001(\014*\224\010\n\021EBaseUserMessages\022\027\n\023UM_Achiev" +
+      "\001 \001(\014*\200\t\n\021EBaseUserMessages\022\027\n\023UM_Achiev" +
       "ementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM_" +
       "CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimesc" +
       "ale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fad" +
@@ -12987,16 +13023,19 @@ public final class S2UserMessages {
       "CommandQueueState\020\230\001\022\030\n\023UM_UpdateCssClas" +
       "ses\020\231\001\022\027\n\022UM_ServerFrameTime\020\232\001\022\034\n\027UM_La" +
       "gCompensationError\020\233\001\022\030\n\023UM_RequestDllSt" +
-      "atus\020\234\001\022\031\n\024UM_RequestUtilAction\020\235\001\022\020\n\013UM" +
-      "_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\r" +
-      "EM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022",
-      "\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Propagate" +
-      "Force\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle" +
-      "\020\215\001*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAPTI" +
-      "C_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_" +
-      "MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRONG\020" +
-      "\002B7\n skadistats.clarity.wire.s2.protoB\016S" +
-      "2UserMessagesH\001\200\001\000"
+      "atus\020\234\001\022\031\n\024UM_RequestUtilAction\020\235\001\022\032\n\025UM" +
+      "_UtilActionResponse\020\236\001\022\031\n\024UM_DllStatusRe" +
+      "sponse\020\237\001\022\030\n\023UM_RequestInventory\020\240\001\022\031\n\024U",
+      "M_InventoryResponse\020\241\001\022\020\n\013UM_MAX_BASE\020\310\001" +
+      "*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_PlayJingl" +
+      "e\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM_Remove" +
+      "AllDecals\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\n" +
+      "EM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*t\n\020EHapt" +
+      "icPulseType\022\036\n\032VR_HAND_HAPTIC_PULSE_LIGH" +
+      "T\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033" +
+      "VR_HAND_HAPTIC_PULSE_STRONG\020\002B7\n skadist" +
+      "ats.clarity.wire.s2.protoB\016S2UserMessage" +
+      "sH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

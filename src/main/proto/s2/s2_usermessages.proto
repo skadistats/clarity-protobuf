@@ -54,6 +54,10 @@ enum EBaseUserMessages {
   UM_LagCompensationError = 155;
   UM_RequestDllStatus = 156;
   UM_RequestUtilAction = 157;
+  UM_UtilActionResponse = 158;
+  UM_DllStatusResponse = 159;
+  UM_RequestInventory = 160;
+  UM_InventoryResponse = 161;
   UM_MAX_BASE = 200;
 }
 

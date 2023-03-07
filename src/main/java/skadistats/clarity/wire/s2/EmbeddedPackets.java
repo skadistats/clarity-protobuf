@@ -210,6 +210,7 @@ public class EmbeddedPackets {
         /* 612 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ChatMessage_VALUE, DotaUserMessages.CDOTAUserMsg_ChatMessage.class);
         /* 616 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DuelOpponentKilled_VALUE, DotaUserMessages.CDOTAUserMsg_DuelOpponentKilled.class);
         /* 617 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_DuelAccepted_VALUE, DotaUserMessages.CDOTAUserMsg_DuelAccepted.class);
+        /* 619 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled_VALUE, DotaUserMessages.CDOTAUserMsg_MuertaReleaseEvent_AssignedTargetKilled.class);
 
 //        /* 464 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //        /* 465 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DotaUserMessages.CDOTAUserMsg_AIDebugLine.class);

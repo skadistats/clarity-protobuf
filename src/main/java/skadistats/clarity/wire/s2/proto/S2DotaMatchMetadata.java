@@ -858,27 +858,27 @@ public final class S2DotaMatchMetadata {
     int getPrimaryEventId();
 
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
     java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> 
-        getMatchTipsList();
+        getMatchTipsOldList();
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getMatchTips(int index);
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getMatchTipsOld(int index);
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    int getMatchTipsCount();
+    int getMatchTipsOldCount();
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
     java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder> 
-        getMatchTipsOrBuilderList();
+        getMatchTipsOldOrBuilderList();
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOrBuilder(
+    skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOldOrBuilder(
         int index);
 
     /**
@@ -939,6 +939,30 @@ public final class S2DotaMatchMetadata {
      * <code>optional bytes custom_post_game_table = 11;</code>
      */
     com.google.protobuf.ByteString getCustomPostGameTable();
+
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip> 
+        getNewList();
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip getNew(int index);
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    int getNewCount();
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder> 
+        getNewOrBuilderList();
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder getNewOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code CDOTAMatchMetadata}
@@ -1030,10 +1054,10 @@ public final class S2DotaMatchMetadata {
             }
             case 58: {
               if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-                matchTips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips>();
+                matchTipsOld_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips>();
                 mutable_bitField0_ |= 0x00000040;
               }
-              matchTips_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.PARSER, extensionRegistry));
+              matchTipsOld_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.PARSER, extensionRegistry));
               break;
             }
             case 66: {
@@ -1075,6 +1099,14 @@ public final class S2DotaMatchMetadata {
               customPostGameTable_ = input.readBytes();
               break;
             }
+            case 98: {
+              if (!((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+                New_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              New_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1090,10 +1122,13 @@ public final class S2DotaMatchMetadata {
           itemRewards_ = java.util.Collections.unmodifiableList(itemRewards_);
         }
         if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
-          matchTips_ = java.util.Collections.unmodifiableList(matchTips_);
+          matchTipsOld_ = java.util.Collections.unmodifiableList(matchTipsOld_);
         }
         if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
           guildChallengeProgress_ = java.util.Collections.unmodifiableList(guildChallengeProgress_);
+        }
+        if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
+          New_ = java.util.Collections.unmodifiableList(New_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -1124,6 +1159,1279 @@ public final class S2DotaMatchMetadata {
     @java.lang.Override
     public com.google.protobuf.Parser<CDOTAMatchMetadata> getParserForType() {
       return PARSER;
+    }
+
+    public interface EconItemOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.EconItem)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 def_index = 1;</code>
+       */
+      boolean hasDefIndex();
+      /**
+       * <code>optional uint32 def_index = 1;</code>
+       */
+      int getDefIndex();
+
+      /**
+       * <code>optional uint32 quality = 2 [default = 4];</code>
+       */
+      boolean hasQuality();
+      /**
+       * <code>optional uint32 quality = 2 [default = 4];</code>
+       */
+      int getQuality();
+
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute> 
+          getAttributeList();
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute getAttribute(int index);
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      int getAttributeCount();
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder> 
+          getAttributeOrBuilderList();
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder getAttributeOrBuilder(
+          int index);
+
+      /**
+       * <code>optional uint32 style = 4 [default = 0];</code>
+       */
+      boolean hasStyle();
+      /**
+       * <code>optional uint32 style = 4 [default = 0];</code>
+       */
+      int getStyle();
+
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped> 
+          getEquippedStateList();
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped getEquippedState(int index);
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      int getEquippedStateCount();
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder> 
+          getEquippedStateOrBuilderList();
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder getEquippedStateOrBuilder(
+          int index);
+    }
+    /**
+     * Protobuf type {@code CDOTAMatchMetadata.EconItem}
+     */
+    public static final class EconItem extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.EconItem)
+        EconItemOrBuilder {
+      // Use EconItem.newBuilder() to construct.
+      private EconItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private EconItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final EconItem defaultInstance;
+      public static EconItem getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public EconItem getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private EconItem(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                defIndex_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                quality_ = input.readUInt32();
+                break;
+              }
+              case 26: {
+                if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+                  attribute_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute>();
+                  mutable_bitField0_ |= 0x00000004;
+                }
+                attribute_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.PARSER, extensionRegistry));
+                break;
+              }
+              case 32: {
+                bitField0_ |= 0x00000004;
+                style_ = input.readUInt32();
+                break;
+              }
+              case 42: {
+                if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+                  equippedState_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped>();
+                  mutable_bitField0_ |= 0x00000010;
+                }
+                equippedState_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.PARSER, extensionRegistry));
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
+            attribute_ = java.util.Collections.unmodifiableList(attribute_);
+          }
+          if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
+            equippedState_ = java.util.Collections.unmodifiableList(equippedState_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_EconItem_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_EconItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<EconItem> PARSER =
+          new com.google.protobuf.AbstractParser<EconItem>() {
+        public EconItem parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new EconItem(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<EconItem> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int DEF_INDEX_FIELD_NUMBER = 1;
+      private int defIndex_;
+      /**
+       * <code>optional uint32 def_index = 1;</code>
+       */
+      public boolean hasDefIndex() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 def_index = 1;</code>
+       */
+      public int getDefIndex() {
+        return defIndex_;
+      }
+
+      public static final int QUALITY_FIELD_NUMBER = 2;
+      private int quality_;
+      /**
+       * <code>optional uint32 quality = 2 [default = 4];</code>
+       */
+      public boolean hasQuality() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 quality = 2 [default = 4];</code>
+       */
+      public int getQuality() {
+        return quality_;
+      }
+
+      public static final int ATTRIBUTE_FIELD_NUMBER = 3;
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute> attribute_;
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute> getAttributeList() {
+        return attribute_;
+      }
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder> 
+          getAttributeOrBuilderList() {
+        return attribute_;
+      }
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      public int getAttributeCount() {
+        return attribute_.size();
+      }
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute getAttribute(int index) {
+        return attribute_.get(index);
+      }
+      /**
+       * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder getAttributeOrBuilder(
+          int index) {
+        return attribute_.get(index);
+      }
+
+      public static final int STYLE_FIELD_NUMBER = 4;
+      private int style_;
+      /**
+       * <code>optional uint32 style = 4 [default = 0];</code>
+       */
+      public boolean hasStyle() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 style = 4 [default = 0];</code>
+       */
+      public int getStyle() {
+        return style_;
+      }
+
+      public static final int EQUIPPED_STATE_FIELD_NUMBER = 5;
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped> equippedState_;
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped> getEquippedStateList() {
+        return equippedState_;
+      }
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder> 
+          getEquippedStateOrBuilderList() {
+        return equippedState_;
+      }
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      public int getEquippedStateCount() {
+        return equippedState_.size();
+      }
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped getEquippedState(int index) {
+        return equippedState_.get(index);
+      }
+      /**
+       * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder getEquippedStateOrBuilder(
+          int index) {
+        return equippedState_.get(index);
+      }
+
+      private void initFields() {
+        defIndex_ = 0;
+        quality_ = 4;
+        attribute_ = java.util.Collections.emptyList();
+        style_ = 0;
+        equippedState_ = java.util.Collections.emptyList();
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeUInt32(1, defIndex_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeUInt32(2, quality_);
+        }
+        for (int i = 0; i < attribute_.size(); i++) {
+          output.writeMessage(3, attribute_.get(i));
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeUInt32(4, style_);
+        }
+        for (int i = 0; i < equippedState_.size(); i++) {
+          output.writeMessage(5, equippedState_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, defIndex_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, quality_);
+        }
+        for (int i = 0; i < attribute_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, attribute_.get(i));
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(4, style_);
+        }
+        for (int i = 0; i < equippedState_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, equippedState_.get(i));
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.EconItem}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.EconItem)
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_EconItem_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_EconItem_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getAttributeFieldBuilder();
+            getEquippedStateFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          defIndex_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          quality_ = 4;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (attributeBuilder_ == null) {
+            attribute_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            attributeBuilder_.clear();
+          }
+          style_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          if (equippedStateBuilder_ == null) {
+            equippedState_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            equippedStateBuilder_.clear();
+          }
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_EconItem_descriptor;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem getDefaultInstanceForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem build() {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem buildPartial() {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.defIndex_ = defIndex_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.quality_ = quality_;
+          if (attributeBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) == 0x00000004)) {
+              attribute_ = java.util.Collections.unmodifiableList(attribute_);
+              bitField0_ = (bitField0_ & ~0x00000004);
+            }
+            result.attribute_ = attribute_;
+          } else {
+            result.attribute_ = attributeBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.style_ = style_;
+          if (equippedStateBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) == 0x00000010)) {
+              equippedState_ = java.util.Collections.unmodifiableList(equippedState_);
+              bitField0_ = (bitField0_ & ~0x00000010);
+            }
+            result.equippedState_ = equippedState_;
+          } else {
+            result.equippedState_ = equippedStateBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem) {
+            return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem other) {
+          if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.getDefaultInstance()) return this;
+          if (other.hasDefIndex()) {
+            setDefIndex(other.getDefIndex());
+          }
+          if (other.hasQuality()) {
+            setQuality(other.getQuality());
+          }
+          if (attributeBuilder_ == null) {
+            if (!other.attribute_.isEmpty()) {
+              if (attribute_.isEmpty()) {
+                attribute_ = other.attribute_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+              } else {
+                ensureAttributeIsMutable();
+                attribute_.addAll(other.attribute_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.attribute_.isEmpty()) {
+              if (attributeBuilder_.isEmpty()) {
+                attributeBuilder_.dispose();
+                attributeBuilder_ = null;
+                attribute_ = other.attribute_;
+                bitField0_ = (bitField0_ & ~0x00000004);
+                attributeBuilder_ = 
+                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                     getAttributeFieldBuilder() : null;
+              } else {
+                attributeBuilder_.addAllMessages(other.attribute_);
+              }
+            }
+          }
+          if (other.hasStyle()) {
+            setStyle(other.getStyle());
+          }
+          if (equippedStateBuilder_ == null) {
+            if (!other.equippedState_.isEmpty()) {
+              if (equippedState_.isEmpty()) {
+                equippedState_ = other.equippedState_;
+                bitField0_ = (bitField0_ & ~0x00000010);
+              } else {
+                ensureEquippedStateIsMutable();
+                equippedState_.addAll(other.equippedState_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.equippedState_.isEmpty()) {
+              if (equippedStateBuilder_.isEmpty()) {
+                equippedStateBuilder_.dispose();
+                equippedStateBuilder_ = null;
+                equippedState_ = other.equippedState_;
+                bitField0_ = (bitField0_ & ~0x00000010);
+                equippedStateBuilder_ = 
+                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                     getEquippedStateFieldBuilder() : null;
+              } else {
+                equippedStateBuilder_.addAllMessages(other.equippedState_);
+              }
+            }
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int defIndex_ ;
+        /**
+         * <code>optional uint32 def_index = 1;</code>
+         */
+        public boolean hasDefIndex() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 def_index = 1;</code>
+         */
+        public int getDefIndex() {
+          return defIndex_;
+        }
+        /**
+         * <code>optional uint32 def_index = 1;</code>
+         */
+        public Builder setDefIndex(int value) {
+          bitField0_ |= 0x00000001;
+          defIndex_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 def_index = 1;</code>
+         */
+        public Builder clearDefIndex() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          defIndex_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int quality_ = 4;
+        /**
+         * <code>optional uint32 quality = 2 [default = 4];</code>
+         */
+        public boolean hasQuality() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 quality = 2 [default = 4];</code>
+         */
+        public int getQuality() {
+          return quality_;
+        }
+        /**
+         * <code>optional uint32 quality = 2 [default = 4];</code>
+         */
+        public Builder setQuality(int value) {
+          bitField0_ |= 0x00000002;
+          quality_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 quality = 2 [default = 4];</code>
+         */
+        public Builder clearQuality() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          quality_ = 4;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute> attribute_ =
+          java.util.Collections.emptyList();
+        private void ensureAttributeIsMutable() {
+          if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+            attribute_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute>(attribute_);
+            bitField0_ |= 0x00000004;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder> attributeBuilder_;
+
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute> getAttributeList() {
+          if (attributeBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(attribute_);
+          } else {
+            return attributeBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public int getAttributeCount() {
+          if (attributeBuilder_ == null) {
+            return attribute_.size();
+          } else {
+            return attributeBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute getAttribute(int index) {
+          if (attributeBuilder_ == null) {
+            return attribute_.get(index);
+          } else {
+            return attributeBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder setAttribute(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute value) {
+          if (attributeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAttributeIsMutable();
+            attribute_.set(index, value);
+            onChanged();
+          } else {
+            attributeBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder setAttribute(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder builderForValue) {
+          if (attributeBuilder_ == null) {
+            ensureAttributeIsMutable();
+            attribute_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            attributeBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder addAttribute(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute value) {
+          if (attributeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAttributeIsMutable();
+            attribute_.add(value);
+            onChanged();
+          } else {
+            attributeBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder addAttribute(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute value) {
+          if (attributeBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureAttributeIsMutable();
+            attribute_.add(index, value);
+            onChanged();
+          } else {
+            attributeBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder addAttribute(
+            skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder builderForValue) {
+          if (attributeBuilder_ == null) {
+            ensureAttributeIsMutable();
+            attribute_.add(builderForValue.build());
+            onChanged();
+          } else {
+            attributeBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder addAttribute(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder builderForValue) {
+          if (attributeBuilder_ == null) {
+            ensureAttributeIsMutable();
+            attribute_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            attributeBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder addAllAttribute(
+            java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute> values) {
+          if (attributeBuilder_ == null) {
+            ensureAttributeIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, attribute_);
+            onChanged();
+          } else {
+            attributeBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder clearAttribute() {
+          if (attributeBuilder_ == null) {
+            attribute_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000004);
+            onChanged();
+          } else {
+            attributeBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public Builder removeAttribute(int index) {
+          if (attributeBuilder_ == null) {
+            ensureAttributeIsMutable();
+            attribute_.remove(index);
+            onChanged();
+          } else {
+            attributeBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder getAttributeBuilder(
+            int index) {
+          return getAttributeFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder getAttributeOrBuilder(
+            int index) {
+          if (attributeBuilder_ == null) {
+            return attribute_.get(index);  } else {
+            return attributeBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder> 
+             getAttributeOrBuilderList() {
+          if (attributeBuilder_ != null) {
+            return attributeBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(attribute_);
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder addAttributeBuilder() {
+          return getAttributeFieldBuilder().addBuilder(
+              skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder addAttributeBuilder(
+            int index) {
+          return getAttributeFieldBuilder().addBuilder(
+              index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CSOEconItemAttribute attribute = 3;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder> 
+             getAttributeBuilderList() {
+          return getAttributeFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder> 
+            getAttributeFieldBuilder() {
+          if (attributeBuilder_ == null) {
+            attributeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttribute.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemAttributeOrBuilder>(
+                    attribute_,
+                    ((bitField0_ & 0x00000004) == 0x00000004),
+                    getParentForChildren(),
+                    isClean());
+            attribute_ = null;
+          }
+          return attributeBuilder_;
+        }
+
+        private int style_ ;
+        /**
+         * <code>optional uint32 style = 4 [default = 0];</code>
+         */
+        public boolean hasStyle() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional uint32 style = 4 [default = 0];</code>
+         */
+        public int getStyle() {
+          return style_;
+        }
+        /**
+         * <code>optional uint32 style = 4 [default = 0];</code>
+         */
+        public Builder setStyle(int value) {
+          bitField0_ |= 0x00000008;
+          style_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 style = 4 [default = 0];</code>
+         */
+        public Builder clearStyle() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          style_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped> equippedState_ =
+          java.util.Collections.emptyList();
+        private void ensureEquippedStateIsMutable() {
+          if (!((bitField0_ & 0x00000010) == 0x00000010)) {
+            equippedState_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped>(equippedState_);
+            bitField0_ |= 0x00000010;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder> equippedStateBuilder_;
+
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped> getEquippedStateList() {
+          if (equippedStateBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(equippedState_);
+          } else {
+            return equippedStateBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public int getEquippedStateCount() {
+          if (equippedStateBuilder_ == null) {
+            return equippedState_.size();
+          } else {
+            return equippedStateBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped getEquippedState(int index) {
+          if (equippedStateBuilder_ == null) {
+            return equippedState_.get(index);
+          } else {
+            return equippedStateBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder setEquippedState(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped value) {
+          if (equippedStateBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEquippedStateIsMutable();
+            equippedState_.set(index, value);
+            onChanged();
+          } else {
+            equippedStateBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder setEquippedState(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder builderForValue) {
+          if (equippedStateBuilder_ == null) {
+            ensureEquippedStateIsMutable();
+            equippedState_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            equippedStateBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder addEquippedState(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped value) {
+          if (equippedStateBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEquippedStateIsMutable();
+            equippedState_.add(value);
+            onChanged();
+          } else {
+            equippedStateBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder addEquippedState(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped value) {
+          if (equippedStateBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEquippedStateIsMutable();
+            equippedState_.add(index, value);
+            onChanged();
+          } else {
+            equippedStateBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder addEquippedState(
+            skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder builderForValue) {
+          if (equippedStateBuilder_ == null) {
+            ensureEquippedStateIsMutable();
+            equippedState_.add(builderForValue.build());
+            onChanged();
+          } else {
+            equippedStateBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder addEquippedState(
+            int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder builderForValue) {
+          if (equippedStateBuilder_ == null) {
+            ensureEquippedStateIsMutable();
+            equippedState_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            equippedStateBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder addAllEquippedState(
+            java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped> values) {
+          if (equippedStateBuilder_ == null) {
+            ensureEquippedStateIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, equippedState_);
+            onChanged();
+          } else {
+            equippedStateBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder clearEquippedState() {
+          if (equippedStateBuilder_ == null) {
+            equippedState_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000010);
+            onChanged();
+          } else {
+            equippedStateBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public Builder removeEquippedState(int index) {
+          if (equippedStateBuilder_ == null) {
+            ensureEquippedStateIsMutable();
+            equippedState_.remove(index);
+            onChanged();
+          } else {
+            equippedStateBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder getEquippedStateBuilder(
+            int index) {
+          return getEquippedStateFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder getEquippedStateOrBuilder(
+            int index) {
+          if (equippedStateBuilder_ == null) {
+            return equippedState_.get(index);  } else {
+            return equippedStateBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder> 
+             getEquippedStateOrBuilderList() {
+          if (equippedStateBuilder_ != null) {
+            return equippedStateBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(equippedState_);
+          }
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder addEquippedStateBuilder() {
+          return getEquippedStateFieldBuilder().addBuilder(
+              skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder addEquippedStateBuilder(
+            int index) {
+          return getEquippedStateFieldBuilder().addBuilder(
+              index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CSOEconItemEquipped equipped_state = 5;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder> 
+             getEquippedStateBuilderList() {
+          return getEquippedStateFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder> 
+            getEquippedStateFieldBuilder() {
+          if (equippedStateBuilder_ == null) {
+            equippedStateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquipped.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemEquippedOrBuilder>(
+                    equippedState_,
+                    ((bitField0_ & 0x00000010) == 0x00000010),
+                    getParentForChildren(),
+                    isClean());
+            equippedState_ = null;
+          }
+          return equippedStateBuilder_;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.EconItem)
+      }
+
+      static {
+        defaultInstance = new EconItem(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.EconItem)
     }
 
     public interface TeamOrBuilder extends
@@ -1977,11 +3285,11 @@ public final class S2DotaMatchMetadata {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>optional uint32 item_id = 1;</code>
+         * <code>optional int32 item_id = 1;</code>
          */
         boolean hasItemId();
         /**
-         * <code>optional uint32 item_id = 1;</code>
+         * <code>optional int32 item_id = 1;</code>
          */
         int getItemId();
 
@@ -2048,7 +3356,7 @@ public final class S2DotaMatchMetadata {
                 }
                 case 8: {
                   bitField0_ |= 0x00000001;
-                  itemId_ = input.readUInt32();
+                  itemId_ = input.readInt32();
                   break;
                 }
                 case 16: {
@@ -2099,13 +3407,13 @@ public final class S2DotaMatchMetadata {
         public static final int ITEM_ID_FIELD_NUMBER = 1;
         private int itemId_;
         /**
-         * <code>optional uint32 item_id = 1;</code>
+         * <code>optional int32 item_id = 1;</code>
          */
         public boolean hasItemId() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>optional uint32 item_id = 1;</code>
+         * <code>optional int32 item_id = 1;</code>
          */
         public int getItemId() {
           return itemId_;
@@ -2144,7 +3452,7 @@ public final class S2DotaMatchMetadata {
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            output.writeUInt32(1, itemId_);
+            output.writeInt32(1, itemId_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             output.writeInt32(2, purchaseTime_);
@@ -2160,7 +3468,7 @@ public final class S2DotaMatchMetadata {
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(1, itemId_);
+              .computeInt32Size(1, itemId_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             size += com.google.protobuf.CodedOutputStream
@@ -2374,19 +3682,19 @@ public final class S2DotaMatchMetadata {
 
           private int itemId_ ;
           /**
-           * <code>optional uint32 item_id = 1;</code>
+           * <code>optional int32 item_id = 1;</code>
            */
           public boolean hasItemId() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>optional uint32 item_id = 1;</code>
+           * <code>optional int32 item_id = 1;</code>
            */
           public int getItemId() {
             return itemId_;
           }
           /**
-           * <code>optional uint32 item_id = 1;</code>
+           * <code>optional int32 item_id = 1;</code>
            */
           public Builder setItemId(int value) {
             bitField0_ |= 0x00000001;
@@ -2395,7 +3703,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>optional uint32 item_id = 1;</code>
+           * <code>optional int32 item_id = 1;</code>
            */
           public Builder clearItemId() {
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -2452,15 +3760,15 @@ public final class S2DotaMatchMetadata {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>repeated uint32 item_id = 1;</code>
+         * <code>repeated int32 item_id = 1;</code>
          */
         java.util.List<java.lang.Integer> getItemIdList();
         /**
-         * <code>repeated uint32 item_id = 1;</code>
+         * <code>repeated int32 item_id = 1;</code>
          */
         int getItemIdCount();
         /**
-         * <code>repeated uint32 item_id = 1;</code>
+         * <code>repeated int32 item_id = 1;</code>
          */
         int getItemId(int index);
 
@@ -2510,24 +3818,24 @@ public final class S2DotaMatchMetadata {
         int getLevel();
 
         /**
-         * <code>repeated uint32 backpack_item_id = 7;</code>
+         * <code>repeated int32 backpack_item_id = 7;</code>
          */
         java.util.List<java.lang.Integer> getBackpackItemIdList();
         /**
-         * <code>repeated uint32 backpack_item_id = 7;</code>
+         * <code>repeated int32 backpack_item_id = 7;</code>
          */
         int getBackpackItemIdCount();
         /**
-         * <code>repeated uint32 backpack_item_id = 7;</code>
+         * <code>repeated int32 backpack_item_id = 7;</code>
          */
         int getBackpackItemId(int index);
 
         /**
-         * <code>optional uint32 neutral_item_id = 8;</code>
+         * <code>optional int32 neutral_item_id = 8;</code>
          */
         boolean hasNeutralItemId();
         /**
-         * <code>optional uint32 neutral_item_id = 8;</code>
+         * <code>optional int32 neutral_item_id = 8;</code>
          */
         int getNeutralItemId();
       }
@@ -2588,7 +3896,7 @@ public final class S2DotaMatchMetadata {
                     itemId_ = new java.util.ArrayList<java.lang.Integer>();
                     mutable_bitField0_ |= 0x00000001;
                   }
-                  itemId_.add(input.readUInt32());
+                  itemId_.add(input.readInt32());
                   break;
                 }
                 case 10: {
@@ -2599,7 +3907,7 @@ public final class S2DotaMatchMetadata {
                     mutable_bitField0_ |= 0x00000001;
                   }
                   while (input.getBytesUntilLimit() > 0) {
-                    itemId_.add(input.readUInt32());
+                    itemId_.add(input.readInt32());
                   }
                   input.popLimit(limit);
                   break;
@@ -2634,7 +3942,7 @@ public final class S2DotaMatchMetadata {
                     backpackItemId_ = new java.util.ArrayList<java.lang.Integer>();
                     mutable_bitField0_ |= 0x00000040;
                   }
-                  backpackItemId_.add(input.readUInt32());
+                  backpackItemId_.add(input.readInt32());
                   break;
                 }
                 case 58: {
@@ -2645,14 +3953,14 @@ public final class S2DotaMatchMetadata {
                     mutable_bitField0_ |= 0x00000040;
                   }
                   while (input.getBytesUntilLimit() > 0) {
-                    backpackItemId_.add(input.readUInt32());
+                    backpackItemId_.add(input.readInt32());
                   }
                   input.popLimit(limit);
                   break;
                 }
                 case 64: {
                   bitField0_ |= 0x00000020;
-                  neutralItemId_ = input.readUInt32();
+                  neutralItemId_ = input.readInt32();
                   break;
                 }
               }
@@ -2704,20 +4012,20 @@ public final class S2DotaMatchMetadata {
         public static final int ITEM_ID_FIELD_NUMBER = 1;
         private java.util.List<java.lang.Integer> itemId_;
         /**
-         * <code>repeated uint32 item_id = 1;</code>
+         * <code>repeated int32 item_id = 1;</code>
          */
         public java.util.List<java.lang.Integer>
             getItemIdList() {
           return itemId_;
         }
         /**
-         * <code>repeated uint32 item_id = 1;</code>
+         * <code>repeated int32 item_id = 1;</code>
          */
         public int getItemIdCount() {
           return itemId_.size();
         }
         /**
-         * <code>repeated uint32 item_id = 1;</code>
+         * <code>repeated int32 item_id = 1;</code>
          */
         public int getItemId(int index) {
           return itemId_.get(index);
@@ -2801,20 +4109,20 @@ public final class S2DotaMatchMetadata {
         public static final int BACKPACK_ITEM_ID_FIELD_NUMBER = 7;
         private java.util.List<java.lang.Integer> backpackItemId_;
         /**
-         * <code>repeated uint32 backpack_item_id = 7;</code>
+         * <code>repeated int32 backpack_item_id = 7;</code>
          */
         public java.util.List<java.lang.Integer>
             getBackpackItemIdList() {
           return backpackItemId_;
         }
         /**
-         * <code>repeated uint32 backpack_item_id = 7;</code>
+         * <code>repeated int32 backpack_item_id = 7;</code>
          */
         public int getBackpackItemIdCount() {
           return backpackItemId_.size();
         }
         /**
-         * <code>repeated uint32 backpack_item_id = 7;</code>
+         * <code>repeated int32 backpack_item_id = 7;</code>
          */
         public int getBackpackItemId(int index) {
           return backpackItemId_.get(index);
@@ -2823,13 +4131,13 @@ public final class S2DotaMatchMetadata {
         public static final int NEUTRAL_ITEM_ID_FIELD_NUMBER = 8;
         private int neutralItemId_;
         /**
-         * <code>optional uint32 neutral_item_id = 8;</code>
+         * <code>optional int32 neutral_item_id = 8;</code>
          */
         public boolean hasNeutralItemId() {
           return ((bitField0_ & 0x00000020) == 0x00000020);
         }
         /**
-         * <code>optional uint32 neutral_item_id = 8;</code>
+         * <code>optional int32 neutral_item_id = 8;</code>
          */
         public int getNeutralItemId() {
           return neutralItemId_;
@@ -2859,7 +4167,7 @@ public final class S2DotaMatchMetadata {
                             throws java.io.IOException {
           getSerializedSize();
           for (int i = 0; i < itemId_.size(); i++) {
-            output.writeUInt32(1, itemId_.get(i));
+            output.writeInt32(1, itemId_.get(i));
           }
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             output.writeInt32(2, gameTime_);
@@ -2877,10 +4185,10 @@ public final class S2DotaMatchMetadata {
             output.writeUInt32(6, level_);
           }
           for (int i = 0; i < backpackItemId_.size(); i++) {
-            output.writeUInt32(7, backpackItemId_.get(i));
+            output.writeInt32(7, backpackItemId_.get(i));
           }
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
-            output.writeUInt32(8, neutralItemId_);
+            output.writeInt32(8, neutralItemId_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -2895,7 +4203,7 @@ public final class S2DotaMatchMetadata {
             int dataSize = 0;
             for (int i = 0; i < itemId_.size(); i++) {
               dataSize += com.google.protobuf.CodedOutputStream
-                .computeUInt32SizeNoTag(itemId_.get(i));
+                .computeInt32SizeNoTag(itemId_.get(i));
             }
             size += dataSize;
             size += 1 * getItemIdList().size();
@@ -2924,14 +4232,14 @@ public final class S2DotaMatchMetadata {
             int dataSize = 0;
             for (int i = 0; i < backpackItemId_.size(); i++) {
               dataSize += com.google.protobuf.CodedOutputStream
-                .computeUInt32SizeNoTag(backpackItemId_.get(i));
+                .computeInt32SizeNoTag(backpackItemId_.get(i));
             }
             size += dataSize;
             size += 1 * getBackpackItemIdList().size();
           }
           if (((bitField0_ & 0x00000020) == 0x00000020)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(8, neutralItemId_);
+              .computeInt32Size(8, neutralItemId_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -3217,26 +4525,26 @@ public final class S2DotaMatchMetadata {
              }
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public java.util.List<java.lang.Integer>
               getItemIdList() {
             return java.util.Collections.unmodifiableList(itemId_);
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public int getItemIdCount() {
             return itemId_.size();
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public int getItemId(int index) {
             return itemId_.get(index);
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public Builder setItemId(
               int index, int value) {
@@ -3246,7 +4554,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public Builder addItemId(int value) {
             ensureItemIdIsMutable();
@@ -3255,7 +4563,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public Builder addAllItemId(
               java.lang.Iterable<? extends java.lang.Integer> values) {
@@ -3266,7 +4574,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 item_id = 1;</code>
+           * <code>repeated int32 item_id = 1;</code>
            */
           public Builder clearItemId() {
             itemId_ = java.util.Collections.emptyList();
@@ -3443,26 +4751,26 @@ public final class S2DotaMatchMetadata {
              }
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public java.util.List<java.lang.Integer>
               getBackpackItemIdList() {
             return java.util.Collections.unmodifiableList(backpackItemId_);
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public int getBackpackItemIdCount() {
             return backpackItemId_.size();
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public int getBackpackItemId(int index) {
             return backpackItemId_.get(index);
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public Builder setBackpackItemId(
               int index, int value) {
@@ -3472,7 +4780,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public Builder addBackpackItemId(int value) {
             ensureBackpackItemIdIsMutable();
@@ -3481,7 +4789,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public Builder addAllBackpackItemId(
               java.lang.Iterable<? extends java.lang.Integer> values) {
@@ -3492,7 +4800,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 backpack_item_id = 7;</code>
+           * <code>repeated int32 backpack_item_id = 7;</code>
            */
           public Builder clearBackpackItemId() {
             backpackItemId_ = java.util.Collections.emptyList();
@@ -3503,19 +4811,19 @@ public final class S2DotaMatchMetadata {
 
           private int neutralItemId_ ;
           /**
-           * <code>optional uint32 neutral_item_id = 8;</code>
+           * <code>optional int32 neutral_item_id = 8;</code>
            */
           public boolean hasNeutralItemId() {
             return ((bitField0_ & 0x00000080) == 0x00000080);
           }
           /**
-           * <code>optional uint32 neutral_item_id = 8;</code>
+           * <code>optional int32 neutral_item_id = 8;</code>
            */
           public int getNeutralItemId() {
             return neutralItemId_;
           }
           /**
-           * <code>optional uint32 neutral_item_id = 8;</code>
+           * <code>optional int32 neutral_item_id = 8;</code>
            */
           public Builder setNeutralItemId(int value) {
             bitField0_ |= 0x00000080;
@@ -3524,7 +4832,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>optional uint32 neutral_item_id = 8;</code>
+           * <code>optional int32 neutral_item_id = 8;</code>
            */
           public Builder clearNeutralItemId() {
             bitField0_ = (bitField0_ & ~0x00000080);
@@ -13157,15 +14465,15 @@ public final class S2DotaMatchMetadata {
         int getAccountId();
 
         /**
-         * <code>repeated uint32 ability_upgrades = 2;</code>
+         * <code>repeated int32 ability_upgrades = 2;</code>
          */
         java.util.List<java.lang.Integer> getAbilityUpgradesList();
         /**
-         * <code>repeated uint32 ability_upgrades = 2;</code>
+         * <code>repeated int32 ability_upgrades = 2;</code>
          */
         int getAbilityUpgradesCount();
         /**
-         * <code>repeated uint32 ability_upgrades = 2;</code>
+         * <code>repeated int32 ability_upgrades = 2;</code>
          */
         int getAbilityUpgrades(int index);
 
@@ -13179,27 +14487,27 @@ public final class S2DotaMatchMetadata {
         int getPlayerSlot();
 
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
         java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> 
-            getEquippedEconItemsList();
+            getEquippedEconItemsOldList();
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem getEquippedEconItems(int index);
+        skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem getEquippedEconItemsOld(int index);
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        int getEquippedEconItemsCount();
+        int getEquippedEconItemsOldCount();
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
         java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder> 
-            getEquippedEconItemsOrBuilderList();
+            getEquippedEconItemsOldOrBuilderList();
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder getEquippedEconItemsOrBuilder(
+        skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder getEquippedEconItemsOldOrBuilder(
             int index);
 
         /**
@@ -13786,6 +15094,30 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 featured_hero_sticker_quality = 55;</code>
          */
         int getFeaturedHeroStickerQuality();
+
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem> 
+            getEquippedEconItemsNewList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem getEquippedEconItemsNew(int index);
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        int getEquippedEconItemsNewCount();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder> 
+            getEquippedEconItemsNewOrBuilderList();
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder getEquippedEconItemsNewOrBuilder(
+            int index);
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -13850,7 +15182,7 @@ public final class S2DotaMatchMetadata {
                     abilityUpgrades_ = new java.util.ArrayList<java.lang.Integer>();
                     mutable_bitField0_ |= 0x00000002;
                   }
-                  abilityUpgrades_.add(input.readUInt32());
+                  abilityUpgrades_.add(input.readInt32());
                   break;
                 }
                 case 18: {
@@ -13861,7 +15193,7 @@ public final class S2DotaMatchMetadata {
                     mutable_bitField0_ |= 0x00000002;
                   }
                   while (input.getBytesUntilLimit() > 0) {
-                    abilityUpgrades_.add(input.readUInt32());
+                    abilityUpgrades_.add(input.readInt32());
                   }
                   input.popLimit(limit);
                   break;
@@ -13873,10 +15205,10 @@ public final class S2DotaMatchMetadata {
                 }
                 case 34: {
                   if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                    equippedEconItems_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem>();
+                    equippedEconItemsOld_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem>();
                     mutable_bitField0_ |= 0x00000008;
                   }
-                  equippedEconItems_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.PARSER, extensionRegistry));
+                  equippedEconItemsOld_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.PARSER, extensionRegistry));
                   break;
                 }
                 case 42: {
@@ -14240,6 +15572,14 @@ public final class S2DotaMatchMetadata {
                   featuredHeroStickerQuality_ = input.readUInt32();
                   break;
                 }
+                case 450: {
+                  if (!((mutable_bitField1_ & 0x00200000) == 0x00200000)) {
+                    equippedEconItemsNew_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem>();
+                    mutable_bitField1_ |= 0x00200000;
+                  }
+                  equippedEconItemsNew_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.PARSER, extensionRegistry));
+                  break;
+                }
               }
             }
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -14252,7 +15592,7 @@ public final class S2DotaMatchMetadata {
               abilityUpgrades_ = java.util.Collections.unmodifiableList(abilityUpgrades_);
             }
             if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-              equippedEconItems_ = java.util.Collections.unmodifiableList(equippedEconItems_);
+              equippedEconItemsOld_ = java.util.Collections.unmodifiableList(equippedEconItemsOld_);
             }
             if (((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
               kills_ = java.util.Collections.unmodifiableList(kills_);
@@ -14289,6 +15629,9 @@ public final class S2DotaMatchMetadata {
             }
             if (((mutable_bitField1_ & 0x00008000) == 0x00008000)) {
               graphHeroDamage_ = java.util.Collections.unmodifiableList(graphHeroDamage_);
+            }
+            if (((mutable_bitField1_ & 0x00200000) == 0x00200000)) {
+              equippedEconItemsNew_ = java.util.Collections.unmodifiableList(equippedEconItemsNew_);
             }
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
@@ -15206,20 +16549,20 @@ public final class S2DotaMatchMetadata {
         public static final int ABILITY_UPGRADES_FIELD_NUMBER = 2;
         private java.util.List<java.lang.Integer> abilityUpgrades_;
         /**
-         * <code>repeated uint32 ability_upgrades = 2;</code>
+         * <code>repeated int32 ability_upgrades = 2;</code>
          */
         public java.util.List<java.lang.Integer>
             getAbilityUpgradesList() {
           return abilityUpgrades_;
         }
         /**
-         * <code>repeated uint32 ability_upgrades = 2;</code>
+         * <code>repeated int32 ability_upgrades = 2;</code>
          */
         public int getAbilityUpgradesCount() {
           return abilityUpgrades_.size();
         }
         /**
-         * <code>repeated uint32 ability_upgrades = 2;</code>
+         * <code>repeated int32 ability_upgrades = 2;</code>
          */
         public int getAbilityUpgrades(int index) {
           return abilityUpgrades_.get(index);
@@ -15240,39 +16583,39 @@ public final class S2DotaMatchMetadata {
           return playerSlot_;
         }
 
-        public static final int EQUIPPED_ECON_ITEMS_FIELD_NUMBER = 4;
-        private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> equippedEconItems_;
+        public static final int EQUIPPED_ECON_ITEMS_OLD_FIELD_NUMBER = 4;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> equippedEconItemsOld_;
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> getEquippedEconItemsList() {
-          return equippedEconItems_;
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> getEquippedEconItemsOldList() {
+          return equippedEconItemsOld_;
         }
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
         public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder> 
-            getEquippedEconItemsOrBuilderList() {
-          return equippedEconItems_;
+            getEquippedEconItemsOldOrBuilderList() {
+          return equippedEconItemsOld_;
         }
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        public int getEquippedEconItemsCount() {
-          return equippedEconItems_.size();
+        public int getEquippedEconItemsOldCount() {
+          return equippedEconItemsOld_.size();
         }
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem getEquippedEconItems(int index) {
-          return equippedEconItems_.get(index);
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem getEquippedEconItemsOld(int index) {
+          return equippedEconItemsOld_.get(index);
         }
         /**
-         * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+         * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
          */
-        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder getEquippedEconItemsOrBuilder(
+        public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder getEquippedEconItemsOldOrBuilder(
             int index) {
-          return equippedEconItems_.get(index);
+          return equippedEconItemsOld_.get(index);
         }
 
         public static final int KILLS_FIELD_NUMBER = 5;
@@ -16210,11 +17553,46 @@ public final class S2DotaMatchMetadata {
           return featuredHeroStickerQuality_;
         }
 
+        public static final int EQUIPPED_ECON_ITEMS_NEW_FIELD_NUMBER = 56;
+        private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem> equippedEconItemsNew_;
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem> getEquippedEconItemsNewList() {
+          return equippedEconItemsNew_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder> 
+            getEquippedEconItemsNewOrBuilderList() {
+          return equippedEconItemsNew_;
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        public int getEquippedEconItemsNewCount() {
+          return equippedEconItemsNew_.size();
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem getEquippedEconItemsNew(int index) {
+          return equippedEconItemsNew_.get(index);
+        }
+        /**
+         * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder getEquippedEconItemsNewOrBuilder(
+            int index) {
+          return equippedEconItemsNew_.get(index);
+        }
+
         private void initFields() {
           accountId_ = 0;
           abilityUpgrades_ = java.util.Collections.emptyList();
           playerSlot_ = 0;
-          equippedEconItems_ = java.util.Collections.emptyList();
+          equippedEconItemsOld_ = java.util.Collections.emptyList();
           kills_ = java.util.Collections.emptyList();
           items_ = java.util.Collections.emptyList();
           avgKillsX16_ = 0;
@@ -16264,6 +17642,7 @@ public final class S2DotaMatchMetadata {
           featuredGamemodeProgress_ = skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.FeaturedGamemodeProgress.getDefaultInstance();
           featuredHeroStickerIndex_ = 0;
           featuredHeroStickerQuality_ = 0;
+          equippedEconItemsNew_ = java.util.Collections.emptyList();
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -16282,13 +17661,13 @@ public final class S2DotaMatchMetadata {
             output.writeUInt32(1, accountId_);
           }
           for (int i = 0; i < abilityUpgrades_.size(); i++) {
-            output.writeUInt32(2, abilityUpgrades_.get(i));
+            output.writeInt32(2, abilityUpgrades_.get(i));
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             output.writeUInt32(3, playerSlot_);
           }
-          for (int i = 0; i < equippedEconItems_.size(); i++) {
-            output.writeMessage(4, equippedEconItems_.get(i));
+          for (int i = 0; i < equippedEconItemsOld_.size(); i++) {
+            output.writeMessage(4, equippedEconItemsOld_.get(i));
           }
           for (int i = 0; i < kills_.size(); i++) {
             output.writeMessage(5, kills_.get(i));
@@ -16437,6 +17816,9 @@ public final class S2DotaMatchMetadata {
           if (((bitField1_ & 0x00000040) == 0x00000040)) {
             output.writeUInt32(55, featuredHeroStickerQuality_);
           }
+          for (int i = 0; i < equippedEconItemsNew_.size(); i++) {
+            output.writeMessage(56, equippedEconItemsNew_.get(i));
+          }
           getUnknownFields().writeTo(output);
         }
 
@@ -16454,7 +17836,7 @@ public final class S2DotaMatchMetadata {
             int dataSize = 0;
             for (int i = 0; i < abilityUpgrades_.size(); i++) {
               dataSize += com.google.protobuf.CodedOutputStream
-                .computeUInt32SizeNoTag(abilityUpgrades_.get(i));
+                .computeInt32SizeNoTag(abilityUpgrades_.get(i));
             }
             size += dataSize;
             size += 1 * getAbilityUpgradesList().size();
@@ -16463,9 +17845,9 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(3, playerSlot_);
           }
-          for (int i = 0; i < equippedEconItems_.size(); i++) {
+          for (int i = 0; i < equippedEconItemsOld_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
-              .computeMessageSize(4, equippedEconItems_.get(i));
+              .computeMessageSize(4, equippedEconItemsOld_.get(i));
           }
           for (int i = 0; i < kills_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
@@ -16677,6 +18059,10 @@ public final class S2DotaMatchMetadata {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(55, featuredHeroStickerQuality_);
           }
+          for (int i = 0; i < equippedEconItemsNew_.size(); i++) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeMessageSize(56, equippedEconItemsNew_.get(i));
+          }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
           return size;
@@ -16786,7 +18172,7 @@ public final class S2DotaMatchMetadata {
           }
           private void maybeForceBuilderInitialization() {
             if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-              getEquippedEconItemsFieldBuilder();
+              getEquippedEconItemsOldFieldBuilder();
               getKillsFieldBuilder();
               getItemsFieldBuilder();
               getInventorySnapshotFieldBuilder();
@@ -16797,6 +18183,7 @@ public final class S2DotaMatchMetadata {
               getGauntletProgressFieldBuilder();
               getContractProgressFieldBuilder();
               getFeaturedGamemodeProgressFieldBuilder();
+              getEquippedEconItemsNewFieldBuilder();
             }
           }
           private static Builder create() {
@@ -16811,11 +18198,11 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00000002);
             playerSlot_ = 0;
             bitField0_ = (bitField0_ & ~0x00000004);
-            if (equippedEconItemsBuilder_ == null) {
-              equippedEconItems_ = java.util.Collections.emptyList();
+            if (equippedEconItemsOldBuilder_ == null) {
+              equippedEconItemsOld_ = java.util.Collections.emptyList();
               bitField0_ = (bitField0_ & ~0x00000008);
             } else {
-              equippedEconItemsBuilder_.clear();
+              equippedEconItemsOldBuilder_.clear();
             }
             if (killsBuilder_ == null) {
               kills_ = java.util.Collections.emptyList();
@@ -16955,6 +18342,12 @@ public final class S2DotaMatchMetadata {
             bitField1_ = (bitField1_ & ~0x00080000);
             featuredHeroStickerQuality_ = 0;
             bitField1_ = (bitField1_ & ~0x00100000);
+            if (equippedEconItemsNewBuilder_ == null) {
+              equippedEconItemsNew_ = java.util.Collections.emptyList();
+              bitField1_ = (bitField1_ & ~0x00200000);
+            } else {
+              equippedEconItemsNewBuilder_.clear();
+            }
             return this;
           }
 
@@ -16998,14 +18391,14 @@ public final class S2DotaMatchMetadata {
               to_bitField0_ |= 0x00000002;
             }
             result.playerSlot_ = playerSlot_;
-            if (equippedEconItemsBuilder_ == null) {
+            if (equippedEconItemsOldBuilder_ == null) {
               if (((bitField0_ & 0x00000008) == 0x00000008)) {
-                equippedEconItems_ = java.util.Collections.unmodifiableList(equippedEconItems_);
+                equippedEconItemsOld_ = java.util.Collections.unmodifiableList(equippedEconItemsOld_);
                 bitField0_ = (bitField0_ & ~0x00000008);
               }
-              result.equippedEconItems_ = equippedEconItems_;
+              result.equippedEconItemsOld_ = equippedEconItemsOld_;
             } else {
-              result.equippedEconItems_ = equippedEconItemsBuilder_.build();
+              result.equippedEconItemsOld_ = equippedEconItemsOldBuilder_.build();
             }
             if (killsBuilder_ == null) {
               if (((bitField0_ & 0x00000010) == 0x00000010)) {
@@ -17255,6 +18648,15 @@ public final class S2DotaMatchMetadata {
               to_bitField1_ |= 0x00000040;
             }
             result.featuredHeroStickerQuality_ = featuredHeroStickerQuality_;
+            if (equippedEconItemsNewBuilder_ == null) {
+              if (((bitField1_ & 0x00200000) == 0x00200000)) {
+                equippedEconItemsNew_ = java.util.Collections.unmodifiableList(equippedEconItemsNew_);
+                bitField1_ = (bitField1_ & ~0x00200000);
+              }
+              result.equippedEconItemsNew_ = equippedEconItemsNew_;
+            } else {
+              result.equippedEconItemsNew_ = equippedEconItemsNewBuilder_.build();
+            }
             result.bitField0_ = to_bitField0_;
             result.bitField1_ = to_bitField1_;
             onBuilt();
@@ -17288,29 +18690,29 @@ public final class S2DotaMatchMetadata {
             if (other.hasPlayerSlot()) {
               setPlayerSlot(other.getPlayerSlot());
             }
-            if (equippedEconItemsBuilder_ == null) {
-              if (!other.equippedEconItems_.isEmpty()) {
-                if (equippedEconItems_.isEmpty()) {
-                  equippedEconItems_ = other.equippedEconItems_;
+            if (equippedEconItemsOldBuilder_ == null) {
+              if (!other.equippedEconItemsOld_.isEmpty()) {
+                if (equippedEconItemsOld_.isEmpty()) {
+                  equippedEconItemsOld_ = other.equippedEconItemsOld_;
                   bitField0_ = (bitField0_ & ~0x00000008);
                 } else {
-                  ensureEquippedEconItemsIsMutable();
-                  equippedEconItems_.addAll(other.equippedEconItems_);
+                  ensureEquippedEconItemsOldIsMutable();
+                  equippedEconItemsOld_.addAll(other.equippedEconItemsOld_);
                 }
                 onChanged();
               }
             } else {
-              if (!other.equippedEconItems_.isEmpty()) {
-                if (equippedEconItemsBuilder_.isEmpty()) {
-                  equippedEconItemsBuilder_.dispose();
-                  equippedEconItemsBuilder_ = null;
-                  equippedEconItems_ = other.equippedEconItems_;
+              if (!other.equippedEconItemsOld_.isEmpty()) {
+                if (equippedEconItemsOldBuilder_.isEmpty()) {
+                  equippedEconItemsOldBuilder_.dispose();
+                  equippedEconItemsOldBuilder_ = null;
+                  equippedEconItemsOld_ = other.equippedEconItemsOld_;
                   bitField0_ = (bitField0_ & ~0x00000008);
-                  equippedEconItemsBuilder_ = 
+                  equippedEconItemsOldBuilder_ = 
                     com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                       getEquippedEconItemsFieldBuilder() : null;
+                       getEquippedEconItemsOldFieldBuilder() : null;
                 } else {
-                  equippedEconItemsBuilder_.addAllMessages(other.equippedEconItems_);
+                  equippedEconItemsOldBuilder_.addAllMessages(other.equippedEconItemsOld_);
                 }
               }
             }
@@ -17673,6 +19075,32 @@ public final class S2DotaMatchMetadata {
             if (other.hasFeaturedHeroStickerQuality()) {
               setFeaturedHeroStickerQuality(other.getFeaturedHeroStickerQuality());
             }
+            if (equippedEconItemsNewBuilder_ == null) {
+              if (!other.equippedEconItemsNew_.isEmpty()) {
+                if (equippedEconItemsNew_.isEmpty()) {
+                  equippedEconItemsNew_ = other.equippedEconItemsNew_;
+                  bitField1_ = (bitField1_ & ~0x00200000);
+                } else {
+                  ensureEquippedEconItemsNewIsMutable();
+                  equippedEconItemsNew_.addAll(other.equippedEconItemsNew_);
+                }
+                onChanged();
+              }
+            } else {
+              if (!other.equippedEconItemsNew_.isEmpty()) {
+                if (equippedEconItemsNewBuilder_.isEmpty()) {
+                  equippedEconItemsNewBuilder_.dispose();
+                  equippedEconItemsNewBuilder_ = null;
+                  equippedEconItemsNew_ = other.equippedEconItemsNew_;
+                  bitField1_ = (bitField1_ & ~0x00200000);
+                  equippedEconItemsNewBuilder_ = 
+                    com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                       getEquippedEconItemsNewFieldBuilder() : null;
+                } else {
+                  equippedEconItemsNewBuilder_.addAllMessages(other.equippedEconItemsNew_);
+                }
+              }
+            }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
           }
@@ -17741,26 +19169,26 @@ public final class S2DotaMatchMetadata {
              }
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public java.util.List<java.lang.Integer>
               getAbilityUpgradesList() {
             return java.util.Collections.unmodifiableList(abilityUpgrades_);
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public int getAbilityUpgradesCount() {
             return abilityUpgrades_.size();
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public int getAbilityUpgrades(int index) {
             return abilityUpgrades_.get(index);
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public Builder setAbilityUpgrades(
               int index, int value) {
@@ -17770,7 +19198,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public Builder addAbilityUpgrades(int value) {
             ensureAbilityUpgradesIsMutable();
@@ -17779,7 +19207,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public Builder addAllAbilityUpgrades(
               java.lang.Iterable<? extends java.lang.Integer> values) {
@@ -17790,7 +19218,7 @@ public final class S2DotaMatchMetadata {
             return this;
           }
           /**
-           * <code>repeated uint32 ability_upgrades = 2;</code>
+           * <code>repeated int32 ability_upgrades = 2;</code>
            */
           public Builder clearAbilityUpgrades() {
             abilityUpgrades_ = java.util.Collections.emptyList();
@@ -17831,244 +19259,244 @@ public final class S2DotaMatchMetadata {
             return this;
           }
 
-          private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> equippedEconItems_ =
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> equippedEconItemsOld_ =
             java.util.Collections.emptyList();
-          private void ensureEquippedEconItemsIsMutable() {
+          private void ensureEquippedEconItemsOldIsMutable() {
             if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-              equippedEconItems_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem>(equippedEconItems_);
+              equippedEconItemsOld_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem>(equippedEconItemsOld_);
               bitField0_ |= 0x00000008;
              }
           }
 
           private com.google.protobuf.RepeatedFieldBuilder<
-              skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder> equippedEconItemsBuilder_;
+              skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder> equippedEconItemsOldBuilder_;
 
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> getEquippedEconItemsList() {
-            if (equippedEconItemsBuilder_ == null) {
-              return java.util.Collections.unmodifiableList(equippedEconItems_);
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> getEquippedEconItemsOldList() {
+            if (equippedEconItemsOldBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(equippedEconItemsOld_);
             } else {
-              return equippedEconItemsBuilder_.getMessageList();
+              return equippedEconItemsOldBuilder_.getMessageList();
             }
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public int getEquippedEconItemsCount() {
-            if (equippedEconItemsBuilder_ == null) {
-              return equippedEconItems_.size();
+          public int getEquippedEconItemsOldCount() {
+            if (equippedEconItemsOldBuilder_ == null) {
+              return equippedEconItemsOld_.size();
             } else {
-              return equippedEconItemsBuilder_.getCount();
+              return equippedEconItemsOldBuilder_.getCount();
             }
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem getEquippedEconItems(int index) {
-            if (equippedEconItemsBuilder_ == null) {
-              return equippedEconItems_.get(index);
+          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem getEquippedEconItemsOld(int index) {
+            if (equippedEconItemsOldBuilder_ == null) {
+              return equippedEconItemsOld_.get(index);
             } else {
-              return equippedEconItemsBuilder_.getMessage(index);
+              return equippedEconItemsOldBuilder_.getMessage(index);
             }
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder setEquippedEconItems(
+          public Builder setEquippedEconItemsOld(
               int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem value) {
-            if (equippedEconItemsBuilder_ == null) {
+            if (equippedEconItemsOldBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
               }
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.set(index, value);
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.set(index, value);
               onChanged();
             } else {
-              equippedEconItemsBuilder_.setMessage(index, value);
+              equippedEconItemsOldBuilder_.setMessage(index, value);
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder setEquippedEconItems(
+          public Builder setEquippedEconItemsOld(
               int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder builderForValue) {
-            if (equippedEconItemsBuilder_ == null) {
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.set(index, builderForValue.build());
+            if (equippedEconItemsOldBuilder_ == null) {
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.set(index, builderForValue.build());
               onChanged();
             } else {
-              equippedEconItemsBuilder_.setMessage(index, builderForValue.build());
+              equippedEconItemsOldBuilder_.setMessage(index, builderForValue.build());
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder addEquippedEconItems(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem value) {
-            if (equippedEconItemsBuilder_ == null) {
+          public Builder addEquippedEconItemsOld(skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem value) {
+            if (equippedEconItemsOldBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
               }
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.add(value);
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.add(value);
               onChanged();
             } else {
-              equippedEconItemsBuilder_.addMessage(value);
+              equippedEconItemsOldBuilder_.addMessage(value);
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder addEquippedEconItems(
+          public Builder addEquippedEconItemsOld(
               int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem value) {
-            if (equippedEconItemsBuilder_ == null) {
+            if (equippedEconItemsOldBuilder_ == null) {
               if (value == null) {
                 throw new NullPointerException();
               }
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.add(index, value);
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.add(index, value);
               onChanged();
             } else {
-              equippedEconItemsBuilder_.addMessage(index, value);
+              equippedEconItemsOldBuilder_.addMessage(index, value);
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder addEquippedEconItems(
+          public Builder addEquippedEconItemsOld(
               skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder builderForValue) {
-            if (equippedEconItemsBuilder_ == null) {
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.add(builderForValue.build());
+            if (equippedEconItemsOldBuilder_ == null) {
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.add(builderForValue.build());
               onChanged();
             } else {
-              equippedEconItemsBuilder_.addMessage(builderForValue.build());
+              equippedEconItemsOldBuilder_.addMessage(builderForValue.build());
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder addEquippedEconItems(
+          public Builder addEquippedEconItemsOld(
               int index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder builderForValue) {
-            if (equippedEconItemsBuilder_ == null) {
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.add(index, builderForValue.build());
+            if (equippedEconItemsOldBuilder_ == null) {
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.add(index, builderForValue.build());
               onChanged();
             } else {
-              equippedEconItemsBuilder_.addMessage(index, builderForValue.build());
+              equippedEconItemsOldBuilder_.addMessage(index, builderForValue.build());
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder addAllEquippedEconItems(
+          public Builder addAllEquippedEconItemsOld(
               java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem> values) {
-            if (equippedEconItemsBuilder_ == null) {
-              ensureEquippedEconItemsIsMutable();
+            if (equippedEconItemsOldBuilder_ == null) {
+              ensureEquippedEconItemsOldIsMutable();
               com.google.protobuf.AbstractMessageLite.Builder.addAll(
-                  values, equippedEconItems_);
+                  values, equippedEconItemsOld_);
               onChanged();
             } else {
-              equippedEconItemsBuilder_.addAllMessages(values);
+              equippedEconItemsOldBuilder_.addAllMessages(values);
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder clearEquippedEconItems() {
-            if (equippedEconItemsBuilder_ == null) {
-              equippedEconItems_ = java.util.Collections.emptyList();
+          public Builder clearEquippedEconItemsOld() {
+            if (equippedEconItemsOldBuilder_ == null) {
+              equippedEconItemsOld_ = java.util.Collections.emptyList();
               bitField0_ = (bitField0_ & ~0x00000008);
               onChanged();
             } else {
-              equippedEconItemsBuilder_.clear();
+              equippedEconItemsOldBuilder_.clear();
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public Builder removeEquippedEconItems(int index) {
-            if (equippedEconItemsBuilder_ == null) {
-              ensureEquippedEconItemsIsMutable();
-              equippedEconItems_.remove(index);
+          public Builder removeEquippedEconItemsOld(int index) {
+            if (equippedEconItemsOldBuilder_ == null) {
+              ensureEquippedEconItemsOldIsMutable();
+              equippedEconItemsOld_.remove(index);
               onChanged();
             } else {
-              equippedEconItemsBuilder_.remove(index);
+              equippedEconItemsOldBuilder_.remove(index);
             }
             return this;
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder getEquippedEconItemsBuilder(
+          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder getEquippedEconItemsOldBuilder(
               int index) {
-            return getEquippedEconItemsFieldBuilder().getBuilder(index);
+            return getEquippedEconItemsOldFieldBuilder().getBuilder(index);
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder getEquippedEconItemsOrBuilder(
+          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder getEquippedEconItemsOldOrBuilder(
               int index) {
-            if (equippedEconItemsBuilder_ == null) {
-              return equippedEconItems_.get(index);  } else {
-              return equippedEconItemsBuilder_.getMessageOrBuilder(index);
+            if (equippedEconItemsOldBuilder_ == null) {
+              return equippedEconItemsOld_.get(index);  } else {
+              return equippedEconItemsOldBuilder_.getMessageOrBuilder(index);
             }
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
           public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder> 
-               getEquippedEconItemsOrBuilderList() {
-            if (equippedEconItemsBuilder_ != null) {
-              return equippedEconItemsBuilder_.getMessageOrBuilderList();
+               getEquippedEconItemsOldOrBuilderList() {
+            if (equippedEconItemsOldBuilder_ != null) {
+              return equippedEconItemsOldBuilder_.getMessageOrBuilderList();
             } else {
-              return java.util.Collections.unmodifiableList(equippedEconItems_);
+              return java.util.Collections.unmodifiableList(equippedEconItemsOld_);
             }
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder addEquippedEconItemsBuilder() {
-            return getEquippedEconItemsFieldBuilder().addBuilder(
+          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder addEquippedEconItemsOldBuilder() {
+            return getEquippedEconItemsOldFieldBuilder().addBuilder(
                 skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.getDefaultInstance());
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
-          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder addEquippedEconItemsBuilder(
+          public skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder addEquippedEconItemsOldBuilder(
               int index) {
-            return getEquippedEconItemsFieldBuilder().addBuilder(
+            return getEquippedEconItemsOldFieldBuilder().addBuilder(
                 index, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.getDefaultInstance());
           }
           /**
-           * <code>repeated .CSOEconItem equipped_econ_items = 4;</code>
+           * <code>repeated .CSOEconItem equipped_econ_items_old = 4;</code>
            */
           public java.util.List<skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder> 
-               getEquippedEconItemsBuilderList() {
-            return getEquippedEconItemsFieldBuilder().getBuilderList();
+               getEquippedEconItemsOldBuilderList() {
+            return getEquippedEconItemsOldFieldBuilder().getBuilderList();
           }
           private com.google.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder> 
-              getEquippedEconItemsFieldBuilder() {
-            if (equippedEconItemsBuilder_ == null) {
-              equippedEconItemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              getEquippedEconItemsOldFieldBuilder() {
+            if (equippedEconItemsOldBuilder_ == null) {
+              equippedEconItemsOldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
                   skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.s2.proto.S2BaseGcMessages.CSOEconItemOrBuilder>(
-                      equippedEconItems_,
+                      equippedEconItemsOld_,
                       ((bitField0_ & 0x00000008) == 0x00000008),
                       getParentForChildren(),
                       isClean());
-              equippedEconItems_ = null;
+              equippedEconItemsOld_ = null;
             }
-            return equippedEconItemsBuilder_;
+            return equippedEconItemsOldBuilder_;
           }
 
           private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team.PlayerKill> kills_ =
@@ -21613,6 +23041,246 @@ public final class S2DotaMatchMetadata {
             return this;
           }
 
+          private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem> equippedEconItemsNew_ =
+            java.util.Collections.emptyList();
+          private void ensureEquippedEconItemsNewIsMutable() {
+            if (!((bitField1_ & 0x00200000) == 0x00200000)) {
+              equippedEconItemsNew_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem>(equippedEconItemsNew_);
+              bitField1_ |= 0x00200000;
+             }
+          }
+
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder> equippedEconItemsNewBuilder_;
+
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem> getEquippedEconItemsNewList() {
+            if (equippedEconItemsNewBuilder_ == null) {
+              return java.util.Collections.unmodifiableList(equippedEconItemsNew_);
+            } else {
+              return equippedEconItemsNewBuilder_.getMessageList();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public int getEquippedEconItemsNewCount() {
+            if (equippedEconItemsNewBuilder_ == null) {
+              return equippedEconItemsNew_.size();
+            } else {
+              return equippedEconItemsNewBuilder_.getCount();
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem getEquippedEconItemsNew(int index) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              return equippedEconItemsNew_.get(index);
+            } else {
+              return equippedEconItemsNewBuilder_.getMessage(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder setEquippedEconItemsNew(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem value) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.set(index, value);
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.setMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder setEquippedEconItemsNew(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder builderForValue) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.set(index, builderForValue.build());
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.setMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder addEquippedEconItemsNew(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem value) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.add(value);
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.addMessage(value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder addEquippedEconItemsNew(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem value) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              if (value == null) {
+                throw new NullPointerException();
+              }
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.add(index, value);
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.addMessage(index, value);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder addEquippedEconItemsNew(
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder builderForValue) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.add(builderForValue.build());
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.addMessage(builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder addEquippedEconItemsNew(
+              int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder builderForValue) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.add(index, builderForValue.build());
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.addMessage(index, builderForValue.build());
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder addAllEquippedEconItemsNew(
+              java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem> values) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              ensureEquippedEconItemsNewIsMutable();
+              com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                  values, equippedEconItemsNew_);
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.addAllMessages(values);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder clearEquippedEconItemsNew() {
+            if (equippedEconItemsNewBuilder_ == null) {
+              equippedEconItemsNew_ = java.util.Collections.emptyList();
+              bitField1_ = (bitField1_ & ~0x00200000);
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.clear();
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public Builder removeEquippedEconItemsNew(int index) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              ensureEquippedEconItemsNewIsMutable();
+              equippedEconItemsNew_.remove(index);
+              onChanged();
+            } else {
+              equippedEconItemsNewBuilder_.remove(index);
+            }
+            return this;
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder getEquippedEconItemsNewBuilder(
+              int index) {
+            return getEquippedEconItemsNewFieldBuilder().getBuilder(index);
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder getEquippedEconItemsNewOrBuilder(
+              int index) {
+            if (equippedEconItemsNewBuilder_ == null) {
+              return equippedEconItemsNew_.get(index);  } else {
+              return equippedEconItemsNewBuilder_.getMessageOrBuilder(index);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder> 
+               getEquippedEconItemsNewOrBuilderList() {
+            if (equippedEconItemsNewBuilder_ != null) {
+              return equippedEconItemsNewBuilder_.getMessageOrBuilderList();
+            } else {
+              return java.util.Collections.unmodifiableList(equippedEconItemsNew_);
+            }
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder addEquippedEconItemsNewBuilder() {
+            return getEquippedEconItemsNewFieldBuilder().addBuilder(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder addEquippedEconItemsNewBuilder(
+              int index) {
+            return getEquippedEconItemsNewFieldBuilder().addBuilder(
+                index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.getDefaultInstance());
+          }
+          /**
+           * <code>repeated .CDOTAMatchMetadata.EconItem equipped_econ_items_new = 56;</code>
+           */
+          public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder> 
+               getEquippedEconItemsNewBuilderList() {
+            return getEquippedEconItemsNewFieldBuilder().getBuilderList();
+          }
+          private com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder> 
+              getEquippedEconItemsNewFieldBuilder() {
+            if (equippedEconItemsNewBuilder_ == null) {
+              equippedEconItemsNewBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder>(
+                      equippedEconItemsNew_,
+                      ((bitField1_ & 0x00200000) == 0x00200000),
+                      getParentForChildren(),
+                      isClean());
+              equippedEconItemsNew_ = null;
+            }
+            return equippedEconItemsNewBuilder_;
+          }
+
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player)
         }
 
@@ -23265,6 +24933,15 @@ public final class S2DotaMatchMetadata {
          * <code>optional uint32 progress = 2;</code>
          */
         int getProgress();
+
+        /**
+         * <code>optional uint32 player_slot = 3;</code>
+         */
+        boolean hasPlayerSlot();
+        /**
+         * <code>optional uint32 player_slot = 3;</code>
+         */
+        int getPlayerSlot();
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.GuildChallengeProgress.IndividualProgress}
@@ -23326,6 +25003,11 @@ public final class S2DotaMatchMetadata {
                 case 16: {
                   bitField0_ |= 0x00000002;
                   progress_ = input.readUInt32();
+                  break;
+                }
+                case 24: {
+                  bitField0_ |= 0x00000004;
+                  playerSlot_ = input.readUInt32();
                   break;
                 }
               }
@@ -23398,9 +25080,25 @@ public final class S2DotaMatchMetadata {
           return progress_;
         }
 
+        public static final int PLAYER_SLOT_FIELD_NUMBER = 3;
+        private int playerSlot_;
+        /**
+         * <code>optional uint32 player_slot = 3;</code>
+         */
+        public boolean hasPlayerSlot() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 player_slot = 3;</code>
+         */
+        public int getPlayerSlot() {
+          return playerSlot_;
+        }
+
         private void initFields() {
           accountId_ = 0;
           progress_ = 0;
+          playerSlot_ = 0;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -23421,6 +25119,9 @@ public final class S2DotaMatchMetadata {
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             output.writeUInt32(2, progress_);
           }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            output.writeUInt32(3, playerSlot_);
+          }
           getUnknownFields().writeTo(output);
         }
 
@@ -23437,6 +25138,10 @@ public final class S2DotaMatchMetadata {
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             size += com.google.protobuf.CodedOutputStream
               .computeUInt32Size(2, progress_);
+          }
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(3, playerSlot_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -23559,6 +25264,8 @@ public final class S2DotaMatchMetadata {
             bitField0_ = (bitField0_ & ~0x00000001);
             progress_ = 0;
             bitField0_ = (bitField0_ & ~0x00000002);
+            playerSlot_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000004);
             return this;
           }
 
@@ -23595,6 +25302,10 @@ public final class S2DotaMatchMetadata {
               to_bitField0_ |= 0x00000002;
             }
             result.progress_ = progress_;
+            if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+              to_bitField0_ |= 0x00000004;
+            }
+            result.playerSlot_ = playerSlot_;
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -23616,6 +25327,9 @@ public final class S2DotaMatchMetadata {
             }
             if (other.hasProgress()) {
               setProgress(other.getProgress());
+            }
+            if (other.hasPlayerSlot()) {
+              setPlayerSlot(other.getPlayerSlot());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -23704,6 +25418,38 @@ public final class S2DotaMatchMetadata {
           public Builder clearProgress() {
             bitField0_ = (bitField0_ & ~0x00000002);
             progress_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int playerSlot_ ;
+          /**
+           * <code>optional uint32 player_slot = 3;</code>
+           */
+          public boolean hasPlayerSlot() {
+            return ((bitField0_ & 0x00000004) == 0x00000004);
+          }
+          /**
+           * <code>optional uint32 player_slot = 3;</code>
+           */
+          public int getPlayerSlot() {
+            return playerSlot_;
+          }
+          /**
+           * <code>optional uint32 player_slot = 3;</code>
+           */
+          public Builder setPlayerSlot(int value) {
+            bitField0_ |= 0x00000004;
+            playerSlot_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 player_slot = 3;</code>
+           */
+          public Builder clearPlayerSlot() {
+            bitField0_ = (bitField0_ & ~0x00000004);
+            playerSlot_ = 0;
             onChanged();
             return this;
           }
@@ -24719,6 +26465,646 @@ public final class S2DotaMatchMetadata {
       // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.GuildChallengeProgress)
     }
 
+    public interface TipOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CDOTAMatchMetadata.Tip)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 source_player_slot = 1;</code>
+       */
+      boolean hasSourcePlayerSlot();
+      /**
+       * <code>optional uint32 source_player_slot = 1;</code>
+       */
+      int getSourcePlayerSlot();
+
+      /**
+       * <code>optional uint32 target_player_slot = 2;</code>
+       */
+      boolean hasTargetPlayerSlot();
+      /**
+       * <code>optional uint32 target_player_slot = 2;</code>
+       */
+      int getTargetPlayerSlot();
+
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      boolean hasTipAmount();
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      int getTipAmount();
+
+      /**
+       * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+       */
+      boolean hasEventId();
+      /**
+       * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+       */
+      skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId();
+    }
+    /**
+     * Protobuf type {@code CDOTAMatchMetadata.Tip}
+     */
+    public static final class Tip extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CDOTAMatchMetadata.Tip)
+        TipOrBuilder {
+      // Use Tip.newBuilder() to construct.
+      private Tip(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private Tip(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final Tip defaultInstance;
+      public static Tip getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public Tip getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Tip(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                sourcePlayerSlot_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                targetPlayerSlot_ = input.readUInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                tipAmount_ = input.readUInt32();
+                break;
+              }
+              case 32: {
+                int rawValue = input.readEnum();
+                skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent value = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.valueOf(rawValue);
+                if (value == null) {
+                  unknownFields.mergeVarintField(4, rawValue);
+                } else {
+                  bitField0_ |= 0x00000008;
+                  eventId_ = value;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Tip_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Tip_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<Tip> PARSER =
+          new com.google.protobuf.AbstractParser<Tip>() {
+        public Tip parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Tip(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Tip> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int SOURCE_PLAYER_SLOT_FIELD_NUMBER = 1;
+      private int sourcePlayerSlot_;
+      /**
+       * <code>optional uint32 source_player_slot = 1;</code>
+       */
+      public boolean hasSourcePlayerSlot() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 source_player_slot = 1;</code>
+       */
+      public int getSourcePlayerSlot() {
+        return sourcePlayerSlot_;
+      }
+
+      public static final int TARGET_PLAYER_SLOT_FIELD_NUMBER = 2;
+      private int targetPlayerSlot_;
+      /**
+       * <code>optional uint32 target_player_slot = 2;</code>
+       */
+      public boolean hasTargetPlayerSlot() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 target_player_slot = 2;</code>
+       */
+      public int getTargetPlayerSlot() {
+        return targetPlayerSlot_;
+      }
+
+      public static final int TIP_AMOUNT_FIELD_NUMBER = 3;
+      private int tipAmount_;
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public boolean hasTipAmount() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 tip_amount = 3;</code>
+       */
+      public int getTipAmount() {
+        return tipAmount_;
+      }
+
+      public static final int EVENT_ID_FIELD_NUMBER = 4;
+      private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent eventId_;
+      /**
+       * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+       */
+      public boolean hasEventId() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId() {
+        return eventId_;
+      }
+
+      private void initFields() {
+        sourcePlayerSlot_ = 0;
+        targetPlayerSlot_ = 0;
+        tipAmount_ = 0;
+        eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeUInt32(1, sourcePlayerSlot_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeUInt32(2, targetPlayerSlot_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeUInt32(3, tipAmount_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeEnum(4, eventId_.getNumber());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, sourcePlayerSlot_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, targetPlayerSlot_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, tipAmount_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeEnumSize(4, eventId_.getNumber());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CDOTAMatchMetadata.Tip}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CDOTAMatchMetadata.Tip)
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Tip_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Tip_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.class, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          sourcePlayerSlot_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          targetPlayerSlot_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          tipAmount_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.internal_static_CDOTAMatchMetadata_Tip_descriptor;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip getDefaultInstanceForType() {
+          return skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip build() {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip buildPartial() {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip result = new skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.sourcePlayerSlot_ = sourcePlayerSlot_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.targetPlayerSlot_ = targetPlayerSlot_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.tipAmount_ = tipAmount_;
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          result.eventId_ = eventId_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip) {
+            return mergeFrom((skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip other) {
+          if (other == skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.getDefaultInstance()) return this;
+          if (other.hasSourcePlayerSlot()) {
+            setSourcePlayerSlot(other.getSourcePlayerSlot());
+          }
+          if (other.hasTargetPlayerSlot()) {
+            setTargetPlayerSlot(other.getTargetPlayerSlot());
+          }
+          if (other.hasTipAmount()) {
+            setTipAmount(other.getTipAmount());
+          }
+          if (other.hasEventId()) {
+            setEventId(other.getEventId());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int sourcePlayerSlot_ ;
+        /**
+         * <code>optional uint32 source_player_slot = 1;</code>
+         */
+        public boolean hasSourcePlayerSlot() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 source_player_slot = 1;</code>
+         */
+        public int getSourcePlayerSlot() {
+          return sourcePlayerSlot_;
+        }
+        /**
+         * <code>optional uint32 source_player_slot = 1;</code>
+         */
+        public Builder setSourcePlayerSlot(int value) {
+          bitField0_ |= 0x00000001;
+          sourcePlayerSlot_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 source_player_slot = 1;</code>
+         */
+        public Builder clearSourcePlayerSlot() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          sourcePlayerSlot_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int targetPlayerSlot_ ;
+        /**
+         * <code>optional uint32 target_player_slot = 2;</code>
+         */
+        public boolean hasTargetPlayerSlot() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 target_player_slot = 2;</code>
+         */
+        public int getTargetPlayerSlot() {
+          return targetPlayerSlot_;
+        }
+        /**
+         * <code>optional uint32 target_player_slot = 2;</code>
+         */
+        public Builder setTargetPlayerSlot(int value) {
+          bitField0_ |= 0x00000002;
+          targetPlayerSlot_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 target_player_slot = 2;</code>
+         */
+        public Builder clearTargetPlayerSlot() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          targetPlayerSlot_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int tipAmount_ ;
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public boolean hasTipAmount() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public int getTipAmount() {
+          return tipAmount_;
+        }
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public Builder setTipAmount(int value) {
+          bitField0_ |= 0x00000004;
+          tipAmount_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 tip_amount = 3;</code>
+         */
+        public Builder clearTipAmount() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          tipAmount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+        /**
+         * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+         */
+        public boolean hasEventId() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+         */
+        public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent getEventId() {
+          return eventId_;
+        }
+        /**
+         * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+         */
+        public Builder setEventId(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent value) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          bitField0_ |= 0x00000008;
+          eventId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional .EEvent event_id = 4 [default = EVENT_ID_NONE];</code>
+         */
+        public Builder clearEventId() {
+          bitField0_ = (bitField0_ & ~0x00000008);
+          eventId_ = skadistats.clarity.wire.s2.proto.S2DotaGcCommon.EEvent.EVENT_ID_NONE;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Tip)
+      }
+
+      static {
+        defaultInstance = new Tip(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CDOTAMatchMetadata.Tip)
+    }
+
     private int bitField0_;
     public static final int TEAMS_FIELD_NUMBER = 1;
     private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Team> teams_;
@@ -24850,39 +27236,39 @@ public final class S2DotaMatchMetadata {
       return primaryEventId_;
     }
 
-    public static final int MATCH_TIPS_FIELD_NUMBER = 7;
-    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> matchTips_;
+    public static final int MATCH_TIPS_OLD_FIELD_NUMBER = 7;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> matchTipsOld_;
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> getMatchTipsList() {
-      return matchTips_;
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> getMatchTipsOldList() {
+      return matchTipsOld_;
     }
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
     public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder> 
-        getMatchTipsOrBuilderList() {
-      return matchTips_;
+        getMatchTipsOldOrBuilderList() {
+      return matchTipsOld_;
     }
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    public int getMatchTipsCount() {
-      return matchTips_.size();
+    public int getMatchTipsOldCount() {
+      return matchTipsOld_.size();
     }
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getMatchTips(int index) {
-      return matchTips_.get(index);
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getMatchTipsOld(int index) {
+      return matchTipsOld_.get(index);
     }
     /**
-     * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+     * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
      */
-    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOrBuilder(
+    public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOldOrBuilder(
         int index) {
-      return matchTips_.get(index);
+      return matchTipsOld_.get(index);
     }
 
     public static final int MATCHMAKING_STATS_FIELD_NUMBER = 8;
@@ -24977,6 +27363,41 @@ public final class S2DotaMatchMetadata {
       return customPostGameTable_;
     }
 
+    public static final int _NEW_FIELD_NUMBER = 12;
+    private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip> New_;
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip> getNewList() {
+      return New_;
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder> 
+        getNewOrBuilderList() {
+      return New_;
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    public int getNewCount() {
+      return New_.size();
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip getNew(int index) {
+      return New_.get(index);
+    }
+    /**
+     * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+     */
+    public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder getNewOrBuilder(
+        int index) {
+      return New_.get(index);
+    }
+
     private void initFields() {
       teams_ = java.util.Collections.emptyList();
       itemRewards_ = java.util.Collections.emptyList();
@@ -24984,11 +27405,12 @@ public final class S2DotaMatchMetadata {
       reportUntilTime_ = 0L;
       eventGameCustomTable_ = com.google.protobuf.ByteString.EMPTY;
       primaryEventId_ = 0;
-      matchTips_ = java.util.Collections.emptyList();
+      matchTipsOld_ = java.util.Collections.emptyList();
       matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
       mvpData_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMvpData.getDefaultInstance();
       guildChallengeProgress_ = java.util.Collections.emptyList();
       customPostGameTable_ = com.google.protobuf.ByteString.EMPTY;
+      New_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -25021,8 +27443,8 @@ public final class S2DotaMatchMetadata {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeUInt32(6, primaryEventId_);
       }
-      for (int i = 0; i < matchTips_.size(); i++) {
-        output.writeMessage(7, matchTips_.get(i));
+      for (int i = 0; i < matchTipsOld_.size(); i++) {
+        output.writeMessage(7, matchTipsOld_.get(i));
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         output.writeMessage(8, matchmakingStats_);
@@ -25035,6 +27457,9 @@ public final class S2DotaMatchMetadata {
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         output.writeBytes(11, customPostGameTable_);
+      }
+      for (int i = 0; i < New_.size(); i++) {
+        output.writeMessage(12, New_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -25069,9 +27494,9 @@ public final class S2DotaMatchMetadata {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, primaryEventId_);
       }
-      for (int i = 0; i < matchTips_.size(); i++) {
+      for (int i = 0; i < matchTipsOld_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, matchTips_.get(i));
+          .computeMessageSize(7, matchTipsOld_.get(i));
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
@@ -25088,6 +27513,10 @@ public final class S2DotaMatchMetadata {
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(11, customPostGameTable_);
+      }
+      for (int i = 0; i < New_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, New_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -25200,10 +27629,11 @@ public final class S2DotaMatchMetadata {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getTeamsFieldBuilder();
           getItemRewardsFieldBuilder();
-          getMatchTipsFieldBuilder();
+          getMatchTipsOldFieldBuilder();
           getMatchmakingStatsFieldBuilder();
           getMvpDataFieldBuilder();
           getGuildChallengeProgressFieldBuilder();
+          getNewFieldBuilder();
         }
       }
       private static Builder create() {
@@ -25232,11 +27662,11 @@ public final class S2DotaMatchMetadata {
         bitField0_ = (bitField0_ & ~0x00000010);
         primaryEventId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
-        if (matchTipsBuilder_ == null) {
-          matchTips_ = java.util.Collections.emptyList();
+        if (matchTipsOldBuilder_ == null) {
+          matchTipsOld_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000040);
         } else {
-          matchTipsBuilder_.clear();
+          matchTipsOldBuilder_.clear();
         }
         if (matchmakingStatsBuilder_ == null) {
           matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
@@ -25258,6 +27688,12 @@ public final class S2DotaMatchMetadata {
         }
         customPostGameTable_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000400);
+        if (NewBuilder_ == null) {
+          New_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+        } else {
+          NewBuilder_.clear();
+        }
         return this;
       }
 
@@ -25320,14 +27756,14 @@ public final class S2DotaMatchMetadata {
           to_bitField0_ |= 0x00000008;
         }
         result.primaryEventId_ = primaryEventId_;
-        if (matchTipsBuilder_ == null) {
+        if (matchTipsOldBuilder_ == null) {
           if (((bitField0_ & 0x00000040) == 0x00000040)) {
-            matchTips_ = java.util.Collections.unmodifiableList(matchTips_);
+            matchTipsOld_ = java.util.Collections.unmodifiableList(matchTipsOld_);
             bitField0_ = (bitField0_ & ~0x00000040);
           }
-          result.matchTips_ = matchTips_;
+          result.matchTipsOld_ = matchTipsOld_;
         } else {
-          result.matchTips_ = matchTipsBuilder_.build();
+          result.matchTipsOld_ = matchTipsOldBuilder_.build();
         }
         if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
           to_bitField0_ |= 0x00000010;
@@ -25358,6 +27794,15 @@ public final class S2DotaMatchMetadata {
           to_bitField0_ |= 0x00000040;
         }
         result.customPostGameTable_ = customPostGameTable_;
+        if (NewBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800)) {
+            New_ = java.util.Collections.unmodifiableList(New_);
+            bitField0_ = (bitField0_ & ~0x00000800);
+          }
+          result.New_ = New_;
+        } else {
+          result.New_ = NewBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -25438,29 +27883,29 @@ public final class S2DotaMatchMetadata {
         if (other.hasPrimaryEventId()) {
           setPrimaryEventId(other.getPrimaryEventId());
         }
-        if (matchTipsBuilder_ == null) {
-          if (!other.matchTips_.isEmpty()) {
-            if (matchTips_.isEmpty()) {
-              matchTips_ = other.matchTips_;
+        if (matchTipsOldBuilder_ == null) {
+          if (!other.matchTipsOld_.isEmpty()) {
+            if (matchTipsOld_.isEmpty()) {
+              matchTipsOld_ = other.matchTipsOld_;
               bitField0_ = (bitField0_ & ~0x00000040);
             } else {
-              ensureMatchTipsIsMutable();
-              matchTips_.addAll(other.matchTips_);
+              ensureMatchTipsOldIsMutable();
+              matchTipsOld_.addAll(other.matchTipsOld_);
             }
             onChanged();
           }
         } else {
-          if (!other.matchTips_.isEmpty()) {
-            if (matchTipsBuilder_.isEmpty()) {
-              matchTipsBuilder_.dispose();
-              matchTipsBuilder_ = null;
-              matchTips_ = other.matchTips_;
+          if (!other.matchTipsOld_.isEmpty()) {
+            if (matchTipsOldBuilder_.isEmpty()) {
+              matchTipsOldBuilder_.dispose();
+              matchTipsOldBuilder_ = null;
+              matchTipsOld_ = other.matchTipsOld_;
               bitField0_ = (bitField0_ & ~0x00000040);
-              matchTipsBuilder_ = 
+              matchTipsOldBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getMatchTipsFieldBuilder() : null;
+                   getMatchTipsOldFieldBuilder() : null;
             } else {
-              matchTipsBuilder_.addAllMessages(other.matchTips_);
+              matchTipsOldBuilder_.addAllMessages(other.matchTipsOld_);
             }
           }
         }
@@ -25498,6 +27943,32 @@ public final class S2DotaMatchMetadata {
         }
         if (other.hasCustomPostGameTable()) {
           setCustomPostGameTable(other.getCustomPostGameTable());
+        }
+        if (NewBuilder_ == null) {
+          if (!other.New_.isEmpty()) {
+            if (New_.isEmpty()) {
+              New_ = other.New_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+            } else {
+              ensureNewIsMutable();
+              New_.addAll(other.New_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.New_.isEmpty()) {
+            if (NewBuilder_.isEmpty()) {
+              NewBuilder_.dispose();
+              NewBuilder_ = null;
+              New_ = other.New_;
+              bitField0_ = (bitField0_ & ~0x00000800);
+              NewBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getNewFieldBuilder() : null;
+            } else {
+              NewBuilder_.addAllMessages(other.New_);
+            }
+          }
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -26137,244 +28608,244 @@ public final class S2DotaMatchMetadata {
         return this;
       }
 
-      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> matchTips_ =
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> matchTipsOld_ =
         java.util.Collections.emptyList();
-      private void ensureMatchTipsIsMutable() {
+      private void ensureMatchTipsOldIsMutable() {
         if (!((bitField0_ & 0x00000040) == 0x00000040)) {
-          matchTips_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips>(matchTips_);
+          matchTipsOld_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips>(matchTipsOld_);
           bitField0_ |= 0x00000040;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder> matchTipsBuilder_;
+          skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder> matchTipsOldBuilder_;
 
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> getMatchTipsList() {
-        if (matchTipsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(matchTips_);
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> getMatchTipsOldList() {
+        if (matchTipsOldBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(matchTipsOld_);
         } else {
-          return matchTipsBuilder_.getMessageList();
+          return matchTipsOldBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public int getMatchTipsCount() {
-        if (matchTipsBuilder_ == null) {
-          return matchTips_.size();
+      public int getMatchTipsOldCount() {
+        if (matchTipsOldBuilder_ == null) {
+          return matchTipsOld_.size();
         } else {
-          return matchTipsBuilder_.getCount();
+          return matchTipsOldBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getMatchTips(int index) {
-        if (matchTipsBuilder_ == null) {
-          return matchTips_.get(index);
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips getMatchTipsOld(int index) {
+        if (matchTipsOldBuilder_ == null) {
+          return matchTipsOld_.get(index);
         } else {
-          return matchTipsBuilder_.getMessage(index);
+          return matchTipsOldBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder setMatchTips(
+      public Builder setMatchTipsOld(
           int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips value) {
-        if (matchTipsBuilder_ == null) {
+        if (matchTipsOldBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureMatchTipsIsMutable();
-          matchTips_.set(index, value);
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.set(index, value);
           onChanged();
         } else {
-          matchTipsBuilder_.setMessage(index, value);
+          matchTipsOldBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder setMatchTips(
+      public Builder setMatchTipsOld(
           int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder builderForValue) {
-        if (matchTipsBuilder_ == null) {
-          ensureMatchTipsIsMutable();
-          matchTips_.set(index, builderForValue.build());
+        if (matchTipsOldBuilder_ == null) {
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.set(index, builderForValue.build());
           onChanged();
         } else {
-          matchTipsBuilder_.setMessage(index, builderForValue.build());
+          matchTipsOldBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder addMatchTips(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips value) {
-        if (matchTipsBuilder_ == null) {
+      public Builder addMatchTipsOld(skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips value) {
+        if (matchTipsOldBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureMatchTipsIsMutable();
-          matchTips_.add(value);
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.add(value);
           onChanged();
         } else {
-          matchTipsBuilder_.addMessage(value);
+          matchTipsOldBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder addMatchTips(
+      public Builder addMatchTipsOld(
           int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips value) {
-        if (matchTipsBuilder_ == null) {
+        if (matchTipsOldBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureMatchTipsIsMutable();
-          matchTips_.add(index, value);
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.add(index, value);
           onChanged();
         } else {
-          matchTipsBuilder_.addMessage(index, value);
+          matchTipsOldBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder addMatchTips(
+      public Builder addMatchTipsOld(
           skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder builderForValue) {
-        if (matchTipsBuilder_ == null) {
-          ensureMatchTipsIsMutable();
-          matchTips_.add(builderForValue.build());
+        if (matchTipsOldBuilder_ == null) {
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.add(builderForValue.build());
           onChanged();
         } else {
-          matchTipsBuilder_.addMessage(builderForValue.build());
+          matchTipsOldBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder addMatchTips(
+      public Builder addMatchTipsOld(
           int index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder builderForValue) {
-        if (matchTipsBuilder_ == null) {
-          ensureMatchTipsIsMutable();
-          matchTips_.add(index, builderForValue.build());
+        if (matchTipsOldBuilder_ == null) {
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.add(index, builderForValue.build());
           onChanged();
         } else {
-          matchTipsBuilder_.addMessage(index, builderForValue.build());
+          matchTipsOldBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder addAllMatchTips(
+      public Builder addAllMatchTipsOld(
           java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips> values) {
-        if (matchTipsBuilder_ == null) {
-          ensureMatchTipsIsMutable();
+        if (matchTipsOldBuilder_ == null) {
+          ensureMatchTipsOldIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, matchTips_);
+              values, matchTipsOld_);
           onChanged();
         } else {
-          matchTipsBuilder_.addAllMessages(values);
+          matchTipsOldBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder clearMatchTips() {
-        if (matchTipsBuilder_ == null) {
-          matchTips_ = java.util.Collections.emptyList();
+      public Builder clearMatchTipsOld() {
+        if (matchTipsOldBuilder_ == null) {
+          matchTipsOld_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
-          matchTipsBuilder_.clear();
+          matchTipsOldBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public Builder removeMatchTips(int index) {
-        if (matchTipsBuilder_ == null) {
-          ensureMatchTipsIsMutable();
-          matchTips_.remove(index);
+      public Builder removeMatchTipsOld(int index) {
+        if (matchTipsOldBuilder_ == null) {
+          ensureMatchTipsOldIsMutable();
+          matchTipsOld_.remove(index);
           onChanged();
         } else {
-          matchTipsBuilder_.remove(index);
+          matchTipsOldBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder getMatchTipsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder getMatchTipsOldBuilder(
           int index) {
-        return getMatchTipsFieldBuilder().getBuilder(index);
+        return getMatchTipsOldFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOrBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder getMatchTipsOldOrBuilder(
           int index) {
-        if (matchTipsBuilder_ == null) {
-          return matchTips_.get(index);  } else {
-          return matchTipsBuilder_.getMessageOrBuilder(index);
+        if (matchTipsOldBuilder_ == null) {
+          return matchTipsOld_.get(index);  } else {
+          return matchTipsOldBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
       public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder> 
-           getMatchTipsOrBuilderList() {
-        if (matchTipsBuilder_ != null) {
-          return matchTipsBuilder_.getMessageOrBuilderList();
+           getMatchTipsOldOrBuilderList() {
+        if (matchTipsOldBuilder_ != null) {
+          return matchTipsOldBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(matchTips_);
+          return java.util.Collections.unmodifiableList(matchTipsOld_);
         }
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder addMatchTipsBuilder() {
-        return getMatchTipsFieldBuilder().addBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder addMatchTipsOldBuilder() {
+        return getMatchTipsOldFieldBuilder().addBuilder(
             skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.getDefaultInstance());
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
-      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder addMatchTipsBuilder(
+      public skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder addMatchTipsOldBuilder(
           int index) {
-        return getMatchTipsFieldBuilder().addBuilder(
+        return getMatchTipsOldFieldBuilder().addBuilder(
             index, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.getDefaultInstance());
       }
       /**
-       * <code>repeated .CMsgMatchTips match_tips = 7;</code>
+       * <code>repeated .CMsgMatchTips match_tips_old = 7;</code>
        */
       public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder> 
-           getMatchTipsBuilderList() {
-        return getMatchTipsFieldBuilder().getBuilderList();
+           getMatchTipsOldBuilderList() {
+        return getMatchTipsOldFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder> 
-          getMatchTipsFieldBuilder() {
-        if (matchTipsBuilder_ == null) {
-          matchTipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          getMatchTipsOldFieldBuilder() {
+        if (matchTipsOldBuilder_ == null) {
+          matchTipsOldBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTips.Builder, skadistats.clarity.wire.s2.proto.S2DotaGcCommon.CMsgMatchTipsOrBuilder>(
-                  matchTips_,
+                  matchTipsOld_,
                   ((bitField0_ & 0x00000040) == 0x00000040),
                   getParentForChildren(),
                   isClean());
-          matchTips_ = null;
+          matchTipsOld_ = null;
         }
-        return matchTipsBuilder_;
+        return matchTipsOldBuilder_;
       }
 
       private skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats matchmakingStats_ = skadistats.clarity.wire.s2.proto.S2DotaGcMM.CMsgMatchMatchmakingStats.getDefaultInstance();
@@ -26882,6 +29353,246 @@ public final class S2DotaMatchMetadata {
         customPostGameTable_ = getDefaultInstance().getCustomPostGameTable();
         onChanged();
         return this;
+      }
+
+      private java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip> New_ =
+        java.util.Collections.emptyList();
+      private void ensureNewIsMutable() {
+        if (!((bitField0_ & 0x00000800) == 0x00000800)) {
+          New_ = new java.util.ArrayList<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip>(New_);
+          bitField0_ |= 0x00000800;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder> NewBuilder_;
+
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip> getNewList() {
+        if (NewBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(New_);
+        } else {
+          return NewBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public int getNewCount() {
+        if (NewBuilder_ == null) {
+          return New_.size();
+        } else {
+          return NewBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip getNew(int index) {
+        if (NewBuilder_ == null) {
+          return New_.get(index);
+        } else {
+          return NewBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder setNew(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip value) {
+        if (NewBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewIsMutable();
+          New_.set(index, value);
+          onChanged();
+        } else {
+          NewBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder setNew(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder builderForValue) {
+        if (NewBuilder_ == null) {
+          ensureNewIsMutable();
+          New_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          NewBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder addNew(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip value) {
+        if (NewBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewIsMutable();
+          New_.add(value);
+          onChanged();
+        } else {
+          NewBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder addNew(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip value) {
+        if (NewBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNewIsMutable();
+          New_.add(index, value);
+          onChanged();
+        } else {
+          NewBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder addNew(
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder builderForValue) {
+        if (NewBuilder_ == null) {
+          ensureNewIsMutable();
+          New_.add(builderForValue.build());
+          onChanged();
+        } else {
+          NewBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder addNew(
+          int index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder builderForValue) {
+        if (NewBuilder_ == null) {
+          ensureNewIsMutable();
+          New_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          NewBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder addAllNew(
+          java.lang.Iterable<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip> values) {
+        if (NewBuilder_ == null) {
+          ensureNewIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, New_);
+          onChanged();
+        } else {
+          NewBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder clearNew() {
+        if (NewBuilder_ == null) {
+          New_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000800);
+          onChanged();
+        } else {
+          NewBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public Builder removeNew(int index) {
+        if (NewBuilder_ == null) {
+          ensureNewIsMutable();
+          New_.remove(index);
+          onChanged();
+        } else {
+          NewBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder getNewBuilder(
+          int index) {
+        return getNewFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder getNewOrBuilder(
+          int index) {
+        if (NewBuilder_ == null) {
+          return New_.get(index);  } else {
+          return NewBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder> 
+           getNewOrBuilderList() {
+        if (NewBuilder_ != null) {
+          return NewBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(New_);
+        }
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder addNewBuilder() {
+        return getNewFieldBuilder().addBuilder(
+            skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder addNewBuilder(
+          int index) {
+        return getNewFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CDOTAMatchMetadata.Tip _new = 12;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder> 
+           getNewBuilderList() {
+        return getNewFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder> 
+          getNewFieldBuilder() {
+        if (NewBuilder_ == null) {
+          NewBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.Tip.Builder, skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.TipOrBuilder>(
+                  New_,
+                  ((bitField0_ & 0x00000800) == 0x00000800),
+                  getParentForChildren(),
+                  isClean());
+          New_ = null;
+        }
+        return NewBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata)
@@ -28532,11 +31243,11 @@ public final class S2DotaMatchMetadata {
             int getSourceUnitIndex();
 
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             boolean hasAbilityId();
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             int getAbilityId();
 
@@ -28618,7 +31329,7 @@ public final class S2DotaMatchMetadata {
                     }
                     case 8: {
                       bitField0_ |= 0x00000002;
-                      abilityId_ = input.readUInt32();
+                      abilityId_ = input.readInt32();
                       break;
                     }
                     case 18: {
@@ -29170,13 +31881,13 @@ public final class S2DotaMatchMetadata {
             public static final int ABILITY_ID_FIELD_NUMBER = 1;
             private int abilityId_;
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             public boolean hasAbilityId() {
               return ((bitField0_ & 0x00000002) == 0x00000002);
             }
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             public int getAbilityId() {
               return abilityId_;
@@ -29236,7 +31947,7 @@ public final class S2DotaMatchMetadata {
                                 throws java.io.IOException {
               getSerializedSize();
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                output.writeUInt32(1, abilityId_);
+                output.writeInt32(1, abilityId_);
               }
               for (int i = 0; i < byHeroTargets_.size(); i++) {
                 output.writeMessage(2, byHeroTargets_.get(i));
@@ -29255,7 +31966,7 @@ public final class S2DotaMatchMetadata {
               size = 0;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 size += com.google.protobuf.CodedOutputStream
-                  .computeUInt32Size(1, abilityId_);
+                  .computeInt32Size(1, abilityId_);
               }
               for (int i = 0; i < byHeroTargets_.size(); i++) {
                 size += com.google.protobuf.CodedOutputStream
@@ -29547,19 +32258,19 @@ public final class S2DotaMatchMetadata {
 
               private int abilityId_ ;
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public boolean hasAbilityId() {
                 return ((bitField0_ & 0x00000002) == 0x00000002);
               }
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public int getAbilityId() {
                 return abilityId_;
               }
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public Builder setAbilityId(int value) {
                 bitField0_ |= 0x00000002;
@@ -29568,7 +32279,7 @@ public final class S2DotaMatchMetadata {
                 return this;
               }
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public Builder clearAbilityId() {
                 bitField0_ = (bitField0_ & ~0x00000002);
@@ -29842,11 +32553,11 @@ public final class S2DotaMatchMetadata {
             int getSourceUnitIndex();
 
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             boolean hasAbilityId();
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             int getAbilityId();
 
@@ -29928,7 +32639,7 @@ public final class S2DotaMatchMetadata {
                     }
                     case 8: {
                       bitField0_ |= 0x00000002;
-                      abilityId_ = input.readUInt32();
+                      abilityId_ = input.readInt32();
                       break;
                     }
                     case 18: {
@@ -30480,13 +33191,13 @@ public final class S2DotaMatchMetadata {
             public static final int ABILITY_ID_FIELD_NUMBER = 1;
             private int abilityId_;
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             public boolean hasAbilityId() {
               return ((bitField0_ & 0x00000002) == 0x00000002);
             }
             /**
-             * <code>optional uint32 ability_id = 1;</code>
+             * <code>optional int32 ability_id = 1;</code>
              */
             public int getAbilityId() {
               return abilityId_;
@@ -30546,7 +33257,7 @@ public final class S2DotaMatchMetadata {
                                 throws java.io.IOException {
               getSerializedSize();
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
-                output.writeUInt32(1, abilityId_);
+                output.writeInt32(1, abilityId_);
               }
               for (int i = 0; i < byHeroTargets_.size(); i++) {
                 output.writeMessage(2, byHeroTargets_.get(i));
@@ -30565,7 +33276,7 @@ public final class S2DotaMatchMetadata {
               size = 0;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 size += com.google.protobuf.CodedOutputStream
-                  .computeUInt32Size(1, abilityId_);
+                  .computeInt32Size(1, abilityId_);
               }
               for (int i = 0; i < byHeroTargets_.size(); i++) {
                 size += com.google.protobuf.CodedOutputStream
@@ -30857,19 +33568,19 @@ public final class S2DotaMatchMetadata {
 
               private int abilityId_ ;
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public boolean hasAbilityId() {
                 return ((bitField0_ & 0x00000002) == 0x00000002);
               }
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public int getAbilityId() {
                 return abilityId_;
               }
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public Builder setAbilityId(int value) {
                 bitField0_ |= 0x00000002;
@@ -30878,7 +33589,7 @@ public final class S2DotaMatchMetadata {
                 return this;
               }
               /**
-               * <code>optional uint32 ability_id = 1;</code>
+               * <code>optional int32 ability_id = 1;</code>
                */
               public Builder clearAbilityId() {
                 bitField0_ = (bitField0_ & ~0x00000002);
@@ -32081,11 +34792,11 @@ public final class S2DotaMatchMetadata {
             com.google.protobuf.MessageOrBuilder {
 
           /**
-           * <code>optional uint32 buff_ability_id = 1;</code>
+           * <code>optional int32 buff_ability_id = 1;</code>
            */
           boolean hasBuffAbilityId();
           /**
-           * <code>optional uint32 buff_ability_id = 1;</code>
+           * <code>optional int32 buff_ability_id = 1;</code>
            */
           int getBuffAbilityId();
 
@@ -32181,7 +34892,7 @@ public final class S2DotaMatchMetadata {
                   }
                   case 8: {
                     bitField0_ |= 0x00000001;
-                    buffAbilityId_ = input.readUInt32();
+                    buffAbilityId_ = input.readInt32();
                     break;
                   }
                   case 18: {
@@ -32797,13 +35508,13 @@ public final class S2DotaMatchMetadata {
           public static final int BUFF_ABILITY_ID_FIELD_NUMBER = 1;
           private int buffAbilityId_;
           /**
-           * <code>optional uint32 buff_ability_id = 1;</code>
+           * <code>optional int32 buff_ability_id = 1;</code>
            */
           public boolean hasBuffAbilityId() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>optional uint32 buff_ability_id = 1;</code>
+           * <code>optional int32 buff_ability_id = 1;</code>
            */
           public int getBuffAbilityId() {
             return buffAbilityId_;
@@ -32905,7 +35616,7 @@ public final class S2DotaMatchMetadata {
                               throws java.io.IOException {
             getSerializedSize();
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
-              output.writeUInt32(1, buffAbilityId_);
+              output.writeInt32(1, buffAbilityId_);
             }
             for (int i = 0; i < byHeroTargets_.size(); i++) {
               output.writeMessage(2, byHeroTargets_.get(i));
@@ -32924,7 +35635,7 @@ public final class S2DotaMatchMetadata {
             size = 0;
             if (((bitField0_ & 0x00000001) == 0x00000001)) {
               size += com.google.protobuf.CodedOutputStream
-                .computeUInt32Size(1, buffAbilityId_);
+                .computeInt32Size(1, buffAbilityId_);
             }
             for (int i = 0; i < byHeroTargets_.size(); i++) {
               size += com.google.protobuf.CodedOutputStream
@@ -33186,19 +35897,19 @@ public final class S2DotaMatchMetadata {
 
             private int buffAbilityId_ ;
             /**
-             * <code>optional uint32 buff_ability_id = 1;</code>
+             * <code>optional int32 buff_ability_id = 1;</code>
              */
             public boolean hasBuffAbilityId() {
               return ((bitField0_ & 0x00000001) == 0x00000001);
             }
             /**
-             * <code>optional uint32 buff_ability_id = 1;</code>
+             * <code>optional int32 buff_ability_id = 1;</code>
              */
             public int getBuffAbilityId() {
               return buffAbilityId_;
             }
             /**
-             * <code>optional uint32 buff_ability_id = 1;</code>
+             * <code>optional int32 buff_ability_id = 1;</code>
              */
             public Builder setBuffAbilityId(int value) {
               bitField0_ |= 0x00000001;
@@ -33207,7 +35918,7 @@ public final class S2DotaMatchMetadata {
               return this;
             }
             /**
-             * <code>optional uint32 buff_ability_id = 1;</code>
+             * <code>optional int32 buff_ability_id = 1;</code>
              */
             public Builder clearBuffAbilityId() {
               bitField0_ = (bitField0_ & ~0x00000001);
@@ -40868,6 +43579,11 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_EconItem_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_EconItem_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchMetadata_Team_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -40963,6 +43679,11 @@ public final class S2DotaMatchMetadata {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMatchMetadata_Tip_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMatchMetadata_Tip_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMatchPrivateMetadata_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -41052,201 +43773,212 @@ public final class S2DotaMatchMetadata {
       "ch_management.proto\"|\n\026CDOTAMatchMetadat" +
       "aFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_id\030\002 \002(\004" +
       "\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMetadata\022" +
-      "\030\n\020private_metadata\030\005 \001(\014\"\367)\n\022CDOTAMatch" +
+      "\030\n\020private_metadata\030\005 \001(\014\"\225-\n\022CDOTAMatch" +
       "Metadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMatchMeta" +
       "data.Team\022/\n\014item_rewards\030\002 \003(\0132\031.CLobby" +
       "TimedRewardDetails\022\020\n\010lobby_id\030\003 \001(\006\022\031\n\021",
       "report_until_time\030\004 \001(\006\022\037\n\027event_game_cu" +
       "stom_table\030\005 \001(\014\022\030\n\020primary_event_id\030\006 \001" +
-      "(\r\022\"\n\nmatch_tips\030\007 \003(\0132\016.CMsgMatchTips\0225" +
-      "\n\021matchmaking_stats\030\010 \001(\0132\032.CMsgMatchMat" +
-      "chmakingStats\022\033\n\010mvp_data\030\t \001(\0132\t.CMvpDa" +
-      "ta\022L\n\030guild_challenge_progress\030\n \003(\0132*.C" +
-      "DOTAMatchMetadata.GuildChallengeProgress" +
-      "\022\036\n\026custom_post_game_table\030\013 \001(\014\032\243#\n\004Tea" +
-      "m\022\021\n\tdota_team\030\001 \001(\r\0220\n\007players\030\002 \003(\0132\037." +
-      "CDOTAMatchMetadata.Team.Player\022\030\n\020graph_",
-      "experience\030\003 \003(\002\022\031\n\021graph_gold_earned\030\004 " +
-      "\003(\002\022\027\n\017graph_net_worth\030\005 \003(\002\022\025\n\rcm_first" +
-      "_pick\030\006 \001(\010\022\034\n\024cm_captain_player_id\030\007 \001(" +
-      "\005\022\017\n\007cm_bans\030\010 \003(\r\022\020\n\010cm_picks\030\t \003(\r\022\022\n\n" +
-      "cm_penalty\030\n \001(\r\0320\n\nPlayerKill\022\023\n\013victim" +
-      "_slot\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\0326\n\014ItemPurcha" +
-      "se\022\017\n\007item_id\030\001 \001(\r\022\025\n\rpurchase_time\030\002 \001" +
-      "(\005\032\251\001\n\021InventorySnapshot\022\017\n\007item_id\030\001 \003(" +
-      "\r\022\021\n\tgame_time\030\002 \001(\005\022\r\n\005kills\030\003 \001(\r\022\016\n\006d" +
-      "eaths\030\004 \001(\r\022\017\n\007assists\030\005 \001(\r\022\r\n\005level\030\006 ",
-      "\001(\r\022\030\n\020backpack_item_id\030\007 \003(\r\022\027\n\017neutral" +
-      "_item_id\030\010 \001(\r\0326\n\021AutoStyleCriteria\022\022\n\nn" +
-      "ame_token\030\001 \001(\r\022\r\n\005value\030\002 \001(\002\032\306\001\n\022Stran" +
-      "geGemProgress\022\027\n\017kill_eater_type\030\001 \001(\r\022\032" +
-      "\n\022gem_item_def_index\030\002 \001(\r\022\030\n\020required_h" +
-      "ero_id\030\003 \001(\r\022\026\n\016starting_value\030\004 \001(\r\022\024\n\014" +
-      "ending_value\030\005 \001(\r\022\034\n\024owner_item_def_ind" +
-      "ex\030\006 \001(\r\022\025\n\rowner_item_id\030\007 \001(\004\032h\n\021Victo" +
-      "ryPrediction\022\017\n\007item_id\030\001 \001(\004\022\026\n\016item_de" +
-      "f_index\030\002 \001(\r\022\026\n\016starting_value\030\003 \001(\r\022\022\n",
-      "\nis_victory\030\004 \001(\010\032Z\n\014SubChallenge\022\017\n\007slo" +
-      "t_id\030\001 \001(\r\022\023\n\013start_value\030\002 \001(\r\022\021\n\tend_v" +
-      "alue\030\003 \001(\r\022\021\n\tcompleted\030\004 \001(\010\032K\n\025CavernC" +
-      "hallengeResult\022\031\n\021completed_path_id\030\001 \001(" +
-      "\r\022\027\n\017claimed_room_id\030\002 \001(\r\032k\n\013ActionGran" +
-      "t\022\021\n\taction_id\030\001 \001(\r\022\020\n\010quantity\030\002 \001(\r\022\r" +
-      "\n\005audit\030\003 \001(\r\022\024\n\014requires_win\030\004 \001(\010\022\022\n\na" +
-      "udit_data\030\005 \001(\004\032,\n\nCandyGrant\022\016\n\006points\030" +
-      "\001 \001(\r\022\016\n\006reason\030\002 \001(\r\032T\n\024PeriodicResourc" +
-      "eData\022\034\n\024periodic_resource_id\030\001 \001(\r\022\021\n\tr",
-      "emaining\030\002 \001(\r\022\013\n\003max\030\003 \001(\r\032\341\007\n\tEventDat" +
-      "a\022\020\n\010event_id\030\001 \001(\r\022\024\n\014event_points\030\002 \001(" +
-      "\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\032\n\022chal" +
-      "lenge_quest_id\030\004 \001(\r\022$\n\034challenge_quest_" +
-      "challenge_id\030\005 \001(\r\022\033\n\023challenge_complete" +
-      "d\030\006 \001(\010\022 \n\030challenge_rank_completed\030\007 \001(" +
-      "\r\022+\n#challenge_rank_previously_completed" +
-      "\030\010 \001(\r\022\023\n\013event_owned\030\t \001(\010\022K\n\034sub_chall" +
-      "enges_with_progress\030\n \003(\0132%.CDOTAMatchMe" +
-      "tadata.Team.SubChallenge\022\026\n\016wager_winnin",
-      "gs\030\013 \001(\r\022\037\n\027cavern_challenge_active\030\014 \001(" +
-      "\010\022!\n\031cavern_challenge_winnings\030\r \001(\r\022\026\n\016" +
-      "amount_wagered\030\016 \001(\r\022\"\n\032periodic_point_a" +
-      "djustments\030\020 \001(\r\022T\n\034cavern_challenge_map" +
-      "_results\030\021 \003(\0132..CDOTAMatchMetadata.Team" +
-      ".CavernChallengeResult\022,\n$cavern_challen" +
-      "ge_plus_shard_winnings\030\022 \001(\r\022=\n\017actions_" +
-      "granted\030\023 \003(\0132$.CDOTAMatchMetadata.Team." +
-      "ActionGrant\022 \n\030cavern_crawl_map_variant\030" +
-      "\024 \001(\r\022\034\n\024team_wager_bonus_pct\030\025 \001(\r\022\030\n\020w",
-      "ager_streak_pct\030\026 \001(\r\022A\n\024candy_points_gr" +
-      "anted\030\027 \003(\0132#.CDOTAMatchMetadata.Team.Ca" +
-      "ndyGrant\022\030\n\020active_season_id\030\030 \001(\r\022 \n\030ca" +
-      "vern_crawl_half_credit\030\031 \001(\010\022I\n\022periodic" +
-      "_resources\030\032 \003(\0132-.CDOTAMatchMetadata.Te" +
-      "am.PeriodicResourceData\032Y\n\020GauntletProgr" +
-      "ess\022\025\n\rgauntlet_tier\030\002 \001(\r\022\025\n\rgauntlet_w" +
-      "ins\030\003 \001(\r\022\027\n\017gauntlet_losses\030\004 \001(\r\032U\n\030Fe" +
-      "aturedGamemodeProgress\022\023\n\013start_value\030\001 " +
-      "\001(\r\022\021\n\tend_value\030\002 \001(\r\022\021\n\tmax_value\030\003 \001(",
-      "\r\032\352\017\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abil" +
-      "ity_upgrades\030\002 \003(\r\022\023\n\013player_slot\030\003 \001(\r\022" +
-      ")\n\023equipped_econ_items\030\004 \003(\0132\014.CSOEconIt" +
-      "em\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetadata.T" +
-      "eam.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDOTAMat" +
-      "chMetadata.Team.ItemPurchase\022\025\n\ravg_kill" +
-      "s_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r\022\027\n\017a" +
-      "vg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16\030\n \001(" +
-      "\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kills_x16" +
-      "\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n\014best",
-      "_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(\r\022\022\n\n" +
-      "win_streak\030\020 \001(\r\022\027\n\017best_win_streak\030\021 \001(" +
-      "\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_score\030\023 \001" +
-      "(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_score\030" +
-      "\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017graph_n" +
-      "et_worth\030\027 \003(\002\022F\n\022inventory_snapshot\030\030 \003" +
-      "(\0132*.CDOTAMatchMetadata.Team.InventorySn" +
-      "apshot\022\034\n\024avg_stats_calibrated\030\031 \001(\010\022G\n\023" +
-      "auto_style_criteria\030\032 \003(\0132*.CDOTAMatchMe" +
-      "tadata.Team.AutoStyleCriteria\0226\n\nevent_d",
-      "ata\030\035 \003(\0132\".CDOTAMatchMetadata.Team.Even" +
-      "tData\022I\n\024strange_gem_progress\030\036 \003(\0132+.CD" +
-      "OTAMatchMetadata.Team.StrangeGemProgress" +
-      "\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked\030  \001(\r" +
-      "\022F\n\022victory_prediction\030! \003(\0132*.CDOTAMatc" +
-      "hMetadata.Team.VictoryPrediction\022\034\n\024lane" +
-      "_selection_flags\030\" \001(\r\022\020\n\010rampages\030# \001(\r" +
-      "\022\024\n\014triple_kills\030$ \001(\r\022\026\n\016aegis_snatched" +
-      "\030% \001(\r\022\031\n\021rapiers_purchased\030& \001(\r\022\027\n\017cou" +
-      "riers_killed\030\' \001(\r\022\026\n\016net_worth_rank\030( \001",
-      "(\r\022\032\n\022support_gold_spent\030) \001(\r\022\035\n\025observ" +
-      "er_wards_placed\030* \001(\r\022\033\n\023sentry_wards_pl" +
-      "aced\030+ \001(\r\022\026\n\016wards_dewarded\030, \001(\r\022\025\n\rst" +
-      "un_duration\030- \001(\002\022I\n\023rank_mmr_boost_type" +
-      "\030. \001(\0162\022.EDOTAMMRBoostType:\030k_EDOTAMMRBo" +
-      "ostType_None\022D\n\021gauntlet_progress\030/ \001(\0132" +
-      ").CDOTAMatchMetadata.Team.GauntletProgre" +
-      "ss\022K\n\021contract_progress\0300 \003(\01320.CDOTAMat" +
-      "chMetadata.Team.Player.ContractProgress\022" +
-      "\021\n\tguild_ids\0301 \003(\r\022\031\n\021graph_hero_damage\030",
-      "2 \003(\002\022:\n\013team_number\0303 \001(\0162\r.DOTA_GC_TEA" +
-      "M:\026DOTA_GC_TEAM_GOOD_GUYS\022\021\n\tteam_slot\0304" +
-      " \001(\r\022U\n\032featured_gamemode_progress\0305 \001(\013" +
-      "21.CDOTAMatchMetadata.Team.FeaturedGamem" +
-      "odeProgress\022#\n\033featured_hero_sticker_ind" +
-      "ex\0306 \001(\r\022%\n\035featured_hero_sticker_qualit" +
-      "y\0307 \001(\r\032\264\001\n\020ContractProgress\022\020\n\010guild_id" +
-      "\030\001 \001(\r\022\020\n\010event_id\030\002 \001(\r\022\035\n\025challenge_in" +
-      "stance_id\030\003 \001(\r\022\033\n\023challenge_parameter\030\004" +
-      " \001(\r\022\026\n\016contract_stars\030\005 \001(\r\022\025\n\rcontract",
-      "_slot\030\006 \001(\r\022\021\n\tcompleted\030\007 \001(\010\032\222\003\n\026Guild" +
-      "ChallengeProgress\022\020\n\010guild_id\030\001 \001(\r\022(\n\010e" +
-      "vent_id\030\002 \001(\0162\007.EEvent:\rEVENT_ID_NONE\022\035\n" +
-      "\025challenge_instance_id\030\003 \001(\r\022\033\n\023challeng" +
-      "e_parameter\030\004 \001(\r\022\033\n\023challenge_timestamp" +
-      "\030\005 \001(\r\022#\n\033challenge_progress_at_start\030\006 " +
-      "\001(\r\022&\n\036challenge_progress_accumulated\030\007 " +
-      "\001(\r\022Z\n\023individual_progress\030\010 \003(\0132=.CDOTA" +
-      "MatchMetadata.GuildChallengeProgress.Ind" +
-      "ividualProgress\032:\n\022IndividualProgress\022\022\n",
-      "\naccount_id\030\001 \001(\r\022\020\n\010progress\030\002 \001(\r\"\305\021\n\031" +
-      "CDOTAMatchPrivateMetadata\022.\n\005teams\030\001 \003(\013" +
-      "2\037.CDOTAMatchPrivateMetadata.Team\022\035\n\025gra" +
-      "ph_win_probability\030\002 \003(\002\022;\n\014string_names" +
-      "\030\003 \003(\0132%.CDOTAMatchPrivateMetadata.Strin" +
-      "gName\032&\n\nStringName\022\n\n\002id\030\001 \001(\r\022\014\n\004name\030" +
-      "\002 \001(\t\032\363\017\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227\n\007pla" +
-      "yers\030\002 \003(\0132&.CDOTAMatchPrivateMetadata.T" +
-      "eam.Player\022;\n\tbuildings\030\003 \003(\0132(.CDOTAMat" +
-      "chPrivateMetadata.Team.Building\032\372\r\n\006Play",
-      "er\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013player_slot\030\002 " +
-      "\001(\r\022\027\n\017position_stream\030\003 \001(\014\022M\n\017combat_s" +
-      "egments\030\004 \003(\01324.CDOTAMatchPrivateMetadat" +
-      "a.Team.Player.CombatSegment\022\031\n\021damage_un" +
-      "it_names\030\005 \003(\t\022G\n\014buff_records\030\006 \003(\01321.C" +
-      "DOTAMatchPrivateMetadata.Team.Player.Buf" +
-      "fRecord\022\023\n\013graph_kills\030\007 \003(\002\022\024\n\014graph_de" +
-      "aths\030\010 \003(\002\022\025\n\rgraph_assists\030\t \003(\002\022\026\n\016gra" +
-      "ph_lasthits\030\n \003(\002\022\024\n\014graph_denies\030\013 \003(\002\022" +
-      "J\n\rgold_received\030\014 \001(\01323.CDOTAMatchPriva",
-      "teMetadata.Team.Player.GoldReceived\022F\n\013x" +
-      "p_received\030\r \001(\01321.CDOTAMatchPrivateMeta" +
-      "data.Team.Player.XPReceived\022:\n\013team_numb" +
-      "er\030\016 \001(\0162\r.DOTA_GC_TEAM:\026DOTA_GC_TEAM_GO" +
-      "OD_GUYS\022\021\n\tteam_slot\030\017 \001(\r\032\251\005\n\rCombatSeg" +
-      "ment\022\021\n\tgame_time\030\001 \001(\005\022_\n\021damage_by_abi" +
-      "lity\030\002 \003(\0132D.CDOTAMatchPrivateMetadata.T" +
-      "eam.Player.CombatSegment.DamageByAbility" +
-      "\022a\n\022healing_by_ability\030\003 \003(\0132E.CDOTAMatc" +
-      "hPrivateMetadata.Team.Player.CombatSegme",
-      "nt.HealingByAbility\032\335\001\n\017DamageByAbility\022" +
-      "\031\n\021source_unit_index\030\003 \001(\r\022\022\n\nability_id" +
-      "\030\001 \001(\r\022j\n\017by_hero_targets\030\002 \003(\0132Q.CDOTAM" +
-      "atchPrivateMetadata.Team.Player.CombatSe" +
-      "gment.DamageByAbility.ByHeroTarget\032/\n\014By" +
-      "HeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006damage\030\002 " +
-      "\001(\r\032\340\001\n\020HealingByAbility\022\031\n\021source_unit_" +
-      "index\030\003 \001(\r\022\022\n\nability_id\030\001 \001(\r\022k\n\017by_he" +
-      "ro_targets\030\002 \003(\0132R.CDOTAMatchPrivateMeta" +
-      "data.Team.Player.CombatSegment.HealingBy",
-      "Ability.ByHeroTarget\0320\n\014ByHeroTarget\022\017\n\007" +
-      "hero_id\030\001 \001(\r\022\017\n\007healing\030\002 \001(\r\032\350\001\n\nBuffR" +
-      "ecord\022\027\n\017buff_ability_id\030\001 \001(\r\022\032\n\022buff_m" +
-      "odifier_name\030\003 \001(\t\022W\n\017by_hero_targets\030\002 " +
-      "\003(\0132>.CDOTAMatchPrivateMetadata.Team.Pla" +
-      "yer.BuffRecord.ByHeroTarget\032L\n\014ByHeroTar" +
-      "get\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020elapsed_duration" +
-      "\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032\230\001\n\014GoldReceiv" +
-      "ed\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\024\n\014bou" +
-      "nty_runes\030\003 \001(\r\022\017\n\007passive\030\004 \001(\r\022\021\n\tbuil",
-      "dings\030\005 \001(\r\022\021\n\tabilities\030\006 \001(\r\022\r\n\005wards\030" +
-      "\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v\n\nXPReceived\022\r\n\005cr" +
-      "eep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\016\n\006roshan\030\003 \001(" +
-      "\r\022\031\n\021tome_of_knowledge\030\004 \001(\r\022\017\n\007outpost\030" +
-      "\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e\n\010Building\022\021\n\tunit" +
-      "_name\030\001 \001(\t\022\030\n\020position_quant_x\030\002 \001(\r\022\030\n" +
-      "\020position_quant_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 " +
-      "\001(\002\"X\n\020CMsgDOTADPCMatch\022\035\n\005match\030\001 \001(\0132\016" +
-      ".CMsgDOTAMatch\022%\n\010metadata\030\002 \001(\0132\023.CDOTA" +
-      "MatchMetadataB:\n skadistats.clarity.wire",
-      ".s2.protoB\023S2DotaMatchMetadata\200\001\000"
+      "(\r\022&\n\016match_tips_old\030\007 \003(\0132\016.CMsgMatchTi" +
+      "ps\0225\n\021matchmaking_stats\030\010 \001(\0132\032.CMsgMatc" +
+      "hMatchmakingStats\022\033\n\010mvp_data\030\t \001(\0132\t.CM" +
+      "vpData\022L\n\030guild_challenge_progress\030\n \003(\013" +
+      "2*.CDOTAMatchMetadata.GuildChallengeProg" +
+      "ress\022\036\n\026custom_post_game_table\030\013 \001(\014\022%\n\004" +
+      "_new\030\014 \003(\0132\027.CDOTAMatchMetadata.Tip\032\233\001\n\010" +
+      "EconItem\022\021\n\tdef_index\030\001 \001(\r\022\022\n\007quality\030\002",
+      " \001(\r:\0014\022(\n\tattribute\030\003 \003(\0132\025.CSOEconItem" +
+      "Attribute\022\020\n\005style\030\004 \001(\r:\0010\022,\n\016equipped_" +
+      "state\030\005 \003(\0132\024.CSOEconItemEquipped\032\346#\n\004Te" +
+      "am\022\021\n\tdota_team\030\001 \001(\r\0220\n\007players\030\002 \003(\0132\037" +
+      ".CDOTAMatchMetadata.Team.Player\022\030\n\020graph" +
+      "_experience\030\003 \003(\002\022\031\n\021graph_gold_earned\030\004" +
+      " \003(\002\022\027\n\017graph_net_worth\030\005 \003(\002\022\025\n\rcm_firs" +
+      "t_pick\030\006 \001(\010\022\034\n\024cm_captain_player_id\030\007 \001" +
+      "(\005\022\017\n\007cm_bans\030\010 \003(\r\022\020\n\010cm_picks\030\t \003(\r\022\022\n" +
+      "\ncm_penalty\030\n \001(\r\0320\n\nPlayerKill\022\023\n\013victi",
+      "m_slot\030\001 \001(\r\022\r\n\005count\030\002 \001(\r\0326\n\014ItemPurch" +
+      "ase\022\017\n\007item_id\030\001 \001(\005\022\025\n\rpurchase_time\030\002 " +
+      "\001(\005\032\251\001\n\021InventorySnapshot\022\017\n\007item_id\030\001 \003" +
+      "(\005\022\021\n\tgame_time\030\002 \001(\005\022\r\n\005kills\030\003 \001(\r\022\016\n\006" +
+      "deaths\030\004 \001(\r\022\017\n\007assists\030\005 \001(\r\022\r\n\005level\030\006" +
+      " \001(\r\022\030\n\020backpack_item_id\030\007 \003(\005\022\027\n\017neutra" +
+      "l_item_id\030\010 \001(\005\0326\n\021AutoStyleCriteria\022\022\n\n" +
+      "name_token\030\001 \001(\r\022\r\n\005value\030\002 \001(\002\032\306\001\n\022Stra" +
+      "ngeGemProgress\022\027\n\017kill_eater_type\030\001 \001(\r\022" +
+      "\032\n\022gem_item_def_index\030\002 \001(\r\022\030\n\020required_",
+      "hero_id\030\003 \001(\r\022\026\n\016starting_value\030\004 \001(\r\022\024\n" +
+      "\014ending_value\030\005 \001(\r\022\034\n\024owner_item_def_in" +
+      "dex\030\006 \001(\r\022\025\n\rowner_item_id\030\007 \001(\004\032h\n\021Vict" +
+      "oryPrediction\022\017\n\007item_id\030\001 \001(\004\022\026\n\016item_d" +
+      "ef_index\030\002 \001(\r\022\026\n\016starting_value\030\003 \001(\r\022\022" +
+      "\n\nis_victory\030\004 \001(\010\032Z\n\014SubChallenge\022\017\n\007sl" +
+      "ot_id\030\001 \001(\r\022\023\n\013start_value\030\002 \001(\r\022\021\n\tend_" +
+      "value\030\003 \001(\r\022\021\n\tcompleted\030\004 \001(\010\032K\n\025Cavern" +
+      "ChallengeResult\022\031\n\021completed_path_id\030\001 \001" +
+      "(\r\022\027\n\017claimed_room_id\030\002 \001(\r\032k\n\013ActionGra",
+      "nt\022\021\n\taction_id\030\001 \001(\r\022\020\n\010quantity\030\002 \001(\r\022" +
+      "\r\n\005audit\030\003 \001(\r\022\024\n\014requires_win\030\004 \001(\010\022\022\n\n" +
+      "audit_data\030\005 \001(\004\032,\n\nCandyGrant\022\016\n\006points" +
+      "\030\001 \001(\r\022\016\n\006reason\030\002 \001(\r\032T\n\024PeriodicResour" +
+      "ceData\022\034\n\024periodic_resource_id\030\001 \001(\r\022\021\n\t" +
+      "remaining\030\002 \001(\r\022\013\n\003max\030\003 \001(\r\032\341\007\n\tEventDa" +
+      "ta\022\020\n\010event_id\030\001 \001(\r\022\024\n\014event_points\030\002 \001" +
+      "(\r\022\035\n\025challenge_instance_id\030\003 \001(\r\022\032\n\022cha" +
+      "llenge_quest_id\030\004 \001(\r\022$\n\034challenge_quest" +
+      "_challenge_id\030\005 \001(\r\022\033\n\023challenge_complet",
+      "ed\030\006 \001(\010\022 \n\030challenge_rank_completed\030\007 \001" +
+      "(\r\022+\n#challenge_rank_previously_complete" +
+      "d\030\010 \001(\r\022\023\n\013event_owned\030\t \001(\010\022K\n\034sub_chal" +
+      "lenges_with_progress\030\n \003(\0132%.CDOTAMatchM" +
+      "etadata.Team.SubChallenge\022\026\n\016wager_winni" +
+      "ngs\030\013 \001(\r\022\037\n\027cavern_challenge_active\030\014 \001" +
+      "(\010\022!\n\031cavern_challenge_winnings\030\r \001(\r\022\026\n" +
+      "\016amount_wagered\030\016 \001(\r\022\"\n\032periodic_point_" +
+      "adjustments\030\020 \001(\r\022T\n\034cavern_challenge_ma" +
+      "p_results\030\021 \003(\0132..CDOTAMatchMetadata.Tea",
+      "m.CavernChallengeResult\022,\n$cavern_challe" +
+      "nge_plus_shard_winnings\030\022 \001(\r\022=\n\017actions" +
+      "_granted\030\023 \003(\0132$.CDOTAMatchMetadata.Team" +
+      ".ActionGrant\022 \n\030cavern_crawl_map_variant" +
+      "\030\024 \001(\r\022\034\n\024team_wager_bonus_pct\030\025 \001(\r\022\030\n\020" +
+      "wager_streak_pct\030\026 \001(\r\022A\n\024candy_points_g" +
+      "ranted\030\027 \003(\0132#.CDOTAMatchMetadata.Team.C" +
+      "andyGrant\022\030\n\020active_season_id\030\030 \001(\r\022 \n\030c" +
+      "avern_crawl_half_credit\030\031 \001(\010\022I\n\022periodi" +
+      "c_resources\030\032 \003(\0132-.CDOTAMatchMetadata.T",
+      "eam.PeriodicResourceData\032Y\n\020GauntletProg" +
+      "ress\022\025\n\rgauntlet_tier\030\002 \001(\r\022\025\n\rgauntlet_" +
+      "wins\030\003 \001(\r\022\027\n\017gauntlet_losses\030\004 \001(\r\032U\n\030F" +
+      "eaturedGamemodeProgress\022\023\n\013start_value\030\001" +
+      " \001(\r\022\021\n\tend_value\030\002 \001(\r\022\021\n\tmax_value\030\003 \001" +
+      "(\r\032\255\020\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abi" +
+      "lity_upgrades\030\002 \003(\005\022\023\n\013player_slot\030\003 \001(\r" +
+      "\022-\n\027equipped_econ_items_old\030\004 \003(\0132\014.CSOE" +
+      "conItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetad" +
+      "ata.Team.PlayerKill\0224\n\005items\030\006 \003(\0132%.CDO",
+      "TAMatchMetadata.Team.ItemPurchase\022\025\n\ravg" +
+      "_kills_x16\030\007 \001(\r\022\026\n\016avg_deaths_x16\030\010 \001(\r" +
+      "\022\027\n\017avg_assists_x16\030\t \001(\r\022\023\n\013avg_gpm_x16" +
+      "\030\n \001(\r\022\023\n\013avg_xpm_x16\030\013 \001(\r\022\026\n\016best_kill" +
+      "s_x16\030\014 \001(\r\022\030\n\020best_assists_x16\030\r \001(\r\022\024\n" +
+      "\014best_gpm_x16\030\016 \001(\r\022\024\n\014best_xpm_x16\030\017 \001(" +
+      "\r\022\022\n\nwin_streak\030\020 \001(\r\022\027\n\017best_win_streak" +
+      "\030\021 \001(\r\022\023\n\013fight_score\030\022 \001(\002\022\022\n\nfarm_scor" +
+      "e\030\023 \001(\002\022\025\n\rsupport_score\030\024 \001(\002\022\022\n\npush_s" +
+      "core\030\025 \001(\002\022\026\n\016level_up_times\030\026 \003(\r\022\027\n\017gr",
+      "aph_net_worth\030\027 \003(\002\022F\n\022inventory_snapsho" +
+      "t\030\030 \003(\0132*.CDOTAMatchMetadata.Team.Invent" +
+      "orySnapshot\022\034\n\024avg_stats_calibrated\030\031 \001(" +
+      "\010\022G\n\023auto_style_criteria\030\032 \003(\0132*.CDOTAMa" +
+      "tchMetadata.Team.AutoStyleCriteria\0226\n\nev" +
+      "ent_data\030\035 \003(\0132\".CDOTAMatchMetadata.Team" +
+      ".EventData\022I\n\024strange_gem_progress\030\036 \003(\013" +
+      "2+.CDOTAMatchMetadata.Team.StrangeGemPro" +
+      "gress\022\017\n\007hero_xp\030\037 \001(\r\022\025\n\rcamps_stacked\030" +
+      "  \001(\r\022F\n\022victory_prediction\030! \003(\0132*.CDOT",
+      "AMatchMetadata.Team.VictoryPrediction\022\034\n" +
+      "\024lane_selection_flags\030\" \001(\r\022\020\n\010rampages\030" +
+      "# \001(\r\022\024\n\014triple_kills\030$ \001(\r\022\026\n\016aegis_sna" +
+      "tched\030% \001(\r\022\031\n\021rapiers_purchased\030& \001(\r\022\027" +
+      "\n\017couriers_killed\030\' \001(\r\022\026\n\016net_worth_ran" +
+      "k\030( \001(\r\022\032\n\022support_gold_spent\030) \001(\r\022\035\n\025o" +
+      "bserver_wards_placed\030* \001(\r\022\033\n\023sentry_war" +
+      "ds_placed\030+ \001(\r\022\026\n\016wards_dewarded\030, \001(\r\022" +
+      "\025\n\rstun_duration\030- \001(\002\022I\n\023rank_mmr_boost" +
+      "_type\030. \001(\0162\022.EDOTAMMRBoostType:\030k_EDOTA",
+      "MMRBoostType_None\022D\n\021gauntlet_progress\030/" +
+      " \001(\0132).CDOTAMatchMetadata.Team.GauntletP" +
+      "rogress\022K\n\021contract_progress\0300 \003(\01320.CDO" +
+      "TAMatchMetadata.Team.Player.ContractProg" +
+      "ress\022\021\n\tguild_ids\0301 \003(\r\022\031\n\021graph_hero_da" +
+      "mage\0302 \003(\002\022:\n\013team_number\0303 \001(\0162\r.DOTA_G" +
+      "C_TEAM:\026DOTA_GC_TEAM_GOOD_GUYS\022\021\n\tteam_s" +
+      "lot\0304 \001(\r\022U\n\032featured_gamemode_progress\030" +
+      "5 \001(\01321.CDOTAMatchMetadata.Team.Featured" +
+      "GamemodeProgress\022#\n\033featured_hero_sticke",
+      "r_index\0306 \001(\r\022%\n\035featured_hero_sticker_q" +
+      "uality\0307 \001(\r\022=\n\027equipped_econ_items_new\030" +
+      "8 \003(\0132\034.CDOTAMatchMetadata.EconItem\032\264\001\n\020" +
+      "ContractProgress\022\020\n\010guild_id\030\001 \001(\r\022\020\n\010ev" +
+      "ent_id\030\002 \001(\r\022\035\n\025challenge_instance_id\030\003 " +
+      "\001(\r\022\033\n\023challenge_parameter\030\004 \001(\r\022\026\n\016cont" +
+      "ract_stars\030\005 \001(\r\022\025\n\rcontract_slot\030\006 \001(\r\022" +
+      "\021\n\tcompleted\030\007 \001(\010\032\247\003\n\026GuildChallengePro" +
+      "gress\022\020\n\010guild_id\030\001 \001(\r\022(\n\010event_id\030\002 \001(" +
+      "\0162\007.EEvent:\rEVENT_ID_NONE\022\035\n\025challenge_i",
+      "nstance_id\030\003 \001(\r\022\033\n\023challenge_parameter\030" +
+      "\004 \001(\r\022\033\n\023challenge_timestamp\030\005 \001(\r\022#\n\033ch" +
+      "allenge_progress_at_start\030\006 \001(\r\022&\n\036chall" +
+      "enge_progress_accumulated\030\007 \001(\r\022Z\n\023indiv" +
+      "idual_progress\030\010 \003(\0132=.CDOTAMatchMetadat" +
+      "a.GuildChallengeProgress.IndividualProgr" +
+      "ess\032O\n\022IndividualProgress\022\022\n\naccount_id\030" +
+      "\001 \001(\r\022\020\n\010progress\030\002 \001(\r\022\023\n\013player_slot\030\003" +
+      " \001(\r\032{\n\003Tip\022\032\n\022source_player_slot\030\001 \001(\r\022" +
+      "\032\n\022target_player_slot\030\002 \001(\r\022\022\n\ntip_amoun",
+      "t\030\003 \001(\r\022(\n\010event_id\030\004 \001(\0162\007.EEvent:\rEVEN" +
+      "T_ID_NONE\"\305\021\n\031CDOTAMatchPrivateMetadata\022" +
+      ".\n\005teams\030\001 \003(\0132\037.CDOTAMatchPrivateMetada" +
+      "ta.Team\022\035\n\025graph_win_probability\030\002 \003(\002\022;" +
+      "\n\014string_names\030\003 \003(\0132%.CDOTAMatchPrivate" +
+      "Metadata.StringName\032&\n\nStringName\022\n\n\002id\030" +
+      "\001 \001(\r\022\014\n\004name\030\002 \001(\t\032\363\017\n\004Team\022\021\n\tdota_tea" +
+      "m\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatchPri" +
+      "vateMetadata.Team.Player\022;\n\tbuildings\030\003 " +
+      "\003(\0132(.CDOTAMatchPrivateMetadata.Team.Bui",
+      "lding\032\372\r\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013" +
+      "player_slot\030\002 \001(\r\022\027\n\017position_stream\030\003 \001" +
+      "(\014\022M\n\017combat_segments\030\004 \003(\01324.CDOTAMatch" +
+      "PrivateMetadata.Team.Player.CombatSegmen" +
+      "t\022\031\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_rec" +
+      "ords\030\006 \003(\01321.CDOTAMatchPrivateMetadata.T" +
+      "eam.Player.BuffRecord\022\023\n\013graph_kills\030\007 \003" +
+      "(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_assist" +
+      "s\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014graph" +
+      "_denies\030\013 \003(\002\022J\n\rgold_received\030\014 \001(\01323.C",
+      "DOTAMatchPrivateMetadata.Team.Player.Gol" +
+      "dReceived\022F\n\013xp_received\030\r \001(\01321.CDOTAMa" +
+      "tchPrivateMetadata.Team.Player.XPReceive" +
+      "d\022:\n\013team_number\030\016 \001(\0162\r.DOTA_GC_TEAM:\026D" +
+      "OTA_GC_TEAM_GOOD_GUYS\022\021\n\tteam_slot\030\017 \001(\r" +
+      "\032\251\005\n\rCombatSegment\022\021\n\tgame_time\030\001 \001(\005\022_\n" +
+      "\021damage_by_ability\030\002 \003(\0132D.CDOTAMatchPri" +
+      "vateMetadata.Team.Player.CombatSegment.D" +
+      "amageByAbility\022a\n\022healing_by_ability\030\003 \003" +
+      "(\0132E.CDOTAMatchPrivateMetadata.Team.Play",
+      "er.CombatSegment.HealingByAbility\032\335\001\n\017Da" +
+      "mageByAbility\022\031\n\021source_unit_index\030\003 \001(\r" +
+      "\022\022\n\nability_id\030\001 \001(\005\022j\n\017by_hero_targets\030" +
+      "\002 \003(\0132Q.CDOTAMatchPrivateMetadata.Team.P" +
+      "layer.CombatSegment.DamageByAbility.ByHe" +
+      "roTarget\032/\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(" +
+      "\r\022\016\n\006damage\030\002 \001(\r\032\340\001\n\020HealingByAbility\022\031" +
+      "\n\021source_unit_index\030\003 \001(\r\022\022\n\nability_id\030" +
+      "\001 \001(\005\022k\n\017by_hero_targets\030\002 \003(\0132R.CDOTAMa" +
+      "tchPrivateMetadata.Team.Player.CombatSeg",
+      "ment.HealingByAbility.ByHeroTarget\0320\n\014By" +
+      "HeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\017\n\007healing\030\002" +
+      " \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_ability_id\030\001" +
+      " \001(\005\022\032\n\022buff_modifier_name\030\003 \001(\t\022W\n\017by_h" +
+      "ero_targets\030\002 \003(\0132>.CDOTAMatchPrivateMet" +
+      "adata.Team.Player.BuffRecord.ByHeroTarge" +
+      "t\032L\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020el" +
+      "apsed_duration\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032" +
+      "\230\001\n\014GoldReceived\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroe" +
+      "s\030\002 \001(\r\022\024\n\014bounty_runes\030\003 \001(\r\022\017\n\007passive",
+      "\030\004 \001(\r\022\021\n\tbuildings\030\005 \001(\r\022\021\n\tabilities\030\006" +
+      " \001(\r\022\r\n\005wards\030\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v\n\nXP" +
+      "Received\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022" +
+      "\016\n\006roshan\030\003 \001(\r\022\031\n\021tome_of_knowledge\030\004 \001" +
+      "(\r\022\017\n\007outpost\030\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e\n\010Bu" +
+      "ilding\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020position_qu" +
+      "ant_x\030\002 \001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022\022\n" +
+      "\ndeath_time\030\004 \001(\002\"X\n\020CMsgDOTADPCMatch\022\035\n" +
+      "\005match\030\001 \001(\0132\016.CMsgDOTAMatch\022%\n\010metadata" +
+      "\030\002 \001(\0132\023.CDOTAMatchMetadataB:\n skadistat",
+      "s.clarity.wire.s2.protoB\023S2DotaMatchMeta" +
+      "data\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -41274,9 +44006,15 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_descriptor,
-        new java.lang.String[] { "Teams", "ItemRewards", "LobbyId", "ReportUntilTime", "EventGameCustomTable", "PrimaryEventId", "MatchTips", "MatchmakingStats", "MvpData", "GuildChallengeProgress", "CustomPostGameTable", });
-    internal_static_CDOTAMatchMetadata_Team_descriptor =
+        new java.lang.String[] { "Teams", "ItemRewards", "LobbyId", "ReportUntilTime", "EventGameCustomTable", "PrimaryEventId", "MatchTipsOld", "MatchmakingStats", "MvpData", "GuildChallengeProgress", "CustomPostGameTable", "New", });
+    internal_static_CDOTAMatchMetadata_EconItem_descriptor =
       internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(0);
+    internal_static_CDOTAMatchMetadata_EconItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_EconItem_descriptor,
+        new java.lang.String[] { "DefIndex", "Quality", "Attribute", "Style", "EquippedState", });
+    internal_static_CDOTAMatchMetadata_Team_descriptor =
+      internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(1);
     internal_static_CDOTAMatchMetadata_Team_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_descriptor,
@@ -41370,7 +44108,7 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItems", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", "GuildIds", "GraphHeroDamage", "TeamNumber", "TeamSlot", "FeaturedGamemodeProgress", "FeaturedHeroStickerIndex", "FeaturedHeroStickerQuality", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItemsOld", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", "GuildIds", "GraphHeroDamage", "TeamNumber", "TeamSlot", "FeaturedGamemodeProgress", "FeaturedHeroStickerIndex", "FeaturedHeroStickerQuality", "EquippedEconItemsNew", });
     internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor =
       internal_static_CDOTAMatchMetadata_Team_Player_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable = new
@@ -41378,7 +44116,7 @@ public final class S2DotaMatchMetadata {
         internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor,
         new java.lang.String[] { "GuildId", "EventId", "ChallengeInstanceId", "ChallengeParameter", "ContractStars", "ContractSlot", "Completed", });
     internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor =
-      internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(1);
+      internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(2);
     internal_static_CDOTAMatchMetadata_GuildChallengeProgress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_GuildChallengeProgress_descriptor,
@@ -41388,7 +44126,13 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_GuildChallengeProgress_IndividualProgress_descriptor,
-        new java.lang.String[] { "AccountId", "Progress", });
+        new java.lang.String[] { "AccountId", "Progress", "PlayerSlot", });
+    internal_static_CDOTAMatchMetadata_Tip_descriptor =
+      internal_static_CDOTAMatchMetadata_descriptor.getNestedTypes().get(3);
+    internal_static_CDOTAMatchMetadata_Tip_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMatchMetadata_Tip_descriptor,
+        new java.lang.String[] { "SourcePlayerSlot", "TargetPlayerSlot", "TipAmount", "EventId", });
     internal_static_CDOTAMatchPrivateMetadata_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CDOTAMatchPrivateMetadata_fieldAccessorTable = new

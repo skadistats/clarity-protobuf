@@ -402,7 +402,7 @@ message CDOTAUserMsg_ProjectileParticleCPData {
 message CDOTAUserMsg_MiniKillCamInfo {
   message Attacker {
     message Ability {
-      optional uint32 ability_id = 1;
+      optional int32 ability_id = 1;
       optional int32 damage = 2;
     }
 
@@ -765,22 +765,29 @@ message CDOTAUserMsg_ParticleManager {
     optional bool play_endcap = 4;
   }
 
-  message UpdateParticle {
+  message UpdateParticle_OBSOLETE {
     optional int32 control_point = 1;
     optional .CMsgVector position = 2;
   }
 
-  message UpdateParticleFwd {
+  message UpdateParticleFwd_OBSOLETE {
     optional int32 control_point = 1;
     optional .CMsgVector forward = 2;
   }
 
-  message UpdateParticleOrient {
+  message UpdateParticleOrient_OBSOLETE {
     optional int32 control_point = 1;
     optional .CMsgVector forward = 2;
     optional .CMsgVector right = 3 [deprecated = true];
     optional .CMsgVector up = 4;
     optional .CMsgVector left = 5;
+  }
+
+  message UpdateParticleTransform {
+    optional int32 control_point = 1;
+    optional .CMsgVector position = 2;
+    optional .CMsgQuaternion orientation = 3;
+    optional float interpolation_interval = 4;
   }
 
   message UpdateParticleFallback {
@@ -871,6 +878,10 @@ message CDOTAUserMsg_ParticleManager {
     optional bool can_freeze = 1;
   }
 
+  message ParticleFreezeTransitionOverride {
+    optional float freeze_transition_override = 1;
+  }
+
   message SetParticleNamedValueContext {
     message FloatContextValue {
       optional string value_name = 1;
@@ -903,9 +914,9 @@ message CDOTAUserMsg_ParticleManager {
   optional .CDOTAUserMsg_ParticleManager.CreateParticle create_particle = 4;
   optional .CDOTAUserMsg_ParticleManager.DestroyParticle destroy_particle = 5;
   optional .CDOTAUserMsg_ParticleManager.DestroyParticleInvolving destroy_particle_involving = 6;
-  optional .CDOTAUserMsg_ParticleManager.UpdateParticle update_particle = 7;
-  optional .CDOTAUserMsg_ParticleManager.UpdateParticleFwd update_particle_fwd = 8;
-  optional .CDOTAUserMsg_ParticleManager.UpdateParticleOrient update_particle_orient = 9;
+  optional .CDOTAUserMsg_ParticleManager.UpdateParticle_OBSOLETE update_particle = 7;
+  optional .CDOTAUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE update_particle_fwd = 8;
+  optional .CDOTAUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE update_particle_orient = 9;
   optional .CDOTAUserMsg_ParticleManager.UpdateParticleFallback update_particle_fallback = 10;
   optional .CDOTAUserMsg_ParticleManager.UpdateParticleOffset update_particle_offset = 11;
   optional .CDOTAUserMsg_ParticleManager.UpdateParticleEnt update_particle_ent = 12;
@@ -925,6 +936,8 @@ message CDOTAUserMsg_ParticleManager {
   optional .CDOTAUserMsg_ParticleManager.ParticleSkipToTime particle_skip_to_time = 27;
   optional .CDOTAUserMsg_ParticleManager.ParticleCanFreeze particle_can_freeze = 28;
   optional .CDOTAUserMsg_ParticleManager.SetParticleNamedValueContext set_named_value_context = 29;
+  optional .CDOTAUserMsg_ParticleManager.UpdateParticleTransform update_particle_transform = 30;
+  optional .CDOTAUserMsg_ParticleManager.ParticleFreezeTransitionOverride particle_freeze_transition_override = 31;
 
 }
 
@@ -1022,7 +1035,7 @@ message CDOTAUserMsg_TE_DotaBloodImpact {
 
 message CDOTAUserMsg_AbilityPing {
   optional int32 player_id = 1;
-  optional uint32 ability_id = 2;
+  optional int32 ability_id = 2;
   optional .DOTA_ABILITY_PING_TYPE type = 3 [default = ABILITY_PING_READY];
   optional uint32 cooldown_seconds = 4;
   optional uint32 level = 5;
@@ -1057,7 +1070,7 @@ message CDOTAUserMsg_PlayerMMR {
 
 message CDOTAUserMsg_AbilitySteal {
   optional int32 player_id = 1;
-  optional uint32 ability_id = 2;
+  optional int32 ability_id = 2;
   optional uint32 ability_level = 3;
 }
 
@@ -1113,7 +1126,7 @@ message CMsgCombatAnalyzerStats {
 }
 
 message CDOTAUserMsg_ProjectionAbility {
-  optional uint32 ability_id = 1;
+  optional int32 ability_id = 1;
   optional int32 caster_ent_index = 2;
   optional int32 caster_team = 3;
   optional bool channel_end = 4;
@@ -1148,7 +1161,7 @@ message CDOTAUserMsg_KillcamDamageTaken {
   required int32 player_id = 1;
   optional uint32 damage_taken = 2;
   optional uint32 item_type = 3;
-  optional uint32 item_ability_id = 4;
+  optional int32 item_ability_id = 4;
   optional string hero_name = 5;
   optional string damage_color = 6;
 }
@@ -1272,7 +1285,7 @@ message CDOTAUserMsg_DebugChallenge {
 
 message CDOTAUserMsg_FoundNeutralItem {
   optional int32 player_id = 1;
-  optional uint32 item_ability_id = 2;
+  optional int32 item_ability_id = 2;
   optional uint32 item_tier = 3;
   optional uint32 tier_item_count = 4;
 }
@@ -1442,6 +1455,14 @@ message CDOTAUserMsg_DuelAccepted {
 
 message CDOTAUserMsg_DuelRequested {
   optional int32 player_id_requestor = 1;
+}
+
+message CDOTAUserMsg_MuertaReleaseEvent_AssignedTargetKilled {
+  required int32 player_id_killer = 1 [default = -1];
+  required int32 player_id_target = 2 [default = -1];
+  required int32 points = 3;
+  required int32 points_total = 4;
+  required bool last_hit = 5;
 }
 
 message CMsgDOTACombatLogEntry {

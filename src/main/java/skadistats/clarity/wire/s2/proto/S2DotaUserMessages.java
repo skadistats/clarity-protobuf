@@ -625,6 +625,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_DuelRequested = 618;</code>
      */
     DOTA_UM_DuelRequested(152, 618),
+    /**
+     * <code>DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled = 619;</code>
+     */
+    DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled(153, 619),
     ;
 
     /**
@@ -1239,6 +1243,10 @@ public final class S2DotaUserMessages {
      * <code>DOTA_UM_DuelRequested = 618;</code>
      */
     public static final int DOTA_UM_DuelRequested_VALUE = 618;
+    /**
+     * <code>DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled = 619;</code>
+     */
+    public static final int DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled_VALUE = 619;
 
 
     public final int getNumber() { return value; }
@@ -1398,6 +1406,7 @@ public final class S2DotaUserMessages {
         case 616: return DOTA_UM_DuelOpponentKilled;
         case 617: return DOTA_UM_DuelAccepted;
         case 618: return DOTA_UM_DuelRequested;
+        case 619: return DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled;
         default: return null;
       }
     }
@@ -1458,7 +1467,7 @@ public final class S2DotaUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032s2_dota_usermessages.proto*\253$\n\021EDotaUs" +
+      "\n\032s2_dota_usermessages.proto*\341$\n\021EDotaUs" +
       "erMessages\022\037\n\032DOTA_UM_AddUnitToSelection" +
       "\020\320\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM" +
       "_ChatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPosit" +
@@ -1575,8 +1584,9 @@ public final class S2DotaUserMessages {
       "TA_UM_RockPaperScissorsFinished\020\347\004\022\037\n\032DO" +
       "TA_UM_DuelOpponentKilled\020\350\004\022\031\n\024DOTA_UM_D" +
       "uelAccepted\020\351\004\022\032\n\025DOTA_UM_DuelRequested\020" +
-      "\352\004B;\n skadistats.clarity.wire.s2.protoB\022" +
-      "S2DotaUserMessagesH\001\200\001\000"
+      "\352\004\0224\n/DOTA_UM_MuertaReleaseEvent_Assigne" +
+      "dTargetKilled\020\353\004B;\n skadistats.clarity.w" +
+      "ire.s2.protoB\022S2DotaUserMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

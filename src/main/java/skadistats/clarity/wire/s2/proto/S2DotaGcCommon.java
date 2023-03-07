@@ -671,13 +671,17 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_PERMANENT_GRANTS(39, 39),
     /**
+     * <code>EVENT_ID_MUERTA_RELEASE_SPRING2023 = 40;</code>
+     */
+    EVENT_ID_MUERTA_RELEASE_SPRING2023(40, 40),
+    /**
      * <code>EVENT_ID_TEAM_2023_TOUR1 = 41;</code>
      */
-    EVENT_ID_TEAM_2023_TOUR1(40, 41),
+    EVENT_ID_TEAM_2023_TOUR1(41, 41),
     /**
      * <code>EVENT_ID_COUNT = 42;</code>
      */
-    EVENT_ID_COUNT(41, 42),
+    EVENT_ID_COUNT(42, 42),
     ;
 
     /**
@@ -841,6 +845,10 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_PERMANENT_GRANTS_VALUE = 39;
     /**
+     * <code>EVENT_ID_MUERTA_RELEASE_SPRING2023 = 40;</code>
+     */
+    public static final int EVENT_ID_MUERTA_RELEASE_SPRING2023_VALUE = 40;
+    /**
      * <code>EVENT_ID_TEAM_2023_TOUR1 = 41;</code>
      */
     public static final int EVENT_ID_TEAM_2023_TOUR1_VALUE = 41;
@@ -894,6 +902,7 @@ public final class S2DotaGcCommon {
         case 37: return EVENT_ID_TEAM_2021_2022_TOUR3;
         case 38: return EVENT_ID_TEAM_INTERNATIONAL_2022;
         case 39: return EVENT_ID_PERMANENT_GRANTS;
+        case 40: return EVENT_ID_MUERTA_RELEASE_SPRING2023;
         case 41: return EVENT_ID_TEAM_2023_TOUR1;
         case 42: return EVENT_ID_COUNT;
         default: return null;
@@ -1921,15 +1930,15 @@ public final class S2DotaGcCommon {
         getUnitNameBytes();
 
     /**
-     * <code>repeated uint32 items = 2;</code>
+     * <code>repeated int32 items = 2;</code>
      */
     java.util.List<java.lang.Integer> getItemsList();
     /**
-     * <code>repeated uint32 items = 2;</code>
+     * <code>repeated int32 items = 2;</code>
      */
     int getItemsCount();
     /**
-     * <code>repeated uint32 items = 2;</code>
+     * <code>repeated int32 items = 2;</code>
      */
     int getItems(int index);
   }
@@ -1996,7 +2005,7 @@ public final class S2DotaGcCommon {
                 items_ = new java.util.ArrayList<java.lang.Integer>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              items_.add(input.readUInt32());
+              items_.add(input.readInt32());
               break;
             }
             case 18: {
@@ -2007,7 +2016,7 @@ public final class S2DotaGcCommon {
                 mutable_bitField0_ |= 0x00000002;
               }
               while (input.getBytesUntilLimit() > 0) {
-                items_.add(input.readUInt32());
+                items_.add(input.readInt32());
               }
               input.popLimit(limit);
               break;
@@ -2100,20 +2109,20 @@ public final class S2DotaGcCommon {
     public static final int ITEMS_FIELD_NUMBER = 2;
     private java.util.List<java.lang.Integer> items_;
     /**
-     * <code>repeated uint32 items = 2;</code>
+     * <code>repeated int32 items = 2;</code>
      */
     public java.util.List<java.lang.Integer>
         getItemsList() {
       return items_;
     }
     /**
-     * <code>repeated uint32 items = 2;</code>
+     * <code>repeated int32 items = 2;</code>
      */
     public int getItemsCount() {
       return items_.size();
     }
     /**
-     * <code>repeated uint32 items = 2;</code>
+     * <code>repeated int32 items = 2;</code>
      */
     public int getItems(int index) {
       return items_.get(index);
@@ -2140,7 +2149,7 @@ public final class S2DotaGcCommon {
         output.writeBytes(1, getUnitNameBytes());
       }
       for (int i = 0; i < items_.size(); i++) {
-        output.writeUInt32(2, items_.get(i));
+        output.writeInt32(2, items_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -2159,7 +2168,7 @@ public final class S2DotaGcCommon {
         int dataSize = 0;
         for (int i = 0; i < items_.size(); i++) {
           dataSize += com.google.protobuf.CodedOutputStream
-            .computeUInt32SizeNoTag(items_.get(i));
+            .computeInt32SizeNoTag(items_.get(i));
         }
         size += dataSize;
         size += 1 * getItemsList().size();
@@ -2464,26 +2473,26 @@ public final class S2DotaGcCommon {
          }
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public java.util.List<java.lang.Integer>
           getItemsList() {
         return java.util.Collections.unmodifiableList(items_);
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public int getItemsCount() {
         return items_.size();
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public int getItems(int index) {
         return items_.get(index);
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public Builder setItems(
           int index, int value) {
@@ -2493,7 +2502,7 @@ public final class S2DotaGcCommon {
         return this;
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public Builder addItems(int value) {
         ensureItemsIsMutable();
@@ -2502,7 +2511,7 @@ public final class S2DotaGcCommon {
         return this;
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public Builder addAllItems(
           java.lang.Iterable<? extends java.lang.Integer> values) {
@@ -2513,7 +2522,7 @@ public final class S2DotaGcCommon {
         return this;
       }
       /**
-       * <code>repeated uint32 items = 2;</code>
+       * <code>repeated int32 items = 2;</code>
        */
       public Builder clearItems() {
         items_ = java.util.Collections.emptyList();
@@ -4615,83 +4624,83 @@ public final class S2DotaGcCommon {
       int getHeroId();
 
       /**
-       * <code>optional uint32 item_0 = 4;</code>
+       * <code>optional int32 item_0 = 4;</code>
        */
       boolean hasItem0();
       /**
-       * <code>optional uint32 item_0 = 4;</code>
+       * <code>optional int32 item_0 = 4;</code>
        */
       int getItem0();
 
       /**
-       * <code>optional uint32 item_1 = 5;</code>
+       * <code>optional int32 item_1 = 5;</code>
        */
       boolean hasItem1();
       /**
-       * <code>optional uint32 item_1 = 5;</code>
+       * <code>optional int32 item_1 = 5;</code>
        */
       int getItem1();
 
       /**
-       * <code>optional uint32 item_2 = 6;</code>
+       * <code>optional int32 item_2 = 6;</code>
        */
       boolean hasItem2();
       /**
-       * <code>optional uint32 item_2 = 6;</code>
+       * <code>optional int32 item_2 = 6;</code>
        */
       int getItem2();
 
       /**
-       * <code>optional uint32 item_3 = 7;</code>
+       * <code>optional int32 item_3 = 7;</code>
        */
       boolean hasItem3();
       /**
-       * <code>optional uint32 item_3 = 7;</code>
+       * <code>optional int32 item_3 = 7;</code>
        */
       int getItem3();
 
       /**
-       * <code>optional uint32 item_4 = 8;</code>
+       * <code>optional int32 item_4 = 8;</code>
        */
       boolean hasItem4();
       /**
-       * <code>optional uint32 item_4 = 8;</code>
+       * <code>optional int32 item_4 = 8;</code>
        */
       int getItem4();
 
       /**
-       * <code>optional uint32 item_5 = 9;</code>
+       * <code>optional int32 item_5 = 9;</code>
        */
       boolean hasItem5();
       /**
-       * <code>optional uint32 item_5 = 9;</code>
+       * <code>optional int32 item_5 = 9;</code>
        */
       int getItem5();
 
       /**
-       * <code>optional uint32 item_6 = 59;</code>
+       * <code>optional int32 item_6 = 59;</code>
        */
       boolean hasItem6();
       /**
-       * <code>optional uint32 item_6 = 59;</code>
+       * <code>optional int32 item_6 = 59;</code>
        */
       int getItem6();
 
       /**
-       * <code>optional uint32 item_7 = 60;</code>
+       * <code>optional int32 item_7 = 60;</code>
        */
       boolean hasItem7();
       /**
-       * <code>optional uint32 item_7 = 60;</code>
+       * <code>optional int32 item_7 = 60;</code>
        */
       int getItem7();
 
       /**
-       * <code>optional uint32 item_8 = 61;</code>
+       * <code>optional int32 item_8 = 61;</code>
        */
       boolean hasItem8();
       /**
-       * <code>optional uint32 item_8 = 61;</code>
+       * <code>optional int32 item_8 = 61;</code>
        */
       int getItem8();
 
@@ -5278,32 +5287,32 @@ public final class S2DotaGcCommon {
               }
               case 32: {
                 bitField0_ |= 0x00000008;
-                item0_ = input.readUInt32();
+                item0_ = input.readInt32();
                 break;
               }
               case 40: {
                 bitField0_ |= 0x00000010;
-                item1_ = input.readUInt32();
+                item1_ = input.readInt32();
                 break;
               }
               case 48: {
                 bitField0_ |= 0x00000020;
-                item2_ = input.readUInt32();
+                item2_ = input.readInt32();
                 break;
               }
               case 56: {
                 bitField0_ |= 0x00000040;
-                item3_ = input.readUInt32();
+                item3_ = input.readInt32();
                 break;
               }
               case 64: {
                 bitField0_ |= 0x00000080;
-                item4_ = input.readUInt32();
+                item4_ = input.readInt32();
                 break;
               }
               case 72: {
                 bitField0_ |= 0x00000100;
-                item5_ = input.readUInt32();
+                item5_ = input.readInt32();
                 break;
               }
               case 85: {
@@ -5561,17 +5570,17 @@ public final class S2DotaGcCommon {
               }
               case 472: {
                 bitField0_ |= 0x00000200;
-                item6_ = input.readUInt32();
+                item6_ = input.readInt32();
                 break;
               }
               case 480: {
                 bitField0_ |= 0x00000400;
-                item7_ = input.readUInt32();
+                item7_ = input.readInt32();
                 break;
               }
               case 488: {
                 bitField0_ |= 0x00000800;
-                item8_ = input.readUInt32();
+                item8_ = input.readInt32();
                 break;
               }
               case 504: {
@@ -6167,13 +6176,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_0_FIELD_NUMBER = 4;
       private int item0_;
       /**
-       * <code>optional uint32 item_0 = 4;</code>
+       * <code>optional int32 item_0 = 4;</code>
        */
       public boolean hasItem0() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional uint32 item_0 = 4;</code>
+       * <code>optional int32 item_0 = 4;</code>
        */
       public int getItem0() {
         return item0_;
@@ -6182,13 +6191,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_1_FIELD_NUMBER = 5;
       private int item1_;
       /**
-       * <code>optional uint32 item_1 = 5;</code>
+       * <code>optional int32 item_1 = 5;</code>
        */
       public boolean hasItem1() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional uint32 item_1 = 5;</code>
+       * <code>optional int32 item_1 = 5;</code>
        */
       public int getItem1() {
         return item1_;
@@ -6197,13 +6206,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_2_FIELD_NUMBER = 6;
       private int item2_;
       /**
-       * <code>optional uint32 item_2 = 6;</code>
+       * <code>optional int32 item_2 = 6;</code>
        */
       public boolean hasItem2() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional uint32 item_2 = 6;</code>
+       * <code>optional int32 item_2 = 6;</code>
        */
       public int getItem2() {
         return item2_;
@@ -6212,13 +6221,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_3_FIELD_NUMBER = 7;
       private int item3_;
       /**
-       * <code>optional uint32 item_3 = 7;</code>
+       * <code>optional int32 item_3 = 7;</code>
        */
       public boolean hasItem3() {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional uint32 item_3 = 7;</code>
+       * <code>optional int32 item_3 = 7;</code>
        */
       public int getItem3() {
         return item3_;
@@ -6227,13 +6236,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_4_FIELD_NUMBER = 8;
       private int item4_;
       /**
-       * <code>optional uint32 item_4 = 8;</code>
+       * <code>optional int32 item_4 = 8;</code>
        */
       public boolean hasItem4() {
         return ((bitField0_ & 0x00000080) == 0x00000080);
       }
       /**
-       * <code>optional uint32 item_4 = 8;</code>
+       * <code>optional int32 item_4 = 8;</code>
        */
       public int getItem4() {
         return item4_;
@@ -6242,13 +6251,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_5_FIELD_NUMBER = 9;
       private int item5_;
       /**
-       * <code>optional uint32 item_5 = 9;</code>
+       * <code>optional int32 item_5 = 9;</code>
        */
       public boolean hasItem5() {
         return ((bitField0_ & 0x00000100) == 0x00000100);
       }
       /**
-       * <code>optional uint32 item_5 = 9;</code>
+       * <code>optional int32 item_5 = 9;</code>
        */
       public int getItem5() {
         return item5_;
@@ -6257,13 +6266,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_6_FIELD_NUMBER = 59;
       private int item6_;
       /**
-       * <code>optional uint32 item_6 = 59;</code>
+       * <code>optional int32 item_6 = 59;</code>
        */
       public boolean hasItem6() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>optional uint32 item_6 = 59;</code>
+       * <code>optional int32 item_6 = 59;</code>
        */
       public int getItem6() {
         return item6_;
@@ -6272,13 +6281,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_7_FIELD_NUMBER = 60;
       private int item7_;
       /**
-       * <code>optional uint32 item_7 = 60;</code>
+       * <code>optional int32 item_7 = 60;</code>
        */
       public boolean hasItem7() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional uint32 item_7 = 60;</code>
+       * <code>optional int32 item_7 = 60;</code>
        */
       public int getItem7() {
         return item7_;
@@ -6287,13 +6296,13 @@ public final class S2DotaGcCommon {
       public static final int ITEM_8_FIELD_NUMBER = 61;
       private int item8_;
       /**
-       * <code>optional uint32 item_8 = 61;</code>
+       * <code>optional int32 item_8 = 61;</code>
        */
       public boolean hasItem8() {
         return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
-       * <code>optional uint32 item_8 = 61;</code>
+       * <code>optional int32 item_8 = 61;</code>
        */
       public int getItem8() {
         return item8_;
@@ -7245,22 +7254,22 @@ public final class S2DotaGcCommon {
           output.writeUInt32(3, heroId_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          output.writeUInt32(4, item0_);
+          output.writeInt32(4, item0_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          output.writeUInt32(5, item1_);
+          output.writeInt32(5, item1_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          output.writeUInt32(6, item2_);
+          output.writeInt32(6, item2_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          output.writeUInt32(7, item3_);
+          output.writeInt32(7, item3_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          output.writeUInt32(8, item4_);
+          output.writeInt32(8, item4_);
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          output.writeUInt32(9, item5_);
+          output.writeInt32(9, item5_);
         }
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
           output.writeFloat(10, expectedTeamContribution_);
@@ -7404,13 +7413,13 @@ public final class S2DotaGcCommon {
           output.writeUInt32(58, botDifficulty_);
         }
         if (((bitField0_ & 0x00000200) == 0x00000200)) {
-          output.writeUInt32(59, item6_);
+          output.writeInt32(59, item6_);
         }
         if (((bitField0_ & 0x00000400) == 0x00000400)) {
-          output.writeUInt32(60, item7_);
+          output.writeInt32(60, item7_);
         }
         if (((bitField0_ & 0x00000800) == 0x00000800)) {
-          output.writeUInt32(61, item8_);
+          output.writeInt32(61, item8_);
         }
         if (((bitField1_ & 0x02000000) == 0x02000000)) {
           output.writeUInt32(63, heroPickOrder_);
@@ -7447,27 +7456,27 @@ public final class S2DotaGcCommon {
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(4, item0_);
+            .computeInt32Size(4, item0_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(5, item1_);
+            .computeInt32Size(5, item1_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(6, item2_);
+            .computeInt32Size(6, item2_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(7, item3_);
+            .computeInt32Size(7, item3_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(8, item4_);
+            .computeInt32Size(8, item4_);
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(9, item5_);
+            .computeInt32Size(9, item5_);
         }
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
           size += com.google.protobuf.CodedOutputStream
@@ -7659,15 +7668,15 @@ public final class S2DotaGcCommon {
         }
         if (((bitField0_ & 0x00000200) == 0x00000200)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(59, item6_);
+            .computeInt32Size(59, item6_);
         }
         if (((bitField0_ & 0x00000400) == 0x00000400)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(60, item7_);
+            .computeInt32Size(60, item7_);
         }
         if (((bitField0_ & 0x00000800) == 0x00000800)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(61, item8_);
+            .computeInt32Size(61, item8_);
         }
         if (((bitField1_ & 0x02000000) == 0x02000000)) {
           size += com.google.protobuf.CodedOutputStream
@@ -8652,19 +8661,19 @@ public final class S2DotaGcCommon {
 
         private int item0_ ;
         /**
-         * <code>optional uint32 item_0 = 4;</code>
+         * <code>optional int32 item_0 = 4;</code>
          */
         public boolean hasItem0() {
           return ((bitField0_ & 0x00000008) == 0x00000008);
         }
         /**
-         * <code>optional uint32 item_0 = 4;</code>
+         * <code>optional int32 item_0 = 4;</code>
          */
         public int getItem0() {
           return item0_;
         }
         /**
-         * <code>optional uint32 item_0 = 4;</code>
+         * <code>optional int32 item_0 = 4;</code>
          */
         public Builder setItem0(int value) {
           bitField0_ |= 0x00000008;
@@ -8673,7 +8682,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_0 = 4;</code>
+         * <code>optional int32 item_0 = 4;</code>
          */
         public Builder clearItem0() {
           bitField0_ = (bitField0_ & ~0x00000008);
@@ -8684,19 +8693,19 @@ public final class S2DotaGcCommon {
 
         private int item1_ ;
         /**
-         * <code>optional uint32 item_1 = 5;</code>
+         * <code>optional int32 item_1 = 5;</code>
          */
         public boolean hasItem1() {
           return ((bitField0_ & 0x00000010) == 0x00000010);
         }
         /**
-         * <code>optional uint32 item_1 = 5;</code>
+         * <code>optional int32 item_1 = 5;</code>
          */
         public int getItem1() {
           return item1_;
         }
         /**
-         * <code>optional uint32 item_1 = 5;</code>
+         * <code>optional int32 item_1 = 5;</code>
          */
         public Builder setItem1(int value) {
           bitField0_ |= 0x00000010;
@@ -8705,7 +8714,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_1 = 5;</code>
+         * <code>optional int32 item_1 = 5;</code>
          */
         public Builder clearItem1() {
           bitField0_ = (bitField0_ & ~0x00000010);
@@ -8716,19 +8725,19 @@ public final class S2DotaGcCommon {
 
         private int item2_ ;
         /**
-         * <code>optional uint32 item_2 = 6;</code>
+         * <code>optional int32 item_2 = 6;</code>
          */
         public boolean hasItem2() {
           return ((bitField0_ & 0x00000020) == 0x00000020);
         }
         /**
-         * <code>optional uint32 item_2 = 6;</code>
+         * <code>optional int32 item_2 = 6;</code>
          */
         public int getItem2() {
           return item2_;
         }
         /**
-         * <code>optional uint32 item_2 = 6;</code>
+         * <code>optional int32 item_2 = 6;</code>
          */
         public Builder setItem2(int value) {
           bitField0_ |= 0x00000020;
@@ -8737,7 +8746,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_2 = 6;</code>
+         * <code>optional int32 item_2 = 6;</code>
          */
         public Builder clearItem2() {
           bitField0_ = (bitField0_ & ~0x00000020);
@@ -8748,19 +8757,19 @@ public final class S2DotaGcCommon {
 
         private int item3_ ;
         /**
-         * <code>optional uint32 item_3 = 7;</code>
+         * <code>optional int32 item_3 = 7;</code>
          */
         public boolean hasItem3() {
           return ((bitField0_ & 0x00000040) == 0x00000040);
         }
         /**
-         * <code>optional uint32 item_3 = 7;</code>
+         * <code>optional int32 item_3 = 7;</code>
          */
         public int getItem3() {
           return item3_;
         }
         /**
-         * <code>optional uint32 item_3 = 7;</code>
+         * <code>optional int32 item_3 = 7;</code>
          */
         public Builder setItem3(int value) {
           bitField0_ |= 0x00000040;
@@ -8769,7 +8778,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_3 = 7;</code>
+         * <code>optional int32 item_3 = 7;</code>
          */
         public Builder clearItem3() {
           bitField0_ = (bitField0_ & ~0x00000040);
@@ -8780,19 +8789,19 @@ public final class S2DotaGcCommon {
 
         private int item4_ ;
         /**
-         * <code>optional uint32 item_4 = 8;</code>
+         * <code>optional int32 item_4 = 8;</code>
          */
         public boolean hasItem4() {
           return ((bitField0_ & 0x00000080) == 0x00000080);
         }
         /**
-         * <code>optional uint32 item_4 = 8;</code>
+         * <code>optional int32 item_4 = 8;</code>
          */
         public int getItem4() {
           return item4_;
         }
         /**
-         * <code>optional uint32 item_4 = 8;</code>
+         * <code>optional int32 item_4 = 8;</code>
          */
         public Builder setItem4(int value) {
           bitField0_ |= 0x00000080;
@@ -8801,7 +8810,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_4 = 8;</code>
+         * <code>optional int32 item_4 = 8;</code>
          */
         public Builder clearItem4() {
           bitField0_ = (bitField0_ & ~0x00000080);
@@ -8812,19 +8821,19 @@ public final class S2DotaGcCommon {
 
         private int item5_ ;
         /**
-         * <code>optional uint32 item_5 = 9;</code>
+         * <code>optional int32 item_5 = 9;</code>
          */
         public boolean hasItem5() {
           return ((bitField0_ & 0x00000100) == 0x00000100);
         }
         /**
-         * <code>optional uint32 item_5 = 9;</code>
+         * <code>optional int32 item_5 = 9;</code>
          */
         public int getItem5() {
           return item5_;
         }
         /**
-         * <code>optional uint32 item_5 = 9;</code>
+         * <code>optional int32 item_5 = 9;</code>
          */
         public Builder setItem5(int value) {
           bitField0_ |= 0x00000100;
@@ -8833,7 +8842,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_5 = 9;</code>
+         * <code>optional int32 item_5 = 9;</code>
          */
         public Builder clearItem5() {
           bitField0_ = (bitField0_ & ~0x00000100);
@@ -8844,19 +8853,19 @@ public final class S2DotaGcCommon {
 
         private int item6_ ;
         /**
-         * <code>optional uint32 item_6 = 59;</code>
+         * <code>optional int32 item_6 = 59;</code>
          */
         public boolean hasItem6() {
           return ((bitField0_ & 0x00000200) == 0x00000200);
         }
         /**
-         * <code>optional uint32 item_6 = 59;</code>
+         * <code>optional int32 item_6 = 59;</code>
          */
         public int getItem6() {
           return item6_;
         }
         /**
-         * <code>optional uint32 item_6 = 59;</code>
+         * <code>optional int32 item_6 = 59;</code>
          */
         public Builder setItem6(int value) {
           bitField0_ |= 0x00000200;
@@ -8865,7 +8874,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_6 = 59;</code>
+         * <code>optional int32 item_6 = 59;</code>
          */
         public Builder clearItem6() {
           bitField0_ = (bitField0_ & ~0x00000200);
@@ -8876,19 +8885,19 @@ public final class S2DotaGcCommon {
 
         private int item7_ ;
         /**
-         * <code>optional uint32 item_7 = 60;</code>
+         * <code>optional int32 item_7 = 60;</code>
          */
         public boolean hasItem7() {
           return ((bitField0_ & 0x00000400) == 0x00000400);
         }
         /**
-         * <code>optional uint32 item_7 = 60;</code>
+         * <code>optional int32 item_7 = 60;</code>
          */
         public int getItem7() {
           return item7_;
         }
         /**
-         * <code>optional uint32 item_7 = 60;</code>
+         * <code>optional int32 item_7 = 60;</code>
          */
         public Builder setItem7(int value) {
           bitField0_ |= 0x00000400;
@@ -8897,7 +8906,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_7 = 60;</code>
+         * <code>optional int32 item_7 = 60;</code>
          */
         public Builder clearItem7() {
           bitField0_ = (bitField0_ & ~0x00000400);
@@ -8908,19 +8917,19 @@ public final class S2DotaGcCommon {
 
         private int item8_ ;
         /**
-         * <code>optional uint32 item_8 = 61;</code>
+         * <code>optional int32 item_8 = 61;</code>
          */
         public boolean hasItem8() {
           return ((bitField0_ & 0x00000800) == 0x00000800);
         }
         /**
-         * <code>optional uint32 item_8 = 61;</code>
+         * <code>optional int32 item_8 = 61;</code>
          */
         public int getItem8() {
           return item8_;
         }
         /**
-         * <code>optional uint32 item_8 = 61;</code>
+         * <code>optional int32 item_8 = 61;</code>
          */
         public Builder setItem8(int value) {
           bitField0_ |= 0x00000800;
@@ -8929,7 +8938,7 @@ public final class S2DotaGcCommon {
           return this;
         }
         /**
-         * <code>optional uint32 item_8 = 61;</code>
+         * <code>optional int32 item_8 = 61;</code>
          */
         public Builder clearItem8() {
           bitField0_ = (bitField0_ & ~0x00000800);
@@ -19575,7 +19584,7 @@ public final class S2DotaGcCommon {
       "tchPlayerAbilityUpgrade\022\017\n\007ability\030\001 \001(\r" +
       "\022\014\n\004time\030\002 \001(\r\"A\n\035CMatchAdditionalUnitIn" +
       "ventory\022\021\n\tunit_name\030\001 \001(\t\022\r\n\005items\030\002 \003(" +
-      "\r\"H\n\031CMatchPlayerPermanentBuff\022\026\n\016perman" +
+      "\005\"H\n\031CMatchPlayerPermanentBuff\022\026\n\016perman" +
       "ent_buff\030\001 \001(\r\022\023\n\013stack_count\030\002 \001(\r\"G\n\025C" +
       "MatchHeroSelectEvent\022\017\n\007is_pick\030\001 \001(\010\022\014\n" +
       "\004team\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\"\335\031\n\rCMsgDOT" +
@@ -19614,10 +19623,10 @@ public final class S2DotaGcCommon {
       "ament_id\0303 \001(\r\022\030\n\020tournament_round\0304 \001(\r" +
       "\022\031\n\021pre_game_duration\0305 \001(\r\032\267\014\n\006Player\022\022" +
       "\n\naccount_id\030\001 \001(\r\022\023\n\013player_slot\030\002 \001(\r\022" +
-      "\017\n\007hero_id\030\003 \001(\r\022\016\n\006item_0\030\004 \001(\r\022\016\n\006item" +
-      "_1\030\005 \001(\r\022\016\n\006item_2\030\006 \001(\r\022\016\n\006item_3\030\007 \001(\r" +
-      "\022\016\n\006item_4\030\010 \001(\r\022\016\n\006item_5\030\t \001(\r\022\016\n\006item" +
-      "_6\030; \001(\r\022\016\n\006item_7\030< \001(\r\022\016\n\006item_8\030= \001(\r" +
+      "\017\n\007hero_id\030\003 \001(\r\022\016\n\006item_0\030\004 \001(\005\022\016\n\006item" +
+      "_1\030\005 \001(\005\022\016\n\006item_2\030\006 \001(\005\022\016\n\006item_3\030\007 \001(\005" +
+      "\022\016\n\006item_4\030\010 \001(\005\022\016\n\006item_5\030\t \001(\005\022\016\n\006item" +
+      "_6\030; \001(\005\022\016\n\006item_7\030< \001(\005\022\016\n\006item_8\030= \001(\005" +
       "\022\"\n\032expected_team_contribution\030\n \001(\002\022\025\n\r" +
       "scaled_metric\030\013 \001(\002\022\025\n\rprevious_rank\030\014 \001" +
       "(\r\022\023\n\013rank_change\030\r \001(\021\022\021\n\tsolo_rank\0301 \001",
@@ -19693,7 +19702,7 @@ public final class S2DotaGcCommon {
       "A_GC_TEAM_CUSTOM_5\020\n\022\031\n\025DOTA_GC_TEAM_CUS",
       "TOM_6\020\013\022\031\n\025DOTA_GC_TEAM_CUSTOM_7\020\014\022\031\n\025DO" +
       "TA_GC_TEAM_CUSTOM_8\020\r\022\031\n\025DOTA_GC_TEAM_NE" +
-      "UTRALS\020\016*\363\t\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025" +
+      "UTRALS\020\016*\233\n\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025" +
       "\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVENT_ID_SPRING" +
       "_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROSTIVUS_2013\020\003" +
       "\022\034\n\030EVENT_ID_COMPENDIUM_2014\020\004\022\032\n\026EVENT_" +
@@ -19723,14 +19732,15 @@ public final class S2DotaGcCommon {
       "022_TOUR2\020#\022\037\n\033EVENT_ID_INTERNATIONAL_20",
       "22\020$\022!\n\035EVENT_ID_TEAM_2021_2022_TOUR3\020%\022" +
       "$\n EVENT_ID_TEAM_INTERNATIONAL_2022\020&\022\035\n" +
-      "\031EVENT_ID_PERMANENT_GRANTS\020\'\022\034\n\030EVENT_ID" +
+      "\031EVENT_ID_PERMANENT_GRANTS\020\'\022&\n\"EVENT_ID" +
+      "_MUERTA_RELEASE_SPRING2023\020(\022\034\n\030EVENT_ID" +
       "_TEAM_2023_TOUR1\020)\022\022\n\016EVENT_ID_COUNT\020**\327" +
       "\005\n\rEMatchOutcome\022\033\n\027k_EMatchOutcome_Unkn" +
       "own\020\000\022\036\n\032k_EMatchOutcome_RadVictory\020\002\022\037\n" +
       "\033k_EMatchOutcome_DireVictory\020\003\022\"\n\036k_EMat" +
       "chOutcome_NeutralVictory\020\004\022 \n\034k_EMatchOu" +
-      "tcome_NoTeamWinner\020\005\022\"\n\036k_EMatchOutcome_" +
-      "Custom1Victory\020\006\022\"\n\036k_EMatchOutcome_Cust",
+      "tcome_NoTeamWinner\020\005\022\"\n\036k_EMatchOutcome_",
+      "Custom1Victory\020\006\022\"\n\036k_EMatchOutcome_Cust" +
       "om2Victory\020\007\022\"\n\036k_EMatchOutcome_Custom3V" +
       "ictory\020\010\022\"\n\036k_EMatchOutcome_Custom4Victo" +
       "ry\020\t\022\"\n\036k_EMatchOutcome_Custom5Victory\020\n" +
@@ -19739,8 +19749,8 @@ public final class S2DotaGcCommon {
       "atchOutcome_Custom8Victory\020\r\0223\n/k_EMatch" +
       "Outcome_NotScored_PoorNetworkConditions\020" +
       "@\022$\n k_EMatchOutcome_NotScored_Leaver\020A\022" +
-      ")\n%k_EMatchOutcome_NotScored_ServerCrash" +
-      "\020B\022*\n&k_EMatchOutcome_NotScored_NeverSta",
+      ")\n%k_EMatchOutcome_NotScored_ServerCrash",
+      "\020B\022*\n&k_EMatchOutcome_NotScored_NeverSta" +
       "rted\020C\022&\n\"k_EMatchOutcome_NotScored_Canc" +
       "eled\020D\022(\n$k_EMatchOutcome_NotScored_Susp" +
       "icious\020E*\321\003\n\022EDOTAPlayerMMRType\022 \n\034k_EDO" +
@@ -19749,8 +19759,8 @@ public final class S2DotaGcCommon {
       "erMMRType_GeneralCompetitive2019\020\003\022,\n(k_" +
       "EDOTAPlayerMMRType_SoloCompetitive2019\020\004" +
       "\022.\n*k_EDOTAPlayerMMRType_1v1Competitive_" +
-      "UNUSED\020\005\022.\n*k_EDOTAPlayerMMRType_General" +
-      "SeasonalRanked\020\006\022+\n\'k_EDOTAPlayerMMRType",
+      "UNUSED\020\005\022.\n*k_EDOTAPlayerMMRType_General",
+      "SeasonalRanked\020\006\022+\n\'k_EDOTAPlayerMMRType" +
       "_SoloSeasonalRanked\020\007\022)\n%k_EDOTAPlayerMM" +
       "RType_Competitive_Core\020\010\022,\n(k_EDOTAPlaye" +
       "rMMRType_Competitive_Support\020\t\022,\n(k_EDOT" +

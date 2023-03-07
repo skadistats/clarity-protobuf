@@ -92,6 +92,7 @@ enum EEvent {
   EVENT_ID_TEAM_2021_2022_TOUR3 = 37;
   EVENT_ID_TEAM_INTERNATIONAL_2022 = 38;
   EVENT_ID_PERMANENT_GRANTS = 39;
+  EVENT_ID_MUERTA_RELEASE_SPRING2023 = 40;
   EVENT_ID_TEAM_2023_TOUR1 = 41;
   EVENT_ID_COUNT = 42;
 }
@@ -144,7 +145,7 @@ message CMatchPlayerAbilityUpgrade {
 
 message CMatchAdditionalUnitInventory {
   optional string unit_name = 1;
-  repeated uint32 items = 2;
+  repeated int32 items = 2;
 }
 
 message CMatchPlayerPermanentBuff {
@@ -168,15 +169,15 @@ message CMsgDOTAMatch {
     optional uint32 account_id = 1;
     optional uint32 player_slot = 2;
     optional uint32 hero_id = 3;
-    optional uint32 item_0 = 4;
-    optional uint32 item_1 = 5;
-    optional uint32 item_2 = 6;
-    optional uint32 item_3 = 7;
-    optional uint32 item_4 = 8;
-    optional uint32 item_5 = 9;
-    optional uint32 item_6 = 59;
-    optional uint32 item_7 = 60;
-    optional uint32 item_8 = 61;
+    optional int32 item_0 = 4;
+    optional int32 item_1 = 5;
+    optional int32 item_2 = 6;
+    optional int32 item_3 = 7;
+    optional int32 item_4 = 8;
+    optional int32 item_5 = 9;
+    optional int32 item_6 = 59;
+    optional int32 item_7 = 60;
+    optional int32 item_8 = 61;
     optional float expected_team_contribution = 10;
     optional float scaled_metric = 11;
     optional uint32 previous_rank = 12;

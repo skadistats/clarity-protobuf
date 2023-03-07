@@ -1180,11 +1180,11 @@ public final class S2BaseGcMessages {
     int getStyle();
 
     /**
-     * <code>optional uint64 original_id = 16 [default = 0];</code>
+     * <code>optional uint64 original_id = 16;</code>
      */
     boolean hasOriginalId();
     /**
-     * <code>optional uint64 original_id = 16 [default = 0];</code>
+     * <code>optional uint64 original_id = 16;</code>
      */
     long getOriginalId();
 
@@ -1623,13 +1623,13 @@ public final class S2BaseGcMessages {
     public static final int ORIGINAL_ID_FIELD_NUMBER = 16;
     private long originalId_;
     /**
-     * <code>optional uint64 original_id = 16 [default = 0];</code>
+     * <code>optional uint64 original_id = 16;</code>
      */
     public boolean hasOriginalId() {
       return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
-     * <code>optional uint64 original_id = 16 [default = 0];</code>
+     * <code>optional uint64 original_id = 16;</code>
      */
     public long getOriginalId() {
       return originalId_;
@@ -2922,19 +2922,19 @@ public final class S2BaseGcMessages {
 
       private long originalId_ ;
       /**
-       * <code>optional uint64 original_id = 16 [default = 0];</code>
+       * <code>optional uint64 original_id = 16;</code>
        */
       public boolean hasOriginalId() {
         return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
-       * <code>optional uint64 original_id = 16 [default = 0];</code>
+       * <code>optional uint64 original_id = 16;</code>
        */
       public long getOriginalId() {
         return originalId_;
       }
       /**
-       * <code>optional uint64 original_id = 16 [default = 0];</code>
+       * <code>optional uint64 original_id = 16;</code>
        */
       public Builder setOriginalId(long value) {
         bitField0_ |= 0x00002000;
@@ -2943,7 +2943,7 @@ public final class S2BaseGcMessages {
         return this;
       }
       /**
-       * <code>optional uint64 original_id = 16 [default = 0];</code>
+       * <code>optional uint64 original_id = 16;</code>
        */
       public Builder clearOriginalId() {
         bitField0_ = (bitField0_ & ~0x00002000);
@@ -3231,17 +3231,17 @@ public final class S2BaseGcMessages {
       "mAttribute\022\021\n\tdef_index\030\001 \001(\r\022\r\n\005value\030\002" +
       " \001(\r\022\023\n\013value_bytes\030\003 \001(\014\":\n\023CSOEconItem" +
       "Equipped\022\021\n\tnew_class\030\001 \001(\r\022\020\n\010new_slot\030" +
-      "\002 \001(\r\"\361\002\n\013CSOEconItem\022\n\n\002id\030\001 \001(\004\022\022\n\nacc" +
+      "\002 \001(\r\"\356\002\n\013CSOEconItem\022\n\n\002id\030\001 \001(\004\022\022\n\nacc" +
       "ount_id\030\002 \001(\r\022\021\n\tinventory\030\003 \001(\r\022\021\n\tdef_" +
       "index\030\004 \001(\r\022\023\n\010quantity\030\005 \001(\r:\0011\022\020\n\005leve" +
       "l\030\006 \001(\r:\0011\022\022\n\007quality\030\007 \001(\r:\0014\022\020\n\005flags\030" +
       "\010 \001(\r:\0010\022\021\n\006origin\030\t \001(\r:\0010\022(\n\tattribute" +
       "\030\014 \003(\0132\025.CSOEconItemAttribute\022#\n\rinterio",
       "r_item\030\r \001(\0132\014.CSOEconItem\022\025\n\006in_use\030\016 \001" +
-      "(\010:\005false\022\020\n\005style\030\017 \001(\r:\0010\022\026\n\013original_" +
-      "id\030\020 \001(\004:\0010\022,\n\016equipped_state\030\022 \003(\0132\024.CS" +
-      "OEconItemEquippedB9\n skadistats.clarity." +
-      "wire.s2.protoB\020S2BaseGcMessagesH\001\200\001\000"
+      "(\010:\005false\022\020\n\005style\030\017 \001(\r:\0010\022\023\n\013original_" +
+      "id\030\020 \001(\004\022,\n\016equipped_state\030\022 \003(\0132\024.CSOEc" +
+      "onItemEquippedB9\n skadistats.clarity.wir" +
+      "e.s2.protoB\020S2BaseGcMessagesH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
