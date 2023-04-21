@@ -1465,6 +1465,17 @@ message CDOTAUserMsg_MuertaReleaseEvent_AssignedTargetKilled {
   required bool last_hit = 5;
 }
 
+message CDOTAUserMsg_PlayerDraftSuggestPick {
+  optional int32 player_id = 1 [default = -1];
+  optional int32 suggestion_player_id = 2 [default = -1];
+}
+
+message CDOTAUserMsg_PlayerDraftPick {
+  optional int32 player_id_captain = 1 [default = -1];
+  optional int32 player_id_target = 2 [default = -1];
+  optional int32 team = 3;
+}
+
 message CMsgDOTACombatLogEntry {
   optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
   optional uint32 target_name = 2;

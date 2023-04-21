@@ -648,6 +648,15 @@ public final class S2NetMessages {
      * <code>optional bool data_compressed = 9;</code>
      */
     boolean getDataCompressed();
+
+    /**
+     * <code>optional bool using_varint_bitcounts = 10;</code>
+     */
+    boolean hasUsingVarintBitcounts();
+    /**
+     * <code>optional bool using_varint_bitcounts = 10;</code>
+     */
+    boolean getUsingVarintBitcounts();
   }
   /**
    * Protobuf type {@code CSVCMsg_CreateStringTable}
@@ -745,6 +754,11 @@ public final class S2NetMessages {
             case 72: {
               bitField0_ |= 0x00000100;
               dataCompressed_ = input.readBool();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              usingVarintBitcounts_ = input.readBool();
               break;
             }
           }
@@ -949,6 +963,21 @@ public final class S2NetMessages {
       return dataCompressed_;
     }
 
+    public static final int USING_VARINT_BITCOUNTS_FIELD_NUMBER = 10;
+    private boolean usingVarintBitcounts_;
+    /**
+     * <code>optional bool using_varint_bitcounts = 10;</code>
+     */
+    public boolean hasUsingVarintBitcounts() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional bool using_varint_bitcounts = 10;</code>
+     */
+    public boolean getUsingVarintBitcounts() {
+      return usingVarintBitcounts_;
+    }
+
     private void initFields() {
       name_ = "";
       numEntries_ = 0;
@@ -959,6 +988,7 @@ public final class S2NetMessages {
       stringData_ = com.google.protobuf.ByteString.EMPTY;
       uncompressedSize_ = 0;
       dataCompressed_ = false;
+      usingVarintBitcounts_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -999,6 +1029,9 @@ public final class S2NetMessages {
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeBool(9, dataCompressed_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeBool(10, usingVarintBitcounts_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1044,6 +1077,10 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(9, dataCompressed_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(10, usingVarintBitcounts_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1180,6 +1217,8 @@ public final class S2NetMessages {
         bitField0_ = (bitField0_ & ~0x00000080);
         dataCompressed_ = false;
         bitField0_ = (bitField0_ & ~0x00000100);
+        usingVarintBitcounts_ = false;
+        bitField0_ = (bitField0_ & ~0x00000200);
         return this;
       }
 
@@ -1244,6 +1283,10 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000100;
         }
         result.dataCompressed_ = dataCompressed_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.usingVarintBitcounts_ = usingVarintBitcounts_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1288,6 +1331,9 @@ public final class S2NetMessages {
         }
         if (other.hasDataCompressed()) {
           setDataCompressed(other.getDataCompressed());
+        }
+        if (other.hasUsingVarintBitcounts()) {
+          setUsingVarintBitcounts(other.getUsingVarintBitcounts());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -1647,6 +1693,38 @@ public final class S2NetMessages {
       public Builder clearDataCompressed() {
         bitField0_ = (bitField0_ & ~0x00000100);
         dataCompressed_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean usingVarintBitcounts_ ;
+      /**
+       * <code>optional bool using_varint_bitcounts = 10;</code>
+       */
+      public boolean hasUsingVarintBitcounts() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional bool using_varint_bitcounts = 10;</code>
+       */
+      public boolean getUsingVarintBitcounts() {
+        return usingVarintBitcounts_;
+      }
+      /**
+       * <code>optional bool using_varint_bitcounts = 10;</code>
+       */
+      public Builder setUsingVarintBitcounts(boolean value) {
+        bitField0_ |= 0x00000200;
+        usingVarintBitcounts_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool using_varint_bitcounts = 10;</code>
+       */
+      public Builder clearUsingVarintBitcounts() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        usingVarintBitcounts_ = false;
         onChanged();
         return this;
       }
@@ -10250,72 +10328,72 @@ public final class S2NetMessages {
   static {
     java.lang.String[] descriptorData = {
       "\n\024s2_netmessages.proto\032\021netmessages.prot" +
-      "o\"\351\001\n\031CSVCMsg_CreateStringTable\022\014\n\004name\030" +
+      "o\"\211\002\n\031CSVCMsg_CreateStringTable\022\014\n\004name\030" +
       "\001 \001(\t\022\023\n\013num_entries\030\002 \001(\005\022\034\n\024user_data_" +
       "fixed_size\030\003 \001(\010\022\026\n\016user_data_size\030\004 \001(\005" +
       "\022\033\n\023user_data_size_bits\030\005 \001(\005\022\r\n\005flags\030\006" +
       " \001(\005\022\023\n\013string_data\030\007 \001(\014\022\031\n\021uncompresse" +
-      "d_size\030\010 \001(\005\022\027\n\017data_compressed\030\t \001(\010\"\210\001" +
-      "\n\021CSVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMs" +
-      "gVoiceAudio\022\016\n\006client\030\002 \001(\005\022\021\n\tproximity" +
-      "\030\003 \001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001",
-      "(\005\022\014\n\004tick\030\006 \001(\r\"@\n\034CSVCMsg_ClearAllStri" +
-      "ngTables\022\017\n\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001" +
-      "(\r\"\222\002\n\037ProtoFlattenedSerializerField_t\022\024" +
-      "\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001" +
-      "(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002" +
-      "\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001" +
-      "(\005\022!\n\031field_serializer_name_sym\030\007 \001(\005\022 \n" +
-      "\030field_serializer_version\030\010 \001(\005\022\025\n\rsend_" +
-      "node_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\"" +
-      "k\n\032ProtoFlattenedSerializer_t\022\033\n\023seriali",
-      "zer_name_sym\030\001 \001(\005\022\032\n\022serializer_version" +
-      "\030\002 \001(\005\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg" +
-      "_FlattenedSerializer\0220\n\013serializers\030\001 \003(" +
-      "\0132\033.ProtoFlattenedSerializer_t\022\017\n\007symbol" +
-      "s\030\002 \003(\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlattened" +
-      "SerializerField_t\";\n\016CMsgIPCAddress\022\025\n\rc" +
-      "omputer_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001(\r\"\240" +
-      "\001\n\016CMsgServerPeer\022\023\n\013player_slot\030\001 \001(\005\022\017" +
-      "\n\007steamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgIPCAd" +
-      "dress\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear",
-      "_them\030\005 \001(\010\022\034\n\024is_listenserver_host\030\006 \001(" +
-      "\010\"1\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CM" +
-      "sgServerPeer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006ma" +
-      "ster\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001" +
-      "(\005\022\017\n\007proxies\030\004 \001(\005\")\n\025CSVCMsg_ServerSte" +
-      "amID\022\020\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKey" +
-      "Values\022\014\n\004data\030\001 \001(\014\";\n\031CSVCMsg_RconServ" +
-      "erDetails\022\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(" +
-      "\t*\216\003\n\014CLC_Messages\022\022\n\016clc_ClientInfo\020\024\022\014" +
-      "\n\010clc_Move\020\025\022\021\n\rclc_VoiceData\020\026\022\023\n\017clc_B",
-      "aselineAck\020\027\022\024\n\020clc_ListenEvents\020\030\022\030\n\024cl" +
-      "c_RespondCvarValue\020\031\022\024\n\020clc_FileCRCCheck" +
-      "\020\032\022\027\n\023clc_LoadingProgress\020\033\022\032\n\026clc_Split" +
-      "PlayerConnect\020\034\022\025\n\021clc_ClientMessage\020\035\022\035" +
-      "\n\031clc_SplitPlayerDisconnect\020\036\022\024\n\020clc_Ser" +
-      "verStatus\020\037\022\022\n\016clc_ServerPing\020 \022\024\n\020clc_R" +
-      "equestPause\020!\022\024\n\020clc_CmdKeyValues\020\"\022\031\n\025c" +
-      "lc_RconServerDetails\020#\022\022\n\016clc_HltvReplay" +
-      "\020$*\231\005\n\014SVC_Messages\022\022\n\016svc_ServerInfo\020(\022" +
-      "\033\n\027svc_FlattenedSerializer\020)\022\021\n\rsvc_Clas",
-      "sInfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025svc_CreateS" +
-      "tringTable\020,\022\031\n\025svc_UpdateStringTable\020-\022" +
-      "\021\n\rsvc_VoiceInit\020.\022\021\n\rsvc_VoiceData\020/\022\r\n" +
-      "\tsvc_Print\0200\022\016\n\nsvc_Sounds\0201\022\017\n\013svc_SetV" +
-      "iew\0202\022\034\n\030svc_ClearAllStringTables\0203\022\024\n\020s" +
-      "vc_CmdKeyValues\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017s" +
-      "vc_SplitScreen\0206\022\026\n\022svc_PacketEntities\0207" +
-      "\022\020\n\014svc_Prefetch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_" +
-      "GetCvarValue\020:\022\021\n\rsvc_StopSound\020;\022\020\n\014svc" +
-      "_PeerList\020<\022\026\n\022svc_PacketReliable\020=\022\022\n\016s",
-      "vc_HLTVStatus\020>\022\025\n\021svc_ServerSteamID\020?\022\026" +
-      "\n\022svc_FullFrameSplit\020F\022\031\n\025svc_RconServer" +
-      "Details\020G\022\023\n\017svc_UserMessage\020H\022\022\n\016svc_Hl" +
-      "tvReplay\020I\022\031\n\025svc_Broadcast_Command\020J\022\037\n" +
-      "\033svc_HltvFixupOperatorStatus\020KB4\n skadis" +
-      "tats.clarity.wire.s2.protoB\rS2NetMessage" +
-      "s\200\001\000"
+      "d_size\030\010 \001(\005\022\027\n\017data_compressed\030\t \001(\010\022\036\n" +
+      "\026using_varint_bitcounts\030\n \001(\010\"\210\001\n\021CSVCMs" +
+      "g_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMsgVoiceAu" +
+      "dio\022\016\n\006client\030\002 \001(\005\022\021\n\tproximity\030\003 \001(\010\022\014",
+      "\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001(\005\022\014\n\004ti" +
+      "ck\030\006 \001(\r\"@\n\034CSVCMsg_ClearAllStringTables" +
+      "\022\017\n\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001(\r\"\222\002\n\037P" +
+      "rotoFlattenedSerializerField_t\022\024\n\014var_ty" +
+      "pe_sym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001(\005\022\021\n\tbi" +
+      "t_count\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n\nhigh" +
+      "_value\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001(\005\022!\n\031fi" +
+      "eld_serializer_name_sym\030\007 \001(\005\022 \n\030field_s" +
+      "erializer_version\030\010 \001(\005\022\025\n\rsend_node_sym" +
+      "\030\t \001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\"k\n\032Proto",
+      "FlattenedSerializer_t\022\033\n\023serializer_name" +
+      "_sym\030\001 \001(\005\022\032\n\022serializer_version\030\002 \001(\005\022\024" +
+      "\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg_Flatten" +
+      "edSerializer\0220\n\013serializers\030\001 \003(\0132\033.Prot" +
+      "oFlattenedSerializer_t\022\017\n\007symbols\030\002 \003(\t\022" +
+      "0\n\006fields\030\003 \003(\0132 .ProtoFlattenedSerializ" +
+      "erField_t\";\n\016CMsgIPCAddress\022\025\n\rcomputer_" +
+      "guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001(\r\"\240\001\n\016CMsgS" +
+      "erverPeer\022\023\n\013player_slot\030\001 \001(\005\022\017\n\007steami" +
+      "d\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgIPCAddress\022\025\n",
+      "\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear_them\030\005 " +
+      "\001(\010\022\034\n\024is_listenserver_host\030\006 \001(\010\"1\n\020CSV" +
+      "CMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CMsgServer" +
+      "Peer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006master\030\001 \001" +
+      "(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007pr" +
+      "oxies\030\004 \001(\005\")\n\025CSVCMsg_ServerSteamID\022\020\n\010" +
+      "steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKeyValues\022\014" +
+      "\n\004data\030\001 \001(\014\";\n\031CSVCMsg_RconServerDetail" +
+      "s\022\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(\t*\216\003\n\014CL" +
+      "C_Messages\022\022\n\016clc_ClientInfo\020\024\022\014\n\010clc_Mo",
+      "ve\020\025\022\021\n\rclc_VoiceData\020\026\022\023\n\017clc_BaselineA" +
+      "ck\020\027\022\024\n\020clc_ListenEvents\020\030\022\030\n\024clc_Respon" +
+      "dCvarValue\020\031\022\024\n\020clc_FileCRCCheck\020\032\022\027\n\023cl" +
+      "c_LoadingProgress\020\033\022\032\n\026clc_SplitPlayerCo" +
+      "nnect\020\034\022\025\n\021clc_ClientMessage\020\035\022\035\n\031clc_Sp" +
+      "litPlayerDisconnect\020\036\022\024\n\020clc_ServerStatu" +
+      "s\020\037\022\022\n\016clc_ServerPing\020 \022\024\n\020clc_RequestPa" +
+      "use\020!\022\024\n\020clc_CmdKeyValues\020\"\022\031\n\025clc_RconS" +
+      "erverDetails\020#\022\022\n\016clc_HltvReplay\020$*\231\005\n\014S" +
+      "VC_Messages\022\022\n\016svc_ServerInfo\020(\022\033\n\027svc_F",
+      "lattenedSerializer\020)\022\021\n\rsvc_ClassInfo\020*\022" +
+      "\020\n\014svc_SetPause\020+\022\031\n\025svc_CreateStringTab" +
+      "le\020,\022\031\n\025svc_UpdateStringTable\020-\022\021\n\rsvc_V" +
+      "oiceInit\020.\022\021\n\rsvc_VoiceData\020/\022\r\n\tsvc_Pri" +
+      "nt\0200\022\016\n\nsvc_Sounds\0201\022\017\n\013svc_SetView\0202\022\034\n" +
+      "\030svc_ClearAllStringTables\0203\022\024\n\020svc_CmdKe" +
+      "yValues\0204\022\020\n\014svc_BSPDecal\0205\022\023\n\017svc_Split" +
+      "Screen\0206\022\026\n\022svc_PacketEntities\0207\022\020\n\014svc_" +
+      "Prefetch\0208\022\014\n\010svc_Menu\0209\022\024\n\020svc_GetCvarV" +
+      "alue\020:\022\021\n\rsvc_StopSound\020;\022\020\n\014svc_PeerLis",
+      "t\020<\022\026\n\022svc_PacketReliable\020=\022\022\n\016svc_HLTVS" +
+      "tatus\020>\022\025\n\021svc_ServerSteamID\020?\022\026\n\022svc_Fu" +
+      "llFrameSplit\020F\022\031\n\025svc_RconServerDetails\020" +
+      "G\022\023\n\017svc_UserMessage\020H\022\022\n\016svc_HltvReplay" +
+      "\020I\022\031\n\025svc_Broadcast_Command\020J\022\037\n\033svc_Hlt" +
+      "vFixupOperatorStatus\020KB4\n skadistats.cla" +
+      "rity.wire.s2.protoB\rS2NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10335,7 +10413,7 @@ public final class S2NetMessages {
     internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_CreateStringTable_descriptor,
-        new java.lang.String[] { "Name", "NumEntries", "UserDataFixedSize", "UserDataSize", "UserDataSizeBits", "Flags", "StringData", "UncompressedSize", "DataCompressed", });
+        new java.lang.String[] { "Name", "NumEntries", "UserDataFixedSize", "UserDataSize", "UserDataSizeBits", "Flags", "StringData", "UncompressedSize", "DataCompressed", "UsingVarintBitcounts", });
     internal_static_CSVCMsg_VoiceData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CSVCMsg_VoiceData_fieldAccessorTable = new

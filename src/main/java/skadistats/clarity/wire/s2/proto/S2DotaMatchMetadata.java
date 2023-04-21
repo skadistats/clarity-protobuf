@@ -15118,6 +15118,15 @@ public final class S2DotaMatchMetadata {
          */
         skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItemOrBuilder getEquippedEconItemsNewOrBuilder(
             int index);
+
+        /**
+         * <code>optional int32 game_player_id = 57 [default = -1];</code>
+         */
+        boolean hasGamePlayerId();
+        /**
+         * <code>optional int32 game_player_id = 57 [default = -1];</code>
+         */
+        int getGamePlayerId();
       }
       /**
        * Protobuf type {@code CDOTAMatchMetadata.Team.Player}
@@ -15578,6 +15587,11 @@ public final class S2DotaMatchMetadata {
                     mutable_bitField1_ |= 0x00200000;
                   }
                   equippedEconItemsNew_.add(input.readMessage(skadistats.clarity.wire.s2.proto.S2DotaMatchMetadata.CDOTAMatchMetadata.EconItem.PARSER, extensionRegistry));
+                  break;
+                }
+                case 456: {
+                  bitField1_ |= 0x00000080;
+                  gamePlayerId_ = input.readInt32();
                   break;
                 }
               }
@@ -17588,6 +17602,21 @@ public final class S2DotaMatchMetadata {
           return equippedEconItemsNew_.get(index);
         }
 
+        public static final int GAME_PLAYER_ID_FIELD_NUMBER = 57;
+        private int gamePlayerId_;
+        /**
+         * <code>optional int32 game_player_id = 57 [default = -1];</code>
+         */
+        public boolean hasGamePlayerId() {
+          return ((bitField1_ & 0x00000080) == 0x00000080);
+        }
+        /**
+         * <code>optional int32 game_player_id = 57 [default = -1];</code>
+         */
+        public int getGamePlayerId() {
+          return gamePlayerId_;
+        }
+
         private void initFields() {
           accountId_ = 0;
           abilityUpgrades_ = java.util.Collections.emptyList();
@@ -17643,6 +17672,7 @@ public final class S2DotaMatchMetadata {
           featuredHeroStickerIndex_ = 0;
           featuredHeroStickerQuality_ = 0;
           equippedEconItemsNew_ = java.util.Collections.emptyList();
+          gamePlayerId_ = -1;
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -17818,6 +17848,9 @@ public final class S2DotaMatchMetadata {
           }
           for (int i = 0; i < equippedEconItemsNew_.size(); i++) {
             output.writeMessage(56, equippedEconItemsNew_.get(i));
+          }
+          if (((bitField1_ & 0x00000080) == 0x00000080)) {
+            output.writeInt32(57, gamePlayerId_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -18062,6 +18095,10 @@ public final class S2DotaMatchMetadata {
           for (int i = 0; i < equippedEconItemsNew_.size(); i++) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(56, equippedEconItemsNew_.get(i));
+          }
+          if (((bitField1_ & 0x00000080) == 0x00000080)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeInt32Size(57, gamePlayerId_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -18348,6 +18385,8 @@ public final class S2DotaMatchMetadata {
             } else {
               equippedEconItemsNewBuilder_.clear();
             }
+            gamePlayerId_ = -1;
+            bitField1_ = (bitField1_ & ~0x00400000);
             return this;
           }
 
@@ -18657,6 +18696,10 @@ public final class S2DotaMatchMetadata {
             } else {
               result.equippedEconItemsNew_ = equippedEconItemsNewBuilder_.build();
             }
+            if (((from_bitField1_ & 0x00400000) == 0x00400000)) {
+              to_bitField1_ |= 0x00000080;
+            }
+            result.gamePlayerId_ = gamePlayerId_;
             result.bitField0_ = to_bitField0_;
             result.bitField1_ = to_bitField1_;
             onBuilt();
@@ -19100,6 +19143,9 @@ public final class S2DotaMatchMetadata {
                   equippedEconItemsNewBuilder_.addAllMessages(other.equippedEconItemsNew_);
                 }
               }
+            }
+            if (other.hasGamePlayerId()) {
+              setGamePlayerId(other.getGamePlayerId());
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -23279,6 +23325,38 @@ public final class S2DotaMatchMetadata {
               equippedEconItemsNew_ = null;
             }
             return equippedEconItemsNewBuilder_;
+          }
+
+          private int gamePlayerId_ = -1;
+          /**
+           * <code>optional int32 game_player_id = 57 [default = -1];</code>
+           */
+          public boolean hasGamePlayerId() {
+            return ((bitField1_ & 0x00400000) == 0x00400000);
+          }
+          /**
+           * <code>optional int32 game_player_id = 57 [default = -1];</code>
+           */
+          public int getGamePlayerId() {
+            return gamePlayerId_;
+          }
+          /**
+           * <code>optional int32 game_player_id = 57 [default = -1];</code>
+           */
+          public Builder setGamePlayerId(int value) {
+            bitField1_ |= 0x00400000;
+            gamePlayerId_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional int32 game_player_id = 57 [default = -1];</code>
+           */
+          public Builder clearGamePlayerId() {
+            bitField1_ = (bitField1_ & ~0x00400000);
+            gamePlayerId_ = -1;
+            onChanged();
+            return this;
           }
 
           // @@protoc_insertion_point(builder_scope:CDOTAMatchMetadata.Team.Player)
@@ -43773,7 +43851,7 @@ public final class S2DotaMatchMetadata {
       "ch_management.proto\"|\n\026CDOTAMatchMetadat" +
       "aFile\022\017\n\007version\030\001 \002(\005\022\020\n\010match_id\030\002 \002(\004" +
       "\022%\n\010metadata\030\003 \001(\0132\023.CDOTAMatchMetadata\022" +
-      "\030\n\020private_metadata\030\005 \001(\014\"\225-\n\022CDOTAMatch" +
+      "\030\n\020private_metadata\030\005 \001(\014\"\261-\n\022CDOTAMatch" +
       "Metadata\022\'\n\005teams\030\001 \003(\0132\030.CDOTAMatchMeta" +
       "data.Team\022/\n\014item_rewards\030\002 \003(\0132\031.CLobby" +
       "TimedRewardDetails\022\020\n\010lobby_id\030\003 \001(\006\022\031\n\021",
@@ -43789,7 +43867,7 @@ public final class S2DotaMatchMetadata {
       "EconItem\022\021\n\tdef_index\030\001 \001(\r\022\022\n\007quality\030\002",
       " \001(\r:\0014\022(\n\tattribute\030\003 \003(\0132\025.CSOEconItem" +
       "Attribute\022\020\n\005style\030\004 \001(\r:\0010\022,\n\016equipped_" +
-      "state\030\005 \003(\0132\024.CSOEconItemEquipped\032\346#\n\004Te" +
+      "state\030\005 \003(\0132\024.CSOEconItemEquipped\032\202$\n\004Te" +
       "am\022\021\n\tdota_team\030\001 \001(\r\0220\n\007players\030\002 \003(\0132\037" +
       ".CDOTAMatchMetadata.Team.Player\022\030\n\020graph" +
       "_experience\030\003 \003(\002\022\031\n\021graph_gold_earned\030\004" +
@@ -43852,7 +43930,7 @@ public final class S2DotaMatchMetadata {
       "wins\030\003 \001(\r\022\027\n\017gauntlet_losses\030\004 \001(\r\032U\n\030F" +
       "eaturedGamemodeProgress\022\023\n\013start_value\030\001" +
       " \001(\r\022\021\n\tend_value\030\002 \001(\r\022\021\n\tmax_value\030\003 \001" +
-      "(\r\032\255\020\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abi" +
+      "(\r\032\311\020\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\030\n\020abi" +
       "lity_upgrades\030\002 \003(\005\022\023\n\013player_slot\030\003 \001(\r" +
       "\022-\n\027equipped_econ_items_old\030\004 \003(\0132\014.CSOE" +
       "conItem\0222\n\005kills\030\005 \003(\0132#.CDOTAMatchMetad" +
@@ -43899,86 +43977,86 @@ public final class S2DotaMatchMetadata {
       "GamemodeProgress\022#\n\033featured_hero_sticke",
       "r_index\0306 \001(\r\022%\n\035featured_hero_sticker_q" +
       "uality\0307 \001(\r\022=\n\027equipped_econ_items_new\030" +
-      "8 \003(\0132\034.CDOTAMatchMetadata.EconItem\032\264\001\n\020" +
-      "ContractProgress\022\020\n\010guild_id\030\001 \001(\r\022\020\n\010ev" +
-      "ent_id\030\002 \001(\r\022\035\n\025challenge_instance_id\030\003 " +
-      "\001(\r\022\033\n\023challenge_parameter\030\004 \001(\r\022\026\n\016cont" +
-      "ract_stars\030\005 \001(\r\022\025\n\rcontract_slot\030\006 \001(\r\022" +
-      "\021\n\tcompleted\030\007 \001(\010\032\247\003\n\026GuildChallengePro" +
-      "gress\022\020\n\010guild_id\030\001 \001(\r\022(\n\010event_id\030\002 \001(" +
-      "\0162\007.EEvent:\rEVENT_ID_NONE\022\035\n\025challenge_i",
-      "nstance_id\030\003 \001(\r\022\033\n\023challenge_parameter\030" +
-      "\004 \001(\r\022\033\n\023challenge_timestamp\030\005 \001(\r\022#\n\033ch" +
-      "allenge_progress_at_start\030\006 \001(\r\022&\n\036chall" +
-      "enge_progress_accumulated\030\007 \001(\r\022Z\n\023indiv" +
-      "idual_progress\030\010 \003(\0132=.CDOTAMatchMetadat" +
-      "a.GuildChallengeProgress.IndividualProgr" +
-      "ess\032O\n\022IndividualProgress\022\022\n\naccount_id\030" +
-      "\001 \001(\r\022\020\n\010progress\030\002 \001(\r\022\023\n\013player_slot\030\003" +
-      " \001(\r\032{\n\003Tip\022\032\n\022source_player_slot\030\001 \001(\r\022" +
-      "\032\n\022target_player_slot\030\002 \001(\r\022\022\n\ntip_amoun",
-      "t\030\003 \001(\r\022(\n\010event_id\030\004 \001(\0162\007.EEvent:\rEVEN" +
-      "T_ID_NONE\"\305\021\n\031CDOTAMatchPrivateMetadata\022" +
-      ".\n\005teams\030\001 \003(\0132\037.CDOTAMatchPrivateMetada" +
-      "ta.Team\022\035\n\025graph_win_probability\030\002 \003(\002\022;" +
-      "\n\014string_names\030\003 \003(\0132%.CDOTAMatchPrivate" +
-      "Metadata.StringName\032&\n\nStringName\022\n\n\002id\030" +
-      "\001 \001(\r\022\014\n\004name\030\002 \001(\t\032\363\017\n\004Team\022\021\n\tdota_tea" +
-      "m\030\001 \001(\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatchPri" +
-      "vateMetadata.Team.Player\022;\n\tbuildings\030\003 " +
-      "\003(\0132(.CDOTAMatchPrivateMetadata.Team.Bui",
-      "lding\032\372\r\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013" +
-      "player_slot\030\002 \001(\r\022\027\n\017position_stream\030\003 \001" +
-      "(\014\022M\n\017combat_segments\030\004 \003(\01324.CDOTAMatch" +
-      "PrivateMetadata.Team.Player.CombatSegmen" +
-      "t\022\031\n\021damage_unit_names\030\005 \003(\t\022G\n\014buff_rec" +
-      "ords\030\006 \003(\01321.CDOTAMatchPrivateMetadata.T" +
-      "eam.Player.BuffRecord\022\023\n\013graph_kills\030\007 \003" +
-      "(\002\022\024\n\014graph_deaths\030\010 \003(\002\022\025\n\rgraph_assist" +
-      "s\030\t \003(\002\022\026\n\016graph_lasthits\030\n \003(\002\022\024\n\014graph" +
-      "_denies\030\013 \003(\002\022J\n\rgold_received\030\014 \001(\01323.C",
-      "DOTAMatchPrivateMetadata.Team.Player.Gol" +
-      "dReceived\022F\n\013xp_received\030\r \001(\01321.CDOTAMa" +
-      "tchPrivateMetadata.Team.Player.XPReceive" +
-      "d\022:\n\013team_number\030\016 \001(\0162\r.DOTA_GC_TEAM:\026D" +
-      "OTA_GC_TEAM_GOOD_GUYS\022\021\n\tteam_slot\030\017 \001(\r" +
-      "\032\251\005\n\rCombatSegment\022\021\n\tgame_time\030\001 \001(\005\022_\n" +
-      "\021damage_by_ability\030\002 \003(\0132D.CDOTAMatchPri" +
-      "vateMetadata.Team.Player.CombatSegment.D" +
-      "amageByAbility\022a\n\022healing_by_ability\030\003 \003" +
-      "(\0132E.CDOTAMatchPrivateMetadata.Team.Play",
-      "er.CombatSegment.HealingByAbility\032\335\001\n\017Da" +
-      "mageByAbility\022\031\n\021source_unit_index\030\003 \001(\r" +
-      "\022\022\n\nability_id\030\001 \001(\005\022j\n\017by_hero_targets\030" +
-      "\002 \003(\0132Q.CDOTAMatchPrivateMetadata.Team.P" +
-      "layer.CombatSegment.DamageByAbility.ByHe" +
-      "roTarget\032/\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(" +
-      "\r\022\016\n\006damage\030\002 \001(\r\032\340\001\n\020HealingByAbility\022\031" +
-      "\n\021source_unit_index\030\003 \001(\r\022\022\n\nability_id\030" +
-      "\001 \001(\005\022k\n\017by_hero_targets\030\002 \003(\0132R.CDOTAMa" +
-      "tchPrivateMetadata.Team.Player.CombatSeg",
-      "ment.HealingByAbility.ByHeroTarget\0320\n\014By" +
-      "HeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\017\n\007healing\030\002" +
-      " \001(\r\032\350\001\n\nBuffRecord\022\027\n\017buff_ability_id\030\001" +
-      " \001(\005\022\032\n\022buff_modifier_name\030\003 \001(\t\022W\n\017by_h" +
-      "ero_targets\030\002 \003(\0132>.CDOTAMatchPrivateMet" +
-      "adata.Team.Player.BuffRecord.ByHeroTarge" +
-      "t\032L\n\014ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020el" +
-      "apsed_duration\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032" +
-      "\230\001\n\014GoldReceived\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroe" +
-      "s\030\002 \001(\r\022\024\n\014bounty_runes\030\003 \001(\r\022\017\n\007passive",
-      "\030\004 \001(\r\022\021\n\tbuildings\030\005 \001(\r\022\021\n\tabilities\030\006" +
-      " \001(\r\022\r\n\005wards\030\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v\n\nXP" +
-      "Received\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022" +
-      "\016\n\006roshan\030\003 \001(\r\022\031\n\021tome_of_knowledge\030\004 \001" +
-      "(\r\022\017\n\007outpost\030\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e\n\010Bu" +
-      "ilding\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020position_qu" +
-      "ant_x\030\002 \001(\r\022\030\n\020position_quant_y\030\003 \001(\r\022\022\n" +
-      "\ndeath_time\030\004 \001(\002\"X\n\020CMsgDOTADPCMatch\022\035\n" +
-      "\005match\030\001 \001(\0132\016.CMsgDOTAMatch\022%\n\010metadata" +
-      "\030\002 \001(\0132\023.CDOTAMatchMetadataB:\n skadistat",
-      "s.clarity.wire.s2.protoB\023S2DotaMatchMeta" +
-      "data\200\001\000"
+      "8 \003(\0132\034.CDOTAMatchMetadata.EconItem\022\032\n\016g" +
+      "ame_player_id\0309 \001(\005:\002-1\032\264\001\n\020ContractProg" +
+      "ress\022\020\n\010guild_id\030\001 \001(\r\022\020\n\010event_id\030\002 \001(\r" +
+      "\022\035\n\025challenge_instance_id\030\003 \001(\r\022\033\n\023chall" +
+      "enge_parameter\030\004 \001(\r\022\026\n\016contract_stars\030\005" +
+      " \001(\r\022\025\n\rcontract_slot\030\006 \001(\r\022\021\n\tcompleted" +
+      "\030\007 \001(\010\032\247\003\n\026GuildChallengeProgress\022\020\n\010gui" +
+      "ld_id\030\001 \001(\r\022(\n\010event_id\030\002 \001(\0162\007.EEvent:\r",
+      "EVENT_ID_NONE\022\035\n\025challenge_instance_id\030\003" +
+      " \001(\r\022\033\n\023challenge_parameter\030\004 \001(\r\022\033\n\023cha" +
+      "llenge_timestamp\030\005 \001(\r\022#\n\033challenge_prog" +
+      "ress_at_start\030\006 \001(\r\022&\n\036challenge_progres" +
+      "s_accumulated\030\007 \001(\r\022Z\n\023individual_progre" +
+      "ss\030\010 \003(\0132=.CDOTAMatchMetadata.GuildChall" +
+      "engeProgress.IndividualProgress\032O\n\022Indiv" +
+      "idualProgress\022\022\n\naccount_id\030\001 \001(\r\022\020\n\010pro" +
+      "gress\030\002 \001(\r\022\023\n\013player_slot\030\003 \001(\r\032{\n\003Tip\022" +
+      "\032\n\022source_player_slot\030\001 \001(\r\022\032\n\022target_pl",
+      "ayer_slot\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(\r\022(\n\010e" +
+      "vent_id\030\004 \001(\0162\007.EEvent:\rEVENT_ID_NONE\"\305\021" +
+      "\n\031CDOTAMatchPrivateMetadata\022.\n\005teams\030\001 \003" +
+      "(\0132\037.CDOTAMatchPrivateMetadata.Team\022\035\n\025g" +
+      "raph_win_probability\030\002 \003(\002\022;\n\014string_nam" +
+      "es\030\003 \003(\0132%.CDOTAMatchPrivateMetadata.Str" +
+      "ingName\032&\n\nStringName\022\n\n\002id\030\001 \001(\r\022\014\n\004nam" +
+      "e\030\002 \001(\t\032\363\017\n\004Team\022\021\n\tdota_team\030\001 \001(\r\0227\n\007p" +
+      "layers\030\002 \003(\0132&.CDOTAMatchPrivateMetadata" +
+      ".Team.Player\022;\n\tbuildings\030\003 \003(\0132(.CDOTAM",
+      "atchPrivateMetadata.Team.Building\032\372\r\n\006Pl" +
+      "ayer\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013player_slot\030" +
+      "\002 \001(\r\022\027\n\017position_stream\030\003 \001(\014\022M\n\017combat" +
+      "_segments\030\004 \003(\01324.CDOTAMatchPrivateMetad" +
+      "ata.Team.Player.CombatSegment\022\031\n\021damage_" +
+      "unit_names\030\005 \003(\t\022G\n\014buff_records\030\006 \003(\01321" +
+      ".CDOTAMatchPrivateMetadata.Team.Player.B" +
+      "uffRecord\022\023\n\013graph_kills\030\007 \003(\002\022\024\n\014graph_" +
+      "deaths\030\010 \003(\002\022\025\n\rgraph_assists\030\t \003(\002\022\026\n\016g" +
+      "raph_lasthits\030\n \003(\002\022\024\n\014graph_denies\030\013 \003(",
+      "\002\022J\n\rgold_received\030\014 \001(\01323.CDOTAMatchPri" +
+      "vateMetadata.Team.Player.GoldReceived\022F\n" +
+      "\013xp_received\030\r \001(\01321.CDOTAMatchPrivateMe" +
+      "tadata.Team.Player.XPReceived\022:\n\013team_nu" +
+      "mber\030\016 \001(\0162\r.DOTA_GC_TEAM:\026DOTA_GC_TEAM_" +
+      "GOOD_GUYS\022\021\n\tteam_slot\030\017 \001(\r\032\251\005\n\rCombatS" +
+      "egment\022\021\n\tgame_time\030\001 \001(\005\022_\n\021damage_by_a" +
+      "bility\030\002 \003(\0132D.CDOTAMatchPrivateMetadata" +
+      ".Team.Player.CombatSegment.DamageByAbili" +
+      "ty\022a\n\022healing_by_ability\030\003 \003(\0132E.CDOTAMa",
+      "tchPrivateMetadata.Team.Player.CombatSeg" +
+      "ment.HealingByAbility\032\335\001\n\017DamageByAbilit" +
+      "y\022\031\n\021source_unit_index\030\003 \001(\r\022\022\n\nability_" +
+      "id\030\001 \001(\005\022j\n\017by_hero_targets\030\002 \003(\0132Q.CDOT" +
+      "AMatchPrivateMetadata.Team.Player.Combat" +
+      "Segment.DamageByAbility.ByHeroTarget\032/\n\014" +
+      "ByHeroTarget\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006damage\030" +
+      "\002 \001(\r\032\340\001\n\020HealingByAbility\022\031\n\021source_uni" +
+      "t_index\030\003 \001(\r\022\022\n\nability_id\030\001 \001(\005\022k\n\017by_" +
+      "hero_targets\030\002 \003(\0132R.CDOTAMatchPrivateMe",
+      "tadata.Team.Player.CombatSegment.Healing" +
+      "ByAbility.ByHeroTarget\0320\n\014ByHeroTarget\022\017" +
+      "\n\007hero_id\030\001 \001(\r\022\017\n\007healing\030\002 \001(\r\032\350\001\n\nBuf" +
+      "fRecord\022\027\n\017buff_ability_id\030\001 \001(\005\022\032\n\022buff" +
+      "_modifier_name\030\003 \001(\t\022W\n\017by_hero_targets\030" +
+      "\002 \003(\0132>.CDOTAMatchPrivateMetadata.Team.P" +
+      "layer.BuffRecord.ByHeroTarget\032L\n\014ByHeroT" +
+      "arget\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020elapsed_durati" +
+      "on\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032\230\001\n\014GoldRece" +
+      "ived\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\024\n\014b",
+      "ounty_runes\030\003 \001(\r\022\017\n\007passive\030\004 \001(\r\022\021\n\tbu" +
+      "ildings\030\005 \001(\r\022\021\n\tabilities\030\006 \001(\r\022\r\n\005ward" +
+      "s\030\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v\n\nXPReceived\022\r\n\005" +
+      "creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\016\n\006roshan\030\003 " +
+      "\001(\r\022\031\n\021tome_of_knowledge\030\004 \001(\r\022\017\n\007outpos" +
+      "t\030\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e\n\010Building\022\021\n\tun" +
+      "it_name\030\001 \001(\t\022\030\n\020position_quant_x\030\002 \001(\r\022" +
+      "\030\n\020position_quant_y\030\003 \001(\r\022\022\n\ndeath_time\030" +
+      "\004 \001(\002\"X\n\020CMsgDOTADPCMatch\022\035\n\005match\030\001 \001(\013" +
+      "2\016.CMsgDOTAMatch\022%\n\010metadata\030\002 \001(\0132\023.CDO",
+      "TAMatchMetadataB:\n skadistats.clarity.wi" +
+      "re.s2.protoB\023S2DotaMatchMetadata\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -44108,7 +44186,7 @@ public final class S2DotaMatchMetadata {
     internal_static_CDOTAMatchMetadata_Team_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchMetadata_Team_Player_descriptor,
-        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItemsOld", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", "GuildIds", "GraphHeroDamage", "TeamNumber", "TeamSlot", "FeaturedGamemodeProgress", "FeaturedHeroStickerIndex", "FeaturedHeroStickerQuality", "EquippedEconItemsNew", });
+        new java.lang.String[] { "AccountId", "AbilityUpgrades", "PlayerSlot", "EquippedEconItemsOld", "Kills", "Items", "AvgKillsX16", "AvgDeathsX16", "AvgAssistsX16", "AvgGpmX16", "AvgXpmX16", "BestKillsX16", "BestAssistsX16", "BestGpmX16", "BestXpmX16", "WinStreak", "BestWinStreak", "FightScore", "FarmScore", "SupportScore", "PushScore", "LevelUpTimes", "GraphNetWorth", "InventorySnapshot", "AvgStatsCalibrated", "AutoStyleCriteria", "EventData", "StrangeGemProgress", "HeroXp", "CampsStacked", "VictoryPrediction", "LaneSelectionFlags", "Rampages", "TripleKills", "AegisSnatched", "RapiersPurchased", "CouriersKilled", "NetWorthRank", "SupportGoldSpent", "ObserverWardsPlaced", "SentryWardsPlaced", "WardsDewarded", "StunDuration", "RankMmrBoostType", "GauntletProgress", "ContractProgress", "GuildIds", "GraphHeroDamage", "TeamNumber", "TeamSlot", "FeaturedGamemodeProgress", "FeaturedHeroStickerIndex", "FeaturedHeroStickerQuality", "EquippedEconItemsNew", "GamePlayerId", });
     internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_descriptor =
       internal_static_CDOTAMatchMetadata_Team_Player_descriptor.getNestedTypes().get(0);
     internal_static_CDOTAMatchMetadata_Team_Player_ContractProgress_fieldAccessorTable = new

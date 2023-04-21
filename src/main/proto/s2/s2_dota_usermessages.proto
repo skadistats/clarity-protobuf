@@ -159,4 +159,6 @@ enum EDotaUserMessages {
 	DOTA_UM_DuelAccepted = 617;
 	DOTA_UM_DuelRequested = 618;
 	DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled = 619;
+	DOTA_UM_PlayerDraftSuggestPick = 620;
+	DOTA_UM_PlayerDraftPick = 621;
 }

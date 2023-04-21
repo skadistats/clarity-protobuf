@@ -679,9 +679,13 @@ public final class S2DotaGcCommon {
      */
     EVENT_ID_TEAM_2023_TOUR1(41, 41),
     /**
-     * <code>EVENT_ID_COUNT = 42;</code>
+     * <code>EVENT_ID_TEAM_2023_TOUR2 = 42;</code>
      */
-    EVENT_ID_COUNT(42, 42),
+    EVENT_ID_TEAM_2023_TOUR2(42, 42),
+    /**
+     * <code>EVENT_ID_COUNT = 43;</code>
+     */
+    EVENT_ID_COUNT(43, 43),
     ;
 
     /**
@@ -853,9 +857,13 @@ public final class S2DotaGcCommon {
      */
     public static final int EVENT_ID_TEAM_2023_TOUR1_VALUE = 41;
     /**
-     * <code>EVENT_ID_COUNT = 42;</code>
+     * <code>EVENT_ID_TEAM_2023_TOUR2 = 42;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 42;
+    public static final int EVENT_ID_TEAM_2023_TOUR2_VALUE = 42;
+    /**
+     * <code>EVENT_ID_COUNT = 43;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 43;
 
 
     public final int getNumber() { return value; }
@@ -904,7 +912,8 @@ public final class S2DotaGcCommon {
         case 39: return EVENT_ID_PERMANENT_GRANTS;
         case 40: return EVENT_ID_MUERTA_RELEASE_SPRING2023;
         case 41: return EVENT_ID_TEAM_2023_TOUR1;
-        case 42: return EVENT_ID_COUNT;
+        case 42: return EVENT_ID_TEAM_2023_TOUR2;
+        case 43: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -19702,7 +19711,7 @@ public final class S2DotaGcCommon {
       "A_GC_TEAM_CUSTOM_5\020\n\022\031\n\025DOTA_GC_TEAM_CUS",
       "TOM_6\020\013\022\031\n\025DOTA_GC_TEAM_CUSTOM_7\020\014\022\031\n\025DO" +
       "TA_GC_TEAM_CUSTOM_8\020\r\022\031\n\025DOTA_GC_TEAM_NE" +
-      "UTRALS\020\016*\233\n\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025" +
+      "UTRALS\020\016*\271\n\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025" +
       "\n\021EVENT_ID_DIRETIDE\020\001\022\034\n\030EVENT_ID_SPRING" +
       "_FESTIVAL\020\002\022\033\n\027EVENT_ID_FROSTIVUS_2013\020\003" +
       "\022\034\n\030EVENT_ID_COMPENDIUM_2014\020\004\022\032\n\026EVENT_" +
@@ -19734,42 +19743,42 @@ public final class S2DotaGcCommon {
       "$\n EVENT_ID_TEAM_INTERNATIONAL_2022\020&\022\035\n" +
       "\031EVENT_ID_PERMANENT_GRANTS\020\'\022&\n\"EVENT_ID" +
       "_MUERTA_RELEASE_SPRING2023\020(\022\034\n\030EVENT_ID" +
-      "_TEAM_2023_TOUR1\020)\022\022\n\016EVENT_ID_COUNT\020**\327" +
-      "\005\n\rEMatchOutcome\022\033\n\027k_EMatchOutcome_Unkn" +
-      "own\020\000\022\036\n\032k_EMatchOutcome_RadVictory\020\002\022\037\n" +
-      "\033k_EMatchOutcome_DireVictory\020\003\022\"\n\036k_EMat" +
-      "chOutcome_NeutralVictory\020\004\022 \n\034k_EMatchOu" +
-      "tcome_NoTeamWinner\020\005\022\"\n\036k_EMatchOutcome_",
-      "Custom1Victory\020\006\022\"\n\036k_EMatchOutcome_Cust" +
-      "om2Victory\020\007\022\"\n\036k_EMatchOutcome_Custom3V" +
-      "ictory\020\010\022\"\n\036k_EMatchOutcome_Custom4Victo" +
-      "ry\020\t\022\"\n\036k_EMatchOutcome_Custom5Victory\020\n" +
-      "\022\"\n\036k_EMatchOutcome_Custom6Victory\020\013\022\"\n\036" +
-      "k_EMatchOutcome_Custom7Victory\020\014\022\"\n\036k_EM" +
-      "atchOutcome_Custom8Victory\020\r\0223\n/k_EMatch" +
-      "Outcome_NotScored_PoorNetworkConditions\020" +
-      "@\022$\n k_EMatchOutcome_NotScored_Leaver\020A\022" +
-      ")\n%k_EMatchOutcome_NotScored_ServerCrash",
-      "\020B\022*\n&k_EMatchOutcome_NotScored_NeverSta" +
-      "rted\020C\022&\n\"k_EMatchOutcome_NotScored_Canc" +
-      "eled\020D\022(\n$k_EMatchOutcome_NotScored_Susp" +
-      "icious\020E*\321\003\n\022EDOTAPlayerMMRType\022 \n\034k_EDO" +
-      "TAPlayerMMRType_Invalid\020\000\022&\n\"k_EDOTAPlay" +
-      "erMMRType_GeneralHidden\020\001\022/\n+k_EDOTAPlay" +
-      "erMMRType_GeneralCompetitive2019\020\003\022,\n(k_" +
-      "EDOTAPlayerMMRType_SoloCompetitive2019\020\004" +
-      "\022.\n*k_EDOTAPlayerMMRType_1v1Competitive_" +
-      "UNUSED\020\005\022.\n*k_EDOTAPlayerMMRType_General",
-      "SeasonalRanked\020\006\022+\n\'k_EDOTAPlayerMMRType" +
-      "_SoloSeasonalRanked\020\007\022)\n%k_EDOTAPlayerMM" +
-      "RType_Competitive_Core\020\010\022,\n(k_EDOTAPlaye" +
-      "rMMRType_Competitive_Support\020\t\022,\n(k_EDOT" +
-      "APlayerMMRType_Competitive_Classic\020\n*s\n\021" +
-      "EDOTAMMRBoostType\022\034\n\030k_EDOTAMMRBoostType" +
-      "_None\020\000\022\036\n\032k_EDOTAMMRBoostType_Leader\020\001\022" +
-      " \n\034k_EDOTAMMRBoostType_Follower\020\002B7\n ska" +
-      "distats.clarity.wire.s2.protoB\016S2DotaGcC" +
-      "ommonH\001\200\001\000"
+      "_TEAM_2023_TOUR1\020)\022\034\n\030EVENT_ID_TEAM_2023" +
+      "_TOUR2\020*\022\022\n\016EVENT_ID_COUNT\020+*\327\005\n\rEMatchO" +
+      "utcome\022\033\n\027k_EMatchOutcome_Unknown\020\000\022\036\n\032k" +
+      "_EMatchOutcome_RadVictory\020\002\022\037\n\033k_EMatchO" +
+      "utcome_DireVictory\020\003\022\"\n\036k_EMatchOutcome_" +
+      "NeutralVictory\020\004\022 \n\034k_EMatchOutcome_NoTe",
+      "amWinner\020\005\022\"\n\036k_EMatchOutcome_Custom1Vic" +
+      "tory\020\006\022\"\n\036k_EMatchOutcome_Custom2Victory" +
+      "\020\007\022\"\n\036k_EMatchOutcome_Custom3Victory\020\010\022\"" +
+      "\n\036k_EMatchOutcome_Custom4Victory\020\t\022\"\n\036k_" +
+      "EMatchOutcome_Custom5Victory\020\n\022\"\n\036k_EMat" +
+      "chOutcome_Custom6Victory\020\013\022\"\n\036k_EMatchOu" +
+      "tcome_Custom7Victory\020\014\022\"\n\036k_EMatchOutcom" +
+      "e_Custom8Victory\020\r\0223\n/k_EMatchOutcome_No" +
+      "tScored_PoorNetworkConditions\020@\022$\n k_EMa" +
+      "tchOutcome_NotScored_Leaver\020A\022)\n%k_EMatc",
+      "hOutcome_NotScored_ServerCrash\020B\022*\n&k_EM" +
+      "atchOutcome_NotScored_NeverStarted\020C\022&\n\"" +
+      "k_EMatchOutcome_NotScored_Canceled\020D\022(\n$" +
+      "k_EMatchOutcome_NotScored_Suspicious\020E*\321" +
+      "\003\n\022EDOTAPlayerMMRType\022 \n\034k_EDOTAPlayerMM" +
+      "RType_Invalid\020\000\022&\n\"k_EDOTAPlayerMMRType_" +
+      "GeneralHidden\020\001\022/\n+k_EDOTAPlayerMMRType_" +
+      "GeneralCompetitive2019\020\003\022,\n(k_EDOTAPlaye" +
+      "rMMRType_SoloCompetitive2019\020\004\022.\n*k_EDOT" +
+      "APlayerMMRType_1v1Competitive_UNUSED\020\005\022.",
+      "\n*k_EDOTAPlayerMMRType_GeneralSeasonalRa" +
+      "nked\020\006\022+\n\'k_EDOTAPlayerMMRType_SoloSeaso" +
+      "nalRanked\020\007\022)\n%k_EDOTAPlayerMMRType_Comp" +
+      "etitive_Core\020\010\022,\n(k_EDOTAPlayerMMRType_C" +
+      "ompetitive_Support\020\t\022,\n(k_EDOTAPlayerMMR" +
+      "Type_Competitive_Classic\020\n*s\n\021EDOTAMMRBo" +
+      "ostType\022\034\n\030k_EDOTAMMRBoostType_None\020\000\022\036\n" +
+      "\032k_EDOTAMMRBoostType_Leader\020\001\022 \n\034k_EDOTA" +
+      "MMRBoostType_Follower\020\002B7\n skadistats.cl" +
+      "arity.wire.s2.protoB\016S2DotaGcCommonH\001\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
