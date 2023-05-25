@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.skadistats</groupId>
     <artifactId>clarity-protobuf</artifactId>
-    <version>4.30</version>
+    <version>4.31</version>
     <packaging>jar</packaging>
     <name>clarity-protobuf</name>
     <description>Clarity is a fast, almost complete replay parser for Dota 2. This JAR contains the protobuf classes for clarity</description>

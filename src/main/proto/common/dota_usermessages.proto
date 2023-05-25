@@ -908,7 +908,7 @@ message CDOTAUserMsg_ParticleManager {
     repeated .CDOTAUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue transform_values = 3;
   }
 
-  required .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];
+  optional .DOTA_PARTICLE_MESSAGE type = 1 [default = DOTA_PARTICLE_MANAGER_EVENT_CREATE];
   required uint32 index = 2;
   optional .CDOTAUserMsg_ParticleManager.ReleaseParticleIndex release_particle_index = 3;
   optional .CDOTAUserMsg_ParticleManager.CreateParticle create_particle = 4;
