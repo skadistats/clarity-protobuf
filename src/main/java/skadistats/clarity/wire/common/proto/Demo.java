@@ -16332,8 +16332,8 @@ public final class Demo {
       "\022\n\016DEM_FullPacket\020\r\022\020\n\014DEM_SaveGame\020\016\022\023\n" +
       "\017DEM_SpawnGroups\020\017\022\013\n\007DEM_Max\020\020\022\027\n\023DEM_I" +
       "sCompressed_S1\020p\022\027\n\023DEM_IsCompressed_S2\020",
-      "@B)\n$skadistats.clarity.wire.common.prot" +
-      "o\200\001\000"
+      "@B&\n$skadistats.clarity.wire.common.prot" +
+      "o"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
