@@ -1,1 +1,0 @@
-..\bin\protoc-261 --java_out=..\..\java *.proto

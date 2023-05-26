@@ -1,0 +1,27 @@
+[
+  {
+    "path": "common",
+    "build": "*.proto",
+    "include": []
+  },
+  {
+    "path": "csgo-s1",
+    "build": "cstrike*.proto",
+    "include": ["common"]
+  },
+  {
+    "path": "csgo-s1",
+    "build": "csgo*.proto",
+    "include": []
+  },
+  {
+    "path": "dota-s1",
+    "build": "*.proto",
+    "include": ["common"]
+  },
+  {
+    "path": "dota-s2",
+    "build": "*.proto",
+    "include": ["common"]
+  }
+]
