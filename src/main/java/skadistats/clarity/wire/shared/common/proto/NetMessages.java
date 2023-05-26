@@ -243,6 +243,19 @@ public final class NetMessages {
      */
     com.google.protobuf.ByteString
         getFriendsNameBytes();
+
+    /**
+     * <code>repeated fixed32 custom_files = 7;</code>
+     */
+    java.util.List<java.lang.Integer> getCustomFilesList();
+    /**
+     * <code>repeated fixed32 custom_files = 7;</code>
+     */
+    int getCustomFilesCount();
+    /**
+     * <code>repeated fixed32 custom_files = 7;</code>
+     */
+    int getCustomFiles(int index);
   }
   /**
    * Protobuf type {@code CCLCMsg_ClientInfo}
@@ -327,6 +340,27 @@ public final class NetMessages {
               friendsName_ = bs;
               break;
             }
+            case 61: {
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+                customFiles_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              customFiles_.add(input.readFixed32());
+              break;
+            }
+            case 58: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000040) == 0x00000040) && input.getBytesUntilLimit() > 0) {
+                customFiles_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000040;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                customFiles_.add(input.readFixed32());
+              }
+              input.popLimit(limit);
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -335,6 +369,9 @@ public final class NetMessages {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000040) == 0x00000040)) {
+          customFiles_ = java.util.Collections.unmodifiableList(customFiles_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -484,6 +521,28 @@ public final class NetMessages {
       }
     }
 
+    public static final int CUSTOM_FILES_FIELD_NUMBER = 7;
+    private java.util.List<java.lang.Integer> customFiles_;
+    /**
+     * <code>repeated fixed32 custom_files = 7;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getCustomFilesList() {
+      return customFiles_;
+    }
+    /**
+     * <code>repeated fixed32 custom_files = 7;</code>
+     */
+    public int getCustomFilesCount() {
+      return customFiles_.size();
+    }
+    /**
+     * <code>repeated fixed32 custom_files = 7;</code>
+     */
+    public int getCustomFiles(int index) {
+      return customFiles_.get(index);
+    }
+
     private void initFields() {
       sendTableCrc_ = 0;
       serverCount_ = 0;
@@ -491,6 +550,7 @@ public final class NetMessages {
       isReplay_ = false;
       friendsId_ = 0;
       friendsName_ = "";
+      customFiles_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -522,6 +582,9 @@ public final class NetMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeBytes(6, getFriendsNameBytes());
+      }
+      for (int i = 0; i < customFiles_.size(); i++) {
+        output.writeFixed32(7, customFiles_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -555,6 +618,12 @@ public final class NetMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(6, getFriendsNameBytes());
+      }
+      {
+        int dataSize = 0;
+        dataSize = 4 * getCustomFilesList().size();
+        size += dataSize;
+        size += 1 * getCustomFilesList().size();
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -685,6 +754,8 @@ public final class NetMessages {
         bitField0_ = (bitField0_ & ~0x00000010);
         friendsName_ = "";
         bitField0_ = (bitField0_ & ~0x00000020);
+        customFiles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -737,6 +808,11 @@ public final class NetMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.friendsName_ = friendsName_;
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          customFiles_ = java.util.Collections.unmodifiableList(customFiles_);
+          bitField0_ = (bitField0_ & ~0x00000040);
+        }
+        result.customFiles_ = customFiles_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -771,6 +847,16 @@ public final class NetMessages {
         if (other.hasFriendsName()) {
           bitField0_ |= 0x00000020;
           friendsName_ = other.friendsName_;
+          onChanged();
+        }
+        if (!other.customFiles_.isEmpty()) {
+          if (customFiles_.isEmpty()) {
+            customFiles_ = other.customFiles_;
+            bitField0_ = (bitField0_ & ~0x00000040);
+          } else {
+            ensureCustomFilesIsMutable();
+            customFiles_.addAll(other.customFiles_);
+          }
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1032,6 +1118,72 @@ public final class NetMessages {
   }
   bitField0_ |= 0x00000020;
         friendsName_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> customFiles_ = java.util.Collections.emptyList();
+      private void ensureCustomFilesIsMutable() {
+        if (!((bitField0_ & 0x00000040) == 0x00000040)) {
+          customFiles_ = new java.util.ArrayList<java.lang.Integer>(customFiles_);
+          bitField0_ |= 0x00000040;
+         }
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getCustomFilesList() {
+        return java.util.Collections.unmodifiableList(customFiles_);
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public int getCustomFilesCount() {
+        return customFiles_.size();
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public int getCustomFiles(int index) {
+        return customFiles_.get(index);
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public Builder setCustomFiles(
+          int index, int value) {
+        ensureCustomFilesIsMutable();
+        customFiles_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public Builder addCustomFiles(int value) {
+        ensureCustomFilesIsMutable();
+        customFiles_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public Builder addAllCustomFiles(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureCustomFilesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customFiles_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated fixed32 custom_files = 7;</code>
+       */
+      public Builder clearCustomFiles() {
+        customFiles_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -25525,111 +25677,111 @@ public final class NetMessages {
   static {
     java.lang.String[] descriptorData = {
       "\n\030netmessages_common.proto\032\026networkbaset" +
-      "ypes.proto\"\220\001\n\022CCLCMsg_ClientInfo\022\026\n\016sen" +
+      "ypes.proto\"\246\001\n\022CCLCMsg_ClientInfo\022\026\n\016sen" +
       "d_table_crc\030\001 \001(\007\022\024\n\014server_count\030\002 \001(\r\022" +
       "\017\n\007is_hltv\030\003 \001(\010\022\021\n\tis_replay\030\004 \001(\010\022\022\n\nf" +
-      "riends_id\030\005 \001(\r\022\024\n\014friends_name\030\006 \001(\t\"\201\001" +
-      "\n\014CCLCMsg_Move\022\033\n\023num_backup_commands\030\001 " +
-      "\001(\r\022\030\n\020num_new_commands\030\002 \001(\r\022\014\n\004data\030\003 " +
-      "\001(\014\022\026\n\016command_number\030\004 \001(\r\022\024\n\014num_comma" +
-      "nds\030\005 \001(\r\"\311\001\n\016CMsgVoiceAudio\022:\n\006format\030\001" +
-      " \001(\0162\022.VoiceDataFormat_t:\026VOICEDATA_FORM",
-      "AT_STEAM\022\022\n\nvoice_data\030\002 \001(\014\022\026\n\016sequence" +
-      "_bytes\030\003 \001(\005\022\026\n\016section_number\030\004 \001(\r\022\023\n\013" +
-      "sample_rate\030\005 \001(\r\022\"\n\032uncompressed_sample" +
-      "_offset\030\006 \001(\r\"O\n\021CCLCMsg_VoiceData\022\036\n\005au" +
-      "dio\030\001 \001(\0132\017.CMsgVoiceAudio\022\014\n\004xuid\030\002 \001(\006" +
-      "\022\014\n\004tick\030\003 \001(\r\"A\n\023CCLCMsg_BaselineAck\022\025\n" +
-      "\rbaseline_tick\030\001 \001(\005\022\023\n\013baseline_nr\030\002 \001(" +
-      "\005\"*\n\024CCLCMsg_ListenEvents\022\022\n\nevent_mask\030" +
-      "\001 \003(\007\"\\\n\030CCLCMsg_RespondCvarValue\022\016\n\006coo" +
-      "kie\030\001 \001(\005\022\023\n\013status_code\030\002 \001(\005\022\014\n\004name\030\003",
-      " \001(\t\022\r\n\005value\030\004 \001(\t\"m\n\024CCLCMsg_FileCRCCh" +
-      "eck\022\021\n\tcode_path\030\001 \001(\005\022\014\n\004path\030\002 \001(\t\022\025\n\r" +
-      "code_filename\030\003 \001(\005\022\020\n\010filename\030\004 \001(\t\022\013\n" +
-      "\003crc\030\005 \001(\007\"+\n\027CCLCMsg_LoadingProgress\022\020\n" +
-      "\010progress\030\001 \001(\005\"0\n\032CCLCMsg_SplitPlayerCo" +
-      "nnect\022\022\n\nplayername\030\001 \001(\t\"7\n\025CCLCMsg_Cli" +
-      "entMessage\022\020\n\010msg_type\030\001 \001(\005\022\014\n\004data\030\002 \001" +
-      "(\014\"-\n\035CCLCMsg_SplitPlayerDisconnect\022\014\n\004s" +
-      "lot\030\001 \001(\005\"*\n\024CCLCMsg_ServerStatus\022\022\n\nsim" +
-      "plified\030\001 \001(\010\"\024\n\022CCLCMsg_ServerPing\"Z\n\024C",
-      "CLCMsg_RequestPause\022-\n\npause_type\030\001 \001(\0162" +
-      "\017.RequestPause_t:\010RP_PAUSE\022\023\n\013pause_grou" +
-      "p\030\002 \001(\005\"$\n\024CCLCMsg_CmdKeyValues\022\014\n\004data\030" +
-      "\001 \001(\014\"*\n\031CCLCMsg_RconServerDetails\022\r\n\005to" +
-      "ken\030\001 \001(\014\"\321\001\n\025CSVCMsg_GameEventList\0228\n\013d" +
-      "escriptors\030\001 \003(\0132#.CSVCMsg_GameEventList" +
-      ".descriptor_t\032#\n\005key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004" +
-      "name\030\002 \001(\t\032Y\n\014descriptor_t\022\017\n\007eventid\030\001 " +
-      "\001(\005\022\014\n\004name\030\002 \001(\t\022*\n\004keys\030\003 \003(\0132\034.CSVCMs" +
-      "g_GameEventList.key_t\"\356\005\n\026CSVCMsg_Packet",
-      "Entities\022\023\n\013max_entries\030\001 \001(\005\022\027\n\017updated" +
-      "_entries\030\002 \001(\005\022\020\n\010is_delta\030\003 \001(\010\022\027\n\017upda" +
-      "te_baseline\030\004 \001(\010\022\020\n\010baseline\030\005 \001(\005\022\022\n\nd" +
-      "elta_from\030\006 \001(\005\022\023\n\013entity_data\030\007 \001(\014\022\032\n\022" +
-      "pending_full_frame\030\010 \001(\010\022 \n\030active_spawn" +
-      "group_handle\030\t \001(\r\022\'\n\037max_spawngroup_cre" +
-      "ationsequence\030\n \001(\r\022\027\n\017last_cmd_number\030\013" +
-      " \001(\r\022\023\n\013server_tick\030\014 \001(\r\022\033\n\023serialized_" +
-      "entities\030\r \001(\014\022H\n\022command_queue_info\030\016 \001" +
-      "(\0132,.CSVCMsg_PacketEntities.command_queu",
-      "e_info_t\022I\n\023alternate_baselines\030\017 \003(\0132,." +
-      "CSVCMsg_PacketEntities.alternate_baselin" +
-      "e_t\032\262\001\n\024command_queue_info_t\022\027\n\017commands" +
-      "_queued\030\001 \001(\r\022\"\n\032command_queue_desired_s" +
-      "ize\030\002 \001(\r\022\035\n\025starved_command_ticks\030\003 \001(\r" +
-      "\022\035\n\025time_dilation_percent\030\004 \001(\002\022\037\n\027disca" +
-      "rded_command_ticks\030\005 \001(\r\032D\n\024alternate_ba" +
-      "seline_t\022\024\n\014entity_index\030\001 \001(\005\022\026\n\016baseli" +
-      "ne_index\030\002 \001(\005\"\325\003\n\022CSVCMsg_ServerInfo\022\020\n" +
-      "\010protocol\030\001 \001(\005\022\024\n\014server_count\030\002 \001(\005\022\024\n",
-      "\014is_dedicated\030\003 \001(\010\022\017\n\007is_hltv\030\004 \001(\010\022\021\n\t" +
-      "is_replay\030\005 \001(\010\022\014\n\004c_os\030\006 \001(\005\022\017\n\007map_crc" +
-      "\030\007 \001(\007\022\022\n\nclient_crc\030\010 \001(\007\022\030\n\020string_tab" +
-      "le_crc\030\t \001(\007\022\023\n\013max_clients\030\n \001(\005\022\023\n\013max" +
-      "_classes\030\013 \001(\005\022\023\n\013player_slot\030\014 \001(\005\022\025\n\rt" +
-      "ick_interval\030\r \001(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010" +
-      "map_name\030\017 \001(\t\022\020\n\010sky_name\030\020 \001(\t\022\021\n\thost" +
-      "_name\030\021 \001(\t\022\022\n\naddon_name\030\022 \001(\t\022>\n\023game_" +
-      "session_config\030\023 \001(\0132!.CSVCMsg_GameSessi" +
-      "onConfiguration\022\035\n\025game_session_manifest",
-      "\030\024 \001(\014\"\244\001\n\021CSVCMsg_ClassInfo\022\030\n\020create_o" +
-      "n_client\030\001 \001(\010\022+\n\007classes\030\002 \003(\0132\032.CSVCMs" +
-      "g_ClassInfo.class_t\032H\n\007class_t\022\020\n\010class_" +
-      "id\030\001 \001(\005\022\027\n\017data_table_name\030\002 \001(\t\022\022\n\ncla" +
-      "ss_name\030\003 \001(\t\"5\n\017CSVCMsg_SetView\022\024\n\014enti" +
-      "ty_index\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"\035\n\rCSVCMsg_" +
-      "Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCMsg_VoiceInit" +
-      "\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022\022\n\007vers" +
-      "ion\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Sounds\022\026\n\016relia" +
-      "ble_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003(\0132\033.CSVCMs",
-      "g_Sounds.sounddata_t\032\207\003\n\013sounddata_t\022\020\n\010" +
-      "origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021\022\020\n\010orig" +
-      "in_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013delay_valu" +
-      "e\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005\022\024\n\014enti" +
-      "ty_index\030\007 \001(\005\022\017\n\007channel\030\010 \001(\005\022\r\n\005pitch" +
-      "\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_num\030\013 \001(\r" +
-      "\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016speaker_en" +
-      "tity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022\023\n\013sound" +
-      "_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001(\010\022\022\n\nis_" +
-      "ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021sound_res",
-      "ource_id\030\023 \001(\006\"_\n\031CSVCMsg_UpdateStringTa" +
-      "ble\022\020\n\010table_id\030\001 \001(\005\022\033\n\023num_changed_ent" +
-      "ries\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014\"T\n\026CSVCM" +
-      "sg_FullFrameSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007secti" +
-      "on\030\002 \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"\212\001" +
-      "\n\020CSVCMsg_BSPDecal\022\030\n\003pos\030\001 \001(\0132\013.CMsgVe" +
-      "ctor\022\033\n\023decal_texture_index\030\002 \001(\005\022\024\n\014ent" +
-      "ity_index\030\003 \001(\005\022\023\n\013model_index\030\004 \001(\005\022\024\n\014" +
-      "low_priority\030\005 \001(\010\"9\n\024CSVCMsg_GetCvarVal" +
-      "ue\022\016\n\006cookie\030\001 \001(\005\022\021\n\tcvar_name\030\002 \001(\t*L\n",
-      "\021VoiceDataFormat_t\022\032\n\026VOICEDATA_FORMAT_S" +
-      "TEAM\020\000\022\033\n\027VOICEDATA_FORMAT_ENGINE\020\001*B\n\016R" +
-      "equestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UNPAUS" +
-      "E\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002B=\n+skadistats.cl" +
-      "arity.wire.shared.common.protoB\013NetMessa" +
-      "ges\200\001\000"
+      "riends_id\030\005 \001(\r\022\024\n\014friends_name\030\006 \001(\t\022\024\n" +
+      "\014custom_files\030\007 \003(\007\"\201\001\n\014CCLCMsg_Move\022\033\n\023" +
+      "num_backup_commands\030\001 \001(\r\022\030\n\020num_new_com" +
+      "mands\030\002 \001(\r\022\014\n\004data\030\003 \001(\014\022\026\n\016command_num" +
+      "ber\030\004 \001(\r\022\024\n\014num_commands\030\005 \001(\r\"\311\001\n\016CMsg" +
+      "VoiceAudio\022:\n\006format\030\001 \001(\0162\022.VoiceDataFo",
+      "rmat_t:\026VOICEDATA_FORMAT_STEAM\022\022\n\nvoice_" +
+      "data\030\002 \001(\014\022\026\n\016sequence_bytes\030\003 \001(\005\022\026\n\016se" +
+      "ction_number\030\004 \001(\r\022\023\n\013sample_rate\030\005 \001(\r\022" +
+      "\"\n\032uncompressed_sample_offset\030\006 \001(\r\"O\n\021C" +
+      "CLCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMsgVo" +
+      "iceAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n\004tick\030\003 \001(\r\"A\n\023" +
+      "CCLCMsg_BaselineAck\022\025\n\rbaseline_tick\030\001 \001" +
+      "(\005\022\023\n\013baseline_nr\030\002 \001(\005\"*\n\024CCLCMsg_Liste" +
+      "nEvents\022\022\n\nevent_mask\030\001 \003(\007\"\\\n\030CCLCMsg_R" +
+      "espondCvarValue\022\016\n\006cookie\030\001 \001(\005\022\023\n\013statu",
+      "s_code\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022\r\n\005value\030\004 \001(" +
+      "\t\"m\n\024CCLCMsg_FileCRCCheck\022\021\n\tcode_path\030\001" +
+      " \001(\005\022\014\n\004path\030\002 \001(\t\022\025\n\rcode_filename\030\003 \001(" +
+      "\005\022\020\n\010filename\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"+\n\027CCLC" +
+      "Msg_LoadingProgress\022\020\n\010progress\030\001 \001(\005\"0\n" +
+      "\032CCLCMsg_SplitPlayerConnect\022\022\n\nplayernam" +
+      "e\030\001 \001(\t\"7\n\025CCLCMsg_ClientMessage\022\020\n\010msg_" +
+      "type\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"-\n\035CCLCMsg_Spli" +
+      "tPlayerDisconnect\022\014\n\004slot\030\001 \001(\005\"*\n\024CCLCM" +
+      "sg_ServerStatus\022\022\n\nsimplified\030\001 \001(\010\"\024\n\022C",
+      "CLCMsg_ServerPing\"Z\n\024CCLCMsg_RequestPaus" +
+      "e\022-\n\npause_type\030\001 \001(\0162\017.RequestPause_t:\010" +
+      "RP_PAUSE\022\023\n\013pause_group\030\002 \001(\005\"$\n\024CCLCMsg" +
+      "_CmdKeyValues\022\014\n\004data\030\001 \001(\014\"*\n\031CCLCMsg_R" +
+      "conServerDetails\022\r\n\005token\030\001 \001(\014\"\321\001\n\025CSVC" +
+      "Msg_GameEventList\0228\n\013descriptors\030\001 \003(\0132#" +
+      ".CSVCMsg_GameEventList.descriptor_t\032#\n\005k" +
+      "ey_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032Y\n\014desc" +
+      "riptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022" +
+      "*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEventList.ke",
+      "y_t\"\356\005\n\026CSVCMsg_PacketEntities\022\023\n\013max_en" +
+      "tries\030\001 \001(\005\022\027\n\017updated_entries\030\002 \001(\005\022\020\n\010" +
+      "is_delta\030\003 \001(\010\022\027\n\017update_baseline\030\004 \001(\010\022" +
+      "\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005\022\023\n" +
+      "\013entity_data\030\007 \001(\014\022\032\n\022pending_full_frame" +
+      "\030\010 \001(\010\022 \n\030active_spawngroup_handle\030\t \001(\r" +
+      "\022\'\n\037max_spawngroup_creationsequence\030\n \001(" +
+      "\r\022\027\n\017last_cmd_number\030\013 \001(\r\022\023\n\013server_tic" +
+      "k\030\014 \001(\r\022\033\n\023serialized_entities\030\r \001(\014\022H\n\022" +
+      "command_queue_info\030\016 \001(\0132,.CSVCMsg_Packe",
+      "tEntities.command_queue_info_t\022I\n\023altern" +
+      "ate_baselines\030\017 \003(\0132,.CSVCMsg_PacketEnti" +
+      "ties.alternate_baseline_t\032\262\001\n\024command_qu" +
+      "eue_info_t\022\027\n\017commands_queued\030\001 \001(\r\022\"\n\032c" +
+      "ommand_queue_desired_size\030\002 \001(\r\022\035\n\025starv" +
+      "ed_command_ticks\030\003 \001(\r\022\035\n\025time_dilation_" +
+      "percent\030\004 \001(\002\022\037\n\027discarded_command_ticks" +
+      "\030\005 \001(\r\032D\n\024alternate_baseline_t\022\024\n\014entity" +
+      "_index\030\001 \001(\005\022\026\n\016baseline_index\030\002 \001(\005\"\325\003\n" +
+      "\022CSVCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n",
+      "\014server_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(" +
+      "\010\022\017\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n" +
+      "\004c_os\030\006 \001(\005\022\017\n\007map_crc\030\007 \001(\007\022\022\n\nclient_c" +
+      "rc\030\010 \001(\007\022\030\n\020string_table_crc\030\t \001(\007\022\023\n\013ma" +
+      "x_clients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\023\n\013" +
+      "player_slot\030\014 \001(\005\022\025\n\rtick_interval\030\r \001(\002" +
+      "\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020\n\010" +
+      "sky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n\nadd" +
+      "on_name\030\022 \001(\t\022>\n\023game_session_config\030\023 \001" +
+      "(\0132!.CSVCMsg_GameSessionConfiguration\022\035\n",
+      "\025game_session_manifest\030\024 \001(\014\"\244\001\n\021CSVCMsg" +
+      "_ClassInfo\022\030\n\020create_on_client\030\001 \001(\010\022+\n\007" +
+      "classes\030\002 \003(\0132\032.CSVCMsg_ClassInfo.class_" +
+      "t\032H\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017data_t" +
+      "able_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"5\n\017C" +
+      "SVCMsg_SetView\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004" +
+      "slot\030\002 \001(\005\"\035\n\rCSVCMsg_Print\022\014\n\004text\030\001 \001(" +
+      "\t\"G\n\021CSVCMsg_VoiceInit\022\017\n\007quality\030\001 \001(\005\022" +
+      "\r\n\005codec\030\002 \001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016C" +
+      "SVCMsg_Sounds\022\026\n\016reliable_sound\030\001 \001(\010\022+\n",
+      "\006sounds\030\002 \003(\0132\033.CSVCMsg_Sounds.sounddata" +
+      "_t\032\207\003\n\013sounddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010" +
+      "origin_y\030\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volu" +
+      "me\030\004 \001(\r\022\023\n\013delay_value\030\005 \001(\002\022\027\n\017sequenc" +
+      "e_number\030\006 \001(\005\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007" +
+      "channel\030\010 \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n " +
+      "\001(\005\022\021\n\tsound_num\030\013 \001(\r\022\030\n\020sound_num_hand" +
+      "le\030\014 \001(\007\022\026\n\016speaker_entity\030\r \001(\005\022\023\n\013rand" +
+      "om_seed\030\016 \001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013is" +
+      "_sentence\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004g",
+      "uid\030\022 \001(\r\022\031\n\021sound_resource_id\030\023 \001(\006\"_\n\031" +
+      "CSVCMsg_UpdateStringTable\022\020\n\010table_id\030\001 " +
+      "\001(\005\022\033\n\023num_changed_entries\030\002 \001(\005\022\023\n\013stri" +
+      "ng_data\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022" +
+      "\014\n\004tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030" +
+      "\003 \001(\005\022\014\n\004data\030\004 \001(\014\"\212\001\n\020CSVCMsg_BSPDecal" +
+      "\022\030\n\003pos\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_text" +
+      "ure_index\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n" +
+      "\013model_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010" +
+      "\"9\n\024CSVCMsg_GetCvarValue\022\016\n\006cookie\030\001 \001(\005",
+      "\022\021\n\tcvar_name\030\002 \001(\t*L\n\021VoiceDataFormat_t" +
+      "\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDAT" +
+      "A_FORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010R" +
+      "P_PAUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPA" +
+      "USE\020\002B=\n+skadistats.clarity.wire.shared." +
+      "common.protoB\013NetMessages\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -25649,7 +25801,7 @@ public final class NetMessages {
     internal_static_CCLCMsg_ClientInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCLCMsg_ClientInfo_descriptor,
-        new java.lang.String[] { "SendTableCrc", "ServerCount", "IsHltv", "IsReplay", "FriendsId", "FriendsName", });
+        new java.lang.String[] { "SendTableCrc", "ServerCount", "IsHltv", "IsReplay", "FriendsId", "FriendsName", "CustomFiles", });
     internal_static_CCLCMsg_Move_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CCLCMsg_Move_fieldAccessorTable = new

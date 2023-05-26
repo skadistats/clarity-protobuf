@@ -263,8 +263,3 @@ message CNETMsg_DebugOverlay {
   repeated uint64 uint64s = 7;
   repeated string strings = 8;
 }
-
-message CNETMsg_PlayerAvatarData {
-  optional uint32 accountid = 1;
-  optional bytes rgb = 2;
-}
