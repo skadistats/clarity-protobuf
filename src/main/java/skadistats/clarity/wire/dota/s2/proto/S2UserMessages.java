@@ -9,656 +9,6 @@ public final class S2UserMessages {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
-   * Protobuf enum {@code EBaseUserMessages}
-   */
-  public enum EBaseUserMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>UM_AchievementEvent = 101;</code>
-     */
-    UM_AchievementEvent(0, 101),
-    /**
-     * <code>UM_CloseCaption = 102;</code>
-     */
-    UM_CloseCaption(1, 102),
-    /**
-     * <code>UM_CloseCaptionDirect = 103;</code>
-     */
-    UM_CloseCaptionDirect(2, 103),
-    /**
-     * <code>UM_CurrentTimescale = 104;</code>
-     */
-    UM_CurrentTimescale(3, 104),
-    /**
-     * <code>UM_DesiredTimescale = 105;</code>
-     */
-    UM_DesiredTimescale(4, 105),
-    /**
-     * <code>UM_Fade = 106;</code>
-     */
-    UM_Fade(5, 106),
-    /**
-     * <code>UM_GameTitle = 107;</code>
-     */
-    UM_GameTitle(6, 107),
-    /**
-     * <code>UM_HintText = 109;</code>
-     */
-    UM_HintText(7, 109),
-    /**
-     * <code>UM_HudMsg = 110;</code>
-     */
-    UM_HudMsg(8, 110),
-    /**
-     * <code>UM_HudText = 111;</code>
-     */
-    UM_HudText(9, 111),
-    /**
-     * <code>UM_KeyHintText = 112;</code>
-     */
-    UM_KeyHintText(10, 112),
-    /**
-     * <code>UM_ColoredText = 113;</code>
-     */
-    UM_ColoredText(11, 113),
-    /**
-     * <code>UM_RequestState = 114;</code>
-     */
-    UM_RequestState(12, 114),
-    /**
-     * <code>UM_ResetHUD = 115;</code>
-     */
-    UM_ResetHUD(13, 115),
-    /**
-     * <code>UM_Rumble = 116;</code>
-     */
-    UM_Rumble(14, 116),
-    /**
-     * <code>UM_SayText = 117;</code>
-     */
-    UM_SayText(15, 117),
-    /**
-     * <code>UM_SayText2 = 118;</code>
-     */
-    UM_SayText2(16, 118),
-    /**
-     * <code>UM_SayTextChannel = 119;</code>
-     */
-    UM_SayTextChannel(17, 119),
-    /**
-     * <code>UM_Shake = 120;</code>
-     */
-    UM_Shake(18, 120),
-    /**
-     * <code>UM_ShakeDir = 121;</code>
-     */
-    UM_ShakeDir(19, 121),
-    /**
-     * <code>UM_TextMsg = 124;</code>
-     */
-    UM_TextMsg(20, 124),
-    /**
-     * <code>UM_ScreenTilt = 125;</code>
-     */
-    UM_ScreenTilt(21, 125),
-    /**
-     * <code>UM_Train = 126;</code>
-     */
-    UM_Train(22, 126),
-    /**
-     * <code>UM_VGUIMenu = 127;</code>
-     */
-    UM_VGUIMenu(23, 127),
-    /**
-     * <code>UM_VoiceMask = 128;</code>
-     */
-    UM_VoiceMask(24, 128),
-    /**
-     * <code>UM_VoiceSubtitle = 129;</code>
-     */
-    UM_VoiceSubtitle(25, 129),
-    /**
-     * <code>UM_SendAudio = 130;</code>
-     */
-    UM_SendAudio(26, 130),
-    /**
-     * <code>UM_ItemPickup = 131;</code>
-     */
-    UM_ItemPickup(27, 131),
-    /**
-     * <code>UM_AmmoDenied = 132;</code>
-     */
-    UM_AmmoDenied(28, 132),
-    /**
-     * <code>UM_CrosshairAngle = 133;</code>
-     */
-    UM_CrosshairAngle(29, 133),
-    /**
-     * <code>UM_ShowMenu = 134;</code>
-     */
-    UM_ShowMenu(30, 134),
-    /**
-     * <code>UM_CreditsMsg = 135;</code>
-     */
-    UM_CreditsMsg(31, 135),
-    /**
-     * <code>UM_CloseCaptionPlaceholder = 142;</code>
-     */
-    UM_CloseCaptionPlaceholder(32, 142),
-    /**
-     * <code>UM_CameraTransition = 143;</code>
-     */
-    UM_CameraTransition(33, 143),
-    /**
-     * <code>UM_AudioParameter = 144;</code>
-     */
-    UM_AudioParameter(34, 144),
-    /**
-     * <code>UM_ParticleManager = 145;</code>
-     */
-    UM_ParticleManager(35, 145),
-    /**
-     * <code>UM_HudError = 146;</code>
-     */
-    UM_HudError(36, 146),
-    /**
-     * <code>UM_CustomGameEvent = 148;</code>
-     */
-    UM_CustomGameEvent(37, 148),
-    /**
-     * <code>UM_AnimGraphUpdate = 149;</code>
-     */
-    UM_AnimGraphUpdate(38, 149),
-    /**
-     * <code>UM_HapticsManagerPulse = 150;</code>
-     */
-    UM_HapticsManagerPulse(39, 150),
-    /**
-     * <code>UM_HapticsManagerEffect = 151;</code>
-     */
-    UM_HapticsManagerEffect(40, 151),
-    /**
-     * <code>UM_CommandQueueState = 152;</code>
-     */
-    UM_CommandQueueState(41, 152),
-    /**
-     * <code>UM_UpdateCssClasses = 153;</code>
-     */
-    UM_UpdateCssClasses(42, 153),
-    /**
-     * <code>UM_ServerFrameTime = 154;</code>
-     */
-    UM_ServerFrameTime(43, 154),
-    /**
-     * <code>UM_LagCompensationError = 155;</code>
-     */
-    UM_LagCompensationError(44, 155),
-    /**
-     * <code>UM_RequestDllStatus = 156;</code>
-     */
-    UM_RequestDllStatus(45, 156),
-    /**
-     * <code>UM_RequestUtilAction = 157;</code>
-     */
-    UM_RequestUtilAction(46, 157),
-    /**
-     * <code>UM_UtilActionResponse = 158;</code>
-     */
-    UM_UtilActionResponse(47, 158),
-    /**
-     * <code>UM_DllStatusResponse = 159;</code>
-     */
-    UM_DllStatusResponse(48, 159),
-    /**
-     * <code>UM_RequestInventory = 160;</code>
-     */
-    UM_RequestInventory(49, 160),
-    /**
-     * <code>UM_InventoryResponse = 161;</code>
-     */
-    UM_InventoryResponse(50, 161),
-    /**
-     * <code>UM_MAX_BASE = 200;</code>
-     */
-    UM_MAX_BASE(51, 200),
-    ;
-
-    /**
-     * <code>UM_AchievementEvent = 101;</code>
-     */
-    public static final int UM_AchievementEvent_VALUE = 101;
-    /**
-     * <code>UM_CloseCaption = 102;</code>
-     */
-    public static final int UM_CloseCaption_VALUE = 102;
-    /**
-     * <code>UM_CloseCaptionDirect = 103;</code>
-     */
-    public static final int UM_CloseCaptionDirect_VALUE = 103;
-    /**
-     * <code>UM_CurrentTimescale = 104;</code>
-     */
-    public static final int UM_CurrentTimescale_VALUE = 104;
-    /**
-     * <code>UM_DesiredTimescale = 105;</code>
-     */
-    public static final int UM_DesiredTimescale_VALUE = 105;
-    /**
-     * <code>UM_Fade = 106;</code>
-     */
-    public static final int UM_Fade_VALUE = 106;
-    /**
-     * <code>UM_GameTitle = 107;</code>
-     */
-    public static final int UM_GameTitle_VALUE = 107;
-    /**
-     * <code>UM_HintText = 109;</code>
-     */
-    public static final int UM_HintText_VALUE = 109;
-    /**
-     * <code>UM_HudMsg = 110;</code>
-     */
-    public static final int UM_HudMsg_VALUE = 110;
-    /**
-     * <code>UM_HudText = 111;</code>
-     */
-    public static final int UM_HudText_VALUE = 111;
-    /**
-     * <code>UM_KeyHintText = 112;</code>
-     */
-    public static final int UM_KeyHintText_VALUE = 112;
-    /**
-     * <code>UM_ColoredText = 113;</code>
-     */
-    public static final int UM_ColoredText_VALUE = 113;
-    /**
-     * <code>UM_RequestState = 114;</code>
-     */
-    public static final int UM_RequestState_VALUE = 114;
-    /**
-     * <code>UM_ResetHUD = 115;</code>
-     */
-    public static final int UM_ResetHUD_VALUE = 115;
-    /**
-     * <code>UM_Rumble = 116;</code>
-     */
-    public static final int UM_Rumble_VALUE = 116;
-    /**
-     * <code>UM_SayText = 117;</code>
-     */
-    public static final int UM_SayText_VALUE = 117;
-    /**
-     * <code>UM_SayText2 = 118;</code>
-     */
-    public static final int UM_SayText2_VALUE = 118;
-    /**
-     * <code>UM_SayTextChannel = 119;</code>
-     */
-    public static final int UM_SayTextChannel_VALUE = 119;
-    /**
-     * <code>UM_Shake = 120;</code>
-     */
-    public static final int UM_Shake_VALUE = 120;
-    /**
-     * <code>UM_ShakeDir = 121;</code>
-     */
-    public static final int UM_ShakeDir_VALUE = 121;
-    /**
-     * <code>UM_TextMsg = 124;</code>
-     */
-    public static final int UM_TextMsg_VALUE = 124;
-    /**
-     * <code>UM_ScreenTilt = 125;</code>
-     */
-    public static final int UM_ScreenTilt_VALUE = 125;
-    /**
-     * <code>UM_Train = 126;</code>
-     */
-    public static final int UM_Train_VALUE = 126;
-    /**
-     * <code>UM_VGUIMenu = 127;</code>
-     */
-    public static final int UM_VGUIMenu_VALUE = 127;
-    /**
-     * <code>UM_VoiceMask = 128;</code>
-     */
-    public static final int UM_VoiceMask_VALUE = 128;
-    /**
-     * <code>UM_VoiceSubtitle = 129;</code>
-     */
-    public static final int UM_VoiceSubtitle_VALUE = 129;
-    /**
-     * <code>UM_SendAudio = 130;</code>
-     */
-    public static final int UM_SendAudio_VALUE = 130;
-    /**
-     * <code>UM_ItemPickup = 131;</code>
-     */
-    public static final int UM_ItemPickup_VALUE = 131;
-    /**
-     * <code>UM_AmmoDenied = 132;</code>
-     */
-    public static final int UM_AmmoDenied_VALUE = 132;
-    /**
-     * <code>UM_CrosshairAngle = 133;</code>
-     */
-    public static final int UM_CrosshairAngle_VALUE = 133;
-    /**
-     * <code>UM_ShowMenu = 134;</code>
-     */
-    public static final int UM_ShowMenu_VALUE = 134;
-    /**
-     * <code>UM_CreditsMsg = 135;</code>
-     */
-    public static final int UM_CreditsMsg_VALUE = 135;
-    /**
-     * <code>UM_CloseCaptionPlaceholder = 142;</code>
-     */
-    public static final int UM_CloseCaptionPlaceholder_VALUE = 142;
-    /**
-     * <code>UM_CameraTransition = 143;</code>
-     */
-    public static final int UM_CameraTransition_VALUE = 143;
-    /**
-     * <code>UM_AudioParameter = 144;</code>
-     */
-    public static final int UM_AudioParameter_VALUE = 144;
-    /**
-     * <code>UM_ParticleManager = 145;</code>
-     */
-    public static final int UM_ParticleManager_VALUE = 145;
-    /**
-     * <code>UM_HudError = 146;</code>
-     */
-    public static final int UM_HudError_VALUE = 146;
-    /**
-     * <code>UM_CustomGameEvent = 148;</code>
-     */
-    public static final int UM_CustomGameEvent_VALUE = 148;
-    /**
-     * <code>UM_AnimGraphUpdate = 149;</code>
-     */
-    public static final int UM_AnimGraphUpdate_VALUE = 149;
-    /**
-     * <code>UM_HapticsManagerPulse = 150;</code>
-     */
-    public static final int UM_HapticsManagerPulse_VALUE = 150;
-    /**
-     * <code>UM_HapticsManagerEffect = 151;</code>
-     */
-    public static final int UM_HapticsManagerEffect_VALUE = 151;
-    /**
-     * <code>UM_CommandQueueState = 152;</code>
-     */
-    public static final int UM_CommandQueueState_VALUE = 152;
-    /**
-     * <code>UM_UpdateCssClasses = 153;</code>
-     */
-    public static final int UM_UpdateCssClasses_VALUE = 153;
-    /**
-     * <code>UM_ServerFrameTime = 154;</code>
-     */
-    public static final int UM_ServerFrameTime_VALUE = 154;
-    /**
-     * <code>UM_LagCompensationError = 155;</code>
-     */
-    public static final int UM_LagCompensationError_VALUE = 155;
-    /**
-     * <code>UM_RequestDllStatus = 156;</code>
-     */
-    public static final int UM_RequestDllStatus_VALUE = 156;
-    /**
-     * <code>UM_RequestUtilAction = 157;</code>
-     */
-    public static final int UM_RequestUtilAction_VALUE = 157;
-    /**
-     * <code>UM_UtilActionResponse = 158;</code>
-     */
-    public static final int UM_UtilActionResponse_VALUE = 158;
-    /**
-     * <code>UM_DllStatusResponse = 159;</code>
-     */
-    public static final int UM_DllStatusResponse_VALUE = 159;
-    /**
-     * <code>UM_RequestInventory = 160;</code>
-     */
-    public static final int UM_RequestInventory_VALUE = 160;
-    /**
-     * <code>UM_InventoryResponse = 161;</code>
-     */
-    public static final int UM_InventoryResponse_VALUE = 161;
-    /**
-     * <code>UM_MAX_BASE = 200;</code>
-     */
-    public static final int UM_MAX_BASE_VALUE = 200;
-
-
-    public final int getNumber() { return value; }
-
-    public static EBaseUserMessages valueOf(int value) {
-      switch (value) {
-        case 101: return UM_AchievementEvent;
-        case 102: return UM_CloseCaption;
-        case 103: return UM_CloseCaptionDirect;
-        case 104: return UM_CurrentTimescale;
-        case 105: return UM_DesiredTimescale;
-        case 106: return UM_Fade;
-        case 107: return UM_GameTitle;
-        case 109: return UM_HintText;
-        case 110: return UM_HudMsg;
-        case 111: return UM_HudText;
-        case 112: return UM_KeyHintText;
-        case 113: return UM_ColoredText;
-        case 114: return UM_RequestState;
-        case 115: return UM_ResetHUD;
-        case 116: return UM_Rumble;
-        case 117: return UM_SayText;
-        case 118: return UM_SayText2;
-        case 119: return UM_SayTextChannel;
-        case 120: return UM_Shake;
-        case 121: return UM_ShakeDir;
-        case 124: return UM_TextMsg;
-        case 125: return UM_ScreenTilt;
-        case 126: return UM_Train;
-        case 127: return UM_VGUIMenu;
-        case 128: return UM_VoiceMask;
-        case 129: return UM_VoiceSubtitle;
-        case 130: return UM_SendAudio;
-        case 131: return UM_ItemPickup;
-        case 132: return UM_AmmoDenied;
-        case 133: return UM_CrosshairAngle;
-        case 134: return UM_ShowMenu;
-        case 135: return UM_CreditsMsg;
-        case 142: return UM_CloseCaptionPlaceholder;
-        case 143: return UM_CameraTransition;
-        case 144: return UM_AudioParameter;
-        case 145: return UM_ParticleManager;
-        case 146: return UM_HudError;
-        case 148: return UM_CustomGameEvent;
-        case 149: return UM_AnimGraphUpdate;
-        case 150: return UM_HapticsManagerPulse;
-        case 151: return UM_HapticsManagerEffect;
-        case 152: return UM_CommandQueueState;
-        case 153: return UM_UpdateCssClasses;
-        case 154: return UM_ServerFrameTime;
-        case 155: return UM_LagCompensationError;
-        case 156: return UM_RequestDllStatus;
-        case 157: return UM_RequestUtilAction;
-        case 158: return UM_UtilActionResponse;
-        case 159: return UM_DllStatusResponse;
-        case 160: return UM_RequestInventory;
-        case 161: return UM_InventoryResponse;
-        case 200: return UM_MAX_BASE;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
-        internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>() {
-            public EBaseUserMessages findValueByNumber(int number) {
-              return EBaseUserMessages.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return skadistats.clarity.wire.dota.s2.proto.S2UserMessages.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final EBaseUserMessages[] VALUES = values();
-
-    public static EBaseUserMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private EBaseUserMessages(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:EBaseUserMessages)
-  }
-
-  /**
-   * Protobuf enum {@code EBaseEntityMessages}
-   */
-  public enum EBaseEntityMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>EM_PlayJingle = 136;</code>
-     */
-    EM_PlayJingle(0, 136),
-    /**
-     * <code>EM_ScreenOverlay = 137;</code>
-     */
-    EM_ScreenOverlay(1, 137),
-    /**
-     * <code>EM_RemoveAllDecals = 138;</code>
-     */
-    EM_RemoveAllDecals(2, 138),
-    /**
-     * <code>EM_PropagateForce = 139;</code>
-     */
-    EM_PropagateForce(3, 139),
-    /**
-     * <code>EM_DoSpark = 140;</code>
-     */
-    EM_DoSpark(4, 140),
-    /**
-     * <code>EM_FixAngle = 141;</code>
-     */
-    EM_FixAngle(5, 141),
-    ;
-
-    /**
-     * <code>EM_PlayJingle = 136;</code>
-     */
-    public static final int EM_PlayJingle_VALUE = 136;
-    /**
-     * <code>EM_ScreenOverlay = 137;</code>
-     */
-    public static final int EM_ScreenOverlay_VALUE = 137;
-    /**
-     * <code>EM_RemoveAllDecals = 138;</code>
-     */
-    public static final int EM_RemoveAllDecals_VALUE = 138;
-    /**
-     * <code>EM_PropagateForce = 139;</code>
-     */
-    public static final int EM_PropagateForce_VALUE = 139;
-    /**
-     * <code>EM_DoSpark = 140;</code>
-     */
-    public static final int EM_DoSpark_VALUE = 140;
-    /**
-     * <code>EM_FixAngle = 141;</code>
-     */
-    public static final int EM_FixAngle_VALUE = 141;
-
-
-    public final int getNumber() { return value; }
-
-    public static EBaseEntityMessages valueOf(int value) {
-      switch (value) {
-        case 136: return EM_PlayJingle;
-        case 137: return EM_ScreenOverlay;
-        case 138: return EM_RemoveAllDecals;
-        case 139: return EM_PropagateForce;
-        case 140: return EM_DoSpark;
-        case 141: return EM_FixAngle;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static com.google.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>
-        internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>() {
-            public EBaseEntityMessages findValueByNumber(int number) {
-              return EBaseEntityMessages.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return skadistats.clarity.wire.dota.s2.proto.S2UserMessages.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final EBaseEntityMessages[] VALUES = values();
-
-    public static EBaseEntityMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private EBaseEntityMessages(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:EBaseEntityMessages)
-  }
-
-  /**
    * Protobuf enum {@code EHapticPulseType}
    */
   public enum EHapticPulseType
@@ -724,7 +74,7 @@ public final class S2UserMessages {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.s2.proto.S2UserMessages.getDescriptor().getEnumTypes().get(2);
+      return skadistats.clarity.wire.dota.s2.proto.S2UserMessages.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final EHapticPulseType[] VALUES = values();
@@ -5749,11 +5099,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 1;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
     /**
      * <code>optional .CEntityMsg entity_msg = 1;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessagePlayJingle}
@@ -5808,11 +5158,11 @@ public final class S2UserMessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = entityMsg_.toBuilder();
               }
-              entityMsg_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
+              entityMsg_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entityMsg_);
                 entityMsg_ = subBuilder.buildPartial();
@@ -5861,7 +5211,7 @@ public final class S2UserMessages {
 
     private int bitField0_;
     public static final int ENTITY_MSG_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
     /**
      * <code>optional .CEntityMsg entity_msg = 1;</code>
      */
@@ -5871,18 +5221,18 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 1;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
       return entityMsg_;
     }
     /**
      * <code>optional .CEntityMsg entity_msg = 1;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
       return entityMsg_;
     }
 
     private void initFields() {
-      entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6032,7 +5382,7 @@ public final class S2UserMessages {
       public Builder clear() {
         super.clear();
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
         } else {
           entityMsgBuilder_.clear();
         }
@@ -6119,9 +5469,9 @@ public final class S2UserMessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
@@ -6131,7 +5481,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
         if (entityMsgBuilder_ == null) {
           return entityMsg_;
         } else {
@@ -6141,7 +5491,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
-      public Builder setEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder setEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6158,7 +5508,7 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
       public Builder setEntityMsg(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
         if (entityMsgBuilder_ == null) {
           entityMsg_ = builderForValue.build();
           onChanged();
@@ -6171,12 +5521,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
-      public Builder mergeEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder mergeEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              entityMsg_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
+              entityMsg_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
             entityMsg_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
           } else {
             entityMsg_ = value;
           }
@@ -6192,7 +5542,7 @@ public final class S2UserMessages {
        */
       public Builder clearEntityMsg() {
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
           onChanged();
         } else {
           entityMsgBuilder_.clear();
@@ -6203,7 +5553,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getEntityMsgFieldBuilder().getBuilder();
@@ -6211,7 +5561,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
         if (entityMsgBuilder_ != null) {
           return entityMsgBuilder_.getMessageOrBuilder();
         } else {
@@ -6222,11 +5572,11 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
           entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
                   isClean());
@@ -6750,11 +6100,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessageScreenOverlay}
@@ -6814,11 +6164,11 @@ public final class S2UserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = entityMsg_.toBuilder();
               }
-              entityMsg_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
+              entityMsg_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entityMsg_);
                 entityMsg_ = subBuilder.buildPartial();
@@ -6882,7 +6232,7 @@ public final class S2UserMessages {
     }
 
     public static final int ENTITY_MSG_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
@@ -6892,19 +6242,19 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
       return entityMsg_;
     }
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
       return entityMsg_;
     }
 
     private void initFields() {
       startEffect_ = false;
-      entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -7063,7 +6413,7 @@ public final class S2UserMessages {
         startEffect_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
         } else {
           entityMsgBuilder_.clear();
         }
@@ -7189,9 +6539,9 @@ public final class S2UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
@@ -7201,7 +6551,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
         if (entityMsgBuilder_ == null) {
           return entityMsg_;
         } else {
@@ -7211,7 +6561,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public Builder setEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder setEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7228,7 +6578,7 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
       public Builder setEntityMsg(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
         if (entityMsgBuilder_ == null) {
           entityMsg_ = builderForValue.build();
           onChanged();
@@ -7241,12 +6591,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public Builder mergeEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder mergeEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              entityMsg_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
+              entityMsg_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
             entityMsg_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
           } else {
             entityMsg_ = value;
           }
@@ -7262,7 +6612,7 @@ public final class S2UserMessages {
        */
       public Builder clearEntityMsg() {
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
           onChanged();
         } else {
           entityMsgBuilder_.clear();
@@ -7273,7 +6623,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getEntityMsgFieldBuilder().getBuilder();
@@ -7281,7 +6631,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
         if (entityMsgBuilder_ != null) {
           return entityMsgBuilder_.getMessageOrBuilder();
         } else {
@@ -7292,11 +6642,11 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
           entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
                   isClean());
@@ -7336,11 +6686,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessageRemoveAllDecals}
@@ -7400,11 +6750,11 @@ public final class S2UserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = entityMsg_.toBuilder();
               }
-              entityMsg_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
+              entityMsg_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entityMsg_);
                 entityMsg_ = subBuilder.buildPartial();
@@ -7468,7 +6818,7 @@ public final class S2UserMessages {
     }
 
     public static final int ENTITY_MSG_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
@@ -7478,19 +6828,19 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
       return entityMsg_;
     }
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
       return entityMsg_;
     }
 
     private void initFields() {
       removeDecals_ = false;
-      entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -7649,7 +6999,7 @@ public final class S2UserMessages {
         removeDecals_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
         } else {
           entityMsgBuilder_.clear();
         }
@@ -7775,9 +7125,9 @@ public final class S2UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
@@ -7787,7 +7137,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
         if (entityMsgBuilder_ == null) {
           return entityMsg_;
         } else {
@@ -7797,7 +7147,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public Builder setEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder setEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7814,7 +7164,7 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
       public Builder setEntityMsg(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
         if (entityMsgBuilder_ == null) {
           entityMsg_ = builderForValue.build();
           onChanged();
@@ -7827,12 +7177,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public Builder mergeEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder mergeEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              entityMsg_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
+              entityMsg_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
             entityMsg_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
           } else {
             entityMsg_ = value;
           }
@@ -7848,7 +7198,7 @@ public final class S2UserMessages {
        */
       public Builder clearEntityMsg() {
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
           onChanged();
         } else {
           entityMsgBuilder_.clear();
@@ -7859,7 +7209,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getEntityMsgFieldBuilder().getBuilder();
@@ -7867,7 +7217,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
         if (entityMsgBuilder_ != null) {
           return entityMsgBuilder_.getMessageOrBuilder();
         } else {
@@ -7878,11 +7228,11 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
           entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
                   isClean());
@@ -7913,11 +7263,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getImpulse();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getImpulse();
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getImpulseOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getImpulseOrBuilder();
 
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
@@ -7926,11 +7276,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessagePropagateForce}
@@ -7985,11 +7335,11 @@ public final class S2UserMessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = impulse_.toBuilder();
               }
-              impulse_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              impulse_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(impulse_);
                 impulse_ = subBuilder.buildPartial();
@@ -7998,11 +7348,11 @@ public final class S2UserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = entityMsg_.toBuilder();
               }
-              entityMsg_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
+              entityMsg_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entityMsg_);
                 entityMsg_ = subBuilder.buildPartial();
@@ -8051,7 +7401,7 @@ public final class S2UserMessages {
 
     private int bitField0_;
     public static final int IMPULSE_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector impulse_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector impulse_;
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
@@ -8061,18 +7411,18 @@ public final class S2UserMessages {
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getImpulse() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getImpulse() {
       return impulse_;
     }
     /**
      * <code>optional .CMsgVector impulse = 1;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
       return impulse_;
     }
 
     public static final int ENTITY_MSG_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
@@ -8082,19 +7432,19 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
       return entityMsg_;
     }
     /**
      * <code>optional .CEntityMsg entity_msg = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
       return entityMsg_;
     }
 
     private void initFields() {
-      impulse_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
-      entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      impulse_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8252,13 +7602,13 @@ public final class S2UserMessages {
       public Builder clear() {
         super.clear();
         if (impulseBuilder_ == null) {
-          impulse_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          impulse_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           impulseBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
         } else {
           entityMsgBuilder_.clear();
         }
@@ -8356,9 +7706,9 @@ public final class S2UserMessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector impulse_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector impulse_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> impulseBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> impulseBuilder_;
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
@@ -8368,7 +7718,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getImpulse() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getImpulse() {
         if (impulseBuilder_ == null) {
           return impulse_;
         } else {
@@ -8378,7 +7728,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public Builder setImpulse(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder setImpulse(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (impulseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8395,7 +7745,7 @@ public final class S2UserMessages {
        * <code>optional .CMsgVector impulse = 1;</code>
        */
       public Builder setImpulse(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (impulseBuilder_ == null) {
           impulse_ = builderForValue.build();
           onChanged();
@@ -8408,12 +7758,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public Builder mergeImpulse(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder mergeImpulse(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (impulseBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              impulse_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              impulse_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             impulse_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(impulse_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(impulse_).mergeFrom(value).buildPartial();
           } else {
             impulse_ = value;
           }
@@ -8429,7 +7779,7 @@ public final class S2UserMessages {
        */
       public Builder clearImpulse() {
         if (impulseBuilder_ == null) {
-          impulse_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          impulse_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           impulseBuilder_.clear();
@@ -8440,7 +7790,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder getImpulseBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder getImpulseBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getImpulseFieldBuilder().getBuilder();
@@ -8448,7 +7798,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector impulse = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getImpulseOrBuilder() {
         if (impulseBuilder_ != null) {
           return impulseBuilder_.getMessageOrBuilder();
         } else {
@@ -8459,11 +7809,11 @@ public final class S2UserMessages {
        * <code>optional .CMsgVector impulse = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
           getImpulseFieldBuilder() {
         if (impulseBuilder_ == null) {
           impulseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
                   getImpulse(),
                   getParentForChildren(),
                   isClean());
@@ -8472,9 +7822,9 @@ public final class S2UserMessages {
         return impulseBuilder_;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
@@ -8484,7 +7834,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
         if (entityMsgBuilder_ == null) {
           return entityMsg_;
         } else {
@@ -8494,7 +7844,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public Builder setEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder setEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -8511,7 +7861,7 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
       public Builder setEntityMsg(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
         if (entityMsgBuilder_ == null) {
           entityMsg_ = builderForValue.build();
           onChanged();
@@ -8524,12 +7874,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public Builder mergeEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder mergeEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              entityMsg_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
+              entityMsg_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
             entityMsg_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
           } else {
             entityMsg_ = value;
           }
@@ -8545,7 +7895,7 @@ public final class S2UserMessages {
        */
       public Builder clearEntityMsg() {
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
           onChanged();
         } else {
           entityMsgBuilder_.clear();
@@ -8556,7 +7906,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getEntityMsgFieldBuilder().getBuilder();
@@ -8564,7 +7914,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
         if (entityMsgBuilder_ != null) {
           return entityMsgBuilder_.getMessageOrBuilder();
         } else {
@@ -8575,11 +7925,11 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
           entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
                   isClean());
@@ -8610,11 +7960,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getOrigin();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getOrigin();
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder();
 
     /**
      * <code>optional int32 entityindex = 2;</code>
@@ -8677,11 +8027,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 8;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
     /**
      * <code>optional .CEntityMsg entity_msg = 8;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessageDoSpark}
@@ -8736,11 +8086,11 @@ public final class S2UserMessages {
               break;
             }
             case 10: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 subBuilder = origin_.toBuilder();
               }
-              origin_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              origin_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(origin_);
                 origin_ = subBuilder.buildPartial();
@@ -8779,11 +8129,11 @@ public final class S2UserMessages {
               break;
             }
             case 66: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
               if (((bitField0_ & 0x00000080) == 0x00000080)) {
                 subBuilder = entityMsg_.toBuilder();
               }
-              entityMsg_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
+              entityMsg_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entityMsg_);
                 entityMsg_ = subBuilder.buildPartial();
@@ -8832,7 +8182,7 @@ public final class S2UserMessages {
 
     private int bitField0_;
     public static final int ORIGIN_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector origin_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector origin_;
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
@@ -8842,13 +8192,13 @@ public final class S2UserMessages {
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getOrigin() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getOrigin() {
       return origin_;
     }
     /**
      * <code>optional .CMsgVector origin = 1;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder() {
       return origin_;
     }
 
@@ -8943,7 +8293,7 @@ public final class S2UserMessages {
     }
 
     public static final int ENTITY_MSG_FIELD_NUMBER = 8;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
     /**
      * <code>optional .CEntityMsg entity_msg = 8;</code>
      */
@@ -8953,25 +8303,25 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 8;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
       return entityMsg_;
     }
     /**
      * <code>optional .CEntityMsg entity_msg = 8;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
       return entityMsg_;
     }
 
     private void initFields() {
-      origin_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      origin_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       entityindex_ = 0;
       radius_ = 0F;
       color_ = 0;
       beams_ = 0;
       thick_ = 0F;
       duration_ = 0F;
-      entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -9171,7 +8521,7 @@ public final class S2UserMessages {
       public Builder clear() {
         super.clear();
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           originBuilder_.clear();
         }
@@ -9189,7 +8539,7 @@ public final class S2UserMessages {
         duration_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000040);
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
         } else {
           entityMsgBuilder_.clear();
         }
@@ -9329,9 +8679,9 @@ public final class S2UserMessages {
       }
       private int bitField0_;
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector origin_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector origin_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> originBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> originBuilder_;
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
@@ -9341,7 +8691,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getOrigin() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getOrigin() {
         if (originBuilder_ == null) {
           return origin_;
         } else {
@@ -9351,7 +8701,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public Builder setOrigin(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder setOrigin(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9368,7 +8718,7 @@ public final class S2UserMessages {
        * <code>optional .CMsgVector origin = 1;</code>
        */
       public Builder setOrigin(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (originBuilder_ == null) {
           origin_ = builderForValue.build();
           onChanged();
@@ -9381,12 +8731,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public Builder mergeOrigin(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder mergeOrigin(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (originBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001) &&
-              origin_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              origin_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             origin_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
           } else {
             origin_ = value;
           }
@@ -9402,7 +8752,7 @@ public final class S2UserMessages {
        */
       public Builder clearOrigin() {
         if (originBuilder_ == null) {
-          origin_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          origin_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           originBuilder_.clear();
@@ -9413,7 +8763,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder getOriginBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder getOriginBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getOriginFieldBuilder().getBuilder();
@@ -9421,7 +8771,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder() {
         if (originBuilder_ != null) {
           return originBuilder_.getMessageOrBuilder();
         } else {
@@ -9432,11 +8782,11 @@ public final class S2UserMessages {
        * <code>optional .CMsgVector origin = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
           originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
                   getOrigin(),
                   getParentForChildren(),
                   isClean());
@@ -9637,9 +8987,9 @@ public final class S2UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
@@ -9649,7 +8999,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
         if (entityMsgBuilder_ == null) {
           return entityMsg_;
         } else {
@@ -9659,7 +9009,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
-      public Builder setEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder setEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -9676,7 +9026,7 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
       public Builder setEntityMsg(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
         if (entityMsgBuilder_ == null) {
           entityMsg_ = builderForValue.build();
           onChanged();
@@ -9689,12 +9039,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
-      public Builder mergeEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder mergeEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000080) == 0x00000080) &&
-              entityMsg_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
+              entityMsg_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
             entityMsg_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
           } else {
             entityMsg_ = value;
           }
@@ -9710,7 +9060,7 @@ public final class S2UserMessages {
        */
       public Builder clearEntityMsg() {
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
           onChanged();
         } else {
           entityMsgBuilder_.clear();
@@ -9721,7 +9071,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
         bitField0_ |= 0x00000080;
         onChanged();
         return getEntityMsgFieldBuilder().getBuilder();
@@ -9729,7 +9079,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
         if (entityMsgBuilder_ != null) {
           return entityMsgBuilder_.getMessageOrBuilder();
         } else {
@@ -9740,11 +9090,11 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 8;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
           entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
                   isClean());
@@ -9784,11 +9134,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle getAngle();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle getAngle();
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getAngleOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getAngleOrBuilder();
 
     /**
      * <code>optional .CEntityMsg entity_msg = 3;</code>
@@ -9797,11 +9147,11 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 3;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg();
     /**
      * <code>optional .CEntityMsg entity_msg = 3;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder();
   }
   /**
    * Protobuf type {@code CEntityMessageFixAngle}
@@ -9861,11 +9211,11 @@ public final class S2UserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = angle_.toBuilder();
               }
-              angle_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.PARSER, extensionRegistry);
+              angle_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(angle_);
                 angle_ = subBuilder.buildPartial();
@@ -9874,11 +9224,11 @@ public final class S2UserMessages {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = entityMsg_.toBuilder();
               }
-              entityMsg_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
+              entityMsg_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(entityMsg_);
                 entityMsg_ = subBuilder.buildPartial();
@@ -9942,7 +9292,7 @@ public final class S2UserMessages {
     }
 
     public static final int ANGLE_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle angle_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle angle_;
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
@@ -9952,18 +9302,18 @@ public final class S2UserMessages {
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle getAngle() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle getAngle() {
       return angle_;
     }
     /**
      * <code>optional .CMsgQAngle angle = 2;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
       return angle_;
     }
 
     public static final int ENTITY_MSG_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_;
     /**
      * <code>optional .CEntityMsg entity_msg = 3;</code>
      */
@@ -9973,20 +9323,20 @@ public final class S2UserMessages {
     /**
      * <code>optional .CEntityMsg entity_msg = 3;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
       return entityMsg_;
     }
     /**
      * <code>optional .CEntityMsg entity_msg = 3;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
       return entityMsg_;
     }
 
     private void initFields() {
       relative_ = false;
-      angle_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-      entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      angle_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -10153,13 +9503,13 @@ public final class S2UserMessages {
         relative_ = false;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (angleBuilder_ == null) {
-          angle_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+          angle_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
         } else {
           angleBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
         } else {
           entityMsgBuilder_.clear();
         }
@@ -10296,9 +9646,9 @@ public final class S2UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle angle_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle angle_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder> angleBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder> angleBuilder_;
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
@@ -10308,7 +9658,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle getAngle() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle getAngle() {
         if (angleBuilder_ == null) {
           return angle_;
         } else {
@@ -10318,7 +9668,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public Builder setAngle(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle value) {
+      public Builder setAngle(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle value) {
         if (angleBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10335,7 +9685,7 @@ public final class S2UserMessages {
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
       public Builder setAngle(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder builderForValue) {
         if (angleBuilder_ == null) {
           angle_ = builderForValue.build();
           onChanged();
@@ -10348,12 +9698,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public Builder mergeAngle(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle value) {
+      public Builder mergeAngle(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle value) {
         if (angleBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              angle_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance()) {
+              angle_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance()) {
             angle_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.newBuilder(angle_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.newBuilder(angle_).mergeFrom(value).buildPartial();
           } else {
             angle_ = value;
           }
@@ -10369,7 +9719,7 @@ public final class S2UserMessages {
        */
       public Builder clearAngle() {
         if (angleBuilder_ == null) {
-          angle_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+          angle_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
           onChanged();
         } else {
           angleBuilder_.clear();
@@ -10380,7 +9730,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.Builder getAngleBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder getAngleBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getAngleFieldBuilder().getBuilder();
@@ -10388,7 +9738,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getAngleOrBuilder() {
         if (angleBuilder_ != null) {
           return angleBuilder_.getMessageOrBuilder();
         } else {
@@ -10399,11 +9749,11 @@ public final class S2UserMessages {
        * <code>optional .CMsgQAngle angle = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder> 
           getAngleFieldBuilder() {
         if (angleBuilder_ == null) {
           angleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder>(
                   getAngle(),
                   getParentForChildren(),
                   isClean());
@@ -10412,9 +9762,9 @@ public final class S2UserMessages {
         return angleBuilder_;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
@@ -10424,7 +9774,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg getEntityMsg() {
         if (entityMsgBuilder_ == null) {
           return entityMsg_;
         } else {
@@ -10434,7 +9784,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
-      public Builder setEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder setEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10451,7 +9801,7 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
       public Builder setEntityMsg(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder builderForValue) {
         if (entityMsgBuilder_ == null) {
           entityMsg_ = builderForValue.build();
           onChanged();
@@ -10464,12 +9814,12 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
-      public Builder mergeEntityMsg(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg value) {
+      public Builder mergeEntityMsg(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg value) {
         if (entityMsgBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              entityMsg_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
+              entityMsg_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance()) {
             entityMsg_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.newBuilder(entityMsg_).mergeFrom(value).buildPartial();
           } else {
             entityMsg_ = value;
           }
@@ -10485,7 +9835,7 @@ public final class S2UserMessages {
        */
       public Builder clearEntityMsg() {
         if (entityMsgBuilder_ == null) {
-          entityMsg_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
+          entityMsg_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.getDefaultInstance();
           onChanged();
         } else {
           entityMsgBuilder_.clear();
@@ -10496,7 +9846,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder getEntityMsgBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getEntityMsgFieldBuilder().getBuilder();
@@ -10504,7 +9854,7 @@ public final class S2UserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder getEntityMsgOrBuilder() {
         if (entityMsgBuilder_ != null) {
           return entityMsgBuilder_.getMessageOrBuilder();
         } else {
@@ -10515,11 +9865,11 @@ public final class S2UserMessages {
        * <code>optional .CEntityMsg entity_msg = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
           entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
                   isClean());
@@ -12998,44 +12348,11 @@ public final class S2UserMessages {
       "tomGameEvent_ServerToClient\022\022\n\nevent_nam",
       "e\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\">\n.CUserMsg_Tracke" +
       "dControllerInput_ClientToServer\022\014\n\004data\030" +
-      "\001 \001(\014*\200\t\n\021EBaseUserMessages\022\027\n\023UM_Achiev" +
-      "ementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM_" +
-      "CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimesc" +
-      "ale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fad" +
-      "e\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013UM_HintText\020m\022\r" +
-      "\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_KeyH" +
-      "intText\020p\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Requ" +
-      "estState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumble",
-      "\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021U" +
-      "M_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_S" +
-      "hakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_ScreenTi" +
-      "lt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n\014U" +
-      "M_VoiceMask\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022\021\n" +
-      "\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n\r" +
-      "UM_AmmoDenied\020\204\001\022\026\n\021UM_CrosshairAngle\020\205\001" +
-      "\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022\037" +
-      "\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_Ca" +
-      "meraTransition\020\217\001\022\026\n\021UM_AudioParameter\020\220",
-      "\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudErro" +
-      "r\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_Anim" +
-      "GraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPulse" +
-      "\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\031\n\024UM_" +
-      "CommandQueueState\020\230\001\022\030\n\023UM_UpdateCssClas" +
-      "ses\020\231\001\022\027\n\022UM_ServerFrameTime\020\232\001\022\034\n\027UM_La" +
-      "gCompensationError\020\233\001\022\030\n\023UM_RequestDllSt" +
-      "atus\020\234\001\022\031\n\024UM_RequestUtilAction\020\235\001\022\032\n\025UM" +
-      "_UtilActionResponse\020\236\001\022\031\n\024UM_DllStatusRe" +
-      "sponse\020\237\001\022\030\n\023UM_RequestInventory\020\240\001\022\031\n\024U",
-      "M_InventoryResponse\020\241\001\022\020\n\013UM_MAX_BASE\020\310\001" +
-      "*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_PlayJingl" +
-      "e\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM_Remove" +
-      "AllDecals\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\n" +
-      "EM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*t\n\020EHapt" +
-      "icPulseType\022\036\n\032VR_HAND_HAPTIC_PULSE_LIGH" +
-      "T\020\000\022\037\n\033VR_HAND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033" +
-      "VR_HAND_HAPTIC_PULSE_STRONG\020\002B<\n%skadist" +
-      "ats.clarity.wire.dota.s2.protoB\016S2UserMe" +
-      "ssagesH\001\200\001\000"
+      "\001 \001(\014*t\n\020EHapticPulseType\022\036\n\032VR_HAND_HAP" +
+      "TIC_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTIC_PULS" +
+      "E_MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE_STRON" +
+      "G\020\002B7\n%skadistats.clarity.wire.dota.s2.p" +
+      "rotoB\016S2UserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13048,7 +12365,7 @@ public final class S2UserMessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor(),
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CUserMessageFade_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -13170,7 +12487,7 @@ public final class S2UserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_TrackedControllerInput_ClientToServer_descriptor,
         new java.lang.String[] { "Data", });
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

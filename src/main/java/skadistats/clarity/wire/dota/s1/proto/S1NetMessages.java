@@ -4511,7 +4511,7 @@ public final class S1NetMessages {
     /**
      * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
      */
-    skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t getFormat();
+    skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t getFormat();
 
     /**
      * <code>optional int32 sequence_bytes = 7;</code>
@@ -4628,7 +4628,7 @@ public final class S1NetMessages {
             }
             case 48: {
               int rawValue = input.readEnum();
-              skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t value = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.valueOf(rawValue);
+              skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t value = skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(6, rawValue);
               } else {
@@ -4773,7 +4773,7 @@ public final class S1NetMessages {
     }
 
     public static final int FORMAT_FIELD_NUMBER = 6;
-    private skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t format_;
+    private skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t format_;
     /**
      * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
      */
@@ -4783,7 +4783,7 @@ public final class S1NetMessages {
     /**
      * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
      */
-    public skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t getFormat() {
+    public skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t getFormat() {
       return format_;
     }
 
@@ -4853,7 +4853,7 @@ public final class S1NetMessages {
       xuid_ = 0L;
       audibleMask_ = 0;
       voiceData_ = com.google.protobuf.ByteString.EMPTY;
-      format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
+      format_ = skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
       sequenceBytes_ = 0;
       sectionNumber_ = 0;
       uncompressedSampleOffset_ = 0;
@@ -5078,7 +5078,7 @@ public final class S1NetMessages {
         bitField0_ = (bitField0_ & ~0x00000008);
         voiceData_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
-        format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
+        format_ = skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
         bitField0_ = (bitField0_ & ~0x00000020);
         sequenceBytes_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
@@ -5392,7 +5392,7 @@ public final class S1NetMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
+      private skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t format_ = skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
       /**
        * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
        */
@@ -5402,13 +5402,13 @@ public final class S1NetMessages {
       /**
        * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
        */
-      public skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t getFormat() {
+      public skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t getFormat() {
         return format_;
       }
       /**
        * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
        */
-      public Builder setFormat(skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t value) {
+      public Builder setFormat(skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -5422,7 +5422,7 @@ public final class S1NetMessages {
        */
       public Builder clearFormat() {
         bitField0_ = (bitField0_ & ~0x00000020);
-        format_ = skadistats.clarity.wire.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
+        format_ = skadistats.clarity.wire.shared.common.proto.NetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
         onChanged();
         return this;
       }
@@ -5605,45 +5605,46 @@ public final class S1NetMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024s1_netmessages.proto\032\021netmessages.prot" +
-      "o\"\'\n\020CSVCMsg_Prefetch\022\023\n\013sound_index\030\001 \001" +
-      "(\005\"\312\001\n\031CSVCMsg_CreateStringTable\022\014\n\004name" +
-      "\030\001 \001(\t\022\023\n\013max_entries\030\002 \001(\005\022\023\n\013num_entri" +
-      "es\030\003 \001(\005\022\034\n\024user_data_fixed_size\030\004 \001(\010\022\026" +
-      "\n\016user_data_size\030\005 \001(\005\022\033\n\023user_data_size" +
-      "_bits\030\006 \001(\005\022\r\n\005flags\030\007 \001(\005\022\023\n\013string_dat" +
-      "a\030\010 \001(\014\"\260\002\n\021CSVCMsg_SendTable\022\016\n\006is_end\030" +
-      "\001 \001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\rneeds_d" +
-      "ecoder\030\003 \001(\010\022,\n\005props\030\004 \003(\0132\035.CSVCMsg_Se",
-      "ndTable.sendprop_t\032\255\001\n\nsendprop_t\022\014\n\004typ" +
-      "e\030\001 \001(\005\022\020\n\010var_name\030\002 \001(\t\022\r\n\005flags\030\003 \001(\005" +
-      "\022\020\n\010priority\030\004 \001(\005\022\017\n\007dt_name\030\005 \001(\t\022\024\n\014n" +
-      "um_elements\030\006 \001(\005\022\021\n\tlow_value\030\007 \001(\002\022\022\n\n" +
-      "high_value\030\010 \001(\002\022\020\n\010num_bits\030\t \001(\005\"R\n\024CS" +
-      "VCMsg_TempEntities\022\020\n\010reliable\030\001 \001(\010\022\023\n\013" +
-      "num_entries\030\002 \001(\005\022\023\n\013entity_data\030\003 \001(\014\"\214" +
-      "\002\n\021CSVCMsg_VoiceData\022\016\n\006client\030\001 \001(\005\022\021\n\t" +
-      "proximity\030\002 \001(\010\022\014\n\004xuid\030\003 \001(\006\022\024\n\014audible" +
-      "_mask\030\004 \001(\005\022\022\n\nvoice_data\030\005 \001(\014\022:\n\006forma",
-      "t\030\006 \001(\0162\022.VoiceDataFormat_t:\026VOICEDATA_F" +
-      "ORMAT_STEAM\022\026\n\016sequence_bytes\030\007 \001(\005\022\026\n\016s" +
-      "ection_number\030\010 \001(\r\022\"\n\032uncompressed_samp" +
-      "le_offset\030\t \001(\r\022\014\n\004tick\030\n \001(\r*\241\004\n\014SVC_Me" +
-      "ssages\022\022\n\016svc_ServerInfo\020\010\022\021\n\rsvc_SendTa" +
-      "ble\020\t\022\021\n\rsvc_ClassInfo\020\n\022\020\n\014svc_SetPause" +
-      "\020\013\022\031\n\025svc_CreateStringTable\020\014\022\031\n\025svc_Upd" +
-      "ateStringTable\020\r\022\021\n\rsvc_VoiceInit\020\016\022\021\n\rs" +
-      "vc_VoiceData\020\017\022\r\n\tsvc_Print\020\020\022\016\n\nsvc_Sou" +
-      "nds\020\021\022\017\n\013svc_SetView\020\022\022\020\n\014svc_FixAngle\020\023",
-      "\022\026\n\022svc_CrosshairAngle\020\024\022\020\n\014svc_BSPDecal" +
-      "\020\025\022\023\n\017svc_SplitScreen\020\026\022\023\n\017svc_UserMessa" +
-      "ge\020\027\022\025\n\021svc_EntityMessage\020\030\022\021\n\rsvc_GameE" +
-      "vent\020\031\022\026\n\022svc_PacketEntities\020\032\022\024\n\020svc_Te" +
-      "mpEntities\020\033\022\020\n\014svc_Prefetch\020\034\022\014\n\010svc_Me" +
-      "nu\020\035\022\025\n\021svc_GameEventList\020\036\022\024\n\020svc_GetCv" +
-      "arValue\020\037\022\026\n\022svc_PacketReliable\020 \022\026\n\022svc" +
-      "_FullFrameSplit\020!B9\n%skadistats.clarity." +
-      "wire.dota.s1.protoB\rS1NetMessages\200\001\000"
+      "\n\024s1_netmessages.proto\032\030netmessages_comm" +
+      "on.proto\"\'\n\020CSVCMsg_Prefetch\022\023\n\013sound_in" +
+      "dex\030\001 \001(\005\"\312\001\n\031CSVCMsg_CreateStringTable\022" +
+      "\014\n\004name\030\001 \001(\t\022\023\n\013max_entries\030\002 \001(\005\022\023\n\013nu" +
+      "m_entries\030\003 \001(\005\022\034\n\024user_data_fixed_size\030" +
+      "\004 \001(\010\022\026\n\016user_data_size\030\005 \001(\005\022\033\n\023user_da" +
+      "ta_size_bits\030\006 \001(\005\022\r\n\005flags\030\007 \001(\005\022\023\n\013str" +
+      "ing_data\030\010 \001(\014\"\260\002\n\021CSVCMsg_SendTable\022\016\n\006" +
+      "is_end\030\001 \001(\010\022\026\n\016net_table_name\030\002 \001(\t\022\025\n\r" +
+      "needs_decoder\030\003 \001(\010\022,\n\005props\030\004 \003(\0132\035.CSV",
+      "CMsg_SendTable.sendprop_t\032\255\001\n\nsendprop_t" +
+      "\022\014\n\004type\030\001 \001(\005\022\020\n\010var_name\030\002 \001(\t\022\r\n\005flag" +
+      "s\030\003 \001(\005\022\020\n\010priority\030\004 \001(\005\022\017\n\007dt_name\030\005 \001" +
+      "(\t\022\024\n\014num_elements\030\006 \001(\005\022\021\n\tlow_value\030\007 " +
+      "\001(\002\022\022\n\nhigh_value\030\010 \001(\002\022\020\n\010num_bits\030\t \001(" +
+      "\005\"R\n\024CSVCMsg_TempEntities\022\020\n\010reliable\030\001 " +
+      "\001(\010\022\023\n\013num_entries\030\002 \001(\005\022\023\n\013entity_data\030" +
+      "\003 \001(\014\"\214\002\n\021CSVCMsg_VoiceData\022\016\n\006client\030\001 " +
+      "\001(\005\022\021\n\tproximity\030\002 \001(\010\022\014\n\004xuid\030\003 \001(\006\022\024\n\014" +
+      "audible_mask\030\004 \001(\005\022\022\n\nvoice_data\030\005 \001(\014\022:",
+      "\n\006format\030\006 \001(\0162\022.VoiceDataFormat_t:\026VOIC" +
+      "EDATA_FORMAT_STEAM\022\026\n\016sequence_bytes\030\007 \001" +
+      "(\005\022\026\n\016section_number\030\010 \001(\r\022\"\n\032uncompress" +
+      "ed_sample_offset\030\t \001(\r\022\014\n\004tick\030\n \001(\r*\241\004\n" +
+      "\014SVC_Messages\022\022\n\016svc_ServerInfo\020\010\022\021\n\rsvc" +
+      "_SendTable\020\t\022\021\n\rsvc_ClassInfo\020\n\022\020\n\014svc_S" +
+      "etPause\020\013\022\031\n\025svc_CreateStringTable\020\014\022\031\n\025" +
+      "svc_UpdateStringTable\020\r\022\021\n\rsvc_VoiceInit" +
+      "\020\016\022\021\n\rsvc_VoiceData\020\017\022\r\n\tsvc_Print\020\020\022\016\n\n" +
+      "svc_Sounds\020\021\022\017\n\013svc_SetView\020\022\022\020\n\014svc_Fix",
+      "Angle\020\023\022\026\n\022svc_CrosshairAngle\020\024\022\020\n\014svc_B" +
+      "SPDecal\020\025\022\023\n\017svc_SplitScreen\020\026\022\023\n\017svc_Us" +
+      "erMessage\020\027\022\025\n\021svc_EntityMessage\020\030\022\021\n\rsv" +
+      "c_GameEvent\020\031\022\026\n\022svc_PacketEntities\020\032\022\024\n" +
+      "\020svc_TempEntities\020\033\022\020\n\014svc_Prefetch\020\034\022\014\n" +
+      "\010svc_Menu\020\035\022\025\n\021svc_GameEventList\020\036\022\024\n\020sv" +
+      "c_GetCvarValue\020\037\022\026\n\022svc_PacketReliable\020 " +
+      "\022\026\n\022svc_FullFrameSplit\020!B9\n%skadistats.c" +
+      "larity.wire.dota.s1.protoB\rS1NetMessages" +
+      "\200\001\000"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5656,7 +5657,7 @@ public final class S1NetMessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.common.proto.NetMessages.getDescriptor(),
+          skadistats.clarity.wire.shared.common.proto.NetMessages.getDescriptor(),
         }, assigner);
     internal_static_CSVCMsg_Prefetch_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -5694,7 +5695,7 @@ public final class S1NetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceData_descriptor,
         new java.lang.String[] { "Client", "Proximity", "Xuid", "AudibleMask", "VoiceData", "Format", "SequenceBytes", "SectionNumber", "UncompressedSampleOffset", "Tick", });
-    skadistats.clarity.wire.common.proto.NetMessages.getDescriptor();
+    skadistats.clarity.wire.shared.common.proto.NetMessages.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

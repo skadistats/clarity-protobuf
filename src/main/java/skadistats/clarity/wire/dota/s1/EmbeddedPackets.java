@@ -3,8 +3,8 @@ package skadistats.clarity.wire.dota.s1;
 import com.google.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
-import skadistats.clarity.wire.common.proto.NetMessages;
-import skadistats.clarity.wire.common.proto.NetworkBaseTypes;
+import skadistats.clarity.wire.shared.common.proto.NetMessages;
+import skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes;
 import skadistats.clarity.wire.dota.s1.proto.S1NetMessages;
 
 public class EmbeddedPackets {

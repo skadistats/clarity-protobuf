@@ -236,11 +236,11 @@ public final class DotaModifiers {
     /**
      * <code>optional .CMsgVector v_start = 16;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getVStart();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getVStart();
     /**
      * <code>optional .CMsgVector v_start = 16;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVStartOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVStartOrBuilder();
 
     /**
      * <code>optional .CMsgVector v_end = 17;</code>
@@ -249,11 +249,11 @@ public final class DotaModifiers {
     /**
      * <code>optional .CMsgVector v_end = 17;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getVEnd();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getVEnd();
     /**
      * <code>optional .CMsgVector v_end = 17;</code>
      */
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVEndOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVEndOrBuilder();
 
     /**
      * <code>optional string portal_loop_appear = 18;</code>
@@ -614,11 +614,11 @@ public final class DotaModifiers {
               break;
             }
             case 130: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00008000) == 0x00008000)) {
                 subBuilder = vStart_.toBuilder();
               }
-              vStart_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              vStart_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(vStart_);
                 vStart_ = subBuilder.buildPartial();
@@ -627,11 +627,11 @@ public final class DotaModifiers {
               break;
             }
             case 138: {
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00010000) == 0x00010000)) {
                 subBuilder = vEnd_.toBuilder();
               }
-              vEnd_ = input.readMessage(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              vEnd_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(vEnd_);
                 vEnd_ = subBuilder.buildPartial();
@@ -1018,7 +1018,7 @@ public final class DotaModifiers {
     }
 
     public static final int V_START_FIELD_NUMBER = 16;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector vStart_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector vStart_;
     /**
      * <code>optional .CMsgVector v_start = 16;</code>
      */
@@ -1028,18 +1028,18 @@ public final class DotaModifiers {
     /**
      * <code>optional .CMsgVector v_start = 16;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getVStart() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getVStart() {
       return vStart_;
     }
     /**
      * <code>optional .CMsgVector v_start = 16;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVStartOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVStartOrBuilder() {
       return vStart_;
     }
 
     public static final int V_END_FIELD_NUMBER = 17;
-    private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector vEnd_;
+    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector vEnd_;
     /**
      * <code>optional .CMsgVector v_end = 17;</code>
      */
@@ -1049,13 +1049,13 @@ public final class DotaModifiers {
     /**
      * <code>optional .CMsgVector v_end = 17;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getVEnd() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getVEnd() {
       return vEnd_;
     }
     /**
      * <code>optional .CMsgVector v_end = 17;</code>
      */
-    public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVEndOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVEndOrBuilder() {
       return vEnd_;
     }
 
@@ -1579,8 +1579,8 @@ public final class DotaModifiers {
       fadeTime_ = 0F;
       subtle_ = false;
       channelTime_ = 0F;
-      vStart_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
-      vEnd_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      vStart_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      vEnd_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       portalLoopAppear_ = "";
       portalLoopDisappear_ = "";
       heroLoopAppear_ = "";
@@ -2057,13 +2057,13 @@ public final class DotaModifiers {
         channelTime_ = 0F;
         bitField0_ = (bitField0_ & ~0x00004000);
         if (vStartBuilder_ == null) {
-          vStart_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          vStart_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           vStartBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00008000);
         if (vEndBuilder_ == null) {
-          vEnd_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          vEnd_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           vEndBuilder_.clear();
         }
@@ -2972,9 +2972,9 @@ public final class DotaModifiers {
         return this;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector vStart_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector vStart_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> vStartBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> vStartBuilder_;
       /**
        * <code>optional .CMsgVector v_start = 16;</code>
        */
@@ -2984,7 +2984,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_start = 16;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getVStart() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getVStart() {
         if (vStartBuilder_ == null) {
           return vStart_;
         } else {
@@ -2994,7 +2994,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_start = 16;</code>
        */
-      public Builder setVStart(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder setVStart(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (vStartBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3011,7 +3011,7 @@ public final class DotaModifiers {
        * <code>optional .CMsgVector v_start = 16;</code>
        */
       public Builder setVStart(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (vStartBuilder_ == null) {
           vStart_ = builderForValue.build();
           onChanged();
@@ -3024,12 +3024,12 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_start = 16;</code>
        */
-      public Builder mergeVStart(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder mergeVStart(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (vStartBuilder_ == null) {
           if (((bitField0_ & 0x00008000) == 0x00008000) &&
-              vStart_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              vStart_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             vStart_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(vStart_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(vStart_).mergeFrom(value).buildPartial();
           } else {
             vStart_ = value;
           }
@@ -3045,7 +3045,7 @@ public final class DotaModifiers {
        */
       public Builder clearVStart() {
         if (vStartBuilder_ == null) {
-          vStart_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          vStart_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           vStartBuilder_.clear();
@@ -3056,7 +3056,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_start = 16;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder getVStartBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder getVStartBuilder() {
         bitField0_ |= 0x00008000;
         onChanged();
         return getVStartFieldBuilder().getBuilder();
@@ -3064,7 +3064,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_start = 16;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVStartOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVStartOrBuilder() {
         if (vStartBuilder_ != null) {
           return vStartBuilder_.getMessageOrBuilder();
         } else {
@@ -3075,11 +3075,11 @@ public final class DotaModifiers {
        * <code>optional .CMsgVector v_start = 16;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
           getVStartFieldBuilder() {
         if (vStartBuilder_ == null) {
           vStartBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
                   getVStart(),
                   getParentForChildren(),
                   isClean());
@@ -3088,9 +3088,9 @@ public final class DotaModifiers {
         return vStartBuilder_;
       }
 
-      private skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector vEnd_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector vEnd_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> vEndBuilder_;
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> vEndBuilder_;
       /**
        * <code>optional .CMsgVector v_end = 17;</code>
        */
@@ -3100,7 +3100,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_end = 17;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector getVEnd() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getVEnd() {
         if (vEndBuilder_ == null) {
           return vEnd_;
         } else {
@@ -3110,7 +3110,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_end = 17;</code>
        */
-      public Builder setVEnd(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder setVEnd(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (vEndBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3127,7 +3127,7 @@ public final class DotaModifiers {
        * <code>optional .CMsgVector v_end = 17;</code>
        */
       public Builder setVEnd(
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (vEndBuilder_ == null) {
           vEnd_ = builderForValue.build();
           onChanged();
@@ -3140,12 +3140,12 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_end = 17;</code>
        */
-      public Builder mergeVEnd(skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder mergeVEnd(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
         if (vEndBuilder_ == null) {
           if (((bitField0_ & 0x00010000) == 0x00010000) &&
-              vEnd_ != skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              vEnd_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             vEnd_ =
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(vEnd_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(vEnd_).mergeFrom(value).buildPartial();
           } else {
             vEnd_ = value;
           }
@@ -3161,7 +3161,7 @@ public final class DotaModifiers {
        */
       public Builder clearVEnd() {
         if (vEndBuilder_ == null) {
-          vEnd_ = skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          vEnd_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           vEndBuilder_.clear();
@@ -3172,7 +3172,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_end = 17;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder getVEndBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder getVEndBuilder() {
         bitField0_ |= 0x00010000;
         onChanged();
         return getVEndFieldBuilder().getBuilder();
@@ -3180,7 +3180,7 @@ public final class DotaModifiers {
       /**
        * <code>optional .CMsgVector v_end = 17;</code>
        */
-      public skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVEndOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getVEndOrBuilder() {
         if (vEndBuilder_ != null) {
           return vEndBuilder_.getMessageOrBuilder();
         } else {
@@ -3191,11 +3191,11 @@ public final class DotaModifiers {
        * <code>optional .CMsgVector v_end = 17;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
           getVEndFieldBuilder() {
         if (vEndBuilder_ == null) {
           vEndBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
                   getVEnd(),
                   getParentForChildren(),
                   isClean());
@@ -4826,7 +4826,7 @@ public final class DotaModifiers {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor(),
+          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CDOTAModifierBuffTableEntry_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -4840,7 +4840,7 @@ public final class DotaModifiers {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTALuaModifierEntry_descriptor,
         new java.lang.String[] { "ModifierType", "ModifierFilename", });
-    skadistats.clarity.wire.common.proto.NetworkBaseTypes.getDescriptor();
+    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

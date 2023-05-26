@@ -1,0 +1,21 @@
+option java_package = "skadistats.clarity.wire.csgo.s1.proto";
+option java_outer_classname = "CsGoClarityMessages";
+
+option cc_generic_services = false;
+
+message CsGoDemoHeader
+{
+    optional int32	demoprotocol = 1;		// Should be DEMO_PROTOCOL
+    optional int32	networkprotocol = 2;	// Should be PROTOCOL_VERSION
+    optional string	servername = 3;		    // Name of server
+    optional string	clientname = 4;		    // Name of client who recorded the game
+    optional string	mapname = 5;            // Name of map
+    optional string	gamedirectory = 6;	    // Name of game directory (com_gamedir)
+    optional float	playback_time = 7;		// Time of track
+    optional int32  playback_ticks = 8;		// # of ticks in track
+    optional int32  playback_frames = 9;	// # of frames in track
+    optional int32	signonlength = 10;		// length of sigondata in bytes
+}
+
+
+

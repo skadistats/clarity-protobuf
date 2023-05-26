@@ -1,0 +1,94 @@
+option java_package = "skadistats.clarity.wire.shared.s2.proto";
+option java_outer_classname = "S2NetMessages";
+
+import "netmessages_common.proto";
+
+message CSVCMsg_CreateStringTable {
+	optional string name = 1;
+	optional int32 num_entries = 2;
+	optional bool user_data_fixed_size = 3;
+	optional int32 user_data_size = 4;
+	optional int32 user_data_size_bits = 5;
+	optional int32 flags = 6;
+	optional bytes string_data = 7;
+	optional int32 uncompressed_size = 8;
+	optional bool data_compressed = 9;
+	optional bool using_varint_bitcounts = 10;
+}
+
+message CSVCMsg_VoiceData {
+	optional .CMsgVoiceAudio audio = 1;
+	optional int32 client = 2;
+	optional bool proximity = 3;
+	optional fixed64 xuid = 4;
+	optional int32 audible_mask = 5;
+	optional uint32 tick = 6;
+}
+
+message CSVCMsg_ClearAllStringTables {
+	optional string mapname = 1;
+	optional uint32 map_crc = 2;
+}
+
+message ProtoFlattenedSerializerField_t {
+	optional int32 var_type_sym = 1;
+	optional int32 var_name_sym = 2;
+	optional int32 bit_count = 3;
+	optional float low_value = 4;
+	optional float high_value = 5;
+	optional int32 encode_flags = 6;
+	optional int32 field_serializer_name_sym = 7;
+	optional int32 field_serializer_version = 8;
+	optional int32 send_node_sym = 9;
+	optional int32 var_encoder_sym = 10;
+}
+
+message ProtoFlattenedSerializer_t {
+	optional int32 serializer_name_sym = 1;
+	optional int32 serializer_version = 2;
+	repeated int32 fields_index = 3;
+}
+
+message CSVCMsg_FlattenedSerializer {
+	repeated ProtoFlattenedSerializer_t serializers = 1;
+	repeated string symbols = 2;
+	repeated ProtoFlattenedSerializerField_t fields = 3;
+}
+
+message CMsgIPCAddress {
+	optional fixed64 computer_guid = 1;
+	optional uint32 process_id = 2;
+}
+
+message CMsgServerPeer {
+	optional int32 player_slot = 1;
+	optional fixed64 steamid = 2;
+	optional .CMsgIPCAddress ipc = 3;
+	optional bool they_hear_you = 4;
+	optional bool you_hear_them = 5;
+	optional bool is_listenserver_host = 6;
+}
+
+message CSVCMsg_PeerList {
+	repeated .CMsgServerPeer peer = 1;
+}
+
+message CSVCMsg_HLTVStatus {
+	optional string master = 1;
+	optional int32 clients = 2;
+	optional int32 slots = 3;
+	optional int32 proxies = 4;
+}
+
+message CSVCMsg_ServerSteamID {
+	optional uint64 steam_id = 1;
+}
+
+message CSVCMsg_CmdKeyValues {
+	optional bytes data = 1;
+}
+
+message CSVCMsg_RconServerDetails {
+	optional bytes token = 1;
+	optional string details = 2;
+}
