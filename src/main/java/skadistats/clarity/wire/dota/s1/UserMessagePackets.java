@@ -3,7 +3,7 @@ package skadistats.clarity.wire.dota.s1;
 import com.google.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
-import skadistats.clarity.wire.common.proto.DotaUserMessages;
+import skadistats.clarity.wire.dota.common.proto.DotaUserMessages;
 import skadistats.clarity.wire.dota.s1.proto.S1DotaUserMessages;
 import skadistats.clarity.wire.dota.s1.proto.S1UserMessages;
 

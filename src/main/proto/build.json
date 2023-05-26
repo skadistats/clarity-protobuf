@@ -15,13 +15,18 @@
     "include": []
   },
   {
-    "path": "dota-s1",
+    "path": "dota/common",
     "build": "*.proto",
     "include": ["common"]
   },
   {
-    "path": "dota-s2",
+    "path": "dota/s1",
     "build": "*.proto",
-    "include": ["common"]
+    "include": ["common", "dota/common"]
+  },
+  {
+    "path": "dota/s2",
+    "build": "*.proto",
+    "include": ["common", "dota/common"]
   }
 ]
