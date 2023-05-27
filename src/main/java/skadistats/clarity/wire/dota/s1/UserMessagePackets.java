@@ -6,6 +6,7 @@ import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.dota.common.proto.DotaUserMessages;
 import skadistats.clarity.wire.dota.s1.proto.DOTAS1MessageId;
 import skadistats.clarity.wire.dota.s1.proto.S1UserMessages;
+import skadistats.clarity.wire.shared.demo.proto.DemoUserMessages;
 
 public class UserMessagePackets {
 
@@ -60,7 +61,7 @@ public class UserMessagePackets {
         /*  85 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_SharedCooldown_VALUE, DotaUserMessages.CDOTAUserMsg_SharedCooldown.class);
         /*  86 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_SpectatorPlayerClick_VALUE, DotaUserMessages.CDOTAUserMsg_SpectatorPlayerClick.class);
         /*  88 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_UnitEvent_VALUE, DotaUserMessages.CDOTAUserMsg_UnitEvent.class);
-        /*  89 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
+        /*  89 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DemoUserMessages.CUserMsg_ParticleManager.class);
         /*  90 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_BotChat_VALUE, DotaUserMessages.CDOTAUserMsg_BotChat.class);
         /*  91 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_HudError_VALUE, DotaUserMessages.CDOTAUserMsg_HudError.class);
         /*  97 */ K2C.put(DOTAS1MessageId.EDotaUserMessages.DOTA_UM_WorldLine_VALUE, DotaUserMessages.CDOTAUserMsg_WorldLine.class);

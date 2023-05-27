@@ -11,6 +11,7 @@ import skadistats.clarity.wire.dota.s2.proto.S2DotaUserMessages;
 import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;
 import skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes;
 import skadistats.clarity.wire.shared.demo.proto.DemoNetMessages;
+import skadistats.clarity.wire.shared.demo.proto.DemoUserMessages;
 import skadistats.clarity.wire.shared.s2.proto.S2GameEvents;
 import skadistats.clarity.wire.shared.s2.proto.S2NetMessages;
 import skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes;
@@ -62,7 +63,7 @@ public class EmbeddedPackets {
         /* 128 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_VoiceMask_VALUE, S2UserMessages.CUserMessageVoiceMask.class);
         /* 130 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_SendAudio_VALUE, S2UserMessages.CUserMessageSendAudio.class);
         /* 144 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_AudioParameter_VALUE, S2UserMessages.CUserMessageAudioParameter.class);
-        /* 145 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
+        /* 145 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_ParticleManager_VALUE, DemoUserMessages.CUserMsg_ParticleManager.class);
         /* 154 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_ServerFrameTime_VALUE, S2UserMessages.CUserMessageServerFrameTime.class);
 
 //        /* 101 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
@@ -162,7 +163,7 @@ public class EmbeddedPackets {
         /* 485 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SharedCooldown_VALUE, DotaUserMessages.CDOTAUserMsg_SharedCooldown.class);
         /* 486 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_SpectatorPlayerClick_VALUE, DotaUserMessages.CDOTAUserMsg_SpectatorPlayerClick.class);
         /* 488 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_UnitEvent_VALUE, DotaUserMessages.CDOTAUserMsg_UnitEvent.class);
-        /* 489 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DotaUserMessages.CDOTAUserMsg_ParticleManager.class);
+        /* 489 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ParticleManager_VALUE, DemoUserMessages.CUserMsg_ParticleManager.class);
         /* 490 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_BotChat_VALUE, DotaUserMessages.CDOTAUserMsg_BotChat.class);
         /* 491 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_HudError_VALUE, DotaUserMessages.CDOTAUserMsg_HudError.class);
         /* 492 */ K2C.put(S2DotaUserMessages.EDotaUserMessages.DOTA_UM_ItemPurchased_VALUE, DotaUserMessages.CDOTAUserMsg_ItemPurchased.class);

@@ -1,5 +1,5 @@
-option java_package = "skadistats.clarity.wire.csgo.s2.proto";
-option java_outer_classname = "CSGOS2UserMessages";
+option java_package = "skadistats.clarity.wire.shared.demo.proto";
+option java_outer_classname = "DemoUserMessages";
 
 import "networkbasetypes-common.proto";
 import "networkbasetypes-demo.proto";
@@ -242,9 +242,3 @@ message CUserMsg_ParticleManager {
 
   extensions 100 to 201;
 }
-
-
-
-
-
-
