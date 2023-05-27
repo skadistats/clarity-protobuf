@@ -91,6 +91,7 @@ public class EmbeddedPackets {
 //        /* 133 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_CrosshairAngle_VALUE, S2UserMessages.CUserMessageCrosshairAngle.class);
 //        /* 134 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_ShowMenu_VALUE, S2UserMessages.CUserMessageShowMenu.class);
 //        /* 135 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_CreditsMsg_VALUE, S2UserMessages.CUserMessageCreditsMsg.class);
+
 //        /* 142 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_CloseCaptionPlaceholder_VALUE, S2UserMessages.CUserMessageCloseCaptionPlaceholder.class);        System.out.println(K2C.);
 
 //        /* 143 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_CameraTransition_VALUE, S2UserMessages.CUserMessageCameraTransition.class);

@@ -75,7 +75,9 @@ public class EmbeddedPackets {
         /* 132 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_AmmoDenied_VALUE, S2UserMessages.CUserMessageAmmoDenied.class);
         /* 134 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_ShowMenu_VALUE, S2UserMessages.CUserMessageShowMenu.class);
         /* 135 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CreditsMsg_VALUE, S2UserMessages.CUserMessageCreditsMsg.class);
-        /* 138 */ // TODO: seen in replay, no enum or protobuf definition
+
+        /* 138 */ K2C.put(CSGOS2MessageId.EBaseEntityMessages.EM_RemoveAllDecals_VALUE, S2UserMessages.CEntityMessageRemoveAllDecals.class);
+
         /* 142 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CloseCaptionPlaceholder_VALUE, S2UserMessages.CUserMessageCloseCaptionPlaceholder.class);
         /* 143 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CameraTransition_VALUE, S2UserMessages.CUserMessageCameraTransition.class);
         /* 144 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_AudioParameter_VALUE, S2UserMessages.CUserMessageAudioParameter.class);

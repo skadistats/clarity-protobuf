@@ -237,8 +237,6 @@ message CUserMessageCameraTransition {
   optional .CUserMessageCameraTransition.Transition_DataDriven params_data_driven = 3;
 }
 
-// TODO: CUserMsg_ParticleManager here, maybe unify with DOTAS2
-
 message CUserMsg_HudError {
   optional int32 order_id = 1;
 }
@@ -376,8 +374,6 @@ message CUserMessage_Inventory_Response {
   optional int32 build_version = 12;
   optional int32 instance = 13;
 }
-
-
 
 
 
