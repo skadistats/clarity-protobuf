@@ -1,22 +1,11 @@
 option java_package = "skadistats.clarity.wire.dota.s2.proto";
-option java_outer_classname = "S2DotaGcMM";
-
-option optimize_for = SPEED;
-option cc_generic_services = false;
+option java_outer_classname = "DOTAS2GcMessagesCommonMatchManagement";
 
 enum EMatchBehaviorScoreVariance {
     k_EMatchBehaviorScoreVariance_Invalid = 0;
     k_EMatchBehaviorScoreVariance_Low = 1;
     k_EMatchBehaviorScoreVariance_Medium = 2;
     k_EMatchBehaviorScoreVariance_High = 3;
-}
-
-message CLobbyTimedRewardDetails {
-    optional uint32 item_def_index = 2;
-    optional bool is_supply_crate = 3;
-    optional bool is_timed_drop = 4;
-    optional uint32 account_id = 5;
-    optional uint32 origin = 6;
 }
 
 message CMsgMatchMatchmakingStats {
@@ -253,7 +242,7 @@ message CMvpData {
                 kKillEaterEventType_Windrunner_ShackleFocusFireKills = 228;
                 kKillEaterEventType_VengefulSpirit_VengeanceAuraIllusionKills = 229;
                 kKillEaterEventType_Tusk_WalrusPunchKills = 230;
-                kKillEaterEventType_Tinker_TripleHeroLasers = 231;
+                kKillEaterEventType_Tinker_MultiHeroLasers = 231;
                 kKillEaterEventType_TemplarAssassin_MultiHeroPsiBlades = 232;
                 kKillEaterEventType_Sven_KillsDuringGodsStrength = 233;
                 kKillEaterEventType_Sniper_ThreeHeroShrapnels = 234;
@@ -297,15 +286,18 @@ message CMvpData {
                 kKillEaterEventType_Snapfire_LizardBlobsKills = 272;
                 kKillEaterEventType_Snapfire_TwoHeroCookieStuns = 273;
                 Custom_KillStreak = 274;
+                kKillEaterEventType_Muerta_DeadShotKills = 275;
+                kKillEaterEventType_Muerta_PierceTheVeilKills = 276;
+                kKillEaterEventType_Muerta_MultiHeroDeadShot = 277;
+                kKillEaterEventType_Muerta_DeadShotsIntoTheCalling = 278;
             }
 
             optional .CMvpData.MvpDatum.MvpAccolade.MvpAccoladeType type = 1 [default = kills];
             optional float detail_value = 2;
         }
 
-        optional uint32 slot = 1;
+        optional uint32 player_slot = 1;
         repeated .CMvpData.MvpDatum.MvpAccolade accolades = 2;
-        optional uint32 account_id = 3;
     }
 
     repeated .CMvpData.MvpDatum mvps = 1;

@@ -1,8 +1,5 @@
 option java_package = "skadistats.clarity.wire.dota.s2.proto";
-option java_outer_classname = "S2BaseGcMessages";
-
-option optimize_for = SPEED;
-option cc_generic_services = false;
+option java_outer_classname = "DOTAS2BaseGcMessages";
 
 message CSOEconItemAttribute {
     optional uint32 def_index = 1;
@@ -32,4 +29,3 @@ message CSOEconItem {
     optional uint64 original_id = 16;
     repeated .CSOEconItemEquipped equipped_state = 18;
 }
-
