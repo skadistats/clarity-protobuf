@@ -8,14 +8,14 @@ import skadistats.clarity.wire.dota.s2.proto.DOTAS2MessageId;
 import skadistats.clarity.wire.dota.s2.proto.S2DotaGcCommon;
 import skadistats.clarity.wire.dota.s2.proto.S2DotaMatchMetadata;
 import skadistats.clarity.wire.dota.s2.proto.S2DotaUserMessages;
-import skadistats.clarity.wire.dota.s2.proto.S2TempEntities;
-import skadistats.clarity.wire.dota.s2.proto.S2UserMessages;
 import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;
 import skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes;
 import skadistats.clarity.wire.shared.demo.proto.DemoNetMessages;
 import skadistats.clarity.wire.shared.s2.proto.S2GameEvents;
 import skadistats.clarity.wire.shared.s2.proto.S2NetMessages;
 import skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes;
+import skadistats.clarity.wire.shared.s2.proto.S2TempEntities;
+import skadistats.clarity.wire.shared.s2.proto.S2UserMessages;
 
 public class EmbeddedPackets {
 
