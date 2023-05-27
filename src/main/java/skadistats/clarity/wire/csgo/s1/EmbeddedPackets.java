@@ -68,7 +68,7 @@ public class EmbeddedPackets {
         /*  15 */ K2C_SENT.put(CSGOS1MessageId.CLC_Messages.clc_LoadingProgress_VALUE, CommonNetMessages.CCLCMsg_LoadingProgress.class);
         /*  16 */ K2C_SENT.put(CSGOS1MessageId.CLC_Messages.clc_SplitPlayerConnect_VALUE, CSGOS1NetMessages.CCLCMsg_SplitPlayerConnect.class);
 
-//        /*  17 */ K2C_SERVER.put(CSGOS1NetMessages.CLC_Messages.clc_ClientMessage_VALUE, CSGOS1NetMessages.CCLCMsg_ClientMessage.class);
+//      /*  17 */ K2C_SERVER.put(CSGOS1NetMessages.CLC_Messages.clc_ClientMessage_VALUE, CSGOS1NetMessages.CCLCMsg_ClientMessage.class);
 
         /*  18 */ K2C_SENT.put(CSGOS1MessageId.CLC_Messages.clc_CmdKeyValues_VALUE, CommonNetMessages.CCLCMsg_CmdKeyValues.class);
     }
