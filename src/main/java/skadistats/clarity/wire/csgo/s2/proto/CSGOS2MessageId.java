@@ -9,6 +9,214 @@ public final class CSGOS2MessageId {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
+   * Protobuf enum {@code NET_Messages}
+   */
+  public enum NET_Messages
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>net_NOP = 0;</code>
+     */
+    net_NOP(0, 0),
+    /**
+     * <code>net_Disconnect = 1;</code>
+     */
+    net_Disconnect(1, 1),
+    /**
+     * <code>net_File = 2;</code>
+     */
+    net_File(2, 2),
+    /**
+     * <code>net_SplitScreenUser = 3;</code>
+     */
+    net_SplitScreenUser(3, 3),
+    /**
+     * <code>net_Tick = 4;</code>
+     */
+    net_Tick(4, 4),
+    /**
+     * <code>net_StringCmd = 5;</code>
+     */
+    net_StringCmd(5, 5),
+    /**
+     * <code>net_SetConVar = 6;</code>
+     */
+    net_SetConVar(6, 6),
+    /**
+     * <code>net_SignonState = 7;</code>
+     */
+    net_SignonState(7, 7),
+    /**
+     * <code>net_SpawnGroup_Load = 8;</code>
+     */
+    net_SpawnGroup_Load(8, 8),
+    /**
+     * <code>net_SpawnGroup_ManifestUpdate = 9;</code>
+     */
+    net_SpawnGroup_ManifestUpdate(9, 9),
+    /**
+     * <code>net_SpawnGroup_SetCreationTick = 11;</code>
+     */
+    net_SpawnGroup_SetCreationTick(10, 11),
+    /**
+     * <code>net_SpawnGroup_Unload = 12;</code>
+     */
+    net_SpawnGroup_Unload(11, 12),
+    /**
+     * <code>net_SpawnGroup_LoadCompleted = 13;</code>
+     */
+    net_SpawnGroup_LoadCompleted(12, 13),
+    /**
+     * <code>net_ReliableMessageEndMarker = 14;</code>
+     */
+    net_ReliableMessageEndMarker(13, 14),
+    /**
+     * <code>net_DebugOverlay = 15;</code>
+     */
+    net_DebugOverlay(14, 15),
+    /**
+     * <code>net_PlayerAvatarData = 100;</code>
+     */
+    net_PlayerAvatarData(15, 100),
+    ;
+
+    /**
+     * <code>net_NOP = 0;</code>
+     */
+    public static final int net_NOP_VALUE = 0;
+    /**
+     * <code>net_Disconnect = 1;</code>
+     */
+    public static final int net_Disconnect_VALUE = 1;
+    /**
+     * <code>net_File = 2;</code>
+     */
+    public static final int net_File_VALUE = 2;
+    /**
+     * <code>net_SplitScreenUser = 3;</code>
+     */
+    public static final int net_SplitScreenUser_VALUE = 3;
+    /**
+     * <code>net_Tick = 4;</code>
+     */
+    public static final int net_Tick_VALUE = 4;
+    /**
+     * <code>net_StringCmd = 5;</code>
+     */
+    public static final int net_StringCmd_VALUE = 5;
+    /**
+     * <code>net_SetConVar = 6;</code>
+     */
+    public static final int net_SetConVar_VALUE = 6;
+    /**
+     * <code>net_SignonState = 7;</code>
+     */
+    public static final int net_SignonState_VALUE = 7;
+    /**
+     * <code>net_SpawnGroup_Load = 8;</code>
+     */
+    public static final int net_SpawnGroup_Load_VALUE = 8;
+    /**
+     * <code>net_SpawnGroup_ManifestUpdate = 9;</code>
+     */
+    public static final int net_SpawnGroup_ManifestUpdate_VALUE = 9;
+    /**
+     * <code>net_SpawnGroup_SetCreationTick = 11;</code>
+     */
+    public static final int net_SpawnGroup_SetCreationTick_VALUE = 11;
+    /**
+     * <code>net_SpawnGroup_Unload = 12;</code>
+     */
+    public static final int net_SpawnGroup_Unload_VALUE = 12;
+    /**
+     * <code>net_SpawnGroup_LoadCompleted = 13;</code>
+     */
+    public static final int net_SpawnGroup_LoadCompleted_VALUE = 13;
+    /**
+     * <code>net_ReliableMessageEndMarker = 14;</code>
+     */
+    public static final int net_ReliableMessageEndMarker_VALUE = 14;
+    /**
+     * <code>net_DebugOverlay = 15;</code>
+     */
+    public static final int net_DebugOverlay_VALUE = 15;
+    /**
+     * <code>net_PlayerAvatarData = 100;</code>
+     */
+    public static final int net_PlayerAvatarData_VALUE = 100;
+
+
+    public final int getNumber() { return value; }
+
+    public static NET_Messages valueOf(int value) {
+      switch (value) {
+        case 0: return net_NOP;
+        case 1: return net_Disconnect;
+        case 2: return net_File;
+        case 3: return net_SplitScreenUser;
+        case 4: return net_Tick;
+        case 5: return net_StringCmd;
+        case 6: return net_SetConVar;
+        case 7: return net_SignonState;
+        case 8: return net_SpawnGroup_Load;
+        case 9: return net_SpawnGroup_ManifestUpdate;
+        case 11: return net_SpawnGroup_SetCreationTick;
+        case 12: return net_SpawnGroup_Unload;
+        case 13: return net_SpawnGroup_LoadCompleted;
+        case 14: return net_ReliableMessageEndMarker;
+        case 15: return net_DebugOverlay;
+        case 100: return net_PlayerAvatarData;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<NET_Messages>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<NET_Messages>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<NET_Messages>() {
+            public NET_Messages findValueByNumber(int number) {
+              return NET_Messages.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final NET_Messages[] VALUES = values();
+
+    public static NET_Messages valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private NET_Messages(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:NET_Messages)
+  }
+
+  /**
    * Protobuf enum {@code CLC_Messages}
    */
   public enum CLC_Messages
@@ -200,7 +408,7 @@ public final class CSGOS2MessageId {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(0);
+      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(1);
     }
 
     private static final CLC_Messages[] VALUES = values();
@@ -534,7 +742,7 @@ public final class CSGOS2MessageId {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(1);
+      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final SVC_Messages[] VALUES = values();
@@ -1012,7 +1220,7 @@ public final class CSGOS2MessageId {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(2);
+      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final EBaseUserMessages[] VALUES = values();
@@ -1130,7 +1338,7 @@ public final class CSGOS2MessageId {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(3);
+      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final EBaseEntityMessages[] VALUES = values();
@@ -1878,7 +2086,7 @@ public final class CSGOS2MessageId {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(4);
+      return skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId.getDescriptor().getEnumTypes().get(5);
     }
 
     private static final ECstrike15UserMessages[] VALUES = values();
@@ -1912,114 +2120,124 @@ public final class CSGOS2MessageId {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020message_id.proto*\216\003\n\014CLC_Messages\022\022\n\016c" +
-      "lc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc_Voi" +
-      "ceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020clc_Lis" +
-      "tenEvents\020\030\022\030\n\024clc_RespondCvarValue\020\031\022\024\n" +
-      "\020clc_FileCRCCheck\020\032\022\027\n\023clc_LoadingProgre" +
-      "ss\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\025\n\021clc_" +
-      "ClientMessage\020\035\022\035\n\031clc_SplitPlayerDiscon" +
-      "nect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016clc_Serv" +
-      "erPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020clc_Cm" +
-      "dKeyValues\020\"\022\031\n\025clc_RconServerDetails\020#\022",
-      "\022\n\016clc_HltvReplay\020$*\231\005\n\014SVC_Messages\022\022\n\016" +
-      "svc_ServerInfo\020(\022\033\n\027svc_FlattenedSeriali" +
-      "zer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause" +
-      "\020+\022\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_Upd" +
-      "ateStringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\rs" +
-      "vc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_Sou" +
-      "nds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllSt" +
-      "ringTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014sv" +
-      "c_BSPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022svc" +
-      "_PacketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010s",
-      "vc_Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_S" +
-      "topSound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_Pack" +
-      "etReliable\020=\022\022\n\016svc_HLTVStatus\020>\022\025\n\021svc_" +
-      "ServerSteamID\020?\022\026\n\022svc_FullFrameSplit\020F\022" +
-      "\031\n\025svc_RconServerDetails\020G\022\023\n\017svc_UserMe" +
-      "ssage\020H\022\022\n\016svc_HltvReplay\020I\022\031\n\025svc_Broad" +
-      "cast_Command\020J\022\037\n\033svc_HltvFixupOperatorS" +
-      "tatus\020K*\215\010\n\021EBaseUserMessages\022\027\n\023UM_Achi" +
-      "evementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025U" +
-      "M_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTime",
-      "scale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_F" +
-      "ade\020j\022\020\n\014UM_GameTitle\020k\022\r\n\tUM_HudMsg\020n\022\016" +
-      "\n\nUM_HudText\020o\022\022\n\016UM_ColoredText\020q\022\023\n\017UM" +
-      "_RequestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_R" +
-      "umble\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v" +
-      "\022\025\n\021UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n" +
-      "\013UM_ShakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_Scr" +
-      "eenTilt\020}\022\021\n\014UM_VoiceMask\020\200\001\022\021\n\014UM_SendA" +
-      "udio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n\rUM_AmmoDe" +
-      "nied\020\204\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsM",
-      "sg\020\207\001\022\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030" +
-      "\n\023UM_CameraTransition\020\217\001\022\026\n\021UM_AudioPara" +
-      "meter\020\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_" +
-      "HudError\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022" +
-      "UM_AnimGraphUpdate\020\225\001\022\033\n\026UM_HapticsManag" +
-      "erPulse\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001" +
-      "\022\031\n\024UM_CommandQueueState\020\230\001\022\030\n\023UM_Update" +
-      "CssClasses\020\231\001\022\027\n\022UM_ServerFrameTime\020\232\001\022\034" +
-      "\n\027UM_LagCompensationError\020\233\001\022\030\n\023UM_Reque" +
-      "stDllStatus\020\234\001\022\031\n\024UM_RequestUtilAction\020\235",
-      "\001\022\032\n\025UM_UtilActionResponse\020\236\001\022\031\n\024UM_DllS" +
-      "tatusResponse\020\237\001\022\030\n\023UM_RequestInventory\020" +
-      "\240\001\022\031\n\024UM_InventoryResponse\020\241\001\022\020\n\013UM_MAX_" +
-      "BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_Pl" +
-      "ayJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM" +
-      "_RemoveAllDecals\020\212\001\022\026\n\021EM_PropagateForce" +
-      "\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\246" +
-      "\017\n\026ECstrike15UserMessages\022\023\n\016CS_UM_VGUIM" +
-      "enu\020\255\002\022\021\n\014CS_UM_Geiger\020\256\002\022\020\n\013CS_UM_Train" +
-      "\020\257\002\022\022\n\rCS_UM_HudText\020\260\002\022\022\n\rCS_UM_SayText",
-      "\020\261\002\022\023\n\016CS_UM_SayText2\020\262\002\022\022\n\rCS_UM_TextMs" +
-      "g\020\263\002\022\021\n\014CS_UM_HudMsg\020\264\002\022\023\n\016CS_UM_ResetHu" +
-      "d\020\265\002\022\024\n\017CS_UM_GameTitle\020\266\002\022\020\n\013CS_UM_Shak" +
-      "e\020\270\002\022\017\n\nCS_UM_Fade\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002" +
-      "\022\027\n\022CS_UM_CloseCaption\020\273\002\022\035\n\030CS_UM_Close" +
-      "CaptionDirect\020\274\002\022\024\n\017CS_UM_SendAudio\020\275\002\022\023" +
-      "\n\016CS_UM_RawAudio\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277" +
-      "\002\022\027\n\022CS_UM_RequestState\020\300\002\022\021\n\014CS_UM_Dama" +
-      "ge\020\301\002\022\024\n\017CS_UM_RadioText\020\302\002\022\023\n\016CS_UM_Hin" +
-      "tText\020\303\002\022\026\n\021CS_UM_KeyHintText\020\304\002\022%\n CS_U",
-      "M_ProcessSpottedEntityUpdate\020\305\002\022\027\n\022CS_UM" +
-      "_ReloadEffect\020\306\002\022\026\n\021CS_UM_AdjustMoney\020\307\002" +
-      "\022\032\n\025CS_UM_UpdateTeamMoney\020\310\002\022\034\n\027CS_UM_St" +
-      "opSpectatorMode\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033" +
-      "\n\026CS_UM_DesiredTimescale\020\313\002\022\033\n\026CS_UM_Cur" +
-      "rentTimescale\020\314\002\022\033\n\026CS_UM_AchievementEve" +
-      "nt\020\315\002\022\035\n\030CS_UM_MatchEndConditions\020\316\002\022\034\n\027" +
-      "CS_UM_DisconnectToLobby\020\317\002\022\034\n\027CS_UM_Play" +
-      "erStatsUpdate\020\320\002\022\031\n\024CS_UM_WarmupHasEnded" +
-      "\020\322\002\022\025\n\020CS_UM_ClientInfo\020\323\002\022\023\n\016CS_UM_XRan",
-      "kGet\020\324\002\022\023\n\016CS_UM_XRankUpd\020\325\002\022\031\n\024CS_UM_Ca" +
-      "llVoteFailed\020\331\002\022\024\n\017CS_UM_VoteStart\020\332\002\022\023\n" +
-      "\016CS_UM_VotePass\020\333\002\022\025\n\020CS_UM_VoteFailed\020\334" +
-      "\002\022\024\n\017CS_UM_VoteSetup\020\335\002\022\036\n\031CS_UM_ServerR" +
-      "ankRevealAll\020\336\002\022\'\n\"CS_UM_SendLastKillerD" +
-      "amageToClient\020\337\002\022\033\n\026CS_UM_ServerRankUpda" +
-      "te\020\340\002\022\025\n\020CS_UM_ItemPickup\020\341\002\022\023\n\016CS_UM_Sh" +
-      "owMenu\020\342\002\022\022\n\rCS_UM_BarTime\020\343\002\022\025\n\020CS_UM_A" +
-      "mmoDenied\020\344\002\022\032\n\025CS_UM_MarkAchievement\020\345\002" +
-      "\022\033\n\026CS_UM_MatchStatsUpdate\020\346\002\022\023\n\016CS_UM_I",
-      "temDrop\020\347\002\022\032\n\025CS_UM_GlowPropTurnOff\020\350\002\022\036" +
-      "\n\031CS_UM_SendPlayerItemDrops\020\351\002\022\037\n\032CS_UM_" +
-      "RoundBackupFilenames\020\352\002\022\036\n\031CS_UM_SendPla" +
-      "yerItemFound\020\353\002\022\024\n\017CS_UM_ReportHit\020\354\002\022\023\n" +
-      "\016CS_UM_XpUpdate\020\355\002\022\030\n\023CS_UM_QuestProgres" +
-      "s\020\356\002\022\037\n\032CS_UM_ScoreLeaderboardData\020\357\002\022&\n" +
-      "!CS_UM_PlayerDecalDigitalSignature\020\360\002\022\026\n" +
-      "\021CS_UM_WeaponSound\020\361\002\022 \n\033CS_UM_UpdateScr" +
-      "eenHealthBar\020\362\002\022!\n\034CS_UM_EntityOutlineHi" +
-      "ghlight\020\363\002\022\017\n\nCS_UM_SSUI\020\364\002\022\030\n\023CS_UM_Sur",
-      "vivalStats\020\365\002\022\035\n\030CS_UM_DisconnectToLobby" +
-      "2\020\366\002\022#\n\036CS_UM_EndOfMatchAllPlayersData\020\367" +
-      "\002\022 \n\033CS_UM_PostRoundDamageReport\020\370\002\022\035\n\030C" +
-      "S_UM_RoundEndReportData\020\373\002\022\033\n\026CS_UM_Curr" +
-      "entRoundOdds\020\374\002\022\024\n\017CS_UM_DeepStats\020\375\002\022\022\n" +
-      "\rCS_UM_UtilMsg\020\376\002\022\024\n\017CS_UM_ShootInfo\020\377\002B" +
-      "8\n%skadistats.clarity.wire.csgo.s2.proto" +
-      "B\017CSGOS2MessageId"
+      "\n\020message_id.proto*\216\003\n\014NET_Messages\022\013\n\007n" +
+      "et_NOP\020\000\022\022\n\016net_Disconnect\020\001\022\014\n\010net_File" +
+      "\020\002\022\027\n\023net_SplitScreenUser\020\003\022\014\n\010net_Tick\020" +
+      "\004\022\021\n\rnet_StringCmd\020\005\022\021\n\rnet_SetConVar\020\006\022" +
+      "\023\n\017net_SignonState\020\007\022\027\n\023net_SpawnGroup_L" +
+      "oad\020\010\022!\n\035net_SpawnGroup_ManifestUpdate\020\t" +
+      "\022\"\n\036net_SpawnGroup_SetCreationTick\020\013\022\031\n\025" +
+      "net_SpawnGroup_Unload\020\014\022 \n\034net_SpawnGrou" +
+      "p_LoadCompleted\020\r\022 \n\034net_ReliableMessage" +
+      "EndMarker\020\016\022\024\n\020net_DebugOverlay\020\017\022\030\n\024net",
+      "_PlayerAvatarData\020d*\216\003\n\014CLC_Messages\022\022\n\016" +
+      "clc_ClientInfo\020\024\022\014\n\010clc_Move\020\025\022\021\n\rclc_Vo" +
+      "iceData\020\026\022\023\n\017clc_BaselineAck\020\027\022\024\n\020clc_Li" +
+      "stenEvents\020\030\022\030\n\024clc_RespondCvarValue\020\031\022\024" +
+      "\n\020clc_FileCRCCheck\020\032\022\027\n\023clc_LoadingProgr" +
+      "ess\020\033\022\032\n\026clc_SplitPlayerConnect\020\034\022\025\n\021clc" +
+      "_ClientMessage\020\035\022\035\n\031clc_SplitPlayerDisco" +
+      "nnect\020\036\022\024\n\020clc_ServerStatus\020\037\022\022\n\016clc_Ser" +
+      "verPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020clc_C" +
+      "mdKeyValues\020\"\022\031\n\025clc_RconServerDetails\020#",
+      "\022\022\n\016clc_HltvReplay\020$*\231\005\n\014SVC_Messages\022\022\n" +
+      "\016svc_ServerInfo\020(\022\033\n\027svc_FlattenedSerial" +
+      "izer\020)\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPaus" +
+      "e\020+\022\031\n\025svc_CreateStringTable\020,\022\031\n\025svc_Up" +
+      "dateStringTable\020-\022\021\n\rsvc_VoiceInit\020.\022\021\n\r" +
+      "svc_VoiceData\020/\022\r\n\tsvc_Print\0200\022\016\n\nsvc_So" +
+      "unds\0201\022\017\n\013svc_SetView\0202\022\034\n\030svc_ClearAllS" +
+      "tringTables\0203\022\024\n\020svc_CmdKeyValues\0204\022\020\n\014s" +
+      "vc_BSPDecal\0205\022\023\n\017svc_SplitScreen\0206\022\026\n\022sv" +
+      "c_PacketEntities\0207\022\020\n\014svc_Prefetch\0208\022\014\n\010",
+      "svc_Menu\0209\022\024\n\020svc_GetCvarValue\020:\022\021\n\rsvc_" +
+      "StopSound\020;\022\020\n\014svc_PeerList\020<\022\026\n\022svc_Pac" +
+      "ketReliable\020=\022\022\n\016svc_HLTVStatus\020>\022\025\n\021svc" +
+      "_ServerSteamID\020?\022\026\n\022svc_FullFrameSplit\020F" +
+      "\022\031\n\025svc_RconServerDetails\020G\022\023\n\017svc_UserM" +
+      "essage\020H\022\022\n\016svc_HltvReplay\020I\022\031\n\025svc_Broa" +
+      "dcast_Command\020J\022\037\n\033svc_HltvFixupOperator" +
+      "Status\020K*\215\010\n\021EBaseUserMessages\022\027\n\023UM_Ach" +
+      "ievementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025" +
+      "UM_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTim",
+      "escale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_" +
+      "Fade\020j\022\020\n\014UM_GameTitle\020k\022\r\n\tUM_HudMsg\020n\022" +
+      "\016\n\nUM_HudText\020o\022\022\n\016UM_ColoredText\020q\022\023\n\017U" +
+      "M_RequestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_" +
+      "Rumble\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020" +
+      "v\022\025\n\021UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017" +
+      "\n\013UM_ShakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_Sc" +
+      "reenTilt\020}\022\021\n\014UM_VoiceMask\020\200\001\022\021\n\014UM_Send" +
+      "Audio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n\rUM_AmmoD" +
+      "enied\020\204\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_Credits",
+      "Msg\020\207\001\022\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022" +
+      "\030\n\023UM_CameraTransition\020\217\001\022\026\n\021UM_AudioPar" +
+      "ameter\020\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM" +
+      "_HudError\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n" +
+      "\022UM_AnimGraphUpdate\020\225\001\022\033\n\026UM_HapticsMana" +
+      "gerPulse\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227" +
+      "\001\022\031\n\024UM_CommandQueueState\020\230\001\022\030\n\023UM_Updat" +
+      "eCssClasses\020\231\001\022\027\n\022UM_ServerFrameTime\020\232\001\022" +
+      "\034\n\027UM_LagCompensationError\020\233\001\022\030\n\023UM_Requ" +
+      "estDllStatus\020\234\001\022\031\n\024UM_RequestUtilAction\020",
+      "\235\001\022\032\n\025UM_UtilActionResponse\020\236\001\022\031\n\024UM_Dll" +
+      "StatusResponse\020\237\001\022\030\n\023UM_RequestInventory" +
+      "\020\240\001\022\031\n\024UM_InventoryResponse\020\241\001\022\020\n\013UM_MAX" +
+      "_BASE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_P" +
+      "layJingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022E" +
+      "M_RemoveAllDecals\020\212\001\022\026\n\021EM_PropagateForc" +
+      "e\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*" +
+      "\246\017\n\026ECstrike15UserMessages\022\023\n\016CS_UM_VGUI" +
+      "Menu\020\255\002\022\021\n\014CS_UM_Geiger\020\256\002\022\020\n\013CS_UM_Trai" +
+      "n\020\257\002\022\022\n\rCS_UM_HudText\020\260\002\022\022\n\rCS_UM_SayTex",
+      "t\020\261\002\022\023\n\016CS_UM_SayText2\020\262\002\022\022\n\rCS_UM_TextM" +
+      "sg\020\263\002\022\021\n\014CS_UM_HudMsg\020\264\002\022\023\n\016CS_UM_ResetH" +
+      "ud\020\265\002\022\024\n\017CS_UM_GameTitle\020\266\002\022\020\n\013CS_UM_Sha" +
+      "ke\020\270\002\022\017\n\nCS_UM_Fade\020\271\002\022\021\n\014CS_UM_Rumble\020\272" +
+      "\002\022\027\n\022CS_UM_CloseCaption\020\273\002\022\035\n\030CS_UM_Clos" +
+      "eCaptionDirect\020\274\002\022\024\n\017CS_UM_SendAudio\020\275\002\022" +
+      "\023\n\016CS_UM_RawAudio\020\276\002\022\024\n\017CS_UM_VoiceMask\020" +
+      "\277\002\022\027\n\022CS_UM_RequestState\020\300\002\022\021\n\014CS_UM_Dam" +
+      "age\020\301\002\022\024\n\017CS_UM_RadioText\020\302\002\022\023\n\016CS_UM_Hi" +
+      "ntText\020\303\002\022\026\n\021CS_UM_KeyHintText\020\304\002\022%\n CS_",
+      "UM_ProcessSpottedEntityUpdate\020\305\002\022\027\n\022CS_U" +
+      "M_ReloadEffect\020\306\002\022\026\n\021CS_UM_AdjustMoney\020\307" +
+      "\002\022\032\n\025CS_UM_UpdateTeamMoney\020\310\002\022\034\n\027CS_UM_S" +
+      "topSpectatorMode\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022" +
+      "\033\n\026CS_UM_DesiredTimescale\020\313\002\022\033\n\026CS_UM_Cu" +
+      "rrentTimescale\020\314\002\022\033\n\026CS_UM_AchievementEv" +
+      "ent\020\315\002\022\035\n\030CS_UM_MatchEndConditions\020\316\002\022\034\n" +
+      "\027CS_UM_DisconnectToLobby\020\317\002\022\034\n\027CS_UM_Pla" +
+      "yerStatsUpdate\020\320\002\022\031\n\024CS_UM_WarmupHasEnde" +
+      "d\020\322\002\022\025\n\020CS_UM_ClientInfo\020\323\002\022\023\n\016CS_UM_XRa",
+      "nkGet\020\324\002\022\023\n\016CS_UM_XRankUpd\020\325\002\022\031\n\024CS_UM_C" +
+      "allVoteFailed\020\331\002\022\024\n\017CS_UM_VoteStart\020\332\002\022\023" +
+      "\n\016CS_UM_VotePass\020\333\002\022\025\n\020CS_UM_VoteFailed\020" +
+      "\334\002\022\024\n\017CS_UM_VoteSetup\020\335\002\022\036\n\031CS_UM_Server" +
+      "RankRevealAll\020\336\002\022\'\n\"CS_UM_SendLastKiller" +
+      "DamageToClient\020\337\002\022\033\n\026CS_UM_ServerRankUpd" +
+      "ate\020\340\002\022\025\n\020CS_UM_ItemPickup\020\341\002\022\023\n\016CS_UM_S" +
+      "howMenu\020\342\002\022\022\n\rCS_UM_BarTime\020\343\002\022\025\n\020CS_UM_" +
+      "AmmoDenied\020\344\002\022\032\n\025CS_UM_MarkAchievement\020\345" +
+      "\002\022\033\n\026CS_UM_MatchStatsUpdate\020\346\002\022\023\n\016CS_UM_",
+      "ItemDrop\020\347\002\022\032\n\025CS_UM_GlowPropTurnOff\020\350\002\022" +
+      "\036\n\031CS_UM_SendPlayerItemDrops\020\351\002\022\037\n\032CS_UM" +
+      "_RoundBackupFilenames\020\352\002\022\036\n\031CS_UM_SendPl" +
+      "ayerItemFound\020\353\002\022\024\n\017CS_UM_ReportHit\020\354\002\022\023" +
+      "\n\016CS_UM_XpUpdate\020\355\002\022\030\n\023CS_UM_QuestProgre" +
+      "ss\020\356\002\022\037\n\032CS_UM_ScoreLeaderboardData\020\357\002\022&" +
+      "\n!CS_UM_PlayerDecalDigitalSignature\020\360\002\022\026" +
+      "\n\021CS_UM_WeaponSound\020\361\002\022 \n\033CS_UM_UpdateSc" +
+      "reenHealthBar\020\362\002\022!\n\034CS_UM_EntityOutlineH" +
+      "ighlight\020\363\002\022\017\n\nCS_UM_SSUI\020\364\002\022\030\n\023CS_UM_Su",
+      "rvivalStats\020\365\002\022\035\n\030CS_UM_DisconnectToLobb" +
+      "y2\020\366\002\022#\n\036CS_UM_EndOfMatchAllPlayersData\020" +
+      "\367\002\022 \n\033CS_UM_PostRoundDamageReport\020\370\002\022\035\n\030" +
+      "CS_UM_RoundEndReportData\020\373\002\022\033\n\026CS_UM_Cur" +
+      "rentRoundOdds\020\374\002\022\024\n\017CS_UM_DeepStats\020\375\002\022\022" +
+      "\n\rCS_UM_UtilMsg\020\376\002\022\024\n\017CS_UM_ShootInfo\020\377\002" +
+      "B8\n%skadistats.clarity.wire.csgo.s2.prot" +
+      "oB\017CSGOS2MessageId"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

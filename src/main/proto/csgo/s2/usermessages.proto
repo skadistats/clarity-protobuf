@@ -1,7 +1,8 @@
 option java_package = "skadistats.clarity.wire.csgo.s2.proto";
 option java_outer_classname = "CSGOS2UserMessages";
 
-import "networkbasetypes.proto";
+import "networkbasetypes-common.proto";
+import "networkbasetypes-demo.proto";
 
 enum eRollType {
   ROLL_NONE = -1;

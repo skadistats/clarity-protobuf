@@ -10,10 +10,12 @@ import skadistats.clarity.wire.dota.s2.proto.S2DotaMatchMetadata;
 import skadistats.clarity.wire.dota.s2.proto.S2DotaUserMessages;
 import skadistats.clarity.wire.dota.s2.proto.S2TempEntities;
 import skadistats.clarity.wire.dota.s2.proto.S2UserMessages;
-import skadistats.clarity.wire.shared.common.proto.NetMessages;
-import skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes;
+import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;
+import skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes;
+import skadistats.clarity.wire.shared.demo.proto.DemoNetMessages;
 import skadistats.clarity.wire.shared.s2.proto.S2GameEvents;
 import skadistats.clarity.wire.shared.s2.proto.S2NetMessages;
+import skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes;
 
 public class EmbeddedPackets {
 
@@ -21,36 +23,36 @@ public class EmbeddedPackets {
 
     static {
         K2C = new KindToClassMessageRegistry(100);
-        /*   0 */ K2C.put(NetworkBaseTypes.NET_Messages.net_NOP_VALUE, NetworkBaseTypes.CNETMsg_NOP.class);
-        /*   1 */ K2C.put(NetworkBaseTypes.NET_Messages.net_Disconnect_VALUE, NetworkBaseTypes.CNETMsg_Disconnect.class);
-        /*   4 */ K2C.put(NetworkBaseTypes.NET_Messages.net_Tick_VALUE, NetworkBaseTypes.CNETMsg_Tick.class);
-        /*   6 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SetConVar_VALUE, NetworkBaseTypes.CNETMsg_SetConVar.class);
-        /*   7 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SignonState_VALUE, NetworkBaseTypes.CNETMsg_SignonState.class);
-        /*   8 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_Load_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_Load.class);
-        /*   9 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_ManifestUpdate_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate.class);
-        /*  11 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_SetCreationTick_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick.class);
-        /*  12 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_Unload_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_Unload.class);
-        /*  12 */ K2C.put(NetworkBaseTypes.NET_Messages.net_SpawnGroup_LoadCompleted_VALUE, NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted.class);
+        /*   0 */ K2C.put(DOTAS2MessageId.NET_Messages.net_NOP_VALUE, CommonNetworkBaseTypes.CNETMsg_NOP.class);
+        /*   1 */ K2C.put(DOTAS2MessageId.NET_Messages.net_Disconnect_VALUE, CommonNetworkBaseTypes.CNETMsg_Disconnect.class);
+        /*   4 */ K2C.put(DOTAS2MessageId.NET_Messages.net_Tick_VALUE, CommonNetworkBaseTypes.CNETMsg_Tick.class);
+        /*   6 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SetConVar_VALUE, CommonNetworkBaseTypes.CNETMsg_SetConVar.class);
+        /*   7 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SignonState_VALUE, CommonNetworkBaseTypes.CNETMsg_SignonState.class);
+        /*   8 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SpawnGroup_Load_VALUE, S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load.class);
+        /*   9 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SpawnGroup_ManifestUpdate_VALUE, S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate.class);
+        /*  11 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SpawnGroup_SetCreationTick_VALUE, S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick.class);
+        /*  12 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SpawnGroup_Unload_VALUE, S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload.class);
+        /*  12 */ K2C.put(DOTAS2MessageId.NET_Messages.net_SpawnGroup_LoadCompleted_VALUE, S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted.class);
 
-        /*  20 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_ClientInfo_VALUE, NetMessages.CCLCMsg_ClientInfo.class);
-        /*  21 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_Move_VALUE, NetMessages.CCLCMsg_Move.class);
-        /*  23 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_BaselineAck_VALUE, NetMessages.CCLCMsg_BaselineAck.class);
-        /*  27 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_LoadingProgress_VALUE, NetMessages.CCLCMsg_LoadingProgress.class);
+        /*  20 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_ClientInfo_VALUE, CommonNetMessages.CCLCMsg_ClientInfo.class);
+        /*  21 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_Move_VALUE, CommonNetMessages.CCLCMsg_Move.class);
+        /*  23 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_BaselineAck_VALUE, CommonNetMessages.CCLCMsg_BaselineAck.class);
+        /*  27 */ K2C.put(DOTAS2MessageId.CLC_Messages.clc_LoadingProgress_VALUE, CommonNetMessages.CCLCMsg_LoadingProgress.class);
 
-        /*  40 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_ServerInfo_VALUE, NetMessages.CSVCMsg_ServerInfo.class);
+        /*  40 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_ServerInfo_VALUE, DemoNetMessages.CSVCMsg_ServerInfo.class);
         /*  41 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_FlattenedSerializer_VALUE, S2NetMessages.CSVCMsg_FlattenedSerializer.class);
-        /*  42 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_ClassInfo_VALUE, NetMessages.CSVCMsg_ClassInfo.class);
+        /*  42 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_ClassInfo_VALUE, CommonNetMessages.CSVCMsg_ClassInfo.class);
         /*  44 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_CreateStringTable_VALUE, S2NetMessages.CSVCMsg_CreateStringTable.class);
-        /*  45 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_UpdateStringTable_VALUE, NetMessages.CSVCMsg_UpdateStringTable.class);
-        /*  46 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_VoiceInit_VALUE, NetMessages.CSVCMsg_VoiceInit.class);
+        /*  45 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_UpdateStringTable_VALUE, CommonNetMessages.CSVCMsg_UpdateStringTable.class);
+        /*  46 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_VoiceInit_VALUE, CommonNetMessages.CSVCMsg_VoiceInit.class);
         /*  47 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_VoiceData_VALUE, S2NetMessages.CSVCMsg_VoiceData.class);
-        /*  48 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_Print_VALUE, NetMessages.CSVCMsg_Print.class);
-        /*  50 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_SetView_VALUE, NetMessages.CSVCMsg_SetView.class);
+        /*  48 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_Print_VALUE, CommonNetMessages.CSVCMsg_Print.class);
+        /*  50 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_SetView_VALUE, CommonNetMessages.CSVCMsg_SetView.class);
         /*  51 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_ClearAllStringTables_VALUE, S2NetMessages.CSVCMsg_ClearAllStringTables.class);
-        /*  55 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_PacketEntities_VALUE, NetMessages.CSVCMsg_PacketEntities.class);
+        /*  55 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_PacketEntities_VALUE, CommonNetMessages.CSVCMsg_PacketEntities.class);
         /*  60 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
         /*  62 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_HLTVStatus_VALUE, S2NetMessages.CSVCMsg_HLTVStatus.class);
-        /*  70 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, NetMessages.CSVCMsg_FullFrameSplit.class);
+        /*  70 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
 
         /* 106 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_Fade_VALUE, S2UserMessages.CUserMessageFade.class);
         /* 114 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestState_VALUE, S2UserMessages.CUserMessageRequestState.class);
@@ -101,9 +103,9 @@ public class EmbeddedPackets {
 //        /* 156 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestDllStatus_VALUE, null);
 //        /* 154 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestUtilAction_VALUE, null);
 
-        /* 205 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, NetMessages.CSVCMsg_GameEventList.class);
+        /* 205 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEventList_VALUE, CommonNetMessages.CSVCMsg_GameEventList.class);
         /* 206 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyListenEvents_VALUE, S2GameEvents.CMsgSource1LegacyListenEvents.class);
-        /* 207 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEvent_VALUE, NetworkBaseTypes.CSVCMsg_GameEvent.class);
+        /* 207 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_Source1LegacyGameEvent_VALUE, CommonNetworkBaseTypes.CSVCMsg_GameEvent.class);
         /* 208 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_SosStartSoundEvent_VALUE, S2GameEvents.CMsgSosStartSoundEvent.class);
         /* 209 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_SosStopSoundEvent_VALUE, S2GameEvents.CMsgSosStopSoundEvent.class);
         /* 210 */ K2C.put(S2GameEvents.EBaseGameEvents.GE_SosSetSoundEventParams_VALUE, S2GameEvents.CMsgSosSetSoundEventParams.class);

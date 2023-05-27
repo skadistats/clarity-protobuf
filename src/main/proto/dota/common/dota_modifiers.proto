@@ -1,7 +1,7 @@
 option java_package = "skadistats.clarity.wire.dota.common.proto";
 option java_outer_classname = "DotaModifiers";
 
-import "networkbasetypes.proto";
+import "networkbasetypes-common.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;

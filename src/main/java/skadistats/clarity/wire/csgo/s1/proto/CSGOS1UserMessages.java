@@ -5110,11 +5110,11 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D getPos();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D getPos();
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2DOrBuilder getPosOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder();
 
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
@@ -5123,11 +5123,11 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr1();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr1();
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClr1OrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder();
 
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
@@ -5136,11 +5136,11 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr2();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr2();
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClr2OrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder();
 
     /**
      * <code>optional int32 effect = 5;</code>
@@ -5259,11 +5259,11 @@ public final class CSGOS1UserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = pos_.toBuilder();
               }
-              pos_ = input.readMessage(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.PARSER, extensionRegistry);
+              pos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pos_);
                 pos_ = subBuilder.buildPartial();
@@ -5272,11 +5272,11 @@ public final class CSGOS1UserMessages {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = clr1_.toBuilder();
               }
-              clr1_ = input.readMessage(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.PARSER, extensionRegistry);
+              clr1_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr1_);
                 clr1_ = subBuilder.buildPartial();
@@ -5285,11 +5285,11 @@ public final class CSGOS1UserMessages {
               break;
             }
             case 34: {
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 subBuilder = clr2_.toBuilder();
               }
-              clr2_ = input.readMessage(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.PARSER, extensionRegistry);
+              clr2_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr2_);
                 clr2_ = subBuilder.buildPartial();
@@ -5384,7 +5384,7 @@ public final class CSGOS1UserMessages {
     }
 
     public static final int POS_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D pos_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D pos_;
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
@@ -5394,18 +5394,18 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D getPos() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D getPos() {
       return pos_;
     }
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2DOrBuilder getPosOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder() {
       return pos_;
     }
 
     public static final int CLR1_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA clr1_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr1_;
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
@@ -5415,18 +5415,18 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr1() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr1() {
       return clr1_;
     }
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClr1OrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
       return clr1_;
     }
 
     public static final int CLR2_FIELD_NUMBER = 4;
-    private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA clr2_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr2_;
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
@@ -5436,13 +5436,13 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr2() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr2() {
       return clr2_;
     }
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClr2OrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
       return clr2_;
     }
 
@@ -5565,9 +5565,9 @@ public final class CSGOS1UserMessages {
 
     private void initFields() {
       channel_ = 0;
-      pos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.getDefaultInstance();
-      clr1_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
-      clr2_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+      pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
+      clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       effect_ = 0;
       fadeInTime_ = 0F;
       fadeOutTime_ = 0F;
@@ -5790,19 +5790,19 @@ public final class CSGOS1UserMessages {
         channel_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (posBuilder_ == null) {
-          pos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.getDefaultInstance();
+          pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
         } else {
           posBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (clr1Builder_ == null) {
-          clr1_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+          clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
         } else {
           clr1Builder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (clr2Builder_ == null) {
-          clr2_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+          clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
         } else {
           clr2Builder_.clear();
         }
@@ -6006,9 +6006,9 @@ public final class CSGOS1UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D pos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2DOrBuilder> posBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder> posBuilder_;
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
@@ -6018,7 +6018,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D getPos() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D getPos() {
         if (posBuilder_ == null) {
           return pos_;
         } else {
@@ -6028,7 +6028,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Builder setPos(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D value) {
+      public Builder setPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D value) {
         if (posBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6045,7 +6045,7 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
       public Builder setPos(
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder builderForValue) {
         if (posBuilder_ == null) {
           pos_ = builderForValue.build();
           onChanged();
@@ -6058,12 +6058,12 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Builder mergePos(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D value) {
+      public Builder mergePos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D value) {
         if (posBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              pos_ != skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.getDefaultInstance()) {
+              pos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance()) {
             pos_ =
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.newBuilder(pos_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.newBuilder(pos_).mergeFrom(value).buildPartial();
           } else {
             pos_ = value;
           }
@@ -6079,7 +6079,7 @@ public final class CSGOS1UserMessages {
        */
       public Builder clearPos() {
         if (posBuilder_ == null) {
-          pos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.getDefaultInstance();
+          pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
           onChanged();
         } else {
           posBuilder_.clear();
@@ -6090,7 +6090,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.Builder getPosBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder getPosBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getPosFieldBuilder().getBuilder();
@@ -6098,7 +6098,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2DOrBuilder getPosOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
           return posBuilder_.getMessageOrBuilder();
         } else {
@@ -6109,11 +6109,11 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2DOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder> 
           getPosFieldBuilder() {
         if (posBuilder_ == null) {
           posBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2D.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector2DOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder>(
                   getPos(),
                   getParentForChildren(),
                   isClean());
@@ -6122,9 +6122,9 @@ public final class CSGOS1UserMessages {
         return posBuilder_;
       }
 
-      private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA clr1_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder> clr1Builder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> clr1Builder_;
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
@@ -6134,7 +6134,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr1() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr1() {
         if (clr1Builder_ == null) {
           return clr1_;
         } else {
@@ -6144,7 +6144,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Builder setClr1(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA value) {
+      public Builder setClr1(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6161,7 +6161,7 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
       public Builder setClr1(
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
         if (clr1Builder_ == null) {
           clr1_ = builderForValue.build();
           onChanged();
@@ -6174,12 +6174,12 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Builder mergeClr1(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA value) {
+      public Builder mergeClr1(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr1Builder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              clr1_ != skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance()) {
+              clr1_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
             clr1_ =
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.newBuilder(clr1_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.newBuilder(clr1_).mergeFrom(value).buildPartial();
           } else {
             clr1_ = value;
           }
@@ -6195,7 +6195,7 @@ public final class CSGOS1UserMessages {
        */
       public Builder clearClr1() {
         if (clr1Builder_ == null) {
-          clr1_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+          clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
           onChanged();
         } else {
           clr1Builder_.clear();
@@ -6206,7 +6206,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder getClr1Builder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder getClr1Builder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getClr1FieldBuilder().getBuilder();
@@ -6214,7 +6214,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClr1OrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
         if (clr1Builder_ != null) {
           return clr1Builder_.getMessageOrBuilder();
         } else {
@@ -6225,11 +6225,11 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> 
           getClr1FieldBuilder() {
         if (clr1Builder_ == null) {
           clr1Builder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder>(
                   getClr1(),
                   getParentForChildren(),
                   isClean());
@@ -6238,9 +6238,9 @@ public final class CSGOS1UserMessages {
         return clr1Builder_;
       }
 
-      private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA clr2_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder> clr2Builder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> clr2Builder_;
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
@@ -6250,7 +6250,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr2() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr2() {
         if (clr2Builder_ == null) {
           return clr2_;
         } else {
@@ -6260,7 +6260,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Builder setClr2(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA value) {
+      public Builder setClr2(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr2Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -6277,7 +6277,7 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
       public Builder setClr2(
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
         if (clr2Builder_ == null) {
           clr2_ = builderForValue.build();
           onChanged();
@@ -6290,12 +6290,12 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Builder mergeClr2(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA value) {
+      public Builder mergeClr2(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr2Builder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              clr2_ != skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance()) {
+              clr2_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
             clr2_ =
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.newBuilder(clr2_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.newBuilder(clr2_).mergeFrom(value).buildPartial();
           } else {
             clr2_ = value;
           }
@@ -6311,7 +6311,7 @@ public final class CSGOS1UserMessages {
        */
       public Builder clearClr2() {
         if (clr2Builder_ == null) {
-          clr2_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+          clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
           onChanged();
         } else {
           clr2Builder_.clear();
@@ -6322,7 +6322,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder getClr2Builder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder getClr2Builder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getClr2FieldBuilder().getBuilder();
@@ -6330,7 +6330,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClr2OrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
         if (clr2Builder_ != null) {
           return clr2Builder_.getMessageOrBuilder();
         } else {
@@ -6341,11 +6341,11 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> 
           getClr2FieldBuilder() {
         if (clr2Builder_ == null) {
           clr2Builder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder>(
                   getClr2(),
                   getParentForChildren(),
                   isClean());
@@ -7270,11 +7270,11 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr();
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClrOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_Fade}
@@ -7344,11 +7344,11 @@ public final class CSGOS1UserMessages {
               break;
             }
             case 34: {
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 subBuilder = clr_.toBuilder();
               }
-              clr_ = input.readMessage(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.PARSER, extensionRegistry);
+              clr_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr_);
                 clr_ = subBuilder.buildPartial();
@@ -7442,7 +7442,7 @@ public final class CSGOS1UserMessages {
     }
 
     public static final int CLR_FIELD_NUMBER = 4;
-    private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA clr_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr_;
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
@@ -7452,13 +7452,13 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr() {
       return clr_;
     }
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClrOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder() {
       return clr_;
     }
 
@@ -7466,7 +7466,7 @@ public final class CSGOS1UserMessages {
       duration_ = 0;
       holdTime_ = 0;
       flags_ = 0;
-      clr_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+      clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -7643,7 +7643,7 @@ public final class CSGOS1UserMessages {
         flags_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
         if (clrBuilder_ == null) {
-          clr_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+          clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
         } else {
           clrBuilder_.clear();
         }
@@ -7847,9 +7847,9 @@ public final class CSGOS1UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA clr_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder> clrBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> clrBuilder_;
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
@@ -7859,7 +7859,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA getClr() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr() {
         if (clrBuilder_ == null) {
           return clr_;
         } else {
@@ -7869,7 +7869,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Builder setClr(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA value) {
+      public Builder setClr(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clrBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -7886,7 +7886,7 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
       public Builder setClr(
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
         if (clrBuilder_ == null) {
           clr_ = builderForValue.build();
           onChanged();
@@ -7899,12 +7899,12 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Builder mergeClr(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA value) {
+      public Builder mergeClr(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clrBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              clr_ != skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance()) {
+              clr_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
             clr_ =
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.newBuilder(clr_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.newBuilder(clr_).mergeFrom(value).buildPartial();
           } else {
             clr_ = value;
           }
@@ -7920,7 +7920,7 @@ public final class CSGOS1UserMessages {
        */
       public Builder clearClr() {
         if (clrBuilder_ == null) {
-          clr_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.getDefaultInstance();
+          clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
           onChanged();
         } else {
           clrBuilder_.clear();
@@ -7931,7 +7931,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder getClrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder getClrBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getClrFieldBuilder().getBuilder();
@@ -7939,7 +7939,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder getClrOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder() {
         if (clrBuilder_ != null) {
           return clrBuilder_.getMessageOrBuilder();
         } else {
@@ -7950,11 +7950,11 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> 
           getClrFieldBuilder() {
         if (clrBuilder_ == null) {
           clrBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBA.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgRGBAOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder>(
                   getClr(),
                   getParentForChildren(),
                   isClean());
@@ -12228,11 +12228,11 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector getInflictorWorldPos();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getInflictorWorldPos();
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder();
 
     /**
      * <code>optional int32 victim_entindex = 3;</code>
@@ -12301,11 +12301,11 @@ public final class CSGOS1UserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = inflictorWorldPos_.toBuilder();
               }
-              inflictorWorldPos_ = input.readMessage(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.PARSER, extensionRegistry);
+              inflictorWorldPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(inflictorWorldPos_);
                 inflictorWorldPos_ = subBuilder.buildPartial();
@@ -12374,7 +12374,7 @@ public final class CSGOS1UserMessages {
     }
 
     public static final int INFLICTOR_WORLD_POS_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector inflictorWorldPos_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector inflictorWorldPos_;
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
@@ -12384,13 +12384,13 @@ public final class CSGOS1UserMessages {
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector getInflictorWorldPos() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getInflictorWorldPos() {
       return inflictorWorldPos_;
     }
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
       return inflictorWorldPos_;
     }
 
@@ -12411,7 +12411,7 @@ public final class CSGOS1UserMessages {
 
     private void initFields() {
       amount_ = 0;
-      inflictorWorldPos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.getDefaultInstance();
+      inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       victimEntindex_ = 0;
     }
     private byte memoizedIsInitialized = -1;
@@ -12578,7 +12578,7 @@ public final class CSGOS1UserMessages {
         amount_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (inflictorWorldPosBuilder_ == null) {
-          inflictorWorldPos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.getDefaultInstance();
+          inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           inflictorWorldPosBuilder_.clear();
         }
@@ -12713,9 +12713,9 @@ public final class CSGOS1UserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector inflictorWorldPos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVectorOrBuilder> inflictorWorldPosBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> inflictorWorldPosBuilder_;
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
@@ -12725,7 +12725,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector getInflictorWorldPos() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getInflictorWorldPos() {
         if (inflictorWorldPosBuilder_ == null) {
           return inflictorWorldPos_;
         } else {
@@ -12735,7 +12735,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Builder setInflictorWorldPos(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector value) {
+      public Builder setInflictorWorldPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
         if (inflictorWorldPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -12752,7 +12752,7 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
       public Builder setInflictorWorldPos(
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (inflictorWorldPosBuilder_ == null) {
           inflictorWorldPos_ = builderForValue.build();
           onChanged();
@@ -12765,12 +12765,12 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Builder mergeInflictorWorldPos(skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector value) {
+      public Builder mergeInflictorWorldPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
         if (inflictorWorldPosBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              inflictorWorldPos_ != skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.getDefaultInstance()) {
+              inflictorWorldPos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             inflictorWorldPos_ =
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.newBuilder(inflictorWorldPos_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(inflictorWorldPos_).mergeFrom(value).buildPartial();
           } else {
             inflictorWorldPos_ = value;
           }
@@ -12786,7 +12786,7 @@ public final class CSGOS1UserMessages {
        */
       public Builder clearInflictorWorldPos() {
         if (inflictorWorldPosBuilder_ == null) {
-          inflictorWorldPos_ = skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.getDefaultInstance();
+          inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           inflictorWorldPosBuilder_.clear();
@@ -12797,7 +12797,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.Builder getInflictorWorldPosBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getInflictorWorldPosBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getInflictorWorldPosFieldBuilder().getBuilder();
@@ -12805,7 +12805,7 @@ public final class CSGOS1UserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
         if (inflictorWorldPosBuilder_ != null) {
           return inflictorWorldPosBuilder_.getMessageOrBuilder();
         } else {
@@ -12816,11 +12816,11 @@ public final class CSGOS1UserMessages {
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getInflictorWorldPosFieldBuilder() {
         if (inflictorWorldPosBuilder_ == null) {
           inflictorWorldPosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVector.Builder, skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getInflictorWorldPos(),
                   getParentForChildren(),
                   isClean());
@@ -58655,216 +58655,216 @@ public final class CSGOS1UserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034cstrike15_usermessages.proto\032\021netmessa" +
-      "ges.proto\032\032cstrike15_gcmessages.proto\"\202\001" +
-      "\n\022CCSUsrMsg_VGUIMenu\022\014\n\004name\030\001 \001(\t\022\014\n\004sh" +
-      "ow\030\002 \001(\010\022+\n\007subkeys\030\003 \003(\0132\032.CCSUsrMsg_VG" +
-      "UIMenu.Subkey\032#\n\006Subkey\022\014\n\004name\030\001 \001(\t\022\013\n" +
-      "\003str\030\002 \001(\t\"!\n\020CCSUsrMsg_Geiger\022\r\n\005range\030" +
-      "\001 \001(\005\" \n\017CCSUsrMsg_Train\022\r\n\005train\030\001 \001(\005\"" +
-      "!\n\021CCSUsrMsg_HudText\022\014\n\004text\030\001 \001(\t\"U\n\021CC" +
-      "SUsrMsg_SayText\022\017\n\007ent_idx\030\001 \001(\005\022\014\n\004text" +
-      "\030\002 \001(\t\022\014\n\004chat\030\003 \001(\010\022\023\n\013textallchat\030\004 \001(",
-      "\010\"j\n\022CCSUsrMsg_SayText2\022\017\n\007ent_idx\030\001 \001(\005" +
-      "\022\014\n\004chat\030\002 \001(\010\022\020\n\010msg_name\030\003 \001(\t\022\016\n\006para" +
-      "ms\030\004 \003(\t\022\023\n\013textallchat\030\005 \001(\010\"4\n\021CCSUsrM" +
-      "sg_TextMsg\022\017\n\007msg_dst\030\001 \001(\005\022\016\n\006params\030\003 " +
-      "\003(\t\"\340\001\n\020CCSUsrMsg_HudMsg\022\017\n\007channel\030\001 \001(" +
-      "\005\022\032\n\003pos\030\002 \001(\0132\r.CMsgVector2D\022\027\n\004clr1\030\003 " +
-      "\001(\0132\t.CMsgRGBA\022\027\n\004clr2\030\004 \001(\0132\t.CMsgRGBA\022" +
-      "\016\n\006effect\030\005 \001(\005\022\024\n\014fade_in_time\030\006 \001(\002\022\025\n" +
-      "\rfade_out_time\030\007 \001(\002\022\021\n\thold_time\030\t \001(\002\022" +
-      "\017\n\007fx_time\030\n \001(\002\022\014\n\004text\030\013 \001(\t\"`\n\017CCSUsr",
-      "Msg_Shake\022\017\n\007command\030\001 \001(\005\022\027\n\017local_ampl" +
-      "itude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001(\002\022\020\n\010durati" +
-      "on\030\004 \001(\002\"\\\n\016CCSUsrMsg_Fade\022\020\n\010duration\030\001" +
-      " \001(\005\022\021\n\thold_time\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\022\026" +
-      "\n\003clr\030\004 \001(\0132\t.CMsgRGBA\">\n\020CCSUsrMsg_Rumb" +
-      "le\022\r\n\005index\030\001 \001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005flags" +
-      "\030\003 \001(\005\"^\n\026CCSUsrMsg_CloseCaption\022\014\n\004hash" +
-      "\030\001 \001(\r\022\020\n\010duration\030\002 \001(\005\022\023\n\013from_player\030" +
-      "\003 \001(\010\022\017\n\007cctoken\030\004 \001(\t\"S\n\034CCSUsrMsg_Clos" +
-      "eCaptionDirect\022\014\n\004hash\030\001 \001(\r\022\020\n\010duration",
-      "\030\002 \001(\005\022\023\n\013from_player\030\003 \001(\010\"*\n\023CCSUsrMsg" +
-      "_SendAudio\022\023\n\013radio_sound\030\001 \001(\t\"]\n\022CCSUs" +
-      "rMsg_RawAudio\022\r\n\005pitch\030\001 \001(\005\022\016\n\006entidx\030\002" +
-      " \001(\005\022\020\n\010duration\030\003 \001(\002\022\026\n\016voice_filename" +
-      "\030\004 \001(\t\"\241\001\n\023CCSUsrMsg_VoiceMask\0225\n\014player" +
-      "_masks\030\001 \003(\0132\037.CCSUsrMsg_VoiceMask.Playe" +
-      "rMask\022\031\n\021player_mod_enable\030\002 \001(\010\0328\n\nPlay" +
-      "erMask\022\027\n\017game_rules_mask\030\001 \001(\005\022\021\n\tban_m" +
-      "asks\030\002 \001(\005\"e\n\020CCSUsrMsg_Damage\022\016\n\006amount" +
-      "\030\001 \001(\005\022(\n\023inflictor_world_pos\030\002 \001(\0132\013.CM",
-      "sgVector\022\027\n\017victim_entindex\030\003 \001(\005\"X\n\023CCS" +
-      "UsrMsg_RadioText\022\017\n\007msg_dst\030\001 \001(\005\022\016\n\006cli" +
-      "ent\030\002 \001(\005\022\020\n\010msg_name\030\003 \001(\t\022\016\n\006params\030\004 " +
-      "\003(\t\"\"\n\022CCSUsrMsg_HintText\022\014\n\004text\030\001 \001(\t\"" +
-      "&\n\025CCSUsrMsg_KeyHintText\022\r\n\005hints\030\001 \003(\t\"" +
-      "\326\002\n$CCSUsrMsg_ProcessSpottedEntityUpdate" +
-      "\022\022\n\nnew_update\030\001 \001(\010\022Q\n\016entity_updates\030\002" +
-      " \003(\01329.CCSUsrMsg_ProcessSpottedEntityUpd" +
-      "ate.SpottedEntityUpdate\032\306\001\n\023SpottedEntit" +
-      "yUpdate\022\022\n\nentity_idx\030\001 \001(\005\022\020\n\010class_id\030",
-      "\002 \001(\005\022\020\n\010origin_x\030\003 \001(\005\022\020\n\010origin_y\030\004 \001(" +
-      "\005\022\020\n\010origin_z\030\005 \001(\005\022\017\n\007angle_y\030\006 \001(\005\022\017\n\007" +
-      "defuser\030\007 \001(\010\022\032\n\022player_has_defuser\030\010 \001(" +
-      "\010\022\025\n\rplayer_has_c4\030\t \001(\010\"S\n\035CCSUsrMsg_Se" +
-      "ndPlayerItemDrops\0222\n\016entity_updates\030\001 \003(" +
-      "\0132\032.CEconItemPreviewDataBlock\"_\n\035CCSUsrM" +
-      "sg_SendPlayerItemFound\022,\n\010iteminfo\030\001 \001(\013" +
-      "2\032.CEconItemPreviewDataBlock\022\020\n\010entindex" +
-      "\030\002 \001(\005\"o\n\026CCSUsrMsg_ReloadEffect\022\016\n\006enti" +
-      "dx\030\001 \001(\005\022\017\n\007actanim\030\002 \001(\005\022\020\n\010origin_x\030\003 ",
-      "\001(\002\022\020\n\010origin_y\030\004 \001(\002\022\020\n\010origin_z\030\005 \001(\002\"" +
-      "\177\n\025CCSUsrMsg_WeaponSound\022\016\n\006entidx\030\001 \001(\005" +
-      "\022\020\n\010origin_x\030\002 \001(\002\022\020\n\010origin_y\030\003 \001(\002\022\020\n\010" +
-      "origin_z\030\004 \001(\002\022\r\n\005sound\030\005 \001(\t\022\021\n\ttimesta" +
-      "mp\030\006 \001(\002\"r\n\037CCSUsrMsg_UpdateScreenHealth" +
-      "Bar\022\016\n\006entidx\030\001 \001(\005\022\027\n\017healthratio_old\030\002" +
-      " \001(\002\022\027\n\017healthratio_new\030\003 \001(\002\022\r\n\005style\030\004" +
-      " \001(\005\"K\n CCSUsrMsg_EntityOutlineHighlight" +
-      "\022\016\n\006entidx\030\001 \001(\005\022\027\n\017removehighlight\030\002 \001(" +
-      "\010\"\'\n\025CCSUsrMsg_AdjustMoney\022\016\n\006amount\030\001 \001",
-      "(\005\"U\n\023CCSUsrMsg_ReportHit\022\r\n\005pos_x\030\001 \001(\002" +
-      "\022\r\n\005pos_y\030\002 \001(\002\022\021\n\ttimestamp\030\004 \001(\002\022\r\n\005po" +
-      "s_z\030\003 \001(\002\"R\n\021CCSUsrMsg_KillCam\022\020\n\010obs_mo" +
-      "de\030\001 \001(\005\022\024\n\014first_target\030\002 \001(\005\022\025\n\rsecond" +
-      "_target\030\003 \001(\005\"\213\001\n\032CCSUsrMsg_DesiredTimes" +
-      "cale\022\031\n\021desired_timescale\030\001 \001(\002\022\035\n\025durat" +
-      "ion_realtime_sec\030\002 \001(\002\022\031\n\021interpolator_t" +
-      "ype\030\003 \001(\005\022\030\n\020start_blend_time\030\004 \001(\002\"3\n\032C" +
-      "CSUsrMsg_CurrentTimescale\022\025\n\rcur_timesca" +
-      "le\030\001 \001(\002\"Q\n\032CCSUsrMsg_AchievementEvent\022\023",
-      "\n\013achievement\030\001 \001(\005\022\r\n\005count\030\002 \001(\005\022\017\n\007us" +
-      "er_id\030\003 \001(\005\"r\n\034CCSUsrMsg_MatchEndConditi" +
-      "ons\022\021\n\tfraglimit\030\001 \001(\005\022\024\n\014mp_maxrounds\030\002" +
-      " \001(\005\022\023\n\013mp_winlimit\030\003 \001(\005\022\024\n\014mp_timelimi" +
-      "t\030\004 \001(\005\"\242\001\n\033CCSUsrMsg_PlayerStatsUpdate\022" +
-      "\017\n\007version\030\001 \001(\005\0220\n\005stats\030\004 \003(\0132!.CCSUsr" +
-      "Msg_PlayerStatsUpdate.Stat\022\017\n\007user_id\030\005 " +
-      "\001(\005\022\013\n\003crc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003idx\030\001 \001(\005\022\r\n" +
-      "\005delta\030\002 \001(\005\">\n\032CCSUsrMsg_DisplayInvento" +
-      "ry\022\017\n\007display\030\001 \001(\010\022\017\n\007user_id\030\002 \001(\005\"p\n\027",
-      "CCSUsrMsg_QuestProgress\022\020\n\010quest_id\030\001 \001(" +
-      "\r\022\025\n\rnormal_points\030\002 \001(\r\022\024\n\014bonus_points" +
-      "\030\003 \001(\r\022\026\n\016is_event_quest\030\004 \001(\010\"E\n\036CCSUsr" +
-      "Msg_ScoreLeaderboardData\022#\n\004data\030\001 \001(\0132\025" +
-      ".ScoreLeaderboardData\"S\n%CCSUsrMsg_Playe" +
-      "rDecalDigitalSignature\022*\n\004data\030\001 \001(\0132\034.P" +
-      "layerDecalDigitalSignature\":\n\022CCSUsrMsg_" +
-      "XRankGet\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\ncontroller" +
-      "\030\002 \001(\005\"K\n\022CCSUsrMsg_XRankUpd\022\020\n\010mode_idx" +
-      "\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\022\017\n\007ranking\030\003 ",
-      "\001(\005\"8\n\030CCSUsrMsg_CallVoteFailed\022\016\n\006reaso" +
-      "n\030\001 \001(\005\022\014\n\004time\030\002 \001(\005\"\265\001\n\023CCSUsrMsg_Vote" +
-      "Start\022\014\n\004team\030\001 \001(\005\022\017\n\007ent_idx\030\002 \001(\005\022\021\n\t" +
-      "vote_type\030\003 \001(\005\022\020\n\010disp_str\030\004 \001(\t\022\023\n\013det" +
-      "ails_str\030\005 \001(\t\022\026\n\016other_team_str\030\006 \001(\t\022\026" +
-      "\n\016is_yes_no_vote\030\007 \001(\010\022\025\n\rentidx_target\030" +
-      "\010 \001(\005\"\\\n\022CCSUsrMsg_VotePass\022\014\n\004team\030\001 \001(" +
-      "\005\022\021\n\tvote_type\030\002 \001(\005\022\020\n\010disp_str\030\003 \001(\t\022\023" +
-      "\n\013details_str\030\004 \001(\t\"4\n\024CCSUsrMsg_VoteFai" +
-      "led\022\014\n\004team\030\001 \001(\005\022\016\n\006reason\030\002 \001(\005\"/\n\023CCS",
-      "UsrMsg_VoteSetup\022\030\n\020potential_issues\030\001 \003" +
-      "(\t\"\204\001\n&CCSUsrMsg_SendLastKillerDamageToC" +
-      "lient\022\026\n\016num_hits_given\030\001 \001(\005\022\024\n\014damage_" +
-      "given\030\002 \001(\005\022\026\n\016num_hits_taken\030\003 \001(\005\022\024\n\014d" +
-      "amage_taken\030\004 \001(\005\"\335\001\n\032CCSUsrMsg_ServerRa" +
-      "nkUpdate\022;\n\013rank_update\030\001 \003(\0132&.CCSUsrMs" +
-      "g_ServerRankUpdate.RankUpdate\032\201\001\n\nRankUp" +
-      "date\022\022\n\naccount_id\030\001 \001(\005\022\020\n\010rank_old\030\002 \001" +
-      "(\005\022\020\n\010rank_new\030\003 \001(\005\022\020\n\010num_wins\030\004 \001(\005\022\023" +
-      "\n\013rank_change\030\005 \001(\002\022\024\n\014rank_type_id\030\006 \001(",
-      "\005\"Q\n\022CCSUsrMsg_XpUpdate\022;\n\004data\030\001 \001(\0132-." +
-      "CMsgGCCstrike15_v2_GC2ServerNotifyXPRewa" +
-      "rded\"$\n\024CCSUsrMsg_ItemPickup\022\014\n\004item\030\001 \001" +
-      "(\t\"Y\n\022CCSUsrMsg_ShowMenu\022\030\n\020bits_valid_s" +
-      "lots\030\001 \001(\005\022\024\n\014display_time\030\002 \001(\005\022\023\n\013menu" +
-      "_string\030\003 \001(\t\"!\n\021CCSUsrMsg_BarTime\022\014\n\004ti" +
-      "me\030\001 \001(\t\"\'\n\024CCSUsrMsg_AmmoDenied\022\017\n\007ammo" +
-      "Idx\030\001 \001(\005\"0\n\031CCSUsrMsg_MarkAchievement\022\023" +
-      "\n\013achievement\030\001 \001(\t\",\n\032CCSUsrMsg_MatchSt" +
-      "atsUpdate\022\016\n\006update\030\001 \001(\t\"3\n\022CCSUsrMsg_I",
-      "temDrop\022\016\n\006itemid\030\001 \001(\003\022\r\n\005death\030\002 \001(\010\"+" +
-      "\n\031CCSUsrMsg_GlowPropTurnOff\022\016\n\006entidx\030\001 " +
-      "\001(\005\"b\n\036CCSUsrMsg_RoundBackupFilenames\022\r\n" +
-      "\005count\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022\020\n\010filename\030" +
-      "\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\"D\n\016CCSUsrMsg_SSU" +
-      "I\022\014\n\004show\030\001 \001(\010\022\022\n\nstart_time\030\002 \001(\002\022\020\n\010e" +
-      "nd_time\030\003 \001(\002\"\265\003\n\027CCSUsrMsg_SurvivalStat" +
-      "s\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts\030\002 \003(\0132\035.CCSUsrM" +
-      "sg_SurvivalStats.Fact\0221\n\005users\030\003 \003(\0132\".C" +
-      "CSUsrMsg_SurvivalStats.Placement\0220\n\007dama",
-      "ges\030\005 \003(\0132\037.CCSUsrMsg_SurvivalStats.Dama" +
-      "ge\022\022\n\nticknumber\030\004 \001(\005\032M\n\004Fact\022\014\n\004type\030\001" +
-      " \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n\005value\030\003 \001(\005\022\027\n\017" +
-      "interestingness\030\004 \001(\002\032@\n\tPlacement\022\014\n\004xu" +
-      "id\030\001 \001(\004\022\022\n\nteamnumber\030\002 \001(\005\022\021\n\tplacemen" +
-      "t\030\003 \001(\005\032T\n\006Damage\022\014\n\004xuid\030\001 \001(\004\022\n\n\002to\030\002 " +
-      "\001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\021\n\tfr" +
-      "om_hits\030\005 \001(\005\"\234\003\n\"CCSUsrMsg_EndOfMatchAl" +
-      "lPlayersData\022E\n\rallplayerdata\030\001 \003(\0132..CC" +
-      "SUsrMsg_EndOfMatchAllPlayersData.PlayerD",
-      "ata\022\r\n\005scene\030\002 \001(\005\032>\n\010Accolade\022\021\n\teaccol" +
-      "ade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002\022\020\n\010position\030\003 \001" +
-      "(\005\032\337\001\n\nPlayerData\022\020\n\010entindex\030\001 \001(\005\022\014\n\004x" +
-      "uid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022\022\n\nteamnumber\030\004 " +
-      "\001(\005\022@\n\nnomination\030\005 \001(\0132,.CCSUsrMsg_EndO" +
-      "fMatchAllPlayersData.Accolade\022)\n\005items\030\006" +
-      " \003(\0132\032.CEconItemPreviewDataBlock\022\023\n\013play" +
-      "ercolor\030\007 \001(\005\022\r\n\005isbot\030\010 \001(\010\"\352\006\n\036CCSUsrM" +
-      "sg_RoundImpactScoreData\022J\n\017init_conditio" +
-      "ns\030\001 \001(\01321.CCSUsrMsg_RoundImpactScoreDat",
-      "a.InitialConditions\022D\n\022all_ris_event_dat" +
-      "a\030\002 \003(\0132(.CCSUsrMsg_RoundImpactScoreData" +
-      ".RisEvent\032\331\004\n\010RisEvent\022\021\n\ttimestamp\030\001 \001(" +
-      "\002\022\026\n\016terrorist_odds\030\002 \001(\005\022\020\n\010ct_alive\030\003 " +
-      "\001(\005\022\017\n\007t_alive\030\004 \001(\005\022D\n\013victim_data\030\005 \001(" +
-      "\0132/.CCSUsrMsg_RoundImpactScoreData.RisEv" +
-      "ent.Victim\022J\n\016objective_data\030\006 \001(\01322.CCS" +
-      "UsrMsg_RoundImpactScoreData.RisEvent.Obj" +
-      "ective\022H\n\017all_damage_data\030\007 \003(\0132/.CCSUsr" +
-      "Msg_RoundImpactScoreData.RisEvent.Damage",
-      "\032m\n\006Victim\022\023\n\013team_number\030\001 \001(\005\022\020\n\010entin" +
-      "dex\030\002 \001(\005\022\014\n\004xuid\030\003 \001(\004\022\r\n\005color\030\004 \001(\005\022\016" +
-      "\n\006is_bot\030\005 \001(\010\022\017\n\007is_dead\030\006 \001(\010\032\031\n\tObjec" +
-      "tive\022\014\n\004type\030\001 \001(\005\032\230\001\n\006Damage\022\027\n\017target_" +
-      "entindex\030\001 \001(\005\022\023\n\013target_xuid\030\002 \001(\004\022\026\n\016h" +
-      "ealth_removed\030\003 \001(\005\022\020\n\010num_hits\030\004 \001(\005\022\035\n" +
-      "\025return_health_removed\030\005 \001(\005\022\027\n\017num_retu" +
-      "rn_hits\030\006 \001(\005\032Z\n\021InitialConditions\022\026\n\016ct" +
-      "_equip_value\030\001 \001(\005\022\025\n\rt_equip_value\030\002 \001(" +
-      "\005\022\026\n\016terrorist_odds\030\003 \001(\005\"*\n\032CCSUsrMsg_C",
-      "urrentRoundOdds\022\014\n\004odds\030\001 \001(\005\"F\n\023CCSUsrM" +
-      "sg_DeepStats\022/\n\005stats\030\001 \001(\0132 .CMsgGCCStr" +
-      "ike15_ClientDeepStats\"#\n\022CCSUsrMsg_Reset" +
-      "Hud\022\r\n\005reset\030\001 \001(\010\"$\n\023CCSUsrMsg_GameTitl" +
-      "e\022\r\n\005dummy\030\001 \001(\005\"\'\n\026CCSUsrMsg_RequestSta" +
-      "te\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrMsg_StopSpect" +
-      "atorMode\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrMsg_Dis" +
-      "connectToLobby\022\r\n\005dummy\030\001 \001(\005\")\n\030CCSUsrM" +
-      "sg_WarmupHasEnded\022\r\n\005dummy\030\001 \001(\005\"%\n\024CCSU" +
-      "srMsg_ClientInfo\022\r\n\005dummy\030\001 \001(\005\"\204\001\n\035CCSU",
-      "srMsg_ServerRankRevealAll\022\035\n\025seconds_til" +
-      "l_shutdown\030\001 \001(\005\022D\n\013reservation\030\002 \001(\0132/." +
-      "CMsgGCCStrike15_v2_MatchmakingGC2ServerR" +
-      "eserve\"s\n\021CCSUsrMsg_UtilMsg\022\023\n\013util_acti" +
-      "on\030\001 \001(\t\022\r\n\005util1\030\002 \001(\005\022\r\n\005util2\030\003 \001(\005\022\r" +
-      "\n\005util3\030\004 \001(\005\022\r\n\005util4\030\005 \001(\005\022\r\n\005util5\030\006 " +
-      "\001(\005\"\307\002\n\032CCSUsrMsg_UtilMsg_Response\022\013\n\003cr" +
-      "c\030\001 \001(\007\022\022\n\nitem_count\030\002 \001(\005\022\014\n\004crc2\030\003 \001(" +
-      "\007\022\023\n\013item_count2\030\004 \001(\005\022\020\n\010crc_part\030\005 \003(\005" +
-      "\022\021\n\tcrc_part2\030\006 \003(\005\022\030\n\020client_timestamp\030",
-      "\007 \001(\005\022\020\n\010platform\030\010 \001(\005\022;\n\013itemdetails\030\t" +
-      " \003(\0132&.CCSUsrMsg_UtilMsg_Response.ItemDe" +
-      "tail\022\021\n\titemgroup\030\n \001(\005\032D\n\nItemDetail\022\r\n" +
-      "\005index\030\001 \001(\005\022\014\n\004hash\030\002 \001(\005\022\013\n\003crc\030\003 \001(\005\022" +
-      "\014\n\004name\030\004 \001(\t*\210\001\n\"ECSUsrMsg_DisconnectTo" +
-      "Lobby_Action\0220\n,k_ECSUsrMsg_DisconnectTo" +
-      "Lobby_Action_Default\020\000\0220\n,k_ECSUsrMsg_Di" +
-      "sconnectToLobby_Action_GoQueue\020\001B;\n%skad" +
-      "istats.clarity.wire.csgo.s1.protoB\022CSGOS" +
-      "1UserMessages"
+      "\n\034cstrike15_usermessages.proto\032\035networkb" +
+      "asetypes-common.proto\032\032cstrike15_gcmessa" +
+      "ges.proto\"\202\001\n\022CCSUsrMsg_VGUIMenu\022\014\n\004name" +
+      "\030\001 \001(\t\022\014\n\004show\030\002 \001(\010\022+\n\007subkeys\030\003 \003(\0132\032." +
+      "CCSUsrMsg_VGUIMenu.Subkey\032#\n\006Subkey\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\013\n\003str\030\002 \001(\t\"!\n\020CCSUsrMsg_Geig" +
+      "er\022\r\n\005range\030\001 \001(\005\" \n\017CCSUsrMsg_Train\022\r\n\005" +
+      "train\030\001 \001(\005\"!\n\021CCSUsrMsg_HudText\022\014\n\004text" +
+      "\030\001 \001(\t\"U\n\021CCSUsrMsg_SayText\022\017\n\007ent_idx\030\001" +
+      " \001(\005\022\014\n\004text\030\002 \001(\t\022\014\n\004chat\030\003 \001(\010\022\023\n\013text",
+      "allchat\030\004 \001(\010\"j\n\022CCSUsrMsg_SayText2\022\017\n\007e" +
+      "nt_idx\030\001 \001(\005\022\014\n\004chat\030\002 \001(\010\022\020\n\010msg_name\030\003" +
+      " \001(\t\022\016\n\006params\030\004 \003(\t\022\023\n\013textallchat\030\005 \001(" +
+      "\010\"4\n\021CCSUsrMsg_TextMsg\022\017\n\007msg_dst\030\001 \001(\005\022" +
+      "\016\n\006params\030\003 \003(\t\"\340\001\n\020CCSUsrMsg_HudMsg\022\017\n\007" +
+      "channel\030\001 \001(\005\022\032\n\003pos\030\002 \001(\0132\r.CMsgVector2" +
+      "D\022\027\n\004clr1\030\003 \001(\0132\t.CMsgRGBA\022\027\n\004clr2\030\004 \001(\013" +
+      "2\t.CMsgRGBA\022\016\n\006effect\030\005 \001(\005\022\024\n\014fade_in_t" +
+      "ime\030\006 \001(\002\022\025\n\rfade_out_time\030\007 \001(\002\022\021\n\thold" +
+      "_time\030\t \001(\002\022\017\n\007fx_time\030\n \001(\002\022\014\n\004text\030\013 \001",
+      "(\t\"`\n\017CCSUsrMsg_Shake\022\017\n\007command\030\001 \001(\005\022\027" +
+      "\n\017local_amplitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001" +
+      "(\002\022\020\n\010duration\030\004 \001(\002\"\\\n\016CCSUsrMsg_Fade\022\020" +
+      "\n\010duration\030\001 \001(\005\022\021\n\thold_time\030\002 \001(\005\022\r\n\005f" +
+      "lags\030\003 \001(\005\022\026\n\003clr\030\004 \001(\0132\t.CMsgRGBA\">\n\020CC" +
+      "SUsrMsg_Rumble\022\r\n\005index\030\001 \001(\005\022\014\n\004data\030\002 " +
+      "\001(\005\022\r\n\005flags\030\003 \001(\005\"^\n\026CCSUsrMsg_CloseCap" +
+      "tion\022\014\n\004hash\030\001 \001(\r\022\020\n\010duration\030\002 \001(\005\022\023\n\013" +
+      "from_player\030\003 \001(\010\022\017\n\007cctoken\030\004 \001(\t\"S\n\034CC" +
+      "SUsrMsg_CloseCaptionDirect\022\014\n\004hash\030\001 \001(\r",
+      "\022\020\n\010duration\030\002 \001(\005\022\023\n\013from_player\030\003 \001(\010\"" +
+      "*\n\023CCSUsrMsg_SendAudio\022\023\n\013radio_sound\030\001 " +
+      "\001(\t\"]\n\022CCSUsrMsg_RawAudio\022\r\n\005pitch\030\001 \001(\005" +
+      "\022\016\n\006entidx\030\002 \001(\005\022\020\n\010duration\030\003 \001(\002\022\026\n\016vo" +
+      "ice_filename\030\004 \001(\t\"\241\001\n\023CCSUsrMsg_VoiceMa" +
+      "sk\0225\n\014player_masks\030\001 \003(\0132\037.CCSUsrMsg_Voi" +
+      "ceMask.PlayerMask\022\031\n\021player_mod_enable\030\002" +
+      " \001(\010\0328\n\nPlayerMask\022\027\n\017game_rules_mask\030\001 " +
+      "\001(\005\022\021\n\tban_masks\030\002 \001(\005\"e\n\020CCSUsrMsg_Dama" +
+      "ge\022\016\n\006amount\030\001 \001(\005\022(\n\023inflictor_world_po",
+      "s\030\002 \001(\0132\013.CMsgVector\022\027\n\017victim_entindex\030" +
+      "\003 \001(\005\"X\n\023CCSUsrMsg_RadioText\022\017\n\007msg_dst\030" +
+      "\001 \001(\005\022\016\n\006client\030\002 \001(\005\022\020\n\010msg_name\030\003 \001(\t\022" +
+      "\016\n\006params\030\004 \003(\t\"\"\n\022CCSUsrMsg_HintText\022\014\n" +
+      "\004text\030\001 \001(\t\"&\n\025CCSUsrMsg_KeyHintText\022\r\n\005" +
+      "hints\030\001 \003(\t\"\326\002\n$CCSUsrMsg_ProcessSpotted" +
+      "EntityUpdate\022\022\n\nnew_update\030\001 \001(\010\022Q\n\016enti" +
+      "ty_updates\030\002 \003(\01329.CCSUsrMsg_ProcessSpot" +
+      "tedEntityUpdate.SpottedEntityUpdate\032\306\001\n\023" +
+      "SpottedEntityUpdate\022\022\n\nentity_idx\030\001 \001(\005\022",
+      "\020\n\010class_id\030\002 \001(\005\022\020\n\010origin_x\030\003 \001(\005\022\020\n\010o" +
+      "rigin_y\030\004 \001(\005\022\020\n\010origin_z\030\005 \001(\005\022\017\n\007angle" +
+      "_y\030\006 \001(\005\022\017\n\007defuser\030\007 \001(\010\022\032\n\022player_has_" +
+      "defuser\030\010 \001(\010\022\025\n\rplayer_has_c4\030\t \001(\010\"S\n\035" +
+      "CCSUsrMsg_SendPlayerItemDrops\0222\n\016entity_" +
+      "updates\030\001 \003(\0132\032.CEconItemPreviewDataBloc" +
+      "k\"_\n\035CCSUsrMsg_SendPlayerItemFound\022,\n\010it" +
+      "eminfo\030\001 \001(\0132\032.CEconItemPreviewDataBlock" +
+      "\022\020\n\010entindex\030\002 \001(\005\"o\n\026CCSUsrMsg_ReloadEf" +
+      "fect\022\016\n\006entidx\030\001 \001(\005\022\017\n\007actanim\030\002 \001(\005\022\020\n",
+      "\010origin_x\030\003 \001(\002\022\020\n\010origin_y\030\004 \001(\002\022\020\n\010ori" +
+      "gin_z\030\005 \001(\002\"\177\n\025CCSUsrMsg_WeaponSound\022\016\n\006" +
+      "entidx\030\001 \001(\005\022\020\n\010origin_x\030\002 \001(\002\022\020\n\010origin" +
+      "_y\030\003 \001(\002\022\020\n\010origin_z\030\004 \001(\002\022\r\n\005sound\030\005 \001(" +
+      "\t\022\021\n\ttimestamp\030\006 \001(\002\"r\n\037CCSUsrMsg_Update" +
+      "ScreenHealthBar\022\016\n\006entidx\030\001 \001(\005\022\027\n\017healt" +
+      "hratio_old\030\002 \001(\002\022\027\n\017healthratio_new\030\003 \001(" +
+      "\002\022\r\n\005style\030\004 \001(\005\"K\n CCSUsrMsg_EntityOutl" +
+      "ineHighlight\022\016\n\006entidx\030\001 \001(\005\022\027\n\017removehi" +
+      "ghlight\030\002 \001(\010\"\'\n\025CCSUsrMsg_AdjustMoney\022\016",
+      "\n\006amount\030\001 \001(\005\"U\n\023CCSUsrMsg_ReportHit\022\r\n" +
+      "\005pos_x\030\001 \001(\002\022\r\n\005pos_y\030\002 \001(\002\022\021\n\ttimestamp" +
+      "\030\004 \001(\002\022\r\n\005pos_z\030\003 \001(\002\"R\n\021CCSUsrMsg_KillC" +
+      "am\022\020\n\010obs_mode\030\001 \001(\005\022\024\n\014first_target\030\002 \001" +
+      "(\005\022\025\n\rsecond_target\030\003 \001(\005\"\213\001\n\032CCSUsrMsg_" +
+      "DesiredTimescale\022\031\n\021desired_timescale\030\001 " +
+      "\001(\002\022\035\n\025duration_realtime_sec\030\002 \001(\002\022\031\n\021in" +
+      "terpolator_type\030\003 \001(\005\022\030\n\020start_blend_tim" +
+      "e\030\004 \001(\002\"3\n\032CCSUsrMsg_CurrentTimescale\022\025\n" +
+      "\rcur_timescale\030\001 \001(\002\"Q\n\032CCSUsrMsg_Achiev",
+      "ementEvent\022\023\n\013achievement\030\001 \001(\005\022\r\n\005count" +
+      "\030\002 \001(\005\022\017\n\007user_id\030\003 \001(\005\"r\n\034CCSUsrMsg_Mat" +
+      "chEndConditions\022\021\n\tfraglimit\030\001 \001(\005\022\024\n\014mp" +
+      "_maxrounds\030\002 \001(\005\022\023\n\013mp_winlimit\030\003 \001(\005\022\024\n" +
+      "\014mp_timelimit\030\004 \001(\005\"\242\001\n\033CCSUsrMsg_Player" +
+      "StatsUpdate\022\017\n\007version\030\001 \001(\005\0220\n\005stats\030\004 " +
+      "\003(\0132!.CCSUsrMsg_PlayerStatsUpdate.Stat\022\017" +
+      "\n\007user_id\030\005 \001(\005\022\013\n\003crc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003" +
+      "idx\030\001 \001(\005\022\r\n\005delta\030\002 \001(\005\">\n\032CCSUsrMsg_Di" +
+      "splayInventory\022\017\n\007display\030\001 \001(\010\022\017\n\007user_",
+      "id\030\002 \001(\005\"p\n\027CCSUsrMsg_QuestProgress\022\020\n\010q" +
+      "uest_id\030\001 \001(\r\022\025\n\rnormal_points\030\002 \001(\r\022\024\n\014" +
+      "bonus_points\030\003 \001(\r\022\026\n\016is_event_quest\030\004 \001" +
+      "(\010\"E\n\036CCSUsrMsg_ScoreLeaderboardData\022#\n\004" +
+      "data\030\001 \001(\0132\025.ScoreLeaderboardData\"S\n%CCS" +
+      "UsrMsg_PlayerDecalDigitalSignature\022*\n\004da" +
+      "ta\030\001 \001(\0132\034.PlayerDecalDigitalSignature\":" +
+      "\n\022CCSUsrMsg_XRankGet\022\020\n\010mode_idx\030\001 \001(\005\022\022" +
+      "\n\ncontroller\030\002 \001(\005\"K\n\022CCSUsrMsg_XRankUpd" +
+      "\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\022\017",
+      "\n\007ranking\030\003 \001(\005\"8\n\030CCSUsrMsg_CallVoteFai" +
+      "led\022\016\n\006reason\030\001 \001(\005\022\014\n\004time\030\002 \001(\005\"\265\001\n\023CC" +
+      "SUsrMsg_VoteStart\022\014\n\004team\030\001 \001(\005\022\017\n\007ent_i" +
+      "dx\030\002 \001(\005\022\021\n\tvote_type\030\003 \001(\005\022\020\n\010disp_str\030" +
+      "\004 \001(\t\022\023\n\013details_str\030\005 \001(\t\022\026\n\016other_team" +
+      "_str\030\006 \001(\t\022\026\n\016is_yes_no_vote\030\007 \001(\010\022\025\n\ren" +
+      "tidx_target\030\010 \001(\005\"\\\n\022CCSUsrMsg_VotePass\022" +
+      "\014\n\004team\030\001 \001(\005\022\021\n\tvote_type\030\002 \001(\005\022\020\n\010disp" +
+      "_str\030\003 \001(\t\022\023\n\013details_str\030\004 \001(\t\"4\n\024CCSUs" +
+      "rMsg_VoteFailed\022\014\n\004team\030\001 \001(\005\022\016\n\006reason\030",
+      "\002 \001(\005\"/\n\023CCSUsrMsg_VoteSetup\022\030\n\020potentia" +
+      "l_issues\030\001 \003(\t\"\204\001\n&CCSUsrMsg_SendLastKil" +
+      "lerDamageToClient\022\026\n\016num_hits_given\030\001 \001(" +
+      "\005\022\024\n\014damage_given\030\002 \001(\005\022\026\n\016num_hits_take" +
+      "n\030\003 \001(\005\022\024\n\014damage_taken\030\004 \001(\005\"\335\001\n\032CCSUsr" +
+      "Msg_ServerRankUpdate\022;\n\013rank_update\030\001 \003(" +
+      "\0132&.CCSUsrMsg_ServerRankUpdate.RankUpdat" +
+      "e\032\201\001\n\nRankUpdate\022\022\n\naccount_id\030\001 \001(\005\022\020\n\010" +
+      "rank_old\030\002 \001(\005\022\020\n\010rank_new\030\003 \001(\005\022\020\n\010num_" +
+      "wins\030\004 \001(\005\022\023\n\013rank_change\030\005 \001(\002\022\024\n\014rank_",
+      "type_id\030\006 \001(\005\"Q\n\022CCSUsrMsg_XpUpdate\022;\n\004d" +
+      "ata\030\001 \001(\0132-.CMsgGCCstrike15_v2_GC2Server" +
+      "NotifyXPRewarded\"$\n\024CCSUsrMsg_ItemPickup" +
+      "\022\014\n\004item\030\001 \001(\t\"Y\n\022CCSUsrMsg_ShowMenu\022\030\n\020" +
+      "bits_valid_slots\030\001 \001(\005\022\024\n\014display_time\030\002" +
+      " \001(\005\022\023\n\013menu_string\030\003 \001(\t\"!\n\021CCSUsrMsg_B" +
+      "arTime\022\014\n\004time\030\001 \001(\t\"\'\n\024CCSUsrMsg_AmmoDe" +
+      "nied\022\017\n\007ammoIdx\030\001 \001(\005\"0\n\031CCSUsrMsg_MarkA" +
+      "chievement\022\023\n\013achievement\030\001 \001(\t\",\n\032CCSUs" +
+      "rMsg_MatchStatsUpdate\022\016\n\006update\030\001 \001(\t\"3\n",
+      "\022CCSUsrMsg_ItemDrop\022\016\n\006itemid\030\001 \001(\003\022\r\n\005d" +
+      "eath\030\002 \001(\010\"+\n\031CCSUsrMsg_GlowPropTurnOff\022" +
+      "\016\n\006entidx\030\001 \001(\005\"b\n\036CCSUsrMsg_RoundBackup" +
+      "Filenames\022\r\n\005count\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022" +
+      "\020\n\010filename\030\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\"D\n\016C" +
+      "CSUsrMsg_SSUI\022\014\n\004show\030\001 \001(\010\022\022\n\nstart_tim" +
+      "e\030\002 \001(\002\022\020\n\010end_time\030\003 \001(\002\"\265\003\n\027CCSUsrMsg_" +
+      "SurvivalStats\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts\030\002 \003" +
+      "(\0132\035.CCSUsrMsg_SurvivalStats.Fact\0221\n\005use" +
+      "rs\030\003 \003(\0132\".CCSUsrMsg_SurvivalStats.Place",
+      "ment\0220\n\007damages\030\005 \003(\0132\037.CCSUsrMsg_Surviv" +
+      "alStats.Damage\022\022\n\nticknumber\030\004 \001(\005\032M\n\004Fa" +
+      "ct\022\014\n\004type\030\001 \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n\005val" +
+      "ue\030\003 \001(\005\022\027\n\017interestingness\030\004 \001(\002\032@\n\tPla" +
+      "cement\022\014\n\004xuid\030\001 \001(\004\022\022\n\nteamnumber\030\002 \001(\005" +
+      "\022\021\n\tplacement\030\003 \001(\005\032T\n\006Damage\022\014\n\004xuid\030\001 " +
+      "\001(\004\022\n\n\002to\030\002 \001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004from" +
+      "\030\004 \001(\005\022\021\n\tfrom_hits\030\005 \001(\005\"\234\003\n\"CCSUsrMsg_" +
+      "EndOfMatchAllPlayersData\022E\n\rallplayerdat" +
+      "a\030\001 \003(\0132..CCSUsrMsg_EndOfMatchAllPlayers",
+      "Data.PlayerData\022\r\n\005scene\030\002 \001(\005\032>\n\010Accola" +
+      "de\022\021\n\teaccolade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002\022\020\n\010" +
+      "position\030\003 \001(\005\032\337\001\n\nPlayerData\022\020\n\010entinde" +
+      "x\030\001 \001(\005\022\014\n\004xuid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022\022\n\nt" +
+      "eamnumber\030\004 \001(\005\022@\n\nnomination\030\005 \001(\0132,.CC" +
+      "SUsrMsg_EndOfMatchAllPlayersData.Accolad" +
+      "e\022)\n\005items\030\006 \003(\0132\032.CEconItemPreviewDataB" +
+      "lock\022\023\n\013playercolor\030\007 \001(\005\022\r\n\005isbot\030\010 \001(\010" +
+      "\"\352\006\n\036CCSUsrMsg_RoundImpactScoreData\022J\n\017i" +
+      "nit_conditions\030\001 \001(\01321.CCSUsrMsg_RoundIm",
+      "pactScoreData.InitialConditions\022D\n\022all_r" +
+      "is_event_data\030\002 \003(\0132(.CCSUsrMsg_RoundImp" +
+      "actScoreData.RisEvent\032\331\004\n\010RisEvent\022\021\n\tti" +
+      "mestamp\030\001 \001(\002\022\026\n\016terrorist_odds\030\002 \001(\005\022\020\n" +
+      "\010ct_alive\030\003 \001(\005\022\017\n\007t_alive\030\004 \001(\005\022D\n\013vict" +
+      "im_data\030\005 \001(\0132/.CCSUsrMsg_RoundImpactSco" +
+      "reData.RisEvent.Victim\022J\n\016objective_data" +
+      "\030\006 \001(\01322.CCSUsrMsg_RoundImpactScoreData." +
+      "RisEvent.Objective\022H\n\017all_damage_data\030\007 " +
+      "\003(\0132/.CCSUsrMsg_RoundImpactScoreData.Ris",
+      "Event.Damage\032m\n\006Victim\022\023\n\013team_number\030\001 " +
+      "\001(\005\022\020\n\010entindex\030\002 \001(\005\022\014\n\004xuid\030\003 \001(\004\022\r\n\005c" +
+      "olor\030\004 \001(\005\022\016\n\006is_bot\030\005 \001(\010\022\017\n\007is_dead\030\006 " +
+      "\001(\010\032\031\n\tObjective\022\014\n\004type\030\001 \001(\005\032\230\001\n\006Damag" +
+      "e\022\027\n\017target_entindex\030\001 \001(\005\022\023\n\013target_xui" +
+      "d\030\002 \001(\004\022\026\n\016health_removed\030\003 \001(\005\022\020\n\010num_h" +
+      "its\030\004 \001(\005\022\035\n\025return_health_removed\030\005 \001(\005" +
+      "\022\027\n\017num_return_hits\030\006 \001(\005\032Z\n\021InitialCond" +
+      "itions\022\026\n\016ct_equip_value\030\001 \001(\005\022\025\n\rt_equi" +
+      "p_value\030\002 \001(\005\022\026\n\016terrorist_odds\030\003 \001(\005\"*\n",
+      "\032CCSUsrMsg_CurrentRoundOdds\022\014\n\004odds\030\001 \001(" +
+      "\005\"F\n\023CCSUsrMsg_DeepStats\022/\n\005stats\030\001 \001(\0132" +
+      " .CMsgGCCStrike15_ClientDeepStats\"#\n\022CCS" +
+      "UsrMsg_ResetHud\022\r\n\005reset\030\001 \001(\010\"$\n\023CCSUsr" +
+      "Msg_GameTitle\022\r\n\005dummy\030\001 \001(\005\"\'\n\026CCSUsrMs" +
+      "g_RequestState\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrM" +
+      "sg_StopSpectatorMode\022\r\n\005dummy\030\001 \001(\005\",\n\033C" +
+      "CSUsrMsg_DisconnectToLobby\022\r\n\005dummy\030\001 \001(" +
+      "\005\")\n\030CCSUsrMsg_WarmupHasEnded\022\r\n\005dummy\030\001" +
+      " \001(\005\"%\n\024CCSUsrMsg_ClientInfo\022\r\n\005dummy\030\001 ",
+      "\001(\005\"\204\001\n\035CCSUsrMsg_ServerRankRevealAll\022\035\n" +
+      "\025seconds_till_shutdown\030\001 \001(\005\022D\n\013reservat" +
+      "ion\030\002 \001(\0132/.CMsgGCCStrike15_v2_Matchmaki" +
+      "ngGC2ServerReserve\"s\n\021CCSUsrMsg_UtilMsg\022" +
+      "\023\n\013util_action\030\001 \001(\t\022\r\n\005util1\030\002 \001(\005\022\r\n\005u" +
+      "til2\030\003 \001(\005\022\r\n\005util3\030\004 \001(\005\022\r\n\005util4\030\005 \001(\005" +
+      "\022\r\n\005util5\030\006 \001(\005\"\307\002\n\032CCSUsrMsg_UtilMsg_Re" +
+      "sponse\022\013\n\003crc\030\001 \001(\007\022\022\n\nitem_count\030\002 \001(\005\022" +
+      "\014\n\004crc2\030\003 \001(\007\022\023\n\013item_count2\030\004 \001(\005\022\020\n\010cr" +
+      "c_part\030\005 \003(\005\022\021\n\tcrc_part2\030\006 \003(\005\022\030\n\020clien",
+      "t_timestamp\030\007 \001(\005\022\020\n\010platform\030\010 \001(\005\022;\n\013i" +
+      "temdetails\030\t \003(\0132&.CCSUsrMsg_UtilMsg_Res" +
+      "ponse.ItemDetail\022\021\n\titemgroup\030\n \001(\005\032D\n\nI" +
+      "temDetail\022\r\n\005index\030\001 \001(\005\022\014\n\004hash\030\002 \001(\005\022\013" +
+      "\n\003crc\030\003 \001(\005\022\014\n\004name\030\004 \001(\t*\210\001\n\"ECSUsrMsg_" +
+      "DisconnectToLobby_Action\0220\n,k_ECSUsrMsg_" +
+      "DisconnectToLobby_Action_Default\020\000\0220\n,k_" +
+      "ECSUsrMsg_DisconnectToLobby_Action_GoQue" +
+      "ue\020\001B;\n%skadistats.clarity.wire.csgo.s1." +
+      "protoB\022CSGOS1UserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -58877,7 +58877,7 @@ public final class CSGOS1UserMessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.getDescriptor(),
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
           skadistats.clarity.wire.csgo.s1.proto.CSGOS1GcMessages.getDescriptor(),
         }, assigner);
     internal_static_CCSUsrMsg_VGUIMenu_descriptor =
@@ -59420,7 +59420,7 @@ public final class CSGOS1UserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCSUsrMsg_UtilMsg_Response_ItemDetail_descriptor,
         new java.lang.String[] { "Index", "Hash", "Crc", "Name", });
-    skadistats.clarity.wire.csgo.s1.proto.CSGOS1NetMessages.getDescriptor();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.csgo.s1.proto.CSGOS1GcMessages.getDescriptor();
   }
 

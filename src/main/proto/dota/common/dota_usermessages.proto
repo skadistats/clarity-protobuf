@@ -1,7 +1,8 @@
 option java_package = "skadistats.clarity.wire.dota.common.proto";
 option java_outer_classname = "DotaUserMessages";
 
-import "networkbasetypes.proto";
+import "networkbasetypes-common.proto";
+import "networkbasetypes-demo.proto";
 import "dota_commonmessages.proto";
 
 option optimize_for = SPEED;

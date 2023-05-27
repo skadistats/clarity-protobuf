@@ -2927,11 +2927,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D getPos();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D getPos();
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder();
 
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
@@ -2940,11 +2940,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr1();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr1();
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder();
 
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
@@ -2953,11 +2953,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr2();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr2();
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder();
 
     /**
      * <code>optional int32 effect = 5;</code>
@@ -3076,11 +3076,11 @@ public final class CsgoUserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = pos_.toBuilder();
               }
-              pos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.PARSER, extensionRegistry);
+              pos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(pos_);
                 pos_ = subBuilder.buildPartial();
@@ -3089,11 +3089,11 @@ public final class CsgoUserMessages {
               break;
             }
             case 26: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = clr1_.toBuilder();
               }
-              clr1_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
+              clr1_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr1_);
                 clr1_ = subBuilder.buildPartial();
@@ -3102,11 +3102,11 @@ public final class CsgoUserMessages {
               break;
             }
             case 34: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 subBuilder = clr2_.toBuilder();
               }
-              clr2_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
+              clr2_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr2_);
                 clr2_ = subBuilder.buildPartial();
@@ -3201,7 +3201,7 @@ public final class CsgoUserMessages {
     }
 
     public static final int POS_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D pos_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D pos_;
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
@@ -3211,18 +3211,18 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D getPos() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D getPos() {
       return pos_;
     }
     /**
      * <code>optional .CMsgVector2D pos = 2;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder() {
       return pos_;
     }
 
     public static final int CLR1_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA clr1_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr1_;
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
@@ -3232,18 +3232,18 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr1() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr1() {
       return clr1_;
     }
     /**
      * <code>optional .CMsgRGBA clr1 = 3;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
       return clr1_;
     }
 
     public static final int CLR2_FIELD_NUMBER = 4;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA clr2_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr2_;
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
@@ -3253,13 +3253,13 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr2() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr2() {
       return clr2_;
     }
     /**
      * <code>optional .CMsgRGBA clr2 = 4;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
       return clr2_;
     }
 
@@ -3382,9 +3382,9 @@ public final class CsgoUserMessages {
 
     private void initFields() {
       channel_ = 0;
-      pos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.getDefaultInstance();
-      clr1_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
-      clr2_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
+      clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       effect_ = 0;
       fadeInTime_ = 0F;
       fadeOutTime_ = 0F;
@@ -3607,19 +3607,19 @@ public final class CsgoUserMessages {
         channel_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (posBuilder_ == null) {
-          pos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.getDefaultInstance();
+          pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
         } else {
           posBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000002);
         if (clr1Builder_ == null) {
-          clr1_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+          clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
         } else {
           clr1Builder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (clr2Builder_ == null) {
-          clr2_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+          clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
         } else {
           clr2Builder_.clear();
         }
@@ -3823,9 +3823,9 @@ public final class CsgoUserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D pos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2DOrBuilder> posBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder> posBuilder_;
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
@@ -3835,7 +3835,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D getPos() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D getPos() {
         if (posBuilder_ == null) {
           return pos_;
         } else {
@@ -3845,7 +3845,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Builder setPos(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D value) {
+      public Builder setPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D value) {
         if (posBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3862,7 +3862,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
       public Builder setPos(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder builderForValue) {
         if (posBuilder_ == null) {
           pos_ = builderForValue.build();
           onChanged();
@@ -3875,12 +3875,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public Builder mergePos(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D value) {
+      public Builder mergePos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D value) {
         if (posBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              pos_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.getDefaultInstance()) {
+              pos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance()) {
             pos_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.newBuilder(pos_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.newBuilder(pos_).mergeFrom(value).buildPartial();
           } else {
             pos_ = value;
           }
@@ -3896,7 +3896,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearPos() {
         if (posBuilder_ == null) {
-          pos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.getDefaultInstance();
+          pos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.getDefaultInstance();
           onChanged();
         } else {
           posBuilder_.clear();
@@ -3907,7 +3907,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.Builder getPosBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder getPosBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getPosFieldBuilder().getBuilder();
@@ -3915,7 +3915,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder getPosOrBuilder() {
         if (posBuilder_ != null) {
           return posBuilder_.getMessageOrBuilder();
         } else {
@@ -3926,11 +3926,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgVector2D pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2DOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder> 
           getPosFieldBuilder() {
         if (posBuilder_ == null) {
           posBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector2DOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder>(
                   getPos(),
                   getParentForChildren(),
                   isClean());
@@ -3939,9 +3939,9 @@ public final class CsgoUserMessages {
         return posBuilder_;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA clr1_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder> clr1Builder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> clr1Builder_;
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
@@ -3951,7 +3951,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr1() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr1() {
         if (clr1Builder_ == null) {
           return clr1_;
         } else {
@@ -3961,7 +3961,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Builder setClr1(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA value) {
+      public Builder setClr1(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr1Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3978,7 +3978,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
       public Builder setClr1(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
         if (clr1Builder_ == null) {
           clr1_ = builderForValue.build();
           onChanged();
@@ -3991,12 +3991,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public Builder mergeClr1(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA value) {
+      public Builder mergeClr1(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr1Builder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              clr1_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
+              clr1_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
             clr1_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.newBuilder(clr1_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.newBuilder(clr1_).mergeFrom(value).buildPartial();
           } else {
             clr1_ = value;
           }
@@ -4012,7 +4012,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearClr1() {
         if (clr1Builder_ == null) {
-          clr1_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+          clr1_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
           onChanged();
         } else {
           clr1Builder_.clear();
@@ -4023,7 +4023,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder getClr1Builder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder getClr1Builder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getClr1FieldBuilder().getBuilder();
@@ -4031,7 +4031,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr1OrBuilder() {
         if (clr1Builder_ != null) {
           return clr1Builder_.getMessageOrBuilder();
         } else {
@@ -4042,11 +4042,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgRGBA clr1 = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> 
           getClr1FieldBuilder() {
         if (clr1Builder_ == null) {
           clr1Builder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder>(
                   getClr1(),
                   getParentForChildren(),
                   isClean());
@@ -4055,9 +4055,9 @@ public final class CsgoUserMessages {
         return clr1Builder_;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA clr2_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder> clr2Builder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> clr2Builder_;
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
@@ -4067,7 +4067,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr2() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr2() {
         if (clr2Builder_ == null) {
           return clr2_;
         } else {
@@ -4077,7 +4077,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Builder setClr2(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA value) {
+      public Builder setClr2(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr2Builder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4094,7 +4094,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
       public Builder setClr2(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
         if (clr2Builder_ == null) {
           clr2_ = builderForValue.build();
           onChanged();
@@ -4107,12 +4107,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public Builder mergeClr2(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA value) {
+      public Builder mergeClr2(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clr2Builder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              clr2_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
+              clr2_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
             clr2_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.newBuilder(clr2_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.newBuilder(clr2_).mergeFrom(value).buildPartial();
           } else {
             clr2_ = value;
           }
@@ -4128,7 +4128,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearClr2() {
         if (clr2Builder_ == null) {
-          clr2_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+          clr2_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
           onChanged();
         } else {
           clr2Builder_.clear();
@@ -4139,7 +4139,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder getClr2Builder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder getClr2Builder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getClr2FieldBuilder().getBuilder();
@@ -4147,7 +4147,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClr2OrBuilder() {
         if (clr2Builder_ != null) {
           return clr2Builder_.getMessageOrBuilder();
         } else {
@@ -4158,11 +4158,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgRGBA clr2 = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> 
           getClr2FieldBuilder() {
         if (clr2Builder_ == null) {
           clr2Builder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder>(
                   getClr2(),
                   getParentForChildren(),
                   isClean());
@@ -5087,11 +5087,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr();
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_Fade}
@@ -5161,11 +5161,11 @@ public final class CsgoUserMessages {
               break;
             }
             case 34: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder subBuilder = null;
               if (((bitField0_ & 0x00000008) == 0x00000008)) {
                 subBuilder = clr_.toBuilder();
               }
-              clr_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
+              clr_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clr_);
                 clr_ = subBuilder.buildPartial();
@@ -5259,7 +5259,7 @@ public final class CsgoUserMessages {
     }
 
     public static final int CLR_FIELD_NUMBER = 4;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA clr_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr_;
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
@@ -5269,13 +5269,13 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr() {
       return clr_;
     }
     /**
      * <code>optional .CMsgRGBA clr = 4;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder() {
       return clr_;
     }
 
@@ -5283,7 +5283,7 @@ public final class CsgoUserMessages {
       duration_ = 0;
       holdTime_ = 0;
       flags_ = 0;
-      clr_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5460,7 +5460,7 @@ public final class CsgoUserMessages {
         flags_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
         if (clrBuilder_ == null) {
-          clr_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+          clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
         } else {
           clrBuilder_.clear();
         }
@@ -5664,9 +5664,9 @@ public final class CsgoUserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA clr_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder> clrBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> clrBuilder_;
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
@@ -5676,7 +5676,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA getClr() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA getClr() {
         if (clrBuilder_ == null) {
           return clr_;
         } else {
@@ -5686,7 +5686,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Builder setClr(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA value) {
+      public Builder setClr(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clrBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5703,7 +5703,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
       public Builder setClr(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder builderForValue) {
         if (clrBuilder_ == null) {
           clr_ = builderForValue.build();
           onChanged();
@@ -5716,12 +5716,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public Builder mergeClr(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA value) {
+      public Builder mergeClr(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA value) {
         if (clrBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              clr_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
+              clr_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance()) {
             clr_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.newBuilder(clr_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.newBuilder(clr_).mergeFrom(value).buildPartial();
           } else {
             clr_ = value;
           }
@@ -5737,7 +5737,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearClr() {
         if (clrBuilder_ == null) {
-          clr_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.getDefaultInstance();
+          clr_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.getDefaultInstance();
           onChanged();
         } else {
           clrBuilder_.clear();
@@ -5748,7 +5748,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder getClrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder getClrBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getClrFieldBuilder().getBuilder();
@@ -5756,7 +5756,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder getClrOrBuilder() {
         if (clrBuilder_ != null) {
           return clrBuilder_.getMessageOrBuilder();
         } else {
@@ -5767,11 +5767,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgRGBA clr = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder> 
           getClrFieldBuilder() {
         if (clrBuilder_ == null) {
           clrBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgRGBAOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder>(
                   getClr(),
                   getParentForChildren(),
                   isClean());
@@ -10045,11 +10045,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getInflictorWorldPos();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getInflictorWorldPos();
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder();
 
     /**
      * <code>optional int32 victim_entindex = 3 [default = -1];</code>
@@ -10118,11 +10118,11 @@ public final class CsgoUserMessages {
               break;
             }
             case 18: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = inflictorWorldPos_.toBuilder();
               }
-              inflictorWorldPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              inflictorWorldPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(inflictorWorldPos_);
                 inflictorWorldPos_ = subBuilder.buildPartial();
@@ -10191,7 +10191,7 @@ public final class CsgoUserMessages {
     }
 
     public static final int INFLICTOR_WORLD_POS_FIELD_NUMBER = 2;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector inflictorWorldPos_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector inflictorWorldPos_;
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
@@ -10201,13 +10201,13 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getInflictorWorldPos() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getInflictorWorldPos() {
       return inflictorWorldPos_;
     }
     /**
      * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
       return inflictorWorldPos_;
     }
 
@@ -10228,7 +10228,7 @@ public final class CsgoUserMessages {
 
     private void initFields() {
       amount_ = 0;
-      inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       victimEntindex_ = -1;
     }
     private byte memoizedIsInitialized = -1;
@@ -10395,7 +10395,7 @@ public final class CsgoUserMessages {
         amount_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (inflictorWorldPosBuilder_ == null) {
-          inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           inflictorWorldPosBuilder_.clear();
         }
@@ -10530,9 +10530,9 @@ public final class CsgoUserMessages {
         return this;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> inflictorWorldPosBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> inflictorWorldPosBuilder_;
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
@@ -10542,7 +10542,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getInflictorWorldPos() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getInflictorWorldPos() {
         if (inflictorWorldPosBuilder_ == null) {
           return inflictorWorldPos_;
         } else {
@@ -10552,7 +10552,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Builder setInflictorWorldPos(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder setInflictorWorldPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
         if (inflictorWorldPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -10569,7 +10569,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
       public Builder setInflictorWorldPos(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (inflictorWorldPosBuilder_ == null) {
           inflictorWorldPos_ = builderForValue.build();
           onChanged();
@@ -10582,12 +10582,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public Builder mergeInflictorWorldPos(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder mergeInflictorWorldPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
         if (inflictorWorldPosBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002) &&
-              inflictorWorldPos_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              inflictorWorldPos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             inflictorWorldPos_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(inflictorWorldPos_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(inflictorWorldPos_).mergeFrom(value).buildPartial();
           } else {
             inflictorWorldPos_ = value;
           }
@@ -10603,7 +10603,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearInflictorWorldPos() {
         if (inflictorWorldPosBuilder_ == null) {
-          inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          inflictorWorldPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           inflictorWorldPosBuilder_.clear();
@@ -10614,7 +10614,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder getInflictorWorldPosBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getInflictorWorldPosBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getInflictorWorldPosFieldBuilder().getBuilder();
@@ -10622,7 +10622,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getInflictorWorldPosOrBuilder() {
         if (inflictorWorldPosBuilder_ != null) {
           return inflictorWorldPosBuilder_.getMessageOrBuilder();
         } else {
@@ -10633,11 +10633,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgVector inflictor_world_pos = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getInflictorWorldPosFieldBuilder() {
         if (inflictorWorldPosBuilder_ == null) {
           inflictorWorldPosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getInflictorWorldPos(),
                   getParentForChildren(),
                   isClean());
@@ -50177,12 +50177,12 @@ public final class CsgoUserMessages {
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    java.util.List<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform> 
+    java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform> 
         getHitboxTransformsList();
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform getHitboxTransforms(int index);
+    skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform getHitboxTransforms(int index);
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
@@ -50190,12 +50190,12 @@ public final class CsgoUserMessages {
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    java.util.List<? extends skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder> 
+    java.util.List<? extends skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> 
         getHitboxTransformsOrBuilderList();
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
+    skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
         int index);
 
     /**
@@ -50205,11 +50205,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgVector shoot_pos = 3;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getShootPos();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getShootPos();
     /**
      * <code>optional .CMsgVector shoot_pos = 3;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder();
 
     /**
      * <code>optional .CMsgQAngle shoot_dir = 4;</code>
@@ -50218,11 +50218,11 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgQAngle shoot_dir = 4;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle getShootDir();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getShootDir();
     /**
      * <code>optional .CMsgQAngle shoot_dir = 4;</code>
      */
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder();
   }
   /**
    * Protobuf type {@code CCSUsrMsg_ShootInfo}
@@ -50283,18 +50283,18 @@ public final class CsgoUserMessages {
             }
             case 18: {
               if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                hitboxTransforms_ = new java.util.ArrayList<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform>();
+                hitboxTransforms_ = new java.util.ArrayList<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              hitboxTransforms_.add(input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.PARSER, extensionRegistry));
+              hitboxTransforms_.add(input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.PARSER, extensionRegistry));
               break;
             }
             case 26: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 subBuilder = shootPos_.toBuilder();
               }
-              shootPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              shootPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(shootPos_);
                 shootPos_ = subBuilder.buildPartial();
@@ -50303,11 +50303,11 @@ public final class CsgoUserMessages {
               break;
             }
             case 34: {
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder subBuilder = null;
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder subBuilder = null;
               if (((bitField0_ & 0x00000004) == 0x00000004)) {
                 subBuilder = shootDir_.toBuilder();
               }
-              shootDir_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.PARSER, extensionRegistry);
+              shootDir_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.PARSER, extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(shootDir_);
                 shootDir_ = subBuilder.buildPartial();
@@ -50374,17 +50374,17 @@ public final class CsgoUserMessages {
     }
 
     public static final int HITBOX_TRANSFORMS_FIELD_NUMBER = 2;
-    private java.util.List<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform> hitboxTransforms_;
+    private java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform> hitboxTransforms_;
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    public java.util.List<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform> getHitboxTransformsList() {
+    public java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform> getHitboxTransformsList() {
       return hitboxTransforms_;
     }
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    public java.util.List<? extends skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder> 
+    public java.util.List<? extends skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> 
         getHitboxTransformsOrBuilderList() {
       return hitboxTransforms_;
     }
@@ -50397,19 +50397,19 @@ public final class CsgoUserMessages {
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform getHitboxTransforms(int index) {
+    public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform getHitboxTransforms(int index) {
       return hitboxTransforms_.get(index);
     }
     /**
      * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
+    public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
         int index) {
       return hitboxTransforms_.get(index);
     }
 
     public static final int SHOOT_POS_FIELD_NUMBER = 3;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector shootPos_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector shootPos_;
     /**
      * <code>optional .CMsgVector shoot_pos = 3;</code>
      */
@@ -50419,18 +50419,18 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgVector shoot_pos = 3;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getShootPos() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getShootPos() {
       return shootPos_;
     }
     /**
      * <code>optional .CMsgVector shoot_pos = 3;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
       return shootPos_;
     }
 
     public static final int SHOOT_DIR_FIELD_NUMBER = 4;
-    private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle shootDir_;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle shootDir_;
     /**
      * <code>optional .CMsgQAngle shoot_dir = 4;</code>
      */
@@ -50440,21 +50440,21 @@ public final class CsgoUserMessages {
     /**
      * <code>optional .CMsgQAngle shoot_dir = 4;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle getShootDir() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getShootDir() {
       return shootDir_;
     }
     /**
      * <code>optional .CMsgQAngle shoot_dir = 4;</code>
      */
-    public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
       return shootDir_;
     }
 
     private void initFields() {
       frameNumber_ = 0;
       hitboxTransforms_ = java.util.Collections.emptyList();
-      shootPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
-      shootDir_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -50635,13 +50635,13 @@ public final class CsgoUserMessages {
           hitboxTransformsBuilder_.clear();
         }
         if (shootPosBuilder_ == null) {
-          shootPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
         } else {
           shootPosBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000004);
         if (shootDirBuilder_ == null) {
-          shootDir_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+          shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
         } else {
           shootDirBuilder_.clear();
         }
@@ -50813,22 +50813,22 @@ public final class CsgoUserMessages {
         return this;
       }
 
-      private java.util.List<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform> hitboxTransforms_ =
+      private java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform> hitboxTransforms_ =
         java.util.Collections.emptyList();
       private void ensureHitboxTransformsIsMutable() {
         if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-          hitboxTransforms_ = new java.util.ArrayList<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform>(hitboxTransforms_);
+          hitboxTransforms_ = new java.util.ArrayList<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform>(hitboxTransforms_);
           bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder> hitboxTransformsBuilder_;
+          skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> hitboxTransformsBuilder_;
 
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public java.util.List<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform> getHitboxTransformsList() {
+      public java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform> getHitboxTransformsList() {
         if (hitboxTransformsBuilder_ == null) {
           return java.util.Collections.unmodifiableList(hitboxTransforms_);
         } else {
@@ -50848,7 +50848,7 @@ public final class CsgoUserMessages {
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform getHitboxTransforms(int index) {
+      public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform getHitboxTransforms(int index) {
         if (hitboxTransformsBuilder_ == null) {
           return hitboxTransforms_.get(index);
         } else {
@@ -50859,7 +50859,7 @@ public final class CsgoUserMessages {
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
       public Builder setHitboxTransforms(
-          int index, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform value) {
+          int index, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform value) {
         if (hitboxTransformsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -50876,7 +50876,7 @@ public final class CsgoUserMessages {
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
       public Builder setHitboxTransforms(
-          int index, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder builderForValue) {
+          int index, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder builderForValue) {
         if (hitboxTransformsBuilder_ == null) {
           ensureHitboxTransformsIsMutable();
           hitboxTransforms_.set(index, builderForValue.build());
@@ -50889,7 +50889,7 @@ public final class CsgoUserMessages {
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public Builder addHitboxTransforms(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform value) {
+      public Builder addHitboxTransforms(skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform value) {
         if (hitboxTransformsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -50906,7 +50906,7 @@ public final class CsgoUserMessages {
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
       public Builder addHitboxTransforms(
-          int index, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform value) {
+          int index, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform value) {
         if (hitboxTransformsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -50923,7 +50923,7 @@ public final class CsgoUserMessages {
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
       public Builder addHitboxTransforms(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder builderForValue) {
+          skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder builderForValue) {
         if (hitboxTransformsBuilder_ == null) {
           ensureHitboxTransformsIsMutable();
           hitboxTransforms_.add(builderForValue.build());
@@ -50937,7 +50937,7 @@ public final class CsgoUserMessages {
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
       public Builder addHitboxTransforms(
-          int index, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder builderForValue) {
+          int index, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder builderForValue) {
         if (hitboxTransformsBuilder_ == null) {
           ensureHitboxTransformsIsMutable();
           hitboxTransforms_.add(index, builderForValue.build());
@@ -50951,7 +50951,7 @@ public final class CsgoUserMessages {
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
       public Builder addAllHitboxTransforms(
-          java.lang.Iterable<? extends skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform> values) {
+          java.lang.Iterable<? extends skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform> values) {
         if (hitboxTransformsBuilder_ == null) {
           ensureHitboxTransformsIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -50991,14 +50991,14 @@ public final class CsgoUserMessages {
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder getHitboxTransformsBuilder(
+      public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder getHitboxTransformsBuilder(
           int index) {
         return getHitboxTransformsFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
+      public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder getHitboxTransformsOrBuilder(
           int index) {
         if (hitboxTransformsBuilder_ == null) {
           return hitboxTransforms_.get(index);  } else {
@@ -51008,7 +51008,7 @@ public final class CsgoUserMessages {
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public java.util.List<? extends skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder> 
+      public java.util.List<? extends skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> 
            getHitboxTransformsOrBuilderList() {
         if (hitboxTransformsBuilder_ != null) {
           return hitboxTransformsBuilder_.getMessageOrBuilderList();
@@ -51019,31 +51019,31 @@ public final class CsgoUserMessages {
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder addHitboxTransformsBuilder() {
+      public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder addHitboxTransformsBuilder() {
         return getHitboxTransformsFieldBuilder().addBuilder(
-            skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.getDefaultInstance());
+            skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.getDefaultInstance());
       }
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder addHitboxTransformsBuilder(
+      public skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder addHitboxTransformsBuilder(
           int index) {
         return getHitboxTransformsFieldBuilder().addBuilder(
-            index, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.getDefaultInstance());
+            index, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.getDefaultInstance());
       }
       /**
        * <code>repeated .CMsgTransform hitbox_transforms = 2;</code>
        */
-      public java.util.List<skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder> 
+      public java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder> 
            getHitboxTransformsBuilderList() {
         return getHitboxTransformsFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder> 
+          skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> 
           getHitboxTransformsFieldBuilder() {
         if (hitboxTransformsBuilder_ == null) {
           hitboxTransformsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgTransformOrBuilder>(
+              skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder>(
                   hitboxTransforms_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
                   getParentForChildren(),
@@ -51053,9 +51053,9 @@ public final class CsgoUserMessages {
         return hitboxTransformsBuilder_;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector shootPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> shootPosBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> shootPosBuilder_;
       /**
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
@@ -51065,7 +51065,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector getShootPos() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getShootPos() {
         if (shootPosBuilder_ == null) {
           return shootPos_;
         } else {
@@ -51075,7 +51075,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
-      public Builder setShootPos(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder setShootPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
         if (shootPosBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -51092,7 +51092,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
       public Builder setShootPos(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
         if (shootPosBuilder_ == null) {
           shootPos_ = builderForValue.build();
           onChanged();
@@ -51105,12 +51105,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
-      public Builder mergeShootPos(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector value) {
+      public Builder mergeShootPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
         if (shootPosBuilder_ == null) {
           if (((bitField0_ & 0x00000004) == 0x00000004) &&
-              shootPos_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              shootPos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
             shootPos_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.newBuilder(shootPos_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(shootPos_).mergeFrom(value).buildPartial();
           } else {
             shootPos_ = value;
           }
@@ -51126,7 +51126,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearShootPos() {
         if (shootPosBuilder_ == null) {
-          shootPos_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.getDefaultInstance();
+          shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
           onChanged();
         } else {
           shootPosBuilder_.clear();
@@ -51137,7 +51137,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder getShootPosBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getShootPosBuilder() {
         bitField0_ |= 0x00000004;
         onChanged();
         return getShootPosFieldBuilder().getBuilder();
@@ -51145,7 +51145,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
         if (shootPosBuilder_ != null) {
           return shootPosBuilder_.getMessageOrBuilder();
         } else {
@@ -51156,11 +51156,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgVector shoot_pos = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getShootPosFieldBuilder() {
         if (shootPosBuilder_ == null) {
           shootPosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgVectorOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getShootPos(),
                   getParentForChildren(),
                   isClean());
@@ -51169,9 +51169,9 @@ public final class CsgoUserMessages {
         return shootPosBuilder_;
       }
 
-      private skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle shootDir_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder> shootDirBuilder_;
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> shootDirBuilder_;
       /**
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
@@ -51181,7 +51181,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle getShootDir() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getShootDir() {
         if (shootDirBuilder_ == null) {
           return shootDir_;
         } else {
@@ -51191,7 +51191,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
-      public Builder setShootDir(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle value) {
+      public Builder setShootDir(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle value) {
         if (shootDirBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -51208,7 +51208,7 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
       public Builder setShootDir(
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder builderForValue) {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder builderForValue) {
         if (shootDirBuilder_ == null) {
           shootDir_ = builderForValue.build();
           onChanged();
@@ -51221,12 +51221,12 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
-      public Builder mergeShootDir(skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle value) {
+      public Builder mergeShootDir(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle value) {
         if (shootDirBuilder_ == null) {
           if (((bitField0_ & 0x00000008) == 0x00000008) &&
-              shootDir_ != skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance()) {
+              shootDir_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance()) {
             shootDir_ =
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.newBuilder(shootDir_).mergeFrom(value).buildPartial();
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.newBuilder(shootDir_).mergeFrom(value).buildPartial();
           } else {
             shootDir_ = value;
           }
@@ -51242,7 +51242,7 @@ public final class CsgoUserMessages {
        */
       public Builder clearShootDir() {
         if (shootDirBuilder_ == null) {
-          shootDir_ = skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+          shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
           onChanged();
         } else {
           shootDirBuilder_.clear();
@@ -51253,7 +51253,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder getShootDirBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder getShootDirBuilder() {
         bitField0_ |= 0x00000008;
         onChanged();
         return getShootDirFieldBuilder().getBuilder();
@@ -51261,7 +51261,7 @@ public final class CsgoUserMessages {
       /**
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
-      public skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
         if (shootDirBuilder_ != null) {
           return shootDirBuilder_.getMessageOrBuilder();
         } else {
@@ -51272,11 +51272,11 @@ public final class CsgoUserMessages {
        * <code>optional .CMsgQAngle shoot_dir = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder> 
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
           getShootDirFieldBuilder() {
         if (shootDirBuilder_ == null) {
           shootDirBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.CMsgQAngleOrBuilder>(
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                   getShootDir(),
                   getParentForChildren(),
                   isClean());
@@ -55095,210 +55095,211 @@ public final class CsgoUserMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\034cstrike15_usermessages.proto\032\026networkb" +
-      "asetypes.proto\032\032cstrike15_gcmessages.pro" +
-      "to\"}\n\022CCSUsrMsg_VGUIMenu\022\014\n\004name\030\001 \001(\t\022\014" +
-      "\n\004show\030\002 \001(\010\022&\n\004keys\030\003 \003(\0132\030.CCSUsrMsg_V" +
-      "GUIMenu.Keys\032#\n\004Keys\022\014\n\004name\030\001 \001(\t\022\r\n\005va" +
-      "lue\030\002 \001(\t\"!\n\020CCSUsrMsg_Geiger\022\r\n\005range\030\001" +
-      " \001(\005\" \n\017CCSUsrMsg_Train\022\r\n\005train\030\001 \001(\005\"!" +
-      "\n\021CCSUsrMsg_HudText\022\014\n\004text\030\001 \001(\t\"\340\001\n\020CC" +
-      "SUsrMsg_HudMsg\022\017\n\007channel\030\001 \001(\005\022\032\n\003pos\030\002" +
-      " \001(\0132\r.CMsgVector2D\022\027\n\004clr1\030\003 \001(\0132\t.CMsg",
-      "RGBA\022\027\n\004clr2\030\004 \001(\0132\t.CMsgRGBA\022\016\n\006effect\030" +
-      "\005 \001(\005\022\024\n\014fade_in_time\030\006 \001(\002\022\025\n\rfade_out_" +
-      "time\030\007 \001(\002\022\021\n\thold_time\030\t \001(\002\022\017\n\007fx_time" +
-      "\030\n \001(\002\022\014\n\004text\030\013 \001(\t\"`\n\017CCSUsrMsg_Shake\022" +
-      "\017\n\007command\030\001 \001(\005\022\027\n\017local_amplitude\030\002 \001(" +
-      "\002\022\021\n\tfrequency\030\003 \001(\002\022\020\n\010duration\030\004 \001(\002\"\\" +
-      "\n\016CCSUsrMsg_Fade\022\020\n\010duration\030\001 \001(\005\022\021\n\tho" +
-      "ld_time\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\022\026\n\003clr\030\004 \001(" +
-      "\0132\t.CMsgRGBA\">\n\020CCSUsrMsg_Rumble\022\r\n\005inde" +
-      "x\030\001 \001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\"^\n\026",
-      "CCSUsrMsg_CloseCaption\022\014\n\004hash\030\001 \001(\r\022\020\n\010" +
-      "duration\030\002 \001(\005\022\023\n\013from_player\030\003 \001(\010\022\017\n\007c" +
-      "ctoken\030\004 \001(\t\"S\n\034CCSUsrMsg_CloseCaptionDi" +
-      "rect\022\014\n\004hash\030\001 \001(\r\022\020\n\010duration\030\002 \001(\005\022\023\n\013" +
-      "from_player\030\003 \001(\010\"*\n\023CCSUsrMsg_SendAudio" +
-      "\022\023\n\013radio_sound\030\001 \001(\t\"a\n\022CCSUsrMsg_RawAu" +
-      "dio\022\r\n\005pitch\030\001 \001(\005\022\022\n\006entidx\030\002 \001(\005:\002-1\022\020" +
-      "\n\010duration\030\003 \001(\002\022\026\n\016voice_filename\030\004 \001(\t" +
-      "\"\241\001\n\023CCSUsrMsg_VoiceMask\0225\n\014player_masks" +
-      "\030\001 \003(\0132\037.CCSUsrMsg_VoiceMask.PlayerMask\022",
-      "\031\n\021player_mod_enable\030\002 \001(\010\0328\n\nPlayerMask" +
-      "\022\027\n\017game_rules_mask\030\001 \001(\005\022\021\n\tban_masks\030\002" +
-      " \001(\005\"i\n\020CCSUsrMsg_Damage\022\016\n\006amount\030\001 \001(\005" +
-      "\022(\n\023inflictor_world_pos\030\002 \001(\0132\013.CMsgVect" +
-      "or\022\033\n\017victim_entindex\030\003 \001(\005:\002-1\"\\\n\023CCSUs" +
-      "rMsg_RadioText\022\017\n\007msg_dst\030\001 \001(\005\022\022\n\006clien" +
-      "t\030\002 \001(\005:\002-1\022\020\n\010msg_name\030\003 \001(\t\022\016\n\006params\030" +
-      "\004 \003(\t\"%\n\022CCSUsrMsg_HintText\022\017\n\007message\030\001" +
-      " \001(\t\")\n\025CCSUsrMsg_KeyHintText\022\020\n\010message" +
-      "s\030\001 \003(\t\"\332\002\n$CCSUsrMsg_ProcessSpottedEnti",
-      "tyUpdate\022\022\n\nnew_update\030\001 \001(\010\022Q\n\016entity_u" +
-      "pdates\030\002 \003(\01329.CCSUsrMsg_ProcessSpottedE" +
-      "ntityUpdate.SpottedEntityUpdate\032\312\001\n\023Spot" +
-      "tedEntityUpdate\022\026\n\nentity_idx\030\001 \001(\005:\002-1\022" +
-      "\020\n\010class_id\030\002 \001(\005\022\020\n\010origin_x\030\003 \001(\005\022\020\n\010o" +
-      "rigin_y\030\004 \001(\005\022\020\n\010origin_z\030\005 \001(\005\022\017\n\007angle" +
-      "_y\030\006 \001(\005\022\017\n\007defuser\030\007 \001(\010\022\032\n\022player_has_" +
-      "defuser\030\010 \001(\010\022\025\n\rplayer_has_c4\030\t \001(\010\"S\n\035" +
-      "CCSUsrMsg_SendPlayerItemDrops\0222\n\016entity_" +
-      "updates\030\001 \003(\0132\032.CEconItemPreviewDataBloc",
-      "k\"e\n\035CCSUsrMsg_SendPlayerItemFound\022,\n\010it" +
-      "eminfo\030\001 \001(\0132\032.CEconItemPreviewDataBlock" +
-      "\022\026\n\nplayerslot\030\002 \001(\005:\002-1\"s\n\026CCSUsrMsg_Re" +
-      "loadEffect\022\022\n\006entidx\030\001 \001(\005:\002-1\022\017\n\007actani" +
-      "m\030\002 \001(\005\022\020\n\010origin_x\030\003 \001(\002\022\020\n\010origin_y\030\004 " +
-      "\001(\002\022\020\n\010origin_z\030\005 \001(\002\"\240\001\n\025CCSUsrMsg_Weap" +
-      "onSound\022\022\n\006entidx\030\001 \001(\005:\002-1\022\020\n\010origin_x\030" +
-      "\002 \001(\002\022\020\n\010origin_y\030\003 \001(\002\022\020\n\010origin_z\030\004 \001(" +
-      "\002\022\r\n\005sound\030\005 \001(\t\022\021\n\ttimestamp\030\006 \001(\002\022\033\n\023s" +
-      "ource_soundscapeid\030\007 \001(\007\"v\n\037CCSUsrMsg_Up",
-      "dateScreenHealthBar\022\022\n\006entidx\030\001 \001(\005:\002-1\022" +
-      "\027\n\017healthratio_old\030\002 \001(\002\022\027\n\017healthratio_" +
-      "new\030\003 \001(\002\022\r\n\005style\030\004 \001(\005\"O\n CCSUsrMsg_En" +
-      "tityOutlineHighlight\022\022\n\006entidx\030\001 \001(\005:\002-1" +
-      "\022\027\n\017removehighlight\030\002 \001(\010\"\'\n\025CCSUsrMsg_A" +
-      "djustMoney\022\016\n\006amount\030\001 \001(\005\"U\n\023CCSUsrMsg_" +
-      "ReportHit\022\r\n\005pos_x\030\001 \001(\002\022\r\n\005pos_y\030\002 \001(\002\022" +
-      "\021\n\ttimestamp\030\004 \001(\002\022\r\n\005pos_z\030\003 \001(\002\"Z\n\021CCS" +
-      "UsrMsg_KillCam\022\020\n\010obs_mode\030\001 \001(\005\022\030\n\014firs" +
-      "t_target\030\002 \001(\005:\002-1\022\031\n\rsecond_target\030\003 \001(",
-      "\005:\002-1\"\213\001\n\032CCSUsrMsg_DesiredTimescale\022\031\n\021" +
-      "desired_timescale\030\001 \001(\002\022\035\n\025duration_real" +
-      "time_sec\030\002 \001(\002\022\031\n\021interpolator_type\030\003 \001(" +
-      "\005\022\030\n\020start_blend_time\030\004 \001(\002\"3\n\032CCSUsrMsg" +
-      "_CurrentTimescale\022\025\n\rcur_timescale\030\001 \001(\002" +
-      "\"Q\n\032CCSUsrMsg_AchievementEvent\022\023\n\013achiev" +
-      "ement\030\001 \001(\005\022\r\n\005count\030\002 \001(\005\022\017\n\007user_id\030\003 " +
-      "\001(\005\"r\n\034CCSUsrMsg_MatchEndConditions\022\021\n\tf" +
-      "raglimit\030\001 \001(\005\022\024\n\014mp_maxrounds\030\002 \001(\005\022\023\n\013" +
-      "mp_winlimit\030\003 \001(\005\022\024\n\014mp_timelimit\030\004 \001(\002\"",
-      "\242\001\n\033CCSUsrMsg_PlayerStatsUpdate\022\017\n\007versi" +
-      "on\030\001 \001(\005\0220\n\005stats\030\004 \003(\0132!.CCSUsrMsg_Play" +
-      "erStatsUpdate.Stat\022\017\n\007ehandle\030\005 \001(\r\022\013\n\003c" +
-      "rc\030\006 \001(\005\032\"\n\004Stat\022\013\n\003idx\030\001 \001(\005\022\r\n\005delta\030\002" +
-      " \001(\005\"p\n\027CCSUsrMsg_QuestProgress\022\020\n\010quest" +
-      "_id\030\001 \001(\r\022\025\n\rnormal_points\030\002 \001(\r\022\024\n\014bonu" +
-      "s_points\030\003 \001(\r\022\026\n\016is_event_quest\030\004 \001(\010\"E" +
-      "\n\036CCSUsrMsg_ScoreLeaderboardData\022#\n\004data" +
-      "\030\001 \001(\0132\025.ScoreLeaderboardData\"S\n%CCSUsrM" +
-      "sg_PlayerDecalDigitalSignature\022*\n\004data\030\001",
-      " \001(\0132\034.PlayerDecalDigitalSignature\":\n\022CC" +
-      "SUsrMsg_XRankGet\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\nco" +
-      "ntroller\030\002 \001(\005\"K\n\022CCSUsrMsg_XRankUpd\022\020\n\010" +
-      "mode_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\022\017\n\007ra" +
-      "nking\030\003 \001(\005\"8\n\030CCSUsrMsg_CallVoteFailed\022" +
-      "\016\n\006reason\030\001 \001(\005\022\014\n\004time\030\002 \001(\005\"\306\001\n\023CCSUsr" +
-      "Msg_VoteStart\022\014\n\004team\030\001 \001(\005\022\027\n\013player_sl" +
-      "ot\030\002 \001(\005:\002-1\022\021\n\tvote_type\030\003 \001(\005\022\020\n\010disp_" +
-      "str\030\004 \001(\t\022\023\n\013details_str\030\005 \001(\t\022\026\n\016other_" +
-      "team_str\030\006 \001(\t\022\026\n\016is_yes_no_vote\030\007 \001(\010\022\036",
-      "\n\022player_slot_target\030\010 \001(\005:\002-1\"\\\n\022CCSUsr" +
-      "Msg_VotePass\022\014\n\004team\030\001 \001(\005\022\021\n\tvote_type\030" +
-      "\002 \001(\005\022\020\n\010disp_str\030\003 \001(\t\022\023\n\013details_str\030\004" +
-      " \001(\t\"4\n\024CCSUsrMsg_VoteFailed\022\014\n\004team\030\001 \001" +
-      "(\005\022\016\n\006reason\030\002 \001(\005\"/\n\023CCSUsrMsg_VoteSetu" +
-      "p\022\030\n\020potential_issues\030\001 \003(\t\"\276\001\n&CCSUsrMs" +
-      "g_SendLastKillerDamageToClient\022\026\n\016num_hi" +
-      "ts_given\030\001 \001(\005\022\024\n\014damage_given\030\002 \001(\005\022\026\n\016" +
-      "num_hits_taken\030\003 \001(\005\022\024\n\014damage_taken\030\004 \001" +
-      "(\005\022\033\n\023actual_damage_given\030\005 \001(\005\022\033\n\023actua",
-      "l_damage_taken\030\006 \001(\005\"\335\001\n\032CCSUsrMsg_Serve" +
-      "rRankUpdate\022;\n\013rank_update\030\001 \003(\0132&.CCSUs" +
-      "rMsg_ServerRankUpdate.RankUpdate\032\201\001\n\nRan" +
-      "kUpdate\022\022\n\naccount_id\030\001 \001(\005\022\020\n\010rank_old\030" +
-      "\002 \001(\005\022\020\n\010rank_new\030\003 \001(\005\022\020\n\010num_wins\030\004 \001(" +
-      "\005\022\023\n\013rank_change\030\005 \001(\002\022\024\n\014rank_type_id\030\006" +
-      " \001(\005\"Q\n\022CCSUsrMsg_XpUpdate\022;\n\004data\030\001 \001(\013" +
-      "2-.CMsgGCCstrike15_v2_GC2ServerNotifyXPR" +
-      "ewarded\"$\n\024CCSUsrMsg_ItemPickup\022\014\n\004item\030" +
-      "\001 \001(\t\"Y\n\022CCSUsrMsg_ShowMenu\022\030\n\020bits_vali",
-      "d_slots\030\001 \001(\005\022\024\n\014display_time\030\002 \001(\005\022\023\n\013m" +
-      "enu_string\030\003 \001(\t\"!\n\021CCSUsrMsg_BarTime\022\014\n" +
-      "\004time\030\001 \001(\t\"\'\n\024CCSUsrMsg_AmmoDenied\022\017\n\007a" +
-      "mmoidx\030\001 \001(\005\"0\n\031CCSUsrMsg_MarkAchievemen" +
-      "t\022\023\n\013achievement\030\001 \001(\t\",\n\032CCSUsrMsg_Matc" +
-      "hStatsUpdate\022\016\n\006update\030\001 \001(\t\"3\n\022CCSUsrMs" +
-      "g_ItemDrop\022\016\n\006itemid\030\001 \001(\003\022\r\n\005death\030\002 \001(" +
-      "\010\"/\n\031CCSUsrMsg_GlowPropTurnOff\022\022\n\006entidx" +
-      "\030\001 \001(\005:\002-1\"b\n\036CCSUsrMsg_RoundBackupFilen" +
-      "ames\022\r\n\005count\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022\020\n\010fi",
-      "lename\030\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\"D\n\016CCSUsr" +
-      "Msg_SSUI\022\014\n\004show\030\001 \001(\010\022\022\n\nstart_time\030\002 \001" +
-      "(\002\022\020\n\010end_time\030\003 \001(\002\"\265\003\n\027CCSUsrMsg_Survi" +
-      "valStats\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts\030\002 \003(\0132\035." +
-      "CCSUsrMsg_SurvivalStats.Fact\0221\n\005users\030\003 " +
-      "\003(\0132\".CCSUsrMsg_SurvivalStats.Placement\022" +
-      "0\n\007damages\030\005 \003(\0132\037.CCSUsrMsg_SurvivalSta" +
-      "ts.Damage\022\022\n\nticknumber\030\004 \001(\005\032M\n\004Fact\022\014\n" +
-      "\004type\030\001 \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n\005value\030\003 " +
-      "\001(\005\022\027\n\017interestingness\030\004 \001(\002\032@\n\tPlacemen",
-      "t\022\014\n\004xuid\030\001 \001(\004\022\022\n\nteamnumber\030\002 \001(\005\022\021\n\tp" +
-      "lacement\030\003 \001(\005\032T\n\006Damage\022\014\n\004xuid\030\001 \001(\004\022\n" +
-      "\n\002to\030\002 \001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004from\030\004 \001(" +
-      "\005\022\021\n\tfrom_hits\030\005 \001(\005\"\234\003\n\"CCSUsrMsg_EndOf" +
-      "MatchAllPlayersData\022E\n\rallplayerdata\030\001 \003" +
-      "(\0132..CCSUsrMsg_EndOfMatchAllPlayersData." +
-      "PlayerData\022\r\n\005scene\030\002 \001(\005\032>\n\010Accolade\022\021\n" +
-      "\teaccolade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002\022\020\n\010posit" +
-      "ion\030\003 \001(\005\032\337\001\n\nPlayerData\022\020\n\004slot\030\001 \001(\005:\002" +
-      "-1\022\014\n\004xuid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022\022\n\nteamnu",
-      "mber\030\004 \001(\005\022@\n\nnomination\030\005 \001(\0132,.CCSUsrM" +
-      "sg_EndOfMatchAllPlayersData.Accolade\022)\n\005" +
-      "items\030\006 \003(\0132\032.CEconItemPreviewDataBlock\022" +
-      "\023\n\013playercolor\030\007 \001(\005\022\r\n\005isbot\030\010 \001(\010\"\350\006\n\034" +
-      "CCSUsrMsg_RoundEndReportData\022H\n\017init_con" +
-      "ditions\030\001 \001(\0132/.CCSUsrMsg_RoundEndReport" +
-      "Data.InitialConditions\022B\n\022all_rer_event_" +
-      "data\030\002 \003(\0132&.CCSUsrMsg_RoundEndReportDat" +
-      "a.RerEvent\032\335\004\n\010RerEvent\022\021\n\ttimestamp\030\001 \001" +
-      "(\002\022\026\n\016terrorist_odds\030\002 \001(\005\022\020\n\010ct_alive\030\003",
-      " \001(\005\022\017\n\007t_alive\030\004 \001(\005\022B\n\013victim_data\030\005 \001" +
-      "(\0132-.CCSUsrMsg_RoundEndReportData.RerEve" +
-      "nt.Victim\022H\n\016objective_data\030\006 \001(\01320.CCSU" +
-      "srMsg_RoundEndReportData.RerEvent.Object" +
-      "ive\022F\n\017all_damage_data\030\007 \003(\0132-.CCSUsrMsg" +
-      "_RoundEndReportData.RerEvent.Damage\032s\n\006V" +
-      "ictim\022\023\n\013team_number\030\001 \001(\005\022\026\n\nplayerslot" +
-      "\030\002 \001(\005:\002-1\022\014\n\004xuid\030\003 \001(\004\022\r\n\005color\030\004 \001(\005\022" +
-      "\016\n\006is_bot\030\005 \001(\010\022\017\n\007is_dead\030\006 \001(\010\032\031\n\tObje" +
-      "ctive\022\014\n\004type\030\001 \001(\005\032\234\001\n\006Damage\022\034\n\020other_",
-      "playerslot\030\001 \001(\005:\002-1\022\022\n\nother_xuid\030\002 \001(\004" +
-      "\022\026\n\016health_removed\030\003 \001(\005\022\020\n\010num_hits\030\004 \001" +
-      "(\005\022\035\n\025return_health_removed\030\005 \001(\005\022\027\n\017ret" +
-      "urn_num_hits\030\006 \001(\005\032Z\n\021InitialConditions\022" +
-      "\026\n\016ct_equip_value\030\001 \001(\005\022\025\n\rt_equip_value" +
-      "\030\002 \001(\005\022\026\n\016terrorist_odds\030\003 \001(\005\"\323\001\n\037CCSUs" +
-      "rMsg_PostRoundDamageReport\022\022\n\nother_xuid" +
-      "\030\001 \001(\004\022\027\n\017given_kill_type\030\002 \001(\005\022\034\n\024given" +
-      "_health_removed\030\003 \001(\005\022\026\n\016given_num_hits\030" +
-      "\004 \001(\005\022\027\n\017taken_kill_type\030\005 \001(\005\022\034\n\024taken_",
-      "health_removed\030\006 \001(\005\022\026\n\016taken_num_hits\030\007" +
-      " \001(\005\"*\n\032CCSUsrMsg_CurrentRoundOdds\022\014\n\004od" +
-      "ds\030\001 \001(\005\"F\n\023CCSUsrMsg_DeepStats\022/\n\005stats" +
-      "\030\001 \001(\0132 .CMsgGCCStrike15_ClientDeepStats" +
-      "\"\226\001\n\023CCSUsrMsg_ShootInfo\022\024\n\014frame_number" +
-      "\030\001 \001(\005\022)\n\021hitbox_transforms\030\002 \003(\0132\016.CMsg" +
-      "Transform\022\036\n\tshoot_pos\030\003 \001(\0132\013.CMsgVecto" +
-      "r\022\036\n\tshoot_dir\030\004 \001(\0132\013.CMsgQAngle\"#\n\022CCS" +
-      "UsrMsg_ResetHud\022\r\n\005reset\030\001 \001(\010\"$\n\023CCSUsr" +
-      "Msg_GameTitle\022\r\n\005dummy\030\001 \001(\005\"\'\n\026CCSUsrMs",
-      "g_RequestState\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrM" +
-      "sg_StopSpectatorMode\022\r\n\005dummy\030\001 \001(\005\",\n\033C" +
-      "CSUsrMsg_DisconnectToLobby\022\r\n\005dummy\030\001 \001(" +
-      "\005\")\n\030CCSUsrMsg_WarmupHasEnded\022\r\n\005dummy\030\001" +
-      " \001(\005\"%\n\024CCSUsrMsg_ClientInfo\022\r\n\005dummy\030\001 " +
-      "\001(\005\"\204\001\n\035CCSUsrMsg_ServerRankRevealAll\022\035\n" +
-      "\025seconds_till_shutdown\030\001 \001(\005\022D\n\013reservat" +
-      "ion\030\002 \001(\0132/.CMsgGCCStrike15_v2_Matchmaki" +
-      "ngGC2ServerReserve*\210\001\n\"ECSUsrMsg_Disconn" +
-      "ectToLobby_Action\0220\n,k_ECSUsrMsg_Disconn",
-      "ectToLobby_Action_Default\020\000\0220\n,k_ECSUsrM" +
-      "sg_DisconnectToLobby_Action_GoQueue\020\001B=\n" +
-      ")skadistats.clarity.wire.csgo.common.pro" +
-      "toB\020CsgoUserMessages"
+      "\n\034cstrike15_usermessages.proto\032\035networkb" +
+      "asetypes-common.proto\032\033networkbasetypes-" +
+      "demo.proto\032\032cstrike15_gcmessages.proto\"}" +
+      "\n\022CCSUsrMsg_VGUIMenu\022\014\n\004name\030\001 \001(\t\022\014\n\004sh" +
+      "ow\030\002 \001(\010\022&\n\004keys\030\003 \003(\0132\030.CCSUsrMsg_VGUIM" +
+      "enu.Keys\032#\n\004Keys\022\014\n\004name\030\001 \001(\t\022\r\n\005value\030" +
+      "\002 \001(\t\"!\n\020CCSUsrMsg_Geiger\022\r\n\005range\030\001 \001(\005" +
+      "\" \n\017CCSUsrMsg_Train\022\r\n\005train\030\001 \001(\005\"!\n\021CC" +
+      "SUsrMsg_HudText\022\014\n\004text\030\001 \001(\t\"\340\001\n\020CCSUsr" +
+      "Msg_HudMsg\022\017\n\007channel\030\001 \001(\005\022\032\n\003pos\030\002 \001(\013",
+      "2\r.CMsgVector2D\022\027\n\004clr1\030\003 \001(\0132\t.CMsgRGBA" +
+      "\022\027\n\004clr2\030\004 \001(\0132\t.CMsgRGBA\022\016\n\006effect\030\005 \001(" +
+      "\005\022\024\n\014fade_in_time\030\006 \001(\002\022\025\n\rfade_out_time" +
+      "\030\007 \001(\002\022\021\n\thold_time\030\t \001(\002\022\017\n\007fx_time\030\n \001" +
+      "(\002\022\014\n\004text\030\013 \001(\t\"`\n\017CCSUsrMsg_Shake\022\017\n\007c" +
+      "ommand\030\001 \001(\005\022\027\n\017local_amplitude\030\002 \001(\002\022\021\n" +
+      "\tfrequency\030\003 \001(\002\022\020\n\010duration\030\004 \001(\002\"\\\n\016CC" +
+      "SUsrMsg_Fade\022\020\n\010duration\030\001 \001(\005\022\021\n\thold_t" +
+      "ime\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\022\026\n\003clr\030\004 \001(\0132\t." +
+      "CMsgRGBA\">\n\020CCSUsrMsg_Rumble\022\r\n\005index\030\001 ",
+      "\001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005\"^\n\026CCSU" +
+      "srMsg_CloseCaption\022\014\n\004hash\030\001 \001(\r\022\020\n\010dura" +
+      "tion\030\002 \001(\005\022\023\n\013from_player\030\003 \001(\010\022\017\n\007cctok" +
+      "en\030\004 \001(\t\"S\n\034CCSUsrMsg_CloseCaptionDirect" +
+      "\022\014\n\004hash\030\001 \001(\r\022\020\n\010duration\030\002 \001(\005\022\023\n\013from" +
+      "_player\030\003 \001(\010\"*\n\023CCSUsrMsg_SendAudio\022\023\n\013" +
+      "radio_sound\030\001 \001(\t\"a\n\022CCSUsrMsg_RawAudio\022" +
+      "\r\n\005pitch\030\001 \001(\005\022\022\n\006entidx\030\002 \001(\005:\002-1\022\020\n\010du" +
+      "ration\030\003 \001(\002\022\026\n\016voice_filename\030\004 \001(\t\"\241\001\n" +
+      "\023CCSUsrMsg_VoiceMask\0225\n\014player_masks\030\001 \003",
+      "(\0132\037.CCSUsrMsg_VoiceMask.PlayerMask\022\031\n\021p" +
+      "layer_mod_enable\030\002 \001(\010\0328\n\nPlayerMask\022\027\n\017" +
+      "game_rules_mask\030\001 \001(\005\022\021\n\tban_masks\030\002 \001(\005" +
+      "\"i\n\020CCSUsrMsg_Damage\022\016\n\006amount\030\001 \001(\005\022(\n\023" +
+      "inflictor_world_pos\030\002 \001(\0132\013.CMsgVector\022\033" +
+      "\n\017victim_entindex\030\003 \001(\005:\002-1\"\\\n\023CCSUsrMsg" +
+      "_RadioText\022\017\n\007msg_dst\030\001 \001(\005\022\022\n\006client\030\002 " +
+      "\001(\005:\002-1\022\020\n\010msg_name\030\003 \001(\t\022\016\n\006params\030\004 \003(" +
+      "\t\"%\n\022CCSUsrMsg_HintText\022\017\n\007message\030\001 \001(\t" +
+      "\")\n\025CCSUsrMsg_KeyHintText\022\020\n\010messages\030\001 ",
+      "\003(\t\"\332\002\n$CCSUsrMsg_ProcessSpottedEntityUp" +
+      "date\022\022\n\nnew_update\030\001 \001(\010\022Q\n\016entity_updat" +
+      "es\030\002 \003(\01329.CCSUsrMsg_ProcessSpottedEntit" +
+      "yUpdate.SpottedEntityUpdate\032\312\001\n\023SpottedE" +
+      "ntityUpdate\022\026\n\nentity_idx\030\001 \001(\005:\002-1\022\020\n\010c" +
+      "lass_id\030\002 \001(\005\022\020\n\010origin_x\030\003 \001(\005\022\020\n\010origi" +
+      "n_y\030\004 \001(\005\022\020\n\010origin_z\030\005 \001(\005\022\017\n\007angle_y\030\006" +
+      " \001(\005\022\017\n\007defuser\030\007 \001(\010\022\032\n\022player_has_defu" +
+      "ser\030\010 \001(\010\022\025\n\rplayer_has_c4\030\t \001(\010\"S\n\035CCSU" +
+      "srMsg_SendPlayerItemDrops\0222\n\016entity_upda",
+      "tes\030\001 \003(\0132\032.CEconItemPreviewDataBlock\"e\n" +
+      "\035CCSUsrMsg_SendPlayerItemFound\022,\n\010itemin" +
+      "fo\030\001 \001(\0132\032.CEconItemPreviewDataBlock\022\026\n\n" +
+      "playerslot\030\002 \001(\005:\002-1\"s\n\026CCSUsrMsg_Reload" +
+      "Effect\022\022\n\006entidx\030\001 \001(\005:\002-1\022\017\n\007actanim\030\002 " +
+      "\001(\005\022\020\n\010origin_x\030\003 \001(\002\022\020\n\010origin_y\030\004 \001(\002\022" +
+      "\020\n\010origin_z\030\005 \001(\002\"\240\001\n\025CCSUsrMsg_WeaponSo" +
+      "und\022\022\n\006entidx\030\001 \001(\005:\002-1\022\020\n\010origin_x\030\002 \001(" +
+      "\002\022\020\n\010origin_y\030\003 \001(\002\022\020\n\010origin_z\030\004 \001(\002\022\r\n" +
+      "\005sound\030\005 \001(\t\022\021\n\ttimestamp\030\006 \001(\002\022\033\n\023sourc",
+      "e_soundscapeid\030\007 \001(\007\"v\n\037CCSUsrMsg_Update" +
+      "ScreenHealthBar\022\022\n\006entidx\030\001 \001(\005:\002-1\022\027\n\017h" +
+      "ealthratio_old\030\002 \001(\002\022\027\n\017healthratio_new\030" +
+      "\003 \001(\002\022\r\n\005style\030\004 \001(\005\"O\n CCSUsrMsg_Entity" +
+      "OutlineHighlight\022\022\n\006entidx\030\001 \001(\005:\002-1\022\027\n\017" +
+      "removehighlight\030\002 \001(\010\"\'\n\025CCSUsrMsg_Adjus" +
+      "tMoney\022\016\n\006amount\030\001 \001(\005\"U\n\023CCSUsrMsg_Repo" +
+      "rtHit\022\r\n\005pos_x\030\001 \001(\002\022\r\n\005pos_y\030\002 \001(\002\022\021\n\tt" +
+      "imestamp\030\004 \001(\002\022\r\n\005pos_z\030\003 \001(\002\"Z\n\021CCSUsrM" +
+      "sg_KillCam\022\020\n\010obs_mode\030\001 \001(\005\022\030\n\014first_ta",
+      "rget\030\002 \001(\005:\002-1\022\031\n\rsecond_target\030\003 \001(\005:\002-" +
+      "1\"\213\001\n\032CCSUsrMsg_DesiredTimescale\022\031\n\021desi" +
+      "red_timescale\030\001 \001(\002\022\035\n\025duration_realtime" +
+      "_sec\030\002 \001(\002\022\031\n\021interpolator_type\030\003 \001(\005\022\030\n" +
+      "\020start_blend_time\030\004 \001(\002\"3\n\032CCSUsrMsg_Cur" +
+      "rentTimescale\022\025\n\rcur_timescale\030\001 \001(\002\"Q\n\032" +
+      "CCSUsrMsg_AchievementEvent\022\023\n\013achievemen" +
+      "t\030\001 \001(\005\022\r\n\005count\030\002 \001(\005\022\017\n\007user_id\030\003 \001(\005\"" +
+      "r\n\034CCSUsrMsg_MatchEndConditions\022\021\n\tfragl" +
+      "imit\030\001 \001(\005\022\024\n\014mp_maxrounds\030\002 \001(\005\022\023\n\013mp_w",
+      "inlimit\030\003 \001(\005\022\024\n\014mp_timelimit\030\004 \001(\002\"\242\001\n\033" +
+      "CCSUsrMsg_PlayerStatsUpdate\022\017\n\007version\030\001" +
+      " \001(\005\0220\n\005stats\030\004 \003(\0132!.CCSUsrMsg_PlayerSt" +
+      "atsUpdate.Stat\022\017\n\007ehandle\030\005 \001(\r\022\013\n\003crc\030\006" +
+      " \001(\005\032\"\n\004Stat\022\013\n\003idx\030\001 \001(\005\022\r\n\005delta\030\002 \001(\005" +
+      "\"p\n\027CCSUsrMsg_QuestProgress\022\020\n\010quest_id\030" +
+      "\001 \001(\r\022\025\n\rnormal_points\030\002 \001(\r\022\024\n\014bonus_po" +
+      "ints\030\003 \001(\r\022\026\n\016is_event_quest\030\004 \001(\010\"E\n\036CC" +
+      "SUsrMsg_ScoreLeaderboardData\022#\n\004data\030\001 \001" +
+      "(\0132\025.ScoreLeaderboardData\"S\n%CCSUsrMsg_P",
+      "layerDecalDigitalSignature\022*\n\004data\030\001 \001(\013" +
+      "2\034.PlayerDecalDigitalSignature\":\n\022CCSUsr" +
+      "Msg_XRankGet\022\020\n\010mode_idx\030\001 \001(\005\022\022\n\ncontro" +
+      "ller\030\002 \001(\005\"K\n\022CCSUsrMsg_XRankUpd\022\020\n\010mode" +
+      "_idx\030\001 \001(\005\022\022\n\ncontroller\030\002 \001(\005\022\017\n\007rankin" +
+      "g\030\003 \001(\005\"8\n\030CCSUsrMsg_CallVoteFailed\022\016\n\006r" +
+      "eason\030\001 \001(\005\022\014\n\004time\030\002 \001(\005\"\306\001\n\023CCSUsrMsg_" +
+      "VoteStart\022\014\n\004team\030\001 \001(\005\022\027\n\013player_slot\030\002" +
+      " \001(\005:\002-1\022\021\n\tvote_type\030\003 \001(\005\022\020\n\010disp_str\030" +
+      "\004 \001(\t\022\023\n\013details_str\030\005 \001(\t\022\026\n\016other_team",
+      "_str\030\006 \001(\t\022\026\n\016is_yes_no_vote\030\007 \001(\010\022\036\n\022pl" +
+      "ayer_slot_target\030\010 \001(\005:\002-1\"\\\n\022CCSUsrMsg_" +
+      "VotePass\022\014\n\004team\030\001 \001(\005\022\021\n\tvote_type\030\002 \001(" +
+      "\005\022\020\n\010disp_str\030\003 \001(\t\022\023\n\013details_str\030\004 \001(\t" +
+      "\"4\n\024CCSUsrMsg_VoteFailed\022\014\n\004team\030\001 \001(\005\022\016" +
+      "\n\006reason\030\002 \001(\005\"/\n\023CCSUsrMsg_VoteSetup\022\030\n" +
+      "\020potential_issues\030\001 \003(\t\"\276\001\n&CCSUsrMsg_Se" +
+      "ndLastKillerDamageToClient\022\026\n\016num_hits_g" +
+      "iven\030\001 \001(\005\022\024\n\014damage_given\030\002 \001(\005\022\026\n\016num_" +
+      "hits_taken\030\003 \001(\005\022\024\n\014damage_taken\030\004 \001(\005\022\033",
+      "\n\023actual_damage_given\030\005 \001(\005\022\033\n\023actual_da" +
+      "mage_taken\030\006 \001(\005\"\335\001\n\032CCSUsrMsg_ServerRan" +
+      "kUpdate\022;\n\013rank_update\030\001 \003(\0132&.CCSUsrMsg" +
+      "_ServerRankUpdate.RankUpdate\032\201\001\n\nRankUpd" +
+      "ate\022\022\n\naccount_id\030\001 \001(\005\022\020\n\010rank_old\030\002 \001(" +
+      "\005\022\020\n\010rank_new\030\003 \001(\005\022\020\n\010num_wins\030\004 \001(\005\022\023\n" +
+      "\013rank_change\030\005 \001(\002\022\024\n\014rank_type_id\030\006 \001(\005" +
+      "\"Q\n\022CCSUsrMsg_XpUpdate\022;\n\004data\030\001 \001(\0132-.C" +
+      "MsgGCCstrike15_v2_GC2ServerNotifyXPRewar" +
+      "ded\"$\n\024CCSUsrMsg_ItemPickup\022\014\n\004item\030\001 \001(",
+      "\t\"Y\n\022CCSUsrMsg_ShowMenu\022\030\n\020bits_valid_sl" +
+      "ots\030\001 \001(\005\022\024\n\014display_time\030\002 \001(\005\022\023\n\013menu_" +
+      "string\030\003 \001(\t\"!\n\021CCSUsrMsg_BarTime\022\014\n\004tim" +
+      "e\030\001 \001(\t\"\'\n\024CCSUsrMsg_AmmoDenied\022\017\n\007ammoi" +
+      "dx\030\001 \001(\005\"0\n\031CCSUsrMsg_MarkAchievement\022\023\n" +
+      "\013achievement\030\001 \001(\t\",\n\032CCSUsrMsg_MatchSta" +
+      "tsUpdate\022\016\n\006update\030\001 \001(\t\"3\n\022CCSUsrMsg_It" +
+      "emDrop\022\016\n\006itemid\030\001 \001(\003\022\r\n\005death\030\002 \001(\010\"/\n" +
+      "\031CCSUsrMsg_GlowPropTurnOff\022\022\n\006entidx\030\001 \001" +
+      "(\005:\002-1\"b\n\036CCSUsrMsg_RoundBackupFilenames",
+      "\022\r\n\005count\030\001 \001(\005\022\r\n\005index\030\002 \001(\005\022\020\n\010filena" +
+      "me\030\003 \001(\t\022\020\n\010nicename\030\004 \001(\t\"D\n\016CCSUsrMsg_" +
+      "SSUI\022\014\n\004show\030\001 \001(\010\022\022\n\nstart_time\030\002 \001(\002\022\020" +
+      "\n\010end_time\030\003 \001(\002\"\265\003\n\027CCSUsrMsg_SurvivalS" +
+      "tats\022\014\n\004xuid\030\001 \001(\004\022,\n\005facts\030\002 \003(\0132\035.CCSU" +
+      "srMsg_SurvivalStats.Fact\0221\n\005users\030\003 \003(\0132" +
+      "\".CCSUsrMsg_SurvivalStats.Placement\0220\n\007d" +
+      "amages\030\005 \003(\0132\037.CCSUsrMsg_SurvivalStats.D" +
+      "amage\022\022\n\nticknumber\030\004 \001(\005\032M\n\004Fact\022\014\n\004typ" +
+      "e\030\001 \001(\005\022\017\n\007display\030\002 \001(\005\022\r\n\005value\030\003 \001(\005\022",
+      "\027\n\017interestingness\030\004 \001(\002\032@\n\tPlacement\022\014\n" +
+      "\004xuid\030\001 \001(\004\022\022\n\nteamnumber\030\002 \001(\005\022\021\n\tplace" +
+      "ment\030\003 \001(\005\032T\n\006Damage\022\014\n\004xuid\030\001 \001(\004\022\n\n\002to" +
+      "\030\002 \001(\005\022\017\n\007to_hits\030\003 \001(\005\022\014\n\004from\030\004 \001(\005\022\021\n" +
+      "\tfrom_hits\030\005 \001(\005\"\234\003\n\"CCSUsrMsg_EndOfMatc" +
+      "hAllPlayersData\022E\n\rallplayerdata\030\001 \003(\0132." +
+      ".CCSUsrMsg_EndOfMatchAllPlayersData.Play" +
+      "erData\022\r\n\005scene\030\002 \001(\005\032>\n\010Accolade\022\021\n\teac" +
+      "colade\030\001 \001(\005\022\r\n\005value\030\002 \001(\002\022\020\n\010position\030" +
+      "\003 \001(\005\032\337\001\n\nPlayerData\022\020\n\004slot\030\001 \001(\005:\002-1\022\014",
+      "\n\004xuid\030\002 \001(\004\022\014\n\004name\030\003 \001(\t\022\022\n\nteamnumber" +
+      "\030\004 \001(\005\022@\n\nnomination\030\005 \001(\0132,.CCSUsrMsg_E" +
+      "ndOfMatchAllPlayersData.Accolade\022)\n\005item" +
+      "s\030\006 \003(\0132\032.CEconItemPreviewDataBlock\022\023\n\013p" +
+      "layercolor\030\007 \001(\005\022\r\n\005isbot\030\010 \001(\010\"\350\006\n\034CCSU" +
+      "srMsg_RoundEndReportData\022H\n\017init_conditi" +
+      "ons\030\001 \001(\0132/.CCSUsrMsg_RoundEndReportData" +
+      ".InitialConditions\022B\n\022all_rer_event_data" +
+      "\030\002 \003(\0132&.CCSUsrMsg_RoundEndReportData.Re" +
+      "rEvent\032\335\004\n\010RerEvent\022\021\n\ttimestamp\030\001 \001(\002\022\026",
+      "\n\016terrorist_odds\030\002 \001(\005\022\020\n\010ct_alive\030\003 \001(\005" +
+      "\022\017\n\007t_alive\030\004 \001(\005\022B\n\013victim_data\030\005 \001(\0132-" +
+      ".CCSUsrMsg_RoundEndReportData.RerEvent.V" +
+      "ictim\022H\n\016objective_data\030\006 \001(\01320.CCSUsrMs" +
+      "g_RoundEndReportData.RerEvent.Objective\022" +
+      "F\n\017all_damage_data\030\007 \003(\0132-.CCSUsrMsg_Rou" +
+      "ndEndReportData.RerEvent.Damage\032s\n\006Victi" +
+      "m\022\023\n\013team_number\030\001 \001(\005\022\026\n\nplayerslot\030\002 \001" +
+      "(\005:\002-1\022\014\n\004xuid\030\003 \001(\004\022\r\n\005color\030\004 \001(\005\022\016\n\006i" +
+      "s_bot\030\005 \001(\010\022\017\n\007is_dead\030\006 \001(\010\032\031\n\tObjectiv",
+      "e\022\014\n\004type\030\001 \001(\005\032\234\001\n\006Damage\022\034\n\020other_play" +
+      "erslot\030\001 \001(\005:\002-1\022\022\n\nother_xuid\030\002 \001(\004\022\026\n\016" +
+      "health_removed\030\003 \001(\005\022\020\n\010num_hits\030\004 \001(\005\022\035" +
+      "\n\025return_health_removed\030\005 \001(\005\022\027\n\017return_" +
+      "num_hits\030\006 \001(\005\032Z\n\021InitialConditions\022\026\n\016c" +
+      "t_equip_value\030\001 \001(\005\022\025\n\rt_equip_value\030\002 \001" +
+      "(\005\022\026\n\016terrorist_odds\030\003 \001(\005\"\323\001\n\037CCSUsrMsg" +
+      "_PostRoundDamageReport\022\022\n\nother_xuid\030\001 \001" +
+      "(\004\022\027\n\017given_kill_type\030\002 \001(\005\022\034\n\024given_hea" +
+      "lth_removed\030\003 \001(\005\022\026\n\016given_num_hits\030\004 \001(",
+      "\005\022\027\n\017taken_kill_type\030\005 \001(\005\022\034\n\024taken_heal" +
+      "th_removed\030\006 \001(\005\022\026\n\016taken_num_hits\030\007 \001(\005" +
+      "\"*\n\032CCSUsrMsg_CurrentRoundOdds\022\014\n\004odds\030\001" +
+      " \001(\005\"F\n\023CCSUsrMsg_DeepStats\022/\n\005stats\030\001 \001" +
+      "(\0132 .CMsgGCCStrike15_ClientDeepStats\"\226\001\n" +
+      "\023CCSUsrMsg_ShootInfo\022\024\n\014frame_number\030\001 \001" +
+      "(\005\022)\n\021hitbox_transforms\030\002 \003(\0132\016.CMsgTran" +
+      "sform\022\036\n\tshoot_pos\030\003 \001(\0132\013.CMsgVector\022\036\n" +
+      "\tshoot_dir\030\004 \001(\0132\013.CMsgQAngle\"#\n\022CCSUsrM" +
+      "sg_ResetHud\022\r\n\005reset\030\001 \001(\010\"$\n\023CCSUsrMsg_",
+      "GameTitle\022\r\n\005dummy\030\001 \001(\005\"\'\n\026CCSUsrMsg_Re" +
+      "questState\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUsrMsg_S" +
+      "topSpectatorMode\022\r\n\005dummy\030\001 \001(\005\",\n\033CCSUs" +
+      "rMsg_DisconnectToLobby\022\r\n\005dummy\030\001 \001(\005\")\n" +
+      "\030CCSUsrMsg_WarmupHasEnded\022\r\n\005dummy\030\001 \001(\005" +
+      "\"%\n\024CCSUsrMsg_ClientInfo\022\r\n\005dummy\030\001 \001(\005\"" +
+      "\204\001\n\035CCSUsrMsg_ServerRankRevealAll\022\035\n\025sec" +
+      "onds_till_shutdown\030\001 \001(\005\022D\n\013reservation\030" +
+      "\002 \001(\0132/.CMsgGCCStrike15_v2_MatchmakingGC" +
+      "2ServerReserve*\210\001\n\"ECSUsrMsg_DisconnectT",
+      "oLobby_Action\0220\n,k_ECSUsrMsg_DisconnectT" +
+      "oLobby_Action_Default\020\000\0220\n,k_ECSUsrMsg_D" +
+      "isconnectToLobby_Action_GoQueue\020\001B=\n)ska" +
+      "distats.clarity.wire.csgo.common.protoB\020" +
+      "CsgoUserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -55311,7 +55312,8 @@ public final class CsgoUserMessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.getDescriptor(),
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
+          skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor(),
           skadistats.clarity.wire.csgo.common.proto.CsgoGcMessages.getDescriptor(),
         }, assigner);
     internal_static_CCSUsrMsg_VGUIMenu_descriptor =
@@ -55824,7 +55826,8 @@ public final class CsgoUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCSUsrMsg_ServerRankRevealAll_descriptor,
         new java.lang.String[] { "SecondsTillShutdown", "Reservation", });
-    skadistats.clarity.wire.shared.common.proto.NetworkBaseTypes.getDescriptor();
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
+    skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.csgo.common.proto.CsgoGcMessages.getDescriptor();
   }
 

@@ -1,7 +1,8 @@
 option java_package = "skadistats.clarity.wire.csgo.common.proto";
 option java_outer_classname = "CsgoUserMessages";
 
-import "networkbasetypes.proto";
+import "networkbasetypes-common.proto";
+import "networkbasetypes-demo.proto";
 import "cstrike15_gcmessages.proto";
 
 enum ECSUsrMsg_DisconnectToLobby_Action {

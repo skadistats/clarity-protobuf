@@ -1,7 +1,8 @@
 option java_package = "skadistats.clarity.wire.dota.s2.proto";
 option java_outer_classname = "S2UserMessages";
 
-import "networkbasetypes.proto";
+import "networkbasetypes-common.proto";
+import "networkbasetypes-demo.proto";
 
 enum EHapticPulseType {
   VR_HAND_HAPTIC_PULSE_LIGHT = 0;

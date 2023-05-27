@@ -1,7 +1,7 @@
 option java_package = "skadistats.clarity.wire.dota.s2.proto";
 option java_outer_classname = "S2TempEntities";
 
-import "networkbasetypes.proto";
+import "networkbasetypes-common.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = false;
