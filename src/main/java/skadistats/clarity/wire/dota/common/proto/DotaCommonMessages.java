@@ -847,6 +847,106 @@ public final class DotaCommonMessages {
   }
 
   /**
+   * Protobuf enum {@code EPingSource}
+   */
+  public enum EPingSource
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_ePingSource_Default = 0;</code>
+     */
+    k_ePingSource_Default(0, 0),
+    /**
+     * <code>k_ePingSource_Warning = 1;</code>
+     */
+    k_ePingSource_Warning(1, 1),
+    /**
+     * <code>k_ePingSource_Wheel = 2;</code>
+     */
+    k_ePingSource_Wheel(2, 2),
+    /**
+     * <code>k_ePingSource_System = 3;</code>
+     */
+    k_ePingSource_System(3, 3),
+    ;
+
+    /**
+     * <code>k_ePingSource_Default = 0;</code>
+     */
+    public static final int k_ePingSource_Default_VALUE = 0;
+    /**
+     * <code>k_ePingSource_Warning = 1;</code>
+     */
+    public static final int k_ePingSource_Warning_VALUE = 1;
+    /**
+     * <code>k_ePingSource_Wheel = 2;</code>
+     */
+    public static final int k_ePingSource_Wheel_VALUE = 2;
+    /**
+     * <code>k_ePingSource_System = 3;</code>
+     */
+    public static final int k_ePingSource_System_VALUE = 3;
+
+
+    public final int getNumber() { return value; }
+
+    public static EPingSource valueOf(int value) {
+      switch (value) {
+        case 0: return k_ePingSource_Default;
+        case 1: return k_ePingSource_Warning;
+        case 2: return k_ePingSource_Wheel;
+        case 3: return k_ePingSource_System;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<EPingSource>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<EPingSource>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<EPingSource>() {
+            public EPingSource findValueByNumber(int number) {
+              return EPingSource.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final EPingSource[] VALUES = values();
+
+    public static EPingSource valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private EPingSource(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:EPingSource)
+  }
+
+  /**
    * Protobuf enum {@code EDOTAStatPopupTypes}
    */
   public enum EDOTAStatPopupTypes
@@ -939,7 +1039,7 @@ public final class DotaCommonMessages {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(1);
+      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(2);
     }
 
     private static final EDOTAStatPopupTypes[] VALUES = values();
@@ -1363,7 +1463,7 @@ public final class DotaCommonMessages {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(2);
+      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(3);
     }
 
     private static final dotaunitorder_t[] VALUES = values();
@@ -1454,7 +1554,7 @@ public final class DotaCommonMessages {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(3);
+      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(4);
     }
 
     private static final EDOTAVersusScenePlayerBehavior[] VALUES = values();
@@ -1477,106 +1577,6 @@ public final class DotaCommonMessages {
     }
 
     // @@protoc_insertion_point(enum_scope:EDOTAVersusScenePlayerBehavior)
-  }
-
-  /**
-   * Protobuf enum {@code EPingSource}
-   */
-  public enum EPingSource
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>k_ePingSource_Default = 0;</code>
-     */
-    k_ePingSource_Default(0, 0),
-    /**
-     * <code>k_ePingSource_Warning = 1;</code>
-     */
-    k_ePingSource_Warning(1, 1),
-    /**
-     * <code>k_ePingSource_Wheel = 2;</code>
-     */
-    k_ePingSource_Wheel(2, 2),
-    /**
-     * <code>k_ePingSource_System = 3;</code>
-     */
-    k_ePingSource_System(3, 3),
-    ;
-
-    /**
-     * <code>k_ePingSource_Default = 0;</code>
-     */
-    public static final int k_ePingSource_Default_VALUE = 0;
-    /**
-     * <code>k_ePingSource_Warning = 1;</code>
-     */
-    public static final int k_ePingSource_Warning_VALUE = 1;
-    /**
-     * <code>k_ePingSource_Wheel = 2;</code>
-     */
-    public static final int k_ePingSource_Wheel_VALUE = 2;
-    /**
-     * <code>k_ePingSource_System = 3;</code>
-     */
-    public static final int k_ePingSource_System_VALUE = 3;
-
-
-    public final int getNumber() { return value; }
-
-    public static EPingSource valueOf(int value) {
-      switch (value) {
-        case 0: return k_ePingSource_Default;
-        case 1: return k_ePingSource_Warning;
-        case 2: return k_ePingSource_Wheel;
-        case 3: return k_ePingSource_System;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<EPingSource>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static com.google.protobuf.Internal.EnumLiteMap<EPingSource>
-        internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EPingSource>() {
-            public EPingSource findValueByNumber(int number) {
-              return EPingSource.valueOf(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(index);
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.getDescriptor().getEnumTypes().get(4);
-    }
-
-    private static final EPingSource[] VALUES = values();
-
-    public static EPingSource valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int index;
-    private final int value;
-
-    private EPingSource(int index, int value) {
-      this.index = index;
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:EPingSource)
   }
 
   public interface CDOTAMsg_LocationPingOrBuilder extends
@@ -1602,11 +1602,11 @@ public final class DotaCommonMessages {
     int getY();
 
     /**
-     * <code>optional int32 target = 3;</code>
+     * <code>optional int32 target = 3 [default = -1];</code>
      */
     boolean hasTarget();
     /**
-     * <code>optional int32 target = 3;</code>
+     * <code>optional int32 target = 3 [default = -1];</code>
      */
     int getTarget();
 
@@ -1620,11 +1620,11 @@ public final class DotaCommonMessages {
     boolean getDirectPing();
 
     /**
-     * <code>optional int32 type = 5;</code>
+     * <code>optional uint32 type = 5 [default = 4294967295];</code>
      */
     boolean hasType();
     /**
-     * <code>optional int32 type = 5;</code>
+     * <code>optional uint32 type = 5 [default = 4294967295];</code>
      */
     int getType();
 
@@ -1711,7 +1711,7 @@ public final class DotaCommonMessages {
             }
             case 40: {
               bitField0_ |= 0x00000010;
-              type_ = input.readInt32();
+              type_ = input.readUInt32();
               break;
             }
             case 48: {
@@ -1798,13 +1798,13 @@ public final class DotaCommonMessages {
     public static final int TARGET_FIELD_NUMBER = 3;
     private int target_;
     /**
-     * <code>optional int32 target = 3;</code>
+     * <code>optional int32 target = 3 [default = -1];</code>
      */
     public boolean hasTarget() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int32 target = 3;</code>
+     * <code>optional int32 target = 3 [default = -1];</code>
      */
     public int getTarget() {
       return target_;
@@ -1828,13 +1828,13 @@ public final class DotaCommonMessages {
     public static final int TYPE_FIELD_NUMBER = 5;
     private int type_;
     /**
-     * <code>optional int32 type = 5;</code>
+     * <code>optional uint32 type = 5 [default = 4294967295];</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional int32 type = 5;</code>
+     * <code>optional uint32 type = 5 [default = 4294967295];</code>
      */
     public int getType() {
       return type_;
@@ -1858,9 +1858,9 @@ public final class DotaCommonMessages {
     private void initFields() {
       x_ = 0;
       y_ = 0;
-      target_ = 0;
+      target_ = -1;
       directPing_ = false;
-      type_ = 0;
+      type_ = -1;
       pingSource_ = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.EPingSource.k_ePingSource_Default;
     }
     private byte memoizedIsInitialized = -1;
@@ -1889,7 +1889,7 @@ public final class DotaCommonMessages {
         output.writeBool(4, directPing_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        output.writeInt32(5, type_);
+        output.writeUInt32(5, type_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeEnum(6, pingSource_.getNumber());
@@ -1921,7 +1921,7 @@ public final class DotaCommonMessages {
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(5, type_);
+          .computeUInt32Size(5, type_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2048,11 +2048,11 @@ public final class DotaCommonMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         y_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        target_ = 0;
+        target_ = -1;
         bitField0_ = (bitField0_ & ~0x00000004);
         directPing_ = false;
         bitField0_ = (bitField0_ & ~0x00000008);
-        type_ = 0;
+        type_ = -1;
         bitField0_ = (bitField0_ & ~0x00000010);
         pingSource_ = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.EPingSource.k_ePingSource_Default;
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -2233,21 +2233,21 @@ public final class DotaCommonMessages {
         return this;
       }
 
-      private int target_ ;
+      private int target_ = -1;
       /**
-       * <code>optional int32 target = 3;</code>
+       * <code>optional int32 target = 3 [default = -1];</code>
        */
       public boolean hasTarget() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int32 target = 3;</code>
+       * <code>optional int32 target = 3 [default = -1];</code>
        */
       public int getTarget() {
         return target_;
       }
       /**
-       * <code>optional int32 target = 3;</code>
+       * <code>optional int32 target = 3 [default = -1];</code>
        */
       public Builder setTarget(int value) {
         bitField0_ |= 0x00000004;
@@ -2256,11 +2256,11 @@ public final class DotaCommonMessages {
         return this;
       }
       /**
-       * <code>optional int32 target = 3;</code>
+       * <code>optional int32 target = 3 [default = -1];</code>
        */
       public Builder clearTarget() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        target_ = 0;
+        target_ = -1;
         onChanged();
         return this;
       }
@@ -2297,21 +2297,21 @@ public final class DotaCommonMessages {
         return this;
       }
 
-      private int type_ ;
+      private int type_ = -1;
       /**
-       * <code>optional int32 type = 5;</code>
+       * <code>optional uint32 type = 5 [default = 4294967295];</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional int32 type = 5;</code>
+       * <code>optional uint32 type = 5 [default = 4294967295];</code>
        */
       public int getType() {
         return type_;
       }
       /**
-       * <code>optional int32 type = 5;</code>
+       * <code>optional uint32 type = 5 [default = 4294967295];</code>
        */
       public Builder setType(int value) {
         bitField0_ |= 0x00000010;
@@ -2320,11 +2320,11 @@ public final class DotaCommonMessages {
         return this;
       }
       /**
-       * <code>optional int32 type = 5;</code>
+       * <code>optional uint32 type = 5 [default = 4294967295];</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000010);
-        type_ = 0;
+        type_ = -1;
         onChanged();
         return this;
       }
@@ -2398,11 +2398,11 @@ public final class DotaCommonMessages {
     int getY();
 
     /**
-     * <code>optional int32 item_ability_id = 3;</code>
+     * <code>optional int32 item_ability_id = 3 [default = -1];</code>
      */
     boolean hasItemAbilityId();
     /**
-     * <code>optional int32 item_ability_id = 3;</code>
+     * <code>optional int32 item_ability_id = 3 [default = -1];</code>
      */
     int getItemAbilityId();
   }
@@ -2546,13 +2546,13 @@ public final class DotaCommonMessages {
     public static final int ITEM_ABILITY_ID_FIELD_NUMBER = 3;
     private int itemAbilityId_;
     /**
-     * <code>optional int32 item_ability_id = 3;</code>
+     * <code>optional int32 item_ability_id = 3 [default = -1];</code>
      */
     public boolean hasItemAbilityId() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional int32 item_ability_id = 3;</code>
+     * <code>optional int32 item_ability_id = 3 [default = -1];</code>
      */
     public int getItemAbilityId() {
       return itemAbilityId_;
@@ -2561,7 +2561,7 @@ public final class DotaCommonMessages {
     private void initFields() {
       x_ = 0;
       y_ = 0;
-      itemAbilityId_ = 0;
+      itemAbilityId_ = -1;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2727,7 +2727,7 @@ public final class DotaCommonMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         y_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        itemAbilityId_ = 0;
+        itemAbilityId_ = -1;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -2885,21 +2885,21 @@ public final class DotaCommonMessages {
         return this;
       }
 
-      private int itemAbilityId_ ;
+      private int itemAbilityId_ = -1;
       /**
-       * <code>optional int32 item_ability_id = 3;</code>
+       * <code>optional int32 item_ability_id = 3 [default = -1];</code>
        */
       public boolean hasItemAbilityId() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional int32 item_ability_id = 3;</code>
+       * <code>optional int32 item_ability_id = 3 [default = -1];</code>
        */
       public int getItemAbilityId() {
         return itemAbilityId_;
       }
       /**
-       * <code>optional int32 item_ability_id = 3;</code>
+       * <code>optional int32 item_ability_id = 3 [default = -1];</code>
        */
       public Builder setItemAbilityId(int value) {
         bitField0_ |= 0x00000004;
@@ -2908,11 +2908,11 @@ public final class DotaCommonMessages {
         return this;
       }
       /**
-       * <code>optional int32 item_ability_id = 3;</code>
+       * <code>optional int32 item_ability_id = 3 [default = -1];</code>
        */
       public Builder clearItemAbilityId() {
         bitField0_ = (bitField0_ & ~0x00000004);
-        itemAbilityId_ = 0;
+        itemAbilityId_ = -1;
         onChanged();
         return this;
       }
@@ -6906,6 +6906,1068 @@ public final class DotaCommonMessages {
     // @@protoc_insertion_point(class_scope:CDOTAMsg_CoachHUDPing)
   }
 
+  public interface CDOTAMsg_UnitOrderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDOTAMsg_UnitOrder)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+     */
+    boolean hasOrderType();
+    /**
+     * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+     */
+    skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t getOrderType();
+
+    /**
+     * <code>repeated int32 units = 3;</code>
+     */
+    java.util.List<java.lang.Integer> getUnitsList();
+    /**
+     * <code>repeated int32 units = 3;</code>
+     */
+    int getUnitsCount();
+    /**
+     * <code>repeated int32 units = 3;</code>
+     */
+    int getUnits(int index);
+
+    /**
+     * <code>optional int32 target_index = 4 [default = 0];</code>
+     */
+    boolean hasTargetIndex();
+    /**
+     * <code>optional int32 target_index = 4 [default = 0];</code>
+     */
+    int getTargetIndex();
+
+    /**
+     * <code>optional int32 ability_index = 5 [default = -1];</code>
+     */
+    boolean hasAbilityIndex();
+    /**
+     * <code>optional int32 ability_index = 5 [default = -1];</code>
+     */
+    int getAbilityIndex();
+
+    /**
+     * <code>optional .CMsgVector position = 6;</code>
+     */
+    boolean hasPosition();
+    /**
+     * <code>optional .CMsgVector position = 6;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getPosition();
+    /**
+     * <code>optional .CMsgVector position = 6;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getPositionOrBuilder();
+
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    boolean hasSequenceNumber();
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    int getSequenceNumber();
+
+    /**
+     * <code>optional uint32 flags = 9;</code>
+     */
+    boolean hasFlags();
+    /**
+     * <code>optional uint32 flags = 9;</code>
+     */
+    int getFlags();
+  }
+  /**
+   * Protobuf type {@code CDOTAMsg_UnitOrder}
+   */
+  public static final class CDOTAMsg_UnitOrder extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDOTAMsg_UnitOrder)
+      CDOTAMsg_UnitOrderOrBuilder {
+    // Use CDOTAMsg_UnitOrder.newBuilder() to construct.
+    private CDOTAMsg_UnitOrder(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDOTAMsg_UnitOrder(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDOTAMsg_UnitOrder defaultInstance;
+    public static CDOTAMsg_UnitOrder getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDOTAMsg_UnitOrder getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDOTAMsg_UnitOrder(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 16: {
+              int rawValue = input.readEnum();
+              skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t value = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t.valueOf(rawValue);
+              if (value == null) {
+                unknownFields.mergeVarintField(2, rawValue);
+              } else {
+                bitField0_ |= 0x00000001;
+                orderType_ = value;
+              }
+              break;
+            }
+            case 24: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                units_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              units_.add(input.readInt32());
+              break;
+            }
+            case 26: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                units_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                units_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000002;
+              targetIndex_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000004;
+              abilityIndex_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                subBuilder = position_.toBuilder();
+              }
+              position_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(position_);
+                position_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000008;
+              break;
+            }
+            case 64: {
+              bitField0_ |= 0x00000010;
+              sequenceNumber_ = input.readInt32();
+              break;
+            }
+            case 72: {
+              bitField0_ |= 0x00000020;
+              flags_ = input.readUInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          units_ = java.util.Collections.unmodifiableList(units_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.internal_static_CDOTAMsg_UnitOrder_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.internal_static_CDOTAMsg_UnitOrder_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.class, skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CDOTAMsg_UnitOrder> PARSER =
+        new com.google.protobuf.AbstractParser<CDOTAMsg_UnitOrder>() {
+      public CDOTAMsg_UnitOrder parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDOTAMsg_UnitOrder(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDOTAMsg_UnitOrder> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ORDER_TYPE_FIELD_NUMBER = 2;
+    private skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t orderType_;
+    /**
+     * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+     */
+    public boolean hasOrderType() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+     */
+    public skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t getOrderType() {
+      return orderType_;
+    }
+
+    public static final int UNITS_FIELD_NUMBER = 3;
+    private java.util.List<java.lang.Integer> units_;
+    /**
+     * <code>repeated int32 units = 3;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getUnitsList() {
+      return units_;
+    }
+    /**
+     * <code>repeated int32 units = 3;</code>
+     */
+    public int getUnitsCount() {
+      return units_.size();
+    }
+    /**
+     * <code>repeated int32 units = 3;</code>
+     */
+    public int getUnits(int index) {
+      return units_.get(index);
+    }
+
+    public static final int TARGET_INDEX_FIELD_NUMBER = 4;
+    private int targetIndex_;
+    /**
+     * <code>optional int32 target_index = 4 [default = 0];</code>
+     */
+    public boolean hasTargetIndex() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 target_index = 4 [default = 0];</code>
+     */
+    public int getTargetIndex() {
+      return targetIndex_;
+    }
+
+    public static final int ABILITY_INDEX_FIELD_NUMBER = 5;
+    private int abilityIndex_;
+    /**
+     * <code>optional int32 ability_index = 5 [default = -1];</code>
+     */
+    public boolean hasAbilityIndex() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 ability_index = 5 [default = -1];</code>
+     */
+    public int getAbilityIndex() {
+      return abilityIndex_;
+    }
+
+    public static final int POSITION_FIELD_NUMBER = 6;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector position_;
+    /**
+     * <code>optional .CMsgVector position = 6;</code>
+     */
+    public boolean hasPosition() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional .CMsgVector position = 6;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getPosition() {
+      return position_;
+    }
+    /**
+     * <code>optional .CMsgVector position = 6;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+      return position_;
+    }
+
+    public static final int SEQUENCE_NUMBER_FIELD_NUMBER = 8;
+    private int sequenceNumber_;
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    public boolean hasSequenceNumber() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 sequence_number = 8;</code>
+     */
+    public int getSequenceNumber() {
+      return sequenceNumber_;
+    }
+
+    public static final int FLAGS_FIELD_NUMBER = 9;
+    private int flags_;
+    /**
+     * <code>optional uint32 flags = 9;</code>
+     */
+    public boolean hasFlags() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional uint32 flags = 9;</code>
+     */
+    public int getFlags() {
+      return flags_;
+    }
+
+    private void initFields() {
+      orderType_ = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t.DOTA_UNIT_ORDER_NONE;
+      units_ = java.util.Collections.emptyList();
+      targetIndex_ = 0;
+      abilityIndex_ = -1;
+      position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      sequenceNumber_ = 0;
+      flags_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeEnum(2, orderType_.getNumber());
+      }
+      for (int i = 0; i < units_.size(); i++) {
+        output.writeInt32(3, units_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(4, targetIndex_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(5, abilityIndex_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeMessage(6, position_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(8, sequenceNumber_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeUInt32(9, flags_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(2, orderType_.getNumber());
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < units_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(units_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getUnitsList().size();
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, targetIndex_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, abilityIndex_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, position_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(8, sequenceNumber_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(9, flags_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDOTAMsg_UnitOrder}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDOTAMsg_UnitOrder)
+        skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.internal_static_CDOTAMsg_UnitOrder_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.internal_static_CDOTAMsg_UnitOrder_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.class, skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPositionFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        orderType_ = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t.DOTA_UNIT_ORDER_NONE;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        units_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        targetIndex_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        abilityIndex_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        if (positionBuilder_ == null) {
+          position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          positionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        sequenceNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        flags_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.internal_static_CDOTAMsg_UnitOrder_descriptor;
+      }
+
+      public skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder getDefaultInstanceForType() {
+        return skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder build() {
+        skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder buildPartial() {
+        skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder result = new skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.orderType_ = orderType_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          units_ = java.util.Collections.unmodifiableList(units_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.units_ = units_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.targetIndex_ = targetIndex_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.abilityIndex_ = abilityIndex_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        if (positionBuilder_ == null) {
+          result.position_ = position_;
+        } else {
+          result.position_ = positionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.sequenceNumber_ = sequenceNumber_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        result.flags_ = flags_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder) {
+          return mergeFrom((skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder other) {
+        if (other == skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder.getDefaultInstance()) return this;
+        if (other.hasOrderType()) {
+          setOrderType(other.getOrderType());
+        }
+        if (!other.units_.isEmpty()) {
+          if (units_.isEmpty()) {
+            units_ = other.units_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureUnitsIsMutable();
+            units_.addAll(other.units_);
+          }
+          onChanged();
+        }
+        if (other.hasTargetIndex()) {
+          setTargetIndex(other.getTargetIndex());
+        }
+        if (other.hasAbilityIndex()) {
+          setAbilityIndex(other.getAbilityIndex());
+        }
+        if (other.hasPosition()) {
+          mergePosition(other.getPosition());
+        }
+        if (other.hasSequenceNumber()) {
+          setSequenceNumber(other.getSequenceNumber());
+        }
+        if (other.hasFlags()) {
+          setFlags(other.getFlags());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.CDOTAMsg_UnitOrder) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t orderType_ = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t.DOTA_UNIT_ORDER_NONE;
+      /**
+       * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+       */
+      public boolean hasOrderType() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+       */
+      public skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t getOrderType() {
+        return orderType_;
+      }
+      /**
+       * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+       */
+      public Builder setOrderType(skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        orderType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .dotaunitorder_t order_type = 2 [default = DOTA_UNIT_ORDER_NONE];</code>
+       */
+      public Builder clearOrderType() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        orderType_ = skadistats.clarity.wire.dota.common.proto.DotaCommonMessages.dotaunitorder_t.DOTA_UNIT_ORDER_NONE;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> units_ = java.util.Collections.emptyList();
+      private void ensureUnitsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          units_ = new java.util.ArrayList<java.lang.Integer>(units_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getUnitsList() {
+        return java.util.Collections.unmodifiableList(units_);
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public int getUnitsCount() {
+        return units_.size();
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public int getUnits(int index) {
+        return units_.get(index);
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public Builder setUnits(
+          int index, int value) {
+        ensureUnitsIsMutable();
+        units_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public Builder addUnits(int value) {
+        ensureUnitsIsMutable();
+        units_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public Builder addAllUnits(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureUnitsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, units_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 units = 3;</code>
+       */
+      public Builder clearUnits() {
+        units_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private int targetIndex_ ;
+      /**
+       * <code>optional int32 target_index = 4 [default = 0];</code>
+       */
+      public boolean hasTargetIndex() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 target_index = 4 [default = 0];</code>
+       */
+      public int getTargetIndex() {
+        return targetIndex_;
+      }
+      /**
+       * <code>optional int32 target_index = 4 [default = 0];</code>
+       */
+      public Builder setTargetIndex(int value) {
+        bitField0_ |= 0x00000004;
+        targetIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 target_index = 4 [default = 0];</code>
+       */
+      public Builder clearTargetIndex() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        targetIndex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int abilityIndex_ = -1;
+      /**
+       * <code>optional int32 ability_index = 5 [default = -1];</code>
+       */
+      public boolean hasAbilityIndex() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 ability_index = 5 [default = -1];</code>
+       */
+      public int getAbilityIndex() {
+        return abilityIndex_;
+      }
+      /**
+       * <code>optional int32 ability_index = 5 [default = -1];</code>
+       */
+      public Builder setAbilityIndex(int value) {
+        bitField0_ |= 0x00000008;
+        abilityIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ability_index = 5 [default = -1];</code>
+       */
+      public Builder clearAbilityIndex() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        abilityIndex_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> positionBuilder_;
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public boolean hasPosition() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getPosition() {
+        if (positionBuilder_ == null) {
+          return position_;
+        } else {
+          return positionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public Builder setPosition(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (positionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          position_ = value;
+          onChanged();
+        } else {
+          positionBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public Builder setPosition(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (positionBuilder_ == null) {
+          position_ = builderForValue.build();
+          onChanged();
+        } else {
+          positionBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public Builder mergePosition(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (positionBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) == 0x00000010) &&
+              position_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            position_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(position_).mergeFrom(value).buildPartial();
+          } else {
+            position_ = value;
+          }
+          onChanged();
+        } else {
+          positionBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000010;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public Builder clearPosition() {
+        if (positionBuilder_ == null) {
+          position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          positionBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getPositionBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getPositionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getPositionOrBuilder() {
+        if (positionBuilder_ != null) {
+          return positionBuilder_.getMessageOrBuilder();
+        } else {
+          return position_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector position = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getPositionFieldBuilder() {
+        if (positionBuilder_ == null) {
+          positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getPosition(),
+                  getParentForChildren(),
+                  isClean());
+          position_ = null;
+        }
+        return positionBuilder_;
+      }
+
+      private int sequenceNumber_ ;
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public boolean hasSequenceNumber() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public int getSequenceNumber() {
+        return sequenceNumber_;
+      }
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public Builder setSequenceNumber(int value) {
+        bitField0_ |= 0x00000020;
+        sequenceNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 sequence_number = 8;</code>
+       */
+      public Builder clearSequenceNumber() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        sequenceNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int flags_ ;
+      /**
+       * <code>optional uint32 flags = 9;</code>
+       */
+      public boolean hasFlags() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 flags = 9;</code>
+       */
+      public int getFlags() {
+        return flags_;
+      }
+      /**
+       * <code>optional uint32 flags = 9;</code>
+       */
+      public Builder setFlags(int value) {
+        bitField0_ |= 0x00000040;
+        flags_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 flags = 9;</code>
+       */
+      public Builder clearFlags() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        flags_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDOTAMsg_UnitOrder)
+    }
+
+    static {
+      defaultInstance = new CDOTAMsg_UnitOrder(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDOTAMsg_UnitOrder)
+  }
+
   public interface VersusScene_PlayActivityOrBuilder extends
       // @@protoc_insertion_point(interface_extends:VersusScene_PlayActivity)
       com.google.protobuf.MessageOrBuilder {
@@ -8300,11 +9362,11 @@ public final class DotaCommonMessages {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional uint32 chat_message_id = 1;</code>
+     * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
      */
     boolean hasChatMessageId();
     /**
-     * <code>optional uint32 chat_message_id = 1;</code>
+     * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
      */
     int getChatMessageId();
 
@@ -8422,13 +9484,13 @@ public final class DotaCommonMessages {
     public static final int CHAT_MESSAGE_ID_FIELD_NUMBER = 1;
     private int chatMessageId_;
     /**
-     * <code>optional uint32 chat_message_id = 1;</code>
+     * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
      */
     public boolean hasChatMessageId() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional uint32 chat_message_id = 1;</code>
+     * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
      */
     public int getChatMessageId() {
       return chatMessageId_;
@@ -8450,7 +9512,7 @@ public final class DotaCommonMessages {
     }
 
     private void initFields() {
-      chatMessageId_ = 0;
+      chatMessageId_ = -1;
       emoticonId_ = 0;
     }
     private byte memoizedIsInitialized = -1;
@@ -8606,7 +9668,7 @@ public final class DotaCommonMessages {
 
       public Builder clear() {
         super.clear();
-        chatMessageId_ = 0;
+        chatMessageId_ = -1;
         bitField0_ = (bitField0_ & ~0x00000001);
         emoticonId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -8695,21 +9757,21 @@ public final class DotaCommonMessages {
       }
       private int bitField0_;
 
-      private int chatMessageId_ ;
+      private int chatMessageId_ = -1;
       /**
-       * <code>optional uint32 chat_message_id = 1;</code>
+       * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
        */
       public boolean hasChatMessageId() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional uint32 chat_message_id = 1;</code>
+       * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
        */
       public int getChatMessageId() {
         return chatMessageId_;
       }
       /**
-       * <code>optional uint32 chat_message_id = 1;</code>
+       * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
        */
       public Builder setChatMessageId(int value) {
         bitField0_ |= 0x00000001;
@@ -8718,11 +9780,11 @@ public final class DotaCommonMessages {
         return this;
       }
       /**
-       * <code>optional uint32 chat_message_id = 1;</code>
+       * <code>optional uint32 chat_message_id = 1 [default = 4294967295];</code>
        */
       public Builder clearChatMessageId() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        chatMessageId_ = 0;
+        chatMessageId_ = -1;
         onChanged();
         return this;
       }
@@ -9208,6 +10270,11 @@ public final class DotaCommonMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMsg_CoachHUDPing_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMsg_UnitOrder_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMsg_UnitOrder_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_VersusScene_PlayActivity_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -9236,138 +10303,145 @@ public final class DotaCommonMessages {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\031dota_commonmessages.proto\"\232\001\n\025CDOTAMsg" +
-      "_LocationPing\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\016\n\006t" +
-      "arget\030\003 \001(\005\022\023\n\013direct_ping\030\004 \001(\010\022\014\n\004type" +
-      "\030\005 \001(\005\0228\n\013ping_source\030\006 \001(\0162\014.EPingSourc" +
-      "e:\025k_ePingSource_Default\"C\n\022CDOTAMsg_Ite" +
-      "mAlert\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\027\n\017item_abi" +
-      "lity_id\030\003 \001(\005\"<\n\027CDOTAMsg_EnemyItemAlert" +
-      "\022\021\n\tplayer_id\030\001 \001(\r\022\016\n\006itemid\030\002 \001(\005\"9\n\020C" +
-      "DOTAMsg_MapLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\017\n" +
-      "\007initial\030\003 \001(\010\"S\n\022CDOTAMsg_WorldLine\022\t\n\001",
-      "x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\t\n\001z\030\003 \001(\005\022\017\n\007initial" +
-      "\030\004 \001(\010\022\013\n\003end\030\005 \001(\010\"\320\001\n\026CDOTAMsg_SendSta" +
-      "tPopup\0229\n\005style\030\001 \001(\0162\024.EDOTAStatPopupTy" +
-      "pes:\024k_EDOTA_SPT_Textline\022\024\n\014stat_string" +
-      "s\030\002 \003(\t\022\023\n\013stat_images\030\003 \003(\005\022\030\n\020stat_ima" +
-      "ge_types\030\004 \003(\005\022\020\n\010duration\030\005 \001(\002\022\020\n\010use_" +
-      "html\030\006 \001(\010\022\022\n\nmovie_name\030\007 \001(\t\"3\n\035CDOTAM" +
-      "sg_DismissAllStatPopups\022\022\n\ntime_delay\030\001 " +
-      "\001(\002\">\n\025CDOTAMsg_CoachHUDPing\022\t\n\001x\030\001 \001(\r\022" +
-      "\t\n\001y\030\002 \001(\r\022\017\n\007tgtpath\030\003 \001(\t\"\301\001\n\030VersusSc",
-      "ene_PlayActivity\022:\n\nactivities\030\001 \003(\0132&.V" +
-      "ersusScene_PlayActivity.ActivityInfo\022\025\n\r" +
-      "playback_rate\030\002 \001(\002\032R\n\014ActivityInfo\022\020\n\010a" +
-      "ctivity\030\001 \001(\t\022\031\n\021disable_auto_kill\030\002 \001(\010" +
-      "\022\025\n\rforce_looping\030\003 \001(\010\"E\n\025VersusScene_C" +
-      "hatWheel\022\027\n\017chat_message_id\030\001 \001(\r\022\023\n\013emo" +
-      "ticon_id\030\002 \001(\r\"(\n\030VersusScene_PlaybackRa" +
-      "te\022\014\n\004rate\030\001 \001(\002*\305\021\n\025EDOTAChatWheelMessa" +
-      "ge\022\021\n\rk_EDOTA_CW_Ok\020\000\022\023\n\017k_EDOTA_CW_Care" +
-      "\020\001\022\026\n\022k_EDOTA_CW_GetBack\020\002\022\030\n\024k_EDOTA_CW",
-      "_NeedWards\020\003\022\023\n\017k_EDOTA_CW_Stun\020\004\022\023\n\017k_E" +
-      "DOTA_CW_Help\020\005\022\023\n\017k_EDOTA_CW_Push\020\006\022\026\n\022k" +
-      "_EDOTA_CW_GoodJob\020\007\022\026\n\022k_EDOTA_CW_Missin" +
-      "g\020\010\022\032\n\026k_EDOTA_CW_Missing_Top\020\t\022\032\n\026k_EDO" +
-      "TA_CW_Missing_Mid\020\n\022\035\n\031k_EDOTA_CW_Missin" +
-      "g_Bottom\020\013\022\021\n\rk_EDOTA_CW_Go\020\014\022\027\n\023k_EDOTA" +
-      "_CW_Initiate\020\r\022\025\n\021k_EDOTA_CW_Follow\020\016\022\027\n" +
-      "\023k_EDOTA_CW_Group_Up\020\017\022\031\n\025k_EDOTA_CW_Spr" +
-      "ead_Out\020\020\022\031\n\025k_EDOTA_CW_Split_Farm\020\021\022\025\n\021" +
-      "k_EDOTA_CW_Attack\020\022\022\022\n\016k_EDOTA_CW_BRB\020\023\022",
-      "\023\n\017k_EDOTA_CW_Dive\020\024\022\022\n\016k_EDOTA_CW_OMW\020\025" +
-      "\022\030\n\024k_EDOTA_CW_Get_Ready\020\026\022\023\n\017k_EDOTA_CW" +
-      "_Bait\020\027\022\023\n\017k_EDOTA_CW_Heal\020\030\022\023\n\017k_EDOTA_" +
-      "CW_Mana\020\031\022\022\n\016k_EDOTA_CW_OOM\020\032\022\035\n\031k_EDOTA" +
-      "_CW_Skill_Cooldown\020\033\022\031\n\025k_EDOTA_CW_Ulti_" +
-      "Ready\020\034\022\035\n\031k_EDOTA_CW_Enemy_Returned\020\035\022\032" +
-      "\n\026k_EDOTA_CW_All_Missing\020\036\022\035\n\031k_EDOTA_CW" +
-      "_Enemy_Incoming\020\037\022\032\n\026k_EDOTA_CW_Invis_En" +
-      "emy\020 \022\035\n\031k_EDOTA_CW_Enemy_Had_Rune\020!\022\031\n\025" +
-      "k_EDOTA_CW_Split_Push\020\"\022\035\n\031k_EDOTA_CW_Co",
-      "ming_To_Gank\020#\022\033\n\027k_EDOTA_CW_Request_Gan" +
-      "k\020$\022 \n\034k_EDOTA_CW_Fight_Under_Tower\020%\022\031\n" +
-      "\025k_EDOTA_CW_Deny_Tower\020&\022\032\n\026k_EDOTA_CW_B" +
-      "uy_Courier\020\'\022\036\n\032k_EDOTA_CW_Upgrade_Couri" +
-      "er\020(\022\035\n\031k_EDOTA_CW_Need_Detection\020)\022\"\n\036k" +
-      "_EDOTA_CW_They_Have_Detection\020*\022\025\n\021k_EDO" +
-      "TA_CW_Buy_TP\020+\022\034\n\030k_EDOTA_CW_Reuse_Couri" +
-      "er\020,\022\025\n\021k_EDOTA_CW_Deward\020-\022\033\n\027k_EDOTA_C" +
-      "W_Building_Mek\020.\022\034\n\030k_EDOTA_CW_Building_" +
-      "Pipe\020/\022\035\n\031k_EDOTA_CW_Stack_And_Pull\0200\022\023\n",
-      "\017k_EDOTA_CW_Pull\0201\022\026\n\022k_EDOTA_CW_Pulling" +
-      "\0202\022\024\n\020k_EDOTA_CW_Stack\0203\022\027\n\023k_EDOTA_CW_J" +
-      "ungling\0204\022\025\n\021k_EDOTA_CW_Roshan\0205\022\032\n\026k_ED" +
-      "OTA_CW_Affirmative\0206\022\023\n\017k_EDOTA_CW_Wait\020" +
-      "7\022\024\n\020k_EDOTA_CW_Pause\0208\022\033\n\027k_EDOTA_CW_Cu" +
-      "rrent_Time\0209\022\032\n\026k_EDOTA_CW_Check_Runes\020:" +
-      "\022\031\n\025k_EDOTA_CW_Smoke_Gank\020;\022\023\n\017k_EDOTA_C" +
-      "W_GLHF\020<\022\023\n\017k_EDOTA_CW_Nice\020=\022\025\n\021k_EDOTA" +
-      "_CW_Thanks\020>\022\024\n\020k_EDOTA_CW_Sorry\020?\022\031\n\025k_" +
-      "EDOTA_CW_No_Give_Up\020@\022\034\n\030k_EDOTA_CW_Just",
-      "_Happened\020A\022\033\n\027k_EDOTA_CW_Game_Is_Hard\020B" +
-      "\022\027\n\023k_EDOTA_CW_New_Meta\020C\022\025\n\021k_EDOTA_CW_" +
-      "My_Bad\020D\022\025\n\021k_EDOTA_CW_Regret\020E\022\024\n\020k_EDO" +
-      "TA_CW_Relax\020F\022\032\n\026k_EDOTA_CW_MissingHero\020" +
-      "G\022\033\n\027k_EDOTA_CW_ReturnedHero\020H\022\021\n\rk_EDOT" +
-      "A_CW_GG\020I\022\023\n\017k_EDOTA_CW_GGWP\020J\022\025\n\021k_EDOT" +
-      "A_CW_All_GG\020K\022\027\n\023k_EDOTA_CW_All_GGWP\020L\022\032" +
-      "\n\026k_EDOTA_CW_What_To_Buy\020M\022\034\n\030k_EDOTA_CW" +
-      "_Im_Retreating\020N\022\034\n\030k_EDOTA_CW_Space_Cre" +
-      "ated\020O\022\025\n\021k_EDOTA_CW_Whoops\020P\022\036\n\032k_EDOTA",
-      "_CW_Tower_then_Back\020Q\022!\n\035k_EDOTA_CW_Barr" +
-      "acks_then_Back\020R\022\037\n\033k_EDOTA_CW_Ward_Bott" +
-      "om_Rune\020S\022\034\n\030k_EDOTA_CW_Ward_Top_Rune\020T\022" +
-      "\027\n\023k_EDOTA_CW_Zeus_Ult\020U*\244\001\n\023EDOTAStatPo" +
-      "pupTypes\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025\n\021k_" +
-      "EDOTA_SPT_Basic\020\001\022\024\n\020k_EDOTA_SPT_Poll\020\002\022" +
-      "\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT_Dua" +
-      "lImage\020\004\022\025\n\021k_EDOTA_SPT_Movie\020\005*\222\013\n\017dota" +
-      "unitorder_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020\000\022$\n" +
-      " DOTA_UNIT_ORDER_MOVE_TO_POSITION\020\001\022\"\n\036D",
-      "OTA_UNIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033DOTA_" +
-      "UNIT_ORDER_ATTACK_MOVE\020\003\022!\n\035DOTA_UNIT_OR" +
-      "DER_ATTACK_TARGET\020\004\022!\n\035DOTA_UNIT_ORDER_C" +
-      "AST_POSITION\020\005\022\037\n\033DOTA_UNIT_ORDER_CAST_T" +
-      "ARGET\020\006\022$\n DOTA_UNIT_ORDER_CAST_TARGET_T" +
-      "REE\020\007\022\"\n\036DOTA_UNIT_ORDER_CAST_NO_TARGET\020" +
-      "\010\022\037\n\033DOTA_UNIT_ORDER_CAST_TOGGLE\020\t\022!\n\035DO" +
-      "TA_UNIT_ORDER_HOLD_POSITION\020\n\022!\n\035DOTA_UN" +
-      "IT_ORDER_TRAIN_ABILITY\020\013\022\035\n\031DOTA_UNIT_OR" +
-      "DER_DROP_ITEM\020\014\022\035\n\031DOTA_UNIT_ORDER_GIVE_",
-      "ITEM\020\r\022\037\n\033DOTA_UNIT_ORDER_PICKUP_ITEM\020\016\022" +
-      "\037\n\033DOTA_UNIT_ORDER_PICKUP_RUNE\020\017\022!\n\035DOTA" +
-      "_UNIT_ORDER_PURCHASE_ITEM\020\020\022\035\n\031DOTA_UNIT" +
-      "_ORDER_SELL_ITEM\020\021\022$\n DOTA_UNIT_ORDER_DI" +
-      "SASSEMBLE_ITEM\020\022\022\035\n\031DOTA_UNIT_ORDER_MOVE" +
-      "_ITEM\020\023\022$\n DOTA_UNIT_ORDER_CAST_TOGGLE_A" +
-      "UTO\020\024\022\030\n\024DOTA_UNIT_ORDER_STOP\020\025\022\031\n\025DOTA_" +
-      "UNIT_ORDER_TAUNT\020\026\022\033\n\027DOTA_UNIT_ORDER_BU" +
-      "YBACK\020\027\022\031\n\025DOTA_UNIT_ORDER_GLYPH\020\030\022)\n%DO" +
-      "TA_UNIT_ORDER_EJECT_ITEM_FROM_STASH\020\031\022\035\n",
-      "\031DOTA_UNIT_ORDER_CAST_RUNE\020\032\022 \n\034DOTA_UNI" +
-      "T_ORDER_PING_ABILITY\020\033\022%\n!DOTA_UNIT_ORDE" +
-      "R_MOVE_TO_DIRECTION\020\034\022\032\n\026DOTA_UNIT_ORDER" +
-      "_PATROL\020\035\022*\n&DOTA_UNIT_ORDER_VECTOR_TARG" +
-      "ET_POSITION\020\036\022\031\n\025DOTA_UNIT_ORDER_RADAR\020\037" +
-      "\022)\n%DOTA_UNIT_ORDER_SET_ITEM_COMBINE_LOC" +
-      "K\020 \022\034\n\030DOTA_UNIT_ORDER_CONTINUE\020!\022*\n&DOT" +
-      "A_UNIT_ORDER_VECTOR_TARGET_CANCELED\020\"\022$\n" +
-      " DOTA_UNIT_ORDER_CAST_RIVER_PAINT\020#\0222\n.D" +
-      "OTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_ASSIG",
-      "NMENT\020$\022)\n%DOTA_UNIT_ORDER_DROP_ITEM_AT_" +
-      "FOUNTAIN\020%\0225\n1DOTA_UNIT_ORDER_TAKE_ITEM_" +
-      "FROM_NEUTRAL_ITEM_STASH\020&\022!\n\035DOTA_UNIT_O" +
-      "RDER_MOVE_RELATIVE\020\'*\217\001\n\036EDOTAVersusScen" +
-      "ePlayerBehavior\022$\n VS_PLAYER_BEHAVIOR_PL" +
-      "AY_ACTIVITY\020\001\022!\n\035VS_PLAYER_BEHAVIOR_CHAT" +
-      "_WHEEL\020\002\022$\n VS_PLAYER_BEHAVIOR_PLAYBACK_" +
-      "RATE\020\003*v\n\013EPingSource\022\031\n\025k_ePingSource_D" +
-      "efault\020\000\022\031\n\025k_ePingSource_Warning\020\001\022\027\n\023k" +
-      "_ePingSource_Wheel\020\002\022\030\n\024k_ePingSource_Sy",
-      "stem\020\003BD\n)skadistats.clarity.wire.dota.c" +
-      "ommon.protoB\022DotaCommonMessagesH\001\200\001\000"
+      "\n\031dota_commonmessages.proto\032\035networkbase" +
+      "types-common.proto\"\252\001\n\025CDOTAMsg_Location" +
+      "Ping\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\022\n\006target\030\003 \001" +
+      "(\005:\002-1\022\023\n\013direct_ping\030\004 \001(\010\022\030\n\004type\030\005 \001(" +
+      "\r:\n4294967295\0228\n\013ping_source\030\006 \001(\0162\014.EPi" +
+      "ngSource:\025k_ePingSource_Default\"G\n\022CDOTA" +
+      "Msg_ItemAlert\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\033\n\017i" +
+      "tem_ability_id\030\003 \001(\005:\002-1\"<\n\027CDOTAMsg_Ene" +
+      "myItemAlert\022\021\n\tplayer_id\030\001 \001(\r\022\016\n\006itemid" +
+      "\030\002 \001(\005\"9\n\020CDOTAMsg_MapLine\022\t\n\001x\030\001 \001(\005\022\t\n",
+      "\001y\030\002 \001(\005\022\017\n\007initial\030\003 \001(\010\"S\n\022CDOTAMsg_Wo" +
+      "rldLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\t\n\001z\030\003 \001(\005" +
+      "\022\017\n\007initial\030\004 \001(\010\022\013\n\003end\030\005 \001(\010\"\320\001\n\026CDOTA" +
+      "Msg_SendStatPopup\0229\n\005style\030\001 \001(\0162\024.EDOTA" +
+      "StatPopupTypes:\024k_EDOTA_SPT_Textline\022\024\n\014" +
+      "stat_strings\030\002 \003(\t\022\023\n\013stat_images\030\003 \003(\005\022" +
+      "\030\n\020stat_image_types\030\004 \003(\005\022\020\n\010duration\030\005 " +
+      "\001(\002\022\020\n\010use_html\030\006 \001(\010\022\022\n\nmovie_name\030\007 \001(" +
+      "\t\"3\n\035CDOTAMsg_DismissAllStatPopups\022\022\n\nti" +
+      "me_delay\030\001 \001(\002\">\n\025CDOTAMsg_CoachHUDPing\022",
+      "\t\n\001x\030\001 \001(\r\022\t\n\001y\030\002 \001(\r\022\017\n\007tgtpath\030\003 \001(\t\"\332" +
+      "\001\n\022CDOTAMsg_UnitOrder\022:\n\norder_type\030\002 \001(" +
+      "\0162\020.dotaunitorder_t:\024DOTA_UNIT_ORDER_NON" +
+      "E\022\r\n\005units\030\003 \003(\005\022\027\n\014target_index\030\004 \001(\005:\001" +
+      "0\022\031\n\rability_index\030\005 \001(\005:\002-1\022\035\n\010position" +
+      "\030\006 \001(\0132\013.CMsgVector\022\027\n\017sequence_number\030\010" +
+      " \001(\005\022\r\n\005flags\030\t \001(\r\"\301\001\n\030VersusScene_Play" +
+      "Activity\022:\n\nactivities\030\001 \003(\0132&.VersusSce" +
+      "ne_PlayActivity.ActivityInfo\022\025\n\rplayback" +
+      "_rate\030\002 \001(\002\032R\n\014ActivityInfo\022\020\n\010activity\030",
+      "\001 \001(\t\022\031\n\021disable_auto_kill\030\002 \001(\010\022\025\n\rforc" +
+      "e_looping\030\003 \001(\010\"Q\n\025VersusScene_ChatWheel" +
+      "\022#\n\017chat_message_id\030\001 \001(\r:\n4294967295\022\023\n" +
+      "\013emoticon_id\030\002 \001(\r\"(\n\030VersusScene_Playba" +
+      "ckRate\022\014\n\004rate\030\001 \001(\002*\305\021\n\025EDOTAChatWheelM" +
+      "essage\022\021\n\rk_EDOTA_CW_Ok\020\000\022\023\n\017k_EDOTA_CW_" +
+      "Care\020\001\022\026\n\022k_EDOTA_CW_GetBack\020\002\022\030\n\024k_EDOT" +
+      "A_CW_NeedWards\020\003\022\023\n\017k_EDOTA_CW_Stun\020\004\022\023\n" +
+      "\017k_EDOTA_CW_Help\020\005\022\023\n\017k_EDOTA_CW_Push\020\006\022" +
+      "\026\n\022k_EDOTA_CW_GoodJob\020\007\022\026\n\022k_EDOTA_CW_Mi",
+      "ssing\020\010\022\032\n\026k_EDOTA_CW_Missing_Top\020\t\022\032\n\026k" +
+      "_EDOTA_CW_Missing_Mid\020\n\022\035\n\031k_EDOTA_CW_Mi" +
+      "ssing_Bottom\020\013\022\021\n\rk_EDOTA_CW_Go\020\014\022\027\n\023k_E" +
+      "DOTA_CW_Initiate\020\r\022\025\n\021k_EDOTA_CW_Follow\020" +
+      "\016\022\027\n\023k_EDOTA_CW_Group_Up\020\017\022\031\n\025k_EDOTA_CW" +
+      "_Spread_Out\020\020\022\031\n\025k_EDOTA_CW_Split_Farm\020\021" +
+      "\022\025\n\021k_EDOTA_CW_Attack\020\022\022\022\n\016k_EDOTA_CW_BR" +
+      "B\020\023\022\023\n\017k_EDOTA_CW_Dive\020\024\022\022\n\016k_EDOTA_CW_O" +
+      "MW\020\025\022\030\n\024k_EDOTA_CW_Get_Ready\020\026\022\023\n\017k_EDOT" +
+      "A_CW_Bait\020\027\022\023\n\017k_EDOTA_CW_Heal\020\030\022\023\n\017k_ED",
+      "OTA_CW_Mana\020\031\022\022\n\016k_EDOTA_CW_OOM\020\032\022\035\n\031k_E" +
+      "DOTA_CW_Skill_Cooldown\020\033\022\031\n\025k_EDOTA_CW_U" +
+      "lti_Ready\020\034\022\035\n\031k_EDOTA_CW_Enemy_Returned" +
+      "\020\035\022\032\n\026k_EDOTA_CW_All_Missing\020\036\022\035\n\031k_EDOT" +
+      "A_CW_Enemy_Incoming\020\037\022\032\n\026k_EDOTA_CW_Invi" +
+      "s_Enemy\020 \022\035\n\031k_EDOTA_CW_Enemy_Had_Rune\020!" +
+      "\022\031\n\025k_EDOTA_CW_Split_Push\020\"\022\035\n\031k_EDOTA_C" +
+      "W_Coming_To_Gank\020#\022\033\n\027k_EDOTA_CW_Request" +
+      "_Gank\020$\022 \n\034k_EDOTA_CW_Fight_Under_Tower\020" +
+      "%\022\031\n\025k_EDOTA_CW_Deny_Tower\020&\022\032\n\026k_EDOTA_",
+      "CW_Buy_Courier\020\'\022\036\n\032k_EDOTA_CW_Upgrade_C" +
+      "ourier\020(\022\035\n\031k_EDOTA_CW_Need_Detection\020)\022" +
+      "\"\n\036k_EDOTA_CW_They_Have_Detection\020*\022\025\n\021k" +
+      "_EDOTA_CW_Buy_TP\020+\022\034\n\030k_EDOTA_CW_Reuse_C" +
+      "ourier\020,\022\025\n\021k_EDOTA_CW_Deward\020-\022\033\n\027k_EDO" +
+      "TA_CW_Building_Mek\020.\022\034\n\030k_EDOTA_CW_Build" +
+      "ing_Pipe\020/\022\035\n\031k_EDOTA_CW_Stack_And_Pull\020" +
+      "0\022\023\n\017k_EDOTA_CW_Pull\0201\022\026\n\022k_EDOTA_CW_Pul" +
+      "ling\0202\022\024\n\020k_EDOTA_CW_Stack\0203\022\027\n\023k_EDOTA_" +
+      "CW_Jungling\0204\022\025\n\021k_EDOTA_CW_Roshan\0205\022\032\n\026",
+      "k_EDOTA_CW_Affirmative\0206\022\023\n\017k_EDOTA_CW_W" +
+      "ait\0207\022\024\n\020k_EDOTA_CW_Pause\0208\022\033\n\027k_EDOTA_C" +
+      "W_Current_Time\0209\022\032\n\026k_EDOTA_CW_Check_Run" +
+      "es\020:\022\031\n\025k_EDOTA_CW_Smoke_Gank\020;\022\023\n\017k_EDO" +
+      "TA_CW_GLHF\020<\022\023\n\017k_EDOTA_CW_Nice\020=\022\025\n\021k_E" +
+      "DOTA_CW_Thanks\020>\022\024\n\020k_EDOTA_CW_Sorry\020?\022\031" +
+      "\n\025k_EDOTA_CW_No_Give_Up\020@\022\034\n\030k_EDOTA_CW_" +
+      "Just_Happened\020A\022\033\n\027k_EDOTA_CW_Game_Is_Ha" +
+      "rd\020B\022\027\n\023k_EDOTA_CW_New_Meta\020C\022\025\n\021k_EDOTA" +
+      "_CW_My_Bad\020D\022\025\n\021k_EDOTA_CW_Regret\020E\022\024\n\020k",
+      "_EDOTA_CW_Relax\020F\022\032\n\026k_EDOTA_CW_MissingH" +
+      "ero\020G\022\033\n\027k_EDOTA_CW_ReturnedHero\020H\022\021\n\rk_" +
+      "EDOTA_CW_GG\020I\022\023\n\017k_EDOTA_CW_GGWP\020J\022\025\n\021k_" +
+      "EDOTA_CW_All_GG\020K\022\027\n\023k_EDOTA_CW_All_GGWP" +
+      "\020L\022\032\n\026k_EDOTA_CW_What_To_Buy\020M\022\034\n\030k_EDOT" +
+      "A_CW_Im_Retreating\020N\022\034\n\030k_EDOTA_CW_Space" +
+      "_Created\020O\022\025\n\021k_EDOTA_CW_Whoops\020P\022\036\n\032k_E" +
+      "DOTA_CW_Tower_then_Back\020Q\022!\n\035k_EDOTA_CW_" +
+      "Barracks_then_Back\020R\022\037\n\033k_EDOTA_CW_Ward_" +
+      "Bottom_Rune\020S\022\034\n\030k_EDOTA_CW_Ward_Top_Run",
+      "e\020T\022\027\n\023k_EDOTA_CW_Zeus_Ult\020U*v\n\013EPingSou" +
+      "rce\022\031\n\025k_ePingSource_Default\020\000\022\031\n\025k_ePin" +
+      "gSource_Warning\020\001\022\027\n\023k_ePingSource_Wheel" +
+      "\020\002\022\030\n\024k_ePingSource_System\020\003*\244\001\n\023EDOTASt" +
+      "atPopupTypes\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025" +
+      "\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k_EDOTA_SPT_Pol" +
+      "l\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT" +
+      "_DualImage\020\004\022\025\n\021k_EDOTA_SPT_Movie\020\005*\222\013\n\017" +
+      "dotaunitorder_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020" +
+      "\000\022$\n DOTA_UNIT_ORDER_MOVE_TO_POSITION\020\001\022",
+      "\"\n\036DOTA_UNIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033D" +
+      "OTA_UNIT_ORDER_ATTACK_MOVE\020\003\022!\n\035DOTA_UNI" +
+      "T_ORDER_ATTACK_TARGET\020\004\022!\n\035DOTA_UNIT_ORD" +
+      "ER_CAST_POSITION\020\005\022\037\n\033DOTA_UNIT_ORDER_CA" +
+      "ST_TARGET\020\006\022$\n DOTA_UNIT_ORDER_CAST_TARG" +
+      "ET_TREE\020\007\022\"\n\036DOTA_UNIT_ORDER_CAST_NO_TAR" +
+      "GET\020\010\022\037\n\033DOTA_UNIT_ORDER_CAST_TOGGLE\020\t\022!" +
+      "\n\035DOTA_UNIT_ORDER_HOLD_POSITION\020\n\022!\n\035DOT" +
+      "A_UNIT_ORDER_TRAIN_ABILITY\020\013\022\035\n\031DOTA_UNI" +
+      "T_ORDER_DROP_ITEM\020\014\022\035\n\031DOTA_UNIT_ORDER_G",
+      "IVE_ITEM\020\r\022\037\n\033DOTA_UNIT_ORDER_PICKUP_ITE" +
+      "M\020\016\022\037\n\033DOTA_UNIT_ORDER_PICKUP_RUNE\020\017\022!\n\035" +
+      "DOTA_UNIT_ORDER_PURCHASE_ITEM\020\020\022\035\n\031DOTA_" +
+      "UNIT_ORDER_SELL_ITEM\020\021\022$\n DOTA_UNIT_ORDE" +
+      "R_DISASSEMBLE_ITEM\020\022\022\035\n\031DOTA_UNIT_ORDER_" +
+      "MOVE_ITEM\020\023\022$\n DOTA_UNIT_ORDER_CAST_TOGG" +
+      "LE_AUTO\020\024\022\030\n\024DOTA_UNIT_ORDER_STOP\020\025\022\031\n\025D" +
+      "OTA_UNIT_ORDER_TAUNT\020\026\022\033\n\027DOTA_UNIT_ORDE" +
+      "R_BUYBACK\020\027\022\031\n\025DOTA_UNIT_ORDER_GLYPH\020\030\022)" +
+      "\n%DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH\020",
+      "\031\022\035\n\031DOTA_UNIT_ORDER_CAST_RUNE\020\032\022 \n\034DOTA" +
+      "_UNIT_ORDER_PING_ABILITY\020\033\022%\n!DOTA_UNIT_" +
+      "ORDER_MOVE_TO_DIRECTION\020\034\022\032\n\026DOTA_UNIT_O" +
+      "RDER_PATROL\020\035\022*\n&DOTA_UNIT_ORDER_VECTOR_" +
+      "TARGET_POSITION\020\036\022\031\n\025DOTA_UNIT_ORDER_RAD" +
+      "AR\020\037\022)\n%DOTA_UNIT_ORDER_SET_ITEM_COMBINE" +
+      "_LOCK\020 \022\034\n\030DOTA_UNIT_ORDER_CONTINUE\020!\022*\n" +
+      "&DOTA_UNIT_ORDER_VECTOR_TARGET_CANCELED\020" +
+      "\"\022$\n DOTA_UNIT_ORDER_CAST_RIVER_PAINT\020#\022" +
+      "2\n.DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_A",
+      "SSIGNMENT\020$\022)\n%DOTA_UNIT_ORDER_DROP_ITEM" +
+      "_AT_FOUNTAIN\020%\0225\n1DOTA_UNIT_ORDER_TAKE_I" +
+      "TEM_FROM_NEUTRAL_ITEM_STASH\020&\022!\n\035DOTA_UN" +
+      "IT_ORDER_MOVE_RELATIVE\020\'*\217\001\n\036EDOTAVersus" +
+      "ScenePlayerBehavior\022$\n VS_PLAYER_BEHAVIO" +
+      "R_PLAY_ACTIVITY\020\001\022!\n\035VS_PLAYER_BEHAVIOR_" +
+      "CHAT_WHEEL\020\002\022$\n VS_PLAYER_BEHAVIOR_PLAYB" +
+      "ACK_RATE\020\003B?\n)skadistats.clarity.wire.do" +
+      "ta.common.protoB\022DotaCommonMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9380,6 +10454,7 @@ public final class DotaCommonMessages {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CDOTAMsg_LocationPing_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -9429,8 +10504,14 @@ public final class DotaCommonMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_CoachHUDPing_descriptor,
         new java.lang.String[] { "X", "Y", "Tgtpath", });
-    internal_static_VersusScene_PlayActivity_descriptor =
+    internal_static_CDOTAMsg_UnitOrder_descriptor =
       getDescriptor().getMessageTypes().get(8);
+    internal_static_CDOTAMsg_UnitOrder_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMsg_UnitOrder_descriptor,
+        new java.lang.String[] { "OrderType", "Units", "TargetIndex", "AbilityIndex", "Position", "SequenceNumber", "Flags", });
+    internal_static_VersusScene_PlayActivity_descriptor =
+      getDescriptor().getMessageTypes().get(9);
     internal_static_VersusScene_PlayActivity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_VersusScene_PlayActivity_descriptor,
@@ -9442,17 +10523,18 @@ public final class DotaCommonMessages {
         internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor,
         new java.lang.String[] { "Activity", "DisableAutoKill", "ForceLooping", });
     internal_static_VersusScene_ChatWheel_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_VersusScene_ChatWheel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_VersusScene_ChatWheel_descriptor,
         new java.lang.String[] { "ChatMessageId", "EmoticonId", });
     internal_static_VersusScene_PlaybackRate_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_VersusScene_PlaybackRate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_VersusScene_PlaybackRate_descriptor,
         new java.lang.String[] { "Rate", });
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

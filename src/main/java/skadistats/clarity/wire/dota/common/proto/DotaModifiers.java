@@ -104,11 +104,11 @@ public final class DotaModifiers {
     skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType();
 
     /**
-     * <code>required uint32 parent = 2;</code>
+     * <code>required uint32 parent = 2 [default = 16777215];</code>
      */
     boolean hasParent();
     /**
-     * <code>required uint32 parent = 2;</code>
+     * <code>required uint32 parent = 2 [default = 16777215];</code>
      */
     int getParent();
 
@@ -176,20 +176,20 @@ public final class DotaModifiers {
     float getDuration();
 
     /**
-     * <code>optional uint32 caster = 10;</code>
+     * <code>optional uint32 caster = 10 [default = 16777215];</code>
      */
     boolean hasCaster();
     /**
-     * <code>optional uint32 caster = 10;</code>
+     * <code>optional uint32 caster = 10 [default = 16777215];</code>
      */
     int getCaster();
 
     /**
-     * <code>optional uint32 ability = 11;</code>
+     * <code>optional uint32 ability = 11 [default = 16777215];</code>
      */
     boolean hasAbility();
     /**
-     * <code>optional uint32 ability = 11;</code>
+     * <code>optional uint32 ability = 11 [default = 16777215];</code>
      */
     int getAbility();
 
@@ -366,11 +366,11 @@ public final class DotaModifiers {
     int getDdModifierIndex();
 
     /**
-     * <code>optional int32 dd_ability_id = 28;</code>
+     * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
      */
     boolean hasDdAbilityId();
     /**
-     * <code>optional int32 dd_ability_id = 28;</code>
+     * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
      */
     int getDdAbilityId();
 
@@ -398,15 +398,15 @@ public final class DotaModifiers {
     boolean getActive();
 
     /**
-     * <code>optional string player_ids = 31;</code>
+     * <code>optional string player_ids = 31 [default = "-1"];</code>
      */
     boolean hasPlayerIds();
     /**
-     * <code>optional string player_ids = 31;</code>
+     * <code>optional string player_ids = 31 [default = "-1"];</code>
      */
     java.lang.String getPlayerIds();
     /**
-     * <code>optional string player_ids = 31;</code>
+     * <code>optional string player_ids = 31 [default = "-1"];</code>
      */
     com.google.protobuf.ByteString
         getPlayerIdsBytes();
@@ -435,11 +435,11 @@ public final class DotaModifiers {
     int getAttackSpeed();
 
     /**
-     * <code>optional uint32 aura_owner = 34;</code>
+     * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
      */
     boolean hasAuraOwner();
     /**
-     * <code>optional uint32 aura_owner = 34;</code>
+     * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
      */
     int getAuraOwner();
 
@@ -471,11 +471,11 @@ public final class DotaModifiers {
     int getBonusMana();
 
     /**
-     * <code>optional uint32 custom_entity = 38;</code>
+     * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
      */
     boolean hasCustomEntity();
     /**
-     * <code>optional uint32 custom_entity = 38;</code>
+     * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
      */
     int getCustomEntity();
   }
@@ -810,13 +810,13 @@ public final class DotaModifiers {
     public static final int PARENT_FIELD_NUMBER = 2;
     private int parent_;
     /**
-     * <code>required uint32 parent = 2;</code>
+     * <code>required uint32 parent = 2 [default = 16777215];</code>
      */
     public boolean hasParent() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required uint32 parent = 2;</code>
+     * <code>required uint32 parent = 2 [default = 16777215];</code>
      */
     public int getParent() {
       return parent_;
@@ -930,13 +930,13 @@ public final class DotaModifiers {
     public static final int CASTER_FIELD_NUMBER = 10;
     private int caster_;
     /**
-     * <code>optional uint32 caster = 10;</code>
+     * <code>optional uint32 caster = 10 [default = 16777215];</code>
      */
     public boolean hasCaster() {
       return ((bitField0_ & 0x00000200) == 0x00000200);
     }
     /**
-     * <code>optional uint32 caster = 10;</code>
+     * <code>optional uint32 caster = 10 [default = 16777215];</code>
      */
     public int getCaster() {
       return caster_;
@@ -945,13 +945,13 @@ public final class DotaModifiers {
     public static final int ABILITY_FIELD_NUMBER = 11;
     private int ability_;
     /**
-     * <code>optional uint32 ability = 11;</code>
+     * <code>optional uint32 ability = 11 [default = 16777215];</code>
      */
     public boolean hasAbility() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
-     * <code>optional uint32 ability = 11;</code>
+     * <code>optional uint32 ability = 11 [default = 16777215];</code>
      */
     public int getAbility() {
       return ability_;
@@ -1320,13 +1320,13 @@ public final class DotaModifiers {
     public static final int DD_ABILITY_ID_FIELD_NUMBER = 28;
     private int ddAbilityId_;
     /**
-     * <code>optional int32 dd_ability_id = 28;</code>
+     * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
      */
     public boolean hasDdAbilityId() {
       return ((bitField0_ & 0x08000000) == 0x08000000);
     }
     /**
-     * <code>optional int32 dd_ability_id = 28;</code>
+     * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
      */
     public int getDdAbilityId() {
       return ddAbilityId_;
@@ -1392,13 +1392,13 @@ public final class DotaModifiers {
     public static final int PLAYER_IDS_FIELD_NUMBER = 31;
     private java.lang.Object playerIds_;
     /**
-     * <code>optional string player_ids = 31;</code>
+     * <code>optional string player_ids = 31 [default = "-1"];</code>
      */
     public boolean hasPlayerIds() {
       return ((bitField0_ & 0x40000000) == 0x40000000);
     }
     /**
-     * <code>optional string player_ids = 31;</code>
+     * <code>optional string player_ids = 31 [default = "-1"];</code>
      */
     public java.lang.String getPlayerIds() {
       java.lang.Object ref = playerIds_;
@@ -1415,7 +1415,7 @@ public final class DotaModifiers {
       }
     }
     /**
-     * <code>optional string player_ids = 31;</code>
+     * <code>optional string player_ids = 31 [default = "-1"];</code>
      */
     public com.google.protobuf.ByteString
         getPlayerIdsBytes() {
@@ -1491,13 +1491,13 @@ public final class DotaModifiers {
     public static final int AURA_OWNER_FIELD_NUMBER = 34;
     private int auraOwner_;
     /**
-     * <code>optional uint32 aura_owner = 34;</code>
+     * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
      */
     public boolean hasAuraOwner() {
       return ((bitField1_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional uint32 aura_owner = 34;</code>
+     * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
      */
     public int getAuraOwner() {
       return auraOwner_;
@@ -1551,13 +1551,13 @@ public final class DotaModifiers {
     public static final int CUSTOM_ENTITY_FIELD_NUMBER = 38;
     private int customEntity_;
     /**
-     * <code>optional uint32 custom_entity = 38;</code>
+     * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
      */
     public boolean hasCustomEntity() {
       return ((bitField1_ & 0x00000020) == 0x00000020);
     }
     /**
-     * <code>optional uint32 custom_entity = 38;</code>
+     * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
      */
     public int getCustomEntity() {
       return customEntity_;
@@ -1565,7 +1565,7 @@ public final class DotaModifiers {
 
     private void initFields() {
       entryType_ = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
-      parent_ = 0;
+      parent_ = 16777215;
       index_ = 0;
       serialNum_ = 0;
       modifierClass_ = 0;
@@ -1573,8 +1573,8 @@ public final class DotaModifiers {
       stackCount_ = 0;
       creationTime_ = 0F;
       duration_ = -1F;
-      caster_ = 0;
-      ability_ = 0;
+      caster_ = 16777215;
+      ability_ = 16777215;
       armor_ = 0;
       fadeTime_ = 0F;
       subtle_ = false;
@@ -1591,17 +1591,17 @@ public final class DotaModifiers {
       damage_ = 0;
       range_ = 0;
       ddModifierIndex_ = 0;
-      ddAbilityId_ = 0;
+      ddAbilityId_ = -1;
       illusionLabel_ = "";
       active_ = false;
-      playerIds_ = "";
+      playerIds_ = "-1";
       luaName_ = "";
       attackSpeed_ = 0;
-      auraOwner_ = 0;
+      auraOwner_ = 16777215;
       bonusAllStats_ = 0;
       bonusHealth_ = 0;
       bonusMana_ = 0;
-      customEntity_ = 0;
+      customEntity_ = 16777215;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2028,7 +2028,7 @@ public final class DotaModifiers {
         super.clear();
         entryType_ = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
         bitField0_ = (bitField0_ & ~0x00000001);
-        parent_ = 0;
+        parent_ = 16777215;
         bitField0_ = (bitField0_ & ~0x00000002);
         index_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -2044,9 +2044,9 @@ public final class DotaModifiers {
         bitField0_ = (bitField0_ & ~0x00000080);
         duration_ = -1F;
         bitField0_ = (bitField0_ & ~0x00000100);
-        caster_ = 0;
+        caster_ = 16777215;
         bitField0_ = (bitField0_ & ~0x00000200);
-        ability_ = 0;
+        ability_ = 16777215;
         bitField0_ = (bitField0_ & ~0x00000400);
         armor_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
@@ -2088,19 +2088,19 @@ public final class DotaModifiers {
         bitField0_ = (bitField0_ & ~0x02000000);
         ddModifierIndex_ = 0;
         bitField0_ = (bitField0_ & ~0x04000000);
-        ddAbilityId_ = 0;
+        ddAbilityId_ = -1;
         bitField0_ = (bitField0_ & ~0x08000000);
         illusionLabel_ = "";
         bitField0_ = (bitField0_ & ~0x10000000);
         active_ = false;
         bitField0_ = (bitField0_ & ~0x20000000);
-        playerIds_ = "";
+        playerIds_ = "-1";
         bitField0_ = (bitField0_ & ~0x40000000);
         luaName_ = "";
         bitField0_ = (bitField0_ & ~0x80000000);
         attackSpeed_ = 0;
         bitField1_ = (bitField1_ & ~0x00000001);
-        auraOwner_ = 0;
+        auraOwner_ = 16777215;
         bitField1_ = (bitField1_ & ~0x00000002);
         bonusAllStats_ = 0;
         bitField1_ = (bitField1_ & ~0x00000004);
@@ -2108,7 +2108,7 @@ public final class DotaModifiers {
         bitField1_ = (bitField1_ & ~0x00000008);
         bonusMana_ = 0;
         bitField1_ = (bitField1_ & ~0x00000010);
-        customEntity_ = 0;
+        customEntity_ = 16777215;
         bitField1_ = (bitField1_ & ~0x00000020);
         return this;
       }
@@ -2524,21 +2524,21 @@ public final class DotaModifiers {
         return this;
       }
 
-      private int parent_ ;
+      private int parent_ = 16777215;
       /**
-       * <code>required uint32 parent = 2;</code>
+       * <code>required uint32 parent = 2 [default = 16777215];</code>
        */
       public boolean hasParent() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required uint32 parent = 2;</code>
+       * <code>required uint32 parent = 2 [default = 16777215];</code>
        */
       public int getParent() {
         return parent_;
       }
       /**
-       * <code>required uint32 parent = 2;</code>
+       * <code>required uint32 parent = 2 [default = 16777215];</code>
        */
       public Builder setParent(int value) {
         bitField0_ |= 0x00000002;
@@ -2547,11 +2547,11 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>required uint32 parent = 2;</code>
+       * <code>required uint32 parent = 2 [default = 16777215];</code>
        */
       public Builder clearParent() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        parent_ = 0;
+        parent_ = 16777215;
         onChanged();
         return this;
       }
@@ -2780,21 +2780,21 @@ public final class DotaModifiers {
         return this;
       }
 
-      private int caster_ ;
+      private int caster_ = 16777215;
       /**
-       * <code>optional uint32 caster = 10;</code>
+       * <code>optional uint32 caster = 10 [default = 16777215];</code>
        */
       public boolean hasCaster() {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>optional uint32 caster = 10;</code>
+       * <code>optional uint32 caster = 10 [default = 16777215];</code>
        */
       public int getCaster() {
         return caster_;
       }
       /**
-       * <code>optional uint32 caster = 10;</code>
+       * <code>optional uint32 caster = 10 [default = 16777215];</code>
        */
       public Builder setCaster(int value) {
         bitField0_ |= 0x00000200;
@@ -2803,30 +2803,30 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional uint32 caster = 10;</code>
+       * <code>optional uint32 caster = 10 [default = 16777215];</code>
        */
       public Builder clearCaster() {
         bitField0_ = (bitField0_ & ~0x00000200);
-        caster_ = 0;
+        caster_ = 16777215;
         onChanged();
         return this;
       }
 
-      private int ability_ ;
+      private int ability_ = 16777215;
       /**
-       * <code>optional uint32 ability = 11;</code>
+       * <code>optional uint32 ability = 11 [default = 16777215];</code>
        */
       public boolean hasAbility() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional uint32 ability = 11;</code>
+       * <code>optional uint32 ability = 11 [default = 16777215];</code>
        */
       public int getAbility() {
         return ability_;
       }
       /**
-       * <code>optional uint32 ability = 11;</code>
+       * <code>optional uint32 ability = 11 [default = 16777215];</code>
        */
       public Builder setAbility(int value) {
         bitField0_ |= 0x00000400;
@@ -2835,11 +2835,11 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional uint32 ability = 11;</code>
+       * <code>optional uint32 ability = 11 [default = 16777215];</code>
        */
       public Builder clearAbility() {
         bitField0_ = (bitField0_ & ~0x00000400);
-        ability_ = 0;
+        ability_ = 16777215;
         onChanged();
         return this;
       }
@@ -3700,21 +3700,21 @@ public final class DotaModifiers {
         return this;
       }
 
-      private int ddAbilityId_ ;
+      private int ddAbilityId_ = -1;
       /**
-       * <code>optional int32 dd_ability_id = 28;</code>
+       * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
        */
       public boolean hasDdAbilityId() {
         return ((bitField0_ & 0x08000000) == 0x08000000);
       }
       /**
-       * <code>optional int32 dd_ability_id = 28;</code>
+       * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
        */
       public int getDdAbilityId() {
         return ddAbilityId_;
       }
       /**
-       * <code>optional int32 dd_ability_id = 28;</code>
+       * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
        */
       public Builder setDdAbilityId(int value) {
         bitField0_ |= 0x08000000;
@@ -3723,11 +3723,11 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional int32 dd_ability_id = 28;</code>
+       * <code>optional int32 dd_ability_id = 28 [default = -1];</code>
        */
       public Builder clearDdAbilityId() {
         bitField0_ = (bitField0_ & ~0x08000000);
-        ddAbilityId_ = 0;
+        ddAbilityId_ = -1;
         onChanged();
         return this;
       }
@@ -3840,15 +3840,15 @@ public final class DotaModifiers {
         return this;
       }
 
-      private java.lang.Object playerIds_ = "";
+      private java.lang.Object playerIds_ = "-1";
       /**
-       * <code>optional string player_ids = 31;</code>
+       * <code>optional string player_ids = 31 [default = "-1"];</code>
        */
       public boolean hasPlayerIds() {
         return ((bitField0_ & 0x40000000) == 0x40000000);
       }
       /**
-       * <code>optional string player_ids = 31;</code>
+       * <code>optional string player_ids = 31 [default = "-1"];</code>
        */
       public java.lang.String getPlayerIds() {
         java.lang.Object ref = playerIds_;
@@ -3865,7 +3865,7 @@ public final class DotaModifiers {
         }
       }
       /**
-       * <code>optional string player_ids = 31;</code>
+       * <code>optional string player_ids = 31 [default = "-1"];</code>
        */
       public com.google.protobuf.ByteString
           getPlayerIdsBytes() {
@@ -3881,7 +3881,7 @@ public final class DotaModifiers {
         }
       }
       /**
-       * <code>optional string player_ids = 31;</code>
+       * <code>optional string player_ids = 31 [default = "-1"];</code>
        */
       public Builder setPlayerIds(
           java.lang.String value) {
@@ -3894,7 +3894,7 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional string player_ids = 31;</code>
+       * <code>optional string player_ids = 31 [default = "-1"];</code>
        */
       public Builder clearPlayerIds() {
         bitField0_ = (bitField0_ & ~0x40000000);
@@ -3903,7 +3903,7 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional string player_ids = 31;</code>
+       * <code>optional string player_ids = 31 [default = "-1"];</code>
        */
       public Builder setPlayerIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4024,21 +4024,21 @@ public final class DotaModifiers {
         return this;
       }
 
-      private int auraOwner_ ;
+      private int auraOwner_ = 16777215;
       /**
-       * <code>optional uint32 aura_owner = 34;</code>
+       * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
        */
       public boolean hasAuraOwner() {
         return ((bitField1_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional uint32 aura_owner = 34;</code>
+       * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
        */
       public int getAuraOwner() {
         return auraOwner_;
       }
       /**
-       * <code>optional uint32 aura_owner = 34;</code>
+       * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
        */
       public Builder setAuraOwner(int value) {
         bitField1_ |= 0x00000002;
@@ -4047,11 +4047,11 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional uint32 aura_owner = 34;</code>
+       * <code>optional uint32 aura_owner = 34 [default = 16777215];</code>
        */
       public Builder clearAuraOwner() {
         bitField1_ = (bitField1_ & ~0x00000002);
-        auraOwner_ = 0;
+        auraOwner_ = 16777215;
         onChanged();
         return this;
       }
@@ -4152,21 +4152,21 @@ public final class DotaModifiers {
         return this;
       }
 
-      private int customEntity_ ;
+      private int customEntity_ = 16777215;
       /**
-       * <code>optional uint32 custom_entity = 38;</code>
+       * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
        */
       public boolean hasCustomEntity() {
         return ((bitField1_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional uint32 custom_entity = 38;</code>
+       * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
        */
       public int getCustomEntity() {
         return customEntity_;
       }
       /**
-       * <code>optional uint32 custom_entity = 38;</code>
+       * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
        */
       public Builder setCustomEntity(int value) {
         bitField1_ |= 0x00000020;
@@ -4175,11 +4175,11 @@ public final class DotaModifiers {
         return this;
       }
       /**
-       * <code>optional uint32 custom_entity = 38;</code>
+       * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
        */
       public Builder clearCustomEntity() {
         bitField1_ = (bitField1_ & ~0x00000020);
-        customEntity_ = 0;
+        customEntity_ = 16777215;
         onChanged();
         return this;
       }
@@ -4785,35 +4785,37 @@ public final class DotaModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\035networkbasetypes" +
-      "-common.proto\"\201\007\n\033CDOTAModifierBuffTable" +
+      "-common.proto\"\273\007\n\033CDOTAModifierBuffTable" +
       "Entry\022N\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIE" +
       "R_ENTRY_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_A" +
-      "CTIVE\022\016\n\006parent\030\002 \002(\r\022\r\n\005index\030\003 \002(\005\022\022\n\n" +
-      "serial_num\030\004 \002(\005\022\026\n\016modifier_class\030\005 \001(\005" +
-      "\022\025\n\rability_level\030\006 \001(\005\022\023\n\013stack_count\030\007" +
-      " \001(\005\022\025\n\rcreation_time\030\010 \001(\002\022\024\n\010duration\030" +
-      "\t \001(\002:\002-1\022\016\n\006caster\030\n \001(\r\022\017\n\007ability\030\013 \001" +
-      "(\r\022\r\n\005armor\030\014 \001(\005\022\021\n\tfade_time\030\r \001(\002\022\016\n\006",
-      "subtle\030\016 \001(\010\022\024\n\014channel_time\030\017 \001(\002\022\034\n\007v_" +
-      "start\030\020 \001(\0132\013.CMsgVector\022\032\n\005v_end\030\021 \001(\0132" +
-      "\013.CMsgVector\022\032\n\022portal_loop_appear\030\022 \001(\t" +
-      "\022\035\n\025portal_loop_disappear\030\023 \001(\t\022\030\n\020hero_" +
-      "loop_appear\030\024 \001(\t\022\033\n\023hero_loop_disappear" +
-      "\030\025 \001(\t\022\026\n\016movement_speed\030\026 \001(\005\022\014\n\004aura\030\027" +
-      " \001(\010\022\020\n\010activity\030\030 \001(\005\022\016\n\006damage\030\031 \001(\005\022\r" +
-      "\n\005range\030\032 \001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005" +
-      "\022\025\n\rdd_ability_id\030\034 \001(\005\022\026\n\016illusion_labe" +
-      "l\030\035 \001(\t\022\016\n\006active\030\036 \001(\010\022\022\n\nplayer_ids\030\037 ",
-      "\001(\t\022\020\n\010lua_name\030  \001(\t\022\024\n\014attack_speed\030! " +
-      "\001(\005\022\022\n\naura_owner\030\" \001(\r\022\027\n\017bonus_all_sta" +
-      "ts\030# \001(\005\022\024\n\014bonus_health\030$ \001(\005\022\022\n\nbonus_" +
-      "mana\030% \001(\005\022\025\n\rcustom_entity\030& \001(\r\"I\n\025CDO" +
-      "TALuaModifierEntry\022\025\n\rmodifier_type\030\001 \002(" +
-      "\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_MOD" +
-      "IFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENTRY_" +
-      "TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_TYP" +
-      "E_REMOVED\020\002B?\n)skadistats.clarity.wire.d" +
-      "ota.common.protoB\rDotaModifiersH\001\200\001\000"
+      "CTIVE\022\030\n\006parent\030\002 \002(\r:\01016777215\022\r\n\005index" +
+      "\030\003 \002(\005\022\022\n\nserial_num\030\004 \002(\005\022\026\n\016modifier_c" +
+      "lass\030\005 \001(\005\022\025\n\rability_level\030\006 \001(\005\022\023\n\013sta" +
+      "ck_count\030\007 \001(\005\022\025\n\rcreation_time\030\010 \001(\002\022\024\n" +
+      "\010duration\030\t \001(\002:\002-1\022\030\n\006caster\030\n \001(\r:\010167" +
+      "77215\022\031\n\007ability\030\013 \001(\r:\01016777215\022\r\n\005armo",
+      "r\030\014 \001(\005\022\021\n\tfade_time\030\r \001(\002\022\016\n\006subtle\030\016 \001" +
+      "(\010\022\024\n\014channel_time\030\017 \001(\002\022\034\n\007v_start\030\020 \001(" +
+      "\0132\013.CMsgVector\022\032\n\005v_end\030\021 \001(\0132\013.CMsgVect" +
+      "or\022\032\n\022portal_loop_appear\030\022 \001(\t\022\035\n\025portal" +
+      "_loop_disappear\030\023 \001(\t\022\030\n\020hero_loop_appea" +
+      "r\030\024 \001(\t\022\033\n\023hero_loop_disappear\030\025 \001(\t\022\026\n\016" +
+      "movement_speed\030\026 \001(\005\022\014\n\004aura\030\027 \001(\010\022\020\n\010ac" +
+      "tivity\030\030 \001(\005\022\016\n\006damage\030\031 \001(\005\022\r\n\005range\030\032 " +
+      "\001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005\022\031\n\rdd_abi" +
+      "lity_id\030\034 \001(\005:\002-1\022\026\n\016illusion_label\030\035 \001(",
+      "\t\022\016\n\006active\030\036 \001(\010\022\026\n\nplayer_ids\030\037 \001(\t:\002-" +
+      "1\022\020\n\010lua_name\030  \001(\t\022\024\n\014attack_speed\030! \001(" +
+      "\005\022\034\n\naura_owner\030\" \001(\r:\01016777215\022\027\n\017bonus" +
+      "_all_stats\030# \001(\005\022\024\n\014bonus_health\030$ \001(\005\022\022" +
+      "\n\nbonus_mana\030% \001(\005\022\037\n\rcustom_entity\030& \001(" +
+      "\r:\01016777215\"I\n\025CDOTALuaModifierEntry\022\025\n\r" +
+      "modifier_type\030\001 \002(\005\022\031\n\021modifier_filename" +
+      "\030\002 \002(\t*e\n\030DOTA_MODIFIER_ENTRY_TYPE\022#\n\037DO" +
+      "TA_MODIFIER_ENTRY_TYPE_ACTIVE\020\001\022$\n DOTA_" +
+      "MODIFIER_ENTRY_TYPE_REMOVED\020\002B:\n)skadist",
+      "ats.clarity.wire.dota.common.protoB\rDota" +
+      "Modifiers"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
