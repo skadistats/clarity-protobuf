@@ -17083,6 +17083,30 @@ public final class DemoUserMessages {
        */
       skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValueOrBuilder getTransformValuesOrBuilder(
           int index);
+
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> 
+          getEhandleValuesList();
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext getEhandleValues(int index);
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      int getEhandleValuesCount();
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      java.util.List<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> 
+          getEhandleValuesOrBuilderList();
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder getEhandleValuesOrBuilder(
+          int index);
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext}
@@ -17160,6 +17184,14 @@ public final class DemoUserMessages {
                 transformValues_.add(input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.PARSER, extensionRegistry));
                 break;
               }
+              case 34: {
+                if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+                  ehandleValues_ = new java.util.ArrayList<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext>();
+                  mutable_bitField0_ |= 0x00000008;
+                }
+                ehandleValues_.add(input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.PARSER, extensionRegistry));
+                break;
+              }
             }
           }
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -17176,6 +17208,9 @@ public final class DemoUserMessages {
           }
           if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
             transformValues_ = java.util.Collections.unmodifiableList(transformValues_);
+          }
+          if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
+            ehandleValues_ = java.util.Collections.unmodifiableList(ehandleValues_);
           }
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
@@ -17213,18 +17248,13 @@ public final class DemoUserMessages {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        boolean hasValueName();
+        boolean hasValueNameHash();
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        java.lang.String getValueName();
-        /**
-         * <code>optional string value_name = 1;</code>
-         */
-        com.google.protobuf.ByteString
-            getValueNameBytes();
+        int getValueNameHash();
 
         /**
          * <code>optional float value = 2;</code>
@@ -17287,10 +17317,9 @@ public final class DemoUserMessages {
                   }
                   break;
                 }
-                case 10: {
-                  com.google.protobuf.ByteString bs = input.readBytes();
+                case 8: {
                   bitField0_ |= 0x00000001;
-                  valueName_ = bs;
+                  valueNameHash_ = input.readUInt32();
                   break;
                 }
                 case 21: {
@@ -17338,46 +17367,19 @@ public final class DemoUserMessages {
         }
 
         private int bitField0_;
-        public static final int VALUE_NAME_FIELD_NUMBER = 1;
-        private java.lang.Object valueName_;
+        public static final int VALUE_NAME_HASH_FIELD_NUMBER = 1;
+        private int valueNameHash_;
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        public boolean hasValueName() {
+        public boolean hasValueNameHash() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        public java.lang.String getValueName() {
-          java.lang.Object ref = valueName_;
-          if (ref instanceof java.lang.String) {
-            return (java.lang.String) ref;
-          } else {
-            com.google.protobuf.ByteString bs = 
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              valueName_ = s;
-            }
-            return s;
-          }
-        }
-        /**
-         * <code>optional string value_name = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getValueNameBytes() {
-          java.lang.Object ref = valueName_;
-          if (ref instanceof java.lang.String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            valueName_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
+        public int getValueNameHash() {
+          return valueNameHash_;
         }
 
         public static final int VALUE_FIELD_NUMBER = 2;
@@ -17396,7 +17398,7 @@ public final class DemoUserMessages {
         }
 
         private void initFields() {
-          valueName_ = "";
+          valueNameHash_ = 0;
           value_ = 0F;
         }
         private byte memoizedIsInitialized = -1;
@@ -17413,7 +17415,7 @@ public final class DemoUserMessages {
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            output.writeBytes(1, getValueNameBytes());
+            output.writeUInt32(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             output.writeFloat(2, value_);
@@ -17429,7 +17431,7 @@ public final class DemoUserMessages {
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBytesSize(1, getValueNameBytes());
+              .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             size += com.google.protobuf.CodedOutputStream
@@ -17552,7 +17554,7 @@ public final class DemoUserMessages {
 
           public Builder clear() {
             super.clear();
-            valueName_ = "";
+            valueNameHash_ = 0;
             bitField0_ = (bitField0_ & ~0x00000001);
             value_ = 0F;
             bitField0_ = (bitField0_ & ~0x00000002);
@@ -17587,7 +17589,7 @@ public final class DemoUserMessages {
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
               to_bitField0_ |= 0x00000001;
             }
-            result.valueName_ = valueName_;
+            result.valueNameHash_ = valueNameHash_;
             if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
               to_bitField0_ |= 0x00000002;
             }
@@ -17608,10 +17610,8 @@ public final class DemoUserMessages {
 
           public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue other) {
             if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue.getDefaultInstance()) return this;
-            if (other.hasValueName()) {
-              bitField0_ |= 0x00000001;
-              valueName_ = other.valueName_;
-              onChanged();
+            if (other.hasValueNameHash()) {
+              setValueNameHash(other.getValueNameHash());
             }
             if (other.hasValue()) {
               setValue(other.getValue());
@@ -17643,78 +17643,34 @@ public final class DemoUserMessages {
           }
           private int bitField0_;
 
-          private java.lang.Object valueName_ = "";
+          private int valueNameHash_ ;
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public boolean hasValueName() {
+          public boolean hasValueNameHash() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public java.lang.String getValueName() {
-            java.lang.Object ref = valueName_;
-            if (!(ref instanceof java.lang.String)) {
-              com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-              java.lang.String s = bs.toStringUtf8();
-              if (bs.isValidUtf8()) {
-                valueName_ = s;
-              }
-              return s;
-            } else {
-              return (java.lang.String) ref;
-            }
+          public int getValueNameHash() {
+            return valueNameHash_;
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public com.google.protobuf.ByteString
-              getValueNameBytes() {
-            java.lang.Object ref = valueName_;
-            if (ref instanceof String) {
-              com.google.protobuf.ByteString b = 
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                      (java.lang.String) ref);
-              valueName_ = b;
-              return b;
-            } else {
-              return (com.google.protobuf.ByteString) ref;
-            }
-          }
-          /**
-           * <code>optional string value_name = 1;</code>
-           */
-          public Builder setValueName(
-              java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-            valueName_ = value;
+          public Builder setValueNameHash(int value) {
+            bitField0_ |= 0x00000001;
+            valueNameHash_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public Builder clearValueName() {
+          public Builder clearValueNameHash() {
             bitField0_ = (bitField0_ & ~0x00000001);
-            valueName_ = getDefaultInstance().getValueName();
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string value_name = 1;</code>
-           */
-          public Builder setValueNameBytes(
-              com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-            valueName_ = value;
+            valueNameHash_ = 0;
             onChanged();
             return this;
           }
@@ -17767,18 +17723,13 @@ public final class DemoUserMessages {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        boolean hasValueName();
+        boolean hasValueNameHash();
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        java.lang.String getValueName();
-        /**
-         * <code>optional string value_name = 1;</code>
-         */
-        com.google.protobuf.ByteString
-            getValueNameBytes();
+        int getValueNameHash();
 
         /**
          * <code>optional .CMsgVector value = 2;</code>
@@ -17792,29 +17743,6 @@ public final class DemoUserMessages {
          * <code>optional .CMsgVector value = 2;</code>
          */
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getValueOrBuilder();
-
-        /**
-         * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-         */
-        boolean hasEntIndex();
-        /**
-         * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-         */
-        int getEntIndex();
-
-        /**
-         * <code>optional string attachment_name = 4;</code>
-         */
-        boolean hasAttachmentName();
-        /**
-         * <code>optional string attachment_name = 4;</code>
-         */
-        java.lang.String getAttachmentName();
-        /**
-         * <code>optional string attachment_name = 4;</code>
-         */
-        com.google.protobuf.ByteString
-            getAttachmentNameBytes();
       }
       /**
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue}
@@ -17868,10 +17796,9 @@ public final class DemoUserMessages {
                   }
                   break;
                 }
-                case 10: {
-                  com.google.protobuf.ByteString bs = input.readBytes();
+                case 8: {
                   bitField0_ |= 0x00000001;
-                  valueName_ = bs;
+                  valueNameHash_ = input.readUInt32();
                   break;
                 }
                 case 18: {
@@ -17885,17 +17812,6 @@ public final class DemoUserMessages {
                     value_ = subBuilder.buildPartial();
                   }
                   bitField0_ |= 0x00000002;
-                  break;
-                }
-                case 24: {
-                  bitField0_ |= 0x00000004;
-                  entIndex_ = input.readUInt32();
-                  break;
-                }
-                case 34: {
-                  com.google.protobuf.ByteString bs = input.readBytes();
-                  bitField0_ |= 0x00000008;
-                  attachmentName_ = bs;
                   break;
                 }
               }
@@ -17938,46 +17854,19 @@ public final class DemoUserMessages {
         }
 
         private int bitField0_;
-        public static final int VALUE_NAME_FIELD_NUMBER = 1;
-        private java.lang.Object valueName_;
+        public static final int VALUE_NAME_HASH_FIELD_NUMBER = 1;
+        private int valueNameHash_;
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        public boolean hasValueName() {
+        public boolean hasValueNameHash() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        public java.lang.String getValueName() {
-          java.lang.Object ref = valueName_;
-          if (ref instanceof java.lang.String) {
-            return (java.lang.String) ref;
-          } else {
-            com.google.protobuf.ByteString bs = 
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              valueName_ = s;
-            }
-            return s;
-          }
-        }
-        /**
-         * <code>optional string value_name = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getValueNameBytes() {
-          java.lang.Object ref = valueName_;
-          if (ref instanceof java.lang.String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            valueName_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
+        public int getValueNameHash() {
+          return valueNameHash_;
         }
 
         public static final int VALUE_FIELD_NUMBER = 2;
@@ -18001,68 +17890,9 @@ public final class DemoUserMessages {
           return value_;
         }
 
-        public static final int ENT_INDEX_FIELD_NUMBER = 3;
-        private int entIndex_;
-        /**
-         * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-         */
-        public boolean hasEntIndex() {
-          return ((bitField0_ & 0x00000004) == 0x00000004);
-        }
-        /**
-         * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-         */
-        public int getEntIndex() {
-          return entIndex_;
-        }
-
-        public static final int ATTACHMENT_NAME_FIELD_NUMBER = 4;
-        private java.lang.Object attachmentName_;
-        /**
-         * <code>optional string attachment_name = 4;</code>
-         */
-        public boolean hasAttachmentName() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>optional string attachment_name = 4;</code>
-         */
-        public java.lang.String getAttachmentName() {
-          java.lang.Object ref = attachmentName_;
-          if (ref instanceof java.lang.String) {
-            return (java.lang.String) ref;
-          } else {
-            com.google.protobuf.ByteString bs = 
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              attachmentName_ = s;
-            }
-            return s;
-          }
-        }
-        /**
-         * <code>optional string attachment_name = 4;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAttachmentNameBytes() {
-          java.lang.Object ref = attachmentName_;
-          if (ref instanceof java.lang.String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            attachmentName_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-
         private void initFields() {
-          valueName_ = "";
+          valueNameHash_ = 0;
           value_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-          entIndex_ = 16777215;
-          attachmentName_ = "";
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -18078,16 +17908,10 @@ public final class DemoUserMessages {
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            output.writeBytes(1, getValueNameBytes());
+            output.writeUInt32(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             output.writeMessage(2, value_);
-          }
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            output.writeUInt32(3, entIndex_);
-          }
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            output.writeBytes(4, getAttachmentNameBytes());
           }
           getUnknownFields().writeTo(output);
         }
@@ -18100,19 +17924,11 @@ public final class DemoUserMessages {
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBytesSize(1, getValueNameBytes());
+              .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(2, value_);
-          }
-          if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(3, entIndex_);
-          }
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeBytesSize(4, getAttachmentNameBytes());
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -18232,7 +18048,7 @@ public final class DemoUserMessages {
 
           public Builder clear() {
             super.clear();
-            valueName_ = "";
+            valueNameHash_ = 0;
             bitField0_ = (bitField0_ & ~0x00000001);
             if (valueBuilder_ == null) {
               value_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
@@ -18240,10 +18056,6 @@ public final class DemoUserMessages {
               valueBuilder_.clear();
             }
             bitField0_ = (bitField0_ & ~0x00000002);
-            entIndex_ = 16777215;
-            bitField0_ = (bitField0_ & ~0x00000004);
-            attachmentName_ = "";
-            bitField0_ = (bitField0_ & ~0x00000008);
             return this;
           }
 
@@ -18275,7 +18087,7 @@ public final class DemoUserMessages {
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
               to_bitField0_ |= 0x00000001;
             }
-            result.valueName_ = valueName_;
+            result.valueNameHash_ = valueNameHash_;
             if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
               to_bitField0_ |= 0x00000002;
             }
@@ -18284,14 +18096,6 @@ public final class DemoUserMessages {
             } else {
               result.value_ = valueBuilder_.build();
             }
-            if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
-              to_bitField0_ |= 0x00000004;
-            }
-            result.entIndex_ = entIndex_;
-            if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-              to_bitField0_ |= 0x00000008;
-            }
-            result.attachmentName_ = attachmentName_;
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -18308,21 +18112,11 @@ public final class DemoUserMessages {
 
           public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue other) {
             if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue.getDefaultInstance()) return this;
-            if (other.hasValueName()) {
-              bitField0_ |= 0x00000001;
-              valueName_ = other.valueName_;
-              onChanged();
+            if (other.hasValueNameHash()) {
+              setValueNameHash(other.getValueNameHash());
             }
             if (other.hasValue()) {
               mergeValue(other.getValue());
-            }
-            if (other.hasEntIndex()) {
-              setEntIndex(other.getEntIndex());
-            }
-            if (other.hasAttachmentName()) {
-              bitField0_ |= 0x00000008;
-              attachmentName_ = other.attachmentName_;
-              onChanged();
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -18351,78 +18145,34 @@ public final class DemoUserMessages {
           }
           private int bitField0_;
 
-          private java.lang.Object valueName_ = "";
+          private int valueNameHash_ ;
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public boolean hasValueName() {
+          public boolean hasValueNameHash() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public java.lang.String getValueName() {
-            java.lang.Object ref = valueName_;
-            if (!(ref instanceof java.lang.String)) {
-              com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-              java.lang.String s = bs.toStringUtf8();
-              if (bs.isValidUtf8()) {
-                valueName_ = s;
-              }
-              return s;
-            } else {
-              return (java.lang.String) ref;
-            }
+          public int getValueNameHash() {
+            return valueNameHash_;
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public com.google.protobuf.ByteString
-              getValueNameBytes() {
-            java.lang.Object ref = valueName_;
-            if (ref instanceof String) {
-              com.google.protobuf.ByteString b = 
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                      (java.lang.String) ref);
-              valueName_ = b;
-              return b;
-            } else {
-              return (com.google.protobuf.ByteString) ref;
-            }
-          }
-          /**
-           * <code>optional string value_name = 1;</code>
-           */
-          public Builder setValueName(
-              java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-            valueName_ = value;
+          public Builder setValueNameHash(int value) {
+            bitField0_ |= 0x00000001;
+            valueNameHash_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public Builder clearValueName() {
+          public Builder clearValueNameHash() {
             bitField0_ = (bitField0_ & ~0x00000001);
-            valueName_ = getDefaultInstance().getValueName();
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string value_name = 1;</code>
-           */
-          public Builder setValueNameBytes(
-              com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-            valueName_ = value;
+            valueNameHash_ = 0;
             onChanged();
             return this;
           }
@@ -18543,114 +18293,6 @@ public final class DemoUserMessages {
             return valueBuilder_;
           }
 
-          private int entIndex_ = 16777215;
-          /**
-           * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-           */
-          public boolean hasEntIndex() {
-            return ((bitField0_ & 0x00000004) == 0x00000004);
-          }
-          /**
-           * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-           */
-          public int getEntIndex() {
-            return entIndex_;
-          }
-          /**
-           * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-           */
-          public Builder setEntIndex(int value) {
-            bitField0_ |= 0x00000004;
-            entIndex_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional uint32 ent_index = 3 [default = 16777215];</code>
-           */
-          public Builder clearEntIndex() {
-            bitField0_ = (bitField0_ & ~0x00000004);
-            entIndex_ = 16777215;
-            onChanged();
-            return this;
-          }
-
-          private java.lang.Object attachmentName_ = "";
-          /**
-           * <code>optional string attachment_name = 4;</code>
-           */
-          public boolean hasAttachmentName() {
-            return ((bitField0_ & 0x00000008) == 0x00000008);
-          }
-          /**
-           * <code>optional string attachment_name = 4;</code>
-           */
-          public java.lang.String getAttachmentName() {
-            java.lang.Object ref = attachmentName_;
-            if (!(ref instanceof java.lang.String)) {
-              com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-              java.lang.String s = bs.toStringUtf8();
-              if (bs.isValidUtf8()) {
-                attachmentName_ = s;
-              }
-              return s;
-            } else {
-              return (java.lang.String) ref;
-            }
-          }
-          /**
-           * <code>optional string attachment_name = 4;</code>
-           */
-          public com.google.protobuf.ByteString
-              getAttachmentNameBytes() {
-            java.lang.Object ref = attachmentName_;
-            if (ref instanceof String) {
-              com.google.protobuf.ByteString b = 
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                      (java.lang.String) ref);
-              attachmentName_ = b;
-              return b;
-            } else {
-              return (com.google.protobuf.ByteString) ref;
-            }
-          }
-          /**
-           * <code>optional string attachment_name = 4;</code>
-           */
-          public Builder setAttachmentName(
-              java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-            attachmentName_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string attachment_name = 4;</code>
-           */
-          public Builder clearAttachmentName() {
-            bitField0_ = (bitField0_ & ~0x00000008);
-            attachmentName_ = getDefaultInstance().getAttachmentName();
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string attachment_name = 4;</code>
-           */
-          public Builder setAttachmentNameBytes(
-              com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000008;
-            attachmentName_ = value;
-            onChanged();
-            return this;
-          }
-
           // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue)
         }
 
@@ -18667,18 +18309,13 @@ public final class DemoUserMessages {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        boolean hasValueName();
+        boolean hasValueNameHash();
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        java.lang.String getValueName();
-        /**
-         * <code>optional string value_name = 1;</code>
-         */
-        com.google.protobuf.ByteString
-            getValueNameBytes();
+        int getValueNameHash();
 
         /**
          * <code>optional .CMsgQAngle angles = 2;</code>
@@ -18705,29 +18342,6 @@ public final class DemoUserMessages {
          * <code>optional .CMsgVector translation = 3;</code>
          */
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getTranslationOrBuilder();
-
-        /**
-         * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-         */
-        boolean hasEntIndex();
-        /**
-         * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-         */
-        int getEntIndex();
-
-        /**
-         * <code>optional string attachment_name = 5;</code>
-         */
-        boolean hasAttachmentName();
-        /**
-         * <code>optional string attachment_name = 5;</code>
-         */
-        java.lang.String getAttachmentName();
-        /**
-         * <code>optional string attachment_name = 5;</code>
-         */
-        com.google.protobuf.ByteString
-            getAttachmentNameBytes();
       }
       /**
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue}
@@ -18781,10 +18395,9 @@ public final class DemoUserMessages {
                   }
                   break;
                 }
-                case 10: {
-                  com.google.protobuf.ByteString bs = input.readBytes();
+                case 8: {
                   bitField0_ |= 0x00000001;
-                  valueName_ = bs;
+                  valueNameHash_ = input.readUInt32();
                   break;
                 }
                 case 18: {
@@ -18811,17 +18424,6 @@ public final class DemoUserMessages {
                     translation_ = subBuilder.buildPartial();
                   }
                   bitField0_ |= 0x00000004;
-                  break;
-                }
-                case 32: {
-                  bitField0_ |= 0x00000008;
-                  entIndex_ = input.readUInt32();
-                  break;
-                }
-                case 42: {
-                  com.google.protobuf.ByteString bs = input.readBytes();
-                  bitField0_ |= 0x00000010;
-                  attachmentName_ = bs;
                   break;
                 }
               }
@@ -18864,46 +18466,19 @@ public final class DemoUserMessages {
         }
 
         private int bitField0_;
-        public static final int VALUE_NAME_FIELD_NUMBER = 1;
-        private java.lang.Object valueName_;
+        public static final int VALUE_NAME_HASH_FIELD_NUMBER = 1;
+        private int valueNameHash_;
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        public boolean hasValueName() {
+        public boolean hasValueNameHash() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>optional string value_name = 1;</code>
+         * <code>optional uint32 value_name_hash = 1;</code>
          */
-        public java.lang.String getValueName() {
-          java.lang.Object ref = valueName_;
-          if (ref instanceof java.lang.String) {
-            return (java.lang.String) ref;
-          } else {
-            com.google.protobuf.ByteString bs = 
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              valueName_ = s;
-            }
-            return s;
-          }
-        }
-        /**
-         * <code>optional string value_name = 1;</code>
-         */
-        public com.google.protobuf.ByteString
-            getValueNameBytes() {
-          java.lang.Object ref = valueName_;
-          if (ref instanceof java.lang.String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            valueName_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
+        public int getValueNameHash() {
+          return valueNameHash_;
         }
 
         public static final int ANGLES_FIELD_NUMBER = 2;
@@ -18948,69 +18523,10 @@ public final class DemoUserMessages {
           return translation_;
         }
 
-        public static final int ENT_INDEX_FIELD_NUMBER = 4;
-        private int entIndex_;
-        /**
-         * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-         */
-        public boolean hasEntIndex() {
-          return ((bitField0_ & 0x00000008) == 0x00000008);
-        }
-        /**
-         * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-         */
-        public int getEntIndex() {
-          return entIndex_;
-        }
-
-        public static final int ATTACHMENT_NAME_FIELD_NUMBER = 5;
-        private java.lang.Object attachmentName_;
-        /**
-         * <code>optional string attachment_name = 5;</code>
-         */
-        public boolean hasAttachmentName() {
-          return ((bitField0_ & 0x00000010) == 0x00000010);
-        }
-        /**
-         * <code>optional string attachment_name = 5;</code>
-         */
-        public java.lang.String getAttachmentName() {
-          java.lang.Object ref = attachmentName_;
-          if (ref instanceof java.lang.String) {
-            return (java.lang.String) ref;
-          } else {
-            com.google.protobuf.ByteString bs = 
-                (com.google.protobuf.ByteString) ref;
-            java.lang.String s = bs.toStringUtf8();
-            if (bs.isValidUtf8()) {
-              attachmentName_ = s;
-            }
-            return s;
-          }
-        }
-        /**
-         * <code>optional string attachment_name = 5;</code>
-         */
-        public com.google.protobuf.ByteString
-            getAttachmentNameBytes() {
-          java.lang.Object ref = attachmentName_;
-          if (ref instanceof java.lang.String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
-                    (java.lang.String) ref);
-            attachmentName_ = b;
-            return b;
-          } else {
-            return (com.google.protobuf.ByteString) ref;
-          }
-        }
-
         private void initFields() {
-          valueName_ = "";
+          valueNameHash_ = 0;
           angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
           translation_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-          entIndex_ = 16777215;
-          attachmentName_ = "";
         }
         private byte memoizedIsInitialized = -1;
         public final boolean isInitialized() {
@@ -19026,19 +18542,13 @@ public final class DemoUserMessages {
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            output.writeBytes(1, getValueNameBytes());
+            output.writeUInt32(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             output.writeMessage(2, angles_);
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
             output.writeMessage(3, translation_);
-          }
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            output.writeUInt32(4, entIndex_);
-          }
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            output.writeBytes(5, getAttachmentNameBytes());
           }
           getUnknownFields().writeTo(output);
         }
@@ -19051,7 +18561,7 @@ public final class DemoUserMessages {
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeBytesSize(1, getValueNameBytes());
+              .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             size += com.google.protobuf.CodedOutputStream
@@ -19060,14 +18570,6 @@ public final class DemoUserMessages {
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
             size += com.google.protobuf.CodedOutputStream
               .computeMessageSize(3, translation_);
-          }
-          if (((bitField0_ & 0x00000008) == 0x00000008)) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(4, entIndex_);
-          }
-          if (((bitField0_ & 0x00000010) == 0x00000010)) {
-            size += com.google.protobuf.CodedOutputStream
-              .computeBytesSize(5, getAttachmentNameBytes());
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -19188,7 +18690,7 @@ public final class DemoUserMessages {
 
           public Builder clear() {
             super.clear();
-            valueName_ = "";
+            valueNameHash_ = 0;
             bitField0_ = (bitField0_ & ~0x00000001);
             if (anglesBuilder_ == null) {
               angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
@@ -19202,10 +18704,6 @@ public final class DemoUserMessages {
               translationBuilder_.clear();
             }
             bitField0_ = (bitField0_ & ~0x00000004);
-            entIndex_ = 16777215;
-            bitField0_ = (bitField0_ & ~0x00000008);
-            attachmentName_ = "";
-            bitField0_ = (bitField0_ & ~0x00000010);
             return this;
           }
 
@@ -19237,7 +18735,7 @@ public final class DemoUserMessages {
             if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
               to_bitField0_ |= 0x00000001;
             }
-            result.valueName_ = valueName_;
+            result.valueNameHash_ = valueNameHash_;
             if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
               to_bitField0_ |= 0x00000002;
             }
@@ -19254,14 +18752,6 @@ public final class DemoUserMessages {
             } else {
               result.translation_ = translationBuilder_.build();
             }
-            if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
-              to_bitField0_ |= 0x00000008;
-            }
-            result.entIndex_ = entIndex_;
-            if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
-              to_bitField0_ |= 0x00000010;
-            }
-            result.attachmentName_ = attachmentName_;
             result.bitField0_ = to_bitField0_;
             onBuilt();
             return result;
@@ -19278,24 +18768,14 @@ public final class DemoUserMessages {
 
           public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue other) {
             if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.getDefaultInstance()) return this;
-            if (other.hasValueName()) {
-              bitField0_ |= 0x00000001;
-              valueName_ = other.valueName_;
-              onChanged();
+            if (other.hasValueNameHash()) {
+              setValueNameHash(other.getValueNameHash());
             }
             if (other.hasAngles()) {
               mergeAngles(other.getAngles());
             }
             if (other.hasTranslation()) {
               mergeTranslation(other.getTranslation());
-            }
-            if (other.hasEntIndex()) {
-              setEntIndex(other.getEntIndex());
-            }
-            if (other.hasAttachmentName()) {
-              bitField0_ |= 0x00000010;
-              attachmentName_ = other.attachmentName_;
-              onChanged();
             }
             this.mergeUnknownFields(other.getUnknownFields());
             return this;
@@ -19324,78 +18804,34 @@ public final class DemoUserMessages {
           }
           private int bitField0_;
 
-          private java.lang.Object valueName_ = "";
+          private int valueNameHash_ ;
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public boolean hasValueName() {
+          public boolean hasValueNameHash() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public java.lang.String getValueName() {
-            java.lang.Object ref = valueName_;
-            if (!(ref instanceof java.lang.String)) {
-              com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-              java.lang.String s = bs.toStringUtf8();
-              if (bs.isValidUtf8()) {
-                valueName_ = s;
-              }
-              return s;
-            } else {
-              return (java.lang.String) ref;
-            }
+          public int getValueNameHash() {
+            return valueNameHash_;
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public com.google.protobuf.ByteString
-              getValueNameBytes() {
-            java.lang.Object ref = valueName_;
-            if (ref instanceof String) {
-              com.google.protobuf.ByteString b = 
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                      (java.lang.String) ref);
-              valueName_ = b;
-              return b;
-            } else {
-              return (com.google.protobuf.ByteString) ref;
-            }
-          }
-          /**
-           * <code>optional string value_name = 1;</code>
-           */
-          public Builder setValueName(
-              java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-            valueName_ = value;
+          public Builder setValueNameHash(int value) {
+            bitField0_ |= 0x00000001;
+            valueNameHash_ = value;
             onChanged();
             return this;
           }
           /**
-           * <code>optional string value_name = 1;</code>
+           * <code>optional uint32 value_name_hash = 1;</code>
            */
-          public Builder clearValueName() {
+          public Builder clearValueNameHash() {
             bitField0_ = (bitField0_ & ~0x00000001);
-            valueName_ = getDefaultInstance().getValueName();
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string value_name = 1;</code>
-           */
-          public Builder setValueNameBytes(
-              com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-            valueName_ = value;
+            valueNameHash_ = 0;
             onChanged();
             return this;
           }
@@ -19632,114 +19068,6 @@ public final class DemoUserMessages {
             return translationBuilder_;
           }
 
-          private int entIndex_ = 16777215;
-          /**
-           * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-           */
-          public boolean hasEntIndex() {
-            return ((bitField0_ & 0x00000008) == 0x00000008);
-          }
-          /**
-           * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-           */
-          public int getEntIndex() {
-            return entIndex_;
-          }
-          /**
-           * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-           */
-          public Builder setEntIndex(int value) {
-            bitField0_ |= 0x00000008;
-            entIndex_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional uint32 ent_index = 4 [default = 16777215];</code>
-           */
-          public Builder clearEntIndex() {
-            bitField0_ = (bitField0_ & ~0x00000008);
-            entIndex_ = 16777215;
-            onChanged();
-            return this;
-          }
-
-          private java.lang.Object attachmentName_ = "";
-          /**
-           * <code>optional string attachment_name = 5;</code>
-           */
-          public boolean hasAttachmentName() {
-            return ((bitField0_ & 0x00000010) == 0x00000010);
-          }
-          /**
-           * <code>optional string attachment_name = 5;</code>
-           */
-          public java.lang.String getAttachmentName() {
-            java.lang.Object ref = attachmentName_;
-            if (!(ref instanceof java.lang.String)) {
-              com.google.protobuf.ByteString bs =
-                  (com.google.protobuf.ByteString) ref;
-              java.lang.String s = bs.toStringUtf8();
-              if (bs.isValidUtf8()) {
-                attachmentName_ = s;
-              }
-              return s;
-            } else {
-              return (java.lang.String) ref;
-            }
-          }
-          /**
-           * <code>optional string attachment_name = 5;</code>
-           */
-          public com.google.protobuf.ByteString
-              getAttachmentNameBytes() {
-            java.lang.Object ref = attachmentName_;
-            if (ref instanceof String) {
-              com.google.protobuf.ByteString b = 
-                  com.google.protobuf.ByteString.copyFromUtf8(
-                      (java.lang.String) ref);
-              attachmentName_ = b;
-              return b;
-            } else {
-              return (com.google.protobuf.ByteString) ref;
-            }
-          }
-          /**
-           * <code>optional string attachment_name = 5;</code>
-           */
-          public Builder setAttachmentName(
-              java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-            attachmentName_ = value;
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string attachment_name = 5;</code>
-           */
-          public Builder clearAttachmentName() {
-            bitField0_ = (bitField0_ & ~0x00000010);
-            attachmentName_ = getDefaultInstance().getAttachmentName();
-            onChanged();
-            return this;
-          }
-          /**
-           * <code>optional string attachment_name = 5;</code>
-           */
-          public Builder setAttachmentNameBytes(
-              com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000010;
-            attachmentName_ = value;
-            onChanged();
-            return this;
-          }
-
           // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue)
         }
 
@@ -19749,6 +19077,481 @@ public final class DemoUserMessages {
         }
 
         // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue)
+      }
+
+      public interface EHandleContextOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <code>optional uint32 value_name_hash = 1;</code>
+         */
+        boolean hasValueNameHash();
+        /**
+         * <code>optional uint32 value_name_hash = 1;</code>
+         */
+        int getValueNameHash();
+
+        /**
+         * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+         */
+        boolean hasEntIndex();
+        /**
+         * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+         */
+        int getEntIndex();
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext}
+       */
+      public static final class EHandleContext extends
+          com.google.protobuf.GeneratedMessage implements
+          // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
+          EHandleContextOrBuilder {
+        // Use EHandleContext.newBuilder() to construct.
+        private EHandleContext(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+          super(builder);
+          this.unknownFields = builder.getUnknownFields();
+        }
+        private EHandleContext(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+        private static final EHandleContext defaultInstance;
+        public static EHandleContext getDefaultInstance() {
+          return defaultInstance;
+        }
+
+        public EHandleContext getDefaultInstanceForType() {
+          return defaultInstance;
+        }
+
+        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+            getUnknownFields() {
+          return this.unknownFields;
+        }
+        private EHandleContext(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          initFields();
+          int mutable_bitField0_ = 0;
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                default: {
+                  if (!parseUnknownField(input, unknownFields,
+                                         extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+                case 8: {
+                  bitField0_ |= 0x00000001;
+                  valueNameHash_ = input.readUInt32();
+                  break;
+                }
+                case 16: {
+                  bitField0_ |= 0x00000002;
+                  entIndex_ = input.readUInt32();
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e.getMessage()).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder.class);
+        }
+
+        public static com.google.protobuf.Parser<EHandleContext> PARSER =
+            new com.google.protobuf.AbstractParser<EHandleContext>() {
+          public EHandleContext parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new EHandleContext(input, extensionRegistry);
+          }
+        };
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<EHandleContext> getParserForType() {
+          return PARSER;
+        }
+
+        private int bitField0_;
+        public static final int VALUE_NAME_HASH_FIELD_NUMBER = 1;
+        private int valueNameHash_;
+        /**
+         * <code>optional uint32 value_name_hash = 1;</code>
+         */
+        public boolean hasValueNameHash() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 value_name_hash = 1;</code>
+         */
+        public int getValueNameHash() {
+          return valueNameHash_;
+        }
+
+        public static final int ENT_INDEX_FIELD_NUMBER = 2;
+        private int entIndex_;
+        /**
+         * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+         */
+        public boolean hasEntIndex() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+         */
+        public int getEntIndex() {
+          return entIndex_;
+        }
+
+        private void initFields() {
+          valueNameHash_ = 0;
+          entIndex_ = 16777215;
+        }
+        private byte memoizedIsInitialized = -1;
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          getSerializedSize();
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            output.writeUInt32(1, valueNameHash_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            output.writeUInt32(2, entIndex_);
+          }
+          getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+        public int getSerializedSize() {
+          int size = memoizedSerializedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(1, valueNameHash_);
+          }
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt32Size(2, entIndex_);
+          }
+          size += getUnknownFields().getSerializedSize();
+          memoizedSerializedSize = size;
+          return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+        @java.lang.Override
+        protected java.lang.Object writeReplace()
+            throws java.io.ObjectStreamException {
+          return super.writeReplace();
+        }
+
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseDelimitedFrom(input, extensionRegistry);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input);
+        }
+        public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return PARSER.parseFrom(input, extensionRegistry);
+        }
+
+        public static Builder newBuilder() { return Builder.create(); }
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext prototype) {
+          return newBuilder().mergeFrom(prototype);
+        }
+        public Builder toBuilder() { return newBuilder(this); }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
+          }
+
+          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder.class);
+          }
+
+          // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            }
+          }
+          private static Builder create() {
+            return new Builder();
+          }
+
+          public Builder clear() {
+            super.clear();
+            valueNameHash_ = 0;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            entIndex_ = 16777215;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            return this;
+          }
+
+          public Builder clone() {
+            return create().mergeFrom(buildPartial());
+          }
+
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
+          }
+
+          public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext getDefaultInstanceForType() {
+            return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.getDefaultInstance();
+          }
+
+          public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext build() {
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext buildPartial() {
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext(this);
+            int from_bitField0_ = bitField0_;
+            int to_bitField0_ = 0;
+            if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+              to_bitField0_ |= 0x00000001;
+            }
+            result.valueNameHash_ = valueNameHash_;
+            if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+              to_bitField0_ |= 0x00000002;
+            }
+            result.entIndex_ = entIndex_;
+            result.bitField0_ = to_bitField0_;
+            onBuilt();
+            return result;
+          }
+
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext) {
+              return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext other) {
+            if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.getDefaultInstance()) return this;
+            if (other.hasValueNameHash()) {
+              setValueNameHash(other.getValueNameHash());
+            }
+            if (other.hasEntIndex()) {
+              setEntIndex(other.getEntIndex());
+            }
+            this.mergeUnknownFields(other.getUnknownFields());
+            return this;
+          }
+
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext) e.getUnfinishedMessage();
+              throw e;
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+          private int bitField0_;
+
+          private int valueNameHash_ ;
+          /**
+           * <code>optional uint32 value_name_hash = 1;</code>
+           */
+          public boolean hasValueNameHash() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+          }
+          /**
+           * <code>optional uint32 value_name_hash = 1;</code>
+           */
+          public int getValueNameHash() {
+            return valueNameHash_;
+          }
+          /**
+           * <code>optional uint32 value_name_hash = 1;</code>
+           */
+          public Builder setValueNameHash(int value) {
+            bitField0_ |= 0x00000001;
+            valueNameHash_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 value_name_hash = 1;</code>
+           */
+          public Builder clearValueNameHash() {
+            bitField0_ = (bitField0_ & ~0x00000001);
+            valueNameHash_ = 0;
+            onChanged();
+            return this;
+          }
+
+          private int entIndex_ = 16777215;
+          /**
+           * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+           */
+          public boolean hasEntIndex() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+          }
+          /**
+           * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+           */
+          public int getEntIndex() {
+            return entIndex_;
+          }
+          /**
+           * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+           */
+          public Builder setEntIndex(int value) {
+            bitField0_ |= 0x00000002;
+            entIndex_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <code>optional uint32 ent_index = 2 [default = 16777215];</code>
+           */
+          public Builder clearEntIndex() {
+            bitField0_ = (bitField0_ & ~0x00000002);
+            entIndex_ = 16777215;
+            onChanged();
+            return this;
+          }
+
+          // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
+        }
+
+        static {
+          defaultInstance = new EHandleContext(true);
+          defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
       }
 
       public static final int FLOAT_VALUES_FIELD_NUMBER = 1;
@@ -19856,10 +19659,46 @@ public final class DemoUserMessages {
         return transformValues_.get(index);
       }
 
+      public static final int EHANDLE_VALUES_FIELD_NUMBER = 4;
+      private java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> ehandleValues_;
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> getEhandleValuesList() {
+        return ehandleValues_;
+      }
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> 
+          getEhandleValuesOrBuilderList() {
+        return ehandleValues_;
+      }
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      public int getEhandleValuesCount() {
+        return ehandleValues_.size();
+      }
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext getEhandleValues(int index) {
+        return ehandleValues_.get(index);
+      }
+      /**
+       * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder getEhandleValuesOrBuilder(
+          int index) {
+        return ehandleValues_.get(index);
+      }
+
       private void initFields() {
         floatValues_ = java.util.Collections.emptyList();
         vectorValues_ = java.util.Collections.emptyList();
         transformValues_ = java.util.Collections.emptyList();
+        ehandleValues_ = java.util.Collections.emptyList();
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -19883,6 +19722,9 @@ public final class DemoUserMessages {
         for (int i = 0; i < transformValues_.size(); i++) {
           output.writeMessage(3, transformValues_.get(i));
         }
+        for (int i = 0; i < ehandleValues_.size(); i++) {
+          output.writeMessage(4, ehandleValues_.get(i));
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -19903,6 +19745,10 @@ public final class DemoUserMessages {
         for (int i = 0; i < transformValues_.size(); i++) {
           size += com.google.protobuf.CodedOutputStream
             .computeMessageSize(3, transformValues_.get(i));
+        }
+        for (int i = 0; i < ehandleValues_.size(); i++) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, ehandleValues_.get(i));
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -20016,6 +19862,7 @@ public final class DemoUserMessages {
             getFloatValuesFieldBuilder();
             getVectorValuesFieldBuilder();
             getTransformValuesFieldBuilder();
+            getEhandleValuesFieldBuilder();
           }
         }
         private static Builder create() {
@@ -20041,6 +19888,12 @@ public final class DemoUserMessages {
             bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             transformValuesBuilder_.clear();
+          }
+          if (ehandleValuesBuilder_ == null) {
+            ehandleValues_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ehandleValuesBuilder_.clear();
           }
           return this;
         }
@@ -20095,6 +19948,15 @@ public final class DemoUserMessages {
             result.transformValues_ = transformValues_;
           } else {
             result.transformValues_ = transformValuesBuilder_.build();
+          }
+          if (ehandleValuesBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) == 0x00000008)) {
+              ehandleValues_ = java.util.Collections.unmodifiableList(ehandleValues_);
+              bitField0_ = (bitField0_ & ~0x00000008);
+            }
+            result.ehandleValues_ = ehandleValues_;
+          } else {
+            result.ehandleValues_ = ehandleValuesBuilder_.build();
           }
           onBuilt();
           return result;
@@ -20186,6 +20048,32 @@ public final class DemoUserMessages {
                      getTransformValuesFieldBuilder() : null;
               } else {
                 transformValuesBuilder_.addAllMessages(other.transformValues_);
+              }
+            }
+          }
+          if (ehandleValuesBuilder_ == null) {
+            if (!other.ehandleValues_.isEmpty()) {
+              if (ehandleValues_.isEmpty()) {
+                ehandleValues_ = other.ehandleValues_;
+                bitField0_ = (bitField0_ & ~0x00000008);
+              } else {
+                ensureEhandleValuesIsMutable();
+                ehandleValues_.addAll(other.ehandleValues_);
+              }
+              onChanged();
+            }
+          } else {
+            if (!other.ehandleValues_.isEmpty()) {
+              if (ehandleValuesBuilder_.isEmpty()) {
+                ehandleValuesBuilder_.dispose();
+                ehandleValuesBuilder_ = null;
+                ehandleValues_ = other.ehandleValues_;
+                bitField0_ = (bitField0_ & ~0x00000008);
+                ehandleValuesBuilder_ = 
+                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                     getEhandleValuesFieldBuilder() : null;
+              } else {
+                ehandleValuesBuilder_.addAllMessages(other.ehandleValues_);
               }
             }
           }
@@ -20934,6 +20822,246 @@ public final class DemoUserMessages {
             transformValues_ = null;
           }
           return transformValuesBuilder_;
+        }
+
+        private java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> ehandleValues_ =
+          java.util.Collections.emptyList();
+        private void ensureEhandleValuesIsMutable() {
+          if (!((bitField0_ & 0x00000008) == 0x00000008)) {
+            ehandleValues_ = new java.util.ArrayList<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext>(ehandleValues_);
+            bitField0_ |= 0x00000008;
+           }
+        }
+
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> ehandleValuesBuilder_;
+
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> getEhandleValuesList() {
+          if (ehandleValuesBuilder_ == null) {
+            return java.util.Collections.unmodifiableList(ehandleValues_);
+          } else {
+            return ehandleValuesBuilder_.getMessageList();
+          }
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public int getEhandleValuesCount() {
+          if (ehandleValuesBuilder_ == null) {
+            return ehandleValues_.size();
+          } else {
+            return ehandleValuesBuilder_.getCount();
+          }
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext getEhandleValues(int index) {
+          if (ehandleValuesBuilder_ == null) {
+            return ehandleValues_.get(index);
+          } else {
+            return ehandleValuesBuilder_.getMessage(index);
+          }
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder setEhandleValues(
+            int index, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext value) {
+          if (ehandleValuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.set(index, value);
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.setMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder setEhandleValues(
+            int index, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder builderForValue) {
+          if (ehandleValuesBuilder_ == null) {
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.set(index, builderForValue.build());
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.setMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder addEhandleValues(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext value) {
+          if (ehandleValuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.add(value);
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.addMessage(value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder addEhandleValues(
+            int index, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext value) {
+          if (ehandleValuesBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.add(index, value);
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.addMessage(index, value);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder addEhandleValues(
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder builderForValue) {
+          if (ehandleValuesBuilder_ == null) {
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.add(builderForValue.build());
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.addMessage(builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder addEhandleValues(
+            int index, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder builderForValue) {
+          if (ehandleValuesBuilder_ == null) {
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.add(index, builderForValue.build());
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.addMessage(index, builderForValue.build());
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder addAllEhandleValues(
+            java.lang.Iterable<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> values) {
+          if (ehandleValuesBuilder_ == null) {
+            ensureEhandleValuesIsMutable();
+            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+                values, ehandleValues_);
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.addAllMessages(values);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder clearEhandleValues() {
+          if (ehandleValuesBuilder_ == null) {
+            ehandleValues_ = java.util.Collections.emptyList();
+            bitField0_ = (bitField0_ & ~0x00000008);
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.clear();
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public Builder removeEhandleValues(int index) {
+          if (ehandleValuesBuilder_ == null) {
+            ensureEhandleValuesIsMutable();
+            ehandleValues_.remove(index);
+            onChanged();
+          } else {
+            ehandleValuesBuilder_.remove(index);
+          }
+          return this;
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder getEhandleValuesBuilder(
+            int index) {
+          return getEhandleValuesFieldBuilder().getBuilder(index);
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder getEhandleValuesOrBuilder(
+            int index) {
+          if (ehandleValuesBuilder_ == null) {
+            return ehandleValues_.get(index);  } else {
+            return ehandleValuesBuilder_.getMessageOrBuilder(index);
+          }
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public java.util.List<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> 
+             getEhandleValuesOrBuilderList() {
+          if (ehandleValuesBuilder_ != null) {
+            return ehandleValuesBuilder_.getMessageOrBuilderList();
+          } else {
+            return java.util.Collections.unmodifiableList(ehandleValues_);
+          }
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder addEhandleValuesBuilder() {
+          return getEhandleValuesFieldBuilder().addBuilder(
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder addEhandleValuesBuilder(
+            int index) {
+          return getEhandleValuesFieldBuilder().addBuilder(
+              index, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.getDefaultInstance());
+        }
+        /**
+         * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext ehandle_values = 4;</code>
+         */
+        public java.util.List<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder> 
+             getEhandleValuesBuilderList() {
+          return getEhandleValuesFieldBuilder().getBuilderList();
+        }
+        private com.google.protobuf.RepeatedFieldBuilder<
+            skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> 
+            getEhandleValuesFieldBuilder() {
+          if (ehandleValuesBuilder_ == null) {
+            ehandleValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder>(
+                    ehandleValues_,
+                    ((bitField0_ & 0x00000008) == 0x00000008),
+                    getParentForChildren(),
+                    isClean());
+            ehandleValues_ = null;
+          }
+          return ehandleValuesBuilder_;
         }
 
         // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.SetParticleNamedValueContext)
@@ -26057,6 +26185,11 @@ public final class DemoUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -26068,7 +26201,7 @@ public final class DemoUserMessages {
     java.lang.String[] descriptorData = {
       "\n\027usermessages-demo.proto\032\035networkbasety" +
       "pes-common.proto\032\033networkbasetypes-demo." +
-      "proto\"\344+\n\030CUserMsg_ParticleManager\022C\n\004ty" +
+      "proto\"\255,\n\030CUserMsg_ParticleManager\022C\n\004ty" +
       "pe\030\001 \002(\0162\021.PARTICLE_MESSAGE:\"GAME_PARTIC" +
       "LE_MANAGER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022N" +
       "\n\026release_particle_index\030\003 \001(\0132..CUserMs" +
@@ -26191,7 +26324,7 @@ public final class DemoUserMessages {
       "skip_to_time\030\001 \001(\002\032\'\n\021ParticleCanFreeze\022" +
       "\022\n\ncan_freeze\030\001 \001(\010\032F\n ParticleFreezeTra" +
       "nsitionOverride\022\"\n\032freeze_transition_ove" +
-      "rride\030\001 \001(\002\032\237\005\n\034SetParticleNamedValueCon" +
+      "rride\030\001 \001(\002\032\350\005\n\034SetParticleNamedValueCon" +
       "text\022^\n\014float_values\030\001 \003(\0132H.CUserMsg_Pa" +
       "rticleManager.SetParticleNamedValueConte" +
       "xt.FloatContextValue\022`\n\rvector_values\030\002 " +
@@ -26199,54 +26332,56 @@ public final class DemoUserMessages {
       "leNamedValueContext.VectorContextValue\022f" +
       "\n\020transform_values\030\003 \003(\0132L.CUserMsg_Part" +
       "icleManager.SetParticleNamedValueContext" +
-      ".TransformContextValue\0326\n\021FloatContextVa" +
-      "lue\022\022\n\nvalue_name\030\001 \001(\t\022\r\n\005value\030\002 \001(\002\032z" +
-      "\n\022VectorContextValue\022\022\n\nvalue_name\030\001 \001(\t" +
-      "\022\032\n\005value\030\002 \001(\0132\013.CMsgVector\022\033\n\tent_inde" +
-      "x\030\003 \001(\r:\01016777215\022\027\n\017attachment_name\030\004 \001" +
-      "(\t\032\240\001\n\025TransformContextValue\022\022\n\nvalue_na" +
-      "me\030\001 \001(\t\022\033\n\006angles\030\002 \001(\0132\013.CMsgQAngle\022 \n",
-      "\013translation\030\003 \001(\0132\013.CMsgVector\022\033\n\tent_i" +
-      "ndex\030\004 \001(\r:\01016777215\022\027\n\017attachment_name\030" +
-      "\005 \001(\t*\005\010d\020\312\001*\276\013\n\020PARTICLE_MESSAGE\022&\n\"GAM" +
-      "E_PARTICLE_MANAGER_EVENT_CREATE\020\000\022&\n\"GAM" +
-      "E_PARTICLE_MANAGER_EVENT_UPDATE\020\001\022.\n*GAM" +
-      "E_PARTICLE_MANAGER_EVENT_UPDATE_FORWARD\020" +
-      "\002\0222\n.GAME_PARTICLE_MANAGER_EVENT_UPDATE_" +
-      "ORIENTATION\020\003\022/\n+GAME_PARTICLE_MANAGER_E" +
-      "VENT_UPDATE_FALLBACK\020\004\022*\n&GAME_PARTICLE_" +
-      "MANAGER_EVENT_UPDATE_ENT\020\005\022-\n)GAME_PARTI",
-      "CLE_MANAGER_EVENT_UPDATE_OFFSET\020\006\022\'\n#GAM" +
-      "E_PARTICLE_MANAGER_EVENT_DESTROY\020\007\0221\n-GA" +
-      "ME_PARTICLE_MANAGER_EVENT_DESTROY_INVOLV" +
-      "ING\020\010\022\'\n#GAME_PARTICLE_MANAGER_EVENT_REL" +
-      "EASE\020\t\022\'\n#GAME_PARTICLE_MANAGER_EVENT_LA" +
-      "TENCY\020\n\022+\n\'GAME_PARTICLE_MANAGER_EVENT_S" +
-      "HOULD_DRAW\020\013\022&\n\"GAME_PARTICLE_MANAGER_EV" +
-      "ENT_FROZEN\020\014\022?\n;GAME_PARTICLE_MANAGER_EV" +
-      "ENT_CHANGE_CONTROL_POINT_ATTACHMENT\020\r\0226\n" +
-      "2GAME_PARTICLE_MANAGER_EVENT_UPDATE_ENTI",
-      "TY_POSITION\020\016\0222\n.GAME_PARTICLE_MANAGER_E" +
-      "VENT_SET_FOW_PROPERTIES\020\017\022(\n$GAME_PARTIC" +
-      "LE_MANAGER_EVENT_SET_TEXT\020\020\0224\n0GAME_PART" +
-      "ICLE_MANAGER_EVENT_SET_SHOULD_CHECK_FOW\020" +
-      "\021\0227\n3GAME_PARTICLE_MANAGER_EVENT_SET_CON" +
-      "TROL_POINT_MODEL\020\022\022:\n6GAME_PARTICLE_MANA" +
-      "GER_EVENT_SET_CONTROL_POINT_SNAPSHOT\020\023\0225" +
-      "\n1GAME_PARTICLE_MANAGER_EVENT_SET_TEXTUR" +
-      "E_ATTRIBUTE\020\024\022=\n9GAME_PARTICLE_MANAGER_E" +
-      "VENT_SET_SCENE_OBJECT_GENERIC_FLAG\020\025\022?\n;",
-      "GAME_PARTICLE_MANAGER_EVENT_SET_SCENE_OB" +
-      "JECT_TINT_AND_DESAT\020\026\022-\n)GAME_PARTICLE_M" +
-      "ANAGER_EVENT_DESTROY_NAMED\020\027\022,\n(GAME_PAR" +
-      "TICLE_MANAGER_EVENT_SKIP_TO_TIME\020\030\022*\n&GA" +
-      "ME_PARTICLE_MANAGER_EVENT_CAN_FREEZE\020\031\0227" +
-      "\n3GAME_PARTICLE_MANAGER_EVENT_SET_NAMED_" +
-      "VALUE_CONTEXT\020\032\0220\n,GAME_PARTICLE_MANAGER" +
-      "_EVENT_UPDATE_TRANSFORM\020\033\022:\n6GAME_PARTIC" +
-      "LE_MANAGER_EVENT_FREEZE_TRANSITION_OVERR" +
-      "IDE\020\034B=\n)skadistats.clarity.wire.shared.",
-      "demo.protoB\020DemoUserMessages"
+      ".TransformContextValue\022]\n\016ehandle_values" +
+      "\030\004 \003(\0132E.CUserMsg_ParticleManager.SetPar" +
+      "ticleNamedValueContext.EHandleContext\032;\n" +
+      "\021FloatContextValue\022\027\n\017value_name_hash\030\001 " +
+      "\001(\r\022\r\n\005value\030\002 \001(\002\032I\n\022VectorContextValue" +
+      "\022\027\n\017value_name_hash\030\001 \001(\r\022\032\n\005value\030\002 \001(\013" +
+      "2\013.CMsgVector\032o\n\025TransformContextValue\022\027",
+      "\n\017value_name_hash\030\001 \001(\r\022\033\n\006angles\030\002 \001(\0132" +
+      "\013.CMsgQAngle\022 \n\013translation\030\003 \001(\0132\013.CMsg" +
+      "Vector\032F\n\016EHandleContext\022\027\n\017value_name_h" +
+      "ash\030\001 \001(\r\022\033\n\tent_index\030\002 \001(\r:\01016777215*\005" +
+      "\010d\020\312\001*\276\013\n\020PARTICLE_MESSAGE\022&\n\"GAME_PARTI" +
+      "CLE_MANAGER_EVENT_CREATE\020\000\022&\n\"GAME_PARTI" +
+      "CLE_MANAGER_EVENT_UPDATE\020\001\022.\n*GAME_PARTI" +
+      "CLE_MANAGER_EVENT_UPDATE_FORWARD\020\002\0222\n.GA" +
+      "ME_PARTICLE_MANAGER_EVENT_UPDATE_ORIENTA" +
+      "TION\020\003\022/\n+GAME_PARTICLE_MANAGER_EVENT_UP",
+      "DATE_FALLBACK\020\004\022*\n&GAME_PARTICLE_MANAGER" +
+      "_EVENT_UPDATE_ENT\020\005\022-\n)GAME_PARTICLE_MAN" +
+      "AGER_EVENT_UPDATE_OFFSET\020\006\022\'\n#GAME_PARTI" +
+      "CLE_MANAGER_EVENT_DESTROY\020\007\0221\n-GAME_PART" +
+      "ICLE_MANAGER_EVENT_DESTROY_INVOLVING\020\010\022\'" +
+      "\n#GAME_PARTICLE_MANAGER_EVENT_RELEASE\020\t\022" +
+      "\'\n#GAME_PARTICLE_MANAGER_EVENT_LATENCY\020\n" +
+      "\022+\n\'GAME_PARTICLE_MANAGER_EVENT_SHOULD_D" +
+      "RAW\020\013\022&\n\"GAME_PARTICLE_MANAGER_EVENT_FRO" +
+      "ZEN\020\014\022?\n;GAME_PARTICLE_MANAGER_EVENT_CHA",
+      "NGE_CONTROL_POINT_ATTACHMENT\020\r\0226\n2GAME_P" +
+      "ARTICLE_MANAGER_EVENT_UPDATE_ENTITY_POSI" +
+      "TION\020\016\0222\n.GAME_PARTICLE_MANAGER_EVENT_SE" +
+      "T_FOW_PROPERTIES\020\017\022(\n$GAME_PARTICLE_MANA" +
+      "GER_EVENT_SET_TEXT\020\020\0224\n0GAME_PARTICLE_MA" +
+      "NAGER_EVENT_SET_SHOULD_CHECK_FOW\020\021\0227\n3GA" +
+      "ME_PARTICLE_MANAGER_EVENT_SET_CONTROL_PO" +
+      "INT_MODEL\020\022\022:\n6GAME_PARTICLE_MANAGER_EVE" +
+      "NT_SET_CONTROL_POINT_SNAPSHOT\020\023\0225\n1GAME_" +
+      "PARTICLE_MANAGER_EVENT_SET_TEXTURE_ATTRI",
+      "BUTE\020\024\022=\n9GAME_PARTICLE_MANAGER_EVENT_SE" +
+      "T_SCENE_OBJECT_GENERIC_FLAG\020\025\022?\n;GAME_PA" +
+      "RTICLE_MANAGER_EVENT_SET_SCENE_OBJECT_TI" +
+      "NT_AND_DESAT\020\026\022-\n)GAME_PARTICLE_MANAGER_" +
+      "EVENT_DESTROY_NAMED\020\027\022,\n(GAME_PARTICLE_M" +
+      "ANAGER_EVENT_SKIP_TO_TIME\020\030\022*\n&GAME_PART" +
+      "ICLE_MANAGER_EVENT_CAN_FREEZE\020\031\0227\n3GAME_" +
+      "PARTICLE_MANAGER_EVENT_SET_NAMED_VALUE_C" +
+      "ONTEXT\020\032\0220\n,GAME_PARTICLE_MANAGER_EVENT_" +
+      "UPDATE_TRANSFORM\020\033\022:\n6GAME_PARTICLE_MANA",
+      "GER_EVENT_FREEZE_TRANSITION_OVERRIDE\020\034B=" +
+      "\n)skadistats.clarity.wire.shared.demo.pr" +
+      "otoB\020DemoUserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26435,25 +26570,31 @@ public final class DemoUserMessages {
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor,
-        new java.lang.String[] { "FloatValues", "VectorValues", "TransformValues", });
+        new java.lang.String[] { "FloatValues", "VectorValues", "TransformValues", "EhandleValues", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(0);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor,
-        new java.lang.String[] { "ValueName", "Value", });
+        new java.lang.String[] { "ValueNameHash", "Value", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(1);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor,
-        new java.lang.String[] { "ValueName", "Value", "EntIndex", "AttachmentName", });
+        new java.lang.String[] { "ValueNameHash", "Value", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(2);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor,
-        new java.lang.String[] { "ValueName", "Angles", "Translation", "EntIndex", "AttachmentName", });
+        new java.lang.String[] { "ValueNameHash", "Angles", "Translation", });
+    internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor =
+      internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(3);
+    internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor,
+        new java.lang.String[] { "ValueNameHash", "EntIndex", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
   }
