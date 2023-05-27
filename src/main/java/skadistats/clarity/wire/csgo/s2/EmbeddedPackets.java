@@ -4,6 +4,7 @@ import com.google.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.csgo.common.proto.CsgoUserMessages;
+import skadistats.clarity.wire.csgo.s2.proto.CSGOS2GameEvents;
 import skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId;
 import skadistats.clarity.wire.csgo.s2.proto.CSGOS2UserMessages;
 import skadistats.clarity.wire.dota.s2.proto.S2TempEntities;
@@ -201,6 +202,10 @@ public class EmbeddedPackets {
         /* 424 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_PlayerDecalId_VALUE, S2TempEntities.CMsgTEPlayerDecal.class);
         /* 425 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ProjectedDecalId_VALUE, S2TempEntities.CMsgTEProjectedDecal.class);
         /* 426 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_SmokeId_VALUE, S2TempEntities.CMsgTESmoke.class);
+
+        /* 450 */ K2C.put(CSGOS2GameEvents.ECsgoGameEvents.GE_PlayerAnimEventId_VALUE, CSGOS2GameEvents.CMsgTEPlayerAnimEvent.class);
+        /* 451 */ K2C.put(CSGOS2GameEvents.ECsgoGameEvents.GE_RadioIconEventId_VALUE, CSGOS2GameEvents.CMsgTERadioIcon.class);
+        /* 452 */ K2C.put(CSGOS2GameEvents.ECsgoGameEvents.GE_FireBulletsId_VALUE, CSGOS2GameEvents.CMsgTEFireBullets.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {
