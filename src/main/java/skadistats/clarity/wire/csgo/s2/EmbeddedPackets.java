@@ -6,6 +6,7 @@ import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.csgo.common.proto.CsgoUserMessages;
 import skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId;
 import skadistats.clarity.wire.csgo.s2.proto.CSGOS2UserMessages;
+import skadistats.clarity.wire.dota.s2.proto.S2TempEntities;
 import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;
 import skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes;
 import skadistats.clarity.wire.shared.demo.proto.DemoNetMessages;
@@ -172,6 +173,34 @@ public class EmbeddedPackets {
         /* 381 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_DeepStats_VALUE, CsgoUserMessages.CCSUsrMsg_DeepStats.class);
 //      /* 382 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_UtilMsg_VALUE, CsgoUserMessages.CCSUsrMsg_UtilMsg.class);
         /* 383 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_ShootInfo_VALUE, CsgoUserMessages.CCSUsrMsg_ShootInfo.class);
+
+        /* 400 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_EffectDispatchId_VALUE, S2TempEntities.CMsgTEEffectDispatch.class);
+        /* 401 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ArmorRicochetId_VALUE, S2TempEntities.CMsgTEArmorRicochet.class);
+        /* 402 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BeamEntPointId_VALUE, S2TempEntities.CMsgTEBeamEntPoint.class);
+        /* 403 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BeamEntsId_VALUE, S2TempEntities.CMsgTEBeamEnts.class);
+        /* 404 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BeamPointsId_VALUE, S2TempEntities.CMsgTEBeamPoints.class);
+        /* 405 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BeamRingId_VALUE, S2TempEntities.CMsgTEBeamRing.class);
+        /* 406 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BreakModelId_VALUE, S2TempEntities.CMsgTEBreakModel.class);
+        /* 407 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BSPDecalId_VALUE, S2TempEntities.CMsgTEBSPDecal.class);
+        /* 408 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BubblesId_VALUE, S2TempEntities.CMsgTEBubbles.class);
+        /* 409 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BubbleTrailId_VALUE, S2TempEntities.CMsgTEBubbleTrail.class);
+        /* 410 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_DecalId_VALUE, S2TempEntities.CMsgTEDecal.class);
+        /* 411 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_WorldDecalId_VALUE, S2TempEntities.CMsgTEWorldDecal.class);
+        /* 412 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_EnergySplashId_VALUE, S2TempEntities.CMsgTEEnergySplash.class);
+        /* 413 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_FizzId_VALUE, S2TempEntities.CMsgTEFizz.class);
+        /* 414 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ShatterSurfaceId_VALUE, S2TempEntities.CMsgTEShatterSurface.class);
+        /* 415 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_GlowSpriteId_VALUE, S2TempEntities.CMsgTEGlowSprite.class);
+        /* 416 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ImpactId_VALUE, S2TempEntities.CMsgTEImpact.class);
+        /* 417 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_MuzzleFlashId_VALUE, S2TempEntities.CMsgTEMuzzleFlash.class);
+        /* 418 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_BloodStreamId_VALUE, S2TempEntities.CMsgTEBloodStream.class);
+        /* 419 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ExplosionId_VALUE, S2TempEntities.CMsgTEExplosion.class);
+        /* 420 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_DustId_VALUE, S2TempEntities.CMsgTEDust.class);
+        /* 421 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_LargeFunnelId_VALUE, S2TempEntities.CMsgTELargeFunnel.class);
+        /* 422 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_SparksId_VALUE, S2TempEntities.CMsgTESparks.class);
+        /* 423 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_PhysicsPropId_VALUE, S2TempEntities.CMsgTEPhysicsProp.class);
+        /* 424 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_PlayerDecalId_VALUE, S2TempEntities.CMsgTEPlayerDecal.class);
+        /* 425 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ProjectedDecalId_VALUE, S2TempEntities.CMsgTEProjectedDecal.class);
+        /* 426 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_SmokeId_VALUE, S2TempEntities.CMsgTESmoke.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {
