@@ -29,12 +29,12 @@
   {
     "path": "csgo/s1",
     "build": "*.proto",
-    "include": ["shared/common", "shared/demo" ,"shared/s1"]
+    "include": ["shared/common", "shared/demo" ,"shared/s1", "csgo/common"]
   },
   {
     "path": "csgo/s2",
     "build": "*.proto",
-    "include": ["shared/common", "shared/demo", "shared/s2"]
+    "include": ["shared/common", "shared/demo", "shared/s2", "csgo/common"]
   },
 
   {
