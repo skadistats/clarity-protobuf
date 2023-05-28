@@ -1,5 +1,5 @@
 option java_package = "skadistats.clarity.wire.dota.common.proto";
-option java_outer_classname = "DotaModifiers";
+option java_outer_classname = "DOTAModifiers";
 
 import "networkbasetypes-common.proto";
 

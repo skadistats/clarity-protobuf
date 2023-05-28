@@ -3,8 +3,8 @@
 
 package skadistats.clarity.wire.dota.common.proto;
 
-public final class DotaModifiers {
-  private DotaModifiers() {}
+public final class DOTAModifiers {
+  private DOTAModifiers() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
@@ -65,7 +65,7 @@ public final class DotaModifiers {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaModifiers.getDescriptor().getEnumTypes().get(0);
+      return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final DOTA_MODIFIER_ENTRY_TYPE[] VALUES = values();
@@ -101,7 +101,7 @@ public final class DotaModifiers {
     /**
      * <code>required .DOTA_MODIFIER_ENTRY_TYPE entry_type = 1 [default = DOTA_MODIFIER_ENTRY_TYPE_ACTIVE];</code>
      */
-    skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType();
+    skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType();
 
     /**
      * <code>required uint32 parent = 2 [default = 16777215];</code>
@@ -534,7 +534,7 @@ public final class DotaModifiers {
             }
             case 8: {
               int rawValue = input.readEnum();
-              skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE value = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.valueOf(rawValue);
+              skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE value = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(1, rawValue);
               } else {
@@ -765,14 +765,14 @@ public final class DotaModifiers {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTAModifierBuffTableEntry_descriptor;
+      return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTAModifierBuffTableEntry_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable
+      return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.class, skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.Builder.class);
+              skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.class, skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTAModifierBuffTableEntry> PARSER =
@@ -793,7 +793,7 @@ public final class DotaModifiers {
     private int bitField0_;
     private int bitField1_;
     public static final int ENTRY_TYPE_FIELD_NUMBER = 1;
-    private skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE entryType_;
+    private skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE entryType_;
     /**
      * <code>required .DOTA_MODIFIER_ENTRY_TYPE entry_type = 1 [default = DOTA_MODIFIER_ENTRY_TYPE_ACTIVE];</code>
      */
@@ -803,7 +803,7 @@ public final class DotaModifiers {
     /**
      * <code>required .DOTA_MODIFIER_ENTRY_TYPE entry_type = 1 [default = DOTA_MODIFIER_ENTRY_TYPE_ACTIVE];</code>
      */
-    public skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType() {
+    public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType() {
       return entryType_;
     }
 
@@ -1564,7 +1564,7 @@ public final class DotaModifiers {
     }
 
     private void initFields() {
-      entryType_ = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
+      entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       parent_ = 16777215;
       index_ = 0;
       serialNum_ = 0;
@@ -1919,53 +1919,53 @@ public final class DotaModifiers {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(byte[] data)
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseDelimitedFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1974,7 +1974,7 @@ public final class DotaModifiers {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1991,20 +1991,20 @@ public final class DotaModifiers {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTAModifierBuffTableEntry)
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntryOrBuilder {
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTAModifierBuffTableEntry_descriptor;
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTAModifierBuffTableEntry_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.class, skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.Builder.class);
+                skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.class, skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.newBuilder()
+      // Construct using skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2026,7 +2026,7 @@ public final class DotaModifiers {
 
       public Builder clear() {
         super.clear();
-        entryType_ = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
+        entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
         bitField0_ = (bitField0_ & ~0x00000001);
         parent_ = 16777215;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -2119,23 +2119,23 @@ public final class DotaModifiers {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTAModifierBuffTableEntry_descriptor;
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTAModifierBuffTableEntry_descriptor;
       }
 
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry getDefaultInstanceForType() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.getDefaultInstance();
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry getDefaultInstanceForType() {
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry build() {
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry result = buildPartial();
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry build() {
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry buildPartial() {
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry result = new skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry(this);
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry buildPartial() {
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry result = new skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry(this);
         int from_bitField0_ = bitField0_;
         int from_bitField1_ = bitField1_;
         int to_bitField0_ = 0;
@@ -2307,16 +2307,16 @@ public final class DotaModifiers {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry) {
-          return mergeFrom((skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry)other);
+        if (other instanceof skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry) {
+          return mergeFrom((skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry other) {
-        if (other == skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry other) {
+        if (other == skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry.getDefaultInstance()) return this;
         if (other.hasEntryType()) {
           setEntryType(other.getEntryType());
         }
@@ -2473,11 +2473,11 @@ public final class DotaModifiers {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry parsedMessage = null;
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTAModifierBuffTableEntry) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTAModifierBuffTableEntry) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -2489,7 +2489,7 @@ public final class DotaModifiers {
       private int bitField0_;
       private int bitField1_;
 
-      private skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE entryType_ = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
+      private skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       /**
        * <code>required .DOTA_MODIFIER_ENTRY_TYPE entry_type = 1 [default = DOTA_MODIFIER_ENTRY_TYPE_ACTIVE];</code>
        */
@@ -2499,13 +2499,13 @@ public final class DotaModifiers {
       /**
        * <code>required .DOTA_MODIFIER_ENTRY_TYPE entry_type = 1 [default = DOTA_MODIFIER_ENTRY_TYPE_ACTIVE];</code>
        */
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType() {
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE getEntryType() {
         return entryType_;
       }
       /**
        * <code>required .DOTA_MODIFIER_ENTRY_TYPE entry_type = 1 [default = DOTA_MODIFIER_ENTRY_TYPE_ACTIVE];</code>
        */
-      public Builder setEntryType(skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE value) {
+      public Builder setEntryType(skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2519,7 +2519,7 @@ public final class DotaModifiers {
        */
       public Builder clearEntryType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        entryType_ = skadistats.clarity.wire.dota.common.proto.DotaModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
+        entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
         onChanged();
         return this;
       }
@@ -4299,14 +4299,14 @@ public final class DotaModifiers {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTALuaModifierEntry_descriptor;
+      return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTALuaModifierEntry_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTALuaModifierEntry_fieldAccessorTable
+      return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTALuaModifierEntry_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.class, skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.Builder.class);
+              skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.class, skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.Builder.class);
     }
 
     public static com.google.protobuf.Parser<CDOTALuaModifierEntry> PARSER =
@@ -4442,53 +4442,53 @@ public final class DotaModifiers {
       return super.writeReplace();
     }
 
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(byte[] data)
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseDelimitedFrom(java.io.InputStream input)
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseDelimitedFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parseFrom(
+    public static skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4497,7 +4497,7 @@ public final class DotaModifiers {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry prototype) {
+    public static Builder newBuilder(skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -4514,20 +4514,20 @@ public final class DotaModifiers {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CDOTALuaModifierEntry)
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntryOrBuilder {
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntryOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTALuaModifierEntry_descriptor;
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTALuaModifierEntry_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTALuaModifierEntry_fieldAccessorTable
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTALuaModifierEntry_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.class, skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.Builder.class);
+                skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.class, skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.Builder.class);
       }
 
-      // Construct using skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.newBuilder()
+      // Construct using skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4560,23 +4560,23 @@ public final class DotaModifiers {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.internal_static_CDOTALuaModifierEntry_descriptor;
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.internal_static_CDOTALuaModifierEntry_descriptor;
       }
 
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry getDefaultInstanceForType() {
-        return skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.getDefaultInstance();
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry getDefaultInstanceForType() {
+        return skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.getDefaultInstance();
       }
 
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry build() {
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry result = buildPartial();
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry build() {
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry buildPartial() {
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry result = new skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry(this);
+      public skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry buildPartial() {
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry result = new skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4593,16 +4593,16 @@ public final class DotaModifiers {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry) {
-          return mergeFrom((skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry)other);
+        if (other instanceof skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry) {
+          return mergeFrom((skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry other) {
-        if (other == skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry.getDefaultInstance()) return this;
+      public Builder mergeFrom(skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry other) {
+        if (other == skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry.getDefaultInstance()) return this;
         if (other.hasModifierType()) {
           setModifierType(other.getModifierType());
         }
@@ -4631,11 +4631,11 @@ public final class DotaModifiers {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry parsedMessage = null;
+        skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (skadistats.clarity.wire.dota.common.proto.DotaModifiers.CDOTALuaModifierEntry) e.getUnfinishedMessage();
+          parsedMessage = (skadistats.clarity.wire.dota.common.proto.DOTAModifiers.CDOTALuaModifierEntry) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
@@ -4814,7 +4814,7 @@ public final class DotaModifiers {
       "\030\002 \002(\t*e\n\030DOTA_MODIFIER_ENTRY_TYPE\022#\n\037DO" +
       "TA_MODIFIER_ENTRY_TYPE_ACTIVE\020\001\022$\n DOTA_" +
       "MODIFIER_ENTRY_TYPE_REMOVED\020\002B:\n)skadist",
-      "ats.clarity.wire.dota.common.protoB\rDota" +
+      "ats.clarity.wire.dota.common.protoB\rDOTA" +
       "Modifiers"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =

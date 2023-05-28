@@ -1,4 +1,4 @@
-option java_package = "skadistats.clarity.wire.dota.s1.proto";
+option java_package = "skadistats.clarity.wire.shared.s1.proto";
 option java_outer_classname = "S1UserMessages";
 
 message CUserMsg_SayText2 {
