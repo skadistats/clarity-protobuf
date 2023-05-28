@@ -5,9 +5,6 @@ import "networkbasetypes-common.proto";
 import "networkbasetypes-demo.proto";
 import "dota_commonmessages.proto";
 
-option optimize_for = SPEED;
-option cc_generic_services = false;
-
 enum DOTA_COMBATLOG_TYPES {
   DOTA_COMBATLOG_INVALID = -1;
   DOTA_COMBATLOG_DAMAGE = 0;

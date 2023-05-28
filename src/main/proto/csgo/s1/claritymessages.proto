@@ -1,8 +1,6 @@
 option java_package = "skadistats.clarity.wire.csgo.s1.proto";
 option java_outer_classname = "CSGOS1ClarityMessages";
 
-option cc_generic_services = false;
-
 message CsGoDemoHeader
 {
     optional int32	demoprotocol = 1;		// Should be DEMO_PROTOCOL

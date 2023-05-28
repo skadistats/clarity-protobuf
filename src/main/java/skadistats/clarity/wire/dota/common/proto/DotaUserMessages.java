@@ -103369,9 +103369,8 @@ public final class DotaUserMessages {
       "owSameTeam\020H\022\027\n\023kPVLS_AllowShowcase\020I\022\033\n" +
       "\027kPVLS_AllowPrivateCoach\020J*B\n\020EProjectio" +
       "nEvent\022\022\n\016ePE_FirstBlood\020\000\022\032\n\026ePE_Killst" +
-      "reak_godlike\020\001BB\n)skadistats.clarity.wir" +
-      "e.dota.common.protoB\020DotaUserMessagesH\001\200" +
-      "\001\000"
+      "reak_godlike\020\001B=\n)skadistats.clarity.wir" +
+      "e.dota.common.protoB\020DotaUserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

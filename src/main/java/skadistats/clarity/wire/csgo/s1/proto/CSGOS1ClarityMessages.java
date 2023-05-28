@@ -1827,9 +1827,9 @@ public final class CSGOS1ClarityMessages {
       "ame\030\004 \001(\t\022\017\n\007mapname\030\005 \001(\t\022\025\n\rgamedirect" +
       "ory\030\006 \001(\t\022\025\n\rplayback_time\030\007 \001(\002\022\026\n\016play" +
       "back_ticks\030\010 \001(\005\022\027\n\017playback_frames\030\t \001(" +
-      "\005\022\024\n\014signonlength\030\n \001(\005BA\n%skadistats.cl" +
+      "\005\022\024\n\014signonlength\030\n \001(\005B>\n%skadistats.cl" +
       "arity.wire.csgo.s1.protoB\025CSGOS1ClarityM" +
-      "essages\200\001\000"
+      "essages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
