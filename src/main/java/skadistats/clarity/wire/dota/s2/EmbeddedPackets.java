@@ -185,6 +185,7 @@ public class EmbeddedPackets {
         /* 532 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AbilitySteal_VALUE, DOTAUserMessages.CDOTAUserMsg_AbilitySteal.class);
         /* 533 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_CourierKilledAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_CourierKilledAlert.class);
         /* 534 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_EnemyItemAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_EnemyItemAlert.class);
+        /* 537 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_BuyBackStateAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_BuyBackStateAlert.class);
         /* 540 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_QuickBuyAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_QuickBuyAlert.class);
         /* 542 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_PredictionResult_VALUE, DOTAUserMessages.CDOTAUserMsg_PredictionResult.class);
         /* 543 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ModifierAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_ModifierAlert.class);
@@ -236,6 +237,7 @@ public class EmbeddedPackets {
         /* 604 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_GuildChallenge_Progress_VALUE, DOTAUserMessages.CDOTAUserMsg_GuildChallenge_Progress.class);
         /* 605 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_WRArcanaProgress_VALUE, DOTAUserMessages.CDOTAUserMsg_WRArcanaProgress.class);
         /* 606 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_WRArcanaSummary_VALUE, DOTAUserMessages.CDOTAUserMsg_WRArcanaSummary.class);
+        /* 607 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_EmptyItemSlotAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_EmptyItemSlotAlert.class);
         /* 608 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AghsStatusAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_AghsStatusAlert.class);
         /* 610 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MutedPlayers_VALUE, DOTAUserMessages.CDOTAUserMsg_MutedPlayers.class);
         /* 611 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ContextualTip_VALUE, DOTAUserMessages.CDOTAUserMsg_ContextualTip.class);
@@ -281,7 +283,6 @@ public class EmbeddedPackets {
 //      /* 531 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_PlayerMMR_VALUE, DOTAUserMessages.CDOTAUserMsg_PlayerMMR.class);
 //      /* 535 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_StatsMatchDetails_VALUE, DOTAUserMessages.CDOTAUserMsg_StatsMatchDetails.class);
 //      /* 536 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MiniTaunt_VALUE, DOTAUserMessages.CDOTAUserMsg_MiniTaunt.class);
-//      /* 537 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_BuyBackStateAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_BuyBackStateAlert.class);
 //      /* 538 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_SpeechBubble_VALUE, DOTAUserMessages.CDOTAUserMsg_SpeechBubble.class);
 //      /* 539 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_CustomHeaderMessage_VALUE, DOTAUserMessages.CDOTAUserMsg_CustomHeaderMessage.class);
 //      /* 541 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_StatsHeroDetails_VALUE, DOTAUserMessages.CDOTAUserMsg_StatsHeroMinuteDetails.class);
@@ -301,7 +302,6 @@ public class EmbeddedPackets {
 //      /* 573 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AbilityDraftRequestAbility_VALUE, DOTAUserMessages.CDOTAUserMessage_AbilityDraftRequestAbility.class);
 //      /* 578 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ReplaceQueryUnit_VALUE, DOTAUserMessages.CDOTAUserMsg_ReplaceQueryUnit.class);
 //      /* 579 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_EmptyTeleportAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_EmptyTeleportAlert.class);
-//      /* 607 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_EmptyItemSlotAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_EmptyItemSlotAlert.class);
 //      /* 609 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_PingConfirmation_VALUE, DOTAUserMessages.CDOTAUserMsg_PingConfirmation.class);
 //      /* 611 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ContextualTip_VALUE, DOTAUserMessages.CDOTAUserMsg_ContextualTip.class);
 //      /* 612 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ChatMessage_VALUE, DOTAUserMessages.CDOTAUserMsg_ChatMessage.class);
