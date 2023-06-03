@@ -29,7 +29,7 @@ repositories {
 }
 
 dependencies {
-    api("it.unimi.dsi:fastutil:8.5.11")
+    api("it.unimi.dsi:fastutil-core:8.5.12")
 }
 
 publishing {
