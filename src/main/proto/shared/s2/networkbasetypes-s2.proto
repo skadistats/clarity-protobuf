@@ -1,0 +1,62 @@
+option java_package = "skadistats.clarity.wire.shared.s2.proto";
+option java_outer_classname = "S2NetworkBaseTypes";
+
+import "network_connection-common.proto";
+import "networkbasetypes-common.proto";
+
+enum SpawnGroupFlags_t {
+  SPAWN_GROUP_LOAD_ENTITIES_FROM_SAVE = 1;
+  SPAWN_GROUP_DONT_SPAWN_ENTITIES = 2;
+  SPAWN_GROUP_SYNCHRONOUS_SPAWN = 4;
+  SPAWN_GROUP_IS_INITIAL_SPAWN_GROUP = 8;
+  SPAWN_GROUP_CREATE_CLIENT_ONLY_ENTITIES = 16;
+  SPAWN_GROUP_SAVE_ENTITIES = 32;
+  SPAWN_GROUP_BLOCK_UNTIL_LOADED = 64;
+  SPAWN_GROUP_LOAD_STREAMING_DATA = 128;
+  SPAWN_GROUP_CREATE_NEW_SCENE_WORLD = 256;
+}
+
+message CNETMsg_SpawnGroup_Load {
+  optional string worldname = 1;
+  optional string entitylumpname = 2;
+  optional string entityfiltername = 3;
+  optional uint32 spawngrouphandle = 4;
+  optional uint32 spawngroupownerhandle = 5;
+  optional .CMsgVector world_offset_pos = 6;
+  optional .CMsgQAngle world_offset_angle = 7;
+  optional bytes spawngroupmanifest = 8;
+  optional uint32 flags = 9;
+  optional int32 tickcount = 10;
+  optional bool manifestincomplete = 11;
+  optional string localnamefixup = 12;
+  optional string parentnamefixup = 13;
+  optional int32 manifestloadpriority = 14;
+  optional uint32 worldgroupid = 15;
+  optional uint32 creationsequence = 16;
+  optional string savegamefilename = 17;
+  optional uint32 spawngroupparenthandle = 18;
+  optional bool leveltransition = 19;
+  optional string worldgroupname = 20;
+}
+
+message CNETMsg_SpawnGroup_ManifestUpdate {
+  optional uint32 spawngrouphandle = 1;
+  optional bytes spawngroupmanifest = 2;
+  optional bool manifestincomplete = 3;
+}
+
+message CNETMsg_SpawnGroup_SetCreationTick {
+  optional uint32 spawngrouphandle = 1;
+  optional int32 tickcount = 2;
+  optional uint32 creationsequence = 3;
+}
+
+message CNETMsg_SpawnGroup_Unload {
+  optional uint32 spawngrouphandle = 1;
+  optional uint32 flags = 2;
+  optional int32 tickcount = 3;
+}
+
+message CNETMsg_SpawnGroup_LoadCompleted {
+  optional uint32 spawngrouphandle = 1;
+}

@@ -1,0 +1,11 @@
+option java_package = "skadistats.clarity.wire.csgo.s2.proto";
+option java_outer_classname = "CSGOS2ClarityMessages";
+
+message PlayerInfo {
+  optional string name = 1;
+  optional fixed64 xuid = 2;
+  optional int32 unknown1 = 3;
+  optional fixed64 unknown2 = 4;
+  optional bool fakePlayer = 5;
+  optional bool isHlTv = 6;
+}

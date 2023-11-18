@@ -1,1 +1,0 @@
-..\bin\protoc-261 --proto_path=..\common --proto_path=. --java_out=..\..\java *.proto

@@ -1,0 +1,38 @@
+option java_package = "skadistats.clarity.wire.shared.s1.proto";
+option java_outer_classname = "S1NetMessages";
+
+message CSVCMsg_SendTable {
+  message sendprop_t {
+    optional int32 type = 1;
+    optional string var_name = 2;
+    optional int32 flags = 3;
+    optional int32 priority = 4;
+    optional string dt_name = 5;
+    optional int32 num_elements = 6;
+    optional float low_value = 7;
+    optional float high_value = 8;
+    optional int32 num_bits = 9;
+  }
+
+  optional bool is_end = 1;
+  optional string net_table_name = 2;
+  optional bool needs_decoder = 3;
+  repeated CSVCMsg_SendTable.sendprop_t props = 4;
+}
+
+message CSVCMsg_CreateStringTable {
+  optional string name = 1;
+  optional int32 max_entries = 2;
+  optional int32 num_entries = 3;
+  optional bool user_data_fixed_size = 4;
+  optional int32 user_data_size = 5;
+  optional int32 user_data_size_bits = 6;
+  optional int32 flags = 7;
+  optional bytes string_data = 8;
+}
+
+message CSVCMsg_TempEntities {
+  optional bool reliable = 1;
+  optional int32 num_entries = 2;
+  optional bytes entity_data = 3;
+}

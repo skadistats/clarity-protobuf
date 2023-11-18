@@ -1,0 +1,40 @@
+option java_package = "skadistats.clarity.wire.shared.s1.proto";
+option java_outer_classname = "S1UserMessages";
+
+message CUserMsg_SayText2 {
+	optional uint32 client = 1;
+	optional bool chat = 2;
+	optional string format = 3;
+	optional string prefix = 4;
+	optional string text = 5;
+	optional string location = 6;
+}
+
+message CUserMsg_TextMsg {
+	optional uint32 dest = 1;
+	repeated string param = 2;
+}
+
+message CUserMsg_ResetHUD {
+}
+
+message CUserMsg_SendAudio {
+	optional bool stop = 2;
+	optional string name = 3;
+}
+
+message CUserMsg_VoiceMask {
+	repeated int32 audible_players_mask = 1;
+	optional bool player_mod_enabled = 2;
+}
+
+message CUserMsg_VGUIMenu {
+	message Keys {
+		optional string name = 1;
+		optional string value = 2;
+	}
+
+	optional string name = 1;
+	optional bool show = 2;
+	repeated .CUserMsg_VGUIMenu.Keys keys = 3;
+}

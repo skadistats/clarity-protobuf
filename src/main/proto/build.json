@@ -1,0 +1,56 @@
+[
+
+  {
+    "path": "shared/common",
+    "build": "*.proto",
+    "include": []
+  },
+  {
+    "path": "shared/demo",
+    "build": "*.proto",
+    "include": ["shared/common"]
+  },
+  {
+    "path": "shared/s1",
+    "build": "*.proto",
+    "include": ["shared/common"]
+  },
+  {
+    "path": "shared/s2",
+    "build": "*.proto",
+    "include": ["shared/common" ,"shared/demo"]
+  },
+
+  {
+    "path": "csgo/common",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo"]
+  },
+  {
+    "path": "csgo/s1",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo" ,"shared/s1", "csgo/common"]
+  },
+  {
+    "path": "csgo/s2",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo", "shared/s2", "csgo/common"]
+  },
+
+  {
+    "path": "dota/common",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo"]
+  },
+  {
+    "path": "dota/s1",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo", "shared/s1" ,"dota/common"]
+  },
+  {
+    "path": "dota/s2",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo", "shared/s2", "dota/common"]
+  }
+
+]
