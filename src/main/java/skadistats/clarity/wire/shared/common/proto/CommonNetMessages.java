@@ -9221,13 +9221,22 @@ public final class CommonNetMessages {
     int getMaxSpawngroupCreationsequence();
 
     /**
-     * <code>optional uint32 last_cmd_number = 11;</code>
+     * <code>optional uint32 last_cmd_number_executed = 11;</code>
      */
-    boolean hasLastCmdNumber();
+    boolean hasLastCmdNumberExecuted();
     /**
-     * <code>optional uint32 last_cmd_number = 11;</code>
+     * <code>optional uint32 last_cmd_number_executed = 11;</code>
      */
-    int getLastCmdNumber();
+    int getLastCmdNumberExecuted();
+
+    /**
+     * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+     */
+    boolean hasLastCmdNumberRecvDelta();
+    /**
+     * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+     */
+    int getLastCmdNumberRecvDelta();
 
     /**
      * <code>optional uint32 server_tick = 12;</code>
@@ -9283,6 +9292,46 @@ public final class CommonNetMessages {
      */
     skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_tOrBuilder getAlternateBaselinesOrBuilder(
         int index);
+
+    /**
+     * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+     */
+    boolean hasHasPvsVisBits();
+    /**
+     * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+     */
+    int getHasPvsVisBits();
+
+    /**
+     * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+     */
+    boolean hasLastCmdRecvMargin();
+    /**
+     * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+     */
+    int getLastCmdRecvMargin();
+
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+     */
+    boolean hasNonTransmittedEntities();
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t getNonTransmittedEntities();
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder getNonTransmittedEntitiesOrBuilder();
+
+    /**
+     * <code>optional bytes dev_padding = 999;</code>
+     */
+    boolean hasDevPadding();
+    /**
+     * <code>optional bytes dev_padding = 999;</code>
+     */
+    com.google.protobuf.ByteString getDevPadding();
   }
   /**
    * Protobuf type {@code CSVCMsg_PacketEntities}
@@ -9388,22 +9437,22 @@ public final class CommonNetMessages {
             }
             case 88: {
               bitField0_ |= 0x00000400;
-              lastCmdNumber_ = input.readUInt32();
+              lastCmdNumberExecuted_ = input.readUInt32();
               break;
             }
             case 96: {
-              bitField0_ |= 0x00000800;
+              bitField0_ |= 0x00001000;
               serverTick_ = input.readUInt32();
               break;
             }
             case 106: {
-              bitField0_ |= 0x00001000;
+              bitField0_ |= 0x00002000;
               serializedEntities_ = input.readBytes();
               break;
             }
             case 114: {
               skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder subBuilder = null;
-              if (((bitField0_ & 0x00002000) == 0x00002000)) {
+              if (((bitField0_ & 0x00004000) == 0x00004000)) {
                 subBuilder = commandQueueInfo_.toBuilder();
               }
               commandQueueInfo_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.PARSER, extensionRegistry);
@@ -9411,15 +9460,48 @@ public final class CommonNetMessages {
                 subBuilder.mergeFrom(commandQueueInfo_);
                 commandQueueInfo_ = subBuilder.buildPartial();
               }
-              bitField0_ |= 0x00002000;
+              bitField0_ |= 0x00004000;
               break;
             }
             case 122: {
-              if (!((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+              if (!((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
                 alternateBaselines_ = new java.util.ArrayList<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_t>();
-                mutable_bitField0_ |= 0x00004000;
+                mutable_bitField0_ |= 0x00008000;
               }
               alternateBaselines_.add(input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_t.PARSER, extensionRegistry));
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00008000;
+              hasPvsVisBits_ = input.readUInt32();
+              break;
+            }
+            case 136: {
+              bitField0_ |= 0x00000800;
+              lastCmdNumberRecvDelta_ = input.readSInt32();
+              break;
+            }
+            case 144: {
+              bitField0_ |= 0x00010000;
+              lastCmdRecvMargin_ = input.readUInt32();
+              break;
+            }
+            case 154: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder subBuilder = null;
+              if (((bitField0_ & 0x00020000) == 0x00020000)) {
+                subBuilder = nonTransmittedEntities_.toBuilder();
+              }
+              nonTransmittedEntities_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(nonTransmittedEntities_);
+                nonTransmittedEntities_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00020000;
+              break;
+            }
+            case 7994: {
+              bitField0_ |= 0x00040000;
+              devPadding_ = input.readBytes();
               break;
             }
           }
@@ -9430,7 +9512,7 @@ public final class CommonNetMessages {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00004000) == 0x00004000)) {
+        if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
           alternateBaselines_ = java.util.Collections.unmodifiableList(alternateBaselines_);
         }
         this.unknownFields = unknownFields.build();
@@ -10648,6 +10730,484 @@ public final class CommonNetMessages {
       // @@protoc_insertion_point(class_scope:CSVCMsg_PacketEntities.alternate_baseline_t)
     }
 
+    public interface non_transmitted_entities_tOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CSVCMsg_PacketEntities.non_transmitted_entities_t)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional int32 header_count = 1;</code>
+       */
+      boolean hasHeaderCount();
+      /**
+       * <code>optional int32 header_count = 1;</code>
+       */
+      int getHeaderCount();
+
+      /**
+       * <code>optional bytes data = 2;</code>
+       */
+      boolean hasData();
+      /**
+       * <code>optional bytes data = 2;</code>
+       */
+      com.google.protobuf.ByteString getData();
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_PacketEntities.non_transmitted_entities_t}
+     */
+    public static final class non_transmitted_entities_t extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CSVCMsg_PacketEntities.non_transmitted_entities_t)
+        non_transmitted_entities_tOrBuilder {
+      // Use non_transmitted_entities_t.newBuilder() to construct.
+      private non_transmitted_entities_t(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private non_transmitted_entities_t(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final non_transmitted_entities_t defaultInstance;
+      public static non_transmitted_entities_t getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public non_transmitted_entities_t getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private non_transmitted_entities_t(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                headerCount_ = input.readInt32();
+                break;
+              }
+              case 18: {
+                bitField0_ |= 0x00000002;
+                data_ = input.readBytes();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.class, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<non_transmitted_entities_t> PARSER =
+          new com.google.protobuf.AbstractParser<non_transmitted_entities_t>() {
+        public non_transmitted_entities_t parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new non_transmitted_entities_t(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<non_transmitted_entities_t> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int HEADER_COUNT_FIELD_NUMBER = 1;
+      private int headerCount_;
+      /**
+       * <code>optional int32 header_count = 1;</code>
+       */
+      public boolean hasHeaderCount() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 header_count = 1;</code>
+       */
+      public int getHeaderCount() {
+        return headerCount_;
+      }
+
+      public static final int DATA_FIELD_NUMBER = 2;
+      private com.google.protobuf.ByteString data_;
+      /**
+       * <code>optional bytes data = 2;</code>
+       */
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bytes data = 2;</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+
+      private void initFields() {
+        headerCount_ = 0;
+        data_ = com.google.protobuf.ByteString.EMPTY;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeInt32(1, headerCount_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBytes(2, data_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, headerCount_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(2, data_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CSVCMsg_PacketEntities.non_transmitted_entities_t}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CSVCMsg_PacketEntities.non_transmitted_entities_t)
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.class, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          headerCount_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          data_ = com.google.protobuf.ByteString.EMPTY;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t build() {
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t buildPartial() {
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t result = new skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.headerCount_ = headerCount_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.data_ = data_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t) {
+            return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t other) {
+          if (other == skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance()) return this;
+          if (other.hasHeaderCount()) {
+            setHeaderCount(other.getHeaderCount());
+          }
+          if (other.hasData()) {
+            setData(other.getData());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int headerCount_ ;
+        /**
+         * <code>optional int32 header_count = 1;</code>
+         */
+        public boolean hasHeaderCount() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional int32 header_count = 1;</code>
+         */
+        public int getHeaderCount() {
+          return headerCount_;
+        }
+        /**
+         * <code>optional int32 header_count = 1;</code>
+         */
+        public Builder setHeaderCount(int value) {
+          bitField0_ |= 0x00000001;
+          headerCount_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 header_count = 1;</code>
+         */
+        public Builder clearHeaderCount() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          headerCount_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+        /**
+         * <code>optional bytes data = 2;</code>
+         */
+        public boolean hasData() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional bytes data = 2;</code>
+         */
+        public com.google.protobuf.ByteString getData() {
+          return data_;
+        }
+        /**
+         * <code>optional bytes data = 2;</code>
+         */
+        public Builder setData(com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+          data_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bytes data = 2;</code>
+         */
+        public Builder clearData() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          data_ = getDefaultInstance().getData();
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CSVCMsg_PacketEntities.non_transmitted_entities_t)
+      }
+
+      static {
+        defaultInstance = new non_transmitted_entities_t(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CSVCMsg_PacketEntities.non_transmitted_entities_t)
+    }
+
     private int bitField0_;
     public static final int MAX_ENTRIES_FIELD_NUMBER = 1;
     private int maxEntries_;
@@ -10799,19 +11359,34 @@ public final class CommonNetMessages {
       return maxSpawngroupCreationsequence_;
     }
 
-    public static final int LAST_CMD_NUMBER_FIELD_NUMBER = 11;
-    private int lastCmdNumber_;
+    public static final int LAST_CMD_NUMBER_EXECUTED_FIELD_NUMBER = 11;
+    private int lastCmdNumberExecuted_;
     /**
-     * <code>optional uint32 last_cmd_number = 11;</code>
+     * <code>optional uint32 last_cmd_number_executed = 11;</code>
      */
-    public boolean hasLastCmdNumber() {
+    public boolean hasLastCmdNumberExecuted() {
       return ((bitField0_ & 0x00000400) == 0x00000400);
     }
     /**
-     * <code>optional uint32 last_cmd_number = 11;</code>
+     * <code>optional uint32 last_cmd_number_executed = 11;</code>
      */
-    public int getLastCmdNumber() {
-      return lastCmdNumber_;
+    public int getLastCmdNumberExecuted() {
+      return lastCmdNumberExecuted_;
+    }
+
+    public static final int LAST_CMD_NUMBER_RECV_DELTA_FIELD_NUMBER = 17;
+    private int lastCmdNumberRecvDelta_;
+    /**
+     * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+     */
+    public boolean hasLastCmdNumberRecvDelta() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+     */
+    public int getLastCmdNumberRecvDelta() {
+      return lastCmdNumberRecvDelta_;
     }
 
     public static final int SERVER_TICK_FIELD_NUMBER = 12;
@@ -10820,7 +11395,7 @@ public final class CommonNetMessages {
      * <code>optional uint32 server_tick = 12;</code>
      */
     public boolean hasServerTick() {
-      return ((bitField0_ & 0x00000800) == 0x00000800);
+      return ((bitField0_ & 0x00001000) == 0x00001000);
     }
     /**
      * <code>optional uint32 server_tick = 12;</code>
@@ -10835,7 +11410,7 @@ public final class CommonNetMessages {
      * <code>optional bytes serialized_entities = 13;</code>
      */
     public boolean hasSerializedEntities() {
-      return ((bitField0_ & 0x00001000) == 0x00001000);
+      return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
      * <code>optional bytes serialized_entities = 13;</code>
@@ -10850,7 +11425,7 @@ public final class CommonNetMessages {
      * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
      */
     public boolean hasCommandQueueInfo() {
-      return ((bitField0_ & 0x00002000) == 0x00002000);
+      return ((bitField0_ & 0x00004000) == 0x00004000);
     }
     /**
      * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
@@ -10900,6 +11475,72 @@ public final class CommonNetMessages {
       return alternateBaselines_.get(index);
     }
 
+    public static final int HAS_PVS_VIS_BITS_FIELD_NUMBER = 16;
+    private int hasPvsVisBits_;
+    /**
+     * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+     */
+    public boolean hasHasPvsVisBits() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+     */
+    public int getHasPvsVisBits() {
+      return hasPvsVisBits_;
+    }
+
+    public static final int LAST_CMD_RECV_MARGIN_FIELD_NUMBER = 18;
+    private int lastCmdRecvMargin_;
+    /**
+     * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+     */
+    public boolean hasLastCmdRecvMargin() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+     */
+    public int getLastCmdRecvMargin() {
+      return lastCmdRecvMargin_;
+    }
+
+    public static final int NON_TRANSMITTED_ENTITIES_FIELD_NUMBER = 19;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t nonTransmittedEntities_;
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+     */
+    public boolean hasNonTransmittedEntities() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t getNonTransmittedEntities() {
+      return nonTransmittedEntities_;
+    }
+    /**
+     * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder getNonTransmittedEntitiesOrBuilder() {
+      return nonTransmittedEntities_;
+    }
+
+    public static final int DEV_PADDING_FIELD_NUMBER = 999;
+    private com.google.protobuf.ByteString devPadding_;
+    /**
+     * <code>optional bytes dev_padding = 999;</code>
+     */
+    public boolean hasDevPadding() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional bytes dev_padding = 999;</code>
+     */
+    public com.google.protobuf.ByteString getDevPadding() {
+      return devPadding_;
+    }
+
     private void initFields() {
       maxEntries_ = 0;
       updatedEntries_ = 0;
@@ -10911,11 +11552,16 @@ public final class CommonNetMessages {
       pendingFullFrame_ = false;
       activeSpawngroupHandle_ = 0;
       maxSpawngroupCreationsequence_ = 0;
-      lastCmdNumber_ = 0;
+      lastCmdNumberExecuted_ = 0;
+      lastCmdNumberRecvDelta_ = 0;
       serverTick_ = 0;
       serializedEntities_ = com.google.protobuf.ByteString.EMPTY;
       commandQueueInfo_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
       alternateBaselines_ = java.util.Collections.emptyList();
+      hasPvsVisBits_ = 0;
+      lastCmdRecvMargin_ = 0;
+      nonTransmittedEntities_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
+      devPadding_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -10961,19 +11607,34 @@ public final class CommonNetMessages {
         output.writeUInt32(10, maxSpawngroupCreationsequence_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        output.writeUInt32(11, lastCmdNumber_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        output.writeUInt32(12, serverTick_);
+        output.writeUInt32(11, lastCmdNumberExecuted_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        output.writeBytes(13, serializedEntities_);
+        output.writeUInt32(12, serverTick_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeBytes(13, serializedEntities_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeMessage(14, commandQueueInfo_);
       }
       for (int i = 0; i < alternateBaselines_.size(); i++) {
         output.writeMessage(15, alternateBaselines_.get(i));
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeUInt32(16, hasPvsVisBits_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeSInt32(17, lastCmdNumberRecvDelta_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeUInt32(18, lastCmdRecvMargin_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeMessage(19, nonTransmittedEntities_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeBytes(999, devPadding_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -11026,23 +11687,43 @@ public final class CommonNetMessages {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(11, lastCmdNumber_);
-      }
-      if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(12, serverTick_);
+          .computeUInt32Size(11, lastCmdNumberExecuted_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(13, serializedEntities_);
+          .computeUInt32Size(12, serverTick_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, serializedEntities_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, commandQueueInfo_);
       }
       for (int i = 0; i < alternateBaselines_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, alternateBaselines_.get(i));
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(16, hasPvsVisBits_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSInt32Size(17, lastCmdNumberRecvDelta_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(18, lastCmdRecvMargin_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(19, nonTransmittedEntities_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(999, devPadding_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -11155,6 +11836,7 @@ public final class CommonNetMessages {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getCommandQueueInfoFieldBuilder();
           getAlternateBaselinesFieldBuilder();
+          getNonTransmittedEntitiesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -11183,24 +11865,38 @@ public final class CommonNetMessages {
         bitField0_ = (bitField0_ & ~0x00000100);
         maxSpawngroupCreationsequence_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
-        lastCmdNumber_ = 0;
+        lastCmdNumberExecuted_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
-        serverTick_ = 0;
+        lastCmdNumberRecvDelta_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
-        serializedEntities_ = com.google.protobuf.ByteString.EMPTY;
+        serverTick_ = 0;
         bitField0_ = (bitField0_ & ~0x00001000);
+        serializedEntities_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00002000);
         if (commandQueueInfoBuilder_ == null) {
           commandQueueInfo_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
         } else {
           commandQueueInfoBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         if (alternateBaselinesBuilder_ == null) {
           alternateBaselines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00008000);
         } else {
           alternateBaselinesBuilder_.clear();
         }
+        hasPvsVisBits_ = 0;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        lastCmdRecvMargin_ = 0;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          nonTransmittedEntities_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
+        } else {
+          nonTransmittedEntitiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
+        devPadding_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
 
@@ -11272,17 +11968,21 @@ public final class CommonNetMessages {
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000400;
         }
-        result.lastCmdNumber_ = lastCmdNumber_;
+        result.lastCmdNumberExecuted_ = lastCmdNumberExecuted_;
         if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000800;
         }
-        result.serverTick_ = serverTick_;
+        result.lastCmdNumberRecvDelta_ = lastCmdNumberRecvDelta_;
         if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
           to_bitField0_ |= 0x00001000;
         }
-        result.serializedEntities_ = serializedEntities_;
+        result.serverTick_ = serverTick_;
         if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
           to_bitField0_ |= 0x00002000;
+        }
+        result.serializedEntities_ = serializedEntities_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
         }
         if (commandQueueInfoBuilder_ == null) {
           result.commandQueueInfo_ = commandQueueInfo_;
@@ -11290,14 +11990,34 @@ public final class CommonNetMessages {
           result.commandQueueInfo_ = commandQueueInfoBuilder_.build();
         }
         if (alternateBaselinesBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          if (((bitField0_ & 0x00008000) == 0x00008000)) {
             alternateBaselines_ = java.util.Collections.unmodifiableList(alternateBaselines_);
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00008000);
           }
           result.alternateBaselines_ = alternateBaselines_;
         } else {
           result.alternateBaselines_ = alternateBaselinesBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.hasPvsVisBits_ = hasPvsVisBits_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.lastCmdRecvMargin_ = lastCmdRecvMargin_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          result.nonTransmittedEntities_ = nonTransmittedEntities_;
+        } else {
+          result.nonTransmittedEntities_ = nonTransmittedEntitiesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.devPadding_ = devPadding_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -11344,8 +12064,11 @@ public final class CommonNetMessages {
         if (other.hasMaxSpawngroupCreationsequence()) {
           setMaxSpawngroupCreationsequence(other.getMaxSpawngroupCreationsequence());
         }
-        if (other.hasLastCmdNumber()) {
-          setLastCmdNumber(other.getLastCmdNumber());
+        if (other.hasLastCmdNumberExecuted()) {
+          setLastCmdNumberExecuted(other.getLastCmdNumberExecuted());
+        }
+        if (other.hasLastCmdNumberRecvDelta()) {
+          setLastCmdNumberRecvDelta(other.getLastCmdNumberRecvDelta());
         }
         if (other.hasServerTick()) {
           setServerTick(other.getServerTick());
@@ -11360,7 +12083,7 @@ public final class CommonNetMessages {
           if (!other.alternateBaselines_.isEmpty()) {
             if (alternateBaselines_.isEmpty()) {
               alternateBaselines_ = other.alternateBaselines_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               ensureAlternateBaselinesIsMutable();
               alternateBaselines_.addAll(other.alternateBaselines_);
@@ -11373,7 +12096,7 @@ public final class CommonNetMessages {
               alternateBaselinesBuilder_.dispose();
               alternateBaselinesBuilder_ = null;
               alternateBaselines_ = other.alternateBaselines_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00008000);
               alternateBaselinesBuilder_ = 
                 com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getAlternateBaselinesFieldBuilder() : null;
@@ -11381,6 +12104,18 @@ public final class CommonNetMessages {
               alternateBaselinesBuilder_.addAllMessages(other.alternateBaselines_);
             }
           }
+        }
+        if (other.hasHasPvsVisBits()) {
+          setHasPvsVisBits(other.getHasPvsVisBits());
+        }
+        if (other.hasLastCmdRecvMargin()) {
+          setLastCmdRecvMargin(other.getLastCmdRecvMargin());
+        }
+        if (other.hasNonTransmittedEntities()) {
+          mergeNonTransmittedEntities(other.getNonTransmittedEntities());
+        }
+        if (other.hasDevPadding()) {
+          setDevPadding(other.getDevPadding());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -11732,34 +12467,66 @@ public final class CommonNetMessages {
         return this;
       }
 
-      private int lastCmdNumber_ ;
+      private int lastCmdNumberExecuted_ ;
       /**
-       * <code>optional uint32 last_cmd_number = 11;</code>
+       * <code>optional uint32 last_cmd_number_executed = 11;</code>
        */
-      public boolean hasLastCmdNumber() {
+      public boolean hasLastCmdNumberExecuted() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional uint32 last_cmd_number = 11;</code>
+       * <code>optional uint32 last_cmd_number_executed = 11;</code>
        */
-      public int getLastCmdNumber() {
-        return lastCmdNumber_;
+      public int getLastCmdNumberExecuted() {
+        return lastCmdNumberExecuted_;
       }
       /**
-       * <code>optional uint32 last_cmd_number = 11;</code>
+       * <code>optional uint32 last_cmd_number_executed = 11;</code>
        */
-      public Builder setLastCmdNumber(int value) {
+      public Builder setLastCmdNumberExecuted(int value) {
         bitField0_ |= 0x00000400;
-        lastCmdNumber_ = value;
+        lastCmdNumberExecuted_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional uint32 last_cmd_number = 11;</code>
+       * <code>optional uint32 last_cmd_number_executed = 11;</code>
        */
-      public Builder clearLastCmdNumber() {
+      public Builder clearLastCmdNumberExecuted() {
         bitField0_ = (bitField0_ & ~0x00000400);
-        lastCmdNumber_ = 0;
+        lastCmdNumberExecuted_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lastCmdNumberRecvDelta_ ;
+      /**
+       * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+       */
+      public boolean hasLastCmdNumberRecvDelta() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+       */
+      public int getLastCmdNumberRecvDelta() {
+        return lastCmdNumberRecvDelta_;
+      }
+      /**
+       * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+       */
+      public Builder setLastCmdNumberRecvDelta(int value) {
+        bitField0_ |= 0x00000800;
+        lastCmdNumberRecvDelta_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional sint32 last_cmd_number_recv_delta = 17;</code>
+       */
+      public Builder clearLastCmdNumberRecvDelta() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        lastCmdNumberRecvDelta_ = 0;
         onChanged();
         return this;
       }
@@ -11769,7 +12536,7 @@ public final class CommonNetMessages {
        * <code>optional uint32 server_tick = 12;</code>
        */
       public boolean hasServerTick() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
+        return ((bitField0_ & 0x00001000) == 0x00001000);
       }
       /**
        * <code>optional uint32 server_tick = 12;</code>
@@ -11781,7 +12548,7 @@ public final class CommonNetMessages {
        * <code>optional uint32 server_tick = 12;</code>
        */
       public Builder setServerTick(int value) {
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00001000;
         serverTick_ = value;
         onChanged();
         return this;
@@ -11790,7 +12557,7 @@ public final class CommonNetMessages {
        * <code>optional uint32 server_tick = 12;</code>
        */
       public Builder clearServerTick() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00001000);
         serverTick_ = 0;
         onChanged();
         return this;
@@ -11801,7 +12568,7 @@ public final class CommonNetMessages {
        * <code>optional bytes serialized_entities = 13;</code>
        */
       public boolean hasSerializedEntities() {
-        return ((bitField0_ & 0x00001000) == 0x00001000);
+        return ((bitField0_ & 0x00002000) == 0x00002000);
       }
       /**
        * <code>optional bytes serialized_entities = 13;</code>
@@ -11816,7 +12583,7 @@ public final class CommonNetMessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00001000;
+  bitField0_ |= 0x00002000;
         serializedEntities_ = value;
         onChanged();
         return this;
@@ -11825,7 +12592,7 @@ public final class CommonNetMessages {
        * <code>optional bytes serialized_entities = 13;</code>
        */
       public Builder clearSerializedEntities() {
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         serializedEntities_ = getDefaultInstance().getSerializedEntities();
         onChanged();
         return this;
@@ -11838,7 +12605,7 @@ public final class CommonNetMessages {
        * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
        */
       public boolean hasCommandQueueInfo() {
-        return ((bitField0_ & 0x00002000) == 0x00002000);
+        return ((bitField0_ & 0x00004000) == 0x00004000);
       }
       /**
        * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
@@ -11863,7 +12630,7 @@ public final class CommonNetMessages {
         } else {
           commandQueueInfoBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         return this;
       }
       /**
@@ -11877,7 +12644,7 @@ public final class CommonNetMessages {
         } else {
           commandQueueInfoBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         return this;
       }
       /**
@@ -11885,7 +12652,7 @@ public final class CommonNetMessages {
        */
       public Builder mergeCommandQueueInfo(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t value) {
         if (commandQueueInfoBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) == 0x00002000) &&
+          if (((bitField0_ & 0x00004000) == 0x00004000) &&
               commandQueueInfo_ != skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance()) {
             commandQueueInfo_ =
               skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.newBuilder(commandQueueInfo_).mergeFrom(value).buildPartial();
@@ -11896,7 +12663,7 @@ public final class CommonNetMessages {
         } else {
           commandQueueInfoBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         return this;
       }
       /**
@@ -11909,14 +12676,14 @@ public final class CommonNetMessages {
         } else {
           commandQueueInfoBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
       /**
        * <code>optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;</code>
        */
       public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.Builder getCommandQueueInfoBuilder() {
-        bitField0_ |= 0x00002000;
+        bitField0_ |= 0x00004000;
         onChanged();
         return getCommandQueueInfoFieldBuilder().getBuilder();
       }
@@ -11950,9 +12717,9 @@ public final class CommonNetMessages {
       private java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_t> alternateBaselines_ =
         java.util.Collections.emptyList();
       private void ensureAlternateBaselinesIsMutable() {
-        if (!((bitField0_ & 0x00004000) == 0x00004000)) {
+        if (!((bitField0_ & 0x00008000) == 0x00008000)) {
           alternateBaselines_ = new java.util.ArrayList<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_t>(alternateBaselines_);
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00008000;
          }
       }
 
@@ -12102,7 +12869,7 @@ public final class CommonNetMessages {
       public Builder clearAlternateBaselines() {
         if (alternateBaselinesBuilder_ == null) {
           alternateBaselines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
         } else {
           alternateBaselinesBuilder_.clear();
@@ -12179,12 +12946,227 @@ public final class CommonNetMessages {
           alternateBaselinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_t, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.alternate_baseline_tOrBuilder>(
                   alternateBaselines_,
-                  ((bitField0_ & 0x00004000) == 0x00004000),
+                  ((bitField0_ & 0x00008000) == 0x00008000),
                   getParentForChildren(),
                   isClean());
           alternateBaselines_ = null;
         }
         return alternateBaselinesBuilder_;
+      }
+
+      private int hasPvsVisBits_ ;
+      /**
+       * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+       */
+      public boolean hasHasPvsVisBits() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+       */
+      public int getHasPvsVisBits() {
+        return hasPvsVisBits_;
+      }
+      /**
+       * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+       */
+      public Builder setHasPvsVisBits(int value) {
+        bitField0_ |= 0x00010000;
+        hasPvsVisBits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 has_pvs_vis_bits = 16;</code>
+       */
+      public Builder clearHasPvsVisBits() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        hasPvsVisBits_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int lastCmdRecvMargin_ ;
+      /**
+       * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+       */
+      public boolean hasLastCmdRecvMargin() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+       */
+      public int getLastCmdRecvMargin() {
+        return lastCmdRecvMargin_;
+      }
+      /**
+       * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+       */
+      public Builder setLastCmdRecvMargin(int value) {
+        bitField0_ |= 0x00020000;
+        lastCmdRecvMargin_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 last_cmd_recv_margin = 18;</code>
+       */
+      public Builder clearLastCmdRecvMargin() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        lastCmdRecvMargin_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t nonTransmittedEntities_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder> nonTransmittedEntitiesBuilder_;
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public boolean hasNonTransmittedEntities() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t getNonTransmittedEntities() {
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          return nonTransmittedEntities_;
+        } else {
+          return nonTransmittedEntitiesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public Builder setNonTransmittedEntities(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t value) {
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          nonTransmittedEntities_ = value;
+          onChanged();
+        } else {
+          nonTransmittedEntitiesBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public Builder setNonTransmittedEntities(
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder builderForValue) {
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          nonTransmittedEntities_ = builderForValue.build();
+          onChanged();
+        } else {
+          nonTransmittedEntitiesBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public Builder mergeNonTransmittedEntities(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t value) {
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          if (((bitField0_ & 0x00040000) == 0x00040000) &&
+              nonTransmittedEntities_ != skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance()) {
+            nonTransmittedEntities_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.newBuilder(nonTransmittedEntities_).mergeFrom(value).buildPartial();
+          } else {
+            nonTransmittedEntities_ = value;
+          }
+          onChanged();
+        } else {
+          nonTransmittedEntitiesBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00040000;
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public Builder clearNonTransmittedEntities() {
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          nonTransmittedEntities_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
+          onChanged();
+        } else {
+          nonTransmittedEntitiesBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00040000);
+        return this;
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder getNonTransmittedEntitiesBuilder() {
+        bitField0_ |= 0x00040000;
+        onChanged();
+        return getNonTransmittedEntitiesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder getNonTransmittedEntitiesOrBuilder() {
+        if (nonTransmittedEntitiesBuilder_ != null) {
+          return nonTransmittedEntitiesBuilder_.getMessageOrBuilder();
+        } else {
+          return nonTransmittedEntities_;
+        }
+      }
+      /**
+       * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder> 
+          getNonTransmittedEntitiesFieldBuilder() {
+        if (nonTransmittedEntitiesBuilder_ == null) {
+          nonTransmittedEntitiesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder>(
+                  getNonTransmittedEntities(),
+                  getParentForChildren(),
+                  isClean());
+          nonTransmittedEntities_ = null;
+        }
+        return nonTransmittedEntitiesBuilder_;
+      }
+
+      private com.google.protobuf.ByteString devPadding_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes dev_padding = 999;</code>
+       */
+      public boolean hasDevPadding() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <code>optional bytes dev_padding = 999;</code>
+       */
+      public com.google.protobuf.ByteString getDevPadding() {
+        return devPadding_;
+      }
+      /**
+       * <code>optional bytes dev_padding = 999;</code>
+       */
+      public Builder setDevPadding(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00080000;
+        devPadding_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes dev_padding = 999;</code>
+       */
+      public Builder clearDevPadding() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        devPadding_ = getDefaultInstance().getDevPadding();
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:CSVCMsg_PacketEntities)
@@ -20397,6 +21379,11 @@ public final class CommonNetMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_PacketEntities_alternate_baseline_t_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_ClassInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -20489,62 +21476,69 @@ public final class CommonNetMessages {
       "key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032Y\n\014des" +
       "criptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t" +
       "\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEventList.k" +
-      "ey_t\"\356\005\n\026CSVCMsg_PacketEntities\022\023\n\013max_e",
+      "ey_t\"\201\010\n\026CSVCMsg_PacketEntities\022\023\n\013max_e",
       "ntries\030\001 \001(\005\022\027\n\017updated_entries\030\002 \001(\005\022\020\n" +
       "\010is_delta\030\003 \001(\010\022\027\n\017update_baseline\030\004 \001(\010" +
       "\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005\022\023" +
       "\n\013entity_data\030\007 \001(\014\022\032\n\022pending_full_fram" +
       "e\030\010 \001(\010\022 \n\030active_spawngroup_handle\030\t \001(" +
       "\r\022\'\n\037max_spawngroup_creationsequence\030\n \001" +
-      "(\r\022\027\n\017last_cmd_number\030\013 \001(\r\022\023\n\013server_ti" +
-      "ck\030\014 \001(\r\022\033\n\023serialized_entities\030\r \001(\014\022H\n" +
-      "\022command_queue_info\030\016 \001(\0132,.CSVCMsg_Pack" +
-      "etEntities.command_queue_info_t\022I\n\023alter",
-      "nate_baselines\030\017 \003(\0132,.CSVCMsg_PacketEnt" +
-      "ities.alternate_baseline_t\032\262\001\n\024command_q" +
-      "ueue_info_t\022\027\n\017commands_queued\030\001 \001(\r\022\"\n\032" +
-      "command_queue_desired_size\030\002 \001(\r\022\035\n\025star" +
-      "ved_command_ticks\030\003 \001(\r\022\035\n\025time_dilation" +
-      "_percent\030\004 \001(\002\022\037\n\027discarded_command_tick" +
-      "s\030\005 \001(\r\032D\n\024alternate_baseline_t\022\024\n\014entit" +
-      "y_index\030\001 \001(\005\022\026\n\016baseline_index\030\002 \001(\005\"\244\001" +
-      "\n\021CSVCMsg_ClassInfo\022\030\n\020create_on_client\030" +
-      "\001 \001(\010\022+\n\007classes\030\002 \003(\0132\032.CSVCMsg_ClassIn",
-      "fo.class_t\032H\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022" +
-      "\027\n\017data_table_name\030\002 \001(\t\022\022\n\nclass_name\030\003" +
-      " \001(\t\"5\n\017CSVCMsg_SetView\022\024\n\014entity_index\030" +
-      "\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"\212\001\n\020CSVCMsg_BSPDecal" +
-      "\022\030\n\003pos\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_text" +
-      "ure_index\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n" +
-      "\013model_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010" +
-      "\"\035\n\rCSVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCM" +
-      "sg_VoiceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002" +
-      " \001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Sou",
-      "nds\022\026\n\016reliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 " +
-      "\003(\0132\033.CSVCMsg_Sounds.sounddata_t\032\207\003\n\013sou" +
-      "nddata_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002" +
-      " \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023" +
-      "\n\013delay_value\030\005 \001(\002\022\027\n\017sequence_number\030\006" +
-      " \001(\005\022\024\n\014entity_index\030\007 \001(\005\022\017\n\007channel\030\010 " +
-      "\001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsou" +
-      "nd_num\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026" +
-      "\n\016speaker_entity\030\r \001(\005\022\023\n\013random_seed\030\016 " +
-      "\001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence\030",
-      "\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022" +
-      "\031\n\021sound_resource_id\030\023 \001(\006\"X\n\020CSVCMsg_Pr" +
-      "efetch\022\023\n\013sound_index\030\001 \001(\005\022/\n\rresource_" +
-      "type\030\002 \001(\0162\r.PrefetchType:\tPFT_SOUND\"_\n\031" +
-      "CSVCMsg_UpdateStringTable\022\020\n\010table_id\030\001 " +
-      "\001(\005\022\033\n\023num_changed_entries\030\002 \001(\005\022\023\n\013stri" +
-      "ng_data\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022" +
-      "\014\n\004tick\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030" +
-      "\003 \001(\005\022\014\n\004data\030\004 \001(\014*L\n\021VoiceDataFormat_t" +
-      "\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDAT",
-      "A_FORMAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010R" +
-      "P_PAUSE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPA" +
-      "USE\020\002*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000B@\n+" +
-      "skadistats.clarity.wire.shared.common.pr" +
-      "otoB\021CommonNetMessages"
+      "(\r\022 \n\030last_cmd_number_executed\030\013 \001(\r\022\"\n\032" +
+      "last_cmd_number_recv_delta\030\021 \001(\021\022\023\n\013serv" +
+      "er_tick\030\014 \001(\r\022\033\n\023serialized_entities\030\r \001" +
+      "(\014\022H\n\022command_queue_info\030\016 \001(\0132,.CSVCMsg",
+      "_PacketEntities.command_queue_info_t\022I\n\023" +
+      "alternate_baselines\030\017 \003(\0132,.CSVCMsg_Pack" +
+      "etEntities.alternate_baseline_t\022\030\n\020has_p" +
+      "vs_vis_bits\030\020 \001(\r\022\034\n\024last_cmd_recv_margi" +
+      "n\030\022 \001(\r\022T\n\030non_transmitted_entities\030\023 \001(" +
+      "\01322.CSVCMsg_PacketEntities.non_transmitt" +
+      "ed_entities_t\022\024\n\013dev_padding\030\347\007 \001(\014\032\262\001\n\024" +
+      "command_queue_info_t\022\027\n\017commands_queued\030" +
+      "\001 \001(\r\022\"\n\032command_queue_desired_size\030\002 \001(" +
+      "\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035\n\025time",
+      "_dilation_percent\030\004 \001(\002\022\037\n\027discarded_com" +
+      "mand_ticks\030\005 \001(\r\032D\n\024alternate_baseline_t" +
+      "\022\024\n\014entity_index\030\001 \001(\005\022\026\n\016baseline_index" +
+      "\030\002 \001(\005\032@\n\032non_transmitted_entities_t\022\024\n\014" +
+      "header_count\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"\244\001\n\021CSV" +
+      "CMsg_ClassInfo\022\030\n\020create_on_client\030\001 \001(\010" +
+      "\022+\n\007classes\030\002 \003(\0132\032.CSVCMsg_ClassInfo.cl" +
+      "ass_t\032H\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017da" +
+      "ta_table_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"" +
+      "5\n\017CSVCMsg_SetView\022\024\n\014entity_index\030\001 \001(\005",
+      "\022\014\n\004slot\030\002 \001(\005\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n\003p" +
+      "os\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_texture_i" +
+      "ndex\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013mode" +
+      "l_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"\035\n\rC" +
+      "SVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCMsg_Vo" +
+      "iceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022" +
+      "\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Sounds\022\026" +
+      "\n\016reliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003(\0132\033" +
+      ".CSVCMsg_Sounds.sounddata_t\032\207\003\n\013sounddat" +
+      "a_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021\022",
+      "\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013del" +
+      "ay_value\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005\022" +
+      "\024\n\014entity_index\030\007 \001(\005\022\017\n\007channel\030\010 \001(\005\022\r" +
+      "\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_nu" +
+      "m\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016spe" +
+      "aker_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022\023" +
+      "\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001(\010" +
+      "\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021so" +
+      "und_resource_id\030\023 \001(\006\"X\n\020CSVCMsg_Prefetc" +
+      "h\022\023\n\013sound_index\030\001 \001(\005\022/\n\rresource_type\030",
+      "\002 \001(\0162\r.PrefetchType:\tPFT_SOUND\"_\n\031CSVCM" +
+      "sg_UpdateStringTable\022\020\n\010table_id\030\001 \001(\005\022\033" +
+      "\n\023num_changed_entries\030\002 \001(\005\022\023\n\013string_da" +
+      "ta\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004ti" +
+      "ck\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005" +
+      "\022\014\n\004data\030\004 \001(\014*L\n\021VoiceDataFormat_t\022\032\n\026V" +
+      "OICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FOR" +
+      "MAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_PAU" +
+      "SE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002" +
+      "*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000B@\n+skadi",
+      "stats.clarity.wire.shared.common.protoB\021" +
+      "CommonNetMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -20660,7 +21654,7 @@ public final class CommonNetMessages {
     internal_static_CSVCMsg_PacketEntities_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PacketEntities_descriptor,
-        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumber", "ServerTick", "SerializedEntities", "CommandQueueInfo", "AlternateBaselines", });
+        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumberExecuted", "LastCmdNumberRecvDelta", "ServerTick", "SerializedEntities", "CommandQueueInfo", "AlternateBaselines", "HasPvsVisBits", "LastCmdRecvMargin", "NonTransmittedEntities", "DevPadding", });
     internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor =
       internal_static_CSVCMsg_PacketEntities_descriptor.getNestedTypes().get(0);
     internal_static_CSVCMsg_PacketEntities_command_queue_info_t_fieldAccessorTable = new
@@ -20673,6 +21667,12 @@ public final class CommonNetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PacketEntities_alternate_baseline_t_descriptor,
         new java.lang.String[] { "EntityIndex", "BaselineIndex", });
+    internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_descriptor =
+      internal_static_CSVCMsg_PacketEntities_descriptor.getNestedTypes().get(2);
+    internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_PacketEntities_non_transmitted_entities_t_descriptor,
+        new java.lang.String[] { "HeaderCount", "Data", });
     internal_static_CSVCMsg_ClassInfo_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_CSVCMsg_ClassInfo_fieldAccessorTable = new

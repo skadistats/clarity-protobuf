@@ -2734,6 +2734,39 @@ public final class S2NetMessages {
      * <code>optional int32 var_encoder_sym = 10;</code>
      */
     int getVarEncoderSym();
+
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t> 
+        getPolymorphicTypesList();
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t getPolymorphicTypes(int index);
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    int getPolymorphicTypesCount();
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder> 
+        getPolymorphicTypesOrBuilderList();
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder getPolymorphicTypesOrBuilder(
+        int index);
+
+    /**
+     * <code>optional int32 var_serializer_sym = 12;</code>
+     */
+    boolean hasVarSerializerSym();
+    /**
+     * <code>optional int32 var_serializer_sym = 12;</code>
+     */
+    int getVarSerializerSym();
   }
   /**
    * Protobuf type {@code ProtoFlattenedSerializerField_t}
@@ -2837,6 +2870,19 @@ public final class S2NetMessages {
               varEncoderSym_ = input.readInt32();
               break;
             }
+            case 90: {
+              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+                polymorphicTypes_ = new java.util.ArrayList<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t>();
+                mutable_bitField0_ |= 0x00000400;
+              }
+              polymorphicTypes_.add(input.readMessage(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.PARSER, extensionRegistry));
+              break;
+            }
+            case 96: {
+              bitField0_ |= 0x00000400;
+              varSerializerSym_ = input.readInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -2845,6 +2891,9 @@ public final class S2NetMessages {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+          polymorphicTypes_ = java.util.Collections.unmodifiableList(polymorphicTypes_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -2874,6 +2923,481 @@ public final class S2NetMessages {
     @java.lang.Override
     public com.google.protobuf.Parser<ProtoFlattenedSerializerField_t> getParserForType() {
       return PARSER;
+    }
+
+    public interface polymorphic_field_tOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:ProtoFlattenedSerializerField_t.polymorphic_field_t)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+       */
+      boolean hasPolymorphicFieldSerializerNameSym();
+      /**
+       * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+       */
+      int getPolymorphicFieldSerializerNameSym();
+
+      /**
+       * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+       */
+      boolean hasPolymorphicFieldSerializerVersion();
+      /**
+       * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+       */
+      int getPolymorphicFieldSerializerVersion();
+    }
+    /**
+     * Protobuf type {@code ProtoFlattenedSerializerField_t.polymorphic_field_t}
+     */
+    public static final class polymorphic_field_t extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:ProtoFlattenedSerializerField_t.polymorphic_field_t)
+        polymorphic_field_tOrBuilder {
+      // Use polymorphic_field_t.newBuilder() to construct.
+      private polymorphic_field_t(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private polymorphic_field_t(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final polymorphic_field_t defaultInstance;
+      public static polymorphic_field_t getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public polymorphic_field_t getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private polymorphic_field_t(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                polymorphicFieldSerializerNameSym_ = input.readInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                polymorphicFieldSerializerVersion_ = input.readInt32();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.class, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<polymorphic_field_t> PARSER =
+          new com.google.protobuf.AbstractParser<polymorphic_field_t>() {
+        public polymorphic_field_t parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new polymorphic_field_t(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<polymorphic_field_t> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int POLYMORPHIC_FIELD_SERIALIZER_NAME_SYM_FIELD_NUMBER = 1;
+      private int polymorphicFieldSerializerNameSym_;
+      /**
+       * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+       */
+      public boolean hasPolymorphicFieldSerializerNameSym() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+       */
+      public int getPolymorphicFieldSerializerNameSym() {
+        return polymorphicFieldSerializerNameSym_;
+      }
+
+      public static final int POLYMORPHIC_FIELD_SERIALIZER_VERSION_FIELD_NUMBER = 2;
+      private int polymorphicFieldSerializerVersion_;
+      /**
+       * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+       */
+      public boolean hasPolymorphicFieldSerializerVersion() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+       */
+      public int getPolymorphicFieldSerializerVersion() {
+        return polymorphicFieldSerializerVersion_;
+      }
+
+      private void initFields() {
+        polymorphicFieldSerializerNameSym_ = 0;
+        polymorphicFieldSerializerVersion_ = 0;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeInt32(1, polymorphicFieldSerializerNameSym_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeInt32(2, polymorphicFieldSerializerVersion_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(1, polymorphicFieldSerializerNameSym_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, polymorphicFieldSerializerVersion_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code ProtoFlattenedSerializerField_t.polymorphic_field_t}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:ProtoFlattenedSerializerField_t.polymorphic_field_t)
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.class, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          polymorphicFieldSerializerNameSym_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          polymorphicFieldSerializerVersion_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t build() {
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t buildPartial() {
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t result = new skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.polymorphicFieldSerializerNameSym_ = polymorphicFieldSerializerNameSym_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.polymorphicFieldSerializerVersion_ = polymorphicFieldSerializerVersion_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t) {
+            return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t other) {
+          if (other == skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.getDefaultInstance()) return this;
+          if (other.hasPolymorphicFieldSerializerNameSym()) {
+            setPolymorphicFieldSerializerNameSym(other.getPolymorphicFieldSerializerNameSym());
+          }
+          if (other.hasPolymorphicFieldSerializerVersion()) {
+            setPolymorphicFieldSerializerVersion(other.getPolymorphicFieldSerializerVersion());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int polymorphicFieldSerializerNameSym_ ;
+        /**
+         * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+         */
+        public boolean hasPolymorphicFieldSerializerNameSym() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+         */
+        public int getPolymorphicFieldSerializerNameSym() {
+          return polymorphicFieldSerializerNameSym_;
+        }
+        /**
+         * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+         */
+        public Builder setPolymorphicFieldSerializerNameSym(int value) {
+          bitField0_ |= 0x00000001;
+          polymorphicFieldSerializerNameSym_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 polymorphic_field_serializer_name_sym = 1;</code>
+         */
+        public Builder clearPolymorphicFieldSerializerNameSym() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          polymorphicFieldSerializerNameSym_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int polymorphicFieldSerializerVersion_ ;
+        /**
+         * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+         */
+        public boolean hasPolymorphicFieldSerializerVersion() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+         */
+        public int getPolymorphicFieldSerializerVersion() {
+          return polymorphicFieldSerializerVersion_;
+        }
+        /**
+         * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+         */
+        public Builder setPolymorphicFieldSerializerVersion(int value) {
+          bitField0_ |= 0x00000002;
+          polymorphicFieldSerializerVersion_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 polymorphic_field_serializer_version = 2;</code>
+         */
+        public Builder clearPolymorphicFieldSerializerVersion() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          polymorphicFieldSerializerVersion_ = 0;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:ProtoFlattenedSerializerField_t.polymorphic_field_t)
+      }
+
+      static {
+        defaultInstance = new polymorphic_field_t(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:ProtoFlattenedSerializerField_t.polymorphic_field_t)
     }
 
     private int bitField0_;
@@ -3027,6 +3551,56 @@ public final class S2NetMessages {
       return varEncoderSym_;
     }
 
+    public static final int POLYMORPHIC_TYPES_FIELD_NUMBER = 11;
+    private java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t> polymorphicTypes_;
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t> getPolymorphicTypesList() {
+      return polymorphicTypes_;
+    }
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder> 
+        getPolymorphicTypesOrBuilderList() {
+      return polymorphicTypes_;
+    }
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    public int getPolymorphicTypesCount() {
+      return polymorphicTypes_.size();
+    }
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t getPolymorphicTypes(int index) {
+      return polymorphicTypes_.get(index);
+    }
+    /**
+     * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder getPolymorphicTypesOrBuilder(
+        int index) {
+      return polymorphicTypes_.get(index);
+    }
+
+    public static final int VAR_SERIALIZER_SYM_FIELD_NUMBER = 12;
+    private int varSerializerSym_;
+    /**
+     * <code>optional int32 var_serializer_sym = 12;</code>
+     */
+    public boolean hasVarSerializerSym() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional int32 var_serializer_sym = 12;</code>
+     */
+    public int getVarSerializerSym() {
+      return varSerializerSym_;
+    }
+
     private void initFields() {
       varTypeSym_ = 0;
       varNameSym_ = 0;
@@ -3038,6 +3612,8 @@ public final class S2NetMessages {
       fieldSerializerVersion_ = 0;
       sendNodeSym_ = 0;
       varEncoderSym_ = 0;
+      polymorphicTypes_ = java.util.Collections.emptyList();
+      varSerializerSym_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3081,6 +3657,12 @@ public final class S2NetMessages {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeInt32(10, varEncoderSym_);
+      }
+      for (int i = 0; i < polymorphicTypes_.size(); i++) {
+        output.writeMessage(11, polymorphicTypes_.get(i));
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeInt32(12, varSerializerSym_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3130,6 +3712,14 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(10, varEncoderSym_);
+      }
+      for (int i = 0; i < polymorphicTypes_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, polymorphicTypes_.get(i));
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(12, varSerializerSym_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3240,6 +3830,7 @@ public final class S2NetMessages {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getPolymorphicTypesFieldBuilder();
         }
       }
       private static Builder create() {
@@ -3268,6 +3859,14 @@ public final class S2NetMessages {
         bitField0_ = (bitField0_ & ~0x00000100);
         varEncoderSym_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
+        if (polymorphicTypesBuilder_ == null) {
+          polymorphicTypes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+        } else {
+          polymorphicTypesBuilder_.clear();
+        }
+        varSerializerSym_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
         return this;
       }
 
@@ -3336,6 +3935,19 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000200;
         }
         result.varEncoderSym_ = varEncoderSym_;
+        if (polymorphicTypesBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400)) {
+            polymorphicTypes_ = java.util.Collections.unmodifiableList(polymorphicTypes_);
+            bitField0_ = (bitField0_ & ~0x00000400);
+          }
+          result.polymorphicTypes_ = polymorphicTypes_;
+        } else {
+          result.polymorphicTypes_ = polymorphicTypesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.varSerializerSym_ = varSerializerSym_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3381,6 +3993,35 @@ public final class S2NetMessages {
         }
         if (other.hasVarEncoderSym()) {
           setVarEncoderSym(other.getVarEncoderSym());
+        }
+        if (polymorphicTypesBuilder_ == null) {
+          if (!other.polymorphicTypes_.isEmpty()) {
+            if (polymorphicTypes_.isEmpty()) {
+              polymorphicTypes_ = other.polymorphicTypes_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+            } else {
+              ensurePolymorphicTypesIsMutable();
+              polymorphicTypes_.addAll(other.polymorphicTypes_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.polymorphicTypes_.isEmpty()) {
+            if (polymorphicTypesBuilder_.isEmpty()) {
+              polymorphicTypesBuilder_.dispose();
+              polymorphicTypesBuilder_ = null;
+              polymorphicTypes_ = other.polymorphicTypes_;
+              bitField0_ = (bitField0_ & ~0x00000400);
+              polymorphicTypesBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getPolymorphicTypesFieldBuilder() : null;
+            } else {
+              polymorphicTypesBuilder_.addAllMessages(other.polymorphicTypes_);
+            }
+          }
+        }
+        if (other.hasVarSerializerSym()) {
+          setVarSerializerSym(other.getVarSerializerSym());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3725,6 +4366,278 @@ public final class S2NetMessages {
       public Builder clearVarEncoderSym() {
         bitField0_ = (bitField0_ & ~0x00000200);
         varEncoderSym_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t> polymorphicTypes_ =
+        java.util.Collections.emptyList();
+      private void ensurePolymorphicTypesIsMutable() {
+        if (!((bitField0_ & 0x00000400) == 0x00000400)) {
+          polymorphicTypes_ = new java.util.ArrayList<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t>(polymorphicTypes_);
+          bitField0_ |= 0x00000400;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder> polymorphicTypesBuilder_;
+
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t> getPolymorphicTypesList() {
+        if (polymorphicTypesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(polymorphicTypes_);
+        } else {
+          return polymorphicTypesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public int getPolymorphicTypesCount() {
+        if (polymorphicTypesBuilder_ == null) {
+          return polymorphicTypes_.size();
+        } else {
+          return polymorphicTypesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t getPolymorphicTypes(int index) {
+        if (polymorphicTypesBuilder_ == null) {
+          return polymorphicTypes_.get(index);
+        } else {
+          return polymorphicTypesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder setPolymorphicTypes(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t value) {
+        if (polymorphicTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.set(index, value);
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder setPolymorphicTypes(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder builderForValue) {
+        if (polymorphicTypesBuilder_ == null) {
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder addPolymorphicTypes(skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t value) {
+        if (polymorphicTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.add(value);
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder addPolymorphicTypes(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t value) {
+        if (polymorphicTypesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.add(index, value);
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder addPolymorphicTypes(
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder builderForValue) {
+        if (polymorphicTypesBuilder_ == null) {
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.add(builderForValue.build());
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder addPolymorphicTypes(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder builderForValue) {
+        if (polymorphicTypesBuilder_ == null) {
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder addAllPolymorphicTypes(
+          java.lang.Iterable<? extends skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t> values) {
+        if (polymorphicTypesBuilder_ == null) {
+          ensurePolymorphicTypesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, polymorphicTypes_);
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder clearPolymorphicTypes() {
+        if (polymorphicTypesBuilder_ == null) {
+          polymorphicTypes_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000400);
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public Builder removePolymorphicTypes(int index) {
+        if (polymorphicTypesBuilder_ == null) {
+          ensurePolymorphicTypesIsMutable();
+          polymorphicTypes_.remove(index);
+          onChanged();
+        } else {
+          polymorphicTypesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder getPolymorphicTypesBuilder(
+          int index) {
+        return getPolymorphicTypesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder getPolymorphicTypesOrBuilder(
+          int index) {
+        if (polymorphicTypesBuilder_ == null) {
+          return polymorphicTypes_.get(index);  } else {
+          return polymorphicTypesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder> 
+           getPolymorphicTypesOrBuilderList() {
+        if (polymorphicTypesBuilder_ != null) {
+          return polymorphicTypesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(polymorphicTypes_);
+        }
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder addPolymorphicTypesBuilder() {
+        return getPolymorphicTypesFieldBuilder().addBuilder(
+            skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder addPolymorphicTypesBuilder(
+          int index) {
+        return getPolymorphicTypesFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ProtoFlattenedSerializerField_t.polymorphic_field_t polymorphic_types = 11;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder> 
+           getPolymorphicTypesBuilderList() {
+        return getPolymorphicTypesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder> 
+          getPolymorphicTypesFieldBuilder() {
+        if (polymorphicTypesBuilder_ == null) {
+          polymorphicTypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_t.Builder, skadistats.clarity.wire.shared.s2.proto.S2NetMessages.ProtoFlattenedSerializerField_t.polymorphic_field_tOrBuilder>(
+                  polymorphicTypes_,
+                  ((bitField0_ & 0x00000400) == 0x00000400),
+                  getParentForChildren(),
+                  isClean());
+          polymorphicTypes_ = null;
+        }
+        return polymorphicTypesBuilder_;
+      }
+
+      private int varSerializerSym_ ;
+      /**
+       * <code>optional int32 var_serializer_sym = 12;</code>
+       */
+      public boolean hasVarSerializerSym() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional int32 var_serializer_sym = 12;</code>
+       */
+      public int getVarSerializerSym() {
+        return varSerializerSym_;
+      }
+      /**
+       * <code>optional int32 var_serializer_sym = 12;</code>
+       */
+      public Builder setVarSerializerSym(int value) {
+        bitField0_ |= 0x00000800;
+        varSerializerSym_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 var_serializer_sym = 12;</code>
+       */
+      public Builder clearVarSerializerSym() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        varSerializerSym_ = 0;
         onChanged();
         return this;
       }
@@ -9723,6 +10636,11 @@ public final class S2NetMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ProtoFlattenedSerializerField_t_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ProtoFlattenedSerializer_t_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -9789,34 +10707,40 @@ public final class S2NetMessages {
       "\001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001(\005\022" +
       "\014\n\004tick\030\006 \001(\r\"@\n\034CSVCMsg_ClearAllStringT" +
       "ables\022\017\n\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001(\r\"" +
-      "\222\002\n\037ProtoFlattenedSerializerField_t\022\024\n\014v" +
+      "\363\003\n\037ProtoFlattenedSerializerField_t\022\024\n\014v" +
       "ar_type_sym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001(\005\022" +
       "\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n" +
       "\nhigh_value\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001(\005\022" +
       "!\n\031field_serializer_name_sym\030\007 \001(\005\022 \n\030fi" +
       "eld_serializer_version\030\010 \001(\005\022\025\n\rsend_nod" +
-      "e_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\"k\n\032",
-      "ProtoFlattenedSerializer_t\022\033\n\023serializer" +
-      "_name_sym\030\001 \001(\005\022\032\n\022serializer_version\030\002 " +
-      "\001(\005\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg_Fl" +
-      "attenedSerializer\0220\n\013serializers\030\001 \003(\0132\033" +
-      ".ProtoFlattenedSerializer_t\022\017\n\007symbols\030\002" +
-      " \003(\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlattenedSer" +
-      "ializerField_t\";\n\016CMsgIPCAddress\022\025\n\rcomp" +
-      "uter_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001(\r\"\240\001\n\016" +
-      "CMsgServerPeer\022\023\n\013player_slot\030\001 \001(\005\022\017\n\007s" +
-      "teamid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgIPCAddre",
-      "ss\022\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear_th" +
-      "em\030\005 \001(\010\022\034\n\024is_listenserver_host\030\006 \001(\010\"1" +
-      "\n\020CSVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CMsgS" +
-      "erverPeer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006maste" +
-      "r\030\001 \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022" +
-      "\017\n\007proxies\030\004 \001(\005\")\n\025CSVCMsg_ServerSteamI" +
-      "D\022\020\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKeyVal" +
-      "ues\022\014\n\004data\030\001 \001(\014\";\n\031CSVCMsg_RconServerD" +
-      "etails\022\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(\tB8" +
-      "\n\'skadistats.clarity.wire.shared.s2.prot",
-      "oB\rS2NetMessages"
+      "e_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\022O\n\021",
+      "polymorphic_types\030\013 \003(\01324.ProtoFlattened" +
+      "SerializerField_t.polymorphic_field_t\022\032\n" +
+      "\022var_serializer_sym\030\014 \001(\005\032r\n\023polymorphic" +
+      "_field_t\022-\n%polymorphic_field_serializer" +
+      "_name_sym\030\001 \001(\005\022,\n$polymorphic_field_ser" +
+      "ializer_version\030\002 \001(\005\"k\n\032ProtoFlattenedS" +
+      "erializer_t\022\033\n\023serializer_name_sym\030\001 \001(\005" +
+      "\022\032\n\022serializer_version\030\002 \001(\005\022\024\n\014fields_i" +
+      "ndex\030\003 \003(\005\"\222\001\n\033CSVCMsg_FlattenedSerializ" +
+      "er\0220\n\013serializers\030\001 \003(\0132\033.ProtoFlattened",
+      "Serializer_t\022\017\n\007symbols\030\002 \003(\t\0220\n\006fields\030" +
+      "\003 \003(\0132 .ProtoFlattenedSerializerField_t\"" +
+      ";\n\016CMsgIPCAddress\022\025\n\rcomputer_guid\030\001 \001(\006" +
+      "\022\022\n\nprocess_id\030\002 \001(\r\"\240\001\n\016CMsgServerPeer\022" +
+      "\023\n\013player_slot\030\001 \001(\005\022\017\n\007steamid\030\002 \001(\006\022\034\n" +
+      "\003ipc\030\003 \001(\0132\017.CMsgIPCAddress\022\025\n\rthey_hear" +
+      "_you\030\004 \001(\010\022\025\n\ryou_hear_them\030\005 \001(\010\022\034\n\024is_" +
+      "listenserver_host\030\006 \001(\010\"1\n\020CSVCMsg_PeerL" +
+      "ist\022\035\n\004peer\030\001 \003(\0132\017.CMsgServerPeer\"U\n\022CS" +
+      "VCMsg_HLTVStatus\022\016\n\006master\030\001 \001(\t\022\017\n\007clie",
+      "nts\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007proxies\030\004 \001(" +
+      "\005\")\n\025CSVCMsg_ServerSteamID\022\020\n\010steam_id\030\001" +
+      " \001(\004\"$\n\024CSVCMsg_CmdKeyValues\022\014\n\004data\030\001 \001" +
+      "(\014\";\n\031CSVCMsg_RconServerDetails\022\r\n\005token" +
+      "\030\001 \001(\014\022\017\n\007details\030\002 \001(\tB8\n\'skadistats.cl" +
+      "arity.wire.shared.s2.protoB\rS2NetMessage" +
+      "s"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -9854,7 +10778,13 @@ public final class S2NetMessages {
     internal_static_ProtoFlattenedSerializerField_t_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ProtoFlattenedSerializerField_t_descriptor,
-        new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", "VarEncoderSym", });
+        new java.lang.String[] { "VarTypeSym", "VarNameSym", "BitCount", "LowValue", "HighValue", "EncodeFlags", "FieldSerializerNameSym", "FieldSerializerVersion", "SendNodeSym", "VarEncoderSym", "PolymorphicTypes", "VarSerializerSym", });
+    internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor =
+      internal_static_ProtoFlattenedSerializerField_t_descriptor.getNestedTypes().get(0);
+    internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ProtoFlattenedSerializerField_t_polymorphic_field_t_descriptor,
+        new java.lang.String[] { "PolymorphicFieldSerializerNameSym", "PolymorphicFieldSerializerVersion", });
     internal_static_ProtoFlattenedSerializer_t_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ProtoFlattenedSerializer_t_fieldAccessorTable = new
