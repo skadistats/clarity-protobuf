@@ -2037,6 +2037,14 @@ public final class DOTAS2MessageId {
      * <code>DOTA_UM_PlayerDraftPick = 621;</code>
      */
     DOTA_UM_PlayerDraftPick(155, 621),
+    /**
+     * <code>DOTA_UM_UpdateLinearProjectileCPData = 622;</code>
+     */
+    DOTA_UM_UpdateLinearProjectileCPData(156, 622),
+    /**
+     * <code>DOTA_UM_GiftPlayer = 623;</code>
+     */
+    DOTA_UM_GiftPlayer(157, 623),
     ;
 
     /**
@@ -2663,6 +2671,14 @@ public final class DOTAS2MessageId {
      * <code>DOTA_UM_PlayerDraftPick = 621;</code>
      */
     public static final int DOTA_UM_PlayerDraftPick_VALUE = 621;
+    /**
+     * <code>DOTA_UM_UpdateLinearProjectileCPData = 622;</code>
+     */
+    public static final int DOTA_UM_UpdateLinearProjectileCPData_VALUE = 622;
+    /**
+     * <code>DOTA_UM_GiftPlayer = 623;</code>
+     */
+    public static final int DOTA_UM_GiftPlayer_VALUE = 623;
 
 
     public final int getNumber() { return value; }
@@ -2825,6 +2841,8 @@ public final class DOTAS2MessageId {
         case 619: return DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled;
         case 620: return DOTA_UM_PlayerDraftSuggestPick;
         case 621: return DOTA_UM_PlayerDraftPick;
+        case 622: return DOTA_UM_UpdateLinearProjectileCPData;
+        case 623: return DOTA_UM_GiftPlayer;
         default: return null;
       }
     }
@@ -2954,7 +2972,7 @@ public final class DOTAS2MessageId {
       "s\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOverla" +
       "y\020\211\001\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_Prop" +
       "agateForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_Fix" +
-      "Angle\020\215\001*\244%\n\021EDotaUserMessages\022\037\n\032DOTA_U",
+      "Angle\020\215\001*\350%\n\021EDotaUserMessages\022\037\n\032DOTA_U",
       "M_AddUnitToSelection\020\320\003\022\030\n\023DOTA_UM_AIDeb" +
       "ugLine\020\321\003\022\026\n\021DOTA_UM_ChatEvent\020\322\003\022 \n\033DOT" +
       "A_UM_CombatHeroPositions\020\323\003\022\032\n\025DOTA_UM_C" +
@@ -3073,9 +3091,10 @@ public final class DOTAS2MessageId {
       "TA_UM_DuelRequested\020\352\004\0224\n/DOTA_UM_Muerta" +
       "ReleaseEvent_AssignedTargetKilled\020\353\004\022#\n\036" +
       "DOTA_UM_PlayerDraftSuggestPick\020\354\004\022\034\n\027DOT" +
-      "A_UM_PlayerDraftPick\020\355\004B8\n%skadistats.cl" +
-      "arity.wire.dota.s2.protoB\017DOTAS2MessageI",
-      "d"
+      "A_UM_PlayerDraftPick\020\355\004\022)\n$DOTA_UM_Updat" +
+      "eLinearProjectileCPData\020\356\004\022\027\n\022DOTA_UM_Gi",
+      "ftPlayer\020\357\004B8\n%skadistats.clarity.wire.d" +
+      "ota.s2.protoB\017DOTAS2MessageId"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

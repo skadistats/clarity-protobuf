@@ -23,11 +23,13 @@ message CSVCMsg_VoiceData {
 	optional fixed64 xuid = 4;
 	optional int32 audible_mask = 5;
 	optional uint32 tick = 6;
+	optional int32 passthrough = 7;
 }
 
 message CSVCMsg_ClearAllStringTables {
 	optional string mapname = 1;
 	optional uint32 map_crc = 2;
+	optional bool create_tables_skipped = 3;
 }
 
 message ProtoFlattenedSerializerField_t {

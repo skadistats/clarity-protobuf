@@ -82,17 +82,25 @@ public final class Demo {
      */
     DEM_SpawnGroups(16, 15),
     /**
-     * <code>DEM_Max = 16;</code>
+     * <code>DEM_AnimationData = 16;</code>
      */
-    DEM_Max(17, 16),
+    DEM_AnimationData(17, 16),
+    /**
+     * <code>DEM_AnimationHeader = 17;</code>
+     */
+    DEM_AnimationHeader(18, 17),
+    /**
+     * <code>DEM_Max = 18;</code>
+     */
+    DEM_Max(19, 18),
     /**
      * <code>DEM_IsCompressed_S1 = 112;</code>
      */
-    DEM_IsCompressed_S1(18, 112),
+    DEM_IsCompressed_S1(20, 112),
     /**
      * <code>DEM_IsCompressed_S2 = 64;</code>
      */
-    DEM_IsCompressed_S2(19, 64),
+    DEM_IsCompressed_S2(21, 64),
     ;
 
     /**
@@ -164,9 +172,17 @@ public final class Demo {
      */
     public static final int DEM_SpawnGroups_VALUE = 15;
     /**
-     * <code>DEM_Max = 16;</code>
+     * <code>DEM_AnimationData = 16;</code>
      */
-    public static final int DEM_Max_VALUE = 16;
+    public static final int DEM_AnimationData_VALUE = 16;
+    /**
+     * <code>DEM_AnimationHeader = 17;</code>
+     */
+    public static final int DEM_AnimationHeader_VALUE = 17;
+    /**
+     * <code>DEM_Max = 18;</code>
+     */
+    public static final int DEM_Max_VALUE = 18;
     /**
      * <code>DEM_IsCompressed_S1 = 112;</code>
      */
@@ -198,7 +214,9 @@ public final class Demo {
         case 13: return DEM_FullPacket;
         case 14: return DEM_SaveGame;
         case 15: return DEM_SpawnGroups;
-        case 16: return DEM_Max;
+        case 16: return DEM_AnimationData;
+        case 17: return DEM_AnimationHeader;
+        case 18: return DEM_Max;
         case 112: return DEM_IsCompressed_S1;
         case 64: return DEM_IsCompressed_S2;
         default: return null;
@@ -426,6 +444,15 @@ public final class Demo {
      */
     com.google.protobuf.ByteString
         getGameBytes();
+
+    /**
+     * <code>optional int32 server_start_tick = 15;</code>
+     */
+    boolean hasServerStartTick();
+    /**
+     * <code>optional int32 server_start_tick = 15;</code>
+     */
+    int getServerStartTick();
   }
   /**
    * Protobuf type {@code CDemoFileHeader}
@@ -556,6 +583,11 @@ public final class Demo {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00002000;
               game_ = bs;
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00004000;
+              serverStartTick_ = input.readInt32();
               break;
             }
           }
@@ -1051,6 +1083,21 @@ public final class Demo {
       }
     }
 
+    public static final int SERVER_START_TICK_FIELD_NUMBER = 15;
+    private int serverStartTick_;
+    /**
+     * <code>optional int32 server_start_tick = 15;</code>
+     */
+    public boolean hasServerStartTick() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional int32 server_start_tick = 15;</code>
+     */
+    public int getServerStartTick() {
+      return serverStartTick_;
+    }
+
     private void initFields() {
       demoFileStamp_ = "";
       networkProtocol_ = 0;
@@ -1066,6 +1113,7 @@ public final class Demo {
       demoVersionGuid_ = "";
       buildNum_ = 0;
       game_ = "";
+      serverStartTick_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1125,6 +1173,9 @@ public final class Demo {
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeBytes(14, getGameBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeInt32(15, serverStartTick_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1190,6 +1241,10 @@ public final class Demo {
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(14, getGameBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(15, serverStartTick_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1336,6 +1391,8 @@ public final class Demo {
         bitField0_ = (bitField0_ & ~0x00001000);
         game_ = "";
         bitField0_ = (bitField0_ & ~0x00002000);
+        serverStartTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -1420,6 +1477,10 @@ public final class Demo {
           to_bitField0_ |= 0x00002000;
         }
         result.game_ = game_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.serverStartTick_ = serverStartTick_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1495,6 +1556,9 @@ public final class Demo {
           bitField0_ |= 0x00002000;
           game_ = other.game_;
           onChanged();
+        }
+        if (other.hasServerStartTick()) {
+          setServerStartTick(other.getServerStartTick());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2371,6 +2435,38 @@ public final class Demo {
         return this;
       }
 
+      private int serverStartTick_ ;
+      /**
+       * <code>optional int32 server_start_tick = 15;</code>
+       */
+      public boolean hasServerStartTick() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional int32 server_start_tick = 15;</code>
+       */
+      public int getServerStartTick() {
+        return serverStartTick_;
+      }
+      /**
+       * <code>optional int32 server_start_tick = 15;</code>
+       */
+      public Builder setServerStartTick(int value) {
+        bitField0_ |= 0x00004000;
+        serverStartTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 server_start_tick = 15;</code>
+       */
+      public Builder clearServerStartTick() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        serverStartTick_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CDemoFileHeader)
     }
 
@@ -2398,6 +2494,19 @@ public final class Demo {
      * <code>optional .CGameInfo.CDotaGameInfo dota = 4;</code>
      */
     skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CDotaGameInfoOrBuilder getDotaOrBuilder();
+
+    /**
+     * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+     */
+    boolean hasCs();
+    /**
+     * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo getCs();
+    /**
+     * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder getCsOrBuilder();
   }
   /**
    * Protobuf type {@code CGameInfo}
@@ -2462,6 +2571,19 @@ public final class Demo {
                 dota_ = subBuilder.buildPartial();
               }
               bitField0_ |= 0x00000001;
+              break;
+            }
+            case 42: {
+              skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                subBuilder = cs_.toBuilder();
+              }
+              cs_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cs_);
+                cs_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000002;
               break;
             }
           }
@@ -5822,6 +5944,477 @@ public final class Demo {
       // @@protoc_insertion_point(class_scope:CGameInfo.CDotaGameInfo)
     }
 
+    public interface CCSGameInfoOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CGameInfo.CCSGameInfo)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>repeated int32 round_start_ticks = 1;</code>
+       */
+      java.util.List<java.lang.Integer> getRoundStartTicksList();
+      /**
+       * <code>repeated int32 round_start_ticks = 1;</code>
+       */
+      int getRoundStartTicksCount();
+      /**
+       * <code>repeated int32 round_start_ticks = 1;</code>
+       */
+      int getRoundStartTicks(int index);
+    }
+    /**
+     * Protobuf type {@code CGameInfo.CCSGameInfo}
+     */
+    public static final class CCSGameInfo extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CGameInfo.CCSGameInfo)
+        CCSGameInfoOrBuilder {
+      // Use CCSGameInfo.newBuilder() to construct.
+      private CCSGameInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private CCSGameInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final CCSGameInfo defaultInstance;
+      public static CCSGameInfo getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public CCSGameInfo getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private CCSGameInfo(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                  roundStartTicks_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                roundStartTicks_.add(input.readInt32());
+                break;
+              }
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                if (!((mutable_bitField0_ & 0x00000001) == 0x00000001) && input.getBytesUntilLimit() > 0) {
+                  roundStartTicks_ = new java.util.ArrayList<java.lang.Integer>();
+                  mutable_bitField0_ |= 0x00000001;
+                }
+                while (input.getBytesUntilLimit() > 0) {
+                  roundStartTicks_.add(input.readInt32());
+                }
+                input.popLimit(limit);
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+            roundStartTicks_ = java.util.Collections.unmodifiableList(roundStartTicks_);
+          }
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CGameInfo_CCSGameInfo_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CGameInfo_CCSGameInfo_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.class, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<CCSGameInfo> PARSER =
+          new com.google.protobuf.AbstractParser<CCSGameInfo>() {
+        public CCSGameInfo parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CCSGameInfo(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CCSGameInfo> getParserForType() {
+        return PARSER;
+      }
+
+      public static final int ROUND_START_TICKS_FIELD_NUMBER = 1;
+      private java.util.List<java.lang.Integer> roundStartTicks_;
+      /**
+       * <code>repeated int32 round_start_ticks = 1;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getRoundStartTicksList() {
+        return roundStartTicks_;
+      }
+      /**
+       * <code>repeated int32 round_start_ticks = 1;</code>
+       */
+      public int getRoundStartTicksCount() {
+        return roundStartTicks_.size();
+      }
+      /**
+       * <code>repeated int32 round_start_ticks = 1;</code>
+       */
+      public int getRoundStartTicks(int index) {
+        return roundStartTicks_.get(index);
+      }
+
+      private void initFields() {
+        roundStartTicks_ = java.util.Collections.emptyList();
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        for (int i = 0; i < roundStartTicks_.size(); i++) {
+          output.writeInt32(1, roundStartTicks_.get(i));
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        {
+          int dataSize = 0;
+          for (int i = 0; i < roundStartTicks_.size(); i++) {
+            dataSize += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(roundStartTicks_.get(i));
+          }
+          size += dataSize;
+          size += 1 * getRoundStartTicksList().size();
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CGameInfo.CCSGameInfo}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CGameInfo.CCSGameInfo)
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CGameInfo_CCSGameInfo_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CGameInfo_CCSGameInfo_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.class, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          roundStartTicks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CGameInfo_CCSGameInfo_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo build() {
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo result = new skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo(this);
+          int from_bitField0_ = bitField0_;
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            roundStartTicks_ = java.util.Collections.unmodifiableList(roundStartTicks_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.roundStartTicks_ = roundStartTicks_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance()) return this;
+          if (!other.roundStartTicks_.isEmpty()) {
+            if (roundStartTicks_.isEmpty()) {
+              roundStartTicks_ = other.roundStartTicks_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRoundStartTicksIsMutable();
+              roundStartTicks_.addAll(other.roundStartTicks_);
+            }
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.util.List<java.lang.Integer> roundStartTicks_ = java.util.Collections.emptyList();
+        private void ensureRoundStartTicksIsMutable() {
+          if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+            roundStartTicks_ = new java.util.ArrayList<java.lang.Integer>(roundStartTicks_);
+            bitField0_ |= 0x00000001;
+           }
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public java.util.List<java.lang.Integer>
+            getRoundStartTicksList() {
+          return java.util.Collections.unmodifiableList(roundStartTicks_);
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public int getRoundStartTicksCount() {
+          return roundStartTicks_.size();
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public int getRoundStartTicks(int index) {
+          return roundStartTicks_.get(index);
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public Builder setRoundStartTicks(
+            int index, int value) {
+          ensureRoundStartTicksIsMutable();
+          roundStartTicks_.set(index, value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public Builder addRoundStartTicks(int value) {
+          ensureRoundStartTicksIsMutable();
+          roundStartTicks_.add(value);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public Builder addAllRoundStartTicks(
+            java.lang.Iterable<? extends java.lang.Integer> values) {
+          ensureRoundStartTicksIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, roundStartTicks_);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>repeated int32 round_start_ticks = 1;</code>
+         */
+        public Builder clearRoundStartTicks() {
+          roundStartTicks_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CGameInfo.CCSGameInfo)
+      }
+
+      static {
+        defaultInstance = new CCSGameInfo(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CGameInfo.CCSGameInfo)
+    }
+
     private int bitField0_;
     public static final int DOTA_FIELD_NUMBER = 4;
     private skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CDotaGameInfo dota_;
@@ -5844,8 +6437,30 @@ public final class Demo {
       return dota_;
     }
 
+    public static final int CS_FIELD_NUMBER = 5;
+    private skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo cs_;
+    /**
+     * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+     */
+    public boolean hasCs() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo getCs() {
+      return cs_;
+    }
+    /**
+     * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder getCsOrBuilder() {
+      return cs_;
+    }
+
     private void initFields() {
       dota_ = skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CDotaGameInfo.getDefaultInstance();
+      cs_ = skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -5863,6 +6478,9 @@ public final class Demo {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeMessage(4, dota_);
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeMessage(5, cs_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -5875,6 +6493,10 @@ public final class Demo {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, dota_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, cs_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -5986,6 +6608,7 @@ public final class Demo {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getDotaFieldBuilder();
+          getCsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -6000,6 +6623,12 @@ public final class Demo {
           dotaBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (csBuilder_ == null) {
+          cs_ = skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance();
+        } else {
+          csBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -6036,6 +6665,14 @@ public final class Demo {
         } else {
           result.dota_ = dotaBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        if (csBuilder_ == null) {
+          result.cs_ = cs_;
+        } else {
+          result.cs_ = csBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6054,6 +6691,9 @@ public final class Demo {
         if (other == skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.getDefaultInstance()) return this;
         if (other.hasDota()) {
           mergeDota(other.getDota());
+        }
+        if (other.hasCs()) {
+          mergeCs(other.getCs());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6196,6 +6836,122 @@ public final class Demo {
           dota_ = null;
         }
         return dotaBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo cs_ = skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder> csBuilder_;
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public boolean hasCs() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo getCs() {
+        if (csBuilder_ == null) {
+          return cs_;
+        } else {
+          return csBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public Builder setCs(skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo value) {
+        if (csBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          cs_ = value;
+          onChanged();
+        } else {
+          csBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public Builder setCs(
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder builderForValue) {
+        if (csBuilder_ == null) {
+          cs_ = builderForValue.build();
+          onChanged();
+        } else {
+          csBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public Builder mergeCs(skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo value) {
+        if (csBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002) &&
+              cs_ != skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance()) {
+            cs_ =
+              skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.newBuilder(cs_).mergeFrom(value).buildPartial();
+          } else {
+            cs_ = value;
+          }
+          onChanged();
+        } else {
+          csBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000002;
+        return this;
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public Builder clearCs() {
+        if (csBuilder_ == null) {
+          cs_ = skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.getDefaultInstance();
+          onChanged();
+        } else {
+          csBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder getCsBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getCsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder getCsOrBuilder() {
+        if (csBuilder_ != null) {
+          return csBuilder_.getMessageOrBuilder();
+        } else {
+          return cs_;
+        }
+      }
+      /**
+       * <code>optional .CGameInfo.CCSGameInfo cs = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder> 
+          getCsFieldBuilder() {
+        if (csBuilder_ == null) {
+          csBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfo.Builder, skadistats.clarity.wire.shared.demo.proto.Demo.CGameInfo.CCSGameInfoOrBuilder>(
+                  getCs(),
+                  getParentForChildren(),
+                  isClean());
+          cs_ = null;
+        }
+        return csBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:CGameInfo)
@@ -12391,6 +13147,1274 @@ public final class Demo {
     // @@protoc_insertion_point(class_scope:CDemoCustomDataCallbacks)
   }
 
+  public interface CDemoAnimationHeaderOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDemoAnimationHeader)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    boolean hasEntityId();
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    int getEntityId();
+
+    /**
+     * <code>optional int32 tick = 2;</code>
+     */
+    boolean hasTick();
+    /**
+     * <code>optional int32 tick = 2;</code>
+     */
+    int getTick();
+
+    /**
+     * <code>optional bytes data = 3;</code>
+     */
+    boolean hasData();
+    /**
+     * <code>optional bytes data = 3;</code>
+     */
+    com.google.protobuf.ByteString getData();
+  }
+  /**
+   * Protobuf type {@code CDemoAnimationHeader}
+   */
+  public static final class CDemoAnimationHeader extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDemoAnimationHeader)
+      CDemoAnimationHeaderOrBuilder {
+    // Use CDemoAnimationHeader.newBuilder() to construct.
+    private CDemoAnimationHeader(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDemoAnimationHeader(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDemoAnimationHeader defaultInstance;
+    public static CDemoAnimationHeader getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDemoAnimationHeader getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDemoAnimationHeader(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              entityId_ = input.readSInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              tick_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              data_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationHeader_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationHeader_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CDemoAnimationHeader> PARSER =
+        new com.google.protobuf.AbstractParser<CDemoAnimationHeader>() {
+      public CDemoAnimationHeader parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDemoAnimationHeader(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDemoAnimationHeader> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
+    private int entityId_;
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    public boolean hasEntityId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    public int getEntityId() {
+      return entityId_;
+    }
+
+    public static final int TICK_FIELD_NUMBER = 2;
+    private int tick_;
+    /**
+     * <code>optional int32 tick = 2;</code>
+     */
+    public boolean hasTick() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 tick = 2;</code>
+     */
+    public int getTick() {
+      return tick_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>optional bytes data = 3;</code>
+     */
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bytes data = 3;</code>
+     */
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    private void initFields() {
+      entityId_ = 0;
+      tick_ = 0;
+      data_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeSInt32(1, entityId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, tick_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, data_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSInt32Size(1, entityId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, tick_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, data_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDemoAnimationHeader}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDemoAnimationHeader)
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeaderOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationHeader_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationHeader_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        entityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        tick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationHeader_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader build() {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader buildPartial() {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader result = new skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.entityId_ = entityId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.tick_ = tick_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.data_ = data_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader) {
+          return mergeFrom((skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader other) {
+        if (other == skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader.getDefaultInstance()) return this;
+        if (other.hasEntityId()) {
+          setEntityId(other.getEntityId());
+        }
+        if (other.hasTick()) {
+          setTick(other.getTick());
+        }
+        if (other.hasData()) {
+          setData(other.getData());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationHeader) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int entityId_ ;
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public boolean hasEntityId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public int getEntityId() {
+        return entityId_;
+      }
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public Builder setEntityId(int value) {
+        bitField0_ |= 0x00000001;
+        entityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public Builder clearEntityId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int tick_ ;
+      /**
+       * <code>optional int32 tick = 2;</code>
+       */
+      public boolean hasTick() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 tick = 2;</code>
+       */
+      public int getTick() {
+        return tick_;
+      }
+      /**
+       * <code>optional int32 tick = 2;</code>
+       */
+      public Builder setTick(int value) {
+        bitField0_ |= 0x00000002;
+        tick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 tick = 2;</code>
+       */
+      public Builder clearTick() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        tick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes data = 3;</code>
+       */
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bytes data = 3;</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>optional bytes data = 3;</code>
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes data = 3;</code>
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDemoAnimationHeader)
+    }
+
+    static {
+      defaultInstance = new CDemoAnimationHeader(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDemoAnimationHeader)
+  }
+
+  public interface CDemoAnimationDataOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDemoAnimationData)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    boolean hasEntityId();
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    int getEntityId();
+
+    /**
+     * <code>optional int32 start_tick = 2;</code>
+     */
+    boolean hasStartTick();
+    /**
+     * <code>optional int32 start_tick = 2;</code>
+     */
+    int getStartTick();
+
+    /**
+     * <code>optional int32 end_tick = 3;</code>
+     */
+    boolean hasEndTick();
+    /**
+     * <code>optional int32 end_tick = 3;</code>
+     */
+    int getEndTick();
+
+    /**
+     * <code>optional bytes data = 4;</code>
+     */
+    boolean hasData();
+    /**
+     * <code>optional bytes data = 4;</code>
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>optional int64 data_checksum = 5;</code>
+     */
+    boolean hasDataChecksum();
+    /**
+     * <code>optional int64 data_checksum = 5;</code>
+     */
+    long getDataChecksum();
+  }
+  /**
+   * Protobuf type {@code CDemoAnimationData}
+   */
+  public static final class CDemoAnimationData extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDemoAnimationData)
+      CDemoAnimationDataOrBuilder {
+    // Use CDemoAnimationData.newBuilder() to construct.
+    private CDemoAnimationData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDemoAnimationData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDemoAnimationData defaultInstance;
+    public static CDemoAnimationData getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDemoAnimationData getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDemoAnimationData(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              entityId_ = input.readSInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              startTick_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              endTick_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              bitField0_ |= 0x00000008;
+              data_ = input.readBytes();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              dataChecksum_ = input.readInt64();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationData_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationData_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CDemoAnimationData> PARSER =
+        new com.google.protobuf.AbstractParser<CDemoAnimationData>() {
+      public CDemoAnimationData parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDemoAnimationData(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDemoAnimationData> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ENTITY_ID_FIELD_NUMBER = 1;
+    private int entityId_;
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    public boolean hasEntityId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional sint32 entity_id = 1;</code>
+     */
+    public int getEntityId() {
+      return entityId_;
+    }
+
+    public static final int START_TICK_FIELD_NUMBER = 2;
+    private int startTick_;
+    /**
+     * <code>optional int32 start_tick = 2;</code>
+     */
+    public boolean hasStartTick() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 start_tick = 2;</code>
+     */
+    public int getStartTick() {
+      return startTick_;
+    }
+
+    public static final int END_TICK_FIELD_NUMBER = 3;
+    private int endTick_;
+    /**
+     * <code>optional int32 end_tick = 3;</code>
+     */
+    public boolean hasEndTick() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 end_tick = 3;</code>
+     */
+    public int getEndTick() {
+      return endTick_;
+    }
+
+    public static final int DATA_FIELD_NUMBER = 4;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>optional bytes data = 4;</code>
+     */
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional bytes data = 4;</code>
+     */
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    public static final int DATA_CHECKSUM_FIELD_NUMBER = 5;
+    private long dataChecksum_;
+    /**
+     * <code>optional int64 data_checksum = 5;</code>
+     */
+    public boolean hasDataChecksum() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int64 data_checksum = 5;</code>
+     */
+    public long getDataChecksum() {
+      return dataChecksum_;
+    }
+
+    private void initFields() {
+      entityId_ = 0;
+      startTick_ = 0;
+      endTick_ = 0;
+      data_ = com.google.protobuf.ByteString.EMPTY;
+      dataChecksum_ = 0L;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeSInt32(1, entityId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, startTick_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, endTick_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeBytes(4, data_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt64(5, dataChecksum_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeSInt32Size(1, entityId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, startTick_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, endTick_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(4, data_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(5, dataChecksum_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDemoAnimationData}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDemoAnimationData)
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationDataOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationData_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationData_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        entityId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        endTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        dataChecksum_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoAnimationData_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData build() {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData buildPartial() {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData result = new skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.entityId_ = entityId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.startTick_ = startTick_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.endTick_ = endTick_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.data_ = data_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.dataChecksum_ = dataChecksum_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData) {
+          return mergeFrom((skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData other) {
+        if (other == skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData.getDefaultInstance()) return this;
+        if (other.hasEntityId()) {
+          setEntityId(other.getEntityId());
+        }
+        if (other.hasStartTick()) {
+          setStartTick(other.getStartTick());
+        }
+        if (other.hasEndTick()) {
+          setEndTick(other.getEndTick());
+        }
+        if (other.hasData()) {
+          setData(other.getData());
+        }
+        if (other.hasDataChecksum()) {
+          setDataChecksum(other.getDataChecksum());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.demo.proto.Demo.CDemoAnimationData) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int entityId_ ;
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public boolean hasEntityId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public int getEntityId() {
+        return entityId_;
+      }
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public Builder setEntityId(int value) {
+        bitField0_ |= 0x00000001;
+        entityId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional sint32 entity_id = 1;</code>
+       */
+      public Builder clearEntityId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entityId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int startTick_ ;
+      /**
+       * <code>optional int32 start_tick = 2;</code>
+       */
+      public boolean hasStartTick() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 start_tick = 2;</code>
+       */
+      public int getStartTick() {
+        return startTick_;
+      }
+      /**
+       * <code>optional int32 start_tick = 2;</code>
+       */
+      public Builder setStartTick(int value) {
+        bitField0_ |= 0x00000002;
+        startTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 start_tick = 2;</code>
+       */
+      public Builder clearStartTick() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        startTick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int endTick_ ;
+      /**
+       * <code>optional int32 end_tick = 3;</code>
+       */
+      public boolean hasEndTick() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 end_tick = 3;</code>
+       */
+      public int getEndTick() {
+        return endTick_;
+      }
+      /**
+       * <code>optional int32 end_tick = 3;</code>
+       */
+      public Builder setEndTick(int value) {
+        bitField0_ |= 0x00000004;
+        endTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 end_tick = 3;</code>
+       */
+      public Builder clearEndTick() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        endTick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes data = 4;</code>
+       */
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional bytes data = 4;</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>optional bytes data = 4;</code>
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000008;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes data = 4;</code>
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private long dataChecksum_ ;
+      /**
+       * <code>optional int64 data_checksum = 5;</code>
+       */
+      public boolean hasDataChecksum() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int64 data_checksum = 5;</code>
+       */
+      public long getDataChecksum() {
+        return dataChecksum_;
+      }
+      /**
+       * <code>optional int64 data_checksum = 5;</code>
+       */
+      public Builder setDataChecksum(long value) {
+        bitField0_ |= 0x00000010;
+        dataChecksum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 data_checksum = 5;</code>
+       */
+      public Builder clearDataChecksum() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        dataChecksum_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDemoAnimationData)
+    }
+
+    static {
+      defaultInstance = new CDemoAnimationData(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDemoAnimationData)
+  }
+
   public interface CDemoStringTablesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CDemoStringTables)
       com.google.protobuf.MessageOrBuilder {
@@ -16179,6 +18203,11 @@ public final class Demo {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CGameInfo_CDotaGameInfo_CHeroSelectEvent_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CGameInfo_CCSGameInfo_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CGameInfo_CCSGameInfo_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDemoFileInfo_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -16234,6 +18263,16 @@ public final class Demo {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDemoCustomDataCallbacks_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDemoAnimationHeader_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDemoAnimationHeader_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDemoAnimationData_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDemoAnimationData_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDemoStringTables_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -16272,7 +18311,7 @@ public final class Demo {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ndemo.proto\"\343\002\n\017CDemoFileHeader\022\027\n\017demo" +
+      "\n\ndemo.proto\"\376\002\n\017CDemoFileHeader\022\027\n\017demo" +
       "_file_stamp\030\001 \002(\t\022\030\n\020network_protocol\030\002 " +
       "\001(\005\022\023\n\013server_name\030\003 \001(\t\022\023\n\013client_name\030" +
       "\004 \001(\t\022\020\n\010map_name\030\005 \001(\t\022\026\n\016game_director" +
@@ -16281,59 +18320,67 @@ public final class Demo {
       "_clientside_particles\030\t \001(\010\022\016\n\006addons\030\n " +
       "\001(\t\022\031\n\021demo_version_name\030\013 \001(\t\022\031\n\021demo_v" +
       "ersion_guid\030\014 \001(\t\022\021\n\tbuild_num\030\r \001(\005\022\014\n\004" +
-      "game\030\016 \001(\t\"\264\004\n\tCGameInfo\022&\n\004dota\030\004 \001(\0132\030",
-      ".CGameInfo.CDotaGameInfo\032\376\003\n\rCDotaGameIn" +
-      "fo\022\020\n\010match_id\030\001 \001(\004\022\021\n\tgame_mode\030\002 \001(\005\022" +
-      "\023\n\013game_winner\030\003 \001(\005\0229\n\013player_info\030\004 \003(" +
-      "\0132$.CGameInfo.CDotaGameInfo.CPlayerInfo\022" +
-      "\020\n\010leagueid\030\005 \001(\r\022=\n\npicks_bans\030\006 \003(\0132)." +
-      "CGameInfo.CDotaGameInfo.CHeroSelectEvent" +
-      "\022\027\n\017radiant_team_id\030\007 \001(\r\022\024\n\014dire_team_i" +
-      "d\030\010 \001(\r\022\030\n\020radiant_team_tag\030\t \001(\t\022\025\n\rdir" +
-      "e_team_tag\030\n \001(\t\022\020\n\010end_time\030\013 \001(\r\032q\n\013CP" +
-      "layerInfo\022\021\n\thero_name\030\001 \001(\t\022\023\n\013player_n",
-      "ame\030\002 \001(\t\022\026\n\016is_fake_client\030\003 \001(\010\022\017\n\007ste" +
-      "amid\030\004 \001(\004\022\021\n\tgame_team\030\005 \001(\005\032B\n\020CHeroSe" +
-      "lectEvent\022\017\n\007is_pick\030\001 \001(\010\022\014\n\004team\030\002 \001(\r" +
-      "\022\017\n\007hero_id\030\003 \001(\r\"v\n\rCDemoFileInfo\022\025\n\rpl" +
-      "ayback_time\030\001 \001(\002\022\026\n\016playback_ticks\030\002 \001(" +
-      "\005\022\027\n\017playback_frames\030\003 \001(\005\022\035\n\tgame_info\030" +
-      "\004 \001(\0132\n.CGameInfo\"J\n\013CDemoPacket\022\023\n\013sequ" +
-      "ence_in\030\001 \001(\005\022\030\n\020sequence_out_ack\030\002 \001(\005\022" +
-      "\014\n\004data\030\003 \001(\014\"Y\n\017CDemoFullPacket\022(\n\014stri" +
-      "ng_table\030\001 \001(\0132\022.CDemoStringTables\022\034\n\006pa",
-      "cket\030\002 \001(\0132\014.CDemoPacket\"S\n\rCDemoSaveGam" +
-      "e\022\014\n\004data\030\001 \001(\014\022\020\n\010steam_id\030\002 \001(\006\022\021\n\tsig" +
-      "nature\030\003 \001(\006\022\017\n\007version\030\004 \001(\005\"\017\n\rCDemoSy" +
-      "ncTick\"$\n\017CDemoConsoleCmd\022\021\n\tcmdstring\030\001" +
-      " \001(\t\"\037\n\017CDemoSendTables\022\014\n\004data\030\001 \001(\014\"\201\001" +
-      "\n\016CDemoClassInfo\022(\n\007classes\030\001 \003(\0132\027.CDem" +
-      "oClassInfo.class_t\032E\n\007class_t\022\020\n\010class_i" +
-      "d\030\001 \001(\005\022\024\n\014network_name\030\002 \001(\t\022\022\n\ntable_n" +
-      "ame\030\003 \001(\t\"7\n\017CDemoCustomData\022\026\n\016callback" +
-      "_index\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"+\n\030CDemoCusto",
-      "mDataCallbacks\022\017\n\007save_id\030\001 \003(\t\"\373\001\n\021CDem" +
-      "oStringTables\022*\n\006tables\030\001 \003(\0132\032.CDemoStr" +
-      "ingTables.table_t\032$\n\007items_t\022\013\n\003str\030\001 \001(" +
-      "\t\022\014\n\004data\030\002 \001(\014\032\223\001\n\007table_t\022\022\n\ntable_nam" +
-      "e\030\001 \001(\t\022)\n\005items\030\002 \003(\0132\032.CDemoStringTabl" +
-      "es.items_t\0224\n\020items_clientside\030\003 \003(\0132\032.C" +
-      "DemoStringTables.items_t\022\023\n\013table_flags\030" +
-      "\004 \001(\005\"\013\n\tCDemoStop\"0\n\014CDemoUserCmd\022\022\n\ncm" +
-      "d_number\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\" \n\020CDemoSpa" +
-      "wnGroups\022\014\n\004msgs\030\003 \003(\014*\240\003\n\rEDemoCommands",
-      "\022\026\n\tDEM_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010DEM_Stop\020\000\022\022" +
-      "\n\016DEM_FileHeader\020\001\022\020\n\014DEM_FileInfo\020\002\022\020\n\014" +
-      "DEM_SyncTick\020\003\022\022\n\016DEM_SendTables\020\004\022\021\n\rDE" +
-      "M_ClassInfo\020\005\022\024\n\020DEM_StringTables\020\006\022\016\n\nD" +
-      "EM_Packet\020\007\022\024\n\020DEM_SignonPacket\020\010\022\022\n\016DEM" +
-      "_ConsoleCmd\020\t\022\022\n\016DEM_CustomData\020\n\022\033\n\027DEM" +
-      "_CustomDataCallbacks\020\013\022\017\n\013DEM_UserCmd\020\014\022" +
-      "\022\n\016DEM_FullPacket\020\r\022\020\n\014DEM_SaveGame\020\016\022\023\n" +
-      "\017DEM_SpawnGroups\020\017\022\013\n\007DEM_Max\020\020\022\027\n\023DEM_I" +
-      "sCompressed_S1\020p\022\027\n\023DEM_IsCompressed_S2\020",
-      "@B+\n)skadistats.clarity.wire.shared.demo" +
-      ".proto"
+      "game\030\016 \001(\t\022\031\n\021server_start_tick\030\017 \001(\005\"\202\005",
+      "\n\tCGameInfo\022&\n\004dota\030\004 \001(\0132\030.CGameInfo.CD" +
+      "otaGameInfo\022\"\n\002cs\030\005 \001(\0132\026.CGameInfo.CCSG" +
+      "ameInfo\032\376\003\n\rCDotaGameInfo\022\020\n\010match_id\030\001 " +
+      "\001(\004\022\021\n\tgame_mode\030\002 \001(\005\022\023\n\013game_winner\030\003 " +
+      "\001(\005\0229\n\013player_info\030\004 \003(\0132$.CGameInfo.CDo" +
+      "taGameInfo.CPlayerInfo\022\020\n\010leagueid\030\005 \001(\r" +
+      "\022=\n\npicks_bans\030\006 \003(\0132).CGameInfo.CDotaGa" +
+      "meInfo.CHeroSelectEvent\022\027\n\017radiant_team_" +
+      "id\030\007 \001(\r\022\024\n\014dire_team_id\030\010 \001(\r\022\030\n\020radian" +
+      "t_team_tag\030\t \001(\t\022\025\n\rdire_team_tag\030\n \001(\t\022",
+      "\020\n\010end_time\030\013 \001(\r\032q\n\013CPlayerInfo\022\021\n\thero" +
+      "_name\030\001 \001(\t\022\023\n\013player_name\030\002 \001(\t\022\026\n\016is_f" +
+      "ake_client\030\003 \001(\010\022\017\n\007steamid\030\004 \001(\004\022\021\n\tgam" +
+      "e_team\030\005 \001(\005\032B\n\020CHeroSelectEvent\022\017\n\007is_p" +
+      "ick\030\001 \001(\010\022\014\n\004team\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r" +
+      "\032(\n\013CCSGameInfo\022\031\n\021round_start_ticks\030\001 \003" +
+      "(\005\"v\n\rCDemoFileInfo\022\025\n\rplayback_time\030\001 \001" +
+      "(\002\022\026\n\016playback_ticks\030\002 \001(\005\022\027\n\017playback_f" +
+      "rames\030\003 \001(\005\022\035\n\tgame_info\030\004 \001(\0132\n.CGameIn" +
+      "fo\"J\n\013CDemoPacket\022\023\n\013sequence_in\030\001 \001(\005\022\030",
+      "\n\020sequence_out_ack\030\002 \001(\005\022\014\n\004data\030\003 \001(\014\"Y" +
+      "\n\017CDemoFullPacket\022(\n\014string_table\030\001 \001(\0132" +
+      "\022.CDemoStringTables\022\034\n\006packet\030\002 \001(\0132\014.CD" +
+      "emoPacket\"S\n\rCDemoSaveGame\022\014\n\004data\030\001 \001(\014" +
+      "\022\020\n\010steam_id\030\002 \001(\006\022\021\n\tsignature\030\003 \001(\006\022\017\n" +
+      "\007version\030\004 \001(\005\"\017\n\rCDemoSyncTick\"$\n\017CDemo" +
+      "ConsoleCmd\022\021\n\tcmdstring\030\001 \001(\t\"\037\n\017CDemoSe" +
+      "ndTables\022\014\n\004data\030\001 \001(\014\"\201\001\n\016CDemoClassInf" +
+      "o\022(\n\007classes\030\001 \003(\0132\027.CDemoClassInfo.clas" +
+      "s_t\032E\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\024\n\014netw",
+      "ork_name\030\002 \001(\t\022\022\n\ntable_name\030\003 \001(\t\"7\n\017CD" +
+      "emoCustomData\022\026\n\016callback_index\030\001 \001(\005\022\014\n" +
+      "\004data\030\002 \001(\014\"+\n\030CDemoCustomDataCallbacks\022" +
+      "\017\n\007save_id\030\001 \003(\t\"E\n\024CDemoAnimationHeader" +
+      "\022\021\n\tentity_id\030\001 \001(\021\022\014\n\004tick\030\002 \001(\005\022\014\n\004dat" +
+      "a\030\003 \001(\014\"r\n\022CDemoAnimationData\022\021\n\tentity_" +
+      "id\030\001 \001(\021\022\022\n\nstart_tick\030\002 \001(\005\022\020\n\010end_tick" +
+      "\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\022\025\n\rdata_checksum\030\005 " +
+      "\001(\003\"\373\001\n\021CDemoStringTables\022*\n\006tables\030\001 \003(" +
+      "\0132\032.CDemoStringTables.table_t\032$\n\007items_t",
+      "\022\013\n\003str\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\032\223\001\n\007table_t\022" +
+      "\022\n\ntable_name\030\001 \001(\t\022)\n\005items\030\002 \003(\0132\032.CDe" +
+      "moStringTables.items_t\0224\n\020items_clientsi" +
+      "de\030\003 \003(\0132\032.CDemoStringTables.items_t\022\023\n\013" +
+      "table_flags\030\004 \001(\005\"\013\n\tCDemoStop\"0\n\014CDemoU" +
+      "serCmd\022\022\n\ncmd_number\030\001 \001(\005\022\014\n\004data\030\002 \001(\014" +
+      "\" \n\020CDemoSpawnGroups\022\014\n\004msgs\030\003 \003(\014*\320\003\n\rE" +
+      "DemoCommands\022\026\n\tDEM_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010" +
+      "DEM_Stop\020\000\022\022\n\016DEM_FileHeader\020\001\022\020\n\014DEM_Fi" +
+      "leInfo\020\002\022\020\n\014DEM_SyncTick\020\003\022\022\n\016DEM_SendTa",
+      "bles\020\004\022\021\n\rDEM_ClassInfo\020\005\022\024\n\020DEM_StringT" +
+      "ables\020\006\022\016\n\nDEM_Packet\020\007\022\024\n\020DEM_SignonPac" +
+      "ket\020\010\022\022\n\016DEM_ConsoleCmd\020\t\022\022\n\016DEM_CustomD" +
+      "ata\020\n\022\033\n\027DEM_CustomDataCallbacks\020\013\022\017\n\013DE" +
+      "M_UserCmd\020\014\022\022\n\016DEM_FullPacket\020\r\022\020\n\014DEM_S" +
+      "aveGame\020\016\022\023\n\017DEM_SpawnGroups\020\017\022\025\n\021DEM_An" +
+      "imationData\020\020\022\027\n\023DEM_AnimationHeader\020\021\022\013" +
+      "\n\007DEM_Max\020\022\022\027\n\023DEM_IsCompressed_S1\020p\022\027\n\023" +
+      "DEM_IsCompressed_S2\020@B+\n)skadistats.clar" +
+      "ity.wire.shared.demo.proto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -16352,13 +18399,13 @@ public final class Demo {
     internal_static_CDemoFileHeader_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoFileHeader_descriptor,
-        new java.lang.String[] { "DemoFileStamp", "NetworkProtocol", "ServerName", "ClientName", "MapName", "GameDirectory", "FullpacketsVersion", "AllowClientsideEntities", "AllowClientsideParticles", "Addons", "DemoVersionName", "DemoVersionGuid", "BuildNum", "Game", });
+        new java.lang.String[] { "DemoFileStamp", "NetworkProtocol", "ServerName", "ClientName", "MapName", "GameDirectory", "FullpacketsVersion", "AllowClientsideEntities", "AllowClientsideParticles", "Addons", "DemoVersionName", "DemoVersionGuid", "BuildNum", "Game", "ServerStartTick", });
     internal_static_CGameInfo_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CGameInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CGameInfo_descriptor,
-        new java.lang.String[] { "Dota", });
+        new java.lang.String[] { "Dota", "Cs", });
     internal_static_CGameInfo_CDotaGameInfo_descriptor =
       internal_static_CGameInfo_descriptor.getNestedTypes().get(0);
     internal_static_CGameInfo_CDotaGameInfo_fieldAccessorTable = new
@@ -16377,6 +18424,12 @@ public final class Demo {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CGameInfo_CDotaGameInfo_CHeroSelectEvent_descriptor,
         new java.lang.String[] { "IsPick", "Team", "HeroId", });
+    internal_static_CGameInfo_CCSGameInfo_descriptor =
+      internal_static_CGameInfo_descriptor.getNestedTypes().get(1);
+    internal_static_CGameInfo_CCSGameInfo_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CGameInfo_CCSGameInfo_descriptor,
+        new java.lang.String[] { "RoundStartTicks", });
     internal_static_CDemoFileInfo_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CDemoFileInfo_fieldAccessorTable = new
@@ -16443,8 +18496,20 @@ public final class Demo {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoCustomDataCallbacks_descriptor,
         new java.lang.String[] { "SaveId", });
-    internal_static_CDemoStringTables_descriptor =
+    internal_static_CDemoAnimationHeader_descriptor =
       getDescriptor().getMessageTypes().get(12);
+    internal_static_CDemoAnimationHeader_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDemoAnimationHeader_descriptor,
+        new java.lang.String[] { "EntityId", "Tick", "Data", });
+    internal_static_CDemoAnimationData_descriptor =
+      getDescriptor().getMessageTypes().get(13);
+    internal_static_CDemoAnimationData_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDemoAnimationData_descriptor,
+        new java.lang.String[] { "EntityId", "StartTick", "EndTick", "Data", "DataChecksum", });
+    internal_static_CDemoStringTables_descriptor =
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CDemoStringTables_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoStringTables_descriptor,
@@ -16462,19 +18527,19 @@ public final class Demo {
         internal_static_CDemoStringTables_table_t_descriptor,
         new java.lang.String[] { "TableName", "Items", "ItemsClientside", "TableFlags", });
     internal_static_CDemoStop_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CDemoStop_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoStop_descriptor,
         new java.lang.String[] { });
     internal_static_CDemoUserCmd_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CDemoUserCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoUserCmd_descriptor,
         new java.lang.String[] { "CmdNumber", "Data", });
     internal_static_CDemoSpawnGroups_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CDemoSpawnGroups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoSpawnGroups_descriptor,

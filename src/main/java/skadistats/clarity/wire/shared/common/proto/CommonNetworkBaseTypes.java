@@ -5966,6 +5966,29 @@ public final class CommonNetworkBaseTypes {
      * <code>optional uint32 hltv_replay_flags = 9;</code>
      */
     int getHltvReplayFlags();
+
+    /**
+     * <code>optional uint32 expected_long_tick = 10;</code>
+     */
+    boolean hasExpectedLongTick();
+    /**
+     * <code>optional uint32 expected_long_tick = 10;</code>
+     */
+    int getExpectedLongTick();
+
+    /**
+     * <code>optional string expected_long_tick_reason = 11;</code>
+     */
+    boolean hasExpectedLongTickReason();
+    /**
+     * <code>optional string expected_long_tick_reason = 11;</code>
+     */
+    java.lang.String getExpectedLongTickReason();
+    /**
+     * <code>optional string expected_long_tick_reason = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getExpectedLongTickReasonBytes();
   }
   /**
    * Protobuf type {@code CNETMsg_Tick}
@@ -6062,6 +6085,17 @@ public final class CommonNetworkBaseTypes {
             case 72: {
               bitField0_ |= 0x00000100;
               hltvReplayFlags_ = input.readUInt32();
+              break;
+            }
+            case 80: {
+              bitField0_ |= 0x00000200;
+              expectedLongTick_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000400;
+              expectedLongTickReason_ = bs;
               break;
             }
           }
@@ -6239,6 +6273,63 @@ public final class CommonNetworkBaseTypes {
       return hltvReplayFlags_;
     }
 
+    public static final int EXPECTED_LONG_TICK_FIELD_NUMBER = 10;
+    private int expectedLongTick_;
+    /**
+     * <code>optional uint32 expected_long_tick = 10;</code>
+     */
+    public boolean hasExpectedLongTick() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional uint32 expected_long_tick = 10;</code>
+     */
+    public int getExpectedLongTick() {
+      return expectedLongTick_;
+    }
+
+    public static final int EXPECTED_LONG_TICK_REASON_FIELD_NUMBER = 11;
+    private java.lang.Object expectedLongTickReason_;
+    /**
+     * <code>optional string expected_long_tick_reason = 11;</code>
+     */
+    public boolean hasExpectedLongTickReason() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional string expected_long_tick_reason = 11;</code>
+     */
+    public java.lang.String getExpectedLongTickReason() {
+      java.lang.Object ref = expectedLongTickReason_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          expectedLongTickReason_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string expected_long_tick_reason = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExpectedLongTickReasonBytes() {
+      java.lang.Object ref = expectedLongTickReason_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        expectedLongTickReason_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private void initFields() {
       tick_ = 0;
       hostFrametime_ = 0;
@@ -6249,6 +6340,8 @@ public final class CommonNetworkBaseTypes {
       hostLoss_ = 0;
       hostUnfilteredFrametime_ = 0;
       hltvReplayFlags_ = 0;
+      expectedLongTick_ = 0;
+      expectedLongTickReason_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -6289,6 +6382,12 @@ public final class CommonNetworkBaseTypes {
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeUInt32(9, hltvReplayFlags_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeUInt32(10, expectedLongTick_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeBytes(11, getExpectedLongTickReasonBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -6334,6 +6433,14 @@ public final class CommonNetworkBaseTypes {
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(9, hltvReplayFlags_);
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, expectedLongTick_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(11, getExpectedLongTickReasonBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -6470,6 +6577,10 @@ public final class CommonNetworkBaseTypes {
         bitField0_ = (bitField0_ & ~0x00000080);
         hltvReplayFlags_ = 0;
         bitField0_ = (bitField0_ & ~0x00000100);
+        expectedLongTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        expectedLongTickReason_ = "";
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -6534,6 +6645,14 @@ public final class CommonNetworkBaseTypes {
           to_bitField0_ |= 0x00000100;
         }
         result.hltvReplayFlags_ = hltvReplayFlags_;
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.expectedLongTick_ = expectedLongTick_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.expectedLongTickReason_ = expectedLongTickReason_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -6576,6 +6695,14 @@ public final class CommonNetworkBaseTypes {
         }
         if (other.hasHltvReplayFlags()) {
           setHltvReplayFlags(other.getHltvReplayFlags());
+        }
+        if (other.hasExpectedLongTick()) {
+          setExpectedLongTick(other.getExpectedLongTick());
+        }
+        if (other.hasExpectedLongTickReason()) {
+          bitField0_ |= 0x00000400;
+          expectedLongTickReason_ = other.expectedLongTickReason_;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -6892,6 +7019,114 @@ public final class CommonNetworkBaseTypes {
         return this;
       }
 
+      private int expectedLongTick_ ;
+      /**
+       * <code>optional uint32 expected_long_tick = 10;</code>
+       */
+      public boolean hasExpectedLongTick() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional uint32 expected_long_tick = 10;</code>
+       */
+      public int getExpectedLongTick() {
+        return expectedLongTick_;
+      }
+      /**
+       * <code>optional uint32 expected_long_tick = 10;</code>
+       */
+      public Builder setExpectedLongTick(int value) {
+        bitField0_ |= 0x00000200;
+        expectedLongTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 expected_long_tick = 10;</code>
+       */
+      public Builder clearExpectedLongTick() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        expectedLongTick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object expectedLongTickReason_ = "";
+      /**
+       * <code>optional string expected_long_tick_reason = 11;</code>
+       */
+      public boolean hasExpectedLongTickReason() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional string expected_long_tick_reason = 11;</code>
+       */
+      public java.lang.String getExpectedLongTickReason() {
+        java.lang.Object ref = expectedLongTickReason_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            expectedLongTickReason_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string expected_long_tick_reason = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExpectedLongTickReasonBytes() {
+        java.lang.Object ref = expectedLongTickReason_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          expectedLongTickReason_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string expected_long_tick_reason = 11;</code>
+       */
+      public Builder setExpectedLongTickReason(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        expectedLongTickReason_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string expected_long_tick_reason = 11;</code>
+       */
+      public Builder clearExpectedLongTickReason() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        expectedLongTickReason_ = getDefaultInstance().getExpectedLongTickReason();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string expected_long_tick_reason = 11;</code>
+       */
+      public Builder setExpectedLongTickReasonBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000400;
+        expectedLongTickReason_ = value;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CNETMsg_Tick)
     }
 
@@ -6920,6 +7155,15 @@ public final class CommonNetworkBaseTypes {
      */
     com.google.protobuf.ByteString
         getCommandBytes();
+
+    /**
+     * <code>optional uint32 prediction_sync = 2;</code>
+     */
+    boolean hasPredictionSync();
+    /**
+     * <code>optional uint32 prediction_sync = 2;</code>
+     */
+    int getPredictionSync();
   }
   /**
    * Protobuf type {@code CNETMsg_StringCmd}
@@ -6977,6 +7221,11 @@ public final class CommonNetworkBaseTypes {
               com.google.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               command_ = bs;
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              predictionSync_ = input.readUInt32();
               break;
             }
           }
@@ -7061,8 +7310,24 @@ public final class CommonNetworkBaseTypes {
       }
     }
 
+    public static final int PREDICTION_SYNC_FIELD_NUMBER = 2;
+    private int predictionSync_;
+    /**
+     * <code>optional uint32 prediction_sync = 2;</code>
+     */
+    public boolean hasPredictionSync() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional uint32 prediction_sync = 2;</code>
+     */
+    public int getPredictionSync() {
+      return predictionSync_;
+    }
+
     private void initFields() {
       command_ = "";
+      predictionSync_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -7080,6 +7345,9 @@ public final class CommonNetworkBaseTypes {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         output.writeBytes(1, getCommandBytes());
       }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeUInt32(2, predictionSync_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -7092,6 +7360,10 @@ public final class CommonNetworkBaseTypes {
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(1, getCommandBytes());
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(2, predictionSync_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -7212,6 +7484,8 @@ public final class CommonNetworkBaseTypes {
         super.clear();
         command_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
+        predictionSync_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -7244,6 +7518,10 @@ public final class CommonNetworkBaseTypes {
           to_bitField0_ |= 0x00000001;
         }
         result.command_ = command_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.predictionSync_ = predictionSync_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -7264,6 +7542,9 @@ public final class CommonNetworkBaseTypes {
           bitField0_ |= 0x00000001;
           command_ = other.command_;
           onChanged();
+        }
+        if (other.hasPredictionSync()) {
+          setPredictionSync(other.getPredictionSync());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7364,6 +7645,38 @@ public final class CommonNetworkBaseTypes {
   }
   bitField0_ |= 0x00000001;
         command_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int predictionSync_ ;
+      /**
+       * <code>optional uint32 prediction_sync = 2;</code>
+       */
+      public boolean hasPredictionSync() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional uint32 prediction_sync = 2;</code>
+       */
+      public int getPredictionSync() {
+        return predictionSync_;
+      }
+      /**
+       * <code>optional uint32 prediction_sync = 2;</code>
+       */
+      public Builder setPredictionSync(int value) {
+        bitField0_ |= 0x00000002;
+        predictionSync_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 prediction_sync = 2;</code>
+       */
+      public Builder clearPredictionSync() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        predictionSync_ = 0;
         onChanged();
         return this;
       }
@@ -12979,41 +13292,44 @@ public final class CommonNetworkBaseTypes {
       "DISCONNECT_INVALID\"|\n\014CNETMsg_File\022\023\n\013tr" +
       "ansfer_id\030\001 \001(\005\022\021\n\tfile_name\030\002 \001(\t\022\033\n\023is" +
       "_replay_demo_file\030\003 \001(\010\022\014\n\004deny\030\004 \001(\010\022\031\n" +
-      "\021is_file_requested\030\005 \001(\010\"\240\002\n\014CNETMsg_Tic" +
+      "\021is_file_requested\030\005 \001(\010\"\337\002\n\014CNETMsg_Tic" +
       "k\022\014\n\004tick\030\001 \001(\r\022\026\n\016host_frametime\030\002 \001(\r\022" +
       "$\n\034host_frametime_std_deviation\030\003 \001(\r\022\034\n" +
       "\024host_computationtime\030\004 \001(\r\022*\n\"host_comp",
       "utationtime_std_deviation\030\005 \001(\r\022)\n!host_" +
       "framestarttime_std_deviation\030\006 \001(\r\022\021\n\tho" +
       "st_loss\030\007 \001(\r\022!\n\031host_unfiltered_frameti" +
-      "me\030\010 \001(\r\022\031\n\021hltv_replay_flags\030\t \001(\r\"$\n\021C" +
-      "NETMsg_StringCmd\022\017\n\007command\030\001 \001(\t\"1\n\021CNE" +
-      "TMsg_SetConVar\022\034\n\007convars\030\001 \001(\0132\013.CMsg_C" +
-      "Vars\"\274\001\n\023CNETMsg_SignonState\0226\n\014signon_s" +
-      "tate\030\001 \001(\0162\016.SignonState_t:\020SIGNONSTATE_" +
-      "NONE\022\023\n\013spawn_count\030\002 \001(\r\022\032\n\022num_server_" +
-      "players\030\003 \001(\r\022\032\n\022players_networkids\030\004 \003(",
-      "\t\022\020\n\010map_name\030\005 \001(\t\022\016\n\006addons\030\006 \001(\t\"\246\002\n\021" +
-      "CSVCMsg_GameEvent\022\022\n\nevent_name\030\001 \001(\t\022\017\n" +
-      "\007eventid\030\002 \001(\005\022&\n\004keys\030\003 \003(\0132\030.CSVCMsg_G" +
-      "ameEvent.key_t\022\023\n\013passthrough\030\004 \001(\005\032\256\001\n\005" +
-      "key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_string\030\002 \001(\t\022" +
-      "\021\n\tval_float\030\003 \001(\002\022\020\n\010val_long\030\004 \001(\005\022\021\n\t" +
-      "val_short\030\005 \001(\005\022\020\n\010val_byte\030\006 \001(\005\022\020\n\010val" +
-      "_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010 \001(\004\022\023\n\013val_w" +
-      "string\030\t \001(\014\"\205\001\n\026CSVCMsgList_GameEvents\022" +
-      "/\n\006events\030\001 \003(\0132\037.CSVCMsgList_GameEvents",
-      ".event_t\032:\n\007event_t\022\014\n\004tick\030\001 \001(\005\022!\n\005eve" +
-      "nt\030\002 \001(\0132\022.CSVCMsg_GameEvent\"N\n\023CSVCMsg_" +
-      "UserMessage\022\020\n\010msg_type\030\001 \001(\005\022\020\n\010msg_dat" +
-      "a\030\002 \001(\014\022\023\n\013passthrough\030\003 \001(\005*\324\001\n\rSignonS" +
-      "tate_t\022\024\n\020SIGNONSTATE_NONE\020\000\022\031\n\025SIGNONST" +
-      "ATE_CHALLENGE\020\001\022\031\n\025SIGNONSTATE_CONNECTED" +
-      "\020\002\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024SIGNONSTATE_P" +
-      "RESPAWN\020\004\022\025\n\021SIGNONSTATE_SPAWN\020\005\022\024\n\020SIGN" +
-      "ONSTATE_FULL\020\006\022\033\n\027SIGNONSTATE_CHANGELEVE" +
-      "L\020\007BE\n+skadistats.clarity.wire.shared.co",
-      "mmon.protoB\026CommonNetworkBaseTypes"
+      "me\030\010 \001(\r\022\031\n\021hltv_replay_flags\030\t \001(\r\022\032\n\022e" +
+      "xpected_long_tick\030\n \001(\r\022!\n\031expected_long" +
+      "_tick_reason\030\013 \001(\t\"=\n\021CNETMsg_StringCmd\022" +
+      "\017\n\007command\030\001 \001(\t\022\027\n\017prediction_sync\030\002 \001(" +
+      "\r\"1\n\021CNETMsg_SetConVar\022\034\n\007convars\030\001 \001(\0132" +
+      "\013.CMsg_CVars\"\274\001\n\023CNETMsg_SignonState\0226\n\014" +
+      "signon_state\030\001 \001(\0162\016.SignonState_t:\020SIGN",
+      "ONSTATE_NONE\022\023\n\013spawn_count\030\002 \001(\r\022\032\n\022num" +
+      "_server_players\030\003 \001(\r\022\032\n\022players_network" +
+      "ids\030\004 \003(\t\022\020\n\010map_name\030\005 \001(\t\022\016\n\006addons\030\006 " +
+      "\001(\t\"\246\002\n\021CSVCMsg_GameEvent\022\022\n\nevent_name\030" +
+      "\001 \001(\t\022\017\n\007eventid\030\002 \001(\005\022&\n\004keys\030\003 \003(\0132\030.C" +
+      "SVCMsg_GameEvent.key_t\022\023\n\013passthrough\030\004 " +
+      "\001(\005\032\256\001\n\005key_t\022\014\n\004type\030\001 \001(\005\022\022\n\nval_strin" +
+      "g\030\002 \001(\t\022\021\n\tval_float\030\003 \001(\002\022\020\n\010val_long\030\004" +
+      " \001(\005\022\021\n\tval_short\030\005 \001(\005\022\020\n\010val_byte\030\006 \001(" +
+      "\005\022\020\n\010val_bool\030\007 \001(\010\022\022\n\nval_uint64\030\010 \001(\004\022",
+      "\023\n\013val_wstring\030\t \001(\014\"\205\001\n\026CSVCMsgList_Gam" +
+      "eEvents\022/\n\006events\030\001 \003(\0132\037.CSVCMsgList_Ga" +
+      "meEvents.event_t\032:\n\007event_t\022\014\n\004tick\030\001 \001(" +
+      "\005\022!\n\005event\030\002 \001(\0132\022.CSVCMsg_GameEvent\"N\n\023" +
+      "CSVCMsg_UserMessage\022\020\n\010msg_type\030\001 \001(\005\022\020\n" +
+      "\010msg_data\030\002 \001(\014\022\023\n\013passthrough\030\003 \001(\005*\324\001\n" +
+      "\rSignonState_t\022\024\n\020SIGNONSTATE_NONE\020\000\022\031\n\025" +
+      "SIGNONSTATE_CHALLENGE\020\001\022\031\n\025SIGNONSTATE_C" +
+      "ONNECTED\020\002\022\023\n\017SIGNONSTATE_NEW\020\003\022\030\n\024SIGNO" +
+      "NSTATE_PRESPAWN\020\004\022\025\n\021SIGNONSTATE_SPAWN\020\005",
+      "\022\024\n\020SIGNONSTATE_FULL\020\006\022\033\n\027SIGNONSTATE_CH" +
+      "ANGELEVEL\020\007BE\n+skadistats.clarity.wire.s" +
+      "hared.common.protoB\026CommonNetworkBaseTyp" +
+      "es"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -13093,13 +13409,13 @@ public final class CommonNetworkBaseTypes {
     internal_static_CNETMsg_Tick_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_Tick_descriptor,
-        new java.lang.String[] { "Tick", "HostFrametime", "HostFrametimeStdDeviation", "HostComputationtime", "HostComputationtimeStdDeviation", "HostFramestarttimeStdDeviation", "HostLoss", "HostUnfilteredFrametime", "HltvReplayFlags", });
+        new java.lang.String[] { "Tick", "HostFrametime", "HostFrametimeStdDeviation", "HostComputationtime", "HostComputationtimeStdDeviation", "HostFramestarttimeStdDeviation", "HostLoss", "HostUnfilteredFrametime", "HltvReplayFlags", "ExpectedLongTick", "ExpectedLongTickReason", });
     internal_static_CNETMsg_StringCmd_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_CNETMsg_StringCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_StringCmd_descriptor,
-        new java.lang.String[] { "Command", });
+        new java.lang.String[] { "Command", "PredictionSync", });
     internal_static_CNETMsg_SetConVar_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_CNETMsg_SetConVar_fieldAccessorTable = new

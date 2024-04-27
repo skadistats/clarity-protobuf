@@ -1,0 +1,12 @@
+option java_package = "skadistats.clarity.wire.dota.s2.proto";
+option java_outer_classname = "DOTAS2GcMessagesCommonOverworld";
+
+message CMsgOverworldTokenCount {
+    optional uint32 token_id = 1;
+    optional uint32 token_count = 2;
+}
+
+message CMsgOverworldTokenQuantity {
+    repeated .CMsgOverworldTokenCount token_counts = 1;
+}
+

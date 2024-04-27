@@ -293,4 +293,6 @@ enum EDotaUserMessages {
   DOTA_UM_MuertaReleaseEvent_AssignedTargetKilled = 619;
   DOTA_UM_PlayerDraftSuggestPick = 620;
   DOTA_UM_PlayerDraftPick = 621;
+  DOTA_UM_UpdateLinearProjectileCPData = 622;
+  DOTA_UM_GiftPlayer = 623;
 }

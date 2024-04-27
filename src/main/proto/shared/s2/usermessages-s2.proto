@@ -73,6 +73,13 @@ message CUserMessageShakeDir {
   optional .CMsgVector direction = 2;
 }
 
+message CUserMessageWaterShake {
+  optional uint32 command = 1;
+  optional float amplitude = 2;
+  optional float frequency = 3;
+  optional float duration = 4;
+}
+
 message CUserMessageScreenTilt {
   optional uint32 command = 1;
   optional bool ease_in_out = 2;
@@ -370,22 +377,9 @@ message CUserMessage_Inventory_Response {
   optional int32 platform = 8;
   repeated .CUserMessage_Inventory_Response.InventoryDetail inventories = 9;
   repeated .CUserMessage_Inventory_Response.InventoryDetail inventories2 = 10;
+  repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;
   optional int32 inv_type = 11;
   optional int32 build_version = 12;
   optional int32 instance = 13;
+  optional int64 start_time = 15;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

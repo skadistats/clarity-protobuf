@@ -65,6 +65,37 @@ public final class DemoNetMessages {
      * <code>optional uint32 uncompressed_sample_offset = 6;</code>
      */
     int getUncompressedSampleOffset();
+
+    /**
+     * <code>optional uint32 num_packets = 7;</code>
+     */
+    boolean hasNumPackets();
+    /**
+     * <code>optional uint32 num_packets = 7;</code>
+     */
+    int getNumPackets();
+
+    /**
+     * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+     */
+    java.util.List<java.lang.Integer> getPacketOffsetsList();
+    /**
+     * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+     */
+    int getPacketOffsetsCount();
+    /**
+     * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+     */
+    int getPacketOffsets(int index);
+
+    /**
+     * <code>optional float voice_level = 9;</code>
+     */
+    boolean hasVoiceLevel();
+    /**
+     * <code>optional float voice_level = 9;</code>
+     */
+    float getVoiceLevel();
   }
   /**
    * Protobuf type {@code CMsgVoiceAudio}
@@ -154,6 +185,37 @@ public final class DemoNetMessages {
               uncompressedSampleOffset_ = input.readUInt32();
               break;
             }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              numPackets_ = input.readUInt32();
+              break;
+            }
+            case 64: {
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+                packetOffsets_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              packetOffsets_.add(input.readUInt32());
+              break;
+            }
+            case 66: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080) && input.getBytesUntilLimit() > 0) {
+                packetOffsets_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000080;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                packetOffsets_.add(input.readUInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 77: {
+              bitField0_ |= 0x00000080;
+              voiceLevel_ = input.readFloat();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -162,6 +224,9 @@ public final class DemoNetMessages {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+          packetOffsets_ = java.util.Collections.unmodifiableList(packetOffsets_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -284,6 +349,59 @@ public final class DemoNetMessages {
       return uncompressedSampleOffset_;
     }
 
+    public static final int NUM_PACKETS_FIELD_NUMBER = 7;
+    private int numPackets_;
+    /**
+     * <code>optional uint32 num_packets = 7;</code>
+     */
+    public boolean hasNumPackets() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional uint32 num_packets = 7;</code>
+     */
+    public int getNumPackets() {
+      return numPackets_;
+    }
+
+    public static final int PACKET_OFFSETS_FIELD_NUMBER = 8;
+    private java.util.List<java.lang.Integer> packetOffsets_;
+    /**
+     * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getPacketOffsetsList() {
+      return packetOffsets_;
+    }
+    /**
+     * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+     */
+    public int getPacketOffsetsCount() {
+      return packetOffsets_.size();
+    }
+    /**
+     * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+     */
+    public int getPacketOffsets(int index) {
+      return packetOffsets_.get(index);
+    }
+    private int packetOffsetsMemoizedSerializedSize = -1;
+
+    public static final int VOICE_LEVEL_FIELD_NUMBER = 9;
+    private float voiceLevel_;
+    /**
+     * <code>optional float voice_level = 9;</code>
+     */
+    public boolean hasVoiceLevel() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional float voice_level = 9;</code>
+     */
+    public float getVoiceLevel() {
+      return voiceLevel_;
+    }
+
     private void initFields() {
       format_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
       voiceData_ = com.google.protobuf.ByteString.EMPTY;
@@ -291,6 +409,9 @@ public final class DemoNetMessages {
       sectionNumber_ = 0;
       sampleRate_ = 0;
       uncompressedSampleOffset_ = 0;
+      numPackets_ = 0;
+      packetOffsets_ = java.util.Collections.emptyList();
+      voiceLevel_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -322,6 +443,19 @@ public final class DemoNetMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeUInt32(6, uncompressedSampleOffset_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt32(7, numPackets_);
+      }
+      if (getPacketOffsetsList().size() > 0) {
+        output.writeRawVarint32(66);
+        output.writeRawVarint32(packetOffsetsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < packetOffsets_.size(); i++) {
+        output.writeUInt32NoTag(packetOffsets_.get(i));
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeFloat(9, voiceLevel_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -355,6 +489,28 @@ public final class DemoNetMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, uncompressedSampleOffset_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(7, numPackets_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < packetOffsets_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeUInt32SizeNoTag(packetOffsets_.get(i));
+        }
+        size += dataSize;
+        if (!getPacketOffsetsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        packetOffsetsMemoizedSerializedSize = dataSize;
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(9, voiceLevel_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -485,6 +641,12 @@ public final class DemoNetMessages {
         bitField0_ = (bitField0_ & ~0x00000010);
         uncompressedSampleOffset_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
+        numPackets_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        packetOffsets_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        voiceLevel_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -537,6 +699,19 @@ public final class DemoNetMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.uncompressedSampleOffset_ = uncompressedSampleOffset_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.numPackets_ = numPackets_;
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          packetOffsets_ = java.util.Collections.unmodifiableList(packetOffsets_);
+          bitField0_ = (bitField0_ & ~0x00000080);
+        }
+        result.packetOffsets_ = packetOffsets_;
+        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.voiceLevel_ = voiceLevel_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -570,6 +745,22 @@ public final class DemoNetMessages {
         }
         if (other.hasUncompressedSampleOffset()) {
           setUncompressedSampleOffset(other.getUncompressedSampleOffset());
+        }
+        if (other.hasNumPackets()) {
+          setNumPackets(other.getNumPackets());
+        }
+        if (!other.packetOffsets_.isEmpty()) {
+          if (packetOffsets_.isEmpty()) {
+            packetOffsets_ = other.packetOffsets_;
+            bitField0_ = (bitField0_ & ~0x00000080);
+          } else {
+            ensurePacketOffsetsIsMutable();
+            packetOffsets_.addAll(other.packetOffsets_);
+          }
+          onChanged();
+        }
+        if (other.hasVoiceLevel()) {
+          setVoiceLevel(other.getVoiceLevel());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -792,6 +983,136 @@ public final class DemoNetMessages {
       public Builder clearUncompressedSampleOffset() {
         bitField0_ = (bitField0_ & ~0x00000020);
         uncompressedSampleOffset_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int numPackets_ ;
+      /**
+       * <code>optional uint32 num_packets = 7;</code>
+       */
+      public boolean hasNumPackets() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 num_packets = 7;</code>
+       */
+      public int getNumPackets() {
+        return numPackets_;
+      }
+      /**
+       * <code>optional uint32 num_packets = 7;</code>
+       */
+      public Builder setNumPackets(int value) {
+        bitField0_ |= 0x00000040;
+        numPackets_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_packets = 7;</code>
+       */
+      public Builder clearNumPackets() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        numPackets_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> packetOffsets_ = java.util.Collections.emptyList();
+      private void ensurePacketOffsetsIsMutable() {
+        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+          packetOffsets_ = new java.util.ArrayList<java.lang.Integer>(packetOffsets_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getPacketOffsetsList() {
+        return java.util.Collections.unmodifiableList(packetOffsets_);
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public int getPacketOffsetsCount() {
+        return packetOffsets_.size();
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public int getPacketOffsets(int index) {
+        return packetOffsets_.get(index);
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public Builder setPacketOffsets(
+          int index, int value) {
+        ensurePacketOffsetsIsMutable();
+        packetOffsets_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public Builder addPacketOffsets(int value) {
+        ensurePacketOffsetsIsMutable();
+        packetOffsets_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public Builder addAllPacketOffsets(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensurePacketOffsetsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, packetOffsets_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated uint32 packet_offsets = 8 [packed = true];</code>
+       */
+      public Builder clearPacketOffsets() {
+        packetOffsets_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+
+      private float voiceLevel_ ;
+      /**
+       * <code>optional float voice_level = 9;</code>
+       */
+      public boolean hasVoiceLevel() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional float voice_level = 9;</code>
+       */
+      public float getVoiceLevel() {
+        return voiceLevel_;
+      }
+      /**
+       * <code>optional float voice_level = 9;</code>
+       */
+      public Builder setVoiceLevel(float value) {
+        bitField0_ |= 0x00000100;
+        voiceLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float voice_level = 9;</code>
+       */
+      public Builder clearVoiceLevel() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        voiceLevel_ = 0F;
         onChanged();
         return this;
       }
@@ -5238,31 +5559,33 @@ public final class DemoNetMessages {
     java.lang.String[] descriptorData = {
       "\n\026netmessages-demo.proto\032\030netmessages-co" +
       "mmon.proto\032\033networkbasetypes-demo.proto\"" +
-      "\311\001\n\016CMsgVoiceAudio\022:\n\006format\030\001 \001(\0162\022.Voi" +
+      "\217\002\n\016CMsgVoiceAudio\022:\n\006format\030\001 \001(\0162\022.Voi" +
       "ceDataFormat_t:\026VOICEDATA_FORMAT_STEAM\022\022" +
       "\n\nvoice_data\030\002 \001(\014\022\026\n\016sequence_bytes\030\003 \001" +
       "(\005\022\026\n\016section_number\030\004 \001(\r\022\023\n\013sample_rat" +
       "e\030\005 \001(\r\022\"\n\032uncompressed_sample_offset\030\006 " +
-      "\001(\r\"O\n\021CCLCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132" +
-      "\017.CMsgVoiceAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n\004tick\030\003" +
-      " \001(\r\"m\n\024CCLCMsg_FileCRCCheck\022\021\n\tcode_pat",
-      "h\030\001 \001(\005\022\014\n\004path\030\002 \001(\t\022\025\n\rcode_filename\030\003" +
-      " \001(\005\022\020\n\010filename\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"0\n\032C" +
-      "CLCMsg_SplitPlayerConnect\022\022\n\nplayername\030" +
-      "\001 \001(\t\"\325\003\n\022CSVCMsg_ServerInfo\022\020\n\010protocol" +
-      "\030\001 \001(\005\022\024\n\014server_count\030\002 \001(\005\022\024\n\014is_dedic" +
-      "ated\030\003 \001(\010\022\017\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay" +
-      "\030\005 \001(\010\022\014\n\004c_os\030\006 \001(\005\022\017\n\007map_crc\030\007 \001(\007\022\022\n" +
-      "\nclient_crc\030\010 \001(\007\022\030\n\020string_table_crc\030\t " +
-      "\001(\007\022\023\n\013max_clients\030\n \001(\005\022\023\n\013max_classes\030" +
-      "\013 \001(\005\022\023\n\013player_slot\030\014 \001(\005\022\025\n\rtick_inter",
-      "val\030\r \001(\002\022\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030" +
-      "\017 \001(\t\022\020\n\010sky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001" +
-      "(\t\022\022\n\naddon_name\030\022 \001(\t\022>\n\023game_session_c" +
-      "onfig\030\023 \001(\0132!.CSVCMsg_GameSessionConfigu" +
-      "ration\022\035\n\025game_session_manifest\030\024 \001(\014B<\n" +
-      ")skadistats.clarity.wire.shared.demo.pro" +
-      "toB\017DemoNetMessages"
+      "\001(\r\022\023\n\013num_packets\030\007 \001(\r\022\032\n\016packet_offse" +
+      "ts\030\010 \003(\rB\002\020\001\022\023\n\013voice_level\030\t \001(\002\"O\n\021CCL" +
+      "CMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMsgVoic",
+      "eAudio\022\014\n\004xuid\030\002 \001(\006\022\014\n\004tick\030\003 \001(\r\"m\n\024CC" +
+      "LCMsg_FileCRCCheck\022\021\n\tcode_path\030\001 \001(\005\022\014\n" +
+      "\004path\030\002 \001(\t\022\025\n\rcode_filename\030\003 \001(\005\022\020\n\010fi" +
+      "lename\030\004 \001(\t\022\013\n\003crc\030\005 \001(\007\"0\n\032CCLCMsg_Spl" +
+      "itPlayerConnect\022\022\n\nplayername\030\001 \001(\t\"\325\003\n\022" +
+      "CSVCMsg_ServerInfo\022\020\n\010protocol\030\001 \001(\005\022\024\n\014" +
+      "server_count\030\002 \001(\005\022\024\n\014is_dedicated\030\003 \001(\010" +
+      "\022\017\n\007is_hltv\030\004 \001(\010\022\021\n\tis_replay\030\005 \001(\010\022\014\n\004" +
+      "c_os\030\006 \001(\005\022\017\n\007map_crc\030\007 \001(\007\022\022\n\nclient_cr" +
+      "c\030\010 \001(\007\022\030\n\020string_table_crc\030\t \001(\007\022\023\n\013max",
+      "_clients\030\n \001(\005\022\023\n\013max_classes\030\013 \001(\005\022\023\n\013p" +
+      "layer_slot\030\014 \001(\005\022\025\n\rtick_interval\030\r \001(\002\022" +
+      "\020\n\010game_dir\030\016 \001(\t\022\020\n\010map_name\030\017 \001(\t\022\020\n\010s" +
+      "ky_name\030\020 \001(\t\022\021\n\thost_name\030\021 \001(\t\022\022\n\naddo" +
+      "n_name\030\022 \001(\t\022>\n\023game_session_config\030\023 \001(" +
+      "\0132!.CSVCMsg_GameSessionConfiguration\022\035\n\025" +
+      "game_session_manifest\030\024 \001(\014B<\n)skadistat" +
+      "s.clarity.wire.shared.demo.protoB\017DemoNe" +
+      "tMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5283,7 +5606,7 @@ public final class DemoNetMessages {
     internal_static_CMsgVoiceAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgVoiceAudio_descriptor,
-        new java.lang.String[] { "Format", "VoiceData", "SequenceBytes", "SectionNumber", "SampleRate", "UncompressedSampleOffset", });
+        new java.lang.String[] { "Format", "VoiceData", "SequenceBytes", "SectionNumber", "SampleRate", "UncompressedSampleOffset", "NumPackets", "PacketOffsets", "VoiceLevel", });
     internal_static_CCLCMsg_VoiceData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CCLCMsg_VoiceData_fieldAccessorTable = new

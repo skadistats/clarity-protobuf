@@ -129,6 +129,10 @@ public final class DemoUserMessages {
      * <code>GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE = 28;</code>
      */
     GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE(28, 28),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_FREEZE_INVOLVING = 29;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_FREEZE_INVOLVING(29, 29),
     ;
 
     /**
@@ -247,6 +251,10 @@ public final class DemoUserMessages {
      * <code>GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE = 28;</code>
      */
     public static final int GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE_VALUE = 28;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_FREEZE_INVOLVING = 29;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_FREEZE_INVOLVING_VALUE = 29;
 
 
     public final int getNumber() { return value; }
@@ -282,6 +290,7 @@ public final class DemoUserMessages {
         case 26: return GAME_PARTICLE_MANAGER_EVENT_SET_NAMED_VALUE_CONTEXT;
         case 27: return GAME_PARTICLE_MANAGER_EVENT_UPDATE_TRANSFORM;
         case 28: return GAME_PARTICLE_MANAGER_EVENT_FREEZE_TRANSITION_OVERRIDE;
+        case 29: return GAME_PARTICLE_MANAGER_EVENT_FREEZE_INVOLVING;
         default: return null;
       }
     }
@@ -719,6 +728,19 @@ public final class DemoUserMessages {
      * <code>optional .CUserMsg_ParticleManager.ParticleFreezeTransitionOverride particle_freeze_transition_override = 31;</code>
      */
     skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverrideOrBuilder getParticleFreezeTransitionOverrideOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+     */
+    boolean hasFreezeParticleInvolving();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving getFreezeParticleInvolving();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder getFreezeParticleInvolvingOrBuilder();
   }
   /**
    * Protobuf type {@code CUserMsg_ParticleManager}
@@ -1153,6 +1175,19 @@ public final class DemoUserMessages {
               bitField0_ |= 0x20000000;
               break;
             }
+            case 258: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder subBuilder = null;
+              if (((bitField0_ & 0x40000000) == 0x40000000)) {
+                subBuilder = freezeParticleInvolving_.toBuilder();
+              }
+              freezeParticleInvolving_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(freezeParticleInvolving_);
+                freezeParticleInvolving_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x40000000;
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -1576,6 +1611,24 @@ public final class DemoUserMessages {
        */
       com.google.protobuf.ByteString
           getControlPointConfigurationBytes();
+
+      /**
+       * <code>optional bool cluster = 8;</code>
+       */
+      boolean hasCluster();
+      /**
+       * <code>optional bool cluster = 8;</code>
+       */
+      boolean getCluster();
+
+      /**
+       * <code>optional float endcap_time = 9;</code>
+       */
+      boolean hasEndcapTime();
+      /**
+       * <code>optional float endcap_time = 9;</code>
+       */
+      float getEndcapTime();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.CreateParticle}
@@ -1663,6 +1716,16 @@ public final class DemoUserMessages {
                 com.google.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000040;
                 controlPointConfiguration_ = bs;
+                break;
+              }
+              case 64: {
+                bitField0_ |= 0x00000080;
+                cluster_ = input.readBool();
+                break;
+              }
+              case 77: {
+                bitField0_ |= 0x00000100;
+                endcapTime_ = input.readFloat();
                 break;
               }
             }
@@ -1837,6 +1900,36 @@ public final class DemoUserMessages {
         }
       }
 
+      public static final int CLUSTER_FIELD_NUMBER = 8;
+      private boolean cluster_;
+      /**
+       * <code>optional bool cluster = 8;</code>
+       */
+      public boolean hasCluster() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional bool cluster = 8;</code>
+       */
+      public boolean getCluster() {
+        return cluster_;
+      }
+
+      public static final int ENDCAP_TIME_FIELD_NUMBER = 9;
+      private float endcapTime_;
+      /**
+       * <code>optional float endcap_time = 9;</code>
+       */
+      public boolean hasEndcapTime() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional float endcap_time = 9;</code>
+       */
+      public float getEndcapTime() {
+        return endcapTime_;
+      }
+
       private void initFields() {
         particleNameIndex_ = 0L;
         attachType_ = 0;
@@ -1845,6 +1938,8 @@ public final class DemoUserMessages {
         applyVoiceBanRules_ = false;
         teamBehavior_ = 0;
         controlPointConfiguration_ = "";
+        cluster_ = false;
+        endcapTime_ = 0F;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -1879,6 +1974,12 @@ public final class DemoUserMessages {
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
           output.writeBytes(7, getControlPointConfigurationBytes());
+        }
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          output.writeBool(8, cluster_);
+        }
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          output.writeFloat(9, endcapTime_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -1916,6 +2017,14 @@ public final class DemoUserMessages {
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
           size += com.google.protobuf.CodedOutputStream
             .computeBytesSize(7, getControlPointConfigurationBytes());
+        }
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(8, cluster_);
+        }
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(9, endcapTime_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -2048,6 +2157,10 @@ public final class DemoUserMessages {
           bitField0_ = (bitField0_ & ~0x00000020);
           controlPointConfiguration_ = "";
           bitField0_ = (bitField0_ & ~0x00000040);
+          cluster_ = false;
+          bitField0_ = (bitField0_ & ~0x00000080);
+          endcapTime_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000100);
           return this;
         }
 
@@ -2104,6 +2217,14 @@ public final class DemoUserMessages {
             to_bitField0_ |= 0x00000040;
           }
           result.controlPointConfiguration_ = controlPointConfiguration_;
+          if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+            to_bitField0_ |= 0x00000080;
+          }
+          result.cluster_ = cluster_;
+          if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+            to_bitField0_ |= 0x00000100;
+          }
+          result.endcapTime_ = endcapTime_;
           result.bitField0_ = to_bitField0_;
           onBuilt();
           return result;
@@ -2142,6 +2263,12 @@ public final class DemoUserMessages {
             bitField0_ |= 0x00000040;
             controlPointConfiguration_ = other.controlPointConfiguration_;
             onChanged();
+          }
+          if (other.hasCluster()) {
+            setCluster(other.getCluster());
+          }
+          if (other.hasEndcapTime()) {
+            setEndcapTime(other.getEndcapTime());
           }
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
@@ -2434,6 +2561,70 @@ public final class DemoUserMessages {
   }
   bitField0_ |= 0x00000040;
           controlPointConfiguration_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean cluster_ ;
+        /**
+         * <code>optional bool cluster = 8;</code>
+         */
+        public boolean hasCluster() {
+          return ((bitField0_ & 0x00000080) == 0x00000080);
+        }
+        /**
+         * <code>optional bool cluster = 8;</code>
+         */
+        public boolean getCluster() {
+          return cluster_;
+        }
+        /**
+         * <code>optional bool cluster = 8;</code>
+         */
+        public Builder setCluster(boolean value) {
+          bitField0_ |= 0x00000080;
+          cluster_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool cluster = 8;</code>
+         */
+        public Builder clearCluster() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          cluster_ = false;
+          onChanged();
+          return this;
+        }
+
+        private float endcapTime_ ;
+        /**
+         * <code>optional float endcap_time = 9;</code>
+         */
+        public boolean hasEndcapTime() {
+          return ((bitField0_ & 0x00000100) == 0x00000100);
+        }
+        /**
+         * <code>optional float endcap_time = 9;</code>
+         */
+        public float getEndcapTime() {
+          return endcapTime_;
+        }
+        /**
+         * <code>optional float endcap_time = 9;</code>
+         */
+        public Builder setEndcapTime(float value) {
+          bitField0_ |= 0x00000100;
+          endcapTime_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float endcap_time = 9;</code>
+         */
+        public Builder clearEndcapTime() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          endcapTime_ = 0F;
           onChanged();
           return this;
         }
@@ -17008,6 +17199,559 @@ public final class DemoUserMessages {
       // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.ParticleFreezeTransitionOverride)
     }
 
+    public interface FreezeParticleInvolvingOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.FreezeParticleInvolving)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bool set_frozen = 1;</code>
+       */
+      boolean hasSetFrozen();
+      /**
+       * <code>optional bool set_frozen = 1;</code>
+       */
+      boolean getSetFrozen();
+
+      /**
+       * <code>optional float transition_duration = 2;</code>
+       */
+      boolean hasTransitionDuration();
+      /**
+       * <code>optional float transition_duration = 2;</code>
+       */
+      float getTransitionDuration();
+
+      /**
+       * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+       */
+      boolean hasEntityHandle();
+      /**
+       * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+       */
+      int getEntityHandle();
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.FreezeParticleInvolving}
+     */
+    public static final class FreezeParticleInvolving extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.FreezeParticleInvolving)
+        FreezeParticleInvolvingOrBuilder {
+      // Use FreezeParticleInvolving.newBuilder() to construct.
+      private FreezeParticleInvolving(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private FreezeParticleInvolving(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final FreezeParticleInvolving defaultInstance;
+      public static FreezeParticleInvolving getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public FreezeParticleInvolving getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private FreezeParticleInvolving(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                setFrozen_ = input.readBool();
+                break;
+              }
+              case 21: {
+                bitField0_ |= 0x00000002;
+                transitionDuration_ = input.readFloat();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                entityHandle_ = input.readUInt32();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<FreezeParticleInvolving> PARSER =
+          new com.google.protobuf.AbstractParser<FreezeParticleInvolving>() {
+        public FreezeParticleInvolving parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new FreezeParticleInvolving(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<FreezeParticleInvolving> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int SET_FROZEN_FIELD_NUMBER = 1;
+      private boolean setFrozen_;
+      /**
+       * <code>optional bool set_frozen = 1;</code>
+       */
+      public boolean hasSetFrozen() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool set_frozen = 1;</code>
+       */
+      public boolean getSetFrozen() {
+        return setFrozen_;
+      }
+
+      public static final int TRANSITION_DURATION_FIELD_NUMBER = 2;
+      private float transitionDuration_;
+      /**
+       * <code>optional float transition_duration = 2;</code>
+       */
+      public boolean hasTransitionDuration() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float transition_duration = 2;</code>
+       */
+      public float getTransitionDuration() {
+        return transitionDuration_;
+      }
+
+      public static final int ENTITY_HANDLE_FIELD_NUMBER = 3;
+      private int entityHandle_;
+      /**
+       * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+       */
+      public boolean hasEntityHandle() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+       */
+      public int getEntityHandle() {
+        return entityHandle_;
+      }
+
+      private void initFields() {
+        setFrozen_ = false;
+        transitionDuration_ = 0F;
+        entityHandle_ = 16777215;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBool(1, setFrozen_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeFloat(2, transitionDuration_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeUInt32(3, entityHandle_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, setFrozen_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(2, transitionDuration_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(3, entityHandle_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.FreezeParticleInvolving}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.FreezeParticleInvolving)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          setFrozen_ = false;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          transitionDuration_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          entityHandle_ = 16777215;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.setFrozen_ = setFrozen_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.transitionDuration_ = transitionDuration_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.entityHandle_ = entityHandle_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance()) return this;
+          if (other.hasSetFrozen()) {
+            setSetFrozen(other.getSetFrozen());
+          }
+          if (other.hasTransitionDuration()) {
+            setTransitionDuration(other.getTransitionDuration());
+          }
+          if (other.hasEntityHandle()) {
+            setEntityHandle(other.getEntityHandle());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean setFrozen_ ;
+        /**
+         * <code>optional bool set_frozen = 1;</code>
+         */
+        public boolean hasSetFrozen() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional bool set_frozen = 1;</code>
+         */
+        public boolean getSetFrozen() {
+          return setFrozen_;
+        }
+        /**
+         * <code>optional bool set_frozen = 1;</code>
+         */
+        public Builder setSetFrozen(boolean value) {
+          bitField0_ |= 0x00000001;
+          setFrozen_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool set_frozen = 1;</code>
+         */
+        public Builder clearSetFrozen() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          setFrozen_ = false;
+          onChanged();
+          return this;
+        }
+
+        private float transitionDuration_ ;
+        /**
+         * <code>optional float transition_duration = 2;</code>
+         */
+        public boolean hasTransitionDuration() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional float transition_duration = 2;</code>
+         */
+        public float getTransitionDuration() {
+          return transitionDuration_;
+        }
+        /**
+         * <code>optional float transition_duration = 2;</code>
+         */
+        public Builder setTransitionDuration(float value) {
+          bitField0_ |= 0x00000002;
+          transitionDuration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float transition_duration = 2;</code>
+         */
+        public Builder clearTransitionDuration() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          transitionDuration_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private int entityHandle_ = 16777215;
+        /**
+         * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+         */
+        public boolean hasEntityHandle() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+         */
+        public int getEntityHandle() {
+          return entityHandle_;
+        }
+        /**
+         * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+         */
+        public Builder setEntityHandle(int value) {
+          bitField0_ |= 0x00000004;
+          entityHandle_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 entity_handle = 3 [default = 16777215];</code>
+         */
+        public Builder clearEntityHandle() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          entityHandle_ = 16777215;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.FreezeParticleInvolving)
+      }
+
+      static {
+        defaultInstance = new FreezeParticleInvolving(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.FreezeParticleInvolving)
+    }
+
     public interface SetParticleNamedValueContextOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext)
         com.google.protobuf.MessageOrBuilder {
@@ -21694,6 +22438,27 @@ public final class DemoUserMessages {
       return particleFreezeTransitionOverride_;
     }
 
+    public static final int FREEZE_PARTICLE_INVOLVING_FIELD_NUMBER = 32;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving freezeParticleInvolving_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+     */
+    public boolean hasFreezeParticleInvolving() {
+      return ((bitField0_ & 0x40000000) == 0x40000000);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving getFreezeParticleInvolving() {
+      return freezeParticleInvolving_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder getFreezeParticleInvolvingOrBuilder() {
+      return freezeParticleInvolving_;
+    }
+
     private void initFields() {
       type_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.PARTICLE_MESSAGE.GAME_PARTICLE_MANAGER_EVENT_CREATE;
       index_ = 0;
@@ -21725,6 +22490,7 @@ public final class DemoUserMessages {
       setNamedValueContext_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.getDefaultInstance();
       updateParticleTransform_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.getDefaultInstance();
       particleFreezeTransitionOverride_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.getDefaultInstance();
+      freezeParticleInvolving_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -21843,6 +22609,9 @@ public final class DemoUserMessages {
       }
       if (((bitField0_ & 0x20000000) == 0x20000000)) {
         output.writeMessage(31, particleFreezeTransitionOverride_);
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        output.writeMessage(32, freezeParticleInvolving_);
       }
       extensionWriter.writeUntil(202, output);
       getUnknownFields().writeTo(output);
@@ -21973,6 +22742,10 @@ public final class DemoUserMessages {
       if (((bitField0_ & 0x20000000) == 0x20000000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(31, particleFreezeTransitionOverride_);
+      }
+      if (((bitField0_ & 0x40000000) == 0x40000000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(32, freezeParticleInvolving_);
       }
       size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
@@ -22113,6 +22886,7 @@ public final class DemoUserMessages {
           getSetNamedValueContextFieldBuilder();
           getUpdateParticleTransformFieldBuilder();
           getParticleFreezeTransitionOverrideFieldBuilder();
+          getFreezeParticleInvolvingFieldBuilder();
         }
       }
       private static Builder create() {
@@ -22293,6 +23067,12 @@ public final class DemoUserMessages {
           particleFreezeTransitionOverrideBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x20000000);
+        if (freezeParticleInvolvingBuilder_ == null) {
+          freezeParticleInvolving_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance();
+        } else {
+          freezeParticleInvolvingBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x40000000);
         return this;
       }
 
@@ -22553,6 +23333,14 @@ public final class DemoUserMessages {
         } else {
           result.particleFreezeTransitionOverride_ = particleFreezeTransitionOverrideBuilder_.build();
         }
+        if (((from_bitField0_ & 0x40000000) == 0x40000000)) {
+          to_bitField0_ |= 0x40000000;
+        }
+        if (freezeParticleInvolvingBuilder_ == null) {
+          result.freezeParticleInvolving_ = freezeParticleInvolving_;
+        } else {
+          result.freezeParticleInvolving_ = freezeParticleInvolvingBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -22658,6 +23446,9 @@ public final class DemoUserMessages {
         }
         if (other.hasParticleFreezeTransitionOverride()) {
           mergeParticleFreezeTransitionOverride(other.getParticleFreezeTransitionOverride());
+        }
+        if (other.hasFreezeParticleInvolving()) {
+          mergeFreezeParticleInvolving(other.getFreezeParticleInvolving());
         }
         this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
@@ -26014,6 +26805,122 @@ public final class DemoUserMessages {
         return particleFreezeTransitionOverrideBuilder_;
       }
 
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving freezeParticleInvolving_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder> freezeParticleInvolvingBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public boolean hasFreezeParticleInvolving() {
+        return ((bitField0_ & 0x40000000) == 0x40000000);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving getFreezeParticleInvolving() {
+        if (freezeParticleInvolvingBuilder_ == null) {
+          return freezeParticleInvolving_;
+        } else {
+          return freezeParticleInvolvingBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public Builder setFreezeParticleInvolving(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving value) {
+        if (freezeParticleInvolvingBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          freezeParticleInvolving_ = value;
+          onChanged();
+        } else {
+          freezeParticleInvolvingBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x40000000;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public Builder setFreezeParticleInvolving(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder builderForValue) {
+        if (freezeParticleInvolvingBuilder_ == null) {
+          freezeParticleInvolving_ = builderForValue.build();
+          onChanged();
+        } else {
+          freezeParticleInvolvingBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x40000000;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public Builder mergeFreezeParticleInvolving(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving value) {
+        if (freezeParticleInvolvingBuilder_ == null) {
+          if (((bitField0_ & 0x40000000) == 0x40000000) &&
+              freezeParticleInvolving_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance()) {
+            freezeParticleInvolving_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.newBuilder(freezeParticleInvolving_).mergeFrom(value).buildPartial();
+          } else {
+            freezeParticleInvolving_ = value;
+          }
+          onChanged();
+        } else {
+          freezeParticleInvolvingBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x40000000;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public Builder clearFreezeParticleInvolving() {
+        if (freezeParticleInvolvingBuilder_ == null) {
+          freezeParticleInvolving_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance();
+          onChanged();
+        } else {
+          freezeParticleInvolvingBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x40000000);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder getFreezeParticleInvolvingBuilder() {
+        bitField0_ |= 0x40000000;
+        onChanged();
+        return getFreezeParticleInvolvingFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder getFreezeParticleInvolvingOrBuilder() {
+        if (freezeParticleInvolvingBuilder_ != null) {
+          return freezeParticleInvolvingBuilder_.getMessageOrBuilder();
+        } else {
+          return freezeParticleInvolving_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder> 
+          getFreezeParticleInvolvingFieldBuilder() {
+        if (freezeParticleInvolvingBuilder_ == null) {
+          freezeParticleInvolvingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder>(
+                  getFreezeParticleInvolving(),
+                  getParentForChildren(),
+                  isClean());
+          freezeParticleInvolving_ = null;
+        }
+        return freezeParticleInvolvingBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager)
     }
 
@@ -26166,6 +27073,11 @@ public final class DemoUserMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -26201,7 +27113,7 @@ public final class DemoUserMessages {
     java.lang.String[] descriptorData = {
       "\n\027usermessages-demo.proto\032\035networkbasety" +
       "pes-common.proto\032\033networkbasetypes-demo." +
-      "proto\"\255,\n\030CUserMsg_ParticleManager\022C\n\004ty" +
+      "proto\"\226.\n\030CUserMsg_ParticleManager\022C\n\004ty" +
       "pe\030\001 \002(\0162\021.PARTICLE_MESSAGE:\"GAME_PARTIC" +
       "LE_MANAGER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022N" +
       "\n\026release_particle_index\030\003 \001(\0132..CUserMs" +
@@ -26262,126 +27174,133 @@ public final class DemoUserMessages {
       "Manager.UpdateParticleTransform\022g\n#parti" +
       "cle_freeze_transition_override\030\037 \001(\0132:.C" +
       "UserMsg_ParticleManager.ParticleFreezeTr" +
-      "ansitionOverride\032\026\n\024ReleaseParticleIndex" +
-      "\032\355\001\n\016CreateParticle\022\033\n\023particle_name_ind" +
-      "ex\030\001 \001(\006\022\023\n\013attach_type\030\002 \001(\005\022\037\n\rentity_" +
-      "handle\030\003 \001(\r:\01016777215\022-\n\033entity_handle_" +
-      "for_modifiers\030\004 \001(\r:\01016777215\022\035\n\025apply_v" +
-      "oice_ban_rules\030\005 \001(\010\022\025\n\rteam_behavior\030\006 " +
-      "\001(\005\022#\n\033control_point_configuration\030\007 \001(\t",
-      "\032.\n\017DestroyParticle\022\033\n\023destroy_immediate" +
-      "ly\030\001 \001(\010\032X\n\030DestroyParticleInvolving\022\033\n\023" +
-      "destroy_immediately\030\001 \001(\010\022\037\n\rentity_hand" +
-      "le\030\003 \001(\r:\01016777215\032\206\001\n\024DestroyParticleNa" +
-      "med\022\033\n\023particle_name_index\030\001 \001(\006\022\037\n\renti" +
-      "ty_handle\030\002 \001(\r:\01016777215\022\033\n\023destroy_imm" +
-      "ediately\030\003 \001(\010\022\023\n\013play_endcap\030\004 \001(\010\032O\n\027U" +
-      "pdateParticle_OBSOLETE\022\025\n\rcontrol_point\030" +
-      "\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032Q\n\032" +
-      "UpdateParticleFwd_OBSOLETE\022\025\n\rcontrol_po",
-      "int\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVector\032" +
-      "\257\001\n\035UpdateParticleOrient_OBSOLETE\022\025\n\rcon" +
-      "trol_point\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsg" +
-      "Vector\022%\n\020deprecated_right\030\003 \001(\0132\013.CMsgV" +
-      "ector\022\027\n\002up\030\004 \001(\0132\013.CMsgVector\022\031\n\004left\030\005" +
-      " \001(\0132\013.CMsgVector\032\225\001\n\027UpdateParticleTran" +
-      "sform\022\025\n\rcontrol_point\030\001 \001(\005\022\035\n\010position" +
-      "\030\002 \001(\0132\013.CMsgVector\022$\n\013orientation\030\003 \001(\013" +
-      "2\017.CMsgQuaternion\022\036\n\026interpolation_inter" +
-      "val\030\004 \001(\002\032N\n\026UpdateParticleFallback\022\025\n\rc",
-      "ontrol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.C" +
-      "MsgVector\032t\n\024UpdateParticleOffset\022\025\n\rcon" +
-      "trol_point\030\001 \001(\005\022\"\n\rorigin_offset\030\002 \001(\0132" +
-      "\013.CMsgVector\022!\n\014angle_offset\030\003 \001(\0132\013.CMs" +
-      "gQAngle\032\201\002\n\021UpdateParticleEnt\022\025\n\rcontrol" +
-      "_point\030\001 \001(\005\022\037\n\rentity_handle\030\002 \001(\r:\010167" +
-      "77215\022\023\n\013attach_type\030\003 \001(\005\022\022\n\nattachment" +
-      "\030\004 \001(\005\022&\n\021fallback_position\030\005 \001(\0132\013.CMsg" +
-      "Vector\022\031\n\021include_wearables\030\006 \001(\010\022$\n\017off" +
-      "set_position\030\007 \001(\0132\013.CMsgVector\022\"\n\roffse",
-      "t_angles\030\010 \001(\0132\013.CMsgQAngle\032J\n\027UpdatePar" +
-      "ticleSetFrozen\022\022\n\nset_frozen\030\001 \001(\010\022\033\n\023tr" +
-      "ansition_duration\030\002 \001(\002\032/\n\030UpdateParticl" +
-      "eShouldDraw\022\023\n\013should_draw\030\001 \001(\010\032o\n\034Chan" +
-      "geControlPointAttachment\022\026\n\016attachment_o" +
-      "ld\030\001 \001(\005\022\026\n\016attachment_new\030\002 \001(\005\022\037\n\renti" +
-      "ty_handle\030\003 \001(\r:\01016777215\032V\n\024UpdateEntit" +
-      "yPosition\022\037\n\rentity_handle\030\001 \001(\r:\010167772" +
-      "15\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032e\n\030Set" +
-      "ParticleFoWProperties\022\031\n\021fow_control_poi",
-      "nt\030\001 \001(\005\022\032\n\022fow_control_point2\030\002 \001(\005\022\022\n\n" +
-      "fow_radius\030\003 \001(\002\032.\n\031SetParticleShouldChe" +
-      "ckFoW\022\021\n\tcheck_fow\030\001 \001(\010\032A\n\024SetControlPo" +
-      "intModel\022\025\n\rcontrol_point\030\001 \001(\005\022\022\n\nmodel" +
-      "_name\030\002 \001(\t\032G\n\027SetControlPointSnapshot\022\025" +
-      "\n\rcontrol_point\030\001 \001(\005\022\025\n\rsnapshot_name\030\002" +
-      " \001(\t\032\037\n\017SetParticleText\022\014\n\004text\030\001 \001(\t\032C\n" +
-      "\023SetTextureAttribute\022\026\n\016attribute_name\030\001" +
-      " \001(\t\022\024\n\014texture_name\030\002 \001(\t\032/\n\031SetSceneOb" +
-      "jectGenericFlag\022\022\n\nflag_value\030\001 \001(\010\0329\n\032S",
-      "etSceneObjectTintAndDesat\022\014\n\004tint\030\001 \001(\007\022" +
-      "\r\n\005desat\030\002 \001(\002\032*\n\022ParticleSkipToTime\022\024\n\014" +
-      "skip_to_time\030\001 \001(\002\032\'\n\021ParticleCanFreeze\022" +
-      "\022\n\ncan_freeze\030\001 \001(\010\032F\n ParticleFreezeTra" +
-      "nsitionOverride\022\"\n\032freeze_transition_ove" +
-      "rride\030\001 \001(\002\032\350\005\n\034SetParticleNamedValueCon" +
-      "text\022^\n\014float_values\030\001 \003(\0132H.CUserMsg_Pa" +
-      "rticleManager.SetParticleNamedValueConte" +
-      "xt.FloatContextValue\022`\n\rvector_values\030\002 " +
-      "\003(\0132I.CUserMsg_ParticleManager.SetPartic",
-      "leNamedValueContext.VectorContextValue\022f" +
-      "\n\020transform_values\030\003 \003(\0132L.CUserMsg_Part" +
-      "icleManager.SetParticleNamedValueContext" +
-      ".TransformContextValue\022]\n\016ehandle_values" +
-      "\030\004 \003(\0132E.CUserMsg_ParticleManager.SetPar" +
-      "ticleNamedValueContext.EHandleContext\032;\n" +
-      "\021FloatContextValue\022\027\n\017value_name_hash\030\001 " +
-      "\001(\r\022\r\n\005value\030\002 \001(\002\032I\n\022VectorContextValue" +
-      "\022\027\n\017value_name_hash\030\001 \001(\r\022\032\n\005value\030\002 \001(\013" +
-      "2\013.CMsgVector\032o\n\025TransformContextValue\022\027",
-      "\n\017value_name_hash\030\001 \001(\r\022\033\n\006angles\030\002 \001(\0132" +
-      "\013.CMsgQAngle\022 \n\013translation\030\003 \001(\0132\013.CMsg" +
-      "Vector\032F\n\016EHandleContext\022\027\n\017value_name_h" +
-      "ash\030\001 \001(\r\022\033\n\tent_index\030\002 \001(\r:\01016777215*\005" +
-      "\010d\020\312\001*\276\013\n\020PARTICLE_MESSAGE\022&\n\"GAME_PARTI" +
-      "CLE_MANAGER_EVENT_CREATE\020\000\022&\n\"GAME_PARTI" +
-      "CLE_MANAGER_EVENT_UPDATE\020\001\022.\n*GAME_PARTI" +
-      "CLE_MANAGER_EVENT_UPDATE_FORWARD\020\002\0222\n.GA" +
-      "ME_PARTICLE_MANAGER_EVENT_UPDATE_ORIENTA" +
-      "TION\020\003\022/\n+GAME_PARTICLE_MANAGER_EVENT_UP",
-      "DATE_FALLBACK\020\004\022*\n&GAME_PARTICLE_MANAGER" +
-      "_EVENT_UPDATE_ENT\020\005\022-\n)GAME_PARTICLE_MAN" +
-      "AGER_EVENT_UPDATE_OFFSET\020\006\022\'\n#GAME_PARTI" +
-      "CLE_MANAGER_EVENT_DESTROY\020\007\0221\n-GAME_PART" +
-      "ICLE_MANAGER_EVENT_DESTROY_INVOLVING\020\010\022\'" +
-      "\n#GAME_PARTICLE_MANAGER_EVENT_RELEASE\020\t\022" +
-      "\'\n#GAME_PARTICLE_MANAGER_EVENT_LATENCY\020\n" +
-      "\022+\n\'GAME_PARTICLE_MANAGER_EVENT_SHOULD_D" +
-      "RAW\020\013\022&\n\"GAME_PARTICLE_MANAGER_EVENT_FRO" +
-      "ZEN\020\014\022?\n;GAME_PARTICLE_MANAGER_EVENT_CHA",
-      "NGE_CONTROL_POINT_ATTACHMENT\020\r\0226\n2GAME_P" +
-      "ARTICLE_MANAGER_EVENT_UPDATE_ENTITY_POSI" +
-      "TION\020\016\0222\n.GAME_PARTICLE_MANAGER_EVENT_SE" +
-      "T_FOW_PROPERTIES\020\017\022(\n$GAME_PARTICLE_MANA" +
-      "GER_EVENT_SET_TEXT\020\020\0224\n0GAME_PARTICLE_MA" +
-      "NAGER_EVENT_SET_SHOULD_CHECK_FOW\020\021\0227\n3GA" +
-      "ME_PARTICLE_MANAGER_EVENT_SET_CONTROL_PO" +
-      "INT_MODEL\020\022\022:\n6GAME_PARTICLE_MANAGER_EVE" +
-      "NT_SET_CONTROL_POINT_SNAPSHOT\020\023\0225\n1GAME_" +
-      "PARTICLE_MANAGER_EVENT_SET_TEXTURE_ATTRI",
-      "BUTE\020\024\022=\n9GAME_PARTICLE_MANAGER_EVENT_SE" +
-      "T_SCENE_OBJECT_GENERIC_FLAG\020\025\022?\n;GAME_PA" +
-      "RTICLE_MANAGER_EVENT_SET_SCENE_OBJECT_TI" +
-      "NT_AND_DESAT\020\026\022-\n)GAME_PARTICLE_MANAGER_" +
-      "EVENT_DESTROY_NAMED\020\027\022,\n(GAME_PARTICLE_M" +
-      "ANAGER_EVENT_SKIP_TO_TIME\020\030\022*\n&GAME_PART" +
-      "ICLE_MANAGER_EVENT_CAN_FREEZE\020\031\0227\n3GAME_" +
-      "PARTICLE_MANAGER_EVENT_SET_NAMED_VALUE_C" +
-      "ONTEXT\020\032\0220\n,GAME_PARTICLE_MANAGER_EVENT_" +
-      "UPDATE_TRANSFORM\020\033\022:\n6GAME_PARTICLE_MANA",
-      "GER_EVENT_FREEZE_TRANSITION_OVERRIDE\020\034B=" +
-      "\n)skadistats.clarity.wire.shared.demo.pr" +
-      "otoB\020DemoUserMessages"
+      "ansitionOverride\022T\n\031freeze_particle_invo" +
+      "lving\030  \001(\01321.CUserMsg_ParticleManager.F" +
+      "reezeParticleInvolving\032\026\n\024ReleaseParticl" +
+      "eIndex\032\223\002\n\016CreateParticle\022\033\n\023particle_na" +
+      "me_index\030\001 \001(\006\022\023\n\013attach_type\030\002 \001(\005\022\037\n\re" +
+      "ntity_handle\030\003 \001(\r:\01016777215\022-\n\033entity_h" +
+      "andle_for_modifiers\030\004 \001(\r:\01016777215\022\035\n\025a",
+      "pply_voice_ban_rules\030\005 \001(\010\022\025\n\rteam_behav" +
+      "ior\030\006 \001(\005\022#\n\033control_point_configuration" +
+      "\030\007 \001(\t\022\017\n\007cluster\030\010 \001(\010\022\023\n\013endcap_time\030\t" +
+      " \001(\002\032.\n\017DestroyParticle\022\033\n\023destroy_immed" +
+      "iately\030\001 \001(\010\032X\n\030DestroyParticleInvolving" +
+      "\022\033\n\023destroy_immediately\030\001 \001(\010\022\037\n\rentity_" +
+      "handle\030\003 \001(\r:\01016777215\032\206\001\n\024DestroyPartic" +
+      "leNamed\022\033\n\023particle_name_index\030\001 \001(\006\022\037\n\r" +
+      "entity_handle\030\002 \001(\r:\01016777215\022\033\n\023destroy" +
+      "_immediately\030\003 \001(\010\022\023\n\013play_endcap\030\004 \001(\010\032",
+      "O\n\027UpdateParticle_OBSOLETE\022\025\n\rcontrol_po" +
+      "int\030\001 \001(\005\022\035\n\010position\030\002 \001(\0132\013.CMsgVector" +
+      "\032Q\n\032UpdateParticleFwd_OBSOLETE\022\025\n\rcontro" +
+      "l_point\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013.CMsgVec" +
+      "tor\032\257\001\n\035UpdateParticleOrient_OBSOLETE\022\025\n" +
+      "\rcontrol_point\030\001 \001(\005\022\034\n\007forward\030\002 \001(\0132\013." +
+      "CMsgVector\022%\n\020deprecated_right\030\003 \001(\0132\013.C" +
+      "MsgVector\022\027\n\002up\030\004 \001(\0132\013.CMsgVector\022\031\n\004le" +
+      "ft\030\005 \001(\0132\013.CMsgVector\032\225\001\n\027UpdateParticle" +
+      "Transform\022\025\n\rcontrol_point\030\001 \001(\005\022\035\n\010posi",
+      "tion\030\002 \001(\0132\013.CMsgVector\022$\n\013orientation\030\003" +
+      " \001(\0132\017.CMsgQuaternion\022\036\n\026interpolation_i" +
+      "nterval\030\004 \001(\002\032N\n\026UpdateParticleFallback\022" +
+      "\025\n\rcontrol_point\030\001 \001(\005\022\035\n\010position\030\002 \001(\013" +
+      "2\013.CMsgVector\032t\n\024UpdateParticleOffset\022\025\n" +
+      "\rcontrol_point\030\001 \001(\005\022\"\n\rorigin_offset\030\002 " +
+      "\001(\0132\013.CMsgVector\022!\n\014angle_offset\030\003 \001(\0132\013" +
+      ".CMsgQAngle\032\201\002\n\021UpdateParticleEnt\022\025\n\rcon" +
+      "trol_point\030\001 \001(\005\022\037\n\rentity_handle\030\002 \001(\r:" +
+      "\01016777215\022\023\n\013attach_type\030\003 \001(\005\022\022\n\nattach",
+      "ment\030\004 \001(\005\022&\n\021fallback_position\030\005 \001(\0132\013." +
+      "CMsgVector\022\031\n\021include_wearables\030\006 \001(\010\022$\n" +
+      "\017offset_position\030\007 \001(\0132\013.CMsgVector\022\"\n\ro" +
+      "ffset_angles\030\010 \001(\0132\013.CMsgQAngle\032J\n\027Updat" +
+      "eParticleSetFrozen\022\022\n\nset_frozen\030\001 \001(\010\022\033" +
+      "\n\023transition_duration\030\002 \001(\002\032/\n\030UpdatePar" +
+      "ticleShouldDraw\022\023\n\013should_draw\030\001 \001(\010\032o\n\034" +
+      "ChangeControlPointAttachment\022\026\n\016attachme" +
+      "nt_old\030\001 \001(\005\022\026\n\016attachment_new\030\002 \001(\005\022\037\n\r" +
+      "entity_handle\030\003 \001(\r:\01016777215\032V\n\024UpdateE",
+      "ntityPosition\022\037\n\rentity_handle\030\001 \001(\r:\01016" +
+      "777215\022\035\n\010position\030\002 \001(\0132\013.CMsgVector\032e\n" +
+      "\030SetParticleFoWProperties\022\031\n\021fow_control" +
+      "_point\030\001 \001(\005\022\032\n\022fow_control_point2\030\002 \001(\005" +
+      "\022\022\n\nfow_radius\030\003 \001(\002\032.\n\031SetParticleShoul" +
+      "dCheckFoW\022\021\n\tcheck_fow\030\001 \001(\010\032A\n\024SetContr" +
+      "olPointModel\022\025\n\rcontrol_point\030\001 \001(\005\022\022\n\nm" +
+      "odel_name\030\002 \001(\t\032G\n\027SetControlPointSnapsh" +
+      "ot\022\025\n\rcontrol_point\030\001 \001(\005\022\025\n\rsnapshot_na" +
+      "me\030\002 \001(\t\032\037\n\017SetParticleText\022\014\n\004text\030\001 \001(",
+      "\t\032C\n\023SetTextureAttribute\022\026\n\016attribute_na" +
+      "me\030\001 \001(\t\022\024\n\014texture_name\030\002 \001(\t\032/\n\031SetSce" +
+      "neObjectGenericFlag\022\022\n\nflag_value\030\001 \001(\010\032" +
+      "9\n\032SetSceneObjectTintAndDesat\022\014\n\004tint\030\001 " +
+      "\001(\007\022\r\n\005desat\030\002 \001(\002\032*\n\022ParticleSkipToTime" +
+      "\022\024\n\014skip_to_time\030\001 \001(\002\032\'\n\021ParticleCanFre" +
+      "eze\022\022\n\ncan_freeze\030\001 \001(\010\032F\n ParticleFreez" +
+      "eTransitionOverride\022\"\n\032freeze_transition" +
+      "_override\030\001 \001(\002\032k\n\027FreezeParticleInvolvi" +
+      "ng\022\022\n\nset_frozen\030\001 \001(\010\022\033\n\023transition_dur",
+      "ation\030\002 \001(\002\022\037\n\rentity_handle\030\003 \001(\r:\0101677" +
+      "7215\032\350\005\n\034SetParticleNamedValueContext\022^\n" +
+      "\014float_values\030\001 \003(\0132H.CUserMsg_ParticleM" +
+      "anager.SetParticleNamedValueContext.Floa" +
+      "tContextValue\022`\n\rvector_values\030\002 \003(\0132I.C" +
+      "UserMsg_ParticleManager.SetParticleNamed" +
+      "ValueContext.VectorContextValue\022f\n\020trans" +
+      "form_values\030\003 \003(\0132L.CUserMsg_ParticleMan" +
+      "ager.SetParticleNamedValueContext.Transf" +
+      "ormContextValue\022]\n\016ehandle_values\030\004 \003(\0132",
+      "E.CUserMsg_ParticleManager.SetParticleNa" +
+      "medValueContext.EHandleContext\032;\n\021FloatC" +
+      "ontextValue\022\027\n\017value_name_hash\030\001 \001(\r\022\r\n\005" +
+      "value\030\002 \001(\002\032I\n\022VectorContextValue\022\027\n\017val" +
+      "ue_name_hash\030\001 \001(\r\022\032\n\005value\030\002 \001(\0132\013.CMsg" +
+      "Vector\032o\n\025TransformContextValue\022\027\n\017value" +
+      "_name_hash\030\001 \001(\r\022\033\n\006angles\030\002 \001(\0132\013.CMsgQ" +
+      "Angle\022 \n\013translation\030\003 \001(\0132\013.CMsgVector\032" +
+      "F\n\016EHandleContext\022\027\n\017value_name_hash\030\001 \001" +
+      "(\r\022\033\n\tent_index\030\002 \001(\r:\01016777215*\005\010d\020\312\001*\360",
+      "\013\n\020PARTICLE_MESSAGE\022&\n\"GAME_PARTICLE_MAN" +
+      "AGER_EVENT_CREATE\020\000\022&\n\"GAME_PARTICLE_MAN" +
+      "AGER_EVENT_UPDATE\020\001\022.\n*GAME_PARTICLE_MAN" +
+      "AGER_EVENT_UPDATE_FORWARD\020\002\0222\n.GAME_PART" +
+      "ICLE_MANAGER_EVENT_UPDATE_ORIENTATION\020\003\022" +
+      "/\n+GAME_PARTICLE_MANAGER_EVENT_UPDATE_FA" +
+      "LLBACK\020\004\022*\n&GAME_PARTICLE_MANAGER_EVENT_" +
+      "UPDATE_ENT\020\005\022-\n)GAME_PARTICLE_MANAGER_EV" +
+      "ENT_UPDATE_OFFSET\020\006\022\'\n#GAME_PARTICLE_MAN" +
+      "AGER_EVENT_DESTROY\020\007\0221\n-GAME_PARTICLE_MA",
+      "NAGER_EVENT_DESTROY_INVOLVING\020\010\022\'\n#GAME_" +
+      "PARTICLE_MANAGER_EVENT_RELEASE\020\t\022\'\n#GAME" +
+      "_PARTICLE_MANAGER_EVENT_LATENCY\020\n\022+\n\'GAM" +
+      "E_PARTICLE_MANAGER_EVENT_SHOULD_DRAW\020\013\022&" +
+      "\n\"GAME_PARTICLE_MANAGER_EVENT_FROZEN\020\014\022?" +
+      "\n;GAME_PARTICLE_MANAGER_EVENT_CHANGE_CON" +
+      "TROL_POINT_ATTACHMENT\020\r\0226\n2GAME_PARTICLE" +
+      "_MANAGER_EVENT_UPDATE_ENTITY_POSITION\020\016\022" +
+      "2\n.GAME_PARTICLE_MANAGER_EVENT_SET_FOW_P" +
+      "ROPERTIES\020\017\022(\n$GAME_PARTICLE_MANAGER_EVE",
+      "NT_SET_TEXT\020\020\0224\n0GAME_PARTICLE_MANAGER_E" +
+      "VENT_SET_SHOULD_CHECK_FOW\020\021\0227\n3GAME_PART" +
+      "ICLE_MANAGER_EVENT_SET_CONTROL_POINT_MOD" +
+      "EL\020\022\022:\n6GAME_PARTICLE_MANAGER_EVENT_SET_" +
+      "CONTROL_POINT_SNAPSHOT\020\023\0225\n1GAME_PARTICL" +
+      "E_MANAGER_EVENT_SET_TEXTURE_ATTRIBUTE\020\024\022" +
+      "=\n9GAME_PARTICLE_MANAGER_EVENT_SET_SCENE" +
+      "_OBJECT_GENERIC_FLAG\020\025\022?\n;GAME_PARTICLE_" +
+      "MANAGER_EVENT_SET_SCENE_OBJECT_TINT_AND_" +
+      "DESAT\020\026\022-\n)GAME_PARTICLE_MANAGER_EVENT_D",
+      "ESTROY_NAMED\020\027\022,\n(GAME_PARTICLE_MANAGER_" +
+      "EVENT_SKIP_TO_TIME\020\030\022*\n&GAME_PARTICLE_MA" +
+      "NAGER_EVENT_CAN_FREEZE\020\031\0227\n3GAME_PARTICL" +
+      "E_MANAGER_EVENT_SET_NAMED_VALUE_CONTEXT\020" +
+      "\032\0220\n,GAME_PARTICLE_MANAGER_EVENT_UPDATE_" +
+      "TRANSFORM\020\033\022:\n6GAME_PARTICLE_MANAGER_EVE" +
+      "NT_FREEZE_TRANSITION_OVERRIDE\020\034\0220\n,GAME_" +
+      "PARTICLE_MANAGER_EVENT_FREEZE_INVOLVING\020" +
+      "\035B=\n)skadistats.clarity.wire.shared.demo" +
+      ".protoB\020DemoUserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -26402,7 +27321,7 @@ public final class DemoUserMessages {
     internal_static_CUserMsg_ParticleManager_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_descriptor,
-        new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", "SetParticleShouldCheckFow", "SetControlPointModel", "SetControlPointSnapshot", "SetTextureAttribute", "SetSceneObjectGenericFlag", "SetSceneObjectTintAndDesat", "DestroyParticleNamed", "ParticleSkipToTime", "ParticleCanFreeze", "SetNamedValueContext", "UpdateParticleTransform", "ParticleFreezeTransitionOverride", });
+        new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", "SetParticleShouldCheckFow", "SetControlPointModel", "SetControlPointSnapshot", "SetTextureAttribute", "SetSceneObjectGenericFlag", "SetSceneObjectTintAndDesat", "DestroyParticleNamed", "ParticleSkipToTime", "ParticleCanFreeze", "SetNamedValueContext", "UpdateParticleTransform", "ParticleFreezeTransitionOverride", "FreezeParticleInvolving", });
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(0);
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable = new
@@ -26414,7 +27333,7 @@ public final class DemoUserMessages {
     internal_static_CUserMsg_ParticleManager_CreateParticle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor,
-        new java.lang.String[] { "ParticleNameIndex", "AttachType", "EntityHandle", "EntityHandleForModifiers", "ApplyVoiceBanRules", "TeamBehavior", "ControlPointConfiguration", });
+        new java.lang.String[] { "ParticleNameIndex", "AttachType", "EntityHandle", "EntityHandleForModifiers", "ApplyVoiceBanRules", "TeamBehavior", "ControlPointConfiguration", "Cluster", "EndcapTime", });
     internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(2);
     internal_static_CUserMsg_ParticleManager_DestroyParticle_fieldAccessorTable = new
@@ -26565,8 +27484,14 @@ public final class DemoUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor,
         new java.lang.String[] { "FreezeTransitionOverride", });
-    internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor =
+    internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(27);
+    internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor,
+        new java.lang.String[] { "SetFrozen", "TransitionDuration", "EntityHandle", });
+    internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(28);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor,

@@ -23545,6 +23545,41 @@ public final class S2TempEntities {
      * <code>optional float scale = 10;</code>
      */
     float getScale();
+
+    /**
+     * <code>optional .CMsgVector dmgpos = 11;</code>
+     */
+    boolean hasDmgpos();
+    /**
+     * <code>optional .CMsgVector dmgpos = 11;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getDmgpos();
+    /**
+     * <code>optional .CMsgVector dmgpos = 11;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDmgposOrBuilder();
+
+    /**
+     * <code>optional .CMsgVector dmgdir = 12;</code>
+     */
+    boolean hasDmgdir();
+    /**
+     * <code>optional .CMsgVector dmgdir = 12;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getDmgdir();
+    /**
+     * <code>optional .CMsgVector dmgdir = 12;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDmgdirOrBuilder();
+
+    /**
+     * <code>optional int32 dmgtype = 13;</code>
+     */
+    boolean hasDmgtype();
+    /**
+     * <code>optional int32 dmgtype = 13;</code>
+     */
+    int getDmgtype();
   }
   /**
    * Protobuf type {@code CMsgTEPhysicsProp}
@@ -23670,6 +23705,37 @@ public final class S2TempEntities {
             case 85: {
               bitField0_ |= 0x00000200;
               scale_ = input.readFloat();
+              break;
+            }
+            case 90: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000400) == 0x00000400)) {
+                subBuilder = dmgpos_.toBuilder();
+              }
+              dmgpos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dmgpos_);
+                dmgpos_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000400;
+              break;
+            }
+            case 98: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000800) == 0x00000800)) {
+                subBuilder = dmgdir_.toBuilder();
+              }
+              dmgdir_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(dmgdir_);
+                dmgdir_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000800;
+              break;
+            }
+            case 104: {
+              bitField0_ |= 0x00001000;
+              dmgtype_ = input.readInt32();
               break;
             }
           }
@@ -23880,6 +23946,63 @@ public final class S2TempEntities {
       return scale_;
     }
 
+    public static final int DMGPOS_FIELD_NUMBER = 11;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector dmgpos_;
+    /**
+     * <code>optional .CMsgVector dmgpos = 11;</code>
+     */
+    public boolean hasDmgpos() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional .CMsgVector dmgpos = 11;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getDmgpos() {
+      return dmgpos_;
+    }
+    /**
+     * <code>optional .CMsgVector dmgpos = 11;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDmgposOrBuilder() {
+      return dmgpos_;
+    }
+
+    public static final int DMGDIR_FIELD_NUMBER = 12;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector dmgdir_;
+    /**
+     * <code>optional .CMsgVector dmgdir = 12;</code>
+     */
+    public boolean hasDmgdir() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    /**
+     * <code>optional .CMsgVector dmgdir = 12;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getDmgdir() {
+      return dmgdir_;
+    }
+    /**
+     * <code>optional .CMsgVector dmgdir = 12;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDmgdirOrBuilder() {
+      return dmgdir_;
+    }
+
+    public static final int DMGTYPE_FIELD_NUMBER = 13;
+    private int dmgtype_;
+    /**
+     * <code>optional int32 dmgtype = 13;</code>
+     */
+    public boolean hasDmgtype() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional int32 dmgtype = 13;</code>
+     */
+    public int getDmgtype() {
+      return dmgtype_;
+    }
+
     private void initFields() {
       origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       velocity_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
@@ -23891,6 +24014,9 @@ public final class S2TempEntities {
       modelindex_ = 0L;
       breakmodelsnottomake_ = 0;
       scale_ = 0F;
+      dmgpos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      dmgdir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      dmgtype_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -23934,6 +24060,15 @@ public final class S2TempEntities {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeFloat(10, scale_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeMessage(11, dmgpos_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeMessage(12, dmgdir_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeInt32(13, dmgtype_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -23983,6 +24118,18 @@ public final class S2TempEntities {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(10, scale_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, dmgpos_);
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, dmgdir_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(13, dmgtype_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -24096,6 +24243,8 @@ public final class S2TempEntities {
           getOriginFieldBuilder();
           getVelocityFieldBuilder();
           getAnglesFieldBuilder();
+          getDmgposFieldBuilder();
+          getDmgdirFieldBuilder();
         }
       }
       private static Builder create() {
@@ -24136,6 +24285,20 @@ public final class S2TempEntities {
         bitField0_ = (bitField0_ & ~0x00000100);
         scale_ = 0F;
         bitField0_ = (bitField0_ & ~0x00000200);
+        if (dmgposBuilder_ == null) {
+          dmgpos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          dmgposBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        if (dmgdirBuilder_ == null) {
+          dmgdir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          dmgdirBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        dmgtype_ = 0;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -24216,6 +24379,26 @@ public final class S2TempEntities {
           to_bitField0_ |= 0x00000200;
         }
         result.scale_ = scale_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        if (dmgposBuilder_ == null) {
+          result.dmgpos_ = dmgpos_;
+        } else {
+          result.dmgpos_ = dmgposBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        if (dmgdirBuilder_ == null) {
+          result.dmgdir_ = dmgdir_;
+        } else {
+          result.dmgdir_ = dmgdirBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.dmgtype_ = dmgtype_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -24261,6 +24444,15 @@ public final class S2TempEntities {
         }
         if (other.hasScale()) {
           setScale(other.getScale());
+        }
+        if (other.hasDmgpos()) {
+          mergeDmgpos(other.getDmgpos());
+        }
+        if (other.hasDmgdir()) {
+          mergeDmgdir(other.getDmgdir());
+        }
+        if (other.hasDmgtype()) {
+          setDmgtype(other.getDmgtype());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -24857,6 +25049,270 @@ public final class S2TempEntities {
       public Builder clearScale() {
         bitField0_ = (bitField0_ & ~0x00000200);
         scale_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector dmgpos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> dmgposBuilder_;
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public boolean hasDmgpos() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getDmgpos() {
+        if (dmgposBuilder_ == null) {
+          return dmgpos_;
+        } else {
+          return dmgposBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public Builder setDmgpos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (dmgposBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dmgpos_ = value;
+          onChanged();
+        } else {
+          dmgposBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public Builder setDmgpos(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (dmgposBuilder_ == null) {
+          dmgpos_ = builderForValue.build();
+          onChanged();
+        } else {
+          dmgposBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public Builder mergeDmgpos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (dmgposBuilder_ == null) {
+          if (((bitField0_ & 0x00000400) == 0x00000400) &&
+              dmgpos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            dmgpos_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(dmgpos_).mergeFrom(value).buildPartial();
+          } else {
+            dmgpos_ = value;
+          }
+          onChanged();
+        } else {
+          dmgposBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public Builder clearDmgpos() {
+        if (dmgposBuilder_ == null) {
+          dmgpos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          dmgposBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000400);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getDmgposBuilder() {
+        bitField0_ |= 0x00000400;
+        onChanged();
+        return getDmgposFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDmgposOrBuilder() {
+        if (dmgposBuilder_ != null) {
+          return dmgposBuilder_.getMessageOrBuilder();
+        } else {
+          return dmgpos_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector dmgpos = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getDmgposFieldBuilder() {
+        if (dmgposBuilder_ == null) {
+          dmgposBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getDmgpos(),
+                  getParentForChildren(),
+                  isClean());
+          dmgpos_ = null;
+        }
+        return dmgposBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector dmgdir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> dmgdirBuilder_;
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public boolean hasDmgdir() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getDmgdir() {
+        if (dmgdirBuilder_ == null) {
+          return dmgdir_;
+        } else {
+          return dmgdirBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public Builder setDmgdir(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (dmgdirBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          dmgdir_ = value;
+          onChanged();
+        } else {
+          dmgdirBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public Builder setDmgdir(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (dmgdirBuilder_ == null) {
+          dmgdir_ = builderForValue.build();
+          onChanged();
+        } else {
+          dmgdirBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public Builder mergeDmgdir(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (dmgdirBuilder_ == null) {
+          if (((bitField0_ & 0x00000800) == 0x00000800) &&
+              dmgdir_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            dmgdir_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(dmgdir_).mergeFrom(value).buildPartial();
+          } else {
+            dmgdir_ = value;
+          }
+          onChanged();
+        } else {
+          dmgdirBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000800;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public Builder clearDmgdir() {
+        if (dmgdirBuilder_ == null) {
+          dmgdir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          dmgdirBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000800);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getDmgdirBuilder() {
+        bitField0_ |= 0x00000800;
+        onChanged();
+        return getDmgdirFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getDmgdirOrBuilder() {
+        if (dmgdirBuilder_ != null) {
+          return dmgdirBuilder_.getMessageOrBuilder();
+        } else {
+          return dmgdir_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector dmgdir = 12;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getDmgdirFieldBuilder() {
+        if (dmgdirBuilder_ == null) {
+          dmgdirBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getDmgdir(),
+                  getParentForChildren(),
+                  isClean());
+          dmgdir_ = null;
+        }
+        return dmgdirBuilder_;
+      }
+
+      private int dmgtype_ ;
+      /**
+       * <code>optional int32 dmgtype = 13;</code>
+       */
+      public boolean hasDmgtype() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional int32 dmgtype = 13;</code>
+       */
+      public int getDmgtype() {
+        return dmgtype_;
+      }
+      /**
+       * <code>optional int32 dmgtype = 13;</code>
+       */
+      public Builder setDmgtype(int value) {
+        bitField0_ |= 0x00001000;
+        dmgtype_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 dmgtype = 13;</code>
+       */
+      public Builder clearDmgtype() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        dmgtype_ = 0;
         onChanged();
         return this;
       }
@@ -27987,39 +28443,41 @@ public final class S2TempEntities {
       "\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\020\n\010reversed" +
       "\030\002 \001(\r\"n\n\014CMsgTESparks\022\033\n\006origin\030\001 \001(\0132\013" +
       ".CMsgVector\022\021\n\tmagnitude\030\002 \001(\r\022\016\n\006length" +
-      "\030\003 \001(\r\022\036\n\tdirection\030\004 \001(\0132\013.CMsgVector\"\352" +
-      "\001\n\021CMsgTEPhysicsProp\022\033\n\006origin\030\001 \001(\0132\013.C" +
+      "\030\003 \001(\r\022\036\n\tdirection\030\004 \001(\0132\013.CMsgVector\"\265" +
+      "\002\n\021CMsgTEPhysicsProp\022\033\n\006origin\030\001 \001(\0132\013.C" +
       "MsgVector\022\035\n\010velocity\030\002 \001(\0132\013.CMsgVector" +
       "\022\033\n\006angles\030\003 \001(\0132\013.CMsgQAngle\022\014\n\004skin\030\004 " +
       "\001(\007\022\r\n\005flags\030\005 \001(\r\022\017\n\007effects\030\006 \001(\r\022\r\n\005c" +
       "olor\030\007 \001(\007\022\022\n\nmodelindex\030\010 \001(\006\022\034\n\024breakm" +
-      "odelsnottomake\030\t \001(\r\022\r\n\005scale\030\n \001(\002\"X\n\021C",
-      "MsgTEPlayerDecal\022\033\n\006origin\030\001 \001(\0132\013.CMsgV" +
-      "ector\022\022\n\006player\030\002 \001(\005:\002-1\022\022\n\006entity\030\003 \001(" +
-      "\005:\002-1\"q\n\024CMsgTEProjectedDecal\022\033\n\006origin\030" +
-      "\001 \001(\0132\013.CMsgVector\022\033\n\006angles\030\002 \001(\0132\013.CMs" +
-      "gQAngle\022\r\n\005index\030\003 \001(\r\022\020\n\010distance\030\004 \001(\002" +
-      "\"9\n\013CMsgTESmoke\022\033\n\006origin\030\001 \001(\0132\013.CMsgVe" +
-      "ctor\022\r\n\005scale\030\002 \001(\002\"[\n\020CMsgTEWorldDecal\022" +
-      "\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\033\n\006normal\030\002" +
-      " \001(\0132\013.CMsgVector\022\r\n\005index\030\003 \001(\r*\323\004\n\016ETE" +
-      "ProtobufIds\022\030\n\023TE_EffectDispatchId\020\220\003\022\027\n",
-      "\022TE_ArmorRicochetId\020\221\003\022\026\n\021TE_BeamEntPoin" +
-      "tId\020\222\003\022\022\n\rTE_BeamEntsId\020\223\003\022\024\n\017TE_BeamPoi" +
-      "ntsId\020\224\003\022\022\n\rTE_BeamRingId\020\225\003\022\024\n\017TE_Break" +
-      "ModelId\020\226\003\022\022\n\rTE_BSPDecalId\020\227\003\022\021\n\014TE_Bub" +
-      "blesId\020\230\003\022\025\n\020TE_BubbleTrailId\020\231\003\022\017\n\nTE_D" +
-      "ecalId\020\232\003\022\024\n\017TE_WorldDecalId\020\233\003\022\026\n\021TE_En" +
-      "ergySplashId\020\234\003\022\016\n\tTE_FizzId\020\235\003\022\030\n\023TE_Sh" +
-      "atterSurfaceId\020\236\003\022\024\n\017TE_GlowSpriteId\020\237\003\022" +
-      "\020\n\013TE_ImpactId\020\240\003\022\025\n\020TE_MuzzleFlashId\020\241\003" +
-      "\022\025\n\020TE_BloodStreamId\020\242\003\022\023\n\016TE_ExplosionI",
-      "d\020\243\003\022\016\n\tTE_DustId\020\244\003\022\025\n\020TE_LargeFunnelId" +
-      "\020\245\003\022\020\n\013TE_SparksId\020\246\003\022\025\n\020TE_PhysicsPropI" +
-      "d\020\247\003\022\025\n\020TE_PlayerDecalId\020\250\003\022\030\n\023TE_Projec" +
-      "tedDecalId\020\251\003\022\017\n\nTE_SmokeId\020\252\003B9\n\'skadis" +
-      "tats.clarity.wire.shared.s2.protoB\016S2Tem" +
-      "pEntities"
+      "odelsnottomake\030\t \001(\r\022\r\n\005scale\030\n \001(\002\022\033\n\006d",
+      "mgpos\030\013 \001(\0132\013.CMsgVector\022\033\n\006dmgdir\030\014 \001(\013" +
+      "2\013.CMsgVector\022\017\n\007dmgtype\030\r \001(\005\"X\n\021CMsgTE" +
+      "PlayerDecal\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector" +
+      "\022\022\n\006player\030\002 \001(\005:\002-1\022\022\n\006entity\030\003 \001(\005:\002-1" +
+      "\"q\n\024CMsgTEProjectedDecal\022\033\n\006origin\030\001 \001(\013" +
+      "2\013.CMsgVector\022\033\n\006angles\030\002 \001(\0132\013.CMsgQAng" +
+      "le\022\r\n\005index\030\003 \001(\r\022\020\n\010distance\030\004 \001(\002\"9\n\013C" +
+      "MsgTESmoke\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022" +
+      "\r\n\005scale\030\002 \001(\002\"[\n\020CMsgTEWorldDecal\022\033\n\006or" +
+      "igin\030\001 \001(\0132\013.CMsgVector\022\033\n\006normal\030\002 \001(\0132",
+      "\013.CMsgVector\022\r\n\005index\030\003 \001(\r*\323\004\n\016ETEProto" +
+      "bufIds\022\030\n\023TE_EffectDispatchId\020\220\003\022\027\n\022TE_A" +
+      "rmorRicochetId\020\221\003\022\026\n\021TE_BeamEntPointId\020\222" +
+      "\003\022\022\n\rTE_BeamEntsId\020\223\003\022\024\n\017TE_BeamPointsId" +
+      "\020\224\003\022\022\n\rTE_BeamRingId\020\225\003\022\024\n\017TE_BreakModel" +
+      "Id\020\226\003\022\022\n\rTE_BSPDecalId\020\227\003\022\021\n\014TE_BubblesI" +
+      "d\020\230\003\022\025\n\020TE_BubbleTrailId\020\231\003\022\017\n\nTE_DecalI" +
+      "d\020\232\003\022\024\n\017TE_WorldDecalId\020\233\003\022\026\n\021TE_EnergyS" +
+      "plashId\020\234\003\022\016\n\tTE_FizzId\020\235\003\022\030\n\023TE_Shatter" +
+      "SurfaceId\020\236\003\022\024\n\017TE_GlowSpriteId\020\237\003\022\020\n\013TE",
+      "_ImpactId\020\240\003\022\025\n\020TE_MuzzleFlashId\020\241\003\022\025\n\020T" +
+      "E_BloodStreamId\020\242\003\022\023\n\016TE_ExplosionId\020\243\003\022" +
+      "\016\n\tTE_DustId\020\244\003\022\025\n\020TE_LargeFunnelId\020\245\003\022\020" +
+      "\n\013TE_SparksId\020\246\003\022\025\n\020TE_PhysicsPropId\020\247\003\022" +
+      "\025\n\020TE_PlayerDecalId\020\250\003\022\030\n\023TE_ProjectedDe" +
+      "calId\020\251\003\022\017\n\nTE_SmokeId\020\252\003B9\n\'skadistats." +
+      "clarity.wire.shared.s2.protoB\016S2TempEnti" +
+      "ties"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -28183,7 +28641,7 @@ public final class S2TempEntities {
     internal_static_CMsgTEPhysicsProp_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgTEPhysicsProp_descriptor,
-        new java.lang.String[] { "Origin", "Velocity", "Angles", "Skin", "Flags", "Effects", "Color", "Modelindex", "Breakmodelsnottomake", "Scale", });
+        new java.lang.String[] { "Origin", "Velocity", "Angles", "Skin", "Flags", "Effects", "Color", "Modelindex", "Breakmodelsnottomake", "Scale", "Dmgpos", "Dmgdir", "Dmgtype", });
     internal_static_CMsgTEPlayerDecal_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_CMsgTEPlayerDecal_fieldAccessorTable = new

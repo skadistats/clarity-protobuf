@@ -1168,6 +1168,37 @@ public final class CSGOS2GameEvents {
      * <code>optional fixed32 sound_dsp_effect = 12;</code>
      */
     int getSoundDspEffect();
+
+    /**
+     * <code>optional .CMsgVector ent_origin = 13;</code>
+     */
+    boolean hasEntOrigin();
+    /**
+     * <code>optional .CMsgVector ent_origin = 13;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEntOrigin();
+    /**
+     * <code>optional .CMsgVector ent_origin = 13;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntOriginOrBuilder();
+
+    /**
+     * <code>optional uint32 num_bullets_remaining = 14;</code>
+     */
+    boolean hasNumBulletsRemaining();
+    /**
+     * <code>optional uint32 num_bullets_remaining = 14;</code>
+     */
+    int getNumBulletsRemaining();
+
+    /**
+     * <code>optional uint32 attack_type = 15;</code>
+     */
+    boolean hasAttackType();
+    /**
+     * <code>optional uint32 attack_type = 15;</code>
+     */
+    int getAttackType();
   }
   /**
    * Protobuf type {@code CMsgTEFireBullets}
@@ -1295,6 +1326,29 @@ public final class CSGOS2GameEvents {
             case 101: {
               bitField0_ |= 0x00000800;
               soundDspEffect_ = input.readFixed32();
+              break;
+            }
+            case 106: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00001000) == 0x00001000)) {
+                subBuilder = entOrigin_.toBuilder();
+              }
+              entOrigin_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(entOrigin_);
+                entOrigin_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00001000;
+              break;
+            }
+            case 112: {
+              bitField0_ |= 0x00002000;
+              numBulletsRemaining_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00004000;
+              attackType_ = input.readUInt32();
               break;
             }
           }
@@ -1529,6 +1583,57 @@ public final class CSGOS2GameEvents {
       return soundDspEffect_;
     }
 
+    public static final int ENT_ORIGIN_FIELD_NUMBER = 13;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector entOrigin_;
+    /**
+     * <code>optional .CMsgVector ent_origin = 13;</code>
+     */
+    public boolean hasEntOrigin() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional .CMsgVector ent_origin = 13;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEntOrigin() {
+      return entOrigin_;
+    }
+    /**
+     * <code>optional .CMsgVector ent_origin = 13;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntOriginOrBuilder() {
+      return entOrigin_;
+    }
+
+    public static final int NUM_BULLETS_REMAINING_FIELD_NUMBER = 14;
+    private int numBulletsRemaining_;
+    /**
+     * <code>optional uint32 num_bullets_remaining = 14;</code>
+     */
+    public boolean hasNumBulletsRemaining() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    /**
+     * <code>optional uint32 num_bullets_remaining = 14;</code>
+     */
+    public int getNumBulletsRemaining() {
+      return numBulletsRemaining_;
+    }
+
+    public static final int ATTACK_TYPE_FIELD_NUMBER = 15;
+    private int attackType_;
+    /**
+     * <code>optional uint32 attack_type = 15;</code>
+     */
+    public boolean hasAttackType() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional uint32 attack_type = 15;</code>
+     */
+    public int getAttackType() {
+      return attackType_;
+    }
+
     private void initFields() {
       origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
@@ -1542,6 +1647,9 @@ public final class CSGOS2GameEvents {
       soundType_ = 0;
       itemDefIndex_ = 0;
       soundDspEffect_ = 0;
+      entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      numBulletsRemaining_ = 0;
+      attackType_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1591,6 +1699,15 @@ public final class CSGOS2GameEvents {
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         output.writeFixed32(12, soundDspEffect_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeMessage(13, entOrigin_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeUInt32(14, numBulletsRemaining_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeUInt32(15, attackType_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1648,6 +1765,18 @@ public final class CSGOS2GameEvents {
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(12, soundDspEffect_);
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(13, entOrigin_);
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(14, numBulletsRemaining_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, attackType_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1760,6 +1889,7 @@ public final class CSGOS2GameEvents {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getOriginFieldBuilder();
           getAnglesFieldBuilder();
+          getEntOriginFieldBuilder();
         }
       }
       private static Builder create() {
@@ -1800,6 +1930,16 @@ public final class CSGOS2GameEvents {
         bitField0_ = (bitField0_ & ~0x00000400);
         soundDspEffect_ = 0;
         bitField0_ = (bitField0_ & ~0x00000800);
+        if (entOriginBuilder_ == null) {
+          entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          entOriginBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        numBulletsRemaining_ = 0;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        attackType_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -1884,6 +2024,22 @@ public final class CSGOS2GameEvents {
           to_bitField0_ |= 0x00000800;
         }
         result.soundDspEffect_ = soundDspEffect_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        if (entOriginBuilder_ == null) {
+          result.entOrigin_ = entOrigin_;
+        } else {
+          result.entOrigin_ = entOriginBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.numBulletsRemaining_ = numBulletsRemaining_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.attackType_ = attackType_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1935,6 +2091,15 @@ public final class CSGOS2GameEvents {
         }
         if (other.hasSoundDspEffect()) {
           setSoundDspEffect(other.getSoundDspEffect());
+        }
+        if (other.hasEntOrigin()) {
+          mergeEntOrigin(other.getEntOrigin());
+        }
+        if (other.hasNumBulletsRemaining()) {
+          setNumBulletsRemaining(other.getNumBulletsRemaining());
+        }
+        if (other.hasAttackType()) {
+          setAttackType(other.getAttackType());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2515,6 +2680,186 @@ public final class CSGOS2GameEvents {
         return this;
       }
 
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> entOriginBuilder_;
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public boolean hasEntOrigin() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEntOrigin() {
+        if (entOriginBuilder_ == null) {
+          return entOrigin_;
+        } else {
+          return entOriginBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public Builder setEntOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (entOriginBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entOrigin_ = value;
+          onChanged();
+        } else {
+          entOriginBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public Builder setEntOrigin(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (entOriginBuilder_ == null) {
+          entOrigin_ = builderForValue.build();
+          onChanged();
+        } else {
+          entOriginBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public Builder mergeEntOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (entOriginBuilder_ == null) {
+          if (((bitField0_ & 0x00001000) == 0x00001000) &&
+              entOrigin_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            entOrigin_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(entOrigin_).mergeFrom(value).buildPartial();
+          } else {
+            entOrigin_ = value;
+          }
+          onChanged();
+        } else {
+          entOriginBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00001000;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public Builder clearEntOrigin() {
+        if (entOriginBuilder_ == null) {
+          entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          entOriginBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00001000);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getEntOriginBuilder() {
+        bitField0_ |= 0x00001000;
+        onChanged();
+        return getEntOriginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntOriginOrBuilder() {
+        if (entOriginBuilder_ != null) {
+          return entOriginBuilder_.getMessageOrBuilder();
+        } else {
+          return entOrigin_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 13;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getEntOriginFieldBuilder() {
+        if (entOriginBuilder_ == null) {
+          entOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getEntOrigin(),
+                  getParentForChildren(),
+                  isClean());
+          entOrigin_ = null;
+        }
+        return entOriginBuilder_;
+      }
+
+      private int numBulletsRemaining_ ;
+      /**
+       * <code>optional uint32 num_bullets_remaining = 14;</code>
+       */
+      public boolean hasNumBulletsRemaining() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional uint32 num_bullets_remaining = 14;</code>
+       */
+      public int getNumBulletsRemaining() {
+        return numBulletsRemaining_;
+      }
+      /**
+       * <code>optional uint32 num_bullets_remaining = 14;</code>
+       */
+      public Builder setNumBulletsRemaining(int value) {
+        bitField0_ |= 0x00002000;
+        numBulletsRemaining_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 num_bullets_remaining = 14;</code>
+       */
+      public Builder clearNumBulletsRemaining() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        numBulletsRemaining_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int attackType_ ;
+      /**
+       * <code>optional uint32 attack_type = 15;</code>
+       */
+      public boolean hasAttackType() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional uint32 attack_type = 15;</code>
+       */
+      public int getAttackType() {
+        return attackType_;
+      }
+      /**
+       * <code>optional uint32 attack_type = 15;</code>
+       */
+      public Builder setAttackType(int value) {
+        bitField0_ |= 0x00004000;
+        attackType_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 attack_type = 15;</code>
+       */
+      public Builder clearAttackType() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        attackType_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgTEFireBullets)
     }
 
@@ -2554,18 +2899,20 @@ public final class CSGOS2GameEvents {
       "common.proto\"N\n\025CMsgTEPlayerAnimEvent\022\030\n" +
       "\006player\030\001 \001(\007:\01016777215\022\r\n\005event\030\002 \001(\r\022\014" +
       "\n\004data\030\003 \001(\005\"+\n\017CMsgTERadioIcon\022\030\n\006playe" +
-      "r\030\001 \001(\007:\01016777215\"\240\002\n\021CMsgTEFireBullets\022" +
+      "r\030\001 \001(\007:\01016777215\"\365\002\n\021CMsgTEFireBullets\022" +
       "\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\033\n\006angles\030\002" +
       " \001(\0132\013.CMsgQAngle\022\033\n\tweapon_id\030\003 \001(\r:\01016" +
       "777215\022\014\n\004mode\030\004 \001(\r\022\014\n\004seed\030\005 \001(\r\022\030\n\006pl" +
       "ayer\030\006 \001(\007:\01016777215\022\022\n\ninaccuracy\030\007 \001(\002" +
       "\022\024\n\014recoil_index\030\010 \001(\002\022\016\n\006spread\030\t \001(\002\022\022",
       "\n\nsound_type\030\n \001(\005\022\026\n\016item_def_index\030\013 \001" +
-      "(\r\022\030\n\020sound_dsp_effect\030\014 \001(\007*]\n\017ECsgoGam" +
-      "eEvents\022\031\n\024GE_PlayerAnimEventId\020\302\003\022\030\n\023GE" +
-      "_RadioIconEventId\020\303\003\022\025\n\020GE_FireBulletsId" +
-      "\020\304\003B9\n%skadistats.clarity.wire.csgo.s2.p" +
-      "rotoB\020CSGOS2GameEvents"
+      "(\r\022\030\n\020sound_dsp_effect\030\014 \001(\007\022\037\n\nent_orig" +
+      "in\030\r \001(\0132\013.CMsgVector\022\035\n\025num_bullets_rem" +
+      "aining\030\016 \001(\r\022\023\n\013attack_type\030\017 \001(\r*]\n\017ECs" +
+      "goGameEvents\022\031\n\024GE_PlayerAnimEventId\020\302\003\022" +
+      "\030\n\023GE_RadioIconEventId\020\303\003\022\025\n\020GE_FireBull" +
+      "etsId\020\304\003B9\n%skadistats.clarity.wire.csgo" +
+      ".s2.protoB\020CSGOS2GameEvents"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2597,7 +2944,7 @@ public final class CSGOS2GameEvents {
     internal_static_CMsgTEFireBullets_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgTEFireBullets_descriptor,
-        new java.lang.String[] { "Origin", "Angles", "WeaponId", "Mode", "Seed", "Player", "Inaccuracy", "RecoilIndex", "Spread", "SoundType", "ItemDefIndex", "SoundDspEffect", });
+        new java.lang.String[] { "Origin", "Angles", "WeaponId", "Mode", "Seed", "Player", "Inaccuracy", "RecoilIndex", "Spread", "SoundType", "ItemDefIndex", "SoundDspEffect", "EntOrigin", "NumBulletsRemaining", "AttackType", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
   }
 

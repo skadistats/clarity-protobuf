@@ -21,6 +21,10 @@ public final class CommonNetMessages {
      * <code>VOICEDATA_FORMAT_ENGINE = 1;</code>
      */
     VOICEDATA_FORMAT_ENGINE(1, 1),
+    /**
+     * <code>VOICEDATA_FORMAT_OPUS = 2;</code>
+     */
+    VOICEDATA_FORMAT_OPUS(2, 2),
     ;
 
     /**
@@ -31,6 +35,10 @@ public final class CommonNetMessages {
      * <code>VOICEDATA_FORMAT_ENGINE = 1;</code>
      */
     public static final int VOICEDATA_FORMAT_ENGINE_VALUE = 1;
+    /**
+     * <code>VOICEDATA_FORMAT_OPUS = 2;</code>
+     */
+    public static final int VOICEDATA_FORMAT_OPUS_VALUE = 2;
 
 
     public final int getNumber() { return value; }
@@ -39,6 +47,7 @@ public final class CommonNetMessages {
       switch (value) {
         case 0: return VOICEDATA_FORMAT_STEAM;
         case 1: return VOICEDATA_FORMAT_ENGINE;
+        case 2: return VOICEDATA_FORMAT_OPUS;
         default: return null;
       }
     }
@@ -21532,13 +21541,14 @@ public final class CommonNetMessages {
       "\n\023num_changed_entries\030\002 \001(\005\022\023\n\013string_da" +
       "ta\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004ti" +
       "ck\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005" +
-      "\022\014\n\004data\030\004 \001(\014*L\n\021VoiceDataFormat_t\022\032\n\026V" +
+      "\022\014\n\004data\030\004 \001(\014*g\n\021VoiceDataFormat_t\022\032\n\026V" +
       "OICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FOR" +
-      "MAT_ENGINE\020\001*B\n\016RequestPause_t\022\014\n\010RP_PAU" +
-      "SE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002" +
-      "*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000B@\n+skadi",
-      "stats.clarity.wire.shared.common.protoB\021" +
-      "CommonNetMessages"
+      "MAT_ENGINE\020\001\022\031\n\025VOICEDATA_FORMAT_OPUS\020\002*" +
+      "B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UN" +
+      "PAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035\n\014PrefetchT",
+      "ype\022\r\n\tPFT_SOUND\020\000B@\n+skadistats.clarity" +
+      ".wire.shared.common.protoB\021CommonNetMess" +
+      "ages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

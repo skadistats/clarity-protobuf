@@ -1229,6 +1229,10 @@ public final class DOTACommonMessages {
      * <code>DOTA_UNIT_ORDER_MOVE_RELATIVE = 39;</code>
      */
     DOTA_UNIT_ORDER_MOVE_RELATIVE(39, 39),
+    /**
+     * <code>DOTA_UNIT_ORDER_CAST_TOGGLE_ALT = 40;</code>
+     */
+    DOTA_UNIT_ORDER_CAST_TOGGLE_ALT(40, 40),
     ;
 
     /**
@@ -1391,6 +1395,10 @@ public final class DOTACommonMessages {
      * <code>DOTA_UNIT_ORDER_MOVE_RELATIVE = 39;</code>
      */
     public static final int DOTA_UNIT_ORDER_MOVE_RELATIVE_VALUE = 39;
+    /**
+     * <code>DOTA_UNIT_ORDER_CAST_TOGGLE_ALT = 40;</code>
+     */
+    public static final int DOTA_UNIT_ORDER_CAST_TOGGLE_ALT_VALUE = 40;
 
 
     public final int getNumber() { return value; }
@@ -1437,6 +1445,7 @@ public final class DOTACommonMessages {
         case 37: return DOTA_UNIT_ORDER_DROP_ITEM_AT_FOUNTAIN;
         case 38: return DOTA_UNIT_ORDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH;
         case 39: return DOTA_UNIT_ORDER_MOVE_RELATIVE;
+        case 40: return DOTA_UNIT_ORDER_CAST_TOGGLE_ALT;
         default: return null;
       }
     }
@@ -10400,7 +10409,7 @@ public final class DOTACommonMessages {
       "atPopupTypes\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025" +
       "\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k_EDOTA_SPT_Pol" +
       "l\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT" +
-      "_DualImage\020\004\022\025\n\021k_EDOTA_SPT_Movie\020\005*\222\013\n\017" +
+      "_DualImage\020\004\022\025\n\021k_EDOTA_SPT_Movie\020\005*\267\013\n\017" +
       "dotaunitorder_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020" +
       "\000\022$\n DOTA_UNIT_ORDER_MOVE_TO_POSITION\020\001\022",
       "\"\n\036DOTA_UNIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033D" +
@@ -10436,12 +10445,13 @@ public final class DOTACommonMessages {
       "SSIGNMENT\020$\022)\n%DOTA_UNIT_ORDER_DROP_ITEM" +
       "_AT_FOUNTAIN\020%\0225\n1DOTA_UNIT_ORDER_TAKE_I" +
       "TEM_FROM_NEUTRAL_ITEM_STASH\020&\022!\n\035DOTA_UN" +
-      "IT_ORDER_MOVE_RELATIVE\020\'*\217\001\n\036EDOTAVersus" +
-      "ScenePlayerBehavior\022$\n VS_PLAYER_BEHAVIO" +
-      "R_PLAY_ACTIVITY\020\001\022!\n\035VS_PLAYER_BEHAVIOR_" +
-      "CHAT_WHEEL\020\002\022$\n VS_PLAYER_BEHAVIOR_PLAYB" +
-      "ACK_RATE\020\003B?\n)skadistats.clarity.wire.do" +
-      "ta.common.protoB\022DOTACommonMessages"
+      "IT_ORDER_MOVE_RELATIVE\020\'\022#\n\037DOTA_UNIT_OR" +
+      "DER_CAST_TOGGLE_ALT\020(*\217\001\n\036EDOTAVersusSce" +
+      "nePlayerBehavior\022$\n VS_PLAYER_BEHAVIOR_P" +
+      "LAY_ACTIVITY\020\001\022!\n\035VS_PLAYER_BEHAVIOR_CHA" +
+      "T_WHEEL\020\002\022$\n VS_PLAYER_BEHAVIOR_PLAYBACK" +
+      "_RATE\020\003B?\n)skadistats.clarity.wire.dota." +
+      "common.protoB\022DOTACommonMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -1250,6 +1250,15 @@ public final class S2NetMessages {
      * <code>optional uint32 tick = 6;</code>
      */
     int getTick();
+
+    /**
+     * <code>optional int32 passthrough = 7;</code>
+     */
+    boolean hasPassthrough();
+    /**
+     * <code>optional int32 passthrough = 7;</code>
+     */
+    int getPassthrough();
   }
   /**
    * Protobuf type {@code CSVCMsg_VoiceData}
@@ -1339,6 +1348,11 @@ public final class S2NetMessages {
             case 48: {
               bitField0_ |= 0x00000020;
               tick_ = input.readUInt32();
+              break;
+            }
+            case 56: {
+              bitField0_ |= 0x00000040;
+              passthrough_ = input.readInt32();
               break;
             }
           }
@@ -1477,6 +1491,21 @@ public final class S2NetMessages {
       return tick_;
     }
 
+    public static final int PASSTHROUGH_FIELD_NUMBER = 7;
+    private int passthrough_;
+    /**
+     * <code>optional int32 passthrough = 7;</code>
+     */
+    public boolean hasPassthrough() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional int32 passthrough = 7;</code>
+     */
+    public int getPassthrough() {
+      return passthrough_;
+    }
+
     private void initFields() {
       audio_ = skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.getDefaultInstance();
       client_ = 0;
@@ -1484,6 +1513,7 @@ public final class S2NetMessages {
       xuid_ = 0L;
       audibleMask_ = 0;
       tick_ = 0;
+      passthrough_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1515,6 +1545,9 @@ public final class S2NetMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeUInt32(6, tick_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeInt32(7, passthrough_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1548,6 +1581,10 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(6, tick_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, passthrough_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1683,6 +1720,8 @@ public final class S2NetMessages {
         bitField0_ = (bitField0_ & ~0x00000010);
         tick_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
+        passthrough_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -1739,6 +1778,10 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.tick_ = tick_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.passthrough_ = passthrough_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1772,6 +1815,9 @@ public final class S2NetMessages {
         }
         if (other.hasTick()) {
           setTick(other.getTick());
+        }
+        if (other.hasPassthrough()) {
+          setPassthrough(other.getPassthrough());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2076,6 +2122,38 @@ public final class S2NetMessages {
         return this;
       }
 
+      private int passthrough_ ;
+      /**
+       * <code>optional int32 passthrough = 7;</code>
+       */
+      public boolean hasPassthrough() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional int32 passthrough = 7;</code>
+       */
+      public int getPassthrough() {
+        return passthrough_;
+      }
+      /**
+       * <code>optional int32 passthrough = 7;</code>
+       */
+      public Builder setPassthrough(int value) {
+        bitField0_ |= 0x00000040;
+        passthrough_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 passthrough = 7;</code>
+       */
+      public Builder clearPassthrough() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        passthrough_ = 0;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CSVCMsg_VoiceData)
     }
 
@@ -2113,6 +2191,15 @@ public final class S2NetMessages {
      * <code>optional uint32 map_crc = 2;</code>
      */
     int getMapCrc();
+
+    /**
+     * <code>optional bool create_tables_skipped = 3;</code>
+     */
+    boolean hasCreateTablesSkipped();
+    /**
+     * <code>optional bool create_tables_skipped = 3;</code>
+     */
+    boolean getCreateTablesSkipped();
   }
   /**
    * Protobuf type {@code CSVCMsg_ClearAllStringTables}
@@ -2175,6 +2262,11 @@ public final class S2NetMessages {
             case 16: {
               bitField0_ |= 0x00000002;
               mapCrc_ = input.readUInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              createTablesSkipped_ = input.readBool();
               break;
             }
           }
@@ -2274,9 +2366,25 @@ public final class S2NetMessages {
       return mapCrc_;
     }
 
+    public static final int CREATE_TABLES_SKIPPED_FIELD_NUMBER = 3;
+    private boolean createTablesSkipped_;
+    /**
+     * <code>optional bool create_tables_skipped = 3;</code>
+     */
+    public boolean hasCreateTablesSkipped() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool create_tables_skipped = 3;</code>
+     */
+    public boolean getCreateTablesSkipped() {
+      return createTablesSkipped_;
+    }
+
     private void initFields() {
       mapname_ = "";
       mapCrc_ = 0;
+      createTablesSkipped_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2297,6 +2405,9 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         output.writeUInt32(2, mapCrc_);
       }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, createTablesSkipped_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -2313,6 +2424,10 @@ public final class S2NetMessages {
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, mapCrc_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, createTablesSkipped_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2435,6 +2550,8 @@ public final class S2NetMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         mapCrc_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
+        createTablesSkipped_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -2471,6 +2588,10 @@ public final class S2NetMessages {
           to_bitField0_ |= 0x00000002;
         }
         result.mapCrc_ = mapCrc_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.createTablesSkipped_ = createTablesSkipped_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2494,6 +2615,9 @@ public final class S2NetMessages {
         }
         if (other.hasMapCrc()) {
           setMapCrc(other.getMapCrc());
+        }
+        if (other.hasCreateTablesSkipped()) {
+          setCreateTablesSkipped(other.getCreateTablesSkipped());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2626,6 +2750,38 @@ public final class S2NetMessages {
       public Builder clearMapCrc() {
         bitField0_ = (bitField0_ & ~0x00000002);
         mapCrc_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean createTablesSkipped_ ;
+      /**
+       * <code>optional bool create_tables_skipped = 3;</code>
+       */
+      public boolean hasCreateTablesSkipped() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool create_tables_skipped = 3;</code>
+       */
+      public boolean getCreateTablesSkipped() {
+        return createTablesSkipped_;
+      }
+      /**
+       * <code>optional bool create_tables_skipped = 3;</code>
+       */
+      public Builder setCreateTablesSkipped(boolean value) {
+        bitField0_ |= 0x00000004;
+        createTablesSkipped_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool create_tables_skipped = 3;</code>
+       */
+      public Builder clearCreateTablesSkipped() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        createTablesSkipped_ = false;
         onChanged();
         return this;
       }
@@ -10701,46 +10857,47 @@ public final class S2NetMessages {
       "\004 \001(\005\022\033\n\023user_data_size_bits\030\005 \001(\005\022\r\n\005fl" +
       "ags\030\006 \001(\005\022\023\n\013string_data\030\007 \001(\014\022\031\n\021uncomp" +
       "ressed_size\030\010 \001(\005\022\027\n\017data_compressed\030\t \001" +
-      "(\010\022\036\n\026using_varint_bitcounts\030\n \001(\010\"\210\001\n\021C" +
+      "(\010\022\036\n\026using_varint_bitcounts\030\n \001(\010\"\235\001\n\021C" +
       "SVCMsg_VoiceData\022\036\n\005audio\030\001 \001(\0132\017.CMsgVo" +
       "iceAudio\022\016\n\006client\030\002 \001(\005\022\021\n\tproximity\030\003 ",
       "\001(\010\022\014\n\004xuid\030\004 \001(\006\022\024\n\014audible_mask\030\005 \001(\005\022" +
-      "\014\n\004tick\030\006 \001(\r\"@\n\034CSVCMsg_ClearAllStringT" +
-      "ables\022\017\n\007mapname\030\001 \001(\t\022\017\n\007map_crc\030\002 \001(\r\"" +
-      "\363\003\n\037ProtoFlattenedSerializerField_t\022\024\n\014v" +
-      "ar_type_sym\030\001 \001(\005\022\024\n\014var_name_sym\030\002 \001(\005\022" +
-      "\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_value\030\004 \001(\002\022\022\n" +
-      "\nhigh_value\030\005 \001(\002\022\024\n\014encode_flags\030\006 \001(\005\022" +
-      "!\n\031field_serializer_name_sym\030\007 \001(\005\022 \n\030fi" +
-      "eld_serializer_version\030\010 \001(\005\022\025\n\rsend_nod" +
-      "e_sym\030\t \001(\005\022\027\n\017var_encoder_sym\030\n \001(\005\022O\n\021",
-      "polymorphic_types\030\013 \003(\01324.ProtoFlattened" +
-      "SerializerField_t.polymorphic_field_t\022\032\n" +
-      "\022var_serializer_sym\030\014 \001(\005\032r\n\023polymorphic" +
-      "_field_t\022-\n%polymorphic_field_serializer" +
-      "_name_sym\030\001 \001(\005\022,\n$polymorphic_field_ser" +
-      "ializer_version\030\002 \001(\005\"k\n\032ProtoFlattenedS" +
-      "erializer_t\022\033\n\023serializer_name_sym\030\001 \001(\005" +
-      "\022\032\n\022serializer_version\030\002 \001(\005\022\024\n\014fields_i" +
-      "ndex\030\003 \003(\005\"\222\001\n\033CSVCMsg_FlattenedSerializ" +
-      "er\0220\n\013serializers\030\001 \003(\0132\033.ProtoFlattened",
-      "Serializer_t\022\017\n\007symbols\030\002 \003(\t\0220\n\006fields\030" +
-      "\003 \003(\0132 .ProtoFlattenedSerializerField_t\"" +
-      ";\n\016CMsgIPCAddress\022\025\n\rcomputer_guid\030\001 \001(\006" +
-      "\022\022\n\nprocess_id\030\002 \001(\r\"\240\001\n\016CMsgServerPeer\022" +
-      "\023\n\013player_slot\030\001 \001(\005\022\017\n\007steamid\030\002 \001(\006\022\034\n" +
-      "\003ipc\030\003 \001(\0132\017.CMsgIPCAddress\022\025\n\rthey_hear" +
-      "_you\030\004 \001(\010\022\025\n\ryou_hear_them\030\005 \001(\010\022\034\n\024is_" +
-      "listenserver_host\030\006 \001(\010\"1\n\020CSVCMsg_PeerL" +
-      "ist\022\035\n\004peer\030\001 \003(\0132\017.CMsgServerPeer\"U\n\022CS" +
-      "VCMsg_HLTVStatus\022\016\n\006master\030\001 \001(\t\022\017\n\007clie",
-      "nts\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007proxies\030\004 \001(" +
-      "\005\")\n\025CSVCMsg_ServerSteamID\022\020\n\010steam_id\030\001" +
-      " \001(\004\"$\n\024CSVCMsg_CmdKeyValues\022\014\n\004data\030\001 \001" +
-      "(\014\";\n\031CSVCMsg_RconServerDetails\022\r\n\005token" +
-      "\030\001 \001(\014\022\017\n\007details\030\002 \001(\tB8\n\'skadistats.cl" +
-      "arity.wire.shared.s2.protoB\rS2NetMessage" +
-      "s"
+      "\014\n\004tick\030\006 \001(\r\022\023\n\013passthrough\030\007 \001(\005\"_\n\034CS" +
+      "VCMsg_ClearAllStringTables\022\017\n\007mapname\030\001 " +
+      "\001(\t\022\017\n\007map_crc\030\002 \001(\r\022\035\n\025create_tables_sk" +
+      "ipped\030\003 \001(\010\"\363\003\n\037ProtoFlattenedSerializer" +
+      "Field_t\022\024\n\014var_type_sym\030\001 \001(\005\022\024\n\014var_nam" +
+      "e_sym\030\002 \001(\005\022\021\n\tbit_count\030\003 \001(\005\022\021\n\tlow_va" +
+      "lue\030\004 \001(\002\022\022\n\nhigh_value\030\005 \001(\002\022\024\n\014encode_" +
+      "flags\030\006 \001(\005\022!\n\031field_serializer_name_sym" +
+      "\030\007 \001(\005\022 \n\030field_serializer_version\030\010 \001(\005",
+      "\022\025\n\rsend_node_sym\030\t \001(\005\022\027\n\017var_encoder_s" +
+      "ym\030\n \001(\005\022O\n\021polymorphic_types\030\013 \003(\01324.Pr" +
+      "otoFlattenedSerializerField_t.polymorphi" +
+      "c_field_t\022\032\n\022var_serializer_sym\030\014 \001(\005\032r\n" +
+      "\023polymorphic_field_t\022-\n%polymorphic_fiel" +
+      "d_serializer_name_sym\030\001 \001(\005\022,\n$polymorph" +
+      "ic_field_serializer_version\030\002 \001(\005\"k\n\032Pro" +
+      "toFlattenedSerializer_t\022\033\n\023serializer_na" +
+      "me_sym\030\001 \001(\005\022\032\n\022serializer_version\030\002 \001(\005" +
+      "\022\024\n\014fields_index\030\003 \003(\005\"\222\001\n\033CSVCMsg_Flatt",
+      "enedSerializer\0220\n\013serializers\030\001 \003(\0132\033.Pr" +
+      "otoFlattenedSerializer_t\022\017\n\007symbols\030\002 \003(" +
+      "\t\0220\n\006fields\030\003 \003(\0132 .ProtoFlattenedSerial" +
+      "izerField_t\";\n\016CMsgIPCAddress\022\025\n\rcompute" +
+      "r_guid\030\001 \001(\006\022\022\n\nprocess_id\030\002 \001(\r\"\240\001\n\016CMs" +
+      "gServerPeer\022\023\n\013player_slot\030\001 \001(\005\022\017\n\007stea" +
+      "mid\030\002 \001(\006\022\034\n\003ipc\030\003 \001(\0132\017.CMsgIPCAddress\022" +
+      "\025\n\rthey_hear_you\030\004 \001(\010\022\025\n\ryou_hear_them\030" +
+      "\005 \001(\010\022\034\n\024is_listenserver_host\030\006 \001(\010\"1\n\020C" +
+      "SVCMsg_PeerList\022\035\n\004peer\030\001 \003(\0132\017.CMsgServ",
+      "erPeer\"U\n\022CSVCMsg_HLTVStatus\022\016\n\006master\030\001" +
+      " \001(\t\022\017\n\007clients\030\002 \001(\005\022\r\n\005slots\030\003 \001(\005\022\017\n\007" +
+      "proxies\030\004 \001(\005\")\n\025CSVCMsg_ServerSteamID\022\020" +
+      "\n\010steam_id\030\001 \001(\004\"$\n\024CSVCMsg_CmdKeyValues" +
+      "\022\014\n\004data\030\001 \001(\014\";\n\031CSVCMsg_RconServerDeta" +
+      "ils\022\r\n\005token\030\001 \001(\014\022\017\n\007details\030\002 \001(\tB8\n\'s" +
+      "kadistats.clarity.wire.shared.s2.protoB\r" +
+      "S2NetMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10766,13 +10923,13 @@ public final class S2NetMessages {
     internal_static_CSVCMsg_VoiceData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceData_descriptor,
-        new java.lang.String[] { "Audio", "Client", "Proximity", "Xuid", "AudibleMask", "Tick", });
+        new java.lang.String[] { "Audio", "Client", "Proximity", "Xuid", "AudibleMask", "Tick", "Passthrough", });
     internal_static_CSVCMsg_ClearAllStringTables_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CSVCMsg_ClearAllStringTables_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ClearAllStringTables_descriptor,
-        new java.lang.String[] { "Mapname", "MapCrc", });
+        new java.lang.String[] { "Mapname", "MapCrc", "CreateTablesSkipped", });
     internal_static_ProtoFlattenedSerializerField_t_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ProtoFlattenedSerializerField_t_fieldAccessorTable = new

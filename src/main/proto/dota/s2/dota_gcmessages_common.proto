@@ -212,3 +212,9 @@ message CMsgMatchTips {
   optional .EEvent event_id = 1 [default = EVENT_ID_NONE];
   repeated .CMsgMatchTips.SingleTip tips = 2;
 }
+
+message CMsgTrackedStat {
+  optional uint32 tracked_stat_id = 1;
+  optional int32 tracked_stat_value = 2;
+}
+

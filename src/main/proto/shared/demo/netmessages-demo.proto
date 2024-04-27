@@ -11,6 +11,9 @@ message CMsgVoiceAudio {
   optional uint32 section_number = 4;
   optional uint32 sample_rate = 5;
   optional uint32 uncompressed_sample_offset = 6;
+  optional uint32 num_packets = 7;
+  repeated uint32 packet_offsets = 8 [packed = true];
+  optional float voice_level = 9;
 }
 
 message CCLCMsg_VoiceData {

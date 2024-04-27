@@ -92,6 +92,7 @@ enum EBaseUserMessages {
   UM_SayTextChannel = 119;
   UM_Shake = 120;
   UM_ShakeDir = 121;
+  UM_WaterShake = 122;
   UM_TextMsg = 124;
   UM_ScreenTilt = 125;
   UM_VoiceMask = 128;
@@ -119,6 +120,9 @@ enum EBaseUserMessages {
   UM_DllStatusResponse = 159;
   UM_RequestInventory = 160;
   UM_InventoryResponse = 161;
+  UM_RequestDiagnostic = 162;
+  UM_DiagnosticResponse = 163;
+  UM_ExtraUserData = 164;
   UM_MAX_BASE = 200;
 }
 

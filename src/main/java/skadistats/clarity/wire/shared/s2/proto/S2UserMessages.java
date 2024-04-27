@@ -5564,6 +5564,637 @@ public final class S2UserMessages {
     // @@protoc_insertion_point(class_scope:CUserMessageShakeDir)
   }
 
+  public interface CUserMessageWaterShakeOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessageWaterShake)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 command = 1;</code>
+     */
+    boolean hasCommand();
+    /**
+     * <code>optional uint32 command = 1;</code>
+     */
+    int getCommand();
+
+    /**
+     * <code>optional float amplitude = 2;</code>
+     */
+    boolean hasAmplitude();
+    /**
+     * <code>optional float amplitude = 2;</code>
+     */
+    float getAmplitude();
+
+    /**
+     * <code>optional float frequency = 3;</code>
+     */
+    boolean hasFrequency();
+    /**
+     * <code>optional float frequency = 3;</code>
+     */
+    float getFrequency();
+
+    /**
+     * <code>optional float duration = 4;</code>
+     */
+    boolean hasDuration();
+    /**
+     * <code>optional float duration = 4;</code>
+     */
+    float getDuration();
+  }
+  /**
+   * Protobuf type {@code CUserMessageWaterShake}
+   */
+  public static final class CUserMessageWaterShake extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessageWaterShake)
+      CUserMessageWaterShakeOrBuilder {
+    // Use CUserMessageWaterShake.newBuilder() to construct.
+    private CUserMessageWaterShake(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessageWaterShake(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessageWaterShake defaultInstance;
+    public static CUserMessageWaterShake getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessageWaterShake getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessageWaterShake(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              command_ = input.readUInt32();
+              break;
+            }
+            case 21: {
+              bitField0_ |= 0x00000002;
+              amplitude_ = input.readFloat();
+              break;
+            }
+            case 29: {
+              bitField0_ |= 0x00000004;
+              frequency_ = input.readFloat();
+              break;
+            }
+            case 37: {
+              bitField0_ |= 0x00000008;
+              duration_ = input.readFloat();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessageWaterShake_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessageWaterShake_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.class, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessageWaterShake> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessageWaterShake>() {
+      public CUserMessageWaterShake parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessageWaterShake(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessageWaterShake> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int COMMAND_FIELD_NUMBER = 1;
+    private int command_;
+    /**
+     * <code>optional uint32 command = 1;</code>
+     */
+    public boolean hasCommand() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 command = 1;</code>
+     */
+    public int getCommand() {
+      return command_;
+    }
+
+    public static final int AMPLITUDE_FIELD_NUMBER = 2;
+    private float amplitude_;
+    /**
+     * <code>optional float amplitude = 2;</code>
+     */
+    public boolean hasAmplitude() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional float amplitude = 2;</code>
+     */
+    public float getAmplitude() {
+      return amplitude_;
+    }
+
+    public static final int FREQUENCY_FIELD_NUMBER = 3;
+    private float frequency_;
+    /**
+     * <code>optional float frequency = 3;</code>
+     */
+    public boolean hasFrequency() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional float frequency = 3;</code>
+     */
+    public float getFrequency() {
+      return frequency_;
+    }
+
+    public static final int DURATION_FIELD_NUMBER = 4;
+    private float duration_;
+    /**
+     * <code>optional float duration = 4;</code>
+     */
+    public boolean hasDuration() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional float duration = 4;</code>
+     */
+    public float getDuration() {
+      return duration_;
+    }
+
+    private void initFields() {
+      command_ = 0;
+      amplitude_ = 0F;
+      frequency_ = 0F;
+      duration_ = 0F;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, command_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeFloat(2, amplitude_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeFloat(3, frequency_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFloat(4, duration_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, command_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, amplitude_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, frequency_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(4, duration_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessageWaterShake}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessageWaterShake)
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShakeOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessageWaterShake_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessageWaterShake_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.class, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        command_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        amplitude_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        frequency_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        duration_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessageWaterShake_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake build() {
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake buildPartial() {
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake result = new skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.command_ = command_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.amplitude_ = amplitude_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.frequency_ = frequency_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.duration_ = duration_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake) {
+          return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake other) {
+        if (other == skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake.getDefaultInstance()) return this;
+        if (other.hasCommand()) {
+          setCommand(other.getCommand());
+        }
+        if (other.hasAmplitude()) {
+          setAmplitude(other.getAmplitude());
+        }
+        if (other.hasFrequency()) {
+          setFrequency(other.getFrequency());
+        }
+        if (other.hasDuration()) {
+          setDuration(other.getDuration());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessageWaterShake) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int command_ ;
+      /**
+       * <code>optional uint32 command = 1;</code>
+       */
+      public boolean hasCommand() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 command = 1;</code>
+       */
+      public int getCommand() {
+        return command_;
+      }
+      /**
+       * <code>optional uint32 command = 1;</code>
+       */
+      public Builder setCommand(int value) {
+        bitField0_ |= 0x00000001;
+        command_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 command = 1;</code>
+       */
+      public Builder clearCommand() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        command_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float amplitude_ ;
+      /**
+       * <code>optional float amplitude = 2;</code>
+       */
+      public boolean hasAmplitude() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional float amplitude = 2;</code>
+       */
+      public float getAmplitude() {
+        return amplitude_;
+      }
+      /**
+       * <code>optional float amplitude = 2;</code>
+       */
+      public Builder setAmplitude(float value) {
+        bitField0_ |= 0x00000002;
+        amplitude_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float amplitude = 2;</code>
+       */
+      public Builder clearAmplitude() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        amplitude_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float frequency_ ;
+      /**
+       * <code>optional float frequency = 3;</code>
+       */
+      public boolean hasFrequency() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional float frequency = 3;</code>
+       */
+      public float getFrequency() {
+        return frequency_;
+      }
+      /**
+       * <code>optional float frequency = 3;</code>
+       */
+      public Builder setFrequency(float value) {
+        bitField0_ |= 0x00000004;
+        frequency_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float frequency = 3;</code>
+       */
+      public Builder clearFrequency() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        frequency_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float duration_ ;
+      /**
+       * <code>optional float duration = 4;</code>
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional float duration = 4;</code>
+       */
+      public float getDuration() {
+        return duration_;
+      }
+      /**
+       * <code>optional float duration = 4;</code>
+       */
+      public Builder setDuration(float value) {
+        bitField0_ |= 0x00000008;
+        duration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float duration = 4;</code>
+       */
+      public Builder clearDuration() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        duration_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessageWaterShake)
+    }
+
+    static {
+      defaultInstance = new CUserMessageWaterShake(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessageWaterShake)
+  }
+
   public interface CUserMessageScreenTiltOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CUserMessageScreenTilt)
       com.google.protobuf.MessageOrBuilder {
@@ -34920,6 +35551,30 @@ public final class S2UserMessages {
         int index);
 
     /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    java.util.List<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail> 
+        getInventories3List();
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail getInventories3(int index);
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    int getInventories3Count();
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder> 
+        getInventories3OrBuilderList();
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder getInventories3OrBuilder(
+        int index);
+
+    /**
      * <code>optional int32 inv_type = 11;</code>
      */
     boolean hasInvType();
@@ -34945,6 +35600,15 @@ public final class S2UserMessages {
      * <code>optional int32 instance = 13;</code>
      */
     int getInstance();
+
+    /**
+     * <code>optional int64 start_time = 15;</code>
+     */
+    boolean hasStartTime();
+    /**
+     * <code>optional int64 start_time = 15;</code>
+     */
+    long getStartTime();
   }
   /**
    * Protobuf type {@code CUserMessage_Inventory_Response}
@@ -35059,6 +35723,19 @@ public final class S2UserMessages {
               instance_ = input.readInt32();
               break;
             }
+            case 114: {
+              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+                inventories3_ = new java.util.ArrayList<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail>();
+                mutable_bitField0_ |= 0x00000100;
+              }
+              inventories3_.add(input.readMessage(skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.PARSER, extensionRegistry));
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00000200;
+              startTime_ = input.readInt64();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -35072,6 +35749,9 @@ public final class S2UserMessages {
         }
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
           inventories2_ = java.util.Collections.unmodifiableList(inventories2_);
+        }
+        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+          inventories3_ = java.util.Collections.unmodifiableList(inventories3_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -36522,6 +37202,41 @@ public final class S2UserMessages {
       return inventories2_.get(index);
     }
 
+    public static final int INVENTORIES3_FIELD_NUMBER = 14;
+    private java.util.List<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail> inventories3_;
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail> getInventories3List() {
+      return inventories3_;
+    }
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder> 
+        getInventories3OrBuilderList() {
+      return inventories3_;
+    }
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    public int getInventories3Count() {
+      return inventories3_.size();
+    }
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail getInventories3(int index) {
+      return inventories3_.get(index);
+    }
+    /**
+     * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+     */
+    public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder getInventories3OrBuilder(
+        int index) {
+      return inventories3_.get(index);
+    }
+
     public static final int INV_TYPE_FIELD_NUMBER = 11;
     private int invType_;
     /**
@@ -36567,6 +37282,21 @@ public final class S2UserMessages {
       return instance_;
     }
 
+    public static final int START_TIME_FIELD_NUMBER = 15;
+    private long startTime_;
+    /**
+     * <code>optional int64 start_time = 15;</code>
+     */
+    public boolean hasStartTime() {
+      return ((bitField0_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional int64 start_time = 15;</code>
+     */
+    public long getStartTime() {
+      return startTime_;
+    }
+
     private void initFields() {
       crc_ = 0;
       itemCount_ = 0;
@@ -36576,9 +37306,11 @@ public final class S2UserMessages {
       platform_ = 0;
       inventories_ = java.util.Collections.emptyList();
       inventories2_ = java.util.Collections.emptyList();
+      inventories3_ = java.util.Collections.emptyList();
       invType_ = 0;
       buildVersion_ = 0;
       instance_ = 0;
+      startTime_ = 0L;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -36625,6 +37357,12 @@ public final class S2UserMessages {
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         output.writeInt32(13, instance_);
+      }
+      for (int i = 0; i < inventories3_.size(); i++) {
+        output.writeMessage(14, inventories3_.get(i));
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        output.writeInt64(15, startTime_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -36678,6 +37416,14 @@ public final class S2UserMessages {
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(13, instance_);
+      }
+      for (int i = 0; i < inventories3_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, inventories3_.get(i));
+      }
+      if (((bitField0_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt64Size(15, startTime_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -36790,6 +37536,7 @@ public final class S2UserMessages {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getInventoriesFieldBuilder();
           getInventories2FieldBuilder();
+          getInventories3FieldBuilder();
         }
       }
       private static Builder create() {
@@ -36822,12 +37569,20 @@ public final class S2UserMessages {
         } else {
           inventories2Builder_.clear();
         }
+        if (inventories3Builder_ == null) {
+          inventories3_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        } else {
+          inventories3Builder_.clear();
+        }
         invType_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000100);
-        buildVersion_ = 0;
         bitField0_ = (bitField0_ & ~0x00000200);
-        instance_ = 0;
+        buildVersion_ = 0;
         bitField0_ = (bitField0_ & ~0x00000400);
+        instance_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        startTime_ = 0L;
+        bitField0_ = (bitField0_ & ~0x00001000);
         return this;
       }
 
@@ -36898,18 +37653,31 @@ public final class S2UserMessages {
         } else {
           result.inventories2_ = inventories2Builder_.build();
         }
-        if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (inventories3Builder_ == null) {
+          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+            inventories3_ = java.util.Collections.unmodifiableList(inventories3_);
+            bitField0_ = (bitField0_ & ~0x00000100);
+          }
+          result.inventories3_ = inventories3_;
+        } else {
+          result.inventories3_ = inventories3Builder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
           to_bitField0_ |= 0x00000040;
         }
         result.invType_ = invType_;
-        if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000080;
         }
         result.buildVersion_ = buildVersion_;
-        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
           to_bitField0_ |= 0x00000100;
         }
         result.instance_ = instance_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00000200;
+        }
+        result.startTime_ = startTime_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -36996,6 +37764,32 @@ public final class S2UserMessages {
             }
           }
         }
+        if (inventories3Builder_ == null) {
+          if (!other.inventories3_.isEmpty()) {
+            if (inventories3_.isEmpty()) {
+              inventories3_ = other.inventories3_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+            } else {
+              ensureInventories3IsMutable();
+              inventories3_.addAll(other.inventories3_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.inventories3_.isEmpty()) {
+            if (inventories3Builder_.isEmpty()) {
+              inventories3Builder_.dispose();
+              inventories3Builder_ = null;
+              inventories3_ = other.inventories3_;
+              bitField0_ = (bitField0_ & ~0x00000100);
+              inventories3Builder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getInventories3FieldBuilder() : null;
+            } else {
+              inventories3Builder_.addAllMessages(other.inventories3_);
+            }
+          }
+        }
         if (other.hasInvType()) {
           setInvType(other.getInvType());
         }
@@ -37004,6 +37798,9 @@ public final class S2UserMessages {
         }
         if (other.hasInstance()) {
           setInstance(other.getInstance());
+        }
+        if (other.hasStartTime()) {
+          setStartTime(other.getStartTime());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -37704,12 +38501,252 @@ public final class S2UserMessages {
         return inventories2Builder_;
       }
 
+      private java.util.List<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail> inventories3_ =
+        java.util.Collections.emptyList();
+      private void ensureInventories3IsMutable() {
+        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+          inventories3_ = new java.util.ArrayList<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail>(inventories3_);
+          bitField0_ |= 0x00000100;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder> inventories3Builder_;
+
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail> getInventories3List() {
+        if (inventories3Builder_ == null) {
+          return java.util.Collections.unmodifiableList(inventories3_);
+        } else {
+          return inventories3Builder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public int getInventories3Count() {
+        if (inventories3Builder_ == null) {
+          return inventories3_.size();
+        } else {
+          return inventories3Builder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail getInventories3(int index) {
+        if (inventories3Builder_ == null) {
+          return inventories3_.get(index);
+        } else {
+          return inventories3Builder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder setInventories3(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail value) {
+        if (inventories3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInventories3IsMutable();
+          inventories3_.set(index, value);
+          onChanged();
+        } else {
+          inventories3Builder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder setInventories3(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder builderForValue) {
+        if (inventories3Builder_ == null) {
+          ensureInventories3IsMutable();
+          inventories3_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          inventories3Builder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder addInventories3(skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail value) {
+        if (inventories3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInventories3IsMutable();
+          inventories3_.add(value);
+          onChanged();
+        } else {
+          inventories3Builder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder addInventories3(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail value) {
+        if (inventories3Builder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureInventories3IsMutable();
+          inventories3_.add(index, value);
+          onChanged();
+        } else {
+          inventories3Builder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder addInventories3(
+          skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder builderForValue) {
+        if (inventories3Builder_ == null) {
+          ensureInventories3IsMutable();
+          inventories3_.add(builderForValue.build());
+          onChanged();
+        } else {
+          inventories3Builder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder addInventories3(
+          int index, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder builderForValue) {
+        if (inventories3Builder_ == null) {
+          ensureInventories3IsMutable();
+          inventories3_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          inventories3Builder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder addAllInventories3(
+          java.lang.Iterable<? extends skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail> values) {
+        if (inventories3Builder_ == null) {
+          ensureInventories3IsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, inventories3_);
+          onChanged();
+        } else {
+          inventories3Builder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder clearInventories3() {
+        if (inventories3Builder_ == null) {
+          inventories3_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000100);
+          onChanged();
+        } else {
+          inventories3Builder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public Builder removeInventories3(int index) {
+        if (inventories3Builder_ == null) {
+          ensureInventories3IsMutable();
+          inventories3_.remove(index);
+          onChanged();
+        } else {
+          inventories3Builder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder getInventories3Builder(
+          int index) {
+        return getInventories3FieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder getInventories3OrBuilder(
+          int index) {
+        if (inventories3Builder_ == null) {
+          return inventories3_.get(index);  } else {
+          return inventories3Builder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder> 
+           getInventories3OrBuilderList() {
+        if (inventories3Builder_ != null) {
+          return inventories3Builder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(inventories3_);
+        }
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder addInventories3Builder() {
+        return getInventories3FieldBuilder().addBuilder(
+            skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder addInventories3Builder(
+          int index) {
+        return getInventories3FieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CUserMessage_Inventory_Response.InventoryDetail inventories3 = 14;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder> 
+           getInventories3BuilderList() {
+        return getInventories3FieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder> 
+          getInventories3FieldBuilder() {
+        if (inventories3Builder_ == null) {
+          inventories3Builder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetail.Builder, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_Inventory_Response.InventoryDetailOrBuilder>(
+                  inventories3_,
+                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  getParentForChildren(),
+                  isClean());
+          inventories3_ = null;
+        }
+        return inventories3Builder_;
+      }
+
       private int invType_ ;
       /**
        * <code>optional int32 inv_type = 11;</code>
        */
       public boolean hasInvType() {
-        return ((bitField0_ & 0x00000100) == 0x00000100);
+        return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
        * <code>optional int32 inv_type = 11;</code>
@@ -37721,7 +38758,7 @@ public final class S2UserMessages {
        * <code>optional int32 inv_type = 11;</code>
        */
       public Builder setInvType(int value) {
-        bitField0_ |= 0x00000100;
+        bitField0_ |= 0x00000200;
         invType_ = value;
         onChanged();
         return this;
@@ -37730,7 +38767,7 @@ public final class S2UserMessages {
        * <code>optional int32 inv_type = 11;</code>
        */
       public Builder clearInvType() {
-        bitField0_ = (bitField0_ & ~0x00000100);
+        bitField0_ = (bitField0_ & ~0x00000200);
         invType_ = 0;
         onChanged();
         return this;
@@ -37741,7 +38778,7 @@ public final class S2UserMessages {
        * <code>optional int32 build_version = 12;</code>
        */
       public boolean hasBuildVersion() {
-        return ((bitField0_ & 0x00000200) == 0x00000200);
+        return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
        * <code>optional int32 build_version = 12;</code>
@@ -37753,7 +38790,7 @@ public final class S2UserMessages {
        * <code>optional int32 build_version = 12;</code>
        */
       public Builder setBuildVersion(int value) {
-        bitField0_ |= 0x00000200;
+        bitField0_ |= 0x00000400;
         buildVersion_ = value;
         onChanged();
         return this;
@@ -37762,7 +38799,7 @@ public final class S2UserMessages {
        * <code>optional int32 build_version = 12;</code>
        */
       public Builder clearBuildVersion() {
-        bitField0_ = (bitField0_ & ~0x00000200);
+        bitField0_ = (bitField0_ & ~0x00000400);
         buildVersion_ = 0;
         onChanged();
         return this;
@@ -37773,7 +38810,7 @@ public final class S2UserMessages {
        * <code>optional int32 instance = 13;</code>
        */
       public boolean hasInstance() {
-        return ((bitField0_ & 0x00000400) == 0x00000400);
+        return ((bitField0_ & 0x00000800) == 0x00000800);
       }
       /**
        * <code>optional int32 instance = 13;</code>
@@ -37785,7 +38822,7 @@ public final class S2UserMessages {
        * <code>optional int32 instance = 13;</code>
        */
       public Builder setInstance(int value) {
-        bitField0_ |= 0x00000400;
+        bitField0_ |= 0x00000800;
         instance_ = value;
         onChanged();
         return this;
@@ -37794,8 +38831,40 @@ public final class S2UserMessages {
        * <code>optional int32 instance = 13;</code>
        */
       public Builder clearInstance() {
-        bitField0_ = (bitField0_ & ~0x00000400);
+        bitField0_ = (bitField0_ & ~0x00000800);
         instance_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long startTime_ ;
+      /**
+       * <code>optional int64 start_time = 15;</code>
+       */
+      public boolean hasStartTime() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional int64 start_time = 15;</code>
+       */
+      public long getStartTime() {
+        return startTime_;
+      }
+      /**
+       * <code>optional int64 start_time = 15;</code>
+       */
+      public Builder setStartTime(long value) {
+        bitField0_ |= 0x00001000;
+        startTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int64 start_time = 15;</code>
+       */
+      public Builder clearStartTime() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        startTime_ = 0L;
         onChanged();
         return this;
       }
@@ -37856,6 +38925,11 @@ public final class S2UserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMessageShakeDir_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessageWaterShake_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessageWaterShake_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserMessageScreenTilt_descriptor;
   private static
@@ -38122,135 +39196,140 @@ public final class S2UserMessages {
       " \001(\r\022\021\n\tamplitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001",
       "(\002\022\020\n\010duration\030\004 \001(\002\"Y\n\024CUserMessageShak" +
       "eDir\022!\n\005shake\030\001 \001(\0132\022.CUserMessageShake\022" +
-      "\036\n\tdirection\030\002 \001(\0132\013.CMsgVector\"z\n\026CUser" +
-      "MessageScreenTilt\022\017\n\007command\030\001 \001(\r\022\023\n\013ea" +
-      "se_in_out\030\002 \001(\010\022\032\n\005angle\030\003 \001(\0132\013.CMsgVec" +
-      "tor\022\020\n\010duration\030\004 \001(\002\022\014\n\004time\030\005 \001(\002\"J\n\023C" +
-      "UserMessageSayText\022\027\n\013playerindex\030\001 \001(\005:" +
-      "\002-1\022\014\n\004text\030\002 \001(\t\022\014\n\004chat\030\003 \001(\010\"\222\001\n\024CUse" +
-      "rMessageSayText2\022\027\n\013entityindex\030\001 \001(\005:\002-" +
-      "1\022\014\n\004chat\030\002 \001(\010\022\023\n\013messagename\030\003 \001(\t\022\016\n\006",
-      "param1\030\004 \001(\t\022\016\n\006param2\030\005 \001(\t\022\016\n\006param3\030\006" +
-      " \001(\t\022\016\n\006param4\030\007 \001(\t\"|\n\022CUserMessageHudM" +
-      "sg\022\017\n\007channel\030\001 \001(\r\022\t\n\001x\030\002 \001(\002\022\t\n\001y\030\003 \001(" +
-      "\002\022\016\n\006color1\030\004 \001(\007\022\016\n\006color2\030\005 \001(\007\022\016\n\006eff" +
-      "ect\030\006 \001(\r\022\017\n\007message\030\013 \001(\t\"&\n\023CUserMessa" +
-      "geHudText\022\017\n\007message\030\001 \001(\t\"2\n\023CUserMessa" +
-      "geTextMsg\022\014\n\004dest\030\001 \001(\r\022\r\n\005param\030\002 \003(\t\"\027" +
-      "\n\025CUserMessageGameTitle\"\026\n\024CUserMessageR" +
-      "esetHUD\"8\n\025CUserMessageSendAudio\022\021\n\tsoun" +
-      "dname\030\001 \001(\t\022\014\n\004stop\030\002 \001(\010\"n\n\032CUserMessag",
-      "eAudioParameter\022\026\n\016parameter_type\030\001 \001(\r\022" +
-      "\026\n\016name_hash_code\030\002 \001(\r\022\r\n\005value\030\003 \001(\002\022\021" +
-      "\n\tint_value\030\004 \001(\r\"W\n\025CUserMessageVoiceMa" +
-      "sk\022\027\n\017gamerules_masks\030\001 \003(\r\022\021\n\tban_masks" +
-      "\030\002 \003(\r\022\022\n\nmod_enable\030\003 \001(\010\"\032\n\030CUserMessa" +
-      "geRequestState\"@\n\022CUserMessageRumble\022\r\n\005" +
-      "index\030\001 \001(\005\022\014\n\004data\030\002 \001(\005\022\r\n\005flags\030\003 \001(\005" +
-      "\"K\n\032CUserMessageSayTextChannel\022\016\n\006player" +
-      "\030\001 \001(\005\022\017\n\007channel\030\002 \001(\005\022\014\n\004text\030\003 \001(\t\"\226\001" +
-      "\n\027CUserMessageColoredText\022\r\n\005color\030\001 \001(\r",
-      "\022\014\n\004text\030\002 \001(\t\022\r\n\005reset\030\003 \001(\010\022\037\n\023context" +
-      "_player_slot\030\004 \001(\005:\002-1\022\025\n\rcontext_value\030" +
-      "\005 \001(\005\022\027\n\017context_team_id\030\006 \001(\005\"*\n\026CUserM" +
-      "essageItemPickup\022\020\n\010itemname\030\001 \001(\t\")\n\026CU" +
-      "serMessageAmmoDenied\022\017\n\007ammo_id\030\001 \001(\r\"e\n" +
-      "\024CUserMessageShowMenu\022\022\n\nvalidslots\030\001 \001(" +
-      "\r\022\023\n\013displaytime\030\002 \001(\r\022\020\n\010needmore\030\003 \001(\010" +
-      "\022\022\n\nmenustring\030\004 \001(\t\"V\n\026CUserMessageCred" +
-      "itsMsg\022\'\n\010rolltype\030\001 \001(\0162\n.eRollType:\tRO" +
-      "LL_NONE\022\023\n\013logo_length\030\002 \001(\002\"m\n\027CUserMes",
-      "sageHapticPulse\022\017\n\007hand_id\030\001 \001(\005\022A\n\npuls" +
-      "e_type\030\002 \001(\0162\021.EHapticPulseType:\032VR_HAND" +
-      "_HAPTIC_PULSE_LIGHT\";\n\030CEntityMessagePla" +
-      "yJingle\022\037\n\nentity_msg\030\001 \001(\0132\013.CEntityMsg" +
-      "\"T\n\033CEntityMessageScreenOverlay\022\024\n\014start" +
-      "_effect\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEnt" +
-      "ityMsg\"W\n\035CEntityMessageRemoveAllDecals\022" +
-      "\025\n\rremove_decals\030\001 \001(\010\022\037\n\nentity_msg\030\002 \001" +
-      "(\0132\013.CEntityMsg\"]\n\034CEntityMessagePropaga" +
-      "teForce\022\034\n\007impulse\030\001 \001(\0132\013.CMsgVector\022\037\n",
-      "\nentity_msg\030\002 \001(\0132\013.CEntityMsg\"\275\001\n\025CEnti" +
-      "tyMessageDoSpark\022\033\n\006origin\030\001 \001(\0132\013.CMsgV" +
-      "ector\022\027\n\013entityindex\030\002 \001(\005:\002-1\022\016\n\006radius" +
-      "\030\003 \001(\002\022\r\n\005color\030\004 \001(\007\022\r\n\005beams\030\005 \001(\r\022\r\n\005" +
-      "thick\030\006 \001(\002\022\020\n\010duration\030\007 \001(\002\022\037\n\nentity_" +
-      "msg\030\010 \001(\0132\013.CEntityMsg\"g\n\026CEntityMessage" +
-      "FixAngle\022\020\n\010relative\030\001 \001(\010\022\032\n\005angle\030\002 \001(" +
-      "\0132\013.CMsgQAngle\022\037\n\nentity_msg\030\003 \001(\0132\013.CEn" +
-      "tityMsg\"\361\001\n\034CUserMessageCameraTransition" +
-      "\022\023\n\013camera_type\030\001 \001(\r\022\020\n\010duration\030\002 \001(\002\022",
-      "O\n\022params_data_driven\030\003 \001(\01323.CUserMessa" +
-      "geCameraTransition.Transition_DataDriven" +
-      "\032Y\n\025Transition_DataDriven\022\020\n\010filename\030\001 " +
-      "\001(\t\022\034\n\020attach_ent_index\030\002 \001(\005:\002-1\022\020\n\010dur" +
-      "ation\030\003 \001(\002\"%\n\021CUserMsg_HudError\022\020\n\010orde" +
-      "r_id\030\001 \001(\005\"<\n\030CUserMsg_CustomGameEvent\022\022" +
-      "\n\nevent_name\030\001 \001(\t\022\014\n\004data\030\002 \001(\014\"\177\n\037CUse" +
-      "rMessageHapticsManagerPulse\022\017\n\007hand_id\030\001" +
-      " \001(\005\022\030\n\020effect_amplitude\030\002 \001(\002\022\030\n\020effect" +
-      "_frequency\030\003 \001(\002\022\027\n\017effect_duration\030\004 \001(",
-      "\002\"h\n CUserMessageHapticsManagerEffect\022\017\n" +
-      "\007hand_id\030\001 \001(\005\022\035\n\025effect_name_hash_code\030" +
-      "\002 \001(\r\022\024\n\014effect_scale\030\003 \001(\002\"E\n\037CUserMess" +
-      "ageAnimStateGraphState\022\024\n\014entity_index\030\001" +
-      " \001(\005\022\014\n\004data\030\002 \001(\014\"\235\002\n\035CUserMessageComma" +
-      "ndQueueState\022\027\n\013player_slot\030\001 \001(\005:\002-1\022O\n" +
-      "\022command_queue_info\030\002 \001(\01323.CUserMessage" +
-      "CommandQueueState.command_queue_info_t\032\221" +
-      "\001\n\024command_queue_info_t\022\027\n\017commands_queu" +
-      "ed\030\001 \001(\r\022\"\n\032command_queue_desired_size\030\002",
-      " \001(\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035\n\025t" +
-      "ime_dilation_percent\030\004 \001(\005\"_\n\034CUserMessa" +
-      "geUpdateCssClasses\022\032\n\022target_world_panel" +
-      "\030\001 \001(\005\022\023\n\013css_classes\030\002 \001(\t\022\016\n\006is_add\030\003 " +
-      "\001(\010\"1\n\033CUserMessageServerFrameTime\022\022\n\nfr" +
-      "ame_time\030\001 \001(\002\"4\n CUserMessageLagCompens" +
-      "ationError\022\020\n\010distance\030\001 \001(\002\"G\n\034CUserMes" +
-      "sageRequestDllStatus\022\022\n\ndll_action\030\001 \001(\t" +
-      "\022\023\n\013full_report\030\002 \001(\010\"j\n\035CUserMessageReq" +
-      "uestUtilAction\022\r\n\005util1\030\002 \001(\005\022\r\n\005util2\030\003",
-      " \001(\005\022\r\n\005util3\030\004 \001(\005\022\r\n\005util4\030\005 \001(\005\022\r\n\005ut" +
-      "il5\030\006 \001(\005\"\370\002\n\035CUserMessage_UtilMsg_Respo" +
-      "nse\022\013\n\003crc\030\001 \001(\007\022\022\n\nitem_count\030\002 \001(\005\022\014\n\004" +
-      "crc2\030\003 \001(\007\022\023\n\013item_count2\030\004 \001(\005\022\020\n\010crc_p" +
-      "art\030\005 \003(\005\022\021\n\tcrc_part2\030\006 \003(\005\022\030\n\020client_t" +
-      "imestamp\030\007 \001(\005\022\020\n\010platform\030\010 \001(\005\022>\n\013item" +
-      "details\030\t \003(\0132).CUserMessage_UtilMsg_Res" +
-      "ponse.ItemDetail\022\021\n\titemgroup\030\n \001(\005\022\023\n\013t" +
-      "otal_count\030\013 \001(\005\022\024\n\014total_count2\030\014 \001(\005\032D" +
-      "\n\nItemDetail\022\r\n\005index\030\001 \001(\005\022\014\n\004hash\030\002 \001(",
-      "\005\022\013\n\003crc\030\003 \001(\005\022\014\n\004name\030\004 \001(\t\"\242\002\n\026CUserMe" +
-      "ssage_DllStatus\022\023\n\013file_report\030\001 \001(\t\022\024\n\014" +
-      "command_line\030\002 \001(\t\022\023\n\013total_files\030\003 \001(\r\022" +
-      "\022\n\nprocess_id\030\004 \001(\r\022\021\n\tosversion\030\005 \001(\005\022\023" +
-      "\n\013client_time\030\006 \001(\004\0229\n\013diagnostics\030\007 \003(\013" +
-      "2$.CUserMessage_DllStatus.CVDiagnostic\032Q" +
-      "\n\014CVDiagnostic\022\n\n\002id\030\001 \001(\r\022\020\n\010extended\030\002" +
-      " \001(\r\022\r\n\005value\030\003 \001(\004\022\024\n\014string_value\030\004 \001(" +
-      "\t\"R\n\034CUserMessageRequestInventory\022\021\n\tinv" +
-      "entory\030\001 \001(\005\022\016\n\006offset\030\002 \001(\005\022\017\n\007options\030",
-      "\003 \001(\005\"\233\004\n\037CUserMessage_Inventory_Respons" +
-      "e\022\013\n\003crc\030\001 \001(\007\022\022\n\nitem_count\030\002 \001(\005\022\021\n\tos" +
-      "version\030\005 \001(\005\022\021\n\tperf_time\030\006 \001(\005\022\030\n\020clie" +
-      "nt_timestamp\030\007 \001(\005\022\020\n\010platform\030\010 \001(\005\022E\n\013" +
-      "inventories\030\t \003(\01320.CUserMessage_Invento" +
-      "ry_Response.InventoryDetail\022F\n\014inventori" +
-      "es2\030\n \003(\01320.CUserMessage_Inventory_Respo" +
-      "nse.InventoryDetail\022\020\n\010inv_type\030\013 \001(\005\022\025\n" +
-      "\rbuild_version\030\014 \001(\005\022\020\n\010instance\030\r \001(\005\032\272" +
-      "\001\n\017InventoryDetail\022\r\n\005index\030\001 \001(\005\022\017\n\007pri",
-      "mary\030\002 \001(\003\022\016\n\006offset\030\003 \001(\003\022\r\n\005first\030\004 \001(" +
-      "\003\022\014\n\004base\030\005 \001(\003\022\014\n\004name\030\006 \001(\t\022\021\n\tbase_na" +
-      "me\030\007 \001(\t\022\023\n\013base_detail\030\010 \001(\005\022\021\n\tbase_ti" +
-      "me\030\t \001(\005\022\021\n\tbase_hash\030\n \001(\005*o\n\teRollType" +
-      "\022\026\n\tROLL_NONE\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nROLL_STATS\020\000" +
-      "\022\020\n\014ROLL_CREDITS\020\001\022\027\n\023ROLL_LATE_JOIN_LOG" +
-      "O\020\002\022\017\n\013ROLL_OUTTRO\020\003*t\n\020EHapticPulseType" +
-      "\022\036\n\032VR_HAND_HAPTIC_PULSE_LIGHT\020\000\022\037\n\033VR_H" +
-      "AND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033VR_HAND_HAP" +
-      "TIC_PULSE_STRONG\020\002B9\n\'skadistats.clarity",
-      ".wire.shared.s2.protoB\016S2UserMessages"
+      "\036\n\tdirection\030\002 \001(\0132\013.CMsgVector\"a\n\026CUser" +
+      "MessageWaterShake\022\017\n\007command\030\001 \001(\r\022\021\n\tam" +
+      "plitude\030\002 \001(\002\022\021\n\tfrequency\030\003 \001(\002\022\020\n\010dura" +
+      "tion\030\004 \001(\002\"z\n\026CUserMessageScreenTilt\022\017\n\007" +
+      "command\030\001 \001(\r\022\023\n\013ease_in_out\030\002 \001(\010\022\032\n\005an" +
+      "gle\030\003 \001(\0132\013.CMsgVector\022\020\n\010duration\030\004 \001(\002" +
+      "\022\014\n\004time\030\005 \001(\002\"J\n\023CUserMessageSayText\022\027\n" +
+      "\013playerindex\030\001 \001(\005:\002-1\022\014\n\004text\030\002 \001(\t\022\014\n\004",
+      "chat\030\003 \001(\010\"\222\001\n\024CUserMessageSayText2\022\027\n\013e" +
+      "ntityindex\030\001 \001(\005:\002-1\022\014\n\004chat\030\002 \001(\010\022\023\n\013me" +
+      "ssagename\030\003 \001(\t\022\016\n\006param1\030\004 \001(\t\022\016\n\006param" +
+      "2\030\005 \001(\t\022\016\n\006param3\030\006 \001(\t\022\016\n\006param4\030\007 \001(\t\"" +
+      "|\n\022CUserMessageHudMsg\022\017\n\007channel\030\001 \001(\r\022\t" +
+      "\n\001x\030\002 \001(\002\022\t\n\001y\030\003 \001(\002\022\016\n\006color1\030\004 \001(\007\022\016\n\006" +
+      "color2\030\005 \001(\007\022\016\n\006effect\030\006 \001(\r\022\017\n\007message\030" +
+      "\013 \001(\t\"&\n\023CUserMessageHudText\022\017\n\007message\030" +
+      "\001 \001(\t\"2\n\023CUserMessageTextMsg\022\014\n\004dest\030\001 \001" +
+      "(\r\022\r\n\005param\030\002 \003(\t\"\027\n\025CUserMessageGameTit",
+      "le\"\026\n\024CUserMessageResetHUD\"8\n\025CUserMessa" +
+      "geSendAudio\022\021\n\tsoundname\030\001 \001(\t\022\014\n\004stop\030\002" +
+      " \001(\010\"n\n\032CUserMessageAudioParameter\022\026\n\016pa" +
+      "rameter_type\030\001 \001(\r\022\026\n\016name_hash_code\030\002 \001" +
+      "(\r\022\r\n\005value\030\003 \001(\002\022\021\n\tint_value\030\004 \001(\r\"W\n\025" +
+      "CUserMessageVoiceMask\022\027\n\017gamerules_masks" +
+      "\030\001 \003(\r\022\021\n\tban_masks\030\002 \003(\r\022\022\n\nmod_enable\030" +
+      "\003 \001(\010\"\032\n\030CUserMessageRequestState\"@\n\022CUs" +
+      "erMessageRumble\022\r\n\005index\030\001 \001(\005\022\014\n\004data\030\002" +
+      " \001(\005\022\r\n\005flags\030\003 \001(\005\"K\n\032CUserMessageSayTe",
+      "xtChannel\022\016\n\006player\030\001 \001(\005\022\017\n\007channel\030\002 \001" +
+      "(\005\022\014\n\004text\030\003 \001(\t\"\226\001\n\027CUserMessageColored" +
+      "Text\022\r\n\005color\030\001 \001(\r\022\014\n\004text\030\002 \001(\t\022\r\n\005res" +
+      "et\030\003 \001(\010\022\037\n\023context_player_slot\030\004 \001(\005:\002-" +
+      "1\022\025\n\rcontext_value\030\005 \001(\005\022\027\n\017context_team" +
+      "_id\030\006 \001(\005\"*\n\026CUserMessageItemPickup\022\020\n\010i" +
+      "temname\030\001 \001(\t\")\n\026CUserMessageAmmoDenied\022" +
+      "\017\n\007ammo_id\030\001 \001(\r\"e\n\024CUserMessageShowMenu" +
+      "\022\022\n\nvalidslots\030\001 \001(\r\022\023\n\013displaytime\030\002 \001(" +
+      "\r\022\020\n\010needmore\030\003 \001(\010\022\022\n\nmenustring\030\004 \001(\t\"",
+      "V\n\026CUserMessageCreditsMsg\022\'\n\010rolltype\030\001 " +
+      "\001(\0162\n.eRollType:\tROLL_NONE\022\023\n\013logo_lengt" +
+      "h\030\002 \001(\002\"m\n\027CUserMessageHapticPulse\022\017\n\007ha" +
+      "nd_id\030\001 \001(\005\022A\n\npulse_type\030\002 \001(\0162\021.EHapti" +
+      "cPulseType:\032VR_HAND_HAPTIC_PULSE_LIGHT\";" +
+      "\n\030CEntityMessagePlayJingle\022\037\n\nentity_msg" +
+      "\030\001 \001(\0132\013.CEntityMsg\"T\n\033CEntityMessageScr" +
+      "eenOverlay\022\024\n\014start_effect\030\001 \001(\010\022\037\n\nenti" +
+      "ty_msg\030\002 \001(\0132\013.CEntityMsg\"W\n\035CEntityMess" +
+      "ageRemoveAllDecals\022\025\n\rremove_decals\030\001 \001(",
+      "\010\022\037\n\nentity_msg\030\002 \001(\0132\013.CEntityMsg\"]\n\034CE" +
+      "ntityMessagePropagateForce\022\034\n\007impulse\030\001 " +
+      "\001(\0132\013.CMsgVector\022\037\n\nentity_msg\030\002 \001(\0132\013.C" +
+      "EntityMsg\"\275\001\n\025CEntityMessageDoSpark\022\033\n\006o" +
+      "rigin\030\001 \001(\0132\013.CMsgVector\022\027\n\013entityindex\030" +
+      "\002 \001(\005:\002-1\022\016\n\006radius\030\003 \001(\002\022\r\n\005color\030\004 \001(\007" +
+      "\022\r\n\005beams\030\005 \001(\r\022\r\n\005thick\030\006 \001(\002\022\020\n\010durati" +
+      "on\030\007 \001(\002\022\037\n\nentity_msg\030\010 \001(\0132\013.CEntityMs" +
+      "g\"g\n\026CEntityMessageFixAngle\022\020\n\010relative\030" +
+      "\001 \001(\010\022\032\n\005angle\030\002 \001(\0132\013.CMsgQAngle\022\037\n\nent",
+      "ity_msg\030\003 \001(\0132\013.CEntityMsg\"\361\001\n\034CUserMess" +
+      "ageCameraTransition\022\023\n\013camera_type\030\001 \001(\r" +
+      "\022\020\n\010duration\030\002 \001(\002\022O\n\022params_data_driven" +
+      "\030\003 \001(\01323.CUserMessageCameraTransition.Tr" +
+      "ansition_DataDriven\032Y\n\025Transition_DataDr" +
+      "iven\022\020\n\010filename\030\001 \001(\t\022\034\n\020attach_ent_ind" +
+      "ex\030\002 \001(\005:\002-1\022\020\n\010duration\030\003 \001(\002\"%\n\021CUserM" +
+      "sg_HudError\022\020\n\010order_id\030\001 \001(\005\"<\n\030CUserMs" +
+      "g_CustomGameEvent\022\022\n\nevent_name\030\001 \001(\t\022\014\n" +
+      "\004data\030\002 \001(\014\"\177\n\037CUserMessageHapticsManage",
+      "rPulse\022\017\n\007hand_id\030\001 \001(\005\022\030\n\020effect_amplit" +
+      "ude\030\002 \001(\002\022\030\n\020effect_frequency\030\003 \001(\002\022\027\n\017e" +
+      "ffect_duration\030\004 \001(\002\"h\n CUserMessageHapt" +
+      "icsManagerEffect\022\017\n\007hand_id\030\001 \001(\005\022\035\n\025eff" +
+      "ect_name_hash_code\030\002 \001(\r\022\024\n\014effect_scale" +
+      "\030\003 \001(\002\"E\n\037CUserMessageAnimStateGraphStat" +
+      "e\022\024\n\014entity_index\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"\235\002" +
+      "\n\035CUserMessageCommandQueueState\022\027\n\013playe" +
+      "r_slot\030\001 \001(\005:\002-1\022O\n\022command_queue_info\030\002" +
+      " \001(\01323.CUserMessageCommandQueueState.com",
+      "mand_queue_info_t\032\221\001\n\024command_queue_info" +
+      "_t\022\027\n\017commands_queued\030\001 \001(\r\022\"\n\032command_q" +
+      "ueue_desired_size\030\002 \001(\r\022\035\n\025starved_comma" +
+      "nd_ticks\030\003 \001(\r\022\035\n\025time_dilation_percent\030" +
+      "\004 \001(\005\"_\n\034CUserMessageUpdateCssClasses\022\032\n" +
+      "\022target_world_panel\030\001 \001(\005\022\023\n\013css_classes" +
+      "\030\002 \001(\t\022\016\n\006is_add\030\003 \001(\010\"1\n\033CUserMessageSe" +
+      "rverFrameTime\022\022\n\nframe_time\030\001 \001(\002\"4\n CUs" +
+      "erMessageLagCompensationError\022\020\n\010distanc" +
+      "e\030\001 \001(\002\"G\n\034CUserMessageRequestDllStatus\022",
+      "\022\n\ndll_action\030\001 \001(\t\022\023\n\013full_report\030\002 \001(\010" +
+      "\"j\n\035CUserMessageRequestUtilAction\022\r\n\005uti" +
+      "l1\030\002 \001(\005\022\r\n\005util2\030\003 \001(\005\022\r\n\005util3\030\004 \001(\005\022\r" +
+      "\n\005util4\030\005 \001(\005\022\r\n\005util5\030\006 \001(\005\"\370\002\n\035CUserMe" +
+      "ssage_UtilMsg_Response\022\013\n\003crc\030\001 \001(\007\022\022\n\ni" +
+      "tem_count\030\002 \001(\005\022\014\n\004crc2\030\003 \001(\007\022\023\n\013item_co" +
+      "unt2\030\004 \001(\005\022\020\n\010crc_part\030\005 \003(\005\022\021\n\tcrc_part" +
+      "2\030\006 \003(\005\022\030\n\020client_timestamp\030\007 \001(\005\022\020\n\010pla" +
+      "tform\030\010 \001(\005\022>\n\013itemdetails\030\t \003(\0132).CUser" +
+      "Message_UtilMsg_Response.ItemDetail\022\021\n\ti",
+      "temgroup\030\n \001(\005\022\023\n\013total_count\030\013 \001(\005\022\024\n\014t" +
+      "otal_count2\030\014 \001(\005\032D\n\nItemDetail\022\r\n\005index" +
+      "\030\001 \001(\005\022\014\n\004hash\030\002 \001(\005\022\013\n\003crc\030\003 \001(\005\022\014\n\004nam" +
+      "e\030\004 \001(\t\"\242\002\n\026CUserMessage_DllStatus\022\023\n\013fi" +
+      "le_report\030\001 \001(\t\022\024\n\014command_line\030\002 \001(\t\022\023\n" +
+      "\013total_files\030\003 \001(\r\022\022\n\nprocess_id\030\004 \001(\r\022\021" +
+      "\n\tosversion\030\005 \001(\005\022\023\n\013client_time\030\006 \001(\004\0229" +
+      "\n\013diagnostics\030\007 \003(\0132$.CUserMessage_DllSt" +
+      "atus.CVDiagnostic\032Q\n\014CVDiagnostic\022\n\n\002id\030" +
+      "\001 \001(\r\022\020\n\010extended\030\002 \001(\r\022\r\n\005value\030\003 \001(\004\022\024",
+      "\n\014string_value\030\004 \001(\t\"R\n\034CUserMessageRequ" +
+      "estInventory\022\021\n\tinventory\030\001 \001(\005\022\016\n\006offse" +
+      "t\030\002 \001(\005\022\017\n\007options\030\003 \001(\005\"\367\004\n\037CUserMessag" +
+      "e_Inventory_Response\022\013\n\003crc\030\001 \001(\007\022\022\n\nite" +
+      "m_count\030\002 \001(\005\022\021\n\tosversion\030\005 \001(\005\022\021\n\tperf" +
+      "_time\030\006 \001(\005\022\030\n\020client_timestamp\030\007 \001(\005\022\020\n" +
+      "\010platform\030\010 \001(\005\022E\n\013inventories\030\t \003(\01320.C" +
+      "UserMessage_Inventory_Response.Inventory" +
+      "Detail\022F\n\014inventories2\030\n \003(\01320.CUserMess" +
+      "age_Inventory_Response.InventoryDetail\022F",
+      "\n\014inventories3\030\016 \003(\01320.CUserMessage_Inve" +
+      "ntory_Response.InventoryDetail\022\020\n\010inv_ty" +
+      "pe\030\013 \001(\005\022\025\n\rbuild_version\030\014 \001(\005\022\020\n\010insta" +
+      "nce\030\r \001(\005\022\022\n\nstart_time\030\017 \001(\003\032\272\001\n\017Invent" +
+      "oryDetail\022\r\n\005index\030\001 \001(\005\022\017\n\007primary\030\002 \001(" +
+      "\003\022\016\n\006offset\030\003 \001(\003\022\r\n\005first\030\004 \001(\003\022\014\n\004base" +
+      "\030\005 \001(\003\022\014\n\004name\030\006 \001(\t\022\021\n\tbase_name\030\007 \001(\t\022" +
+      "\023\n\013base_detail\030\010 \001(\005\022\021\n\tbase_time\030\t \001(\005\022" +
+      "\021\n\tbase_hash\030\n \001(\005*o\n\teRollType\022\026\n\tROLL_" +
+      "NONE\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nROLL_STATS\020\000\022\020\n\014ROLL_",
+      "CREDITS\020\001\022\027\n\023ROLL_LATE_JOIN_LOGO\020\002\022\017\n\013RO" +
+      "LL_OUTTRO\020\003*t\n\020EHapticPulseType\022\036\n\032VR_HA" +
+      "ND_HAPTIC_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTI" +
+      "C_PULSE_MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE" +
+      "_STRONG\020\002B9\n\'skadistats.clarity.wire.sha" +
+      "red.s2.protoB\016S2UserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -38320,164 +39399,170 @@ public final class S2UserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageShakeDir_descriptor,
         new java.lang.String[] { "Shake", "Direction", });
-    internal_static_CUserMessageScreenTilt_descriptor =
+    internal_static_CUserMessageWaterShake_descriptor =
       getDescriptor().getMessageTypes().get(9);
+    internal_static_CUserMessageWaterShake_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessageWaterShake_descriptor,
+        new java.lang.String[] { "Command", "Amplitude", "Frequency", "Duration", });
+    internal_static_CUserMessageScreenTilt_descriptor =
+      getDescriptor().getMessageTypes().get(10);
     internal_static_CUserMessageScreenTilt_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageScreenTilt_descriptor,
         new java.lang.String[] { "Command", "EaseInOut", "Angle", "Duration", "Time", });
     internal_static_CUserMessageSayText_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_CUserMessageSayText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageSayText_descriptor,
         new java.lang.String[] { "Playerindex", "Text", "Chat", });
     internal_static_CUserMessageSayText2_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_CUserMessageSayText2_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageSayText2_descriptor,
         new java.lang.String[] { "Entityindex", "Chat", "Messagename", "Param1", "Param2", "Param3", "Param4", });
     internal_static_CUserMessageHudMsg_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_CUserMessageHudMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHudMsg_descriptor,
         new java.lang.String[] { "Channel", "X", "Y", "Color1", "Color2", "Effect", "Message", });
     internal_static_CUserMessageHudText_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_CUserMessageHudText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHudText_descriptor,
         new java.lang.String[] { "Message", });
     internal_static_CUserMessageTextMsg_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_CUserMessageTextMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageTextMsg_descriptor,
         new java.lang.String[] { "Dest", "Param", });
     internal_static_CUserMessageGameTitle_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_CUserMessageGameTitle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageGameTitle_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMessageResetHUD_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_CUserMessageResetHUD_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageResetHUD_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMessageSendAudio_descriptor =
-      getDescriptor().getMessageTypes().get(17);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_CUserMessageSendAudio_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageSendAudio_descriptor,
         new java.lang.String[] { "Soundname", "Stop", });
     internal_static_CUserMessageAudioParameter_descriptor =
-      getDescriptor().getMessageTypes().get(18);
+      getDescriptor().getMessageTypes().get(19);
     internal_static_CUserMessageAudioParameter_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageAudioParameter_descriptor,
         new java.lang.String[] { "ParameterType", "NameHashCode", "Value", "IntValue", });
     internal_static_CUserMessageVoiceMask_descriptor =
-      getDescriptor().getMessageTypes().get(19);
+      getDescriptor().getMessageTypes().get(20);
     internal_static_CUserMessageVoiceMask_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageVoiceMask_descriptor,
         new java.lang.String[] { "GamerulesMasks", "BanMasks", "ModEnable", });
     internal_static_CUserMessageRequestState_descriptor =
-      getDescriptor().getMessageTypes().get(20);
+      getDescriptor().getMessageTypes().get(21);
     internal_static_CUserMessageRequestState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageRequestState_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMessageRumble_descriptor =
-      getDescriptor().getMessageTypes().get(21);
+      getDescriptor().getMessageTypes().get(22);
     internal_static_CUserMessageRumble_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageRumble_descriptor,
         new java.lang.String[] { "Index", "Data", "Flags", });
     internal_static_CUserMessageSayTextChannel_descriptor =
-      getDescriptor().getMessageTypes().get(22);
+      getDescriptor().getMessageTypes().get(23);
     internal_static_CUserMessageSayTextChannel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageSayTextChannel_descriptor,
         new java.lang.String[] { "Player", "Channel", "Text", });
     internal_static_CUserMessageColoredText_descriptor =
-      getDescriptor().getMessageTypes().get(23);
+      getDescriptor().getMessageTypes().get(24);
     internal_static_CUserMessageColoredText_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageColoredText_descriptor,
         new java.lang.String[] { "Color", "Text", "Reset", "ContextPlayerSlot", "ContextValue", "ContextTeamId", });
     internal_static_CUserMessageItemPickup_descriptor =
-      getDescriptor().getMessageTypes().get(24);
+      getDescriptor().getMessageTypes().get(25);
     internal_static_CUserMessageItemPickup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageItemPickup_descriptor,
         new java.lang.String[] { "Itemname", });
     internal_static_CUserMessageAmmoDenied_descriptor =
-      getDescriptor().getMessageTypes().get(25);
+      getDescriptor().getMessageTypes().get(26);
     internal_static_CUserMessageAmmoDenied_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageAmmoDenied_descriptor,
         new java.lang.String[] { "AmmoId", });
     internal_static_CUserMessageShowMenu_descriptor =
-      getDescriptor().getMessageTypes().get(26);
+      getDescriptor().getMessageTypes().get(27);
     internal_static_CUserMessageShowMenu_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageShowMenu_descriptor,
         new java.lang.String[] { "Validslots", "Displaytime", "Needmore", "Menustring", });
     internal_static_CUserMessageCreditsMsg_descriptor =
-      getDescriptor().getMessageTypes().get(27);
+      getDescriptor().getMessageTypes().get(28);
     internal_static_CUserMessageCreditsMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageCreditsMsg_descriptor,
         new java.lang.String[] { "Rolltype", "LogoLength", });
     internal_static_CUserMessageHapticPulse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_CUserMessageHapticPulse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHapticPulse_descriptor,
         new java.lang.String[] { "HandId", "PulseType", });
     internal_static_CEntityMessagePlayJingle_descriptor =
-      getDescriptor().getMessageTypes().get(29);
+      getDescriptor().getMessageTypes().get(30);
     internal_static_CEntityMessagePlayJingle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePlayJingle_descriptor,
         new java.lang.String[] { "EntityMsg", });
     internal_static_CEntityMessageScreenOverlay_descriptor =
-      getDescriptor().getMessageTypes().get(30);
+      getDescriptor().getMessageTypes().get(31);
     internal_static_CEntityMessageScreenOverlay_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageScreenOverlay_descriptor,
         new java.lang.String[] { "StartEffect", "EntityMsg", });
     internal_static_CEntityMessageRemoveAllDecals_descriptor =
-      getDescriptor().getMessageTypes().get(31);
+      getDescriptor().getMessageTypes().get(32);
     internal_static_CEntityMessageRemoveAllDecals_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageRemoveAllDecals_descriptor,
         new java.lang.String[] { "RemoveDecals", "EntityMsg", });
     internal_static_CEntityMessagePropagateForce_descriptor =
-      getDescriptor().getMessageTypes().get(32);
+      getDescriptor().getMessageTypes().get(33);
     internal_static_CEntityMessagePropagateForce_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessagePropagateForce_descriptor,
         new java.lang.String[] { "Impulse", "EntityMsg", });
     internal_static_CEntityMessageDoSpark_descriptor =
-      getDescriptor().getMessageTypes().get(33);
+      getDescriptor().getMessageTypes().get(34);
     internal_static_CEntityMessageDoSpark_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageDoSpark_descriptor,
         new java.lang.String[] { "Origin", "Entityindex", "Radius", "Color", "Beams", "Thick", "Duration", "EntityMsg", });
     internal_static_CEntityMessageFixAngle_descriptor =
-      getDescriptor().getMessageTypes().get(34);
+      getDescriptor().getMessageTypes().get(35);
     internal_static_CEntityMessageFixAngle_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEntityMessageFixAngle_descriptor,
         new java.lang.String[] { "Relative", "Angle", "EntityMsg", });
     internal_static_CUserMessageCameraTransition_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(36);
     internal_static_CUserMessageCameraTransition_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageCameraTransition_descriptor,
@@ -38489,37 +39574,37 @@ public final class S2UserMessages {
         internal_static_CUserMessageCameraTransition_Transition_DataDriven_descriptor,
         new java.lang.String[] { "Filename", "AttachEntIndex", "Duration", });
     internal_static_CUserMsg_HudError_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(37);
     internal_static_CUserMsg_HudError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_HudError_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_CUserMsg_CustomGameEvent_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_CUserMsg_CustomGameEvent_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_CustomGameEvent_descriptor,
         new java.lang.String[] { "EventName", "Data", });
     internal_static_CUserMessageHapticsManagerPulse_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_CUserMessageHapticsManagerPulse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHapticsManagerPulse_descriptor,
         new java.lang.String[] { "HandId", "EffectAmplitude", "EffectFrequency", "EffectDuration", });
     internal_static_CUserMessageHapticsManagerEffect_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_CUserMessageHapticsManagerEffect_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageHapticsManagerEffect_descriptor,
         new java.lang.String[] { "HandId", "EffectNameHashCode", "EffectScale", });
     internal_static_CUserMessageAnimStateGraphState_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_CUserMessageAnimStateGraphState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageAnimStateGraphState_descriptor,
         new java.lang.String[] { "EntityIndex", "Data", });
     internal_static_CUserMessageCommandQueueState_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_CUserMessageCommandQueueState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageCommandQueueState_descriptor,
@@ -38531,37 +39616,37 @@ public final class S2UserMessages {
         internal_static_CUserMessageCommandQueueState_command_queue_info_t_descriptor,
         new java.lang.String[] { "CommandsQueued", "CommandQueueDesiredSize", "StarvedCommandTicks", "TimeDilationPercent", });
     internal_static_CUserMessageUpdateCssClasses_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_CUserMessageUpdateCssClasses_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageUpdateCssClasses_descriptor,
         new java.lang.String[] { "TargetWorldPanel", "CssClasses", "IsAdd", });
     internal_static_CUserMessageServerFrameTime_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_CUserMessageServerFrameTime_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageServerFrameTime_descriptor,
         new java.lang.String[] { "FrameTime", });
     internal_static_CUserMessageLagCompensationError_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_CUserMessageLagCompensationError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageLagCompensationError_descriptor,
         new java.lang.String[] { "Distance", });
     internal_static_CUserMessageRequestDllStatus_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_CUserMessageRequestDllStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageRequestDllStatus_descriptor,
         new java.lang.String[] { "DllAction", "FullReport", });
     internal_static_CUserMessageRequestUtilAction_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_CUserMessageRequestUtilAction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageRequestUtilAction_descriptor,
         new java.lang.String[] { "Util1", "Util2", "Util3", "Util4", "Util5", });
     internal_static_CUserMessage_UtilMsg_Response_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_CUserMessage_UtilMsg_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessage_UtilMsg_Response_descriptor,
@@ -38573,7 +39658,7 @@ public final class S2UserMessages {
         internal_static_CUserMessage_UtilMsg_Response_ItemDetail_descriptor,
         new java.lang.String[] { "Index", "Hash", "Crc", "Name", });
     internal_static_CUserMessage_DllStatus_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_CUserMessage_DllStatus_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessage_DllStatus_descriptor,
@@ -38585,17 +39670,17 @@ public final class S2UserMessages {
         internal_static_CUserMessage_DllStatus_CVDiagnostic_descriptor,
         new java.lang.String[] { "Id", "Extended", "Value", "StringValue", });
     internal_static_CUserMessageRequestInventory_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_CUserMessageRequestInventory_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessageRequestInventory_descriptor,
         new java.lang.String[] { "Inventory", "Offset", "Options", });
     internal_static_CUserMessage_Inventory_Response_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_CUserMessage_Inventory_Response_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessage_Inventory_Response_descriptor,
-        new java.lang.String[] { "Crc", "ItemCount", "Osversion", "PerfTime", "ClientTimestamp", "Platform", "Inventories", "Inventories2", "InvType", "BuildVersion", "Instance", });
+        new java.lang.String[] { "Crc", "ItemCount", "Osversion", "PerfTime", "ClientTimestamp", "Platform", "Inventories", "Inventories2", "Inventories3", "InvType", "BuildVersion", "Instance", "StartTime", });
     internal_static_CUserMessage_Inventory_Response_InventoryDetail_descriptor =
       internal_static_CUserMessage_Inventory_Response_descriptor.getNestedTypes().get(0);
     internal_static_CUserMessage_Inventory_Response_InventoryDetail_fieldAccessorTable = new

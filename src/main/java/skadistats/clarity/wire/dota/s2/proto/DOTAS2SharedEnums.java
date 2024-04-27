@@ -687,9 +687,25 @@ public final class DOTAS2SharedEnums {
      */
     EVENT_ID_TEAM_2023_TOUR3(43, 43),
     /**
-     * <code>EVENT_ID_COUNT = 44;</code>
+     * <code>EVENT_ID_INTERNATIONAL_2023 = 45;</code>
      */
-    EVENT_ID_COUNT(44, 44),
+    EVENT_ID_INTERNATIONAL_2023(44, 45),
+    /**
+     * <code>EVENT_ID_10TH_ANNIVERSARY = 46;</code>
+     */
+    EVENT_ID_10TH_ANNIVERSARY(45, 46),
+    /**
+     * <code>EVENT_ID_CROWNFALL = 47;</code>
+     */
+    EVENT_ID_CROWNFALL(46, 47),
+    /**
+     * <code>EVENT_ID_FROSTIVUS_2023 = 48;</code>
+     */
+    EVENT_ID_FROSTIVUS_2023(47, 48),
+    /**
+     * <code>EVENT_ID_COUNT = 49;</code>
+     */
+    EVENT_ID_COUNT(48, 49),
     ;
 
     /**
@@ -869,9 +885,25 @@ public final class DOTAS2SharedEnums {
      */
     public static final int EVENT_ID_TEAM_2023_TOUR3_VALUE = 43;
     /**
-     * <code>EVENT_ID_COUNT = 44;</code>
+     * <code>EVENT_ID_INTERNATIONAL_2023 = 45;</code>
      */
-    public static final int EVENT_ID_COUNT_VALUE = 44;
+    public static final int EVENT_ID_INTERNATIONAL_2023_VALUE = 45;
+    /**
+     * <code>EVENT_ID_10TH_ANNIVERSARY = 46;</code>
+     */
+    public static final int EVENT_ID_10TH_ANNIVERSARY_VALUE = 46;
+    /**
+     * <code>EVENT_ID_CROWNFALL = 47;</code>
+     */
+    public static final int EVENT_ID_CROWNFALL_VALUE = 47;
+    /**
+     * <code>EVENT_ID_FROSTIVUS_2023 = 48;</code>
+     */
+    public static final int EVENT_ID_FROSTIVUS_2023_VALUE = 48;
+    /**
+     * <code>EVENT_ID_COUNT = 49;</code>
+     */
+    public static final int EVENT_ID_COUNT_VALUE = 49;
 
 
     public final int getNumber() { return value; }
@@ -922,7 +954,11 @@ public final class DOTAS2SharedEnums {
         case 41: return EVENT_ID_TEAM_2023_TOUR1;
         case 42: return EVENT_ID_TEAM_2023_TOUR2;
         case 43: return EVENT_ID_TEAM_2023_TOUR3;
-        case 44: return EVENT_ID_COUNT;
+        case 45: return EVENT_ID_INTERNATIONAL_2023;
+        case 46: return EVENT_ID_10TH_ANNIVERSARY;
+        case 47: return EVENT_ID_CROWNFALL;
+        case 48: return EVENT_ID_FROSTIVUS_2023;
+        case 49: return EVENT_ID_COUNT;
         default: return null;
       }
     }
@@ -1491,7 +1527,7 @@ public final class DOTAS2SharedEnums {
       "EAM_CUSTOM_5\020\n\022\031\n\025DOTA_GC_TEAM_CUSTOM_6\020" +
       "\013\022\031\n\025DOTA_GC_TEAM_CUSTOM_7\020\014\022\031\n\025DOTA_GC_" +
       "TEAM_CUSTOM_8\020\r\022\031\n\025DOTA_GC_TEAM_NEUTRALS" +
-      "\020\016*\327\n\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025\n\021EVEN" +
+      "\020\016*\314\013\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025\n\021EVEN" +
       "T_ID_DIRETIDE\020\001\022\034\n\030EVENT_ID_SPRING_FESTI",
       "VAL\020\002\022\033\n\027EVENT_ID_FROSTIVUS_2013\020\003\022\034\n\030EV" +
       "ENT_ID_COMPENDIUM_2014\020\004\022\032\n\026EVENT_ID_NEX" +
@@ -1524,42 +1560,45 @@ public final class DOTAS2SharedEnums {
       "_ID_PERMANENT_GRANTS\020\'\022&\n\"EVENT_ID_MUERT" +
       "A_RELEASE_SPRING2023\020(\022\034\n\030EVENT_ID_TEAM_",
       "2023_TOUR1\020)\022\034\n\030EVENT_ID_TEAM_2023_TOUR2" +
-      "\020*\022\034\n\030EVENT_ID_TEAM_2023_TOUR3\020+\022\022\n\016EVEN" +
-      "T_ID_COUNT\020,*\327\005\n\rEMatchOutcome\022\033\n\027k_EMat" +
-      "chOutcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_R" +
-      "adVictory\020\002\022\037\n\033k_EMatchOutcome_DireVicto" +
-      "ry\020\003\022\"\n\036k_EMatchOutcome_NeutralVictory\020\004" +
-      "\022 \n\034k_EMatchOutcome_NoTeamWinner\020\005\022\"\n\036k_" +
-      "EMatchOutcome_Custom1Victory\020\006\022\"\n\036k_EMat" +
-      "chOutcome_Custom2Victory\020\007\022\"\n\036k_EMatchOu" +
-      "tcome_Custom3Victory\020\010\022\"\n\036k_EMatchOutcom",
-      "e_Custom4Victory\020\t\022\"\n\036k_EMatchOutcome_Cu" +
-      "stom5Victory\020\n\022\"\n\036k_EMatchOutcome_Custom" +
-      "6Victory\020\013\022\"\n\036k_EMatchOutcome_Custom7Vic" +
-      "tory\020\014\022\"\n\036k_EMatchOutcome_Custom8Victory" +
-      "\020\r\0223\n/k_EMatchOutcome_NotScored_PoorNetw" +
-      "orkConditions\020@\022$\n k_EMatchOutcome_NotSc" +
-      "ored_Leaver\020A\022)\n%k_EMatchOutcome_NotScor" +
-      "ed_ServerCrash\020B\022*\n&k_EMatchOutcome_NotS" +
-      "cored_NeverStarted\020C\022&\n\"k_EMatchOutcome_" +
-      "NotScored_Canceled\020D\022(\n$k_EMatchOutcome_",
-      "NotScored_Suspicious\020E*\321\003\n\022EDOTAPlayerMM" +
-      "RType\022 \n\034k_EDOTAPlayerMMRType_Invalid\020\000\022" +
-      "&\n\"k_EDOTAPlayerMMRType_GeneralHidden\020\001\022" +
-      "/\n+k_EDOTAPlayerMMRType_GeneralCompetiti" +
-      "ve2019\020\003\022,\n(k_EDOTAPlayerMMRType_SoloCom" +
-      "petitive2019\020\004\022.\n*k_EDOTAPlayerMMRType_1" +
-      "v1Competitive_UNUSED\020\005\022.\n*k_EDOTAPlayerM" +
-      "MRType_GeneralSeasonalRanked\020\006\022+\n\'k_EDOT" +
-      "APlayerMMRType_SoloSeasonalRanked\020\007\022)\n%k" +
-      "_EDOTAPlayerMMRType_Competitive_Core\020\010\022,",
-      "\n(k_EDOTAPlayerMMRType_Competitive_Suppo" +
-      "rt\020\t\022,\n(k_EDOTAPlayerMMRType_Competitive" +
-      "_Classic\020\n*s\n\021EDOTAMMRBoostType\022\034\n\030k_EDO" +
-      "TAMMRBoostType_None\020\000\022\036\n\032k_EDOTAMMRBoost" +
-      "Type_Leader\020\001\022 \n\034k_EDOTAMMRBoostType_Fol" +
-      "lower\020\002B:\n%skadistats.clarity.wire.dota." +
-      "s2.protoB\021DOTAS2SharedEnums"
+      "\020*\022\034\n\030EVENT_ID_TEAM_2023_TOUR3\020+\022\037\n\033EVEN" +
+      "T_ID_INTERNATIONAL_2023\020-\022\035\n\031EVENT_ID_10" +
+      "TH_ANNIVERSARY\020.\022\026\n\022EVENT_ID_CROWNFALL\020/" +
+      "\022\033\n\027EVENT_ID_FROSTIVUS_2023\0200\022\022\n\016EVENT_I" +
+      "D_COUNT\0201*\327\005\n\rEMatchOutcome\022\033\n\027k_EMatchO" +
+      "utcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_RadV" +
+      "ictory\020\002\022\037\n\033k_EMatchOutcome_DireVictory\020" +
+      "\003\022\"\n\036k_EMatchOutcome_NeutralVictory\020\004\022 \n" +
+      "\034k_EMatchOutcome_NoTeamWinner\020\005\022\"\n\036k_EMa",
+      "tchOutcome_Custom1Victory\020\006\022\"\n\036k_EMatchO" +
+      "utcome_Custom2Victory\020\007\022\"\n\036k_EMatchOutco" +
+      "me_Custom3Victory\020\010\022\"\n\036k_EMatchOutcome_C" +
+      "ustom4Victory\020\t\022\"\n\036k_EMatchOutcome_Custo" +
+      "m5Victory\020\n\022\"\n\036k_EMatchOutcome_Custom6Vi" +
+      "ctory\020\013\022\"\n\036k_EMatchOutcome_Custom7Victor" +
+      "y\020\014\022\"\n\036k_EMatchOutcome_Custom8Victory\020\r\022" +
+      "3\n/k_EMatchOutcome_NotScored_PoorNetwork" +
+      "Conditions\020@\022$\n k_EMatchOutcome_NotScore" +
+      "d_Leaver\020A\022)\n%k_EMatchOutcome_NotScored_",
+      "ServerCrash\020B\022*\n&k_EMatchOutcome_NotScor" +
+      "ed_NeverStarted\020C\022&\n\"k_EMatchOutcome_Not" +
+      "Scored_Canceled\020D\022(\n$k_EMatchOutcome_Not" +
+      "Scored_Suspicious\020E*\321\003\n\022EDOTAPlayerMMRTy" +
+      "pe\022 \n\034k_EDOTAPlayerMMRType_Invalid\020\000\022&\n\"" +
+      "k_EDOTAPlayerMMRType_GeneralHidden\020\001\022/\n+" +
+      "k_EDOTAPlayerMMRType_GeneralCompetitive2" +
+      "019\020\003\022,\n(k_EDOTAPlayerMMRType_SoloCompet" +
+      "itive2019\020\004\022.\n*k_EDOTAPlayerMMRType_1v1C" +
+      "ompetitive_UNUSED\020\005\022.\n*k_EDOTAPlayerMMRT",
+      "ype_GeneralSeasonalRanked\020\006\022+\n\'k_EDOTAPl" +
+      "ayerMMRType_SoloSeasonalRanked\020\007\022)\n%k_ED" +
+      "OTAPlayerMMRType_Competitive_Core\020\010\022,\n(k" +
+      "_EDOTAPlayerMMRType_Competitive_Support\020" +
+      "\t\022,\n(k_EDOTAPlayerMMRType_Competitive_Cl" +
+      "assic\020\n*s\n\021EDOTAMMRBoostType\022\034\n\030k_EDOTAM" +
+      "MRBoostType_None\020\000\022\036\n\032k_EDOTAMMRBoostTyp" +
+      "e_Leader\020\001\022 \n\034k_EDOTAMMRBoostType_Follow" +
+      "er\020\002B:\n%skadistats.clarity.wire.dota.s2." +
+      "protoB\021DOTAS2SharedEnums"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

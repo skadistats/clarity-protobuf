@@ -398,15 +398,15 @@ public final class DOTAModifiers {
     boolean getActive();
 
     /**
-     * <code>optional string player_ids = 31 [default = "-1"];</code>
+     * <code>optional string player_ids = 31;</code>
      */
     boolean hasPlayerIds();
     /**
-     * <code>optional string player_ids = 31 [default = "-1"];</code>
+     * <code>optional string player_ids = 31;</code>
      */
     java.lang.String getPlayerIds();
     /**
-     * <code>optional string player_ids = 31 [default = "-1"];</code>
+     * <code>optional string player_ids = 31;</code>
      */
     com.google.protobuf.ByteString
         getPlayerIdsBytes();
@@ -478,6 +478,15 @@ public final class DOTAModifiers {
      * <code>optional uint32 custom_entity = 38 [default = 16777215];</code>
      */
     int getCustomEntity();
+
+    /**
+     * <code>optional bool aura_within_range = 39;</code>
+     */
+    boolean hasAuraWithinRange();
+    /**
+     * <code>optional bool aura_within_range = 39;</code>
+     */
+    boolean getAuraWithinRange();
   }
   /**
    * Protobuf type {@code CDOTAModifierBuffTableEntry}
@@ -749,6 +758,11 @@ public final class DOTAModifiers {
             case 304: {
               bitField1_ |= 0x00000020;
               customEntity_ = input.readUInt32();
+              break;
+            }
+            case 312: {
+              bitField1_ |= 0x00000040;
+              auraWithinRange_ = input.readBool();
               break;
             }
           }
@@ -1392,13 +1406,13 @@ public final class DOTAModifiers {
     public static final int PLAYER_IDS_FIELD_NUMBER = 31;
     private java.lang.Object playerIds_;
     /**
-     * <code>optional string player_ids = 31 [default = "-1"];</code>
+     * <code>optional string player_ids = 31;</code>
      */
     public boolean hasPlayerIds() {
       return ((bitField0_ & 0x40000000) == 0x40000000);
     }
     /**
-     * <code>optional string player_ids = 31 [default = "-1"];</code>
+     * <code>optional string player_ids = 31;</code>
      */
     public java.lang.String getPlayerIds() {
       java.lang.Object ref = playerIds_;
@@ -1415,7 +1429,7 @@ public final class DOTAModifiers {
       }
     }
     /**
-     * <code>optional string player_ids = 31 [default = "-1"];</code>
+     * <code>optional string player_ids = 31;</code>
      */
     public com.google.protobuf.ByteString
         getPlayerIdsBytes() {
@@ -1563,6 +1577,21 @@ public final class DOTAModifiers {
       return customEntity_;
     }
 
+    public static final int AURA_WITHIN_RANGE_FIELD_NUMBER = 39;
+    private boolean auraWithinRange_;
+    /**
+     * <code>optional bool aura_within_range = 39;</code>
+     */
+    public boolean hasAuraWithinRange() {
+      return ((bitField1_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional bool aura_within_range = 39;</code>
+     */
+    public boolean getAuraWithinRange() {
+      return auraWithinRange_;
+    }
+
     private void initFields() {
       entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       parent_ = 16777215;
@@ -1594,7 +1623,7 @@ public final class DOTAModifiers {
       ddAbilityId_ = -1;
       illusionLabel_ = "";
       active_ = false;
-      playerIds_ = "-1";
+      playerIds_ = "";
       luaName_ = "";
       attackSpeed_ = 0;
       auraOwner_ = 16777215;
@@ -1602,6 +1631,7 @@ public final class DOTAModifiers {
       bonusHealth_ = 0;
       bonusMana_ = 0;
       customEntity_ = 16777215;
+      auraWithinRange_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1745,6 +1775,9 @@ public final class DOTAModifiers {
       }
       if (((bitField1_ & 0x00000020) == 0x00000020)) {
         output.writeUInt32(38, customEntity_);
+      }
+      if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        output.writeBool(39, auraWithinRange_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1906,6 +1939,10 @@ public final class DOTAModifiers {
       if (((bitField1_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(38, customEntity_);
+      }
+      if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(39, auraWithinRange_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2094,7 +2131,7 @@ public final class DOTAModifiers {
         bitField0_ = (bitField0_ & ~0x10000000);
         active_ = false;
         bitField0_ = (bitField0_ & ~0x20000000);
-        playerIds_ = "-1";
+        playerIds_ = "";
         bitField0_ = (bitField0_ & ~0x40000000);
         luaName_ = "";
         bitField0_ = (bitField0_ & ~0x80000000);
@@ -2110,6 +2147,8 @@ public final class DOTAModifiers {
         bitField1_ = (bitField1_ & ~0x00000010);
         customEntity_ = 16777215;
         bitField1_ = (bitField1_ & ~0x00000020);
+        auraWithinRange_ = false;
+        bitField1_ = (bitField1_ & ~0x00000040);
         return this;
       }
 
@@ -2300,6 +2339,10 @@ public final class DOTAModifiers {
           to_bitField1_ |= 0x00000020;
         }
         result.customEntity_ = customEntity_;
+        if (((from_bitField1_ & 0x00000040) == 0x00000040)) {
+          to_bitField1_ |= 0x00000040;
+        }
+        result.auraWithinRange_ = auraWithinRange_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -2444,6 +2487,9 @@ public final class DOTAModifiers {
         }
         if (other.hasCustomEntity()) {
           setCustomEntity(other.getCustomEntity());
+        }
+        if (other.hasAuraWithinRange()) {
+          setAuraWithinRange(other.getAuraWithinRange());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -3840,15 +3886,15 @@ public final class DOTAModifiers {
         return this;
       }
 
-      private java.lang.Object playerIds_ = "-1";
+      private java.lang.Object playerIds_ = "";
       /**
-       * <code>optional string player_ids = 31 [default = "-1"];</code>
+       * <code>optional string player_ids = 31;</code>
        */
       public boolean hasPlayerIds() {
         return ((bitField0_ & 0x40000000) == 0x40000000);
       }
       /**
-       * <code>optional string player_ids = 31 [default = "-1"];</code>
+       * <code>optional string player_ids = 31;</code>
        */
       public java.lang.String getPlayerIds() {
         java.lang.Object ref = playerIds_;
@@ -3865,7 +3911,7 @@ public final class DOTAModifiers {
         }
       }
       /**
-       * <code>optional string player_ids = 31 [default = "-1"];</code>
+       * <code>optional string player_ids = 31;</code>
        */
       public com.google.protobuf.ByteString
           getPlayerIdsBytes() {
@@ -3881,7 +3927,7 @@ public final class DOTAModifiers {
         }
       }
       /**
-       * <code>optional string player_ids = 31 [default = "-1"];</code>
+       * <code>optional string player_ids = 31;</code>
        */
       public Builder setPlayerIds(
           java.lang.String value) {
@@ -3894,7 +3940,7 @@ public final class DOTAModifiers {
         return this;
       }
       /**
-       * <code>optional string player_ids = 31 [default = "-1"];</code>
+       * <code>optional string player_ids = 31;</code>
        */
       public Builder clearPlayerIds() {
         bitField0_ = (bitField0_ & ~0x40000000);
@@ -3903,7 +3949,7 @@ public final class DOTAModifiers {
         return this;
       }
       /**
-       * <code>optional string player_ids = 31 [default = "-1"];</code>
+       * <code>optional string player_ids = 31;</code>
        */
       public Builder setPlayerIdsBytes(
           com.google.protobuf.ByteString value) {
@@ -4180,6 +4226,38 @@ public final class DOTAModifiers {
       public Builder clearCustomEntity() {
         bitField1_ = (bitField1_ & ~0x00000020);
         customEntity_ = 16777215;
+        onChanged();
+        return this;
+      }
+
+      private boolean auraWithinRange_ ;
+      /**
+       * <code>optional bool aura_within_range = 39;</code>
+       */
+      public boolean hasAuraWithinRange() {
+        return ((bitField1_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional bool aura_within_range = 39;</code>
+       */
+      public boolean getAuraWithinRange() {
+        return auraWithinRange_;
+      }
+      /**
+       * <code>optional bool aura_within_range = 39;</code>
+       */
+      public Builder setAuraWithinRange(boolean value) {
+        bitField1_ |= 0x00000040;
+        auraWithinRange_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool aura_within_range = 39;</code>
+       */
+      public Builder clearAuraWithinRange() {
+        bitField1_ = (bitField1_ & ~0x00000040);
+        auraWithinRange_ = false;
         onChanged();
         return this;
       }
@@ -4785,7 +4863,7 @@ public final class DOTAModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\035networkbasetypes" +
-      "-common.proto\"\273\007\n\033CDOTAModifierBuffTable" +
+      "-common.proto\"\322\007\n\033CDOTAModifierBuffTable" +
       "Entry\022N\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIE" +
       "R_ENTRY_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_A" +
       "CTIVE\022\030\n\006parent\030\002 \002(\r:\01016777215\022\r\n\005index" +
@@ -4804,18 +4882,18 @@ public final class DOTAModifiers {
       "tivity\030\030 \001(\005\022\016\n\006damage\030\031 \001(\005\022\r\n\005range\030\032 " +
       "\001(\005\022\031\n\021dd_modifier_index\030\033 \001(\005\022\031\n\rdd_abi" +
       "lity_id\030\034 \001(\005:\002-1\022\026\n\016illusion_label\030\035 \001(",
-      "\t\022\016\n\006active\030\036 \001(\010\022\026\n\nplayer_ids\030\037 \001(\t:\002-" +
-      "1\022\020\n\010lua_name\030  \001(\t\022\024\n\014attack_speed\030! \001(" +
-      "\005\022\034\n\naura_owner\030\" \001(\r:\01016777215\022\027\n\017bonus" +
-      "_all_stats\030# \001(\005\022\024\n\014bonus_health\030$ \001(\005\022\022" +
-      "\n\nbonus_mana\030% \001(\005\022\037\n\rcustom_entity\030& \001(" +
-      "\r:\01016777215\"I\n\025CDOTALuaModifierEntry\022\025\n\r" +
-      "modifier_type\030\001 \002(\005\022\031\n\021modifier_filename" +
-      "\030\002 \002(\t*e\n\030DOTA_MODIFIER_ENTRY_TYPE\022#\n\037DO" +
-      "TA_MODIFIER_ENTRY_TYPE_ACTIVE\020\001\022$\n DOTA_" +
-      "MODIFIER_ENTRY_TYPE_REMOVED\020\002B:\n)skadist",
-      "ats.clarity.wire.dota.common.protoB\rDOTA" +
-      "Modifiers"
+      "\t\022\016\n\006active\030\036 \001(\010\022\022\n\nplayer_ids\030\037 \001(\t\022\020\n" +
+      "\010lua_name\030  \001(\t\022\024\n\014attack_speed\030! \001(\005\022\034\n" +
+      "\naura_owner\030\" \001(\r:\01016777215\022\027\n\017bonus_all" +
+      "_stats\030# \001(\005\022\024\n\014bonus_health\030$ \001(\005\022\022\n\nbo" +
+      "nus_mana\030% \001(\005\022\037\n\rcustom_entity\030& \001(\r:\0101" +
+      "6777215\022\031\n\021aura_within_range\030\' \001(\010\"I\n\025CD" +
+      "OTALuaModifierEntry\022\025\n\rmodifier_type\030\001 \002" +
+      "(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_MO" +
+      "DIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENTRY" +
+      "_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_TY",
+      "PE_REMOVED\020\002B:\n)skadistats.clarity.wire." +
+      "dota.common.protoB\rDOTAModifiers"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4835,7 +4913,7 @@ public final class DOTAModifiers {
     internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAModifierBuffTableEntry_descriptor,
-        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", "BonusAllStats", "BonusHealth", "BonusMana", "CustomEntity", });
+        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", "BonusAllStats", "BonusHealth", "BonusMana", "CustomEntity", "AuraWithinRange", });
     internal_static_CDOTALuaModifierEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTALuaModifierEntry_fieldAccessorTable = new

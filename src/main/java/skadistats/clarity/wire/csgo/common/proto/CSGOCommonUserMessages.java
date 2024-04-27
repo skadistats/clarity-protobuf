@@ -54661,6 +54661,638 @@ public final class CSGOCommonUserMessages {
     // @@protoc_insertion_point(class_scope:CCSUsrMsg_ServerRankRevealAll)
   }
 
+  public interface CCSUsrMsgPreMatchSayTextOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsgPreMatchSayText)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     */
+    boolean hasAccountId();
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     */
+    int getAccountId();
+
+    /**
+     * <code>optional string text = 2;</code>
+     */
+    boolean hasText();
+    /**
+     * <code>optional string text = 2;</code>
+     */
+    java.lang.String getText();
+    /**
+     * <code>optional string text = 2;</code>
+     */
+    com.google.protobuf.ByteString
+        getTextBytes();
+
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    boolean hasAllChat();
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    boolean getAllChat();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsgPreMatchSayText}
+   */
+  public static final class CCSUsrMsgPreMatchSayText extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsgPreMatchSayText)
+      CCSUsrMsgPreMatchSayTextOrBuilder {
+    // Use CCSUsrMsgPreMatchSayText.newBuilder() to construct.
+    private CCSUsrMsgPreMatchSayText(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCSUsrMsgPreMatchSayText(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCSUsrMsgPreMatchSayText defaultInstance;
+    public static CCSUsrMsgPreMatchSayText getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCSUsrMsgPreMatchSayText getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsgPreMatchSayText(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              accountId_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              text_ = bs;
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              allChat_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCSUsrMsgPreMatchSayText> PARSER =
+        new com.google.protobuf.AbstractParser<CCSUsrMsgPreMatchSayText>() {
+      public CCSUsrMsgPreMatchSayText parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsgPreMatchSayText(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsgPreMatchSayText> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ACCOUNT_ID_FIELD_NUMBER = 1;
+    private int accountId_;
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     */
+    public boolean hasAccountId() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 account_id = 1;</code>
+     */
+    public int getAccountId() {
+      return accountId_;
+    }
+
+    public static final int TEXT_FIELD_NUMBER = 2;
+    private java.lang.Object text_;
+    /**
+     * <code>optional string text = 2;</code>
+     */
+    public boolean hasText() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     */
+    public java.lang.String getText() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          text_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string text = 2;</code>
+     */
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = text_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        text_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ALL_CHAT_FIELD_NUMBER = 3;
+    private boolean allChat_;
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    public boolean hasAllChat() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool all_chat = 3;</code>
+     */
+    public boolean getAllChat() {
+      return allChat_;
+    }
+
+    private void initFields() {
+      accountId_ = 0;
+      text_ = "";
+      allChat_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, accountId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, getTextBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, allChat_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, accountId_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, getTextBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, allChat_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsgPreMatchSayText}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsgPreMatchSayText)
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayTextOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        accountId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        text_ = "";
+        bitField0_ = (bitField0_ & ~0x00000002);
+        allChat_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText build() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText buildPartial() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText result = new skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.accountId_ = accountId_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.text_ = text_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.allChat_ = allChat_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText) {
+          return mergeFrom((skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText other) {
+        if (other == skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText.getDefaultInstance()) return this;
+        if (other.hasAccountId()) {
+          setAccountId(other.getAccountId());
+        }
+        if (other.hasText()) {
+          bitField0_ |= 0x00000002;
+          text_ = other.text_;
+          onChanged();
+        }
+        if (other.hasAllChat()) {
+          setAllChat(other.getAllChat());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsgPreMatchSayText) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int accountId_ ;
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       */
+      public boolean hasAccountId() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       */
+      public int getAccountId() {
+        return accountId_;
+      }
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       */
+      public Builder setAccountId(int value) {
+        bitField0_ |= 0x00000001;
+        accountId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 account_id = 1;</code>
+       */
+      public Builder clearAccountId() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        accountId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object text_ = "";
+      /**
+       * <code>optional string text = 2;</code>
+       */
+      public boolean hasText() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       */
+      public java.lang.String getText() {
+        java.lang.Object ref = text_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            text_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextBytes() {
+        java.lang.Object ref = text_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          text_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       */
+      public Builder setText(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        text_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       */
+      public Builder clearText() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        text_ = getDefaultInstance().getText();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string text = 2;</code>
+       */
+      public Builder setTextBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        text_ = value;
+        onChanged();
+        return this;
+      }
+
+      private boolean allChat_ ;
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public boolean hasAllChat() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public boolean getAllChat() {
+        return allChat_;
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public Builder setAllChat(boolean value) {
+        bitField0_ |= 0x00000004;
+        allChat_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool all_chat = 3;</code>
+       */
+      public Builder clearAllChat() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        allChat_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsgPreMatchSayText)
+    }
+
+    static {
+      defaultInstance = new CCSUsrMsgPreMatchSayText(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsgPreMatchSayText)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_VGUIMenu_descriptor;
   private static
@@ -55086,6 +55718,11 @@ public final class CSGOCommonUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCSUsrMsg_ServerRankRevealAll_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsgPreMatchSayText_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55294,7 +55931,9 @@ public final class CSGOCommonUserMessages {
       "\n\005dummy\030\001 \001(\005\"\204\001\n\035CCSUsrMsg_ServerRankRe" +
       "vealAll\022\035\n\025seconds_till_shutdown\030\001 \001(\005\022D" +
       "\n\013reservation\030\002 \001(\0132/.CMsgGCCStrike15_v2" +
-      "_MatchmakingGC2ServerReserve*\210\001\n\"ECSUsrM",
+      "_MatchmakingGC2ServerReserve\"N\n\030CCSUsrMs",
+      "gPreMatchSayText\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004" +
+      "text\030\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010*\210\001\n\"ECSUsrM" +
       "sg_DisconnectToLobby_Action\0220\n,k_ECSUsrM" +
       "sg_DisconnectToLobby_Action_Default\020\000\0220\n" +
       ",k_ECSUsrMsg_DisconnectToLobby_Action_Go" +
@@ -55826,6 +56465,12 @@ public final class CSGOCommonUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCSUsrMsg_ServerRankRevealAll_descriptor,
         new java.lang.String[] { "SecondsTillShutdown", "Reservation", });
+    internal_static_CCSUsrMsgPreMatchSayText_descriptor =
+      getDescriptor().getMessageTypes().get(70);
+    internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsgPreMatchSayText_descriptor,
+        new java.lang.String[] { "AccountId", "Text", "AllChat", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.getDescriptor();

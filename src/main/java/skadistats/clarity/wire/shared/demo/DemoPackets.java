@@ -8,7 +8,7 @@ public class DemoPackets {
 
     private static final KindToClassMessageRegistry K2C;
     static {
-        K2C = new KindToClassMessageRegistry(16);
+        K2C = new KindToClassMessageRegistry(18);
         K2C.put(Demo.EDemoCommands.DEM_ClassInfo_VALUE, Demo.CDemoClassInfo.class);
         K2C.put(Demo.EDemoCommands.DEM_ConsoleCmd_VALUE, Demo.CDemoConsoleCmd.class);
         K2C.put(Demo.EDemoCommands.DEM_CustomData_VALUE, Demo.CDemoCustomData.class);
@@ -25,6 +25,8 @@ public class DemoPackets {
         K2C.put(Demo.EDemoCommands.DEM_UserCmd_VALUE, Demo.CDemoUserCmd.class);
         K2C.put(Demo.EDemoCommands.DEM_SaveGame_VALUE, Demo.CDemoSaveGame.class);
         K2C.put(Demo.EDemoCommands.DEM_SpawnGroups_VALUE, Demo.CDemoSpawnGroups.class);
+        K2C.put(Demo.EDemoCommands.DEM_AnimationData_VALUE, Demo.CDemoAnimationData.class);
+        K2C.put(Demo.EDemoCommands.DEM_AnimationHeader_VALUE, Demo.CDemoAnimationHeader.class);
     }
 
     public static Class<? extends GeneratedMessage> classForKind(int kind) {
