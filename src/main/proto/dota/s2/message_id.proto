@@ -37,6 +37,7 @@ enum CLC_Messages {
   clc_CmdKeyValues = 34;
   clc_RconServerDetails = 35;
   clc_HltvReplay = 36;
+  clc_Diagnostic = 37;
 }
 
 enum SVC_Messages {
@@ -70,6 +71,7 @@ enum SVC_Messages {
   svc_HltvReplay = 73;
   svc_Broadcast_Command = 74;
   svc_HltvFixupOperatorStatus = 75;
+  svc_UserCmds = 76;
 }
 
 enum EBaseUserMessages {
@@ -124,6 +126,11 @@ enum EBaseUserMessages {
   UM_DllStatusResponse = 159;
   UM_RequestInventory = 160;
   UM_InventoryResponse = 161;
+  UM_RequestDiagnostic = 162;
+  UM_DiagnosticResponse = 163;
+  UM_ExtraUserData = 164;
+  UM_NotifyResponseFound = 165;
+  UM_PlayResponseConditional = 166;
   UM_MAX_BASE = 200;
 }
 
@@ -295,4 +302,7 @@ enum EDotaUserMessages {
   DOTA_UM_PlayerDraftPick = 621;
   DOTA_UM_UpdateLinearProjectileCPData = 622;
   DOTA_UM_GiftPlayer = 623;
+  DOTA_UM_FacetPing = 624;
+  DOTA_UM_InnatePing = 625;
+  DOTA_UM_RoshanTimer = 626;
 }

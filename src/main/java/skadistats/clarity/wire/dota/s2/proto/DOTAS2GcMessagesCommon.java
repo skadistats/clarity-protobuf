@@ -1612,11 +1612,11 @@ public final class DOTAS2GcMessagesCommon {
     int getTeam();
 
     /**
-     * <code>optional uint32 hero_id = 3;</code>
+     * <code>optional int32 hero_id = 3;</code>
      */
     boolean hasHeroId();
     /**
-     * <code>optional uint32 hero_id = 3;</code>
+     * <code>optional int32 hero_id = 3;</code>
      */
     int getHeroId();
   }
@@ -1684,7 +1684,7 @@ public final class DOTAS2GcMessagesCommon {
             }
             case 24: {
               bitField0_ |= 0x00000004;
-              heroId_ = input.readUInt32();
+              heroId_ = input.readInt32();
               break;
             }
           }
@@ -1760,13 +1760,13 @@ public final class DOTAS2GcMessagesCommon {
     public static final int HERO_ID_FIELD_NUMBER = 3;
     private int heroId_;
     /**
-     * <code>optional uint32 hero_id = 3;</code>
+     * <code>optional int32 hero_id = 3;</code>
      */
     public boolean hasHeroId() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional uint32 hero_id = 3;</code>
+     * <code>optional int32 hero_id = 3;</code>
      */
     public int getHeroId() {
       return heroId_;
@@ -1797,7 +1797,7 @@ public final class DOTAS2GcMessagesCommon {
         output.writeUInt32(2, team_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        output.writeUInt32(3, heroId_);
+        output.writeInt32(3, heroId_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1818,7 +1818,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeUInt32Size(3, heroId_);
+          .computeInt32Size(3, heroId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2101,19 +2101,19 @@ public final class DOTAS2GcMessagesCommon {
 
       private int heroId_ ;
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       public boolean hasHeroId() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       public int getHeroId() {
         return heroId_;
       }
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       public Builder setHeroId(int value) {
         bitField0_ |= 0x00000004;
@@ -2122,7 +2122,7 @@ public final class DOTAS2GcMessagesCommon {
         return this;
       }
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       public Builder clearHeroId() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -3248,11 +3248,11 @@ public final class DOTAS2GcMessagesCommon {
       int getPlayerSlot();
 
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       boolean hasHeroId();
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       int getHeroId();
 
@@ -3979,6 +3979,15 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional uint32 team_slot = 81;</code>
        */
       int getTeamSlot();
+
+      /**
+       * <code>optional uint32 selected_facet = 82;</code>
+       */
+      boolean hasSelectedFacet();
+      /**
+       * <code>optional uint32 selected_facet = 82;</code>
+       */
+      int getSelectedFacet();
     }
     /**
      * Protobuf type {@code CMsgDOTAMatch.Player}
@@ -4046,7 +4055,7 @@ public final class DOTAS2GcMessagesCommon {
               }
               case 24: {
                 bitField0_ |= 0x00000004;
-                heroId_ = input.readUInt32();
+                heroId_ = input.readInt32();
                 break;
               }
               case 32: {
@@ -4429,6 +4438,11 @@ public final class DOTAS2GcMessagesCommon {
               case 648: {
                 bitField2_ |= 0x00000008;
                 teamSlot_ = input.readUInt32();
+                break;
+              }
+              case 656: {
+                bitField2_ |= 0x00000010;
+                selectedFacet_ = input.readUInt32();
                 break;
               }
             }
@@ -5649,13 +5663,13 @@ public final class DOTAS2GcMessagesCommon {
       public static final int HERO_ID_FIELD_NUMBER = 3;
       private int heroId_;
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       public boolean hasHeroId() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional uint32 hero_id = 3;</code>
+       * <code>optional int32 hero_id = 3;</code>
        */
       public int getHeroId() {
         return heroId_;
@@ -6898,6 +6912,21 @@ public final class DOTAS2GcMessagesCommon {
         return teamSlot_;
       }
 
+      public static final int SELECTED_FACET_FIELD_NUMBER = 82;
+      private int selectedFacet_;
+      /**
+       * <code>optional uint32 selected_facet = 82;</code>
+       */
+      public boolean hasSelectedFacet() {
+        return ((bitField2_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional uint32 selected_facet = 82;</code>
+       */
+      public int getSelectedFacet() {
+        return selectedFacet_;
+      }
+
       private void initFields() {
         accountId_ = 0;
         playerSlot_ = 0;
@@ -6972,6 +7001,7 @@ public final class DOTAS2GcMessagesCommon {
         outpostsCaptured_ = 0;
         teamNumber_ = skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.DOTA_GC_TEAM.DOTA_GC_TEAM_GOOD_GUYS;
         teamSlot_ = 0;
+        selectedFacet_ = 0;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -6993,7 +7023,7 @@ public final class DOTAS2GcMessagesCommon {
           output.writeUInt32(2, playerSlot_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          output.writeUInt32(3, heroId_);
+          output.writeInt32(3, heroId_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
           output.writeInt32(4, item0_);
@@ -7205,6 +7235,9 @@ public final class DOTAS2GcMessagesCommon {
         if (((bitField2_ & 0x00000008) == 0x00000008)) {
           output.writeUInt32(81, teamSlot_);
         }
+        if (((bitField2_ & 0x00000010) == 0x00000010)) {
+          output.writeUInt32(82, selectedFacet_);
+        }
         getUnknownFields().writeTo(output);
       }
 
@@ -7224,7 +7257,7 @@ public final class DOTAS2GcMessagesCommon {
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
           size += com.google.protobuf.CodedOutputStream
-            .computeUInt32Size(3, heroId_);
+            .computeInt32Size(3, heroId_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
           size += com.google.protobuf.CodedOutputStream
@@ -7505,6 +7538,10 @@ public final class DOTAS2GcMessagesCommon {
         if (((bitField2_ & 0x00000008) == 0x00000008)) {
           size += com.google.protobuf.CodedOutputStream
             .computeUInt32Size(81, teamSlot_);
+        }
+        if (((bitField2_ & 0x00000010) == 0x00000010)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(82, selectedFacet_);
         }
         size += getUnknownFields().getSerializedSize();
         memoizedSerializedSize = size;
@@ -7799,6 +7836,8 @@ public final class DOTAS2GcMessagesCommon {
           bitField2_ = (bitField2_ & ~0x00000080);
           teamSlot_ = 0;
           bitField2_ = (bitField2_ & ~0x00000100);
+          selectedFacet_ = 0;
+          bitField2_ = (bitField2_ & ~0x00000200);
           return this;
         }
 
@@ -8152,6 +8191,10 @@ public final class DOTAS2GcMessagesCommon {
             to_bitField2_ |= 0x00000008;
           }
           result.teamSlot_ = teamSlot_;
+          if (((from_bitField2_ & 0x00000200) == 0x00000200)) {
+            to_bitField2_ |= 0x00000010;
+          }
+          result.selectedFacet_ = selectedFacet_;
           result.bitField0_ = to_bitField0_;
           result.bitField1_ = to_bitField1_;
           result.bitField2_ = to_bitField2_;
@@ -8510,6 +8553,9 @@ public final class DOTAS2GcMessagesCommon {
           if (other.hasTeamSlot()) {
             setTeamSlot(other.getTeamSlot());
           }
+          if (other.hasSelectedFacet()) {
+            setSelectedFacet(other.getSelectedFacet());
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           return this;
         }
@@ -8605,19 +8651,19 @@ public final class DOTAS2GcMessagesCommon {
 
         private int heroId_ ;
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         public boolean hasHeroId() {
           return ((bitField0_ & 0x00000004) == 0x00000004);
         }
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         public int getHeroId() {
           return heroId_;
         }
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         public Builder setHeroId(int value) {
           bitField0_ |= 0x00000004;
@@ -8626,7 +8672,7 @@ public final class DOTAS2GcMessagesCommon {
           return this;
         }
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         public Builder clearHeroId() {
           bitField0_ = (bitField0_ & ~0x00000004);
@@ -12130,6 +12176,38 @@ public final class DOTAS2GcMessagesCommon {
         public Builder clearTeamSlot() {
           bitField2_ = (bitField2_ & ~0x00000100);
           teamSlot_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int selectedFacet_ ;
+        /**
+         * <code>optional uint32 selected_facet = 82;</code>
+         */
+        public boolean hasSelectedFacet() {
+          return ((bitField2_ & 0x00000200) == 0x00000200);
+        }
+        /**
+         * <code>optional uint32 selected_facet = 82;</code>
+         */
+        public int getSelectedFacet() {
+          return selectedFacet_;
+        }
+        /**
+         * <code>optional uint32 selected_facet = 82;</code>
+         */
+        public Builder setSelectedFacet(int value) {
+          bitField2_ |= 0x00000200;
+          selectedFacet_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 selected_facet = 82;</code>
+         */
+        public Builder clearSelectedFacet() {
+          bitField2_ = (bitField2_ & ~0x00000200);
+          selectedFacet_ = 0;
           onChanged();
           return this;
         }
@@ -22282,7 +22360,7 @@ public final class DOTAS2GcMessagesCommon {
       "ermanentBuff\022\026\n\016permanent_buff\030\001 \001(\r\022\023\n\013" +
       "stack_count\030\002 \001(\r\"G\n\025CMatchHeroSelectEve" +
       "nt\022\017\n\007is_pick\030\001 \001(\010\022\014\n\004team\030\002 \001(\r\022\017\n\007her" +
-      "o_id\030\003 \001(\r\"\275 \n\rCMsgDOTAMatch\022\020\n\010duration" +
+      "o_id\030\003 \001(\005\"\325 \n\rCMsgDOTAMatch\022\020\n\010duration" +
       "\030\003 \001(\r\022\021\n\tstarttime\030\004 \001(\007\022&\n\007players\030\005 \003",
       "(\0132\025.CMsgDOTAMatch.Player\022\020\n\010match_id\030\006 " +
       "\001(\004\022\024\n\014tower_status\030\010 \003(\r\022\027\n\017barracks_st" +
@@ -22318,8 +22396,8 @@ public final class DOTAS2GcMessagesCommon {
       "e_Unknown\022\025\n\rtournament_id\0303 \001(\r\022\030\n\020tour" +
       "nament_round\0304 \001(\r\022\031\n\021pre_game_duration\030" +
       "5 \001(\r\022%\n\007coaches\0309 \003(\0132\024.CMsgDOTAMatch.C" +
-      "oach\032\276\021\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013p" +
-      "layer_slot\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r\022\022\n\006ite" +
+      "oach\032\326\021\n\006Player\022\022\n\naccount_id\030\001 \001(\r\022\023\n\013p" +
+      "layer_slot\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\005\022\022\n\006ite" +
       "m_0\030\004 \001(\005:\002-1\022\022\n\006item_1\030\005 \001(\005:\002-1\022\022\n\006ite" +
       "m_2\030\006 \001(\005:\002-1\022\022\n\006item_3\030\007 \001(\005:\002-1\022\022\n\006ite" +
       "m_4\030\010 \001(\005:\002-1\022\022\n\006item_5\030\t \001(\005:\002-1\022\022\n\006ite" +
@@ -22366,35 +22444,35 @@ public final class DOTAS2GcMessagesCommon {
       "_selection_flags\030K \001(\r\022\024\n\014bounty_runes\030M",
       " \001(\r\022\031\n\021outposts_captured\030N \001(\r\022:\n\013team_" +
       "number\030P \001(\0162\r.DOTA_GC_TEAM:\026DOTA_GC_TEA" +
-      "M_GOOD_GUYS\022\021\n\tteam_slot\030Q \001(\r\0323\n\016Custom" +
-      "GameData\022\021\n\tdota_team\030\001 \001(\r\022\016\n\006winner\030\002 " +
-      "\001(\010\032\224\001\n\022HeroDamageReceived\022\025\n\rpre_reduct" +
-      "ion\030\001 \001(\r\022\026\n\016post_reduction\030\002 \001(\r\022O\n\013dam" +
-      "age_type\030\003 \001(\0162$.CMsgDOTAMatch.Player.He" +
-      "roDamageType:\024HERO_DAMAGE_PHYSICAL\"Y\n\016He" +
-      "roDamageType\022\030\n\024HERO_DAMAGE_PHYSICAL\020\000\022\027" +
-      "\n\023HERO_DAMAGE_MAGICAL\020\001\022\024\n\020HERO_DAMAGE_P",
-      "URE\020\002\0323\n\017BroadcasterInfo\022\022\n\naccount_id\030\001" +
-      " \001(\r\022\014\n\004name\030\002 \001(\t\032\221\001\n\022BroadcasterChanne" +
-      "l\022\024\n\014country_code\030\001 \001(\t\022\023\n\013description\030\002" +
-      " \001(\t\0229\n\021broadcaster_infos\030\003 \003(\0132\036.CMsgDO" +
-      "TAMatch.BroadcasterInfo\022\025\n\rlanguage_code" +
-      "\030\004 \001(\t\032\213\001\n\005Coach\022\022\n\naccount_id\030\001 \001(\r\022\022\n\n" +
-      "coach_name\030\002 \001(\t\022\024\n\014coach_rating\030\003 \001(\r\022\022" +
-      "\n\ncoach_team\030\004 \001(\r\022\026\n\016coach_party_id\030\005 \001" +
-      "(\004\022\030\n\020is_private_coach\030\006 \001(\010\032:\n\016CustomGa" +
-      "meData\022\026\n\016custom_game_id\030\001 \001(\004\022\020\n\010map_na",
-      "me\030\002 \001(\t\"P\n\013ReplayState\022\024\n\020REPLAY_AVAILA" +
-      "BLE\020\000\022\027\n\023REPLAY_NOT_RECORDED\020\001\022\022\n\016REPLAY" +
-      "_EXPIRED\020\002\"\270\001\n\rCMsgMatchTips\022(\n\010event_id" +
-      "\030\001 \001(\0162\007.EEvent:\rEVENT_ID_NONE\022&\n\004tips\030\002" +
-      " \003(\0132\030.CMsgMatchTips.SingleTip\032U\n\tSingle" +
-      "Tip\022\031\n\021source_account_id\030\001 \001(\r\022\031\n\021target" +
-      "_account_id\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(\r\"F\n" +
-      "\017CMsgTrackedStat\022\027\n\017tracked_stat_id\030\001 \001(" +
-      "\r\022\032\n\022tracked_stat_value\030\002 \001(\005B?\n%skadist" +
-      "ats.clarity.wire.dota.s2.protoB\026DOTAS2Gc",
-      "MessagesCommon"
+      "M_GOOD_GUYS\022\021\n\tteam_slot\030Q \001(\r\022\026\n\016select" +
+      "ed_facet\030R \001(\r\0323\n\016CustomGameData\022\021\n\tdota" +
+      "_team\030\001 \001(\r\022\016\n\006winner\030\002 \001(\010\032\224\001\n\022HeroDama" +
+      "geReceived\022\025\n\rpre_reduction\030\001 \001(\r\022\026\n\016pos" +
+      "t_reduction\030\002 \001(\r\022O\n\013damage_type\030\003 \001(\0162$" +
+      ".CMsgDOTAMatch.Player.HeroDamageType:\024HE" +
+      "RO_DAMAGE_PHYSICAL\"Y\n\016HeroDamageType\022\030\n\024" +
+      "HERO_DAMAGE_PHYSICAL\020\000\022\027\n\023HERO_DAMAGE_MA",
+      "GICAL\020\001\022\024\n\020HERO_DAMAGE_PURE\020\002\0323\n\017Broadca" +
+      "sterInfo\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004name\030\002 \001" +
+      "(\t\032\221\001\n\022BroadcasterChannel\022\024\n\014country_cod" +
+      "e\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\0229\n\021broadcas" +
+      "ter_infos\030\003 \003(\0132\036.CMsgDOTAMatch.Broadcas" +
+      "terInfo\022\025\n\rlanguage_code\030\004 \001(\t\032\213\001\n\005Coach" +
+      "\022\022\n\naccount_id\030\001 \001(\r\022\022\n\ncoach_name\030\002 \001(\t" +
+      "\022\024\n\014coach_rating\030\003 \001(\r\022\022\n\ncoach_team\030\004 \001" +
+      "(\r\022\026\n\016coach_party_id\030\005 \001(\004\022\030\n\020is_private" +
+      "_coach\030\006 \001(\010\032:\n\016CustomGameData\022\026\n\016custom",
+      "_game_id\030\001 \001(\004\022\020\n\010map_name\030\002 \001(\t\"P\n\013Repl" +
+      "ayState\022\024\n\020REPLAY_AVAILABLE\020\000\022\027\n\023REPLAY_" +
+      "NOT_RECORDED\020\001\022\022\n\016REPLAY_EXPIRED\020\002\"\270\001\n\rC" +
+      "MsgMatchTips\022(\n\010event_id\030\001 \001(\0162\007.EEvent:" +
+      "\rEVENT_ID_NONE\022&\n\004tips\030\002 \003(\0132\030.CMsgMatch" +
+      "Tips.SingleTip\032U\n\tSingleTip\022\031\n\021source_ac" +
+      "count_id\030\001 \001(\r\022\031\n\021target_account_id\030\002 \001(" +
+      "\r\022\022\n\ntip_amount\030\003 \001(\r\"F\n\017CMsgTrackedStat" +
+      "\022\027\n\017tracked_stat_id\030\001 \001(\r\022\032\n\022tracked_sta" +
+      "t_value\030\002 \001(\005B?\n%skadistats.clarity.wire",
+      ".dota.s2.protoB\026DOTAS2GcMessagesCommon"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -22444,7 +22522,7 @@ public final class DOTAS2GcMessagesCommon {
     internal_static_CMsgDOTAMatch_Player_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_Player_descriptor,
-        new java.lang.String[] { "AccountId", "PlayerSlot", "HeroId", "Item0", "Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "Item9", "ExpectedTeamContribution", "ScaledMetric", "PreviousRank", "RankChange", "MmrType", "Kills", "Deaths", "Assists", "LeaverStatus", "Gold", "LastHits", "Denies", "GoldPerMin", "XpPerMin", "GoldSpent", "HeroDamage", "TowerDamage", "HeroHealing", "Level", "TimeLastSeen", "PlayerName", "SupportAbilityValue", "FeedingDetected", "SearchRank", "SearchRankUncertainty", "RankUncertaintyChange", "HeroPlayCount", "PartyId", "ScaledHeroDamage", "ScaledTowerDamage", "ScaledHeroHealing", "ScaledKills", "ScaledDeaths", "ScaledAssists", "ClaimedFarmGold", "SupportGold", "ClaimedDenies", "ClaimedMisses", "Misses", "AbilityUpgrades", "AdditionalUnitsInventory", "PermanentBuffs", "ProName", "RealName", "CustomGameData", "ActivePlusSubscription", "NetWorth", "BotDifficulty", "HeroPickOrder", "HeroWasRandomed", "HeroWasDotaPlusSuggestion", "HeroDamageReceived", "HeroDamageDealt", "SecondsDead", "GoldLostToDeath", "LaneSelectionFlags", "BountyRunes", "OutpostsCaptured", "TeamNumber", "TeamSlot", });
+        new java.lang.String[] { "AccountId", "PlayerSlot", "HeroId", "Item0", "Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "Item9", "ExpectedTeamContribution", "ScaledMetric", "PreviousRank", "RankChange", "MmrType", "Kills", "Deaths", "Assists", "LeaverStatus", "Gold", "LastHits", "Denies", "GoldPerMin", "XpPerMin", "GoldSpent", "HeroDamage", "TowerDamage", "HeroHealing", "Level", "TimeLastSeen", "PlayerName", "SupportAbilityValue", "FeedingDetected", "SearchRank", "SearchRankUncertainty", "RankUncertaintyChange", "HeroPlayCount", "PartyId", "ScaledHeroDamage", "ScaledTowerDamage", "ScaledHeroHealing", "ScaledKills", "ScaledDeaths", "ScaledAssists", "ClaimedFarmGold", "SupportGold", "ClaimedDenies", "ClaimedMisses", "Misses", "AbilityUpgrades", "AdditionalUnitsInventory", "PermanentBuffs", "ProName", "RealName", "CustomGameData", "ActivePlusSubscription", "NetWorth", "BotDifficulty", "HeroPickOrder", "HeroWasRandomed", "HeroWasDotaPlusSuggestion", "HeroDamageReceived", "HeroDamageDealt", "SecondsDead", "GoldLostToDeath", "LaneSelectionFlags", "BountyRunes", "OutpostsCaptured", "TeamNumber", "TeamSlot", "SelectedFacet", });
     internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor =
       internal_static_CMsgDOTAMatch_Player_descriptor.getNestedTypes().get(0);
     internal_static_CMsgDOTAMatch_Player_CustomGameData_fieldAccessorTable = new

@@ -38,6 +38,7 @@ enum CLC_Messages {
   clc_CmdKeyValues = 34;
   clc_RconServerDetails = 35;
   clc_HltvReplay = 36;
+  clc_Diagnostic = 37;
 }
 
 enum SVC_Messages {
@@ -71,6 +72,7 @@ enum SVC_Messages {
   svc_HltvReplay = 73;
   svc_Broadcast_Command = 74;
   svc_HltvFixupOperatorStatus = 75;
+  svc_UserCmds = 76;
 }
 
 enum EBaseUserMessages {
@@ -123,6 +125,8 @@ enum EBaseUserMessages {
   UM_RequestDiagnostic = 162;
   UM_DiagnosticResponse = 163;
   UM_ExtraUserData = 164;
+  UM_NotifyResponseFound = 165;
+  UM_PlayResponseConditional = 166;
   UM_MAX_BASE = 200;
 }
 
@@ -212,4 +216,5 @@ enum ECstrike15UserMessages {
   CS_UM_DeepStats = 381;
   CS_UM_UtilMsg = 382;
   CS_UM_ShootInfo = 383;
+  CS_UM_CounterStrafe = 385;
 }

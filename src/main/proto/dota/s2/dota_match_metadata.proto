@@ -54,7 +54,7 @@ message CDOTAMatchMetadata {
         message StrangeGemProgress {
             optional uint32 kill_eater_type = 1;
             optional uint32 gem_item_def_index = 2;
-            optional uint32 required_hero_id = 3;
+            optional int32 required_hero_id = 3;
             optional uint32 starting_value = 4;
             optional uint32 ending_value = 5;
             optional uint32 owner_item_def_index = 6;
@@ -264,7 +264,7 @@ message CDOTAMatchPrivateMetadata {
             message CombatSegment {
                 message DamageByAbility {
                     message ByHeroTarget {
-                        optional uint32 hero_id = 1;
+                        optional int32 hero_id = 1;
                         optional uint32 damage = 2;
                     }
 
@@ -275,7 +275,7 @@ message CDOTAMatchPrivateMetadata {
 
                 message HealingByAbility {
                     message ByHeroTarget {
-                        optional uint32 hero_id = 1;
+                        optional int32 hero_id = 1;
                         optional uint32 healing = 2;
                     }
 
@@ -291,7 +291,7 @@ message CDOTAMatchPrivateMetadata {
 
             message BuffRecord {
                 message ByHeroTarget {
-                    optional uint32 hero_id = 1;
+                    optional int32 hero_id = 1;
                     optional float elapsed_duration = 2;
                     optional bool is_hidden = 3;
                 }
@@ -319,6 +319,7 @@ message CDOTAMatchPrivateMetadata {
                 optional uint32 tome_of_knowledge = 4;
                 optional uint32 outpost = 5;
                 optional uint32 other = 6;
+                optional uint32 abilities = 7;
             }
 
             optional uint32 player_slot = 2;

@@ -21,7 +21,7 @@ message CMatchPlayerPermanentBuff {
 message CMatchHeroSelectEvent {
   optional bool is_pick = 1;
   optional uint32 team = 2;
-  optional uint32 hero_id = 3;
+  optional int32 hero_id = 3;
 }
 
 message CMsgDOTAMatch {
@@ -45,7 +45,7 @@ message CMsgDOTAMatch {
 
     optional uint32 account_id = 1;
     optional uint32 player_slot = 2;
-    optional uint32 hero_id = 3;
+    optional int32 hero_id = 3;
     optional int32 item_0 = 4 [default = -1];
     optional int32 item_1 = 5 [default = -1];
     optional int32 item_2 = 6 [default = -1];
@@ -116,6 +116,7 @@ message CMsgDOTAMatch {
     optional uint32 outposts_captured = 78;
     optional .DOTA_GC_TEAM team_number = 80 [default = DOTA_GC_TEAM_GOOD_GUYS];
     optional uint32 team_slot = 81;
+    optional uint32 selected_facet = 82;
   }
 
   message BroadcasterInfo {

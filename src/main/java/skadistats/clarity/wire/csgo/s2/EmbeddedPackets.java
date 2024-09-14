@@ -6,6 +6,7 @@ import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages;
 import skadistats.clarity.wire.csgo.s2.proto.CSGOS2GameEvents;
 import skadistats.clarity.wire.csgo.s2.proto.CSGOS2MessageId;
+import skadistats.clarity.wire.deadlock.proto.DeadlockMessageId;
 import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;
 import skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes;
 import skadistats.clarity.wire.shared.demo.proto.DemoNetMessages;
@@ -49,6 +50,7 @@ public class EmbeddedPackets {
         /*  60 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
         /*  62 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_HLTVStatus_VALUE, S2NetMessages.CSVCMsg_HLTVStatus.class);
         /*  70 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
+        /*  76 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_UserCmds_VALUE, CommonNetMessages.CSVCMsg_UserCommands.class);
 
         /* 101 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
         /* 102 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CloseCaption_VALUE, S2UserMessages.CUserMessageCloseCaption.class);
