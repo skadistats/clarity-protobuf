@@ -49,6 +49,7 @@ public class EmbeddedPackets {
         /*  60 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
         /*  62 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_HLTVStatus_VALUE, S2NetMessages.CSVCMsg_HLTVStatus.class);
         /*  70 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
+        /*  76 */ K2C.put(CSGOS2MessageId.SVC_Messages.svc_UserCmds_VALUE, CommonNetMessages.CSVCMsg_UserCommands.class);
 
         /* 101 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_AchievementEvent_VALUE, S2UserMessages.CUserMessageAchievementEvent.class);
         /* 102 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CloseCaption_VALUE, S2UserMessages.CUserMessageCloseCaption.class);
@@ -77,6 +78,7 @@ public class EmbeddedPackets {
         /* 135 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CreditsMsg_VALUE, S2UserMessages.CUserMessageCreditsMsg.class);
 
         /* 138 */ K2C.put(CSGOS2MessageId.EBaseEntityMessages.EM_RemoveAllDecals_VALUE, S2UserMessages.CEntityMessageRemoveAllDecals.class);
+        /* 141 */ K2C.put(CSGOS2MessageId.EBaseEntityMessages.EM_FixAngle_VALUE, S2UserMessages.CEntityMessageFixAngle.class);
 
         /* 142 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CloseCaptionPlaceholder_VALUE, S2UserMessages.CUserMessageCloseCaptionPlaceholder.class);
         /* 143 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CameraTransition_VALUE, S2UserMessages.CUserMessageCameraTransition.class);
@@ -89,6 +91,7 @@ public class EmbeddedPackets {
         /* 151 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_HapticsManagerEffect_VALUE, S2UserMessages.CUserMessageHapticsManagerEffect.class);
         /* 152 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_CommandQueueState_VALUE, S2UserMessages.CUserMessageCommandQueueState.class);
         /* 153 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_UpdateCssClasses_VALUE, S2UserMessages.CUserMessageUpdateCssClasses.class);
+        /* 154 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_ServerFrameTime_VALUE, S2UserMessages.CUserMessageServerFrameTime.class);
         /* 155 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_LagCompensationError_VALUE, S2UserMessages.CUserMessageLagCompensationError.class);
         /* 156 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_RequestDllStatus_VALUE, S2UserMessages.CUserMessageRequestDllStatus.class);
         /* 157 */ K2C.put(CSGOS2MessageId.EBaseUserMessages.UM_RequestUtilAction_VALUE, S2UserMessages.CUserMessageRequestUtilAction.class);

@@ -38880,6 +38880,1060 @@ public final class S2UserMessages {
     // @@protoc_insertion_point(class_scope:CUserMessage_Inventory_Response)
   }
 
+  public interface CUserMessage_PlayResponseConditionalOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CUserMessage_PlayResponseConditional)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 ent_index = 1 [default = -1];</code>
+     */
+    boolean hasEntIndex();
+    /**
+     * <code>optional int32 ent_index = 1 [default = -1];</code>
+     */
+    int getEntIndex();
+
+    /**
+     * <code>repeated int32 player_slots = 2;</code>
+     */
+    java.util.List<java.lang.Integer> getPlayerSlotsList();
+    /**
+     * <code>repeated int32 player_slots = 2;</code>
+     */
+    int getPlayerSlotsCount();
+    /**
+     * <code>repeated int32 player_slots = 2;</code>
+     */
+    int getPlayerSlots(int index);
+
+    /**
+     * <code>optional string response = 3;</code>
+     */
+    boolean hasResponse();
+    /**
+     * <code>optional string response = 3;</code>
+     */
+    java.lang.String getResponse();
+    /**
+     * <code>optional string response = 3;</code>
+     */
+    com.google.protobuf.ByteString
+        getResponseBytes();
+
+    /**
+     * <code>optional .CMsgVector ent_origin = 4;</code>
+     */
+    boolean hasEntOrigin();
+    /**
+     * <code>optional .CMsgVector ent_origin = 4;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEntOrigin();
+    /**
+     * <code>optional .CMsgVector ent_origin = 4;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntOriginOrBuilder();
+
+    /**
+     * <code>optional float pre_delay = 5;</code>
+     */
+    boolean hasPreDelay();
+    /**
+     * <code>optional float pre_delay = 5;</code>
+     */
+    float getPreDelay();
+
+    /**
+     * <code>optional int32 mix_priority = 6;</code>
+     */
+    boolean hasMixPriority();
+    /**
+     * <code>optional int32 mix_priority = 6;</code>
+     */
+    int getMixPriority();
+  }
+  /**
+   * Protobuf type {@code CUserMessage_PlayResponseConditional}
+   */
+  public static final class CUserMessage_PlayResponseConditional extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CUserMessage_PlayResponseConditional)
+      CUserMessage_PlayResponseConditionalOrBuilder {
+    // Use CUserMessage_PlayResponseConditional.newBuilder() to construct.
+    private CUserMessage_PlayResponseConditional(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CUserMessage_PlayResponseConditional(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CUserMessage_PlayResponseConditional defaultInstance;
+    public static CUserMessage_PlayResponseConditional getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CUserMessage_PlayResponseConditional getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CUserMessage_PlayResponseConditional(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              entIndex_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                playerSlots_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              playerSlots_.add(input.readInt32());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002) && input.getBytesUntilLimit() > 0) {
+                playerSlots_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                playerSlots_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 26: {
+              com.google.protobuf.ByteString bs = input.readBytes();
+              bitField0_ |= 0x00000002;
+              response_ = bs;
+              break;
+            }
+            case 34: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                subBuilder = entOrigin_.toBuilder();
+              }
+              entOrigin_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(entOrigin_);
+                entOrigin_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000004;
+              break;
+            }
+            case 45: {
+              bitField0_ |= 0x00000008;
+              preDelay_ = input.readFloat();
+              break;
+            }
+            case 48: {
+              bitField0_ |= 0x00000010;
+              mixPriority_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          playerSlots_ = java.util.Collections.unmodifiableList(playerSlots_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessage_PlayResponseConditional_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessage_PlayResponseConditional_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.class, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CUserMessage_PlayResponseConditional> PARSER =
+        new com.google.protobuf.AbstractParser<CUserMessage_PlayResponseConditional>() {
+      public CUserMessage_PlayResponseConditional parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CUserMessage_PlayResponseConditional(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CUserMessage_PlayResponseConditional> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ENT_INDEX_FIELD_NUMBER = 1;
+    private int entIndex_;
+    /**
+     * <code>optional int32 ent_index = 1 [default = -1];</code>
+     */
+    public boolean hasEntIndex() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 ent_index = 1 [default = -1];</code>
+     */
+    public int getEntIndex() {
+      return entIndex_;
+    }
+
+    public static final int PLAYER_SLOTS_FIELD_NUMBER = 2;
+    private java.util.List<java.lang.Integer> playerSlots_;
+    /**
+     * <code>repeated int32 player_slots = 2;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getPlayerSlotsList() {
+      return playerSlots_;
+    }
+    /**
+     * <code>repeated int32 player_slots = 2;</code>
+     */
+    public int getPlayerSlotsCount() {
+      return playerSlots_.size();
+    }
+    /**
+     * <code>repeated int32 player_slots = 2;</code>
+     */
+    public int getPlayerSlots(int index) {
+      return playerSlots_.get(index);
+    }
+
+    public static final int RESPONSE_FIELD_NUMBER = 3;
+    private java.lang.Object response_;
+    /**
+     * <code>optional string response = 3;</code>
+     */
+    public boolean hasResponse() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional string response = 3;</code>
+     */
+    public java.lang.String getResponse() {
+      java.lang.Object ref = response_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          response_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string response = 3;</code>
+     */
+    public com.google.protobuf.ByteString
+        getResponseBytes() {
+      java.lang.Object ref = response_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        response_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ENT_ORIGIN_FIELD_NUMBER = 4;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector entOrigin_;
+    /**
+     * <code>optional .CMsgVector ent_origin = 4;</code>
+     */
+    public boolean hasEntOrigin() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional .CMsgVector ent_origin = 4;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEntOrigin() {
+      return entOrigin_;
+    }
+    /**
+     * <code>optional .CMsgVector ent_origin = 4;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntOriginOrBuilder() {
+      return entOrigin_;
+    }
+
+    public static final int PRE_DELAY_FIELD_NUMBER = 5;
+    private float preDelay_;
+    /**
+     * <code>optional float pre_delay = 5;</code>
+     */
+    public boolean hasPreDelay() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional float pre_delay = 5;</code>
+     */
+    public float getPreDelay() {
+      return preDelay_;
+    }
+
+    public static final int MIX_PRIORITY_FIELD_NUMBER = 6;
+    private int mixPriority_;
+    /**
+     * <code>optional int32 mix_priority = 6;</code>
+     */
+    public boolean hasMixPriority() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 mix_priority = 6;</code>
+     */
+    public int getMixPriority() {
+      return mixPriority_;
+    }
+
+    private void initFields() {
+      entIndex_ = -1;
+      playerSlots_ = java.util.Collections.emptyList();
+      response_ = "";
+      entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      preDelay_ = 0F;
+      mixPriority_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, entIndex_);
+      }
+      for (int i = 0; i < playerSlots_.size(); i++) {
+        output.writeInt32(2, playerSlots_.get(i));
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(3, getResponseBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeMessage(4, entOrigin_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeFloat(5, preDelay_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(6, mixPriority_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, entIndex_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < playerSlots_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(playerSlots_.get(i));
+        }
+        size += dataSize;
+        size += 1 * getPlayerSlotsList().size();
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, getResponseBytes());
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, entOrigin_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(5, preDelay_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, mixPriority_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CUserMessage_PlayResponseConditional}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CUserMessage_PlayResponseConditional)
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditionalOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessage_PlayResponseConditional_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessage_PlayResponseConditional_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.class, skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getEntOriginFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        entIndex_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        playerSlots_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        response_ = "";
+        bitField0_ = (bitField0_ & ~0x00000004);
+        if (entOriginBuilder_ == null) {
+          entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          entOriginBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        preDelay_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        mixPriority_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.internal_static_CUserMessage_PlayResponseConditional_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional build() {
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional buildPartial() {
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional result = new skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.entIndex_ = entIndex_;
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          playerSlots_ = java.util.Collections.unmodifiableList(playerSlots_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.playerSlots_ = playerSlots_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.response_ = response_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        if (entOriginBuilder_ == null) {
+          result.entOrigin_ = entOrigin_;
+        } else {
+          result.entOrigin_ = entOriginBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.preDelay_ = preDelay_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.mixPriority_ = mixPriority_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional) {
+          return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional other) {
+        if (other == skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional.getDefaultInstance()) return this;
+        if (other.hasEntIndex()) {
+          setEntIndex(other.getEntIndex());
+        }
+        if (!other.playerSlots_.isEmpty()) {
+          if (playerSlots_.isEmpty()) {
+            playerSlots_ = other.playerSlots_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensurePlayerSlotsIsMutable();
+            playerSlots_.addAll(other.playerSlots_);
+          }
+          onChanged();
+        }
+        if (other.hasResponse()) {
+          bitField0_ |= 0x00000004;
+          response_ = other.response_;
+          onChanged();
+        }
+        if (other.hasEntOrigin()) {
+          mergeEntOrigin(other.getEntOrigin());
+        }
+        if (other.hasPreDelay()) {
+          setPreDelay(other.getPreDelay());
+        }
+        if (other.hasMixPriority()) {
+          setMixPriority(other.getMixPriority());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2UserMessages.CUserMessage_PlayResponseConditional) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int entIndex_ = -1;
+      /**
+       * <code>optional int32 ent_index = 1 [default = -1];</code>
+       */
+      public boolean hasEntIndex() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 ent_index = 1 [default = -1];</code>
+       */
+      public int getEntIndex() {
+        return entIndex_;
+      }
+      /**
+       * <code>optional int32 ent_index = 1 [default = -1];</code>
+       */
+      public Builder setEntIndex(int value) {
+        bitField0_ |= 0x00000001;
+        entIndex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 ent_index = 1 [default = -1];</code>
+       */
+      public Builder clearEntIndex() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entIndex_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> playerSlots_ = java.util.Collections.emptyList();
+      private void ensurePlayerSlotsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          playerSlots_ = new java.util.ArrayList<java.lang.Integer>(playerSlots_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getPlayerSlotsList() {
+        return java.util.Collections.unmodifiableList(playerSlots_);
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public int getPlayerSlotsCount() {
+        return playerSlots_.size();
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public int getPlayerSlots(int index) {
+        return playerSlots_.get(index);
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public Builder setPlayerSlots(
+          int index, int value) {
+        ensurePlayerSlotsIsMutable();
+        playerSlots_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public Builder addPlayerSlots(int value) {
+        ensurePlayerSlotsIsMutable();
+        playerSlots_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public Builder addAllPlayerSlots(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensurePlayerSlotsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, playerSlots_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 player_slots = 2;</code>
+       */
+      public Builder clearPlayerSlots() {
+        playerSlots_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object response_ = "";
+      /**
+       * <code>optional string response = 3;</code>
+       */
+      public boolean hasResponse() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional string response = 3;</code>
+       */
+      public java.lang.String getResponse() {
+        java.lang.Object ref = response_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            response_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string response = 3;</code>
+       */
+      public com.google.protobuf.ByteString
+          getResponseBytes() {
+        java.lang.Object ref = response_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          response_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string response = 3;</code>
+       */
+      public Builder setResponse(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        response_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string response = 3;</code>
+       */
+      public Builder clearResponse() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        response_ = getDefaultInstance().getResponse();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string response = 3;</code>
+       */
+      public Builder setResponseBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        response_ = value;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> entOriginBuilder_;
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public boolean hasEntOrigin() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getEntOrigin() {
+        if (entOriginBuilder_ == null) {
+          return entOrigin_;
+        } else {
+          return entOriginBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public Builder setEntOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (entOriginBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entOrigin_ = value;
+          onChanged();
+        } else {
+          entOriginBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public Builder setEntOrigin(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (entOriginBuilder_ == null) {
+          entOrigin_ = builderForValue.build();
+          onChanged();
+        } else {
+          entOriginBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public Builder mergeEntOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (entOriginBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) == 0x00000008) &&
+              entOrigin_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            entOrigin_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(entOrigin_).mergeFrom(value).buildPartial();
+          } else {
+            entOrigin_ = value;
+          }
+          onChanged();
+        } else {
+          entOriginBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000008;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public Builder clearEntOrigin() {
+        if (entOriginBuilder_ == null) {
+          entOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          entOriginBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000008);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getEntOriginBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getEntOriginFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getEntOriginOrBuilder() {
+        if (entOriginBuilder_ != null) {
+          return entOriginBuilder_.getMessageOrBuilder();
+        } else {
+          return entOrigin_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector ent_origin = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getEntOriginFieldBuilder() {
+        if (entOriginBuilder_ == null) {
+          entOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getEntOrigin(),
+                  getParentForChildren(),
+                  isClean());
+          entOrigin_ = null;
+        }
+        return entOriginBuilder_;
+      }
+
+      private float preDelay_ ;
+      /**
+       * <code>optional float pre_delay = 5;</code>
+       */
+      public boolean hasPreDelay() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional float pre_delay = 5;</code>
+       */
+      public float getPreDelay() {
+        return preDelay_;
+      }
+      /**
+       * <code>optional float pre_delay = 5;</code>
+       */
+      public Builder setPreDelay(float value) {
+        bitField0_ |= 0x00000010;
+        preDelay_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float pre_delay = 5;</code>
+       */
+      public Builder clearPreDelay() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        preDelay_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int mixPriority_ ;
+      /**
+       * <code>optional int32 mix_priority = 6;</code>
+       */
+      public boolean hasMixPriority() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional int32 mix_priority = 6;</code>
+       */
+      public int getMixPriority() {
+        return mixPriority_;
+      }
+      /**
+       * <code>optional int32 mix_priority = 6;</code>
+       */
+      public Builder setMixPriority(int value) {
+        bitField0_ |= 0x00000020;
+        mixPriority_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 mix_priority = 6;</code>
+       */
+      public Builder clearMixPriority() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        mixPriority_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CUserMessage_PlayResponseConditional)
+    }
+
+    static {
+      defaultInstance = new CUserMessage_PlayResponseConditional(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CUserMessage_PlayResponseConditional)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CUserMessageAchievementEvent_descriptor;
   private static
@@ -39165,6 +40219,11 @@ public final class S2UserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMessage_Inventory_Response_InventoryDetail_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMessage_PlayResponseConditional_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMessage_PlayResponseConditional_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -39322,14 +40381,19 @@ public final class S2UserMessages {
       "\003\022\016\n\006offset\030\003 \001(\003\022\r\n\005first\030\004 \001(\003\022\014\n\004base" +
       "\030\005 \001(\003\022\014\n\004name\030\006 \001(\t\022\021\n\tbase_name\030\007 \001(\t\022" +
       "\023\n\013base_detail\030\010 \001(\005\022\021\n\tbase_time\030\t \001(\005\022" +
-      "\021\n\tbase_hash\030\n \001(\005*o\n\teRollType\022\026\n\tROLL_" +
-      "NONE\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nROLL_STATS\020\000\022\020\n\014ROLL_",
-      "CREDITS\020\001\022\027\n\023ROLL_LATE_JOIN_LOGO\020\002\022\017\n\013RO" +
-      "LL_OUTTRO\020\003*t\n\020EHapticPulseType\022\036\n\032VR_HA" +
-      "ND_HAPTIC_PULSE_LIGHT\020\000\022\037\n\033VR_HAND_HAPTI" +
-      "C_PULSE_MEDIUM\020\001\022\037\n\033VR_HAND_HAPTIC_PULSE" +
-      "_STRONG\020\002B9\n\'skadistats.clarity.wire.sha" +
-      "red.s2.protoB\016S2UserMessages"
+      "\021\n\tbase_hash\030\n \001(\005\"\257\001\n$CUserMessage_Play" +
+      "ResponseConditional\022\025\n\tent_index\030\001 \001(\005:\002",
+      "-1\022\024\n\014player_slots\030\002 \003(\005\022\020\n\010response\030\003 \001" +
+      "(\t\022\037\n\nent_origin\030\004 \001(\0132\013.CMsgVector\022\021\n\tp" +
+      "re_delay\030\005 \001(\002\022\024\n\014mix_priority\030\006 \001(\005*o\n\t" +
+      "eRollType\022\026\n\tROLL_NONE\020\377\377\377\377\377\377\377\377\377\001\022\016\n\nROL" +
+      "L_STATS\020\000\022\020\n\014ROLL_CREDITS\020\001\022\027\n\023ROLL_LATE" +
+      "_JOIN_LOGO\020\002\022\017\n\013ROLL_OUTTRO\020\003*t\n\020EHaptic" +
+      "PulseType\022\036\n\032VR_HAND_HAPTIC_PULSE_LIGHT\020" +
+      "\000\022\037\n\033VR_HAND_HAPTIC_PULSE_MEDIUM\020\001\022\037\n\033VR" +
+      "_HAND_HAPTIC_PULSE_STRONG\020\002B9\n\'skadistat" +
+      "s.clarity.wire.shared.s2.protoB\016S2UserMe",
+      "ssages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -39687,6 +40751,12 @@ public final class S2UserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMessage_Inventory_Response_InventoryDetail_descriptor,
         new java.lang.String[] { "Index", "Primary", "Offset", "First", "Base", "Name", "BaseName", "BaseDetail", "BaseTime", "BaseHash", });
+    internal_static_CUserMessage_PlayResponseConditional_descriptor =
+      getDescriptor().getMessageTypes().get(52);
+    internal_static_CUserMessage_PlayResponseConditional_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMessage_PlayResponseConditional_descriptor,
+        new java.lang.String[] { "EntIndex", "PlayerSlots", "Response", "EntOrigin", "PreDelay", "MixPriority", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
   }

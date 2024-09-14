@@ -51,6 +51,13 @@
     "path": "dota/s2",
     "build": "*.proto",
     "include": ["shared/common", "shared/demo", "shared/s2", "dota/common"]
+  },
+
+  {
+    "path": "deadlock",
+    "build": "*.proto",
+    "include": ["shared/common", "shared/demo", "shared/s2"]
   }
+
 
 ]

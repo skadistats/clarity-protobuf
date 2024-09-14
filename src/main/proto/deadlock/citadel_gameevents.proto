@@ -1,0 +1,55 @@
+option java_package = "skadistats.clarity.wire.deadlock.proto";
+option java_outer_classname = "DeadlockGameEvents";
+
+import "networkbasetypes-common.proto";
+
+enum ECitadelGameEvents {
+  GE_FireBullets = 450;
+  GE_PlayerAnimEvent = 451;
+  GE_ParticleSystemManager = 458;
+  GE_ScreenTextPretty = 459;
+  GE_ServerRequestedTracer = 460;
+  GE_BulletImpact = 461;
+  GE_EnableSatVolumesEvent = 462;
+  GE_PlaceSatVolumeEvent = 463;
+  GE_DisableSatVolumesEvent = 464;
+  GE_RemoveSatVolumeEvent = 465;
+}
+
+message CMsgFireBullets {
+  message TracerAssignment {
+    optional uint64 tracer_resource_id = 1;
+    optional uint32 bullet_indicies = 2;
+  }
+
+  optional .CMsgVector origin = 1;
+  optional .CMsgQAngle angles = 2;
+  optional uint32 seed = 4;
+  optional int32 shooter_entity = 5 [default = -1];
+  optional int32 ability = 7 [default = -1];
+  optional float penetration_percent = 8;
+  optional float spread = 9;
+  optional bool fired_from_gun = 10 [default = true];
+  optional uint32 bullets_override = 11;
+  optional .CMsgFireBullets.TracerAssignment tracer_replacement = 12;
+  repeated .CMsgFireBullets.TracerAssignment tracer_additional = 13;
+  optional .CMsgQAngle angles_original = 14;
+  optional uint32 weapon_subclass_id = 15;
+  optional uint32 shot_number = 16;
+  optional int32 ignore_entity = 17 [default = -1];
+  optional float max_range = 18;
+}
+
+message CMsgBulletImpact {
+  optional .CMsgVector trace_start = 1;
+  optional .CMsgVector impact_origin = 2;
+  optional .CMsgVector surface_normal = 3;
+  optional uint32 damage = 4;
+  optional uint32 surface_type = 5;
+  optional int32 ability_entindex = 7 [default = -1];
+  optional int32 impacted_entindex = 8 [default = -1];
+  optional uint32 impacted_hitbox = 9;
+  optional uint32 weapon_subclass_id = 10;
+  optional int32 shooter_entindex = 11 [default = -1];
+}
+

@@ -247,6 +247,7 @@ enum DOTA_OVERHEAD_ALERT {
   OVERHEAD_ALERT_ITEM_RECEIVED = 22;
   OVERHEAD_ALERT_SHARD = 23;
   OVERHEAD_ALERT_DEADLY_BLOW = 24;
+  OVERHEAD_ALERT_FORCE_MISS = 25;
 }
 
 enum DOTA_ROSHAN_PHASE {
@@ -732,7 +733,7 @@ message CDOTAUserMsg_ChatWheel {
   optional uint32 chat_message_id = 1;
   optional int32 player_id = 2;
   optional uint32 account_id = 3;
-  optional uint32 param_hero_id = 4;
+  optional int32 param_hero_id = 4;
   optional uint32 emoticon_id = 5;
 }
 
@@ -824,6 +825,7 @@ message CDOTAUserMsg_AbilityPing {
   optional uint32 caster_id = 11;
   optional bool ctrl_held = 12;
   optional float reclaim_time = 13;
+  optional int32 owner_entity = 14 [default = -1];
 }
 
 message CDOTAUserMsg_TE_UnitAnimation {
@@ -977,8 +979,8 @@ message CDOTAUserMsg_HeroRelicProgress {
 
 message CDOTAUserMsg_DamageReport {
   optional int32 player_id = 1;
-  optional uint32 target_hero_id = 2;
-  optional uint32 source_hero_id = 3;
+  optional int32 target_hero_id = 2;
+  optional int32 source_hero_id = 3;
   optional int32 damage_amount = 4;
   optional bool broadcast = 5;
 }
@@ -1124,7 +1126,7 @@ message CDOTAUserMsg_HotPotato_Exploded {
 message CDOTAUserMsg_WK_Arcana_Progress {
   optional uint32 ehandle = 1;
   optional uint32 arcana_level = 2;
-  optional uint32 hero_id = 3;
+  optional int32 hero_id = 3;
 }
 
 message CDOTAUserMsg_GuildChallenge_Progress {
@@ -1257,6 +1259,19 @@ message CDOTAUserMsg_PlayerDraftPick {
   optional int32 player_id_captain = 1 [default = -1];
   optional int32 player_id_target = 2 [default = -1];
   optional int32 team = 3;
+}
+
+message CDOTAUserMsg_FacetPing {
+  optional int32 player_id = 1 [default = -1];
+  optional uint32 facet_strhash = 2;
+  optional uint32 entity_id = 3;
+  optional bool all_chat = 4;
+}
+
+message CDOTAUserMsg_InnatePing {
+  optional int32 player_id = 1 [default = -1];
+  optional uint32 entity_id = 2;
+  optional bool all_chat = 3;
 }
 
 message CMsgDOTACombatLogEntry {

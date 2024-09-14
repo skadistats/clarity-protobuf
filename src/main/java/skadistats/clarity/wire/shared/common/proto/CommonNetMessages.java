@@ -9312,6 +9312,19 @@ public final class CommonNetMessages {
     int getHasPvsVisBits();
 
     /**
+     * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+     */
+    java.util.List<java.lang.Integer> getCmdRecvStatusList();
+    /**
+     * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+     */
+    int getCmdRecvStatusCount();
+    /**
+     * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+     */
+    int getCmdRecvStatus(int index);
+
+    /**
      * <code>optional uint32 last_cmd_recv_margin = 18;</code>
      */
     boolean hasLastCmdRecvMargin();
@@ -9332,6 +9345,24 @@ public final class CommonNetMessages {
      * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
      */
     skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_tOrBuilder getNonTransmittedEntitiesOrBuilder();
+
+    /**
+     * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+     */
+    boolean hasCqStarvedCommandTicks();
+    /**
+     * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+     */
+    int getCqStarvedCommandTicks();
+
+    /**
+     * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+     */
+    boolean hasCqDiscardedCommandTicks();
+    /**
+     * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+     */
+    int getCqDiscardedCommandTicks();
 
     /**
      * <code>optional bytes dev_padding = 999;</code>
@@ -9508,8 +9539,39 @@ public final class CommonNetMessages {
               bitField0_ |= 0x00020000;
               break;
             }
-            case 7994: {
+            case 160: {
               bitField0_ |= 0x00040000;
+              cqStarvedCommandTicks_ = input.readUInt32();
+              break;
+            }
+            case 168: {
+              bitField0_ |= 0x00080000;
+              cqDiscardedCommandTicks_ = input.readUInt32();
+              break;
+            }
+            case 176: {
+              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+                cmdRecvStatus_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00020000;
+              }
+              cmdRecvStatus_.add(input.readSInt32());
+              break;
+            }
+            case 178: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00020000) == 0x00020000) && input.getBytesUntilLimit() > 0) {
+                cmdRecvStatus_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00020000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                cmdRecvStatus_.add(input.readSInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 7994: {
+              bitField0_ |= 0x00100000;
               devPadding_ = input.readBytes();
               break;
             }
@@ -9523,6 +9585,9 @@ public final class CommonNetMessages {
       } finally {
         if (((mutable_bitField0_ & 0x00008000) == 0x00008000)) {
           alternateBaselines_ = java.util.Collections.unmodifiableList(alternateBaselines_);
+        }
+        if (((mutable_bitField0_ & 0x00020000) == 0x00020000)) {
+          cmdRecvStatus_ = java.util.Collections.unmodifiableList(cmdRecvStatus_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -11499,6 +11564,29 @@ public final class CommonNetMessages {
       return hasPvsVisBits_;
     }
 
+    public static final int CMD_RECV_STATUS_FIELD_NUMBER = 22;
+    private java.util.List<java.lang.Integer> cmdRecvStatus_;
+    /**
+     * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getCmdRecvStatusList() {
+      return cmdRecvStatus_;
+    }
+    /**
+     * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+     */
+    public int getCmdRecvStatusCount() {
+      return cmdRecvStatus_.size();
+    }
+    /**
+     * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+     */
+    public int getCmdRecvStatus(int index) {
+      return cmdRecvStatus_.get(index);
+    }
+    private int cmdRecvStatusMemoizedSerializedSize = -1;
+
     public static final int LAST_CMD_RECV_MARGIN_FIELD_NUMBER = 18;
     private int lastCmdRecvMargin_;
     /**
@@ -11535,13 +11623,43 @@ public final class CommonNetMessages {
       return nonTransmittedEntities_;
     }
 
+    public static final int CQ_STARVED_COMMAND_TICKS_FIELD_NUMBER = 20;
+    private int cqStarvedCommandTicks_;
+    /**
+     * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+     */
+    public boolean hasCqStarvedCommandTicks() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+     */
+    public int getCqStarvedCommandTicks() {
+      return cqStarvedCommandTicks_;
+    }
+
+    public static final int CQ_DISCARDED_COMMAND_TICKS_FIELD_NUMBER = 21;
+    private int cqDiscardedCommandTicks_;
+    /**
+     * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+     */
+    public boolean hasCqDiscardedCommandTicks() {
+      return ((bitField0_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+     */
+    public int getCqDiscardedCommandTicks() {
+      return cqDiscardedCommandTicks_;
+    }
+
     public static final int DEV_PADDING_FIELD_NUMBER = 999;
     private com.google.protobuf.ByteString devPadding_;
     /**
      * <code>optional bytes dev_padding = 999;</code>
      */
     public boolean hasDevPadding() {
-      return ((bitField0_ & 0x00040000) == 0x00040000);
+      return ((bitField0_ & 0x00100000) == 0x00100000);
     }
     /**
      * <code>optional bytes dev_padding = 999;</code>
@@ -11568,8 +11686,11 @@ public final class CommonNetMessages {
       commandQueueInfo_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.command_queue_info_t.getDefaultInstance();
       alternateBaselines_ = java.util.Collections.emptyList();
       hasPvsVisBits_ = 0;
+      cmdRecvStatus_ = java.util.Collections.emptyList();
       lastCmdRecvMargin_ = 0;
       nonTransmittedEntities_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
+      cqStarvedCommandTicks_ = 0;
+      cqDiscardedCommandTicks_ = 0;
       devPadding_ = com.google.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
@@ -11643,6 +11764,19 @@ public final class CommonNetMessages {
         output.writeMessage(19, nonTransmittedEntities_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeUInt32(20, cqStarvedCommandTicks_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeUInt32(21, cqDiscardedCommandTicks_);
+      }
+      if (getCmdRecvStatusList().size() > 0) {
+        output.writeRawVarint32(178);
+        output.writeRawVarint32(cmdRecvStatusMemoizedSerializedSize);
+      }
+      for (int i = 0; i < cmdRecvStatus_.size(); i++) {
+        output.writeSInt32NoTag(cmdRecvStatus_.get(i));
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         output.writeBytes(999, devPadding_);
       }
       getUnknownFields().writeTo(output);
@@ -11731,6 +11865,28 @@ public final class CommonNetMessages {
           .computeMessageSize(19, nonTransmittedEntities_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(20, cqStarvedCommandTicks_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(21, cqDiscardedCommandTicks_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < cmdRecvStatus_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeSInt32SizeNoTag(cmdRecvStatus_.get(i));
+        }
+        size += dataSize;
+        if (!getCmdRecvStatusList().isEmpty()) {
+          size += 2;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        cmdRecvStatusMemoizedSerializedSize = dataSize;
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(999, devPadding_);
       }
@@ -11896,16 +12052,22 @@ public final class CommonNetMessages {
         }
         hasPvsVisBits_ = 0;
         bitField0_ = (bitField0_ & ~0x00010000);
-        lastCmdRecvMargin_ = 0;
+        cmdRecvStatus_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00020000);
+        lastCmdRecvMargin_ = 0;
+        bitField0_ = (bitField0_ & ~0x00040000);
         if (nonTransmittedEntitiesBuilder_ == null) {
           nonTransmittedEntities_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance();
         } else {
           nonTransmittedEntitiesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00040000);
-        devPadding_ = com.google.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00080000);
+        cqStarvedCommandTicks_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        cqDiscardedCommandTicks_ = 0;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        devPadding_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -12011,11 +12173,16 @@ public final class CommonNetMessages {
           to_bitField0_ |= 0x00008000;
         }
         result.hasPvsVisBits_ = hasPvsVisBits_;
-        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          cmdRecvStatus_ = java.util.Collections.unmodifiableList(cmdRecvStatus_);
+          bitField0_ = (bitField0_ & ~0x00020000);
+        }
+        result.cmdRecvStatus_ = cmdRecvStatus_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
           to_bitField0_ |= 0x00010000;
         }
         result.lastCmdRecvMargin_ = lastCmdRecvMargin_;
-        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
           to_bitField0_ |= 0x00020000;
         }
         if (nonTransmittedEntitiesBuilder_ == null) {
@@ -12023,8 +12190,16 @@ public final class CommonNetMessages {
         } else {
           result.nonTransmittedEntities_ = nonTransmittedEntitiesBuilder_.build();
         }
-        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
           to_bitField0_ |= 0x00040000;
+        }
+        result.cqStarvedCommandTicks_ = cqStarvedCommandTicks_;
+        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
+          to_bitField0_ |= 0x00080000;
+        }
+        result.cqDiscardedCommandTicks_ = cqDiscardedCommandTicks_;
+        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
+          to_bitField0_ |= 0x00100000;
         }
         result.devPadding_ = devPadding_;
         result.bitField0_ = to_bitField0_;
@@ -12117,11 +12292,27 @@ public final class CommonNetMessages {
         if (other.hasHasPvsVisBits()) {
           setHasPvsVisBits(other.getHasPvsVisBits());
         }
+        if (!other.cmdRecvStatus_.isEmpty()) {
+          if (cmdRecvStatus_.isEmpty()) {
+            cmdRecvStatus_ = other.cmdRecvStatus_;
+            bitField0_ = (bitField0_ & ~0x00020000);
+          } else {
+            ensureCmdRecvStatusIsMutable();
+            cmdRecvStatus_.addAll(other.cmdRecvStatus_);
+          }
+          onChanged();
+        }
         if (other.hasLastCmdRecvMargin()) {
           setLastCmdRecvMargin(other.getLastCmdRecvMargin());
         }
         if (other.hasNonTransmittedEntities()) {
           mergeNonTransmittedEntities(other.getNonTransmittedEntities());
+        }
+        if (other.hasCqStarvedCommandTicks()) {
+          setCqStarvedCommandTicks(other.getCqStarvedCommandTicks());
+        }
+        if (other.hasCqDiscardedCommandTicks()) {
+          setCqDiscardedCommandTicks(other.getCqDiscardedCommandTicks());
         }
         if (other.hasDevPadding()) {
           setDevPadding(other.getDevPadding());
@@ -12995,12 +13186,78 @@ public final class CommonNetMessages {
         return this;
       }
 
+      private java.util.List<java.lang.Integer> cmdRecvStatus_ = java.util.Collections.emptyList();
+      private void ensureCmdRecvStatusIsMutable() {
+        if (!((bitField0_ & 0x00020000) == 0x00020000)) {
+          cmdRecvStatus_ = new java.util.ArrayList<java.lang.Integer>(cmdRecvStatus_);
+          bitField0_ |= 0x00020000;
+         }
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getCmdRecvStatusList() {
+        return java.util.Collections.unmodifiableList(cmdRecvStatus_);
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public int getCmdRecvStatusCount() {
+        return cmdRecvStatus_.size();
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public int getCmdRecvStatus(int index) {
+        return cmdRecvStatus_.get(index);
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public Builder setCmdRecvStatus(
+          int index, int value) {
+        ensureCmdRecvStatusIsMutable();
+        cmdRecvStatus_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public Builder addCmdRecvStatus(int value) {
+        ensureCmdRecvStatusIsMutable();
+        cmdRecvStatus_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public Builder addAllCmdRecvStatus(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureCmdRecvStatusIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, cmdRecvStatus_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated sint32 cmd_recv_status = 22 [packed = true];</code>
+       */
+      public Builder clearCmdRecvStatus() {
+        cmdRecvStatus_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00020000);
+        onChanged();
+        return this;
+      }
+
       private int lastCmdRecvMargin_ ;
       /**
        * <code>optional uint32 last_cmd_recv_margin = 18;</code>
        */
       public boolean hasLastCmdRecvMargin() {
-        return ((bitField0_ & 0x00020000) == 0x00020000);
+        return ((bitField0_ & 0x00040000) == 0x00040000);
       }
       /**
        * <code>optional uint32 last_cmd_recv_margin = 18;</code>
@@ -13012,7 +13269,7 @@ public final class CommonNetMessages {
        * <code>optional uint32 last_cmd_recv_margin = 18;</code>
        */
       public Builder setLastCmdRecvMargin(int value) {
-        bitField0_ |= 0x00020000;
+        bitField0_ |= 0x00040000;
         lastCmdRecvMargin_ = value;
         onChanged();
         return this;
@@ -13021,7 +13278,7 @@ public final class CommonNetMessages {
        * <code>optional uint32 last_cmd_recv_margin = 18;</code>
        */
       public Builder clearLastCmdRecvMargin() {
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         lastCmdRecvMargin_ = 0;
         onChanged();
         return this;
@@ -13034,7 +13291,7 @@ public final class CommonNetMessages {
        * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
        */
       public boolean hasNonTransmittedEntities() {
-        return ((bitField0_ & 0x00040000) == 0x00040000);
+        return ((bitField0_ & 0x00080000) == 0x00080000);
       }
       /**
        * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
@@ -13059,7 +13316,7 @@ public final class CommonNetMessages {
         } else {
           nonTransmittedEntitiesBuilder_.setMessage(value);
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         return this;
       }
       /**
@@ -13073,7 +13330,7 @@ public final class CommonNetMessages {
         } else {
           nonTransmittedEntitiesBuilder_.setMessage(builderForValue.build());
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         return this;
       }
       /**
@@ -13081,7 +13338,7 @@ public final class CommonNetMessages {
        */
       public Builder mergeNonTransmittedEntities(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t value) {
         if (nonTransmittedEntitiesBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) == 0x00040000) &&
+          if (((bitField0_ & 0x00080000) == 0x00080000) &&
               nonTransmittedEntities_ != skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.getDefaultInstance()) {
             nonTransmittedEntities_ =
               skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.newBuilder(nonTransmittedEntities_).mergeFrom(value).buildPartial();
@@ -13092,7 +13349,7 @@ public final class CommonNetMessages {
         } else {
           nonTransmittedEntitiesBuilder_.mergeFrom(value);
         }
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         return this;
       }
       /**
@@ -13105,14 +13362,14 @@ public final class CommonNetMessages {
         } else {
           nonTransmittedEntitiesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
       /**
        * <code>optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;</code>
        */
       public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_PacketEntities.non_transmitted_entities_t.Builder getNonTransmittedEntitiesBuilder() {
-        bitField0_ |= 0x00040000;
+        bitField0_ |= 0x00080000;
         onChanged();
         return getNonTransmittedEntitiesFieldBuilder().getBuilder();
       }
@@ -13143,12 +13400,76 @@ public final class CommonNetMessages {
         return nonTransmittedEntitiesBuilder_;
       }
 
+      private int cqStarvedCommandTicks_ ;
+      /**
+       * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+       */
+      public boolean hasCqStarvedCommandTicks() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+       */
+      public int getCqStarvedCommandTicks() {
+        return cqStarvedCommandTicks_;
+      }
+      /**
+       * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+       */
+      public Builder setCqStarvedCommandTicks(int value) {
+        bitField0_ |= 0x00100000;
+        cqStarvedCommandTicks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 cq_starved_command_ticks = 20;</code>
+       */
+      public Builder clearCqStarvedCommandTicks() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        cqStarvedCommandTicks_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int cqDiscardedCommandTicks_ ;
+      /**
+       * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+       */
+      public boolean hasCqDiscardedCommandTicks() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+       */
+      public int getCqDiscardedCommandTicks() {
+        return cqDiscardedCommandTicks_;
+      }
+      /**
+       * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+       */
+      public Builder setCqDiscardedCommandTicks(int value) {
+        bitField0_ |= 0x00200000;
+        cqDiscardedCommandTicks_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 cq_discarded_command_ticks = 21;</code>
+       */
+      public Builder clearCqDiscardedCommandTicks() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        cqDiscardedCommandTicks_ = 0;
+        onChanged();
+        return this;
+      }
+
       private com.google.protobuf.ByteString devPadding_ = com.google.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes dev_padding = 999;</code>
        */
       public boolean hasDevPadding() {
-        return ((bitField0_ & 0x00080000) == 0x00080000);
+        return ((bitField0_ & 0x00400000) == 0x00400000);
       }
       /**
        * <code>optional bytes dev_padding = 999;</code>
@@ -13163,7 +13484,7 @@ public final class CommonNetMessages {
         if (value == null) {
     throw new NullPointerException();
   }
-  bitField0_ |= 0x00080000;
+  bitField0_ |= 0x00400000;
         devPadding_ = value;
         onChanged();
         return this;
@@ -13172,7 +13493,7 @@ public final class CommonNetMessages {
        * <code>optional bytes dev_padding = 999;</code>
        */
       public Builder clearDevPadding() {
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00400000);
         devPadding_ = getDefaultInstance().getDevPadding();
         onChanged();
         return this;
@@ -21292,6 +21613,1394 @@ public final class CommonNetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_FullFrameSplit)
   }
 
+  public interface CMsgServerUserCmdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CMsgServerUserCmd)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional bytes data = 1;</code>
+     */
+    boolean hasData();
+    /**
+     * <code>optional bytes data = 1;</code>
+     */
+    com.google.protobuf.ByteString getData();
+
+    /**
+     * <code>optional int32 cmd_number = 2;</code>
+     */
+    boolean hasCmdNumber();
+    /**
+     * <code>optional int32 cmd_number = 2;</code>
+     */
+    int getCmdNumber();
+
+    /**
+     * <code>optional int32 player_slot = 3 [default = -1];</code>
+     */
+    boolean hasPlayerSlot();
+    /**
+     * <code>optional int32 player_slot = 3 [default = -1];</code>
+     */
+    int getPlayerSlot();
+
+    /**
+     * <code>optional int32 server_tick_executed = 4;</code>
+     */
+    boolean hasServerTickExecuted();
+    /**
+     * <code>optional int32 server_tick_executed = 4;</code>
+     */
+    int getServerTickExecuted();
+
+    /**
+     * <code>optional int32 client_tick = 5;</code>
+     */
+    boolean hasClientTick();
+    /**
+     * <code>optional int32 client_tick = 5;</code>
+     */
+    int getClientTick();
+  }
+  /**
+   * Protobuf type {@code CMsgServerUserCmd}
+   */
+  public static final class CMsgServerUserCmd extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CMsgServerUserCmd)
+      CMsgServerUserCmdOrBuilder {
+    // Use CMsgServerUserCmd.newBuilder() to construct.
+    private CMsgServerUserCmd(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CMsgServerUserCmd(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CMsgServerUserCmd defaultInstance;
+    public static CMsgServerUserCmd getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CMsgServerUserCmd getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CMsgServerUserCmd(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              bitField0_ |= 0x00000001;
+              data_ = input.readBytes();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              cmdNumber_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              playerSlot_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              serverTickExecuted_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              clientTick_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CMsgServerUserCmd_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CMsgServerUserCmd_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.class, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CMsgServerUserCmd> PARSER =
+        new com.google.protobuf.AbstractParser<CMsgServerUserCmd>() {
+      public CMsgServerUserCmd parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CMsgServerUserCmd(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CMsgServerUserCmd> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int DATA_FIELD_NUMBER = 1;
+    private com.google.protobuf.ByteString data_;
+    /**
+     * <code>optional bytes data = 1;</code>
+     */
+    public boolean hasData() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional bytes data = 1;</code>
+     */
+    public com.google.protobuf.ByteString getData() {
+      return data_;
+    }
+
+    public static final int CMD_NUMBER_FIELD_NUMBER = 2;
+    private int cmdNumber_;
+    /**
+     * <code>optional int32 cmd_number = 2;</code>
+     */
+    public boolean hasCmdNumber() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 cmd_number = 2;</code>
+     */
+    public int getCmdNumber() {
+      return cmdNumber_;
+    }
+
+    public static final int PLAYER_SLOT_FIELD_NUMBER = 3;
+    private int playerSlot_;
+    /**
+     * <code>optional int32 player_slot = 3 [default = -1];</code>
+     */
+    public boolean hasPlayerSlot() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 player_slot = 3 [default = -1];</code>
+     */
+    public int getPlayerSlot() {
+      return playerSlot_;
+    }
+
+    public static final int SERVER_TICK_EXECUTED_FIELD_NUMBER = 4;
+    private int serverTickExecuted_;
+    /**
+     * <code>optional int32 server_tick_executed = 4;</code>
+     */
+    public boolean hasServerTickExecuted() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 server_tick_executed = 4;</code>
+     */
+    public int getServerTickExecuted() {
+      return serverTickExecuted_;
+    }
+
+    public static final int CLIENT_TICK_FIELD_NUMBER = 5;
+    private int clientTick_;
+    /**
+     * <code>optional int32 client_tick = 5;</code>
+     */
+    public boolean hasClientTick() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 client_tick = 5;</code>
+     */
+    public int getClientTick() {
+      return clientTick_;
+    }
+
+    private void initFields() {
+      data_ = com.google.protobuf.ByteString.EMPTY;
+      cmdNumber_ = 0;
+      playerSlot_ = -1;
+      serverTickExecuted_ = 0;
+      clientTick_ = 0;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeBytes(1, data_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, cmdNumber_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, playerSlot_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, serverTickExecuted_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, clientTick_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(1, data_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, cmdNumber_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, playerSlot_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, serverTickExecuted_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, clientTick_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CMsgServerUserCmd}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CMsgServerUserCmd)
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CMsgServerUserCmd_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CMsgServerUserCmd_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.class, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        data_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        cmdNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        playerSlot_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serverTickExecuted_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        clientTick_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CMsgServerUserCmd_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd build() {
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd buildPartial() {
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd result = new skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.data_ = data_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.cmdNumber_ = cmdNumber_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.playerSlot_ = playerSlot_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.serverTickExecuted_ = serverTickExecuted_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.clientTick_ = clientTick_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd) {
+          return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd other) {
+        if (other == skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.getDefaultInstance()) return this;
+        if (other.hasData()) {
+          setData(other.getData());
+        }
+        if (other.hasCmdNumber()) {
+          setCmdNumber(other.getCmdNumber());
+        }
+        if (other.hasPlayerSlot()) {
+          setPlayerSlot(other.getPlayerSlot());
+        }
+        if (other.hasServerTickExecuted()) {
+          setServerTickExecuted(other.getServerTickExecuted());
+        }
+        if (other.hasClientTick()) {
+          setClientTick(other.getClientTick());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes data = 1;</code>
+       */
+      public boolean hasData() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bytes data = 1;</code>
+       */
+      public com.google.protobuf.ByteString getData() {
+        return data_;
+      }
+      /**
+       * <code>optional bytes data = 1;</code>
+       */
+      public Builder setData(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+        data_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes data = 1;</code>
+       */
+      public Builder clearData() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        data_ = getDefaultInstance().getData();
+        onChanged();
+        return this;
+      }
+
+      private int cmdNumber_ ;
+      /**
+       * <code>optional int32 cmd_number = 2;</code>
+       */
+      public boolean hasCmdNumber() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 cmd_number = 2;</code>
+       */
+      public int getCmdNumber() {
+        return cmdNumber_;
+      }
+      /**
+       * <code>optional int32 cmd_number = 2;</code>
+       */
+      public Builder setCmdNumber(int value) {
+        bitField0_ |= 0x00000002;
+        cmdNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 cmd_number = 2;</code>
+       */
+      public Builder clearCmdNumber() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        cmdNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int playerSlot_ = -1;
+      /**
+       * <code>optional int32 player_slot = 3 [default = -1];</code>
+       */
+      public boolean hasPlayerSlot() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 player_slot = 3 [default = -1];</code>
+       */
+      public int getPlayerSlot() {
+        return playerSlot_;
+      }
+      /**
+       * <code>optional int32 player_slot = 3 [default = -1];</code>
+       */
+      public Builder setPlayerSlot(int value) {
+        bitField0_ |= 0x00000004;
+        playerSlot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 player_slot = 3 [default = -1];</code>
+       */
+      public Builder clearPlayerSlot() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        playerSlot_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int serverTickExecuted_ ;
+      /**
+       * <code>optional int32 server_tick_executed = 4;</code>
+       */
+      public boolean hasServerTickExecuted() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 server_tick_executed = 4;</code>
+       */
+      public int getServerTickExecuted() {
+        return serverTickExecuted_;
+      }
+      /**
+       * <code>optional int32 server_tick_executed = 4;</code>
+       */
+      public Builder setServerTickExecuted(int value) {
+        bitField0_ |= 0x00000008;
+        serverTickExecuted_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 server_tick_executed = 4;</code>
+       */
+      public Builder clearServerTickExecuted() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        serverTickExecuted_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int clientTick_ ;
+      /**
+       * <code>optional int32 client_tick = 5;</code>
+       */
+      public boolean hasClientTick() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 client_tick = 5;</code>
+       */
+      public int getClientTick() {
+        return clientTick_;
+      }
+      /**
+       * <code>optional int32 client_tick = 5;</code>
+       */
+      public Builder setClientTick(int value) {
+        bitField0_ |= 0x00000010;
+        clientTick_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 client_tick = 5;</code>
+       */
+      public Builder clearClientTick() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        clientTick_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CMsgServerUserCmd)
+    }
+
+    static {
+      defaultInstance = new CMsgServerUserCmd(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CMsgServerUserCmd)
+  }
+
+  public interface CSVCMsg_UserCommandsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CSVCMsg_UserCommands)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd> 
+        getCommandsList();
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd getCommands(int index);
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    int getCommandsCount();
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder> 
+        getCommandsOrBuilderList();
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder getCommandsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code CSVCMsg_UserCommands}
+   */
+  public static final class CSVCMsg_UserCommands extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CSVCMsg_UserCommands)
+      CSVCMsg_UserCommandsOrBuilder {
+    // Use CSVCMsg_UserCommands.newBuilder() to construct.
+    private CSVCMsg_UserCommands(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CSVCMsg_UserCommands(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CSVCMsg_UserCommands defaultInstance;
+    public static CSVCMsg_UserCommands getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CSVCMsg_UserCommands getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CSVCMsg_UserCommands(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                commands_ = new java.util.ArrayList<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              commands_.add(input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.PARSER, extensionRegistry));
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          commands_ = java.util.Collections.unmodifiableList(commands_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_UserCommands_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_UserCommands_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.class, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CSVCMsg_UserCommands> PARSER =
+        new com.google.protobuf.AbstractParser<CSVCMsg_UserCommands>() {
+      public CSVCMsg_UserCommands parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CSVCMsg_UserCommands(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CSVCMsg_UserCommands> getParserForType() {
+      return PARSER;
+    }
+
+    public static final int COMMANDS_FIELD_NUMBER = 1;
+    private java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd> commands_;
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd> getCommandsList() {
+      return commands_;
+    }
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder> 
+        getCommandsOrBuilderList() {
+      return commands_;
+    }
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    public int getCommandsCount() {
+      return commands_.size();
+    }
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd getCommands(int index) {
+      return commands_.get(index);
+    }
+    /**
+     * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder getCommandsOrBuilder(
+        int index) {
+      return commands_.get(index);
+    }
+
+    private void initFields() {
+      commands_ = java.util.Collections.emptyList();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < commands_.size(); i++) {
+        output.writeMessage(1, commands_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < commands_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, commands_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CSVCMsg_UserCommands}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CSVCMsg_UserCommands)
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommandsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_UserCommands_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_UserCommands_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.class, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getCommandsFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (commandsBuilder_ == null) {
+          commands_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          commandsBuilder_.clear();
+        }
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.internal_static_CSVCMsg_UserCommands_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands build() {
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands buildPartial() {
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands result = new skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands(this);
+        int from_bitField0_ = bitField0_;
+        if (commandsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            commands_ = java.util.Collections.unmodifiableList(commands_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.commands_ = commands_;
+        } else {
+          result.commands_ = commandsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands) {
+          return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands other) {
+        if (other == skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands.getDefaultInstance()) return this;
+        if (commandsBuilder_ == null) {
+          if (!other.commands_.isEmpty()) {
+            if (commands_.isEmpty()) {
+              commands_ = other.commands_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCommandsIsMutable();
+              commands_.addAll(other.commands_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.commands_.isEmpty()) {
+            if (commandsBuilder_.isEmpty()) {
+              commandsBuilder_.dispose();
+              commandsBuilder_ = null;
+              commands_ = other.commands_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              commandsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getCommandsFieldBuilder() : null;
+            } else {
+              commandsBuilder_.addAllMessages(other.commands_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CSVCMsg_UserCommands) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd> commands_ =
+        java.util.Collections.emptyList();
+      private void ensureCommandsIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          commands_ = new java.util.ArrayList<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd>(commands_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder> commandsBuilder_;
+
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd> getCommandsList() {
+        if (commandsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(commands_);
+        } else {
+          return commandsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public int getCommandsCount() {
+        if (commandsBuilder_ == null) {
+          return commands_.size();
+        } else {
+          return commandsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd getCommands(int index) {
+        if (commandsBuilder_ == null) {
+          return commands_.get(index);
+        } else {
+          return commandsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder setCommands(
+          int index, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd value) {
+        if (commandsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommandsIsMutable();
+          commands_.set(index, value);
+          onChanged();
+        } else {
+          commandsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder setCommands(
+          int index, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder builderForValue) {
+        if (commandsBuilder_ == null) {
+          ensureCommandsIsMutable();
+          commands_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          commandsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder addCommands(skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd value) {
+        if (commandsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommandsIsMutable();
+          commands_.add(value);
+          onChanged();
+        } else {
+          commandsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder addCommands(
+          int index, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd value) {
+        if (commandsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCommandsIsMutable();
+          commands_.add(index, value);
+          onChanged();
+        } else {
+          commandsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder addCommands(
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder builderForValue) {
+        if (commandsBuilder_ == null) {
+          ensureCommandsIsMutable();
+          commands_.add(builderForValue.build());
+          onChanged();
+        } else {
+          commandsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder addCommands(
+          int index, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder builderForValue) {
+        if (commandsBuilder_ == null) {
+          ensureCommandsIsMutable();
+          commands_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          commandsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder addAllCommands(
+          java.lang.Iterable<? extends skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd> values) {
+        if (commandsBuilder_ == null) {
+          ensureCommandsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, commands_);
+          onChanged();
+        } else {
+          commandsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder clearCommands() {
+        if (commandsBuilder_ == null) {
+          commands_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          commandsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public Builder removeCommands(int index) {
+        if (commandsBuilder_ == null) {
+          ensureCommandsIsMutable();
+          commands_.remove(index);
+          onChanged();
+        } else {
+          commandsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder getCommandsBuilder(
+          int index) {
+        return getCommandsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder getCommandsOrBuilder(
+          int index) {
+        if (commandsBuilder_ == null) {
+          return commands_.get(index);  } else {
+          return commandsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder> 
+           getCommandsOrBuilderList() {
+        if (commandsBuilder_ != null) {
+          return commandsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(commands_);
+        }
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder addCommandsBuilder() {
+        return getCommandsFieldBuilder().addBuilder(
+            skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder addCommandsBuilder(
+          int index) {
+        return getCommandsFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMsgServerUserCmd commands = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder> 
+           getCommandsBuilderList() {
+        return getCommandsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder> 
+          getCommandsFieldBuilder() {
+        if (commandsBuilder_ == null) {
+          commandsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmd.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetMessages.CMsgServerUserCmdOrBuilder>(
+                  commands_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          commands_ = null;
+        }
+        return commandsBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CSVCMsg_UserCommands)
+    }
+
+    static {
+      defaultInstance = new CSVCMsg_UserCommands(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CSVCMsg_UserCommands)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCLCMsg_ClientInfo_descriptor;
   private static
@@ -21447,6 +23156,16 @@ public final class CommonNetMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_FullFrameSplit_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CMsgServerUserCmd_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CMsgServerUserCmd_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CSVCMsg_UserCommands_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CSVCMsg_UserCommands_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -21485,7 +23204,7 @@ public final class CommonNetMessages {
       "key_t\022\014\n\004type\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\032Y\n\014des" +
       "criptor_t\022\017\n\007eventid\030\001 \001(\005\022\014\n\004name\030\002 \001(\t" +
       "\022*\n\004keys\030\003 \003(\0132\034.CSVCMsg_GameEventList.k" +
-      "ey_t\"\201\010\n\026CSVCMsg_PacketEntities\022\023\n\013max_e",
+      "ey_t\"\344\010\n\026CSVCMsg_PacketEntities\022\023\n\013max_e",
       "ntries\030\001 \001(\005\022\027\n\017updated_entries\030\002 \001(\005\022\020\n" +
       "\010is_delta\030\003 \001(\010\022\027\n\017update_baseline\030\004 \001(\010" +
       "\022\020\n\010baseline\030\005 \001(\005\022\022\n\ndelta_from\030\006 \001(\005\022\023" +
@@ -21499,56 +23218,63 @@ public final class CommonNetMessages {
       "_PacketEntities.command_queue_info_t\022I\n\023" +
       "alternate_baselines\030\017 \003(\0132,.CSVCMsg_Pack" +
       "etEntities.alternate_baseline_t\022\030\n\020has_p" +
-      "vs_vis_bits\030\020 \001(\r\022\034\n\024last_cmd_recv_margi" +
-      "n\030\022 \001(\r\022T\n\030non_transmitted_entities\030\023 \001(" +
-      "\01322.CSVCMsg_PacketEntities.non_transmitt" +
-      "ed_entities_t\022\024\n\013dev_padding\030\347\007 \001(\014\032\262\001\n\024" +
-      "command_queue_info_t\022\027\n\017commands_queued\030" +
-      "\001 \001(\r\022\"\n\032command_queue_desired_size\030\002 \001(" +
-      "\r\022\035\n\025starved_command_ticks\030\003 \001(\r\022\035\n\025time",
-      "_dilation_percent\030\004 \001(\002\022\037\n\027discarded_com" +
-      "mand_ticks\030\005 \001(\r\032D\n\024alternate_baseline_t" +
-      "\022\024\n\014entity_index\030\001 \001(\005\022\026\n\016baseline_index" +
-      "\030\002 \001(\005\032@\n\032non_transmitted_entities_t\022\024\n\014" +
-      "header_count\030\001 \001(\005\022\014\n\004data\030\002 \001(\014\"\244\001\n\021CSV" +
-      "CMsg_ClassInfo\022\030\n\020create_on_client\030\001 \001(\010" +
-      "\022+\n\007classes\030\002 \003(\0132\032.CSVCMsg_ClassInfo.cl" +
-      "ass_t\032H\n\007class_t\022\020\n\010class_id\030\001 \001(\005\022\027\n\017da" +
-      "ta_table_name\030\002 \001(\t\022\022\n\nclass_name\030\003 \001(\t\"" +
-      "5\n\017CSVCMsg_SetView\022\024\n\014entity_index\030\001 \001(\005",
-      "\022\014\n\004slot\030\002 \001(\005\"\212\001\n\020CSVCMsg_BSPDecal\022\030\n\003p" +
-      "os\030\001 \001(\0132\013.CMsgVector\022\033\n\023decal_texture_i" +
-      "ndex\030\002 \001(\005\022\024\n\014entity_index\030\003 \001(\005\022\023\n\013mode" +
-      "l_index\030\004 \001(\005\022\024\n\014low_priority\030\005 \001(\010\"\035\n\rC" +
-      "SVCMsg_Print\022\014\n\004text\030\001 \001(\t\"G\n\021CSVCMsg_Vo" +
-      "iceInit\022\017\n\007quality\030\001 \001(\005\022\r\n\005codec\030\002 \001(\t\022" +
-      "\022\n\007version\030\003 \001(\005:\0010\"\337\003\n\016CSVCMsg_Sounds\022\026" +
-      "\n\016reliable_sound\030\001 \001(\010\022+\n\006sounds\030\002 \003(\0132\033" +
-      ".CSVCMsg_Sounds.sounddata_t\032\207\003\n\013sounddat" +
-      "a_t\022\020\n\010origin_x\030\001 \001(\021\022\020\n\010origin_y\030\002 \001(\021\022",
-      "\020\n\010origin_z\030\003 \001(\021\022\016\n\006volume\030\004 \001(\r\022\023\n\013del" +
-      "ay_value\030\005 \001(\002\022\027\n\017sequence_number\030\006 \001(\005\022" +
-      "\024\n\014entity_index\030\007 \001(\005\022\017\n\007channel\030\010 \001(\005\022\r" +
-      "\n\005pitch\030\t \001(\005\022\r\n\005flags\030\n \001(\005\022\021\n\tsound_nu" +
-      "m\030\013 \001(\r\022\030\n\020sound_num_handle\030\014 \001(\007\022\026\n\016spe" +
-      "aker_entity\030\r \001(\005\022\023\n\013random_seed\030\016 \001(\005\022\023" +
-      "\n\013sound_level\030\017 \001(\005\022\023\n\013is_sentence\030\020 \001(\010" +
-      "\022\022\n\nis_ambient\030\021 \001(\010\022\014\n\004guid\030\022 \001(\r\022\031\n\021so" +
-      "und_resource_id\030\023 \001(\006\"X\n\020CSVCMsg_Prefetc" +
-      "h\022\023\n\013sound_index\030\001 \001(\005\022/\n\rresource_type\030",
-      "\002 \001(\0162\r.PrefetchType:\tPFT_SOUND\"_\n\031CSVCM" +
-      "sg_UpdateStringTable\022\020\n\010table_id\030\001 \001(\005\022\033" +
-      "\n\023num_changed_entries\030\002 \001(\005\022\023\n\013string_da" +
-      "ta\030\003 \001(\014\"T\n\026CSVCMsg_FullFrameSplit\022\014\n\004ti" +
-      "ck\030\001 \001(\005\022\017\n\007section\030\002 \001(\005\022\r\n\005total\030\003 \001(\005" +
-      "\022\014\n\004data\030\004 \001(\014*g\n\021VoiceDataFormat_t\022\032\n\026V" +
-      "OICEDATA_FORMAT_STEAM\020\000\022\033\n\027VOICEDATA_FOR" +
-      "MAT_ENGINE\020\001\022\031\n\025VOICEDATA_FORMAT_OPUS\020\002*" +
-      "B\n\016RequestPause_t\022\014\n\010RP_PAUSE\020\000\022\016\n\nRP_UN" +
-      "PAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002*\035\n\014PrefetchT",
-      "ype\022\r\n\tPFT_SOUND\020\000B@\n+skadistats.clarity" +
-      ".wire.shared.common.protoB\021CommonNetMess" +
-      "ages"
+      "vs_vis_bits\030\020 \001(\r\022\033\n\017cmd_recv_status\030\026 \003" +
+      "(\021B\002\020\001\022\034\n\024last_cmd_recv_margin\030\022 \001(\r\022T\n\030" +
+      "non_transmitted_entities\030\023 \001(\01322.CSVCMsg" +
+      "_PacketEntities.non_transmitted_entities" +
+      "_t\022 \n\030cq_starved_command_ticks\030\024 \001(\r\022\"\n\032" +
+      "cq_discarded_command_ticks\030\025 \001(\r\022\024\n\013dev_" +
+      "padding\030\347\007 \001(\014\032\262\001\n\024command_queue_info_t\022",
+      "\027\n\017commands_queued\030\001 \001(\r\022\"\n\032command_queu" +
+      "e_desired_size\030\002 \001(\r\022\035\n\025starved_command_" +
+      "ticks\030\003 \001(\r\022\035\n\025time_dilation_percent\030\004 \001" +
+      "(\002\022\037\n\027discarded_command_ticks\030\005 \001(\r\032D\n\024a" +
+      "lternate_baseline_t\022\024\n\014entity_index\030\001 \001(" +
+      "\005\022\026\n\016baseline_index\030\002 \001(\005\032@\n\032non_transmi" +
+      "tted_entities_t\022\024\n\014header_count\030\001 \001(\005\022\014\n" +
+      "\004data\030\002 \001(\014\"\244\001\n\021CSVCMsg_ClassInfo\022\030\n\020cre" +
+      "ate_on_client\030\001 \001(\010\022+\n\007classes\030\002 \003(\0132\032.C" +
+      "SVCMsg_ClassInfo.class_t\032H\n\007class_t\022\020\n\010c",
+      "lass_id\030\001 \001(\005\022\027\n\017data_table_name\030\002 \001(\t\022\022" +
+      "\n\nclass_name\030\003 \001(\t\"5\n\017CSVCMsg_SetView\022\024\n" +
+      "\014entity_index\030\001 \001(\005\022\014\n\004slot\030\002 \001(\005\"\212\001\n\020CS" +
+      "VCMsg_BSPDecal\022\030\n\003pos\030\001 \001(\0132\013.CMsgVector" +
+      "\022\033\n\023decal_texture_index\030\002 \001(\005\022\024\n\014entity_" +
+      "index\030\003 \001(\005\022\023\n\013model_index\030\004 \001(\005\022\024\n\014low_" +
+      "priority\030\005 \001(\010\"\035\n\rCSVCMsg_Print\022\014\n\004text\030" +
+      "\001 \001(\t\"G\n\021CSVCMsg_VoiceInit\022\017\n\007quality\030\001 " +
+      "\001(\005\022\r\n\005codec\030\002 \001(\t\022\022\n\007version\030\003 \001(\005:\0010\"\337" +
+      "\003\n\016CSVCMsg_Sounds\022\026\n\016reliable_sound\030\001 \001(",
+      "\010\022+\n\006sounds\030\002 \003(\0132\033.CSVCMsg_Sounds.sound" +
+      "data_t\032\207\003\n\013sounddata_t\022\020\n\010origin_x\030\001 \001(\021" +
+      "\022\020\n\010origin_y\030\002 \001(\021\022\020\n\010origin_z\030\003 \001(\021\022\016\n\006" +
+      "volume\030\004 \001(\r\022\023\n\013delay_value\030\005 \001(\002\022\027\n\017seq" +
+      "uence_number\030\006 \001(\005\022\024\n\014entity_index\030\007 \001(\005" +
+      "\022\017\n\007channel\030\010 \001(\005\022\r\n\005pitch\030\t \001(\005\022\r\n\005flag" +
+      "s\030\n \001(\005\022\021\n\tsound_num\030\013 \001(\r\022\030\n\020sound_num_" +
+      "handle\030\014 \001(\007\022\026\n\016speaker_entity\030\r \001(\005\022\023\n\013" +
+      "random_seed\030\016 \001(\005\022\023\n\013sound_level\030\017 \001(\005\022\023" +
+      "\n\013is_sentence\030\020 \001(\010\022\022\n\nis_ambient\030\021 \001(\010\022",
+      "\014\n\004guid\030\022 \001(\r\022\031\n\021sound_resource_id\030\023 \001(\006" +
+      "\"X\n\020CSVCMsg_Prefetch\022\023\n\013sound_index\030\001 \001(" +
+      "\005\022/\n\rresource_type\030\002 \001(\0162\r.PrefetchType:" +
+      "\tPFT_SOUND\"_\n\031CSVCMsg_UpdateStringTable\022" +
+      "\020\n\010table_id\030\001 \001(\005\022\033\n\023num_changed_entries" +
+      "\030\002 \001(\005\022\023\n\013string_data\030\003 \001(\014\"T\n\026CSVCMsg_F" +
+      "ullFrameSplit\022\014\n\004tick\030\001 \001(\005\022\017\n\007section\030\002" +
+      " \001(\005\022\r\n\005total\030\003 \001(\005\022\014\n\004data\030\004 \001(\014\"\201\001\n\021CM" +
+      "sgServerUserCmd\022\014\n\004data\030\001 \001(\014\022\022\n\ncmd_num" +
+      "ber\030\002 \001(\005\022\027\n\013player_slot\030\003 \001(\005:\002-1\022\034\n\024se",
+      "rver_tick_executed\030\004 \001(\005\022\023\n\013client_tick\030" +
+      "\005 \001(\005\"<\n\024CSVCMsg_UserCommands\022$\n\010command" +
+      "s\030\001 \003(\0132\022.CMsgServerUserCmd*g\n\021VoiceData" +
+      "Format_t\022\032\n\026VOICEDATA_FORMAT_STEAM\020\000\022\033\n\027" +
+      "VOICEDATA_FORMAT_ENGINE\020\001\022\031\n\025VOICEDATA_F" +
+      "ORMAT_OPUS\020\002*B\n\016RequestPause_t\022\014\n\010RP_PAU" +
+      "SE\020\000\022\016\n\nRP_UNPAUSE\020\001\022\022\n\016RP_TOGGLEPAUSE\020\002" +
+      "*\035\n\014PrefetchType\022\r\n\tPFT_SOUND\020\000B@\n+skadi" +
+      "stats.clarity.wire.shared.common.protoB\021" +
+      "CommonNetMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -21664,7 +23390,7 @@ public final class CommonNetMessages {
     internal_static_CSVCMsg_PacketEntities_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_PacketEntities_descriptor,
-        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumberExecuted", "LastCmdNumberRecvDelta", "ServerTick", "SerializedEntities", "CommandQueueInfo", "AlternateBaselines", "HasPvsVisBits", "LastCmdRecvMargin", "NonTransmittedEntities", "DevPadding", });
+        new java.lang.String[] { "MaxEntries", "UpdatedEntries", "IsDelta", "UpdateBaseline", "Baseline", "DeltaFrom", "EntityData", "PendingFullFrame", "ActiveSpawngroupHandle", "MaxSpawngroupCreationsequence", "LastCmdNumberExecuted", "LastCmdNumberRecvDelta", "ServerTick", "SerializedEntities", "CommandQueueInfo", "AlternateBaselines", "HasPvsVisBits", "CmdRecvStatus", "LastCmdRecvMargin", "NonTransmittedEntities", "CqStarvedCommandTicks", "CqDiscardedCommandTicks", "DevPadding", });
     internal_static_CSVCMsg_PacketEntities_command_queue_info_t_descriptor =
       internal_static_CSVCMsg_PacketEntities_descriptor.getNestedTypes().get(0);
     internal_static_CSVCMsg_PacketEntities_command_queue_info_t_fieldAccessorTable = new
@@ -21749,6 +23475,18 @@ public final class CommonNetMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_FullFrameSplit_descriptor,
         new java.lang.String[] { "Tick", "Section", "Total", "Data", });
+    internal_static_CMsgServerUserCmd_descriptor =
+      getDescriptor().getMessageTypes().get(24);
+    internal_static_CMsgServerUserCmd_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CMsgServerUserCmd_descriptor,
+        new java.lang.String[] { "Data", "CmdNumber", "PlayerSlot", "ServerTickExecuted", "ClientTick", });
+    internal_static_CSVCMsg_UserCommands_descriptor =
+      getDescriptor().getMessageTypes().get(25);
+    internal_static_CSVCMsg_UserCommands_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CSVCMsg_UserCommands_descriptor,
+        new java.lang.String[] { "Commands", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
   }
 

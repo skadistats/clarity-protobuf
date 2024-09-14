@@ -53,6 +53,7 @@ public class EmbeddedPackets {
         /*  60 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_PeerList_VALUE, S2NetMessages.CSVCMsg_PeerList.class);
         /*  62 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_HLTVStatus_VALUE, S2NetMessages.CSVCMsg_HLTVStatus.class);
         /*  70 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
+        /*  76 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_UserCmds_VALUE, CommonNetMessages.CSVCMsg_UserCommands.class);
 
         /* 106 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_Fade_VALUE, S2UserMessages.CUserMessageFade.class);
         /* 114 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestState_VALUE, S2UserMessages.CUserMessageRequestState.class);

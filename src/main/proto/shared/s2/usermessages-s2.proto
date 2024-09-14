@@ -383,3 +383,12 @@ message CUserMessage_Inventory_Response {
   optional int32 instance = 13;
   optional int64 start_time = 15;
 }
+
+message CUserMessage_PlayResponseConditional {
+  optional int32 ent_index = 1 [default = -1];
+  repeated int32 player_slots = 2;
+  optional string response = 3;
+  optional .CMsgVector ent_origin = 4;
+  optional float pre_delay = 5;
+  optional int32 mix_priority = 6;
+}

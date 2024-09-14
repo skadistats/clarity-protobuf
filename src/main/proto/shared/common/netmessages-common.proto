@@ -137,8 +137,11 @@ message CSVCMsg_PacketEntities {
   optional .CSVCMsg_PacketEntities.command_queue_info_t command_queue_info = 14;
   repeated .CSVCMsg_PacketEntities.alternate_baseline_t alternate_baselines = 15;
   optional uint32 has_pvs_vis_bits = 16;
+	repeated sint32 cmd_recv_status = 22 [packed = true];
   optional uint32 last_cmd_recv_margin = 18;
   optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;
+	optional uint32 cq_starved_command_ticks = 20;
+	optional uint32 cq_discarded_command_ticks = 21;
   optional bytes dev_padding = 999;
 }
 message CSVCMsg_ClassInfo {
@@ -218,5 +221,17 @@ message CSVCMsg_FullFrameSplit {
 	optional int32 section = 2;
 	optional int32 total = 3;
 	optional bytes data = 4;
+}
+
+message CMsgServerUserCmd {
+	optional bytes data = 1;
+	optional int32 cmd_number = 2;
+	optional int32 player_slot = 3 [default = -1];
+	optional int32 server_tick_executed = 4;
+	optional int32 client_tick = 5;
+}
+
+message CSVCMsg_UserCommands {
+	repeated .CMsgServerUserCmd commands = 1;
 }
 

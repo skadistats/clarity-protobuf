@@ -3818,11 +3818,11 @@ public final class Demo {
         int getTeam();
 
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         boolean hasHeroId();
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         int getHeroId();
       }
@@ -3890,7 +3890,7 @@ public final class Demo {
                 }
                 case 24: {
                   bitField0_ |= 0x00000004;
-                  heroId_ = input.readUInt32();
+                  heroId_ = input.readInt32();
                   break;
                 }
               }
@@ -3966,13 +3966,13 @@ public final class Demo {
         public static final int HERO_ID_FIELD_NUMBER = 3;
         private int heroId_;
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         public boolean hasHeroId() {
           return ((bitField0_ & 0x00000004) == 0x00000004);
         }
         /**
-         * <code>optional uint32 hero_id = 3;</code>
+         * <code>optional int32 hero_id = 3;</code>
          */
         public int getHeroId() {
           return heroId_;
@@ -4003,7 +4003,7 @@ public final class Demo {
             output.writeUInt32(2, team_);
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            output.writeUInt32(3, heroId_);
+            output.writeInt32(3, heroId_);
           }
           getUnknownFields().writeTo(output);
         }
@@ -4024,7 +4024,7 @@ public final class Demo {
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(3, heroId_);
+              .computeInt32Size(3, heroId_);
           }
           size += getUnknownFields().getSerializedSize();
           memoizedSerializedSize = size;
@@ -4307,19 +4307,19 @@ public final class Demo {
 
           private int heroId_ ;
           /**
-           * <code>optional uint32 hero_id = 3;</code>
+           * <code>optional int32 hero_id = 3;</code>
            */
           public boolean hasHeroId() {
             return ((bitField0_ & 0x00000004) == 0x00000004);
           }
           /**
-           * <code>optional uint32 hero_id = 3;</code>
+           * <code>optional int32 hero_id = 3;</code>
            */
           public int getHeroId() {
             return heroId_;
           }
           /**
-           * <code>optional uint32 hero_id = 3;</code>
+           * <code>optional int32 hero_id = 3;</code>
            */
           public Builder setHeroId(int value) {
             bitField0_ |= 0x00000004;
@@ -4328,7 +4328,7 @@ public final class Demo {
             return this;
           }
           /**
-           * <code>optional uint32 hero_id = 3;</code>
+           * <code>optional int32 hero_id = 3;</code>
            */
           public Builder clearHeroId() {
             bitField0_ = (bitField0_ & ~0x00000004);
@@ -18335,7 +18335,7 @@ public final class Demo {
       "_name\030\001 \001(\t\022\023\n\013player_name\030\002 \001(\t\022\026\n\016is_f" +
       "ake_client\030\003 \001(\010\022\017\n\007steamid\030\004 \001(\004\022\021\n\tgam" +
       "e_team\030\005 \001(\005\032B\n\020CHeroSelectEvent\022\017\n\007is_p" +
-      "ick\030\001 \001(\010\022\014\n\004team\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\r" +
+      "ick\030\001 \001(\010\022\014\n\004team\030\002 \001(\r\022\017\n\007hero_id\030\003 \001(\005" +
       "\032(\n\013CCSGameInfo\022\031\n\021round_start_ticks\030\001 \003" +
       "(\005\"v\n\rCDemoFileInfo\022\025\n\rplayback_time\030\001 \001" +
       "(\002\022\026\n\016playback_ticks\030\002 \001(\005\022\027\n\017playback_f" +

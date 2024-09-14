@@ -5276,11 +5276,11 @@ public final class DOTAS2MatchMetadata {
         int getGemItemDefIndex();
 
         /**
-         * <code>optional uint32 required_hero_id = 3;</code>
+         * <code>optional int32 required_hero_id = 3;</code>
          */
         boolean hasRequiredHeroId();
         /**
-         * <code>optional uint32 required_hero_id = 3;</code>
+         * <code>optional int32 required_hero_id = 3;</code>
          */
         int getRequiredHeroId();
 
@@ -5384,7 +5384,7 @@ public final class DOTAS2MatchMetadata {
                 }
                 case 24: {
                   bitField0_ |= 0x00000004;
-                  requiredHeroId_ = input.readUInt32();
+                  requiredHeroId_ = input.readInt32();
                   break;
                 }
                 case 32: {
@@ -5480,13 +5480,13 @@ public final class DOTAS2MatchMetadata {
         public static final int REQUIRED_HERO_ID_FIELD_NUMBER = 3;
         private int requiredHeroId_;
         /**
-         * <code>optional uint32 required_hero_id = 3;</code>
+         * <code>optional int32 required_hero_id = 3;</code>
          */
         public boolean hasRequiredHeroId() {
           return ((bitField0_ & 0x00000004) == 0x00000004);
         }
         /**
-         * <code>optional uint32 required_hero_id = 3;</code>
+         * <code>optional int32 required_hero_id = 3;</code>
          */
         public int getRequiredHeroId() {
           return requiredHeroId_;
@@ -5581,7 +5581,7 @@ public final class DOTAS2MatchMetadata {
             output.writeUInt32(2, gemItemDefIndex_);
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            output.writeUInt32(3, requiredHeroId_);
+            output.writeInt32(3, requiredHeroId_);
           }
           if (((bitField0_ & 0x00000008) == 0x00000008)) {
             output.writeUInt32(4, startingValue_);
@@ -5614,7 +5614,7 @@ public final class DOTAS2MatchMetadata {
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
             size += com.google.protobuf.CodedOutputStream
-              .computeUInt32Size(3, requiredHeroId_);
+              .computeInt32Size(3, requiredHeroId_);
           }
           if (((bitField0_ & 0x00000008) == 0x00000008)) {
             size += com.google.protobuf.CodedOutputStream
@@ -5949,19 +5949,19 @@ public final class DOTAS2MatchMetadata {
 
           private int requiredHeroId_ ;
           /**
-           * <code>optional uint32 required_hero_id = 3;</code>
+           * <code>optional int32 required_hero_id = 3;</code>
            */
           public boolean hasRequiredHeroId() {
             return ((bitField0_ & 0x00000004) == 0x00000004);
           }
           /**
-           * <code>optional uint32 required_hero_id = 3;</code>
+           * <code>optional int32 required_hero_id = 3;</code>
            */
           public int getRequiredHeroId() {
             return requiredHeroId_;
           }
           /**
-           * <code>optional uint32 required_hero_id = 3;</code>
+           * <code>optional int32 required_hero_id = 3;</code>
            */
           public Builder setRequiredHeroId(int value) {
             bitField0_ |= 0x00000004;
@@ -5970,7 +5970,7 @@ public final class DOTAS2MatchMetadata {
             return this;
           }
           /**
-           * <code>optional uint32 required_hero_id = 3;</code>
+           * <code>optional int32 required_hero_id = 3;</code>
            */
           public Builder clearRequiredHeroId() {
             bitField0_ = (bitField0_ & ~0x00000004);
@@ -31383,11 +31383,11 @@ public final class DOTAS2MatchMetadata {
                 com.google.protobuf.MessageOrBuilder {
 
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               boolean hasHeroId();
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               int getHeroId();
 
@@ -31454,7 +31454,7 @@ public final class DOTAS2MatchMetadata {
                       }
                       case 8: {
                         bitField0_ |= 0x00000001;
-                        heroId_ = input.readUInt32();
+                        heroId_ = input.readInt32();
                         break;
                       }
                       case 16: {
@@ -31505,13 +31505,13 @@ public final class DOTAS2MatchMetadata {
               public static final int HERO_ID_FIELD_NUMBER = 1;
               private int heroId_;
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public boolean hasHeroId() {
                 return ((bitField0_ & 0x00000001) == 0x00000001);
               }
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public int getHeroId() {
                 return heroId_;
@@ -31550,7 +31550,7 @@ public final class DOTAS2MatchMetadata {
                                   throws java.io.IOException {
                 getSerializedSize();
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                  output.writeUInt32(1, heroId_);
+                  output.writeInt32(1, heroId_);
                 }
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   output.writeUInt32(2, damage_);
@@ -31566,7 +31566,7 @@ public final class DOTAS2MatchMetadata {
                 size = 0;
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
                   size += com.google.protobuf.CodedOutputStream
-                    .computeUInt32Size(1, heroId_);
+                    .computeInt32Size(1, heroId_);
                 }
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   size += com.google.protobuf.CodedOutputStream
@@ -31780,19 +31780,19 @@ public final class DOTAS2MatchMetadata {
 
                 private int heroId_ ;
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public boolean hasHeroId() {
                   return ((bitField0_ & 0x00000001) == 0x00000001);
                 }
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public int getHeroId() {
                   return heroId_;
                 }
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public Builder setHeroId(int value) {
                   bitField0_ |= 0x00000001;
@@ -31801,7 +31801,7 @@ public final class DOTAS2MatchMetadata {
                   return this;
                 }
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public Builder clearHeroId() {
                   bitField0_ = (bitField0_ & ~0x00000001);
@@ -32693,11 +32693,11 @@ public final class DOTAS2MatchMetadata {
                 com.google.protobuf.MessageOrBuilder {
 
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               boolean hasHeroId();
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               int getHeroId();
 
@@ -32764,7 +32764,7 @@ public final class DOTAS2MatchMetadata {
                       }
                       case 8: {
                         bitField0_ |= 0x00000001;
-                        heroId_ = input.readUInt32();
+                        heroId_ = input.readInt32();
                         break;
                       }
                       case 16: {
@@ -32815,13 +32815,13 @@ public final class DOTAS2MatchMetadata {
               public static final int HERO_ID_FIELD_NUMBER = 1;
               private int heroId_;
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public boolean hasHeroId() {
                 return ((bitField0_ & 0x00000001) == 0x00000001);
               }
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public int getHeroId() {
                 return heroId_;
@@ -32860,7 +32860,7 @@ public final class DOTAS2MatchMetadata {
                                   throws java.io.IOException {
                 getSerializedSize();
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                  output.writeUInt32(1, heroId_);
+                  output.writeInt32(1, heroId_);
                 }
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   output.writeUInt32(2, healing_);
@@ -32876,7 +32876,7 @@ public final class DOTAS2MatchMetadata {
                 size = 0;
                 if (((bitField0_ & 0x00000001) == 0x00000001)) {
                   size += com.google.protobuf.CodedOutputStream
-                    .computeUInt32Size(1, heroId_);
+                    .computeInt32Size(1, heroId_);
                 }
                 if (((bitField0_ & 0x00000002) == 0x00000002)) {
                   size += com.google.protobuf.CodedOutputStream
@@ -33090,19 +33090,19 @@ public final class DOTAS2MatchMetadata {
 
                 private int heroId_ ;
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public boolean hasHeroId() {
                   return ((bitField0_ & 0x00000001) == 0x00000001);
                 }
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public int getHeroId() {
                   return heroId_;
                 }
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public Builder setHeroId(int value) {
                   bitField0_ |= 0x00000001;
@@ -33111,7 +33111,7 @@ public final class DOTAS2MatchMetadata {
                   return this;
                 }
                 /**
-                 * <code>optional uint32 hero_id = 1;</code>
+                 * <code>optional int32 hero_id = 1;</code>
                  */
                 public Builder clearHeroId() {
                   bitField0_ = (bitField0_ & ~0x00000001);
@@ -34947,11 +34947,11 @@ public final class DOTAS2MatchMetadata {
               com.google.protobuf.MessageOrBuilder {
 
             /**
-             * <code>optional uint32 hero_id = 1;</code>
+             * <code>optional int32 hero_id = 1;</code>
              */
             boolean hasHeroId();
             /**
-             * <code>optional uint32 hero_id = 1;</code>
+             * <code>optional int32 hero_id = 1;</code>
              */
             int getHeroId();
 
@@ -35027,7 +35027,7 @@ public final class DOTAS2MatchMetadata {
                     }
                     case 8: {
                       bitField0_ |= 0x00000001;
-                      heroId_ = input.readUInt32();
+                      heroId_ = input.readInt32();
                       break;
                     }
                     case 21: {
@@ -35083,13 +35083,13 @@ public final class DOTAS2MatchMetadata {
             public static final int HERO_ID_FIELD_NUMBER = 1;
             private int heroId_;
             /**
-             * <code>optional uint32 hero_id = 1;</code>
+             * <code>optional int32 hero_id = 1;</code>
              */
             public boolean hasHeroId() {
               return ((bitField0_ & 0x00000001) == 0x00000001);
             }
             /**
-             * <code>optional uint32 hero_id = 1;</code>
+             * <code>optional int32 hero_id = 1;</code>
              */
             public int getHeroId() {
               return heroId_;
@@ -35144,7 +35144,7 @@ public final class DOTAS2MatchMetadata {
                                 throws java.io.IOException {
               getSerializedSize();
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
-                output.writeUInt32(1, heroId_);
+                output.writeInt32(1, heroId_);
               }
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 output.writeFloat(2, elapsedDuration_);
@@ -35163,7 +35163,7 @@ public final class DOTAS2MatchMetadata {
               size = 0;
               if (((bitField0_ & 0x00000001) == 0x00000001)) {
                 size += com.google.protobuf.CodedOutputStream
-                  .computeUInt32Size(1, heroId_);
+                  .computeInt32Size(1, heroId_);
               }
               if (((bitField0_ & 0x00000002) == 0x00000002)) {
                 size += com.google.protobuf.CodedOutputStream
@@ -35390,19 +35390,19 @@ public final class DOTAS2MatchMetadata {
 
               private int heroId_ ;
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public boolean hasHeroId() {
                 return ((bitField0_ & 0x00000001) == 0x00000001);
               }
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public int getHeroId() {
                 return heroId_;
               }
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public Builder setHeroId(int value) {
                 bitField0_ |= 0x00000001;
@@ -35411,7 +35411,7 @@ public final class DOTAS2MatchMetadata {
                 return this;
               }
               /**
-               * <code>optional uint32 hero_id = 1;</code>
+               * <code>optional int32 hero_id = 1;</code>
                */
               public Builder clearHeroId() {
                 bitField0_ = (bitField0_ & ~0x00000001);
@@ -37245,6 +37245,15 @@ public final class DOTAS2MatchMetadata {
            * <code>optional uint32 other = 6;</code>
            */
           int getOther();
+
+          /**
+           * <code>optional uint32 abilities = 7;</code>
+           */
+          boolean hasAbilities();
+          /**
+           * <code>optional uint32 abilities = 7;</code>
+           */
+          int getAbilities();
         }
         /**
          * Protobuf type {@code CDOTAMatchPrivateMetadata.Team.Player.XPReceived}
@@ -37326,6 +37335,11 @@ public final class DOTAS2MatchMetadata {
                   case 48: {
                     bitField0_ |= 0x00000020;
                     other_ = input.readUInt32();
+                    break;
+                  }
+                  case 56: {
+                    bitField0_ |= 0x00000040;
+                    abilities_ = input.readUInt32();
                     break;
                   }
                 }
@@ -37458,6 +37472,21 @@ public final class DOTAS2MatchMetadata {
             return other_;
           }
 
+          public static final int ABILITIES_FIELD_NUMBER = 7;
+          private int abilities_;
+          /**
+           * <code>optional uint32 abilities = 7;</code>
+           */
+          public boolean hasAbilities() {
+            return ((bitField0_ & 0x00000040) == 0x00000040);
+          }
+          /**
+           * <code>optional uint32 abilities = 7;</code>
+           */
+          public int getAbilities() {
+            return abilities_;
+          }
+
           private void initFields() {
             creep_ = 0;
             heroes_ = 0;
@@ -37465,6 +37494,7 @@ public final class DOTAS2MatchMetadata {
             tomeOfKnowledge_ = 0;
             outpost_ = 0;
             other_ = 0;
+            abilities_ = 0;
           }
           private byte memoizedIsInitialized = -1;
           public final boolean isInitialized() {
@@ -37496,6 +37526,9 @@ public final class DOTAS2MatchMetadata {
             }
             if (((bitField0_ & 0x00000020) == 0x00000020)) {
               output.writeUInt32(6, other_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+              output.writeUInt32(7, abilities_);
             }
             getUnknownFields().writeTo(output);
           }
@@ -37529,6 +37562,10 @@ public final class DOTAS2MatchMetadata {
             if (((bitField0_ & 0x00000020) == 0x00000020)) {
               size += com.google.protobuf.CodedOutputStream
                 .computeUInt32Size(6, other_);
+            }
+            if (((bitField0_ & 0x00000040) == 0x00000040)) {
+              size += com.google.protobuf.CodedOutputStream
+                .computeUInt32Size(7, abilities_);
             }
             size += getUnknownFields().getSerializedSize();
             memoizedSerializedSize = size;
@@ -37659,6 +37696,8 @@ public final class DOTAS2MatchMetadata {
               bitField0_ = (bitField0_ & ~0x00000010);
               other_ = 0;
               bitField0_ = (bitField0_ & ~0x00000020);
+              abilities_ = 0;
+              bitField0_ = (bitField0_ & ~0x00000040);
               return this;
             }
 
@@ -37711,6 +37750,10 @@ public final class DOTAS2MatchMetadata {
                 to_bitField0_ |= 0x00000020;
               }
               result.other_ = other_;
+              if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+                to_bitField0_ |= 0x00000040;
+              }
+              result.abilities_ = abilities_;
               result.bitField0_ = to_bitField0_;
               onBuilt();
               return result;
@@ -37744,6 +37787,9 @@ public final class DOTAS2MatchMetadata {
               }
               if (other.hasOther()) {
                 setOther(other.getOther());
+              }
+              if (other.hasAbilities()) {
+                setAbilities(other.getAbilities());
               }
               this.mergeUnknownFields(other.getUnknownFields());
               return this;
@@ -37960,6 +38006,38 @@ public final class DOTAS2MatchMetadata {
             public Builder clearOther() {
               bitField0_ = (bitField0_ & ~0x00000020);
               other_ = 0;
+              onChanged();
+              return this;
+            }
+
+            private int abilities_ ;
+            /**
+             * <code>optional uint32 abilities = 7;</code>
+             */
+            public boolean hasAbilities() {
+              return ((bitField0_ & 0x00000040) == 0x00000040);
+            }
+            /**
+             * <code>optional uint32 abilities = 7;</code>
+             */
+            public int getAbilities() {
+              return abilities_;
+            }
+            /**
+             * <code>optional uint32 abilities = 7;</code>
+             */
+            public Builder setAbilities(int value) {
+              bitField0_ |= 0x00000040;
+              abilities_ = value;
+              onChanged();
+              return this;
+            }
+            /**
+             * <code>optional uint32 abilities = 7;</code>
+             */
+            public Builder clearAbilities() {
+              bitField0_ = (bitField0_ & ~0x00000040);
+              abilities_ = 0;
               onChanged();
               return this;
             }
@@ -43033,7 +43111,7 @@ public final class DOTAS2MatchMetadata {
       "6\n\021AutoStyleCriteria\022\022\n\nname_token\030\001 \001(\r" +
       "\022\r\n\005value\030\002 \001(\002\032\306\001\n\022StrangeGemProgress\022\027",
       "\n\017kill_eater_type\030\001 \001(\r\022\032\n\022gem_item_def_" +
-      "index\030\002 \001(\r\022\030\n\020required_hero_id\030\003 \001(\r\022\026\n" +
+      "index\030\002 \001(\r\022\030\n\020required_hero_id\030\003 \001(\005\022\026\n" +
       "\016starting_value\030\004 \001(\r\022\024\n\014ending_value\030\005 " +
       "\001(\r\022\034\n\024owner_item_def_index\030\006 \001(\r\022\025\n\rown" +
       "er_item_id\030\007 \001(\004\032h\n\021VictoryPrediction\022\017\n" +
@@ -43146,16 +43224,16 @@ public final class DOTAS2MatchMetadata {
       "\n\003Tip\022\032\n\022source_player_slot\030\001 \001(\r\022\032\n\022tar" +
       "get_player_slot\030\002 \001(\r\022\022\n\ntip_amount\030\003 \001(" +
       "\r\022(\n\010event_id\030\004 \001(\0162\007.EEvent:\rEVENT_ID_N" +
-      "ONE\"\275\021\n\031CDOTAMatchPrivateMetadata\022.\n\005tea" +
+      "ONE\"\321\021\n\031CDOTAMatchPrivateMetadata\022.\n\005tea" +
       "ms\030\001 \003(\0132\037.CDOTAMatchPrivateMetadata.Tea" +
       "m\022\035\n\025graph_win_probability\030\002 \003(\002\022;\n\014stri" +
       "ng_names\030\003 \003(\0132%.CDOTAMatchPrivateMetada" +
       "ta.StringName\032&\n\nStringName\022\n\n\002id\030\001 \001(\r\022" +
-      "\014\n\004name\030\002 \001(\t\032\353\017\n\004Team\022\021\n\tdota_team\030\001 \001(",
+      "\014\n\004name\030\002 \001(\t\032\377\017\n\004Team\022\021\n\tdota_team\030\001 \001(",
       "\r\0227\n\007players\030\002 \003(\0132&.CDOTAMatchPrivateMe" +
       "tadata.Team.Player\022;\n\tbuildings\030\003 \003(\0132(." +
       "CDOTAMatchPrivateMetadata.Team.Building\032" +
-      "\362\r\n\006Player\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017posit" +
+      "\206\016\n\006Player\022\023\n\013player_slot\030\002 \001(\r\022\027\n\017posit" +
       "ion_stream\030\003 \001(\014\022M\n\017combat_segments\030\004 \003(" +
       "\01324.CDOTAMatchPrivateMetadata.Team.Playe" +
       "r.CombatSegment\022\031\n\021damage_unit_names\030\005 \003" +
@@ -43180,30 +43258,31 @@ public final class DOTAS2MatchMetadata {
       "\n\017by_hero_targets\030\002 \003(\0132Q.CDOTAMatchPriv" +
       "ateMetadata.Team.Player.CombatSegment.Da" +
       "mageByAbility.ByHeroTarget\032/\n\014ByHeroTarg" +
-      "et\022\017\n\007hero_id\030\001 \001(\r\022\016\n\006damage\030\002 \001(\r\032\344\001\n\020" +
+      "et\022\017\n\007hero_id\030\001 \001(\005\022\016\n\006damage\030\002 \001(\r\032\344\001\n\020" +
       "HealingByAbility\022\031\n\021source_unit_index\030\003 ",
       "\001(\r\022\026\n\nability_id\030\001 \001(\005:\002-1\022k\n\017by_hero_t" +
       "argets\030\002 \003(\0132R.CDOTAMatchPrivateMetadata" +
       ".Team.Player.CombatSegment.HealingByAbil" +
       "ity.ByHeroTarget\0320\n\014ByHeroTarget\022\017\n\007hero" +
-      "_id\030\001 \001(\r\022\017\n\007healing\030\002 \001(\r\032\354\001\n\nBuffRecor" +
+      "_id\030\001 \001(\005\022\017\n\007healing\030\002 \001(\r\032\354\001\n\nBuffRecor" +
       "d\022\033\n\017buff_ability_id\030\001 \001(\005:\002-1\022\032\n\022buff_m" +
       "odifier_name\030\003 \001(\t\022W\n\017by_hero_targets\030\002 " +
       "\003(\0132>.CDOTAMatchPrivateMetadata.Team.Pla" +
       "yer.BuffRecord.ByHeroTarget\032L\n\014ByHeroTar" +
-      "get\022\017\n\007hero_id\030\001 \001(\r\022\030\n\020elapsed_duration",
+      "get\022\017\n\007hero_id\030\001 \001(\005\022\030\n\020elapsed_duration",
       "\030\002 \001(\002\022\021\n\tis_hidden\030\003 \001(\010\032\230\001\n\014GoldReceiv" +
       "ed\022\r\n\005creep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\024\n\014bou" +
       "nty_runes\030\003 \001(\r\022\017\n\007passive\030\004 \001(\r\022\021\n\tbuil" +
       "dings\030\005 \001(\r\022\021\n\tabilities\030\006 \001(\r\022\r\n\005wards\030" +
-      "\007 \001(\r\022\r\n\005other\030\010 \001(\r\032v\n\nXPReceived\022\r\n\005cr" +
-      "eep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\016\n\006roshan\030\003 \001(" +
-      "\r\022\031\n\021tome_of_knowledge\030\004 \001(\r\022\017\n\007outpost\030" +
-      "\005 \001(\r\022\r\n\005other\030\006 \001(\r\032e\n\010Building\022\021\n\tunit" +
-      "_name\030\001 \001(\t\022\030\n\020position_quant_x\030\002 \001(\r\022\030\n" +
-      "\020position_quant_y\030\003 \001(\r\022\022\n\ndeath_time\030\004 ",
-      "\001(\002B<\n%skadistats.clarity.wire.dota.s2.p" +
-      "rotoB\023DOTAS2MatchMetadata"
+      "\007 \001(\r\022\r\n\005other\030\010 \001(\r\032\211\001\n\nXPReceived\022\r\n\005c" +
+      "reep\030\001 \001(\r\022\016\n\006heroes\030\002 \001(\r\022\016\n\006roshan\030\003 \001" +
+      "(\r\022\031\n\021tome_of_knowledge\030\004 \001(\r\022\017\n\007outpost" +
+      "\030\005 \001(\r\022\r\n\005other\030\006 \001(\r\022\021\n\tabilities\030\007 \001(\r" +
+      "\032e\n\010Building\022\021\n\tunit_name\030\001 \001(\t\022\030\n\020posit" +
+      "ion_quant_x\030\002 \001(\r\022\030\n\020position_quant_y\030\003 ",
+      "\001(\r\022\022\n\ndeath_time\030\004 \001(\002B<\n%skadistats.cl" +
+      "arity.wire.dota.s2.protoB\023DOTAS2MatchMet" +
+      "adata"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -43438,7 +43517,7 @@ public final class DOTAS2MatchMetadata {
     internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMatchPrivateMetadata_Team_Player_XPReceived_descriptor,
-        new java.lang.String[] { "Creep", "Heroes", "Roshan", "TomeOfKnowledge", "Outpost", "Other", });
+        new java.lang.String[] { "Creep", "Heroes", "Roshan", "TomeOfKnowledge", "Outpost", "Other", "Abilities", });
     internal_static_CDOTAMatchPrivateMetadata_Team_Building_descriptor =
       internal_static_CDOTAMatchPrivateMetadata_Team_descriptor.getNestedTypes().get(1);
     internal_static_CDOTAMatchPrivateMetadata_Team_Building_fieldAccessorTable = new
