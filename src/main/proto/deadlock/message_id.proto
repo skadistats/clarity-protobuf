@@ -1,0 +1,185 @@
+option java_package = "skadistats.clarity.wire.deadlock.proto";
+option java_outer_classname = "DeadlockMessageId";
+
+enum NET_Messages {
+  net_NOP = 0;
+  net_Disconnect = 1;
+  net_File = 2;
+  net_SplitScreenUser = 3;
+  net_Tick = 4;
+  net_StringCmd = 5;
+  net_SetConVar = 6;
+  net_SignonState = 7;
+  net_SpawnGroup_Load = 8;
+  net_SpawnGroup_ManifestUpdate = 9;
+  net_SpawnGroup_SetCreationTick = 11;
+  net_SpawnGroup_Unload = 12;
+  net_SpawnGroup_LoadCompleted = 13;
+  net_ReliableMessageEndMarker = 14;
+  net_DebugOverlay = 15;
+}
+
+enum CLC_Messages {
+  clc_ClientInfo = 20;
+  clc_Move = 21;
+  clc_VoiceData = 22;
+  clc_BaselineAck = 23;
+  clc_RespondCvarValue = 25;
+  clc_FileCRCCheck = 26;
+  clc_LoadingProgress = 27;
+  clc_SplitPlayerConnect = 28;
+  clc_SplitPlayerDisconnect = 30;
+  clc_ServerStatus = 31;
+  clc_RequestPause = 33;
+  clc_CmdKeyValues = 34;
+  clc_RconServerDetails = 35;
+  clc_HltvReplay = 36;
+  clc_Diagnostic = 37;
+}
+
+enum SVC_Messages {
+  svc_ServerInfo = 40;
+  svc_FlattenedSerializer = 41;
+  svc_ClassInfo = 42;
+  svc_SetPause = 43;
+  svc_CreateStringTable = 44;
+  svc_UpdateStringTable = 45;
+  svc_VoiceInit = 46;
+  svc_VoiceData = 47;
+  svc_Print = 48;
+  svc_Sounds = 49;
+  svc_SetView = 50;
+  svc_ClearAllStringTables = 51;
+  svc_CmdKeyValues = 52;
+  svc_BSPDecal = 53;
+  svc_SplitScreen = 54;
+  svc_PacketEntities = 55;
+  svc_Prefetch = 56;
+  svc_Menu = 57;
+  svc_GetCvarValue = 58;
+  svc_StopSound = 59;
+  svc_PeerList = 60;
+  svc_PacketReliable = 61;
+  svc_HLTVStatus = 62;
+  svc_ServerSteamID = 63;
+  svc_FullFrameSplit = 70;
+  svc_RconServerDetails = 71;
+  svc_UserMessage = 72;
+  svc_Broadcast_Command = 74;
+  svc_HltvFixupOperatorStatus = 75;
+  svc_UserCmds = 76;
+}
+
+enum EBaseUserMessages {
+  UM_AchievementEvent = 101;
+  UM_CloseCaption = 102;
+  UM_CloseCaptionDirect = 103;
+  UM_CurrentTimescale = 104;
+  UM_DesiredTimescale = 105;
+  UM_Fade = 106;
+  UM_GameTitle = 107;
+  UM_HudMsg = 110;
+  UM_HudText = 111;
+  UM_ColoredText = 113;
+  UM_RequestState = 114;
+  UM_ResetHUD = 115;
+  UM_Rumble = 116;
+  UM_SayText = 117;
+  UM_SayText2 = 118;
+  UM_SayTextChannel = 119;
+  UM_Shake = 120;
+  UM_ShakeDir = 121;
+  UM_WaterShake = 122;
+  UM_TextMsg = 124;
+  UM_ScreenTilt = 125;
+  UM_VoiceMask = 128;
+  UM_SendAudio = 130;
+  UM_ItemPickup = 131;
+  UM_AmmoDenied = 132;
+  UM_ShowMenu = 134;
+  UM_CreditsMsg = 135;
+  UM_CloseCaptionPlaceholder = 142;
+  UM_CameraTransition = 143;
+  UM_AudioParameter = 144;
+  UM_ParticleManager = 145;
+  UM_HudError = 146;
+  UM_CustomGameEvent = 148;
+  UM_AnimGraphUpdate = 149;
+  UM_HapticsManagerPulse = 150;
+  UM_HapticsManagerEffect = 151;
+  UM_CommandQueueState = 152;
+  UM_UpdateCssClasses = 153;
+  UM_ServerFrameTime = 154;
+  UM_LagCompensationError = 155;
+  UM_RequestDllStatus = 156;
+  UM_RequestUtilAction = 157;
+  UM_UtilActionResponse = 158;
+  UM_DllStatusResponse = 159;
+  UM_RequestInventory = 160;
+  UM_InventoryResponse = 161;
+  UM_RequestDiagnostic = 162;
+  UM_DiagnosticResponse = 163;
+  UM_ExtraUserData = 164;
+  UM_NotifyResponseFound = 165;
+  UM_PlayResponseConditional = 166;
+  UM_MAX_BASE = 200;
+}
+
+enum EBaseEntityMessages {
+  EM_PlayJingle = 136;
+  EM_ScreenOverlay = 137;
+  EM_RemoveAllDecals = 138;
+  EM_PropagateForce = 139;
+  EM_DoSpark = 140;
+  EM_FixAngle = 141;
+}
+
+enum CitadelUserMessageIds {
+  k_EUserMsg_Damage = 300;
+  k_EUserMsg_MapPing = 303;
+  k_EUserMsg_TeamRewards = 304;
+  k_EUserMsg_AbilityFailed = 306;
+  k_EUserMsg_TriggerDamageFlash = 308;
+  k_EUserMsg_AbilitiesChanged = 309;
+  k_EUserMsg_RecentDamageSummary = 310;
+  k_EUserMsg_SpectatorTeamChanged = 311;
+  k_EUserMsg_ChatWheel = 312;
+  k_EUserMsg_GoldHistory = 313;
+  k_EUserMsg_ChatMsg = 314;
+  k_EUserMsg_QuickResponse = 315;
+  k_EUserMsg_PostMatchDetails = 316;
+  k_EUserMsg_ChatEvent = 317;
+  k_EUserMsg_AbilityInterrupted = 318;
+  k_EUserMsg_HeroKilled = 319;
+  k_EUserMsg_ReturnIdol = 320;
+  k_EUserMsg_SetClientCameraAngles = 321;
+  k_EUserMsg_MapLine = 322;
+  k_EUserMsg_BulletHit = 323;
+  k_EUserMsg_ObjectiveMask = 324;
+  k_EUserMsg_ModifierApplied = 325;
+  k_EUserMsg_CameraController = 326;
+  k_EUserMsg_AuraModifierApplied = 327;
+  k_EUserMsg_ObstructedShotFired = 329;
+  k_EUserMsg_AbilityLateFailure = 330;
+  k_EUserMsg_AbilityPing = 331;
+  k_EUserMsg_PostProcessingAnim = 332;
+  k_EUserMsg_DeathReplayData = 333;
+  k_EUserMsg_PlayerLifetimeStatInfo = 334;
+  k_EUserMsg_ForceShopClosed = 336;
+  k_EUserMsg_StaminaDrained = 337;
+  k_EUserMsg_AbilityNotify = 338;
+  k_EUserMsg_GetDamageStatsResponse = 339;
+  k_EUserMsg_ParticipantStartSoundEvent = 340;
+  k_EUserMsg_ParticipantStopSoundEvent = 341;
+  k_EUserMsg_ParticipantStopSoundEventHash = 342;
+  k_EUserMsg_ParticipantSetSoundEventParams = 343;
+  k_EUserMsg_ParticipantSetLibraryStackFields = 344;
+  k_EUserMsg_CurrencyChanged = 345;
+  k_EUserMsg_GameOver = 346;
+  k_EUserMsg_BossKilled = 347;
+}
+
+enum CitadelEntityMessageIds {
+  k_EEntityMsg_BreakablePropSpawnDebris = 500;
+}
+

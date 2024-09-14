@@ -1,0 +1,190 @@
+option java_package = "skadistats.clarity.wire.deadlock.proto";
+option java_outer_classname = "CitadelUserMessages";
+
+import "networkbasetypes-common.proto";
+import "networkbasetypes-demo.proto";
+import "gameevents-s2.proto";
+import "citadel_gcmessages_common.proto";
+
+enum ChatMsgPingMarkerInfo {
+	k_EPingMarkerInfo_ShowMarkerAndSound = 0;
+	k_EPingMarkerInfo_HideMarkerAndSound = 1;
+	k_EPingMarkerInfo_ShowMarkerOnSender = 2;
+	k_EPingMarkerInfo_OnlyShowMarker = 3;
+	k_EPingMarkerInfo_OnlyPlaySound = 4;
+}
+
+enum ECitadelChatMessage {
+	CITADEL_CHAT_MESSAGE_UNPAUSE_COUNTDOWN = 1;
+	CITADEL_CHAT_MESSAGE_UNPAUSED = 2;
+	CITADEL_CHAT_MESSAGE_AUTO_UNPAUSED = 3;
+	CITADEL_CHAT_MESSAGE_PAUSE_COUNTDOWN = 4;
+	CITADEL_CHAT_MESSAGE_PAUSED = 5;
+	CITADEL_CHAT_MESSAGE_YOUPAUSED = 6;
+	CITADEL_CHAT_MESSAGE_CANTPAUSE = 7;
+	CITADEL_CHAT_MESSAGE_CANTUNPAUSETEAM = 8;
+	CITADEL_CHAT_MESSAGE_NOPAUSESLEFT = 9;
+	CITADEL_CHAT_MESSAGE_CANTPAUSEYET = 10;
+	CITADEL_CHAT_MESSAGE_PREGAME_COUNTDOWN = 11;
+	CITADEL_CHAT_MESSAGE_NOTEAMPAUSESLEFT = 12;
+	CITADEL_CHAT_MESSAGE_COMMS_RESTRICTED = 13;
+}
+
+enum PostProcessingGameStates {
+	PostProcState_Killed = 0;
+	PostProcState_Black = 1;
+	PostProcState_Blinded = 2;
+	PostProcState_ShivPossessed = 3;
+}
+
+message CCitadelUserMessage_Damage {
+	optional int32 damage = 1;
+	optional int32 pre_damage = 2;
+	optional int32 type = 3;
+	optional int32 citadel_type = 4;
+	optional .CMsgVector origin = 5;
+	optional int32 entindex_victim = 6 [default = -1];
+	optional int32 entindex_inflictor = 7 [default = -1];
+	optional int32 entindex_attacker = 8 [default = -1];
+	optional int32 entindex_ability = 9 [default = -1];
+	optional int32 damage_absorbed = 10;
+	optional int32 victim_health_max = 11;
+	optional int32 victim_health_new = 12;
+	optional uint64 flags = 13;
+	optional uint32 ability_id = 14;
+	optional uint32 attacker_class = 15;
+	optional uint32 victim_class = 16;
+	optional int32 victim_shield_max = 17;
+	optional int32 victim_shield_new = 18;
+	optional int32 hits = 19;
+	optional int32 health_lost = 20;
+}
+
+message PingCommonData {
+	optional uint32 ping_message_id = 1;
+	optional .CMsgVector ping_location = 2;
+	optional uint32 entity_index = 3 [default = 16777215];
+	optional int32 sender_player_slot = 4 [default = -1];
+	optional int32 speech_concept = 5;
+	optional string response_chosen = 6;
+	optional float cooldown_time = 7;
+}
+
+message CCitadelUserMsg_MapPing {
+	required .PingCommonData ping_data = 1;
+	optional uint32 event_type = 2;
+	optional .ChatMsgPingMarkerInfo ping_marker_and_sound_info = 3 [default = k_EPingMarkerInfo_ShowMarkerAndSound];
+	optional bool pinged_enemy_entity = 4;
+	optional uint32 pinged_entity_class = 5;
+	optional bool is_minimap_ping = 6;
+	optional string pinged_hero_name = 7;
+	optional bool is_blind_ping = 8;
+}
+
+message CCitadelUserMsg_TriggerDamageFlash {
+	optional int32 entindex_flash_victim = 1 [default = -1];
+	optional int32 entindex_flash_attacker = 2 [default = -1];
+	optional int32 entindex_flash_hitgroup = 3;
+	optional uint32 flash_value = 4;
+	optional uint32 flash_type = 5;
+	optional uint32 flash_flags = 6;
+	optional .CMsgVector flash_position = 7;
+}
+
+message CCitadelUserMsg_ChatWheel {
+	optional uint32 chat_message_id = 1;
+	optional int32 player_slot = 2 [default = -1];
+	optional int32 pawn_entindex = 3 [default = -1];
+	optional uint32 account_id = 4;
+	optional uint32 hero_id = 5;
+	optional string param_1 = 6;
+	optional .CMsgLaneColor lane_color = 7 [default = k_ELaneColor_Invalid];
+}
+
+message CCitadelUserMsg_ChatMsg {
+	optional int32 player_slot = 1 [default = -1];
+	optional string text = 2;
+	optional bool all_chat = 3;
+	optional .CMsgLaneColor lane_color = 4 [default = k_ELaneColor_Invalid];
+}
+
+message CCitadelUserMsg_PostMatchDetails {
+	optional bytes match_details = 1;
+}
+
+message CCitadelUserMsg_ChatEvent {
+	optional .ECitadelChatMessage type = 1 [default = CITADEL_CHAT_MESSAGE_UNPAUSE_COUNTDOWN];
+	repeated uint32 values = 2;
+	repeated int32 player_slots = 3;
+}
+
+message CCitadelUserMsg_HeroKilled {
+	optional int32 entindex_victim = 1 [default = -1];
+	optional int32 entindex_inflictor = 2 [default = -1];
+	optional int32 entindex_attacker = 3 [default = -1];
+	repeated int32 entindex_assisters = 4;
+	optional int32 entindex_scorer = 5 [default = -1];
+	optional int32 respawn_reason = 6;
+}
+
+message CCitadelEntityMsg_BreakablePropSpawnDebris {
+	optional .CEntityMsg entity_msg = 1;
+	optional .CMsgVector damage_pos = 2;
+	optional float damage = 3;
+}
+
+message CCitadelUserMsg_PostProcessingAnim {
+	optional int32 entindex_owner = 1 [default = -1];
+	optional bool clear_all_states = 2;
+	optional .PostProcessingGameStates state = 3 [default = PostProcState_Killed];
+	optional float start_time = 4;
+	optional float fade_in_time = 5;
+	optional float hold_time = 6;
+	optional float fade_out_time = 7;
+	optional float scale = 8;
+}
+
+message CCitadelUserMessage_AbilityNotify {
+	optional int32 entindex_victim = 1 [default = -1];
+	optional int32 entindex_attacker = 2 [default = -1];
+	optional uint32 ability_id = 3;
+}
+
+message CCitadelUserMessage_GameOver {
+	optional int32 winning_team = 1;
+	optional bool just_a_test = 2;
+}
+
+message CCitadelUserMsg_ParticipantStartSoundEvent {
+	required .CMsgSosStartSoundEvent event = 1;
+	repeated int32 player_slots = 2;
+}
+
+message CCitadelUserMsg_ParticipantStopSoundEvent {
+	required .CMsgSosStopSoundEvent event = 1;
+	repeated int32 player_slots = 2;
+}
+
+message CCitadelUserMsg_ParticipantStopSoundEventHash {
+	required .CMsgSosStopSoundEventHash event = 1;
+	repeated int32 player_slots = 2;
+}
+
+message CCitadelUserMsg_ParticipantSetSoundEventParams {
+	required .CMsgSosSetSoundEventParams event = 1;
+	repeated int32 player_slots = 2;
+}
+
+message CCitadelUserMsg_ParticipantSetLibraryStackFields {
+	required .CMsgSosSetLibraryStackFields event = 1;
+	repeated int32 player_slots = 2;
+}
+
+message CCitadelUserMsg_BossKilled {
+	optional int32 objective_team = 1;
+	optional int32 objective_mask_change = 2;
+	required uint32 entity_killed = 3 [default = 16777215];
+	required int32 entity_killed_class = 4;
+	required uint32 entity_killer = 5 [default = 16777215];
+	required float gametime = 6;
+}

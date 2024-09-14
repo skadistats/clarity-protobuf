@@ -220,3 +220,15 @@ message CSVCMsg_FullFrameSplit {
 	optional bytes data = 4;
 }
 
+message CMsgServerUserCmd {
+	optional bytes data = 1;
+	optional int32 cmd_number = 2;
+	optional int32 player_slot = 3 [default = -1];
+	optional int32 server_tick_executed = 4;
+	optional int32 client_tick = 5;
+}
+
+message CSVCMsg_UserCommands {
+	repeated .CMsgServerUserCmd commands = 1;
+}
+
