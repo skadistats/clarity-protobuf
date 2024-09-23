@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.skadistats"
-version = "5.3"
+version = "5.4"
 
 java {
     toolchain {
