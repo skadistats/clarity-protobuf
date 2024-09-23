@@ -250,6 +250,7 @@ public class EmbeddedPackets {
         /* 621 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_PlayerDraftPick_VALUE, DOTAUserMessages.CDOTAUserMsg_PlayerDraftPick.class);
         /* 622 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_UpdateLinearProjectileCPData_VALUE, DOTAUserMessages.CDOTAUserMsg_ProjectileParticleCPData.class);
         /* 623 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_GiftPlayer_VALUE, DOTAUserMessages.CDOTAUserMsg_GiftPlayer.class);
+        /* 624 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_FacetPing_VALUE, DOTAUserMessages.CDOTAUserMsg_FacetPing.class);
 
 //      /* 464 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //      /* 465 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DOTAUserMessages.CDOTAUserMsg_AIDebugLine.class);
