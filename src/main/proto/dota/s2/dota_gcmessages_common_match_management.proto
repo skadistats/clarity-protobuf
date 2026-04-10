@@ -301,4 +301,5 @@ message CMvpData {
     }
 
     repeated .CMvpData.MvpDatum mvps = 1;
+    repeated .CMvpData.MvpDatum event_mvps = 2;
 }

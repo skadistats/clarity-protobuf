@@ -65,6 +65,14 @@ public final class S2GameEvents {
      * <code>GE_SosStopSoundEventHash = 212;</code>
      */
     GE_SosStopSoundEventHash(12, 212),
+    /**
+     * <code>GE_ClothStiffenAnimEvent = 213;</code>
+     */
+    GE_ClothStiffenAnimEvent(13, 213),
+    /**
+     * <code>GE_ClothEffectAnimEvent = 214;</code>
+     */
+    GE_ClothEffectAnimEvent(14, 214),
     ;
 
     /**
@@ -119,6 +127,14 @@ public final class S2GameEvents {
      * <code>GE_SosStopSoundEventHash = 212;</code>
      */
     public static final int GE_SosStopSoundEventHash_VALUE = 212;
+    /**
+     * <code>GE_ClothStiffenAnimEvent = 213;</code>
+     */
+    public static final int GE_ClothStiffenAnimEvent_VALUE = 213;
+    /**
+     * <code>GE_ClothEffectAnimEvent = 214;</code>
+     */
+    public static final int GE_ClothEffectAnimEvent_VALUE = 214;
 
 
     public final int getNumber() { return value; }
@@ -138,6 +154,8 @@ public final class S2GameEvents {
         case 210: return GE_SosSetSoundEventParams;
         case 211: return GE_SosSetLibraryStackFields;
         case 212: return GE_SosStopSoundEventHash;
+        case 213: return GE_ClothStiffenAnimEvent;
+        case 214: return GE_ClothEffectAnimEvent;
         default: return null;
       }
     }
@@ -11373,7 +11391,7 @@ public final class S2GameEvents {
       "dEventParams\022\027\n\017soundevent_guid\030\001 \001(\005\022\025\n" +
       "\rpacked_params\030\005 \001(\014\"I\n\034CMsgSosSetLibrar" +
       "yStackFields\022\022\n\nstack_hash\030\001 \001(\007\022\025\n\rpack" +
-      "ed_fields\030\005 \001(\014*\267\003\n\017EBaseGameEvents\022 \n\033G" +
+      "ed_fields\030\005 \001(\014*\364\003\n\017EBaseGameEvents\022 \n\033G" +
       "E_VDebugGameSessionIDEvent\020\310\001\022\027\n\022GE_Plac" +
       "eDecalEvent\020\311\001\022\035\n\030GE_ClearWorldDecalsEve" +
       "nt\020\312\001\022\036\n\031GE_ClearEntityDecalsEvent\020\313\001\022+\n" +
@@ -11384,8 +11402,10 @@ public final class S2GameEvents {
       "SoundEvent\020\320\001\022\031\n\024GE_SosStopSoundEvent\020\321\001" +
       "\022\036\n\031GE_SosSetSoundEventParams\020\322\001\022 \n\033GE_S" +
       "osSetLibraryStackFields\020\323\001\022\035\n\030GE_SosStop" +
-      "SoundEventHash\020\324\001B7\n\'skadistats.clarity." +
-      "wire.shared.s2.protoB\014S2GameEvents"
+      "SoundEventHash\020\324\001\022\035\n\030GE_ClothStiffenAnim" +
+      "Event\020\325\001\022\034\n\027GE_ClothEffectAnimEvent\020\326\001B7" +
+      "\n\'skadistats.clarity.wire.shared.s2.prot" +
+      "oB\014S2GameEvents"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

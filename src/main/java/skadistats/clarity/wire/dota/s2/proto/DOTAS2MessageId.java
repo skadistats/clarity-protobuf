@@ -562,6 +562,10 @@ public final class DOTAS2MessageId {
      * <code>svc_UserCmds = 76;</code>
      */
     svc_UserCmds(30, 76),
+    /**
+     * <code>svc_NextMsgPredicted = 77;</code>
+     */
+    svc_NextMsgPredicted(31, 77),
     ;
 
     /**
@@ -688,6 +692,10 @@ public final class DOTAS2MessageId {
      * <code>svc_UserCmds = 76;</code>
      */
     public static final int svc_UserCmds_VALUE = 76;
+    /**
+     * <code>svc_NextMsgPredicted = 77;</code>
+     */
+    public static final int svc_NextMsgPredicted_VALUE = 77;
 
 
     public final int getNumber() { return value; }
@@ -725,6 +733,7 @@ public final class DOTAS2MessageId {
         case 74: return svc_Broadcast_Command;
         case 75: return svc_HltvFixupOperatorStatus;
         case 76: return svc_UserCmds;
+        case 77: return svc_NextMsgPredicted;
         default: return null;
       }
     }
@@ -2120,6 +2129,46 @@ public final class DOTAS2MessageId {
      * <code>DOTA_UM_RoshanTimer = 626;</code>
      */
     DOTA_UM_RoshanTimer(160, 626),
+    /**
+     * <code>DOTA_UM_NeutralCraftAvailable = 627;</code>
+     */
+    DOTA_UM_NeutralCraftAvailable(161, 627),
+    /**
+     * <code>DOTA_UM_TimerAlert = 628;</code>
+     */
+    DOTA_UM_TimerAlert(162, 628),
+    /**
+     * <code>DOTA_UM_MadstoneAlert = 629;</code>
+     */
+    DOTA_UM_MadstoneAlert(163, 629),
+    /**
+     * <code>DOTA_UM_CourierLeftFountainAlert = 630;</code>
+     */
+    DOTA_UM_CourierLeftFountainAlert(164, 630),
+    /**
+     * <code>DOTA_UM_MonsterHunter_InvestigationsAvailable = 631;</code>
+     */
+    DOTA_UM_MonsterHunter_InvestigationsAvailable(165, 631),
+    /**
+     * <code>DOTA_UM_MonsterHunter_InvestigationGameState = 632;</code>
+     */
+    DOTA_UM_MonsterHunter_InvestigationGameState(166, 632),
+    /**
+     * <code>DOTA_UM_MonsterHunter_HuntAlert = 633;</code>
+     */
+    DOTA_UM_MonsterHunter_HuntAlert(167, 633),
+    /**
+     * <code>DOTA_UM_TormentorTimer = 634;</code>
+     */
+    DOTA_UM_TormentorTimer(168, 634),
+    /**
+     * <code>DOTA_UM_KillEffect = 635;</code>
+     */
+    DOTA_UM_KillEffect(169, 635),
+    /**
+     * <code>DOTA_UM_GiveItem = 636;</code>
+     */
+    DOTA_UM_GiveItem(170, 636),
     ;
 
     /**
@@ -2766,6 +2815,46 @@ public final class DOTAS2MessageId {
      * <code>DOTA_UM_RoshanTimer = 626;</code>
      */
     public static final int DOTA_UM_RoshanTimer_VALUE = 626;
+    /**
+     * <code>DOTA_UM_NeutralCraftAvailable = 627;</code>
+     */
+    public static final int DOTA_UM_NeutralCraftAvailable_VALUE = 627;
+    /**
+     * <code>DOTA_UM_TimerAlert = 628;</code>
+     */
+    public static final int DOTA_UM_TimerAlert_VALUE = 628;
+    /**
+     * <code>DOTA_UM_MadstoneAlert = 629;</code>
+     */
+    public static final int DOTA_UM_MadstoneAlert_VALUE = 629;
+    /**
+     * <code>DOTA_UM_CourierLeftFountainAlert = 630;</code>
+     */
+    public static final int DOTA_UM_CourierLeftFountainAlert_VALUE = 630;
+    /**
+     * <code>DOTA_UM_MonsterHunter_InvestigationsAvailable = 631;</code>
+     */
+    public static final int DOTA_UM_MonsterHunter_InvestigationsAvailable_VALUE = 631;
+    /**
+     * <code>DOTA_UM_MonsterHunter_InvestigationGameState = 632;</code>
+     */
+    public static final int DOTA_UM_MonsterHunter_InvestigationGameState_VALUE = 632;
+    /**
+     * <code>DOTA_UM_MonsterHunter_HuntAlert = 633;</code>
+     */
+    public static final int DOTA_UM_MonsterHunter_HuntAlert_VALUE = 633;
+    /**
+     * <code>DOTA_UM_TormentorTimer = 634;</code>
+     */
+    public static final int DOTA_UM_TormentorTimer_VALUE = 634;
+    /**
+     * <code>DOTA_UM_KillEffect = 635;</code>
+     */
+    public static final int DOTA_UM_KillEffect_VALUE = 635;
+    /**
+     * <code>DOTA_UM_GiveItem = 636;</code>
+     */
+    public static final int DOTA_UM_GiveItem_VALUE = 636;
 
 
     public final int getNumber() { return value; }
@@ -2933,6 +3022,16 @@ public final class DOTAS2MessageId {
         case 624: return DOTA_UM_FacetPing;
         case 625: return DOTA_UM_InnatePing;
         case 626: return DOTA_UM_RoshanTimer;
+        case 627: return DOTA_UM_NeutralCraftAvailable;
+        case 628: return DOTA_UM_TimerAlert;
+        case 629: return DOTA_UM_MadstoneAlert;
+        case 630: return DOTA_UM_CourierLeftFountainAlert;
+        case 631: return DOTA_UM_MonsterHunter_InvestigationsAvailable;
+        case 632: return DOTA_UM_MonsterHunter_InvestigationGameState;
+        case 633: return DOTA_UM_MonsterHunter_HuntAlert;
+        case 634: return DOTA_UM_TormentorTimer;
+        case 635: return DOTA_UM_KillEffect;
+        case 636: return DOTA_UM_GiveItem;
         default: return null;
       }
     }
@@ -3013,7 +3112,7 @@ public final class DOTAS2MessageId {
       "s\020\037\022\022\n\016clc_ServerPing\020 \022\024\n\020clc_RequestPa" +
       "use\020!\022\024\n\020clc_CmdKeyValues\020\"\022\031\n\025clc_RconS" +
       "erverDetails\020#\022\022\n\016clc_HltvReplay\020$\022\022\n\016cl",
-      "c_Diagnostic\020%*\253\005\n\014SVC_Messages\022\022\n\016svc_S" +
+      "c_Diagnostic\020%*\305\005\n\014SVC_Messages\022\022\n\016svc_S" +
       "erverInfo\020(\022\033\n\027svc_FlattenedSerializer\020)" +
       "\022\021\n\rsvc_ClassInfo\020*\022\020\n\014svc_SetPause\020+\022\031\n" +
       "\025svc_CreateStringTable\020,\022\031\n\025svc_UpdateSt" +
@@ -3030,168 +3129,177 @@ public final class DOTAS2MessageId {
       "c_RconServerDetails\020G\022\023\n\017svc_UserMessage" +
       "\020H\022\022\n\016svc_HltvReplay\020I\022\031\n\025svc_Broadcast_" +
       "Command\020J\022\037\n\033svc_HltvFixupOperatorStatus" +
-      "\020K\022\020\n\014svc_UserCmds\020L*\214\n\n\021EBaseUserMessag" +
-      "es\022\027\n\023UM_AchievementEvent\020e\022\023\n\017UM_CloseC" +
-      "aption\020f\022\031\n\025UM_CloseCaptionDirect\020g\022\027\n\023U",
-      "M_CurrentTimescale\020h\022\027\n\023UM_DesiredTimesc" +
-      "ale\020i\022\013\n\007UM_Fade\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013" +
-      "UM_HintText\020m\022\r\n\tUM_HudMsg\020n\022\016\n\nUM_HudTe" +
-      "xt\020o\022\022\n\016UM_KeyHintText\020p\022\022\n\016UM_ColoredTe" +
-      "xt\020q\022\023\n\017UM_RequestState\020r\022\017\n\013UM_ResetHUD" +
-      "\020s\022\r\n\tUM_Rumble\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_" +
-      "SayText2\020v\022\025\n\021UM_SayTextChannel\020w\022\014\n\010UM_" +
-      "Shake\020x\022\017\n\013UM_ShakeDir\020y\022\016\n\nUM_TextMsg\020|" +
-      "\022\021\n\rUM_ScreenTilt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_" +
-      "VGUIMenu\020\177\022\021\n\014UM_VoiceMask\020\200\001\022\025\n\020UM_Voic",
-      "eSubtitle\020\201\001\022\021\n\014UM_SendAudio\020\202\001\022\022\n\rUM_It" +
-      "emPickup\020\203\001\022\022\n\rUM_AmmoDenied\020\204\001\022\026\n\021UM_Cr" +
-      "osshairAngle\020\205\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_" +
-      "CreditsMsg\020\207\001\022\037\n\032UM_CloseCaptionPlacehol" +
-      "der\020\216\001\022\030\n\023UM_CameraTransition\020\217\001\022\026\n\021UM_A" +
-      "udioParameter\020\220\001\022\027\n\022UM_ParticleManager\020\221" +
-      "\001\022\020\n\013UM_HudError\020\222\001\022\027\n\022UM_CustomGameEven" +
-      "t\020\224\001\022\027\n\022UM_AnimGraphUpdate\020\225\001\022\033\n\026UM_Hapt" +
-      "icsManagerPulse\020\226\001\022\034\n\027UM_HapticsManagerE" +
-      "ffect\020\227\001\022\031\n\024UM_CommandQueueState\020\230\001\022\030\n\023U",
-      "M_UpdateCssClasses\020\231\001\022\027\n\022UM_ServerFrameT" +
-      "ime\020\232\001\022\034\n\027UM_LagCompensationError\020\233\001\022\030\n\023" +
-      "UM_RequestDllStatus\020\234\001\022\031\n\024UM_RequestUtil" +
-      "Action\020\235\001\022\032\n\025UM_UtilActionResponse\020\236\001\022\031\n" +
-      "\024UM_DllStatusResponse\020\237\001\022\030\n\023UM_RequestIn" +
-      "ventory\020\240\001\022\031\n\024UM_InventoryResponse\020\241\001\022\031\n" +
-      "\024UM_RequestDiagnostic\020\242\001\022\032\n\025UM_Diagnosti" +
-      "cResponse\020\243\001\022\025\n\020UM_ExtraUserData\020\244\001\022\033\n\026U" +
-      "M_NotifyResponseFound\020\245\001\022\037\n\032UM_PlayRespo" +
-      "nseConditional\020\246\001\022\020\n\013UM_MAX_BASE\020\310\001*\224\001\n\023",
-      "EBaseEntityMessages\022\022\n\rEM_PlayJingle\020\210\001\022" +
-      "\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM_RemoveAllDe" +
-      "cals\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\nEM_Do" +
-      "Spark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\263&\n\021EDotaUser" +
-      "Messages\022\037\n\032DOTA_UM_AddUnitToSelection\020\320" +
-      "\003\022\030\n\023DOTA_UM_AIDebugLine\020\321\003\022\026\n\021DOTA_UM_C" +
-      "hatEvent\020\322\003\022 \n\033DOTA_UM_CombatHeroPositio" +
-      "ns\020\323\003\022\032\n\025DOTA_UM_CombatLogData\020\324\003\022\036\n\031DOT" +
-      "A_UM_CombatLogBulkData\020\326\003\022#\n\036DOTA_UM_Cre" +
-      "ateLinearProjectile\020\327\003\022$\n\037DOTA_UM_Destro",
-      "yLinearProjectile\020\330\003\022%\n DOTA_UM_DodgeTra" +
-      "ckingProjectiles\020\331\003\022\035\n\030DOTA_UM_GlobalLig" +
-      "htColor\020\332\003\022!\n\034DOTA_UM_GlobalLightDirecti" +
-      "on\020\333\003\022\033\n\026DOTA_UM_InvalidCommand\020\334\003\022\031\n\024DO" +
-      "TA_UM_LocationPing\020\335\003\022\024\n\017DOTA_UM_MapLine" +
-      "\020\336\003\022\034\n\027DOTA_UM_MiniKillCamInfo\020\337\003\022\036\n\031DOT" +
-      "A_UM_MinimapDebugPoint\020\340\003\022\031\n\024DOTA_UM_Min" +
-      "imapEvent\020\341\003\022\035\n\030DOTA_UM_NevermoreRequiem" +
-      "\020\342\003\022\032\n\025DOTA_UM_OverheadEvent\020\343\003\022\037\n\032DOTA_" +
-      "UM_SetNextAutobuyItem\020\344\003\022\033\n\026DOTA_UM_Shar",
-      "edCooldown\020\345\003\022!\n\034DOTA_UM_SpectatorPlayer" +
-      "Click\020\346\003\022\034\n\027DOTA_UM_TutorialTipInfo\020\347\003\022\026" +
-      "\n\021DOTA_UM_UnitEvent\020\350\003\022\034\n\027DOTA_UM_Partic" +
-      "leManager\020\351\003\022\024\n\017DOTA_UM_BotChat\020\352\003\022\025\n\020DO" +
-      "TA_UM_HudError\020\353\003\022\032\n\025DOTA_UM_ItemPurchas" +
-      "ed\020\354\003\022\021\n\014DOTA_UM_Ping\020\355\003\022\026\n\021DOTA_UM_Item" +
-      "Found\020\356\003\022\"\n\035DOTA_UM_CharacterSpeakConcep" +
-      "t\020\357\003\022\027\n\022DOTA_UM_SwapVerify\020\360\003\022\026\n\021DOTA_UM" +
-      "_WorldLine\020\361\003\022\033\n\026DOTA_UM_TournamentDrop\020" +
-      "\362\003\022\026\n\021DOTA_UM_ItemAlert\020\363\003\022\033\n\026DOTA_UM_Ha",
-      "lloweenDrops\020\364\003\022\026\n\021DOTA_UM_ChatWheel\020\365\003\022" +
-      "\035\n\030DOTA_UM_ReceivedXmasGift\020\366\003\022 \n\033DOTA_U" +
-      "M_UpdateSharedContent\020\367\003\022\037\n\032DOTA_UM_Tuto" +
-      "rialRequestExp\020\370\003\022 \n\033DOTA_UM_TutorialPin" +
-      "gMinimap\020\371\003\022\"\n\035DOTA_UM_GamerulesStateCha" +
-      "nged\020\372\003\022\027\n\022DOTA_UM_ShowSurvey\020\373\003\022\031\n\024DOTA" +
-      "_UM_TutorialFade\020\374\003\022\035\n\030DOTA_UM_AddQuestL" +
-      "ogEntry\020\375\003\022\032\n\025DOTA_UM_SendStatPopup\020\376\003\022\033" +
-      "\n\026DOTA_UM_TutorialFinish\020\377\003\022\034\n\027DOTA_UM_S" +
-      "endRoshanPopup\020\200\004\022\037\n\032DOTA_UM_SendGeneric",
-      "ToolTip\020\201\004\022\032\n\025DOTA_UM_SendFinalGold\020\202\004\022\026" +
-      "\n\021DOTA_UM_CustomMsg\020\203\004\022\031\n\024DOTA_UM_CoachH" +
-      "UDPing\020\204\004\022\036\n\031DOTA_UM_ClientLoadGridNav\020\205" +
-      "\004\022\032\n\025DOTA_UM_TE_Projectile\020\206\004\022\035\n\030DOTA_UM" +
-      "_TE_ProjectileLoc\020\207\004\022\037\n\032DOTA_UM_TE_DotaB" +
-      "loodImpact\020\210\004\022\035\n\030DOTA_UM_TE_UnitAnimatio" +
-      "n\020\211\004\022 \n\033DOTA_UM_TE_UnitAnimationEnd\020\212\004\022\030" +
-      "\n\023DOTA_UM_AbilityPing\020\213\004\022\035\n\030DOTA_UM_Show" +
-      "GenericPopup\020\214\004\022\026\n\021DOTA_UM_VoteStart\020\215\004\022" +
-      "\027\n\022DOTA_UM_VoteUpdate\020\216\004\022\024\n\017DOTA_UM_Vote",
-      "End\020\217\004\022\031\n\024DOTA_UM_BoosterState\020\220\004\022\036\n\031DOT" +
-      "A_UM_WillPurchaseAlert\020\221\004\022$\n\037DOTA_UM_Tut" +
-      "orialMinimapPosition\020\222\004\022\026\n\021DOTA_UM_Playe" +
-      "rMMR\020\223\004\022\031\n\024DOTA_UM_AbilitySteal\020\224\004\022\037\n\032DO" +
-      "TA_UM_CourierKilledAlert\020\225\004\022\033\n\026DOTA_UM_E" +
-      "nemyItemAlert\020\226\004\022\036\n\031DOTA_UM_StatsMatchDe" +
-      "tails\020\227\004\022\026\n\021DOTA_UM_MiniTaunt\020\230\004\022\036\n\031DOTA" +
-      "_UM_BuyBackStateAlert\020\231\004\022\031\n\024DOTA_UM_Spee" +
-      "chBubble\020\232\004\022 \n\033DOTA_UM_CustomHeaderMessa" +
-      "ge\020\233\004\022\032\n\025DOTA_UM_QuickBuyAlert\020\234\004\022\035\n\030DOT",
-      "A_UM_StatsHeroDetails\020\235\004\022\035\n\030DOTA_UM_Pred" +
-      "ictionResult\020\236\004\022\032\n\025DOTA_UM_ModifierAlert" +
-      "\020\237\004\022\030\n\023DOTA_UM_HPManaAlert\020\240\004\022\027\n\022DOTA_UM" +
-      "_GlyphAlert\020\241\004\022\026\n\021DOTA_UM_BeastChat\020\242\004\022&" +
-      "\n!DOTA_UM_SpectatorPlayerUnitOrders\020\243\004\022$" +
-      "\n\037DOTA_UM_CustomHudElement_Create\020\244\004\022$\n\037" +
-      "DOTA_UM_CustomHudElement_Modify\020\245\004\022%\n DO" +
-      "TA_UM_CustomHudElement_Destroy\020\246\004\022\034\n\027DOT" +
-      "A_UM_CompendiumState\020\247\004\022\036\n\031DOTA_UM_Proje" +
-      "ctionAbility\020\250\004\022\034\n\027DOTA_UM_ProjectionEve",
-      "nt\020\251\004\022\036\n\031DOTA_UM_CombatLogDataHLTV\020\252\004\022\024\n" +
-      "\017DOTA_UM_XPAlert\020\253\004\022 \n\033DOTA_UM_UpdateQue" +
-      "stProgress\020\254\004\022\032\n\025DOTA_UM_MatchMetadata\020\255" +
-      "\004\022\031\n\024DOTA_UM_MatchDetails\020\256\004\022\030\n\023DOTA_UM_" +
-      "QuestStatus\020\257\004\022\034\n\027DOTA_UM_SuggestHeroPic" +
-      "k\020\260\004\022\034\n\027DOTA_UM_SuggestHeroRole\020\261\004\022\037\n\032DO" +
-      "TA_UM_KillcamDamageTaken\020\262\004\022\036\n\031DOTA_UM_S" +
-      "electPenaltyGold\020\263\004\022\033\n\026DOTA_UM_RollDiceR" +
-      "esult\020\264\004\022\033\n\026DOTA_UM_FlipCoinResult\020\265\004\022#\n" +
-      "\036DOTA_UM_RequestItemSuggestions\020\266\004\022\037\n\032DO",
-      "TA_UM_TeamCaptainChanged\020\267\004\022%\n DOTA_UM_S" +
-      "endRoshanSpectatorPhase\020\270\004\022\036\n\031DOTA_UM_Ch" +
-      "atWheelCooldown\020\271\004\022!\n\034DOTA_UM_DismissAll" +
-      "StatPopups\020\272\004\022!\n\034DOTA_UM_TE_DestroyProje" +
-      "ctile\020\273\004\022\036\n\031DOTA_UM_HeroRelicProgress\020\274\004" +
-      "\022\'\n\"DOTA_UM_AbilityDraftRequestAbility\020\275" +
-      "\004\022\025\n\020DOTA_UM_ItemSold\020\276\004\022\031\n\024DOTA_UM_Dama" +
-      "geReport\020\277\004\022\031\n\024DOTA_UM_SalutePlayer\020\300\004\022\025" +
-      "\n\020DOTA_UM_TipAlert\020\301\004\022\035\n\030DOTA_UM_Replace" +
-      "QueryUnit\020\302\004\022\037\n\032DOTA_UM_EmptyTeleportAle",
-      "rt\020\303\004\022#\n\036DOTA_UM_MarsArenaOfBloodAttack\020" +
-      "\304\004\022\032\n\025DOTA_UM_ESArcanaCombo\020\305\004\022!\n\034DOTA_U" +
-      "M_ESArcanaComboSummary\020\306\004\022 \n\033DOTA_UM_Hig" +
-      "hFiveLeftHanging\020\307\004\022\036\n\031DOTA_UM_HighFiveC" +
-      "ompleted\020\310\004\022\032\n\025DOTA_UM_ShovelUnearth\020\311\004\022" +
-      "\035\n\030DOTA_EM_InvokerSpellCast\020\312\004\022\027\n\022DOTA_U" +
-      "M_RadarAlert\020\313\004\022\031\n\024DOTA_UM_AllStarEvent\020" +
-      "\314\004\022\034\n\027DOTA_UM_TalentTreeAlert\020\315\004\022\037\n\032DOTA" +
-      "_UM_QueuedOrderRemoved\020\316\004\022\033\n\026DOTA_UM_Deb" +
-      "ugChallenge\020\317\004\022\032\n\025DOTA_UM_OMArcanaCombo\020",
-      "\320\004\022\035\n\030DOTA_UM_FoundNeutralItem\020\321\004\022\034\n\027DOT" +
-      "A_UM_OutpostCaptured\020\322\004\022\035\n\030DOTA_UM_Outpo" +
-      "stGrantedXP\020\323\004\022\035\n\030DOTA_UM_MoveCameraToUn" +
-      "it\020\324\004\022\036\n\031DOTA_UM_PauseMinigameData\020\325\004\022\'\n" +
-      "\"DOTA_UM_VersusScene_PlayerBehavior\020\326\004\022\036" +
-      "\n\031DOTA_UM_QoP_ArcanaSummary\020\330\004\022\036\n\031DOTA_U" +
-      "M_HotPotato_Created\020\331\004\022\037\n\032DOTA_UM_HotPot" +
-      "ato_Exploded\020\332\004\022\037\n\032DOTA_UM_WK_Arcana_Pro" +
-      "gress\020\333\004\022$\n\037DOTA_UM_GuildChallenge_Progr" +
-      "ess\020\334\004\022\035\n\030DOTA_UM_WRArcanaProgress\020\335\004\022\034\n",
-      "\027DOTA_UM_WRArcanaSummary\020\336\004\022\037\n\032DOTA_UM_E" +
-      "mptyItemSlotAlert\020\337\004\022\034\n\027DOTA_UM_AghsStat" +
-      "usAlert\020\340\004\022\035\n\030DOTA_UM_PingConfirmation\020\341" +
-      "\004\022\031\n\024DOTA_UM_MutedPlayers\020\342\004\022\032\n\025DOTA_UM_" +
-      "ContextualTip\020\343\004\022\030\n\023DOTA_UM_ChatMessage\020" +
-      "\344\004\022\035\n\030DOTA_UM_NeutralCampAlert\020\345\004\022%\n DOT" +
-      "A_UM_RockPaperScissorsStarted\020\346\004\022&\n!DOTA" +
-      "_UM_RockPaperScissorsFinished\020\347\004\022\037\n\032DOTA" +
-      "_UM_DuelOpponentKilled\020\350\004\022\031\n\024DOTA_UM_Due" +
-      "lAccepted\020\351\004\022\032\n\025DOTA_UM_DuelRequested\020\352\004",
-      "\0224\n/DOTA_UM_MuertaReleaseEvent_AssignedT" +
-      "argetKilled\020\353\004\022#\n\036DOTA_UM_PlayerDraftSug" +
-      "gestPick\020\354\004\022\034\n\027DOTA_UM_PlayerDraftPick\020\355" +
-      "\004\022)\n$DOTA_UM_UpdateLinearProjectileCPDat" +
-      "a\020\356\004\022\027\n\022DOTA_UM_GiftPlayer\020\357\004\022\026\n\021DOTA_UM" +
-      "_FacetPing\020\360\004\022\027\n\022DOTA_UM_InnatePing\020\361\004\022\030" +
-      "\n\023DOTA_UM_RoshanTimer\020\362\004B8\n%skadistats.c" +
-      "larity.wire.dota.s2.protoB\017DOTAS2Message" +
-      "Id"
+      "\020K\022\020\n\014svc_UserCmds\020L\022\030\n\024svc_NextMsgPredi" +
+      "cted\020M*\214\n\n\021EBaseUserMessages\022\027\n\023UM_Achie" +
+      "vementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM",
+      "_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimes" +
+      "cale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fa" +
+      "de\020j\022\020\n\014UM_GameTitle\020k\022\017\n\013UM_HintText\020m\022" +
+      "\r\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022\022\n\016UM_Key" +
+      "HintText\020p\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_Req" +
+      "uestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumbl" +
+      "e\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021" +
+      "UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_" +
+      "ShakeDir\020y\022\016\n\nUM_TextMsg\020|\022\021\n\rUM_ScreenT" +
+      "ilt\020}\022\014\n\010UM_Train\020~\022\017\n\013UM_VGUIMenu\020\177\022\021\n\014",
+      "UM_VoiceMask\020\200\001\022\025\n\020UM_VoiceSubtitle\020\201\001\022\021" +
+      "\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n" +
+      "\rUM_AmmoDenied\020\204\001\022\026\n\021UM_CrosshairAngle\020\205" +
+      "\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022" +
+      "\037\n\032UM_CloseCaptionPlaceholder\020\216\001\022\030\n\023UM_C" +
+      "ameraTransition\020\217\001\022\026\n\021UM_AudioParameter\020" +
+      "\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n\013UM_HudErr" +
+      "or\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001\022\027\n\022UM_Ani" +
+      "mGraphUpdate\020\225\001\022\033\n\026UM_HapticsManagerPuls" +
+      "e\020\226\001\022\034\n\027UM_HapticsManagerEffect\020\227\001\022\031\n\024UM",
+      "_CommandQueueState\020\230\001\022\030\n\023UM_UpdateCssCla" +
+      "sses\020\231\001\022\027\n\022UM_ServerFrameTime\020\232\001\022\034\n\027UM_L" +
+      "agCompensationError\020\233\001\022\030\n\023UM_RequestDllS" +
+      "tatus\020\234\001\022\031\n\024UM_RequestUtilAction\020\235\001\022\032\n\025U" +
+      "M_UtilActionResponse\020\236\001\022\031\n\024UM_DllStatusR" +
+      "esponse\020\237\001\022\030\n\023UM_RequestInventory\020\240\001\022\031\n\024" +
+      "UM_InventoryResponse\020\241\001\022\031\n\024UM_RequestDia" +
+      "gnostic\020\242\001\022\032\n\025UM_DiagnosticResponse\020\243\001\022\025" +
+      "\n\020UM_ExtraUserData\020\244\001\022\033\n\026UM_NotifyRespon" +
+      "seFound\020\245\001\022\037\n\032UM_PlayResponseConditional",
+      "\020\246\001\022\020\n\013UM_MAX_BASE\020\310\001*\224\001\n\023EBaseEntityMes" +
+      "sages\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020EM_ScreenOv" +
+      "erlay\020\211\001\022\027\n\022EM_RemoveAllDecals\020\212\001\022\026\n\021EM_" +
+      "PropagateForce\020\213\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM" +
+      "_FixAngle\020\215\001*\215)\n\021EDotaUserMessages\022\037\n\032DO" +
+      "TA_UM_AddUnitToSelection\020\320\003\022\030\n\023DOTA_UM_A" +
+      "IDebugLine\020\321\003\022\026\n\021DOTA_UM_ChatEvent\020\322\003\022 \n" +
+      "\033DOTA_UM_CombatHeroPositions\020\323\003\022\032\n\025DOTA_" +
+      "UM_CombatLogData\020\324\003\022\036\n\031DOTA_UM_CombatLog" +
+      "BulkData\020\326\003\022#\n\036DOTA_UM_CreateLinearProje",
+      "ctile\020\327\003\022$\n\037DOTA_UM_DestroyLinearProject" +
+      "ile\020\330\003\022%\n DOTA_UM_DodgeTrackingProjectil" +
+      "es\020\331\003\022\035\n\030DOTA_UM_GlobalLightColor\020\332\003\022!\n\034" +
+      "DOTA_UM_GlobalLightDirection\020\333\003\022\033\n\026DOTA_" +
+      "UM_InvalidCommand\020\334\003\022\031\n\024DOTA_UM_Location" +
+      "Ping\020\335\003\022\024\n\017DOTA_UM_MapLine\020\336\003\022\034\n\027DOTA_UM" +
+      "_MiniKillCamInfo\020\337\003\022\036\n\031DOTA_UM_MinimapDe" +
+      "bugPoint\020\340\003\022\031\n\024DOTA_UM_MinimapEvent\020\341\003\022\035" +
+      "\n\030DOTA_UM_NevermoreRequiem\020\342\003\022\032\n\025DOTA_UM" +
+      "_OverheadEvent\020\343\003\022\037\n\032DOTA_UM_SetNextAuto",
+      "buyItem\020\344\003\022\033\n\026DOTA_UM_SharedCooldown\020\345\003\022" +
+      "!\n\034DOTA_UM_SpectatorPlayerClick\020\346\003\022\034\n\027DO" +
+      "TA_UM_TutorialTipInfo\020\347\003\022\026\n\021DOTA_UM_Unit" +
+      "Event\020\350\003\022\034\n\027DOTA_UM_ParticleManager\020\351\003\022\024" +
+      "\n\017DOTA_UM_BotChat\020\352\003\022\025\n\020DOTA_UM_HudError" +
+      "\020\353\003\022\032\n\025DOTA_UM_ItemPurchased\020\354\003\022\021\n\014DOTA_" +
+      "UM_Ping\020\355\003\022\026\n\021DOTA_UM_ItemFound\020\356\003\022\"\n\035DO" +
+      "TA_UM_CharacterSpeakConcept\020\357\003\022\027\n\022DOTA_U" +
+      "M_SwapVerify\020\360\003\022\026\n\021DOTA_UM_WorldLine\020\361\003\022" +
+      "\033\n\026DOTA_UM_TournamentDrop\020\362\003\022\026\n\021DOTA_UM_",
+      "ItemAlert\020\363\003\022\033\n\026DOTA_UM_HalloweenDrops\020\364" +
+      "\003\022\026\n\021DOTA_UM_ChatWheel\020\365\003\022\035\n\030DOTA_UM_Rec" +
+      "eivedXmasGift\020\366\003\022 \n\033DOTA_UM_UpdateShared" +
+      "Content\020\367\003\022\037\n\032DOTA_UM_TutorialRequestExp" +
+      "\020\370\003\022 \n\033DOTA_UM_TutorialPingMinimap\020\371\003\022\"\n" +
+      "\035DOTA_UM_GamerulesStateChanged\020\372\003\022\027\n\022DOT" +
+      "A_UM_ShowSurvey\020\373\003\022\031\n\024DOTA_UM_TutorialFa" +
+      "de\020\374\003\022\035\n\030DOTA_UM_AddQuestLogEntry\020\375\003\022\032\n\025" +
+      "DOTA_UM_SendStatPopup\020\376\003\022\033\n\026DOTA_UM_Tuto" +
+      "rialFinish\020\377\003\022\034\n\027DOTA_UM_SendRoshanPopup",
+      "\020\200\004\022\037\n\032DOTA_UM_SendGenericToolTip\020\201\004\022\032\n\025" +
+      "DOTA_UM_SendFinalGold\020\202\004\022\026\n\021DOTA_UM_Cust" +
+      "omMsg\020\203\004\022\031\n\024DOTA_UM_CoachHUDPing\020\204\004\022\036\n\031D" +
+      "OTA_UM_ClientLoadGridNav\020\205\004\022\032\n\025DOTA_UM_T" +
+      "E_Projectile\020\206\004\022\035\n\030DOTA_UM_TE_Projectile" +
+      "Loc\020\207\004\022\037\n\032DOTA_UM_TE_DotaBloodImpact\020\210\004\022" +
+      "\035\n\030DOTA_UM_TE_UnitAnimation\020\211\004\022 \n\033DOTA_U" +
+      "M_TE_UnitAnimationEnd\020\212\004\022\030\n\023DOTA_UM_Abil" +
+      "ityPing\020\213\004\022\035\n\030DOTA_UM_ShowGenericPopup\020\214" +
+      "\004\022\026\n\021DOTA_UM_VoteStart\020\215\004\022\027\n\022DOTA_UM_Vot",
+      "eUpdate\020\216\004\022\024\n\017DOTA_UM_VoteEnd\020\217\004\022\031\n\024DOTA" +
+      "_UM_BoosterState\020\220\004\022\036\n\031DOTA_UM_WillPurch" +
+      "aseAlert\020\221\004\022$\n\037DOTA_UM_TutorialMinimapPo" +
+      "sition\020\222\004\022\026\n\021DOTA_UM_PlayerMMR\020\223\004\022\031\n\024DOT" +
+      "A_UM_AbilitySteal\020\224\004\022\037\n\032DOTA_UM_CourierK" +
+      "illedAlert\020\225\004\022\033\n\026DOTA_UM_EnemyItemAlert\020" +
+      "\226\004\022\036\n\031DOTA_UM_StatsMatchDetails\020\227\004\022\026\n\021DO" +
+      "TA_UM_MiniTaunt\020\230\004\022\036\n\031DOTA_UM_BuyBackSta" +
+      "teAlert\020\231\004\022\031\n\024DOTA_UM_SpeechBubble\020\232\004\022 \n" +
+      "\033DOTA_UM_CustomHeaderMessage\020\233\004\022\032\n\025DOTA_",
+      "UM_QuickBuyAlert\020\234\004\022\035\n\030DOTA_UM_StatsHero" +
+      "Details\020\235\004\022\035\n\030DOTA_UM_PredictionResult\020\236" +
+      "\004\022\032\n\025DOTA_UM_ModifierAlert\020\237\004\022\030\n\023DOTA_UM" +
+      "_HPManaAlert\020\240\004\022\027\n\022DOTA_UM_GlyphAlert\020\241\004" +
+      "\022\026\n\021DOTA_UM_BeastChat\020\242\004\022&\n!DOTA_UM_Spec" +
+      "tatorPlayerUnitOrders\020\243\004\022$\n\037DOTA_UM_Cust" +
+      "omHudElement_Create\020\244\004\022$\n\037DOTA_UM_Custom" +
+      "HudElement_Modify\020\245\004\022%\n DOTA_UM_CustomHu" +
+      "dElement_Destroy\020\246\004\022\034\n\027DOTA_UM_Compendiu" +
+      "mState\020\247\004\022\036\n\031DOTA_UM_ProjectionAbility\020\250",
+      "\004\022\034\n\027DOTA_UM_ProjectionEvent\020\251\004\022\036\n\031DOTA_" +
+      "UM_CombatLogDataHLTV\020\252\004\022\024\n\017DOTA_UM_XPAle" +
+      "rt\020\253\004\022 \n\033DOTA_UM_UpdateQuestProgress\020\254\004\022" +
+      "\032\n\025DOTA_UM_MatchMetadata\020\255\004\022\031\n\024DOTA_UM_M" +
+      "atchDetails\020\256\004\022\030\n\023DOTA_UM_QuestStatus\020\257\004" +
+      "\022\034\n\027DOTA_UM_SuggestHeroPick\020\260\004\022\034\n\027DOTA_U" +
+      "M_SuggestHeroRole\020\261\004\022\037\n\032DOTA_UM_KillcamD" +
+      "amageTaken\020\262\004\022\036\n\031DOTA_UM_SelectPenaltyGo" +
+      "ld\020\263\004\022\033\n\026DOTA_UM_RollDiceResult\020\264\004\022\033\n\026DO" +
+      "TA_UM_FlipCoinResult\020\265\004\022#\n\036DOTA_UM_Reque",
+      "stItemSuggestions\020\266\004\022\037\n\032DOTA_UM_TeamCapt" +
+      "ainChanged\020\267\004\022%\n DOTA_UM_SendRoshanSpect" +
+      "atorPhase\020\270\004\022\036\n\031DOTA_UM_ChatWheelCooldow" +
+      "n\020\271\004\022!\n\034DOTA_UM_DismissAllStatPopups\020\272\004\022" +
+      "!\n\034DOTA_UM_TE_DestroyProjectile\020\273\004\022\036\n\031DO" +
+      "TA_UM_HeroRelicProgress\020\274\004\022\'\n\"DOTA_UM_Ab" +
+      "ilityDraftRequestAbility\020\275\004\022\025\n\020DOTA_UM_I" +
+      "temSold\020\276\004\022\031\n\024DOTA_UM_DamageReport\020\277\004\022\031\n" +
+      "\024DOTA_UM_SalutePlayer\020\300\004\022\025\n\020DOTA_UM_TipA" +
+      "lert\020\301\004\022\035\n\030DOTA_UM_ReplaceQueryUnit\020\302\004\022\037",
+      "\n\032DOTA_UM_EmptyTeleportAlert\020\303\004\022#\n\036DOTA_" +
+      "UM_MarsArenaOfBloodAttack\020\304\004\022\032\n\025DOTA_UM_" +
+      "ESArcanaCombo\020\305\004\022!\n\034DOTA_UM_ESArcanaComb" +
+      "oSummary\020\306\004\022 \n\033DOTA_UM_HighFiveLeftHangi" +
+      "ng\020\307\004\022\036\n\031DOTA_UM_HighFiveCompleted\020\310\004\022\032\n" +
+      "\025DOTA_UM_ShovelUnearth\020\311\004\022\035\n\030DOTA_EM_Inv" +
+      "okerSpellCast\020\312\004\022\027\n\022DOTA_UM_RadarAlert\020\313" +
+      "\004\022\031\n\024DOTA_UM_AllStarEvent\020\314\004\022\034\n\027DOTA_UM_" +
+      "TalentTreeAlert\020\315\004\022\037\n\032DOTA_UM_QueuedOrde" +
+      "rRemoved\020\316\004\022\033\n\026DOTA_UM_DebugChallenge\020\317\004",
+      "\022\032\n\025DOTA_UM_OMArcanaCombo\020\320\004\022\035\n\030DOTA_UM_" +
+      "FoundNeutralItem\020\321\004\022\034\n\027DOTA_UM_OutpostCa" +
+      "ptured\020\322\004\022\035\n\030DOTA_UM_OutpostGrantedXP\020\323\004" +
+      "\022\035\n\030DOTA_UM_MoveCameraToUnit\020\324\004\022\036\n\031DOTA_" +
+      "UM_PauseMinigameData\020\325\004\022\'\n\"DOTA_UM_Versu" +
+      "sScene_PlayerBehavior\020\326\004\022\036\n\031DOTA_UM_QoP_" +
+      "ArcanaSummary\020\330\004\022\036\n\031DOTA_UM_HotPotato_Cr" +
+      "eated\020\331\004\022\037\n\032DOTA_UM_HotPotato_Exploded\020\332" +
+      "\004\022\037\n\032DOTA_UM_WK_Arcana_Progress\020\333\004\022$\n\037DO" +
+      "TA_UM_GuildChallenge_Progress\020\334\004\022\035\n\030DOTA",
+      "_UM_WRArcanaProgress\020\335\004\022\034\n\027DOTA_UM_WRArc" +
+      "anaSummary\020\336\004\022\037\n\032DOTA_UM_EmptyItemSlotAl" +
+      "ert\020\337\004\022\034\n\027DOTA_UM_AghsStatusAlert\020\340\004\022\035\n\030" +
+      "DOTA_UM_PingConfirmation\020\341\004\022\031\n\024DOTA_UM_M" +
+      "utedPlayers\020\342\004\022\032\n\025DOTA_UM_ContextualTip\020" +
+      "\343\004\022\030\n\023DOTA_UM_ChatMessage\020\344\004\022\035\n\030DOTA_UM_" +
+      "NeutralCampAlert\020\345\004\022%\n DOTA_UM_RockPaper" +
+      "ScissorsStarted\020\346\004\022&\n!DOTA_UM_RockPaperS" +
+      "cissorsFinished\020\347\004\022\037\n\032DOTA_UM_DuelOppone" +
+      "ntKilled\020\350\004\022\031\n\024DOTA_UM_DuelAccepted\020\351\004\022\032",
+      "\n\025DOTA_UM_DuelRequested\020\352\004\0224\n/DOTA_UM_Mu" +
+      "ertaReleaseEvent_AssignedTargetKilled\020\353\004" +
+      "\022#\n\036DOTA_UM_PlayerDraftSuggestPick\020\354\004\022\034\n" +
+      "\027DOTA_UM_PlayerDraftPick\020\355\004\022)\n$DOTA_UM_U" +
+      "pdateLinearProjectileCPData\020\356\004\022\027\n\022DOTA_U" +
+      "M_GiftPlayer\020\357\004\022\026\n\021DOTA_UM_FacetPing\020\360\004\022" +
+      "\027\n\022DOTA_UM_InnatePing\020\361\004\022\030\n\023DOTA_UM_Rosh" +
+      "anTimer\020\362\004\022\"\n\035DOTA_UM_NeutralCraftAvaila" +
+      "ble\020\363\004\022\027\n\022DOTA_UM_TimerAlert\020\364\004\022\032\n\025DOTA_" +
+      "UM_MadstoneAlert\020\365\004\022%\n DOTA_UM_CourierLe",
+      "ftFountainAlert\020\366\004\0222\n-DOTA_UM_MonsterHun" +
+      "ter_InvestigationsAvailable\020\367\004\0221\n,DOTA_U" +
+      "M_MonsterHunter_InvestigationGameState\020\370" +
+      "\004\022$\n\037DOTA_UM_MonsterHunter_HuntAlert\020\371\004\022" +
+      "\033\n\026DOTA_UM_TormentorTimer\020\372\004\022\027\n\022DOTA_UM_" +
+      "KillEffect\020\373\004\022\025\n\020DOTA_UM_GiveItem\020\374\004B8\n%" +
+      "skadistats.clarity.wire.dota.s2.protoB\017D" +
+      "OTAS2MessageId"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

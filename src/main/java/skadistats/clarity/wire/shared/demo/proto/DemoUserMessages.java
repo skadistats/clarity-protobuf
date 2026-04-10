@@ -157,6 +157,30 @@ public final class DemoUserMessages {
      * <code>GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE = 35;</code>
      */
     GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE(35, 35),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_ADD_FAN = 36;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_ADD_FAN(36, 36),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN = 37;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN(37, 37),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH = 38;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH(38, 38),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN = 39;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN(39, 39),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID = 40;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID(40, 40),
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE = 41;</code>
+     */
+    GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE(41, 41),
     ;
 
     /**
@@ -303,6 +327,30 @@ public final class DemoUserMessages {
      * <code>GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE = 35;</code>
      */
     public static final int GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE_VALUE = 35;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_ADD_FAN = 36;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_ADD_FAN_VALUE = 36;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN = 37;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN_VALUE = 37;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH = 38;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH_VALUE = 38;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN = 39;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN_VALUE = 39;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID = 40;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID_VALUE = 40;
+    /**
+     * <code>GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE = 41;</code>
+     */
+    public static final int GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE_VALUE = 41;
 
 
     public final int getNumber() { return value; }
@@ -345,6 +393,12 @@ public final class DemoUserMessages {
         case 33: return GAME_PARTICLE_MANAGER_EVENT_DESTROY_PHYSICS_SIM;
         case 34: return GAME_PARTICLE_MANAGER_EVENT_SET_VDATA;
         case 35: return GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE;
+        case 36: return GAME_PARTICLE_MANAGER_EVENT_ADD_FAN;
+        case 37: return GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN;
+        case 38: return GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH;
+        case 39: return GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN;
+        case 40: return GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID;
+        case 41: return GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE;
         default: return null;
       }
     }
@@ -873,6 +927,84 @@ public final class DemoUserMessages {
      * <code>optional .CUserMsg_ParticleManager.SetMaterialOverride set_material_override = 38;</code>
      */
     skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverrideOrBuilder getSetMaterialOverrideOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+     */
+    boolean hasAddFan();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan getAddFan();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder getAddFanOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+     */
+    boolean hasUpdateFan();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan getUpdateFan();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder getUpdateFanOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+     */
+    boolean hasSetParticleClusterGrowth();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth getSetParticleClusterGrowth();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder getSetParticleClusterGrowthOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+     */
+    boolean hasRemoveFan();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan getRemoveFan();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder getRemoveFanOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+     */
+    boolean hasCreateSmokeGrid();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid getCreateSmokeGrid();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder getCreateSmokeGridOrBuilder();
+
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+     */
+    boolean hasSetOverrideTexture();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture getSetOverrideTexture();
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder getSetOverrideTextureOrBuilder();
   }
   /**
    * Protobuf type {@code CUserMsg_ParticleManager}
@@ -1397,6 +1529,84 @@ public final class DemoUserMessages {
                 setMaterialOverride_ = subBuilder.buildPartial();
               }
               bitField1_ |= 0x00000010;
+              break;
+            }
+            case 314: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder subBuilder = null;
+              if (((bitField1_ & 0x00000020) == 0x00000020)) {
+                subBuilder = addFan_.toBuilder();
+              }
+              addFan_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(addFan_);
+                addFan_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00000020;
+              break;
+            }
+            case 322: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder subBuilder = null;
+              if (((bitField1_ & 0x00000040) == 0x00000040)) {
+                subBuilder = updateFan_.toBuilder();
+              }
+              updateFan_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updateFan_);
+                updateFan_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00000040;
+              break;
+            }
+            case 330: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder subBuilder = null;
+              if (((bitField1_ & 0x00000080) == 0x00000080)) {
+                subBuilder = setParticleClusterGrowth_.toBuilder();
+              }
+              setParticleClusterGrowth_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(setParticleClusterGrowth_);
+                setParticleClusterGrowth_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00000080;
+              break;
+            }
+            case 338: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder subBuilder = null;
+              if (((bitField1_ & 0x00000100) == 0x00000100)) {
+                subBuilder = removeFan_.toBuilder();
+              }
+              removeFan_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(removeFan_);
+                removeFan_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00000100;
+              break;
+            }
+            case 346: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder subBuilder = null;
+              if (((bitField1_ & 0x00000200) == 0x00000200)) {
+                subBuilder = createSmokeGrid_.toBuilder();
+              }
+              createSmokeGrid_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createSmokeGrid_);
+                createSmokeGrid_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00000200;
+              break;
+            }
+            case 354: {
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder subBuilder = null;
+              if (((bitField1_ & 0x00000400) == 0x00000400)) {
+                subBuilder = setOverrideTexture_.toBuilder();
+              }
+              setOverrideTexture_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(setOverrideTexture_);
+                setOverrideTexture_ = subBuilder.buildPartial();
+              }
+              bitField1_ |= 0x00000400;
               break;
             }
           }
@@ -25223,6 +25433,5713 @@ public final class DemoUserMessages {
       // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.SetMaterialOverride)
     }
 
+    public interface AddFanOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.AddFan)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      boolean hasActive();
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      boolean getActive();
+
+      /**
+       * <code>optional .CMsgVector bounds_mins = 2;</code>
+       */
+      boolean hasBoundsMins();
+      /**
+       * <code>optional .CMsgVector bounds_mins = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMins();
+      /**
+       * <code>optional .CMsgVector bounds_mins = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMinsOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 3;</code>
+       */
+      boolean hasBoundsMaxs();
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 3;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMaxs();
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 3;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMaxsOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector fan_origin = 4;</code>
+       */
+      boolean hasFanOrigin();
+      /**
+       * <code>optional .CMsgVector fan_origin = 4;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOrigin();
+      /**
+       * <code>optional .CMsgVector fan_origin = 4;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+       */
+      boolean hasFanOriginOffset();
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOriginOffset();
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOffsetOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector fan_direction = 6;</code>
+       */
+      boolean hasFanDirection();
+      /**
+       * <code>optional .CMsgVector fan_direction = 6;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanDirection();
+      /**
+       * <code>optional .CMsgVector fan_direction = 6;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanDirectionOrBuilder();
+
+      /**
+       * <code>optional float force = 7;</code>
+       */
+      boolean hasForce();
+      /**
+       * <code>optional float force = 7;</code>
+       */
+      float getForce();
+
+      /**
+       * <code>optional string fan_force_curve = 8;</code>
+       */
+      boolean hasFanForceCurve();
+      /**
+       * <code>optional string fan_force_curve = 8;</code>
+       */
+      java.lang.String getFanForceCurve();
+      /**
+       * <code>optional string fan_force_curve = 8;</code>
+       */
+      com.google.protobuf.ByteString
+          getFanForceCurveBytes();
+
+      /**
+       * <code>optional bool falloff = 9;</code>
+       */
+      boolean hasFalloff();
+      /**
+       * <code>optional bool falloff = 9;</code>
+       */
+      boolean getFalloff();
+
+      /**
+       * <code>optional bool pull_towards_point = 10;</code>
+       */
+      boolean hasPullTowardsPoint();
+      /**
+       * <code>optional bool pull_towards_point = 10;</code>
+       */
+      boolean getPullTowardsPoint();
+
+      /**
+       * <code>optional float curve_min_dist = 11;</code>
+       */
+      boolean hasCurveMinDist();
+      /**
+       * <code>optional float curve_min_dist = 11;</code>
+       */
+      float getCurveMinDist();
+
+      /**
+       * <code>optional float curve_max_dist = 12;</code>
+       */
+      boolean hasCurveMaxDist();
+      /**
+       * <code>optional float curve_max_dist = 12;</code>
+       */
+      float getCurveMaxDist();
+
+      /**
+       * <code>optional uint32 fan_type = 13;</code>
+       */
+      boolean hasFanType();
+      /**
+       * <code>optional uint32 fan_type = 13;</code>
+       */
+      int getFanType();
+
+      /**
+       * <code>optional float cone_start_radius = 14;</code>
+       */
+      boolean hasConeStartRadius();
+      /**
+       * <code>optional float cone_start_radius = 14;</code>
+       */
+      float getConeStartRadius();
+
+      /**
+       * <code>optional float cone_end_radius = 15;</code>
+       */
+      boolean hasConeEndRadius();
+      /**
+       * <code>optional float cone_end_radius = 15;</code>
+       */
+      float getConeEndRadius();
+
+      /**
+       * <code>optional float cone_length = 16;</code>
+       */
+      boolean hasConeLength();
+      /**
+       * <code>optional float cone_length = 16;</code>
+       */
+      float getConeLength();
+
+      /**
+       * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+       */
+      boolean hasEntityHandle();
+      /**
+       * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+       */
+      int getEntityHandle();
+
+      /**
+       * <code>optional string attachment_name = 18;</code>
+       */
+      boolean hasAttachmentName();
+      /**
+       * <code>optional string attachment_name = 18;</code>
+       */
+      java.lang.String getAttachmentName();
+      /**
+       * <code>optional string attachment_name = 18;</code>
+       */
+      com.google.protobuf.ByteString
+          getAttachmentNameBytes();
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.AddFan}
+     */
+    public static final class AddFan extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.AddFan)
+        AddFanOrBuilder {
+      // Use AddFan.newBuilder() to construct.
+      private AddFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private AddFan(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final AddFan defaultInstance;
+      public static AddFan getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public AddFan getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private AddFan(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                active_ = input.readBool();
+                break;
+              }
+              case 18: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                  subBuilder = boundsMins_.toBuilder();
+                }
+                boundsMins_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(boundsMins_);
+                  boundsMins_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000002;
+                break;
+              }
+              case 26: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                  subBuilder = boundsMaxs_.toBuilder();
+                }
+                boundsMaxs_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(boundsMaxs_);
+                  boundsMaxs_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000004;
+                break;
+              }
+              case 34: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                  subBuilder = fanOrigin_.toBuilder();
+                }
+                fanOrigin_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fanOrigin_);
+                  fanOrigin_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000008;
+                break;
+              }
+              case 42: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                  subBuilder = fanOriginOffset_.toBuilder();
+                }
+                fanOriginOffset_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fanOriginOffset_);
+                  fanOriginOffset_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000010;
+                break;
+              }
+              case 50: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                  subBuilder = fanDirection_.toBuilder();
+                }
+                fanDirection_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fanDirection_);
+                  fanDirection_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000020;
+                break;
+              }
+              case 61: {
+                bitField0_ |= 0x00000040;
+                force_ = input.readFloat();
+                break;
+              }
+              case 66: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000080;
+                fanForceCurve_ = bs;
+                break;
+              }
+              case 72: {
+                bitField0_ |= 0x00000100;
+                falloff_ = input.readBool();
+                break;
+              }
+              case 80: {
+                bitField0_ |= 0x00000200;
+                pullTowardsPoint_ = input.readBool();
+                break;
+              }
+              case 93: {
+                bitField0_ |= 0x00000400;
+                curveMinDist_ = input.readFloat();
+                break;
+              }
+              case 101: {
+                bitField0_ |= 0x00000800;
+                curveMaxDist_ = input.readFloat();
+                break;
+              }
+              case 104: {
+                bitField0_ |= 0x00001000;
+                fanType_ = input.readUInt32();
+                break;
+              }
+              case 117: {
+                bitField0_ |= 0x00002000;
+                coneStartRadius_ = input.readFloat();
+                break;
+              }
+              case 125: {
+                bitField0_ |= 0x00004000;
+                coneEndRadius_ = input.readFloat();
+                break;
+              }
+              case 133: {
+                bitField0_ |= 0x00008000;
+                coneLength_ = input.readFloat();
+                break;
+              }
+              case 136: {
+                bitField0_ |= 0x00010000;
+                entityHandle_ = input.readUInt32();
+                break;
+              }
+              case 146: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00020000;
+                attachmentName_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<AddFan> PARSER =
+          new com.google.protobuf.AbstractParser<AddFan>() {
+        public AddFan parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new AddFan(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<AddFan> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int ACTIVE_FIELD_NUMBER = 1;
+      private boolean active_;
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      public boolean hasActive() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      public boolean getActive() {
+        return active_;
+      }
+
+      public static final int BOUNDS_MINS_FIELD_NUMBER = 2;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMins_;
+      /**
+       * <code>optional .CMsgVector bounds_mins = 2;</code>
+       */
+      public boolean hasBoundsMins() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .CMsgVector bounds_mins = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMins() {
+        return boundsMins_;
+      }
+      /**
+       * <code>optional .CMsgVector bounds_mins = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMinsOrBuilder() {
+        return boundsMins_;
+      }
+
+      public static final int BOUNDS_MAXS_FIELD_NUMBER = 3;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMaxs_;
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 3;</code>
+       */
+      public boolean hasBoundsMaxs() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 3;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMaxs() {
+        return boundsMaxs_;
+      }
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 3;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMaxsOrBuilder() {
+        return boundsMaxs_;
+      }
+
+      public static final int FAN_ORIGIN_FIELD_NUMBER = 4;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOrigin_;
+      /**
+       * <code>optional .CMsgVector fan_origin = 4;</code>
+       */
+      public boolean hasFanOrigin() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOrigin() {
+        return fanOrigin_;
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOrBuilder() {
+        return fanOrigin_;
+      }
+
+      public static final int FAN_ORIGIN_OFFSET_FIELD_NUMBER = 5;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOriginOffset_;
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+       */
+      public boolean hasFanOriginOffset() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOriginOffset() {
+        return fanOriginOffset_;
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOffsetOrBuilder() {
+        return fanOriginOffset_;
+      }
+
+      public static final int FAN_DIRECTION_FIELD_NUMBER = 6;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanDirection_;
+      /**
+       * <code>optional .CMsgVector fan_direction = 6;</code>
+       */
+      public boolean hasFanDirection() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .CMsgVector fan_direction = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanDirection() {
+        return fanDirection_;
+      }
+      /**
+       * <code>optional .CMsgVector fan_direction = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanDirectionOrBuilder() {
+        return fanDirection_;
+      }
+
+      public static final int FORCE_FIELD_NUMBER = 7;
+      private float force_;
+      /**
+       * <code>optional float force = 7;</code>
+       */
+      public boolean hasForce() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional float force = 7;</code>
+       */
+      public float getForce() {
+        return force_;
+      }
+
+      public static final int FAN_FORCE_CURVE_FIELD_NUMBER = 8;
+      private java.lang.Object fanForceCurve_;
+      /**
+       * <code>optional string fan_force_curve = 8;</code>
+       */
+      public boolean hasFanForceCurve() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional string fan_force_curve = 8;</code>
+       */
+      public java.lang.String getFanForceCurve() {
+        java.lang.Object ref = fanForceCurve_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            fanForceCurve_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string fan_force_curve = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getFanForceCurveBytes() {
+        java.lang.Object ref = fanForceCurve_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          fanForceCurve_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int FALLOFF_FIELD_NUMBER = 9;
+      private boolean falloff_;
+      /**
+       * <code>optional bool falloff = 9;</code>
+       */
+      public boolean hasFalloff() {
+        return ((bitField0_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional bool falloff = 9;</code>
+       */
+      public boolean getFalloff() {
+        return falloff_;
+      }
+
+      public static final int PULL_TOWARDS_POINT_FIELD_NUMBER = 10;
+      private boolean pullTowardsPoint_;
+      /**
+       * <code>optional bool pull_towards_point = 10;</code>
+       */
+      public boolean hasPullTowardsPoint() {
+        return ((bitField0_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional bool pull_towards_point = 10;</code>
+       */
+      public boolean getPullTowardsPoint() {
+        return pullTowardsPoint_;
+      }
+
+      public static final int CURVE_MIN_DIST_FIELD_NUMBER = 11;
+      private float curveMinDist_;
+      /**
+       * <code>optional float curve_min_dist = 11;</code>
+       */
+      public boolean hasCurveMinDist() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional float curve_min_dist = 11;</code>
+       */
+      public float getCurveMinDist() {
+        return curveMinDist_;
+      }
+
+      public static final int CURVE_MAX_DIST_FIELD_NUMBER = 12;
+      private float curveMaxDist_;
+      /**
+       * <code>optional float curve_max_dist = 12;</code>
+       */
+      public boolean hasCurveMaxDist() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      /**
+       * <code>optional float curve_max_dist = 12;</code>
+       */
+      public float getCurveMaxDist() {
+        return curveMaxDist_;
+      }
+
+      public static final int FAN_TYPE_FIELD_NUMBER = 13;
+      private int fanType_;
+      /**
+       * <code>optional uint32 fan_type = 13;</code>
+       */
+      public boolean hasFanType() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      /**
+       * <code>optional uint32 fan_type = 13;</code>
+       */
+      public int getFanType() {
+        return fanType_;
+      }
+
+      public static final int CONE_START_RADIUS_FIELD_NUMBER = 14;
+      private float coneStartRadius_;
+      /**
+       * <code>optional float cone_start_radius = 14;</code>
+       */
+      public boolean hasConeStartRadius() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      /**
+       * <code>optional float cone_start_radius = 14;</code>
+       */
+      public float getConeStartRadius() {
+        return coneStartRadius_;
+      }
+
+      public static final int CONE_END_RADIUS_FIELD_NUMBER = 15;
+      private float coneEndRadius_;
+      /**
+       * <code>optional float cone_end_radius = 15;</code>
+       */
+      public boolean hasConeEndRadius() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional float cone_end_radius = 15;</code>
+       */
+      public float getConeEndRadius() {
+        return coneEndRadius_;
+      }
+
+      public static final int CONE_LENGTH_FIELD_NUMBER = 16;
+      private float coneLength_;
+      /**
+       * <code>optional float cone_length = 16;</code>
+       */
+      public boolean hasConeLength() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional float cone_length = 16;</code>
+       */
+      public float getConeLength() {
+        return coneLength_;
+      }
+
+      public static final int ENTITY_HANDLE_FIELD_NUMBER = 17;
+      private int entityHandle_;
+      /**
+       * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+       */
+      public boolean hasEntityHandle() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+       */
+      public int getEntityHandle() {
+        return entityHandle_;
+      }
+
+      public static final int ATTACHMENT_NAME_FIELD_NUMBER = 18;
+      private java.lang.Object attachmentName_;
+      /**
+       * <code>optional string attachment_name = 18;</code>
+       */
+      public boolean hasAttachmentName() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional string attachment_name = 18;</code>
+       */
+      public java.lang.String getAttachmentName() {
+        java.lang.Object ref = attachmentName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            attachmentName_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string attachment_name = 18;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAttachmentNameBytes() {
+        java.lang.Object ref = attachmentName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          attachmentName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        active_ = false;
+        boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        force_ = 0F;
+        fanForceCurve_ = "";
+        falloff_ = false;
+        pullTowardsPoint_ = false;
+        curveMinDist_ = 0F;
+        curveMaxDist_ = 0F;
+        fanType_ = 0;
+        coneStartRadius_ = 0F;
+        coneEndRadius_ = 0F;
+        coneLength_ = 0F;
+        entityHandle_ = 16777215;
+        attachmentName_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBool(1, active_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeMessage(2, boundsMins_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeMessage(3, boundsMaxs_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeMessage(4, fanOrigin_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeMessage(5, fanOriginOffset_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          output.writeMessage(6, fanDirection_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeFloat(7, force_);
+        }
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          output.writeBytes(8, getFanForceCurveBytes());
+        }
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          output.writeBool(9, falloff_);
+        }
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          output.writeBool(10, pullTowardsPoint_);
+        }
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          output.writeFloat(11, curveMinDist_);
+        }
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          output.writeFloat(12, curveMaxDist_);
+        }
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          output.writeUInt32(13, fanType_);
+        }
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          output.writeFloat(14, coneStartRadius_);
+        }
+        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          output.writeFloat(15, coneEndRadius_);
+        }
+        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          output.writeFloat(16, coneLength_);
+        }
+        if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          output.writeUInt32(17, entityHandle_);
+        }
+        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          output.writeBytes(18, getAttachmentNameBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, active_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, boundsMins_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, boundsMaxs_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, fanOrigin_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, fanOriginOffset_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, fanDirection_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(7, force_);
+        }
+        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(8, getFanForceCurveBytes());
+        }
+        if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(9, falloff_);
+        }
+        if (((bitField0_ & 0x00000200) == 0x00000200)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(10, pullTowardsPoint_);
+        }
+        if (((bitField0_ & 0x00000400) == 0x00000400)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(11, curveMinDist_);
+        }
+        if (((bitField0_ & 0x00000800) == 0x00000800)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(12, curveMaxDist_);
+        }
+        if (((bitField0_ & 0x00001000) == 0x00001000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(13, fanType_);
+        }
+        if (((bitField0_ & 0x00002000) == 0x00002000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(14, coneStartRadius_);
+        }
+        if (((bitField0_ & 0x00004000) == 0x00004000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(15, coneEndRadius_);
+        }
+        if (((bitField0_ & 0x00008000) == 0x00008000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(16, coneLength_);
+        }
+        if (((bitField0_ & 0x00010000) == 0x00010000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(17, entityHandle_);
+        }
+        if (((bitField0_ & 0x00020000) == 0x00020000)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(18, getAttachmentNameBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.AddFan}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.AddFan)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getBoundsMinsFieldBuilder();
+            getBoundsMaxsFieldBuilder();
+            getFanOriginFieldBuilder();
+            getFanOriginOffsetFieldBuilder();
+            getFanDirectionFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          active_ = false;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          if (boundsMinsBuilder_ == null) {
+            boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            boundsMinsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            boundsMaxsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000004);
+          if (fanOriginBuilder_ == null) {
+            fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            fanOriginBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            fanOriginOffsetBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          if (fanDirectionBuilder_ == null) {
+            fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            fanDirectionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000020);
+          force_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000040);
+          fanForceCurve_ = "";
+          bitField0_ = (bitField0_ & ~0x00000080);
+          falloff_ = false;
+          bitField0_ = (bitField0_ & ~0x00000100);
+          pullTowardsPoint_ = false;
+          bitField0_ = (bitField0_ & ~0x00000200);
+          curveMinDist_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000400);
+          curveMaxDist_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000800);
+          fanType_ = 0;
+          bitField0_ = (bitField0_ & ~0x00001000);
+          coneStartRadius_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00002000);
+          coneEndRadius_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00004000);
+          coneLength_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00008000);
+          entityHandle_ = 16777215;
+          bitField0_ = (bitField0_ & ~0x00010000);
+          attachmentName_ = "";
+          bitField0_ = (bitField0_ & ~0x00020000);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.active_ = active_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          if (boundsMinsBuilder_ == null) {
+            result.boundsMins_ = boundsMins_;
+          } else {
+            result.boundsMins_ = boundsMinsBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          if (boundsMaxsBuilder_ == null) {
+            result.boundsMaxs_ = boundsMaxs_;
+          } else {
+            result.boundsMaxs_ = boundsMaxsBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          if (fanOriginBuilder_ == null) {
+            result.fanOrigin_ = fanOrigin_;
+          } else {
+            result.fanOrigin_ = fanOriginBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          if (fanOriginOffsetBuilder_ == null) {
+            result.fanOriginOffset_ = fanOriginOffset_;
+          } else {
+            result.fanOriginOffset_ = fanOriginOffsetBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+            to_bitField0_ |= 0x00000020;
+          }
+          if (fanDirectionBuilder_ == null) {
+            result.fanDirection_ = fanDirection_;
+          } else {
+            result.fanDirection_ = fanDirectionBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+            to_bitField0_ |= 0x00000040;
+          }
+          result.force_ = force_;
+          if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+            to_bitField0_ |= 0x00000080;
+          }
+          result.fanForceCurve_ = fanForceCurve_;
+          if (((from_bitField0_ & 0x00000100) == 0x00000100)) {
+            to_bitField0_ |= 0x00000100;
+          }
+          result.falloff_ = falloff_;
+          if (((from_bitField0_ & 0x00000200) == 0x00000200)) {
+            to_bitField0_ |= 0x00000200;
+          }
+          result.pullTowardsPoint_ = pullTowardsPoint_;
+          if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+            to_bitField0_ |= 0x00000400;
+          }
+          result.curveMinDist_ = curveMinDist_;
+          if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+            to_bitField0_ |= 0x00000800;
+          }
+          result.curveMaxDist_ = curveMaxDist_;
+          if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+            to_bitField0_ |= 0x00001000;
+          }
+          result.fanType_ = fanType_;
+          if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+            to_bitField0_ |= 0x00002000;
+          }
+          result.coneStartRadius_ = coneStartRadius_;
+          if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+            to_bitField0_ |= 0x00004000;
+          }
+          result.coneEndRadius_ = coneEndRadius_;
+          if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+            to_bitField0_ |= 0x00008000;
+          }
+          result.coneLength_ = coneLength_;
+          if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+            to_bitField0_ |= 0x00010000;
+          }
+          result.entityHandle_ = entityHandle_;
+          if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+            to_bitField0_ |= 0x00020000;
+          }
+          result.attachmentName_ = attachmentName_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance()) return this;
+          if (other.hasActive()) {
+            setActive(other.getActive());
+          }
+          if (other.hasBoundsMins()) {
+            mergeBoundsMins(other.getBoundsMins());
+          }
+          if (other.hasBoundsMaxs()) {
+            mergeBoundsMaxs(other.getBoundsMaxs());
+          }
+          if (other.hasFanOrigin()) {
+            mergeFanOrigin(other.getFanOrigin());
+          }
+          if (other.hasFanOriginOffset()) {
+            mergeFanOriginOffset(other.getFanOriginOffset());
+          }
+          if (other.hasFanDirection()) {
+            mergeFanDirection(other.getFanDirection());
+          }
+          if (other.hasForce()) {
+            setForce(other.getForce());
+          }
+          if (other.hasFanForceCurve()) {
+            bitField0_ |= 0x00000080;
+            fanForceCurve_ = other.fanForceCurve_;
+            onChanged();
+          }
+          if (other.hasFalloff()) {
+            setFalloff(other.getFalloff());
+          }
+          if (other.hasPullTowardsPoint()) {
+            setPullTowardsPoint(other.getPullTowardsPoint());
+          }
+          if (other.hasCurveMinDist()) {
+            setCurveMinDist(other.getCurveMinDist());
+          }
+          if (other.hasCurveMaxDist()) {
+            setCurveMaxDist(other.getCurveMaxDist());
+          }
+          if (other.hasFanType()) {
+            setFanType(other.getFanType());
+          }
+          if (other.hasConeStartRadius()) {
+            setConeStartRadius(other.getConeStartRadius());
+          }
+          if (other.hasConeEndRadius()) {
+            setConeEndRadius(other.getConeEndRadius());
+          }
+          if (other.hasConeLength()) {
+            setConeLength(other.getConeLength());
+          }
+          if (other.hasEntityHandle()) {
+            setEntityHandle(other.getEntityHandle());
+          }
+          if (other.hasAttachmentName()) {
+            bitField0_ |= 0x00020000;
+            attachmentName_ = other.attachmentName_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean active_ ;
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public boolean hasActive() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public boolean getActive() {
+          return active_;
+        }
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public Builder setActive(boolean value) {
+          bitField0_ |= 0x00000001;
+          active_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public Builder clearActive() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          active_ = false;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMinsBuilder_;
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public boolean hasBoundsMins() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMins() {
+          if (boundsMinsBuilder_ == null) {
+            return boundsMins_;
+          } else {
+            return boundsMinsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public Builder setBoundsMins(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMinsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            boundsMins_ = value;
+            onChanged();
+          } else {
+            boundsMinsBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public Builder setBoundsMins(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (boundsMinsBuilder_ == null) {
+            boundsMins_ = builderForValue.build();
+            onChanged();
+          } else {
+            boundsMinsBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public Builder mergeBoundsMins(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMinsBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) == 0x00000002) &&
+                boundsMins_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              boundsMins_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(boundsMins_).mergeFrom(value).buildPartial();
+            } else {
+              boundsMins_ = value;
+            }
+            onChanged();
+          } else {
+            boundsMinsBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public Builder clearBoundsMins() {
+          if (boundsMinsBuilder_ == null) {
+            boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            boundsMinsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getBoundsMinsBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getBoundsMinsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMinsOrBuilder() {
+          if (boundsMinsBuilder_ != null) {
+            return boundsMinsBuilder_.getMessageOrBuilder();
+          } else {
+            return boundsMins_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getBoundsMinsFieldBuilder() {
+          if (boundsMinsBuilder_ == null) {
+            boundsMinsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getBoundsMins(),
+                    getParentForChildren(),
+                    isClean());
+            boundsMins_ = null;
+          }
+          return boundsMinsBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMaxsBuilder_;
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public boolean hasBoundsMaxs() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMaxs() {
+          if (boundsMaxsBuilder_ == null) {
+            return boundsMaxs_;
+          } else {
+            return boundsMaxsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public Builder setBoundsMaxs(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMaxsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            boundsMaxs_ = value;
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public Builder setBoundsMaxs(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxs_ = builderForValue.build();
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public Builder mergeBoundsMaxs(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMaxsBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) == 0x00000004) &&
+                boundsMaxs_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              boundsMaxs_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(boundsMaxs_).mergeFrom(value).buildPartial();
+            } else {
+              boundsMaxs_ = value;
+            }
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public Builder clearBoundsMaxs() {
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getBoundsMaxsBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getBoundsMaxsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMaxsOrBuilder() {
+          if (boundsMaxsBuilder_ != null) {
+            return boundsMaxsBuilder_.getMessageOrBuilder();
+          } else {
+            return boundsMaxs_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getBoundsMaxsFieldBuilder() {
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getBoundsMaxs(),
+                    getParentForChildren(),
+                    isClean());
+            boundsMaxs_ = null;
+          }
+          return boundsMaxsBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginBuilder_;
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public boolean hasFanOrigin() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOrigin() {
+          if (fanOriginBuilder_ == null) {
+            return fanOrigin_;
+          } else {
+            return fanOriginBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public Builder setFanOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fanOrigin_ = value;
+            onChanged();
+          } else {
+            fanOriginBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public Builder setFanOrigin(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (fanOriginBuilder_ == null) {
+            fanOrigin_ = builderForValue.build();
+            onChanged();
+          } else {
+            fanOriginBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public Builder mergeFanOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) == 0x00000008) &&
+                fanOrigin_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              fanOrigin_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(fanOrigin_).mergeFrom(value).buildPartial();
+            } else {
+              fanOrigin_ = value;
+            }
+            onChanged();
+          } else {
+            fanOriginBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public Builder clearFanOrigin() {
+          if (fanOriginBuilder_ == null) {
+            fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            fanOriginBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getFanOriginBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getFanOriginFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOrBuilder() {
+          if (fanOriginBuilder_ != null) {
+            return fanOriginBuilder_.getMessageOrBuilder();
+          } else {
+            return fanOrigin_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getFanOriginFieldBuilder() {
+          if (fanOriginBuilder_ == null) {
+            fanOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getFanOrigin(),
+                    getParentForChildren(),
+                    isClean());
+            fanOrigin_ = null;
+          }
+          return fanOriginBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginOffsetBuilder_;
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public boolean hasFanOriginOffset() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOriginOffset() {
+          if (fanOriginOffsetBuilder_ == null) {
+            return fanOriginOffset_;
+          } else {
+            return fanOriginOffsetBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public Builder setFanOriginOffset(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginOffsetBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fanOriginOffset_ = value;
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public Builder setFanOriginOffset(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffset_ = builderForValue.build();
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public Builder mergeFanOriginOffset(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginOffsetBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) == 0x00000010) &&
+                fanOriginOffset_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              fanOriginOffset_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(fanOriginOffset_).mergeFrom(value).buildPartial();
+            } else {
+              fanOriginOffset_ = value;
+            }
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public Builder clearFanOriginOffset() {
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getFanOriginOffsetBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getFanOriginOffsetFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOffsetOrBuilder() {
+          if (fanOriginOffsetBuilder_ != null) {
+            return fanOriginOffsetBuilder_.getMessageOrBuilder();
+          } else {
+            return fanOriginOffset_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getFanOriginOffsetFieldBuilder() {
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getFanOriginOffset(),
+                    getParentForChildren(),
+                    isClean());
+            fanOriginOffset_ = null;
+          }
+          return fanOriginOffsetBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanDirectionBuilder_;
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public boolean hasFanDirection() {
+          return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanDirection() {
+          if (fanDirectionBuilder_ == null) {
+            return fanDirection_;
+          } else {
+            return fanDirectionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public Builder setFanDirection(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanDirectionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fanDirection_ = value;
+            onChanged();
+          } else {
+            fanDirectionBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public Builder setFanDirection(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (fanDirectionBuilder_ == null) {
+            fanDirection_ = builderForValue.build();
+            onChanged();
+          } else {
+            fanDirectionBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public Builder mergeFanDirection(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanDirectionBuilder_ == null) {
+            if (((bitField0_ & 0x00000020) == 0x00000020) &&
+                fanDirection_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              fanDirection_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(fanDirection_).mergeFrom(value).buildPartial();
+            } else {
+              fanDirection_ = value;
+            }
+            onChanged();
+          } else {
+            fanDirectionBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public Builder clearFanDirection() {
+          if (fanDirectionBuilder_ == null) {
+            fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            fanDirectionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000020);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getFanDirectionBuilder() {
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return getFanDirectionFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanDirectionOrBuilder() {
+          if (fanDirectionBuilder_ != null) {
+            return fanDirectionBuilder_.getMessageOrBuilder();
+          } else {
+            return fanDirection_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getFanDirectionFieldBuilder() {
+          if (fanDirectionBuilder_ == null) {
+            fanDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getFanDirection(),
+                    getParentForChildren(),
+                    isClean());
+            fanDirection_ = null;
+          }
+          return fanDirectionBuilder_;
+        }
+
+        private float force_ ;
+        /**
+         * <code>optional float force = 7;</code>
+         */
+        public boolean hasForce() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional float force = 7;</code>
+         */
+        public float getForce() {
+          return force_;
+        }
+        /**
+         * <code>optional float force = 7;</code>
+         */
+        public Builder setForce(float value) {
+          bitField0_ |= 0x00000040;
+          force_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float force = 7;</code>
+         */
+        public Builder clearForce() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          force_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object fanForceCurve_ = "";
+        /**
+         * <code>optional string fan_force_curve = 8;</code>
+         */
+        public boolean hasFanForceCurve() {
+          return ((bitField0_ & 0x00000080) == 0x00000080);
+        }
+        /**
+         * <code>optional string fan_force_curve = 8;</code>
+         */
+        public java.lang.String getFanForceCurve() {
+          java.lang.Object ref = fanForceCurve_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              fanForceCurve_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string fan_force_curve = 8;</code>
+         */
+        public com.google.protobuf.ByteString
+            getFanForceCurveBytes() {
+          java.lang.Object ref = fanForceCurve_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            fanForceCurve_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string fan_force_curve = 8;</code>
+         */
+        public Builder setFanForceCurve(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+          fanForceCurve_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string fan_force_curve = 8;</code>
+         */
+        public Builder clearFanForceCurve() {
+          bitField0_ = (bitField0_ & ~0x00000080);
+          fanForceCurve_ = getDefaultInstance().getFanForceCurve();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string fan_force_curve = 8;</code>
+         */
+        public Builder setFanForceCurveBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000080;
+          fanForceCurve_ = value;
+          onChanged();
+          return this;
+        }
+
+        private boolean falloff_ ;
+        /**
+         * <code>optional bool falloff = 9;</code>
+         */
+        public boolean hasFalloff() {
+          return ((bitField0_ & 0x00000100) == 0x00000100);
+        }
+        /**
+         * <code>optional bool falloff = 9;</code>
+         */
+        public boolean getFalloff() {
+          return falloff_;
+        }
+        /**
+         * <code>optional bool falloff = 9;</code>
+         */
+        public Builder setFalloff(boolean value) {
+          bitField0_ |= 0x00000100;
+          falloff_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool falloff = 9;</code>
+         */
+        public Builder clearFalloff() {
+          bitField0_ = (bitField0_ & ~0x00000100);
+          falloff_ = false;
+          onChanged();
+          return this;
+        }
+
+        private boolean pullTowardsPoint_ ;
+        /**
+         * <code>optional bool pull_towards_point = 10;</code>
+         */
+        public boolean hasPullTowardsPoint() {
+          return ((bitField0_ & 0x00000200) == 0x00000200);
+        }
+        /**
+         * <code>optional bool pull_towards_point = 10;</code>
+         */
+        public boolean getPullTowardsPoint() {
+          return pullTowardsPoint_;
+        }
+        /**
+         * <code>optional bool pull_towards_point = 10;</code>
+         */
+        public Builder setPullTowardsPoint(boolean value) {
+          bitField0_ |= 0x00000200;
+          pullTowardsPoint_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool pull_towards_point = 10;</code>
+         */
+        public Builder clearPullTowardsPoint() {
+          bitField0_ = (bitField0_ & ~0x00000200);
+          pullTowardsPoint_ = false;
+          onChanged();
+          return this;
+        }
+
+        private float curveMinDist_ ;
+        /**
+         * <code>optional float curve_min_dist = 11;</code>
+         */
+        public boolean hasCurveMinDist() {
+          return ((bitField0_ & 0x00000400) == 0x00000400);
+        }
+        /**
+         * <code>optional float curve_min_dist = 11;</code>
+         */
+        public float getCurveMinDist() {
+          return curveMinDist_;
+        }
+        /**
+         * <code>optional float curve_min_dist = 11;</code>
+         */
+        public Builder setCurveMinDist(float value) {
+          bitField0_ |= 0x00000400;
+          curveMinDist_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float curve_min_dist = 11;</code>
+         */
+        public Builder clearCurveMinDist() {
+          bitField0_ = (bitField0_ & ~0x00000400);
+          curveMinDist_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float curveMaxDist_ ;
+        /**
+         * <code>optional float curve_max_dist = 12;</code>
+         */
+        public boolean hasCurveMaxDist() {
+          return ((bitField0_ & 0x00000800) == 0x00000800);
+        }
+        /**
+         * <code>optional float curve_max_dist = 12;</code>
+         */
+        public float getCurveMaxDist() {
+          return curveMaxDist_;
+        }
+        /**
+         * <code>optional float curve_max_dist = 12;</code>
+         */
+        public Builder setCurveMaxDist(float value) {
+          bitField0_ |= 0x00000800;
+          curveMaxDist_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float curve_max_dist = 12;</code>
+         */
+        public Builder clearCurveMaxDist() {
+          bitField0_ = (bitField0_ & ~0x00000800);
+          curveMaxDist_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private int fanType_ ;
+        /**
+         * <code>optional uint32 fan_type = 13;</code>
+         */
+        public boolean hasFanType() {
+          return ((bitField0_ & 0x00001000) == 0x00001000);
+        }
+        /**
+         * <code>optional uint32 fan_type = 13;</code>
+         */
+        public int getFanType() {
+          return fanType_;
+        }
+        /**
+         * <code>optional uint32 fan_type = 13;</code>
+         */
+        public Builder setFanType(int value) {
+          bitField0_ |= 0x00001000;
+          fanType_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 fan_type = 13;</code>
+         */
+        public Builder clearFanType() {
+          bitField0_ = (bitField0_ & ~0x00001000);
+          fanType_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private float coneStartRadius_ ;
+        /**
+         * <code>optional float cone_start_radius = 14;</code>
+         */
+        public boolean hasConeStartRadius() {
+          return ((bitField0_ & 0x00002000) == 0x00002000);
+        }
+        /**
+         * <code>optional float cone_start_radius = 14;</code>
+         */
+        public float getConeStartRadius() {
+          return coneStartRadius_;
+        }
+        /**
+         * <code>optional float cone_start_radius = 14;</code>
+         */
+        public Builder setConeStartRadius(float value) {
+          bitField0_ |= 0x00002000;
+          coneStartRadius_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float cone_start_radius = 14;</code>
+         */
+        public Builder clearConeStartRadius() {
+          bitField0_ = (bitField0_ & ~0x00002000);
+          coneStartRadius_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float coneEndRadius_ ;
+        /**
+         * <code>optional float cone_end_radius = 15;</code>
+         */
+        public boolean hasConeEndRadius() {
+          return ((bitField0_ & 0x00004000) == 0x00004000);
+        }
+        /**
+         * <code>optional float cone_end_radius = 15;</code>
+         */
+        public float getConeEndRadius() {
+          return coneEndRadius_;
+        }
+        /**
+         * <code>optional float cone_end_radius = 15;</code>
+         */
+        public Builder setConeEndRadius(float value) {
+          bitField0_ |= 0x00004000;
+          coneEndRadius_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float cone_end_radius = 15;</code>
+         */
+        public Builder clearConeEndRadius() {
+          bitField0_ = (bitField0_ & ~0x00004000);
+          coneEndRadius_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private float coneLength_ ;
+        /**
+         * <code>optional float cone_length = 16;</code>
+         */
+        public boolean hasConeLength() {
+          return ((bitField0_ & 0x00008000) == 0x00008000);
+        }
+        /**
+         * <code>optional float cone_length = 16;</code>
+         */
+        public float getConeLength() {
+          return coneLength_;
+        }
+        /**
+         * <code>optional float cone_length = 16;</code>
+         */
+        public Builder setConeLength(float value) {
+          bitField0_ |= 0x00008000;
+          coneLength_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float cone_length = 16;</code>
+         */
+        public Builder clearConeLength() {
+          bitField0_ = (bitField0_ & ~0x00008000);
+          coneLength_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private int entityHandle_ = 16777215;
+        /**
+         * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+         */
+        public boolean hasEntityHandle() {
+          return ((bitField0_ & 0x00010000) == 0x00010000);
+        }
+        /**
+         * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+         */
+        public int getEntityHandle() {
+          return entityHandle_;
+        }
+        /**
+         * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+         */
+        public Builder setEntityHandle(int value) {
+          bitField0_ |= 0x00010000;
+          entityHandle_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 entity_handle = 17 [default = 16777215];</code>
+         */
+        public Builder clearEntityHandle() {
+          bitField0_ = (bitField0_ & ~0x00010000);
+          entityHandle_ = 16777215;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object attachmentName_ = "";
+        /**
+         * <code>optional string attachment_name = 18;</code>
+         */
+        public boolean hasAttachmentName() {
+          return ((bitField0_ & 0x00020000) == 0x00020000);
+        }
+        /**
+         * <code>optional string attachment_name = 18;</code>
+         */
+        public java.lang.String getAttachmentName() {
+          java.lang.Object ref = attachmentName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              attachmentName_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string attachment_name = 18;</code>
+         */
+        public com.google.protobuf.ByteString
+            getAttachmentNameBytes() {
+          java.lang.Object ref = attachmentName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            attachmentName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string attachment_name = 18;</code>
+         */
+        public Builder setAttachmentName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+          attachmentName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string attachment_name = 18;</code>
+         */
+        public Builder clearAttachmentName() {
+          bitField0_ = (bitField0_ & ~0x00020000);
+          attachmentName_ = getDefaultInstance().getAttachmentName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string attachment_name = 18;</code>
+         */
+        public Builder setAttachmentNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+          attachmentName_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.AddFan)
+      }
+
+      static {
+        defaultInstance = new AddFan(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.AddFan)
+    }
+
+    public interface UpdateFanOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateFan)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      boolean hasActive();
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      boolean getActive();
+
+      /**
+       * <code>optional .CMsgVector fan_origin = 2;</code>
+       */
+      boolean hasFanOrigin();
+      /**
+       * <code>optional .CMsgVector fan_origin = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOrigin();
+      /**
+       * <code>optional .CMsgVector fan_origin = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+       */
+      boolean hasFanOriginOffset();
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOriginOffset();
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOffsetOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector fan_direction = 4;</code>
+       */
+      boolean hasFanDirection();
+      /**
+       * <code>optional .CMsgVector fan_direction = 4;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanDirection();
+      /**
+       * <code>optional .CMsgVector fan_direction = 4;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanDirectionOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector bounds_mins = 5;</code>
+       */
+      boolean hasBoundsMins();
+      /**
+       * <code>optional .CMsgVector bounds_mins = 5;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMins();
+      /**
+       * <code>optional .CMsgVector bounds_mins = 5;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMinsOrBuilder();
+
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 6;</code>
+       */
+      boolean hasBoundsMaxs();
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 6;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMaxs();
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 6;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMaxsOrBuilder();
+
+      /**
+       * <code>optional float fan_ramp_ratio = 7;</code>
+       */
+      boolean hasFanRampRatio();
+      /**
+       * <code>optional float fan_ramp_ratio = 7;</code>
+       */
+      float getFanRampRatio();
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.UpdateFan}
+     */
+    public static final class UpdateFan extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateFan)
+        UpdateFanOrBuilder {
+      // Use UpdateFan.newBuilder() to construct.
+      private UpdateFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private UpdateFan(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final UpdateFan defaultInstance;
+      public static UpdateFan getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public UpdateFan getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private UpdateFan(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                active_ = input.readBool();
+                break;
+              }
+              case 18: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                  subBuilder = fanOrigin_.toBuilder();
+                }
+                fanOrigin_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fanOrigin_);
+                  fanOrigin_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000002;
+                break;
+              }
+              case 26: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000004) == 0x00000004)) {
+                  subBuilder = fanOriginOffset_.toBuilder();
+                }
+                fanOriginOffset_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fanOriginOffset_);
+                  fanOriginOffset_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000004;
+                break;
+              }
+              case 34: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000008) == 0x00000008)) {
+                  subBuilder = fanDirection_.toBuilder();
+                }
+                fanDirection_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(fanDirection_);
+                  fanDirection_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000008;
+                break;
+              }
+              case 42: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000010) == 0x00000010)) {
+                  subBuilder = boundsMins_.toBuilder();
+                }
+                boundsMins_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(boundsMins_);
+                  boundsMins_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000010;
+                break;
+              }
+              case 50: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                  subBuilder = boundsMaxs_.toBuilder();
+                }
+                boundsMaxs_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(boundsMaxs_);
+                  boundsMaxs_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000020;
+                break;
+              }
+              case 61: {
+                bitField0_ |= 0x00000040;
+                fanRampRatio_ = input.readFloat();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<UpdateFan> PARSER =
+          new com.google.protobuf.AbstractParser<UpdateFan>() {
+        public UpdateFan parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new UpdateFan(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<UpdateFan> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int ACTIVE_FIELD_NUMBER = 1;
+      private boolean active_;
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      public boolean hasActive() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional bool active = 1;</code>
+       */
+      public boolean getActive() {
+        return active_;
+      }
+
+      public static final int FAN_ORIGIN_FIELD_NUMBER = 2;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOrigin_;
+      /**
+       * <code>optional .CMsgVector fan_origin = 2;</code>
+       */
+      public boolean hasFanOrigin() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOrigin() {
+        return fanOrigin_;
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOrBuilder() {
+        return fanOrigin_;
+      }
+
+      public static final int FAN_ORIGIN_OFFSET_FIELD_NUMBER = 3;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOriginOffset_;
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+       */
+      public boolean hasFanOriginOffset() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOriginOffset() {
+        return fanOriginOffset_;
+      }
+      /**
+       * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOffsetOrBuilder() {
+        return fanOriginOffset_;
+      }
+
+      public static final int FAN_DIRECTION_FIELD_NUMBER = 4;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanDirection_;
+      /**
+       * <code>optional .CMsgVector fan_direction = 4;</code>
+       */
+      public boolean hasFanDirection() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional .CMsgVector fan_direction = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanDirection() {
+        return fanDirection_;
+      }
+      /**
+       * <code>optional .CMsgVector fan_direction = 4;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanDirectionOrBuilder() {
+        return fanDirection_;
+      }
+
+      public static final int BOUNDS_MINS_FIELD_NUMBER = 5;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMins_;
+      /**
+       * <code>optional .CMsgVector bounds_mins = 5;</code>
+       */
+      public boolean hasBoundsMins() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional .CMsgVector bounds_mins = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMins() {
+        return boundsMins_;
+      }
+      /**
+       * <code>optional .CMsgVector bounds_mins = 5;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMinsOrBuilder() {
+        return boundsMins_;
+      }
+
+      public static final int BOUNDS_MAXS_FIELD_NUMBER = 6;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMaxs_;
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 6;</code>
+       */
+      public boolean hasBoundsMaxs() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMaxs() {
+        return boundsMaxs_;
+      }
+      /**
+       * <code>optional .CMsgVector bounds_maxs = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMaxsOrBuilder() {
+        return boundsMaxs_;
+      }
+
+      public static final int FAN_RAMP_RATIO_FIELD_NUMBER = 7;
+      private float fanRampRatio_;
+      /**
+       * <code>optional float fan_ramp_ratio = 7;</code>
+       */
+      public boolean hasFanRampRatio() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional float fan_ramp_ratio = 7;</code>
+       */
+      public float getFanRampRatio() {
+        return fanRampRatio_;
+      }
+
+      private void initFields() {
+        active_ = false;
+        fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        fanRampRatio_ = 0F;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBool(1, active_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeMessage(2, fanOrigin_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeMessage(3, fanOriginOffset_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          output.writeMessage(4, fanDirection_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          output.writeMessage(5, boundsMins_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          output.writeMessage(6, boundsMaxs_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          output.writeFloat(7, fanRampRatio_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(1, active_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, fanOrigin_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, fanOriginOffset_);
+        }
+        if (((bitField0_ & 0x00000008) == 0x00000008)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(4, fanDirection_);
+        }
+        if (((bitField0_ & 0x00000010) == 0x00000010)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(5, boundsMins_);
+        }
+        if (((bitField0_ & 0x00000020) == 0x00000020)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(6, boundsMaxs_);
+        }
+        if (((bitField0_ & 0x00000040) == 0x00000040)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(7, fanRampRatio_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.UpdateFan}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateFan)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getFanOriginFieldBuilder();
+            getFanOriginOffsetFieldBuilder();
+            getFanDirectionFieldBuilder();
+            getBoundsMinsFieldBuilder();
+            getBoundsMaxsFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          active_ = false;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          if (fanOriginBuilder_ == null) {
+            fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            fanOriginBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            fanOriginOffsetBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000004);
+          if (fanDirectionBuilder_ == null) {
+            fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            fanDirectionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          if (boundsMinsBuilder_ == null) {
+            boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            boundsMinsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            boundsMaxsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000020);
+          fanRampRatio_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000040);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.active_ = active_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          if (fanOriginBuilder_ == null) {
+            result.fanOrigin_ = fanOrigin_;
+          } else {
+            result.fanOrigin_ = fanOriginBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          if (fanOriginOffsetBuilder_ == null) {
+            result.fanOriginOffset_ = fanOriginOffset_;
+          } else {
+            result.fanOriginOffset_ = fanOriginOffsetBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+            to_bitField0_ |= 0x00000008;
+          }
+          if (fanDirectionBuilder_ == null) {
+            result.fanDirection_ = fanDirection_;
+          } else {
+            result.fanDirection_ = fanDirectionBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+            to_bitField0_ |= 0x00000010;
+          }
+          if (boundsMinsBuilder_ == null) {
+            result.boundsMins_ = boundsMins_;
+          } else {
+            result.boundsMins_ = boundsMinsBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+            to_bitField0_ |= 0x00000020;
+          }
+          if (boundsMaxsBuilder_ == null) {
+            result.boundsMaxs_ = boundsMaxs_;
+          } else {
+            result.boundsMaxs_ = boundsMaxsBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+            to_bitField0_ |= 0x00000040;
+          }
+          result.fanRampRatio_ = fanRampRatio_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance()) return this;
+          if (other.hasActive()) {
+            setActive(other.getActive());
+          }
+          if (other.hasFanOrigin()) {
+            mergeFanOrigin(other.getFanOrigin());
+          }
+          if (other.hasFanOriginOffset()) {
+            mergeFanOriginOffset(other.getFanOriginOffset());
+          }
+          if (other.hasFanDirection()) {
+            mergeFanDirection(other.getFanDirection());
+          }
+          if (other.hasBoundsMins()) {
+            mergeBoundsMins(other.getBoundsMins());
+          }
+          if (other.hasBoundsMaxs()) {
+            mergeBoundsMaxs(other.getBoundsMaxs());
+          }
+          if (other.hasFanRampRatio()) {
+            setFanRampRatio(other.getFanRampRatio());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private boolean active_ ;
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public boolean hasActive() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public boolean getActive() {
+          return active_;
+        }
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public Builder setActive(boolean value) {
+          bitField0_ |= 0x00000001;
+          active_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool active = 1;</code>
+         */
+        public Builder clearActive() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          active_ = false;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginBuilder_;
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public boolean hasFanOrigin() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOrigin() {
+          if (fanOriginBuilder_ == null) {
+            return fanOrigin_;
+          } else {
+            return fanOriginBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public Builder setFanOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fanOrigin_ = value;
+            onChanged();
+          } else {
+            fanOriginBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public Builder setFanOrigin(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (fanOriginBuilder_ == null) {
+            fanOrigin_ = builderForValue.build();
+            onChanged();
+          } else {
+            fanOriginBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public Builder mergeFanOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) == 0x00000002) &&
+                fanOrigin_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              fanOrigin_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(fanOrigin_).mergeFrom(value).buildPartial();
+            } else {
+              fanOrigin_ = value;
+            }
+            onChanged();
+          } else {
+            fanOriginBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public Builder clearFanOrigin() {
+          if (fanOriginBuilder_ == null) {
+            fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            fanOriginBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getFanOriginBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getFanOriginFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOrBuilder() {
+          if (fanOriginBuilder_ != null) {
+            return fanOriginBuilder_.getMessageOrBuilder();
+          } else {
+            return fanOrigin_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getFanOriginFieldBuilder() {
+          if (fanOriginBuilder_ == null) {
+            fanOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getFanOrigin(),
+                    getParentForChildren(),
+                    isClean());
+            fanOrigin_ = null;
+          }
+          return fanOriginBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginOffsetBuilder_;
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public boolean hasFanOriginOffset() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanOriginOffset() {
+          if (fanOriginOffsetBuilder_ == null) {
+            return fanOriginOffset_;
+          } else {
+            return fanOriginOffsetBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public Builder setFanOriginOffset(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginOffsetBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fanOriginOffset_ = value;
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public Builder setFanOriginOffset(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffset_ = builderForValue.build();
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public Builder mergeFanOriginOffset(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanOriginOffsetBuilder_ == null) {
+            if (((bitField0_ & 0x00000004) == 0x00000004) &&
+                fanOriginOffset_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              fanOriginOffset_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(fanOriginOffset_).mergeFrom(value).buildPartial();
+            } else {
+              fanOriginOffset_ = value;
+            }
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000004;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public Builder clearFanOriginOffset() {
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            fanOriginOffsetBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getFanOriginOffsetBuilder() {
+          bitField0_ |= 0x00000004;
+          onChanged();
+          return getFanOriginOffsetFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanOriginOffsetOrBuilder() {
+          if (fanOriginOffsetBuilder_ != null) {
+            return fanOriginOffsetBuilder_.getMessageOrBuilder();
+          } else {
+            return fanOriginOffset_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_origin_offset = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getFanOriginOffsetFieldBuilder() {
+          if (fanOriginOffsetBuilder_ == null) {
+            fanOriginOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getFanOriginOffset(),
+                    getParentForChildren(),
+                    isClean());
+            fanOriginOffset_ = null;
+          }
+          return fanOriginOffsetBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanDirectionBuilder_;
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public boolean hasFanDirection() {
+          return ((bitField0_ & 0x00000008) == 0x00000008);
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getFanDirection() {
+          if (fanDirectionBuilder_ == null) {
+            return fanDirection_;
+          } else {
+            return fanDirectionBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public Builder setFanDirection(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanDirectionBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            fanDirection_ = value;
+            onChanged();
+          } else {
+            fanDirectionBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public Builder setFanDirection(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (fanDirectionBuilder_ == null) {
+            fanDirection_ = builderForValue.build();
+            onChanged();
+          } else {
+            fanDirectionBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public Builder mergeFanDirection(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (fanDirectionBuilder_ == null) {
+            if (((bitField0_ & 0x00000008) == 0x00000008) &&
+                fanDirection_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              fanDirection_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(fanDirection_).mergeFrom(value).buildPartial();
+            } else {
+              fanDirection_ = value;
+            }
+            onChanged();
+          } else {
+            fanDirectionBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000008;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public Builder clearFanDirection() {
+          if (fanDirectionBuilder_ == null) {
+            fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            fanDirectionBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000008);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getFanDirectionBuilder() {
+          bitField0_ |= 0x00000008;
+          onChanged();
+          return getFanDirectionFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getFanDirectionOrBuilder() {
+          if (fanDirectionBuilder_ != null) {
+            return fanDirectionBuilder_.getMessageOrBuilder();
+          } else {
+            return fanDirection_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector fan_direction = 4;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getFanDirectionFieldBuilder() {
+          if (fanDirectionBuilder_ == null) {
+            fanDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getFanDirection(),
+                    getParentForChildren(),
+                    isClean());
+            fanDirection_ = null;
+          }
+          return fanDirectionBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMinsBuilder_;
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public boolean hasBoundsMins() {
+          return ((bitField0_ & 0x00000010) == 0x00000010);
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMins() {
+          if (boundsMinsBuilder_ == null) {
+            return boundsMins_;
+          } else {
+            return boundsMinsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public Builder setBoundsMins(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMinsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            boundsMins_ = value;
+            onChanged();
+          } else {
+            boundsMinsBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public Builder setBoundsMins(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (boundsMinsBuilder_ == null) {
+            boundsMins_ = builderForValue.build();
+            onChanged();
+          } else {
+            boundsMinsBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public Builder mergeBoundsMins(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMinsBuilder_ == null) {
+            if (((bitField0_ & 0x00000010) == 0x00000010) &&
+                boundsMins_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              boundsMins_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(boundsMins_).mergeFrom(value).buildPartial();
+            } else {
+              boundsMins_ = value;
+            }
+            onChanged();
+          } else {
+            boundsMinsBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000010;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public Builder clearBoundsMins() {
+          if (boundsMinsBuilder_ == null) {
+            boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            boundsMinsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000010);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getBoundsMinsBuilder() {
+          bitField0_ |= 0x00000010;
+          onChanged();
+          return getBoundsMinsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMinsOrBuilder() {
+          if (boundsMinsBuilder_ != null) {
+            return boundsMinsBuilder_.getMessageOrBuilder();
+          } else {
+            return boundsMins_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_mins = 5;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getBoundsMinsFieldBuilder() {
+          if (boundsMinsBuilder_ == null) {
+            boundsMinsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getBoundsMins(),
+                    getParentForChildren(),
+                    isClean());
+            boundsMins_ = null;
+          }
+          return boundsMinsBuilder_;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMaxsBuilder_;
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public boolean hasBoundsMaxs() {
+          return ((bitField0_ & 0x00000020) == 0x00000020);
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getBoundsMaxs() {
+          if (boundsMaxsBuilder_ == null) {
+            return boundsMaxs_;
+          } else {
+            return boundsMaxsBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public Builder setBoundsMaxs(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMaxsBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            boundsMaxs_ = value;
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public Builder setBoundsMaxs(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxs_ = builderForValue.build();
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public Builder mergeBoundsMaxs(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (boundsMaxsBuilder_ == null) {
+            if (((bitField0_ & 0x00000020) == 0x00000020) &&
+                boundsMaxs_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              boundsMaxs_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(boundsMaxs_).mergeFrom(value).buildPartial();
+            } else {
+              boundsMaxs_ = value;
+            }
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000020;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public Builder clearBoundsMaxs() {
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            boundsMaxsBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000020);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getBoundsMaxsBuilder() {
+          bitField0_ |= 0x00000020;
+          onChanged();
+          return getBoundsMaxsFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getBoundsMaxsOrBuilder() {
+          if (boundsMaxsBuilder_ != null) {
+            return boundsMaxsBuilder_.getMessageOrBuilder();
+          } else {
+            return boundsMaxs_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector bounds_maxs = 6;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getBoundsMaxsFieldBuilder() {
+          if (boundsMaxsBuilder_ == null) {
+            boundsMaxsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getBoundsMaxs(),
+                    getParentForChildren(),
+                    isClean());
+            boundsMaxs_ = null;
+          }
+          return boundsMaxsBuilder_;
+        }
+
+        private float fanRampRatio_ ;
+        /**
+         * <code>optional float fan_ramp_ratio = 7;</code>
+         */
+        public boolean hasFanRampRatio() {
+          return ((bitField0_ & 0x00000040) == 0x00000040);
+        }
+        /**
+         * <code>optional float fan_ramp_ratio = 7;</code>
+         */
+        public float getFanRampRatio() {
+          return fanRampRatio_;
+        }
+        /**
+         * <code>optional float fan_ramp_ratio = 7;</code>
+         */
+        public Builder setFanRampRatio(float value) {
+          bitField0_ |= 0x00000040;
+          fanRampRatio_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float fan_ramp_ratio = 7;</code>
+         */
+        public Builder clearFanRampRatio() {
+          bitField0_ = (bitField0_ & ~0x00000040);
+          fanRampRatio_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.UpdateFan)
+      }
+
+      static {
+        defaultInstance = new UpdateFan(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.UpdateFan)
+    }
+
+    public interface RemoveFanOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.RemoveFan)
+        com.google.protobuf.MessageOrBuilder {
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.RemoveFan}
+     */
+    public static final class RemoveFan extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.RemoveFan)
+        RemoveFanOrBuilder {
+      // Use RemoveFan.newBuilder() to construct.
+      private RemoveFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private RemoveFan(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final RemoveFan defaultInstance;
+      public static RemoveFan getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public RemoveFan getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RemoveFan(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<RemoveFan> PARSER =
+          new com.google.protobuf.AbstractParser<RemoveFan>() {
+        public RemoveFan parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RemoveFan(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RemoveFan> getParserForType() {
+        return PARSER;
+      }
+
+      private void initFields() {
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.RemoveFan}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.RemoveFan)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan(this);
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance()) return this;
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.RemoveFan)
+      }
+
+      static {
+        defaultInstance = new RemoveFan(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.RemoveFan)
+    }
+
+    public interface SetParticleClusterGrowthOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleClusterGrowth)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional float duration = 1;</code>
+       */
+      boolean hasDuration();
+      /**
+       * <code>optional float duration = 1;</code>
+       */
+      float getDuration();
+
+      /**
+       * <code>optional .CMsgVector origin = 2;</code>
+       */
+      boolean hasOrigin();
+      /**
+       * <code>optional .CMsgVector origin = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getOrigin();
+      /**
+       * <code>optional .CMsgVector origin = 2;</code>
+       */
+      skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder();
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.SetParticleClusterGrowth}
+     */
+    public static final class SetParticleClusterGrowth extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleClusterGrowth)
+        SetParticleClusterGrowthOrBuilder {
+      // Use SetParticleClusterGrowth.newBuilder() to construct.
+      private SetParticleClusterGrowth(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private SetParticleClusterGrowth(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final SetParticleClusterGrowth defaultInstance;
+      public static SetParticleClusterGrowth getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public SetParticleClusterGrowth getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SetParticleClusterGrowth(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 13: {
+                bitField0_ |= 0x00000001;
+                duration_ = input.readFloat();
+                break;
+              }
+              case 18: {
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                  subBuilder = origin_.toBuilder();
+                }
+                origin_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(origin_);
+                  origin_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000002;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<SetParticleClusterGrowth> PARSER =
+          new com.google.protobuf.AbstractParser<SetParticleClusterGrowth>() {
+        public SetParticleClusterGrowth parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetParticleClusterGrowth(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SetParticleClusterGrowth> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int DURATION_FIELD_NUMBER = 1;
+      private float duration_;
+      /**
+       * <code>optional float duration = 1;</code>
+       */
+      public boolean hasDuration() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional float duration = 1;</code>
+       */
+      public float getDuration() {
+        return duration_;
+      }
+
+      public static final int ORIGIN_FIELD_NUMBER = 2;
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector origin_;
+      /**
+       * <code>optional .CMsgVector origin = 2;</code>
+       */
+      public boolean hasOrigin() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional .CMsgVector origin = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getOrigin() {
+        return origin_;
+      }
+      /**
+       * <code>optional .CMsgVector origin = 2;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+        return origin_;
+      }
+
+      private void initFields() {
+        duration_ = 0F;
+        origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeFloat(1, duration_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeMessage(2, origin_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeFloatSize(1, duration_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, origin_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.SetParticleClusterGrowth}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleClusterGrowth)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getOriginFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          duration_ = 0F;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          if (originBuilder_ == null) {
+            origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          } else {
+            originBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.duration_ = duration_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          if (originBuilder_ == null) {
+            result.origin_ = origin_;
+          } else {
+            result.origin_ = originBuilder_.build();
+          }
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance()) return this;
+          if (other.hasDuration()) {
+            setDuration(other.getDuration());
+          }
+          if (other.hasOrigin()) {
+            mergeOrigin(other.getOrigin());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private float duration_ ;
+        /**
+         * <code>optional float duration = 1;</code>
+         */
+        public boolean hasDuration() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional float duration = 1;</code>
+         */
+        public float getDuration() {
+          return duration_;
+        }
+        /**
+         * <code>optional float duration = 1;</code>
+         */
+        public Builder setDuration(float value) {
+          bitField0_ |= 0x00000001;
+          duration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional float duration = 1;</code>
+         */
+        public Builder clearDuration() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          duration_ = 0F;
+          onChanged();
+          return this;
+        }
+
+        private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> originBuilder_;
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public boolean hasOrigin() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getOrigin() {
+          if (originBuilder_ == null) {
+            return origin_;
+          } else {
+            return originBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public Builder setOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (originBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            origin_ = value;
+            onChanged();
+          } else {
+            originBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public Builder setOrigin(
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+          if (originBuilder_ == null) {
+            origin_ = builderForValue.build();
+            onChanged();
+          } else {
+            originBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public Builder mergeOrigin(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+          if (originBuilder_ == null) {
+            if (((bitField0_ & 0x00000002) == 0x00000002) &&
+                origin_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+              origin_ =
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(origin_).mergeFrom(value).buildPartial();
+            } else {
+              origin_ = value;
+            }
+            onChanged();
+          } else {
+            originBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000002;
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public Builder clearOrigin() {
+          if (originBuilder_ == null) {
+            origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+            onChanged();
+          } else {
+            originBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getOriginBuilder() {
+          bitField0_ |= 0x00000002;
+          onChanged();
+          return getOriginFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getOriginOrBuilder() {
+          if (originBuilder_ != null) {
+            return originBuilder_.getMessageOrBuilder();
+          } else {
+            return origin_;
+          }
+        }
+        /**
+         * <code>optional .CMsgVector origin = 2;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+            getOriginFieldBuilder() {
+          if (originBuilder_ == null) {
+            originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                    getOrigin(),
+                    getParentForChildren(),
+                    isClean());
+            origin_ = null;
+          }
+          return originBuilder_;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.SetParticleClusterGrowth)
+      }
+
+      static {
+        defaultInstance = new SetParticleClusterGrowth(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.SetParticleClusterGrowth)
+    }
+
+    public interface SetOverrideTextureOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetOverrideTexture)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string texture_name = 1;</code>
+       */
+      boolean hasTextureName();
+      /**
+       * <code>optional string texture_name = 1;</code>
+       */
+      java.lang.String getTextureName();
+      /**
+       * <code>optional string texture_name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getTextureNameBytes();
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.SetOverrideTexture}
+     */
+    public static final class SetOverrideTexture extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetOverrideTexture)
+        SetOverrideTextureOrBuilder {
+      // Use SetOverrideTexture.newBuilder() to construct.
+      private SetOverrideTexture(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private SetOverrideTexture(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final SetOverrideTexture defaultInstance;
+      public static SetOverrideTexture getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public SetOverrideTexture getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private SetOverrideTexture(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                textureName_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<SetOverrideTexture> PARSER =
+          new com.google.protobuf.AbstractParser<SetOverrideTexture>() {
+        public SetOverrideTexture parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new SetOverrideTexture(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<SetOverrideTexture> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int TEXTURE_NAME_FIELD_NUMBER = 1;
+      private java.lang.Object textureName_;
+      /**
+       * <code>optional string texture_name = 1;</code>
+       */
+      public boolean hasTextureName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string texture_name = 1;</code>
+       */
+      public java.lang.String getTextureName() {
+        java.lang.Object ref = textureName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            textureName_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string texture_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getTextureNameBytes() {
+        java.lang.Object ref = textureName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          textureName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        textureName_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBytes(1, getTextureNameBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, getTextureNameBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.SetOverrideTexture}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetOverrideTexture)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          textureName_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.textureName_ = textureName_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance()) return this;
+          if (other.hasTextureName()) {
+            bitField0_ |= 0x00000001;
+            textureName_ = other.textureName_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object textureName_ = "";
+        /**
+         * <code>optional string texture_name = 1;</code>
+         */
+        public boolean hasTextureName() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional string texture_name = 1;</code>
+         */
+        public java.lang.String getTextureName() {
+          java.lang.Object ref = textureName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              textureName_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string texture_name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getTextureNameBytes() {
+          java.lang.Object ref = textureName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            textureName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string texture_name = 1;</code>
+         */
+        public Builder setTextureName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          textureName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string texture_name = 1;</code>
+         */
+        public Builder clearTextureName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          textureName_ = getDefaultInstance().getTextureName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string texture_name = 1;</code>
+         */
+        public Builder setTextureNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          textureName_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.SetOverrideTexture)
+      }
+
+      static {
+        defaultInstance = new SetOverrideTexture(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.SetOverrideTexture)
+    }
+
+    public interface CreateSmokeGridOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.CreateSmokeGrid)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional string vdata_name = 1;</code>
+       */
+      boolean hasVdataName();
+      /**
+       * <code>optional string vdata_name = 1;</code>
+       */
+      java.lang.String getVdataName();
+      /**
+       * <code>optional string vdata_name = 1;</code>
+       */
+      com.google.protobuf.ByteString
+          getVdataNameBytes();
+    }
+    /**
+     * Protobuf type {@code CUserMsg_ParticleManager.CreateSmokeGrid}
+     */
+    public static final class CreateSmokeGrid extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.CreateSmokeGrid)
+        CreateSmokeGridOrBuilder {
+      // Use CreateSmokeGrid.newBuilder() to construct.
+      private CreateSmokeGrid(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private CreateSmokeGrid(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final CreateSmokeGrid defaultInstance;
+      public static CreateSmokeGrid getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public CreateSmokeGrid getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private CreateSmokeGrid(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                com.google.protobuf.ByteString bs = input.readBytes();
+                bitField0_ |= 0x00000001;
+                vdataName_ = bs;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<CreateSmokeGrid> PARSER =
+          new com.google.protobuf.AbstractParser<CreateSmokeGrid>() {
+        public CreateSmokeGrid parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new CreateSmokeGrid(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<CreateSmokeGrid> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int VDATA_NAME_FIELD_NUMBER = 1;
+      private java.lang.Object vdataName_;
+      /**
+       * <code>optional string vdata_name = 1;</code>
+       */
+      public boolean hasVdataName() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional string vdata_name = 1;</code>
+       */
+      public java.lang.String getVdataName() {
+        java.lang.Object ref = vdataName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            vdataName_ = s;
+          }
+          return s;
+        }
+      }
+      /**
+       * <code>optional string vdata_name = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getVdataNameBytes() {
+        java.lang.Object ref = vdataName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          vdataName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private void initFields() {
+        vdataName_ = "";
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeBytes(1, getVdataNameBytes());
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBytesSize(1, getVdataNameBytes());
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CUserMsg_ParticleManager.CreateSmokeGrid}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.CreateSmokeGrid)
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          vdataName_ = "";
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid build() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid result = new skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.vdataName_ = vdataName_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance()) return this;
+          if (other.hasVdataName()) {
+            bitField0_ |= 0x00000001;
+            vdataName_ = other.vdataName_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private java.lang.Object vdataName_ = "";
+        /**
+         * <code>optional string vdata_name = 1;</code>
+         */
+        public boolean hasVdataName() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional string vdata_name = 1;</code>
+         */
+        public java.lang.String getVdataName() {
+          java.lang.Object ref = vdataName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            if (bs.isValidUtf8()) {
+              vdataName_ = s;
+            }
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>optional string vdata_name = 1;</code>
+         */
+        public com.google.protobuf.ByteString
+            getVdataNameBytes() {
+          java.lang.Object ref = vdataName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            vdataName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>optional string vdata_name = 1;</code>
+         */
+        public Builder setVdataName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          vdataName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string vdata_name = 1;</code>
+         */
+        public Builder clearVdataName() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          vdataName_ = getDefaultInstance().getVdataName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional string vdata_name = 1;</code>
+         */
+        public Builder setVdataNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+          vdataName_ = value;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager.CreateSmokeGrid)
+      }
+
+      static {
+        defaultInstance = new CreateSmokeGrid(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager.CreateSmokeGrid)
+    }
+
     private int bitField0_;
     private int bitField1_;
     public static final int TYPE_FIELD_NUMBER = 1;
@@ -25990,6 +31907,132 @@ public final class DemoUserMessages {
       return setMaterialOverride_;
     }
 
+    public static final int ADD_FAN_FIELD_NUMBER = 39;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan addFan_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+     */
+    public boolean hasAddFan() {
+      return ((bitField1_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan getAddFan() {
+      return addFan_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder getAddFanOrBuilder() {
+      return addFan_;
+    }
+
+    public static final int UPDATE_FAN_FIELD_NUMBER = 40;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan updateFan_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+     */
+    public boolean hasUpdateFan() {
+      return ((bitField1_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan getUpdateFan() {
+      return updateFan_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder getUpdateFanOrBuilder() {
+      return updateFan_;
+    }
+
+    public static final int SET_PARTICLE_CLUSTER_GROWTH_FIELD_NUMBER = 41;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth setParticleClusterGrowth_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+     */
+    public boolean hasSetParticleClusterGrowth() {
+      return ((bitField1_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth getSetParticleClusterGrowth() {
+      return setParticleClusterGrowth_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder getSetParticleClusterGrowthOrBuilder() {
+      return setParticleClusterGrowth_;
+    }
+
+    public static final int REMOVE_FAN_FIELD_NUMBER = 42;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan removeFan_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+     */
+    public boolean hasRemoveFan() {
+      return ((bitField1_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan getRemoveFan() {
+      return removeFan_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder getRemoveFanOrBuilder() {
+      return removeFan_;
+    }
+
+    public static final int CREATE_SMOKE_GRID_FIELD_NUMBER = 43;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid createSmokeGrid_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+     */
+    public boolean hasCreateSmokeGrid() {
+      return ((bitField1_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid getCreateSmokeGrid() {
+      return createSmokeGrid_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder getCreateSmokeGridOrBuilder() {
+      return createSmokeGrid_;
+    }
+
+    public static final int SET_OVERRIDE_TEXTURE_FIELD_NUMBER = 44;
+    private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture setOverrideTexture_;
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+     */
+    public boolean hasSetOverrideTexture() {
+      return ((bitField1_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture getSetOverrideTexture() {
+      return setOverrideTexture_;
+    }
+    /**
+     * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder getSetOverrideTextureOrBuilder() {
+      return setOverrideTexture_;
+    }
+
     private void initFields() {
       type_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.PARTICLE_MESSAGE.GAME_PARTICLE_MANAGER_EVENT_CREATE;
       index_ = 0;
@@ -26028,6 +32071,12 @@ public final class DemoUserMessages {
       destroyPhysicsSim_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.getDefaultInstance();
       setVdata_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.getDefaultInstance();
       setMaterialOverride_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.getDefaultInstance();
+      addFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance();
+      updateFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance();
+      setParticleClusterGrowth_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance();
+      removeFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance();
+      createSmokeGrid_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance();
+      setOverrideTexture_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -26167,6 +32216,24 @@ public final class DemoUserMessages {
       }
       if (((bitField1_ & 0x00000010) == 0x00000010)) {
         output.writeMessage(38, setMaterialOverride_);
+      }
+      if (((bitField1_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(39, addFan_);
+      }
+      if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(40, updateFan_);
+      }
+      if (((bitField1_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(41, setParticleClusterGrowth_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        output.writeMessage(42, removeFan_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        output.writeMessage(43, createSmokeGrid_);
+      }
+      if (((bitField1_ & 0x00000400) == 0x00000400)) {
+        output.writeMessage(44, setOverrideTexture_);
       }
       extensionWriter.writeUntil(202, output);
       getUnknownFields().writeTo(output);
@@ -26326,6 +32393,30 @@ public final class DemoUserMessages {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(38, setMaterialOverride_);
       }
+      if (((bitField1_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(39, addFan_);
+      }
+      if (((bitField1_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(40, updateFan_);
+      }
+      if (((bitField1_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(41, setParticleClusterGrowth_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(42, removeFan_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(43, createSmokeGrid_);
+      }
+      if (((bitField1_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(44, setOverrideTexture_);
+      }
       size += extensionsSerializedSize();
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -26472,6 +32563,12 @@ public final class DemoUserMessages {
           getDestroyPhysicsSimFieldBuilder();
           getSetVdataFieldBuilder();
           getSetMaterialOverrideFieldBuilder();
+          getAddFanFieldBuilder();
+          getUpdateFanFieldBuilder();
+          getSetParticleClusterGrowthFieldBuilder();
+          getRemoveFanFieldBuilder();
+          getCreateSmokeGridFieldBuilder();
+          getSetOverrideTextureFieldBuilder();
         }
       }
       private static Builder create() {
@@ -26694,6 +32791,42 @@ public final class DemoUserMessages {
           setMaterialOverrideBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00000010);
+        if (addFanBuilder_ == null) {
+          addFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance();
+        } else {
+          addFanBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000020);
+        if (updateFanBuilder_ == null) {
+          updateFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance();
+        } else {
+          updateFanBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000040);
+        if (setParticleClusterGrowthBuilder_ == null) {
+          setParticleClusterGrowth_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance();
+        } else {
+          setParticleClusterGrowthBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000080);
+        if (removeFanBuilder_ == null) {
+          removeFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance();
+        } else {
+          removeFanBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000100);
+        if (createSmokeGridBuilder_ == null) {
+          createSmokeGrid_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance();
+        } else {
+          createSmokeGridBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000200);
+        if (setOverrideTextureBuilder_ == null) {
+          setOverrideTexture_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance();
+        } else {
+          setOverrideTextureBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000400);
         return this;
       }
 
@@ -27012,6 +33145,54 @@ public final class DemoUserMessages {
         } else {
           result.setMaterialOverride_ = setMaterialOverrideBuilder_.build();
         }
+        if (((from_bitField1_ & 0x00000020) == 0x00000020)) {
+          to_bitField1_ |= 0x00000020;
+        }
+        if (addFanBuilder_ == null) {
+          result.addFan_ = addFan_;
+        } else {
+          result.addFan_ = addFanBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000040) == 0x00000040)) {
+          to_bitField1_ |= 0x00000040;
+        }
+        if (updateFanBuilder_ == null) {
+          result.updateFan_ = updateFan_;
+        } else {
+          result.updateFan_ = updateFanBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000080) == 0x00000080)) {
+          to_bitField1_ |= 0x00000080;
+        }
+        if (setParticleClusterGrowthBuilder_ == null) {
+          result.setParticleClusterGrowth_ = setParticleClusterGrowth_;
+        } else {
+          result.setParticleClusterGrowth_ = setParticleClusterGrowthBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000100) == 0x00000100)) {
+          to_bitField1_ |= 0x00000100;
+        }
+        if (removeFanBuilder_ == null) {
+          result.removeFan_ = removeFan_;
+        } else {
+          result.removeFan_ = removeFanBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000200) == 0x00000200)) {
+          to_bitField1_ |= 0x00000200;
+        }
+        if (createSmokeGridBuilder_ == null) {
+          result.createSmokeGrid_ = createSmokeGrid_;
+        } else {
+          result.createSmokeGrid_ = createSmokeGridBuilder_.build();
+        }
+        if (((from_bitField1_ & 0x00000400) == 0x00000400)) {
+          to_bitField1_ |= 0x00000400;
+        }
+        if (setOverrideTextureBuilder_ == null) {
+          result.setOverrideTexture_ = setOverrideTexture_;
+        } else {
+          result.setOverrideTexture_ = setOverrideTextureBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -27139,6 +33320,24 @@ public final class DemoUserMessages {
         }
         if (other.hasSetMaterialOverride()) {
           mergeSetMaterialOverride(other.getSetMaterialOverride());
+        }
+        if (other.hasAddFan()) {
+          mergeAddFan(other.getAddFan());
+        }
+        if (other.hasUpdateFan()) {
+          mergeUpdateFan(other.getUpdateFan());
+        }
+        if (other.hasSetParticleClusterGrowth()) {
+          mergeSetParticleClusterGrowth(other.getSetParticleClusterGrowth());
+        }
+        if (other.hasRemoveFan()) {
+          mergeRemoveFan(other.getRemoveFan());
+        }
+        if (other.hasCreateSmokeGrid()) {
+          mergeCreateSmokeGrid(other.getCreateSmokeGrid());
+        }
+        if (other.hasSetOverrideTexture()) {
+          mergeSetOverrideTexture(other.getSetOverrideTexture());
         }
         this.mergeExtensionFields(other);
         this.mergeUnknownFields(other.getUnknownFields());
@@ -31308,6 +37507,702 @@ public final class DemoUserMessages {
         return setMaterialOverrideBuilder_;
       }
 
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan addFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder> addFanBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public boolean hasAddFan() {
+        return ((bitField1_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan getAddFan() {
+        if (addFanBuilder_ == null) {
+          return addFan_;
+        } else {
+          return addFanBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public Builder setAddFan(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan value) {
+        if (addFanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          addFan_ = value;
+          onChanged();
+        } else {
+          addFanBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public Builder setAddFan(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder builderForValue) {
+        if (addFanBuilder_ == null) {
+          addFan_ = builderForValue.build();
+          onChanged();
+        } else {
+          addFanBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public Builder mergeAddFan(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan value) {
+        if (addFanBuilder_ == null) {
+          if (((bitField1_ & 0x00000020) == 0x00000020) &&
+              addFan_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance()) {
+            addFan_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.newBuilder(addFan_).mergeFrom(value).buildPartial();
+          } else {
+            addFan_ = value;
+          }
+          onChanged();
+        } else {
+          addFanBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public Builder clearAddFan() {
+        if (addFanBuilder_ == null) {
+          addFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance();
+          onChanged();
+        } else {
+          addFanBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder getAddFanBuilder() {
+        bitField1_ |= 0x00000020;
+        onChanged();
+        return getAddFanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder getAddFanOrBuilder() {
+        if (addFanBuilder_ != null) {
+          return addFanBuilder_.getMessageOrBuilder();
+        } else {
+          return addFan_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder> 
+          getAddFanFieldBuilder() {
+        if (addFanBuilder_ == null) {
+          addFanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder>(
+                  getAddFan(),
+                  getParentForChildren(),
+                  isClean());
+          addFan_ = null;
+        }
+        return addFanBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan updateFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder> updateFanBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public boolean hasUpdateFan() {
+        return ((bitField1_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan getUpdateFan() {
+        if (updateFanBuilder_ == null) {
+          return updateFan_;
+        } else {
+          return updateFanBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public Builder setUpdateFan(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan value) {
+        if (updateFanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updateFan_ = value;
+          onChanged();
+        } else {
+          updateFanBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public Builder setUpdateFan(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder builderForValue) {
+        if (updateFanBuilder_ == null) {
+          updateFan_ = builderForValue.build();
+          onChanged();
+        } else {
+          updateFanBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public Builder mergeUpdateFan(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan value) {
+        if (updateFanBuilder_ == null) {
+          if (((bitField1_ & 0x00000040) == 0x00000040) &&
+              updateFan_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance()) {
+            updateFan_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.newBuilder(updateFan_).mergeFrom(value).buildPartial();
+          } else {
+            updateFan_ = value;
+          }
+          onChanged();
+        } else {
+          updateFanBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public Builder clearUpdateFan() {
+        if (updateFanBuilder_ == null) {
+          updateFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance();
+          onChanged();
+        } else {
+          updateFanBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder getUpdateFanBuilder() {
+        bitField1_ |= 0x00000040;
+        onChanged();
+        return getUpdateFanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder getUpdateFanOrBuilder() {
+        if (updateFanBuilder_ != null) {
+          return updateFanBuilder_.getMessageOrBuilder();
+        } else {
+          return updateFan_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder> 
+          getUpdateFanFieldBuilder() {
+        if (updateFanBuilder_ == null) {
+          updateFanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder>(
+                  getUpdateFan(),
+                  getParentForChildren(),
+                  isClean());
+          updateFan_ = null;
+        }
+        return updateFanBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth setParticleClusterGrowth_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder> setParticleClusterGrowthBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public boolean hasSetParticleClusterGrowth() {
+        return ((bitField1_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth getSetParticleClusterGrowth() {
+        if (setParticleClusterGrowthBuilder_ == null) {
+          return setParticleClusterGrowth_;
+        } else {
+          return setParticleClusterGrowthBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public Builder setSetParticleClusterGrowth(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth value) {
+        if (setParticleClusterGrowthBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setParticleClusterGrowth_ = value;
+          onChanged();
+        } else {
+          setParticleClusterGrowthBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public Builder setSetParticleClusterGrowth(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder builderForValue) {
+        if (setParticleClusterGrowthBuilder_ == null) {
+          setParticleClusterGrowth_ = builderForValue.build();
+          onChanged();
+        } else {
+          setParticleClusterGrowthBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public Builder mergeSetParticleClusterGrowth(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth value) {
+        if (setParticleClusterGrowthBuilder_ == null) {
+          if (((bitField1_ & 0x00000080) == 0x00000080) &&
+              setParticleClusterGrowth_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance()) {
+            setParticleClusterGrowth_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.newBuilder(setParticleClusterGrowth_).mergeFrom(value).buildPartial();
+          } else {
+            setParticleClusterGrowth_ = value;
+          }
+          onChanged();
+        } else {
+          setParticleClusterGrowthBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public Builder clearSetParticleClusterGrowth() {
+        if (setParticleClusterGrowthBuilder_ == null) {
+          setParticleClusterGrowth_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance();
+          onChanged();
+        } else {
+          setParticleClusterGrowthBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder getSetParticleClusterGrowthBuilder() {
+        bitField1_ |= 0x00000080;
+        onChanged();
+        return getSetParticleClusterGrowthFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder getSetParticleClusterGrowthOrBuilder() {
+        if (setParticleClusterGrowthBuilder_ != null) {
+          return setParticleClusterGrowthBuilder_.getMessageOrBuilder();
+        } else {
+          return setParticleClusterGrowth_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder> 
+          getSetParticleClusterGrowthFieldBuilder() {
+        if (setParticleClusterGrowthBuilder_ == null) {
+          setParticleClusterGrowthBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder>(
+                  getSetParticleClusterGrowth(),
+                  getParentForChildren(),
+                  isClean());
+          setParticleClusterGrowth_ = null;
+        }
+        return setParticleClusterGrowthBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan removeFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder> removeFanBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public boolean hasRemoveFan() {
+        return ((bitField1_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan getRemoveFan() {
+        if (removeFanBuilder_ == null) {
+          return removeFan_;
+        } else {
+          return removeFanBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public Builder setRemoveFan(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan value) {
+        if (removeFanBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          removeFan_ = value;
+          onChanged();
+        } else {
+          removeFanBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public Builder setRemoveFan(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder builderForValue) {
+        if (removeFanBuilder_ == null) {
+          removeFan_ = builderForValue.build();
+          onChanged();
+        } else {
+          removeFanBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public Builder mergeRemoveFan(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan value) {
+        if (removeFanBuilder_ == null) {
+          if (((bitField1_ & 0x00000100) == 0x00000100) &&
+              removeFan_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance()) {
+            removeFan_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.newBuilder(removeFan_).mergeFrom(value).buildPartial();
+          } else {
+            removeFan_ = value;
+          }
+          onChanged();
+        } else {
+          removeFanBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000100;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public Builder clearRemoveFan() {
+        if (removeFanBuilder_ == null) {
+          removeFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance();
+          onChanged();
+        } else {
+          removeFanBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000100);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder getRemoveFanBuilder() {
+        bitField1_ |= 0x00000100;
+        onChanged();
+        return getRemoveFanFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder getRemoveFanOrBuilder() {
+        if (removeFanBuilder_ != null) {
+          return removeFanBuilder_.getMessageOrBuilder();
+        } else {
+          return removeFan_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder> 
+          getRemoveFanFieldBuilder() {
+        if (removeFanBuilder_ == null) {
+          removeFanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder>(
+                  getRemoveFan(),
+                  getParentForChildren(),
+                  isClean());
+          removeFan_ = null;
+        }
+        return removeFanBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid createSmokeGrid_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder> createSmokeGridBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public boolean hasCreateSmokeGrid() {
+        return ((bitField1_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid getCreateSmokeGrid() {
+        if (createSmokeGridBuilder_ == null) {
+          return createSmokeGrid_;
+        } else {
+          return createSmokeGridBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public Builder setCreateSmokeGrid(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid value) {
+        if (createSmokeGridBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createSmokeGrid_ = value;
+          onChanged();
+        } else {
+          createSmokeGridBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public Builder setCreateSmokeGrid(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder builderForValue) {
+        if (createSmokeGridBuilder_ == null) {
+          createSmokeGrid_ = builderForValue.build();
+          onChanged();
+        } else {
+          createSmokeGridBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public Builder mergeCreateSmokeGrid(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid value) {
+        if (createSmokeGridBuilder_ == null) {
+          if (((bitField1_ & 0x00000200) == 0x00000200) &&
+              createSmokeGrid_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance()) {
+            createSmokeGrid_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.newBuilder(createSmokeGrid_).mergeFrom(value).buildPartial();
+          } else {
+            createSmokeGrid_ = value;
+          }
+          onChanged();
+        } else {
+          createSmokeGridBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000200;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public Builder clearCreateSmokeGrid() {
+        if (createSmokeGridBuilder_ == null) {
+          createSmokeGrid_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance();
+          onChanged();
+        } else {
+          createSmokeGridBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000200);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder getCreateSmokeGridBuilder() {
+        bitField1_ |= 0x00000200;
+        onChanged();
+        return getCreateSmokeGridFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder getCreateSmokeGridOrBuilder() {
+        if (createSmokeGridBuilder_ != null) {
+          return createSmokeGridBuilder_.getMessageOrBuilder();
+        } else {
+          return createSmokeGrid_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder> 
+          getCreateSmokeGridFieldBuilder() {
+        if (createSmokeGridBuilder_ == null) {
+          createSmokeGridBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder>(
+                  getCreateSmokeGrid(),
+                  getParentForChildren(),
+                  isClean());
+          createSmokeGrid_ = null;
+        }
+        return createSmokeGridBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture setOverrideTexture_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder> setOverrideTextureBuilder_;
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public boolean hasSetOverrideTexture() {
+        return ((bitField1_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture getSetOverrideTexture() {
+        if (setOverrideTextureBuilder_ == null) {
+          return setOverrideTexture_;
+        } else {
+          return setOverrideTextureBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public Builder setSetOverrideTexture(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture value) {
+        if (setOverrideTextureBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          setOverrideTexture_ = value;
+          onChanged();
+        } else {
+          setOverrideTextureBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public Builder setSetOverrideTexture(
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder builderForValue) {
+        if (setOverrideTextureBuilder_ == null) {
+          setOverrideTexture_ = builderForValue.build();
+          onChanged();
+        } else {
+          setOverrideTextureBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public Builder mergeSetOverrideTexture(skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture value) {
+        if (setOverrideTextureBuilder_ == null) {
+          if (((bitField1_ & 0x00000400) == 0x00000400) &&
+              setOverrideTexture_ != skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance()) {
+            setOverrideTexture_ =
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.newBuilder(setOverrideTexture_).mergeFrom(value).buildPartial();
+          } else {
+            setOverrideTexture_ = value;
+          }
+          onChanged();
+        } else {
+          setOverrideTextureBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000400;
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public Builder clearSetOverrideTexture() {
+        if (setOverrideTextureBuilder_ == null) {
+          setOverrideTexture_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance();
+          onChanged();
+        } else {
+          setOverrideTextureBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000400);
+        return this;
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder getSetOverrideTextureBuilder() {
+        bitField1_ |= 0x00000400;
+        onChanged();
+        return getSetOverrideTextureFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder getSetOverrideTextureOrBuilder() {
+        if (setOverrideTextureBuilder_ != null) {
+          return setOverrideTextureBuilder_.getMessageOrBuilder();
+        } else {
+          return setOverrideTexture_;
+        }
+      }
+      /**
+       * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder> 
+          getSetOverrideTextureFieldBuilder() {
+        if (setOverrideTextureBuilder_ == null) {
+          setOverrideTextureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder>(
+                  getSetOverrideTexture(),
+                  getParentForChildren(),
+                  isClean());
+          setOverrideTexture_ = null;
+        }
+        return setOverrideTextureBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:CUserMsg_ParticleManager)
     }
 
@@ -31519,6 +38414,36 @@ public final class DemoUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetMaterialOverride_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -31530,7 +38455,7 @@ public final class DemoUserMessages {
     java.lang.String[] descriptorData = {
       "\n\027usermessages-demo.proto\032\035networkbasety" +
       "pes-common.proto\032\033networkbasetypes-demo." +
-      "proto\"\2005\n\030CUserMsg_ParticleManager\022C\n\004ty" +
+      "proto\"\210?\n\030CUserMsg_ParticleManager\022C\n\004ty" +
       "pe\030\001 \002(\0162\021.PARTICLE_MESSAGE:\"GAME_PARTIC" +
       "LE_MANAGER_EVENT_CREATE\022\r\n\005index\030\002 \002(\r\022N" +
       "\n\026release_particle_index\030\003 \001(\0132..CUserMs" +
@@ -31605,6 +38530,16 @@ public final class DemoUserMessages {
       "\030% \001(\0132\".CUserMsg_ParticleManager.SetVDa" +
       "ta\022L\n\025set_material_override\030& \001(\0132-.CUse" +
       "rMsg_ParticleManager.SetMaterialOverride" +
+      "\0221\n\007add_fan\030\' \001(\0132 .CUserMsg_ParticleMan" +
+      "ager.AddFan\0227\n\nupdate_fan\030( \001(\0132#.CUserM" +
+      "sg_ParticleManager.UpdateFan\022W\n\033set_part",
+      "icle_cluster_growth\030) \001(\01322.CUserMsg_Par" +
+      "ticleManager.SetParticleClusterGrowth\0227\n" +
+      "\nremove_fan\030* \001(\0132#.CUserMsg_ParticleMan" +
+      "ager.RemoveFan\022D\n\021create_smoke_grid\030+ \001(" +
+      "\0132).CUserMsg_ParticleManager.CreateSmoke" +
+      "Grid\022J\n\024set_override_texture\030, \001(\0132,.CUs" +
+      "erMsg_ParticleManager.SetOverrideTexture" +
       "\032\026\n\024ReleaseParticleIndex\032\276\002\n\016CreateParti" +
       "cle\022\033\n\023particle_name_index\030\001 \001(\006\022\023\n\013atta" +
       "ch_type\030\002 \001(\005\022\037\n\rentity_handle\030\003 \001(\r:\01016",
@@ -31699,55 +38634,84 @@ public final class DemoUserMessages {
       "particle_count\030\003 \001(\r\032\023\n\021DestroyPhysicsSi" +
       "m\032\036\n\010SetVData\022\022\n\nvdata_name\030\001 \001(\t\032F\n\023Set",
       "MaterialOverride\022\025\n\rmaterial_name\030\001 \001(\t\022" +
-      "\030\n\020include_children\030\002 \001(\010*\005\010d\020\312\001*\265\016\n\020PAR" +
-      "TICLE_MESSAGE\022&\n\"GAME_PARTICLE_MANAGER_E" +
-      "VENT_CREATE\020\000\022&\n\"GAME_PARTICLE_MANAGER_E" +
-      "VENT_UPDATE\020\001\022.\n*GAME_PARTICLE_MANAGER_E" +
-      "VENT_UPDATE_FORWARD\020\002\0222\n.GAME_PARTICLE_M" +
-      "ANAGER_EVENT_UPDATE_ORIENTATION\020\003\022/\n+GAM" +
-      "E_PARTICLE_MANAGER_EVENT_UPDATE_FALLBACK" +
-      "\020\004\022*\n&GAME_PARTICLE_MANAGER_EVENT_UPDATE" +
-      "_ENT\020\005\022-\n)GAME_PARTICLE_MANAGER_EVENT_UP",
-      "DATE_OFFSET\020\006\022\'\n#GAME_PARTICLE_MANAGER_E" +
-      "VENT_DESTROY\020\007\0221\n-GAME_PARTICLE_MANAGER_" +
-      "EVENT_DESTROY_INVOLVING\020\010\022\'\n#GAME_PARTIC" +
-      "LE_MANAGER_EVENT_RELEASE\020\t\022\'\n#GAME_PARTI" +
-      "CLE_MANAGER_EVENT_LATENCY\020\n\022+\n\'GAME_PART" +
-      "ICLE_MANAGER_EVENT_SHOULD_DRAW\020\013\022&\n\"GAME" +
-      "_PARTICLE_MANAGER_EVENT_FROZEN\020\014\022?\n;GAME" +
-      "_PARTICLE_MANAGER_EVENT_CHANGE_CONTROL_P" +
-      "OINT_ATTACHMENT\020\r\0226\n2GAME_PARTICLE_MANAG" +
-      "ER_EVENT_UPDATE_ENTITY_POSITION\020\016\0222\n.GAM",
-      "E_PARTICLE_MANAGER_EVENT_SET_FOW_PROPERT" +
-      "IES\020\017\022(\n$GAME_PARTICLE_MANAGER_EVENT_SET" +
-      "_TEXT\020\020\0224\n0GAME_PARTICLE_MANAGER_EVENT_S" +
-      "ET_SHOULD_CHECK_FOW\020\021\0227\n3GAME_PARTICLE_M" +
-      "ANAGER_EVENT_SET_CONTROL_POINT_MODEL\020\022\022:" +
-      "\n6GAME_PARTICLE_MANAGER_EVENT_SET_CONTRO" +
-      "L_POINT_SNAPSHOT\020\023\0225\n1GAME_PARTICLE_MANA" +
-      "GER_EVENT_SET_TEXTURE_ATTRIBUTE\020\024\022=\n9GAM" +
-      "E_PARTICLE_MANAGER_EVENT_SET_SCENE_OBJEC" +
-      "T_GENERIC_FLAG\020\025\022?\n;GAME_PARTICLE_MANAGE",
-      "R_EVENT_SET_SCENE_OBJECT_TINT_AND_DESAT\020" +
-      "\026\022-\n)GAME_PARTICLE_MANAGER_EVENT_DESTROY" +
-      "_NAMED\020\027\022,\n(GAME_PARTICLE_MANAGER_EVENT_" +
-      "SKIP_TO_TIME\020\030\022*\n&GAME_PARTICLE_MANAGER_" +
-      "EVENT_CAN_FREEZE\020\031\0227\n3GAME_PARTICLE_MANA" +
-      "GER_EVENT_SET_NAMED_VALUE_CONTEXT\020\032\0220\n,G" +
-      "AME_PARTICLE_MANAGER_EVENT_UPDATE_TRANSF" +
-      "ORM\020\033\022:\n6GAME_PARTICLE_MANAGER_EVENT_FRE" +
-      "EZE_TRANSITION_OVERRIDE\020\034\0220\n,GAME_PARTIC" +
-      "LE_MANAGER_EVENT_FREEZE_INVOLVING\020\035\022>\n:G",
-      "AME_PARTICLE_MANAGER_EVENT_ADD_MODELLIST" +
-      "_OVERRIDE_ELEMENT\020\036\0228\n4GAME_PARTICLE_MAN" +
-      "AGER_EVENT_CLEAR_MODELLIST_OVERRIDE\020\037\0222\n" +
-      ".GAME_PARTICLE_MANAGER_EVENT_CREATE_PHYS" +
-      "ICS_SIM\020 \0223\n/GAME_PARTICLE_MANAGER_EVENT" +
-      "_DESTROY_PHYSICS_SIM\020!\022)\n%GAME_PARTICLE_" +
-      "MANAGER_EVENT_SET_VDATA\020\"\0225\n1GAME_PARTIC" +
-      "LE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE\020#" +
-      "B=\n)skadistats.clarity.wire.shared.demo." +
-      "protoB\020DemoUserMessages"
+      "\030\n\020include_children\030\002 \001(\010\032\343\003\n\006AddFan\022\016\n\006" +
+      "active\030\001 \001(\010\022 \n\013bounds_mins\030\002 \001(\0132\013.CMsg" +
+      "Vector\022 \n\013bounds_maxs\030\003 \001(\0132\013.CMsgVector" +
+      "\022\037\n\nfan_origin\030\004 \001(\0132\013.CMsgVector\022&\n\021fan" +
+      "_origin_offset\030\005 \001(\0132\013.CMsgVector\022\"\n\rfan" +
+      "_direction\030\006 \001(\0132\013.CMsgVector\022\r\n\005force\030\007" +
+      " \001(\002\022\027\n\017fan_force_curve\030\010 \001(\t\022\017\n\007falloff" +
+      "\030\t \001(\010\022\032\n\022pull_towards_point\030\n \001(\010\022\026\n\016cu" +
+      "rve_min_dist\030\013 \001(\002\022\026\n\016curve_max_dist\030\014 \001",
+      "(\002\022\020\n\010fan_type\030\r \001(\r\022\031\n\021cone_start_radiu" +
+      "s\030\016 \001(\002\022\027\n\017cone_end_radius\030\017 \001(\002\022\023\n\013cone" +
+      "_length\030\020 \001(\002\022\037\n\rentity_handle\030\021 \001(\r:\01016" +
+      "777215\022\027\n\017attachment_name\030\022 \001(\t\032\344\001\n\tUpda" +
+      "teFan\022\016\n\006active\030\001 \001(\010\022\037\n\nfan_origin\030\002 \001(" +
+      "\0132\013.CMsgVector\022&\n\021fan_origin_offset\030\003 \001(" +
+      "\0132\013.CMsgVector\022\"\n\rfan_direction\030\004 \001(\0132\013." +
+      "CMsgVector\022 \n\013bounds_mins\030\005 \001(\0132\013.CMsgVe" +
+      "ctor\022 \n\013bounds_maxs\030\006 \001(\0132\013.CMsgVector\022\026" +
+      "\n\016fan_ramp_ratio\030\007 \001(\002\032\013\n\tRemoveFan\032I\n\030S",
+      "etParticleClusterGrowth\022\020\n\010duration\030\001 \001(" +
+      "\002\022\033\n\006origin\030\002 \001(\0132\013.CMsgVector\032*\n\022SetOve" +
+      "rrideTexture\022\024\n\014texture_name\030\001 \001(\t\032%\n\017Cr" +
+      "eateSmokeGrid\022\022\n\nvdata_name\030\001 \001(\t*\005\010d\020\312\001" +
+      "*\323\020\n\020PARTICLE_MESSAGE\022&\n\"GAME_PARTICLE_M" +
+      "ANAGER_EVENT_CREATE\020\000\022&\n\"GAME_PARTICLE_M" +
+      "ANAGER_EVENT_UPDATE\020\001\022.\n*GAME_PARTICLE_M" +
+      "ANAGER_EVENT_UPDATE_FORWARD\020\002\0222\n.GAME_PA" +
+      "RTICLE_MANAGER_EVENT_UPDATE_ORIENTATION\020" +
+      "\003\022/\n+GAME_PARTICLE_MANAGER_EVENT_UPDATE_",
+      "FALLBACK\020\004\022*\n&GAME_PARTICLE_MANAGER_EVEN" +
+      "T_UPDATE_ENT\020\005\022-\n)GAME_PARTICLE_MANAGER_" +
+      "EVENT_UPDATE_OFFSET\020\006\022\'\n#GAME_PARTICLE_M" +
+      "ANAGER_EVENT_DESTROY\020\007\0221\n-GAME_PARTICLE_" +
+      "MANAGER_EVENT_DESTROY_INVOLVING\020\010\022\'\n#GAM" +
+      "E_PARTICLE_MANAGER_EVENT_RELEASE\020\t\022\'\n#GA" +
+      "ME_PARTICLE_MANAGER_EVENT_LATENCY\020\n\022+\n\'G" +
+      "AME_PARTICLE_MANAGER_EVENT_SHOULD_DRAW\020\013" +
+      "\022&\n\"GAME_PARTICLE_MANAGER_EVENT_FROZEN\020\014" +
+      "\022?\n;GAME_PARTICLE_MANAGER_EVENT_CHANGE_C",
+      "ONTROL_POINT_ATTACHMENT\020\r\0226\n2GAME_PARTIC" +
+      "LE_MANAGER_EVENT_UPDATE_ENTITY_POSITION\020" +
+      "\016\0222\n.GAME_PARTICLE_MANAGER_EVENT_SET_FOW" +
+      "_PROPERTIES\020\017\022(\n$GAME_PARTICLE_MANAGER_E" +
+      "VENT_SET_TEXT\020\020\0224\n0GAME_PARTICLE_MANAGER" +
+      "_EVENT_SET_SHOULD_CHECK_FOW\020\021\0227\n3GAME_PA" +
+      "RTICLE_MANAGER_EVENT_SET_CONTROL_POINT_M" +
+      "ODEL\020\022\022:\n6GAME_PARTICLE_MANAGER_EVENT_SE" +
+      "T_CONTROL_POINT_SNAPSHOT\020\023\0225\n1GAME_PARTI" +
+      "CLE_MANAGER_EVENT_SET_TEXTURE_ATTRIBUTE\020",
+      "\024\022=\n9GAME_PARTICLE_MANAGER_EVENT_SET_SCE" +
+      "NE_OBJECT_GENERIC_FLAG\020\025\022?\n;GAME_PARTICL" +
+      "E_MANAGER_EVENT_SET_SCENE_OBJECT_TINT_AN" +
+      "D_DESAT\020\026\022-\n)GAME_PARTICLE_MANAGER_EVENT" +
+      "_DESTROY_NAMED\020\027\022,\n(GAME_PARTICLE_MANAGE" +
+      "R_EVENT_SKIP_TO_TIME\020\030\022*\n&GAME_PARTICLE_" +
+      "MANAGER_EVENT_CAN_FREEZE\020\031\0227\n3GAME_PARTI" +
+      "CLE_MANAGER_EVENT_SET_NAMED_VALUE_CONTEX" +
+      "T\020\032\0220\n,GAME_PARTICLE_MANAGER_EVENT_UPDAT" +
+      "E_TRANSFORM\020\033\022:\n6GAME_PARTICLE_MANAGER_E",
+      "VENT_FREEZE_TRANSITION_OVERRIDE\020\034\0220\n,GAM" +
+      "E_PARTICLE_MANAGER_EVENT_FREEZE_INVOLVIN" +
+      "G\020\035\022>\n:GAME_PARTICLE_MANAGER_EVENT_ADD_M" +
+      "ODELLIST_OVERRIDE_ELEMENT\020\036\0228\n4GAME_PART" +
+      "ICLE_MANAGER_EVENT_CLEAR_MODELLIST_OVERR" +
+      "IDE\020\037\0222\n.GAME_PARTICLE_MANAGER_EVENT_CRE" +
+      "ATE_PHYSICS_SIM\020 \0223\n/GAME_PARTICLE_MANAG" +
+      "ER_EVENT_DESTROY_PHYSICS_SIM\020!\022)\n%GAME_P" +
+      "ARTICLE_MANAGER_EVENT_SET_VDATA\020\"\0225\n1GAM" +
+      "E_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OV",
+      "ERRIDE\020#\022\'\n#GAME_PARTICLE_MANAGER_EVENT_" +
+      "ADD_FAN\020$\022*\n&GAME_PARTICLE_MANAGER_EVENT" +
+      "_UPDATE_FAN\020%\0222\n.GAME_PARTICLE_MANAGER_E" +
+      "VENT_SET_CLUSTER_GROWTH\020&\022*\n&GAME_PARTIC" +
+      "LE_MANAGER_EVENT_REMOVE_FAN\020\'\0221\n-GAME_PA" +
+      "RTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID\020(" +
+      "\0224\n0GAME_PARTICLE_MANAGER_EVENT_SET_OVER" +
+      "RIDE_TEXTURE\020)B=\n)skadistats.clarity.wir" +
+      "e.shared.demo.protoB\020DemoUserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -31768,7 +38732,7 @@ public final class DemoUserMessages {
     internal_static_CUserMsg_ParticleManager_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_descriptor,
-        new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", "SetParticleShouldCheckFow", "SetControlPointModel", "SetControlPointSnapshot", "SetTextureAttribute", "SetSceneObjectGenericFlag", "SetSceneObjectTintAndDesat", "DestroyParticleNamed", "ParticleSkipToTime", "ParticleCanFreeze", "SetNamedValueContext", "UpdateParticleTransform", "ParticleFreezeTransitionOverride", "FreezeParticleInvolving", "AddModellistOverrideElement", "ClearModellistOverride", "CreatePhysicsSim", "DestroyPhysicsSim", "SetVdata", "SetMaterialOverride", });
+        new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", "SetParticleShouldCheckFow", "SetControlPointModel", "SetControlPointSnapshot", "SetTextureAttribute", "SetSceneObjectGenericFlag", "SetSceneObjectTintAndDesat", "DestroyParticleNamed", "ParticleSkipToTime", "ParticleCanFreeze", "SetNamedValueContext", "UpdateParticleTransform", "ParticleFreezeTransitionOverride", "FreezeParticleInvolving", "AddModellistOverrideElement", "ClearModellistOverride", "CreatePhysicsSim", "DestroyPhysicsSim", "SetVdata", "SetMaterialOverride", "AddFan", "UpdateFan", "SetParticleClusterGrowth", "RemoveFan", "CreateSmokeGrid", "SetOverrideTexture", });
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(0);
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable = new
@@ -32003,6 +38967,42 @@ public final class DemoUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor,
         new java.lang.String[] { "MaterialName", "IncludeChildren", });
+    internal_static_CUserMsg_ParticleManager_AddFan_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(35);
+    internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_AddFan_descriptor,
+        new java.lang.String[] { "Active", "BoundsMins", "BoundsMaxs", "FanOrigin", "FanOriginOffset", "FanDirection", "Force", "FanForceCurve", "Falloff", "PullTowardsPoint", "CurveMinDist", "CurveMaxDist", "FanType", "ConeStartRadius", "ConeEndRadius", "ConeLength", "EntityHandle", "AttachmentName", });
+    internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(36);
+    internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor,
+        new java.lang.String[] { "Active", "FanOrigin", "FanOriginOffset", "FanDirection", "BoundsMins", "BoundsMaxs", "FanRampRatio", });
+    internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(37);
+    internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor,
+        new java.lang.String[] { });
+    internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(38);
+    internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor,
+        new java.lang.String[] { "Duration", "Origin", });
+    internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(39);
+    internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor,
+        new java.lang.String[] { "TextureName", });
+    internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor =
+      internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(40);
+    internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor,
+        new java.lang.String[] { "VdataName", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
   }

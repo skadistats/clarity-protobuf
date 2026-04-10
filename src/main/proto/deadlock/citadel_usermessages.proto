@@ -12,6 +12,7 @@ enum ChatMsgPingMarkerInfo {
 	k_EPingMarkerInfo_ShowMarkerOnSender = 2;
 	k_EPingMarkerInfo_OnlyShowMarker = 3;
 	k_EPingMarkerInfo_OnlyPlaySound = 4;
+	k_EPingMarkerInfo_OnlyMiniMap = 5;
 }
 
 enum ECitadelChatMessage {
@@ -35,11 +36,13 @@ enum PostProcessingGameStates {
 	PostProcState_Black = 1;
 	PostProcState_Blinded = 2;
 	PostProcState_ShivPossessed = 3;
+	PostProcState_DrifterDarknessCaster = 4;
+	PostProcState_MatchIntro = 5;
 }
 
 message CCitadelUserMessage_Damage {
 	optional int32 damage = 1;
-	optional int32 pre_damage = 2;
+	optional int32 pre_damage_deprecated = 2;
 	optional int32 type = 3;
 	optional int32 citadel_type = 4;
 	optional .CMsgVector origin = 5;
@@ -47,7 +50,7 @@ message CCitadelUserMessage_Damage {
 	optional int32 entindex_inflictor = 7 [default = -1];
 	optional int32 entindex_attacker = 8 [default = -1];
 	optional int32 entindex_ability = 9 [default = -1];
-	optional int32 damage_absorbed = 10;
+	optional int32 damage_absorbed_deprecated = 10;
 	optional int32 victim_health_max = 11;
 	optional int32 victim_health_new = 12;
 	optional uint64 flags = 13;
@@ -58,6 +61,15 @@ message CCitadelUserMessage_Damage {
 	optional int32 victim_shield_new = 18;
 	optional int32 hits = 19;
 	optional int32 health_lost = 20;
+	optional int32 hitgroup_id = 21;
+	optional int32 entindex_attacking_object = 22 [default = -1];
+	optional .CMsgVector damage_direction = 23;
+	optional bool is_secondary_stat = 24;
+	optional float effectiveness = 25;
+	optional float crit_damage = 26;
+	optional float pre_damage = 27;
+	optional float damage_absorbed = 28;
+	optional int32 server_tick = 29;
 }
 
 message PingCommonData {
@@ -125,12 +137,14 @@ message CCitadelUserMsg_HeroKilled {
 	repeated int32 entindex_assisters = 4;
 	optional int32 entindex_scorer = 5 [default = -1];
 	optional int32 respawn_reason = 6;
+	optional int32 victim_team_number = 7;
 }
 
 message CCitadelEntityMsg_BreakablePropSpawnDebris {
 	optional .CEntityMsg entity_msg = 1;
 	optional .CMsgVector damage_pos = 2;
 	optional float damage = 3;
+	optional .CMsgVector damage_force = 4;
 }
 
 message CCitadelUserMsg_PostProcessingAnim {
@@ -148,6 +162,7 @@ message CCitadelUserMessage_AbilityNotify {
 	optional int32 entindex_victim = 1 [default = -1];
 	optional int32 entindex_attacker = 2 [default = -1];
 	optional uint32 ability_id = 3;
+	optional uint32 status_impact = 4;
 }
 
 message CCitadelUserMessage_GameOver {
@@ -187,4 +202,96 @@ message CCitadelUserMsg_BossKilled {
 	required int32 entity_killed_class = 4;
 	required uint32 entity_killer = 5 [default = 16777215];
 	required float gametime = 6;
+	optional int32 bosses_remaining = 7;
+	optional .CMsgVector entity_position = 8;
+}
+
+message CCitadelUserMsg_BossDamaged {
+	optional int32 objective_team = 1;
+	optional int32 objective_id = 2;
+	optional uint32 entity_damaged = 3 [default = 16777215];
+}
+
+message CCitadelUserMsg_MidBossSpawned {
+}
+
+message CCitadelUserMsg_RejuvStatus {
+	optional int32 killing_team = 1;
+	optional uint32 player_pawn = 2 [default = 16777215];
+	optional int32 user_team = 3;
+	optional int32 event_type = 4;
+}
+
+message CCitadelUserMsg_KillStreak {
+	optional uint32 player_pawn = 1 [default = 16777215];
+	optional int32 num_kills = 2;
+	optional bool is_first_blood = 3;
+	optional bool streak_ended = 4;
+	optional float duration = 5 [default = 5];
+}
+
+message CCitadelUserMsg_TeamMsg {
+	optional int32 event_type = 1;
+	optional int32 team_number = 2;
+	optional int32 lane_color = 3;
+	optional uint32 player_controller = 4 [default = 16777215];
+}
+
+message CCitadelUserMsg_PlayerRespawned {
+	optional uint32 player_pawn = 1 [default = 16777215];
+	optional float facing_yaw = 2;
+}
+
+message CCitadelUserMsg_CallCheaterVote {
+	optional int32 player_slot = 1 [default = -1];
+}
+
+message CCitadelUserMsg_FlexSlotUnlocked {
+	optional int32 team_number = 1;
+	optional int32 flexslot_unlocked = 2;
+}
+
+message CCitadelUserMsg_SeasonalKill {
+	optional uint32 killer = 1 [default = 16777215];
+	optional uint32 victim = 2 [default = 16777215];
+}
+
+message CCitadelUserMsg_MusicQueue {
+	optional int32 music_state = 1;
+	optional bool override = 2;
+}
+
+message CCitadelUserMsg_AG2ParamTrigger {
+	optional string param_id = 1;
+	optional string param_value = 2;
+}
+
+message CCitadelUserMsg_EntityPortalled {
+	optional uint32 entity_portalled = 1 [default = 16777215];
+	optional .CMsgTransform portal_transform = 2;
+}
+
+message CCitadelUserMsg_StreetBrawlScoring {
+	optional int32 scoring_team = 1;
+	optional bool just_a_test = 2;
+	optional int32 sapphire_score = 3;
+	optional int32 amber_score = 4;
+}
+
+message CCitadelUserMsg_HudGameAnnouncement {
+	optional string title_locstring = 1;
+	optional string description_locstring = 2;
+	repeated string classname = 3;
+	repeated string dialog_variable_name = 4;
+	repeated string dialog_variable_locstring = 5;
+}
+
+message CCitadelUserMsg_ItemDraftReaction {
+	optional .PingCommonData ping_data = 1;
+	optional bool rare = 2;
+	optional bool legendary = 3;
+}
+
+message CCitadelUserMsg_BannedHeroes {
+	repeated uint32 banned_hero_ids = 1;
 }

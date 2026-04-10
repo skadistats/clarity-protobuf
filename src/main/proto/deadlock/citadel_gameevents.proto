@@ -14,6 +14,7 @@ enum ECitadelGameEvents {
   GE_PlaceSatVolumeEvent = 463;
   GE_DisableSatVolumesEvent = 464;
   GE_RemoveSatVolumeEvent = 465;
+  GE_RemoveBullet = 466;
 }
 
 message CMsgFireBullets {
@@ -38,6 +39,13 @@ message CMsgFireBullets {
   optional uint32 shot_number = 16;
   optional int32 ignore_entity = 17 [default = -1];
   optional float max_range = 18;
+  optional uint32 shot_id = 19;
+  optional bool predict_hits_against_units = 20 [default = true];
+  optional float bullet_radius_override = 21 [default = 0];
+  optional float bullet_speed_override = 22 [default = 0];
+  optional float bullet_gravity_override = 23 [default = 0];
+  optional int32 muzzle_number = 24;
+  optional bool ability_as_bullet = 25;
 }
 
 message CMsgBulletImpact {
@@ -51,5 +59,6 @@ message CMsgBulletImpact {
   optional uint32 impacted_hitbox = 9;
   optional uint32 weapon_subclass_id = 10;
   optional int32 shooter_entindex = 11 [default = -1];
+  optional float bullet_radius_override = 12;
 }
 

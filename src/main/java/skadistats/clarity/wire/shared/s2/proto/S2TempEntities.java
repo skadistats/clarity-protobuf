@@ -19816,6 +19816,15 @@ public final class S2TempEntities {
      * <code>optional fixed32 debris_surfaceprop = 14;</code>
      */
     int getDebrisSurfaceprop();
+
+    /**
+     * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+     */
+    boolean hasExplosionTypeName();
+    /**
+     * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+     */
+    int getExplosionTypeName();
   }
   /**
    * Protobuf type {@code CMsgTEExplosion}
@@ -19962,6 +19971,11 @@ public final class S2TempEntities {
             case 117: {
               bitField0_ |= 0x00002000;
               debrisSurfaceprop_ = input.readFixed32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00004000;
+              explosionTypeName_ = input.readUInt32();
               break;
             }
           }
@@ -20259,6 +20273,21 @@ public final class S2TempEntities {
       return debrisSurfaceprop_;
     }
 
+    public static final int EXPLOSION_TYPE_NAME_FIELD_NUMBER = 15;
+    private int explosionTypeName_;
+    /**
+     * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+     */
+    public boolean hasExplosionTypeName() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+     */
+    public int getExplosionTypeName() {
+      return explosionTypeName_;
+    }
+
     private void initFields() {
       origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       framerate_ = 0;
@@ -20274,6 +20303,7 @@ public final class S2TempEntities {
       createDebris_ = false;
       debrisOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       debrisSurfaceprop_ = 0;
+      explosionTypeName_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -20329,6 +20359,9 @@ public final class S2TempEntities {
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         output.writeFixed32(14, debrisSurfaceprop_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeUInt32(15, explosionTypeName_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -20394,6 +20427,10 @@ public final class S2TempEntities {
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFixed32Size(14, debrisSurfaceprop_);
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, explosionTypeName_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -20555,6 +20592,8 @@ public final class S2TempEntities {
         bitField0_ = (bitField0_ & ~0x00001000);
         debrisSurfaceprop_ = 0;
         bitField0_ = (bitField0_ & ~0x00002000);
+        explosionTypeName_ = 0;
+        bitField0_ = (bitField0_ & ~0x00004000);
         return this;
       }
 
@@ -20651,6 +20690,10 @@ public final class S2TempEntities {
           to_bitField0_ |= 0x00002000;
         }
         result.debrisSurfaceprop_ = debrisSurfaceprop_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.explosionTypeName_ = explosionTypeName_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -20710,6 +20753,9 @@ public final class S2TempEntities {
         }
         if (other.hasDebrisSurfaceprop()) {
           setDebrisSurfaceprop(other.getDebrisSurfaceprop());
+        }
+        if (other.hasExplosionTypeName()) {
+          setExplosionTypeName(other.getExplosionTypeName());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -21478,6 +21524,38 @@ public final class S2TempEntities {
       public Builder clearDebrisSurfaceprop() {
         bitField0_ = (bitField0_ & ~0x00002000);
         debrisSurfaceprop_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int explosionTypeName_ ;
+      /**
+       * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+       */
+      public boolean hasExplosionTypeName() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      /**
+       * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+       */
+      public int getExplosionTypeName() {
+        return explosionTypeName_;
+      }
+      /**
+       * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+       */
+      public Builder setExplosionTypeName(int value) {
+        bitField0_ |= 0x00004000;
+        explosionTypeName_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 explosion_type_name = 15 [default = 0];</code>
+       */
+      public Builder clearExplosionTypeName() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        explosionTypeName_ = 0;
         onChanged();
         return this;
       }
@@ -28775,7 +28853,7 @@ public final class S2TempEntities {
       "\n\005scale\030\003 \001(\002\022\014\n\004type\030\004 \001(\r\"o\n\021CMsgTEBlo" +
       "odStream\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\036\n" +
       "\tdirection\030\002 \001(\0132\013.CMsgVector\022\r\n\005color\030\003",
-      " \001(\007\022\016\n\006amount\030\004 \001(\r\"\322\002\n\017CMsgTEExplosion" +
+      " \001(\007\022\016\n\006amount\030\004 \001(\r\"\362\002\n\017CMsgTEExplosion" +
       "\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\021\n\tframera" +
       "te\030\002 \001(\r\022\r\n\005flags\030\003 \001(\r\022\033\n\006normal\030\004 \001(\0132" +
       "\013.CMsgVector\022\024\n\014materialtype\030\005 \001(\r\022\016\n\006ra" +
@@ -28784,47 +28862,48 @@ public final class S2TempEntities {
       "name\030\n \001(\t\022\026\n\016explosion_type\030\013 \001(\r\022\025\n\rcr" +
       "eate_debris\030\014 \001(\010\022\"\n\rdebris_origin\030\r \001(\013" +
       "2\013.CMsgVector\022\032\n\022debris_surfaceprop\030\016 \001(" +
-      "\007\"f\n\nCMsgTEDust\022\033\n\006origin\030\001 \001(\0132\013.CMsgVe",
-      "ctor\022\014\n\004size\030\002 \001(\002\022\r\n\005speed\030\003 \001(\002\022\036\n\tdir" +
-      "ection\030\004 \001(\0132\013.CMsgVector\"B\n\021CMsgTELarge" +
-      "Funnel\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\020\n\010r" +
-      "eversed\030\002 \001(\r\"n\n\014CMsgTESparks\022\033\n\006origin\030" +
-      "\001 \001(\0132\013.CMsgVector\022\021\n\tmagnitude\030\002 \001(\r\022\016\n" +
-      "\006length\030\003 \001(\r\022\036\n\tdirection\030\004 \001(\0132\013.CMsgV" +
-      "ector\"\265\002\n\021CMsgTEPhysicsProp\022\033\n\006origin\030\001 " +
-      "\001(\0132\013.CMsgVector\022\035\n\010velocity\030\002 \001(\0132\013.CMs" +
-      "gVector\022\033\n\006angles\030\003 \001(\0132\013.CMsgQAngle\022\014\n\004" +
-      "skin\030\004 \001(\007\022\r\n\005flags\030\005 \001(\r\022\017\n\007effects\030\006 \001",
-      "(\r\022\r\n\005color\030\007 \001(\007\022\022\n\nmodelindex\030\010 \001(\006\022\034\n" +
-      "\024breakmodelsnottomake\030\t \001(\r\022\r\n\005scale\030\n \001" +
-      "(\002\022\033\n\006dmgpos\030\013 \001(\0132\013.CMsgVector\022\033\n\006dmgdi" +
-      "r\030\014 \001(\0132\013.CMsgVector\022\017\n\007dmgtype\030\r \001(\005\"X\n" +
-      "\021CMsgTEPlayerDecal\022\033\n\006origin\030\001 \001(\0132\013.CMs" +
-      "gVector\022\022\n\006player\030\002 \001(\005:\002-1\022\022\n\006entity\030\003 " +
-      "\001(\005:\002-1\"q\n\024CMsgTEProjectedDecal\022\033\n\006origi" +
-      "n\030\001 \001(\0132\013.CMsgVector\022\033\n\006angles\030\002 \001(\0132\013.C" +
-      "MsgQAngle\022\r\n\005index\030\003 \001(\r\022\020\n\010distance\030\004 \001" +
-      "(\002\"9\n\013CMsgTESmoke\022\033\n\006origin\030\001 \001(\0132\013.CMsg",
-      "Vector\022\r\n\005scale\030\002 \001(\002\"[\n\020CMsgTEWorldDeca" +
-      "l\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\033\n\006normal" +
-      "\030\002 \001(\0132\013.CMsgVector\022\r\n\005index\030\003 \001(\r*\323\004\n\016E" +
-      "TEProtobufIds\022\030\n\023TE_EffectDispatchId\020\220\003\022" +
-      "\027\n\022TE_ArmorRicochetId\020\221\003\022\026\n\021TE_BeamEntPo" +
-      "intId\020\222\003\022\022\n\rTE_BeamEntsId\020\223\003\022\024\n\017TE_BeamP" +
-      "ointsId\020\224\003\022\022\n\rTE_BeamRingId\020\225\003\022\024\n\017TE_Bre" +
-      "akModelId\020\226\003\022\022\n\rTE_BSPDecalId\020\227\003\022\021\n\014TE_B" +
-      "ubblesId\020\230\003\022\025\n\020TE_BubbleTrailId\020\231\003\022\017\n\nTE" +
-      "_DecalId\020\232\003\022\024\n\017TE_WorldDecalId\020\233\003\022\026\n\021TE_",
-      "EnergySplashId\020\234\003\022\016\n\tTE_FizzId\020\235\003\022\030\n\023TE_" +
-      "ShatterSurfaceId\020\236\003\022\024\n\017TE_GlowSpriteId\020\237" +
-      "\003\022\020\n\013TE_ImpactId\020\240\003\022\025\n\020TE_MuzzleFlashId\020" +
-      "\241\003\022\025\n\020TE_BloodStreamId\020\242\003\022\023\n\016TE_Explosio" +
-      "nId\020\243\003\022\016\n\tTE_DustId\020\244\003\022\025\n\020TE_LargeFunnel" +
-      "Id\020\245\003\022\020\n\013TE_SparksId\020\246\003\022\025\n\020TE_PhysicsPro" +
-      "pId\020\247\003\022\025\n\020TE_PlayerDecalId\020\250\003\022\030\n\023TE_Proj" +
-      "ectedDecalId\020\251\003\022\017\n\nTE_SmokeId\020\252\003B9\n\'skad" +
-      "istats.clarity.wire.shared.s2.protoB\016S2T" +
-      "empEntities"
+      "\007\022\036\n\023explosion_type_name\030\017 \001(\r:\0010\"f\n\nCMs",
+      "gTEDust\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\014\n\004" +
+      "size\030\002 \001(\002\022\r\n\005speed\030\003 \001(\002\022\036\n\tdirection\030\004" +
+      " \001(\0132\013.CMsgVector\"B\n\021CMsgTELargeFunnel\022\033" +
+      "\n\006origin\030\001 \001(\0132\013.CMsgVector\022\020\n\010reversed\030" +
+      "\002 \001(\r\"n\n\014CMsgTESparks\022\033\n\006origin\030\001 \001(\0132\013." +
+      "CMsgVector\022\021\n\tmagnitude\030\002 \001(\r\022\016\n\006length\030" +
+      "\003 \001(\r\022\036\n\tdirection\030\004 \001(\0132\013.CMsgVector\"\265\002" +
+      "\n\021CMsgTEPhysicsProp\022\033\n\006origin\030\001 \001(\0132\013.CM" +
+      "sgVector\022\035\n\010velocity\030\002 \001(\0132\013.CMsgVector\022" +
+      "\033\n\006angles\030\003 \001(\0132\013.CMsgQAngle\022\014\n\004skin\030\004 \001",
+      "(\007\022\r\n\005flags\030\005 \001(\r\022\017\n\007effects\030\006 \001(\r\022\r\n\005co" +
+      "lor\030\007 \001(\007\022\022\n\nmodelindex\030\010 \001(\006\022\034\n\024breakmo" +
+      "delsnottomake\030\t \001(\r\022\r\n\005scale\030\n \001(\002\022\033\n\006dm" +
+      "gpos\030\013 \001(\0132\013.CMsgVector\022\033\n\006dmgdir\030\014 \001(\0132" +
+      "\013.CMsgVector\022\017\n\007dmgtype\030\r \001(\005\"X\n\021CMsgTEP" +
+      "layerDecal\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022" +
+      "\022\n\006player\030\002 \001(\005:\002-1\022\022\n\006entity\030\003 \001(\005:\002-1\"" +
+      "q\n\024CMsgTEProjectedDecal\022\033\n\006origin\030\001 \001(\0132" +
+      "\013.CMsgVector\022\033\n\006angles\030\002 \001(\0132\013.CMsgQAngl" +
+      "e\022\r\n\005index\030\003 \001(\r\022\020\n\010distance\030\004 \001(\002\"9\n\013CM",
+      "sgTESmoke\022\033\n\006origin\030\001 \001(\0132\013.CMsgVector\022\r" +
+      "\n\005scale\030\002 \001(\002\"[\n\020CMsgTEWorldDecal\022\033\n\006ori" +
+      "gin\030\001 \001(\0132\013.CMsgVector\022\033\n\006normal\030\002 \001(\0132\013" +
+      ".CMsgVector\022\r\n\005index\030\003 \001(\r*\323\004\n\016ETEProtob" +
+      "ufIds\022\030\n\023TE_EffectDispatchId\020\220\003\022\027\n\022TE_Ar" +
+      "morRicochetId\020\221\003\022\026\n\021TE_BeamEntPointId\020\222\003" +
+      "\022\022\n\rTE_BeamEntsId\020\223\003\022\024\n\017TE_BeamPointsId\020" +
+      "\224\003\022\022\n\rTE_BeamRingId\020\225\003\022\024\n\017TE_BreakModelI" +
+      "d\020\226\003\022\022\n\rTE_BSPDecalId\020\227\003\022\021\n\014TE_BubblesId" +
+      "\020\230\003\022\025\n\020TE_BubbleTrailId\020\231\003\022\017\n\nTE_DecalId",
+      "\020\232\003\022\024\n\017TE_WorldDecalId\020\233\003\022\026\n\021TE_EnergySp" +
+      "lashId\020\234\003\022\016\n\tTE_FizzId\020\235\003\022\030\n\023TE_ShatterS" +
+      "urfaceId\020\236\003\022\024\n\017TE_GlowSpriteId\020\237\003\022\020\n\013TE_" +
+      "ImpactId\020\240\003\022\025\n\020TE_MuzzleFlashId\020\241\003\022\025\n\020TE" +
+      "_BloodStreamId\020\242\003\022\023\n\016TE_ExplosionId\020\243\003\022\016" +
+      "\n\tTE_DustId\020\244\003\022\025\n\020TE_LargeFunnelId\020\245\003\022\020\n" +
+      "\013TE_SparksId\020\246\003\022\025\n\020TE_PhysicsPropId\020\247\003\022\025" +
+      "\n\020TE_PlayerDecalId\020\250\003\022\030\n\023TE_ProjectedDec" +
+      "alId\020\251\003\022\017\n\nTE_SmokeId\020\252\003B9\n\'skadistats.c" +
+      "larity.wire.shared.s2.protoB\016S2TempEntit",
+      "ies"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -28964,7 +29043,7 @@ public final class S2TempEntities {
     internal_static_CMsgTEExplosion_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgTEExplosion_descriptor,
-        new java.lang.String[] { "Origin", "Framerate", "Flags", "Normal", "Materialtype", "Radius", "Magnitude", "Scale", "AffectRagdolls", "EffectName", "ExplosionType", "CreateDebris", "DebrisOrigin", "DebrisSurfaceprop", });
+        new java.lang.String[] { "Origin", "Framerate", "Flags", "Normal", "Materialtype", "Radius", "Magnitude", "Scale", "AffectRagdolls", "EffectName", "ExplosionType", "CreateDebris", "DebrisOrigin", "DebrisSurfaceprop", "ExplosionTypeName", });
     internal_static_CMsgTEDust_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_CMsgTEDust_fieldAccessorTable = new

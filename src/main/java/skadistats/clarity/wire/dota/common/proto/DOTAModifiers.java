@@ -487,6 +487,33 @@ public final class DOTAModifiers {
      * <code>optional bool aura_within_range = 39;</code>
      */
     boolean getAuraWithinRange();
+
+    /**
+     * <code>optional float move_slow = 40;</code>
+     */
+    boolean hasMoveSlow();
+    /**
+     * <code>optional float move_slow = 40;</code>
+     */
+    float getMoveSlow();
+
+    /**
+     * <code>optional bool has_scepter = 41;</code>
+     */
+    boolean hasHasScepter();
+    /**
+     * <code>optional bool has_scepter = 41;</code>
+     */
+    boolean getHasScepter();
+
+    /**
+     * <code>optional bool has_shard = 42;</code>
+     */
+    boolean hasHasShard();
+    /**
+     * <code>optional bool has_shard = 42;</code>
+     */
+    boolean getHasShard();
   }
   /**
    * Protobuf type {@code CDOTAModifierBuffTableEntry}
@@ -763,6 +790,21 @@ public final class DOTAModifiers {
             case 312: {
               bitField1_ |= 0x00000040;
               auraWithinRange_ = input.readBool();
+              break;
+            }
+            case 325: {
+              bitField1_ |= 0x00000080;
+              moveSlow_ = input.readFloat();
+              break;
+            }
+            case 328: {
+              bitField1_ |= 0x00000100;
+              hasScepter_ = input.readBool();
+              break;
+            }
+            case 336: {
+              bitField1_ |= 0x00000200;
+              hasShard_ = input.readBool();
               break;
             }
           }
@@ -1592,6 +1634,51 @@ public final class DOTAModifiers {
       return auraWithinRange_;
     }
 
+    public static final int MOVE_SLOW_FIELD_NUMBER = 40;
+    private float moveSlow_;
+    /**
+     * <code>optional float move_slow = 40;</code>
+     */
+    public boolean hasMoveSlow() {
+      return ((bitField1_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional float move_slow = 40;</code>
+     */
+    public float getMoveSlow() {
+      return moveSlow_;
+    }
+
+    public static final int HAS_SCEPTER_FIELD_NUMBER = 41;
+    private boolean hasScepter_;
+    /**
+     * <code>optional bool has_scepter = 41;</code>
+     */
+    public boolean hasHasScepter() {
+      return ((bitField1_ & 0x00000100) == 0x00000100);
+    }
+    /**
+     * <code>optional bool has_scepter = 41;</code>
+     */
+    public boolean getHasScepter() {
+      return hasScepter_;
+    }
+
+    public static final int HAS_SHARD_FIELD_NUMBER = 42;
+    private boolean hasShard_;
+    /**
+     * <code>optional bool has_shard = 42;</code>
+     */
+    public boolean hasHasShard() {
+      return ((bitField1_ & 0x00000200) == 0x00000200);
+    }
+    /**
+     * <code>optional bool has_shard = 42;</code>
+     */
+    public boolean getHasShard() {
+      return hasShard_;
+    }
+
     private void initFields() {
       entryType_ = skadistats.clarity.wire.dota.common.proto.DOTAModifiers.DOTA_MODIFIER_ENTRY_TYPE.DOTA_MODIFIER_ENTRY_TYPE_ACTIVE;
       parent_ = 16777215;
@@ -1632,6 +1719,9 @@ public final class DOTAModifiers {
       bonusMana_ = 0;
       customEntity_ = 16777215;
       auraWithinRange_ = false;
+      moveSlow_ = 0F;
+      hasScepter_ = false;
+      hasShard_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1778,6 +1868,15 @@ public final class DOTAModifiers {
       }
       if (((bitField1_ & 0x00000040) == 0x00000040)) {
         output.writeBool(39, auraWithinRange_);
+      }
+      if (((bitField1_ & 0x00000080) == 0x00000080)) {
+        output.writeFloat(40, moveSlow_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        output.writeBool(41, hasScepter_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        output.writeBool(42, hasShard_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1943,6 +2042,18 @@ public final class DOTAModifiers {
       if (((bitField1_ & 0x00000040) == 0x00000040)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(39, auraWithinRange_);
+      }
+      if (((bitField1_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(40, moveSlow_);
+      }
+      if (((bitField1_ & 0x00000100) == 0x00000100)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(41, hasScepter_);
+      }
+      if (((bitField1_ & 0x00000200) == 0x00000200)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(42, hasShard_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2149,6 +2260,12 @@ public final class DOTAModifiers {
         bitField1_ = (bitField1_ & ~0x00000020);
         auraWithinRange_ = false;
         bitField1_ = (bitField1_ & ~0x00000040);
+        moveSlow_ = 0F;
+        bitField1_ = (bitField1_ & ~0x00000080);
+        hasScepter_ = false;
+        bitField1_ = (bitField1_ & ~0x00000100);
+        hasShard_ = false;
+        bitField1_ = (bitField1_ & ~0x00000200);
         return this;
       }
 
@@ -2343,6 +2460,18 @@ public final class DOTAModifiers {
           to_bitField1_ |= 0x00000040;
         }
         result.auraWithinRange_ = auraWithinRange_;
+        if (((from_bitField1_ & 0x00000080) == 0x00000080)) {
+          to_bitField1_ |= 0x00000080;
+        }
+        result.moveSlow_ = moveSlow_;
+        if (((from_bitField1_ & 0x00000100) == 0x00000100)) {
+          to_bitField1_ |= 0x00000100;
+        }
+        result.hasScepter_ = hasScepter_;
+        if (((from_bitField1_ & 0x00000200) == 0x00000200)) {
+          to_bitField1_ |= 0x00000200;
+        }
+        result.hasShard_ = hasShard_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         onBuilt();
@@ -2490,6 +2619,15 @@ public final class DOTAModifiers {
         }
         if (other.hasAuraWithinRange()) {
           setAuraWithinRange(other.getAuraWithinRange());
+        }
+        if (other.hasMoveSlow()) {
+          setMoveSlow(other.getMoveSlow());
+        }
+        if (other.hasHasScepter()) {
+          setHasScepter(other.getHasScepter());
+        }
+        if (other.hasHasShard()) {
+          setHasShard(other.getHasShard());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4262,6 +4400,102 @@ public final class DOTAModifiers {
         return this;
       }
 
+      private float moveSlow_ ;
+      /**
+       * <code>optional float move_slow = 40;</code>
+       */
+      public boolean hasMoveSlow() {
+        return ((bitField1_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional float move_slow = 40;</code>
+       */
+      public float getMoveSlow() {
+        return moveSlow_;
+      }
+      /**
+       * <code>optional float move_slow = 40;</code>
+       */
+      public Builder setMoveSlow(float value) {
+        bitField1_ |= 0x00000080;
+        moveSlow_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float move_slow = 40;</code>
+       */
+      public Builder clearMoveSlow() {
+        bitField1_ = (bitField1_ & ~0x00000080);
+        moveSlow_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasScepter_ ;
+      /**
+       * <code>optional bool has_scepter = 41;</code>
+       */
+      public boolean hasHasScepter() {
+        return ((bitField1_ & 0x00000100) == 0x00000100);
+      }
+      /**
+       * <code>optional bool has_scepter = 41;</code>
+       */
+      public boolean getHasScepter() {
+        return hasScepter_;
+      }
+      /**
+       * <code>optional bool has_scepter = 41;</code>
+       */
+      public Builder setHasScepter(boolean value) {
+        bitField1_ |= 0x00000100;
+        hasScepter_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_scepter = 41;</code>
+       */
+      public Builder clearHasScepter() {
+        bitField1_ = (bitField1_ & ~0x00000100);
+        hasScepter_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean hasShard_ ;
+      /**
+       * <code>optional bool has_shard = 42;</code>
+       */
+      public boolean hasHasShard() {
+        return ((bitField1_ & 0x00000200) == 0x00000200);
+      }
+      /**
+       * <code>optional bool has_shard = 42;</code>
+       */
+      public boolean getHasShard() {
+        return hasShard_;
+      }
+      /**
+       * <code>optional bool has_shard = 42;</code>
+       */
+      public Builder setHasShard(boolean value) {
+        bitField1_ |= 0x00000200;
+        hasShard_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool has_shard = 42;</code>
+       */
+      public Builder clearHasShard() {
+        bitField1_ = (bitField1_ & ~0x00000200);
+        hasShard_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CDOTAModifierBuffTableEntry)
     }
 
@@ -4863,7 +5097,7 @@ public final class DOTAModifiers {
   static {
     java.lang.String[] descriptorData = {
       "\n\024dota_modifiers.proto\032\035networkbasetypes" +
-      "-common.proto\"\322\007\n\033CDOTAModifierBuffTable" +
+      "-common.proto\"\215\010\n\033CDOTAModifierBuffTable" +
       "Entry\022N\n\nentry_type\030\001 \002(\0162\031.DOTA_MODIFIE" +
       "R_ENTRY_TYPE:\037DOTA_MODIFIER_ENTRY_TYPE_A" +
       "CTIVE\022\030\n\006parent\030\002 \002(\r:\01016777215\022\r\n\005index" +
@@ -4887,13 +5121,15 @@ public final class DOTAModifiers {
       "\naura_owner\030\" \001(\r:\01016777215\022\027\n\017bonus_all" +
       "_stats\030# \001(\005\022\024\n\014bonus_health\030$ \001(\005\022\022\n\nbo" +
       "nus_mana\030% \001(\005\022\037\n\rcustom_entity\030& \001(\r:\0101" +
-      "6777215\022\031\n\021aura_within_range\030\' \001(\010\"I\n\025CD" +
-      "OTALuaModifierEntry\022\025\n\rmodifier_type\030\001 \002" +
-      "(\005\022\031\n\021modifier_filename\030\002 \002(\t*e\n\030DOTA_MO" +
-      "DIFIER_ENTRY_TYPE\022#\n\037DOTA_MODIFIER_ENTRY" +
-      "_TYPE_ACTIVE\020\001\022$\n DOTA_MODIFIER_ENTRY_TY",
-      "PE_REMOVED\020\002B:\n)skadistats.clarity.wire." +
-      "dota.common.protoB\rDOTAModifiers"
+      "6777215\022\031\n\021aura_within_range\030\' \001(\010\022\021\n\tmo" +
+      "ve_slow\030( \001(\002\022\023\n\013has_scepter\030) \001(\010\022\021\n\tha" +
+      "s_shard\030* \001(\010\"I\n\025CDOTALuaModifierEntry\022\025" +
+      "\n\rmodifier_type\030\001 \002(\005\022\031\n\021modifier_filena" +
+      "me\030\002 \002(\t*e\n\030DOTA_MODIFIER_ENTRY_TYPE\022#\n\037",
+      "DOTA_MODIFIER_ENTRY_TYPE_ACTIVE\020\001\022$\n DOT" +
+      "A_MODIFIER_ENTRY_TYPE_REMOVED\020\002B:\n)skadi" +
+      "stats.clarity.wire.dota.common.protoB\rDO" +
+      "TAModifiers"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4913,7 +5149,7 @@ public final class DOTAModifiers {
     internal_static_CDOTAModifierBuffTableEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAModifierBuffTableEntry_descriptor,
-        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", "BonusAllStats", "BonusHealth", "BonusMana", "CustomEntity", "AuraWithinRange", });
+        new java.lang.String[] { "EntryType", "Parent", "Index", "SerialNum", "ModifierClass", "AbilityLevel", "StackCount", "CreationTime", "Duration", "Caster", "Ability", "Armor", "FadeTime", "Subtle", "ChannelTime", "VStart", "VEnd", "PortalLoopAppear", "PortalLoopDisappear", "HeroLoopAppear", "HeroLoopDisappear", "MovementSpeed", "Aura", "Activity", "Damage", "Range", "DdModifierIndex", "DdAbilityId", "IllusionLabel", "Active", "PlayerIds", "LuaName", "AttackSpeed", "AuraOwner", "BonusAllStats", "BonusHealth", "BonusMana", "CustomEntity", "AuraWithinRange", "MoveSlow", "HasScepter", "HasShard", });
     internal_static_CDOTALuaModifierEntry_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CDOTALuaModifierEntry_fieldAccessorTable = new

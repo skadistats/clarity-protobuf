@@ -41,6 +41,12 @@ enum PARTICLE_MESSAGE {
   GAME_PARTICLE_MANAGER_EVENT_DESTROY_PHYSICS_SIM = 33;
   GAME_PARTICLE_MANAGER_EVENT_SET_VDATA = 34;
   GAME_PARTICLE_MANAGER_EVENT_SET_MATERIAL_OVERRIDE = 35;
+  GAME_PARTICLE_MANAGER_EVENT_ADD_FAN = 36;
+  GAME_PARTICLE_MANAGER_EVENT_UPDATE_FAN = 37;
+  GAME_PARTICLE_MANAGER_EVENT_SET_CLUSTER_GROWTH = 38;
+  GAME_PARTICLE_MANAGER_EVENT_REMOVE_FAN = 39;
+  GAME_PARTICLE_MANAGER_EVENT_CREATE_SMOKE_GRID = 40;
+  GAME_PARTICLE_MANAGER_EVENT_SET_OVERRIDE_TEXTURE = 41;
 }
 
 message CUserMsg_ParticleManager {
@@ -292,6 +298,59 @@ message CUserMsg_ParticleManager {
   optional .CUserMsg_ParticleManager.DestroyPhysicsSim destroy_physics_sim = 36;
   optional .CUserMsg_ParticleManager.SetVData set_vdata = 37;
   optional .CUserMsg_ParticleManager.SetMaterialOverride set_material_override = 38;
+  optional .CUserMsg_ParticleManager.AddFan add_fan = 39;
+  optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;
+  optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;
+  optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;
+  optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;
+  optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;
+
+  message AddFan {
+    optional bool active = 1;
+    optional .CMsgVector bounds_mins = 2;
+    optional .CMsgVector bounds_maxs = 3;
+    optional .CMsgVector fan_origin = 4;
+    optional .CMsgVector fan_origin_offset = 5;
+    optional .CMsgVector fan_direction = 6;
+    optional float force = 7;
+    optional string fan_force_curve = 8;
+    optional bool falloff = 9;
+    optional bool pull_towards_point = 10;
+    optional float curve_min_dist = 11;
+    optional float curve_max_dist = 12;
+    optional uint32 fan_type = 13;
+    optional float cone_start_radius = 14;
+    optional float cone_end_radius = 15;
+    optional float cone_length = 16;
+    optional uint32 entity_handle = 17 [default = 16777215];
+    optional string attachment_name = 18;
+  }
+
+  message UpdateFan {
+    optional bool active = 1;
+    optional .CMsgVector fan_origin = 2;
+    optional .CMsgVector fan_origin_offset = 3;
+    optional .CMsgVector fan_direction = 4;
+    optional .CMsgVector bounds_mins = 5;
+    optional .CMsgVector bounds_maxs = 6;
+    optional float fan_ramp_ratio = 7;
+  }
+
+  message RemoveFan {
+  }
+
+  message SetParticleClusterGrowth {
+    optional float duration = 1;
+    optional .CMsgVector origin = 2;
+  }
+
+  message SetOverrideTexture {
+    optional string texture_name = 1;
+  }
+
+  message CreateSmokeGrid {
+    optional string vdata_name = 1;
+  }
 
   extensions 100 to 201;
 }

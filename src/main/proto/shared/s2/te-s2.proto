@@ -1,4 +1,4 @@
-option java_package = "skadistats.clarity.wire.shared.s2.proto";
+Teoption java_package = "skadistats.clarity.wire.shared.s2.proto";
 option java_outer_classname = "S2TempEntities";
 
 import "networkbasetypes-common.proto";
@@ -216,6 +216,7 @@ message CMsgTEExplosion {
 	optional bool create_debris = 12;
 	optional .CMsgVector debris_origin = 13;
 	optional fixed32 debris_surfaceprop = 14;
+	optional uint32 explosion_type_name = 15 [default = 0];
 }
 
 message CMsgTEDust {

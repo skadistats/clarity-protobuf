@@ -1,0 +1,62 @@
+option java_package = "skadistats.clarity.wire.dota.s2.proto";
+option java_outer_classname = "DOTAS2UserMessages";
+
+message CMsgMonsterHunterMaterialQuantity {
+  message MaterialCountsEntry {
+    optional uint32 key = 1;
+    optional int32 value = 2;
+  }
+
+  repeated .CMsgMonsterHunterMaterialQuantity.MaterialCountsEntry material_counts = 1;
+}
+
+message CMsgMonsterHunterInvestigation {
+  optional int32 hero_id = 1;
+  optional int32 persona_id = 2;
+  optional .CMsgMonsterHunterMaterialQuantity match_rewards = 3;
+  optional .CMsgMonsterHunterMaterialQuantity hunt_rewards = 4;
+  optional bool success_state = 5;
+}
+
+message CMsgMonsterHunterInvestigationGameState {
+  message HuntedBy {
+    optional int32 hero_id = 1;
+    optional int32 persona_id = 2;
+    optional .CMsgMonsterHunterMaterialQuantity hunt_rewards = 3;
+    optional bool success_state = 4;
+  }
+
+  optional .CMsgMonsterHunterInvestigation selected_investigation = 1;
+  repeated .CMsgMonsterHunterInvestigationGameState.HuntedBy hunted_by = 2;
+}
+
+message CDOTAUserMsg_MonsterHunter_InvestigationsAvailable {
+  repeated .CMsgMonsterHunterInvestigation investigations = 1;
+}
+
+message CDOTAUserMsg_MonsterHunter_InvestigationGameState {
+  optional .CMsgMonsterHunterInvestigationGameState investigation_game_state = 1;
+  optional bool investigations_locked = 2;
+}
+
+message CDOTAUserMsg_MonsterHunter_HuntAlert {
+  enum EHuntAlertType {
+    MainObjective = 0;
+    MainObjectiveAll = 1;
+    HuntedBy = 2;
+    HuntedByAll = 3;
+    HunterDuel = 4;
+    HunterDuelAll = 5;
+    HuntSelection = 6;
+  }
+  enum EHuntStatusType {
+    Pending = 0;
+    Success = 1;
+    Failed = 2;
+  }
+  optional int32 player_id = 1 [default = -1];
+  optional int32 hero_id = 2;
+  optional .CDOTAUserMsg_MonsterHunter_HuntAlert.EHuntAlertType hunt_alert_type = 3 [default = MainObjective];
+  optional .CDOTAUserMsg_MonsterHunter_HuntAlert.EHuntStatusType hunt_status_type = 4 [default = Pending];
+  optional int32 index = 5;
+}

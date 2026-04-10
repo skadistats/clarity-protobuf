@@ -5,6 +5,7 @@ import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.dota.common.proto.DOTAUserMessages;
 import skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon;
+import skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages;
 import skadistats.clarity.wire.dota.s2.proto.DOTAS2MatchMetadata;
 import skadistats.clarity.wire.dota.s2.proto.DOTAS2MessageId;
 import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;
@@ -54,6 +55,7 @@ public class EmbeddedPackets {
         /*  62 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_HLTVStatus_VALUE, S2NetMessages.CSVCMsg_HLTVStatus.class);
         /*  70 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_FullFrameSplit_VALUE, CommonNetMessages.CSVCMsg_FullFrameSplit.class);
         /*  76 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_UserCmds_VALUE, CommonNetMessages.CSVCMsg_UserCommands.class);
+        /*  77 */ K2C.put(DOTAS2MessageId.SVC_Messages.svc_NextMsgPredicted_VALUE, CommonNetMessages.CSVCMsg_NextMsgPredicted.class);
 
         /* 106 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_Fade_VALUE, S2UserMessages.CUserMessageFade.class);
         /* 114 */ K2C.put(DOTAS2MessageId.EBaseUserMessages.UM_RequestState_VALUE, S2UserMessages.CUserMessageRequestState.class);
@@ -251,6 +253,18 @@ public class EmbeddedPackets {
         /* 622 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_UpdateLinearProjectileCPData_VALUE, DOTAUserMessages.CDOTAUserMsg_ProjectileParticleCPData.class);
         /* 623 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_GiftPlayer_VALUE, DOTAUserMessages.CDOTAUserMsg_GiftPlayer.class);
         /* 624 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_FacetPing_VALUE, DOTAUserMessages.CDOTAUserMsg_FacetPing.class);
+//      /* 625 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_InnatePing_VALUE, DOTAUserMessages.CDOTAUserMsg_InnatePing.class);
+//      /* 626 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_RoshanTimer_VALUE, DOTAUserMessages.CDOTAUserMsg_RoshanTimer.class);
+//      /* 627 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_NeutralCraftAvailable_VALUE, DOTAUserMessages.CDOTAUserMsg_NeutralCraftAvailable.class);
+//      /* 628 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_TimerAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_TimerAlert.class);
+//      /* 629 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MadstoneAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_MadstoneAlert.class);
+//      /* 630 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_CourierLeftFountainAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_CourierLeftFountainAlert.class);
+//      /* 631 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MonsterHunter_InvestigationsAvailable_VALUE, DOTAS2UserMessages.CDOTAUserMsg_MonsterHunter_InvestigationsAvailable.class);
+//      /* 632 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MonsterHunter_InvestigationGameState_VALUE, DOTAS2UserMessages.CDOTAUserMsg_MonsterHunter_InvestigationGameState.class);
+//      /* 633 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MonsterHunter_HuntAlert_VALUE, DOTAS2UserMessages.CDOTAUserMsg_MonsterHunter_HuntAlert.class);
+//      /* 634 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_TormentorTimer_VALUE, DOTAUserMessages.CDOTAUserMsg_TormentorTimer.class);
+        /* 635 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_KillEffect_VALUE, DOTAUserMessages.CDOTAUserMsg_KillEffect.class);
+//      /* 636 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_GiveItem_VALUE, DOTAUserMessages.CDOTAUserMsg_GiveItem.class);
 
 //      /* 464 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AddUnitToSelection_VALUE, null);
 //      /* 465 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_AIDebugLine_VALUE, DOTAUserMessages.CDOTAUserMsg_AIDebugLine.class);

@@ -28,6 +28,7 @@ enum DOTA_GameMode {
   DOTA_GAMEMODE_TURBO = 23;
   DOTA_GAMEMODE_MUTATION = 24;
   DOTA_GAMEMODE_COACHES_CHALLENGE = 25;
+  DOTA_GAMEMODE_BOT_CHALLENGE = 26;
 }
 
 enum DOTA_GC_TEAM {
@@ -99,6 +100,14 @@ enum EEvent {
   EVENT_ID_FROSTIVUS_2023 = 48;
   EVENT_ID_INTERNATIONAL_2024 = 49;
   EVENT_ID_COUNT = 50;
+  EVENT_ID_MONSTER_HUNTER = 51;
+  EVENT_ID_INTERNATIONAL_2025 = 52;
+  EVENT_ID_FALL_2025 = 53;
+  EVENT_ID_WINTER_2025 = 55;
+  EVENT_ID_SPRING_2026 = 56;
+  EVENT_ID_SUMMER_2026 = 57;
+  EVENT_ID_FALL_2026 = 58;
+  EVENT_ID_WINTER_2026 = 59;
 }
 
 enum EMatchOutcome {
@@ -134,6 +143,14 @@ enum EDOTAPlayerMMRType {
   k_EDOTAPlayerMMRType_Competitive_Core = 8;
   k_EDOTAPlayerMMRType_Competitive_Support = 9;
   k_EDOTAPlayerMMRType_Competitive_Classic = 10;
+}
+
+enum ETimerAlertType {
+  k_TimerAlertType_PowerRune = 1;
+  k_TimerAlertType_BountyRune = 2;
+  k_TimerAlertType_WisdomShrine = 3;
+  k_TimerAlertType_JungleCamps = 4;
+  k_TimerAlertType_LotusPool = 5;
 }
 
 enum EDOTAMMRBoostType {

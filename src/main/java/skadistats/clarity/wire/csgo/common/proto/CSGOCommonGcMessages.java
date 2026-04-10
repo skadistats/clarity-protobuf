@@ -3835,6 +3835,24 @@ public final class CSGOCommonGcMessages {
      * <code>optional uint32 tv_control = 7;</code>
      */
     int getTvControl();
+
+    /**
+     * <code>optional uint32 highest_rank = 15;</code>
+     */
+    boolean hasHighestRank();
+    /**
+     * <code>optional uint32 highest_rank = 15;</code>
+     */
+    int getHighestRank();
+
+    /**
+     * <code>optional uint32 rank_expiry = 16;</code>
+     */
+    boolean hasRankExpiry();
+    /**
+     * <code>optional uint32 rank_expiry = 16;</code>
+     */
+    int getRankExpiry();
   }
   /**
    * Protobuf type {@code PlayerRankingInfo}
@@ -3920,6 +3938,16 @@ public final class CSGOCommonGcMessages {
             case 56: {
               bitField0_ |= 0x00000020;
               tvControl_ = input.readUInt32();
+              break;
+            }
+            case 120: {
+              bitField0_ |= 0x00000040;
+              highestRank_ = input.readUInt32();
+              break;
+            }
+            case 128: {
+              bitField0_ |= 0x00000080;
+              rankExpiry_ = input.readUInt32();
               break;
             }
           }
@@ -4052,6 +4080,36 @@ public final class CSGOCommonGcMessages {
       return tvControl_;
     }
 
+    public static final int HIGHEST_RANK_FIELD_NUMBER = 15;
+    private int highestRank_;
+    /**
+     * <code>optional uint32 highest_rank = 15;</code>
+     */
+    public boolean hasHighestRank() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional uint32 highest_rank = 15;</code>
+     */
+    public int getHighestRank() {
+      return highestRank_;
+    }
+
+    public static final int RANK_EXPIRY_FIELD_NUMBER = 16;
+    private int rankExpiry_;
+    /**
+     * <code>optional uint32 rank_expiry = 16;</code>
+     */
+    public boolean hasRankExpiry() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional uint32 rank_expiry = 16;</code>
+     */
+    public int getRankExpiry() {
+      return rankExpiry_;
+    }
+
     private void initFields() {
       accountId_ = 0;
       rankId_ = 0;
@@ -4059,6 +4117,8 @@ public final class CSGOCommonGcMessages {
       rankChange_ = 0F;
       rankTypeId_ = 0;
       tvControl_ = 0;
+      highestRank_ = 0;
+      rankExpiry_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4090,6 +4150,12 @@ public final class CSGOCommonGcMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeUInt32(7, tvControl_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeUInt32(15, highestRank_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeUInt32(16, rankExpiry_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -4123,6 +4189,14 @@ public final class CSGOCommonGcMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(7, tvControl_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(15, highestRank_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(16, rankExpiry_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4257,6 +4331,10 @@ public final class CSGOCommonGcMessages {
         bitField0_ = (bitField0_ & ~0x00000010);
         tvControl_ = 0;
         bitField0_ = (bitField0_ & ~0x00000020);
+        highestRank_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        rankExpiry_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -4309,6 +4387,14 @@ public final class CSGOCommonGcMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.tvControl_ = tvControl_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        result.highestRank_ = highestRank_;
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        result.rankExpiry_ = rankExpiry_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -4342,6 +4428,12 @@ public final class CSGOCommonGcMessages {
         }
         if (other.hasTvControl()) {
           setTvControl(other.getTvControl());
+        }
+        if (other.hasHighestRank()) {
+          setHighestRank(other.getHighestRank());
+        }
+        if (other.hasRankExpiry()) {
+          setRankExpiry(other.getRankExpiry());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4558,6 +4650,70 @@ public final class CSGOCommonGcMessages {
       public Builder clearTvControl() {
         bitField0_ = (bitField0_ & ~0x00000020);
         tvControl_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int highestRank_ ;
+      /**
+       * <code>optional uint32 highest_rank = 15;</code>
+       */
+      public boolean hasHighestRank() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional uint32 highest_rank = 15;</code>
+       */
+      public int getHighestRank() {
+        return highestRank_;
+      }
+      /**
+       * <code>optional uint32 highest_rank = 15;</code>
+       */
+      public Builder setHighestRank(int value) {
+        bitField0_ |= 0x00000040;
+        highestRank_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 highest_rank = 15;</code>
+       */
+      public Builder clearHighestRank() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        highestRank_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rankExpiry_ ;
+      /**
+       * <code>optional uint32 rank_expiry = 16;</code>
+       */
+      public boolean hasRankExpiry() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional uint32 rank_expiry = 16;</code>
+       */
+      public int getRankExpiry() {
+        return rankExpiry_;
+      }
+      /**
+       * <code>optional uint32 rank_expiry = 16;</code>
+       */
+      public Builder setRankExpiry(int value) {
+        bitField0_ |= 0x00000080;
+        rankExpiry_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 rank_expiry = 16;</code>
+       */
+      public Builder clearRankExpiry() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        rankExpiry_ = 0;
         onChanged();
         return this;
       }
@@ -16233,6 +16389,28 @@ public final class CSGOCommonGcMessages {
      * <code>optional uint32 tv_control = 17;</code>
      */
     int getTvControl();
+
+    /**
+     * <code>repeated int32 teammate_colors = 21;</code>
+     */
+    java.util.List<java.lang.Integer> getTeammateColorsList();
+    /**
+     * <code>repeated int32 teammate_colors = 21;</code>
+     */
+    int getTeammateColorsCount();
+    /**
+     * <code>repeated int32 teammate_colors = 21;</code>
+     */
+    int getTeammateColors(int index);
+
+    /**
+     * <code>optional uint32 match_id_additional = 22;</code>
+     */
+    boolean hasMatchIdAdditional();
+    /**
+     * <code>optional uint32 match_id_additional = 22;</code>
+     */
+    int getMatchIdAdditional();
   }
   /**
    * Protobuf type {@code CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve}
@@ -16453,6 +16631,32 @@ public final class CSGOCommonGcMessages {
               flags_ = input.readUInt32();
               break;
             }
+            case 168: {
+              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+                teammateColors_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00040000;
+              }
+              teammateColors_.add(input.readInt32());
+              break;
+            }
+            case 170: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00040000) == 0x00040000) && input.getBytesUntilLimit() > 0) {
+                teammateColors_ = new java.util.ArrayList<java.lang.Integer>();
+                mutable_bitField0_ |= 0x00040000;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                teammateColors_.add(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 176: {
+              bitField0_ |= 0x00001000;
+              matchIdAdditional_ = input.readUInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -16478,6 +16682,9 @@ public final class CSGOCommonGcMessages {
         }
         if (((mutable_bitField0_ & 0x00002000) == 0x00002000)) {
           tournamentCastersAccountIds_ = java.util.Collections.unmodifiableList(tournamentCastersAccountIds_);
+        }
+        if (((mutable_bitField0_ & 0x00040000) == 0x00040000)) {
+          teammateColors_ = java.util.Collections.unmodifiableList(teammateColors_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -16874,6 +17081,43 @@ public final class CSGOCommonGcMessages {
       return tvControl_;
     }
 
+    public static final int TEAMMATE_COLORS_FIELD_NUMBER = 21;
+    private java.util.List<java.lang.Integer> teammateColors_;
+    /**
+     * <code>repeated int32 teammate_colors = 21;</code>
+     */
+    public java.util.List<java.lang.Integer>
+        getTeammateColorsList() {
+      return teammateColors_;
+    }
+    /**
+     * <code>repeated int32 teammate_colors = 21;</code>
+     */
+    public int getTeammateColorsCount() {
+      return teammateColors_.size();
+    }
+    /**
+     * <code>repeated int32 teammate_colors = 21;</code>
+     */
+    public int getTeammateColors(int index) {
+      return teammateColors_.get(index);
+    }
+
+    public static final int MATCH_ID_ADDITIONAL_FIELD_NUMBER = 22;
+    private int matchIdAdditional_;
+    /**
+     * <code>optional uint32 match_id_additional = 22;</code>
+     */
+    public boolean hasMatchIdAdditional() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    /**
+     * <code>optional uint32 match_id_additional = 22;</code>
+     */
+    public int getMatchIdAdditional() {
+      return matchIdAdditional_;
+    }
+
     private void initFields() {
       accountIds_ = java.util.Collections.emptyList();
       gameType_ = 0;
@@ -16893,6 +17137,8 @@ public final class CSGOCommonGcMessages {
       preMatchData_ = skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CPreMatchInfoData.getDefaultInstance();
       rtime32EventStart_ = 0;
       tvControl_ = 0;
+      teammateColors_ = java.util.Collections.emptyList();
+      matchIdAdditional_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -16960,6 +17206,12 @@ public final class CSGOCommonGcMessages {
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         output.writeUInt32(18, flags_);
+      }
+      for (int i = 0; i < teammateColors_.size(); i++) {
+        output.writeInt32(21, teammateColors_.get(i));
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeUInt32(22, matchIdAdditional_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -17056,6 +17308,19 @@ public final class CSGOCommonGcMessages {
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(18, flags_);
+      }
+      {
+        int dataSize = 0;
+        for (int i = 0; i < teammateColors_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(teammateColors_.get(i));
+        }
+        size += dataSize;
+        size += 2 * getTeammateColorsList().size();
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(22, matchIdAdditional_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -17239,6 +17504,10 @@ public final class CSGOCommonGcMessages {
         bitField0_ = (bitField0_ & ~0x00010000);
         tvControl_ = 0;
         bitField0_ = (bitField0_ & ~0x00020000);
+        teammateColors_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        matchIdAdditional_ = 0;
+        bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
 
@@ -17365,6 +17634,15 @@ public final class CSGOCommonGcMessages {
           to_bitField0_ |= 0x00000800;
         }
         result.tvControl_ = tvControl_;
+        if (((bitField0_ & 0x00040000) == 0x00040000)) {
+          teammateColors_ = java.util.Collections.unmodifiableList(teammateColors_);
+          bitField0_ = (bitField0_ & ~0x00040000);
+        }
+        result.teammateColors_ = teammateColors_;
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.matchIdAdditional_ = matchIdAdditional_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -17524,6 +17802,19 @@ public final class CSGOCommonGcMessages {
         }
         if (other.hasTvControl()) {
           setTvControl(other.getTvControl());
+        }
+        if (!other.teammateColors_.isEmpty()) {
+          if (teammateColors_.isEmpty()) {
+            teammateColors_ = other.teammateColors_;
+            bitField0_ = (bitField0_ & ~0x00040000);
+          } else {
+            ensureTeammateColorsIsMutable();
+            teammateColors_.addAll(other.teammateColors_);
+          }
+          onChanged();
+        }
+        if (other.hasMatchIdAdditional()) {
+          setMatchIdAdditional(other.getMatchIdAdditional());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -19018,6 +19309,104 @@ public final class CSGOCommonGcMessages {
       public Builder clearTvControl() {
         bitField0_ = (bitField0_ & ~0x00020000);
         tvControl_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<java.lang.Integer> teammateColors_ = java.util.Collections.emptyList();
+      private void ensureTeammateColorsIsMutable() {
+        if (!((bitField0_ & 0x00040000) == 0x00040000)) {
+          teammateColors_ = new java.util.ArrayList<java.lang.Integer>(teammateColors_);
+          bitField0_ |= 0x00040000;
+         }
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public java.util.List<java.lang.Integer>
+          getTeammateColorsList() {
+        return java.util.Collections.unmodifiableList(teammateColors_);
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public int getTeammateColorsCount() {
+        return teammateColors_.size();
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public int getTeammateColors(int index) {
+        return teammateColors_.get(index);
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public Builder setTeammateColors(
+          int index, int value) {
+        ensureTeammateColorsIsMutable();
+        teammateColors_.set(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public Builder addTeammateColors(int value) {
+        ensureTeammateColorsIsMutable();
+        teammateColors_.add(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public Builder addAllTeammateColors(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureTeammateColorsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, teammateColors_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 teammate_colors = 21;</code>
+       */
+      public Builder clearTeammateColors() {
+        teammateColors_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00040000);
+        onChanged();
+        return this;
+      }
+
+      private int matchIdAdditional_ ;
+      /**
+       * <code>optional uint32 match_id_additional = 22;</code>
+       */
+      public boolean hasMatchIdAdditional() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <code>optional uint32 match_id_additional = 22;</code>
+       */
+      public int getMatchIdAdditional() {
+        return matchIdAdditional_;
+      }
+      /**
+       * <code>optional uint32 match_id_additional = 22;</code>
+       */
+      public Builder setMatchIdAdditional(int value) {
+        bitField0_ |= 0x00080000;
+        matchIdAdditional_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 match_id_additional = 22;</code>
+       */
+      public Builder clearMatchIdAdditional() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        matchIdAdditional_ = 0;
         onChanged();
         return this;
       }
@@ -22670,6 +23059,48 @@ public final class CSGOCommonGcMessages {
      * <code>optional int32 entindex = 18;</code>
      */
     int getEntindex();
+
+    /**
+     * <code>optional uint32 style = 21;</code>
+     */
+    boolean hasStyle();
+    /**
+     * <code>optional uint32 style = 21;</code>
+     */
+    int getStyle();
+
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker> 
+        getVariationsList();
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker getVariations(int index);
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    int getVariationsCount();
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder> 
+        getVariationsOrBuilderList();
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder getVariationsOrBuilder(
+        int index);
+
+    /**
+     * <code>optional uint32 upgrade_level = 23;</code>
+     */
+    boolean hasUpgradeLevel();
+    /**
+     * <code>optional uint32 upgrade_level = 23;</code>
+     */
+    int getUpgradeLevel();
   }
   /**
    * Protobuf type {@code CEconItemPreviewDataBlock}
@@ -22821,6 +23252,24 @@ public final class CSGOCommonGcMessages {
               entindex_ = input.readInt32();
               break;
             }
+            case 168: {
+              bitField0_ |= 0x00020000;
+              style_ = input.readUInt32();
+              break;
+            }
+            case 178: {
+              if (!((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+                variations_ = new java.util.ArrayList<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker>();
+                mutable_bitField0_ |= 0x00080000;
+              }
+              variations_.add(input.readMessage(skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.PARSER, extensionRegistry));
+              break;
+            }
+            case 184: {
+              bitField0_ |= 0x00040000;
+              upgradeLevel_ = input.readUInt32();
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -22831,6 +23280,9 @@ public final class CSGOCommonGcMessages {
       } finally {
         if (((mutable_bitField0_ & 0x00000800) == 0x00000800)) {
           stickers_ = java.util.Collections.unmodifiableList(stickers_);
+        }
+        if (((mutable_bitField0_ & 0x00080000) == 0x00080000)) {
+          variations_ = java.util.Collections.unmodifiableList(variations_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -23968,6 +24420,71 @@ public final class CSGOCommonGcMessages {
       return entindex_;
     }
 
+    public static final int STYLE_FIELD_NUMBER = 21;
+    private int style_;
+    /**
+     * <code>optional uint32 style = 21;</code>
+     */
+    public boolean hasStyle() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional uint32 style = 21;</code>
+     */
+    public int getStyle() {
+      return style_;
+    }
+
+    public static final int VARIATIONS_FIELD_NUMBER = 22;
+    private java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker> variations_;
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker> getVariationsList() {
+      return variations_;
+    }
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder> 
+        getVariationsOrBuilderList() {
+      return variations_;
+    }
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    public int getVariationsCount() {
+      return variations_.size();
+    }
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker getVariations(int index) {
+      return variations_.get(index);
+    }
+    /**
+     * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+     */
+    public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder getVariationsOrBuilder(
+        int index) {
+      return variations_.get(index);
+    }
+
+    public static final int UPGRADE_LEVEL_FIELD_NUMBER = 23;
+    private int upgradeLevel_;
+    /**
+     * <code>optional uint32 upgrade_level = 23;</code>
+     */
+    public boolean hasUpgradeLevel() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional uint32 upgrade_level = 23;</code>
+     */
+    public int getUpgradeLevel() {
+      return upgradeLevel_;
+    }
+
     private void initFields() {
       accountid_ = 0;
       itemid_ = 0L;
@@ -23987,6 +24504,9 @@ public final class CSGOCommonGcMessages {
       dropreason_ = 0;
       musicindex_ = 0;
       entindex_ = 0;
+      style_ = 0;
+      variations_ = java.util.Collections.emptyList();
+      upgradeLevel_ = 0;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -24054,6 +24574,15 @@ public final class CSGOCommonGcMessages {
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         output.writeInt32(18, entindex_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeUInt32(21, style_);
+      }
+      for (int i = 0; i < variations_.size(); i++) {
+        output.writeMessage(22, variations_.get(i));
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeUInt32(23, upgradeLevel_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -24135,6 +24664,18 @@ public final class CSGOCommonGcMessages {
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(18, entindex_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(21, style_);
+      }
+      for (int i = 0; i < variations_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(22, variations_.get(i));
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(23, upgradeLevel_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -24250,6 +24791,7 @@ public final class CSGOCommonGcMessages {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getStickersFieldBuilder();
+          getVariationsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -24298,6 +24840,16 @@ public final class CSGOCommonGcMessages {
         bitField0_ = (bitField0_ & ~0x00010000);
         entindex_ = 0;
         bitField0_ = (bitField0_ & ~0x00020000);
+        style_ = 0;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        if (variationsBuilder_ == null) {
+          variations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00080000);
+        } else {
+          variationsBuilder_.clear();
+        }
+        upgradeLevel_ = 0;
+        bitField0_ = (bitField0_ & ~0x00100000);
         return this;
       }
 
@@ -24403,6 +24955,23 @@ public final class CSGOCommonGcMessages {
           to_bitField0_ |= 0x00010000;
         }
         result.entindex_ = entindex_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.style_ = style_;
+        if (variationsBuilder_ == null) {
+          if (((bitField0_ & 0x00080000) == 0x00080000)) {
+            variations_ = java.util.Collections.unmodifiableList(variations_);
+            bitField0_ = (bitField0_ & ~0x00080000);
+          }
+          result.variations_ = variations_;
+        } else {
+          result.variations_ = variationsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.upgradeLevel_ = upgradeLevel_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -24497,6 +25066,38 @@ public final class CSGOCommonGcMessages {
         }
         if (other.hasEntindex()) {
           setEntindex(other.getEntindex());
+        }
+        if (other.hasStyle()) {
+          setStyle(other.getStyle());
+        }
+        if (variationsBuilder_ == null) {
+          if (!other.variations_.isEmpty()) {
+            if (variations_.isEmpty()) {
+              variations_ = other.variations_;
+              bitField0_ = (bitField0_ & ~0x00080000);
+            } else {
+              ensureVariationsIsMutable();
+              variations_.addAll(other.variations_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.variations_.isEmpty()) {
+            if (variationsBuilder_.isEmpty()) {
+              variationsBuilder_.dispose();
+              variationsBuilder_ = null;
+              variations_ = other.variations_;
+              bitField0_ = (bitField0_ & ~0x00080000);
+              variationsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getVariationsFieldBuilder() : null;
+            } else {
+              variationsBuilder_.addAllMessages(other.variations_);
+            }
+          }
+        }
+        if (other.hasUpgradeLevel()) {
+          setUpgradeLevel(other.getUpgradeLevel());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -25349,6 +25950,310 @@ public final class CSGOCommonGcMessages {
       public Builder clearEntindex() {
         bitField0_ = (bitField0_ & ~0x00020000);
         entindex_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int style_ ;
+      /**
+       * <code>optional uint32 style = 21;</code>
+       */
+      public boolean hasStyle() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional uint32 style = 21;</code>
+       */
+      public int getStyle() {
+        return style_;
+      }
+      /**
+       * <code>optional uint32 style = 21;</code>
+       */
+      public Builder setStyle(int value) {
+        bitField0_ |= 0x00040000;
+        style_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 style = 21;</code>
+       */
+      public Builder clearStyle() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        style_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker> variations_ =
+        java.util.Collections.emptyList();
+      private void ensureVariationsIsMutable() {
+        if (!((bitField0_ & 0x00080000) == 0x00080000)) {
+          variations_ = new java.util.ArrayList<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker>(variations_);
+          bitField0_ |= 0x00080000;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder> variationsBuilder_;
+
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker> getVariationsList() {
+        if (variationsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(variations_);
+        } else {
+          return variationsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public int getVariationsCount() {
+        if (variationsBuilder_ == null) {
+          return variations_.size();
+        } else {
+          return variationsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker getVariations(int index) {
+        if (variationsBuilder_ == null) {
+          return variations_.get(index);
+        } else {
+          return variationsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder setVariations(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker value) {
+        if (variationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariationsIsMutable();
+          variations_.set(index, value);
+          onChanged();
+        } else {
+          variationsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder setVariations(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder builderForValue) {
+        if (variationsBuilder_ == null) {
+          ensureVariationsIsMutable();
+          variations_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          variationsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder addVariations(skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker value) {
+        if (variationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariationsIsMutable();
+          variations_.add(value);
+          onChanged();
+        } else {
+          variationsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder addVariations(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker value) {
+        if (variationsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureVariationsIsMutable();
+          variations_.add(index, value);
+          onChanged();
+        } else {
+          variationsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder addVariations(
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder builderForValue) {
+        if (variationsBuilder_ == null) {
+          ensureVariationsIsMutable();
+          variations_.add(builderForValue.build());
+          onChanged();
+        } else {
+          variationsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder addVariations(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder builderForValue) {
+        if (variationsBuilder_ == null) {
+          ensureVariationsIsMutable();
+          variations_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          variationsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder addAllVariations(
+          java.lang.Iterable<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker> values) {
+        if (variationsBuilder_ == null) {
+          ensureVariationsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, variations_);
+          onChanged();
+        } else {
+          variationsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder clearVariations() {
+        if (variationsBuilder_ == null) {
+          variations_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00080000);
+          onChanged();
+        } else {
+          variationsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public Builder removeVariations(int index) {
+        if (variationsBuilder_ == null) {
+          ensureVariationsIsMutable();
+          variations_.remove(index);
+          onChanged();
+        } else {
+          variationsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder getVariationsBuilder(
+          int index) {
+        return getVariationsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder getVariationsOrBuilder(
+          int index) {
+        if (variationsBuilder_ == null) {
+          return variations_.get(index);  } else {
+          return variationsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder> 
+           getVariationsOrBuilderList() {
+        if (variationsBuilder_ != null) {
+          return variationsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(variations_);
+        }
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder addVariationsBuilder() {
+        return getVariationsFieldBuilder().addBuilder(
+            skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder addVariationsBuilder(
+          int index) {
+        return getVariationsFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CEconItemPreviewDataBlock.Sticker variations = 22;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder> 
+           getVariationsBuilderList() {
+        return getVariationsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder> 
+          getVariationsFieldBuilder() {
+        if (variationsBuilder_ == null) {
+          variationsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Sticker.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.StickerOrBuilder>(
+                  variations_,
+                  ((bitField0_ & 0x00080000) == 0x00080000),
+                  getParentForChildren(),
+                  isClean());
+          variations_ = null;
+        }
+        return variationsBuilder_;
+      }
+
+      private int upgradeLevel_ ;
+      /**
+       * <code>optional uint32 upgrade_level = 23;</code>
+       */
+      public boolean hasUpgradeLevel() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional uint32 upgrade_level = 23;</code>
+       */
+      public int getUpgradeLevel() {
+        return upgradeLevel_;
+      }
+      /**
+       * <code>optional uint32 upgrade_level = 23;</code>
+       */
+      public Builder setUpgradeLevel(int value) {
+        bitField0_ |= 0x00100000;
+        upgradeLevel_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 upgrade_level = 23;</code>
+       */
+      public Builder clearUpgradeLevel() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        upgradeLevel_ = 0;
         onChanged();
         return this;
       }
@@ -27219,111 +28124,116 @@ public final class CSGOCommonGcMessages {
       "ame\030\003 \001(\t\022\030\n\020event_time_start\030\004 \001(\r\022\026\n\016e" +
       "vent_time_end\030\005 \001(\r\022\024\n\014event_public\030\006 \001(" +
       "\005\022\026\n\016event_stage_id\030\007 \001(\005\022\030\n\020event_stage" +
-      "_name\030\010 \001(\t\022\031\n\021active_section_id\030\t \001(\r\"\205" +
+      "_name\030\010 \001(\t\022\031\n\021active_section_id\030\t \001(\r\"\260" +
       "\001\n\021PlayerRankingInfo\022\022\n\naccount_id\030\001 \001(\r" +
       "\022\017\n\007rank_id\030\002 \001(\r\022\014\n\004wins\030\003 \001(\r\022\023\n\013rank_" +
       "change\030\004 \001(\002\022\024\n\014rank_type_id\030\006 \001(\r\022\022\n\ntv" +
-      "_control\030\007 \001(\r\"X\n\rIpAddressMask\022\t\n\001a\030\001 \001" +
-      "(\r\022\t\n\001b\030\002 \001(\r\022\t\n\001c\030\003 \001(\r\022\t\n\001d\030\004 \001(\r\022\014\n\004b" +
-      "its\030\005 \001(\r\022\r\n\005token\030\006 \001(\r\"8\n\016XpProgressDa",
-      "ta\022\021\n\txp_points\030\001 \001(\r\022\023\n\013xp_category\030\002 \001" +
-      "(\005\"\236\002\n\024ScoreLeaderboardData\022\020\n\010quest_id\030" +
-      "\001 \001(\004\022\r\n\005score\030\002 \001(\r\022<\n\016accountentries\030\003" +
-      " \003(\0132$.ScoreLeaderboardData.AccountEntri" +
-      "es\0221\n\014matchentries\030\005 \003(\0132\033.ScoreLeaderbo" +
-      "ardData.Entry\032!\n\005Entry\022\013\n\003tag\030\001 \001(\r\022\013\n\003v" +
-      "al\030\002 \001(\r\032Q\n\016AccountEntries\022\021\n\taccountid\030" +
-      "\001 \001(\r\022,\n\007entries\030\002 \003(\0132\033.ScoreLeaderboar" +
-      "dData.Entry\"\226\005\n\024DeepPlayerStatsEntry\022\021\n\t" +
-      "accountid\030\001 \001(\r\022\020\n\010match_id\030\002 \001(\004\022\024\n\014mm_",
-      "game_mode\030\003 \001(\r\022\r\n\005mapid\030\004 \001(\r\022\025\n\rb_star" +
-      "ting_ct\030\005 \001(\010\022\025\n\rmatch_outcome\030\006 \001(\r\022\022\n\n" +
-      "rounds_won\030\007 \001(\r\022\023\n\013rounds_lost\030\010 \001(\r\022\022\n" +
-      "\nstat_score\030\t \001(\r\022\023\n\013stat_deaths\030\014 \001(\r\022\021" +
-      "\n\tstat_mvps\030\r \001(\r\022\023\n\013enemy_kills\030\016 \001(\r\022\027" +
-      "\n\017enemy_headshots\030\017 \001(\r\022\021\n\tenemy_2ks\030\020 \001" +
-      "(\r\022\021\n\tenemy_3ks\030\021 \001(\r\022\021\n\tenemy_4ks\030\022 \001(\r" +
-      "\022\024\n\014total_damage\030\023 \001(\r\022\037\n\027engagements_en" +
-      "try_count\030\027 \001(\r\022\036\n\026engagements_entry_win" +
-      "s\030\030 \001(\r\022\035\n\025engagements_1v1_count\030\031 \001(\r\022\034",
-      "\n\024engagements_1v1_wins\030\032 \001(\r\022\035\n\025engageme" +
-      "nts_1v2_count\030\033 \001(\r\022\034\n\024engagements_1v2_w" +
-      "ins\030\034 \001(\r\022\025\n\rutility_count\030\035 \001(\r\022\027\n\017util" +
-      "ity_success\030\036 \001(\r\022\023\n\013flash_count\030  \001(\r\022\025" +
-      "\n\rflash_success\030! \001(\r\022\r\n\005mates\030\" \003(\r\"\261\002\n" +
-      "\024DeepPlayerMatchEvent\022\021\n\taccountid\030\001 \001(\r" +
-      "\022\020\n\010match_id\030\002 \001(\004\022\020\n\010event_id\030\003 \001(\r\022\022\n\n" +
-      "event_type\030\004 \001(\r\022\024\n\014b_playing_ct\030\005 \001(\010\022\022" +
-      "\n\nuser_pos_x\030\006 \001(\005\022\022\n\nuser_pos_y\030\007 \001(\005\022\022" +
-      "\n\nuser_pos_z\030\014 \001(\005\022\023\n\013user_defidx\030\010 \001(\r\022",
-      "\023\n\013other_pos_x\030\t \001(\005\022\023\n\013other_pos_y\030\n \001(" +
-      "\005\022\023\n\013other_pos_z\030\r \001(\005\022\024\n\014other_defidx\030\013" +
-      " \001(\r\022\022\n\nevent_data\030\016 \001(\005\"\326\002\n(CDataGCCStr" +
-      "ike15_v2_TournamentMatchDraft\022\020\n\010event_i" +
-      "d\030\001 \001(\005\022\026\n\016event_stage_id\030\002 \001(\005\022\021\n\tteam_" +
-      "id_0\030\003 \001(\005\022\021\n\tteam_id_1\030\004 \001(\005\022\022\n\nmaps_co" +
-      "unt\030\005 \001(\005\022\024\n\014maps_current\030\006 \001(\005\022\025\n\rteam_" +
-      "id_start\030\007 \001(\005\022\025\n\rteam_id_veto1\030\010 \001(\005\022\025\n" +
-      "\rteam_id_pickn\030\t \001(\005\022?\n\006drafts\030\n \003(\0132/.C" +
-      "DataGCCStrike15_v2_TournamentMatchDraft.",
-      "Entry\032*\n\005Entry\022\r\n\005mapid\030\001 \001(\005\022\022\n\nteam_id" +
-      "_ct\030\002 \001(\005\"\373\001\n\021CPreMatchInfoData\022\027\n\017predi" +
-      "ctions_pct\030\001 \001(\005\0228\n\005draft\030\004 \001(\0132).CDataG" +
-      "CCStrike15_v2_TournamentMatchDraft\022+\n\005st" +
-      "ats\030\005 \003(\0132\034.CPreMatchInfoData.TeamStats\022" +
-      "\014\n\004wins\030\006 \003(\005\032X\n\tTeamStats\022\031\n\021match_info" +
-      "_idxtxt\030\001 \001(\005\022\026\n\016match_info_txt\030\002 \001(\t\022\030\n" +
-      "\020match_info_teams\030\003 \003(\t\"\262\004\n.CMsgGCCStrik" +
-      "e15_v2_MatchmakingGC2ServerReserve\022\023\n\013ac" +
-      "count_ids\030\001 \003(\r\022\021\n\tgame_type\030\002 \001(\r\022\020\n\010ma",
-      "tch_id\030\003 \001(\004\022\026\n\016server_version\030\004 \001(\r\022\r\n\005" +
-      "flags\030\022 \001(\r\022$\n\010rankings\030\005 \003(\0132\022.PlayerRa" +
-      "nkingInfo\022\026\n\016encryption_key\030\006 \001(\004\022\032\n\022enc" +
-      "ryption_key_pub\030\007 \001(\004\022\021\n\tparty_ids\030\010 \003(\r" +
-      "\022!\n\twhitelist\030\t \003(\0132\016.IpAddressMask\022\031\n\021t" +
-      "v_master_steamid\030\n \001(\004\022*\n\020tournament_eve" +
-      "nt\030\013 \001(\0132\020.TournamentEvent\022)\n\020tournament" +
-      "_teams\030\014 \003(\0132\017.TournamentTeam\022&\n\036tournam" +
-      "ent_casters_account_ids\030\r \003(\r\022\030\n\020tv_rela" +
-      "y_steamid\030\016 \001(\004\022*\n\016pre_match_data\030\017 \001(\0132",
-      "\022.CPreMatchInfoData\022\033\n\023rtime32_event_sta" +
-      "rt\030\020 \001(\r\022\022\n\ntv_control\030\021 \001(\r\"\325\002\n\037CMsgGCC" +
-      "Strike15_ClientDeepStats\022\022\n\naccount_id\030\001" +
-      " \001(\r\022>\n\005range\030\002 \001(\0132/.CMsgGCCStrike15_Cl" +
-      "ientDeepStats.DeepStatsRange\022@\n\007matches\030" +
-      "\003 \003(\0132/.CMsgGCCStrike15_ClientDeepStats." +
-      "DeepStatsMatch\032<\n\016DeepStatsRange\022\r\n\005begi" +
-      "n\030\001 \001(\r\022\013\n\003end\030\002 \001(\r\022\016\n\006frozen\030\003 \001(\010\032^\n\016" +
-      "DeepStatsMatch\022%\n\006player\030\001 \001(\0132\025.DeepPla" +
-      "yerStatsEntry\022%\n\006events\030\002 \003(\0132\025.DeepPlay",
-      "erMatchEvent\"\323\001\n,CMsgGCCstrike15_v2_GC2S" +
-      "erverNotifyXPRewarded\022)\n\020xp_progress_dat" +
-      "a\030\001 \003(\0132\017.XpProgressData\022\022\n\naccount_id\030\002" +
-      " \001(\r\022\022\n\ncurrent_xp\030\003 \001(\r\022\025\n\rcurrent_leve" +
-      "l\030\004 \001(\r\022\027\n\017upgraded_defidx\030\005 \001(\r\022 \n\030oper" +
-      "ation_points_awarded\030\006 \001(\r\"\204\004\n\031CEconItem" +
-      "PreviewDataBlock\022\021\n\taccountid\030\001 \001(\r\022\016\n\006i" +
-      "temid\030\002 \001(\004\022\020\n\010defindex\030\003 \001(\r\022\022\n\npaintin" +
-      "dex\030\004 \001(\r\022\016\n\006rarity\030\005 \001(\r\022\017\n\007quality\030\006 \001" +
-      "(\r\022\021\n\tpaintwear\030\007 \001(\r\022\021\n\tpaintseed\030\010 \001(\r",
-      "\022\032\n\022killeaterscoretype\030\t \001(\r\022\026\n\016killeate" +
-      "rvalue\030\n \001(\r\022\022\n\ncustomname\030\013 \001(\t\0224\n\010stic" +
-      "kers\030\014 \003(\0132\".CEconItemPreviewDataBlock.S" +
-      "ticker\022\021\n\tinventory\030\r \001(\r\022\016\n\006origin\030\016 \001(" +
-      "\r\022\017\n\007questid\030\017 \001(\r\022\022\n\ndropreason\030\020 \001(\r\022\022" +
-      "\n\nmusicindex\030\021 \001(\r\022\020\n\010entindex\030\022 \001(\005\032k\n\007" +
-      "Sticker\022\014\n\004slot\030\001 \001(\r\022\022\n\nsticker_id\030\002 \001(" +
-      "\r\022\014\n\004wear\030\003 \001(\002\022\r\n\005scale\030\004 \001(\002\022\020\n\010rotati" +
-      "on\030\005 \001(\002\022\017\n\007tint_id\030\006 \001(\r\"\223\002\n\033PlayerDeca" +
-      "lDigitalSignature\022\021\n\tsignature\030\001 \001(\014\022\021\n\t",
-      "accountid\030\002 \001(\r\022\r\n\005rtime\030\003 \001(\r\022\016\n\006endpos" +
-      "\030\004 \003(\002\022\020\n\010startpos\030\005 \003(\002\022\014\n\004left\030\006 \003(\002\022\021" +
-      "\n\ttx_defidx\030\007 \001(\r\022\020\n\010entindex\030\010 \001(\005\022\016\n\006h" +
-      "itbox\030\t \001(\r\022\024\n\014creationtime\030\n \001(\002\022\021\n\tequ" +
-      "ipslot\030\013 \001(\r\022\020\n\010trace_id\030\014 \001(\r\022\016\n\006normal" +
-      "\030\r \003(\002\022\017\n\007tint_id\030\016 \001(\rBA\n)skadistats.cl" +
-      "arity.wire.csgo.common.protoB\024CSGOCommon" +
-      "GcMessages"
+      "_control\030\007 \001(\r\022\024\n\014highest_rank\030\017 \001(\r\022\023\n\013" +
+      "rank_expiry\030\020 \001(\r\"X\n\rIpAddressMask\022\t\n\001a\030" +
+      "\001 \001(\r\022\t\n\001b\030\002 \001(\r\022\t\n\001c\030\003 \001(\r\022\t\n\001d\030\004 \001(\r\022\014",
+      "\n\004bits\030\005 \001(\r\022\r\n\005token\030\006 \001(\r\"8\n\016XpProgres" +
+      "sData\022\021\n\txp_points\030\001 \001(\r\022\023\n\013xp_category\030" +
+      "\002 \001(\005\"\236\002\n\024ScoreLeaderboardData\022\020\n\010quest_" +
+      "id\030\001 \001(\004\022\r\n\005score\030\002 \001(\r\022<\n\016accountentrie" +
+      "s\030\003 \003(\0132$.ScoreLeaderboardData.AccountEn" +
+      "tries\0221\n\014matchentries\030\005 \003(\0132\033.ScoreLeade" +
+      "rboardData.Entry\032!\n\005Entry\022\013\n\003tag\030\001 \001(\r\022\013" +
+      "\n\003val\030\002 \001(\r\032Q\n\016AccountEntries\022\021\n\taccount" +
+      "id\030\001 \001(\r\022,\n\007entries\030\002 \003(\0132\033.ScoreLeaderb" +
+      "oardData.Entry\"\226\005\n\024DeepPlayerStatsEntry\022",
+      "\021\n\taccountid\030\001 \001(\r\022\020\n\010match_id\030\002 \001(\004\022\024\n\014" +
+      "mm_game_mode\030\003 \001(\r\022\r\n\005mapid\030\004 \001(\r\022\025\n\rb_s" +
+      "tarting_ct\030\005 \001(\010\022\025\n\rmatch_outcome\030\006 \001(\r\022" +
+      "\022\n\nrounds_won\030\007 \001(\r\022\023\n\013rounds_lost\030\010 \001(\r" +
+      "\022\022\n\nstat_score\030\t \001(\r\022\023\n\013stat_deaths\030\014 \001(" +
+      "\r\022\021\n\tstat_mvps\030\r \001(\r\022\023\n\013enemy_kills\030\016 \001(" +
+      "\r\022\027\n\017enemy_headshots\030\017 \001(\r\022\021\n\tenemy_2ks\030" +
+      "\020 \001(\r\022\021\n\tenemy_3ks\030\021 \001(\r\022\021\n\tenemy_4ks\030\022 " +
+      "\001(\r\022\024\n\014total_damage\030\023 \001(\r\022\037\n\027engagements" +
+      "_entry_count\030\027 \001(\r\022\036\n\026engagements_entry_",
+      "wins\030\030 \001(\r\022\035\n\025engagements_1v1_count\030\031 \001(" +
+      "\r\022\034\n\024engagements_1v1_wins\030\032 \001(\r\022\035\n\025engag" +
+      "ements_1v2_count\030\033 \001(\r\022\034\n\024engagements_1v" +
+      "2_wins\030\034 \001(\r\022\025\n\rutility_count\030\035 \001(\r\022\027\n\017u" +
+      "tility_success\030\036 \001(\r\022\023\n\013flash_count\030  \001(" +
+      "\r\022\025\n\rflash_success\030! \001(\r\022\r\n\005mates\030\" \003(\r\"" +
+      "\261\002\n\024DeepPlayerMatchEvent\022\021\n\taccountid\030\001 " +
+      "\001(\r\022\020\n\010match_id\030\002 \001(\004\022\020\n\010event_id\030\003 \001(\r\022" +
+      "\022\n\nevent_type\030\004 \001(\r\022\024\n\014b_playing_ct\030\005 \001(" +
+      "\010\022\022\n\nuser_pos_x\030\006 \001(\005\022\022\n\nuser_pos_y\030\007 \001(",
+      "\005\022\022\n\nuser_pos_z\030\014 \001(\005\022\023\n\013user_defidx\030\010 \001" +
+      "(\r\022\023\n\013other_pos_x\030\t \001(\005\022\023\n\013other_pos_y\030\n" +
+      " \001(\005\022\023\n\013other_pos_z\030\r \001(\005\022\024\n\014other_defid" +
+      "x\030\013 \001(\r\022\022\n\nevent_data\030\016 \001(\005\"\326\002\n(CDataGCC" +
+      "Strike15_v2_TournamentMatchDraft\022\020\n\010even" +
+      "t_id\030\001 \001(\005\022\026\n\016event_stage_id\030\002 \001(\005\022\021\n\tte" +
+      "am_id_0\030\003 \001(\005\022\021\n\tteam_id_1\030\004 \001(\005\022\022\n\nmaps" +
+      "_count\030\005 \001(\005\022\024\n\014maps_current\030\006 \001(\005\022\025\n\rte" +
+      "am_id_start\030\007 \001(\005\022\025\n\rteam_id_veto1\030\010 \001(\005" +
+      "\022\025\n\rteam_id_pickn\030\t \001(\005\022?\n\006drafts\030\n \003(\0132",
+      "/.CDataGCCStrike15_v2_TournamentMatchDra" +
+      "ft.Entry\032*\n\005Entry\022\r\n\005mapid\030\001 \001(\005\022\022\n\nteam" +
+      "_id_ct\030\002 \001(\005\"\373\001\n\021CPreMatchInfoData\022\027\n\017pr" +
+      "edictions_pct\030\001 \001(\005\0228\n\005draft\030\004 \001(\0132).CDa" +
+      "taGCCStrike15_v2_TournamentMatchDraft\022+\n" +
+      "\005stats\030\005 \003(\0132\034.CPreMatchInfoData.TeamSta" +
+      "ts\022\014\n\004wins\030\006 \003(\005\032X\n\tTeamStats\022\031\n\021match_i" +
+      "nfo_idxtxt\030\001 \001(\005\022\026\n\016match_info_txt\030\002 \001(\t" +
+      "\022\030\n\020match_info_teams\030\003 \003(\t\"\350\004\n.CMsgGCCSt" +
+      "rike15_v2_MatchmakingGC2ServerReserve\022\023\n",
+      "\013account_ids\030\001 \003(\r\022\021\n\tgame_type\030\002 \001(\r\022\020\n" +
+      "\010match_id\030\003 \001(\004\022\026\n\016server_version\030\004 \001(\r\022" +
+      "\r\n\005flags\030\022 \001(\r\022$\n\010rankings\030\005 \003(\0132\022.Playe" +
+      "rRankingInfo\022\026\n\016encryption_key\030\006 \001(\004\022\032\n\022" +
+      "encryption_key_pub\030\007 \001(\004\022\021\n\tparty_ids\030\010 " +
+      "\003(\r\022!\n\twhitelist\030\t \003(\0132\016.IpAddressMask\022\031" +
+      "\n\021tv_master_steamid\030\n \001(\004\022*\n\020tournament_" +
+      "event\030\013 \001(\0132\020.TournamentEvent\022)\n\020tournam" +
+      "ent_teams\030\014 \003(\0132\017.TournamentTeam\022&\n\036tour" +
+      "nament_casters_account_ids\030\r \003(\r\022\030\n\020tv_r",
+      "elay_steamid\030\016 \001(\004\022*\n\016pre_match_data\030\017 \001" +
+      "(\0132\022.CPreMatchInfoData\022\033\n\023rtime32_event_" +
+      "start\030\020 \001(\r\022\022\n\ntv_control\030\021 \001(\r\022\027\n\017teamm" +
+      "ate_colors\030\025 \003(\005\022\033\n\023match_id_additional\030" +
+      "\026 \001(\r\"\325\002\n\037CMsgGCCStrike15_ClientDeepStat" +
+      "s\022\022\n\naccount_id\030\001 \001(\r\022>\n\005range\030\002 \001(\0132/.C" +
+      "MsgGCCStrike15_ClientDeepStats.DeepStats" +
+      "Range\022@\n\007matches\030\003 \003(\0132/.CMsgGCCStrike15" +
+      "_ClientDeepStats.DeepStatsMatch\032<\n\016DeepS" +
+      "tatsRange\022\r\n\005begin\030\001 \001(\r\022\013\n\003end\030\002 \001(\r\022\016\n",
+      "\006frozen\030\003 \001(\010\032^\n\016DeepStatsMatch\022%\n\006playe" +
+      "r\030\001 \001(\0132\025.DeepPlayerStatsEntry\022%\n\006events" +
+      "\030\002 \003(\0132\025.DeepPlayerMatchEvent\"\323\001\n,CMsgGC" +
+      "Cstrike15_v2_GC2ServerNotifyXPRewarded\022)" +
+      "\n\020xp_progress_data\030\001 \003(\0132\017.XpProgressDat" +
+      "a\022\022\n\naccount_id\030\002 \001(\r\022\022\n\ncurrent_xp\030\003 \001(" +
+      "\r\022\025\n\rcurrent_level\030\004 \001(\r\022\027\n\017upgraded_def" +
+      "idx\030\005 \001(\r\022 \n\030operation_points_awarded\030\006 " +
+      "\001(\r\"\342\004\n\031CEconItemPreviewDataBlock\022\021\n\tacc" +
+      "ountid\030\001 \001(\r\022\016\n\006itemid\030\002 \001(\004\022\020\n\010defindex",
+      "\030\003 \001(\r\022\022\n\npaintindex\030\004 \001(\r\022\016\n\006rarity\030\005 \001" +
+      "(\r\022\017\n\007quality\030\006 \001(\r\022\021\n\tpaintwear\030\007 \001(\r\022\021" +
+      "\n\tpaintseed\030\010 \001(\r\022\032\n\022killeaterscoretype\030" +
+      "\t \001(\r\022\026\n\016killeatervalue\030\n \001(\r\022\022\n\ncustomn" +
+      "ame\030\013 \001(\t\0224\n\010stickers\030\014 \003(\0132\".CEconItemP" +
+      "reviewDataBlock.Sticker\022\021\n\tinventory\030\r \001" +
+      "(\r\022\016\n\006origin\030\016 \001(\r\022\017\n\007questid\030\017 \001(\r\022\022\n\nd" +
+      "ropreason\030\020 \001(\r\022\022\n\nmusicindex\030\021 \001(\r\022\020\n\010e" +
+      "ntindex\030\022 \001(\005\022\r\n\005style\030\025 \001(\r\0226\n\nvariatio" +
+      "ns\030\026 \003(\0132\".CEconItemPreviewDataBlock.Sti",
+      "cker\022\025\n\rupgrade_level\030\027 \001(\r\032k\n\007Sticker\022\014" +
+      "\n\004slot\030\001 \001(\r\022\022\n\nsticker_id\030\002 \001(\r\022\014\n\004wear" +
+      "\030\003 \001(\002\022\r\n\005scale\030\004 \001(\002\022\020\n\010rotation\030\005 \001(\002\022" +
+      "\017\n\007tint_id\030\006 \001(\r\"\223\002\n\033PlayerDecalDigitalS" +
+      "ignature\022\021\n\tsignature\030\001 \001(\014\022\021\n\taccountid" +
+      "\030\002 \001(\r\022\r\n\005rtime\030\003 \001(\r\022\016\n\006endpos\030\004 \003(\002\022\020\n" +
+      "\010startpos\030\005 \003(\002\022\014\n\004left\030\006 \003(\002\022\021\n\ttx_defi" +
+      "dx\030\007 \001(\r\022\020\n\010entindex\030\010 \001(\005\022\016\n\006hitbox\030\t \001" +
+      "(\r\022\024\n\014creationtime\030\n \001(\002\022\021\n\tequipslot\030\013 " +
+      "\001(\r\022\020\n\010trace_id\030\014 \001(\r\022\016\n\006normal\030\r \003(\002\022\017\n",
+      "\007tint_id\030\016 \001(\rBA\n)skadistats.clarity.wir" +
+      "e.csgo.common.protoB\024CSGOCommonGcMessage" +
+      "s"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -27360,7 +28270,7 @@ public final class CSGOCommonGcMessages {
     internal_static_PlayerRankingInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_PlayerRankingInfo_descriptor,
-        new java.lang.String[] { "AccountId", "RankId", "Wins", "RankChange", "RankTypeId", "TvControl", });
+        new java.lang.String[] { "AccountId", "RankId", "Wins", "RankChange", "RankTypeId", "TvControl", "HighestRank", "RankExpiry", });
     internal_static_IpAddressMask_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_IpAddressMask_fieldAccessorTable = new
@@ -27432,7 +28342,7 @@ public final class CSGOCommonGcMessages {
     internal_static_CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve_descriptor,
-        new java.lang.String[] { "AccountIds", "GameType", "MatchId", "ServerVersion", "Flags", "Rankings", "EncryptionKey", "EncryptionKeyPub", "PartyIds", "Whitelist", "TvMasterSteamid", "TournamentEvent", "TournamentTeams", "TournamentCastersAccountIds", "TvRelaySteamid", "PreMatchData", "Rtime32EventStart", "TvControl", });
+        new java.lang.String[] { "AccountIds", "GameType", "MatchId", "ServerVersion", "Flags", "Rankings", "EncryptionKey", "EncryptionKeyPub", "PartyIds", "Whitelist", "TvMasterSteamid", "TournamentEvent", "TournamentTeams", "TournamentCastersAccountIds", "TvRelaySteamid", "PreMatchData", "Rtime32EventStart", "TvControl", "TeammateColors", "MatchIdAdditional", });
     internal_static_CMsgGCCStrike15_ClientDeepStats_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_CMsgGCCStrike15_ClientDeepStats_fieldAccessorTable = new
@@ -27462,7 +28372,7 @@ public final class CSGOCommonGcMessages {
     internal_static_CEconItemPreviewDataBlock_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CEconItemPreviewDataBlock_descriptor,
-        new java.lang.String[] { "Accountid", "Itemid", "Defindex", "Paintindex", "Rarity", "Quality", "Paintwear", "Paintseed", "Killeaterscoretype", "Killeatervalue", "Customname", "Stickers", "Inventory", "Origin", "Questid", "Dropreason", "Musicindex", "Entindex", });
+        new java.lang.String[] { "Accountid", "Itemid", "Defindex", "Paintindex", "Rarity", "Quality", "Paintwear", "Paintseed", "Killeaterscoretype", "Killeatervalue", "Customname", "Stickers", "Inventory", "Origin", "Questid", "Dropreason", "Musicindex", "Entindex", "Style", "Variations", "UpgradeLevel", });
     internal_static_CEconItemPreviewDataBlock_Sticker_descriptor =
       internal_static_CEconItemPreviewDataBlock_descriptor.getNestedTypes().get(0);
     internal_static_CEconItemPreviewDataBlock_Sticker_fieldAccessorTable = new

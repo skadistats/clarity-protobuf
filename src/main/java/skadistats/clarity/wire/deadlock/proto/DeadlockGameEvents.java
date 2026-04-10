@@ -53,6 +53,10 @@ public final class DeadlockGameEvents {
      * <code>GE_RemoveSatVolumeEvent = 465;</code>
      */
     GE_RemoveSatVolumeEvent(9, 465),
+    /**
+     * <code>GE_RemoveBullet = 466;</code>
+     */
+    GE_RemoveBullet(10, 466),
     ;
 
     /**
@@ -95,6 +99,10 @@ public final class DeadlockGameEvents {
      * <code>GE_RemoveSatVolumeEvent = 465;</code>
      */
     public static final int GE_RemoveSatVolumeEvent_VALUE = 465;
+    /**
+     * <code>GE_RemoveBullet = 466;</code>
+     */
+    public static final int GE_RemoveBullet_VALUE = 466;
 
 
     public final int getNumber() { return value; }
@@ -111,6 +119,7 @@ public final class DeadlockGameEvents {
         case 463: return GE_PlaceSatVolumeEvent;
         case 464: return GE_DisableSatVolumesEvent;
         case 465: return GE_RemoveSatVolumeEvent;
+        case 466: return GE_RemoveBullet;
         default: return null;
       }
     }
@@ -340,6 +349,69 @@ public final class DeadlockGameEvents {
      * <code>optional float max_range = 18;</code>
      */
     float getMaxRange();
+
+    /**
+     * <code>optional uint32 shot_id = 19;</code>
+     */
+    boolean hasShotId();
+    /**
+     * <code>optional uint32 shot_id = 19;</code>
+     */
+    int getShotId();
+
+    /**
+     * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+     */
+    boolean hasPredictHitsAgainstUnits();
+    /**
+     * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+     */
+    boolean getPredictHitsAgainstUnits();
+
+    /**
+     * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+     */
+    boolean hasBulletRadiusOverride();
+    /**
+     * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+     */
+    float getBulletRadiusOverride();
+
+    /**
+     * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+     */
+    boolean hasBulletSpeedOverride();
+    /**
+     * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+     */
+    float getBulletSpeedOverride();
+
+    /**
+     * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+     */
+    boolean hasBulletGravityOverride();
+    /**
+     * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+     */
+    float getBulletGravityOverride();
+
+    /**
+     * <code>optional int32 muzzle_number = 24;</code>
+     */
+    boolean hasMuzzleNumber();
+    /**
+     * <code>optional int32 muzzle_number = 24;</code>
+     */
+    int getMuzzleNumber();
+
+    /**
+     * <code>optional bool ability_as_bullet = 25;</code>
+     */
+    boolean hasAbilityAsBullet();
+    /**
+     * <code>optional bool ability_as_bullet = 25;</code>
+     */
+    boolean getAbilityAsBullet();
   }
   /**
    * Protobuf type {@code CMsgFireBullets}
@@ -506,6 +578,41 @@ public final class DeadlockGameEvents {
             case 149: {
               bitField0_ |= 0x00004000;
               maxRange_ = input.readFloat();
+              break;
+            }
+            case 152: {
+              bitField0_ |= 0x00008000;
+              shotId_ = input.readUInt32();
+              break;
+            }
+            case 160: {
+              bitField0_ |= 0x00010000;
+              predictHitsAgainstUnits_ = input.readBool();
+              break;
+            }
+            case 173: {
+              bitField0_ |= 0x00020000;
+              bulletRadiusOverride_ = input.readFloat();
+              break;
+            }
+            case 181: {
+              bitField0_ |= 0x00040000;
+              bulletSpeedOverride_ = input.readFloat();
+              break;
+            }
+            case 189: {
+              bitField0_ |= 0x00080000;
+              bulletGravityOverride_ = input.readFloat();
+              break;
+            }
+            case 192: {
+              bitField0_ |= 0x00100000;
+              muzzleNumber_ = input.readInt32();
+              break;
+            }
+            case 200: {
+              bitField0_ |= 0x00200000;
+              abilityAsBullet_ = input.readBool();
               break;
             }
           }
@@ -1310,6 +1417,111 @@ public final class DeadlockGameEvents {
       return maxRange_;
     }
 
+    public static final int SHOT_ID_FIELD_NUMBER = 19;
+    private int shotId_;
+    /**
+     * <code>optional uint32 shot_id = 19;</code>
+     */
+    public boolean hasShotId() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional uint32 shot_id = 19;</code>
+     */
+    public int getShotId() {
+      return shotId_;
+    }
+
+    public static final int PREDICT_HITS_AGAINST_UNITS_FIELD_NUMBER = 20;
+    private boolean predictHitsAgainstUnits_;
+    /**
+     * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+     */
+    public boolean hasPredictHitsAgainstUnits() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    /**
+     * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+     */
+    public boolean getPredictHitsAgainstUnits() {
+      return predictHitsAgainstUnits_;
+    }
+
+    public static final int BULLET_RADIUS_OVERRIDE_FIELD_NUMBER = 21;
+    private float bulletRadiusOverride_;
+    /**
+     * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+     */
+    public boolean hasBulletRadiusOverride() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    /**
+     * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+     */
+    public float getBulletRadiusOverride() {
+      return bulletRadiusOverride_;
+    }
+
+    public static final int BULLET_SPEED_OVERRIDE_FIELD_NUMBER = 22;
+    private float bulletSpeedOverride_;
+    /**
+     * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+     */
+    public boolean hasBulletSpeedOverride() {
+      return ((bitField0_ & 0x00040000) == 0x00040000);
+    }
+    /**
+     * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+     */
+    public float getBulletSpeedOverride() {
+      return bulletSpeedOverride_;
+    }
+
+    public static final int BULLET_GRAVITY_OVERRIDE_FIELD_NUMBER = 23;
+    private float bulletGravityOverride_;
+    /**
+     * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+     */
+    public boolean hasBulletGravityOverride() {
+      return ((bitField0_ & 0x00080000) == 0x00080000);
+    }
+    /**
+     * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+     */
+    public float getBulletGravityOverride() {
+      return bulletGravityOverride_;
+    }
+
+    public static final int MUZZLE_NUMBER_FIELD_NUMBER = 24;
+    private int muzzleNumber_;
+    /**
+     * <code>optional int32 muzzle_number = 24;</code>
+     */
+    public boolean hasMuzzleNumber() {
+      return ((bitField0_ & 0x00100000) == 0x00100000);
+    }
+    /**
+     * <code>optional int32 muzzle_number = 24;</code>
+     */
+    public int getMuzzleNumber() {
+      return muzzleNumber_;
+    }
+
+    public static final int ABILITY_AS_BULLET_FIELD_NUMBER = 25;
+    private boolean abilityAsBullet_;
+    /**
+     * <code>optional bool ability_as_bullet = 25;</code>
+     */
+    public boolean hasAbilityAsBullet() {
+      return ((bitField0_ & 0x00200000) == 0x00200000);
+    }
+    /**
+     * <code>optional bool ability_as_bullet = 25;</code>
+     */
+    public boolean getAbilityAsBullet() {
+      return abilityAsBullet_;
+    }
+
     private void initFields() {
       origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
@@ -1327,6 +1539,13 @@ public final class DeadlockGameEvents {
       shotNumber_ = 0;
       ignoreEntity_ = -1;
       maxRange_ = 0F;
+      shotId_ = 0;
+      predictHitsAgainstUnits_ = true;
+      bulletRadiusOverride_ = 0F;
+      bulletSpeedOverride_ = 0F;
+      bulletGravityOverride_ = 0F;
+      muzzleNumber_ = 0;
+      abilityAsBullet_ = false;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1388,6 +1607,27 @@ public final class DeadlockGameEvents {
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         output.writeFloat(18, maxRange_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeUInt32(19, shotId_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBool(20, predictHitsAgainstUnits_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeFloat(21, bulletRadiusOverride_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        output.writeFloat(22, bulletSpeedOverride_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        output.writeFloat(23, bulletGravityOverride_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        output.writeInt32(24, muzzleNumber_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        output.writeBool(25, abilityAsBullet_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1461,6 +1701,34 @@ public final class DeadlockGameEvents {
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(18, maxRange_);
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(19, shotId_);
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(20, predictHitsAgainstUnits_);
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(21, bulletRadiusOverride_);
+      }
+      if (((bitField0_ & 0x00040000) == 0x00040000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(22, bulletSpeedOverride_);
+      }
+      if (((bitField0_ & 0x00080000) == 0x00080000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(23, bulletGravityOverride_);
+      }
+      if (((bitField0_ & 0x00100000) == 0x00100000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(24, muzzleNumber_);
+      }
+      if (((bitField0_ & 0x00200000) == 0x00200000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(25, abilityAsBullet_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -1636,6 +1904,20 @@ public final class DeadlockGameEvents {
         bitField0_ = (bitField0_ & ~0x00004000);
         maxRange_ = 0F;
         bitField0_ = (bitField0_ & ~0x00008000);
+        shotId_ = 0;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        predictHitsAgainstUnits_ = true;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        bulletRadiusOverride_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        bulletSpeedOverride_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        bulletGravityOverride_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        muzzleNumber_ = 0;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        abilityAsBullet_ = false;
+        bitField0_ = (bitField0_ & ~0x00400000);
         return this;
       }
 
@@ -1749,6 +2031,34 @@ public final class DeadlockGameEvents {
           to_bitField0_ |= 0x00004000;
         }
         result.maxRange_ = maxRange_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.shotId_ = shotId_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.predictHitsAgainstUnits_ = predictHitsAgainstUnits_;
+        if (((from_bitField0_ & 0x00040000) == 0x00040000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.bulletRadiusOverride_ = bulletRadiusOverride_;
+        if (((from_bitField0_ & 0x00080000) == 0x00080000)) {
+          to_bitField0_ |= 0x00040000;
+        }
+        result.bulletSpeedOverride_ = bulletSpeedOverride_;
+        if (((from_bitField0_ & 0x00100000) == 0x00100000)) {
+          to_bitField0_ |= 0x00080000;
+        }
+        result.bulletGravityOverride_ = bulletGravityOverride_;
+        if (((from_bitField0_ & 0x00200000) == 0x00200000)) {
+          to_bitField0_ |= 0x00100000;
+        }
+        result.muzzleNumber_ = muzzleNumber_;
+        if (((from_bitField0_ & 0x00400000) == 0x00400000)) {
+          to_bitField0_ |= 0x00200000;
+        }
+        result.abilityAsBullet_ = abilityAsBullet_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -1835,6 +2145,27 @@ public final class DeadlockGameEvents {
         }
         if (other.hasMaxRange()) {
           setMaxRange(other.getMaxRange());
+        }
+        if (other.hasShotId()) {
+          setShotId(other.getShotId());
+        }
+        if (other.hasPredictHitsAgainstUnits()) {
+          setPredictHitsAgainstUnits(other.getPredictHitsAgainstUnits());
+        }
+        if (other.hasBulletRadiusOverride()) {
+          setBulletRadiusOverride(other.getBulletRadiusOverride());
+        }
+        if (other.hasBulletSpeedOverride()) {
+          setBulletSpeedOverride(other.getBulletSpeedOverride());
+        }
+        if (other.hasBulletGravityOverride()) {
+          setBulletGravityOverride(other.getBulletGravityOverride());
+        }
+        if (other.hasMuzzleNumber()) {
+          setMuzzleNumber(other.getMuzzleNumber());
+        }
+        if (other.hasAbilityAsBullet()) {
+          setAbilityAsBullet(other.getAbilityAsBullet());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2919,6 +3250,230 @@ public final class DeadlockGameEvents {
         return this;
       }
 
+      private int shotId_ ;
+      /**
+       * <code>optional uint32 shot_id = 19;</code>
+       */
+      public boolean hasShotId() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional uint32 shot_id = 19;</code>
+       */
+      public int getShotId() {
+        return shotId_;
+      }
+      /**
+       * <code>optional uint32 shot_id = 19;</code>
+       */
+      public Builder setShotId(int value) {
+        bitField0_ |= 0x00010000;
+        shotId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 shot_id = 19;</code>
+       */
+      public Builder clearShotId() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        shotId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean predictHitsAgainstUnits_ = true;
+      /**
+       * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+       */
+      public boolean hasPredictHitsAgainstUnits() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      /**
+       * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+       */
+      public boolean getPredictHitsAgainstUnits() {
+        return predictHitsAgainstUnits_;
+      }
+      /**
+       * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+       */
+      public Builder setPredictHitsAgainstUnits(boolean value) {
+        bitField0_ |= 0x00020000;
+        predictHitsAgainstUnits_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool predict_hits_against_units = 20 [default = true];</code>
+       */
+      public Builder clearPredictHitsAgainstUnits() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        predictHitsAgainstUnits_ = true;
+        onChanged();
+        return this;
+      }
+
+      private float bulletRadiusOverride_ ;
+      /**
+       * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+       */
+      public boolean hasBulletRadiusOverride() {
+        return ((bitField0_ & 0x00040000) == 0x00040000);
+      }
+      /**
+       * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+       */
+      public float getBulletRadiusOverride() {
+        return bulletRadiusOverride_;
+      }
+      /**
+       * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+       */
+      public Builder setBulletRadiusOverride(float value) {
+        bitField0_ |= 0x00040000;
+        bulletRadiusOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float bullet_radius_override = 21 [default = 0];</code>
+       */
+      public Builder clearBulletRadiusOverride() {
+        bitField0_ = (bitField0_ & ~0x00040000);
+        bulletRadiusOverride_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float bulletSpeedOverride_ ;
+      /**
+       * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+       */
+      public boolean hasBulletSpeedOverride() {
+        return ((bitField0_ & 0x00080000) == 0x00080000);
+      }
+      /**
+       * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+       */
+      public float getBulletSpeedOverride() {
+        return bulletSpeedOverride_;
+      }
+      /**
+       * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+       */
+      public Builder setBulletSpeedOverride(float value) {
+        bitField0_ |= 0x00080000;
+        bulletSpeedOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float bullet_speed_override = 22 [default = 0];</code>
+       */
+      public Builder clearBulletSpeedOverride() {
+        bitField0_ = (bitField0_ & ~0x00080000);
+        bulletSpeedOverride_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float bulletGravityOverride_ ;
+      /**
+       * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+       */
+      public boolean hasBulletGravityOverride() {
+        return ((bitField0_ & 0x00100000) == 0x00100000);
+      }
+      /**
+       * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+       */
+      public float getBulletGravityOverride() {
+        return bulletGravityOverride_;
+      }
+      /**
+       * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+       */
+      public Builder setBulletGravityOverride(float value) {
+        bitField0_ |= 0x00100000;
+        bulletGravityOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float bullet_gravity_override = 23 [default = 0];</code>
+       */
+      public Builder clearBulletGravityOverride() {
+        bitField0_ = (bitField0_ & ~0x00100000);
+        bulletGravityOverride_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int muzzleNumber_ ;
+      /**
+       * <code>optional int32 muzzle_number = 24;</code>
+       */
+      public boolean hasMuzzleNumber() {
+        return ((bitField0_ & 0x00200000) == 0x00200000);
+      }
+      /**
+       * <code>optional int32 muzzle_number = 24;</code>
+       */
+      public int getMuzzleNumber() {
+        return muzzleNumber_;
+      }
+      /**
+       * <code>optional int32 muzzle_number = 24;</code>
+       */
+      public Builder setMuzzleNumber(int value) {
+        bitField0_ |= 0x00200000;
+        muzzleNumber_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 muzzle_number = 24;</code>
+       */
+      public Builder clearMuzzleNumber() {
+        bitField0_ = (bitField0_ & ~0x00200000);
+        muzzleNumber_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean abilityAsBullet_ ;
+      /**
+       * <code>optional bool ability_as_bullet = 25;</code>
+       */
+      public boolean hasAbilityAsBullet() {
+        return ((bitField0_ & 0x00400000) == 0x00400000);
+      }
+      /**
+       * <code>optional bool ability_as_bullet = 25;</code>
+       */
+      public boolean getAbilityAsBullet() {
+        return abilityAsBullet_;
+      }
+      /**
+       * <code>optional bool ability_as_bullet = 25;</code>
+       */
+      public Builder setAbilityAsBullet(boolean value) {
+        bitField0_ |= 0x00400000;
+        abilityAsBullet_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool ability_as_bullet = 25;</code>
+       */
+      public Builder clearAbilityAsBullet() {
+        bitField0_ = (bitField0_ & ~0x00400000);
+        abilityAsBullet_ = false;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgFireBullets)
     }
 
@@ -3035,6 +3590,15 @@ public final class DeadlockGameEvents {
      * <code>optional int32 shooter_entindex = 11 [default = -1];</code>
      */
     int getShooterEntindex();
+
+    /**
+     * <code>optional float bullet_radius_override = 12;</code>
+     */
+    boolean hasBulletRadiusOverride();
+    /**
+     * <code>optional float bullet_radius_override = 12;</code>
+     */
+    float getBulletRadiusOverride();
   }
   /**
    * Protobuf type {@code CMsgBulletImpact}
@@ -3160,6 +3724,11 @@ public final class DeadlockGameEvents {
             case 88: {
               bitField0_ |= 0x00000200;
               shooterEntindex_ = input.readInt32();
+              break;
+            }
+            case 101: {
+              bitField0_ |= 0x00000400;
+              bulletRadiusOverride_ = input.readFloat();
               break;
             }
           }
@@ -3370,6 +3939,21 @@ public final class DeadlockGameEvents {
       return shooterEntindex_;
     }
 
+    public static final int BULLET_RADIUS_OVERRIDE_FIELD_NUMBER = 12;
+    private float bulletRadiusOverride_;
+    /**
+     * <code>optional float bullet_radius_override = 12;</code>
+     */
+    public boolean hasBulletRadiusOverride() {
+      return ((bitField0_ & 0x00000400) == 0x00000400);
+    }
+    /**
+     * <code>optional float bullet_radius_override = 12;</code>
+     */
+    public float getBulletRadiusOverride() {
+      return bulletRadiusOverride_;
+    }
+
     private void initFields() {
       traceStart_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       impactOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
@@ -3381,6 +3965,7 @@ public final class DeadlockGameEvents {
       impactedHitbox_ = 0;
       weaponSubclassId_ = 0;
       shooterEntindex_ = -1;
+      bulletRadiusOverride_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3424,6 +4009,9 @@ public final class DeadlockGameEvents {
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeInt32(11, shooterEntindex_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        output.writeFloat(12, bulletRadiusOverride_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3473,6 +4061,10 @@ public final class DeadlockGameEvents {
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(11, shooterEntindex_);
+      }
+      if (((bitField0_ & 0x00000400) == 0x00000400)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(12, bulletRadiusOverride_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -3626,6 +4218,8 @@ public final class DeadlockGameEvents {
         bitField0_ = (bitField0_ & ~0x00000100);
         shooterEntindex_ = -1;
         bitField0_ = (bitField0_ & ~0x00000200);
+        bulletRadiusOverride_ = 0F;
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -3706,6 +4300,10 @@ public final class DeadlockGameEvents {
           to_bitField0_ |= 0x00000200;
         }
         result.shooterEntindex_ = shooterEntindex_;
+        if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
+          to_bitField0_ |= 0x00000400;
+        }
+        result.bulletRadiusOverride_ = bulletRadiusOverride_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -3751,6 +4349,9 @@ public final class DeadlockGameEvents {
         }
         if (other.hasShooterEntindex()) {
           setShooterEntindex(other.getShooterEntindex());
+        }
+        if (other.hasBulletRadiusOverride()) {
+          setBulletRadiusOverride(other.getBulletRadiusOverride());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -4351,6 +4952,38 @@ public final class DeadlockGameEvents {
         return this;
       }
 
+      private float bulletRadiusOverride_ ;
+      /**
+       * <code>optional float bullet_radius_override = 12;</code>
+       */
+      public boolean hasBulletRadiusOverride() {
+        return ((bitField0_ & 0x00000400) == 0x00000400);
+      }
+      /**
+       * <code>optional float bullet_radius_override = 12;</code>
+       */
+      public float getBulletRadiusOverride() {
+        return bulletRadiusOverride_;
+      }
+      /**
+       * <code>optional float bullet_radius_override = 12;</code>
+       */
+      public Builder setBulletRadiusOverride(float value) {
+        bitField0_ |= 0x00000400;
+        bulletRadiusOverride_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float bullet_radius_override = 12;</code>
+       */
+      public Builder clearBulletRadiusOverride() {
+        bitField0_ = (bitField0_ & ~0x00000400);
+        bulletRadiusOverride_ = 0F;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgBulletImpact)
     }
 
@@ -4387,7 +5020,7 @@ public final class DeadlockGameEvents {
   static {
     java.lang.String[] descriptorData = {
       "\n\030citadel_gameevents.proto\032\035networkbaset" +
-      "ypes-common.proto\"\272\004\n\017CMsgFireBullets\022\033\n" +
+      "ypes-common.proto\"\220\006\n\017CMsgFireBullets\022\033\n" +
       "\006origin\030\001 \001(\0132\013.CMsgVector\022\033\n\006angles\030\002 \001" +
       "(\0132\013.CMsgQAngle\022\014\n\004seed\030\004 \001(\r\022\032\n\016shooter" +
       "_entity\030\005 \001(\005:\002-1\022\023\n\007ability\030\007 \001(\005:\002-1\022\033" +
@@ -4399,26 +5032,33 @@ public final class DeadlockGameEvents {
       "Bullets.TracerAssignment\022$\n\017angles_origi" +
       "nal\030\016 \001(\0132\013.CMsgQAngle\022\032\n\022weapon_subclas" +
       "s_id\030\017 \001(\r\022\023\n\013shot_number\030\020 \001(\r\022\031\n\rignor" +
-      "e_entity\030\021 \001(\005:\002-1\022\021\n\tmax_range\030\022 \001(\002\032G\n" +
-      "\020TracerAssignment\022\032\n\022tracer_resource_id\030" +
-      "\001 \001(\004\022\027\n\017bullet_indicies\030\002 \001(\r\"\263\002\n\020CMsgB" +
-      "ulletImpact\022 \n\013trace_start\030\001 \001(\0132\013.CMsgV" +
-      "ector\022\"\n\rimpact_origin\030\002 \001(\0132\013.CMsgVecto" +
-      "r\022#\n\016surface_normal\030\003 \001(\0132\013.CMsgVector\022\016" +
-      "\n\006damage\030\004 \001(\r\022\024\n\014surface_type\030\005 \001(\r\022\034\n\020",
-      "ability_entindex\030\007 \001(\005:\002-1\022\035\n\021impacted_e" +
-      "ntindex\030\010 \001(\005:\002-1\022\027\n\017impacted_hitbox\030\t \001" +
-      "(\r\022\032\n\022weapon_subclass_id\030\n \001(\r\022\034\n\020shoote" +
-      "r_entindex\030\013 \001(\005:\002-1*\252\002\n\022ECitadelGameEve" +
-      "nts\022\023\n\016GE_FireBullets\020\302\003\022\027\n\022GE_PlayerAni" +
-      "mEvent\020\303\003\022\035\n\030GE_ParticleSystemManager\020\312\003" +
-      "\022\030\n\023GE_ScreenTextPretty\020\313\003\022\035\n\030GE_ServerR" +
-      "equestedTracer\020\314\003\022\024\n\017GE_BulletImpact\020\315\003\022" +
-      "\035\n\030GE_EnableSatVolumesEvent\020\316\003\022\033\n\026GE_Pla" +
-      "ceSatVolumeEvent\020\317\003\022\036\n\031GE_DisableSatVolu",
-      "mesEvent\020\320\003\022\034\n\027GE_RemoveSatVolumeEvent\020\321" +
-      "\003B<\n&skadistats.clarity.wire.deadlock.pr" +
-      "otoB\022DeadlockGameEvents"
+      "e_entity\030\021 \001(\005:\002-1\022\021\n\tmax_range\030\022 \001(\002\022\017\n" +
+      "\007shot_id\030\023 \001(\r\022(\n\032predict_hits_against_u" +
+      "nits\030\024 \001(\010:\004true\022!\n\026bullet_radius_overri" +
+      "de\030\025 \001(\002:\0010\022 \n\025bullet_speed_override\030\026 \001" +
+      "(\002:\0010\022\"\n\027bullet_gravity_override\030\027 \001(\002:\001" +
+      "0\022\025\n\rmuzzle_number\030\030 \001(\005\022\031\n\021ability_as_b" +
+      "ullet\030\031 \001(\010\032G\n\020TracerAssignment\022\032\n\022trace",
+      "r_resource_id\030\001 \001(\004\022\027\n\017bullet_indicies\030\002" +
+      " \001(\r\"\323\002\n\020CMsgBulletImpact\022 \n\013trace_start" +
+      "\030\001 \001(\0132\013.CMsgVector\022\"\n\rimpact_origin\030\002 \001" +
+      "(\0132\013.CMsgVector\022#\n\016surface_normal\030\003 \001(\0132" +
+      "\013.CMsgVector\022\016\n\006damage\030\004 \001(\r\022\024\n\014surface_" +
+      "type\030\005 \001(\r\022\034\n\020ability_entindex\030\007 \001(\005:\002-1" +
+      "\022\035\n\021impacted_entindex\030\010 \001(\005:\002-1\022\027\n\017impac" +
+      "ted_hitbox\030\t \001(\r\022\032\n\022weapon_subclass_id\030\n" +
+      " \001(\r\022\034\n\020shooter_entindex\030\013 \001(\005:\002-1\022\036\n\026bu" +
+      "llet_radius_override\030\014 \001(\002*\300\002\n\022ECitadelG",
+      "ameEvents\022\023\n\016GE_FireBullets\020\302\003\022\027\n\022GE_Pla" +
+      "yerAnimEvent\020\303\003\022\035\n\030GE_ParticleSystemMana" +
+      "ger\020\312\003\022\030\n\023GE_ScreenTextPretty\020\313\003\022\035\n\030GE_S" +
+      "erverRequestedTracer\020\314\003\022\024\n\017GE_BulletImpa" +
+      "ct\020\315\003\022\035\n\030GE_EnableSatVolumesEvent\020\316\003\022\033\n\026" +
+      "GE_PlaceSatVolumeEvent\020\317\003\022\036\n\031GE_DisableS" +
+      "atVolumesEvent\020\320\003\022\034\n\027GE_RemoveSatVolumeE" +
+      "vent\020\321\003\022\024\n\017GE_RemoveBullet\020\322\003B<\n&skadist" +
+      "ats.clarity.wire.deadlock.protoB\022Deadloc" +
+      "kGameEvents"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4438,7 +5078,7 @@ public final class DeadlockGameEvents {
     internal_static_CMsgFireBullets_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgFireBullets_descriptor,
-        new java.lang.String[] { "Origin", "Angles", "Seed", "ShooterEntity", "Ability", "PenetrationPercent", "Spread", "FiredFromGun", "BulletsOverride", "TracerReplacement", "TracerAdditional", "AnglesOriginal", "WeaponSubclassId", "ShotNumber", "IgnoreEntity", "MaxRange", });
+        new java.lang.String[] { "Origin", "Angles", "Seed", "ShooterEntity", "Ability", "PenetrationPercent", "Spread", "FiredFromGun", "BulletsOverride", "TracerReplacement", "TracerAdditional", "AnglesOriginal", "WeaponSubclassId", "ShotNumber", "IgnoreEntity", "MaxRange", "ShotId", "PredictHitsAgainstUnits", "BulletRadiusOverride", "BulletSpeedOverride", "BulletGravityOverride", "MuzzleNumber", "AbilityAsBullet", });
     internal_static_CMsgFireBullets_TracerAssignment_descriptor =
       internal_static_CMsgFireBullets_descriptor.getNestedTypes().get(0);
     internal_static_CMsgFireBullets_TracerAssignment_fieldAccessorTable = new
@@ -4450,7 +5090,7 @@ public final class DeadlockGameEvents {
     internal_static_CMsgBulletImpact_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgBulletImpact_descriptor,
-        new java.lang.String[] { "TraceStart", "ImpactOrigin", "SurfaceNormal", "Damage", "SurfaceType", "AbilityEntindex", "ImpactedEntindex", "ImpactedHitbox", "WeaponSubclassId", "ShooterEntindex", });
+        new java.lang.String[] { "TraceStart", "ImpactOrigin", "SurfaceNormal", "Damage", "SurfaceType", "AbilityEntindex", "ImpactedEntindex", "ImpactedHitbox", "WeaponSubclassId", "ShooterEntindex", "BulletRadiusOverride", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
   }
 

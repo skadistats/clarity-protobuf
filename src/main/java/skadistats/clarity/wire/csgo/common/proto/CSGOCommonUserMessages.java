@@ -55293,6 +55293,3181 @@ public final class CSGOCommonUserMessages {
     // @@protoc_insertion_point(class_scope:CCSUsrMsgPreMatchSayText)
   }
 
+  public interface CCSUsrMsg_DamagePredictionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_DamagePrediction)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 command_num = 1;</code>
+     */
+    boolean hasCommandNum();
+    /**
+     * <code>optional int32 command_num = 1;</code>
+     */
+    int getCommandNum();
+
+    /**
+     * <code>optional int32 pellet_idx = 2;</code>
+     */
+    boolean hasPelletIdx();
+    /**
+     * <code>optional int32 pellet_idx = 2;</code>
+     */
+    int getPelletIdx();
+
+    /**
+     * <code>optional int32 victim_slot = 3;</code>
+     */
+    boolean hasVictimSlot();
+    /**
+     * <code>optional int32 victim_slot = 3;</code>
+     */
+    int getVictimSlot();
+
+    /**
+     * <code>optional int32 victim_starting_health = 4;</code>
+     */
+    boolean hasVictimStartingHealth();
+    /**
+     * <code>optional int32 victim_starting_health = 4;</code>
+     */
+    int getVictimStartingHealth();
+
+    /**
+     * <code>optional int32 victim_damage = 5;</code>
+     */
+    boolean hasVictimDamage();
+    /**
+     * <code>optional int32 victim_damage = 5;</code>
+     */
+    int getVictimDamage();
+
+    /**
+     * <code>optional .CMsgVector shoot_pos = 6;</code>
+     */
+    boolean hasShootPos();
+    /**
+     * <code>optional .CMsgVector shoot_pos = 6;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getShootPos();
+    /**
+     * <code>optional .CMsgVector shoot_pos = 6;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder();
+
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+     */
+    boolean hasShootDir();
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getShootDir();
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder();
+
+    /**
+     * <code>optional .CMsgQAngle aim_punch = 8;</code>
+     */
+    boolean hasAimPunch();
+    /**
+     * <code>optional .CMsgQAngle aim_punch = 8;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getAimPunch();
+    /**
+     * <code>optional .CMsgQAngle aim_punch = 8;</code>
+     */
+    skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getAimPunchOrBuilder();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_DamagePrediction}
+   */
+  public static final class CCSUsrMsg_DamagePrediction extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_DamagePrediction)
+      CCSUsrMsg_DamagePredictionOrBuilder {
+    // Use CCSUsrMsg_DamagePrediction.newBuilder() to construct.
+    private CCSUsrMsg_DamagePrediction(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCSUsrMsg_DamagePrediction(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCSUsrMsg_DamagePrediction defaultInstance;
+    public static CCSUsrMsg_DamagePrediction getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCSUsrMsg_DamagePrediction getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_DamagePrediction(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              commandNum_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              pelletIdx_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              victimSlot_ = input.readInt32();
+              break;
+            }
+            case 32: {
+              bitField0_ |= 0x00000008;
+              victimStartingHealth_ = input.readInt32();
+              break;
+            }
+            case 40: {
+              bitField0_ |= 0x00000010;
+              victimDamage_ = input.readInt32();
+              break;
+            }
+            case 50: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000020) == 0x00000020)) {
+                subBuilder = shootPos_.toBuilder();
+              }
+              shootPos_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shootPos_);
+                shootPos_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000020;
+              break;
+            }
+            case 58: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = shootDir_.toBuilder();
+              }
+              shootDir_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shootDir_);
+                shootDir_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
+              break;
+            }
+            case 66: {
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000080) == 0x00000080)) {
+                subBuilder = aimPunch_.toBuilder();
+              }
+              aimPunch_ = input.readMessage(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(aimPunch_);
+                aimPunch_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000080;
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_DamagePrediction_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_DamagePrediction_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_DamagePrediction> PARSER =
+        new com.google.protobuf.AbstractParser<CCSUsrMsg_DamagePrediction>() {
+      public CCSUsrMsg_DamagePrediction parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_DamagePrediction(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_DamagePrediction> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int COMMAND_NUM_FIELD_NUMBER = 1;
+    private int commandNum_;
+    /**
+     * <code>optional int32 command_num = 1;</code>
+     */
+    public boolean hasCommandNum() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 command_num = 1;</code>
+     */
+    public int getCommandNum() {
+      return commandNum_;
+    }
+
+    public static final int PELLET_IDX_FIELD_NUMBER = 2;
+    private int pelletIdx_;
+    /**
+     * <code>optional int32 pellet_idx = 2;</code>
+     */
+    public boolean hasPelletIdx() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 pellet_idx = 2;</code>
+     */
+    public int getPelletIdx() {
+      return pelletIdx_;
+    }
+
+    public static final int VICTIM_SLOT_FIELD_NUMBER = 3;
+    private int victimSlot_;
+    /**
+     * <code>optional int32 victim_slot = 3;</code>
+     */
+    public boolean hasVictimSlot() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional int32 victim_slot = 3;</code>
+     */
+    public int getVictimSlot() {
+      return victimSlot_;
+    }
+
+    public static final int VICTIM_STARTING_HEALTH_FIELD_NUMBER = 4;
+    private int victimStartingHealth_;
+    /**
+     * <code>optional int32 victim_starting_health = 4;</code>
+     */
+    public boolean hasVictimStartingHealth() {
+      return ((bitField0_ & 0x00000008) == 0x00000008);
+    }
+    /**
+     * <code>optional int32 victim_starting_health = 4;</code>
+     */
+    public int getVictimStartingHealth() {
+      return victimStartingHealth_;
+    }
+
+    public static final int VICTIM_DAMAGE_FIELD_NUMBER = 5;
+    private int victimDamage_;
+    /**
+     * <code>optional int32 victim_damage = 5;</code>
+     */
+    public boolean hasVictimDamage() {
+      return ((bitField0_ & 0x00000010) == 0x00000010);
+    }
+    /**
+     * <code>optional int32 victim_damage = 5;</code>
+     */
+    public int getVictimDamage() {
+      return victimDamage_;
+    }
+
+    public static final int SHOOT_POS_FIELD_NUMBER = 6;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector shootPos_;
+    /**
+     * <code>optional .CMsgVector shoot_pos = 6;</code>
+     */
+    public boolean hasShootPos() {
+      return ((bitField0_ & 0x00000020) == 0x00000020);
+    }
+    /**
+     * <code>optional .CMsgVector shoot_pos = 6;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getShootPos() {
+      return shootPos_;
+    }
+    /**
+     * <code>optional .CMsgVector shoot_pos = 6;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
+      return shootPos_;
+    }
+
+    public static final int SHOOT_DIR_FIELD_NUMBER = 7;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle shootDir_;
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+     */
+    public boolean hasShootDir() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getShootDir() {
+      return shootDir_;
+    }
+    /**
+     * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
+      return shootDir_;
+    }
+
+    public static final int AIM_PUNCH_FIELD_NUMBER = 8;
+    private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle aimPunch_;
+    /**
+     * <code>optional .CMsgQAngle aim_punch = 8;</code>
+     */
+    public boolean hasAimPunch() {
+      return ((bitField0_ & 0x00000080) == 0x00000080);
+    }
+    /**
+     * <code>optional .CMsgQAngle aim_punch = 8;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getAimPunch() {
+      return aimPunch_;
+    }
+    /**
+     * <code>optional .CMsgQAngle aim_punch = 8;</code>
+     */
+    public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getAimPunchOrBuilder() {
+      return aimPunch_;
+    }
+
+    private void initFields() {
+      commandNum_ = 0;
+      pelletIdx_ = 0;
+      victimSlot_ = 0;
+      victimStartingHealth_ = 0;
+      victimDamage_ = 0;
+      shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      aimPunch_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, commandNum_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, pelletIdx_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeInt32(3, victimSlot_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        output.writeInt32(4, victimStartingHealth_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        output.writeInt32(5, victimDamage_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        output.writeMessage(6, shootPos_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, shootDir_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        output.writeMessage(8, aimPunch_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, commandNum_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, pelletIdx_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, victimSlot_);
+      }
+      if (((bitField0_ & 0x00000008) == 0x00000008)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, victimStartingHealth_);
+      }
+      if (((bitField0_ & 0x00000010) == 0x00000010)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, victimDamage_);
+      }
+      if (((bitField0_ & 0x00000020) == 0x00000020)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, shootPos_);
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, shootDir_);
+      }
+      if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, aimPunch_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_DamagePrediction}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_DamagePrediction)
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePredictionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_DamagePrediction_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_DamagePrediction_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getShootPosFieldBuilder();
+          getShootDirFieldBuilder();
+          getAimPunchFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        commandNum_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        pelletIdx_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        victimSlot_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        victimStartingHealth_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        victimDamage_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        if (shootPosBuilder_ == null) {
+          shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+        } else {
+          shootPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        if (shootDirBuilder_ == null) {
+          shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+        } else {
+          shootDirBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        if (aimPunchBuilder_ == null) {
+          aimPunch_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+        } else {
+          aimPunchBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_DamagePrediction_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction build() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction buildPartial() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction result = new skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.commandNum_ = commandNum_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.pelletIdx_ = pelletIdx_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.victimSlot_ = victimSlot_;
+        if (((from_bitField0_ & 0x00000008) == 0x00000008)) {
+          to_bitField0_ |= 0x00000008;
+        }
+        result.victimStartingHealth_ = victimStartingHealth_;
+        if (((from_bitField0_ & 0x00000010) == 0x00000010)) {
+          to_bitField0_ |= 0x00000010;
+        }
+        result.victimDamage_ = victimDamage_;
+        if (((from_bitField0_ & 0x00000020) == 0x00000020)) {
+          to_bitField0_ |= 0x00000020;
+        }
+        if (shootPosBuilder_ == null) {
+          result.shootPos_ = shootPos_;
+        } else {
+          result.shootPos_ = shootPosBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (shootDirBuilder_ == null) {
+          result.shootDir_ = shootDir_;
+        } else {
+          result.shootDir_ = shootDirBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) == 0x00000080)) {
+          to_bitField0_ |= 0x00000080;
+        }
+        if (aimPunchBuilder_ == null) {
+          result.aimPunch_ = aimPunch_;
+        } else {
+          result.aimPunch_ = aimPunchBuilder_.build();
+        }
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction) {
+          return mergeFrom((skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction other) {
+        if (other == skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.getDefaultInstance()) return this;
+        if (other.hasCommandNum()) {
+          setCommandNum(other.getCommandNum());
+        }
+        if (other.hasPelletIdx()) {
+          setPelletIdx(other.getPelletIdx());
+        }
+        if (other.hasVictimSlot()) {
+          setVictimSlot(other.getVictimSlot());
+        }
+        if (other.hasVictimStartingHealth()) {
+          setVictimStartingHealth(other.getVictimStartingHealth());
+        }
+        if (other.hasVictimDamage()) {
+          setVictimDamage(other.getVictimDamage());
+        }
+        if (other.hasShootPos()) {
+          mergeShootPos(other.getShootPos());
+        }
+        if (other.hasShootDir()) {
+          mergeShootDir(other.getShootDir());
+        }
+        if (other.hasAimPunch()) {
+          mergeAimPunch(other.getAimPunch());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int commandNum_ ;
+      /**
+       * <code>optional int32 command_num = 1;</code>
+       */
+      public boolean hasCommandNum() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 command_num = 1;</code>
+       */
+      public int getCommandNum() {
+        return commandNum_;
+      }
+      /**
+       * <code>optional int32 command_num = 1;</code>
+       */
+      public Builder setCommandNum(int value) {
+        bitField0_ |= 0x00000001;
+        commandNum_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 command_num = 1;</code>
+       */
+      public Builder clearCommandNum() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        commandNum_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int pelletIdx_ ;
+      /**
+       * <code>optional int32 pellet_idx = 2;</code>
+       */
+      public boolean hasPelletIdx() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 pellet_idx = 2;</code>
+       */
+      public int getPelletIdx() {
+        return pelletIdx_;
+      }
+      /**
+       * <code>optional int32 pellet_idx = 2;</code>
+       */
+      public Builder setPelletIdx(int value) {
+        bitField0_ |= 0x00000002;
+        pelletIdx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 pellet_idx = 2;</code>
+       */
+      public Builder clearPelletIdx() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        pelletIdx_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int victimSlot_ ;
+      /**
+       * <code>optional int32 victim_slot = 3;</code>
+       */
+      public boolean hasVictimSlot() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 victim_slot = 3;</code>
+       */
+      public int getVictimSlot() {
+        return victimSlot_;
+      }
+      /**
+       * <code>optional int32 victim_slot = 3;</code>
+       */
+      public Builder setVictimSlot(int value) {
+        bitField0_ |= 0x00000004;
+        victimSlot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 victim_slot = 3;</code>
+       */
+      public Builder clearVictimSlot() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        victimSlot_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int victimStartingHealth_ ;
+      /**
+       * <code>optional int32 victim_starting_health = 4;</code>
+       */
+      public boolean hasVictimStartingHealth() {
+        return ((bitField0_ & 0x00000008) == 0x00000008);
+      }
+      /**
+       * <code>optional int32 victim_starting_health = 4;</code>
+       */
+      public int getVictimStartingHealth() {
+        return victimStartingHealth_;
+      }
+      /**
+       * <code>optional int32 victim_starting_health = 4;</code>
+       */
+      public Builder setVictimStartingHealth(int value) {
+        bitField0_ |= 0x00000008;
+        victimStartingHealth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 victim_starting_health = 4;</code>
+       */
+      public Builder clearVictimStartingHealth() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        victimStartingHealth_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int victimDamage_ ;
+      /**
+       * <code>optional int32 victim_damage = 5;</code>
+       */
+      public boolean hasVictimDamage() {
+        return ((bitField0_ & 0x00000010) == 0x00000010);
+      }
+      /**
+       * <code>optional int32 victim_damage = 5;</code>
+       */
+      public int getVictimDamage() {
+        return victimDamage_;
+      }
+      /**
+       * <code>optional int32 victim_damage = 5;</code>
+       */
+      public Builder setVictimDamage(int value) {
+        bitField0_ |= 0x00000010;
+        victimDamage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 victim_damage = 5;</code>
+       */
+      public Builder clearVictimDamage() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        victimDamage_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> shootPosBuilder_;
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public boolean hasShootPos() {
+        return ((bitField0_ & 0x00000020) == 0x00000020);
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector getShootPos() {
+        if (shootPosBuilder_ == null) {
+          return shootPos_;
+        } else {
+          return shootPosBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public Builder setShootPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (shootPosBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shootPos_ = value;
+          onChanged();
+        } else {
+          shootPosBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public Builder setShootPos(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder builderForValue) {
+        if (shootPosBuilder_ == null) {
+          shootPos_ = builderForValue.build();
+          onChanged();
+        } else {
+          shootPosBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public Builder mergeShootPos(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value) {
+        if (shootPosBuilder_ == null) {
+          if (((bitField0_ & 0x00000020) == 0x00000020) &&
+              shootPos_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance()) {
+            shootPos_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.newBuilder(shootPos_).mergeFrom(value).buildPartial();
+          } else {
+            shootPos_ = value;
+          }
+          onChanged();
+        } else {
+          shootPosBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000020;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public Builder clearShootPos() {
+        if (shootPosBuilder_ == null) {
+          shootPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
+          onChanged();
+        } else {
+          shootPosBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000020);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder getShootPosBuilder() {
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return getShootPosFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder getShootPosOrBuilder() {
+        if (shootPosBuilder_ != null) {
+          return shootPosBuilder_.getMessageOrBuilder();
+        } else {
+          return shootPos_;
+        }
+      }
+      /**
+       * <code>optional .CMsgVector shoot_pos = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
+          getShootPosFieldBuilder() {
+        if (shootPosBuilder_ == null) {
+          shootPosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
+                  getShootPos(),
+                  getParentForChildren(),
+                  isClean());
+          shootPos_ = null;
+        }
+        return shootPosBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> shootDirBuilder_;
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public boolean hasShootDir() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getShootDir() {
+        if (shootDirBuilder_ == null) {
+          return shootDir_;
+        } else {
+          return shootDirBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public Builder setShootDir(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle value) {
+        if (shootDirBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          shootDir_ = value;
+          onChanged();
+        } else {
+          shootDirBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public Builder setShootDir(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder builderForValue) {
+        if (shootDirBuilder_ == null) {
+          shootDir_ = builderForValue.build();
+          onChanged();
+        } else {
+          shootDirBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public Builder mergeShootDir(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle value) {
+        if (shootDirBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              shootDir_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance()) {
+            shootDir_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.newBuilder(shootDir_).mergeFrom(value).buildPartial();
+          } else {
+            shootDir_ = value;
+          }
+          onChanged();
+        } else {
+          shootDirBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public Builder clearShootDir() {
+        if (shootDirBuilder_ == null) {
+          shootDir_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+          onChanged();
+        } else {
+          shootDirBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder getShootDirBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getShootDirFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getShootDirOrBuilder() {
+        if (shootDirBuilder_ != null) {
+          return shootDirBuilder_.getMessageOrBuilder();
+        } else {
+          return shootDir_;
+        }
+      }
+      /**
+       * <code>optional .CMsgQAngle shoot_dir = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
+          getShootDirFieldBuilder() {
+        if (shootDirBuilder_ == null) {
+          shootDirBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
+                  getShootDir(),
+                  getParentForChildren(),
+                  isClean());
+          shootDir_ = null;
+        }
+        return shootDirBuilder_;
+      }
+
+      private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle aimPunch_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> aimPunchBuilder_;
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public boolean hasAimPunch() {
+        return ((bitField0_ & 0x00000080) == 0x00000080);
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle getAimPunch() {
+        if (aimPunchBuilder_ == null) {
+          return aimPunch_;
+        } else {
+          return aimPunchBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public Builder setAimPunch(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle value) {
+        if (aimPunchBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          aimPunch_ = value;
+          onChanged();
+        } else {
+          aimPunchBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public Builder setAimPunch(
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder builderForValue) {
+        if (aimPunchBuilder_ == null) {
+          aimPunch_ = builderForValue.build();
+          onChanged();
+        } else {
+          aimPunchBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public Builder mergeAimPunch(skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle value) {
+        if (aimPunchBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) == 0x00000080) &&
+              aimPunch_ != skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance()) {
+            aimPunch_ =
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.newBuilder(aimPunch_).mergeFrom(value).buildPartial();
+          } else {
+            aimPunch_ = value;
+          }
+          onChanged();
+        } else {
+          aimPunchBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000080;
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public Builder clearAimPunch() {
+        if (aimPunchBuilder_ == null) {
+          aimPunch_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
+          onChanged();
+        } else {
+          aimPunchBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
+        return this;
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder getAimPunchBuilder() {
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return getAimPunchFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      public skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder getAimPunchOrBuilder() {
+        if (aimPunchBuilder_ != null) {
+          return aimPunchBuilder_.getMessageOrBuilder();
+        } else {
+          return aimPunch_;
+        }
+      }
+      /**
+       * <code>optional .CMsgQAngle aim_punch = 8;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
+          getAimPunchFieldBuilder() {
+        if (aimPunchBuilder_ == null) {
+          aimPunchBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
+                  getAimPunch(),
+                  getParentForChildren(),
+                  isClean());
+          aimPunch_ = null;
+        }
+        return aimPunchBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_DamagePrediction)
+    }
+
+    static {
+      defaultInstance = new CCSUsrMsg_DamagePrediction(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_DamagePrediction)
+  }
+
+  public interface CCSUsrMsg_RecurringMissionSchemaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_RecurringMissionSchema)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional uint32 period = 1;</code>
+     */
+    boolean hasPeriod();
+    /**
+     * <code>optional uint32 period = 1;</code>
+     */
+    int getPeriod();
+
+    /**
+     * <code>optional bytes mission_schema = 2;</code>
+     */
+    boolean hasMissionSchema();
+    /**
+     * <code>optional bytes mission_schema = 2;</code>
+     */
+    com.google.protobuf.ByteString getMissionSchema();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_RecurringMissionSchema}
+   */
+  public static final class CCSUsrMsg_RecurringMissionSchema extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_RecurringMissionSchema)
+      CCSUsrMsg_RecurringMissionSchemaOrBuilder {
+    // Use CCSUsrMsg_RecurringMissionSchema.newBuilder() to construct.
+    private CCSUsrMsg_RecurringMissionSchema(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCSUsrMsg_RecurringMissionSchema(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCSUsrMsg_RecurringMissionSchema defaultInstance;
+    public static CCSUsrMsg_RecurringMissionSchema getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCSUsrMsg_RecurringMissionSchema getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_RecurringMissionSchema(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              period_ = input.readUInt32();
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              missionSchema_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_RecurringMissionSchema_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_RecurringMissionSchema_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_RecurringMissionSchema> PARSER =
+        new com.google.protobuf.AbstractParser<CCSUsrMsg_RecurringMissionSchema>() {
+      public CCSUsrMsg_RecurringMissionSchema parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_RecurringMissionSchema(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_RecurringMissionSchema> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int PERIOD_FIELD_NUMBER = 1;
+    private int period_;
+    /**
+     * <code>optional uint32 period = 1;</code>
+     */
+    public boolean hasPeriod() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional uint32 period = 1;</code>
+     */
+    public int getPeriod() {
+      return period_;
+    }
+
+    public static final int MISSION_SCHEMA_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString missionSchema_;
+    /**
+     * <code>optional bytes mission_schema = 2;</code>
+     */
+    public boolean hasMissionSchema() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional bytes mission_schema = 2;</code>
+     */
+    public com.google.protobuf.ByteString getMissionSchema() {
+      return missionSchema_;
+    }
+
+    private void initFields() {
+      period_ = 0;
+      missionSchema_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeUInt32(1, period_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, missionSchema_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, period_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, missionSchema_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_RecurringMissionSchema}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_RecurringMissionSchema)
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchemaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_RecurringMissionSchema_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_RecurringMissionSchema_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        period_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        missionSchema_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_RecurringMissionSchema_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema build() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema buildPartial() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema result = new skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.period_ = period_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.missionSchema_ = missionSchema_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema) {
+          return mergeFrom((skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema other) {
+        if (other == skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.getDefaultInstance()) return this;
+        if (other.hasPeriod()) {
+          setPeriod(other.getPeriod());
+        }
+        if (other.hasMissionSchema()) {
+          setMissionSchema(other.getMissionSchema());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int period_ ;
+      /**
+       * <code>optional uint32 period = 1;</code>
+       */
+      public boolean hasPeriod() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 period = 1;</code>
+       */
+      public int getPeriod() {
+        return period_;
+      }
+      /**
+       * <code>optional uint32 period = 1;</code>
+       */
+      public Builder setPeriod(int value) {
+        bitField0_ |= 0x00000001;
+        period_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 period = 1;</code>
+       */
+      public Builder clearPeriod() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        period_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString missionSchema_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes mission_schema = 2;</code>
+       */
+      public boolean hasMissionSchema() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bytes mission_schema = 2;</code>
+       */
+      public com.google.protobuf.ByteString getMissionSchema() {
+        return missionSchema_;
+      }
+      /**
+       * <code>optional bytes mission_schema = 2;</code>
+       */
+      public Builder setMissionSchema(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        missionSchema_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes mission_schema = 2;</code>
+       */
+      public Builder clearMissionSchema() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        missionSchema_ = getDefaultInstance().getMissionSchema();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_RecurringMissionSchema)
+    }
+
+    static {
+      defaultInstance = new CCSUsrMsg_RecurringMissionSchema(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_RecurringMissionSchema)
+  }
+
+  public interface CCSUsrMsg_SendPlayerLoadoutOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_SendPlayerLoadout)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem> 
+        getLoadoutList();
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem getLoadout(int index);
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    int getLoadoutCount();
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder> 
+        getLoadoutOrBuilderList();
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder getLoadoutOrBuilder(
+        int index);
+
+    /**
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     */
+    boolean hasPlayerslot();
+    /**
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     */
+    int getPlayerslot();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_SendPlayerLoadout}
+   */
+  public static final class CCSUsrMsg_SendPlayerLoadout extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_SendPlayerLoadout)
+      CCSUsrMsg_SendPlayerLoadoutOrBuilder {
+    // Use CCSUsrMsg_SendPlayerLoadout.newBuilder() to construct.
+    private CCSUsrMsg_SendPlayerLoadout(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCSUsrMsg_SendPlayerLoadout(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCSUsrMsg_SendPlayerLoadout defaultInstance;
+    public static CCSUsrMsg_SendPlayerLoadout getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCSUsrMsg_SendPlayerLoadout getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_SendPlayerLoadout(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+                loadout_ = new java.util.ArrayList<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              loadout_.add(input.readMessage(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.PARSER, extensionRegistry));
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000001;
+              playerslot_ = input.readInt32();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+          loadout_ = java.util.Collections.unmodifiableList(loadout_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_SendPlayerLoadout> PARSER =
+        new com.google.protobuf.AbstractParser<CCSUsrMsg_SendPlayerLoadout>() {
+      public CCSUsrMsg_SendPlayerLoadout parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_SendPlayerLoadout(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_SendPlayerLoadout> getParserForType() {
+      return PARSER;
+    }
+
+    public interface LoadoutItemOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+       */
+      boolean hasEconItem();
+      /**
+       * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+       */
+      skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock getEconItem();
+      /**
+       * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+       */
+      skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlockOrBuilder getEconItemOrBuilder();
+
+      /**
+       * <code>optional int32 team = 2;</code>
+       */
+      boolean hasTeam();
+      /**
+       * <code>optional int32 team = 2;</code>
+       */
+      int getTeam();
+
+      /**
+       * <code>optional int32 slot = 3;</code>
+       */
+      boolean hasSlot();
+      /**
+       * <code>optional int32 slot = 3;</code>
+       */
+      int getSlot();
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_SendPlayerLoadout.LoadoutItem}
+     */
+    public static final class LoadoutItem extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+        LoadoutItemOrBuilder {
+      // Use LoadoutItem.newBuilder() to construct.
+      private LoadoutItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private LoadoutItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final LoadoutItem defaultInstance;
+      public static LoadoutItem getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public LoadoutItem getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private LoadoutItem(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 10: {
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Builder subBuilder = null;
+                if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                  subBuilder = econItem_.toBuilder();
+                }
+                econItem_ = input.readMessage(skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.PARSER, extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(econItem_);
+                  econItem_ = subBuilder.buildPartial();
+                }
+                bitField0_ |= 0x00000001;
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                team_ = input.readInt32();
+                break;
+              }
+              case 24: {
+                bitField0_ |= 0x00000004;
+                slot_ = input.readInt32();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<LoadoutItem> PARSER =
+          new com.google.protobuf.AbstractParser<LoadoutItem>() {
+        public LoadoutItem parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new LoadoutItem(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<LoadoutItem> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int ECON_ITEM_FIELD_NUMBER = 1;
+      private skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock econItem_;
+      /**
+       * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+       */
+      public boolean hasEconItem() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock getEconItem() {
+        return econItem_;
+      }
+      /**
+       * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlockOrBuilder getEconItemOrBuilder() {
+        return econItem_;
+      }
+
+      public static final int TEAM_FIELD_NUMBER = 2;
+      private int team_;
+      /**
+       * <code>optional int32 team = 2;</code>
+       */
+      public boolean hasTeam() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 team = 2;</code>
+       */
+      public int getTeam() {
+        return team_;
+      }
+
+      public static final int SLOT_FIELD_NUMBER = 3;
+      private int slot_;
+      /**
+       * <code>optional int32 slot = 3;</code>
+       */
+      public boolean hasSlot() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional int32 slot = 3;</code>
+       */
+      public int getSlot() {
+        return slot_;
+      }
+
+      private void initFields() {
+        econItem_ = skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.getDefaultInstance();
+        team_ = 0;
+        slot_ = 0;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeMessage(1, econItem_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeInt32(2, team_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          output.writeInt32(3, slot_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(1, econItem_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(2, team_);
+        }
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeInt32Size(3, slot_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CCSUsrMsg_SendPlayerLoadout.LoadoutItem}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            getEconItemFieldBuilder();
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          if (econItemBuilder_ == null) {
+            econItem_ = skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.getDefaultInstance();
+          } else {
+            econItemBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          team_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          slot_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000004);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor;
+        }
+
+        public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem getDefaultInstanceForType() {
+          return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem build() {
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem buildPartial() {
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem result = new skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          if (econItemBuilder_ == null) {
+            result.econItem_ = econItem_;
+          } else {
+            result.econItem_ = econItemBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.team_ = team_;
+          if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+            to_bitField0_ |= 0x00000004;
+          }
+          result.slot_ = slot_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem) {
+            return mergeFrom((skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem other) {
+          if (other == skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.getDefaultInstance()) return this;
+          if (other.hasEconItem()) {
+            mergeEconItem(other.getEconItem());
+          }
+          if (other.hasTeam()) {
+            setTeam(other.getTeam());
+          }
+          if (other.hasSlot()) {
+            setSlot(other.getSlot());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock econItem_ = skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.getDefaultInstance();
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlockOrBuilder> econItemBuilder_;
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public boolean hasEconItem() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock getEconItem() {
+          if (econItemBuilder_ == null) {
+            return econItem_;
+          } else {
+            return econItemBuilder_.getMessage();
+          }
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public Builder setEconItem(skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock value) {
+          if (econItemBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            econItem_ = value;
+            onChanged();
+          } else {
+            econItemBuilder_.setMessage(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public Builder setEconItem(
+            skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Builder builderForValue) {
+          if (econItemBuilder_ == null) {
+            econItem_ = builderForValue.build();
+            onChanged();
+          } else {
+            econItemBuilder_.setMessage(builderForValue.build());
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public Builder mergeEconItem(skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock value) {
+          if (econItemBuilder_ == null) {
+            if (((bitField0_ & 0x00000001) == 0x00000001) &&
+                econItem_ != skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.getDefaultInstance()) {
+              econItem_ =
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.newBuilder(econItem_).mergeFrom(value).buildPartial();
+            } else {
+              econItem_ = value;
+            }
+            onChanged();
+          } else {
+            econItemBuilder_.mergeFrom(value);
+          }
+          bitField0_ |= 0x00000001;
+          return this;
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public Builder clearEconItem() {
+          if (econItemBuilder_ == null) {
+            econItem_ = skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.getDefaultInstance();
+            onChanged();
+          } else {
+            econItemBuilder_.clear();
+          }
+          bitField0_ = (bitField0_ & ~0x00000001);
+          return this;
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Builder getEconItemBuilder() {
+          bitField0_ |= 0x00000001;
+          onChanged();
+          return getEconItemFieldBuilder().getBuilder();
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        public skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlockOrBuilder getEconItemOrBuilder() {
+          if (econItemBuilder_ != null) {
+            return econItemBuilder_.getMessageOrBuilder();
+          } else {
+            return econItem_;
+          }
+        }
+        /**
+         * <code>optional .CEconItemPreviewDataBlock econ_item = 1;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilder<
+            skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlockOrBuilder> 
+            getEconItemFieldBuilder() {
+          if (econItemBuilder_ == null) {
+            econItemBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlock.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.CEconItemPreviewDataBlockOrBuilder>(
+                    getEconItem(),
+                    getParentForChildren(),
+                    isClean());
+            econItem_ = null;
+          }
+          return econItemBuilder_;
+        }
+
+        private int team_ ;
+        /**
+         * <code>optional int32 team = 2;</code>
+         */
+        public boolean hasTeam() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional int32 team = 2;</code>
+         */
+        public int getTeam() {
+          return team_;
+        }
+        /**
+         * <code>optional int32 team = 2;</code>
+         */
+        public Builder setTeam(int value) {
+          bitField0_ |= 0x00000002;
+          team_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 team = 2;</code>
+         */
+        public Builder clearTeam() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          team_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int slot_ ;
+        /**
+         * <code>optional int32 slot = 3;</code>
+         */
+        public boolean hasSlot() {
+          return ((bitField0_ & 0x00000004) == 0x00000004);
+        }
+        /**
+         * <code>optional int32 slot = 3;</code>
+         */
+        public int getSlot() {
+          return slot_;
+        }
+        /**
+         * <code>optional int32 slot = 3;</code>
+         */
+        public Builder setSlot(int value) {
+          bitField0_ |= 0x00000004;
+          slot_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional int32 slot = 3;</code>
+         */
+        public Builder clearSlot() {
+          bitField0_ = (bitField0_ & ~0x00000004);
+          slot_ = 0;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+      }
+
+      static {
+        defaultInstance = new LoadoutItem(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CCSUsrMsg_SendPlayerLoadout.LoadoutItem)
+    }
+
+    private int bitField0_;
+    public static final int LOADOUT_FIELD_NUMBER = 1;
+    private java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem> loadout_;
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem> getLoadoutList() {
+      return loadout_;
+    }
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder> 
+        getLoadoutOrBuilderList() {
+      return loadout_;
+    }
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    public int getLoadoutCount() {
+      return loadout_.size();
+    }
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem getLoadout(int index) {
+      return loadout_.get(index);
+    }
+    /**
+     * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+     */
+    public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder getLoadoutOrBuilder(
+        int index) {
+      return loadout_.get(index);
+    }
+
+    public static final int PLAYERSLOT_FIELD_NUMBER = 2;
+    private int playerslot_;
+    /**
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     */
+    public boolean hasPlayerslot() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 playerslot = 2 [default = -1];</code>
+     */
+    public int getPlayerslot() {
+      return playerslot_;
+    }
+
+    private void initFields() {
+      loadout_ = java.util.Collections.emptyList();
+      playerslot_ = -1;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      for (int i = 0; i < loadout_.size(); i++) {
+        output.writeMessage(1, loadout_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(2, playerslot_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < loadout_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, loadout_.get(i));
+      }
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, playerslot_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_SendPlayerLoadout}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_SendPlayerLoadout)
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadoutOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getLoadoutFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (loadoutBuilder_ == null) {
+          loadout_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          loadoutBuilder_.clear();
+        }
+        playerslot_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout build() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout buildPartial() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout result = new skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (loadoutBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            loadout_ = java.util.Collections.unmodifiableList(loadout_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.loadout_ = loadout_;
+        } else {
+          result.loadout_ = loadoutBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.playerslot_ = playerslot_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout) {
+          return mergeFrom((skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout other) {
+        if (other == skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.getDefaultInstance()) return this;
+        if (loadoutBuilder_ == null) {
+          if (!other.loadout_.isEmpty()) {
+            if (loadout_.isEmpty()) {
+              loadout_ = other.loadout_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureLoadoutIsMutable();
+              loadout_.addAll(other.loadout_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.loadout_.isEmpty()) {
+            if (loadoutBuilder_.isEmpty()) {
+              loadoutBuilder_.dispose();
+              loadoutBuilder_ = null;
+              loadout_ = other.loadout_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              loadoutBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getLoadoutFieldBuilder() : null;
+            } else {
+              loadoutBuilder_.addAllMessages(other.loadout_);
+            }
+          }
+        }
+        if (other.hasPlayerslot()) {
+          setPlayerslot(other.getPlayerslot());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem> loadout_ =
+        java.util.Collections.emptyList();
+      private void ensureLoadoutIsMutable() {
+        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+          loadout_ = new java.util.ArrayList<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem>(loadout_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder> loadoutBuilder_;
+
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem> getLoadoutList() {
+        if (loadoutBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(loadout_);
+        } else {
+          return loadoutBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public int getLoadoutCount() {
+        if (loadoutBuilder_ == null) {
+          return loadout_.size();
+        } else {
+          return loadoutBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem getLoadout(int index) {
+        if (loadoutBuilder_ == null) {
+          return loadout_.get(index);
+        } else {
+          return loadoutBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder setLoadout(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem value) {
+        if (loadoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLoadoutIsMutable();
+          loadout_.set(index, value);
+          onChanged();
+        } else {
+          loadoutBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder setLoadout(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder builderForValue) {
+        if (loadoutBuilder_ == null) {
+          ensureLoadoutIsMutable();
+          loadout_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          loadoutBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder addLoadout(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem value) {
+        if (loadoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLoadoutIsMutable();
+          loadout_.add(value);
+          onChanged();
+        } else {
+          loadoutBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder addLoadout(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem value) {
+        if (loadoutBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureLoadoutIsMutable();
+          loadout_.add(index, value);
+          onChanged();
+        } else {
+          loadoutBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder addLoadout(
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder builderForValue) {
+        if (loadoutBuilder_ == null) {
+          ensureLoadoutIsMutable();
+          loadout_.add(builderForValue.build());
+          onChanged();
+        } else {
+          loadoutBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder addLoadout(
+          int index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder builderForValue) {
+        if (loadoutBuilder_ == null) {
+          ensureLoadoutIsMutable();
+          loadout_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          loadoutBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder addAllLoadout(
+          java.lang.Iterable<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem> values) {
+        if (loadoutBuilder_ == null) {
+          ensureLoadoutIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, loadout_);
+          onChanged();
+        } else {
+          loadoutBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder clearLoadout() {
+        if (loadoutBuilder_ == null) {
+          loadout_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          loadoutBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public Builder removeLoadout(int index) {
+        if (loadoutBuilder_ == null) {
+          ensureLoadoutIsMutable();
+          loadout_.remove(index);
+          onChanged();
+        } else {
+          loadoutBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder getLoadoutBuilder(
+          int index) {
+        return getLoadoutFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder getLoadoutOrBuilder(
+          int index) {
+        if (loadoutBuilder_ == null) {
+          return loadout_.get(index);  } else {
+          return loadoutBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder> 
+           getLoadoutOrBuilderList() {
+        if (loadoutBuilder_ != null) {
+          return loadoutBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(loadout_);
+        }
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder addLoadoutBuilder() {
+        return getLoadoutFieldBuilder().addBuilder(
+            skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder addLoadoutBuilder(
+          int index) {
+        return getLoadoutFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CCSUsrMsg_SendPlayerLoadout.LoadoutItem loadout = 1;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder> 
+           getLoadoutBuilderList() {
+        return getLoadoutFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder> 
+          getLoadoutFieldBuilder() {
+        if (loadoutBuilder_ == null) {
+          loadoutBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItem.Builder, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.LoadoutItemOrBuilder>(
+                  loadout_,
+                  ((bitField0_ & 0x00000001) == 0x00000001),
+                  getParentForChildren(),
+                  isClean());
+          loadout_ = null;
+        }
+        return loadoutBuilder_;
+      }
+
+      private int playerslot_ = -1;
+      /**
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       */
+      public boolean hasPlayerslot() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       */
+      public int getPlayerslot() {
+        return playerslot_;
+      }
+      /**
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       */
+      public Builder setPlayerslot(int value) {
+        bitField0_ |= 0x00000002;
+        playerslot_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 playerslot = 2 [default = -1];</code>
+       */
+      public Builder clearPlayerslot() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        playerslot_ = -1;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_SendPlayerLoadout)
+    }
+
+    static {
+      defaultInstance = new CCSUsrMsg_SendPlayerLoadout(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_SendPlayerLoadout)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_VGUIMenu_descriptor;
   private static
@@ -55723,6 +58898,26 @@ public final class CSGOCommonUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCSUsrMsgPreMatchSayText_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_DamagePrediction_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsg_DamagePrediction_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_RecurringMissionSchema_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsg_RecurringMissionSchema_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsg_SendPlayerLoadout_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -55933,12 +59128,26 @@ public final class CSGOCommonUserMessages {
       "\n\013reservation\030\002 \001(\0132/.CMsgGCCStrike15_v2" +
       "_MatchmakingGC2ServerReserve\"N\n\030CCSUsrMs",
       "gPreMatchSayText\022\022\n\naccount_id\030\001 \001(\r\022\014\n\004" +
-      "text\030\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010*\210\001\n\"ECSUsrM" +
-      "sg_DisconnectToLobby_Action\0220\n,k_ECSUsrM" +
-      "sg_DisconnectToLobby_Action_Default\020\000\0220\n" +
-      ",k_ECSUsrMsg_DisconnectToLobby_Action_Go" +
-      "Queue\020\001BC\n)skadistats.clarity.wire.csgo." +
-      "common.protoB\026CSGOCommonUserMessages"
+      "text\030\002 \001(\t\022\020\n\010all_chat\030\003 \001(\010\"\361\001\n\032CCSUsrM" +
+      "sg_DamagePrediction\022\023\n\013command_num\030\001 \001(\005" +
+      "\022\022\n\npellet_idx\030\002 \001(\005\022\023\n\013victim_slot\030\003 \001(" +
+      "\005\022\036\n\026victim_starting_health\030\004 \001(\005\022\025\n\rvic" +
+      "tim_damage\030\005 \001(\005\022\036\n\tshoot_pos\030\006 \001(\0132\013.CM" +
+      "sgVector\022\036\n\tshoot_dir\030\007 \001(\0132\013.CMsgQAngle" +
+      "\022\036\n\taim_punch\030\010 \001(\0132\013.CMsgQAngle\"J\n CCSU" +
+      "srMsg_RecurringMissionSchema\022\016\n\006period\030\001" +
+      " \001(\r\022\026\n\016mission_schema\030\002 \001(\014\"\312\001\n\033CCSUsrM",
+      "sg_SendPlayerLoadout\0229\n\007loadout\030\001 \003(\0132(." +
+      "CCSUsrMsg_SendPlayerLoadout.LoadoutItem\022" +
+      "\026\n\nplayerslot\030\002 \001(\005:\002-1\032X\n\013LoadoutItem\022-" +
+      "\n\tecon_item\030\001 \001(\0132\032.CEconItemPreviewData" +
+      "Block\022\014\n\004team\030\002 \001(\005\022\014\n\004slot\030\003 \001(\005*\210\001\n\"EC" +
+      "SUsrMsg_DisconnectToLobby_Action\0220\n,k_EC" +
+      "SUsrMsg_DisconnectToLobby_Action_Default" +
+      "\020\000\0220\n,k_ECSUsrMsg_DisconnectToLobby_Acti" +
+      "on_GoQueue\020\001BC\n)skadistats.clarity.wire." +
+      "csgo.common.protoB\026CSGOCommonUserMessage",
+      "s"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -56471,6 +59680,30 @@ public final class CSGOCommonUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCSUsrMsgPreMatchSayText_descriptor,
         new java.lang.String[] { "AccountId", "Text", "AllChat", });
+    internal_static_CCSUsrMsg_DamagePrediction_descriptor =
+      getDescriptor().getMessageTypes().get(71);
+    internal_static_CCSUsrMsg_DamagePrediction_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsg_DamagePrediction_descriptor,
+        new java.lang.String[] { "CommandNum", "PelletIdx", "VictimSlot", "VictimStartingHealth", "VictimDamage", "ShootPos", "ShootDir", "AimPunch", });
+    internal_static_CCSUsrMsg_RecurringMissionSchema_descriptor =
+      getDescriptor().getMessageTypes().get(72);
+    internal_static_CCSUsrMsg_RecurringMissionSchema_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsg_RecurringMissionSchema_descriptor,
+        new java.lang.String[] { "Period", "MissionSchema", });
+    internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor =
+      getDescriptor().getMessageTypes().get(73);
+    internal_static_CCSUsrMsg_SendPlayerLoadout_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor,
+        new java.lang.String[] { "Loadout", "Playerslot", });
+    internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor =
+      internal_static_CCSUsrMsg_SendPlayerLoadout_descriptor.getNestedTypes().get(0);
+    internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor,
+        new java.lang.String[] { "EconItem", "Team", "Slot", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.getDescriptor();

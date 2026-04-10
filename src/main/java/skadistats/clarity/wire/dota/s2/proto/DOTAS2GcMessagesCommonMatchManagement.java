@@ -697,6 +697,30 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
      */
     skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder getMvpsOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    java.util.List<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum> 
+        getEventMvpsList();
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum getEventMvps(int index);
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    int getEventMvpsCount();
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    java.util.List<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder> 
+        getEventMvpsOrBuilderList();
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder getEventMvpsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code CMvpData}
@@ -758,6 +782,14 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
               mvps_.add(input.readMessage(skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.PARSER, extensionRegistry));
               break;
             }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+                eventMvps_ = new java.util.ArrayList<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              eventMvps_.add(input.readMessage(skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.PARSER, extensionRegistry));
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -768,6 +800,9 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
           mvps_ = java.util.Collections.unmodifiableList(mvps_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          eventMvps_ = java.util.Collections.unmodifiableList(eventMvps_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -4588,8 +4623,44 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       return mvps_.get(index);
     }
 
+    public static final int EVENT_MVPS_FIELD_NUMBER = 2;
+    private java.util.List<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum> eventMvps_;
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    public java.util.List<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum> getEventMvpsList() {
+      return eventMvps_;
+    }
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    public java.util.List<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder> 
+        getEventMvpsOrBuilderList() {
+      return eventMvps_;
+    }
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    public int getEventMvpsCount() {
+      return eventMvps_.size();
+    }
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum getEventMvps(int index) {
+      return eventMvps_.get(index);
+    }
+    /**
+     * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+     */
+    public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder getEventMvpsOrBuilder(
+        int index) {
+      return eventMvps_.get(index);
+    }
+
     private void initFields() {
       mvps_ = java.util.Collections.emptyList();
+      eventMvps_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4607,6 +4678,9 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       for (int i = 0; i < mvps_.size(); i++) {
         output.writeMessage(1, mvps_.get(i));
       }
+      for (int i = 0; i < eventMvps_.size(); i++) {
+        output.writeMessage(2, eventMvps_.get(i));
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -4619,6 +4693,10 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       for (int i = 0; i < mvps_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(1, mvps_.get(i));
+      }
+      for (int i = 0; i < eventMvps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, eventMvps_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -4730,6 +4808,7 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getMvpsFieldBuilder();
+          getEventMvpsFieldBuilder();
         }
       }
       private static Builder create() {
@@ -4743,6 +4822,12 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
           mvpsBuilder_.clear();
+        }
+        if (eventMvpsBuilder_ == null) {
+          eventMvps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          eventMvpsBuilder_.clear();
         }
         return this;
       }
@@ -4779,6 +4864,15 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
           result.mvps_ = mvps_;
         } else {
           result.mvps_ = mvpsBuilder_.build();
+        }
+        if (eventMvpsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) == 0x00000002)) {
+            eventMvps_ = java.util.Collections.unmodifiableList(eventMvps_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.eventMvps_ = eventMvps_;
+        } else {
+          result.eventMvps_ = eventMvpsBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4818,6 +4912,32 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
                    getMvpsFieldBuilder() : null;
             } else {
               mvpsBuilder_.addAllMessages(other.mvps_);
+            }
+          }
+        }
+        if (eventMvpsBuilder_ == null) {
+          if (!other.eventMvps_.isEmpty()) {
+            if (eventMvps_.isEmpty()) {
+              eventMvps_ = other.eventMvps_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureEventMvpsIsMutable();
+              eventMvps_.addAll(other.eventMvps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.eventMvps_.isEmpty()) {
+            if (eventMvpsBuilder_.isEmpty()) {
+              eventMvpsBuilder_.dispose();
+              eventMvpsBuilder_ = null;
+              eventMvps_ = other.eventMvps_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              eventMvpsBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getEventMvpsFieldBuilder() : null;
+            } else {
+              eventMvpsBuilder_.addAllMessages(other.eventMvps_);
             }
           }
         }
@@ -5088,6 +5208,246 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
         return mvpsBuilder_;
       }
 
+      private java.util.List<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum> eventMvps_ =
+        java.util.Collections.emptyList();
+      private void ensureEventMvpsIsMutable() {
+        if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+          eventMvps_ = new java.util.ArrayList<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum>(eventMvps_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder> eventMvpsBuilder_;
+
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum> getEventMvpsList() {
+        if (eventMvpsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(eventMvps_);
+        } else {
+          return eventMvpsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public int getEventMvpsCount() {
+        if (eventMvpsBuilder_ == null) {
+          return eventMvps_.size();
+        } else {
+          return eventMvpsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum getEventMvps(int index) {
+        if (eventMvpsBuilder_ == null) {
+          return eventMvps_.get(index);
+        } else {
+          return eventMvpsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder setEventMvps(
+          int index, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum value) {
+        if (eventMvpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventMvpsIsMutable();
+          eventMvps_.set(index, value);
+          onChanged();
+        } else {
+          eventMvpsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder setEventMvps(
+          int index, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder builderForValue) {
+        if (eventMvpsBuilder_ == null) {
+          ensureEventMvpsIsMutable();
+          eventMvps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventMvpsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder addEventMvps(skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum value) {
+        if (eventMvpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventMvpsIsMutable();
+          eventMvps_.add(value);
+          onChanged();
+        } else {
+          eventMvpsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder addEventMvps(
+          int index, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum value) {
+        if (eventMvpsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEventMvpsIsMutable();
+          eventMvps_.add(index, value);
+          onChanged();
+        } else {
+          eventMvpsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder addEventMvps(
+          skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder builderForValue) {
+        if (eventMvpsBuilder_ == null) {
+          ensureEventMvpsIsMutable();
+          eventMvps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          eventMvpsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder addEventMvps(
+          int index, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder builderForValue) {
+        if (eventMvpsBuilder_ == null) {
+          ensureEventMvpsIsMutable();
+          eventMvps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          eventMvpsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder addAllEventMvps(
+          java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum> values) {
+        if (eventMvpsBuilder_ == null) {
+          ensureEventMvpsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, eventMvps_);
+          onChanged();
+        } else {
+          eventMvpsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder clearEventMvps() {
+        if (eventMvpsBuilder_ == null) {
+          eventMvps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          eventMvpsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public Builder removeEventMvps(int index) {
+        if (eventMvpsBuilder_ == null) {
+          ensureEventMvpsIsMutable();
+          eventMvps_.remove(index);
+          onChanged();
+        } else {
+          eventMvpsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder getEventMvpsBuilder(
+          int index) {
+        return getEventMvpsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder getEventMvpsOrBuilder(
+          int index) {
+        if (eventMvpsBuilder_ == null) {
+          return eventMvps_.get(index);  } else {
+          return eventMvpsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public java.util.List<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder> 
+           getEventMvpsOrBuilderList() {
+        if (eventMvpsBuilder_ != null) {
+          return eventMvpsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(eventMvps_);
+        }
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder addEventMvpsBuilder() {
+        return getEventMvpsFieldBuilder().addBuilder(
+            skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder addEventMvpsBuilder(
+          int index) {
+        return getEventMvpsFieldBuilder().addBuilder(
+            index, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .CMvpData.MvpDatum event_mvps = 2;</code>
+       */
+      public java.util.List<skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder> 
+           getEventMvpsBuilderList() {
+        return getEventMvpsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder> 
+          getEventMvpsFieldBuilder() {
+        if (eventMvpsBuilder_ == null) {
+          eventMvpsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatum.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommonMatchManagement.CMvpData.MvpDatumOrBuilder>(
+                  eventMvps_,
+                  ((bitField0_ & 0x00000002) == 0x00000002),
+                  getParentForChildren(),
+                  isClean());
+          eventMvps_ = null;
+        }
+        return eventMvpsBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMvpData)
     }
 
@@ -5133,11 +5493,12 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "\022average_queue_time\030\001 \001(\r\022\032\n\022maximum_que" +
       "ue_time\030\002 \001(\r\022d\n\027behavior_score_variance" +
       "\030\003 \001(\0162\034.EMatchBehaviorScoreVariance:%k_" +
-      "EMatchBehaviorScoreVariance_Invalid\"\347j\n\010" +
+      "EMatchBehaviorScoreVariance_Invalid\"\217k\n\010" +
       "CMvpData\022 \n\004mvps\030\001 \003(\0132\022.CMvpData.MvpDat" +
+      "um\022&\n\nevent_mvps\030\002 \003(\0132\022.CMvpData.MvpDat" +
       "um\032\270j\n\010MvpDatum\022\023\n\013player_slot\030\001 \001(\r\0221\n\t" +
-      "accolades\030\002 \003(\0132\036.CMvpData.MvpDatum.MvpA" +
-      "ccolade\032\343i\n\013MvpAccolade\022C\n\004type\030\001 \001(\0162..",
+      "accolades\030\002 \003(\0132\036.CMvpData.MvpDatum.MvpA",
+      "ccolade\032\343i\n\013MvpAccolade\022C\n\004type\030\001 \001(\0162.." +
       "CMvpData.MvpDatum.MvpAccolade.MvpAccolad" +
       "eType:\005kills\022\024\n\014detail_value\030\002 \001(\002\"\370h\n\017M" +
       "vpAccoladeType\022\t\n\005kills\020\001\022\n\n\006deaths\020\002\022\013\n" +
@@ -5146,8 +5507,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "d\020\010\022\013\n\007dewards\020\t\022\021\n\rcamps_stacked\020\n\022\r\n\tl" +
       "ast_hits\020\013\022\n\n\006denies\020\014\022\"\n\036kKillEaterEven" +
       "t_Killing_Sprees\020\r\022\033\n\027kKillEaterEvent_Go" +
-      "dlike\020\016\022$\n kKillEaterEvent_Towers_Destro" +
-      "yed\020\017\022.\n*kKillEaterEventType_Invoker_Sun",
+      "dlike\020\016\022$\n kKillEaterEvent_Towers_Destro",
+      "yed\020\017\022.\n*kKillEaterEventType_Invoker_Sun" +
       "strikeKills\020\020\022!\n\035kKillEaterEventType_Axe" +
       "_Culls\020\021\022-\n)kKillEaterEventType_Axe_Batt" +
       "leHungerKills\020\022\022&\n\"kKillEaterEventType_L" +
@@ -5156,8 +5517,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "Type_Sven_DoubleStuns\020\025\022*\n&kKillEaterEve" +
       "ntType_Sven_WarcryAssists\020\026\022.\n*kKillEate" +
       "rEventType_Sven_CleaveDoubleKills\020\027\022/\n+k" +
-      "KillEaterEventType_Sven_TeleportInterrup" +
-      "ts\020\030\022,\n(kKillEaterEventType_Faceless_Mul",
+      "KillEaterEventType_Sven_TeleportInterrup",
+      "ts\020\030\022,\n(kKillEaterEventType_Faceless_Mul" +
       "tiChrono\020\031\022,\n(kKillEaterEventType_Facele" +
       "ss_ChronoKills\020\032\022(\n$kKillEaterEventType_" +
       "Ursa_MultiShocks\020\033\022#\n\037kKillEaterEventTyp" +
@@ -5166,8 +5527,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "_Riki_SmokedHeroKills\020 \022.\n*kKillEaterEve" +
       "ntType_HeroesRevealedWithDust\020!\0227\n3kKill" +
       "EaterEventType_SkeletonKing_Reincarnatio" +
-      "nKills\020\"\022+\n\'kKillEaterEventType_Skywrath" +
-      "_FlareKills\020#\022/\n+kKillEaterEventType_Les",
+      "nKills\020\"\022+\n\'kKillEaterEventType_Skywrath",
+      "_FlareKills\020#\022/\n+kKillEaterEventType_Les" +
       "hrac_SplitEarthStuns\020$\022,\n(kKillEaterEven" +
       "tType_Mirana_MaxStunArrows\020%\0228\n4kKillEat" +
       "erEventType_PhantomAssassin_CoupdeGraceC" +
@@ -5176,8 +5537,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "pe_Meepo_Earthbinds\020(\0220\n,kKillEaterEvent" +
       "Type_Bloodseeker_RuptureKills\020)\022,\n(kKill" +
       "EaterEventType_Slark_LeashedEnemies\020*\0222\n" +
-      ".kKillEaterEventType_Disruptor_FountainG" +
-      "limpses\020+\022+\n\'kKillEaterEventType_Rubick_",
+      ".kKillEaterEventType_Disruptor_FountainG",
+      "limpses\020+\022+\n\'kKillEaterEventType_Rubick_" +
       "SpellsStolen\020,\022.\n*kKillEaterEventType_Ru" +
       "bick_UltimatesStolen\020-\022*\n&kKillEaterEven" +
       "tType_Doom_EnemiesDoomed\020.\0220\n,kKillEater" +
@@ -5186,8 +5547,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "elled\0200\0222\n.kKillEaterEventType_Omniknigh" +
       "t_EnemiesRepelled\0201\0222\n.kKillEaterEventTy" +
       "pe_Warlock_FiveHeroFatalBonds\0202\0228\n4kKill" +
-      "EaterEventType_CrystalMaiden_Frostbitten" +
-      "Enemies\0203\0222\n.kKillEaterEventType_Crystal",
+      "EaterEventType_CrystalMaiden_Frostbitten",
+      "Enemies\0203\0222\n.kKillEaterEventType_Crystal" +
       "Maiden_CrystalNovas\0204\0221\n-kKillEaterEvent" +
       "Type_Kunkka_DoubleHeroTorrents\0205\0223\n/kKil" +
       "lEaterEventType_Kunkka_TripleHeroGhostSh" +
@@ -5196,8 +5557,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "NagaSiren_TripleHeroRipTides\0208\0223\n/kKillE" +
       "aterEventType_Lycan_KillsDuringShapeshif" +
       "t\0209\022,\n(kKillEaterEventType_Pudge_Dismemb" +
-      "erKills\020:\022/\n+kKillEaterEventType_Pudge_E" +
-      "nemyHeroesHooked\020;\022\'\n#kKillEaterEventTyp",
+      "erKills\020:\022/\n+kKillEaterEventType_Pudge_E",
+      "nemyHeroesHooked\020;\022\'\n#kKillEaterEventTyp" +
       "e_Pudge_HookKills\020<\0225\n1kKillEaterEventTy" +
       "pe_Pudge_UnseenEnemyHeroesHooked\020=\0222\n.kK" +
       "illEaterEventType_DrowRanger_EnemiesSile" +
@@ -5206,8 +5567,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "ype_DrowRanger_SilencedKills\020@\0222\n.kKillE" +
       "aterEventType_DrowRanger_FrostArrowKills" +
       "\020A\0226\n2kKillEaterEventType_DragonKnight_K" +
-      "illsInDragonForm\020B\0225\n1kKillEaterEventTyp" +
-      "e_DragonKnight_BreatheFireKills\020C\0220\n,kKi",
+      "illsInDragonForm\020B\0225\n1kKillEaterEventTyp",
+      "e_DragonKnight_BreatheFireKills\020C\0220\n,kKi" +
       "llEaterEventType_DragonKnight_SplashKill" +
       "s\020D\022-\n)kKillEaterEventType_WitchDoctor_C" +
       "askStuns\020E\0221\n-kKillEaterEventType_WitchD" +
@@ -5216,8 +5577,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       ".kKillEaterEventType_WitchDoctor_DeathWa" +
       "rdKills\020H\0224\n0kKillEaterEventType_Disrupt" +
       "or_ThunderStrikeKills\020I\0220\n,kKillEaterEve" +
-      "ntType_Disruptor_HeroesGlimpsed\020J\0228\n4kKi" +
-      "llEaterEventType_CrystalMaiden_FreezingF",
+      "ntType_Disruptor_HeroesGlimpsed\020J\0228\n4kKi",
+      "llEaterEventType_CrystalMaiden_FreezingF" +
       "ieldKills\020K\022/\n+kKillEaterEventType_Medus" +
       "a_EnemiesPetrified\020M\022/\n+kKillEaterEventT" +
       "ype_Warlock_FatalBondsKills\020N\022*\n&kKillEa" +
@@ -5226,8 +5587,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "&kKillEaterEventType_Tusk_SnowballStuns\020" +
       "Q\0220\n,kKillEaterEventType_Earthshaker_Fis" +
       "sureStuns\020R\0222\n.kKillEaterEventType_Earth" +
-      "shaker_3HeroEchoslams\020S\0222\n.kKillEaterEve" +
-      "ntType_SandKing_BurrowstrikeStuns\020T\022/\n+k",
+      "shaker_3HeroEchoslams\020S\0222\n.kKillEaterEve",
+      "ntType_SandKing_BurrowstrikeStuns\020T\022/\n+k" +
       "KillEaterEventType_SandKing_EpicenterKil" +
       "ls\020U\0225\n1kKillEaterEventType_SkywrathMage" +
       "_AncientSealKills\020V\0228\n4kKillEaterEventTy" +
@@ -5236,8 +5597,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "s\020X\022)\n%kKillEaterEventType_Luna_EclipseK" +
       "ills\020Y\0228\n4kKillEaterEventType_KeeperOfTh" +
       "eLight_IlluminateKills\020Z\0226\n2kKillEaterEv" +
-      "entType_KeeperOfTheLight_ManaLeakStuns\020[" +
-      "\022:\n6kKillEaterEventType_KeeperOfTheLight",
+      "entType_KeeperOfTheLight_ManaLeakStuns\020[",
+      "\022:\n6kKillEaterEventType_KeeperOfTheLight" +
       "_TeammatesRecalled\020\\\0220\n,kKillEaterEventT" +
       "ype_LegionCommander_DuelsWon\020]\022-\n)kKillE" +
       "aterEventType_Beastmaster_RoarKills\020^\0222\n" +
@@ -5246,8 +5607,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "ner_FocusFireBuildings\020`\0221\n-kKillEaterEv" +
       "entType_Windrunner_PowershotKills\020a\0226\n2k" +
       "KillEaterEventType_PhantomAssassin_Dagge" +
-      "rLastHits\020b\022:\n6kKillEaterEventType_Phant" +
-      "omAssassin_PhantomStrikeKills\020c\0224\n0kKill",
+      "rLastHits\020b\022:\n6kKillEaterEventType_Phant",
+      "omAssassin_PhantomStrikeKills\020c\0224\n0kKill" +
       "EaterEventType_DeathProphet_CryptSwarmKi" +
       "lls\020d\022:\n6kKillEaterEventType_DeathProphe" +
       "t_ExorcismBuildingKills\020e\022<\n8kKillEaterE" +
@@ -5256,8 +5617,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "het_MultiHeroSilences\020g\022-\n)kKillEaterEve" +
       "ntType_Abaddon_MistCoilKills\020h\022.\n*kKillE" +
       "aterEventType_Abaddon_MistCoilHealed\020i\0222" +
-      "\n.kKillEaterEventType_Abaddon_AphoticShi" +
-      "eldKills\020j\0222\n.kKillEaterEventType_Lich_C",
+      "\n.kKillEaterEventType_Abaddon_AphoticShi",
+      "eldKills\020j\0222\n.kKillEaterEventType_Lich_C" +
       "hainFrostTripleKills\020k\0221\n-kKillEaterEven" +
       "tType_Lich_ChainFrostMultiKills\020l\022.\n*kKi" +
       "llEaterEventType_Lich_ChainFrostBounces\020" +
@@ -5266,8 +5627,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "ockKills\020o\022-\n)kKillEaterEventType_Lina_L" +
       "agunaBladeKills\020p\022-\n)kKillEaterEventType" +
       "_Lina_DragonSlaveKills\020q\0222\n.kKillEaterEv" +
-      "entType_Lina_LightStrikeArrayStuns\020r\022&\n\"" +
-      "kKillEaterEvent_Barracks_Destroyed\020s\022-\n)",
+      "entType_Lina_LightStrikeArrayStuns\020r\022&\n\"",
+      "kKillEaterEvent_Barracks_Destroyed\020s\022-\n)" +
       "kKillEaterEvent_TemplarAssassin_MeldKill" +
       "s\020t\0220\n,kKillEaterEvent_TemplarAssassin_H" +
       "eroesSlowed\020u\022-\n)kKillEaterEvent_Sniper_" +
@@ -5276,8 +5637,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "t_EarthSpirit_SmashStuns\020x\022,\n(kKillEater" +
       "Event_EarthSpirit_GripSilences\020y\022-\n)kKil" +
       "lEaterEvent_ShadowShaman_ShackleKills\020z\022" +
-      ")\n%kKillEaterEvent_ShadowShaman_HexKills" +
-      "\020{\022*\n&kKillEaterEvent_Centaur_EnemiesSto",
+      ")\n%kKillEaterEvent_ShadowShaman_HexKills",
+      "\020{\022*\n&kKillEaterEvent_Centaur_EnemiesSto" +
       "mped\020|\022+\n\'kKillEaterEvent_Centaur_Double" +
       "EdgeKills\020}\022\'\n#kKillEaterEvent_Centaur_R" +
       "eturnKills\020~\022.\n*kKillEaterEvent_EmberSpi" +
@@ -5286,8 +5647,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "\n\035kKillEaterEvent_Puck_OrbKills\020\201\001\0222\n-kK" +
       "illEaterEvent_VengefulSpirit_EnemiesStun" +
       "ned\020\202\001\022*\n%kKillEaterEvent_Lifestealer_Ra" +
-      "geKills\020\203\001\0220\n+kKillEaterEvent_Lifesteale" +
-      "r_OpenWoundsKills\020\204\001\022,\n\'kKillEaterEvent_",
+      "geKills\020\203\001\0220\n+kKillEaterEvent_Lifesteale",
+      "r_OpenWoundsKills\020\204\001\022,\n\'kKillEaterEvent_" +
       "Lifestealer_InfestKills\020\205\001\022+\n&kKillEater" +
       "Event_ElderTitan_SpiritKills\020\206\001\022*\n%kKill" +
       "EaterEvent_ElderTitan_GoodStomps\020\207\001\022*\n%k" +
@@ -5296,8 +5657,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "Kills\020\211\001\022*\n%kKillEaterEvent_StormSpirit_" +
       "BallKills\020\212\001\0223\n.kKillEaterEvent_StormSpi" +
       "rit_DoubleRemnantKills\020\213\001\022,\n\'kKillEaterE" +
-      "vent_StormSpirit_VortexKills\020\214\001\022.\n)kKill" +
-      "EaterEvent_Tinker_DoubleMissileKills\020\215\001\022",
+      "vent_StormSpirit_VortexKills\020\214\001\022.\n)kKill",
+      "EaterEvent_Tinker_DoubleMissileKills\020\215\001\022" +
       "&\n!kKillEaterEvent_Tinker_LaserKills\020\216\001\022" +
       ")\n$kKillEaterEvent_Techies_SuicideKills\020" +
       "\217\001\022*\n%kKillEaterEvent_Techies_LandMineKi" +
@@ -5306,8 +5667,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "RemoteMineKills\020\222\001\0220\n+kKillEaterEvent_Sh" +
       "adowFiend_TripleRazeKills\020\223\001\0222\n-kKillEat" +
       "erEvent_ShadowFiend_RequiemMultiKills\020\224\001" +
-      "\022+\n&kKillEaterEvent_ShadowFiend_QRazeKil" +
-      "ls\020\225\001\022+\n&kKillEaterEvent_ShadowFiend_WRa",
+      "\022+\n&kKillEaterEvent_ShadowFiend_QRazeKil",
+      "ls\020\225\001\022+\n&kKillEaterEvent_ShadowFiend_WRa" +
       "zeKills\020\226\001\022+\n&kKillEaterEvent_ShadowFien" +
       "d_ERazeKills\020\227\001\022+\n&kKillEaterEvent_Oracl" +
       "e_FatesEdictKills\020\230\001\022-\n(kKillEaterEvent_" +
@@ -5316,8 +5677,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "KillEaterEventType_SkeletonKing_Skeleton" +
       "HeroKills\020\235\001\022:\n5kKillEaterEventType_Dark" +
       "Willow_CursedCrownTripleStuns\020\236\001\0221\n,kKil" +
-      "lEaterEventType_Dazzle_ShallowGraveSaves" +
-      "\020\237\001\0220\n+kKillEaterEventType_Dazzle_Poison",
+      "lEaterEventType_Dazzle_ShallowGraveSaves",
+      "\020\237\001\0220\n+kKillEaterEventType_Dazzle_Poison" +
       "TouchKills\020\240\001\022%\n kKillEaterEventType_Thr" +
       "eeManMeks\020\241\001\0220\n+kKillEaterEventType_Vipe" +
       "r_PoisonAttackKills\020\242\001\0221\n,kKillEaterEven" +
@@ -5326,8 +5687,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "illEaterEventType_Viper_KillsDuringViper" +
       "Strike\020\245\001\022(\n#kKillEaterEventType_SolarCr" +
       "estKills\020\246\001\022,\n\'kKillEaterEventType_Tiny_" +
-      "TreeThrowKills\020\247\001\022+\n&kKillEaterEventType" +
-      "_Riki_BackstabKills\020\250\001\0228\n3kKillEaterEven",
+      "TreeThrowKills\020\247\001\022+\n&kKillEaterEventType",
+      "_Riki_BackstabKills\020\250\001\0228\n3kKillEaterEven" +
       "tType_Phoenix_ThreeHeroSupernovaStuns\020\251\001" +
       "\0227\n2kKillEaterEventType_Terrorblade_Meta" +
       "morphosisKills\020\252\001\022.\n)kKillEaterEventType" +
@@ -5336,8 +5697,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "ims\020\254\001\0223\n.kKillEaterEventType_Antimage_T" +
       "hreeManManaVoids\020\255\001\0225\n0kKillEaterEventTy" +
       "pe_ArcWarden_TempestDoubleKills\020\256\001\0223\n.kK" +
-      "illEaterEventType_ArcWarden_SparkWraithK" +
-      "ills\020\257\001\022+\n&kKillEaterEventType_Bane_Brai",
+      "illEaterEventType_ArcWarden_SparkWraithK",
+      "ills\020\257\001\022+\n&kKillEaterEventType_Bane_Brai" +
       "nSapKills\020\260\001\022-\n(kKillEaterEventType_Bane" +
       "_FiendsGripKills\020\261\001\0227\n2kKillEaterEventTy" +
       "pe_Batrider_TripleHeroFlamebreaks\020\262\001\0223\n." +
@@ -5346,8 +5707,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "ter_KillsDuringPrimalSplit\020\264\001\022>\n9kKillEa" +
       "terEventType_Bristleback_KillsUnderFourQ" +
       "uillStacks\020\265\001\0227\n2kKillEaterEventType_Bri" +
-      "stleback_TripleHeroNasalGoo\020\266\001\0228\n3kKillE" +
-      "aterEventType_Broodmother_SpiderlingHero",
+      "stleback_TripleHeroNasalGoo\020\266\001\0228\n3kKillE",
+      "aterEventType_Broodmother_SpiderlingHero" +
       "Kills\020\267\001\0223\n.kKillEaterEventType_Broodmot" +
       "her_KillsInsideWeb\020\270\001\0222\n-kKillEaterEvent" +
       "Type_Centaur_ThreeHeroStampede\020\271\001\0225\n0kKi" +
@@ -5356,8 +5717,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "lsWithPenitence\020\273\001\022:\n5kKillEaterEventTyp" +
       "e_CrystalMaiden_TwoHeroCrystalNovas\020\274\001\022>" +
       "\n9kKillEaterEventType_CrystalMaiden_Thre" +
-      "eHeroFreezingFields\020\275\001\022/\n*kKillEaterEven" +
-      "tType_Dazzle_ShadowWaveKills\020\276\001\0221\n,kKill",
+      "eHeroFreezingFields\020\275\001\022/\n*kKillEaterEven",
+      "tType_Dazzle_ShadowWaveKills\020\276\001\0221\n,kKill" +
       "EaterEventType_DeathProphet_SiphonKills\020" +
       "\277\001\022=\n8kKillEaterEventType_DeathProphet_E" +
       "xorcismKillsDuringEuls\020\300\001\022C\n>kKillEaterE" +
@@ -5366,8 +5727,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "om_InfernalBladeBurnKills\020\302\001\022@\n;kKillEat" +
       "erEventType_DrowRanger_PrecisionAuraCree" +
       "pTowerKills\020\303\001\0221\n,kKillEaterEventType_Em" +
-      "berSpirit_RemnantKills\020\304\001\0227\n2kKillEaterE" +
-      "ventType_EmberSpirit_SleightOfFistKills\020",
+      "berSpirit_RemnantKills\020\304\001\0227\n2kKillEaterE",
+      "ventType_EmberSpirit_SleightOfFistKills\020" +
       "\305\001\022<\n7kKillEaterEventType_Enigma_Midnigh" +
       "tPulseBlackHoleCombos\020\306\001\0222\n-kKillEaterEv" +
       "entType_Enigma_ThreeManBlackHoles\020\307\001\022;\n6" +
@@ -5376,8 +5737,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "_Gyrocopter_ThreeHeroFlakCannon\020\311\001\0226\n1kK" +
       "illEaterEventType_Gyrocopter_HomingMissi" +
       "leKills\020\312\001\0226\n1kKillEaterEventType_Gyroco" +
-      "pter_RocketBarrageKills\020\313\001\0224\n/kKillEater" +
-      "EventType_Huskar_KillsDuringLifeBreak\020\314\001",
+      "pter_RocketBarrageKills\020\313\001\0224\n/kKillEater",
+      "EventType_Huskar_KillsDuringLifeBreak\020\314\001" +
       "\0221\n,kKillEaterEventType_Huskar_BurningSp" +
       "earKills\020\315\001\0221\n,kKillEaterEventType_Invok" +
       "er_MultiHeroIceWall\020\316\001\022-\n(kKillEaterEven" +
@@ -5386,8 +5747,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "last\020\320\001\0225\n0kKillEaterEventType_Invoker_M" +
       "ultiHeroChaosMeteor\020\321\001\0223\n.kKillEaterEven" +
       "tType_Jakiro_MultiHeroDualBreath\020\322\001\0226\n1k" +
-      "KillEaterEventType_Jakiro_IcePathMacropy" +
-      "reCombos\020\323\001\022/\n*kKillEaterEventType_Leshr",
+      "KillEaterEventType_Jakiro_IcePathMacropy",
+      "reCombos\020\323\001\022/\n*kKillEaterEventType_Leshr" +
       "ac_PulseNovaKills\020\324\001\0228\n3kKillEaterEventT" +
       "ype_Leshrac_ThreeHeroLightningStorm\020\325\001\0224" +
       "\n/kKillEaterEventType_Lion_ThreeHeroFing" +
@@ -5396,8 +5757,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "epo_MultiHeroEarthbinds\020\330\001\0224\n/kKillEater" +
       "EventType_NightStalker_NighttimeKills\020\331\001" +
       "\0227\n2kKillEaterEventType_Morphling_KillsD" +
-      "uringReplicate\020\332\001\0220\n+kKillEaterEventType" +
-      "_OgreMagi_FireblastKills\020\333\001\022-\n(kKillEate",
+      "uringReplicate\020\332\001\0220\n+kKillEaterEventType",
+      "_OgreMagi_FireblastKills\020\333\001\022-\n(kKillEate" +
       "rEventType_OgreMagi_IgniteKills\020\334\001\022.\n)kK" +
       "illEaterEventType_DominatingKillStreaks\020" +
       "\335\001\022(\n#kKillEaterEventType_MegaKillStreak" +
@@ -5406,8 +5767,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "ilsLeadingToKills\020\340\001\022+\n&kKillEaterEventT" +
       "ype_DustLeadingToKills\020\341\001\0227\n2kKillEaterE" +
       "ventType_WitchDoctor_MultiHeroCaskStuns\020" +
-      "\342\001\022-\n(kKillEaterEventType_Weaver_Shukuch" +
-      "iKills\020\343\001\0229\n4kKillEaterEventType_Windrun",
+      "\342\001\022-\n(kKillEaterEventType_Weaver_Shukuch",
+      "iKills\020\343\001\0229\n4kKillEaterEventType_Windrun" +
       "ner_ShackleFocusFireKills\020\344\001\022B\n=kKillEat" +
       "erEventType_VengefulSpirit_VengeanceAura" +
       "IllusionKills\020\345\001\022.\n)kKillEaterEventType_" +
@@ -5416,8 +5777,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "llEaterEventType_TemplarAssassin_MultiHe" +
       "roPsiBlades\020\350\001\0225\n0kKillEaterEventType_Sv" +
       "en_KillsDuringGodsStrength\020\351\001\0222\n-kKillEa" +
-      "terEventType_Sniper_ThreeHeroShrapnels\020\352" +
-      "\001\0225\n0kKillEaterEventType_Slark_KillsDuri",
+      "terEventType_Sniper_ThreeHeroShrapnels\020\352",
+      "\001\0225\n0kKillEaterEventType_Slark_KillsDuri" +
       "ngShadowDance\020\353\001\022:\n5kKillEaterEventType_" +
       "ShadowShaman_MultiHeroEtherShocks\020\354\001\022=\n8" +
       "kKillEaterEventType_ShadowShaman_Serpent" +
@@ -5426,8 +5787,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "kKillEaterEventType_Razor_EyeOfTheStormK" +
       "ills\020\357\001\022-\n(kKillEaterEventType_Pugna_Lif" +
       "eDrainKills\020\360\001\022>\n9kKillEaterEventType_Ob" +
-      "sidianDestroyer_SanitysEclipseKills\020\361\001\0224" +
-      "\n/kKillEaterEventType_Oracle_MultiHeroFo",
+      "sidianDestroyer_SanitysEclipseKills\020\361\001\0224",
+      "\n/kKillEaterEventType_Oracle_MultiHeroFo" +
       "rtunesEnd\020\362\001\0225\n0kKillEaterEventType_Omni" +
       "knight_PurificationKills\020\363\001\022C\n>kKillEate" +
       "rEventType_NightStalker_EnemyMissesUnder" +
@@ -5436,8 +5797,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "aterEventType_Riki_TricksOfTheTradeKills" +
       "\020\366\001\0225\n0kKillEaterEventType_Earthshaker_A" +
       "ftershockHits10\020\367\001\0223\n.kKillEaterEventTyp" +
-      "e_Earthshaker_5HeroEchoslams\020\370\001\0222\n-kKill" +
-      "EaterEventType_Lina_LagunaBladeHeroKills",
+      "e_Earthshaker_5HeroEchoslams\020\370\001\0222\n-kKill",
+      "EaterEventType_Lina_LagunaBladeHeroKills" +
       "\020\371\001\0222\n-kKillEaterEventType_Lina_LightStr" +
       "ikeHeroStuns\020\372\001\0226\n1kKillEaterEventType_E" +
       "arthshaker_FissureMultiStuns\020\373\001\022/\n*kKill" +
@@ -5446,8 +5807,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "uckleKills\020\375\001\0222\n-kKillEaterEventType_Fur" +
       "ion_EnemyHeroesTrapped\020\376\001\0224\n/kKillEaterE" +
       "ventType_Pangolier_HeartpiercerKills\020\377\001\022" +
-      "2\n-kKillEaterEventType_Medusa_MultiHeroS" +
-      "toneGaze\020\200\002\022.\n)kKillEaterEventType_Medus",
+      "2\n-kKillEaterEventType_Medusa_MultiHeroS",
+      "toneGaze\020\200\002\022.\n)kKillEaterEventType_Medus" +
       "a_SplitShotKills\020\201\002\0222\n-kKillEaterEventTy" +
       "pe_Mirana_MultiHeroStarstorm\020\202\002\0228\n3kKill" +
       "EaterEventType_Mirana_KillsFromMoonlight" +
@@ -5456,8 +5817,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "pe_Magnus_MultiHeroReversePolarity\020\205\002\0229\n" +
       "4kKillEaterEventType_Magnus_HeroesSlowed" +
       "WithShockwave\020\206\002\0220\n+kKillEaterEventType_" +
-      "NagaSiren_MultiHeroSong\020\207\002\0225\n0kKillEater" +
-      "EventType_NagaSiren_AlliesHealedBySong\020\210",
+      "NagaSiren_MultiHeroSong\020\207\002\0225\n0kKillEater",
+      "EventType_NagaSiren_AlliesHealedBySong\020\210" +
       "\002\0220\n+kKillEaterEventType_LoneDruid_Multi" +
       "HeroRoar\020\211\002\0221\n,kKillEaterEventType_LoneD" +
       "ruid_BattleCryKills\020\212\002\0225\n0kKillEaterEven" +
@@ -5466,8 +5827,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "kedWithCounterspell\020\214\002\0222\n-kKillEaterEven" +
       "tType_Mars_EnemiesKilledInArena\020\215\002\0221\n,kK" +
       "illEaterEventType_Mars_MultiHeroGodsRebu" +
-      "ke\020\216\002\022-\n(kKillEaterEventType_Mars_GodsRe" +
-      "bukeKills\020\217\002\0222\n-kKillEaterEventType_Snap",
+      "ke\020\216\002\022-\n(kKillEaterEventType_Mars_GodsRe",
+      "bukeKills\020\217\002\0222\n-kKillEaterEventType_Snap" +
       "fire_LizardBlobsKills\020\220\002\0224\n/kKillEaterEv" +
       "entType_Snapfire_TwoHeroCookieStuns\020\221\002\022\026" +
       "\n\021Custom_KillStreak\020\222\002\022-\n(kKillEaterEven" +
@@ -5476,8 +5837,8 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
       "\002\0221\n,kKillEaterEventType_Muerta_MultiHer" +
       "oDeadShot\020\225\002\0227\n2kKillEaterEventType_Muer" +
       "ta_DeadShotsIntoTheCalling\020\226\002*\301\001\n\033EMatch" +
-      "BehaviorScoreVariance\022)\n%k_EMatchBehavio" +
-      "rScoreVariance_Invalid\020\000\022%\n!k_EMatchBeha",
+      "BehaviorScoreVariance\022)\n%k_EMatchBehavio",
+      "rScoreVariance_Invalid\020\000\022%\n!k_EMatchBeha" +
       "viorScoreVariance_Low\020\001\022(\n$k_EMatchBehav" +
       "iorScoreVariance_Medium\020\002\022&\n\"k_EMatchBeh" +
       "aviorScoreVariance_High\020\003BN\n%skadistats." +
@@ -5507,7 +5868,7 @@ public final class DOTAS2GcMessagesCommonMatchManagement {
     internal_static_CMvpData_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMvpData_descriptor,
-        new java.lang.String[] { "Mvps", });
+        new java.lang.String[] { "Mvps", "EventMvps", });
     internal_static_CMvpData_MvpDatum_descriptor =
       internal_static_CMvpData_descriptor.getNestedTypes().get(0);
     internal_static_CMvpData_MvpDatum_fieldAccessorTable = new

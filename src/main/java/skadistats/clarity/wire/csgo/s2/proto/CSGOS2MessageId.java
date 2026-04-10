@@ -571,6 +571,10 @@ public final class CSGOS2MessageId {
      * <code>svc_UserCmds = 76;</code>
      */
     svc_UserCmds(30, 76),
+    /**
+     * <code>svc_NextMsgPredicted = 77;</code>
+     */
+    svc_NextMsgPredicted(31, 77),
     ;
 
     /**
@@ -697,6 +701,10 @@ public final class CSGOS2MessageId {
      * <code>svc_UserCmds = 76;</code>
      */
     public static final int svc_UserCmds_VALUE = 76;
+    /**
+     * <code>svc_NextMsgPredicted = 77;</code>
+     */
+    public static final int svc_NextMsgPredicted_VALUE = 77;
 
 
     public final int getNumber() { return value; }
@@ -734,6 +742,7 @@ public final class CSGOS2MessageId {
         case 74: return svc_Broadcast_Command;
         case 75: return svc_HltvFixupOperatorStatus;
         case 76: return svc_UserCmds;
+        case 77: return svc_NextMsgPredicted;
         default: return null;
       }
     }
@@ -1748,6 +1757,18 @@ public final class CSGOS2MessageId {
      * <code>CS_UM_CounterStrafe = 385;</code>
      */
     CS_UM_CounterStrafe(76, 385),
+    /**
+     * <code>CS_UM_DamagePrediction = 386;</code>
+     */
+    CS_UM_DamagePrediction(77, 386),
+    /**
+     * <code>CS_UM_RecurringMissionSchema = 387;</code>
+     */
+    CS_UM_RecurringMissionSchema(78, 387),
+    /**
+     * <code>CS_UM_SendPlayerLoadout = 388;</code>
+     */
+    CS_UM_SendPlayerLoadout(79, 388),
     ;
 
     /**
@@ -2058,6 +2079,18 @@ public final class CSGOS2MessageId {
      * <code>CS_UM_CounterStrafe = 385;</code>
      */
     public static final int CS_UM_CounterStrafe_VALUE = 385;
+    /**
+     * <code>CS_UM_DamagePrediction = 386;</code>
+     */
+    public static final int CS_UM_DamagePrediction_VALUE = 386;
+    /**
+     * <code>CS_UM_RecurringMissionSchema = 387;</code>
+     */
+    public static final int CS_UM_RecurringMissionSchema_VALUE = 387;
+    /**
+     * <code>CS_UM_SendPlayerLoadout = 388;</code>
+     */
+    public static final int CS_UM_SendPlayerLoadout_VALUE = 388;
 
 
     public final int getNumber() { return value; }
@@ -2141,6 +2174,9 @@ public final class CSGOS2MessageId {
         case 382: return CS_UM_UtilMsg;
         case 383: return CS_UM_ShootInfo;
         case 385: return CS_UM_CounterStrafe;
+        case 386: return CS_UM_DamagePrediction;
+        case 387: return CS_UM_RecurringMissionSchema;
+        case 388: return CS_UM_SendPlayerLoadout;
         default: return null;
       }
     }
@@ -2222,7 +2258,7 @@ public final class CSGOS2MessageId {
       "verPing\020 \022\024\n\020clc_RequestPause\020!\022\024\n\020clc_C" +
       "mdKeyValues\020\"\022\031\n\025clc_RconServerDetails\020#",
       "\022\022\n\016clc_HltvReplay\020$\022\022\n\016clc_Diagnostic\020%" +
-      "*\253\005\n\014SVC_Messages\022\022\n\016svc_ServerInfo\020(\022\033\n" +
+      "*\305\005\n\014SVC_Messages\022\022\n\016svc_ServerInfo\020(\022\033\n" +
       "\027svc_FlattenedSerializer\020)\022\021\n\rsvc_ClassI" +
       "nfo\020*\022\020\n\014svc_SetPause\020+\022\031\n\025svc_CreateStr" +
       "ingTable\020,\022\031\n\025svc_UpdateStringTable\020-\022\021\n" +
@@ -2239,90 +2275,93 @@ public final class CSGOS2MessageId {
       "tails\020G\022\023\n\017svc_UserMessage\020H\022\022\n\016svc_Hltv" +
       "Replay\020I\022\031\n\025svc_Broadcast_Command\020J\022\037\n\033s" +
       "vc_HltvFixupOperatorStatus\020K\022\020\n\014svc_User" +
-      "Cmds\020L*\254\t\n\021EBaseUserMessages\022\027\n\023UM_Achie" +
-      "vementEvent\020e\022\023\n\017UM_CloseCaption\020f\022\031\n\025UM",
-      "_CloseCaptionDirect\020g\022\027\n\023UM_CurrentTimes" +
-      "cale\020h\022\027\n\023UM_DesiredTimescale\020i\022\013\n\007UM_Fa" +
-      "de\020j\022\020\n\014UM_GameTitle\020k\022\r\n\tUM_HudMsg\020n\022\016\n" +
-      "\nUM_HudText\020o\022\022\n\016UM_ColoredText\020q\022\023\n\017UM_" +
-      "RequestState\020r\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Ru" +
-      "mble\020t\022\016\n\nUM_SayText\020u\022\017\n\013UM_SayText2\020v\022" +
-      "\025\n\021UM_SayTextChannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013" +
-      "UM_ShakeDir\020y\022\021\n\rUM_WaterShake\020z\022\016\n\nUM_T" +
-      "extMsg\020|\022\021\n\rUM_ScreenTilt\020}\022\021\n\014UM_VoiceM" +
-      "ask\020\200\001\022\021\n\014UM_SendAudio\020\202\001\022\022\n\rUM_ItemPick",
-      "up\020\203\001\022\022\n\rUM_AmmoDenied\020\204\001\022\020\n\013UM_ShowMenu" +
-      "\020\206\001\022\022\n\rUM_CreditsMsg\020\207\001\022\037\n\032UM_CloseCapti" +
-      "onPlaceholder\020\216\001\022\030\n\023UM_CameraTransition\020" +
-      "\217\001\022\026\n\021UM_AudioParameter\020\220\001\022\027\n\022UM_Particl" +
-      "eManager\020\221\001\022\020\n\013UM_HudError\020\222\001\022\027\n\022UM_Cust" +
-      "omGameEvent\020\224\001\022\027\n\022UM_AnimGraphUpdate\020\225\001\022" +
-      "\033\n\026UM_HapticsManagerPulse\020\226\001\022\034\n\027UM_Hapti" +
-      "csManagerEffect\020\227\001\022\031\n\024UM_CommandQueueSta" +
-      "te\020\230\001\022\030\n\023UM_UpdateCssClasses\020\231\001\022\027\n\022UM_Se" +
-      "rverFrameTime\020\232\001\022\034\n\027UM_LagCompensationEr",
-      "ror\020\233\001\022\030\n\023UM_RequestDllStatus\020\234\001\022\031\n\024UM_R" +
-      "equestUtilAction\020\235\001\022\032\n\025UM_UtilActionResp" +
-      "onse\020\236\001\022\031\n\024UM_DllStatusResponse\020\237\001\022\030\n\023UM" +
-      "_RequestInventory\020\240\001\022\031\n\024UM_InventoryResp" +
-      "onse\020\241\001\022\031\n\024UM_RequestDiagnostic\020\242\001\022\032\n\025UM" +
-      "_DiagnosticResponse\020\243\001\022\025\n\020UM_ExtraUserDa" +
-      "ta\020\244\001\022\033\n\026UM_NotifyResponseFound\020\245\001\022\037\n\032UM" +
-      "_PlayResponseConditional\020\246\001\022\020\n\013UM_MAX_BA" +
-      "SE\020\310\001*\224\001\n\023EBaseEntityMessages\022\022\n\rEM_Play" +
-      "Jingle\020\210\001\022\025\n\020EM_ScreenOverlay\020\211\001\022\027\n\022EM_R",
-      "emoveAllDecals\020\212\001\022\026\n\021EM_PropagateForce\020\213" +
-      "\001\022\017\n\nEM_DoSpark\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\300\017\n" +
-      "\026ECstrike15UserMessages\022\023\n\016CS_UM_VGUIMen" +
-      "u\020\255\002\022\021\n\014CS_UM_Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257" +
-      "\002\022\022\n\rCS_UM_HudText\020\260\002\022\022\n\rCS_UM_SayText\020\261" +
-      "\002\022\023\n\016CS_UM_SayText2\020\262\002\022\022\n\rCS_UM_TextMsg\020" +
-      "\263\002\022\021\n\014CS_UM_HudMsg\020\264\002\022\023\n\016CS_UM_ResetHud\020" +
-      "\265\002\022\024\n\017CS_UM_GameTitle\020\266\002\022\020\n\013CS_UM_Shake\020" +
-      "\270\002\022\017\n\nCS_UM_Fade\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002\022\027" +
-      "\n\022CS_UM_CloseCaption\020\273\002\022\035\n\030CS_UM_CloseCa",
-      "ptionDirect\020\274\002\022\024\n\017CS_UM_SendAudio\020\275\002\022\023\n\016" +
-      "CS_UM_RawAudio\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277\002\022" +
-      "\027\n\022CS_UM_RequestState\020\300\002\022\021\n\014CS_UM_Damage" +
-      "\020\301\002\022\024\n\017CS_UM_RadioText\020\302\002\022\023\n\016CS_UM_HintT" +
-      "ext\020\303\002\022\026\n\021CS_UM_KeyHintText\020\304\002\022%\n CS_UM_" +
-      "ProcessSpottedEntityUpdate\020\305\002\022\027\n\022CS_UM_R" +
-      "eloadEffect\020\306\002\022\026\n\021CS_UM_AdjustMoney\020\307\002\022\032" +
-      "\n\025CS_UM_UpdateTeamMoney\020\310\002\022\034\n\027CS_UM_Stop" +
-      "SpectatorMode\020\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033\n\026" +
-      "CS_UM_DesiredTimescale\020\313\002\022\033\n\026CS_UM_Curre",
-      "ntTimescale\020\314\002\022\033\n\026CS_UM_AchievementEvent" +
-      "\020\315\002\022\035\n\030CS_UM_MatchEndConditions\020\316\002\022\034\n\027CS" +
-      "_UM_DisconnectToLobby\020\317\002\022\034\n\027CS_UM_Player" +
-      "StatsUpdate\020\320\002\022\031\n\024CS_UM_WarmupHasEnded\020\322" +
-      "\002\022\025\n\020CS_UM_ClientInfo\020\323\002\022\023\n\016CS_UM_XRankG" +
-      "et\020\324\002\022\023\n\016CS_UM_XRankUpd\020\325\002\022\031\n\024CS_UM_Call" +
-      "VoteFailed\020\331\002\022\024\n\017CS_UM_VoteStart\020\332\002\022\023\n\016C" +
-      "S_UM_VotePass\020\333\002\022\025\n\020CS_UM_VoteFailed\020\334\002\022" +
-      "\024\n\017CS_UM_VoteSetup\020\335\002\022\036\n\031CS_UM_ServerRan" +
-      "kRevealAll\020\336\002\022\'\n\"CS_UM_SendLastKillerDam",
-      "ageToClient\020\337\002\022\033\n\026CS_UM_ServerRankUpdate" +
-      "\020\340\002\022\025\n\020CS_UM_ItemPickup\020\341\002\022\023\n\016CS_UM_Show" +
-      "Menu\020\342\002\022\022\n\rCS_UM_BarTime\020\343\002\022\025\n\020CS_UM_Amm" +
-      "oDenied\020\344\002\022\032\n\025CS_UM_MarkAchievement\020\345\002\022\033" +
-      "\n\026CS_UM_MatchStatsUpdate\020\346\002\022\023\n\016CS_UM_Ite" +
-      "mDrop\020\347\002\022\032\n\025CS_UM_GlowPropTurnOff\020\350\002\022\036\n\031" +
-      "CS_UM_SendPlayerItemDrops\020\351\002\022\037\n\032CS_UM_Ro" +
-      "undBackupFilenames\020\352\002\022\036\n\031CS_UM_SendPlaye" +
-      "rItemFound\020\353\002\022\024\n\017CS_UM_ReportHit\020\354\002\022\023\n\016C" +
-      "S_UM_XpUpdate\020\355\002\022\030\n\023CS_UM_QuestProgress\020",
-      "\356\002\022\037\n\032CS_UM_ScoreLeaderboardData\020\357\002\022&\n!C" +
-      "S_UM_PlayerDecalDigitalSignature\020\360\002\022\026\n\021C" +
-      "S_UM_WeaponSound\020\361\002\022 \n\033CS_UM_UpdateScree" +
-      "nHealthBar\020\362\002\022!\n\034CS_UM_EntityOutlineHigh" +
-      "light\020\363\002\022\017\n\nCS_UM_SSUI\020\364\002\022\030\n\023CS_UM_Survi" +
-      "valStats\020\365\002\022\035\n\030CS_UM_DisconnectToLobby2\020" +
-      "\366\002\022#\n\036CS_UM_EndOfMatchAllPlayersData\020\367\002\022" +
-      " \n\033CS_UM_PostRoundDamageReport\020\370\002\022\035\n\030CS_" +
-      "UM_RoundEndReportData\020\373\002\022\033\n\026CS_UM_Curren" +
-      "tRoundOdds\020\374\002\022\024\n\017CS_UM_DeepStats\020\375\002\022\022\n\rC",
-      "S_UM_UtilMsg\020\376\002\022\024\n\017CS_UM_ShootInfo\020\377\002\022\030\n" +
-      "\023CS_UM_CounterStrafe\020\201\003B8\n%skadistats.cl" +
+      "Cmds\020L\022\030\n\024svc_NextMsgPredicted\020M*\254\t\n\021EBa" +
+      "seUserMessages\022\027\n\023UM_AchievementEvent\020e\022",
+      "\023\n\017UM_CloseCaption\020f\022\031\n\025UM_CloseCaptionD" +
+      "irect\020g\022\027\n\023UM_CurrentTimescale\020h\022\027\n\023UM_D" +
+      "esiredTimescale\020i\022\013\n\007UM_Fade\020j\022\020\n\014UM_Gam" +
+      "eTitle\020k\022\r\n\tUM_HudMsg\020n\022\016\n\nUM_HudText\020o\022" +
+      "\022\n\016UM_ColoredText\020q\022\023\n\017UM_RequestState\020r" +
+      "\022\017\n\013UM_ResetHUD\020s\022\r\n\tUM_Rumble\020t\022\016\n\nUM_S" +
+      "ayText\020u\022\017\n\013UM_SayText2\020v\022\025\n\021UM_SayTextC" +
+      "hannel\020w\022\014\n\010UM_Shake\020x\022\017\n\013UM_ShakeDir\020y\022" +
+      "\021\n\rUM_WaterShake\020z\022\016\n\nUM_TextMsg\020|\022\021\n\rUM" +
+      "_ScreenTilt\020}\022\021\n\014UM_VoiceMask\020\200\001\022\021\n\014UM_S",
+      "endAudio\020\202\001\022\022\n\rUM_ItemPickup\020\203\001\022\022\n\rUM_Am" +
+      "moDenied\020\204\001\022\020\n\013UM_ShowMenu\020\206\001\022\022\n\rUM_Cred" +
+      "itsMsg\020\207\001\022\037\n\032UM_CloseCaptionPlaceholder\020" +
+      "\216\001\022\030\n\023UM_CameraTransition\020\217\001\022\026\n\021UM_Audio" +
+      "Parameter\020\220\001\022\027\n\022UM_ParticleManager\020\221\001\022\020\n" +
+      "\013UM_HudError\020\222\001\022\027\n\022UM_CustomGameEvent\020\224\001" +
+      "\022\027\n\022UM_AnimGraphUpdate\020\225\001\022\033\n\026UM_HapticsM" +
+      "anagerPulse\020\226\001\022\034\n\027UM_HapticsManagerEffec" +
+      "t\020\227\001\022\031\n\024UM_CommandQueueState\020\230\001\022\030\n\023UM_Up" +
+      "dateCssClasses\020\231\001\022\027\n\022UM_ServerFrameTime\020",
+      "\232\001\022\034\n\027UM_LagCompensationError\020\233\001\022\030\n\023UM_R" +
+      "equestDllStatus\020\234\001\022\031\n\024UM_RequestUtilActi" +
+      "on\020\235\001\022\032\n\025UM_UtilActionResponse\020\236\001\022\031\n\024UM_" +
+      "DllStatusResponse\020\237\001\022\030\n\023UM_RequestInvent" +
+      "ory\020\240\001\022\031\n\024UM_InventoryResponse\020\241\001\022\031\n\024UM_" +
+      "RequestDiagnostic\020\242\001\022\032\n\025UM_DiagnosticRes" +
+      "ponse\020\243\001\022\025\n\020UM_ExtraUserData\020\244\001\022\033\n\026UM_No" +
+      "tifyResponseFound\020\245\001\022\037\n\032UM_PlayResponseC" +
+      "onditional\020\246\001\022\020\n\013UM_MAX_BASE\020\310\001*\224\001\n\023EBas" +
+      "eEntityMessages\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020E",
+      "M_ScreenOverlay\020\211\001\022\027\n\022EM_RemoveAllDecals" +
+      "\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\nEM_DoSpar" +
+      "k\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\236\020\n\026ECstrike15Use" +
+      "rMessages\022\023\n\016CS_UM_VGUIMenu\020\255\002\022\021\n\014CS_UM_" +
+      "Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257\002\022\022\n\rCS_UM_Hud" +
+      "Text\020\260\002\022\022\n\rCS_UM_SayText\020\261\002\022\023\n\016CS_UM_Say" +
+      "Text2\020\262\002\022\022\n\rCS_UM_TextMsg\020\263\002\022\021\n\014CS_UM_Hu" +
+      "dMsg\020\264\002\022\023\n\016CS_UM_ResetHud\020\265\002\022\024\n\017CS_UM_Ga" +
+      "meTitle\020\266\002\022\020\n\013CS_UM_Shake\020\270\002\022\017\n\nCS_UM_Fa" +
+      "de\020\271\002\022\021\n\014CS_UM_Rumble\020\272\002\022\027\n\022CS_UM_CloseC",
+      "aption\020\273\002\022\035\n\030CS_UM_CloseCaptionDirect\020\274\002" +
+      "\022\024\n\017CS_UM_SendAudio\020\275\002\022\023\n\016CS_UM_RawAudio" +
+      "\020\276\002\022\024\n\017CS_UM_VoiceMask\020\277\002\022\027\n\022CS_UM_Reque" +
+      "stState\020\300\002\022\021\n\014CS_UM_Damage\020\301\002\022\024\n\017CS_UM_R" +
+      "adioText\020\302\002\022\023\n\016CS_UM_HintText\020\303\002\022\026\n\021CS_U" +
+      "M_KeyHintText\020\304\002\022%\n CS_UM_ProcessSpotted" +
+      "EntityUpdate\020\305\002\022\027\n\022CS_UM_ReloadEffect\020\306\002" +
+      "\022\026\n\021CS_UM_AdjustMoney\020\307\002\022\032\n\025CS_UM_Update" +
+      "TeamMoney\020\310\002\022\034\n\027CS_UM_StopSpectatorMode\020" +
+      "\311\002\022\022\n\rCS_UM_KillCam\020\312\002\022\033\n\026CS_UM_DesiredT",
+      "imescale\020\313\002\022\033\n\026CS_UM_CurrentTimescale\020\314\002" +
+      "\022\033\n\026CS_UM_AchievementEvent\020\315\002\022\035\n\030CS_UM_M" +
+      "atchEndConditions\020\316\002\022\034\n\027CS_UM_Disconnect" +
+      "ToLobby\020\317\002\022\034\n\027CS_UM_PlayerStatsUpdate\020\320\002" +
+      "\022\031\n\024CS_UM_WarmupHasEnded\020\322\002\022\025\n\020CS_UM_Cli" +
+      "entInfo\020\323\002\022\023\n\016CS_UM_XRankGet\020\324\002\022\023\n\016CS_UM" +
+      "_XRankUpd\020\325\002\022\031\n\024CS_UM_CallVoteFailed\020\331\002\022" +
+      "\024\n\017CS_UM_VoteStart\020\332\002\022\023\n\016CS_UM_VotePass\020" +
+      "\333\002\022\025\n\020CS_UM_VoteFailed\020\334\002\022\024\n\017CS_UM_VoteS" +
+      "etup\020\335\002\022\036\n\031CS_UM_ServerRankRevealAll\020\336\002\022",
+      "\'\n\"CS_UM_SendLastKillerDamageToClient\020\337\002" +
+      "\022\033\n\026CS_UM_ServerRankUpdate\020\340\002\022\025\n\020CS_UM_I" +
+      "temPickup\020\341\002\022\023\n\016CS_UM_ShowMenu\020\342\002\022\022\n\rCS_" +
+      "UM_BarTime\020\343\002\022\025\n\020CS_UM_AmmoDenied\020\344\002\022\032\n\025" +
+      "CS_UM_MarkAchievement\020\345\002\022\033\n\026CS_UM_MatchS" +
+      "tatsUpdate\020\346\002\022\023\n\016CS_UM_ItemDrop\020\347\002\022\032\n\025CS" +
+      "_UM_GlowPropTurnOff\020\350\002\022\036\n\031CS_UM_SendPlay" +
+      "erItemDrops\020\351\002\022\037\n\032CS_UM_RoundBackupFilen" +
+      "ames\020\352\002\022\036\n\031CS_UM_SendPlayerItemFound\020\353\002\022" +
+      "\024\n\017CS_UM_ReportHit\020\354\002\022\023\n\016CS_UM_XpUpdate\020",
+      "\355\002\022\030\n\023CS_UM_QuestProgress\020\356\002\022\037\n\032CS_UM_Sc" +
+      "oreLeaderboardData\020\357\002\022&\n!CS_UM_PlayerDec" +
+      "alDigitalSignature\020\360\002\022\026\n\021CS_UM_WeaponSou" +
+      "nd\020\361\002\022 \n\033CS_UM_UpdateScreenHealthBar\020\362\002\022" +
+      "!\n\034CS_UM_EntityOutlineHighlight\020\363\002\022\017\n\nCS" +
+      "_UM_SSUI\020\364\002\022\030\n\023CS_UM_SurvivalStats\020\365\002\022\035\n" +
+      "\030CS_UM_DisconnectToLobby2\020\366\002\022#\n\036CS_UM_En" +
+      "dOfMatchAllPlayersData\020\367\002\022 \n\033CS_UM_PostR" +
+      "oundDamageReport\020\370\002\022\035\n\030CS_UM_RoundEndRep" +
+      "ortData\020\373\002\022\033\n\026CS_UM_CurrentRoundOdds\020\374\002\022",
+      "\024\n\017CS_UM_DeepStats\020\375\002\022\022\n\rCS_UM_UtilMsg\020\376" +
+      "\002\022\024\n\017CS_UM_ShootInfo\020\377\002\022\030\n\023CS_UM_Counter" +
+      "Strafe\020\201\003\022\033\n\026CS_UM_DamagePrediction\020\202\003\022!" +
+      "\n\034CS_UM_RecurringMissionSchema\020\203\003\022\034\n\027CS_" +
+      "UM_SendPlayerLoadout\020\204\003B8\n%skadistats.cl" +
       "arity.wire.csgo.s2.protoB\017CSGOS2MessageI" +
       "d"
     };

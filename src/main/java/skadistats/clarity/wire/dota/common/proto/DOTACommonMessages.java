@@ -1237,6 +1237,10 @@ public final class DOTACommonMessages {
      * <code>DOTA_UNIT_ORDER_CONSUME_ITEM = 41;</code>
      */
     DOTA_UNIT_ORDER_CONSUME_ITEM(41, 41),
+    /**
+     * <code>DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL = 42;</code>
+     */
+    DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL(42, 42),
     ;
 
     /**
@@ -1407,6 +1411,10 @@ public final class DOTACommonMessages {
      * <code>DOTA_UNIT_ORDER_CONSUME_ITEM = 41;</code>
      */
     public static final int DOTA_UNIT_ORDER_CONSUME_ITEM_VALUE = 41;
+    /**
+     * <code>DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL = 42;</code>
+     */
+    public static final int DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL_VALUE = 42;
 
 
     public final int getNumber() { return value; }
@@ -1455,6 +1463,7 @@ public final class DOTACommonMessages {
         case 39: return DOTA_UNIT_ORDER_MOVE_RELATIVE;
         case 40: return DOTA_UNIT_ORDER_CAST_TOGGLE_ALT;
         case 41: return DOTA_UNIT_ORDER_CONSUME_ITEM;
+        case 42: return DOTA_UNIT_ORDER_SET_ITEM_MARK_FOR_SELL;
         default: return null;
       }
     }
@@ -1654,6 +1663,19 @@ public final class DOTACommonMessages {
      * <code>optional .EPingSource ping_source = 6 [default = k_ePingSource_Default];</code>
      */
     skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.EPingSource getPingSource();
+
+    /**
+     * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+     */
+    boolean hasWaypointPath();
+    /**
+     * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+     */
+    skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath getWaypointPath();
+    /**
+     * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+     */
+    skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder getWaypointPathOrBuilder();
   }
   /**
    * Protobuf type {@code CDOTAMsg_LocationPing}
@@ -1741,6 +1763,19 @@ public final class DOTACommonMessages {
                 bitField0_ |= 0x00000020;
                 pingSource_ = value;
               }
+              break;
+            }
+            case 58: {
+              skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000040) == 0x00000040)) {
+                subBuilder = waypointPath_.toBuilder();
+              }
+              waypointPath_ = input.readMessage(skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(waypointPath_);
+                waypointPath_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000040;
               break;
             }
           }
@@ -1873,6 +1908,27 @@ public final class DOTACommonMessages {
       return pingSource_;
     }
 
+    public static final int WAYPOINT_PATH_FIELD_NUMBER = 7;
+    private skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath waypointPath_;
+    /**
+     * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+     */
+    public boolean hasWaypointPath() {
+      return ((bitField0_ & 0x00000040) == 0x00000040);
+    }
+    /**
+     * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+     */
+    public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath getWaypointPath() {
+      return waypointPath_;
+    }
+    /**
+     * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+     */
+    public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder getWaypointPathOrBuilder() {
+      return waypointPath_;
+    }
+
     private void initFields() {
       x_ = 0;
       y_ = 0;
@@ -1880,6 +1936,7 @@ public final class DOTACommonMessages {
       directPing_ = false;
       type_ = -1;
       pingSource_ = skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.EPingSource.k_ePingSource_Default;
+      waypointPath_ = skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -1911,6 +1968,9 @@ public final class DOTACommonMessages {
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         output.writeEnum(6, pingSource_.getNumber());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        output.writeMessage(7, waypointPath_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1944,6 +2004,10 @@ public final class DOTACommonMessages {
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(6, pingSource_.getNumber());
+      }
+      if (((bitField0_ & 0x00000040) == 0x00000040)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(7, waypointPath_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2054,6 +2118,7 @@ public final class DOTACommonMessages {
       }
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getWaypointPathFieldBuilder();
         }
       }
       private static Builder create() {
@@ -2074,6 +2139,12 @@ public final class DOTACommonMessages {
         bitField0_ = (bitField0_ & ~0x00000010);
         pingSource_ = skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.EPingSource.k_ePingSource_Default;
         bitField0_ = (bitField0_ & ~0x00000020);
+        if (waypointPathBuilder_ == null) {
+          waypointPath_ = skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance();
+        } else {
+          waypointPathBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -2126,6 +2197,14 @@ public final class DOTACommonMessages {
           to_bitField0_ |= 0x00000020;
         }
         result.pingSource_ = pingSource_;
+        if (((from_bitField0_ & 0x00000040) == 0x00000040)) {
+          to_bitField0_ |= 0x00000040;
+        }
+        if (waypointPathBuilder_ == null) {
+          result.waypointPath_ = waypointPath_;
+        } else {
+          result.waypointPath_ = waypointPathBuilder_.build();
+        }
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -2159,6 +2238,9 @@ public final class DOTACommonMessages {
         }
         if (other.hasPingSource()) {
           setPingSource(other.getPingSource());
+        }
+        if (other.hasWaypointPath()) {
+          mergeWaypointPath(other.getWaypointPath());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -2382,6 +2464,122 @@ public final class DOTACommonMessages {
         return this;
       }
 
+      private skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath waypointPath_ = skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder> waypointPathBuilder_;
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public boolean hasWaypointPath() {
+        return ((bitField0_ & 0x00000040) == 0x00000040);
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath getWaypointPath() {
+        if (waypointPathBuilder_ == null) {
+          return waypointPath_;
+        } else {
+          return waypointPathBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public Builder setWaypointPath(skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath value) {
+        if (waypointPathBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          waypointPath_ = value;
+          onChanged();
+        } else {
+          waypointPathBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public Builder setWaypointPath(
+          skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder builderForValue) {
+        if (waypointPathBuilder_ == null) {
+          waypointPath_ = builderForValue.build();
+          onChanged();
+        } else {
+          waypointPathBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public Builder mergeWaypointPath(skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath value) {
+        if (waypointPathBuilder_ == null) {
+          if (((bitField0_ & 0x00000040) == 0x00000040) &&
+              waypointPath_ != skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance()) {
+            waypointPath_ =
+              skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.newBuilder(waypointPath_).mergeFrom(value).buildPartial();
+          } else {
+            waypointPath_ = value;
+          }
+          onChanged();
+        } else {
+          waypointPathBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000040;
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public Builder clearWaypointPath() {
+        if (waypointPathBuilder_ == null) {
+          waypointPath_ = skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance();
+          onChanged();
+        } else {
+          waypointPathBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000040);
+        return this;
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder getWaypointPathBuilder() {
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return getWaypointPathFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder getWaypointPathOrBuilder() {
+        if (waypointPathBuilder_ != null) {
+          return waypointPathBuilder_.getMessageOrBuilder();
+        } else {
+          return waypointPath_;
+        }
+      }
+      /**
+       * <code>optional .CDOTAMsg_PingWaypointPath waypoint_path = 7;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder> 
+          getWaypointPathFieldBuilder() {
+        if (waypointPathBuilder_ == null) {
+          waypointPathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder>(
+                  getWaypointPath(),
+                  getParentForChildren(),
+                  isClean());
+          waypointPath_ = null;
+        }
+        return waypointPathBuilder_;
+      }
+
       // @@protoc_insertion_point(builder_scope:CDOTAMsg_LocationPing)
     }
 
@@ -2391,6 +2589,562 @@ public final class DOTACommonMessages {
     }
 
     // @@protoc_insertion_point(class_scope:CDOTAMsg_LocationPing)
+  }
+
+  public interface CDOTAMsg_PingWaypointPathOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDOTAMsg_PingWaypointPath)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 x = 1;</code>
+     */
+    boolean hasX();
+    /**
+     * <code>optional int32 x = 1;</code>
+     */
+    int getX();
+
+    /**
+     * <code>optional int32 y = 2;</code>
+     */
+    boolean hasY();
+    /**
+     * <code>optional int32 y = 2;</code>
+     */
+    int getY();
+
+    /**
+     * <code>optional bytes grid_nav_directions = 3;</code>
+     */
+    boolean hasGridNavDirections();
+    /**
+     * <code>optional bytes grid_nav_directions = 3;</code>
+     */
+    com.google.protobuf.ByteString getGridNavDirections();
+  }
+  /**
+   * Protobuf type {@code CDOTAMsg_PingWaypointPath}
+   */
+  public static final class CDOTAMsg_PingWaypointPath extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDOTAMsg_PingWaypointPath)
+      CDOTAMsg_PingWaypointPathOrBuilder {
+    // Use CDOTAMsg_PingWaypointPath.newBuilder() to construct.
+    private CDOTAMsg_PingWaypointPath(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDOTAMsg_PingWaypointPath(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDOTAMsg_PingWaypointPath defaultInstance;
+    public static CDOTAMsg_PingWaypointPath getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDOTAMsg_PingWaypointPath getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDOTAMsg_PingWaypointPath(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              x_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              y_ = input.readInt32();
+              break;
+            }
+            case 26: {
+              bitField0_ |= 0x00000004;
+              gridNavDirections_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.internal_static_CDOTAMsg_PingWaypointPath_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.internal_static_CDOTAMsg_PingWaypointPath_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.class, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CDOTAMsg_PingWaypointPath> PARSER =
+        new com.google.protobuf.AbstractParser<CDOTAMsg_PingWaypointPath>() {
+      public CDOTAMsg_PingWaypointPath parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDOTAMsg_PingWaypointPath(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDOTAMsg_PingWaypointPath> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int X_FIELD_NUMBER = 1;
+    private int x_;
+    /**
+     * <code>optional int32 x = 1;</code>
+     */
+    public boolean hasX() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 x = 1;</code>
+     */
+    public int getX() {
+      return x_;
+    }
+
+    public static final int Y_FIELD_NUMBER = 2;
+    private int y_;
+    /**
+     * <code>optional int32 y = 2;</code>
+     */
+    public boolean hasY() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 y = 2;</code>
+     */
+    public int getY() {
+      return y_;
+    }
+
+    public static final int GRID_NAV_DIRECTIONS_FIELD_NUMBER = 3;
+    private com.google.protobuf.ByteString gridNavDirections_;
+    /**
+     * <code>optional bytes grid_nav_directions = 3;</code>
+     */
+    public boolean hasGridNavDirections() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bytes grid_nav_directions = 3;</code>
+     */
+    public com.google.protobuf.ByteString getGridNavDirections() {
+      return gridNavDirections_;
+    }
+
+    private void initFields() {
+      x_ = 0;
+      y_ = 0;
+      gridNavDirections_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, x_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, y_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBytes(3, gridNavDirections_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, x_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, y_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(3, gridNavDirections_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDOTAMsg_PingWaypointPath}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDOTAMsg_PingWaypointPath)
+        skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPathOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.internal_static_CDOTAMsg_PingWaypointPath_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.internal_static_CDOTAMsg_PingWaypointPath_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.class, skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        x_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        y_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        gridNavDirections_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.internal_static_CDOTAMsg_PingWaypointPath_descriptor;
+      }
+
+      public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath getDefaultInstanceForType() {
+        return skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath build() {
+        skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath buildPartial() {
+        skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath result = new skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.x_ = x_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.y_ = y_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.gridNavDirections_ = gridNavDirections_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath) {
+          return mergeFrom((skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath other) {
+        if (other == skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath.getDefaultInstance()) return this;
+        if (other.hasX()) {
+          setX(other.getX());
+        }
+        if (other.hasY()) {
+          setY(other.getY());
+        }
+        if (other.hasGridNavDirections()) {
+          setGridNavDirections(other.getGridNavDirections());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.dota.common.proto.DOTACommonMessages.CDOTAMsg_PingWaypointPath) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int x_ ;
+      /**
+       * <code>optional int32 x = 1;</code>
+       */
+      public boolean hasX() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 x = 1;</code>
+       */
+      public int getX() {
+        return x_;
+      }
+      /**
+       * <code>optional int32 x = 1;</code>
+       */
+      public Builder setX(int value) {
+        bitField0_ |= 0x00000001;
+        x_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 x = 1;</code>
+       */
+      public Builder clearX() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        x_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int y_ ;
+      /**
+       * <code>optional int32 y = 2;</code>
+       */
+      public boolean hasY() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 y = 2;</code>
+       */
+      public int getY() {
+        return y_;
+      }
+      /**
+       * <code>optional int32 y = 2;</code>
+       */
+      public Builder setY(int value) {
+        bitField0_ |= 0x00000002;
+        y_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 y = 2;</code>
+       */
+      public Builder clearY() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        y_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.ByteString gridNavDirections_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes grid_nav_directions = 3;</code>
+       */
+      public boolean hasGridNavDirections() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bytes grid_nav_directions = 3;</code>
+       */
+      public com.google.protobuf.ByteString getGridNavDirections() {
+        return gridNavDirections_;
+      }
+      /**
+       * <code>optional bytes grid_nav_directions = 3;</code>
+       */
+      public Builder setGridNavDirections(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000004;
+        gridNavDirections_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes grid_nav_directions = 3;</code>
+       */
+      public Builder clearGridNavDirections() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        gridNavDirections_ = getDefaultInstance().getGridNavDirections();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDOTAMsg_PingWaypointPath)
+    }
+
+    static {
+      defaultInstance = new CDOTAMsg_PingWaypointPath(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDOTAMsg_PingWaypointPath)
   }
 
   public interface CDOTAMsg_ItemAlertOrBuilder extends
@@ -10253,6 +11007,11 @@ public final class DOTACommonMessages {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDOTAMsg_LocationPing_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDOTAMsg_PingWaypointPath_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDOTAMsg_PingWaypointPath_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDOTAMsg_ItemAlert_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -10322,146 +11081,151 @@ public final class DOTACommonMessages {
   static {
     java.lang.String[] descriptorData = {
       "\n\031dota_commonmessages.proto\032\035networkbase" +
-      "types-common.proto\"\252\001\n\025CDOTAMsg_Location" +
+      "types-common.proto\"\335\001\n\025CDOTAMsg_Location" +
       "Ping\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\022\n\006target\030\003 \001" +
       "(\005:\002-1\022\023\n\013direct_ping\030\004 \001(\010\022\030\n\004type\030\005 \001(" +
       "\r:\n4294967295\0228\n\013ping_source\030\006 \001(\0162\014.EPi" +
-      "ngSource:\025k_ePingSource_Default\"G\n\022CDOTA" +
-      "Msg_ItemAlert\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\033\n\017i" +
-      "tem_ability_id\030\003 \001(\005:\002-1\"<\n\027CDOTAMsg_Ene" +
-      "myItemAlert\022\021\n\tplayer_id\030\001 \001(\r\022\016\n\006itemid" +
-      "\030\002 \001(\005\"9\n\020CDOTAMsg_MapLine\022\t\n\001x\030\001 \001(\005\022\t\n",
-      "\001y\030\002 \001(\005\022\017\n\007initial\030\003 \001(\010\"S\n\022CDOTAMsg_Wo" +
-      "rldLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\t\n\001z\030\003 \001(\005" +
-      "\022\017\n\007initial\030\004 \001(\010\022\013\n\003end\030\005 \001(\010\"\320\001\n\026CDOTA" +
-      "Msg_SendStatPopup\0229\n\005style\030\001 \001(\0162\024.EDOTA" +
-      "StatPopupTypes:\024k_EDOTA_SPT_Textline\022\024\n\014" +
-      "stat_strings\030\002 \003(\t\022\023\n\013stat_images\030\003 \003(\005\022" +
-      "\030\n\020stat_image_types\030\004 \003(\005\022\020\n\010duration\030\005 " +
-      "\001(\002\022\020\n\010use_html\030\006 \001(\010\022\022\n\nmovie_name\030\007 \001(" +
-      "\t\"3\n\035CDOTAMsg_DismissAllStatPopups\022\022\n\nti" +
-      "me_delay\030\001 \001(\002\">\n\025CDOTAMsg_CoachHUDPing\022",
-      "\t\n\001x\030\001 \001(\r\022\t\n\001y\030\002 \001(\r\022\017\n\007tgtpath\030\003 \001(\t\"\332" +
-      "\001\n\022CDOTAMsg_UnitOrder\022:\n\norder_type\030\002 \001(" +
-      "\0162\020.dotaunitorder_t:\024DOTA_UNIT_ORDER_NON" +
-      "E\022\r\n\005units\030\003 \003(\005\022\027\n\014target_index\030\004 \001(\005:\001" +
-      "0\022\031\n\rability_index\030\005 \001(\005:\002-1\022\035\n\010position" +
-      "\030\006 \001(\0132\013.CMsgVector\022\027\n\017sequence_number\030\010" +
-      " \001(\005\022\r\n\005flags\030\t \001(\r\"\301\001\n\030VersusScene_Play" +
-      "Activity\022:\n\nactivities\030\001 \003(\0132&.VersusSce" +
-      "ne_PlayActivity.ActivityInfo\022\025\n\rplayback" +
-      "_rate\030\002 \001(\002\032R\n\014ActivityInfo\022\020\n\010activity\030",
-      "\001 \001(\t\022\031\n\021disable_auto_kill\030\002 \001(\010\022\025\n\rforc" +
-      "e_looping\030\003 \001(\010\"Q\n\025VersusScene_ChatWheel" +
-      "\022#\n\017chat_message_id\030\001 \001(\r:\n4294967295\022\023\n" +
-      "\013emoticon_id\030\002 \001(\r\"(\n\030VersusScene_Playba" +
-      "ckRate\022\014\n\004rate\030\001 \001(\002*\305\021\n\025EDOTAChatWheelM" +
-      "essage\022\021\n\rk_EDOTA_CW_Ok\020\000\022\023\n\017k_EDOTA_CW_" +
-      "Care\020\001\022\026\n\022k_EDOTA_CW_GetBack\020\002\022\030\n\024k_EDOT" +
-      "A_CW_NeedWards\020\003\022\023\n\017k_EDOTA_CW_Stun\020\004\022\023\n" +
-      "\017k_EDOTA_CW_Help\020\005\022\023\n\017k_EDOTA_CW_Push\020\006\022" +
-      "\026\n\022k_EDOTA_CW_GoodJob\020\007\022\026\n\022k_EDOTA_CW_Mi",
-      "ssing\020\010\022\032\n\026k_EDOTA_CW_Missing_Top\020\t\022\032\n\026k" +
-      "_EDOTA_CW_Missing_Mid\020\n\022\035\n\031k_EDOTA_CW_Mi" +
-      "ssing_Bottom\020\013\022\021\n\rk_EDOTA_CW_Go\020\014\022\027\n\023k_E" +
-      "DOTA_CW_Initiate\020\r\022\025\n\021k_EDOTA_CW_Follow\020" +
-      "\016\022\027\n\023k_EDOTA_CW_Group_Up\020\017\022\031\n\025k_EDOTA_CW" +
-      "_Spread_Out\020\020\022\031\n\025k_EDOTA_CW_Split_Farm\020\021" +
-      "\022\025\n\021k_EDOTA_CW_Attack\020\022\022\022\n\016k_EDOTA_CW_BR" +
-      "B\020\023\022\023\n\017k_EDOTA_CW_Dive\020\024\022\022\n\016k_EDOTA_CW_O" +
-      "MW\020\025\022\030\n\024k_EDOTA_CW_Get_Ready\020\026\022\023\n\017k_EDOT" +
-      "A_CW_Bait\020\027\022\023\n\017k_EDOTA_CW_Heal\020\030\022\023\n\017k_ED",
-      "OTA_CW_Mana\020\031\022\022\n\016k_EDOTA_CW_OOM\020\032\022\035\n\031k_E" +
-      "DOTA_CW_Skill_Cooldown\020\033\022\031\n\025k_EDOTA_CW_U" +
-      "lti_Ready\020\034\022\035\n\031k_EDOTA_CW_Enemy_Returned" +
-      "\020\035\022\032\n\026k_EDOTA_CW_All_Missing\020\036\022\035\n\031k_EDOT" +
-      "A_CW_Enemy_Incoming\020\037\022\032\n\026k_EDOTA_CW_Invi" +
-      "s_Enemy\020 \022\035\n\031k_EDOTA_CW_Enemy_Had_Rune\020!" +
-      "\022\031\n\025k_EDOTA_CW_Split_Push\020\"\022\035\n\031k_EDOTA_C" +
-      "W_Coming_To_Gank\020#\022\033\n\027k_EDOTA_CW_Request" +
-      "_Gank\020$\022 \n\034k_EDOTA_CW_Fight_Under_Tower\020" +
-      "%\022\031\n\025k_EDOTA_CW_Deny_Tower\020&\022\032\n\026k_EDOTA_",
-      "CW_Buy_Courier\020\'\022\036\n\032k_EDOTA_CW_Upgrade_C" +
-      "ourier\020(\022\035\n\031k_EDOTA_CW_Need_Detection\020)\022" +
-      "\"\n\036k_EDOTA_CW_They_Have_Detection\020*\022\025\n\021k" +
-      "_EDOTA_CW_Buy_TP\020+\022\034\n\030k_EDOTA_CW_Reuse_C" +
-      "ourier\020,\022\025\n\021k_EDOTA_CW_Deward\020-\022\033\n\027k_EDO" +
-      "TA_CW_Building_Mek\020.\022\034\n\030k_EDOTA_CW_Build" +
-      "ing_Pipe\020/\022\035\n\031k_EDOTA_CW_Stack_And_Pull\020" +
-      "0\022\023\n\017k_EDOTA_CW_Pull\0201\022\026\n\022k_EDOTA_CW_Pul" +
-      "ling\0202\022\024\n\020k_EDOTA_CW_Stack\0203\022\027\n\023k_EDOTA_" +
-      "CW_Jungling\0204\022\025\n\021k_EDOTA_CW_Roshan\0205\022\032\n\026",
-      "k_EDOTA_CW_Affirmative\0206\022\023\n\017k_EDOTA_CW_W" +
-      "ait\0207\022\024\n\020k_EDOTA_CW_Pause\0208\022\033\n\027k_EDOTA_C" +
-      "W_Current_Time\0209\022\032\n\026k_EDOTA_CW_Check_Run" +
-      "es\020:\022\031\n\025k_EDOTA_CW_Smoke_Gank\020;\022\023\n\017k_EDO" +
-      "TA_CW_GLHF\020<\022\023\n\017k_EDOTA_CW_Nice\020=\022\025\n\021k_E" +
-      "DOTA_CW_Thanks\020>\022\024\n\020k_EDOTA_CW_Sorry\020?\022\031" +
-      "\n\025k_EDOTA_CW_No_Give_Up\020@\022\034\n\030k_EDOTA_CW_" +
-      "Just_Happened\020A\022\033\n\027k_EDOTA_CW_Game_Is_Ha" +
-      "rd\020B\022\027\n\023k_EDOTA_CW_New_Meta\020C\022\025\n\021k_EDOTA" +
-      "_CW_My_Bad\020D\022\025\n\021k_EDOTA_CW_Regret\020E\022\024\n\020k",
-      "_EDOTA_CW_Relax\020F\022\032\n\026k_EDOTA_CW_MissingH" +
-      "ero\020G\022\033\n\027k_EDOTA_CW_ReturnedHero\020H\022\021\n\rk_" +
-      "EDOTA_CW_GG\020I\022\023\n\017k_EDOTA_CW_GGWP\020J\022\025\n\021k_" +
-      "EDOTA_CW_All_GG\020K\022\027\n\023k_EDOTA_CW_All_GGWP" +
-      "\020L\022\032\n\026k_EDOTA_CW_What_To_Buy\020M\022\034\n\030k_EDOT" +
-      "A_CW_Im_Retreating\020N\022\034\n\030k_EDOTA_CW_Space" +
-      "_Created\020O\022\025\n\021k_EDOTA_CW_Whoops\020P\022\036\n\032k_E" +
-      "DOTA_CW_Tower_then_Back\020Q\022!\n\035k_EDOTA_CW_" +
-      "Barracks_then_Back\020R\022\037\n\033k_EDOTA_CW_Ward_" +
-      "Bottom_Rune\020S\022\034\n\030k_EDOTA_CW_Ward_Top_Run",
-      "e\020T\022\027\n\023k_EDOTA_CW_Zeus_Ult\020U*v\n\013EPingSou" +
-      "rce\022\031\n\025k_ePingSource_Default\020\000\022\031\n\025k_ePin" +
-      "gSource_Warning\020\001\022\027\n\023k_ePingSource_Wheel" +
-      "\020\002\022\030\n\024k_ePingSource_System\020\003*\244\001\n\023EDOTASt" +
-      "atPopupTypes\022\030\n\024k_EDOTA_SPT_Textline\020\000\022\025" +
-      "\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k_EDOTA_SPT_Pol" +
-      "l\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n\025k_EDOTA_SPT" +
-      "_DualImage\020\004\022\025\n\021k_EDOTA_SPT_Movie\020\005*\331\013\n\017" +
-      "dotaunitorder_t\022\030\n\024DOTA_UNIT_ORDER_NONE\020" +
-      "\000\022$\n DOTA_UNIT_ORDER_MOVE_TO_POSITION\020\001\022",
-      "\"\n\036DOTA_UNIT_ORDER_MOVE_TO_TARGET\020\002\022\037\n\033D" +
-      "OTA_UNIT_ORDER_ATTACK_MOVE\020\003\022!\n\035DOTA_UNI" +
-      "T_ORDER_ATTACK_TARGET\020\004\022!\n\035DOTA_UNIT_ORD" +
-      "ER_CAST_POSITION\020\005\022\037\n\033DOTA_UNIT_ORDER_CA" +
-      "ST_TARGET\020\006\022$\n DOTA_UNIT_ORDER_CAST_TARG" +
-      "ET_TREE\020\007\022\"\n\036DOTA_UNIT_ORDER_CAST_NO_TAR" +
-      "GET\020\010\022\037\n\033DOTA_UNIT_ORDER_CAST_TOGGLE\020\t\022!" +
-      "\n\035DOTA_UNIT_ORDER_HOLD_POSITION\020\n\022!\n\035DOT" +
-      "A_UNIT_ORDER_TRAIN_ABILITY\020\013\022\035\n\031DOTA_UNI" +
-      "T_ORDER_DROP_ITEM\020\014\022\035\n\031DOTA_UNIT_ORDER_G",
-      "IVE_ITEM\020\r\022\037\n\033DOTA_UNIT_ORDER_PICKUP_ITE" +
-      "M\020\016\022\037\n\033DOTA_UNIT_ORDER_PICKUP_RUNE\020\017\022!\n\035" +
-      "DOTA_UNIT_ORDER_PURCHASE_ITEM\020\020\022\035\n\031DOTA_" +
-      "UNIT_ORDER_SELL_ITEM\020\021\022$\n DOTA_UNIT_ORDE" +
-      "R_DISASSEMBLE_ITEM\020\022\022\035\n\031DOTA_UNIT_ORDER_" +
-      "MOVE_ITEM\020\023\022$\n DOTA_UNIT_ORDER_CAST_TOGG" +
-      "LE_AUTO\020\024\022\030\n\024DOTA_UNIT_ORDER_STOP\020\025\022\031\n\025D" +
-      "OTA_UNIT_ORDER_TAUNT\020\026\022\033\n\027DOTA_UNIT_ORDE" +
-      "R_BUYBACK\020\027\022\031\n\025DOTA_UNIT_ORDER_GLYPH\020\030\022)" +
-      "\n%DOTA_UNIT_ORDER_EJECT_ITEM_FROM_STASH\020",
-      "\031\022\035\n\031DOTA_UNIT_ORDER_CAST_RUNE\020\032\022 \n\034DOTA" +
-      "_UNIT_ORDER_PING_ABILITY\020\033\022%\n!DOTA_UNIT_" +
-      "ORDER_MOVE_TO_DIRECTION\020\034\022\032\n\026DOTA_UNIT_O" +
-      "RDER_PATROL\020\035\022*\n&DOTA_UNIT_ORDER_VECTOR_" +
-      "TARGET_POSITION\020\036\022\031\n\025DOTA_UNIT_ORDER_RAD" +
-      "AR\020\037\022)\n%DOTA_UNIT_ORDER_SET_ITEM_COMBINE" +
-      "_LOCK\020 \022\034\n\030DOTA_UNIT_ORDER_CONTINUE\020!\022*\n" +
-      "&DOTA_UNIT_ORDER_VECTOR_TARGET_CANCELED\020" +
-      "\"\022$\n DOTA_UNIT_ORDER_CAST_RIVER_PAINT\020#\022" +
-      "2\n.DOTA_UNIT_ORDER_PREGAME_ADJUST_ITEM_A",
-      "SSIGNMENT\020$\022)\n%DOTA_UNIT_ORDER_DROP_ITEM" +
-      "_AT_FOUNTAIN\020%\0225\n1DOTA_UNIT_ORDER_TAKE_I" +
-      "TEM_FROM_NEUTRAL_ITEM_STASH\020&\022!\n\035DOTA_UN" +
-      "IT_ORDER_MOVE_RELATIVE\020\'\022#\n\037DOTA_UNIT_OR" +
-      "DER_CAST_TOGGLE_ALT\020(\022 \n\034DOTA_UNIT_ORDER" +
-      "_CONSUME_ITEM\020)*\217\001\n\036EDOTAVersusScenePlay" +
-      "erBehavior\022$\n VS_PLAYER_BEHAVIOR_PLAY_AC" +
-      "TIVITY\020\001\022!\n\035VS_PLAYER_BEHAVIOR_CHAT_WHEE" +
-      "L\020\002\022$\n VS_PLAYER_BEHAVIOR_PLAYBACK_RATE\020" +
-      "\003B?\n)skadistats.clarity.wire.dota.common",
-      ".protoB\022DOTACommonMessages"
+      "ngSource:\025k_ePingSource_Default\0221\n\rwaypo" +
+      "int_path\030\007 \001(\0132\032.CDOTAMsg_PingWaypointPa" +
+      "th\"N\n\031CDOTAMsg_PingWaypointPath\022\t\n\001x\030\001 \001" +
+      "(\005\022\t\n\001y\030\002 \001(\005\022\033\n\023grid_nav_directions\030\003 \001" +
+      "(\014\"G\n\022CDOTAMsg_ItemAlert\022\t\n\001x\030\001 \001(\005\022\t\n\001y",
+      "\030\002 \001(\005\022\033\n\017item_ability_id\030\003 \001(\005:\002-1\"<\n\027C" +
+      "DOTAMsg_EnemyItemAlert\022\021\n\tplayer_id\030\001 \001(" +
+      "\r\022\016\n\006itemid\030\002 \001(\005\"9\n\020CDOTAMsg_MapLine\022\t\n" +
+      "\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005\022\017\n\007initial\030\003 \001(\010\"S\n\022" +
+      "CDOTAMsg_WorldLine\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002 \001(\005" +
+      "\022\t\n\001z\030\003 \001(\005\022\017\n\007initial\030\004 \001(\010\022\013\n\003end\030\005 \001(" +
+      "\010\"\320\001\n\026CDOTAMsg_SendStatPopup\0229\n\005style\030\001 " +
+      "\001(\0162\024.EDOTAStatPopupTypes:\024k_EDOTA_SPT_T" +
+      "extline\022\024\n\014stat_strings\030\002 \003(\t\022\023\n\013stat_im" +
+      "ages\030\003 \003(\005\022\030\n\020stat_image_types\030\004 \003(\005\022\020\n\010",
+      "duration\030\005 \001(\002\022\020\n\010use_html\030\006 \001(\010\022\022\n\nmovi" +
+      "e_name\030\007 \001(\t\"3\n\035CDOTAMsg_DismissAllStatP" +
+      "opups\022\022\n\ntime_delay\030\001 \001(\002\">\n\025CDOTAMsg_Co" +
+      "achHUDPing\022\t\n\001x\030\001 \001(\r\022\t\n\001y\030\002 \001(\r\022\017\n\007tgtp" +
+      "ath\030\003 \001(\t\"\332\001\n\022CDOTAMsg_UnitOrder\022:\n\norde" +
+      "r_type\030\002 \001(\0162\020.dotaunitorder_t:\024DOTA_UNI" +
+      "T_ORDER_NONE\022\r\n\005units\030\003 \003(\005\022\027\n\014target_in" +
+      "dex\030\004 \001(\005:\0010\022\031\n\rability_index\030\005 \001(\005:\002-1\022" +
+      "\035\n\010position\030\006 \001(\0132\013.CMsgVector\022\027\n\017sequen" +
+      "ce_number\030\010 \001(\005\022\r\n\005flags\030\t \001(\r\"\301\001\n\030Versu",
+      "sScene_PlayActivity\022:\n\nactivities\030\001 \003(\0132" +
+      "&.VersusScene_PlayActivity.ActivityInfo\022" +
+      "\025\n\rplayback_rate\030\002 \001(\002\032R\n\014ActivityInfo\022\020" +
+      "\n\010activity\030\001 \001(\t\022\031\n\021disable_auto_kill\030\002 " +
+      "\001(\010\022\025\n\rforce_looping\030\003 \001(\010\"Q\n\025VersusScen" +
+      "e_ChatWheel\022#\n\017chat_message_id\030\001 \001(\r:\n42" +
+      "94967295\022\023\n\013emoticon_id\030\002 \001(\r\"(\n\030VersusS" +
+      "cene_PlaybackRate\022\014\n\004rate\030\001 \001(\002*\305\021\n\025EDOT" +
+      "AChatWheelMessage\022\021\n\rk_EDOTA_CW_Ok\020\000\022\023\n\017" +
+      "k_EDOTA_CW_Care\020\001\022\026\n\022k_EDOTA_CW_GetBack\020",
+      "\002\022\030\n\024k_EDOTA_CW_NeedWards\020\003\022\023\n\017k_EDOTA_C" +
+      "W_Stun\020\004\022\023\n\017k_EDOTA_CW_Help\020\005\022\023\n\017k_EDOTA" +
+      "_CW_Push\020\006\022\026\n\022k_EDOTA_CW_GoodJob\020\007\022\026\n\022k_" +
+      "EDOTA_CW_Missing\020\010\022\032\n\026k_EDOTA_CW_Missing" +
+      "_Top\020\t\022\032\n\026k_EDOTA_CW_Missing_Mid\020\n\022\035\n\031k_" +
+      "EDOTA_CW_Missing_Bottom\020\013\022\021\n\rk_EDOTA_CW_" +
+      "Go\020\014\022\027\n\023k_EDOTA_CW_Initiate\020\r\022\025\n\021k_EDOTA" +
+      "_CW_Follow\020\016\022\027\n\023k_EDOTA_CW_Group_Up\020\017\022\031\n" +
+      "\025k_EDOTA_CW_Spread_Out\020\020\022\031\n\025k_EDOTA_CW_S" +
+      "plit_Farm\020\021\022\025\n\021k_EDOTA_CW_Attack\020\022\022\022\n\016k_",
+      "EDOTA_CW_BRB\020\023\022\023\n\017k_EDOTA_CW_Dive\020\024\022\022\n\016k" +
+      "_EDOTA_CW_OMW\020\025\022\030\n\024k_EDOTA_CW_Get_Ready\020" +
+      "\026\022\023\n\017k_EDOTA_CW_Bait\020\027\022\023\n\017k_EDOTA_CW_Hea" +
+      "l\020\030\022\023\n\017k_EDOTA_CW_Mana\020\031\022\022\n\016k_EDOTA_CW_O" +
+      "OM\020\032\022\035\n\031k_EDOTA_CW_Skill_Cooldown\020\033\022\031\n\025k" +
+      "_EDOTA_CW_Ulti_Ready\020\034\022\035\n\031k_EDOTA_CW_Ene" +
+      "my_Returned\020\035\022\032\n\026k_EDOTA_CW_All_Missing\020" +
+      "\036\022\035\n\031k_EDOTA_CW_Enemy_Incoming\020\037\022\032\n\026k_ED" +
+      "OTA_CW_Invis_Enemy\020 \022\035\n\031k_EDOTA_CW_Enemy" +
+      "_Had_Rune\020!\022\031\n\025k_EDOTA_CW_Split_Push\020\"\022\035",
+      "\n\031k_EDOTA_CW_Coming_To_Gank\020#\022\033\n\027k_EDOTA" +
+      "_CW_Request_Gank\020$\022 \n\034k_EDOTA_CW_Fight_U" +
+      "nder_Tower\020%\022\031\n\025k_EDOTA_CW_Deny_Tower\020&\022" +
+      "\032\n\026k_EDOTA_CW_Buy_Courier\020\'\022\036\n\032k_EDOTA_C" +
+      "W_Upgrade_Courier\020(\022\035\n\031k_EDOTA_CW_Need_D" +
+      "etection\020)\022\"\n\036k_EDOTA_CW_They_Have_Detec" +
+      "tion\020*\022\025\n\021k_EDOTA_CW_Buy_TP\020+\022\034\n\030k_EDOTA" +
+      "_CW_Reuse_Courier\020,\022\025\n\021k_EDOTA_CW_Deward" +
+      "\020-\022\033\n\027k_EDOTA_CW_Building_Mek\020.\022\034\n\030k_EDO" +
+      "TA_CW_Building_Pipe\020/\022\035\n\031k_EDOTA_CW_Stac",
+      "k_And_Pull\0200\022\023\n\017k_EDOTA_CW_Pull\0201\022\026\n\022k_E" +
+      "DOTA_CW_Pulling\0202\022\024\n\020k_EDOTA_CW_Stack\0203\022" +
+      "\027\n\023k_EDOTA_CW_Jungling\0204\022\025\n\021k_EDOTA_CW_R" +
+      "oshan\0205\022\032\n\026k_EDOTA_CW_Affirmative\0206\022\023\n\017k" +
+      "_EDOTA_CW_Wait\0207\022\024\n\020k_EDOTA_CW_Pause\0208\022\033" +
+      "\n\027k_EDOTA_CW_Current_Time\0209\022\032\n\026k_EDOTA_C" +
+      "W_Check_Runes\020:\022\031\n\025k_EDOTA_CW_Smoke_Gank" +
+      "\020;\022\023\n\017k_EDOTA_CW_GLHF\020<\022\023\n\017k_EDOTA_CW_Ni" +
+      "ce\020=\022\025\n\021k_EDOTA_CW_Thanks\020>\022\024\n\020k_EDOTA_C" +
+      "W_Sorry\020?\022\031\n\025k_EDOTA_CW_No_Give_Up\020@\022\034\n\030",
+      "k_EDOTA_CW_Just_Happened\020A\022\033\n\027k_EDOTA_CW" +
+      "_Game_Is_Hard\020B\022\027\n\023k_EDOTA_CW_New_Meta\020C" +
+      "\022\025\n\021k_EDOTA_CW_My_Bad\020D\022\025\n\021k_EDOTA_CW_Re" +
+      "gret\020E\022\024\n\020k_EDOTA_CW_Relax\020F\022\032\n\026k_EDOTA_" +
+      "CW_MissingHero\020G\022\033\n\027k_EDOTA_CW_ReturnedH" +
+      "ero\020H\022\021\n\rk_EDOTA_CW_GG\020I\022\023\n\017k_EDOTA_CW_G" +
+      "GWP\020J\022\025\n\021k_EDOTA_CW_All_GG\020K\022\027\n\023k_EDOTA_" +
+      "CW_All_GGWP\020L\022\032\n\026k_EDOTA_CW_What_To_Buy\020" +
+      "M\022\034\n\030k_EDOTA_CW_Im_Retreating\020N\022\034\n\030k_EDO" +
+      "TA_CW_Space_Created\020O\022\025\n\021k_EDOTA_CW_Whoo",
+      "ps\020P\022\036\n\032k_EDOTA_CW_Tower_then_Back\020Q\022!\n\035" +
+      "k_EDOTA_CW_Barracks_then_Back\020R\022\037\n\033k_EDO" +
+      "TA_CW_Ward_Bottom_Rune\020S\022\034\n\030k_EDOTA_CW_W" +
+      "ard_Top_Rune\020T\022\027\n\023k_EDOTA_CW_Zeus_Ult\020U*" +
+      "v\n\013EPingSource\022\031\n\025k_ePingSource_Default\020" +
+      "\000\022\031\n\025k_ePingSource_Warning\020\001\022\027\n\023k_ePingS" +
+      "ource_Wheel\020\002\022\030\n\024k_ePingSource_System\020\003*" +
+      "\244\001\n\023EDOTAStatPopupTypes\022\030\n\024k_EDOTA_SPT_T" +
+      "extline\020\000\022\025\n\021k_EDOTA_SPT_Basic\020\001\022\024\n\020k_ED" +
+      "OTA_SPT_Poll\020\002\022\024\n\020k_EDOTA_SPT_Grid\020\003\022\031\n\025",
+      "k_EDOTA_SPT_DualImage\020\004\022\025\n\021k_EDOTA_SPT_M" +
+      "ovie\020\005*\205\014\n\017dotaunitorder_t\022\030\n\024DOTA_UNIT_" +
+      "ORDER_NONE\020\000\022$\n DOTA_UNIT_ORDER_MOVE_TO_" +
+      "POSITION\020\001\022\"\n\036DOTA_UNIT_ORDER_MOVE_TO_TA" +
+      "RGET\020\002\022\037\n\033DOTA_UNIT_ORDER_ATTACK_MOVE\020\003\022" +
+      "!\n\035DOTA_UNIT_ORDER_ATTACK_TARGET\020\004\022!\n\035DO" +
+      "TA_UNIT_ORDER_CAST_POSITION\020\005\022\037\n\033DOTA_UN" +
+      "IT_ORDER_CAST_TARGET\020\006\022$\n DOTA_UNIT_ORDE" +
+      "R_CAST_TARGET_TREE\020\007\022\"\n\036DOTA_UNIT_ORDER_" +
+      "CAST_NO_TARGET\020\010\022\037\n\033DOTA_UNIT_ORDER_CAST",
+      "_TOGGLE\020\t\022!\n\035DOTA_UNIT_ORDER_HOLD_POSITI" +
+      "ON\020\n\022!\n\035DOTA_UNIT_ORDER_TRAIN_ABILITY\020\013\022" +
+      "\035\n\031DOTA_UNIT_ORDER_DROP_ITEM\020\014\022\035\n\031DOTA_U" +
+      "NIT_ORDER_GIVE_ITEM\020\r\022\037\n\033DOTA_UNIT_ORDER" +
+      "_PICKUP_ITEM\020\016\022\037\n\033DOTA_UNIT_ORDER_PICKUP" +
+      "_RUNE\020\017\022!\n\035DOTA_UNIT_ORDER_PURCHASE_ITEM" +
+      "\020\020\022\035\n\031DOTA_UNIT_ORDER_SELL_ITEM\020\021\022$\n DOT" +
+      "A_UNIT_ORDER_DISASSEMBLE_ITEM\020\022\022\035\n\031DOTA_" +
+      "UNIT_ORDER_MOVE_ITEM\020\023\022$\n DOTA_UNIT_ORDE" +
+      "R_CAST_TOGGLE_AUTO\020\024\022\030\n\024DOTA_UNIT_ORDER_",
+      "STOP\020\025\022\031\n\025DOTA_UNIT_ORDER_TAUNT\020\026\022\033\n\027DOT" +
+      "A_UNIT_ORDER_BUYBACK\020\027\022\031\n\025DOTA_UNIT_ORDE" +
+      "R_GLYPH\020\030\022)\n%DOTA_UNIT_ORDER_EJECT_ITEM_" +
+      "FROM_STASH\020\031\022\035\n\031DOTA_UNIT_ORDER_CAST_RUN" +
+      "E\020\032\022 \n\034DOTA_UNIT_ORDER_PING_ABILITY\020\033\022%\n" +
+      "!DOTA_UNIT_ORDER_MOVE_TO_DIRECTION\020\034\022\032\n\026" +
+      "DOTA_UNIT_ORDER_PATROL\020\035\022*\n&DOTA_UNIT_OR" +
+      "DER_VECTOR_TARGET_POSITION\020\036\022\031\n\025DOTA_UNI" +
+      "T_ORDER_RADAR\020\037\022)\n%DOTA_UNIT_ORDER_SET_I" +
+      "TEM_COMBINE_LOCK\020 \022\034\n\030DOTA_UNIT_ORDER_CO",
+      "NTINUE\020!\022*\n&DOTA_UNIT_ORDER_VECTOR_TARGE" +
+      "T_CANCELED\020\"\022$\n DOTA_UNIT_ORDER_CAST_RIV" +
+      "ER_PAINT\020#\0222\n.DOTA_UNIT_ORDER_PREGAME_AD" +
+      "JUST_ITEM_ASSIGNMENT\020$\022)\n%DOTA_UNIT_ORDE" +
+      "R_DROP_ITEM_AT_FOUNTAIN\020%\0225\n1DOTA_UNIT_O" +
+      "RDER_TAKE_ITEM_FROM_NEUTRAL_ITEM_STASH\020&" +
+      "\022!\n\035DOTA_UNIT_ORDER_MOVE_RELATIVE\020\'\022#\n\037D" +
+      "OTA_UNIT_ORDER_CAST_TOGGLE_ALT\020(\022 \n\034DOTA" +
+      "_UNIT_ORDER_CONSUME_ITEM\020)\022*\n&DOTA_UNIT_" +
+      "ORDER_SET_ITEM_MARK_FOR_SELL\020**\217\001\n\036EDOTA",
+      "VersusScenePlayerBehavior\022$\n VS_PLAYER_B" +
+      "EHAVIOR_PLAY_ACTIVITY\020\001\022!\n\035VS_PLAYER_BEH" +
+      "AVIOR_CHAT_WHEEL\020\002\022$\n VS_PLAYER_BEHAVIOR" +
+      "_PLAYBACK_RATE\020\003B?\n)skadistats.clarity.w" +
+      "ire.dota.common.protoB\022DOTACommonMessage" +
+      "s"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -10481,57 +11245,63 @@ public final class DOTACommonMessages {
     internal_static_CDOTAMsg_LocationPing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_LocationPing_descriptor,
-        new java.lang.String[] { "X", "Y", "Target", "DirectPing", "Type", "PingSource", });
-    internal_static_CDOTAMsg_ItemAlert_descriptor =
+        new java.lang.String[] { "X", "Y", "Target", "DirectPing", "Type", "PingSource", "WaypointPath", });
+    internal_static_CDOTAMsg_PingWaypointPath_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_CDOTAMsg_PingWaypointPath_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDOTAMsg_PingWaypointPath_descriptor,
+        new java.lang.String[] { "X", "Y", "GridNavDirections", });
+    internal_static_CDOTAMsg_ItemAlert_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_CDOTAMsg_ItemAlert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_ItemAlert_descriptor,
         new java.lang.String[] { "X", "Y", "ItemAbilityId", });
     internal_static_CDOTAMsg_EnemyItemAlert_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_CDOTAMsg_EnemyItemAlert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_EnemyItemAlert_descriptor,
         new java.lang.String[] { "PlayerId", "Itemid", });
     internal_static_CDOTAMsg_MapLine_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_CDOTAMsg_MapLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_MapLine_descriptor,
         new java.lang.String[] { "X", "Y", "Initial", });
     internal_static_CDOTAMsg_WorldLine_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_CDOTAMsg_WorldLine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_WorldLine_descriptor,
         new java.lang.String[] { "X", "Y", "Z", "Initial", "End", });
     internal_static_CDOTAMsg_SendStatPopup_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_CDOTAMsg_SendStatPopup_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_SendStatPopup_descriptor,
         new java.lang.String[] { "Style", "StatStrings", "StatImages", "StatImageTypes", "Duration", "UseHtml", "MovieName", });
     internal_static_CDOTAMsg_DismissAllStatPopups_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_CDOTAMsg_DismissAllStatPopups_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_DismissAllStatPopups_descriptor,
         new java.lang.String[] { "TimeDelay", });
     internal_static_CDOTAMsg_CoachHUDPing_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_CDOTAMsg_CoachHUDPing_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_CoachHUDPing_descriptor,
         new java.lang.String[] { "X", "Y", "Tgtpath", });
     internal_static_CDOTAMsg_UnitOrder_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_CDOTAMsg_UnitOrder_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDOTAMsg_UnitOrder_descriptor,
         new java.lang.String[] { "OrderType", "Units", "TargetIndex", "AbilityIndex", "Position", "SequenceNumber", "Flags", });
     internal_static_VersusScene_PlayActivity_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_VersusScene_PlayActivity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_VersusScene_PlayActivity_descriptor,
@@ -10543,13 +11313,13 @@ public final class DOTACommonMessages {
         internal_static_VersusScene_PlayActivity_ActivityInfo_descriptor,
         new java.lang.String[] { "Activity", "DisableAutoKill", "ForceLooping", });
     internal_static_VersusScene_ChatWheel_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_VersusScene_ChatWheel_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_VersusScene_ChatWheel_descriptor,
         new java.lang.String[] { "ChatMessageId", "EmoticonId", });
     internal_static_VersusScene_PlaybackRate_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_VersusScene_PlaybackRate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_VersusScene_PlaybackRate_descriptor,

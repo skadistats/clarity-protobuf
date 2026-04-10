@@ -142,8 +142,20 @@ message CSVCMsg_PacketEntities {
   optional .CSVCMsg_PacketEntities.non_transmitted_entities_t non_transmitted_entities = 19;
 	optional uint32 cq_starved_command_ticks = 20;
 	optional uint32 cq_discarded_command_ticks = 21;
+  message outofpvs_entity_updates_t {
+    optional int32 count = 1;
+    optional bytes data = 2;
+  }
+
   optional bytes dev_padding = 999;
+  optional .CSVCMsg_PacketEntities.outofpvs_entity_updates_t outofpvs_entity_updates = 23;
 }
+
+message CSVCMsg_NextMsgPredicted {
+  optional int32 predicted_by_player_slot = 1 [default = -1];
+  optional uint32 message_type_id = 2;
+}
+
 message CSVCMsg_ClassInfo {
 	message class_t {
 		optional int32 class_id = 1;

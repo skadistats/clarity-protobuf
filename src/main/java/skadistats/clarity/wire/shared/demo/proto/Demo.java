@@ -90,17 +90,21 @@ public final class Demo {
      */
     DEM_AnimationHeader(18, 17),
     /**
-     * <code>DEM_Max = 18;</code>
+     * <code>DEM_Recovery = 18;</code>
      */
-    DEM_Max(19, 18),
+    DEM_Recovery(19, 18),
+    /**
+     * <code>DEM_Max = 19;</code>
+     */
+    DEM_Max(20, 19),
     /**
      * <code>DEM_IsCompressed_S1 = 112;</code>
      */
-    DEM_IsCompressed_S1(20, 112),
+    DEM_IsCompressed_S1(21, 112),
     /**
      * <code>DEM_IsCompressed_S2 = 64;</code>
      */
-    DEM_IsCompressed_S2(21, 64),
+    DEM_IsCompressed_S2(22, 64),
     ;
 
     /**
@@ -180,9 +184,13 @@ public final class Demo {
      */
     public static final int DEM_AnimationHeader_VALUE = 17;
     /**
-     * <code>DEM_Max = 18;</code>
+     * <code>DEM_Recovery = 18;</code>
      */
-    public static final int DEM_Max_VALUE = 18;
+    public static final int DEM_Recovery_VALUE = 18;
+    /**
+     * <code>DEM_Max = 19;</code>
+     */
+    public static final int DEM_Max_VALUE = 19;
     /**
      * <code>DEM_IsCompressed_S1 = 112;</code>
      */
@@ -216,7 +224,8 @@ public final class Demo {
         case 15: return DEM_SpawnGroups;
         case 16: return DEM_AnimationData;
         case 17: return DEM_AnimationHeader;
-        case 18: return DEM_Max;
+        case 18: return DEM_Recovery;
+        case 19: return DEM_Max;
         case 112: return DEM_IsCompressed_S1;
         case 64: return DEM_IsCompressed_S2;
         default: return null;
@@ -18177,6 +18186,1070 @@ public final class Demo {
     // @@protoc_insertion_point(class_scope:CDemoSpawnGroups)
   }
 
+  public interface CDemoRecoveryOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CDemoRecovery)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+     */
+    boolean hasInitialSpawnGroup();
+    /**
+     * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry getInitialSpawnGroup();
+    /**
+     * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+     */
+    skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder getInitialSpawnGroupOrBuilder();
+
+    /**
+     * <code>optional bytes spawn_group_message = 2;</code>
+     */
+    boolean hasSpawnGroupMessage();
+    /**
+     * <code>optional bytes spawn_group_message = 2;</code>
+     */
+    com.google.protobuf.ByteString getSpawnGroupMessage();
+  }
+  /**
+   * Protobuf type {@code CDemoRecovery}
+   */
+  public static final class CDemoRecovery extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CDemoRecovery)
+      CDemoRecoveryOrBuilder {
+    // Use CDemoRecovery.newBuilder() to construct.
+    private CDemoRecovery(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CDemoRecovery(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CDemoRecovery defaultInstance;
+    public static CDemoRecovery getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CDemoRecovery getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CDemoRecovery(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 10: {
+              skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder subBuilder = null;
+              if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                subBuilder = initialSpawnGroup_.toBuilder();
+              }
+              initialSpawnGroup_ = input.readMessage(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.PARSER, extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(initialSpawnGroup_);
+                initialSpawnGroup_ = subBuilder.buildPartial();
+              }
+              bitField0_ |= 0x00000001;
+              break;
+            }
+            case 18: {
+              bitField0_ |= 0x00000002;
+              spawnGroupMessage_ = input.readBytes();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CDemoRecovery> PARSER =
+        new com.google.protobuf.AbstractParser<CDemoRecovery>() {
+      public CDemoRecovery parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CDemoRecovery(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CDemoRecovery> getParserForType() {
+      return PARSER;
+    }
+
+    public interface DemoInitialSpawnGroupEntryOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:CDemoRecovery.DemoInitialSpawnGroupEntry)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>optional uint32 spawngrouphandle = 1;</code>
+       */
+      boolean hasSpawngrouphandle();
+      /**
+       * <code>optional uint32 spawngrouphandle = 1;</code>
+       */
+      int getSpawngrouphandle();
+
+      /**
+       * <code>optional bool was_created = 2;</code>
+       */
+      boolean hasWasCreated();
+      /**
+       * <code>optional bool was_created = 2;</code>
+       */
+      boolean getWasCreated();
+    }
+    /**
+     * Protobuf type {@code CDemoRecovery.DemoInitialSpawnGroupEntry}
+     */
+    public static final class DemoInitialSpawnGroupEntry extends
+        com.google.protobuf.GeneratedMessage implements
+        // @@protoc_insertion_point(message_implements:CDemoRecovery.DemoInitialSpawnGroupEntry)
+        DemoInitialSpawnGroupEntryOrBuilder {
+      // Use DemoInitialSpawnGroupEntry.newBuilder() to construct.
+      private DemoInitialSpawnGroupEntry(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        super(builder);
+        this.unknownFields = builder.getUnknownFields();
+      }
+      private DemoInitialSpawnGroupEntry(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+      private static final DemoInitialSpawnGroupEntry defaultInstance;
+      public static DemoInitialSpawnGroupEntry getDefaultInstance() {
+        return defaultInstance;
+      }
+
+      public DemoInitialSpawnGroupEntry getDefaultInstanceForType() {
+        return defaultInstance;
+      }
+
+      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+          getUnknownFields() {
+        return this.unknownFields;
+      }
+      private DemoInitialSpawnGroupEntry(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        initFields();
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownField(input, unknownFields,
+                                       extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 8: {
+                bitField0_ |= 0x00000001;
+                spawngrouphandle_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+                bitField0_ |= 0x00000002;
+                wasCreated_ = input.readBool();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e.getMessage()).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder.class);
+      }
+
+      public static com.google.protobuf.Parser<DemoInitialSpawnGroupEntry> PARSER =
+          new com.google.protobuf.AbstractParser<DemoInitialSpawnGroupEntry>() {
+        public DemoInitialSpawnGroupEntry parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new DemoInitialSpawnGroupEntry(input, extensionRegistry);
+        }
+      };
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<DemoInitialSpawnGroupEntry> getParserForType() {
+        return PARSER;
+      }
+
+      private int bitField0_;
+      public static final int SPAWNGROUPHANDLE_FIELD_NUMBER = 1;
+      private int spawngrouphandle_;
+      /**
+       * <code>optional uint32 spawngrouphandle = 1;</code>
+       */
+      public boolean hasSpawngrouphandle() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional uint32 spawngrouphandle = 1;</code>
+       */
+      public int getSpawngrouphandle() {
+        return spawngrouphandle_;
+      }
+
+      public static final int WAS_CREATED_FIELD_NUMBER = 2;
+      private boolean wasCreated_;
+      /**
+       * <code>optional bool was_created = 2;</code>
+       */
+      public boolean hasWasCreated() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bool was_created = 2;</code>
+       */
+      public boolean getWasCreated() {
+        return wasCreated_;
+      }
+
+      private void initFields() {
+        spawngrouphandle_ = 0;
+        wasCreated_ = false;
+      }
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        getSerializedSize();
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          output.writeUInt32(1, spawngrouphandle_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          output.writeBool(2, wasCreated_);
+        }
+        getUnknownFields().writeTo(output);
+      }
+
+      private int memoizedSerializedSize = -1;
+      public int getSerializedSize() {
+        int size = memoizedSerializedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, spawngrouphandle_);
+        }
+        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeBoolSize(2, wasCreated_);
+        }
+        size += getUnknownFields().getSerializedSize();
+        memoizedSerializedSize = size;
+        return size;
+      }
+
+      private static final long serialVersionUID = 0L;
+      @java.lang.Override
+      protected java.lang.Object writeReplace()
+          throws java.io.ObjectStreamException {
+        return super.writeReplace();
+      }
+
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseDelimitedFrom(input, extensionRegistry);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input);
+      }
+      public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return PARSER.parseFrom(input, extensionRegistry);
+      }
+
+      public static Builder newBuilder() { return Builder.create(); }
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry prototype) {
+        return newBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() { return newBuilder(this); }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code CDemoRecovery.DemoInitialSpawnGroupEntry}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:CDemoRecovery.DemoInitialSpawnGroupEntry)
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder.class);
+        }
+
+        // Construct using skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          }
+        }
+        private static Builder create() {
+          return new Builder();
+        }
+
+        public Builder clear() {
+          super.clear();
+          spawngrouphandle_ = 0;
+          bitField0_ = (bitField0_ & ~0x00000001);
+          wasCreated_ = false;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          return this;
+        }
+
+        public Builder clone() {
+          return create().mergeFrom(buildPartial());
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_descriptor;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry getDefaultInstanceForType() {
+          return skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance();
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry build() {
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry buildPartial() {
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry result = new skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry(this);
+          int from_bitField0_ = bitField0_;
+          int to_bitField0_ = 0;
+          if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+            to_bitField0_ |= 0x00000001;
+          }
+          result.spawngrouphandle_ = spawngrouphandle_;
+          if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+            to_bitField0_ |= 0x00000002;
+          }
+          result.wasCreated_ = wasCreated_;
+          result.bitField0_ = to_bitField0_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry) {
+            return mergeFrom((skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry other) {
+          if (other == skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance()) return this;
+          if (other.hasSpawngrouphandle()) {
+            setSpawngrouphandle(other.getSpawngrouphandle());
+          }
+          if (other.hasWasCreated()) {
+            setWasCreated(other.getWasCreated());
+          }
+          this.mergeUnknownFields(other.getUnknownFields());
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry) e.getUnfinishedMessage();
+            throw e;
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+        private int bitField0_;
+
+        private int spawngrouphandle_ ;
+        /**
+         * <code>optional uint32 spawngrouphandle = 1;</code>
+         */
+        public boolean hasSpawngrouphandle() {
+          return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+        /**
+         * <code>optional uint32 spawngrouphandle = 1;</code>
+         */
+        public int getSpawngrouphandle() {
+          return spawngrouphandle_;
+        }
+        /**
+         * <code>optional uint32 spawngrouphandle = 1;</code>
+         */
+        public Builder setSpawngrouphandle(int value) {
+          bitField0_ |= 0x00000001;
+          spawngrouphandle_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional uint32 spawngrouphandle = 1;</code>
+         */
+        public Builder clearSpawngrouphandle() {
+          bitField0_ = (bitField0_ & ~0x00000001);
+          spawngrouphandle_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private boolean wasCreated_ ;
+        /**
+         * <code>optional bool was_created = 2;</code>
+         */
+        public boolean hasWasCreated() {
+          return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+        /**
+         * <code>optional bool was_created = 2;</code>
+         */
+        public boolean getWasCreated() {
+          return wasCreated_;
+        }
+        /**
+         * <code>optional bool was_created = 2;</code>
+         */
+        public Builder setWasCreated(boolean value) {
+          bitField0_ |= 0x00000002;
+          wasCreated_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>optional bool was_created = 2;</code>
+         */
+        public Builder clearWasCreated() {
+          bitField0_ = (bitField0_ & ~0x00000002);
+          wasCreated_ = false;
+          onChanged();
+          return this;
+        }
+
+        // @@protoc_insertion_point(builder_scope:CDemoRecovery.DemoInitialSpawnGroupEntry)
+      }
+
+      static {
+        defaultInstance = new DemoInitialSpawnGroupEntry(true);
+        defaultInstance.initFields();
+      }
+
+      // @@protoc_insertion_point(class_scope:CDemoRecovery.DemoInitialSpawnGroupEntry)
+    }
+
+    private int bitField0_;
+    public static final int INITIAL_SPAWN_GROUP_FIELD_NUMBER = 1;
+    private skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry initialSpawnGroup_;
+    /**
+     * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+     */
+    public boolean hasInitialSpawnGroup() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry getInitialSpawnGroup() {
+      return initialSpawnGroup_;
+    }
+    /**
+     * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+     */
+    public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder getInitialSpawnGroupOrBuilder() {
+      return initialSpawnGroup_;
+    }
+
+    public static final int SPAWN_GROUP_MESSAGE_FIELD_NUMBER = 2;
+    private com.google.protobuf.ByteString spawnGroupMessage_;
+    /**
+     * <code>optional bytes spawn_group_message = 2;</code>
+     */
+    public boolean hasSpawnGroupMessage() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional bytes spawn_group_message = 2;</code>
+     */
+    public com.google.protobuf.ByteString getSpawnGroupMessage() {
+      return spawnGroupMessage_;
+    }
+
+    private void initFields() {
+      initialSpawnGroup_ = skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance();
+      spawnGroupMessage_ = com.google.protobuf.ByteString.EMPTY;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeMessage(1, initialSpawnGroup_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeBytes(2, spawnGroupMessage_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, initialSpawnGroup_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(2, spawnGroupMessage_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CDemoRecovery}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CDemoRecovery)
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecoveryOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.class, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          getInitialSpawnGroupFieldBuilder();
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        if (initialSpawnGroupBuilder_ == null) {
+          initialSpawnGroup_ = skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance();
+        } else {
+          initialSpawnGroupBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        spawnGroupMessage_ = com.google.protobuf.ByteString.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.internal_static_CDemoRecovery_descriptor;
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery getDefaultInstanceForType() {
+        return skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery build() {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery buildPartial() {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery result = new skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        if (initialSpawnGroupBuilder_ == null) {
+          result.initialSpawnGroup_ = initialSpawnGroup_;
+        } else {
+          result.initialSpawnGroup_ = initialSpawnGroupBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.spawnGroupMessage_ = spawnGroupMessage_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery) {
+          return mergeFrom((skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery other) {
+        if (other == skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.getDefaultInstance()) return this;
+        if (other.hasInitialSpawnGroup()) {
+          mergeInitialSpawnGroup(other.getInitialSpawnGroup());
+        }
+        if (other.hasSpawnGroupMessage()) {
+          setSpawnGroupMessage(other.getSpawnGroupMessage());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry initialSpawnGroup_ = skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance();
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder> initialSpawnGroupBuilder_;
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public boolean hasInitialSpawnGroup() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry getInitialSpawnGroup() {
+        if (initialSpawnGroupBuilder_ == null) {
+          return initialSpawnGroup_;
+        } else {
+          return initialSpawnGroupBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public Builder setInitialSpawnGroup(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry value) {
+        if (initialSpawnGroupBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          initialSpawnGroup_ = value;
+          onChanged();
+        } else {
+          initialSpawnGroupBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public Builder setInitialSpawnGroup(
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder builderForValue) {
+        if (initialSpawnGroupBuilder_ == null) {
+          initialSpawnGroup_ = builderForValue.build();
+          onChanged();
+        } else {
+          initialSpawnGroupBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public Builder mergeInitialSpawnGroup(skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry value) {
+        if (initialSpawnGroupBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) == 0x00000001) &&
+              initialSpawnGroup_ != skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance()) {
+            initialSpawnGroup_ =
+              skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.newBuilder(initialSpawnGroup_).mergeFrom(value).buildPartial();
+          } else {
+            initialSpawnGroup_ = value;
+          }
+          onChanged();
+        } else {
+          initialSpawnGroupBuilder_.mergeFrom(value);
+        }
+        bitField0_ |= 0x00000001;
+        return this;
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public Builder clearInitialSpawnGroup() {
+        if (initialSpawnGroupBuilder_ == null) {
+          initialSpawnGroup_ = skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.getDefaultInstance();
+          onChanged();
+        } else {
+          initialSpawnGroupBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder getInitialSpawnGroupBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getInitialSpawnGroupFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      public skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder getInitialSpawnGroupOrBuilder() {
+        if (initialSpawnGroupBuilder_ != null) {
+          return initialSpawnGroupBuilder_.getMessageOrBuilder();
+        } else {
+          return initialSpawnGroup_;
+        }
+      }
+      /**
+       * <code>optional .CDemoRecovery.DemoInitialSpawnGroupEntry initial_spawn_group = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder> 
+          getInitialSpawnGroupFieldBuilder() {
+        if (initialSpawnGroupBuilder_ == null) {
+          initialSpawnGroupBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntry.Builder, skadistats.clarity.wire.shared.demo.proto.Demo.CDemoRecovery.DemoInitialSpawnGroupEntryOrBuilder>(
+                  getInitialSpawnGroup(),
+                  getParentForChildren(),
+                  isClean());
+          initialSpawnGroup_ = null;
+        }
+        return initialSpawnGroupBuilder_;
+      }
+
+      private com.google.protobuf.ByteString spawnGroupMessage_ = com.google.protobuf.ByteString.EMPTY;
+      /**
+       * <code>optional bytes spawn_group_message = 2;</code>
+       */
+      public boolean hasSpawnGroupMessage() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional bytes spawn_group_message = 2;</code>
+       */
+      public com.google.protobuf.ByteString getSpawnGroupMessage() {
+        return spawnGroupMessage_;
+      }
+      /**
+       * <code>optional bytes spawn_group_message = 2;</code>
+       */
+      public Builder setSpawnGroupMessage(com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000002;
+        spawnGroupMessage_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bytes spawn_group_message = 2;</code>
+       */
+      public Builder clearSpawnGroupMessage() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        spawnGroupMessage_ = getDefaultInstance().getSpawnGroupMessage();
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CDemoRecovery)
+    }
+
+    static {
+      defaultInstance = new CDemoRecovery(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CDemoRecovery)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CDemoFileHeader_descriptor;
   private static
@@ -18302,6 +19375,16 @@ public final class Demo {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CDemoSpawnGroups_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDemoRecovery_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDemoRecovery_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -18367,20 +19450,25 @@ public final class Demo {
       "de\030\003 \003(\0132\032.CDemoStringTables.items_t\022\023\n\013" +
       "table_flags\030\004 \001(\005\"\013\n\tCDemoStop\"0\n\014CDemoU" +
       "serCmd\022\022\n\ncmd_number\030\001 \001(\005\022\014\n\004data\030\002 \001(\014" +
-      "\" \n\020CDemoSpawnGroups\022\014\n\004msgs\030\003 \003(\014*\320\003\n\rE" +
-      "DemoCommands\022\026\n\tDEM_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010" +
-      "DEM_Stop\020\000\022\022\n\016DEM_FileHeader\020\001\022\020\n\014DEM_Fi" +
-      "leInfo\020\002\022\020\n\014DEM_SyncTick\020\003\022\022\n\016DEM_SendTa",
-      "bles\020\004\022\021\n\rDEM_ClassInfo\020\005\022\024\n\020DEM_StringT" +
-      "ables\020\006\022\016\n\nDEM_Packet\020\007\022\024\n\020DEM_SignonPac" +
-      "ket\020\010\022\022\n\016DEM_ConsoleCmd\020\t\022\022\n\016DEM_CustomD" +
-      "ata\020\n\022\033\n\027DEM_CustomDataCallbacks\020\013\022\017\n\013DE" +
-      "M_UserCmd\020\014\022\022\n\016DEM_FullPacket\020\r\022\020\n\014DEM_S" +
-      "aveGame\020\016\022\023\n\017DEM_SpawnGroups\020\017\022\025\n\021DEM_An" +
-      "imationData\020\020\022\027\n\023DEM_AnimationHeader\020\021\022\013" +
-      "\n\007DEM_Max\020\022\022\027\n\023DEM_IsCompressed_S1\020p\022\027\n\023" +
-      "DEM_IsCompressed_S2\020@B+\n)skadistats.clar" +
-      "ity.wire.shared.demo.proto"
+      "\" \n\020CDemoSpawnGroups\022\014\n\004msgs\030\003 \003(\014\"\301\001\n\rC" +
+      "DemoRecovery\022F\n\023initial_spawn_group\030\001 \001(" +
+      "\0132).CDemoRecovery.DemoInitialSpawnGroupE" +
+      "ntry\022\033\n\023spawn_group_message\030\002 \001(\014\032K\n\032Dem",
+      "oInitialSpawnGroupEntry\022\030\n\020spawngrouphan" +
+      "dle\030\001 \001(\r\022\023\n\013was_created\030\002 \001(\010*\342\003\n\rEDemo" +
+      "Commands\022\026\n\tDEM_Error\020\377\377\377\377\377\377\377\377\377\001\022\014\n\010DEM_" +
+      "Stop\020\000\022\022\n\016DEM_FileHeader\020\001\022\020\n\014DEM_FileIn" +
+      "fo\020\002\022\020\n\014DEM_SyncTick\020\003\022\022\n\016DEM_SendTables" +
+      "\020\004\022\021\n\rDEM_ClassInfo\020\005\022\024\n\020DEM_StringTable" +
+      "s\020\006\022\016\n\nDEM_Packet\020\007\022\024\n\020DEM_SignonPacket\020" +
+      "\010\022\022\n\016DEM_ConsoleCmd\020\t\022\022\n\016DEM_CustomData\020" +
+      "\n\022\033\n\027DEM_CustomDataCallbacks\020\013\022\017\n\013DEM_Us" +
+      "erCmd\020\014\022\022\n\016DEM_FullPacket\020\r\022\020\n\014DEM_SaveG",
+      "ame\020\016\022\023\n\017DEM_SpawnGroups\020\017\022\025\n\021DEM_Animat" +
+      "ionData\020\020\022\027\n\023DEM_AnimationHeader\020\021\022\020\n\014DE" +
+      "M_Recovery\020\022\022\013\n\007DEM_Max\020\023\022\027\n\023DEM_IsCompr" +
+      "essed_S1\020p\022\027\n\023DEM_IsCompressed_S2\020@B+\n)s" +
+      "kadistats.clarity.wire.shared.demo.proto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -18544,6 +19632,18 @@ public final class Demo {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CDemoSpawnGroups_descriptor,
         new java.lang.String[] { "Msgs", });
+    internal_static_CDemoRecovery_descriptor =
+      getDescriptor().getMessageTypes().get(18);
+    internal_static_CDemoRecovery_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDemoRecovery_descriptor,
+        new java.lang.String[] { "InitialSpawnGroup", "SpawnGroupMessage", });
+    internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_descriptor =
+      internal_static_CDemoRecovery_descriptor.getNestedTypes().get(0);
+    internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CDemoRecovery_DemoInitialSpawnGroupEntry_descriptor,
+        new java.lang.String[] { "Spawngrouphandle", "WasCreated", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

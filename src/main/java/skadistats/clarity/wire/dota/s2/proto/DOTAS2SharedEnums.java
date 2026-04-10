@@ -117,6 +117,10 @@ public final class DOTAS2SharedEnums {
      * <code>DOTA_GAMEMODE_COACHES_CHALLENGE = 25;</code>
      */
     DOTA_GAMEMODE_COACHES_CHALLENGE(25, 25),
+    /**
+     * <code>DOTA_GAMEMODE_BOT_CHALLENGE = 26;</code>
+     */
+    DOTA_GAMEMODE_BOT_CHALLENGE(26, 26),
     ;
 
     /**
@@ -223,6 +227,10 @@ public final class DOTAS2SharedEnums {
      * <code>DOTA_GAMEMODE_COACHES_CHALLENGE = 25;</code>
      */
     public static final int DOTA_GAMEMODE_COACHES_CHALLENGE_VALUE = 25;
+    /**
+     * <code>DOTA_GAMEMODE_BOT_CHALLENGE = 26;</code>
+     */
+    public static final int DOTA_GAMEMODE_BOT_CHALLENGE_VALUE = 26;
 
 
     public final int getNumber() { return value; }
@@ -255,6 +263,7 @@ public final class DOTAS2SharedEnums {
         case 23: return DOTA_GAMEMODE_TURBO;
         case 24: return DOTA_GAMEMODE_MUTATION;
         case 25: return DOTA_GAMEMODE_COACHES_CHALLENGE;
+        case 26: return DOTA_GAMEMODE_BOT_CHALLENGE;
         default: return null;
       }
     }
@@ -710,6 +719,38 @@ public final class DOTAS2SharedEnums {
      * <code>EVENT_ID_COUNT = 50;</code>
      */
     EVENT_ID_COUNT(49, 50),
+    /**
+     * <code>EVENT_ID_MONSTER_HUNTER = 51;</code>
+     */
+    EVENT_ID_MONSTER_HUNTER(50, 51),
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2025 = 52;</code>
+     */
+    EVENT_ID_INTERNATIONAL_2025(51, 52),
+    /**
+     * <code>EVENT_ID_FALL_2025 = 53;</code>
+     */
+    EVENT_ID_FALL_2025(52, 53),
+    /**
+     * <code>EVENT_ID_WINTER_2025 = 55;</code>
+     */
+    EVENT_ID_WINTER_2025(53, 55),
+    /**
+     * <code>EVENT_ID_SPRING_2026 = 56;</code>
+     */
+    EVENT_ID_SPRING_2026(54, 56),
+    /**
+     * <code>EVENT_ID_SUMMER_2026 = 57;</code>
+     */
+    EVENT_ID_SUMMER_2026(55, 57),
+    /**
+     * <code>EVENT_ID_FALL_2026 = 58;</code>
+     */
+    EVENT_ID_FALL_2026(56, 58),
+    /**
+     * <code>EVENT_ID_WINTER_2026 = 59;</code>
+     */
+    EVENT_ID_WINTER_2026(57, 59),
     ;
 
     /**
@@ -912,6 +953,38 @@ public final class DOTAS2SharedEnums {
      * <code>EVENT_ID_COUNT = 50;</code>
      */
     public static final int EVENT_ID_COUNT_VALUE = 50;
+    /**
+     * <code>EVENT_ID_MONSTER_HUNTER = 51;</code>
+     */
+    public static final int EVENT_ID_MONSTER_HUNTER_VALUE = 51;
+    /**
+     * <code>EVENT_ID_INTERNATIONAL_2025 = 52;</code>
+     */
+    public static final int EVENT_ID_INTERNATIONAL_2025_VALUE = 52;
+    /**
+     * <code>EVENT_ID_FALL_2025 = 53;</code>
+     */
+    public static final int EVENT_ID_FALL_2025_VALUE = 53;
+    /**
+     * <code>EVENT_ID_WINTER_2025 = 55;</code>
+     */
+    public static final int EVENT_ID_WINTER_2025_VALUE = 55;
+    /**
+     * <code>EVENT_ID_SPRING_2026 = 56;</code>
+     */
+    public static final int EVENT_ID_SPRING_2026_VALUE = 56;
+    /**
+     * <code>EVENT_ID_SUMMER_2026 = 57;</code>
+     */
+    public static final int EVENT_ID_SUMMER_2026_VALUE = 57;
+    /**
+     * <code>EVENT_ID_FALL_2026 = 58;</code>
+     */
+    public static final int EVENT_ID_FALL_2026_VALUE = 58;
+    /**
+     * <code>EVENT_ID_WINTER_2026 = 59;</code>
+     */
+    public static final int EVENT_ID_WINTER_2026_VALUE = 59;
 
 
     public final int getNumber() { return value; }
@@ -968,6 +1041,14 @@ public final class DOTAS2SharedEnums {
         case 48: return EVENT_ID_FROSTIVUS_2023;
         case 49: return EVENT_ID_INTERNATIONAL_2024;
         case 50: return EVENT_ID_COUNT;
+        case 51: return EVENT_ID_MONSTER_HUNTER;
+        case 52: return EVENT_ID_INTERNATIONAL_2025;
+        case 53: return EVENT_ID_FALL_2025;
+        case 55: return EVENT_ID_WINTER_2025;
+        case 56: return EVENT_ID_SPRING_2026;
+        case 57: return EVENT_ID_SUMMER_2026;
+        case 58: return EVENT_ID_FALL_2026;
+        case 59: return EVENT_ID_WINTER_2026;
         default: return null;
       }
     }
@@ -1409,6 +1490,115 @@ public final class DOTAS2SharedEnums {
   }
 
   /**
+   * Protobuf enum {@code ETimerAlertType}
+   */
+  public enum ETimerAlertType
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>k_TimerAlertType_PowerRune = 1;</code>
+     */
+    k_TimerAlertType_PowerRune(0, 1),
+    /**
+     * <code>k_TimerAlertType_BountyRune = 2;</code>
+     */
+    k_TimerAlertType_BountyRune(1, 2),
+    /**
+     * <code>k_TimerAlertType_WisdomShrine = 3;</code>
+     */
+    k_TimerAlertType_WisdomShrine(2, 3),
+    /**
+     * <code>k_TimerAlertType_JungleCamps = 4;</code>
+     */
+    k_TimerAlertType_JungleCamps(3, 4),
+    /**
+     * <code>k_TimerAlertType_LotusPool = 5;</code>
+     */
+    k_TimerAlertType_LotusPool(4, 5),
+    ;
+
+    /**
+     * <code>k_TimerAlertType_PowerRune = 1;</code>
+     */
+    public static final int k_TimerAlertType_PowerRune_VALUE = 1;
+    /**
+     * <code>k_TimerAlertType_BountyRune = 2;</code>
+     */
+    public static final int k_TimerAlertType_BountyRune_VALUE = 2;
+    /**
+     * <code>k_TimerAlertType_WisdomShrine = 3;</code>
+     */
+    public static final int k_TimerAlertType_WisdomShrine_VALUE = 3;
+    /**
+     * <code>k_TimerAlertType_JungleCamps = 4;</code>
+     */
+    public static final int k_TimerAlertType_JungleCamps_VALUE = 4;
+    /**
+     * <code>k_TimerAlertType_LotusPool = 5;</code>
+     */
+    public static final int k_TimerAlertType_LotusPool_VALUE = 5;
+
+
+    public final int getNumber() { return value; }
+
+    public static ETimerAlertType valueOf(int value) {
+      switch (value) {
+        case 1: return k_TimerAlertType_PowerRune;
+        case 2: return k_TimerAlertType_BountyRune;
+        case 3: return k_TimerAlertType_WisdomShrine;
+        case 4: return k_TimerAlertType_JungleCamps;
+        case 5: return k_TimerAlertType_LotusPool;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<ETimerAlertType>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static com.google.protobuf.Internal.EnumLiteMap<ETimerAlertType>
+        internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<ETimerAlertType>() {
+            public ETimerAlertType findValueByNumber(int number) {
+              return ETimerAlertType.valueOf(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(index);
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(5);
+    }
+
+    private static final ETimerAlertType[] VALUES = values();
+
+    public static ETimerAlertType valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int index;
+    private final int value;
+
+    private ETimerAlertType(int index, int value) {
+      this.index = index;
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ETimerAlertType)
+  }
+
+  /**
    * Protobuf enum {@code EDOTAMMRBoostType}
    */
   public enum EDOTAMMRBoostType
@@ -1474,7 +1664,7 @@ public final class DOTAS2SharedEnums {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(5);
+      return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(6);
     }
 
     private static final EDOTAMMRBoostType[] VALUES = values();
@@ -1508,7 +1698,7 @@ public final class DOTAS2SharedEnums {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\027dota_shared_enums.proto*\232\005\n\rDOTA_GameM" +
+      "\n\027dota_shared_enums.proto*\273\005\n\rDOTA_GameM" +
       "ode\022\026\n\022DOTA_GAMEMODE_NONE\020\000\022\024\n\020DOTA_GAME" +
       "MODE_AP\020\001\022\024\n\020DOTA_GAMEMODE_CM\020\002\022\024\n\020DOTA_" +
       "GAMEMODE_RD\020\003\022\024\n\020DOTA_GAMEMODE_SD\020\004\022\024\n\020D" +
@@ -1525,90 +1715,101 @@ public final class DOTAS2SharedEnums {
       "MEMODE_1V1MID\020\025\022\033\n\027DOTA_GAMEMODE_ALL_DRA" +
       "FT\020\026\022\027\n\023DOTA_GAMEMODE_TURBO\020\027\022\032\n\026DOTA_GA" +
       "MEMODE_MUTATION\020\030\022#\n\037DOTA_GAMEMODE_COACH" +
-      "ES_CHALLENGE\020\031*\251\003\n\014DOTA_GC_TEAM\022\032\n\026DOTA_" +
-      "GC_TEAM_GOOD_GUYS\020\000\022\031\n\025DOTA_GC_TEAM_BAD_" +
-      "GUYS\020\001\022\034\n\030DOTA_GC_TEAM_BROADCASTER\020\002\022\032\n\026",
-      "DOTA_GC_TEAM_SPECTATOR\020\003\022\034\n\030DOTA_GC_TEAM" +
-      "_PLAYER_POOL\020\004\022\027\n\023DOTA_GC_TEAM_NOTEAM\020\005\022" +
-      "\031\n\025DOTA_GC_TEAM_CUSTOM_1\020\006\022\031\n\025DOTA_GC_TE" +
-      "AM_CUSTOM_2\020\007\022\031\n\025DOTA_GC_TEAM_CUSTOM_3\020\010" +
-      "\022\031\n\025DOTA_GC_TEAM_CUSTOM_4\020\t\022\031\n\025DOTA_GC_T" +
-      "EAM_CUSTOM_5\020\n\022\031\n\025DOTA_GC_TEAM_CUSTOM_6\020" +
-      "\013\022\031\n\025DOTA_GC_TEAM_CUSTOM_7\020\014\022\031\n\025DOTA_GC_" +
-      "TEAM_CUSTOM_8\020\r\022\031\n\025DOTA_GC_TEAM_NEUTRALS" +
-      "\020\016*\355\013\n\006EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025\n\021EVEN" +
-      "T_ID_DIRETIDE\020\001\022\034\n\030EVENT_ID_SPRING_FESTI",
-      "VAL\020\002\022\033\n\027EVENT_ID_FROSTIVUS_2013\020\003\022\034\n\030EV" +
-      "ENT_ID_COMPENDIUM_2014\020\004\022\032\n\026EVENT_ID_NEX" +
-      "ON_PC_BANG\020\005\022\032\n\026EVENT_ID_PWRD_DAC_2015\020\006" +
-      "\022\033\n\027EVENT_ID_NEW_BLOOM_2015\020\007\022\037\n\033EVENT_I" +
-      "D_INTERNATIONAL_2015\020\010\022\034\n\030EVENT_ID_FALL_" +
-      "MAJOR_2015\020\t\022\026\n\022EVENT_ID_ORACLE_PA\020\n\022$\n " +
-      "EVENT_ID_NEW_BLOOM_2015_PREBEAST\020\013\022\026\n\022EV" +
-      "ENT_ID_FROSTIVUS\020\014\022\036\n\032EVENT_ID_WINTER_MA" +
-      "JOR_2016\020\r\022\037\n\033EVENT_ID_INTERNATIONAL_201" +
-      "6\020\016\022\034\n\030EVENT_ID_FALL_MAJOR_2016\020\017\022\036\n\032EVE",
-      "NT_ID_WINTER_MAJOR_2017\020\020\022\033\n\027EVENT_ID_NE" +
-      "W_BLOOM_2017\020\021\022\037\n\033EVENT_ID_INTERNATIONAL" +
-      "_2017\020\022\022\036\n\032EVENT_ID_PLUS_SUBSCRIPTION\020\023\022" +
-      "\035\n\031EVENT_ID_SINGLES_DAY_2017\020\024\022\033\n\027EVENT_" +
-      "ID_FROSTIVUS_2017\020\025\022\037\n\033EVENT_ID_INTERNAT" +
-      "IONAL_2018\020\026\022\033\n\027EVENT_ID_FROSTIVUS_2018\020" +
-      "\027\022\033\n\027EVENT_ID_NEW_BLOOM_2019\020\030\022\037\n\033EVENT_" +
-      "ID_INTERNATIONAL_2019\020\031\022\"\n\036EVENT_ID_NEW_" +
-      "PLAYER_EXPERIENCE\020\032\022\033\n\027EVENT_ID_FROSTIVU" +
-      "S_2019\020\033\022\033\n\027EVENT_ID_NEW_BLOOM_2020\020\034\022\037\n",
-      "\033EVENT_ID_INTERNATIONAL_2020\020\035\022\030\n\024EVENT_" +
-      "ID_TEAM_FANDOM\020\036\022\032\n\026EVENT_ID_DIRETIDE_20" +
-      "20\020\037\022\030\n\024EVENT_ID_SPRING_2021\020 \022\026\n\022EVENT_" +
-      "ID_FALL_2021\020!\022\"\n\036EVENT_ID_TEAM_FANDOM_F" +
-      "ALL_2021\020\"\022!\n\035EVENT_ID_TEAM_2021_2022_TO" +
-      "UR2\020#\022\037\n\033EVENT_ID_INTERNATIONAL_2022\020$\022!" +
-      "\n\035EVENT_ID_TEAM_2021_2022_TOUR3\020%\022$\n EVE" +
-      "NT_ID_TEAM_INTERNATIONAL_2022\020&\022\035\n\031EVENT" +
-      "_ID_PERMANENT_GRANTS\020\'\022&\n\"EVENT_ID_MUERT" +
-      "A_RELEASE_SPRING2023\020(\022\034\n\030EVENT_ID_TEAM_",
-      "2023_TOUR1\020)\022\034\n\030EVENT_ID_TEAM_2023_TOUR2" +
-      "\020*\022\034\n\030EVENT_ID_TEAM_2023_TOUR3\020+\022\037\n\033EVEN" +
-      "T_ID_INTERNATIONAL_2023\020-\022\035\n\031EVENT_ID_10" +
-      "TH_ANNIVERSARY\020.\022\026\n\022EVENT_ID_CROWNFALL\020/" +
-      "\022\033\n\027EVENT_ID_FROSTIVUS_2023\0200\022\037\n\033EVENT_I" +
-      "D_INTERNATIONAL_2024\0201\022\022\n\016EVENT_ID_COUNT" +
-      "\0202*\327\005\n\rEMatchOutcome\022\033\n\027k_EMatchOutcome_" +
-      "Unknown\020\000\022\036\n\032k_EMatchOutcome_RadVictory\020" +
-      "\002\022\037\n\033k_EMatchOutcome_DireVictory\020\003\022\"\n\036k_" +
-      "EMatchOutcome_NeutralVictory\020\004\022 \n\034k_EMat",
-      "chOutcome_NoTeamWinner\020\005\022\"\n\036k_EMatchOutc" +
-      "ome_Custom1Victory\020\006\022\"\n\036k_EMatchOutcome_" +
-      "Custom2Victory\020\007\022\"\n\036k_EMatchOutcome_Cust" +
-      "om3Victory\020\010\022\"\n\036k_EMatchOutcome_Custom4V" +
-      "ictory\020\t\022\"\n\036k_EMatchOutcome_Custom5Victo" +
-      "ry\020\n\022\"\n\036k_EMatchOutcome_Custom6Victory\020\013" +
-      "\022\"\n\036k_EMatchOutcome_Custom7Victory\020\014\022\"\n\036" +
-      "k_EMatchOutcome_Custom8Victory\020\r\0223\n/k_EM" +
-      "atchOutcome_NotScored_PoorNetworkConditi" +
-      "ons\020@\022$\n k_EMatchOutcome_NotScored_Leave",
-      "r\020A\022)\n%k_EMatchOutcome_NotScored_ServerC" +
-      "rash\020B\022*\n&k_EMatchOutcome_NotScored_Neve" +
-      "rStarted\020C\022&\n\"k_EMatchOutcome_NotScored_" +
-      "Canceled\020D\022(\n$k_EMatchOutcome_NotScored_" +
-      "Suspicious\020E*\321\003\n\022EDOTAPlayerMMRType\022 \n\034k" +
-      "_EDOTAPlayerMMRType_Invalid\020\000\022&\n\"k_EDOTA" +
-      "PlayerMMRType_GeneralHidden\020\001\022/\n+k_EDOTA" +
-      "PlayerMMRType_GeneralCompetitive2019\020\003\022," +
-      "\n(k_EDOTAPlayerMMRType_SoloCompetitive20" +
-      "19\020\004\022.\n*k_EDOTAPlayerMMRType_1v1Competit",
-      "ive_UNUSED\020\005\022.\n*k_EDOTAPlayerMMRType_Gen" +
-      "eralSeasonalRanked\020\006\022+\n\'k_EDOTAPlayerMMR" +
-      "Type_SoloSeasonalRanked\020\007\022)\n%k_EDOTAPlay" +
-      "erMMRType_Competitive_Core\020\010\022,\n(k_EDOTAP" +
-      "layerMMRType_Competitive_Support\020\t\022,\n(k_" +
-      "EDOTAPlayerMMRType_Competitive_Classic\020\n" +
-      "*s\n\021EDOTAMMRBoostType\022\034\n\030k_EDOTAMMRBoost" +
-      "Type_None\020\000\022\036\n\032k_EDOTAMMRBoostType_Leade" +
-      "r\020\001\022 \n\034k_EDOTAMMRBoostType_Follower\020\002B:\n" +
-      "%skadistats.clarity.wire.dota.s2.protoB\021",
-      "DOTAS2SharedEnums"
+      "ES_CHALLENGE\020\031\022\037\n\033DOTA_GAMEMODE_BOT_CHAL" +
+      "LENGE\020\032*\251\003\n\014DOTA_GC_TEAM\022\032\n\026DOTA_GC_TEAM" +
+      "_GOOD_GUYS\020\000\022\031\n\025DOTA_GC_TEAM_BAD_GUYS\020\001\022",
+      "\034\n\030DOTA_GC_TEAM_BROADCASTER\020\002\022\032\n\026DOTA_GC" +
+      "_TEAM_SPECTATOR\020\003\022\034\n\030DOTA_GC_TEAM_PLAYER" +
+      "_POOL\020\004\022\027\n\023DOTA_GC_TEAM_NOTEAM\020\005\022\031\n\025DOTA" +
+      "_GC_TEAM_CUSTOM_1\020\006\022\031\n\025DOTA_GC_TEAM_CUST" +
+      "OM_2\020\007\022\031\n\025DOTA_GC_TEAM_CUSTOM_3\020\010\022\031\n\025DOT" +
+      "A_GC_TEAM_CUSTOM_4\020\t\022\031\n\025DOTA_GC_TEAM_CUS" +
+      "TOM_5\020\n\022\031\n\025DOTA_GC_TEAM_CUSTOM_6\020\013\022\031\n\025DO" +
+      "TA_GC_TEAM_CUSTOM_7\020\014\022\031\n\025DOTA_GC_TEAM_CU" +
+      "STOM_8\020\r\022\031\n\025DOTA_GC_TEAM_NEUTRALS\020\016*\303\r\n\006" +
+      "EEvent\022\021\n\rEVENT_ID_NONE\020\000\022\025\n\021EVENT_ID_DI",
+      "RETIDE\020\001\022\034\n\030EVENT_ID_SPRING_FESTIVAL\020\002\022\033" +
+      "\n\027EVENT_ID_FROSTIVUS_2013\020\003\022\034\n\030EVENT_ID_" +
+      "COMPENDIUM_2014\020\004\022\032\n\026EVENT_ID_NEXON_PC_B" +
+      "ANG\020\005\022\032\n\026EVENT_ID_PWRD_DAC_2015\020\006\022\033\n\027EVE" +
+      "NT_ID_NEW_BLOOM_2015\020\007\022\037\n\033EVENT_ID_INTER" +
+      "NATIONAL_2015\020\010\022\034\n\030EVENT_ID_FALL_MAJOR_2" +
+      "015\020\t\022\026\n\022EVENT_ID_ORACLE_PA\020\n\022$\n EVENT_I" +
+      "D_NEW_BLOOM_2015_PREBEAST\020\013\022\026\n\022EVENT_ID_" +
+      "FROSTIVUS\020\014\022\036\n\032EVENT_ID_WINTER_MAJOR_201" +
+      "6\020\r\022\037\n\033EVENT_ID_INTERNATIONAL_2016\020\016\022\034\n\030",
+      "EVENT_ID_FALL_MAJOR_2016\020\017\022\036\n\032EVENT_ID_W" +
+      "INTER_MAJOR_2017\020\020\022\033\n\027EVENT_ID_NEW_BLOOM" +
+      "_2017\020\021\022\037\n\033EVENT_ID_INTERNATIONAL_2017\020\022" +
+      "\022\036\n\032EVENT_ID_PLUS_SUBSCRIPTION\020\023\022\035\n\031EVEN" +
+      "T_ID_SINGLES_DAY_2017\020\024\022\033\n\027EVENT_ID_FROS" +
+      "TIVUS_2017\020\025\022\037\n\033EVENT_ID_INTERNATIONAL_2" +
+      "018\020\026\022\033\n\027EVENT_ID_FROSTIVUS_2018\020\027\022\033\n\027EV" +
+      "ENT_ID_NEW_BLOOM_2019\020\030\022\037\n\033EVENT_ID_INTE" +
+      "RNATIONAL_2019\020\031\022\"\n\036EVENT_ID_NEW_PLAYER_" +
+      "EXPERIENCE\020\032\022\033\n\027EVENT_ID_FROSTIVUS_2019\020",
+      "\033\022\033\n\027EVENT_ID_NEW_BLOOM_2020\020\034\022\037\n\033EVENT_" +
+      "ID_INTERNATIONAL_2020\020\035\022\030\n\024EVENT_ID_TEAM" +
+      "_FANDOM\020\036\022\032\n\026EVENT_ID_DIRETIDE_2020\020\037\022\030\n" +
+      "\024EVENT_ID_SPRING_2021\020 \022\026\n\022EVENT_ID_FALL" +
+      "_2021\020!\022\"\n\036EVENT_ID_TEAM_FANDOM_FALL_202" +
+      "1\020\"\022!\n\035EVENT_ID_TEAM_2021_2022_TOUR2\020#\022\037" +
+      "\n\033EVENT_ID_INTERNATIONAL_2022\020$\022!\n\035EVENT" +
+      "_ID_TEAM_2021_2022_TOUR3\020%\022$\n EVENT_ID_T" +
+      "EAM_INTERNATIONAL_2022\020&\022\035\n\031EVENT_ID_PER" +
+      "MANENT_GRANTS\020\'\022&\n\"EVENT_ID_MUERTA_RELEA",
+      "SE_SPRING2023\020(\022\034\n\030EVENT_ID_TEAM_2023_TO" +
+      "UR1\020)\022\034\n\030EVENT_ID_TEAM_2023_TOUR2\020*\022\034\n\030E" +
+      "VENT_ID_TEAM_2023_TOUR3\020+\022\037\n\033EVENT_ID_IN" +
+      "TERNATIONAL_2023\020-\022\035\n\031EVENT_ID_10TH_ANNI" +
+      "VERSARY\020.\022\026\n\022EVENT_ID_CROWNFALL\020/\022\033\n\027EVE" +
+      "NT_ID_FROSTIVUS_2023\0200\022\037\n\033EVENT_ID_INTER" +
+      "NATIONAL_2024\0201\022\022\n\016EVENT_ID_COUNT\0202\022\033\n\027E" +
+      "VENT_ID_MONSTER_HUNTER\0203\022\037\n\033EVENT_ID_INT" +
+      "ERNATIONAL_2025\0204\022\026\n\022EVENT_ID_FALL_2025\020" +
+      "5\022\030\n\024EVENT_ID_WINTER_2025\0207\022\030\n\024EVENT_ID_",
+      "SPRING_2026\0208\022\030\n\024EVENT_ID_SUMMER_2026\0209\022" +
+      "\026\n\022EVENT_ID_FALL_2026\020:\022\030\n\024EVENT_ID_WINT" +
+      "ER_2026\020;*\327\005\n\rEMatchOutcome\022\033\n\027k_EMatchO" +
+      "utcome_Unknown\020\000\022\036\n\032k_EMatchOutcome_RadV" +
+      "ictory\020\002\022\037\n\033k_EMatchOutcome_DireVictory\020" +
+      "\003\022\"\n\036k_EMatchOutcome_NeutralVictory\020\004\022 \n" +
+      "\034k_EMatchOutcome_NoTeamWinner\020\005\022\"\n\036k_EMa" +
+      "tchOutcome_Custom1Victory\020\006\022\"\n\036k_EMatchO" +
+      "utcome_Custom2Victory\020\007\022\"\n\036k_EMatchOutco" +
+      "me_Custom3Victory\020\010\022\"\n\036k_EMatchOutcome_C",
+      "ustom4Victory\020\t\022\"\n\036k_EMatchOutcome_Custo" +
+      "m5Victory\020\n\022\"\n\036k_EMatchOutcome_Custom6Vi" +
+      "ctory\020\013\022\"\n\036k_EMatchOutcome_Custom7Victor" +
+      "y\020\014\022\"\n\036k_EMatchOutcome_Custom8Victory\020\r\022" +
+      "3\n/k_EMatchOutcome_NotScored_PoorNetwork" +
+      "Conditions\020@\022$\n k_EMatchOutcome_NotScore" +
+      "d_Leaver\020A\022)\n%k_EMatchOutcome_NotScored_" +
+      "ServerCrash\020B\022*\n&k_EMatchOutcome_NotScor" +
+      "ed_NeverStarted\020C\022&\n\"k_EMatchOutcome_Not" +
+      "Scored_Canceled\020D\022(\n$k_EMatchOutcome_Not",
+      "Scored_Suspicious\020E*\321\003\n\022EDOTAPlayerMMRTy" +
+      "pe\022 \n\034k_EDOTAPlayerMMRType_Invalid\020\000\022&\n\"" +
+      "k_EDOTAPlayerMMRType_GeneralHidden\020\001\022/\n+" +
+      "k_EDOTAPlayerMMRType_GeneralCompetitive2" +
+      "019\020\003\022,\n(k_EDOTAPlayerMMRType_SoloCompet" +
+      "itive2019\020\004\022.\n*k_EDOTAPlayerMMRType_1v1C" +
+      "ompetitive_UNUSED\020\005\022.\n*k_EDOTAPlayerMMRT" +
+      "ype_GeneralSeasonalRanked\020\006\022+\n\'k_EDOTAPl" +
+      "ayerMMRType_SoloSeasonalRanked\020\007\022)\n%k_ED" +
+      "OTAPlayerMMRType_Competitive_Core\020\010\022,\n(k",
+      "_EDOTAPlayerMMRType_Competitive_Support\020" +
+      "\t\022,\n(k_EDOTAPlayerMMRType_Competitive_Cl" +
+      "assic\020\n*\267\001\n\017ETimerAlertType\022\036\n\032k_TimerAl" +
+      "ertType_PowerRune\020\001\022\037\n\033k_TimerAlertType_" +
+      "BountyRune\020\002\022!\n\035k_TimerAlertType_WisdomS" +
+      "hrine\020\003\022 \n\034k_TimerAlertType_JungleCamps\020" +
+      "\004\022\036\n\032k_TimerAlertType_LotusPool\020\005*s\n\021EDO" +
+      "TAMMRBoostType\022\034\n\030k_EDOTAMMRBoostType_No" +
+      "ne\020\000\022\036\n\032k_EDOTAMMRBoostType_Leader\020\001\022 \n\034" +
+      "k_EDOTAMMRBoostType_Follower\020\002B:\n%skadis",
+      "tats.clarity.wire.dota.s2.protoB\021DOTAS2S" +
+      "haredEnums"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

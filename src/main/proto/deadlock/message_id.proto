@@ -68,6 +68,7 @@ enum SVC_Messages {
   svc_Broadcast_Command = 74;
   svc_HltvFixupOperatorStatus = 75;
   svc_UserCmds = 76;
+  svc_NextMsgPredicted = 77;
 }
 
 enum EBaseUserMessages {
@@ -177,6 +178,25 @@ enum CitadelUserMessageIds {
   k_EUserMsg_CurrencyChanged = 345;
   k_EUserMsg_GameOver = 346;
   k_EUserMsg_BossKilled = 347;
+  k_EUserMsg_BossDamaged = 348;
+  k_EUserMsg_MidBossSpawned = 349;
+  k_EUserMsg_RejuvStatus = 350;
+  k_EUserMsg_KillStreak = 351;
+  k_EUserMsg_TeamMsg = 352;
+  k_EUserMsg_PlayerRespawned = 353;
+  k_EUserMsg_CallCheaterVote = 354;
+  k_EUserMsg_MeleeHit = 355;
+  k_EUserMsg_FlexSlotUnlocked = 356;
+  k_EUserMsg_SeasonalKill = 357;
+  k_EUserMsg_MusicQueue = 358;
+  k_EUserMsg_AG2ParamTrigger = 359;
+  k_EUserMsg_ItemPurchaseNotification = 360;
+  k_EUserMsg_EntityPortalled = 361;
+  k_EUserMsg_StreetBrawlScoring = 362;
+  k_EUserMsg_HudGameAnnouncement = 363;
+  k_EUserMsg_ItemDraftReaction = 364;
+  k_EUserMsg_ImportantAbilityUsed = 365;
+  k_EUserMsg_BannedHeroes = 366;
 }
 
 enum CitadelEntityMessageIds {

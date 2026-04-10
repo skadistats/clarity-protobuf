@@ -42,6 +42,8 @@ message PlayerRankingInfo {
 	optional float rank_change = 4;
 	optional uint32 rank_type_id = 6;
 	optional uint32 tv_control = 7;
+	optional uint32 highest_rank = 15;
+	optional uint32 rank_expiry = 16;
 }
 
 // 270
@@ -181,6 +183,8 @@ message CMsgGCCStrike15_v2_MatchmakingGC2ServerReserve {
 	optional .CPreMatchInfoData pre_match_data = 15;
 	optional uint32 rtime32_event_start = 16;
 	optional uint32 tv_control = 17;
+	repeated int32 teammate_colors = 21;
+	optional uint32 match_id_additional = 22;
 }
 
 // 713
@@ -243,6 +247,9 @@ message CEconItemPreviewDataBlock {
 	optional uint32 dropreason = 16;
 	optional uint32 musicindex = 17;
 	optional int32 entindex = 18;
+	optional uint32 style = 21;
+	repeated .CEconItemPreviewDataBlock.Sticker variations = 22;
+	optional uint32 upgrade_level = 23;
 }
 
 // 1133
