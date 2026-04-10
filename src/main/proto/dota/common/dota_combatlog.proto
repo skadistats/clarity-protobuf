@@ -129,4 +129,6 @@ message CMsgDOTACombatLogEntry {
   optional float regenerated_health = 77;
   optional bool will_reincarnate = 78;
   optional bool uses_charges = 79;
+  optional uint32 tracked_stat_id = 80;
+  optional float modifier_purged_duration = 81;
 }

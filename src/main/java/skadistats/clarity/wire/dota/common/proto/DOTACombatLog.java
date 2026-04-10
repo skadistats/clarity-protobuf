@@ -1195,6 +1195,24 @@ public final class DOTACombatLog {
      * <code>optional bool uses_charges = 79;</code>
      */
     boolean getUsesCharges();
+
+    /**
+     * <code>optional uint32 tracked_stat_id = 80;</code>
+     */
+    boolean hasTrackedStatId();
+    /**
+     * <code>optional uint32 tracked_stat_id = 80;</code>
+     */
+    int getTrackedStatId();
+
+    /**
+     * <code>optional float modifier_purged_duration = 81;</code>
+     */
+    boolean hasModifierPurgedDuration();
+    /**
+     * <code>optional float modifier_purged_duration = 81;</code>
+     */
+    float getModifierPurgedDuration();
   }
   /**
    * Protobuf type {@code CMsgDOTACombatLogEntry}
@@ -1665,6 +1683,16 @@ public final class DOTACombatLog {
             case 632: {
               bitField2_ |= 0x00002000;
               usesCharges_ = input.readBool();
+              break;
+            }
+            case 640: {
+              bitField2_ |= 0x00004000;
+              trackedStatId_ = input.readUInt32();
+              break;
+            }
+            case 653: {
+              bitField2_ |= 0x00008000;
+              modifierPurgedDuration_ = input.readFloat();
               break;
             }
           }
@@ -2904,6 +2932,36 @@ public final class DOTACombatLog {
       return usesCharges_;
     }
 
+    public static final int TRACKED_STAT_ID_FIELD_NUMBER = 80;
+    private int trackedStatId_;
+    /**
+     * <code>optional uint32 tracked_stat_id = 80;</code>
+     */
+    public boolean hasTrackedStatId() {
+      return ((bitField2_ & 0x00004000) == 0x00004000);
+    }
+    /**
+     * <code>optional uint32 tracked_stat_id = 80;</code>
+     */
+    public int getTrackedStatId() {
+      return trackedStatId_;
+    }
+
+    public static final int MODIFIER_PURGED_DURATION_FIELD_NUMBER = 81;
+    private float modifierPurgedDuration_;
+    /**
+     * <code>optional float modifier_purged_duration = 81;</code>
+     */
+    public boolean hasModifierPurgedDuration() {
+      return ((bitField2_ & 0x00008000) == 0x00008000);
+    }
+    /**
+     * <code>optional float modifier_purged_duration = 81;</code>
+     */
+    public float getModifierPurgedDuration() {
+      return modifierPurgedDuration_;
+    }
+
     private void initFields() {
       type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
       targetName_ = 0;
@@ -2984,6 +3042,8 @@ public final class DOTACombatLog {
       regeneratedHealth_ = 0F;
       willReincarnate_ = false;
       usesCharges_ = false;
+      trackedStatId_ = 0;
+      modifierPurgedDuration_ = 0F;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3234,6 +3294,12 @@ public final class DOTACombatLog {
       }
       if (((bitField2_ & 0x00002000) == 0x00002000)) {
         output.writeBool(79, usesCharges_);
+      }
+      if (((bitField2_ & 0x00004000) == 0x00004000)) {
+        output.writeUInt32(80, trackedStatId_);
+      }
+      if (((bitField2_ & 0x00008000) == 0x00008000)) {
+        output.writeFloat(81, modifierPurgedDuration_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -3565,6 +3631,14 @@ public final class DOTACombatLog {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(79, usesCharges_);
       }
+      if (((bitField2_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(80, trackedStatId_);
+      }
+      if (((bitField2_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(81, modifierPurgedDuration_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
       return size;
@@ -3840,6 +3914,10 @@ public final class DOTACombatLog {
         bitField2_ = (bitField2_ & ~0x00002000);
         usesCharges_ = false;
         bitField2_ = (bitField2_ & ~0x00004000);
+        trackedStatId_ = 0;
+        bitField2_ = (bitField2_ & ~0x00008000);
+        modifierPurgedDuration_ = 0F;
+        bitField2_ = (bitField2_ & ~0x00010000);
         return this;
       }
 
@@ -4189,6 +4267,14 @@ public final class DOTACombatLog {
           to_bitField2_ |= 0x00002000;
         }
         result.usesCharges_ = usesCharges_;
+        if (((from_bitField2_ & 0x00008000) == 0x00008000)) {
+          to_bitField2_ |= 0x00004000;
+        }
+        result.trackedStatId_ = trackedStatId_;
+        if (((from_bitField2_ & 0x00010000) == 0x00010000)) {
+          to_bitField2_ |= 0x00008000;
+        }
+        result.modifierPurgedDuration_ = modifierPurgedDuration_;
         result.bitField0_ = to_bitField0_;
         result.bitField1_ = to_bitField1_;
         result.bitField2_ = to_bitField2_;
@@ -4450,6 +4536,12 @@ public final class DOTACombatLog {
         }
         if (other.hasUsesCharges()) {
           setUsesCharges(other.getUsesCharges());
+        }
+        if (other.hasTrackedStatId()) {
+          setTrackedStatId(other.getTrackedStatId());
+        }
+        if (other.hasModifierPurgedDuration()) {
+          setModifierPurgedDuration(other.getModifierPurgedDuration());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
@@ -7045,6 +7137,70 @@ public final class DOTACombatLog {
         return this;
       }
 
+      private int trackedStatId_ ;
+      /**
+       * <code>optional uint32 tracked_stat_id = 80;</code>
+       */
+      public boolean hasTrackedStatId() {
+        return ((bitField2_ & 0x00008000) == 0x00008000);
+      }
+      /**
+       * <code>optional uint32 tracked_stat_id = 80;</code>
+       */
+      public int getTrackedStatId() {
+        return trackedStatId_;
+      }
+      /**
+       * <code>optional uint32 tracked_stat_id = 80;</code>
+       */
+      public Builder setTrackedStatId(int value) {
+        bitField2_ |= 0x00008000;
+        trackedStatId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional uint32 tracked_stat_id = 80;</code>
+       */
+      public Builder clearTrackedStatId() {
+        bitField2_ = (bitField2_ & ~0x00008000);
+        trackedStatId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float modifierPurgedDuration_ ;
+      /**
+       * <code>optional float modifier_purged_duration = 81;</code>
+       */
+      public boolean hasModifierPurgedDuration() {
+        return ((bitField2_ & 0x00010000) == 0x00010000);
+      }
+      /**
+       * <code>optional float modifier_purged_duration = 81;</code>
+       */
+      public float getModifierPurgedDuration() {
+        return modifierPurgedDuration_;
+      }
+      /**
+       * <code>optional float modifier_purged_duration = 81;</code>
+       */
+      public Builder setModifierPurgedDuration(float value) {
+        bitField2_ |= 0x00010000;
+        modifierPurgedDuration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional float modifier_purged_duration = 81;</code>
+       */
+      public Builder clearModifierPurgedDuration() {
+        bitField2_ = (bitField2_ & ~0x00010000);
+        modifierPurgedDuration_ = 0F;
+        onChanged();
+        return this;
+      }
+
       // @@protoc_insertion_point(builder_scope:CMsgDOTACombatLogEntry)
     }
 
@@ -7070,7 +7226,7 @@ public final class DOTACombatLog {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024dota_combatlog.proto\"\370\017\n\026CMsgDOTAComba" +
+      "\n\024dota_combatlog.proto\"\263\020\n\026CMsgDOTAComba" +
       "tLogEntry\022:\n\004type\030\001 \001(\0162\025.DOTA_COMBATLOG" +
       "_TYPES:\025DOTA_COMBATLOG_DAMAGE\022\023\n\013target_" +
       "name\030\002 \001(\r\022\032\n\022target_source_name\030\003 \001(\r\022\025" +
@@ -7121,46 +7277,48 @@ public final class DOTACombatLog {
       "t_time\030J \001(\010\022\034\n\024attacker_has_scepter\030K \001" +
       "(\010\022\031\n\021neutral_camp_team\030L \001(\r\022\032\n\022regener",
       "ated_health\030M \001(\002\022\030\n\020will_reincarnate\030N " +
-      "\001(\010\022\024\n\014uses_charges\030O \001(\010*\347\013\n\024DOTA_COMBA" +
-      "TLOG_TYPES\022#\n\026DOTA_COMBATLOG_INVALID\020\377\377\377" +
-      "\377\377\377\377\377\377\001\022\031\n\025DOTA_COMBATLOG_DAMAGE\020\000\022\027\n\023DO" +
-      "TA_COMBATLOG_HEAL\020\001\022\037\n\033DOTA_COMBATLOG_MO" +
-      "DIFIER_ADD\020\002\022\"\n\036DOTA_COMBATLOG_MODIFIER_" +
-      "REMOVE\020\003\022\030\n\024DOTA_COMBATLOG_DEATH\020\004\022\032\n\026DO" +
-      "TA_COMBATLOG_ABILITY\020\005\022\027\n\023DOTA_COMBATLOG" +
-      "_ITEM\020\006\022\033\n\027DOTA_COMBATLOG_LOCATION\020\007\022\027\n\023" +
-      "DOTA_COMBATLOG_GOLD\020\010\022\035\n\031DOTA_COMBATLOG_",
-      "GAME_STATE\020\t\022\025\n\021DOTA_COMBATLOG_XP\020\n\022\033\n\027D" +
-      "OTA_COMBATLOG_PURCHASE\020\013\022\032\n\026DOTA_COMBATL" +
-      "OG_BUYBACK\020\014\022\"\n\036DOTA_COMBATLOG_ABILITY_T" +
-      "RIGGER\020\r\022\036\n\032DOTA_COMBATLOG_PLAYERSTATS\020\016" +
-      "\022\034\n\030DOTA_COMBATLOG_MULTIKILL\020\017\022\035\n\031DOTA_C" +
-      "OMBATLOG_KILLSTREAK\020\020\022%\n!DOTA_COMBATLOG_" +
-      "TEAM_BUILDING_KILL\020\021\022\036\n\032DOTA_COMBATLOG_F" +
-      "IRST_BLOOD\020\022\022\'\n#DOTA_COMBATLOG_MODIFIER_" +
-      "STACK_EVENT\020\023\022%\n!DOTA_COMBATLOG_NEUTRAL_" +
-      "CAMP_STACK\020\024\022\036\n\032DOTA_COMBATLOG_PICKUP_RU",
-      "NE\020\025\022%\n!DOTA_COMBATLOG_REVEALED_INVISIBL" +
-      "E\020\026\022\035\n\031DOTA_COMBATLOG_HERO_SAVED\020\027\022 \n\034DO" +
-      "TA_COMBATLOG_MANA_RESTORED\020\030\022\037\n\033DOTA_COM" +
-      "BATLOG_HERO_LEVELUP\020\031\022#\n\037DOTA_COMBATLOG_" +
-      "BOTTLE_HEAL_ALLY\020\032\022 \n\034DOTA_COMBATLOG_END" +
-      "GAME_STATS\020\033\022$\n DOTA_COMBATLOG_INTERRUPT" +
-      "_CHANNEL\020\034\022\036\n\032DOTA_COMBATLOG_ALLIED_GOLD" +
-      "\020\035\022\036\n\032DOTA_COMBATLOG_AEGIS_TAKEN\020\036\022\036\n\032DO" +
-      "TA_COMBATLOG_MANA_DAMAGE\020\037\022,\n(DOTA_COMBA" +
-      "TLOG_PHYSICAL_DAMAGE_PREVENTED\020 \022 \n\034DOTA",
-      "_COMBATLOG_UNIT_SUMMONED\020!\022\037\n\033DOTA_COMBA" +
-      "TLOG_ATTACK_EVADE\020\"\022\033\n\027DOTA_COMBATLOG_TR" +
-      "EE_CUT\020#\022\"\n\036DOTA_COMBATLOG_SUCCESSFUL_SC" +
-      "AN\020$\022!\n\035DOTA_COMBATLOG_END_KILLSTREAK\020%\022" +
-      "$\n DOTA_COMBATLOG_BLOODSTONE_CHARGE\020&\022\"\n" +
-      "\036DOTA_COMBATLOG_CRITICAL_DAMAGE\020\'\022\037\n\033DOT" +
-      "A_COMBATLOG_SPELL_ABSORB\020(\022\"\n\036DOTA_COMBA" +
-      "TLOG_UNIT_TELEPORTED\020)\022#\n\037DOTA_COMBATLOG" +
-      "_KILL_EATER_EVENT\020*\022&\n\"DOTA_COMBATLOG_NE" +
-      "UTRAL_ITEM_EARNED\020+B:\n)skadistats.clarit",
-      "y.wire.dota.common.protoB\rDOTACombatLog"
+      "\001(\010\022\024\n\014uses_charges\030O \001(\010\022\027\n\017tracked_sta" +
+      "t_id\030P \001(\r\022 \n\030modifier_purged_duration\030Q" +
+      " \001(\002*\347\013\n\024DOTA_COMBATLOG_TYPES\022#\n\026DOTA_CO" +
+      "MBATLOG_INVALID\020\377\377\377\377\377\377\377\377\377\001\022\031\n\025DOTA_COMBA" +
+      "TLOG_DAMAGE\020\000\022\027\n\023DOTA_COMBATLOG_HEAL\020\001\022\037" +
+      "\n\033DOTA_COMBATLOG_MODIFIER_ADD\020\002\022\"\n\036DOTA_" +
+      "COMBATLOG_MODIFIER_REMOVE\020\003\022\030\n\024DOTA_COMB" +
+      "ATLOG_DEATH\020\004\022\032\n\026DOTA_COMBATLOG_ABILITY\020" +
+      "\005\022\027\n\023DOTA_COMBATLOG_ITEM\020\006\022\033\n\027DOTA_COMBA",
+      "TLOG_LOCATION\020\007\022\027\n\023DOTA_COMBATLOG_GOLD\020\010" +
+      "\022\035\n\031DOTA_COMBATLOG_GAME_STATE\020\t\022\025\n\021DOTA_" +
+      "COMBATLOG_XP\020\n\022\033\n\027DOTA_COMBATLOG_PURCHAS" +
+      "E\020\013\022\032\n\026DOTA_COMBATLOG_BUYBACK\020\014\022\"\n\036DOTA_" +
+      "COMBATLOG_ABILITY_TRIGGER\020\r\022\036\n\032DOTA_COMB" +
+      "ATLOG_PLAYERSTATS\020\016\022\034\n\030DOTA_COMBATLOG_MU" +
+      "LTIKILL\020\017\022\035\n\031DOTA_COMBATLOG_KILLSTREAK\020\020" +
+      "\022%\n!DOTA_COMBATLOG_TEAM_BUILDING_KILL\020\021\022" +
+      "\036\n\032DOTA_COMBATLOG_FIRST_BLOOD\020\022\022\'\n#DOTA_" +
+      "COMBATLOG_MODIFIER_STACK_EVENT\020\023\022%\n!DOTA",
+      "_COMBATLOG_NEUTRAL_CAMP_STACK\020\024\022\036\n\032DOTA_" +
+      "COMBATLOG_PICKUP_RUNE\020\025\022%\n!DOTA_COMBATLO" +
+      "G_REVEALED_INVISIBLE\020\026\022\035\n\031DOTA_COMBATLOG" +
+      "_HERO_SAVED\020\027\022 \n\034DOTA_COMBATLOG_MANA_RES" +
+      "TORED\020\030\022\037\n\033DOTA_COMBATLOG_HERO_LEVELUP\020\031" +
+      "\022#\n\037DOTA_COMBATLOG_BOTTLE_HEAL_ALLY\020\032\022 \n" +
+      "\034DOTA_COMBATLOG_ENDGAME_STATS\020\033\022$\n DOTA_" +
+      "COMBATLOG_INTERRUPT_CHANNEL\020\034\022\036\n\032DOTA_CO" +
+      "MBATLOG_ALLIED_GOLD\020\035\022\036\n\032DOTA_COMBATLOG_" +
+      "AEGIS_TAKEN\020\036\022\036\n\032DOTA_COMBATLOG_MANA_DAM",
+      "AGE\020\037\022,\n(DOTA_COMBATLOG_PHYSICAL_DAMAGE_" +
+      "PREVENTED\020 \022 \n\034DOTA_COMBATLOG_UNIT_SUMMO" +
+      "NED\020!\022\037\n\033DOTA_COMBATLOG_ATTACK_EVADE\020\"\022\033" +
+      "\n\027DOTA_COMBATLOG_TREE_CUT\020#\022\"\n\036DOTA_COMB" +
+      "ATLOG_SUCCESSFUL_SCAN\020$\022!\n\035DOTA_COMBATLO" +
+      "G_END_KILLSTREAK\020%\022$\n DOTA_COMBATLOG_BLO" +
+      "ODSTONE_CHARGE\020&\022\"\n\036DOTA_COMBATLOG_CRITI" +
+      "CAL_DAMAGE\020\'\022\037\n\033DOTA_COMBATLOG_SPELL_ABS" +
+      "ORB\020(\022\"\n\036DOTA_COMBATLOG_UNIT_TELEPORTED\020" +
+      ")\022#\n\037DOTA_COMBATLOG_KILL_EATER_EVENT\020*\022&",
+      "\n\"DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED\020+B:" +
+      "\n)skadistats.clarity.wire.dota.common.pr" +
+      "otoB\rDOTACombatLog"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -7179,7 +7337,7 @@ public final class DOTACombatLog {
     internal_static_CMsgDOTACombatLogEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTACombatLogEntry_descriptor,
-        new java.lang.String[] { "Type", "TargetName", "TargetSourceName", "AttackerName", "DamageSourceName", "InflictorName", "IsAttackerIllusion", "IsAttackerHero", "IsTargetIllusion", "IsTargetHero", "IsVisibleRadiant", "IsVisibleDire", "Value", "Health", "Timestamp", "StunDuration", "SlowDuration", "IsAbilityToggleOn", "IsAbilityToggleOff", "AbilityLevel", "LocationX", "LocationY", "GoldReason", "TimestampRaw", "ModifierDuration", "XpReason", "LastHits", "AttackerTeam", "TargetTeam", "ObsWardsPlaced", "AssistPlayer0", "AssistPlayer1", "AssistPlayer2", "AssistPlayer3", "StackCount", "HiddenModifier", "IsTargetBuilding", "NeutralCampType", "RuneType", "AssistPlayers", "IsHealSave", "IsUltimateAbility", "AttackerHeroLevel", "TargetHeroLevel", "Xpm", "Gpm", "EventLocation", "TargetIsSelf", "DamageType", "InvisibilityModifier", "DamageCategory", "Networth", "BuildingType", "ModifierElapsedDuration", "SilenceModifier", "HealFromLifesteal", "ModifierPurged", "SpellEvaded", "MotionControllerModifier", "LongRangeKill", "ModifierPurgeAbility", "ModifierPurgeNpc", "RootModifier", "TotalUnitDeathCount", "AuraModifier", "ArmorDebuffModifier", "NoPhysicalDamageModifier", "ModifierAbility", "ModifierHidden", "InflictorIsStolenAbility", "KillEaterEvent", "UnitStatusLabel", "SpellGeneratedAttack", "AtNightTime", "AttackerHasScepter", "NeutralCampTeam", "RegeneratedHealth", "WillReincarnate", "UsesCharges", });
+        new java.lang.String[] { "Type", "TargetName", "TargetSourceName", "AttackerName", "DamageSourceName", "InflictorName", "IsAttackerIllusion", "IsAttackerHero", "IsTargetIllusion", "IsTargetHero", "IsVisibleRadiant", "IsVisibleDire", "Value", "Health", "Timestamp", "StunDuration", "SlowDuration", "IsAbilityToggleOn", "IsAbilityToggleOff", "AbilityLevel", "LocationX", "LocationY", "GoldReason", "TimestampRaw", "ModifierDuration", "XpReason", "LastHits", "AttackerTeam", "TargetTeam", "ObsWardsPlaced", "AssistPlayer0", "AssistPlayer1", "AssistPlayer2", "AssistPlayer3", "StackCount", "HiddenModifier", "IsTargetBuilding", "NeutralCampType", "RuneType", "AssistPlayers", "IsHealSave", "IsUltimateAbility", "AttackerHeroLevel", "TargetHeroLevel", "Xpm", "Gpm", "EventLocation", "TargetIsSelf", "DamageType", "InvisibilityModifier", "DamageCategory", "Networth", "BuildingType", "ModifierElapsedDuration", "SilenceModifier", "HealFromLifesteal", "ModifierPurged", "SpellEvaded", "MotionControllerModifier", "LongRangeKill", "ModifierPurgeAbility", "ModifierPurgeNpc", "RootModifier", "TotalUnitDeathCount", "AuraModifier", "ArmorDebuffModifier", "NoPhysicalDamageModifier", "ModifierAbility", "ModifierHidden", "InflictorIsStolenAbility", "KillEaterEvent", "UnitStatusLabel", "SpellGeneratedAttack", "AtNightTime", "AttackerHasScepter", "NeutralCampTeam", "RegeneratedHealth", "WillReincarnate", "UsesCharges", "TrackedStatId", "ModifierPurgedDuration", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
