@@ -66,6 +66,10 @@
     "upstream": ["dota2/dota_modifiers.proto"],
     "type": "game-specific"
   },
+  "dota/common/dota_combatlog.proto": {
+    "upstream": ["dota2/dota_shared_enums.proto"],
+    "type": "game-specific"
+  },
   "dota/common/dota_usermessages.proto": {
     "upstream": ["dota2/dota_usermessages.proto"],
     "type": "game-specific"

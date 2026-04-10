@@ -131,8 +131,3 @@ message CSVCMsgList_GameEvents {
   repeated .CSVCMsgList_GameEvents.event_t events = 1;
 }
 
-message CSVCMsg_UserMessage {
-  optional int32 msg_type = 1;
-  optional bytes msg_data = 2;
-  optional int32 passthrough = 3;
-}

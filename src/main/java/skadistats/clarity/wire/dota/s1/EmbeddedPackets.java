@@ -34,7 +34,7 @@ public class EmbeddedPackets {
         /*  17 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_Sounds_VALUE, CommonNetMessages.CSVCMsg_Sounds.class);
         /*  18 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_SetView_VALUE, CommonNetMessages.CSVCMsg_SetView.class);
         /*  21 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_BSPDecal_VALUE, CommonNetMessages.CSVCMsg_BSPDecal.class);
-        /*  23 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_UserMessage_VALUE, CommonNetworkBaseTypes.CSVCMsg_UserMessage.class);
+        /*  23 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_UserMessage_VALUE, CommonNetMessages.CSVCMsg_UserMessage.class);
         /*  25 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_GameEvent_VALUE, CommonNetworkBaseTypes.CSVCMsg_GameEvent.class);
         /*  26 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_PacketEntities_VALUE, CommonNetMessages.CSVCMsg_PacketEntities.class);
         /*  27 */ K2C.put(DOTAS1MessageId.SVC_Messages.svc_TempEntities_VALUE, S1NetMessages.CSVCMsg_TempEntities.class);

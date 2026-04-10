@@ -3,6 +3,7 @@ package skadistats.clarity.wire.dota.s2;
 import com.google.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
+import skadistats.clarity.wire.dota.common.proto.DOTACombatLog;
 import skadistats.clarity.wire.dota.common.proto.DOTAUserMessages;
 import skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon;
 import skadistats.clarity.wire.dota.s2.proto.DOTAS2UserMessages;
@@ -196,7 +197,7 @@ public class EmbeddedPackets {
         /* 547 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_SpectatorPlayerUnitOrders_VALUE, DOTAUserMessages.CDOTAUserMsg_SpectatorPlayerUnitOrders.class);
         /* 552 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ProjectionAbility_VALUE, DOTAUserMessages.CDOTAUserMsg_ProjectionAbility.class);
         /* 553 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_ProjectionEvent_VALUE, DOTAUserMessages.CDOTAUserMsg_ProjectionEvent.class);
-        /* 554 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_CombatLogDataHLTV_VALUE, DOTAUserMessages.CMsgDOTACombatLogEntry.class);
+        /* 554 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_CombatLogDataHLTV_VALUE, DOTACombatLog.CMsgDOTACombatLogEntry.class);
         /* 555 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_XPAlert_VALUE, DOTAUserMessages.CDOTAUserMsg_XPAlert.class);
         /* 556 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_UpdateQuestProgress_VALUE, DOTAUserMessages.CDOTAUserMsg_UpdateQuestProgress.class);
         /* 557 */ K2C.put(DOTAS2MessageId.EDotaUserMessages.DOTA_UM_MatchMetadata_VALUE, DOTAS2MatchMetadata.CDOTAMatchMetadataFile.class);
