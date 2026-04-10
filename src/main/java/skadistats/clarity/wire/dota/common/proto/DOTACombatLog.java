@@ -193,6 +193,10 @@ public final class DOTACombatLog {
      * <code>DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED = 43;</code>
      */
     DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED(44, 43),
+    /**
+     * <code>DOTA_COMBATLOG_STAT_TRACKER_PLAYER = 44;</code>
+     */
+    DOTA_COMBATLOG_STAT_TRACKER_PLAYER(45, 44),
     ;
 
     /**
@@ -375,6 +379,10 @@ public final class DOTACombatLog {
      * <code>DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED = 43;</code>
      */
     public static final int DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED_VALUE = 43;
+    /**
+     * <code>DOTA_COMBATLOG_STAT_TRACKER_PLAYER = 44;</code>
+     */
+    public static final int DOTA_COMBATLOG_STAT_TRACKER_PLAYER_VALUE = 44;
 
 
     public final int getNumber() { return value; }
@@ -426,6 +434,7 @@ public final class DOTACombatLog {
         case 41: return DOTA_COMBATLOG_UNIT_TELEPORTED;
         case 42: return DOTA_COMBATLOG_KILL_EATER_EVENT;
         case 43: return DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED;
+        case 44: return DOTA_COMBATLOG_STAT_TRACKER_PLAYER;
         default: return null;
       }
     }
@@ -482,11 +491,11 @@ public final class DOTACombatLog {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
      */
     boolean hasType();
     /**
-     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
      */
     skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES getType();
 
@@ -1743,13 +1752,13 @@ public final class DOTACombatLog {
     public static final int TYPE_FIELD_NUMBER = 1;
     private skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES type_;
     /**
-     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+     * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
      */
     public skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES getType() {
       return type_;
@@ -2963,7 +2972,7 @@ public final class DOTACombatLog {
     }
 
     private void initFields() {
-      type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+      type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_INVALID;
       targetName_ = 0;
       targetSourceName_ = 0;
       attackerName_ = 0;
@@ -3756,7 +3765,7 @@ public final class DOTACombatLog {
 
       public Builder clear() {
         super.clear();
-        type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+        type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_INVALID;
         bitField0_ = (bitField0_ & ~0x00000001);
         targetName_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -4572,21 +4581,21 @@ public final class DOTACombatLog {
       private int bitField1_;
       private int bitField2_;
 
-      private skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+      private skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_INVALID;
       /**
-       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
        */
       public skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES getType() {
         return type_;
       }
       /**
-       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
        */
       public Builder setType(skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES value) {
         if (value == null) {
@@ -4598,11 +4607,11 @@ public final class DOTACombatLog {
         return this;
       }
       /**
-       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];</code>
+       * <code>optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_DAMAGE;
+        type_ = skadistats.clarity.wire.dota.common.proto.DOTACombatLog.DOTA_COMBATLOG_TYPES.DOTA_COMBATLOG_INVALID;
         onChanged();
         return this;
       }
@@ -7226,99 +7235,100 @@ public final class DOTACombatLog {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024dota_combatlog.proto\"\263\020\n\026CMsgDOTAComba" +
-      "tLogEntry\022:\n\004type\030\001 \001(\0162\025.DOTA_COMBATLOG" +
-      "_TYPES:\025DOTA_COMBATLOG_DAMAGE\022\023\n\013target_" +
-      "name\030\002 \001(\r\022\032\n\022target_source_name\030\003 \001(\r\022\025" +
-      "\n\rattacker_name\030\004 \001(\r\022\032\n\022damage_source_n" +
-      "ame\030\005 \001(\r\022\026\n\016inflictor_name\030\006 \001(\r\022\034\n\024is_" +
-      "attacker_illusion\030\007 \001(\010\022\030\n\020is_attacker_h" +
-      "ero\030\010 \001(\010\022\032\n\022is_target_illusion\030\t \001(\010\022\026\n" +
-      "\016is_target_hero\030\n \001(\010\022\032\n\022is_visible_radi" +
-      "ant\030\013 \001(\010\022\027\n\017is_visible_dire\030\014 \001(\010\022\r\n\005va",
-      "lue\030\r \001(\r\022\016\n\006health\030\016 \001(\005\022\021\n\ttimestamp\030\017" +
-      " \001(\002\022\025\n\rstun_duration\030\020 \001(\002\022\025\n\rslow_dura" +
-      "tion\030\021 \001(\002\022\034\n\024is_ability_toggle_on\030\022 \001(\010" +
-      "\022\035\n\025is_ability_toggle_off\030\023 \001(\010\022\025\n\rabili" +
-      "ty_level\030\024 \001(\r\022\022\n\nlocation_x\030\025 \001(\002\022\022\n\nlo" +
-      "cation_y\030\026 \001(\002\022\023\n\013gold_reason\030\027 \001(\r\022\025\n\rt" +
-      "imestamp_raw\030\030 \001(\002\022\031\n\021modifier_duration\030" +
-      "\031 \001(\002\022\021\n\txp_reason\030\032 \001(\r\022\021\n\tlast_hits\030\033 " +
-      "\001(\r\022\025\n\rattacker_team\030\034 \001(\r\022\023\n\013target_tea" +
-      "m\030\035 \001(\r\022\030\n\020obs_wards_placed\030\036 \001(\r\022\026\n\016ass",
-      "ist_player0\030\037 \001(\r\022\026\n\016assist_player1\030  \001(" +
-      "\r\022\026\n\016assist_player2\030! \001(\r\022\026\n\016assist_play" +
-      "er3\030\" \001(\r\022\023\n\013stack_count\030# \001(\r\022\027\n\017hidden" +
-      "_modifier\030$ \001(\010\022\032\n\022is_target_building\030% " +
-      "\001(\010\022\031\n\021neutral_camp_type\030& \001(\r\022\021\n\trune_t" +
-      "ype\030\' \001(\r\022\026\n\016assist_players\030( \003(\005\022\024\n\014is_" +
-      "heal_save\030) \001(\010\022\033\n\023is_ultimate_ability\030*" +
-      " \001(\010\022\033\n\023attacker_hero_level\030+ \001(\r\022\031\n\021tar" +
-      "get_hero_level\030, \001(\r\022\013\n\003xpm\030- \001(\r\022\013\n\003gpm" +
-      "\030. \001(\r\022\026\n\016event_location\030/ \001(\r\022\026\n\016target",
-      "_is_self\0300 \001(\010\022\023\n\013damage_type\0301 \001(\r\022\035\n\025i" +
-      "nvisibility_modifier\0302 \001(\010\022\027\n\017damage_cat" +
-      "egory\0303 \001(\r\022\020\n\010networth\0304 \001(\r\022\025\n\rbuildin" +
-      "g_type\0305 \001(\r\022!\n\031modifier_elapsed_duratio" +
-      "n\0306 \001(\002\022\030\n\020silence_modifier\0307 \001(\010\022\033\n\023hea" +
-      "l_from_lifesteal\0308 \001(\010\022\027\n\017modifier_purge" +
-      "d\0309 \001(\010\022\024\n\014spell_evaded\030: \001(\010\022\"\n\032motion_" +
-      "controller_modifier\030; \001(\010\022\027\n\017long_range_" +
-      "kill\030< \001(\010\022\036\n\026modifier_purge_ability\030= \001" +
-      "(\r\022\032\n\022modifier_purge_npc\030> \001(\r\022\025\n\rroot_m",
-      "odifier\030? \001(\010\022\036\n\026total_unit_death_count\030" +
-      "@ \001(\r\022\025\n\raura_modifier\030A \001(\010\022\035\n\025armor_de" +
-      "buff_modifier\030B \001(\010\022#\n\033no_physical_damag" +
-      "e_modifier\030C \001(\010\022\030\n\020modifier_ability\030D \001" +
-      "(\r\022\027\n\017modifier_hidden\030E \001(\010\022#\n\033inflictor" +
-      "_is_stolen_ability\030F \001(\010\022\030\n\020kill_eater_e" +
-      "vent\030G \001(\r\022\031\n\021unit_status_label\030H \001(\r\022\036\n" +
-      "\026spell_generated_attack\030I \001(\010\022\025\n\rat_nigh" +
-      "t_time\030J \001(\010\022\034\n\024attacker_has_scepter\030K \001" +
-      "(\010\022\031\n\021neutral_camp_team\030L \001(\r\022\032\n\022regener",
-      "ated_health\030M \001(\002\022\030\n\020will_reincarnate\030N " +
-      "\001(\010\022\024\n\014uses_charges\030O \001(\010\022\027\n\017tracked_sta" +
-      "t_id\030P \001(\r\022 \n\030modifier_purged_duration\030Q" +
-      " \001(\002*\347\013\n\024DOTA_COMBATLOG_TYPES\022#\n\026DOTA_CO" +
-      "MBATLOG_INVALID\020\377\377\377\377\377\377\377\377\377\001\022\031\n\025DOTA_COMBA" +
-      "TLOG_DAMAGE\020\000\022\027\n\023DOTA_COMBATLOG_HEAL\020\001\022\037" +
-      "\n\033DOTA_COMBATLOG_MODIFIER_ADD\020\002\022\"\n\036DOTA_" +
-      "COMBATLOG_MODIFIER_REMOVE\020\003\022\030\n\024DOTA_COMB" +
-      "ATLOG_DEATH\020\004\022\032\n\026DOTA_COMBATLOG_ABILITY\020" +
-      "\005\022\027\n\023DOTA_COMBATLOG_ITEM\020\006\022\033\n\027DOTA_COMBA",
-      "TLOG_LOCATION\020\007\022\027\n\023DOTA_COMBATLOG_GOLD\020\010" +
-      "\022\035\n\031DOTA_COMBATLOG_GAME_STATE\020\t\022\025\n\021DOTA_" +
-      "COMBATLOG_XP\020\n\022\033\n\027DOTA_COMBATLOG_PURCHAS" +
-      "E\020\013\022\032\n\026DOTA_COMBATLOG_BUYBACK\020\014\022\"\n\036DOTA_" +
-      "COMBATLOG_ABILITY_TRIGGER\020\r\022\036\n\032DOTA_COMB" +
-      "ATLOG_PLAYERSTATS\020\016\022\034\n\030DOTA_COMBATLOG_MU" +
-      "LTIKILL\020\017\022\035\n\031DOTA_COMBATLOG_KILLSTREAK\020\020" +
-      "\022%\n!DOTA_COMBATLOG_TEAM_BUILDING_KILL\020\021\022" +
-      "\036\n\032DOTA_COMBATLOG_FIRST_BLOOD\020\022\022\'\n#DOTA_" +
-      "COMBATLOG_MODIFIER_STACK_EVENT\020\023\022%\n!DOTA",
-      "_COMBATLOG_NEUTRAL_CAMP_STACK\020\024\022\036\n\032DOTA_" +
-      "COMBATLOG_PICKUP_RUNE\020\025\022%\n!DOTA_COMBATLO" +
-      "G_REVEALED_INVISIBLE\020\026\022\035\n\031DOTA_COMBATLOG" +
-      "_HERO_SAVED\020\027\022 \n\034DOTA_COMBATLOG_MANA_RES" +
-      "TORED\020\030\022\037\n\033DOTA_COMBATLOG_HERO_LEVELUP\020\031" +
-      "\022#\n\037DOTA_COMBATLOG_BOTTLE_HEAL_ALLY\020\032\022 \n" +
-      "\034DOTA_COMBATLOG_ENDGAME_STATS\020\033\022$\n DOTA_" +
-      "COMBATLOG_INTERRUPT_CHANNEL\020\034\022\036\n\032DOTA_CO" +
-      "MBATLOG_ALLIED_GOLD\020\035\022\036\n\032DOTA_COMBATLOG_" +
-      "AEGIS_TAKEN\020\036\022\036\n\032DOTA_COMBATLOG_MANA_DAM",
-      "AGE\020\037\022,\n(DOTA_COMBATLOG_PHYSICAL_DAMAGE_" +
-      "PREVENTED\020 \022 \n\034DOTA_COMBATLOG_UNIT_SUMMO" +
-      "NED\020!\022\037\n\033DOTA_COMBATLOG_ATTACK_EVADE\020\"\022\033" +
-      "\n\027DOTA_COMBATLOG_TREE_CUT\020#\022\"\n\036DOTA_COMB" +
-      "ATLOG_SUCCESSFUL_SCAN\020$\022!\n\035DOTA_COMBATLO" +
-      "G_END_KILLSTREAK\020%\022$\n DOTA_COMBATLOG_BLO" +
-      "ODSTONE_CHARGE\020&\022\"\n\036DOTA_COMBATLOG_CRITI" +
-      "CAL_DAMAGE\020\'\022\037\n\033DOTA_COMBATLOG_SPELL_ABS" +
-      "ORB\020(\022\"\n\036DOTA_COMBATLOG_UNIT_TELEPORTED\020" +
-      ")\022#\n\037DOTA_COMBATLOG_KILL_EATER_EVENT\020*\022&",
-      "\n\"DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED\020+B:" +
-      "\n)skadistats.clarity.wire.dota.common.pr" +
-      "otoB\rDOTACombatLog"
+      "\n\024dota_combatlog.proto\"\264\020\n\026CMsgDOTAComba" +
+      "tLogEntry\022;\n\004type\030\001 \001(\0162\025.DOTA_COMBATLOG" +
+      "_TYPES:\026DOTA_COMBATLOG_INVALID\022\023\n\013target" +
+      "_name\030\002 \001(\r\022\032\n\022target_source_name\030\003 \001(\r\022" +
+      "\025\n\rattacker_name\030\004 \001(\r\022\032\n\022damage_source_" +
+      "name\030\005 \001(\r\022\026\n\016inflictor_name\030\006 \001(\r\022\034\n\024is" +
+      "_attacker_illusion\030\007 \001(\010\022\030\n\020is_attacker_" +
+      "hero\030\010 \001(\010\022\032\n\022is_target_illusion\030\t \001(\010\022\026" +
+      "\n\016is_target_hero\030\n \001(\010\022\032\n\022is_visible_rad" +
+      "iant\030\013 \001(\010\022\027\n\017is_visible_dire\030\014 \001(\010\022\r\n\005v",
+      "alue\030\r \001(\r\022\016\n\006health\030\016 \001(\005\022\021\n\ttimestamp\030" +
+      "\017 \001(\002\022\025\n\rstun_duration\030\020 \001(\002\022\025\n\rslow_dur" +
+      "ation\030\021 \001(\002\022\034\n\024is_ability_toggle_on\030\022 \001(" +
+      "\010\022\035\n\025is_ability_toggle_off\030\023 \001(\010\022\025\n\rabil" +
+      "ity_level\030\024 \001(\r\022\022\n\nlocation_x\030\025 \001(\002\022\022\n\nl" +
+      "ocation_y\030\026 \001(\002\022\023\n\013gold_reason\030\027 \001(\r\022\025\n\r" +
+      "timestamp_raw\030\030 \001(\002\022\031\n\021modifier_duration" +
+      "\030\031 \001(\002\022\021\n\txp_reason\030\032 \001(\r\022\021\n\tlast_hits\030\033" +
+      " \001(\r\022\025\n\rattacker_team\030\034 \001(\r\022\023\n\013target_te" +
+      "am\030\035 \001(\r\022\030\n\020obs_wards_placed\030\036 \001(\r\022\026\n\016as",
+      "sist_player0\030\037 \001(\r\022\026\n\016assist_player1\030  \001" +
+      "(\r\022\026\n\016assist_player2\030! \001(\r\022\026\n\016assist_pla" +
+      "yer3\030\" \001(\r\022\023\n\013stack_count\030# \001(\r\022\027\n\017hidde" +
+      "n_modifier\030$ \001(\010\022\032\n\022is_target_building\030%" +
+      " \001(\010\022\031\n\021neutral_camp_type\030& \001(\r\022\021\n\trune_" +
+      "type\030\' \001(\r\022\026\n\016assist_players\030( \003(\005\022\024\n\014is" +
+      "_heal_save\030) \001(\010\022\033\n\023is_ultimate_ability\030" +
+      "* \001(\010\022\033\n\023attacker_hero_level\030+ \001(\r\022\031\n\021ta" +
+      "rget_hero_level\030, \001(\r\022\013\n\003xpm\030- \001(\r\022\013\n\003gp" +
+      "m\030. \001(\r\022\026\n\016event_location\030/ \001(\r\022\026\n\016targe",
+      "t_is_self\0300 \001(\010\022\023\n\013damage_type\0301 \001(\r\022\035\n\025" +
+      "invisibility_modifier\0302 \001(\010\022\027\n\017damage_ca" +
+      "tegory\0303 \001(\r\022\020\n\010networth\0304 \001(\r\022\025\n\rbuildi" +
+      "ng_type\0305 \001(\r\022!\n\031modifier_elapsed_durati" +
+      "on\0306 \001(\002\022\030\n\020silence_modifier\0307 \001(\010\022\033\n\023he" +
+      "al_from_lifesteal\0308 \001(\010\022\027\n\017modifier_purg" +
+      "ed\0309 \001(\010\022\024\n\014spell_evaded\030: \001(\010\022\"\n\032motion" +
+      "_controller_modifier\030; \001(\010\022\027\n\017long_range" +
+      "_kill\030< \001(\010\022\036\n\026modifier_purge_ability\030= " +
+      "\001(\r\022\032\n\022modifier_purge_npc\030> \001(\r\022\025\n\rroot_",
+      "modifier\030? \001(\010\022\036\n\026total_unit_death_count" +
+      "\030@ \001(\r\022\025\n\raura_modifier\030A \001(\010\022\035\n\025armor_d" +
+      "ebuff_modifier\030B \001(\010\022#\n\033no_physical_dama" +
+      "ge_modifier\030C \001(\010\022\030\n\020modifier_ability\030D " +
+      "\001(\r\022\027\n\017modifier_hidden\030E \001(\010\022#\n\033inflicto" +
+      "r_is_stolen_ability\030F \001(\010\022\030\n\020kill_eater_" +
+      "event\030G \001(\r\022\031\n\021unit_status_label\030H \001(\r\022\036" +
+      "\n\026spell_generated_attack\030I \001(\010\022\025\n\rat_nig" +
+      "ht_time\030J \001(\010\022\034\n\024attacker_has_scepter\030K " +
+      "\001(\010\022\031\n\021neutral_camp_team\030L \001(\r\022\032\n\022regene",
+      "rated_health\030M \001(\002\022\030\n\020will_reincarnate\030N" +
+      " \001(\010\022\024\n\014uses_charges\030O \001(\010\022\027\n\017tracked_st" +
+      "at_id\030P \001(\r\022 \n\030modifier_purged_duration\030" +
+      "Q \001(\002*\217\014\n\024DOTA_COMBATLOG_TYPES\022#\n\026DOTA_C" +
+      "OMBATLOG_INVALID\020\377\377\377\377\377\377\377\377\377\001\022\031\n\025DOTA_COMB" +
+      "ATLOG_DAMAGE\020\000\022\027\n\023DOTA_COMBATLOG_HEAL\020\001\022" +
+      "\037\n\033DOTA_COMBATLOG_MODIFIER_ADD\020\002\022\"\n\036DOTA" +
+      "_COMBATLOG_MODIFIER_REMOVE\020\003\022\030\n\024DOTA_COM" +
+      "BATLOG_DEATH\020\004\022\032\n\026DOTA_COMBATLOG_ABILITY" +
+      "\020\005\022\027\n\023DOTA_COMBATLOG_ITEM\020\006\022\033\n\027DOTA_COMB",
+      "ATLOG_LOCATION\020\007\022\027\n\023DOTA_COMBATLOG_GOLD\020" +
+      "\010\022\035\n\031DOTA_COMBATLOG_GAME_STATE\020\t\022\025\n\021DOTA" +
+      "_COMBATLOG_XP\020\n\022\033\n\027DOTA_COMBATLOG_PURCHA" +
+      "SE\020\013\022\032\n\026DOTA_COMBATLOG_BUYBACK\020\014\022\"\n\036DOTA" +
+      "_COMBATLOG_ABILITY_TRIGGER\020\r\022\036\n\032DOTA_COM" +
+      "BATLOG_PLAYERSTATS\020\016\022\034\n\030DOTA_COMBATLOG_M" +
+      "ULTIKILL\020\017\022\035\n\031DOTA_COMBATLOG_KILLSTREAK\020" +
+      "\020\022%\n!DOTA_COMBATLOG_TEAM_BUILDING_KILL\020\021" +
+      "\022\036\n\032DOTA_COMBATLOG_FIRST_BLOOD\020\022\022\'\n#DOTA" +
+      "_COMBATLOG_MODIFIER_STACK_EVENT\020\023\022%\n!DOT",
+      "A_COMBATLOG_NEUTRAL_CAMP_STACK\020\024\022\036\n\032DOTA" +
+      "_COMBATLOG_PICKUP_RUNE\020\025\022%\n!DOTA_COMBATL" +
+      "OG_REVEALED_INVISIBLE\020\026\022\035\n\031DOTA_COMBATLO" +
+      "G_HERO_SAVED\020\027\022 \n\034DOTA_COMBATLOG_MANA_RE" +
+      "STORED\020\030\022\037\n\033DOTA_COMBATLOG_HERO_LEVELUP\020" +
+      "\031\022#\n\037DOTA_COMBATLOG_BOTTLE_HEAL_ALLY\020\032\022 " +
+      "\n\034DOTA_COMBATLOG_ENDGAME_STATS\020\033\022$\n DOTA" +
+      "_COMBATLOG_INTERRUPT_CHANNEL\020\034\022\036\n\032DOTA_C" +
+      "OMBATLOG_ALLIED_GOLD\020\035\022\036\n\032DOTA_COMBATLOG" +
+      "_AEGIS_TAKEN\020\036\022\036\n\032DOTA_COMBATLOG_MANA_DA",
+      "MAGE\020\037\022,\n(DOTA_COMBATLOG_PHYSICAL_DAMAGE" +
+      "_PREVENTED\020 \022 \n\034DOTA_COMBATLOG_UNIT_SUMM" +
+      "ONED\020!\022\037\n\033DOTA_COMBATLOG_ATTACK_EVADE\020\"\022" +
+      "\033\n\027DOTA_COMBATLOG_TREE_CUT\020#\022\"\n\036DOTA_COM" +
+      "BATLOG_SUCCESSFUL_SCAN\020$\022!\n\035DOTA_COMBATL" +
+      "OG_END_KILLSTREAK\020%\022$\n DOTA_COMBATLOG_BL" +
+      "OODSTONE_CHARGE\020&\022\"\n\036DOTA_COMBATLOG_CRIT" +
+      "ICAL_DAMAGE\020\'\022\037\n\033DOTA_COMBATLOG_SPELL_AB" +
+      "SORB\020(\022\"\n\036DOTA_COMBATLOG_UNIT_TELEPORTED" +
+      "\020)\022#\n\037DOTA_COMBATLOG_KILL_EATER_EVENT\020*\022",
+      "&\n\"DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED\020+\022" +
+      "&\n\"DOTA_COMBATLOG_STAT_TRACKER_PLAYER\020,B" +
+      ":\n)skadistats.clarity.wire.dota.common.p" +
+      "rotoB\rDOTACombatLog"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

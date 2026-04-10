@@ -47,10 +47,11 @@ enum DOTA_COMBATLOG_TYPES {
   DOTA_COMBATLOG_UNIT_TELEPORTED = 41;
   DOTA_COMBATLOG_KILL_EATER_EVENT = 42;
   DOTA_COMBATLOG_NEUTRAL_ITEM_EARNED = 43;
+  DOTA_COMBATLOG_STAT_TRACKER_PLAYER = 44;
 }
 
 message CMsgDOTACombatLogEntry {
-  optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_DAMAGE];
+  optional .DOTA_COMBATLOG_TYPES type = 1 [default = DOTA_COMBATLOG_INVALID];
   optional uint32 target_name = 2;
   optional uint32 target_source_name = 3;
   optional uint32 attacker_name = 4;
