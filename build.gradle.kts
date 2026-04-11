@@ -2,7 +2,6 @@ plugins {
     id("java-library")
     id("maven-publish")
     id("signing")
-    id("io.github.gradle-nexus.publish-plugin") version "1.3.0"
 }
 
 group = "com.skadistats"
@@ -64,14 +63,11 @@ publishing {
     }
 }
 
-nexusPublishing {
-    this.repositories {
-        sonatype()
-    }
-}
-
 signing {
     useGpgCmd()
+    setRequired({
+        gradle.taskGraph.allTasks.any { it.name.startsWith("publishAggregation") }
+    })
     sign(publishing.publications["mavenJava"])
 }
 
