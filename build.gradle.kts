@@ -5,11 +5,11 @@ plugins {
 }
 
 group = "com.skadistats"
-version = "6.0"
+version = "7.0"
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
     withSourcesJar()
     withJavadocJar()

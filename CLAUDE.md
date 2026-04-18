@@ -9,8 +9,7 @@ Central as `com.skadistats:clarity-protobuf`.
 ./gradlew publishToMavenLocal
 ```
 
-Java **17** toolchain (not 21 — this is a downstream-friendly
-distributable). Only runtime dep: `fastutil-core`.
+Java **21** toolchain. Only runtime dep: `fastutil-core`.
 
 ## What's in here
 - `src/main/proto/`   — proto sources, hand-maintained (see Proto sync below)
@@ -39,7 +38,7 @@ Source-1-only content under `s1/`, Source-2-only under `s2/`. Don't
 cross the streams.
 
 ## Sync / update discipline
-See `tools/proto-sync/RUNBOOK.md` (in German) for the full flow. Core
+See `tools/proto-sync/RUNBOOK.md` for the full flow. Core
 rules that bite if ignored:
 
 - **Additive, never subtractive.** When upstream removes a field,
