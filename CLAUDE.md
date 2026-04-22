@@ -52,6 +52,11 @@ rules that bite if ignored:
 - `EmbeddedPackets.java` / `DemoPackets.java` entries kept numerically
   sorted.
 
+## OpenSpec
+If an OpenSpec change touches this repo, its artifacts belong here — not
+in `clarity` or `clarity-examples`. Create or initialize `openspec/` here
+if needed.
+
 ## Upstream
 Consumer: `/home/spheenik/projects/clarity/clarity`. Any proto change
 here needs a rebuild + smoke test there before publishing.
