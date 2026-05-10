@@ -5,11 +5,11 @@ module com.skadistats.clarity.protobuf {
 
     exports com.google.protobuf;
     exports skadistats.clarity.wire;
-    exports skadistats.clarity.wire.csgo.common.proto;
-    exports skadistats.clarity.wire.csgo.s1;
-    exports skadistats.clarity.wire.csgo.s1.proto;
-    exports skadistats.clarity.wire.csgo.s2;
-    exports skadistats.clarity.wire.csgo.s2.proto;
+    exports skadistats.clarity.wire.cs.common.proto;
+    exports skadistats.clarity.wire.cs.csgo;
+    exports skadistats.clarity.wire.cs.csgo.proto;
+    exports skadistats.clarity.wire.cs.cs2;
+    exports skadistats.clarity.wire.cs.cs2.proto;
     exports skadistats.clarity.wire.deadlock.proto;
     exports skadistats.clarity.wire.dota.common.proto;
     exports skadistats.clarity.wire.dota.s1;

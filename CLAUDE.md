@@ -29,13 +29,30 @@ shared/common  ← everything
 shared/demo    ← shared/common
 shared/s1      ← shared/common
 shared/s2      ← shared/common + shared/demo
-{csgo,dota}/common ← shared/{common,demo}
-{csgo,dota}/s1     ← shared/{common,demo,s1} + game/common
-{csgo,dota}/s2     ← shared/{common,demo,s2} + game/common
-deadlock           ← shared/{common,demo,s2}
+
+dota/common    ← shared/{common,demo}
+dota/s1        ← shared/{common,demo,s1} + dota/common
+dota/s2        ← shared/{common,demo,s2} + dota/common
+
+cs/common      ← shared/{common,demo}
+cs/csgo        ← shared/{common,demo,s1} + cs/common
+cs/cs2         ← shared/{common,demo,s2} + cs/common
+
+deadlock       ← shared/{common,demo,s2}
 ```
-Source-1-only content under `s1/`, Source-2-only under `s2/`. Don't
-cross the streams.
+
+Note the asymmetry between the `dota/` and `cs/` trees:
+- `dota/` is **engine-split**: same product (Dota 2) on Source 1 and
+  Source 2, sharing `dota/common/`.
+- `cs/` is **product-split**: `cs/csgo/` is the legacy CSGO product
+  (Source 1) and `cs/cs2/` is Counter-Strike 2 (Source 2). They are
+  distinct games that share wire-format heritage via `cs/common/`
+  (the upstream `cstrike15_*-common.proto` files Valve still ships in
+  both).
+
+Don't cross the streams: engine-version-specific content stays in its
+matching dir (`s1/`, `s2/`, `csgo/`, `cs2/`); shared content goes in
+`common/`.
 
 ## Sync / update discipline
 See `tools/proto-sync/RUNBOOK.md` for the full flow. Core

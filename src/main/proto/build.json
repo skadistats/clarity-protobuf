@@ -22,19 +22,19 @@
   },
 
   {
-    "path": "csgo/common",
+    "path": "cs/common",
     "build": "*.proto",
     "include": ["shared/common", "shared/demo"]
   },
   {
-    "path": "csgo/s1",
+    "path": "cs/csgo",
     "build": "*.proto",
-    "include": ["shared/common", "shared/demo" ,"shared/s1", "csgo/common"]
+    "include": ["shared/common", "shared/demo" ,"shared/s1", "cs/common"]
   },
   {
-    "path": "csgo/s2",
+    "path": "cs/cs2",
     "build": "*.proto",
-    "include": ["shared/common", "shared/demo", "shared/s2", "csgo/common"]
+    "include": ["shared/common", "shared/demo", "shared/s2", "cs/common"]
   },
 
   {

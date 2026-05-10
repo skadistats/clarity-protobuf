@@ -175,25 +175,25 @@
     ],
     "type": "game-specific"
   },
-  "csgo/common/cstrike15_gcmessages-common.proto": {
+  "cs/common/cstrike15_gcmessages-common.proto": {
     "upstream": [
       "csgo/cstrike15_gcmessages.proto"
     ],
     "type": "game-specific"
   },
-  "csgo/common/cstrike15_usermessages-common.proto": {
+  "cs/common/cstrike15_usermessages-common.proto": {
     "upstream": [
       "csgo/cstrike15_usermessages.proto"
     ],
     "type": "game-specific"
   },
-  "csgo/s2/cs_gameevents.proto": {
+  "cs/cs2/cs_gameevents.proto": {
     "upstream": [
       "csgo/cs_gameevents.proto"
     ],
     "type": "game-specific"
   },
-  "csgo/s2/message_id.proto": {
+  "cs/cs2/message_id.proto": {
     "upstream": [
       "csgo/networkbasetypes.proto",
       "csgo/netmessages.proto",

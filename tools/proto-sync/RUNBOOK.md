@@ -39,19 +39,28 @@ If Valve removes a field, message, or enum value, we do **NOT** remove it on our
 - **New messages/enums**: only add if referenced by a new field (e.g. nested messages like `CUserMsg_ParticleManager.AddFan`)
 - **New top-level messages**: only add if needed for a replay mapping (see steps 6–7)
 
-### Don't touch Source 1
-The S1 files (`dota/s1/`, `csgo/s1/`, `shared/s1/`) are no longer updated. They're for old replays, and current upstream targets Source 2.
+### Don't touch the legacy game directories
+The legacy-game files (`dota/s1/`, `cs/csgo/`, `shared/s1/`) are no longer updated. They're for old replays, and current upstream targets Source 2.
 
-### Common vs. S2 directories
-The `common/` folders (e.g. `dota/common/`) are compiled for both S1 and S2. **New S2-only content must NOT be placed in `common/`.** New messages/enums relevant only to S2 replays belong in the `s2/` folder (e.g. `dota/s2/`).
+Note the asymmetry between the two trees:
+- `dota/` is **engine-split**: `dota/s1/` and `dota/s2/` are the same product (Dota 2) on different Source engines, sharing `dota/common/`.
+- `cs/` is **product-split**: `cs/csgo/` is the legacy CSGO product (Source 1) and `cs/cs2/` is the Counter-Strike 2 product (Source 2). They're distinct games that share wire-format heritage via `cs/common/` (the upstream `cstrike15_*-common.proto` files Valve still ships in both).
+
+### Common vs. version-specific directories
+The `common/` folders are compiled for both versions in the same family.
+- For `dota/`: `dota/common/` is included by `dota/s1/` and `dota/s2/` builds. New S2-only content must NOT be placed in `dota/common/`; it belongs in `dota/s2/`.
+- For `cs/`: `cs/common/` is included by `cs/csgo/` and `cs/cs2/` builds. New CS2-only content must NOT be placed in `cs/common/`; it belongs in `cs/cs2/`.
 
 Proto compilation (`build.json`) defines the include paths:
 - `dota/common` has no access to `dota/s2`
 - `dota/s2` has access to `dota/common` and `shared/*`
-- If a new S2 message references a type from `s2/`, the message itself must also live in `s2/`
+- `cs/common` has no access to `cs/cs2`
+- `cs/cs2` has access to `cs/common` and `shared/*`
+- If a new message references a type from a version-specific dir, the message itself must also live in that dir
 
-When necessary, create a new `.proto` file in `s2/` (e.g. `dota/s2/dota_usermessages_s2.proto`). Proto files get:
-- `option java_package = "skadistats.clarity.wire.<game>.s2.proto";`
+When necessary, create a new `.proto` file in the right location (e.g. `dota/s2/dota_usermessages_s2.proto`, or `cs/cs2/<name>.proto`). Proto files get:
+- `option java_package = "skadistats.clarity.wire.<family>.<version>.proto";`
+  (where `<family>.<version>` is `dota.s2`, `cs.csgo`, `cs.cs2`, `cs.common`, etc.)
 - `option java_outer_classname = "<MeaningfulName>";`
 
 **No message definitions in enum-only files** (e.g. not in `dota_shared_enums.proto` — only enums and the types they require belong there).
@@ -116,7 +125,7 @@ Read the report and sanity-check it:
 
 Affects these files:
 - `src/main/proto/dota/s2/message_id.proto`
-- `src/main/proto/csgo/s2/message_id.proto`
+- `src/main/proto/cs/cs2/message_id.proto`
 - `src/main/proto/deadlock/message_id.proto`
 
 Append new enum values at the end of the respective enum:
@@ -173,7 +182,7 @@ For **every new message ID**, add a **commented-out** line to the matching `Embe
 
 Files:
 - `src/main/java/skadistats/clarity/wire/dota/s2/EmbeddedPackets.java`
-- `src/main/java/skadistats/clarity/wire/csgo/s2/EmbeddedPackets.java`
+- `src/main/java/skadistats/clarity/wire/cs/cs2/EmbeddedPackets.java`
 - `src/main/java/skadistats/clarity/wire/deadlock/proto/EmbeddedPackets.java`
 
 ### DemoPackets.java (top-level demo messages)
@@ -189,7 +198,7 @@ The registry size in the constructor (`new KindToClassMessageRegistry(N)`) must 
 |---|---|---|
 | `DOTA_UM_Foo` | `CDOTAUserMsg_Foo` | `DOTAUserMessages.CDOTAUserMsg_Foo` |
 | `DOTA_EM_Foo` | `CDOTAEntityMsg_Foo` | `DOTAUserMessages.CDOTAEntityMsg_Foo` |
-| `CS_UM_Foo` | `CCSUsrMsg_Foo` | `CSGOCommonUserMessages.CCSUsrMsg_Foo` |
+| `CS_UM_Foo` | `CCSUsrMsg_Foo` | `CsCommonUserMessages.CCSUsrMsg_Foo` |
 | `k_EUserMsg_Foo` | `CCitadelUserMsg_Foo` | `CitadelUserMessages.CCitadelUserMsg_Foo` |
 | `k_EEntityMsg_Foo` | `CCitadelEntityMsg_Foo` | `CitadelUserMessages.CCitadelEntityMsg_Foo` |
 | `UM_Foo` | `CUserMessage_Foo` | `S2UserMessages.CUserMessage_Foo` |
@@ -214,7 +223,7 @@ GitHub Issue: https://github.com/skadistats/clarity/issues/58
 Users report unknown message types there in the format:
 ```
 unknown embedded message of kind DOTA_S2/635
-unknown top level message of kind CSGO_S2/18
+unknown top level message of kind CS2/18
 ```
 
 For every ID reported there:
