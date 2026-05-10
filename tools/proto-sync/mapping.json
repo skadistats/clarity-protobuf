@@ -1,141 +1,232 @@
 {
   "_comment": "Maps clarity proto files to their upstream SteamDatabase/Protobufs source(s). For shared files, all listed upstream sources should be unioned. Default behavior: only show updates to existing messages/enums (no new items).",
   "_upstream_repo": "SteamDatabase/Protobufs",
-  "_last_synced_commit": "e0029427a75d9247e8d15b11d812cf6c00519304",
-
+  "_last_synced_commit": "854ecbbe56bf5cf86b9a9728e73fb120539319e1",
   "shared/common/network_connection-common.proto": {
-    "upstream": ["csgo/network_connection.proto", "dota2/network_connection.proto", "deadlock/network_connection.proto"],
+    "upstream": [
+      "csgo/network_connection.proto",
+      "dota2/network_connection.proto",
+      "deadlock/network_connection.proto"
+    ],
     "type": "shared"
   },
   "shared/common/networkbasetypes-common.proto": {
-    "upstream": ["csgo/networkbasetypes.proto", "dota2/networkbasetypes.proto", "deadlock/networkbasetypes.proto"],
+    "upstream": [
+      "csgo/networkbasetypes.proto",
+      "dota2/networkbasetypes.proto",
+      "deadlock/networkbasetypes.proto"
+    ],
     "type": "shared"
   },
   "shared/common/netmessages-common.proto": {
-    "upstream": ["csgo/netmessages.proto", "dota2/netmessages.proto", "deadlock/netmessages.proto"],
+    "upstream": [
+      "csgo/netmessages.proto",
+      "dota2/netmessages.proto",
+      "deadlock/netmessages.proto"
+    ],
     "type": "shared"
   },
   "shared/common/gcsdk_gcmessages.proto": {
-    "upstream": ["csgo/gcsdk_gcmessages.proto", "dota2/gcsdk_gcmessages.proto", "deadlock/gcsdk_gcmessages.proto"],
+    "upstream": [
+      "csgo/gcsdk_gcmessages.proto",
+      "dota2/gcsdk_gcmessages.proto",
+      "deadlock/gcsdk_gcmessages.proto"
+    ],
     "type": "shared"
   },
-
   "shared/demo/demo.proto": {
-    "upstream": ["csgo/demo.proto", "dota2/demo.proto", "deadlock/demo.proto"],
+    "upstream": [
+      "csgo/demo.proto",
+      "dota2/demo.proto",
+      "deadlock/demo.proto"
+    ],
     "type": "shared"
   },
   "shared/demo/netmessages-demo.proto": {
-    "upstream": ["csgo/netmessages.proto", "dota2/netmessages.proto", "deadlock/netmessages.proto"],
+    "upstream": [
+      "csgo/netmessages.proto",
+      "dota2/netmessages.proto",
+      "deadlock/netmessages.proto"
+    ],
     "type": "shared"
   },
   "shared/demo/networkbasetypes-demo.proto": {
-    "upstream": ["csgo/networkbasetypes.proto", "dota2/networkbasetypes.proto", "deadlock/networkbasetypes.proto"],
+    "upstream": [
+      "csgo/networkbasetypes.proto",
+      "dota2/networkbasetypes.proto",
+      "deadlock/networkbasetypes.proto"
+    ],
     "type": "shared"
   },
   "shared/demo/usermessages-demo.proto": {
-    "upstream": ["csgo/usermessages.proto", "dota2/usermessages.proto", "deadlock/usermessages.proto"],
+    "upstream": [
+      "csgo/usermessages.proto",
+      "dota2/usermessages.proto",
+      "deadlock/usermessages.proto"
+    ],
     "type": "shared"
   },
-
   "shared/s2/gameevents-s2.proto": {
-    "upstream": ["csgo/gameevents.proto", "dota2/gameevents.proto", "deadlock/gameevents.proto"],
+    "upstream": [
+      "csgo/gameevents.proto",
+      "dota2/gameevents.proto",
+      "deadlock/gameevents.proto"
+    ],
     "type": "shared"
   },
   "shared/s2/netmessages-s2.proto": {
-    "upstream": ["csgo/netmessages.proto", "dota2/netmessages.proto", "deadlock/netmessages.proto"],
+    "upstream": [
+      "csgo/netmessages.proto",
+      "dota2/netmessages.proto",
+      "deadlock/netmessages.proto"
+    ],
     "type": "shared"
   },
   "shared/s2/networkbasetypes-s2.proto": {
-    "upstream": ["csgo/networkbasetypes.proto", "dota2/networkbasetypes.proto", "deadlock/networkbasetypes.proto"],
+    "upstream": [
+      "csgo/networkbasetypes.proto",
+      "dota2/networkbasetypes.proto",
+      "deadlock/networkbasetypes.proto"
+    ],
     "type": "shared"
   },
   "shared/s2/te-s2.proto": {
-    "upstream": ["csgo/te.proto", "dota2/te.proto", "deadlock/te.proto"],
+    "upstream": [
+      "csgo/te.proto",
+      "dota2/te.proto",
+      "deadlock/te.proto"
+    ],
     "type": "shared"
   },
   "shared/s2/usermessages-s2.proto": {
-    "upstream": ["csgo/usermessages.proto", "dota2/usermessages.proto", "deadlock/usermessages.proto"],
+    "upstream": [
+      "csgo/usermessages.proto",
+      "dota2/usermessages.proto",
+      "deadlock/usermessages.proto"
+    ],
     "type": "shared"
   },
-
   "dota/common/dota_commonmessages.proto": {
-    "upstream": ["dota2/dota_commonmessages.proto"],
+    "upstream": [
+      "dota2/dota_commonmessages.proto"
+    ],
     "type": "game-specific"
   },
   "dota/common/dota_modifiers.proto": {
-    "upstream": ["dota2/dota_modifiers.proto"],
+    "upstream": [
+      "dota2/dota_modifiers.proto"
+    ],
     "type": "game-specific"
   },
   "dota/common/dota_combatlog.proto": {
-    "upstream": ["dota2/dota_shared_enums.proto"],
+    "upstream": [
+      "dota2/dota_shared_enums.proto"
+    ],
     "type": "game-specific"
   },
   "dota/common/dota_usermessages.proto": {
-    "upstream": ["dota2/dota_usermessages.proto"],
+    "upstream": [
+      "dota2/dota_usermessages.proto"
+    ],
     "type": "game-specific"
   },
-
   "dota/s2/base_gcmessages.proto": {
-    "upstream": ["dota2/base_gcmessages.proto"],
+    "upstream": [
+      "dota2/base_gcmessages.proto"
+    ],
     "type": "game-specific"
   },
   "dota/s2/dota_gcmessages_common.proto": {
-    "upstream": ["dota2/dota_gcmessages_common.proto"],
+    "upstream": [
+      "dota2/dota_gcmessages_common.proto"
+    ],
     "type": "game-specific"
   },
   "dota/s2/dota_gcmessages_common_match_management.proto": {
-    "upstream": ["dota2/dota_gcmessages_common_match_management.proto"],
+    "upstream": [
+      "dota2/dota_gcmessages_common_match_management.proto"
+    ],
     "type": "game-specific"
   },
   "dota/s2/dota_gcmessages_common_overworld.proto": {
-    "upstream": ["dota2/dota_gcmessages_common_overworld.proto"],
+    "upstream": [
+      "dota2/dota_gcmessages_common_overworld.proto"
+    ],
     "type": "game-specific"
   },
   "dota/s2/dota_match_metadata.proto": {
-    "upstream": ["dota2/dota_match_metadata.proto"],
+    "upstream": [
+      "dota2/dota_match_metadata.proto"
+    ],
     "type": "game-specific"
   },
   "dota/s2/dota_shared_enums.proto": {
-    "upstream": ["dota2/dota_shared_enums.proto"],
+    "upstream": [
+      "dota2/dota_shared_enums.proto"
+    ],
     "type": "game-specific"
   },
   "dota/s2/message_id.proto": {
-    "upstream": ["dota2/networkbasetypes.proto", "dota2/netmessages.proto", "dota2/usermessages.proto", "dota2/dota_usermessages.proto"],
+    "upstream": [
+      "dota2/networkbasetypes.proto",
+      "dota2/netmessages.proto",
+      "dota2/usermessages.proto",
+      "dota2/dota_usermessages.proto"
+    ],
     "type": "game-specific"
   },
-
   "csgo/common/cstrike15_gcmessages-common.proto": {
-    "upstream": ["csgo/cstrike15_gcmessages.proto"],
+    "upstream": [
+      "csgo/cstrike15_gcmessages.proto"
+    ],
     "type": "game-specific"
   },
   "csgo/common/cstrike15_usermessages-common.proto": {
-    "upstream": ["csgo/cstrike15_usermessages.proto"],
+    "upstream": [
+      "csgo/cstrike15_usermessages.proto"
+    ],
     "type": "game-specific"
   },
-
   "csgo/s2/cs_gameevents.proto": {
-    "upstream": ["csgo/cs_gameevents.proto"],
+    "upstream": [
+      "csgo/cs_gameevents.proto"
+    ],
     "type": "game-specific"
   },
   "csgo/s2/message_id.proto": {
-    "upstream": ["csgo/networkbasetypes.proto", "csgo/netmessages.proto", "csgo/usermessages.proto", "csgo/cstrike15_usermessages.proto"],
+    "upstream": [
+      "csgo/networkbasetypes.proto",
+      "csgo/netmessages.proto",
+      "csgo/usermessages.proto",
+      "csgo/cstrike15_usermessages.proto"
+    ],
     "type": "game-specific"
   },
-
   "deadlock/citadel_gameevents.proto": {
-    "upstream": ["deadlock/citadel_gameevents.proto"],
+    "upstream": [
+      "deadlock/citadel_gameevents.proto"
+    ],
     "type": "game-specific"
   },
   "deadlock/citadel_gcmessages_common.proto": {
-    "upstream": ["deadlock/citadel_gcmessages_common.proto"],
+    "upstream": [
+      "deadlock/citadel_gcmessages_common.proto"
+    ],
     "type": "game-specific"
   },
   "deadlock/citadel_usermessages.proto": {
-    "upstream": ["deadlock/citadel_usermessages.proto"],
+    "upstream": [
+      "deadlock/citadel_usermessages.proto"
+    ],
     "type": "game-specific"
   },
   "deadlock/message_id.proto": {
-    "upstream": ["deadlock/networkbasetypes.proto", "deadlock/netmessages.proto", "deadlock/usermessages.proto", "deadlock/citadel_usermessages.proto"],
+    "upstream": [
+      "deadlock/networkbasetypes.proto",
+      "deadlock/netmessages.proto",
+      "deadlock/usermessages.proto",
+      "deadlock/citadel_usermessages.proto"
+    ],
     "type": "game-specific"
   }
 }

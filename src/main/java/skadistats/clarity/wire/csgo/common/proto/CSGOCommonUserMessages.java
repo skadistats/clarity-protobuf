@@ -58468,6 +58468,559 @@ public final class CSGOCommonUserMessages {
     // @@protoc_insertion_point(class_scope:CCSUsrMsg_SendPlayerLoadout)
   }
 
+  public interface CCSUsrMsg_WeaponMagDropOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:CCSUsrMsg_WeaponMagDrop)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>optional int32 entidx = 1 [default = -1];</code>
+     */
+    boolean hasEntidx();
+    /**
+     * <code>optional int32 entidx = 1 [default = -1];</code>
+     */
+    int getEntidx();
+
+    /**
+     * <code>optional int32 secondary_data = 2;</code>
+     */
+    boolean hasSecondaryData();
+    /**
+     * <code>optional int32 secondary_data = 2;</code>
+     */
+    int getSecondaryData();
+
+    /**
+     * <code>optional bool server_event = 3;</code>
+     */
+    boolean hasServerEvent();
+    /**
+     * <code>optional bool server_event = 3;</code>
+     */
+    boolean getServerEvent();
+  }
+  /**
+   * Protobuf type {@code CCSUsrMsg_WeaponMagDrop}
+   */
+  public static final class CCSUsrMsg_WeaponMagDrop extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:CCSUsrMsg_WeaponMagDrop)
+      CCSUsrMsg_WeaponMagDropOrBuilder {
+    // Use CCSUsrMsg_WeaponMagDrop.newBuilder() to construct.
+    private CCSUsrMsg_WeaponMagDrop(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+      this.unknownFields = builder.getUnknownFields();
+    }
+    private CCSUsrMsg_WeaponMagDrop(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+
+    private static final CCSUsrMsg_WeaponMagDrop defaultInstance;
+    public static CCSUsrMsg_WeaponMagDrop getDefaultInstance() {
+      return defaultInstance;
+    }
+
+    public CCSUsrMsg_WeaponMagDrop getDefaultInstanceForType() {
+      return defaultInstance;
+    }
+
+    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+      return this.unknownFields;
+    }
+    private CCSUsrMsg_WeaponMagDrop(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      initFields();
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(input, unknownFields,
+                                     extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+            case 8: {
+              bitField0_ |= 0x00000001;
+              entidx_ = input.readInt32();
+              break;
+            }
+            case 16: {
+              bitField0_ |= 0x00000002;
+              secondaryData_ = input.readInt32();
+              break;
+            }
+            case 24: {
+              bitField0_ |= 0x00000004;
+              serverEvent_ = input.readBool();
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e.getMessage()).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_WeaponMagDrop_descriptor;
+    }
+
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_WeaponMagDrop_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.Builder.class);
+    }
+
+    public static com.google.protobuf.Parser<CCSUsrMsg_WeaponMagDrop> PARSER =
+        new com.google.protobuf.AbstractParser<CCSUsrMsg_WeaponMagDrop>() {
+      public CCSUsrMsg_WeaponMagDrop parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new CCSUsrMsg_WeaponMagDrop(input, extensionRegistry);
+      }
+    };
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CCSUsrMsg_WeaponMagDrop> getParserForType() {
+      return PARSER;
+    }
+
+    private int bitField0_;
+    public static final int ENTIDX_FIELD_NUMBER = 1;
+    private int entidx_;
+    /**
+     * <code>optional int32 entidx = 1 [default = -1];</code>
+     */
+    public boolean hasEntidx() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>optional int32 entidx = 1 [default = -1];</code>
+     */
+    public int getEntidx() {
+      return entidx_;
+    }
+
+    public static final int SECONDARY_DATA_FIELD_NUMBER = 2;
+    private int secondaryData_;
+    /**
+     * <code>optional int32 secondary_data = 2;</code>
+     */
+    public boolean hasSecondaryData() {
+      return ((bitField0_ & 0x00000002) == 0x00000002);
+    }
+    /**
+     * <code>optional int32 secondary_data = 2;</code>
+     */
+    public int getSecondaryData() {
+      return secondaryData_;
+    }
+
+    public static final int SERVER_EVENT_FIELD_NUMBER = 3;
+    private boolean serverEvent_;
+    /**
+     * <code>optional bool server_event = 3;</code>
+     */
+    public boolean hasServerEvent() {
+      return ((bitField0_ & 0x00000004) == 0x00000004);
+    }
+    /**
+     * <code>optional bool server_event = 3;</code>
+     */
+    public boolean getServerEvent() {
+      return serverEvent_;
+    }
+
+    private void initFields() {
+      entidx_ = -1;
+      secondaryData_ = 0;
+      serverEvent_ = false;
+    }
+    private byte memoizedIsInitialized = -1;
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        output.writeInt32(1, entidx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        output.writeInt32(2, secondaryData_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        output.writeBool(3, serverEvent_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    private int memoizedSerializedSize = -1;
+    public int getSerializedSize() {
+      int size = memoizedSerializedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(1, entidx_);
+      }
+      if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, secondaryData_);
+      }
+      if (((bitField0_ & 0x00000004) == 0x00000004)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(3, serverEvent_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSerializedSize = size;
+      return size;
+    }
+
+    private static final long serialVersionUID = 0L;
+    @java.lang.Override
+    protected java.lang.Object writeReplace()
+        throws java.io.ObjectStreamException {
+      return super.writeReplace();
+    }
+
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseDelimitedFrom(input, extensionRegistry);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input);
+    }
+    public static skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return PARSER.parseFrom(input, extensionRegistry);
+    }
+
+    public static Builder newBuilder() { return Builder.create(); }
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop prototype) {
+      return newBuilder().mergeFrom(prototype);
+    }
+    public Builder toBuilder() { return newBuilder(this); }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code CCSUsrMsg_WeaponMagDrop}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:CCSUsrMsg_WeaponMagDrop)
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDropOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_WeaponMagDrop_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_WeaponMagDrop_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.class, skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.Builder.class);
+      }
+
+      // Construct using skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        }
+      }
+      private static Builder create() {
+        return new Builder();
+      }
+
+      public Builder clear() {
+        super.clear();
+        entidx_ = -1;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        secondaryData_ = 0;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        serverEvent_ = false;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        return this;
+      }
+
+      public Builder clone() {
+        return create().mergeFrom(buildPartial());
+      }
+
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.internal_static_CCSUsrMsg_WeaponMagDrop_descriptor;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop getDefaultInstanceForType() {
+        return skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.getDefaultInstance();
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop build() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      public skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop buildPartial() {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop result = new skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop(this);
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+          to_bitField0_ |= 0x00000001;
+        }
+        result.entidx_ = entidx_;
+        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+          to_bitField0_ |= 0x00000002;
+        }
+        result.secondaryData_ = secondaryData_;
+        if (((from_bitField0_ & 0x00000004) == 0x00000004)) {
+          to_bitField0_ |= 0x00000004;
+        }
+        result.serverEvent_ = serverEvent_;
+        result.bitField0_ = to_bitField0_;
+        onBuilt();
+        return result;
+      }
+
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop) {
+          return mergeFrom((skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop other) {
+        if (other == skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.getDefaultInstance()) return this;
+        if (other.hasEntidx()) {
+          setEntidx(other.getEntidx());
+        }
+        if (other.hasSecondaryData()) {
+          setSecondaryData(other.getSecondaryData());
+        }
+        if (other.hasServerEvent()) {
+          setServerEvent(other.getServerEvent());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        return this;
+      }
+
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (skadistats.clarity.wire.csgo.common.proto.CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop) e.getUnfinishedMessage();
+          throw e;
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private int entidx_ = -1;
+      /**
+       * <code>optional int32 entidx = 1 [default = -1];</code>
+       */
+      public boolean hasEntidx() {
+        return ((bitField0_ & 0x00000001) == 0x00000001);
+      }
+      /**
+       * <code>optional int32 entidx = 1 [default = -1];</code>
+       */
+      public int getEntidx() {
+        return entidx_;
+      }
+      /**
+       * <code>optional int32 entidx = 1 [default = -1];</code>
+       */
+      public Builder setEntidx(int value) {
+        bitField0_ |= 0x00000001;
+        entidx_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 entidx = 1 [default = -1];</code>
+       */
+      public Builder clearEntidx() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        entidx_ = -1;
+        onChanged();
+        return this;
+      }
+
+      private int secondaryData_ ;
+      /**
+       * <code>optional int32 secondary_data = 2;</code>
+       */
+      public boolean hasSecondaryData() {
+        return ((bitField0_ & 0x00000002) == 0x00000002);
+      }
+      /**
+       * <code>optional int32 secondary_data = 2;</code>
+       */
+      public int getSecondaryData() {
+        return secondaryData_;
+      }
+      /**
+       * <code>optional int32 secondary_data = 2;</code>
+       */
+      public Builder setSecondaryData(int value) {
+        bitField0_ |= 0x00000002;
+        secondaryData_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional int32 secondary_data = 2;</code>
+       */
+      public Builder clearSecondaryData() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        secondaryData_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private boolean serverEvent_ ;
+      /**
+       * <code>optional bool server_event = 3;</code>
+       */
+      public boolean hasServerEvent() {
+        return ((bitField0_ & 0x00000004) == 0x00000004);
+      }
+      /**
+       * <code>optional bool server_event = 3;</code>
+       */
+      public boolean getServerEvent() {
+        return serverEvent_;
+      }
+      /**
+       * <code>optional bool server_event = 3;</code>
+       */
+      public Builder setServerEvent(boolean value) {
+        bitField0_ |= 0x00000004;
+        serverEvent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional bool server_event = 3;</code>
+       */
+      public Builder clearServerEvent() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        serverEvent_ = false;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:CCSUsrMsg_WeaponMagDrop)
+    }
+
+    static {
+      defaultInstance = new CCSUsrMsg_WeaponMagDrop(true);
+      defaultInstance.initFields();
+    }
+
+    // @@protoc_insertion_point(class_scope:CCSUsrMsg_WeaponMagDrop)
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_CCSUsrMsg_VGUIMenu_descriptor;
   private static
@@ -58918,6 +59471,11 @@ public final class CSGOCommonUserMessages {
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_CCSUsrMsg_WeaponMagDrop_descriptor;
+  private static
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_CCSUsrMsg_WeaponMagDrop_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -59141,13 +59699,15 @@ public final class CSGOCommonUserMessages {
       "CCSUsrMsg_SendPlayerLoadout.LoadoutItem\022" +
       "\026\n\nplayerslot\030\002 \001(\005:\002-1\032X\n\013LoadoutItem\022-" +
       "\n\tecon_item\030\001 \001(\0132\032.CEconItemPreviewData" +
-      "Block\022\014\n\004team\030\002 \001(\005\022\014\n\004slot\030\003 \001(\005*\210\001\n\"EC" +
-      "SUsrMsg_DisconnectToLobby_Action\0220\n,k_EC" +
-      "SUsrMsg_DisconnectToLobby_Action_Default" +
-      "\020\000\0220\n,k_ECSUsrMsg_DisconnectToLobby_Acti" +
-      "on_GoQueue\020\001BC\n)skadistats.clarity.wire." +
-      "csgo.common.protoB\026CSGOCommonUserMessage",
-      "s"
+      "Block\022\014\n\004team\030\002 \001(\005\022\014\n\004slot\030\003 \001(\005\"[\n\027CCS" +
+      "UsrMsg_WeaponMagDrop\022\022\n\006entidx\030\001 \001(\005:\002-1" +
+      "\022\026\n\016secondary_data\030\002 \001(\005\022\024\n\014server_event" +
+      "\030\003 \001(\010*\210\001\n\"ECSUsrMsg_DisconnectToLobby_A" +
+      "ction\0220\n,k_ECSUsrMsg_DisconnectToLobby_A" +
+      "ction_Default\020\000\0220\n,k_ECSUsrMsg_Disconnec",
+      "tToLobby_Action_GoQueue\020\001BC\n)skadistats." +
+      "clarity.wire.csgo.common.protoB\026CSGOComm" +
+      "onUserMessages"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -59704,6 +60264,12 @@ public final class CSGOCommonUserMessages {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCSUsrMsg_SendPlayerLoadout_LoadoutItem_descriptor,
         new java.lang.String[] { "EconItem", "Team", "Slot", });
+    internal_static_CCSUsrMsg_WeaponMagDrop_descriptor =
+      getDescriptor().getMessageTypes().get(74);
+    internal_static_CCSUsrMsg_WeaponMagDrop_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_CCSUsrMsg_WeaponMagDrop_descriptor,
+        new java.lang.String[] { "Entidx", "SecondaryData", "ServerEvent", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor();
     skadistats.clarity.wire.csgo.common.proto.CSGOCommonGcMessages.getDescriptor();
