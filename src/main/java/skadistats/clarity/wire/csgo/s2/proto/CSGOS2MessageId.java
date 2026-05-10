@@ -1769,6 +1769,10 @@ public final class CSGOS2MessageId {
      * <code>CS_UM_SendPlayerLoadout = 388;</code>
      */
     CS_UM_SendPlayerLoadout(79, 388),
+    /**
+     * <code>CS_UM_WeaponMagDrop = 389;</code>
+     */
+    CS_UM_WeaponMagDrop(80, 389),
     ;
 
     /**
@@ -2091,6 +2095,10 @@ public final class CSGOS2MessageId {
      * <code>CS_UM_SendPlayerLoadout = 388;</code>
      */
     public static final int CS_UM_SendPlayerLoadout_VALUE = 388;
+    /**
+     * <code>CS_UM_WeaponMagDrop = 389;</code>
+     */
+    public static final int CS_UM_WeaponMagDrop_VALUE = 389;
 
 
     public final int getNumber() { return value; }
@@ -2177,6 +2185,7 @@ public final class CSGOS2MessageId {
         case 386: return CS_UM_DamagePrediction;
         case 387: return CS_UM_RecurringMissionSchema;
         case 388: return CS_UM_SendPlayerLoadout;
+        case 389: return CS_UM_WeaponMagDrop;
         default: return null;
       }
     }
@@ -2309,7 +2318,7 @@ public final class CSGOS2MessageId {
       "eEntityMessages\022\022\n\rEM_PlayJingle\020\210\001\022\025\n\020E",
       "M_ScreenOverlay\020\211\001\022\027\n\022EM_RemoveAllDecals" +
       "\020\212\001\022\026\n\021EM_PropagateForce\020\213\001\022\017\n\nEM_DoSpar" +
-      "k\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\236\020\n\026ECstrike15Use" +
+      "k\020\214\001\022\020\n\013EM_FixAngle\020\215\001*\270\020\n\026ECstrike15Use" +
       "rMessages\022\023\n\016CS_UM_VGUIMenu\020\255\002\022\021\n\014CS_UM_" +
       "Geiger\020\256\002\022\020\n\013CS_UM_Train\020\257\002\022\022\n\rCS_UM_Hud" +
       "Text\020\260\002\022\022\n\rCS_UM_SayText\020\261\002\022\023\n\016CS_UM_Say" +
@@ -2361,9 +2370,9 @@ public final class CSGOS2MessageId {
       "\002\022\024\n\017CS_UM_ShootInfo\020\377\002\022\030\n\023CS_UM_Counter" +
       "Strafe\020\201\003\022\033\n\026CS_UM_DamagePrediction\020\202\003\022!" +
       "\n\034CS_UM_RecurringMissionSchema\020\203\003\022\034\n\027CS_" +
-      "UM_SendPlayerLoadout\020\204\003B8\n%skadistats.cl" +
-      "arity.wire.csgo.s2.protoB\017CSGOS2MessageI" +
-      "d"
+      "UM_SendPlayerLoadout\020\204\003\022\030\n\023CS_UM_WeaponM" +
+      "agDrop\020\205\003B8\n%skadistats.clarity.wire.csg" +
+      "o.s2.protoB\017CSGOS2MessageId"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -186,6 +186,7 @@ public class EmbeddedPackets {
 //      /* 386 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_DamagePrediction_VALUE, CSGOCommonUserMessages.CCSUsrMsg_DamagePrediction.class);
 //      /* 387 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_RecurringMissionSchema_VALUE, CSGOCommonUserMessages.CCSUsrMsg_RecurringMissionSchema.class);
 //      /* 388 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_SendPlayerLoadout_VALUE, CSGOCommonUserMessages.CCSUsrMsg_SendPlayerLoadout.class);
+        /* 389 */ K2C.put(CSGOS2MessageId.ECstrike15UserMessages.CS_UM_WeaponMagDrop_VALUE, CSGOCommonUserMessages.CCSUsrMsg_WeaponMagDrop.class);
 
         /* 400 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_EffectDispatchId_VALUE, S2TempEntities.CMsgTEEffectDispatch.class);
         /* 401 */ K2C.put(S2TempEntities.ETEProtobufIds.TE_ArmorRicochetId_VALUE, S2TempEntities.CMsgTEArmorRicochet.class);
