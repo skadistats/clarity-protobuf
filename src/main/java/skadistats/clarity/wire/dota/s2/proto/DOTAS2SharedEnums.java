@@ -6,13 +6,13 @@ package skadistats.clarity.wire.dota.s2.proto;
 public final class DOTAS2SharedEnums {
   private DOTAS2SharedEnums() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code DOTA_GameMode}
    */
   public enum DOTA_GameMode
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>DOTA_GAMEMODE_NONE = 0;</code>
      */
@@ -268,27 +268,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<DOTA_GameMode>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<DOTA_GameMode>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DOTA_GameMode>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<DOTA_GameMode>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<DOTA_GameMode>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<DOTA_GameMode>() {
             public DOTA_GameMode findValueByNumber(int number) {
               return DOTA_GameMode.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(0);
     }
@@ -296,7 +296,7 @@ public final class DOTAS2SharedEnums {
     private static final DOTA_GameMode[] VALUES = values();
 
     public static DOTA_GameMode valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -319,7 +319,7 @@ public final class DOTAS2SharedEnums {
    * Protobuf enum {@code DOTA_GC_TEAM}
    */
   public enum DOTA_GC_TEAM
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>DOTA_GC_TEAM_GOOD_GUYS = 0;</code>
      */
@@ -467,27 +467,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<DOTA_GC_TEAM>() {
             public DOTA_GC_TEAM findValueByNumber(int number) {
               return DOTA_GC_TEAM.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(1);
     }
@@ -495,7 +495,7 @@ public final class DOTAS2SharedEnums {
     private static final DOTA_GC_TEAM[] VALUES = values();
 
     public static DOTA_GC_TEAM valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -518,7 +518,7 @@ public final class DOTAS2SharedEnums {
    * Protobuf enum {@code EEvent}
    */
   public enum EEvent
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>EVENT_ID_NONE = 0;</code>
      */
@@ -1053,27 +1053,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EEvent>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EEvent>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EEvent>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EEvent>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EEvent>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EEvent>() {
             public EEvent findValueByNumber(int number) {
               return EEvent.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(2);
     }
@@ -1081,7 +1081,7 @@ public final class DOTAS2SharedEnums {
     private static final EEvent[] VALUES = values();
 
     public static EEvent valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1104,7 +1104,7 @@ public final class DOTAS2SharedEnums {
    * Protobuf enum {@code EMatchOutcome}
    */
   public enum EMatchOutcome
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>k_EMatchOutcome_Unknown = 0;</code>
      */
@@ -1288,27 +1288,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EMatchOutcome>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EMatchOutcome>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EMatchOutcome>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EMatchOutcome>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EMatchOutcome>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EMatchOutcome>() {
             public EMatchOutcome findValueByNumber(int number) {
               return EMatchOutcome.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(3);
     }
@@ -1316,7 +1316,7 @@ public final class DOTAS2SharedEnums {
     private static final EMatchOutcome[] VALUES = values();
 
     public static EMatchOutcome valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1339,7 +1339,7 @@ public final class DOTAS2SharedEnums {
    * Protobuf enum {@code EDOTAPlayerMMRType}
    */
   public enum EDOTAPlayerMMRType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>k_EDOTAPlayerMMRType_Invalid = 0;</code>
      */
@@ -1442,27 +1442,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EDOTAPlayerMMRType>() {
             public EDOTAPlayerMMRType findValueByNumber(int number) {
               return EDOTAPlayerMMRType.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(4);
     }
@@ -1470,7 +1470,7 @@ public final class DOTAS2SharedEnums {
     private static final EDOTAPlayerMMRType[] VALUES = values();
 
     public static EDOTAPlayerMMRType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1493,7 +1493,7 @@ public final class DOTAS2SharedEnums {
    * Protobuf enum {@code ETimerAlertType}
    */
   public enum ETimerAlertType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>k_TimerAlertType_PowerRune = 1;</code>
      */
@@ -1551,27 +1551,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ETimerAlertType>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ETimerAlertType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ETimerAlertType>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ETimerAlertType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ETimerAlertType>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<ETimerAlertType>() {
             public ETimerAlertType findValueByNumber(int number) {
               return ETimerAlertType.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(5);
     }
@@ -1579,7 +1579,7 @@ public final class DOTAS2SharedEnums {
     private static final ETimerAlertType[] VALUES = values();
 
     public static ETimerAlertType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1602,7 +1602,7 @@ public final class DOTAS2SharedEnums {
    * Protobuf enum {@code EDOTAMMRBoostType}
    */
   public enum EDOTAMMRBoostType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>k_EDOTAMMRBoostType_None = 0;</code>
      */
@@ -1642,27 +1642,27 @@ public final class DOTAS2SharedEnums {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EDOTAMMRBoostType>() {
             public EDOTAMMRBoostType findValueByNumber(int number) {
               return EDOTAMMRBoostType.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor().getEnumTypes().get(6);
     }
@@ -1670,7 +1670,7 @@ public final class DOTAS2SharedEnums {
     private static final EDOTAMMRBoostType[] VALUES = values();
 
     public static EDOTAMMRBoostType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1690,11 +1690,11 @@ public final class DOTAS2SharedEnums {
   }
 
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -1811,17 +1811,17 @@ public final class DOTAS2SharedEnums {
       "tats.clarity.wire.dota.s2.protoB\021DOTAS2S" +
       "haredEnums"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
 

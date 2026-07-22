@@ -6,11 +6,11 @@ package skadistats.clarity.wire.dota.s2.proto;
 public final class DOTAS2GcMessagesCommon {
   private DOTAS2GcMessagesCommon() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   public interface CMatchPlayerAbilityUpgradeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMatchPlayerAbilityUpgrade)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 ability = 1;</code>
@@ -34,15 +34,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMatchPlayerAbilityUpgrade}
    */
   public static final class CMatchPlayerAbilityUpgrade extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMatchPlayerAbilityUpgrade)
       CMatchPlayerAbilityUpgradeOrBuilder {
     // Use CMatchPlayerAbilityUpgrade.newBuilder() to construct.
-    private CMatchPlayerAbilityUpgrade(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMatchPlayerAbilityUpgrade(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMatchPlayerAbilityUpgrade(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMatchPlayerAbilityUpgrade(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMatchPlayerAbilityUpgrade defaultInstance;
     public static CMatchPlayerAbilityUpgrade getDefaultInstance() {
@@ -53,20 +53,20 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMatchPlayerAbilityUpgrade(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -94,40 +94,40 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerAbilityUpgrade_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerAbilityUpgrade_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMatchPlayerAbilityUpgrade> PARSER =
-        new com.google.protobuf.AbstractParser<CMatchPlayerAbilityUpgrade>() {
+    public static skadistats.clarity.protobuf.Parser<CMatchPlayerAbilityUpgrade> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMatchPlayerAbilityUpgrade>() {
       public CMatchPlayerAbilityUpgrade parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMatchPlayerAbilityUpgrade(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMatchPlayerAbilityUpgrade> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMatchPlayerAbilityUpgrade> getParserForType() {
       return PARSER;
     }
 
@@ -176,7 +176,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -195,11 +195,11 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, ability_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, time_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -215,24 +215,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(java.io.InputStream input)
@@ -241,7 +241,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -251,18 +251,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -276,7 +276,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -284,15 +284,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMatchPlayerAbilityUpgrade}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMatchPlayerAbilityUpgrade)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgradeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerAbilityUpgrade_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerAbilityUpgrade_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -305,12 +305,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -330,7 +330,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerAbilityUpgrade_descriptor;
       }
@@ -364,7 +364,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade)other);
         } else {
@@ -390,13 +390,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -485,7 +485,7 @@ public final class DOTAS2GcMessagesCommon {
 
   public interface CMatchAdditionalUnitInventoryOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMatchAdditionalUnitInventory)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string unit_name = 1;</code>
@@ -498,7 +498,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string unit_name = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getUnitNameBytes();
 
     /**
@@ -518,15 +518,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMatchAdditionalUnitInventory}
    */
   public static final class CMatchAdditionalUnitInventory extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMatchAdditionalUnitInventory)
       CMatchAdditionalUnitInventoryOrBuilder {
     // Use CMatchAdditionalUnitInventory.newBuilder() to construct.
-    private CMatchAdditionalUnitInventory(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMatchAdditionalUnitInventory(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMatchAdditionalUnitInventory(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMatchAdditionalUnitInventory(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMatchAdditionalUnitInventory defaultInstance;
     public static CMatchAdditionalUnitInventory getDefaultInstance() {
@@ -537,20 +537,20 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMatchAdditionalUnitInventory(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -567,7 +567,7 @@ public final class DOTAS2GcMessagesCommon {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               unitName_ = bs;
               break;
@@ -595,10 +595,10 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -608,30 +608,30 @@ public final class DOTAS2GcMessagesCommon {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchAdditionalUnitInventory_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchAdditionalUnitInventory_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMatchAdditionalUnitInventory> PARSER =
-        new com.google.protobuf.AbstractParser<CMatchAdditionalUnitInventory>() {
+    public static skadistats.clarity.protobuf.Parser<CMatchAdditionalUnitInventory> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMatchAdditionalUnitInventory>() {
       public CMatchAdditionalUnitInventory parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMatchAdditionalUnitInventory(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMatchAdditionalUnitInventory> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMatchAdditionalUnitInventory> getParserForType() {
       return PARSER;
     }
 
@@ -652,8 +652,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           unitName_ = s;
@@ -664,17 +664,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string unit_name = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getUnitNameBytes() {
       java.lang.Object ref = unitName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         unitName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -714,7 +714,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -733,13 +733,13 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getUnitNameBytes());
       }
       {
         int dataSize = 0;
         for (int i = 0; i < items_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(items_.get(i));
         }
         size += dataSize;
@@ -758,24 +758,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(java.io.InputStream input)
@@ -784,7 +784,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -794,18 +794,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -819,7 +819,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -827,15 +827,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMatchAdditionalUnitInventory}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMatchAdditionalUnitInventory)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventoryOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchAdditionalUnitInventory_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchAdditionalUnitInventory_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -848,12 +848,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -873,7 +873,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchAdditionalUnitInventory_descriptor;
       }
@@ -908,7 +908,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory)other);
         } else {
@@ -943,13 +943,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -974,8 +974,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getUnitName() {
         java.lang.Object ref = unitName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             unitName_ = s;
@@ -988,17 +988,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string unit_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getUnitNameBytes() {
         java.lang.Object ref = unitName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           unitName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -1027,7 +1027,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string unit_name = 1;</code>
        */
       public Builder setUnitNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1088,7 +1088,7 @@ public final class DOTAS2GcMessagesCommon {
       public Builder addAllItems(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureItemsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, items_);
         onChanged();
         return this;
@@ -1116,7 +1116,7 @@ public final class DOTAS2GcMessagesCommon {
 
   public interface CMatchPlayerPermanentBuffOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMatchPlayerPermanentBuff)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 permanent_buff = 1;</code>
@@ -1140,15 +1140,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMatchPlayerPermanentBuff}
    */
   public static final class CMatchPlayerPermanentBuff extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMatchPlayerPermanentBuff)
       CMatchPlayerPermanentBuffOrBuilder {
     // Use CMatchPlayerPermanentBuff.newBuilder() to construct.
-    private CMatchPlayerPermanentBuff(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMatchPlayerPermanentBuff(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMatchPlayerPermanentBuff(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMatchPlayerPermanentBuff(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMatchPlayerPermanentBuff defaultInstance;
     public static CMatchPlayerPermanentBuff getDefaultInstance() {
@@ -1159,20 +1159,20 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMatchPlayerPermanentBuff(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1200,40 +1200,40 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerPermanentBuff_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerPermanentBuff_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMatchPlayerPermanentBuff> PARSER =
-        new com.google.protobuf.AbstractParser<CMatchPlayerPermanentBuff>() {
+    public static skadistats.clarity.protobuf.Parser<CMatchPlayerPermanentBuff> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMatchPlayerPermanentBuff>() {
       public CMatchPlayerPermanentBuff parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMatchPlayerPermanentBuff(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMatchPlayerPermanentBuff> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMatchPlayerPermanentBuff> getParserForType() {
       return PARSER;
     }
 
@@ -1282,7 +1282,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1301,11 +1301,11 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, permanentBuff_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, stackCount_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1321,24 +1321,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(java.io.InputStream input)
@@ -1347,7 +1347,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1357,18 +1357,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1382,7 +1382,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1390,15 +1390,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMatchPlayerPermanentBuff}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMatchPlayerPermanentBuff)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuffOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerPermanentBuff_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerPermanentBuff_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1411,12 +1411,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -1436,7 +1436,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchPlayerPermanentBuff_descriptor;
       }
@@ -1470,7 +1470,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff)other);
         } else {
@@ -1496,13 +1496,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1591,7 +1591,7 @@ public final class DOTAS2GcMessagesCommon {
 
   public interface CMatchHeroSelectEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMatchHeroSelectEvent)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional bool is_pick = 1;</code>
@@ -1624,15 +1624,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMatchHeroSelectEvent}
    */
   public static final class CMatchHeroSelectEvent extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMatchHeroSelectEvent)
       CMatchHeroSelectEventOrBuilder {
     // Use CMatchHeroSelectEvent.newBuilder() to construct.
-    private CMatchHeroSelectEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMatchHeroSelectEvent(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMatchHeroSelectEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMatchHeroSelectEvent(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMatchHeroSelectEvent defaultInstance;
     public static CMatchHeroSelectEvent getDefaultInstance() {
@@ -1643,20 +1643,20 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMatchHeroSelectEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1689,40 +1689,40 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchHeroSelectEvent_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchHeroSelectEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMatchHeroSelectEvent> PARSER =
-        new com.google.protobuf.AbstractParser<CMatchHeroSelectEvent>() {
+    public static skadistats.clarity.protobuf.Parser<CMatchHeroSelectEvent> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMatchHeroSelectEvent>() {
       public CMatchHeroSelectEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMatchHeroSelectEvent(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMatchHeroSelectEvent> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMatchHeroSelectEvent> getParserForType() {
       return PARSER;
     }
 
@@ -1787,7 +1787,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1809,15 +1809,15 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(1, isPick_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, team_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, heroId_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1833,24 +1833,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(java.io.InputStream input)
@@ -1859,7 +1859,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1869,18 +1869,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1894,7 +1894,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1902,15 +1902,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMatchHeroSelectEvent}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMatchHeroSelectEvent)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchHeroSelectEvent_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchHeroSelectEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1923,12 +1923,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -1950,7 +1950,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMatchHeroSelectEvent_descriptor;
       }
@@ -1988,7 +1988,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent)other);
         } else {
@@ -2017,13 +2017,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2144,7 +2144,7 @@ public final class DOTAS2GcMessagesCommon {
 
   public interface CMsgDOTAMatchOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 duration = 3;</code>
@@ -2342,7 +2342,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string radiant_team_name = 23;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getRadiantTeamNameBytes();
 
     /**
@@ -2356,7 +2356,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string dire_team_name = 24;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getDireTeamNameBytes();
 
     /**
@@ -2388,7 +2388,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string radiant_team_logo_url = 54;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getRadiantTeamLogoUrlBytes();
 
     /**
@@ -2402,7 +2402,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string dire_team_logo_url = 55;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getDireTeamLogoUrlBytes();
 
     /**
@@ -2521,7 +2521,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string radiant_team_tag = 37;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getRadiantTeamTagBytes();
 
     /**
@@ -2535,7 +2535,7 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string dire_team_tag = 38;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getDireTeamTagBytes();
 
     /**
@@ -2702,15 +2702,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMsgDOTAMatch}
    */
   public static final class CMsgDOTAMatch extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgDOTAMatch)
       CMsgDOTAMatchOrBuilder {
     // Use CMsgDOTAMatch.newBuilder() to construct.
-    private CMsgDOTAMatch(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgDOTAMatch(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgDOTAMatch(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgDOTAMatch(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgDOTAMatch defaultInstance;
     public static CMsgDOTAMatch getDefaultInstance() {
@@ -2721,21 +2721,21 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgDOTAMatch(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
       int mutable_bitField1_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2877,13 +2877,13 @@ public final class DOTAS2GcMessagesCommon {
               break;
             }
             case 186: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
               radiantTeamName_ = bs;
               break;
             }
             case 194: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
               direTeamName_ = bs;
               break;
@@ -2964,13 +2964,13 @@ public final class DOTAS2GcMessagesCommon {
               break;
             }
             case 298: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x40000000;
               radiantTeamTag_ = bs;
               break;
             }
             case 306: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x80000000;
               direTeamTag_ = bs;
               break;
@@ -3058,13 +3058,13 @@ public final class DOTAS2GcMessagesCommon {
               break;
             }
             case 434: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00080000;
               radiantTeamLogoUrl_ = bs;
               break;
             }
             case 442: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00100000;
               direTeamLogoUrl_ = bs;
               break;
@@ -3079,10 +3079,10 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
@@ -3107,30 +3107,30 @@ public final class DOTAS2GcMessagesCommon {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgDOTAMatch> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgDOTAMatch>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgDOTAMatch> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgDOTAMatch>() {
       public CMsgDOTAMatch parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgDOTAMatch(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgDOTAMatch> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgDOTAMatch> getParserForType() {
       return PARSER;
     }
 
@@ -3138,7 +3138,7 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf enum {@code CMsgDOTAMatch.ReplayState}
      */
     public enum ReplayState
-        implements com.google.protobuf.ProtocolMessageEnum {
+        implements skadistats.clarity.protobuf.ProtocolMessageEnum {
       /**
        * <code>REPLAY_AVAILABLE = 0;</code>
        */
@@ -3178,27 +3178,27 @@ public final class DOTAS2GcMessagesCommon {
         }
       }
 
-      public static com.google.protobuf.Internal.EnumLiteMap<ReplayState>
+      public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ReplayState>
           internalGetValueMap() {
         return internalValueMap;
       }
-      private static com.google.protobuf.Internal.EnumLiteMap<ReplayState>
+      private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ReplayState>
           internalValueMap =
-            new com.google.protobuf.Internal.EnumLiteMap<ReplayState>() {
+            new skadistats.clarity.protobuf.Internal.EnumLiteMap<ReplayState>() {
               public ReplayState findValueByNumber(int number) {
                 return ReplayState.valueOf(number);
               }
             };
 
-      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+      public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
           getValueDescriptor() {
         return getDescriptor().getValues().get(index);
       }
-      public final com.google.protobuf.Descriptors.EnumDescriptor
+      public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
           getDescriptorForType() {
         return getDescriptor();
       }
-      public static final com.google.protobuf.Descriptors.EnumDescriptor
+      public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.getDescriptor().getEnumTypes().get(0);
       }
@@ -3206,7 +3206,7 @@ public final class DOTAS2GcMessagesCommon {
       private static final ReplayState[] VALUES = values();
 
       public static ReplayState valueOf(
-          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+          skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
           throw new java.lang.IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
@@ -3227,7 +3227,7 @@ public final class DOTAS2GcMessagesCommon {
 
     public interface PlayerOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.Player)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint32 account_id = 1;</code>
@@ -3537,7 +3537,7 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string player_name = 29;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getPlayerNameBytes();
 
       /**
@@ -3785,7 +3785,7 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string pro_name = 72;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getProNameBytes();
 
       /**
@@ -3799,7 +3799,7 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string real_name = 73;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getRealNameBytes();
 
       /**
@@ -3993,15 +3993,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMsgDOTAMatch.Player}
      */
     public static final class Player extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.Player)
         PlayerOrBuilder {
       // Use Player.newBuilder() to construct.
-      private Player(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private Player(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private Player(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private Player(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final Player defaultInstance;
       public static Player getDefaultInstance() {
@@ -4012,22 +4012,22 @@ public final class DOTAS2GcMessagesCommon {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private Player(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
         int mutable_bitField1_ = 0;
         int mutable_bitField2_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -4184,7 +4184,7 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 234: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField1_ |= 0x00000002;
                 playerName_ = bs;
                 break;
@@ -4380,13 +4380,13 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 578: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField1_ |= 0x00100000;
                 proName_ = bs;
                 break;
               }
               case 586: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField1_ |= 0x00200000;
                 realName_ = bs;
                 break;
@@ -4447,10 +4447,10 @@ public final class DOTAS2GcMessagesCommon {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField1_ & 0x00100000) == 0x00100000)) {
@@ -4472,30 +4472,30 @@ public final class DOTAS2GcMessagesCommon {
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<Player> PARSER =
-          new com.google.protobuf.AbstractParser<Player>() {
+      public static skadistats.clarity.protobuf.Parser<Player> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Player>() {
         public Player parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new Player(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Player> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<Player> getParserForType() {
         return PARSER;
       }
 
@@ -4503,7 +4503,7 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf enum {@code CMsgDOTAMatch.Player.HeroDamageType}
        */
       public enum HeroDamageType
-          implements com.google.protobuf.ProtocolMessageEnum {
+          implements skadistats.clarity.protobuf.ProtocolMessageEnum {
         /**
          * <code>HERO_DAMAGE_PHYSICAL = 0;</code>
          */
@@ -4543,27 +4543,27 @@ public final class DOTAS2GcMessagesCommon {
           }
         }
 
-        public static com.google.protobuf.Internal.EnumLiteMap<HeroDamageType>
+        public static skadistats.clarity.protobuf.Internal.EnumLiteMap<HeroDamageType>
             internalGetValueMap() {
           return internalValueMap;
         }
-        private static com.google.protobuf.Internal.EnumLiteMap<HeroDamageType>
+        private static skadistats.clarity.protobuf.Internal.EnumLiteMap<HeroDamageType>
             internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<HeroDamageType>() {
+              new skadistats.clarity.protobuf.Internal.EnumLiteMap<HeroDamageType>() {
                 public HeroDamageType findValueByNumber(int number) {
                   return HeroDamageType.valueOf(number);
                 }
               };
 
-        public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
             getValueDescriptor() {
           return getDescriptor().getValues().get(index);
         }
-        public final com.google.protobuf.Descriptors.EnumDescriptor
+        public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
             getDescriptorForType() {
           return getDescriptor();
         }
-        public static final com.google.protobuf.Descriptors.EnumDescriptor
+        public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.getDescriptor().getEnumTypes().get(0);
         }
@@ -4571,7 +4571,7 @@ public final class DOTAS2GcMessagesCommon {
         private static final HeroDamageType[] VALUES = values();
 
         public static HeroDamageType valueOf(
-            com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+            skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
           if (desc.getType() != getDescriptor()) {
             throw new java.lang.IllegalArgumentException(
               "EnumValueDescriptor is not for this type.");
@@ -4592,7 +4592,7 @@ public final class DOTAS2GcMessagesCommon {
 
       public interface CustomGameDataOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.Player.CustomGameData)
-          com.google.protobuf.MessageOrBuilder {
+          skadistats.clarity.protobuf.MessageOrBuilder {
 
         /**
          * <code>optional uint32 dota_team = 1;</code>
@@ -4616,15 +4616,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.Player.CustomGameData}
        */
       public static final class CustomGameData extends
-          com.google.protobuf.GeneratedMessage implements
+          skadistats.clarity.protobuf.GeneratedMessage implements
           // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.Player.CustomGameData)
           CustomGameDataOrBuilder {
         // Use CustomGameData.newBuilder() to construct.
-        private CustomGameData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        private CustomGameData(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
           this.unknownFields = builder.getUnknownFields();
         }
-        private CustomGameData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        private CustomGameData(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
         private static final CustomGameData defaultInstance;
         public static CustomGameData getDefaultInstance() {
@@ -4635,20 +4635,20 @@ public final class DOTAS2GcMessagesCommon {
           return defaultInstance;
         }
 
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
         @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
+        public final skadistats.clarity.protobuf.UnknownFieldSet
             getUnknownFields() {
           return this.unknownFields;
         }
         private CustomGameData(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           initFields();
           int mutable_bitField0_ = 0;
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+              skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
           try {
             boolean done = false;
             while (!done) {
@@ -4676,40 +4676,40 @@ public final class DOTAS2GcMessagesCommon {
                 }
               }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
+            throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this);
           } finally {
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
         }
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_CustomGameData_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData.Builder.class);
         }
 
-        public static com.google.protobuf.Parser<CustomGameData> PARSER =
-            new com.google.protobuf.AbstractParser<CustomGameData>() {
+        public static skadistats.clarity.protobuf.Parser<CustomGameData> PARSER =
+            new skadistats.clarity.protobuf.AbstractParser<CustomGameData>() {
           public CustomGameData parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
             return new CustomGameData(input, extensionRegistry);
           }
         };
 
         @java.lang.Override
-        public com.google.protobuf.Parser<CustomGameData> getParserForType() {
+        public skadistats.clarity.protobuf.Parser<CustomGameData> getParserForType() {
           return PARSER;
         }
 
@@ -4758,7 +4758,7 @@ public final class DOTAS2GcMessagesCommon {
           return true;
         }
 
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
+        public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4777,11 +4777,11 @@ public final class DOTAS2GcMessagesCommon {
 
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(1, dotaTeam_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeBoolSize(2, winner_);
           }
           size += getUnknownFields().getSerializedSize();
@@ -4797,24 +4797,24 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(
             byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(java.io.InputStream input)
@@ -4823,7 +4823,7 @@ public final class DOTAS2GcMessagesCommon {
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -4833,18 +4833,18 @@ public final class DOTAS2GcMessagesCommon {
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(
-            com.google.protobuf.CodedInputStream input)
+            skadistats.clarity.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -4858,7 +4858,7 @@ public final class DOTAS2GcMessagesCommon {
 
         @java.lang.Override
         protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           Builder builder = new Builder(parent);
           return builder;
         }
@@ -4866,15 +4866,15 @@ public final class DOTAS2GcMessagesCommon {
          * Protobuf type {@code CMsgDOTAMatch.Player.CustomGameData}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.Player.CustomGameData)
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameDataOrBuilder {
-          public static final com.google.protobuf.Descriptors.Descriptor
+          public static final skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor;
           }
 
-          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
             return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_CustomGameData_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
@@ -4887,12 +4887,12 @@ public final class DOTAS2GcMessagesCommon {
           }
 
           private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
             super(parent);
             maybeForceBuilderInitialization();
           }
           private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             }
           }
           private static Builder create() {
@@ -4912,7 +4912,7 @@ public final class DOTAS2GcMessagesCommon {
             return create().mergeFrom(buildPartial());
           }
 
-          public com.google.protobuf.Descriptors.Descriptor
+          public skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
             return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor;
           }
@@ -4946,7 +4946,7 @@ public final class DOTAS2GcMessagesCommon {
             return result;
           }
 
-          public Builder mergeFrom(com.google.protobuf.Message other) {
+          public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
             if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData) {
               return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData)other);
             } else {
@@ -4972,13 +4972,13 @@ public final class DOTAS2GcMessagesCommon {
           }
 
           public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
               parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData) e.getUnfinishedMessage();
               throw e;
             } finally {
@@ -5067,7 +5067,7 @@ public final class DOTAS2GcMessagesCommon {
 
       public interface HeroDamageReceivedOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.Player.HeroDamageReceived)
-          com.google.protobuf.MessageOrBuilder {
+          skadistats.clarity.protobuf.MessageOrBuilder {
 
         /**
          * <code>optional uint32 pre_reduction = 1;</code>
@@ -5100,15 +5100,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.Player.HeroDamageReceived}
        */
       public static final class HeroDamageReceived extends
-          com.google.protobuf.GeneratedMessage implements
+          skadistats.clarity.protobuf.GeneratedMessage implements
           // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.Player.HeroDamageReceived)
           HeroDamageReceivedOrBuilder {
         // Use HeroDamageReceived.newBuilder() to construct.
-        private HeroDamageReceived(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        private HeroDamageReceived(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
           this.unknownFields = builder.getUnknownFields();
         }
-        private HeroDamageReceived(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        private HeroDamageReceived(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
         private static final HeroDamageReceived defaultInstance;
         public static HeroDamageReceived getDefaultInstance() {
@@ -5119,20 +5119,20 @@ public final class DOTAS2GcMessagesCommon {
           return defaultInstance;
         }
 
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
         @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
+        public final skadistats.clarity.protobuf.UnknownFieldSet
             getUnknownFields() {
           return this.unknownFields;
         }
         private HeroDamageReceived(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           initFields();
           int mutable_bitField0_ = 0;
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+              skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
           try {
             boolean done = false;
             while (!done) {
@@ -5171,40 +5171,40 @@ public final class DOTAS2GcMessagesCommon {
                 }
               }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
+            throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this);
           } finally {
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
         }
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder.class);
         }
 
-        public static com.google.protobuf.Parser<HeroDamageReceived> PARSER =
-            new com.google.protobuf.AbstractParser<HeroDamageReceived>() {
+        public static skadistats.clarity.protobuf.Parser<HeroDamageReceived> PARSER =
+            new skadistats.clarity.protobuf.AbstractParser<HeroDamageReceived>() {
           public HeroDamageReceived parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
             return new HeroDamageReceived(input, extensionRegistry);
           }
         };
 
         @java.lang.Override
-        public com.google.protobuf.Parser<HeroDamageReceived> getParserForType() {
+        public skadistats.clarity.protobuf.Parser<HeroDamageReceived> getParserForType() {
           return PARSER;
         }
 
@@ -5269,7 +5269,7 @@ public final class DOTAS2GcMessagesCommon {
           return true;
         }
 
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
+        public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5291,15 +5291,15 @@ public final class DOTAS2GcMessagesCommon {
 
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(1, preReduction_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(2, postReduction_);
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeEnumSize(3, damageType_.getNumber());
           }
           size += getUnknownFields().getSerializedSize();
@@ -5315,24 +5315,24 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(
             byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(java.io.InputStream input)
@@ -5341,7 +5341,7 @@ public final class DOTAS2GcMessagesCommon {
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -5351,18 +5351,18 @@ public final class DOTAS2GcMessagesCommon {
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(
-            com.google.protobuf.CodedInputStream input)
+            skadistats.clarity.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
         public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -5376,7 +5376,7 @@ public final class DOTAS2GcMessagesCommon {
 
         @java.lang.Override
         protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           Builder builder = new Builder(parent);
           return builder;
         }
@@ -5384,15 +5384,15 @@ public final class DOTAS2GcMessagesCommon {
          * Protobuf type {@code CMsgDOTAMatch.Player.HeroDamageReceived}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.Player.HeroDamageReceived)
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder {
-          public static final com.google.protobuf.Descriptors.Descriptor
+          public static final skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_descriptor;
           }
 
-          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
             return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
@@ -5405,12 +5405,12 @@ public final class DOTAS2GcMessagesCommon {
           }
 
           private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
             super(parent);
             maybeForceBuilderInitialization();
           }
           private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             }
           }
           private static Builder create() {
@@ -5432,7 +5432,7 @@ public final class DOTAS2GcMessagesCommon {
             return create().mergeFrom(buildPartial());
           }
 
-          public com.google.protobuf.Descriptors.Descriptor
+          public skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
             return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_descriptor;
           }
@@ -5470,7 +5470,7 @@ public final class DOTAS2GcMessagesCommon {
             return result;
           }
 
-          public Builder mergeFrom(com.google.protobuf.Message other) {
+          public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
             if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived) {
               return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived)other);
             } else {
@@ -5499,13 +5499,13 @@ public final class DOTAS2GcMessagesCommon {
           }
 
           public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
               parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived) e.getUnfinishedMessage();
               throw e;
             } finally {
@@ -6141,8 +6141,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             playerName_ = s;
@@ -6153,17 +6153,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string player_name = 29;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getPlayerNameBytes() {
         java.lang.Object ref = playerName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           playerName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -6558,8 +6558,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             proName_ = s;
@@ -6570,17 +6570,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string pro_name = 72;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getProNameBytes() {
         java.lang.Object ref = proName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           proName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -6600,8 +6600,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             realName_ = s;
@@ -6612,17 +6612,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string real_name = 73;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getRealNameBytes() {
         java.lang.Object ref = realName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           realName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -7013,7 +7013,7 @@ public final class DOTAS2GcMessagesCommon {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7248,299 +7248,299 @@ public final class DOTAS2GcMessagesCommon {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(1, accountId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(2, playerSlot_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(3, heroId_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(4, item0_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(5, item1_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(6, item2_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(7, item3_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(8, item4_);
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(9, item5_);
         }
         if (((bitField0_ & 0x00002000) == 0x00002000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(10, expectedTeamContribution_);
         }
         if (((bitField0_ & 0x00004000) == 0x00004000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(11, scaledMetric_);
         }
         if (((bitField0_ & 0x00008000) == 0x00008000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(12, previousRank_);
         }
         if (((bitField0_ & 0x00010000) == 0x00010000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeSInt32Size(13, rankChange_);
         }
         if (((bitField0_ & 0x00040000) == 0x00040000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(14, kills_);
         }
         if (((bitField0_ & 0x00080000) == 0x00080000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(15, deaths_);
         }
         if (((bitField0_ & 0x00100000) == 0x00100000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(16, assists_);
         }
         if (((bitField0_ & 0x00200000) == 0x00200000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(17, leaverStatus_);
         }
         if (((bitField0_ & 0x00400000) == 0x00400000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(18, gold_);
         }
         if (((bitField0_ & 0x00800000) == 0x00800000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(19, lastHits_);
         }
         if (((bitField0_ & 0x01000000) == 0x01000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(20, denies_);
         }
         if (((bitField0_ & 0x02000000) == 0x02000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(21, goldPerMin_);
         }
         if (((bitField0_ & 0x04000000) == 0x04000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(22, xpPerMin_);
         }
         if (((bitField0_ & 0x08000000) == 0x08000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(23, goldSpent_);
         }
         if (((bitField0_ & 0x10000000) == 0x10000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(24, heroDamage_);
         }
         if (((bitField0_ & 0x20000000) == 0x20000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(25, towerDamage_);
         }
         if (((bitField0_ & 0x40000000) == 0x40000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(26, heroHealing_);
         }
         if (((bitField0_ & 0x80000000) == 0x80000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(27, level_);
         }
         if (((bitField1_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(28, timeLastSeen_);
         }
         if (((bitField1_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(29, getPlayerNameBytes());
         }
         if (((bitField1_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(30, supportAbilityValue_);
         }
         if (((bitField1_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(32, feedingDetected_);
         }
         if (((bitField1_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(34, searchRank_);
         }
         if (((bitField1_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(35, searchRankUncertainty_);
         }
         if (((bitField1_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(36, rankUncertaintyChange_);
         }
         if (((bitField1_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(37, heroPlayCount_);
         }
         if (((bitField1_ & 0x00000100) == 0x00000100)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFixed64Size(38, partyId_);
         }
         if (((bitField1_ & 0x00001000) == 0x00001000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(39, scaledKills_);
         }
         if (((bitField1_ & 0x00002000) == 0x00002000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(40, scaledDeaths_);
         }
         if (((bitField1_ & 0x00004000) == 0x00004000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(41, scaledAssists_);
         }
         if (((bitField1_ & 0x00008000) == 0x00008000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(42, claimedFarmGold_);
         }
         if (((bitField1_ & 0x00010000) == 0x00010000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(43, supportGold_);
         }
         if (((bitField1_ & 0x00020000) == 0x00020000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(44, claimedDenies_);
         }
         if (((bitField1_ & 0x00040000) == 0x00040000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(45, claimedMisses_);
         }
         if (((bitField1_ & 0x00080000) == 0x00080000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(46, misses_);
         }
         for (int i = 0; i < abilityUpgrades_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(47, abilityUpgrades_.get(i));
         }
         for (int i = 0; i < additionalUnitsInventory_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(48, additionalUnitsInventory_.get(i));
         }
         if (((bitField1_ & 0x00400000) == 0x00400000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(50, customGameData_);
         }
         if (((bitField1_ & 0x00800000) == 0x00800000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(51, activePlusSubscription_);
         }
         if (((bitField1_ & 0x01000000) == 0x01000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(52, netWorth_);
         }
         if (((bitField1_ & 0x00000200) == 0x00000200)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(54, scaledHeroDamage_);
         }
         if (((bitField1_ & 0x00000400) == 0x00000400)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(55, scaledTowerDamage_);
         }
         if (((bitField1_ & 0x00000800) == 0x00000800)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(56, scaledHeroHealing_);
         }
         for (int i = 0; i < permanentBuffs_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(57, permanentBuffs_.get(i));
         }
         if (((bitField1_ & 0x02000000) == 0x02000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(58, botDifficulty_);
         }
         if (((bitField0_ & 0x00000200) == 0x00000200)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(59, item6_);
         }
         if (((bitField0_ & 0x00000400) == 0x00000400)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(60, item7_);
         }
         if (((bitField0_ & 0x00000800) == 0x00000800)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(61, item8_);
         }
         if (((bitField1_ & 0x04000000) == 0x04000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(63, heroPickOrder_);
         }
         if (((bitField1_ & 0x08000000) == 0x08000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(64, heroWasRandomed_);
         }
         for (int i = 0; i < heroDamageReceived_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(67, heroDamageReceived_.get(i));
         }
         if (((bitField1_ & 0x10000000) == 0x10000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(69, heroWasDotaPlusSuggestion_);
         }
         if (((bitField1_ & 0x20000000) == 0x20000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(70, secondsDead_);
         }
         if (((bitField1_ & 0x40000000) == 0x40000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(71, goldLostToDeath_);
         }
         if (((bitField1_ & 0x00100000) == 0x00100000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(72, getProNameBytes());
         }
         if (((bitField1_ & 0x00200000) == 0x00200000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(73, getRealNameBytes());
         }
         if (((bitField0_ & 0x00020000) == 0x00020000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(74, mmrType_);
         }
         if (((bitField1_ & 0x80000000) == 0x80000000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(75, laneSelectionFlags_);
         }
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(76, item9_);
         }
         if (((bitField2_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(77, bountyRunes_);
         }
         if (((bitField2_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(78, outpostsCaptured_);
         }
         for (int i = 0; i < heroDamageDealt_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(79, heroDamageDealt_.get(i));
         }
         if (((bitField2_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeEnumSize(80, teamNumber_.getNumber());
         }
         if (((bitField2_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(81, teamSlot_);
         }
         if (((bitField2_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(82, selectedFacet_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -7556,24 +7556,24 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(java.io.InputStream input)
@@ -7582,7 +7582,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -7592,18 +7592,18 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -7617,7 +7617,7 @@ public final class DOTAS2GcMessagesCommon {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -7625,15 +7625,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.Player}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.Player)
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.PlayerOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -7646,12 +7646,12 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getAbilityUpgradesFieldBuilder();
             getAdditionalUnitsInventoryFieldBuilder();
             getPermanentBuffsFieldBuilder();
@@ -7845,7 +7845,7 @@ public final class DOTAS2GcMessagesCommon {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Player_descriptor;
         }
@@ -8202,7 +8202,7 @@ public final class DOTAS2GcMessagesCommon {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player) {
             return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player)other);
           } else {
@@ -8390,7 +8390,7 @@ public final class DOTAS2GcMessagesCommon {
                 abilityUpgrades_ = other.abilityUpgrades_;
                 bitField1_ = (bitField1_ & ~0x00100000);
                 abilityUpgradesBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getAbilityUpgradesFieldBuilder() : null;
               } else {
                 abilityUpgradesBuilder_.addAllMessages(other.abilityUpgrades_);
@@ -8416,7 +8416,7 @@ public final class DOTAS2GcMessagesCommon {
                 additionalUnitsInventory_ = other.additionalUnitsInventory_;
                 bitField1_ = (bitField1_ & ~0x00200000);
                 additionalUnitsInventoryBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getAdditionalUnitsInventoryFieldBuilder() : null;
               } else {
                 additionalUnitsInventoryBuilder_.addAllMessages(other.additionalUnitsInventory_);
@@ -8442,7 +8442,7 @@ public final class DOTAS2GcMessagesCommon {
                 permanentBuffs_ = other.permanentBuffs_;
                 bitField1_ = (bitField1_ & ~0x00400000);
                 permanentBuffsBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getPermanentBuffsFieldBuilder() : null;
               } else {
                 permanentBuffsBuilder_.addAllMessages(other.permanentBuffs_);
@@ -8499,7 +8499,7 @@ public final class DOTAS2GcMessagesCommon {
                 heroDamageReceived_ = other.heroDamageReceived_;
                 bitField2_ = (bitField2_ & ~0x00000001);
                 heroDamageReceivedBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getHeroDamageReceivedFieldBuilder() : null;
               } else {
                 heroDamageReceivedBuilder_.addAllMessages(other.heroDamageReceived_);
@@ -8525,7 +8525,7 @@ public final class DOTAS2GcMessagesCommon {
                 heroDamageDealt_ = other.heroDamageDealt_;
                 bitField2_ = (bitField2_ & ~0x00000002);
                 heroDamageDealtBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getHeroDamageDealtFieldBuilder() : null;
               } else {
                 heroDamageDealtBuilder_.addAllMessages(other.heroDamageDealt_);
@@ -8565,13 +8565,13 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -9654,8 +9654,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getPlayerName() {
           java.lang.Object ref = playerName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               playerName_ = s;
@@ -9668,17 +9668,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string player_name = 29;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getPlayerNameBytes() {
           java.lang.Object ref = playerName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             playerName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -9707,7 +9707,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string player_name = 29;</code>
          */
         public Builder setPlayerNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -10302,7 +10302,7 @@ public final class DOTAS2GcMessagesCommon {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgradeOrBuilder> abilityUpgradesBuilder_;
 
         /**
@@ -10434,7 +10434,7 @@ public final class DOTAS2GcMessagesCommon {
             java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade> values) {
           if (abilityUpgradesBuilder_ == null) {
             ensureAbilityUpgradesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, abilityUpgrades_);
             onChanged();
           } else {
@@ -10518,11 +10518,11 @@ public final class DOTAS2GcMessagesCommon {
              getAbilityUpgradesBuilderList() {
           return getAbilityUpgradesFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgradeOrBuilder> 
             getAbilityUpgradesFieldBuilder() {
           if (abilityUpgradesBuilder_ == null) {
-            abilityUpgradesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            abilityUpgradesBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgrade.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerAbilityUpgradeOrBuilder>(
                     abilityUpgrades_,
                     ((bitField1_ & 0x00100000) == 0x00100000),
@@ -10542,7 +10542,7 @@ public final class DOTAS2GcMessagesCommon {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventoryOrBuilder> additionalUnitsInventoryBuilder_;
 
         /**
@@ -10674,7 +10674,7 @@ public final class DOTAS2GcMessagesCommon {
             java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory> values) {
           if (additionalUnitsInventoryBuilder_ == null) {
             ensureAdditionalUnitsInventoryIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, additionalUnitsInventory_);
             onChanged();
           } else {
@@ -10758,11 +10758,11 @@ public final class DOTAS2GcMessagesCommon {
              getAdditionalUnitsInventoryBuilderList() {
           return getAdditionalUnitsInventoryFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventoryOrBuilder> 
             getAdditionalUnitsInventoryFieldBuilder() {
           if (additionalUnitsInventoryBuilder_ == null) {
-            additionalUnitsInventoryBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            additionalUnitsInventoryBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventory.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchAdditionalUnitInventoryOrBuilder>(
                     additionalUnitsInventory_,
                     ((bitField1_ & 0x00200000) == 0x00200000),
@@ -10782,7 +10782,7 @@ public final class DOTAS2GcMessagesCommon {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuffOrBuilder> permanentBuffsBuilder_;
 
         /**
@@ -10914,7 +10914,7 @@ public final class DOTAS2GcMessagesCommon {
             java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff> values) {
           if (permanentBuffsBuilder_ == null) {
             ensurePermanentBuffsIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, permanentBuffs_);
             onChanged();
           } else {
@@ -10998,11 +10998,11 @@ public final class DOTAS2GcMessagesCommon {
              getPermanentBuffsBuilderList() {
           return getPermanentBuffsFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuffOrBuilder> 
             getPermanentBuffsFieldBuilder() {
           if (permanentBuffsBuilder_ == null) {
-            permanentBuffsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            permanentBuffsBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuff.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchPlayerPermanentBuffOrBuilder>(
                     permanentBuffs_,
                     ((bitField1_ & 0x00400000) == 0x00400000),
@@ -11026,8 +11026,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getProName() {
           java.lang.Object ref = proName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               proName_ = s;
@@ -11040,17 +11040,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string pro_name = 72;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getProNameBytes() {
           java.lang.Object ref = proName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             proName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -11079,7 +11079,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string pro_name = 72;</code>
          */
         public Builder setProNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -11102,8 +11102,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getRealName() {
           java.lang.Object ref = realName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               realName_ = s;
@@ -11116,17 +11116,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string real_name = 73;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getRealNameBytes() {
           java.lang.Object ref = realName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             realName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -11155,7 +11155,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string real_name = 73;</code>
          */
         public Builder setRealNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -11166,7 +11166,7 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData customGameData_ = skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameDataOrBuilder> customGameDataBuilder_;
         /**
          * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
@@ -11267,11 +11267,11 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional .CMsgDOTAMatch.Player.CustomGameData custom_game_data = 50;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameDataOrBuilder> 
             getCustomGameDataFieldBuilder() {
           if (customGameDataBuilder_ == null) {
-            customGameDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            customGameDataBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameData.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.CustomGameDataOrBuilder>(
                     getCustomGameData(),
                     getParentForChildren(),
@@ -11482,7 +11482,7 @@ public final class DOTAS2GcMessagesCommon {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder> heroDamageReceivedBuilder_;
 
         /**
@@ -11614,7 +11614,7 @@ public final class DOTAS2GcMessagesCommon {
             java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived> values) {
           if (heroDamageReceivedBuilder_ == null) {
             ensureHeroDamageReceivedIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, heroDamageReceived_);
             onChanged();
           } else {
@@ -11698,11 +11698,11 @@ public final class DOTAS2GcMessagesCommon {
              getHeroDamageReceivedBuilderList() {
           return getHeroDamageReceivedFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder> 
             getHeroDamageReceivedFieldBuilder() {
           if (heroDamageReceivedBuilder_ == null) {
-            heroDamageReceivedBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            heroDamageReceivedBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder>(
                     heroDamageReceived_,
                     ((bitField2_ & 0x00000001) == 0x00000001),
@@ -11722,7 +11722,7 @@ public final class DOTAS2GcMessagesCommon {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder> heroDamageDealtBuilder_;
 
         /**
@@ -11854,7 +11854,7 @@ public final class DOTAS2GcMessagesCommon {
             java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived> values) {
           if (heroDamageDealtBuilder_ == null) {
             ensureHeroDamageDealtIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, heroDamageDealt_);
             onChanged();
           } else {
@@ -11938,11 +11938,11 @@ public final class DOTAS2GcMessagesCommon {
              getHeroDamageDealtBuilderList() {
           return getHeroDamageDealtFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder> 
             getHeroDamageDealtFieldBuilder() {
           if (heroDamageDealtBuilder_ == null) {
-            heroDamageDealtBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            heroDamageDealtBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceived.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.HeroDamageReceivedOrBuilder>(
                     heroDamageDealt_,
                     ((bitField2_ & 0x00000002) == 0x00000002),
@@ -12225,7 +12225,7 @@ public final class DOTAS2GcMessagesCommon {
 
     public interface BroadcasterInfoOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.BroadcasterInfo)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint32 account_id = 1;</code>
@@ -12247,22 +12247,22 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getNameBytes();
     }
     /**
      * Protobuf type {@code CMsgDOTAMatch.BroadcasterInfo}
      */
     public static final class BroadcasterInfo extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.BroadcasterInfo)
         BroadcasterInfoOrBuilder {
       // Use BroadcasterInfo.newBuilder() to construct.
-      private BroadcasterInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private BroadcasterInfo(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private BroadcasterInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private BroadcasterInfo(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final BroadcasterInfo defaultInstance;
       public static BroadcasterInfo getDefaultInstance() {
@@ -12273,20 +12273,20 @@ public final class DOTAS2GcMessagesCommon {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private BroadcasterInfo(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -12308,47 +12308,47 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 name_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterInfo_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<BroadcasterInfo> PARSER =
-          new com.google.protobuf.AbstractParser<BroadcasterInfo>() {
+      public static skadistats.clarity.protobuf.Parser<BroadcasterInfo> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<BroadcasterInfo>() {
         public BroadcasterInfo parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new BroadcasterInfo(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<BroadcasterInfo> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<BroadcasterInfo> getParserForType() {
         return PARSER;
       }
 
@@ -12384,8 +12384,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             name_ = s;
@@ -12396,17 +12396,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -12424,7 +12424,7 @@ public final class DOTAS2GcMessagesCommon {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12443,11 +12443,11 @@ public final class DOTAS2GcMessagesCommon {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(1, accountId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -12463,24 +12463,24 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(java.io.InputStream input)
@@ -12489,7 +12489,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -12499,18 +12499,18 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -12524,7 +12524,7 @@ public final class DOTAS2GcMessagesCommon {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -12532,15 +12532,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.BroadcasterInfo}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.BroadcasterInfo)
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfoOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterInfo_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterInfo_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -12553,12 +12553,12 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -12578,7 +12578,7 @@ public final class DOTAS2GcMessagesCommon {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterInfo_descriptor;
         }
@@ -12612,7 +12612,7 @@ public final class DOTAS2GcMessagesCommon {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo) {
             return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo)other);
           } else {
@@ -12640,13 +12640,13 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -12703,8 +12703,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getName() {
           java.lang.Object ref = name_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               name_ = s;
@@ -12717,17 +12717,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getNameBytes() {
           java.lang.Object ref = name_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             name_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -12756,7 +12756,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string name = 2;</code>
          */
         public Builder setNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -12779,7 +12779,7 @@ public final class DOTAS2GcMessagesCommon {
 
     public interface BroadcasterChannelOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.BroadcasterChannel)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string country_code = 1;</code>
@@ -12792,7 +12792,7 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string country_code = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getCountryCodeBytes();
 
       /**
@@ -12806,7 +12806,7 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string description = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getDescriptionBytes();
 
       /**
@@ -12844,22 +12844,22 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string language_code = 4;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getLanguageCodeBytes();
     }
     /**
      * Protobuf type {@code CMsgDOTAMatch.BroadcasterChannel}
      */
     public static final class BroadcasterChannel extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.BroadcasterChannel)
         BroadcasterChannelOrBuilder {
       // Use BroadcasterChannel.newBuilder() to construct.
-      private BroadcasterChannel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private BroadcasterChannel(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private BroadcasterChannel(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private BroadcasterChannel(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final BroadcasterChannel defaultInstance;
       public static BroadcasterChannel getDefaultInstance() {
@@ -12870,20 +12870,20 @@ public final class DOTAS2GcMessagesCommon {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private BroadcasterChannel(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -12900,13 +12900,13 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 countryCode_ = bs;
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 description_ = bs;
                 break;
@@ -12920,17 +12920,17 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 34: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000004;
                 languageCode_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
@@ -12940,30 +12940,30 @@ public final class DOTAS2GcMessagesCommon {
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterChannel_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterChannel_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<BroadcasterChannel> PARSER =
-          new com.google.protobuf.AbstractParser<BroadcasterChannel>() {
+      public static skadistats.clarity.protobuf.Parser<BroadcasterChannel> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<BroadcasterChannel>() {
         public BroadcasterChannel parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new BroadcasterChannel(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<BroadcasterChannel> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<BroadcasterChannel> getParserForType() {
         return PARSER;
       }
 
@@ -12984,8 +12984,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             countryCode_ = s;
@@ -12996,17 +12996,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string country_code = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getCountryCodeBytes() {
         java.lang.Object ref = countryCode_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           countryCode_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -13026,8 +13026,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             description_ = s;
@@ -13038,17 +13038,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string description = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDescriptionBytes() {
         java.lang.Object ref = description_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           description_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -13103,8 +13103,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             languageCode_ = s;
@@ -13115,17 +13115,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string language_code = 4;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getLanguageCodeBytes() {
         java.lang.Object ref = languageCode_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           languageCode_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -13145,7 +13145,7 @@ public final class DOTAS2GcMessagesCommon {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13170,19 +13170,19 @@ public final class DOTAS2GcMessagesCommon {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getCountryCodeBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getDescriptionBytes());
         }
         for (int i = 0; i < broadcasterInfos_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, broadcasterInfos_.get(i));
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(4, getLanguageCodeBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -13198,24 +13198,24 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(java.io.InputStream input)
@@ -13224,7 +13224,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -13234,18 +13234,18 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -13259,7 +13259,7 @@ public final class DOTAS2GcMessagesCommon {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -13267,15 +13267,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.BroadcasterChannel}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.BroadcasterChannel)
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannelOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterChannel_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterChannel_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -13288,12 +13288,12 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getBroadcasterInfosFieldBuilder();
           }
         }
@@ -13322,7 +13322,7 @@ public final class DOTAS2GcMessagesCommon {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_BroadcasterChannel_descriptor;
         }
@@ -13369,7 +13369,7 @@ public final class DOTAS2GcMessagesCommon {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel) {
             return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel)other);
           } else {
@@ -13409,7 +13409,7 @@ public final class DOTAS2GcMessagesCommon {
                 broadcasterInfos_ = other.broadcasterInfos_;
                 bitField0_ = (bitField0_ & ~0x00000004);
                 broadcasterInfosBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getBroadcasterInfosFieldBuilder() : null;
               } else {
                 broadcasterInfosBuilder_.addAllMessages(other.broadcasterInfos_);
@@ -13430,13 +13430,13 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -13461,8 +13461,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getCountryCode() {
           java.lang.Object ref = countryCode_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               countryCode_ = s;
@@ -13475,17 +13475,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string country_code = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getCountryCodeBytes() {
           java.lang.Object ref = countryCode_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             countryCode_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -13514,7 +13514,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string country_code = 1;</code>
          */
         public Builder setCountryCodeBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -13537,8 +13537,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getDescription() {
           java.lang.Object ref = description_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               description_ = s;
@@ -13551,17 +13551,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string description = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getDescriptionBytes() {
           java.lang.Object ref = description_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             description_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -13590,7 +13590,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string description = 2;</code>
          */
         public Builder setDescriptionBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -13609,7 +13609,7 @@ public final class DOTAS2GcMessagesCommon {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfoOrBuilder> broadcasterInfosBuilder_;
 
         /**
@@ -13741,7 +13741,7 @@ public final class DOTAS2GcMessagesCommon {
             java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo> values) {
           if (broadcasterInfosBuilder_ == null) {
             ensureBroadcasterInfosIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, broadcasterInfos_);
             onChanged();
           } else {
@@ -13825,11 +13825,11 @@ public final class DOTAS2GcMessagesCommon {
              getBroadcasterInfosBuilderList() {
           return getBroadcasterInfosFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfoOrBuilder> 
             getBroadcasterInfosFieldBuilder() {
           if (broadcasterInfosBuilder_ == null) {
-            broadcasterInfosBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            broadcasterInfosBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfo.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterInfoOrBuilder>(
                     broadcasterInfos_,
                     ((bitField0_ & 0x00000004) == 0x00000004),
@@ -13853,8 +13853,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getLanguageCode() {
           java.lang.Object ref = languageCode_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               languageCode_ = s;
@@ -13867,17 +13867,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string language_code = 4;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getLanguageCodeBytes() {
           java.lang.Object ref = languageCode_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             languageCode_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -13906,7 +13906,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string language_code = 4;</code>
          */
         public Builder setLanguageCodeBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -13929,7 +13929,7 @@ public final class DOTAS2GcMessagesCommon {
 
     public interface CoachOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.Coach)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint32 account_id = 1;</code>
@@ -13951,7 +13951,7 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string coach_name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getCoachNameBytes();
 
       /**
@@ -13994,15 +13994,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMsgDOTAMatch.Coach}
      */
     public static final class Coach extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.Coach)
         CoachOrBuilder {
       // Use Coach.newBuilder() to construct.
-      private Coach(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private Coach(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private Coach(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private Coach(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final Coach defaultInstance;
       public static Coach getDefaultInstance() {
@@ -14013,20 +14013,20 @@ public final class DOTAS2GcMessagesCommon {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private Coach(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -14048,7 +14048,7 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 coachName_ = bs;
                 break;
@@ -14075,40 +14075,40 @@ public final class DOTAS2GcMessagesCommon {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Coach_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Coach_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<Coach> PARSER =
-          new com.google.protobuf.AbstractParser<Coach>() {
+      public static skadistats.clarity.protobuf.Parser<Coach> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<Coach>() {
         public Coach parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new Coach(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<Coach> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<Coach> getParserForType() {
         return PARSER;
       }
 
@@ -14144,8 +14144,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             coachName_ = s;
@@ -14156,17 +14156,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string coach_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getCoachNameBytes() {
         java.lang.Object ref = coachName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           coachName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -14248,7 +14248,7 @@ public final class DOTAS2GcMessagesCommon {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14279,27 +14279,27 @@ public final class DOTAS2GcMessagesCommon {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(1, accountId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getCoachNameBytes());
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, coachRating_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(4, coachTeam_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt64Size(5, coachPartyId_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(6, isPrivateCoach_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -14315,24 +14315,24 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(java.io.InputStream input)
@@ -14341,7 +14341,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -14351,18 +14351,18 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -14376,7 +14376,7 @@ public final class DOTAS2GcMessagesCommon {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -14384,15 +14384,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.Coach}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.Coach)
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CoachOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Coach_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Coach_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -14405,12 +14405,12 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -14438,7 +14438,7 @@ public final class DOTAS2GcMessagesCommon {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_Coach_descriptor;
         }
@@ -14488,7 +14488,7 @@ public final class DOTAS2GcMessagesCommon {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach) {
             return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach)other);
           } else {
@@ -14528,13 +14528,13 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -14591,8 +14591,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getCoachName() {
           java.lang.Object ref = coachName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               coachName_ = s;
@@ -14605,17 +14605,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string coach_name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getCoachNameBytes() {
           java.lang.Object ref = coachName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             coachName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -14644,7 +14644,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string coach_name = 2;</code>
          */
         public Builder setCoachNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -14795,7 +14795,7 @@ public final class DOTAS2GcMessagesCommon {
 
     public interface CustomGameDataOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgDOTAMatch.CustomGameData)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint64 custom_game_id = 1;</code>
@@ -14817,22 +14817,22 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string map_name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getMapNameBytes();
     }
     /**
      * Protobuf type {@code CMsgDOTAMatch.CustomGameData}
      */
     public static final class CustomGameData extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgDOTAMatch.CustomGameData)
         CustomGameDataOrBuilder {
       // Use CustomGameData.newBuilder() to construct.
-      private CustomGameData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private CustomGameData(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private CustomGameData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private CustomGameData(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final CustomGameData defaultInstance;
       public static CustomGameData getDefaultInstance() {
@@ -14843,20 +14843,20 @@ public final class DOTAS2GcMessagesCommon {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private CustomGameData(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -14878,47 +14878,47 @@ public final class DOTAS2GcMessagesCommon {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 mapName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_CustomGameData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_CustomGameData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<CustomGameData> PARSER =
-          new com.google.protobuf.AbstractParser<CustomGameData>() {
+      public static skadistats.clarity.protobuf.Parser<CustomGameData> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<CustomGameData>() {
         public CustomGameData parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new CustomGameData(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<CustomGameData> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<CustomGameData> getParserForType() {
         return PARSER;
       }
 
@@ -14954,8 +14954,8 @@ public final class DOTAS2GcMessagesCommon {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             mapName_ = s;
@@ -14966,17 +14966,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string map_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getMapNameBytes() {
         java.lang.Object ref = mapName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           mapName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -14994,7 +14994,7 @@ public final class DOTAS2GcMessagesCommon {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15013,11 +15013,11 @@ public final class DOTAS2GcMessagesCommon {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt64Size(1, customGameId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getMapNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -15033,24 +15033,24 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(java.io.InputStream input)
@@ -15059,7 +15059,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -15069,18 +15069,18 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -15094,7 +15094,7 @@ public final class DOTAS2GcMessagesCommon {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -15102,15 +15102,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgDOTAMatch.CustomGameData}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch.CustomGameData)
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameDataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_CustomGameData_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_CustomGameData_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -15123,12 +15123,12 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -15148,7 +15148,7 @@ public final class DOTAS2GcMessagesCommon {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_CustomGameData_descriptor;
         }
@@ -15182,7 +15182,7 @@ public final class DOTAS2GcMessagesCommon {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData) {
             return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData)other);
           } else {
@@ -15210,13 +15210,13 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -15273,8 +15273,8 @@ public final class DOTAS2GcMessagesCommon {
         public java.lang.String getMapName() {
           java.lang.Object ref = mapName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               mapName_ = s;
@@ -15287,17 +15287,17 @@ public final class DOTAS2GcMessagesCommon {
         /**
          * <code>optional string map_name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getMapNameBytes() {
           java.lang.Object ref = mapName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             mapName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -15326,7 +15326,7 @@ public final class DOTAS2GcMessagesCommon {
          * <code>optional string map_name = 2;</code>
          */
         public Builder setMapNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -15669,8 +15669,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           radiantTeamName_ = s;
@@ -15681,17 +15681,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string radiant_team_name = 23;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getRadiantTeamNameBytes() {
       java.lang.Object ref = radiantTeamName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         radiantTeamName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -15711,8 +15711,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           direTeamName_ = s;
@@ -15723,17 +15723,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string dire_team_name = 24;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getDireTeamNameBytes() {
       java.lang.Object ref = direTeamName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         direTeamName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -15783,8 +15783,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           radiantTeamLogoUrl_ = s;
@@ -15795,17 +15795,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string radiant_team_logo_url = 54;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getRadiantTeamLogoUrlBytes() {
       java.lang.Object ref = radiantTeamLogoUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         radiantTeamLogoUrl_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -15825,8 +15825,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           direTeamLogoUrl_ = s;
@@ -15837,17 +15837,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string dire_team_logo_url = 55;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getDireTeamLogoUrlBytes() {
       java.lang.Object ref = direTeamLogoUrl_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         direTeamLogoUrl_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -16037,8 +16037,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           radiantTeamTag_ = s;
@@ -16049,17 +16049,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string radiant_team_tag = 37;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getRadiantTeamTagBytes() {
       java.lang.Object ref = radiantTeamTag_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         radiantTeamTag_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -16079,8 +16079,8 @@ public final class DOTAS2GcMessagesCommon {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           direTeamTag_ = s;
@@ -16091,17 +16091,17 @@ public final class DOTAS2GcMessagesCommon {
     /**
      * <code>optional string dire_team_tag = 38;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getDireTeamTagBytes() {
       java.lang.Object ref = direTeamTag_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         direTeamTag_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -16423,7 +16423,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16586,25 +16586,25 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, duration_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(4, starttime_);
       }
       for (int i = 0; i < players_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(5, players_.get(i));
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(6, matchId_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < towerStatus_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(towerStatus_.get(i));
         }
         size += dataSize;
@@ -16613,186 +16613,186 @@ public final class DOTAS2GcMessagesCommon {
       {
         int dataSize = 0;
         for (int i = 0; i < barracksStatus_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(barracksStatus_.get(i));
         }
         size += dataSize;
         size += 1 * getBarracksStatusList().size();
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(10, cluster_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(12, firstBloodTime_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(13, replaySalt_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(14, serverIp_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(15, serverPort_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(16, lobbyType_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(17, humanPlayers_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(18, averageSkill_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(19, gameBalance_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(20, radiantTeamId_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(21, direTeamId_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(22, leagueid_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(23, getRadiantTeamNameBytes());
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(24, getDireTeamNameBytes());
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(25, radiantTeamLogo_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(26, direTeamLogo_);
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(27, radiantTeamComplete_);
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(28, direTeamComplete_);
       }
       if (((bitField0_ & 0x00800000) == 0x00800000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(29, positiveVotes_);
       }
       if (((bitField0_ & 0x01000000) == 0x01000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(30, negativeVotes_);
       }
       if (((bitField0_ & 0x02000000) == 0x02000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(31, gameMode_.getNumber());
       }
       for (int i = 0; i < picksBans_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(32, picksBans_.get(i));
       }
       if (((bitField0_ & 0x04000000) == 0x04000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(33, matchSeqNum_);
       }
       if (((bitField0_ & 0x08000000) == 0x08000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(34, replayState_.getNumber());
       }
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(35, radiantGuildId_);
       }
       if (((bitField0_ & 0x20000000) == 0x20000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(36, direGuildId_);
       }
       if (((bitField0_ & 0x40000000) == 0x40000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(37, getRadiantTeamTagBytes());
       }
       if (((bitField0_ & 0x80000000) == 0x80000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(38, getDireTeamTagBytes());
       }
       if (((bitField1_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(39, seriesId_);
       }
       if (((bitField1_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(40, seriesType_);
       }
       for (int i = 0; i < broadcasterChannels_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(43, broadcasterChannels_.get(i));
       }
       if (((bitField1_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(44, engine_);
       }
       if (((bitField1_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(45, customGameData_);
       }
       if (((bitField1_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(46, matchFlags_);
       }
       if (((bitField1_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(47, privateMetadataKey_);
       }
       if (((bitField1_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(48, radiantTeamScore_);
       }
       if (((bitField1_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(49, direTeamScore_);
       }
       if (((bitField1_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(50, matchOutcome_.getNumber());
       }
       if (((bitField1_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(51, tournamentId_);
       }
       if (((bitField1_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(52, tournamentRound_);
       }
       if (((bitField1_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(53, preGameDuration_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(54, getRadiantTeamLogoUrlBytes());
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(55, getDireTeamLogoUrlBytes());
       }
       for (int i = 0; i < coaches_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(57, coaches_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
@@ -16808,24 +16808,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(java.io.InputStream input)
@@ -16834,7 +16834,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -16844,18 +16844,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -16869,7 +16869,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -16877,15 +16877,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMsgDOTAMatch}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgDOTAMatch)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatchOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -16898,12 +16898,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPlayersFieldBuilder();
           getPicksBansFieldBuilder();
           getBroadcasterChannelsFieldBuilder();
@@ -17044,7 +17044,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgDOTAMatch_descriptor;
       }
@@ -17299,7 +17299,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch)other);
         } else {
@@ -17335,7 +17335,7 @@ public final class DOTAS2GcMessagesCommon {
               players_ = other.players_;
               bitField0_ = (bitField0_ & ~0x00000004);
               playersBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getPlayersFieldBuilder() : null;
             } else {
               playersBuilder_.addAllMessages(other.players_);
@@ -17461,7 +17461,7 @@ public final class DOTAS2GcMessagesCommon {
               picksBans_ = other.picksBans_;
               bitField0_ = (bitField0_ & ~0x20000000);
               picksBansBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getPicksBansFieldBuilder() : null;
             } else {
               picksBansBuilder_.addAllMessages(other.picksBans_);
@@ -17515,7 +17515,7 @@ public final class DOTAS2GcMessagesCommon {
               broadcasterChannels_ = other.broadcasterChannels_;
               bitField1_ = (bitField1_ & ~0x00000040);
               broadcasterChannelsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getBroadcasterChannelsFieldBuilder() : null;
             } else {
               broadcasterChannelsBuilder_.addAllMessages(other.broadcasterChannels_);
@@ -17571,7 +17571,7 @@ public final class DOTAS2GcMessagesCommon {
               coaches_ = other.coaches_;
               bitField1_ = (bitField1_ & ~0x00020000);
               coachesBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getCoachesFieldBuilder() : null;
             } else {
               coachesBuilder_.addAllMessages(other.coaches_);
@@ -17587,13 +17587,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -17679,7 +17679,7 @@ public final class DOTAS2GcMessagesCommon {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.PlayerOrBuilder> playersBuilder_;
 
       /**
@@ -17811,7 +17811,7 @@ public final class DOTAS2GcMessagesCommon {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player> values) {
         if (playersBuilder_ == null) {
           ensurePlayersIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, players_);
           onChanged();
         } else {
@@ -17895,11 +17895,11 @@ public final class DOTAS2GcMessagesCommon {
            getPlayersBuilderList() {
         return getPlayersFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.PlayerOrBuilder> 
           getPlayersFieldBuilder() {
         if (playersBuilder_ == null) {
-          playersBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          playersBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Player.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.PlayerOrBuilder>(
                   players_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
@@ -17993,7 +17993,7 @@ public final class DOTAS2GcMessagesCommon {
       public Builder addAllTowerStatus(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureTowerStatusIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, towerStatus_);
         onChanged();
         return this;
@@ -18059,7 +18059,7 @@ public final class DOTAS2GcMessagesCommon {
       public Builder addAllBarracksStatus(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureBarracksStatusIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, barracksStatus_);
         onChanged();
         return this;
@@ -18471,8 +18471,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getRadiantTeamName() {
         java.lang.Object ref = radiantTeamName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             radiantTeamName_ = s;
@@ -18485,17 +18485,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string radiant_team_name = 23;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getRadiantTeamNameBytes() {
         java.lang.Object ref = radiantTeamName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           radiantTeamName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -18524,7 +18524,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string radiant_team_name = 23;</code>
        */
       public Builder setRadiantTeamNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -18547,8 +18547,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getDireTeamName() {
         java.lang.Object ref = direTeamName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             direTeamName_ = s;
@@ -18561,17 +18561,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string dire_team_name = 24;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDireTeamNameBytes() {
         java.lang.Object ref = direTeamName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           direTeamName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -18600,7 +18600,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string dire_team_name = 24;</code>
        */
       public Builder setDireTeamNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -18687,8 +18687,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getRadiantTeamLogoUrl() {
         java.lang.Object ref = radiantTeamLogoUrl_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             radiantTeamLogoUrl_ = s;
@@ -18701,17 +18701,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string radiant_team_logo_url = 54;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getRadiantTeamLogoUrlBytes() {
         java.lang.Object ref = radiantTeamLogoUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           radiantTeamLogoUrl_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -18740,7 +18740,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string radiant_team_logo_url = 54;</code>
        */
       public Builder setRadiantTeamLogoUrlBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -18763,8 +18763,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getDireTeamLogoUrl() {
         java.lang.Object ref = direTeamLogoUrl_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             direTeamLogoUrl_ = s;
@@ -18777,17 +18777,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string dire_team_logo_url = 55;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDireTeamLogoUrlBytes() {
         java.lang.Object ref = direTeamLogoUrl_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           direTeamLogoUrl_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -18816,7 +18816,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string dire_team_logo_url = 55;</code>
        */
       public Builder setDireTeamLogoUrlBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -18998,7 +18998,7 @@ public final class DOTAS2GcMessagesCommon {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEventOrBuilder> picksBansBuilder_;
 
       /**
@@ -19130,7 +19130,7 @@ public final class DOTAS2GcMessagesCommon {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent> values) {
         if (picksBansBuilder_ == null) {
           ensurePicksBansIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, picksBans_);
           onChanged();
         } else {
@@ -19214,11 +19214,11 @@ public final class DOTAS2GcMessagesCommon {
            getPicksBansBuilderList() {
         return getPicksBansFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEventOrBuilder> 
           getPicksBansFieldBuilder() {
         if (picksBansBuilder_ == null) {
-          picksBansBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          picksBansBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEvent.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMatchHeroSelectEventOrBuilder>(
                   picksBans_,
                   ((bitField0_ & 0x20000000) == 0x20000000),
@@ -19373,8 +19373,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getRadiantTeamTag() {
         java.lang.Object ref = radiantTeamTag_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             radiantTeamTag_ = s;
@@ -19387,17 +19387,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string radiant_team_tag = 37;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getRadiantTeamTagBytes() {
         java.lang.Object ref = radiantTeamTag_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           radiantTeamTag_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -19426,7 +19426,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string radiant_team_tag = 37;</code>
        */
       public Builder setRadiantTeamTagBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -19449,8 +19449,8 @@ public final class DOTAS2GcMessagesCommon {
       public java.lang.String getDireTeamTag() {
         java.lang.Object ref = direTeamTag_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             direTeamTag_ = s;
@@ -19463,17 +19463,17 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional string dire_team_tag = 38;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDireTeamTagBytes() {
         java.lang.Object ref = direTeamTag_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           direTeamTag_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -19502,7 +19502,7 @@ public final class DOTAS2GcMessagesCommon {
        * <code>optional string dire_team_tag = 38;</code>
        */
       public Builder setDireTeamTagBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -19585,7 +19585,7 @@ public final class DOTAS2GcMessagesCommon {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannelOrBuilder> broadcasterChannelsBuilder_;
 
       /**
@@ -19717,7 +19717,7 @@ public final class DOTAS2GcMessagesCommon {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel> values) {
         if (broadcasterChannelsBuilder_ == null) {
           ensureBroadcasterChannelsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, broadcasterChannels_);
           onChanged();
         } else {
@@ -19801,11 +19801,11 @@ public final class DOTAS2GcMessagesCommon {
            getBroadcasterChannelsBuilderList() {
         return getBroadcasterChannelsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannelOrBuilder> 
           getBroadcasterChannelsFieldBuilder() {
         if (broadcasterChannelsBuilder_ == null) {
-          broadcasterChannelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          broadcasterChannelsBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannel.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.BroadcasterChannelOrBuilder>(
                   broadcasterChannels_,
                   ((bitField1_ & 0x00000040) == 0x00000040),
@@ -19849,7 +19849,7 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData customGameData_ = skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameDataOrBuilder> customGameDataBuilder_;
       /**
        * <code>optional .CMsgDOTAMatch.CustomGameData custom_game_data = 45;</code>
@@ -19950,11 +19950,11 @@ public final class DOTAS2GcMessagesCommon {
       /**
        * <code>optional .CMsgDOTAMatch.CustomGameData custom_game_data = 45;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameDataOrBuilder> 
           getCustomGameDataFieldBuilder() {
         if (customGameDataBuilder_ == null) {
-          customGameDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          customGameDataBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameData.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CustomGameDataOrBuilder>(
                   getCustomGameData(),
                   getParentForChildren(),
@@ -20232,7 +20232,7 @@ public final class DOTAS2GcMessagesCommon {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CoachOrBuilder> coachesBuilder_;
 
       /**
@@ -20364,7 +20364,7 @@ public final class DOTAS2GcMessagesCommon {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach> values) {
         if (coachesBuilder_ == null) {
           ensureCoachesIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, coaches_);
           onChanged();
         } else {
@@ -20448,11 +20448,11 @@ public final class DOTAS2GcMessagesCommon {
            getCoachesBuilderList() {
         return getCoachesFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CoachOrBuilder> 
           getCoachesFieldBuilder() {
         if (coachesBuilder_ == null) {
-          coachesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          coachesBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.Coach.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgDOTAMatch.CoachOrBuilder>(
                   coaches_,
                   ((bitField1_ & 0x00020000) == 0x00020000),
@@ -20476,7 +20476,7 @@ public final class DOTAS2GcMessagesCommon {
 
   public interface CMsgMatchTipsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgMatchTips)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .EEvent event_id = 1 [default = EVENT_ID_NONE];</code>
@@ -20515,15 +20515,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMsgMatchTips}
    */
   public static final class CMsgMatchTips extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgMatchTips)
       CMsgMatchTipsOrBuilder {
     // Use CMsgMatchTips.newBuilder() to construct.
-    private CMsgMatchTips(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgMatchTips(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgMatchTips(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgMatchTips(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgMatchTips defaultInstance;
     public static CMsgMatchTips getDefaultInstance() {
@@ -20534,20 +20534,20 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgMatchTips(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -20584,10 +20584,10 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -20597,36 +20597,36 @@ public final class DOTAS2GcMessagesCommon {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgMatchTips> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgMatchTips>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgMatchTips> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgMatchTips>() {
       public CMsgMatchTips parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgMatchTips(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgMatchTips> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgMatchTips> getParserForType() {
       return PARSER;
     }
 
     public interface SingleTipOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgMatchTips.SingleTip)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint32 source_account_id = 1;</code>
@@ -20659,15 +20659,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMsgMatchTips.SingleTip}
      */
     public static final class SingleTip extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgMatchTips.SingleTip)
         SingleTipOrBuilder {
       // Use SingleTip.newBuilder() to construct.
-      private SingleTip(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SingleTip(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SingleTip(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SingleTip(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SingleTip defaultInstance;
       public static SingleTip getDefaultInstance() {
@@ -20678,20 +20678,20 @@ public final class DOTAS2GcMessagesCommon {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SingleTip(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -20724,40 +20724,40 @@ public final class DOTAS2GcMessagesCommon {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_SingleTip_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SingleTip> PARSER =
-          new com.google.protobuf.AbstractParser<SingleTip>() {
+      public static skadistats.clarity.protobuf.Parser<SingleTip> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SingleTip>() {
         public SingleTip parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SingleTip(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SingleTip> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SingleTip> getParserForType() {
         return PARSER;
       }
 
@@ -20822,7 +20822,7 @@ public final class DOTAS2GcMessagesCommon {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20844,15 +20844,15 @@ public final class DOTAS2GcMessagesCommon {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(1, sourceAccountId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(2, targetAccountId_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, tipAmount_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -20868,24 +20868,24 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(java.io.InputStream input)
@@ -20894,7 +20894,7 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -20904,18 +20904,18 @@ public final class DOTAS2GcMessagesCommon {
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -20929,7 +20929,7 @@ public final class DOTAS2GcMessagesCommon {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -20937,15 +20937,15 @@ public final class DOTAS2GcMessagesCommon {
        * Protobuf type {@code CMsgMatchTips.SingleTip}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgMatchTips.SingleTip)
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTipOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_SingleTip_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -20958,12 +20958,12 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -20985,7 +20985,7 @@ public final class DOTAS2GcMessagesCommon {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_SingleTip_descriptor;
         }
@@ -21023,7 +21023,7 @@ public final class DOTAS2GcMessagesCommon {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip) {
             return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip)other);
           } else {
@@ -21052,13 +21052,13 @@ public final class DOTAS2GcMessagesCommon {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -21242,7 +21242,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21261,11 +21261,11 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(1, eventId_.getNumber());
       }
       for (int i = 0; i < tips_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(2, tips_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
@@ -21281,24 +21281,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(java.io.InputStream input)
@@ -21307,7 +21307,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -21317,18 +21317,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -21342,7 +21342,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -21350,15 +21350,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMsgMatchTips}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgMatchTips)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTipsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -21371,12 +21371,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getTipsFieldBuilder();
         }
       }
@@ -21401,7 +21401,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgMatchTips_descriptor;
       }
@@ -21440,7 +21440,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips)other);
         } else {
@@ -21473,7 +21473,7 @@ public final class DOTAS2GcMessagesCommon {
               tips_ = other.tips_;
               bitField0_ = (bitField0_ & ~0x00000002);
               tipsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTipsFieldBuilder() : null;
             } else {
               tipsBuilder_.addAllMessages(other.tips_);
@@ -21489,13 +21489,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -21551,7 +21551,7 @@ public final class DOTAS2GcMessagesCommon {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTipOrBuilder> tipsBuilder_;
 
       /**
@@ -21683,7 +21683,7 @@ public final class DOTAS2GcMessagesCommon {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip> values) {
         if (tipsBuilder_ == null) {
           ensureTipsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, tips_);
           onChanged();
         } else {
@@ -21767,11 +21767,11 @@ public final class DOTAS2GcMessagesCommon {
            getTipsBuilderList() {
         return getTipsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTipOrBuilder> 
           getTipsFieldBuilder() {
         if (tipsBuilder_ == null) {
-          tipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          tipsBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTip.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgMatchTips.SingleTipOrBuilder>(
                   tips_,
                   ((bitField0_ & 0x00000002) == 0x00000002),
@@ -21795,7 +21795,7 @@ public final class DOTAS2GcMessagesCommon {
 
   public interface CMsgTrackedStatOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgTrackedStat)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 tracked_stat_id = 1;</code>
@@ -21819,15 +21819,15 @@ public final class DOTAS2GcMessagesCommon {
    * Protobuf type {@code CMsgTrackedStat}
    */
   public static final class CMsgTrackedStat extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgTrackedStat)
       CMsgTrackedStatOrBuilder {
     // Use CMsgTrackedStat.newBuilder() to construct.
-    private CMsgTrackedStat(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgTrackedStat(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgTrackedStat(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgTrackedStat(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgTrackedStat defaultInstance;
     public static CMsgTrackedStat getDefaultInstance() {
@@ -21838,20 +21838,20 @@ public final class DOTAS2GcMessagesCommon {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgTrackedStat(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -21879,40 +21879,40 @@ public final class DOTAS2GcMessagesCommon {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgTrackedStat_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgTrackedStat_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgTrackedStat> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgTrackedStat>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgTrackedStat> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgTrackedStat>() {
       public CMsgTrackedStat parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgTrackedStat(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgTrackedStat> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgTrackedStat> getParserForType() {
       return PARSER;
     }
 
@@ -21961,7 +21961,7 @@ public final class DOTAS2GcMessagesCommon {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21980,11 +21980,11 @@ public final class DOTAS2GcMessagesCommon {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, trackedStatId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, trackedStatValue_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -22000,24 +22000,24 @@ public final class DOTAS2GcMessagesCommon {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(java.io.InputStream input)
@@ -22026,7 +22026,7 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -22036,18 +22036,18 @@ public final class DOTAS2GcMessagesCommon {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -22061,7 +22061,7 @@ public final class DOTAS2GcMessagesCommon {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -22069,15 +22069,15 @@ public final class DOTAS2GcMessagesCommon {
      * Protobuf type {@code CMsgTrackedStat}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgTrackedStat)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStatOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgTrackedStat_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgTrackedStat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -22090,12 +22090,12 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -22115,7 +22115,7 @@ public final class DOTAS2GcMessagesCommon {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.internal_static_CMsgTrackedStat_descriptor;
       }
@@ -22149,7 +22149,7 @@ public final class DOTAS2GcMessagesCommon {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat)other);
         } else {
@@ -22175,13 +22175,13 @@ public final class DOTAS2GcMessagesCommon {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2GcMessagesCommon.CMsgTrackedStat) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -22268,87 +22268,87 @@ public final class DOTAS2GcMessagesCommon {
     // @@protoc_insertion_point(class_scope:CMsgTrackedStat)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMatchPlayerAbilityUpgrade_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMatchPlayerAbilityUpgrade_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMatchAdditionalUnitInventory_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMatchAdditionalUnitInventory_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMatchPlayerPermanentBuff_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMatchPlayerPermanentBuff_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMatchHeroSelectEvent_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMatchHeroSelectEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_Player_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_Player_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_Player_CustomGameData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_BroadcasterInfo_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_BroadcasterInfo_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_BroadcasterChannel_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_BroadcasterChannel_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_Coach_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_Coach_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgDOTAMatch_CustomGameData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgDOTAMatch_CustomGameData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgMatchTips_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgMatchTips_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgMatchTips_SingleTip_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgTrackedStat_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgTrackedStat_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -22474,107 +22474,107 @@ public final class DOTAS2GcMessagesCommon {
       "t_value\030\002 \001(\005B?\n%skadistats.clarity.wire",
       ".dota.s2.protoB\026DOTAS2GcMessagesCommon"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor(),
         }, assigner);
     internal_static_CMatchPlayerAbilityUpgrade_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CMatchPlayerAbilityUpgrade_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMatchPlayerAbilityUpgrade_descriptor,
         new java.lang.String[] { "Ability", "Time", });
     internal_static_CMatchAdditionalUnitInventory_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CMatchAdditionalUnitInventory_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMatchAdditionalUnitInventory_descriptor,
         new java.lang.String[] { "UnitName", "Items", });
     internal_static_CMatchPlayerPermanentBuff_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CMatchPlayerPermanentBuff_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMatchPlayerPermanentBuff_descriptor,
         new java.lang.String[] { "PermanentBuff", "StackCount", });
     internal_static_CMatchHeroSelectEvent_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CMatchHeroSelectEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMatchHeroSelectEvent_descriptor,
         new java.lang.String[] { "IsPick", "Team", "HeroId", });
     internal_static_CMsgDOTAMatch_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CMsgDOTAMatch_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_descriptor,
         new java.lang.String[] { "Duration", "Starttime", "Players", "MatchId", "TowerStatus", "BarracksStatus", "Cluster", "FirstBloodTime", "ReplaySalt", "ServerIp", "ServerPort", "LobbyType", "HumanPlayers", "AverageSkill", "GameBalance", "RadiantTeamId", "DireTeamId", "Leagueid", "RadiantTeamName", "DireTeamName", "RadiantTeamLogo", "DireTeamLogo", "RadiantTeamLogoUrl", "DireTeamLogoUrl", "RadiantTeamComplete", "DireTeamComplete", "PositiveVotes", "NegativeVotes", "GameMode", "PicksBans", "MatchSeqNum", "ReplayState", "RadiantGuildId", "DireGuildId", "RadiantTeamTag", "DireTeamTag", "SeriesId", "SeriesType", "BroadcasterChannels", "Engine", "CustomGameData", "MatchFlags", "PrivateMetadataKey", "RadiantTeamScore", "DireTeamScore", "MatchOutcome", "TournamentId", "TournamentRound", "PreGameDuration", "Coaches", });
     internal_static_CMsgDOTAMatch_Player_descriptor =
       internal_static_CMsgDOTAMatch_descriptor.getNestedTypes().get(0);
     internal_static_CMsgDOTAMatch_Player_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_Player_descriptor,
         new java.lang.String[] { "AccountId", "PlayerSlot", "HeroId", "Item0", "Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7", "Item8", "Item9", "ExpectedTeamContribution", "ScaledMetric", "PreviousRank", "RankChange", "MmrType", "Kills", "Deaths", "Assists", "LeaverStatus", "Gold", "LastHits", "Denies", "GoldPerMin", "XpPerMin", "GoldSpent", "HeroDamage", "TowerDamage", "HeroHealing", "Level", "TimeLastSeen", "PlayerName", "SupportAbilityValue", "FeedingDetected", "SearchRank", "SearchRankUncertainty", "RankUncertaintyChange", "HeroPlayCount", "PartyId", "ScaledHeroDamage", "ScaledTowerDamage", "ScaledHeroHealing", "ScaledKills", "ScaledDeaths", "ScaledAssists", "ClaimedFarmGold", "SupportGold", "ClaimedDenies", "ClaimedMisses", "Misses", "AbilityUpgrades", "AdditionalUnitsInventory", "PermanentBuffs", "ProName", "RealName", "CustomGameData", "ActivePlusSubscription", "NetWorth", "BotDifficulty", "HeroPickOrder", "HeroWasRandomed", "HeroWasDotaPlusSuggestion", "HeroDamageReceived", "HeroDamageDealt", "SecondsDead", "GoldLostToDeath", "LaneSelectionFlags", "BountyRunes", "OutpostsCaptured", "TeamNumber", "TeamSlot", "SelectedFacet", });
     internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor =
       internal_static_CMsgDOTAMatch_Player_descriptor.getNestedTypes().get(0);
     internal_static_CMsgDOTAMatch_Player_CustomGameData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_Player_CustomGameData_descriptor,
         new java.lang.String[] { "DotaTeam", "Winner", });
     internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_descriptor =
       internal_static_CMsgDOTAMatch_Player_descriptor.getNestedTypes().get(1);
     internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_Player_HeroDamageReceived_descriptor,
         new java.lang.String[] { "PreReduction", "PostReduction", "DamageType", });
     internal_static_CMsgDOTAMatch_BroadcasterInfo_descriptor =
       internal_static_CMsgDOTAMatch_descriptor.getNestedTypes().get(1);
     internal_static_CMsgDOTAMatch_BroadcasterInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_BroadcasterInfo_descriptor,
         new java.lang.String[] { "AccountId", "Name", });
     internal_static_CMsgDOTAMatch_BroadcasterChannel_descriptor =
       internal_static_CMsgDOTAMatch_descriptor.getNestedTypes().get(2);
     internal_static_CMsgDOTAMatch_BroadcasterChannel_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_BroadcasterChannel_descriptor,
         new java.lang.String[] { "CountryCode", "Description", "BroadcasterInfos", "LanguageCode", });
     internal_static_CMsgDOTAMatch_Coach_descriptor =
       internal_static_CMsgDOTAMatch_descriptor.getNestedTypes().get(3);
     internal_static_CMsgDOTAMatch_Coach_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_Coach_descriptor,
         new java.lang.String[] { "AccountId", "CoachName", "CoachRating", "CoachTeam", "CoachPartyId", "IsPrivateCoach", });
     internal_static_CMsgDOTAMatch_CustomGameData_descriptor =
       internal_static_CMsgDOTAMatch_descriptor.getNestedTypes().get(4);
     internal_static_CMsgDOTAMatch_CustomGameData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgDOTAMatch_CustomGameData_descriptor,
         new java.lang.String[] { "CustomGameId", "MapName", });
     internal_static_CMsgMatchTips_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CMsgMatchTips_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgMatchTips_descriptor,
         new java.lang.String[] { "EventId", "Tips", });
     internal_static_CMsgMatchTips_SingleTip_descriptor =
       internal_static_CMsgMatchTips_descriptor.getNestedTypes().get(0);
     internal_static_CMsgMatchTips_SingleTip_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgMatchTips_SingleTip_descriptor,
         new java.lang.String[] { "SourceAccountId", "TargetAccountId", "TipAmount", });
     internal_static_CMsgTrackedStat_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_CMsgTrackedStat_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgTrackedStat_descriptor,
         new java.lang.String[] { "TrackedStatId", "TrackedStatValue", });
     skadistats.clarity.wire.dota.s2.proto.DOTAS2SharedEnums.getDescriptor();

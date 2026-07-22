@@ -6,13 +6,13 @@ package skadistats.clarity.wire.shared.s2.proto;
 public final class S2NetworkBaseTypes {
   private S2NetworkBaseTypes() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code SpawnGroupFlags_t}
    */
   public enum SpawnGroupFlags_t
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>SPAWN_GROUP_LOAD_ENTITIES_FROM_SAVE = 1;</code>
      */
@@ -106,27 +106,27 @@ public final class S2NetworkBaseTypes {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<SpawnGroupFlags_t>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<SpawnGroupFlags_t>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<SpawnGroupFlags_t>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<SpawnGroupFlags_t>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<SpawnGroupFlags_t>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<SpawnGroupFlags_t>() {
             public SpawnGroupFlags_t findValueByNumber(int number) {
               return SpawnGroupFlags_t.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.getDescriptor().getEnumTypes().get(0);
     }
@@ -134,7 +134,7 @@ public final class S2NetworkBaseTypes {
     private static final SpawnGroupFlags_t[] VALUES = values();
 
     public static SpawnGroupFlags_t valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -155,7 +155,7 @@ public final class S2NetworkBaseTypes {
 
   public interface CNETMsg_SpawnGroup_LoadOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SpawnGroup_Load)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string worldname = 1;</code>
@@ -168,7 +168,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string worldname = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getWorldnameBytes();
 
     /**
@@ -182,7 +182,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string entitylumpname = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getEntitylumpnameBytes();
 
     /**
@@ -196,7 +196,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string entityfiltername = 3;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getEntityfilternameBytes();
 
     /**
@@ -250,7 +250,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional bytes spawngroupmanifest = 8;</code>
      */
-    com.google.protobuf.ByteString getSpawngroupmanifest();
+    skadistats.clarity.protobuf.ByteString getSpawngroupmanifest();
 
     /**
      * <code>optional uint32 flags = 9;</code>
@@ -290,7 +290,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string localnamefixup = 12;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getLocalnamefixupBytes();
 
     /**
@@ -304,7 +304,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string parentnamefixup = 13;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getParentnamefixupBytes();
 
     /**
@@ -345,7 +345,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string savegamefilename = 17;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getSavegamefilenameBytes();
 
     /**
@@ -377,22 +377,22 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string worldgroupname = 20;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getWorldgroupnameBytes();
   }
   /**
    * Protobuf type {@code CNETMsg_SpawnGroup_Load}
    */
   public static final class CNETMsg_SpawnGroup_Load extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SpawnGroup_Load)
       CNETMsg_SpawnGroup_LoadOrBuilder {
     // Use CNETMsg_SpawnGroup_Load.newBuilder() to construct.
-    private CNETMsg_SpawnGroup_Load(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SpawnGroup_Load(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SpawnGroup_Load(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SpawnGroup_Load(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SpawnGroup_Load defaultInstance;
     public static CNETMsg_SpawnGroup_Load getDefaultInstance() {
@@ -403,20 +403,20 @@ public final class S2NetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SpawnGroup_Load(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -433,19 +433,19 @@ public final class S2NetworkBaseTypes {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               worldname_ = bs;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               entitylumpname_ = bs;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000004;
               entityfiltername_ = bs;
               break;
@@ -507,13 +507,13 @@ public final class S2NetworkBaseTypes {
               break;
             }
             case 98: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000800;
               localnamefixup_ = bs;
               break;
             }
             case 106: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00001000;
               parentnamefixup_ = bs;
               break;
@@ -534,7 +534,7 @@ public final class S2NetworkBaseTypes {
               break;
             }
             case 138: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
               savegamefilename_ = bs;
               break;
@@ -550,47 +550,47 @@ public final class S2NetworkBaseTypes {
               break;
             }
             case 162: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00080000;
               worldgroupname_ = bs;
               break;
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Load_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Load_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load.class, skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SpawnGroup_Load> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SpawnGroup_Load>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_Load> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SpawnGroup_Load>() {
       public CNETMsg_SpawnGroup_Load parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SpawnGroup_Load(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SpawnGroup_Load> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_Load> getParserForType() {
       return PARSER;
     }
 
@@ -611,8 +611,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           worldname_ = s;
@@ -623,17 +623,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string worldname = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getWorldnameBytes() {
       java.lang.Object ref = worldname_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         worldname_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -653,8 +653,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           entitylumpname_ = s;
@@ -665,17 +665,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string entitylumpname = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getEntitylumpnameBytes() {
       java.lang.Object ref = entitylumpname_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         entitylumpname_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -695,8 +695,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           entityfiltername_ = s;
@@ -707,17 +707,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string entityfiltername = 3;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getEntityfilternameBytes() {
       java.lang.Object ref = entityfiltername_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         entityfiltername_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -794,7 +794,7 @@ public final class S2NetworkBaseTypes {
     }
 
     public static final int SPAWNGROUPMANIFEST_FIELD_NUMBER = 8;
-    private com.google.protobuf.ByteString spawngroupmanifest_;
+    private skadistats.clarity.protobuf.ByteString spawngroupmanifest_;
     /**
      * <code>optional bytes spawngroupmanifest = 8;</code>
      */
@@ -804,7 +804,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional bytes spawngroupmanifest = 8;</code>
      */
-    public com.google.protobuf.ByteString getSpawngroupmanifest() {
+    public skadistats.clarity.protobuf.ByteString getSpawngroupmanifest() {
       return spawngroupmanifest_;
     }
 
@@ -869,8 +869,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           localnamefixup_ = s;
@@ -881,17 +881,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string localnamefixup = 12;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getLocalnamefixupBytes() {
       java.lang.Object ref = localnamefixup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         localnamefixup_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -911,8 +911,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           parentnamefixup_ = s;
@@ -923,17 +923,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string parentnamefixup = 13;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getParentnamefixupBytes() {
       java.lang.Object ref = parentnamefixup_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         parentnamefixup_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -998,8 +998,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           savegamefilename_ = s;
@@ -1010,17 +1010,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string savegamefilename = 17;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getSavegamefilenameBytes() {
       java.lang.Object ref = savegamefilename_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         savegamefilename_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -1070,8 +1070,8 @@ public final class S2NetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           worldgroupname_ = s;
@@ -1082,17 +1082,17 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional string worldgroupname = 20;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getWorldgroupnameBytes() {
       java.lang.Object ref = worldgroupname_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         worldgroupname_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -1104,7 +1104,7 @@ public final class S2NetworkBaseTypes {
       spawngroupownerhandle_ = 0;
       worldOffsetPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
       worldOffsetAngle_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-      spawngroupmanifest_ = com.google.protobuf.ByteString.EMPTY;
+      spawngroupmanifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       flags_ = 0;
       tickcount_ = 0;
       manifestincomplete_ = false;
@@ -1128,7 +1128,7 @@ public final class S2NetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1201,83 +1201,83 @@ public final class S2NetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getWorldnameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getEntitylumpnameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(3, getEntityfilternameBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, spawngrouphandle_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, spawngroupownerhandle_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(6, worldOffsetPos_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(7, worldOffsetAngle_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(8, spawngroupmanifest_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(9, flags_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(10, tickcount_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(11, manifestincomplete_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(12, getLocalnamefixupBytes());
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(13, getParentnamefixupBytes());
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(14, manifestloadpriority_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(15, worldgroupid_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(16, creationsequence_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(17, getSavegamefilenameBytes());
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(18, spawngroupparenthandle_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(19, leveltransition_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(20, getWorldgroupnameBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -1293,24 +1293,24 @@ public final class S2NetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(java.io.InputStream input)
@@ -1319,7 +1319,7 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1329,18 +1329,18 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1354,7 +1354,7 @@ public final class S2NetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1362,15 +1362,15 @@ public final class S2NetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SpawnGroup_Load}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SpawnGroup_Load)
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Load_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Load_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1383,12 +1383,12 @@ public final class S2NetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getWorldOffsetPosFieldBuilder();
           getWorldOffsetAngleFieldBuilder();
         }
@@ -1421,7 +1421,7 @@ public final class S2NetworkBaseTypes {
           worldOffsetAngleBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000040);
-        spawngroupmanifest_ = com.google.protobuf.ByteString.EMPTY;
+        spawngroupmanifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000080);
         flags_ = 0;
         bitField0_ = (bitField0_ & ~0x00000100);
@@ -1454,7 +1454,7 @@ public final class S2NetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Load_descriptor;
       }
@@ -1568,7 +1568,7 @@ public final class S2NetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load) {
           return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load)other);
         } else {
@@ -1662,13 +1662,13 @@ public final class S2NetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Load) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1693,8 +1693,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getWorldname() {
         java.lang.Object ref = worldname_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             worldname_ = s;
@@ -1707,17 +1707,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string worldname = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getWorldnameBytes() {
         java.lang.Object ref = worldname_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           worldname_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -1746,7 +1746,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string worldname = 1;</code>
        */
       public Builder setWorldnameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1769,8 +1769,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getEntitylumpname() {
         java.lang.Object ref = entitylumpname_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             entitylumpname_ = s;
@@ -1783,17 +1783,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string entitylumpname = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getEntitylumpnameBytes() {
         java.lang.Object ref = entitylumpname_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           entitylumpname_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -1822,7 +1822,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string entitylumpname = 2;</code>
        */
       public Builder setEntitylumpnameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1845,8 +1845,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getEntityfiltername() {
         java.lang.Object ref = entityfiltername_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             entityfiltername_ = s;
@@ -1859,17 +1859,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string entityfiltername = 3;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getEntityfilternameBytes() {
         java.lang.Object ref = entityfiltername_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           entityfiltername_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -1898,7 +1898,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string entityfiltername = 3;</code>
        */
       public Builder setEntityfilternameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1973,7 +1973,7 @@ public final class S2NetworkBaseTypes {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector worldOffsetPos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> worldOffsetPosBuilder_;
       /**
        * <code>optional .CMsgVector world_offset_pos = 6;</code>
@@ -2074,11 +2074,11 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional .CMsgVector world_offset_pos = 6;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getWorldOffsetPosFieldBuilder() {
         if (worldOffsetPosBuilder_ == null) {
-          worldOffsetPosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          worldOffsetPosBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getWorldOffsetPos(),
                   getParentForChildren(),
@@ -2089,7 +2089,7 @@ public final class S2NetworkBaseTypes {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle worldOffsetAngle_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> worldOffsetAngleBuilder_;
       /**
        * <code>optional .CMsgQAngle world_offset_angle = 7;</code>
@@ -2190,11 +2190,11 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional .CMsgQAngle world_offset_angle = 7;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
           getWorldOffsetAngleFieldBuilder() {
         if (worldOffsetAngleBuilder_ == null) {
-          worldOffsetAngleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          worldOffsetAngleBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                   getWorldOffsetAngle(),
                   getParentForChildren(),
@@ -2204,7 +2204,7 @@ public final class S2NetworkBaseTypes {
         return worldOffsetAngleBuilder_;
       }
 
-      private com.google.protobuf.ByteString spawngroupmanifest_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString spawngroupmanifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes spawngroupmanifest = 8;</code>
        */
@@ -2214,13 +2214,13 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional bytes spawngroupmanifest = 8;</code>
        */
-      public com.google.protobuf.ByteString getSpawngroupmanifest() {
+      public skadistats.clarity.protobuf.ByteString getSpawngroupmanifest() {
         return spawngroupmanifest_;
       }
       /**
        * <code>optional bytes spawngroupmanifest = 8;</code>
        */
-      public Builder setSpawngroupmanifest(com.google.protobuf.ByteString value) {
+      public Builder setSpawngroupmanifest(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2348,8 +2348,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getLocalnamefixup() {
         java.lang.Object ref = localnamefixup_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             localnamefixup_ = s;
@@ -2362,17 +2362,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string localnamefixup = 12;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getLocalnamefixupBytes() {
         java.lang.Object ref = localnamefixup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           localnamefixup_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2401,7 +2401,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string localnamefixup = 12;</code>
        */
       public Builder setLocalnamefixupBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2424,8 +2424,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getParentnamefixup() {
         java.lang.Object ref = parentnamefixup_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             parentnamefixup_ = s;
@@ -2438,17 +2438,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string parentnamefixup = 13;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getParentnamefixupBytes() {
         java.lang.Object ref = parentnamefixup_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           parentnamefixup_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2477,7 +2477,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string parentnamefixup = 13;</code>
        */
       public Builder setParentnamefixupBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2596,8 +2596,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getSavegamefilename() {
         java.lang.Object ref = savegamefilename_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             savegamefilename_ = s;
@@ -2610,17 +2610,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string savegamefilename = 17;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getSavegamefilenameBytes() {
         java.lang.Object ref = savegamefilename_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           savegamefilename_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2649,7 +2649,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string savegamefilename = 17;</code>
        */
       public Builder setSavegamefilenameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2736,8 +2736,8 @@ public final class S2NetworkBaseTypes {
       public java.lang.String getWorldgroupname() {
         java.lang.Object ref = worldgroupname_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             worldgroupname_ = s;
@@ -2750,17 +2750,17 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional string worldgroupname = 20;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getWorldgroupnameBytes() {
         java.lang.Object ref = worldgroupname_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           worldgroupname_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2789,7 +2789,7 @@ public final class S2NetworkBaseTypes {
        * <code>optional string worldgroupname = 20;</code>
        */
       public Builder setWorldgroupnameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2812,7 +2812,7 @@ public final class S2NetworkBaseTypes {
 
   public interface CNETMsg_SpawnGroup_ManifestUpdateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SpawnGroup_ManifestUpdate)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 spawngrouphandle = 1;</code>
@@ -2830,7 +2830,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional bytes spawngroupmanifest = 2;</code>
      */
-    com.google.protobuf.ByteString getSpawngroupmanifest();
+    skadistats.clarity.protobuf.ByteString getSpawngroupmanifest();
 
     /**
      * <code>optional bool manifestincomplete = 3;</code>
@@ -2845,15 +2845,15 @@ public final class S2NetworkBaseTypes {
    * Protobuf type {@code CNETMsg_SpawnGroup_ManifestUpdate}
    */
   public static final class CNETMsg_SpawnGroup_ManifestUpdate extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SpawnGroup_ManifestUpdate)
       CNETMsg_SpawnGroup_ManifestUpdateOrBuilder {
     // Use CNETMsg_SpawnGroup_ManifestUpdate.newBuilder() to construct.
-    private CNETMsg_SpawnGroup_ManifestUpdate(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SpawnGroup_ManifestUpdate(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SpawnGroup_ManifestUpdate(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SpawnGroup_ManifestUpdate(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SpawnGroup_ManifestUpdate defaultInstance;
     public static CNETMsg_SpawnGroup_ManifestUpdate getDefaultInstance() {
@@ -2864,20 +2864,20 @@ public final class S2NetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SpawnGroup_ManifestUpdate(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2910,40 +2910,40 @@ public final class S2NetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_ManifestUpdate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate.class, skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SpawnGroup_ManifestUpdate> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SpawnGroup_ManifestUpdate>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_ManifestUpdate> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SpawnGroup_ManifestUpdate>() {
       public CNETMsg_SpawnGroup_ManifestUpdate parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SpawnGroup_ManifestUpdate(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SpawnGroup_ManifestUpdate> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_ManifestUpdate> getParserForType() {
       return PARSER;
     }
 
@@ -2964,7 +2964,7 @@ public final class S2NetworkBaseTypes {
     }
 
     public static final int SPAWNGROUPMANIFEST_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString spawngroupmanifest_;
+    private skadistats.clarity.protobuf.ByteString spawngroupmanifest_;
     /**
      * <code>optional bytes spawngroupmanifest = 2;</code>
      */
@@ -2974,7 +2974,7 @@ public final class S2NetworkBaseTypes {
     /**
      * <code>optional bytes spawngroupmanifest = 2;</code>
      */
-    public com.google.protobuf.ByteString getSpawngroupmanifest() {
+    public skadistats.clarity.protobuf.ByteString getSpawngroupmanifest() {
       return spawngroupmanifest_;
     }
 
@@ -2995,7 +2995,7 @@ public final class S2NetworkBaseTypes {
 
     private void initFields() {
       spawngrouphandle_ = 0;
-      spawngroupmanifest_ = com.google.protobuf.ByteString.EMPTY;
+      spawngroupmanifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       manifestincomplete_ = false;
     }
     private byte memoizedIsInitialized = -1;
@@ -3008,7 +3008,7 @@ public final class S2NetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3030,15 +3030,15 @@ public final class S2NetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, spawngrouphandle_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, spawngroupmanifest_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, manifestincomplete_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3054,24 +3054,24 @@ public final class S2NetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(java.io.InputStream input)
@@ -3080,7 +3080,7 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3090,18 +3090,18 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3115,7 +3115,7 @@ public final class S2NetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3123,15 +3123,15 @@ public final class S2NetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SpawnGroup_ManifestUpdate}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SpawnGroup_ManifestUpdate)
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_ManifestUpdate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3144,12 +3144,12 @@ public final class S2NetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -3160,7 +3160,7 @@ public final class S2NetworkBaseTypes {
         super.clear();
         spawngrouphandle_ = 0;
         bitField0_ = (bitField0_ & ~0x00000001);
-        spawngroupmanifest_ = com.google.protobuf.ByteString.EMPTY;
+        spawngroupmanifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         manifestincomplete_ = false;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -3171,7 +3171,7 @@ public final class S2NetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor;
       }
@@ -3209,7 +3209,7 @@ public final class S2NetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate) {
           return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate)other);
         } else {
@@ -3238,13 +3238,13 @@ public final class S2NetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_ManifestUpdate) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -3288,7 +3288,7 @@ public final class S2NetworkBaseTypes {
         return this;
       }
 
-      private com.google.protobuf.ByteString spawngroupmanifest_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString spawngroupmanifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes spawngroupmanifest = 2;</code>
        */
@@ -3298,13 +3298,13 @@ public final class S2NetworkBaseTypes {
       /**
        * <code>optional bytes spawngroupmanifest = 2;</code>
        */
-      public com.google.protobuf.ByteString getSpawngroupmanifest() {
+      public skadistats.clarity.protobuf.ByteString getSpawngroupmanifest() {
         return spawngroupmanifest_;
       }
       /**
        * <code>optional bytes spawngroupmanifest = 2;</code>
        */
-      public Builder setSpawngroupmanifest(com.google.protobuf.ByteString value) {
+      public Builder setSpawngroupmanifest(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3368,7 +3368,7 @@ public final class S2NetworkBaseTypes {
 
   public interface CNETMsg_SpawnGroup_SetCreationTickOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SpawnGroup_SetCreationTick)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 spawngrouphandle = 1;</code>
@@ -3401,15 +3401,15 @@ public final class S2NetworkBaseTypes {
    * Protobuf type {@code CNETMsg_SpawnGroup_SetCreationTick}
    */
   public static final class CNETMsg_SpawnGroup_SetCreationTick extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SpawnGroup_SetCreationTick)
       CNETMsg_SpawnGroup_SetCreationTickOrBuilder {
     // Use CNETMsg_SpawnGroup_SetCreationTick.newBuilder() to construct.
-    private CNETMsg_SpawnGroup_SetCreationTick(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SpawnGroup_SetCreationTick(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SpawnGroup_SetCreationTick(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SpawnGroup_SetCreationTick(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SpawnGroup_SetCreationTick defaultInstance;
     public static CNETMsg_SpawnGroup_SetCreationTick getDefaultInstance() {
@@ -3420,20 +3420,20 @@ public final class S2NetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SpawnGroup_SetCreationTick(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3466,40 +3466,40 @@ public final class S2NetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_SetCreationTick_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_SetCreationTick_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick.class, skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SpawnGroup_SetCreationTick> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SpawnGroup_SetCreationTick>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_SetCreationTick> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SpawnGroup_SetCreationTick>() {
       public CNETMsg_SpawnGroup_SetCreationTick parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SpawnGroup_SetCreationTick(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SpawnGroup_SetCreationTick> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_SetCreationTick> getParserForType() {
       return PARSER;
     }
 
@@ -3564,7 +3564,7 @@ public final class S2NetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3586,15 +3586,15 @@ public final class S2NetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, spawngrouphandle_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, tickcount_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, creationsequence_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3610,24 +3610,24 @@ public final class S2NetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(java.io.InputStream input)
@@ -3636,7 +3636,7 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3646,18 +3646,18 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3671,7 +3671,7 @@ public final class S2NetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3679,15 +3679,15 @@ public final class S2NetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SpawnGroup_SetCreationTick}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SpawnGroup_SetCreationTick)
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTickOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_SetCreationTick_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_SetCreationTick_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3700,12 +3700,12 @@ public final class S2NetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -3727,7 +3727,7 @@ public final class S2NetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_SetCreationTick_descriptor;
       }
@@ -3765,7 +3765,7 @@ public final class S2NetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick) {
           return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick)other);
         } else {
@@ -3794,13 +3794,13 @@ public final class S2NetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_SetCreationTick) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -3921,7 +3921,7 @@ public final class S2NetworkBaseTypes {
 
   public interface CNETMsg_SpawnGroup_UnloadOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SpawnGroup_Unload)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 spawngrouphandle = 1;</code>
@@ -3954,15 +3954,15 @@ public final class S2NetworkBaseTypes {
    * Protobuf type {@code CNETMsg_SpawnGroup_Unload}
    */
   public static final class CNETMsg_SpawnGroup_Unload extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SpawnGroup_Unload)
       CNETMsg_SpawnGroup_UnloadOrBuilder {
     // Use CNETMsg_SpawnGroup_Unload.newBuilder() to construct.
-    private CNETMsg_SpawnGroup_Unload(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SpawnGroup_Unload(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SpawnGroup_Unload(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SpawnGroup_Unload(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SpawnGroup_Unload defaultInstance;
     public static CNETMsg_SpawnGroup_Unload getDefaultInstance() {
@@ -3973,20 +3973,20 @@ public final class S2NetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SpawnGroup_Unload(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4019,40 +4019,40 @@ public final class S2NetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Unload_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Unload_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload.class, skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SpawnGroup_Unload> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SpawnGroup_Unload>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_Unload> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SpawnGroup_Unload>() {
       public CNETMsg_SpawnGroup_Unload parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SpawnGroup_Unload(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SpawnGroup_Unload> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_Unload> getParserForType() {
       return PARSER;
     }
 
@@ -4117,7 +4117,7 @@ public final class S2NetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4139,15 +4139,15 @@ public final class S2NetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, spawngrouphandle_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, flags_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, tickcount_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -4163,24 +4163,24 @@ public final class S2NetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(java.io.InputStream input)
@@ -4189,7 +4189,7 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4199,18 +4199,18 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4224,7 +4224,7 @@ public final class S2NetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4232,15 +4232,15 @@ public final class S2NetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SpawnGroup_Unload}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SpawnGroup_Unload)
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_UnloadOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Unload_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Unload_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4253,12 +4253,12 @@ public final class S2NetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -4280,7 +4280,7 @@ public final class S2NetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_Unload_descriptor;
       }
@@ -4318,7 +4318,7 @@ public final class S2NetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload) {
           return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload)other);
         } else {
@@ -4347,13 +4347,13 @@ public final class S2NetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_Unload) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4474,7 +4474,7 @@ public final class S2NetworkBaseTypes {
 
   public interface CNETMsg_SpawnGroup_LoadCompletedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SpawnGroup_LoadCompleted)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 spawngrouphandle = 1;</code>
@@ -4489,15 +4489,15 @@ public final class S2NetworkBaseTypes {
    * Protobuf type {@code CNETMsg_SpawnGroup_LoadCompleted}
    */
   public static final class CNETMsg_SpawnGroup_LoadCompleted extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SpawnGroup_LoadCompleted)
       CNETMsg_SpawnGroup_LoadCompletedOrBuilder {
     // Use CNETMsg_SpawnGroup_LoadCompleted.newBuilder() to construct.
-    private CNETMsg_SpawnGroup_LoadCompleted(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SpawnGroup_LoadCompleted(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SpawnGroup_LoadCompleted(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SpawnGroup_LoadCompleted(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SpawnGroup_LoadCompleted defaultInstance;
     public static CNETMsg_SpawnGroup_LoadCompleted getDefaultInstance() {
@@ -4508,20 +4508,20 @@ public final class S2NetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SpawnGroup_LoadCompleted(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4544,40 +4544,40 @@ public final class S2NetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_LoadCompleted_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_LoadCompleted_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted.class, skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SpawnGroup_LoadCompleted> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SpawnGroup_LoadCompleted>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_LoadCompleted> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SpawnGroup_LoadCompleted>() {
       public CNETMsg_SpawnGroup_LoadCompleted parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SpawnGroup_LoadCompleted(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SpawnGroup_LoadCompleted> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SpawnGroup_LoadCompleted> getParserForType() {
       return PARSER;
     }
 
@@ -4610,7 +4610,7 @@ public final class S2NetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4626,7 +4626,7 @@ public final class S2NetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, spawngrouphandle_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -4642,24 +4642,24 @@ public final class S2NetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(java.io.InputStream input)
@@ -4668,7 +4668,7 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4678,18 +4678,18 @@ public final class S2NetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4703,7 +4703,7 @@ public final class S2NetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4711,15 +4711,15 @@ public final class S2NetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SpawnGroup_LoadCompleted}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SpawnGroup_LoadCompleted)
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompletedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_LoadCompleted_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_LoadCompleted_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4732,12 +4732,12 @@ public final class S2NetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -4755,7 +4755,7 @@ public final class S2NetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.internal_static_CNETMsg_SpawnGroup_LoadCompleted_descriptor;
       }
@@ -4785,7 +4785,7 @@ public final class S2NetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted) {
           return mergeFrom((skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted)other);
         } else {
@@ -4808,13 +4808,13 @@ public final class S2NetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s2.proto.S2NetworkBaseTypes.CNETMsg_SpawnGroup_LoadCompleted) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4869,37 +4869,37 @@ public final class S2NetworkBaseTypes {
     // @@protoc_insertion_point(class_scope:CNETMsg_SpawnGroup_LoadCompleted)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SpawnGroup_Load_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SpawnGroup_Load_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SpawnGroup_ManifestUpdate_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SpawnGroup_SetCreationTick_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SpawnGroup_SetCreationTick_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SpawnGroup_Unload_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SpawnGroup_Unload_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SpawnGroup_LoadCompleted_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SpawnGroup_LoadCompleted_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -4941,48 +4941,48 @@ public final class S2NetworkBaseTypes {
       "adistats.clarity.wire.shared.s2.protoB\022S" +
       "2NetworkBaseTypes"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.getDescriptor(),
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CNETMsg_SpawnGroup_Load_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CNETMsg_SpawnGroup_Load_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_Load_descriptor,
         new java.lang.String[] { "Worldname", "Entitylumpname", "Entityfiltername", "Spawngrouphandle", "Spawngroupownerhandle", "WorldOffsetPos", "WorldOffsetAngle", "Spawngroupmanifest", "Flags", "Tickcount", "Manifestincomplete", "Localnamefixup", "Parentnamefixup", "Manifestloadpriority", "Worldgroupid", "Creationsequence", "Savegamefilename", "Spawngroupparenthandle", "Leveltransition", "Worldgroupname", });
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CNETMsg_SpawnGroup_ManifestUpdate_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_ManifestUpdate_descriptor,
         new java.lang.String[] { "Spawngrouphandle", "Spawngroupmanifest", "Manifestincomplete", });
     internal_static_CNETMsg_SpawnGroup_SetCreationTick_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CNETMsg_SpawnGroup_SetCreationTick_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_SetCreationTick_descriptor,
         new java.lang.String[] { "Spawngrouphandle", "Tickcount", "Creationsequence", });
     internal_static_CNETMsg_SpawnGroup_Unload_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CNETMsg_SpawnGroup_Unload_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_Unload_descriptor,
         new java.lang.String[] { "Spawngrouphandle", "Flags", "Tickcount", });
     internal_static_CNETMsg_SpawnGroup_LoadCompleted_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CNETMsg_SpawnGroup_LoadCompleted_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SpawnGroup_LoadCompleted_descriptor,
         new java.lang.String[] { "Spawngrouphandle", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.getDescriptor();

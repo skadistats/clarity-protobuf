@@ -6,13 +6,13 @@ package skadistats.clarity.wire.shared.demo.proto;
 public final class DemoUserMessages {
   private DemoUserMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code PARTICLE_MESSAGE}
    */
   public enum PARTICLE_MESSAGE
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>GAME_PARTICLE_MANAGER_EVENT_CREATE = 0;</code>
      */
@@ -403,27 +403,27 @@ public final class DemoUserMessages {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<PARTICLE_MESSAGE>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<PARTICLE_MESSAGE>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<PARTICLE_MESSAGE>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<PARTICLE_MESSAGE>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PARTICLE_MESSAGE>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<PARTICLE_MESSAGE>() {
             public PARTICLE_MESSAGE findValueByNumber(int number) {
               return PARTICLE_MESSAGE.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.getDescriptor().getEnumTypes().get(0);
     }
@@ -431,7 +431,7 @@ public final class DemoUserMessages {
     private static final PARTICLE_MESSAGE[] VALUES = values();
 
     public static PARTICLE_MESSAGE valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -452,7 +452,7 @@ public final class DemoUserMessages {
 
   public interface CUserMsg_ParticleManagerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager)
-      com.google.protobuf.GeneratedMessage.
+      skadistats.clarity.protobuf.GeneratedMessage.
           ExtendableMessageOrBuilder<CUserMsg_ParticleManager> {
 
     /**
@@ -1010,16 +1010,16 @@ public final class DemoUserMessages {
    * Protobuf type {@code CUserMsg_ParticleManager}
    */
   public static final class CUserMsg_ParticleManager extends
-      com.google.protobuf.GeneratedMessage.ExtendableMessage<
+      skadistats.clarity.protobuf.GeneratedMessage.ExtendableMessage<
         CUserMsg_ParticleManager> implements
       // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager)
       CUserMsg_ParticleManagerOrBuilder {
     // Use CUserMsg_ParticleManager.newBuilder() to construct.
-    private CUserMsg_ParticleManager(com.google.protobuf.GeneratedMessage.ExtendableBuilder<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager, ?> builder) {
+    private CUserMsg_ParticleManager(skadistats.clarity.protobuf.GeneratedMessage.ExtendableBuilder<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager, ?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CUserMsg_ParticleManager(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CUserMsg_ParticleManager(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CUserMsg_ParticleManager defaultInstance;
     public static CUserMsg_ParticleManager getDefaultInstance() {
@@ -1030,21 +1030,21 @@ public final class DemoUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CUserMsg_ParticleManager(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
       int mutable_bitField1_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1611,60 +1611,60 @@ public final class DemoUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CUserMsg_ParticleManager> PARSER =
-        new com.google.protobuf.AbstractParser<CUserMsg_ParticleManager>() {
+    public static skadistats.clarity.protobuf.Parser<CUserMsg_ParticleManager> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CUserMsg_ParticleManager>() {
       public CUserMsg_ParticleManager parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CUserMsg_ParticleManager(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CUserMsg_ParticleManager> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CUserMsg_ParticleManager> getParserForType() {
       return PARSER;
     }
 
     public interface ReleaseParticleIndexOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.ReleaseParticleIndex)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.ReleaseParticleIndex}
      */
     public static final class ReleaseParticleIndex extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.ReleaseParticleIndex)
         ReleaseParticleIndexOrBuilder {
       // Use ReleaseParticleIndex.newBuilder() to construct.
-      private ReleaseParticleIndex(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private ReleaseParticleIndex(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private ReleaseParticleIndex(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private ReleaseParticleIndex(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final ReleaseParticleIndex defaultInstance;
       public static ReleaseParticleIndex getDefaultInstance() {
@@ -1675,19 +1675,19 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private ReleaseParticleIndex(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -1705,40 +1705,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<ReleaseParticleIndex> PARSER =
-          new com.google.protobuf.AbstractParser<ReleaseParticleIndex>() {
+      public static skadistats.clarity.protobuf.Parser<ReleaseParticleIndex> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<ReleaseParticleIndex>() {
         public ReleaseParticleIndex parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new ReleaseParticleIndex(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<ReleaseParticleIndex> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<ReleaseParticleIndex> getParserForType() {
         return PARSER;
       }
 
@@ -1754,7 +1754,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         getUnknownFields().writeTo(output);
@@ -1779,24 +1779,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(java.io.InputStream input)
@@ -1805,7 +1805,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -1815,18 +1815,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -1840,7 +1840,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -1848,15 +1848,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.ReleaseParticleIndex}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.ReleaseParticleIndex)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndexOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -1869,12 +1869,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -1890,7 +1890,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor;
         }
@@ -1913,7 +1913,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex)other);
           } else {
@@ -1933,13 +1933,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -1963,7 +1963,7 @@ public final class DemoUserMessages {
 
     public interface CreateParticleOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.CreateParticle)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional fixed64 particle_name_index = 1;</code>
@@ -2030,7 +2030,7 @@ public final class DemoUserMessages {
       /**
        * <code>optional string control_point_configuration = 7;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getControlPointConfigurationBytes();
 
       /**
@@ -2068,15 +2068,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.CreateParticle}
      */
     public static final class CreateParticle extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.CreateParticle)
         CreateParticleOrBuilder {
       // Use CreateParticle.newBuilder() to construct.
-      private CreateParticle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private CreateParticle(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private CreateParticle(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private CreateParticle(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final CreateParticle defaultInstance;
       public static CreateParticle getDefaultInstance() {
@@ -2087,20 +2087,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private CreateParticle(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -2147,7 +2147,7 @@ public final class DemoUserMessages {
                 break;
               }
               case 58: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000040;
                 controlPointConfiguration_ = bs;
                 break;
@@ -2177,40 +2177,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateParticle_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<CreateParticle> PARSER =
-          new com.google.protobuf.AbstractParser<CreateParticle>() {
+      public static skadistats.clarity.protobuf.Parser<CreateParticle> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<CreateParticle>() {
         public CreateParticle parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new CreateParticle(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<CreateParticle> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<CreateParticle> getParserForType() {
         return PARSER;
       }
 
@@ -2321,8 +2321,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             controlPointConfiguration_ = s;
@@ -2333,17 +2333,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string control_point_configuration = 7;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getControlPointConfigurationBytes() {
         java.lang.Object ref = controlPointConfiguration_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           controlPointConfiguration_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -2420,7 +2420,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2463,43 +2463,43 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFixed64Size(1, particleNameIndex_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(2, attachType_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, entityHandle_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(4, entityHandleForModifiers_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(5, applyVoiceBanRules_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(6, teamBehavior_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(7, getControlPointConfigurationBytes());
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(8, cluster_);
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(9, endcapTime_);
         }
         if (((bitField0_ & 0x00000200) == 0x00000200)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(10, aggregationPosition_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -2515,24 +2515,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(java.io.InputStream input)
@@ -2541,7 +2541,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -2551,18 +2551,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -2576,7 +2576,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -2584,15 +2584,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.CreateParticle}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.CreateParticle)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticleOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateParticle_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -2605,12 +2605,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getAggregationPositionFieldBuilder();
           }
         }
@@ -2651,7 +2651,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor;
         }
@@ -2721,7 +2721,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle)other);
           } else {
@@ -2773,13 +2773,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -2996,8 +2996,8 @@ public final class DemoUserMessages {
         public java.lang.String getControlPointConfiguration() {
           java.lang.Object ref = controlPointConfiguration_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               controlPointConfiguration_ = s;
@@ -3010,17 +3010,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string control_point_configuration = 7;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getControlPointConfigurationBytes() {
           java.lang.Object ref = controlPointConfiguration_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             controlPointConfiguration_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -3049,7 +3049,7 @@ public final class DemoUserMessages {
          * <code>optional string control_point_configuration = 7;</code>
          */
         public Builder setControlPointConfigurationBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -3124,7 +3124,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector aggregationPosition_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> aggregationPositionBuilder_;
         /**
          * <code>optional .CMsgVector aggregation_position = 10;</code>
@@ -3225,11 +3225,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector aggregation_position = 10;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getAggregationPositionFieldBuilder() {
           if (aggregationPositionBuilder_ == null) {
-            aggregationPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            aggregationPositionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getAggregationPosition(),
                     getParentForChildren(),
@@ -3252,7 +3252,7 @@ public final class DemoUserMessages {
 
     public interface DestroyParticleOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.DestroyParticle)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool destroy_immediately = 1;</code>
@@ -3267,15 +3267,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.DestroyParticle}
      */
     public static final class DestroyParticle extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.DestroyParticle)
         DestroyParticleOrBuilder {
       // Use DestroyParticle.newBuilder() to construct.
-      private DestroyParticle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private DestroyParticle(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private DestroyParticle(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private DestroyParticle(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final DestroyParticle defaultInstance;
       public static DestroyParticle getDefaultInstance() {
@@ -3286,20 +3286,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private DestroyParticle(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -3322,40 +3322,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticle_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<DestroyParticle> PARSER =
-          new com.google.protobuf.AbstractParser<DestroyParticle>() {
+      public static skadistats.clarity.protobuf.Parser<DestroyParticle> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<DestroyParticle>() {
         public DestroyParticle parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new DestroyParticle(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<DestroyParticle> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<DestroyParticle> getParserForType() {
         return PARSER;
       }
 
@@ -3388,7 +3388,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3404,7 +3404,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, destroyImmediately_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -3420,24 +3420,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(java.io.InputStream input)
@@ -3446,7 +3446,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -3456,18 +3456,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -3481,7 +3481,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -3489,15 +3489,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.DestroyParticle}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.DestroyParticle)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticle_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -3510,12 +3510,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -3533,7 +3533,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor;
         }
@@ -3563,7 +3563,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle)other);
           } else {
@@ -3586,13 +3586,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -3649,7 +3649,7 @@ public final class DemoUserMessages {
 
     public interface DestroyParticleInvolvingOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.DestroyParticleInvolving)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool destroy_immediately = 1;</code>
@@ -3673,15 +3673,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.DestroyParticleInvolving}
      */
     public static final class DestroyParticleInvolving extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.DestroyParticleInvolving)
         DestroyParticleInvolvingOrBuilder {
       // Use DestroyParticleInvolving.newBuilder() to construct.
-      private DestroyParticleInvolving(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private DestroyParticleInvolving(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private DestroyParticleInvolving(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private DestroyParticleInvolving(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final DestroyParticleInvolving defaultInstance;
       public static DestroyParticleInvolving getDefaultInstance() {
@@ -3692,20 +3692,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private DestroyParticleInvolving(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -3733,40 +3733,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<DestroyParticleInvolving> PARSER =
-          new com.google.protobuf.AbstractParser<DestroyParticleInvolving>() {
+      public static skadistats.clarity.protobuf.Parser<DestroyParticleInvolving> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<DestroyParticleInvolving>() {
         public DestroyParticleInvolving parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new DestroyParticleInvolving(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<DestroyParticleInvolving> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<DestroyParticleInvolving> getParserForType() {
         return PARSER;
       }
 
@@ -3815,7 +3815,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3834,11 +3834,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, destroyImmediately_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, entityHandle_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -3854,24 +3854,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(java.io.InputStream input)
@@ -3880,7 +3880,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -3890,18 +3890,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -3915,7 +3915,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -3923,15 +3923,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.DestroyParticleInvolving}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.DestroyParticleInvolving)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolvingOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -3944,12 +3944,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -3969,7 +3969,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_descriptor;
         }
@@ -4003,7 +4003,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving)other);
           } else {
@@ -4029,13 +4029,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -4124,7 +4124,7 @@ public final class DemoUserMessages {
 
     public interface DestroyParticleNamedOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.DestroyParticleNamed)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional fixed64 particle_name_index = 1;</code>
@@ -4166,15 +4166,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.DestroyParticleNamed}
      */
     public static final class DestroyParticleNamed extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.DestroyParticleNamed)
         DestroyParticleNamedOrBuilder {
       // Use DestroyParticleNamed.newBuilder() to construct.
-      private DestroyParticleNamed(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private DestroyParticleNamed(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private DestroyParticleNamed(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private DestroyParticleNamed(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final DestroyParticleNamed defaultInstance;
       public static DestroyParticleNamed getDefaultInstance() {
@@ -4185,20 +4185,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private DestroyParticleNamed(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -4236,40 +4236,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<DestroyParticleNamed> PARSER =
-          new com.google.protobuf.AbstractParser<DestroyParticleNamed>() {
+      public static skadistats.clarity.protobuf.Parser<DestroyParticleNamed> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<DestroyParticleNamed>() {
         public DestroyParticleNamed parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new DestroyParticleNamed(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<DestroyParticleNamed> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<DestroyParticleNamed> getParserForType() {
         return PARSER;
       }
 
@@ -4350,7 +4350,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4375,19 +4375,19 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFixed64Size(1, particleNameIndex_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(2, entityHandle_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(3, destroyImmediately_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(4, playEndcap_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -4403,24 +4403,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(java.io.InputStream input)
@@ -4429,7 +4429,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -4439,18 +4439,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -4464,7 +4464,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -4472,15 +4472,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.DestroyParticleNamed}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.DestroyParticleNamed)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamedOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -4493,12 +4493,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -4522,7 +4522,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_descriptor;
         }
@@ -4564,7 +4564,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed)other);
           } else {
@@ -4596,13 +4596,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -4755,7 +4755,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticle_OBSOLETEOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticle_OBSOLETE)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -4783,15 +4783,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticle_OBSOLETE}
      */
     public static final class UpdateParticle_OBSOLETE extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticle_OBSOLETE)
         UpdateParticle_OBSOLETEOrBuilder {
       // Use UpdateParticle_OBSOLETE.newBuilder() to construct.
-      private UpdateParticle_OBSOLETE(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticle_OBSOLETE(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticle_OBSOLETE(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticle_OBSOLETE(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticle_OBSOLETE defaultInstance;
       public static UpdateParticle_OBSOLETE getDefaultInstance() {
@@ -4802,20 +4802,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticle_OBSOLETE(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -4851,40 +4851,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticle_OBSOLETE> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticle_OBSOLETE>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticle_OBSOLETE> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticle_OBSOLETE>() {
         public UpdateParticle_OBSOLETE parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticle_OBSOLETE(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticle_OBSOLETE> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticle_OBSOLETE> getParserForType() {
         return PARSER;
       }
 
@@ -4939,7 +4939,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4958,11 +4958,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, position_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -4978,24 +4978,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(java.io.InputStream input)
@@ -5004,7 +5004,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -5014,18 +5014,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -5039,7 +5039,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -5047,15 +5047,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticle_OBSOLETE}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticle_OBSOLETE)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETEOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -5068,12 +5068,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getPositionFieldBuilder();
           }
         }
@@ -5098,7 +5098,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_descriptor;
         }
@@ -5136,7 +5136,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE)other);
           } else {
@@ -5162,13 +5162,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -5213,7 +5213,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
@@ -5314,11 +5314,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
-            positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            positionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
@@ -5341,7 +5341,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleFwd_OBSOLETEOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -5369,15 +5369,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE}
      */
     public static final class UpdateParticleFwd_OBSOLETE extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE)
         UpdateParticleFwd_OBSOLETEOrBuilder {
       // Use UpdateParticleFwd_OBSOLETE.newBuilder() to construct.
-      private UpdateParticleFwd_OBSOLETE(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleFwd_OBSOLETE(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleFwd_OBSOLETE(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleFwd_OBSOLETE(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleFwd_OBSOLETE defaultInstance;
       public static UpdateParticleFwd_OBSOLETE getDefaultInstance() {
@@ -5388,20 +5388,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleFwd_OBSOLETE(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -5437,40 +5437,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleFwd_OBSOLETE> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleFwd_OBSOLETE>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleFwd_OBSOLETE> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleFwd_OBSOLETE>() {
         public UpdateParticleFwd_OBSOLETE parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleFwd_OBSOLETE(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleFwd_OBSOLETE> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleFwd_OBSOLETE> getParserForType() {
         return PARSER;
       }
 
@@ -5525,7 +5525,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5544,11 +5544,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, forward_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -5564,24 +5564,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(java.io.InputStream input)
@@ -5590,7 +5590,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -5600,18 +5600,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -5625,7 +5625,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -5633,15 +5633,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETEOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -5654,12 +5654,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getForwardFieldBuilder();
           }
         }
@@ -5684,7 +5684,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_descriptor;
         }
@@ -5722,7 +5722,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE)other);
           } else {
@@ -5748,13 +5748,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -5799,7 +5799,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector forward_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> forwardBuilder_;
         /**
          * <code>optional .CMsgVector forward = 2;</code>
@@ -5900,11 +5900,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getForwardFieldBuilder() {
           if (forwardBuilder_ == null) {
-            forwardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            forwardBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getForward(),
                     getParentForChildren(),
@@ -5927,7 +5927,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleOrient_OBSOLETEOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -5994,15 +5994,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE}
      */
     public static final class UpdateParticleOrient_OBSOLETE extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE)
         UpdateParticleOrient_OBSOLETEOrBuilder {
       // Use UpdateParticleOrient_OBSOLETE.newBuilder() to construct.
-      private UpdateParticleOrient_OBSOLETE(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleOrient_OBSOLETE(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleOrient_OBSOLETE(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleOrient_OBSOLETE(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleOrient_OBSOLETE defaultInstance;
       public static UpdateParticleOrient_OBSOLETE getDefaultInstance() {
@@ -6013,20 +6013,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleOrient_OBSOLETE(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -6101,40 +6101,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleOrient_OBSOLETE> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleOrient_OBSOLETE>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleOrient_OBSOLETE> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleOrient_OBSOLETE>() {
         public UpdateParticleOrient_OBSOLETE parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleOrient_OBSOLETE(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleOrient_OBSOLETE> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleOrient_OBSOLETE> getParserForType() {
         return PARSER;
       }
 
@@ -6255,7 +6255,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6283,23 +6283,23 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, forward_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, deprecatedRight_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(4, up_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(5, left_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -6315,24 +6315,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(java.io.InputStream input)
@@ -6341,7 +6341,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -6351,18 +6351,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -6376,7 +6376,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -6384,15 +6384,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETEOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -6405,12 +6405,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getForwardFieldBuilder();
             getDeprecatedRightFieldBuilder();
             getUpFieldBuilder();
@@ -6456,7 +6456,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_descriptor;
         }
@@ -6518,7 +6518,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE)other);
           } else {
@@ -6553,13 +6553,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -6604,7 +6604,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector forward_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> forwardBuilder_;
         /**
          * <code>optional .CMsgVector forward = 2;</code>
@@ -6705,11 +6705,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector forward = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getForwardFieldBuilder() {
           if (forwardBuilder_ == null) {
-            forwardBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            forwardBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getForward(),
                     getParentForChildren(),
@@ -6720,7 +6720,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector deprecatedRight_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> deprecatedRightBuilder_;
         /**
          * <code>optional .CMsgVector deprecated_right = 3;</code>
@@ -6821,11 +6821,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector deprecated_right = 3;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getDeprecatedRightFieldBuilder() {
           if (deprecatedRightBuilder_ == null) {
-            deprecatedRightBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            deprecatedRightBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getDeprecatedRight(),
                     getParentForChildren(),
@@ -6836,7 +6836,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector up_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> upBuilder_;
         /**
          * <code>optional .CMsgVector up = 4;</code>
@@ -6937,11 +6937,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector up = 4;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getUpFieldBuilder() {
           if (upBuilder_ == null) {
-            upBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            upBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getUp(),
                     getParentForChildren(),
@@ -6952,7 +6952,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector left_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> leftBuilder_;
         /**
          * <code>optional .CMsgVector left = 5;</code>
@@ -7053,11 +7053,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector left = 5;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getLeftFieldBuilder() {
           if (leftBuilder_ == null) {
-            leftBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            leftBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getLeft(),
                     getParentForChildren(),
@@ -7080,7 +7080,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleTransformOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleTransform)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -7130,15 +7130,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleTransform}
      */
     public static final class UpdateParticleTransform extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleTransform)
         UpdateParticleTransformOrBuilder {
       // Use UpdateParticleTransform.newBuilder() to construct.
-      private UpdateParticleTransform(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleTransform(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleTransform(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleTransform(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleTransform defaultInstance;
       public static UpdateParticleTransform getDefaultInstance() {
@@ -7149,20 +7149,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleTransform(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -7216,40 +7216,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleTransform> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleTransform>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleTransform> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleTransform>() {
         public UpdateParticleTransform parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleTransform(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleTransform> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleTransform> getParserForType() {
         return PARSER;
       }
 
@@ -7342,7 +7342,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7367,19 +7367,19 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, position_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, orientation_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(4, interpolationInterval_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -7395,24 +7395,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(java.io.InputStream input)
@@ -7421,7 +7421,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -7431,18 +7431,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -7456,7 +7456,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -7464,15 +7464,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleTransform}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleTransform)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransformOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -7485,12 +7485,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getPositionFieldBuilder();
             getOrientationFieldBuilder();
           }
@@ -7524,7 +7524,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_descriptor;
         }
@@ -7574,7 +7574,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform)other);
           } else {
@@ -7606,13 +7606,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -7657,7 +7657,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
@@ -7758,11 +7758,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
-            positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            positionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
@@ -7773,7 +7773,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion orientation_ = skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternionOrBuilder> orientationBuilder_;
         /**
          * <code>optional .CMsgQuaternion orientation = 3;</code>
@@ -7874,11 +7874,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgQuaternion orientation = 3;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternionOrBuilder> 
             getOrientationFieldBuilder() {
           if (orientationBuilder_ == null) {
-            orientationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            orientationBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternion.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgQuaternionOrBuilder>(
                     getOrientation(),
                     getParentForChildren(),
@@ -7933,7 +7933,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleFallbackOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleFallback)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -7961,15 +7961,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleFallback}
      */
     public static final class UpdateParticleFallback extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleFallback)
         UpdateParticleFallbackOrBuilder {
       // Use UpdateParticleFallback.newBuilder() to construct.
-      private UpdateParticleFallback(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleFallback(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleFallback(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleFallback(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleFallback defaultInstance;
       public static UpdateParticleFallback getDefaultInstance() {
@@ -7980,20 +7980,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleFallback(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -8029,40 +8029,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleFallback> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleFallback>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleFallback> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleFallback>() {
         public UpdateParticleFallback parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleFallback(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleFallback> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleFallback> getParserForType() {
         return PARSER;
       }
 
@@ -8117,7 +8117,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8136,11 +8136,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, position_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -8156,24 +8156,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(java.io.InputStream input)
@@ -8182,7 +8182,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -8192,18 +8192,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -8217,7 +8217,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -8225,15 +8225,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleFallback}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleFallback)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallbackOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -8246,12 +8246,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getPositionFieldBuilder();
           }
         }
@@ -8276,7 +8276,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_descriptor;
         }
@@ -8314,7 +8314,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback)other);
           } else {
@@ -8340,13 +8340,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -8391,7 +8391,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
@@ -8492,11 +8492,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
-            positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            positionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
@@ -8519,7 +8519,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleOffsetOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleOffset)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -8560,15 +8560,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleOffset}
      */
     public static final class UpdateParticleOffset extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleOffset)
         UpdateParticleOffsetOrBuilder {
       // Use UpdateParticleOffset.newBuilder() to construct.
-      private UpdateParticleOffset(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleOffset(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleOffset(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleOffset(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleOffset defaultInstance;
       public static UpdateParticleOffset getDefaultInstance() {
@@ -8579,20 +8579,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleOffset(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -8641,40 +8641,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleOffset> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleOffset>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleOffset> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleOffset>() {
         public UpdateParticleOffset parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleOffset(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleOffset> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleOffset> getParserForType() {
         return PARSER;
       }
 
@@ -8751,7 +8751,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8773,15 +8773,15 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, originOffset_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, angleOffset_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -8797,24 +8797,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(java.io.InputStream input)
@@ -8823,7 +8823,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -8833,18 +8833,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -8858,7 +8858,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -8866,15 +8866,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleOffset}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleOffset)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffsetOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -8887,12 +8887,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getOriginOffsetFieldBuilder();
             getAngleOffsetFieldBuilder();
           }
@@ -8924,7 +8924,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_descriptor;
         }
@@ -8970,7 +8970,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset)other);
           } else {
@@ -8999,13 +8999,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -9050,7 +9050,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector originOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> originOffsetBuilder_;
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
@@ -9151,11 +9151,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector origin_offset = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getOriginOffsetFieldBuilder() {
           if (originOffsetBuilder_ == null) {
-            originOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            originOffsetBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getOriginOffset(),
                     getParentForChildren(),
@@ -9166,7 +9166,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle angleOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> angleOffsetBuilder_;
         /**
          * <code>optional .CMsgQAngle angle_offset = 3;</code>
@@ -9267,11 +9267,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgQAngle angle_offset = 3;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
             getAngleOffsetFieldBuilder() {
           if (angleOffsetBuilder_ == null) {
-            angleOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            angleOffsetBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                     getAngleOffset(),
                     getParentForChildren(),
@@ -9294,7 +9294,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleEntOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleEnt)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -9384,15 +9384,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleEnt}
      */
     public static final class UpdateParticleEnt extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleEnt)
         UpdateParticleEntOrBuilder {
       // Use UpdateParticleEnt.newBuilder() to construct.
-      private UpdateParticleEnt(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleEnt(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleEnt(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleEnt(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleEnt defaultInstance;
       public static UpdateParticleEnt getDefaultInstance() {
@@ -9403,20 +9403,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleEnt(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -9498,40 +9498,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleEnt> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleEnt>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleEnt> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleEnt>() {
         public UpdateParticleEnt parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleEnt(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleEnt> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleEnt> getParserForType() {
         return PARSER;
       }
 
@@ -9694,7 +9694,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -9731,35 +9731,35 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(2, entityHandle_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(3, attachType_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(4, attachment_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(5, fallbackPosition_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(6, includeWearables_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(7, offsetPosition_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(8, offsetAngles_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -9775,24 +9775,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(java.io.InputStream input)
@@ -9801,7 +9801,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -9811,18 +9811,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -9836,7 +9836,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -9844,15 +9844,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleEnt}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleEnt)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEntOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -9865,12 +9865,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getFallbackPositionFieldBuilder();
             getOffsetPositionFieldBuilder();
             getOffsetAnglesFieldBuilder();
@@ -9917,7 +9917,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_descriptor;
         }
@@ -9987,7 +9987,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt)other);
           } else {
@@ -10031,13 +10031,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -10178,7 +10178,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fallbackPosition_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fallbackPositionBuilder_;
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
@@ -10279,11 +10279,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fallback_position = 5;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFallbackPositionFieldBuilder() {
           if (fallbackPositionBuilder_ == null) {
-            fallbackPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fallbackPositionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFallbackPosition(),
                     getParentForChildren(),
@@ -10326,7 +10326,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector offsetPosition_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> offsetPositionBuilder_;
         /**
          * <code>optional .CMsgVector offset_position = 7;</code>
@@ -10427,11 +10427,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector offset_position = 7;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getOffsetPositionFieldBuilder() {
           if (offsetPositionBuilder_ == null) {
-            offsetPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            offsetPositionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getOffsetPosition(),
                     getParentForChildren(),
@@ -10442,7 +10442,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle offsetAngles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> offsetAnglesBuilder_;
         /**
          * <code>optional .CMsgQAngle offset_angles = 8;</code>
@@ -10543,11 +10543,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgQAngle offset_angles = 8;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
             getOffsetAnglesFieldBuilder() {
           if (offsetAnglesBuilder_ == null) {
-            offsetAnglesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            offsetAnglesBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                     getOffsetAngles(),
                     getParentForChildren(),
@@ -10570,7 +10570,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleSetFrozenOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleSetFrozen)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool set_frozen = 1;</code>
@@ -10594,15 +10594,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleSetFrozen}
      */
     public static final class UpdateParticleSetFrozen extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleSetFrozen)
         UpdateParticleSetFrozenOrBuilder {
       // Use UpdateParticleSetFrozen.newBuilder() to construct.
-      private UpdateParticleSetFrozen(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleSetFrozen(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleSetFrozen(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleSetFrozen(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleSetFrozen defaultInstance;
       public static UpdateParticleSetFrozen getDefaultInstance() {
@@ -10613,20 +10613,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleSetFrozen(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -10654,40 +10654,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleSetFrozen> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleSetFrozen>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleSetFrozen> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleSetFrozen>() {
         public UpdateParticleSetFrozen parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleSetFrozen(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleSetFrozen> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleSetFrozen> getParserForType() {
         return PARSER;
       }
 
@@ -10736,7 +10736,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -10755,11 +10755,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, setFrozen_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(2, transitionDuration_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -10775,24 +10775,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(java.io.InputStream input)
@@ -10801,7 +10801,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -10811,18 +10811,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -10836,7 +10836,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -10844,15 +10844,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleSetFrozen}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleSetFrozen)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozenOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -10865,12 +10865,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -10890,7 +10890,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_descriptor;
         }
@@ -10924,7 +10924,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen)other);
           } else {
@@ -10950,13 +10950,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -11045,7 +11045,7 @@ public final class DemoUserMessages {
 
     public interface UpdateParticleShouldDrawOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateParticleShouldDraw)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool should_draw = 1;</code>
@@ -11060,15 +11060,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleShouldDraw}
      */
     public static final class UpdateParticleShouldDraw extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateParticleShouldDraw)
         UpdateParticleShouldDrawOrBuilder {
       // Use UpdateParticleShouldDraw.newBuilder() to construct.
-      private UpdateParticleShouldDraw(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateParticleShouldDraw(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateParticleShouldDraw(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateParticleShouldDraw(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateParticleShouldDraw defaultInstance;
       public static UpdateParticleShouldDraw getDefaultInstance() {
@@ -11079,20 +11079,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateParticleShouldDraw(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -11115,40 +11115,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateParticleShouldDraw> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateParticleShouldDraw>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateParticleShouldDraw> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateParticleShouldDraw>() {
         public UpdateParticleShouldDraw parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateParticleShouldDraw(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateParticleShouldDraw> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateParticleShouldDraw> getParserForType() {
         return PARSER;
       }
 
@@ -11181,7 +11181,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11197,7 +11197,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, shouldDraw_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -11213,24 +11213,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(java.io.InputStream input)
@@ -11239,7 +11239,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -11249,18 +11249,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -11274,7 +11274,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -11282,15 +11282,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateParticleShouldDraw}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateParticleShouldDraw)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDrawOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -11303,12 +11303,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -11326,7 +11326,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_descriptor;
         }
@@ -11356,7 +11356,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw)other);
           } else {
@@ -11379,13 +11379,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -11442,7 +11442,7 @@ public final class DemoUserMessages {
 
     public interface ChangeControlPointAttachmentOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.ChangeControlPointAttachment)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 attachment_old = 1;</code>
@@ -11475,15 +11475,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.ChangeControlPointAttachment}
      */
     public static final class ChangeControlPointAttachment extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.ChangeControlPointAttachment)
         ChangeControlPointAttachmentOrBuilder {
       // Use ChangeControlPointAttachment.newBuilder() to construct.
-      private ChangeControlPointAttachment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private ChangeControlPointAttachment(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private ChangeControlPointAttachment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private ChangeControlPointAttachment(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final ChangeControlPointAttachment defaultInstance;
       public static ChangeControlPointAttachment getDefaultInstance() {
@@ -11494,20 +11494,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private ChangeControlPointAttachment(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -11540,40 +11540,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<ChangeControlPointAttachment> PARSER =
-          new com.google.protobuf.AbstractParser<ChangeControlPointAttachment>() {
+      public static skadistats.clarity.protobuf.Parser<ChangeControlPointAttachment> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<ChangeControlPointAttachment>() {
         public ChangeControlPointAttachment parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new ChangeControlPointAttachment(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<ChangeControlPointAttachment> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<ChangeControlPointAttachment> getParserForType() {
         return PARSER;
       }
 
@@ -11638,7 +11638,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11660,15 +11660,15 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, attachmentOld_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(2, attachmentNew_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, entityHandle_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -11684,24 +11684,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(java.io.InputStream input)
@@ -11710,7 +11710,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -11720,18 +11720,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -11745,7 +11745,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -11753,15 +11753,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.ChangeControlPointAttachment}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.ChangeControlPointAttachment)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachmentOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -11774,12 +11774,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -11801,7 +11801,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor;
         }
@@ -11839,7 +11839,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment)other);
           } else {
@@ -11868,13 +11868,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -11995,7 +11995,7 @@ public final class DemoUserMessages {
 
     public interface UpdateEntityPositionOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateEntityPosition)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint32 entity_handle = 1 [default = 16777215];</code>
@@ -12023,15 +12023,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateEntityPosition}
      */
     public static final class UpdateEntityPosition extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateEntityPosition)
         UpdateEntityPositionOrBuilder {
       // Use UpdateEntityPosition.newBuilder() to construct.
-      private UpdateEntityPosition(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateEntityPosition(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateEntityPosition(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateEntityPosition(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateEntityPosition defaultInstance;
       public static UpdateEntityPosition getDefaultInstance() {
@@ -12042,20 +12042,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateEntityPosition(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -12091,40 +12091,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateEntityPosition> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateEntityPosition>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateEntityPosition> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateEntityPosition>() {
         public UpdateEntityPosition parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateEntityPosition(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateEntityPosition> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateEntityPosition> getParserForType() {
         return PARSER;
       }
 
@@ -12179,7 +12179,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12198,11 +12198,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(1, entityHandle_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, position_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -12218,24 +12218,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(java.io.InputStream input)
@@ -12244,7 +12244,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -12254,18 +12254,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -12279,7 +12279,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -12287,15 +12287,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateEntityPosition}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateEntityPosition)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPositionOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -12308,12 +12308,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getPositionFieldBuilder();
           }
         }
@@ -12338,7 +12338,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_descriptor;
         }
@@ -12376,7 +12376,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition)other);
           } else {
@@ -12402,13 +12402,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -12453,7 +12453,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector position_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> positionBuilder_;
         /**
          * <code>optional .CMsgVector position = 2;</code>
@@ -12554,11 +12554,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector position = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getPositionFieldBuilder() {
           if (positionBuilder_ == null) {
-            positionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            positionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getPosition(),
                     getParentForChildren(),
@@ -12581,7 +12581,7 @@ public final class DemoUserMessages {
 
     public interface SetParticleFoWPropertiesOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleFoWProperties)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 fow_control_point = 1;</code>
@@ -12614,15 +12614,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetParticleFoWProperties}
      */
     public static final class SetParticleFoWProperties extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleFoWProperties)
         SetParticleFoWPropertiesOrBuilder {
       // Use SetParticleFoWProperties.newBuilder() to construct.
-      private SetParticleFoWProperties(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetParticleFoWProperties(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetParticleFoWProperties(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetParticleFoWProperties(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetParticleFoWProperties defaultInstance;
       public static SetParticleFoWProperties getDefaultInstance() {
@@ -12633,20 +12633,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetParticleFoWProperties(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -12679,40 +12679,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetParticleFoWProperties> PARSER =
-          new com.google.protobuf.AbstractParser<SetParticleFoWProperties>() {
+      public static skadistats.clarity.protobuf.Parser<SetParticleFoWProperties> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetParticleFoWProperties>() {
         public SetParticleFoWProperties parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetParticleFoWProperties(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetParticleFoWProperties> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetParticleFoWProperties> getParserForType() {
         return PARSER;
       }
 
@@ -12777,7 +12777,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12799,15 +12799,15 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, fowControlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(2, fowControlPoint2_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(3, fowRadius_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -12823,24 +12823,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(java.io.InputStream input)
@@ -12849,7 +12849,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -12859,18 +12859,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -12884,7 +12884,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -12892,15 +12892,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleFoWProperties}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleFoWProperties)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWPropertiesOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -12913,12 +12913,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -12940,7 +12940,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_descriptor;
         }
@@ -12978,7 +12978,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties)other);
           } else {
@@ -13007,13 +13007,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -13134,7 +13134,7 @@ public final class DemoUserMessages {
 
     public interface SetParticleShouldCheckFoWOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleShouldCheckFoW)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool check_fow = 1;</code>
@@ -13149,15 +13149,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetParticleShouldCheckFoW}
      */
     public static final class SetParticleShouldCheckFoW extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleShouldCheckFoW)
         SetParticleShouldCheckFoWOrBuilder {
       // Use SetParticleShouldCheckFoW.newBuilder() to construct.
-      private SetParticleShouldCheckFoW(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetParticleShouldCheckFoW(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetParticleShouldCheckFoW(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetParticleShouldCheckFoW(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetParticleShouldCheckFoW defaultInstance;
       public static SetParticleShouldCheckFoW getDefaultInstance() {
@@ -13168,20 +13168,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetParticleShouldCheckFoW(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -13204,40 +13204,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetParticleShouldCheckFoW> PARSER =
-          new com.google.protobuf.AbstractParser<SetParticleShouldCheckFoW>() {
+      public static skadistats.clarity.protobuf.Parser<SetParticleShouldCheckFoW> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetParticleShouldCheckFoW>() {
         public SetParticleShouldCheckFoW parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetParticleShouldCheckFoW(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetParticleShouldCheckFoW> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetParticleShouldCheckFoW> getParserForType() {
         return PARSER;
       }
 
@@ -13270,7 +13270,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13286,7 +13286,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, checkFow_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -13302,24 +13302,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(java.io.InputStream input)
@@ -13328,7 +13328,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -13338,18 +13338,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -13363,7 +13363,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -13371,15 +13371,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleShouldCheckFoW}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleShouldCheckFoW)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -13392,12 +13392,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -13415,7 +13415,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
         }
@@ -13445,7 +13445,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW)other);
           } else {
@@ -13468,13 +13468,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -13531,7 +13531,7 @@ public final class DemoUserMessages {
 
     public interface SetControlPointModelOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetControlPointModel)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -13553,22 +13553,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string model_name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getModelNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetControlPointModel}
      */
     public static final class SetControlPointModel extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetControlPointModel)
         SetControlPointModelOrBuilder {
       // Use SetControlPointModel.newBuilder() to construct.
-      private SetControlPointModel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetControlPointModel(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetControlPointModel(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetControlPointModel(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetControlPointModel defaultInstance;
       public static SetControlPointModel getDefaultInstance() {
@@ -13579,20 +13579,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetControlPointModel(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -13614,47 +13614,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 modelName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointModel_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointModel_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetControlPointModel> PARSER =
-          new com.google.protobuf.AbstractParser<SetControlPointModel>() {
+      public static skadistats.clarity.protobuf.Parser<SetControlPointModel> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetControlPointModel>() {
         public SetControlPointModel parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetControlPointModel(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetControlPointModel> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetControlPointModel> getParserForType() {
         return PARSER;
       }
 
@@ -13690,8 +13690,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             modelName_ = s;
@@ -13702,17 +13702,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string model_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getModelNameBytes() {
         java.lang.Object ref = modelName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           modelName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -13730,7 +13730,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13749,11 +13749,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getModelNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -13769,24 +13769,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(java.io.InputStream input)
@@ -13795,7 +13795,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -13805,18 +13805,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -13830,7 +13830,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -13838,15 +13838,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetControlPointModel}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetControlPointModel)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModelOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointModel_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointModel_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -13859,12 +13859,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -13884,7 +13884,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointModel_descriptor;
         }
@@ -13918,7 +13918,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel)other);
           } else {
@@ -13946,13 +13946,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -14009,8 +14009,8 @@ public final class DemoUserMessages {
         public java.lang.String getModelName() {
           java.lang.Object ref = modelName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               modelName_ = s;
@@ -14023,17 +14023,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string model_name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getModelNameBytes() {
           java.lang.Object ref = modelName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             modelName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -14062,7 +14062,7 @@ public final class DemoUserMessages {
          * <code>optional string model_name = 2;</code>
          */
         public Builder setModelNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -14085,7 +14085,7 @@ public final class DemoUserMessages {
 
     public interface SetControlPointSnapshotOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetControlPointSnapshot)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 control_point = 1;</code>
@@ -14107,22 +14107,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string snapshot_name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getSnapshotNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetControlPointSnapshot}
      */
     public static final class SetControlPointSnapshot extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetControlPointSnapshot)
         SetControlPointSnapshotOrBuilder {
       // Use SetControlPointSnapshot.newBuilder() to construct.
-      private SetControlPointSnapshot(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetControlPointSnapshot(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetControlPointSnapshot(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetControlPointSnapshot(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetControlPointSnapshot defaultInstance;
       public static SetControlPointSnapshot getDefaultInstance() {
@@ -14133,20 +14133,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetControlPointSnapshot(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -14168,47 +14168,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 snapshotName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetControlPointSnapshot> PARSER =
-          new com.google.protobuf.AbstractParser<SetControlPointSnapshot>() {
+      public static skadistats.clarity.protobuf.Parser<SetControlPointSnapshot> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetControlPointSnapshot>() {
         public SetControlPointSnapshot parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetControlPointSnapshot(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetControlPointSnapshot> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetControlPointSnapshot> getParserForType() {
         return PARSER;
       }
 
@@ -14244,8 +14244,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             snapshotName_ = s;
@@ -14256,17 +14256,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string snapshot_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getSnapshotNameBytes() {
         java.lang.Object ref = snapshotName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           snapshotName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -14284,7 +14284,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14303,11 +14303,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, controlPoint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getSnapshotNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -14323,24 +14323,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(java.io.InputStream input)
@@ -14349,7 +14349,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -14359,18 +14359,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -14384,7 +14384,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -14392,15 +14392,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetControlPointSnapshot}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetControlPointSnapshot)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshotOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -14413,12 +14413,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -14438,7 +14438,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_descriptor;
         }
@@ -14472,7 +14472,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot)other);
           } else {
@@ -14500,13 +14500,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -14563,8 +14563,8 @@ public final class DemoUserMessages {
         public java.lang.String getSnapshotName() {
           java.lang.Object ref = snapshotName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               snapshotName_ = s;
@@ -14577,17 +14577,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string snapshot_name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getSnapshotNameBytes() {
           java.lang.Object ref = snapshotName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             snapshotName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -14616,7 +14616,7 @@ public final class DemoUserMessages {
          * <code>optional string snapshot_name = 2;</code>
          */
         public Builder setSnapshotNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -14639,7 +14639,7 @@ public final class DemoUserMessages {
 
     public interface SetParticleTextOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleText)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string text = 1;</code>
@@ -14652,22 +14652,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string text = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getTextBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetParticleText}
      */
     public static final class SetParticleText extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleText)
         SetParticleTextOrBuilder {
       // Use SetParticleText.newBuilder() to construct.
-      private SetParticleText(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetParticleText(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetParticleText(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetParticleText(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetParticleText defaultInstance;
       public static SetParticleText getDefaultInstance() {
@@ -14678,20 +14678,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetParticleText(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -14708,47 +14708,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 text_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleText_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleText_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetParticleText> PARSER =
-          new com.google.protobuf.AbstractParser<SetParticleText>() {
+      public static skadistats.clarity.protobuf.Parser<SetParticleText> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetParticleText>() {
         public SetParticleText parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetParticleText(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetParticleText> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetParticleText> getParserForType() {
         return PARSER;
       }
 
@@ -14769,8 +14769,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             text_ = s;
@@ -14781,17 +14781,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string text = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getTextBytes() {
         java.lang.Object ref = text_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           text_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -14808,7 +14808,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14824,7 +14824,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getTextBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -14840,24 +14840,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(java.io.InputStream input)
@@ -14866,7 +14866,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -14876,18 +14876,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -14901,7 +14901,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -14909,15 +14909,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleText}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleText)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleTextOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleText_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleText_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -14930,12 +14930,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -14953,7 +14953,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleText_descriptor;
         }
@@ -14983,7 +14983,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText)other);
           } else {
@@ -15008,13 +15008,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -15039,8 +15039,8 @@ public final class DemoUserMessages {
         public java.lang.String getText() {
           java.lang.Object ref = text_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               text_ = s;
@@ -15053,17 +15053,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string text = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getTextBytes() {
           java.lang.Object ref = text_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             text_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -15092,7 +15092,7 @@ public final class DemoUserMessages {
          * <code>optional string text = 1;</code>
          */
         public Builder setTextBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -15115,7 +15115,7 @@ public final class DemoUserMessages {
 
     public interface SetTextureAttributeOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetTextureAttribute)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string attribute_name = 1;</code>
@@ -15128,7 +15128,7 @@ public final class DemoUserMessages {
       /**
        * <code>optional string attribute_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getAttributeNameBytes();
 
       /**
@@ -15142,22 +15142,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string texture_name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getTextureNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetTextureAttribute}
      */
     public static final class SetTextureAttribute extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetTextureAttribute)
         SetTextureAttributeOrBuilder {
       // Use SetTextureAttribute.newBuilder() to construct.
-      private SetTextureAttribute(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetTextureAttribute(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetTextureAttribute(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetTextureAttribute(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetTextureAttribute defaultInstance;
       public static SetTextureAttribute getDefaultInstance() {
@@ -15168,20 +15168,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetTextureAttribute(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -15198,53 +15198,53 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 attributeName_ = bs;
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 textureName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetTextureAttribute_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetTextureAttribute_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetTextureAttribute> PARSER =
-          new com.google.protobuf.AbstractParser<SetTextureAttribute>() {
+      public static skadistats.clarity.protobuf.Parser<SetTextureAttribute> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetTextureAttribute>() {
         public SetTextureAttribute parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetTextureAttribute(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetTextureAttribute> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetTextureAttribute> getParserForType() {
         return PARSER;
       }
 
@@ -15265,8 +15265,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             attributeName_ = s;
@@ -15277,17 +15277,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string attribute_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getAttributeNameBytes() {
         java.lang.Object ref = attributeName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           attributeName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -15307,8 +15307,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             textureName_ = s;
@@ -15319,17 +15319,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string texture_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getTextureNameBytes() {
         java.lang.Object ref = textureName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           textureName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -15347,7 +15347,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15366,11 +15366,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getAttributeNameBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getTextureNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -15386,24 +15386,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(java.io.InputStream input)
@@ -15412,7 +15412,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -15422,18 +15422,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -15447,7 +15447,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -15455,15 +15455,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetTextureAttribute}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetTextureAttribute)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttributeOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetTextureAttribute_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetTextureAttribute_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -15476,12 +15476,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -15501,7 +15501,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetTextureAttribute_descriptor;
         }
@@ -15535,7 +15535,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute)other);
           } else {
@@ -15565,13 +15565,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -15596,8 +15596,8 @@ public final class DemoUserMessages {
         public java.lang.String getAttributeName() {
           java.lang.Object ref = attributeName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               attributeName_ = s;
@@ -15610,17 +15610,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string attribute_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getAttributeNameBytes() {
           java.lang.Object ref = attributeName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             attributeName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -15649,7 +15649,7 @@ public final class DemoUserMessages {
          * <code>optional string attribute_name = 1;</code>
          */
         public Builder setAttributeNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -15672,8 +15672,8 @@ public final class DemoUserMessages {
         public java.lang.String getTextureName() {
           java.lang.Object ref = textureName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               textureName_ = s;
@@ -15686,17 +15686,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string texture_name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getTextureNameBytes() {
           java.lang.Object ref = textureName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             textureName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -15725,7 +15725,7 @@ public final class DemoUserMessages {
          * <code>optional string texture_name = 2;</code>
          */
         public Builder setTextureNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -15748,7 +15748,7 @@ public final class DemoUserMessages {
 
     public interface SetSceneObjectGenericFlagOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetSceneObjectGenericFlag)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool flag_value = 1;</code>
@@ -15763,15 +15763,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetSceneObjectGenericFlag}
      */
     public static final class SetSceneObjectGenericFlag extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetSceneObjectGenericFlag)
         SetSceneObjectGenericFlagOrBuilder {
       // Use SetSceneObjectGenericFlag.newBuilder() to construct.
-      private SetSceneObjectGenericFlag(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetSceneObjectGenericFlag(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetSceneObjectGenericFlag(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetSceneObjectGenericFlag(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetSceneObjectGenericFlag defaultInstance;
       public static SetSceneObjectGenericFlag getDefaultInstance() {
@@ -15782,20 +15782,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetSceneObjectGenericFlag(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -15818,40 +15818,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetSceneObjectGenericFlag> PARSER =
-          new com.google.protobuf.AbstractParser<SetSceneObjectGenericFlag>() {
+      public static skadistats.clarity.protobuf.Parser<SetSceneObjectGenericFlag> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetSceneObjectGenericFlag>() {
         public SetSceneObjectGenericFlag parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetSceneObjectGenericFlag(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetSceneObjectGenericFlag> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetSceneObjectGenericFlag> getParserForType() {
         return PARSER;
       }
 
@@ -15884,7 +15884,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15900,7 +15900,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, flagValue_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -15916,24 +15916,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(java.io.InputStream input)
@@ -15942,7 +15942,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -15952,18 +15952,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -15977,7 +15977,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -15985,15 +15985,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetSceneObjectGenericFlag}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetSceneObjectGenericFlag)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlagOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -16006,12 +16006,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -16029,7 +16029,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_descriptor;
         }
@@ -16059,7 +16059,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag)other);
           } else {
@@ -16082,13 +16082,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -16145,7 +16145,7 @@ public final class DemoUserMessages {
 
     public interface SetSceneObjectTintAndDesatOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetSceneObjectTintAndDesat)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional fixed32 tint = 1;</code>
@@ -16169,15 +16169,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetSceneObjectTintAndDesat}
      */
     public static final class SetSceneObjectTintAndDesat extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetSceneObjectTintAndDesat)
         SetSceneObjectTintAndDesatOrBuilder {
       // Use SetSceneObjectTintAndDesat.newBuilder() to construct.
-      private SetSceneObjectTintAndDesat(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetSceneObjectTintAndDesat(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetSceneObjectTintAndDesat(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetSceneObjectTintAndDesat(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetSceneObjectTintAndDesat defaultInstance;
       public static SetSceneObjectTintAndDesat getDefaultInstance() {
@@ -16188,20 +16188,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetSceneObjectTintAndDesat(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -16229,40 +16229,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetSceneObjectTintAndDesat> PARSER =
-          new com.google.protobuf.AbstractParser<SetSceneObjectTintAndDesat>() {
+      public static skadistats.clarity.protobuf.Parser<SetSceneObjectTintAndDesat> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetSceneObjectTintAndDesat>() {
         public SetSceneObjectTintAndDesat parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetSceneObjectTintAndDesat(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetSceneObjectTintAndDesat> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetSceneObjectTintAndDesat> getParserForType() {
         return PARSER;
       }
 
@@ -16311,7 +16311,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16330,11 +16330,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFixed32Size(1, tint_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(2, desat_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -16350,24 +16350,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(java.io.InputStream input)
@@ -16376,7 +16376,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -16386,18 +16386,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -16411,7 +16411,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -16419,15 +16419,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetSceneObjectTintAndDesat}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetSceneObjectTintAndDesat)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesatOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -16440,12 +16440,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -16465,7 +16465,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_descriptor;
         }
@@ -16499,7 +16499,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat)other);
           } else {
@@ -16525,13 +16525,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -16620,7 +16620,7 @@ public final class DemoUserMessages {
 
     public interface ParticleSkipToTimeOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.ParticleSkipToTime)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional float skip_to_time = 1;</code>
@@ -16635,15 +16635,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.ParticleSkipToTime}
      */
     public static final class ParticleSkipToTime extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.ParticleSkipToTime)
         ParticleSkipToTimeOrBuilder {
       // Use ParticleSkipToTime.newBuilder() to construct.
-      private ParticleSkipToTime(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private ParticleSkipToTime(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private ParticleSkipToTime(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private ParticleSkipToTime(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final ParticleSkipToTime defaultInstance;
       public static ParticleSkipToTime getDefaultInstance() {
@@ -16654,20 +16654,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private ParticleSkipToTime(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -16690,40 +16690,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<ParticleSkipToTime> PARSER =
-          new com.google.protobuf.AbstractParser<ParticleSkipToTime>() {
+      public static skadistats.clarity.protobuf.Parser<ParticleSkipToTime> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<ParticleSkipToTime>() {
         public ParticleSkipToTime parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new ParticleSkipToTime(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<ParticleSkipToTime> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<ParticleSkipToTime> getParserForType() {
         return PARSER;
       }
 
@@ -16756,7 +16756,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16772,7 +16772,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(1, skipToTime_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -16788,24 +16788,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(java.io.InputStream input)
@@ -16814,7 +16814,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -16824,18 +16824,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -16849,7 +16849,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -16857,15 +16857,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.ParticleSkipToTime}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.ParticleSkipToTime)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTimeOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -16878,12 +16878,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -16901,7 +16901,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_descriptor;
         }
@@ -16931,7 +16931,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime)other);
           } else {
@@ -16954,13 +16954,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -17017,7 +17017,7 @@ public final class DemoUserMessages {
 
     public interface ParticleCanFreezeOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.ParticleCanFreeze)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool can_freeze = 1;</code>
@@ -17032,15 +17032,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.ParticleCanFreeze}
      */
     public static final class ParticleCanFreeze extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.ParticleCanFreeze)
         ParticleCanFreezeOrBuilder {
       // Use ParticleCanFreeze.newBuilder() to construct.
-      private ParticleCanFreeze(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private ParticleCanFreeze(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private ParticleCanFreeze(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private ParticleCanFreeze(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final ParticleCanFreeze defaultInstance;
       public static ParticleCanFreeze getDefaultInstance() {
@@ -17051,20 +17051,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private ParticleCanFreeze(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -17087,40 +17087,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<ParticleCanFreeze> PARSER =
-          new com.google.protobuf.AbstractParser<ParticleCanFreeze>() {
+      public static skadistats.clarity.protobuf.Parser<ParticleCanFreeze> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<ParticleCanFreeze>() {
         public ParticleCanFreeze parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new ParticleCanFreeze(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<ParticleCanFreeze> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<ParticleCanFreeze> getParserForType() {
         return PARSER;
       }
 
@@ -17153,7 +17153,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17169,7 +17169,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, canFreeze_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -17185,24 +17185,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(java.io.InputStream input)
@@ -17211,7 +17211,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -17221,18 +17221,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -17246,7 +17246,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -17254,15 +17254,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.ParticleCanFreeze}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.ParticleCanFreeze)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreezeOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -17275,12 +17275,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -17298,7 +17298,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_descriptor;
         }
@@ -17328,7 +17328,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze)other);
           } else {
@@ -17351,13 +17351,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -17414,7 +17414,7 @@ public final class DemoUserMessages {
 
     public interface ParticleFreezeTransitionOverrideOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.ParticleFreezeTransitionOverride)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional float freeze_transition_override = 1;</code>
@@ -17429,15 +17429,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.ParticleFreezeTransitionOverride}
      */
     public static final class ParticleFreezeTransitionOverride extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.ParticleFreezeTransitionOverride)
         ParticleFreezeTransitionOverrideOrBuilder {
       // Use ParticleFreezeTransitionOverride.newBuilder() to construct.
-      private ParticleFreezeTransitionOverride(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private ParticleFreezeTransitionOverride(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private ParticleFreezeTransitionOverride(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private ParticleFreezeTransitionOverride(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final ParticleFreezeTransitionOverride defaultInstance;
       public static ParticleFreezeTransitionOverride getDefaultInstance() {
@@ -17448,20 +17448,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private ParticleFreezeTransitionOverride(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -17484,40 +17484,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<ParticleFreezeTransitionOverride> PARSER =
-          new com.google.protobuf.AbstractParser<ParticleFreezeTransitionOverride>() {
+      public static skadistats.clarity.protobuf.Parser<ParticleFreezeTransitionOverride> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<ParticleFreezeTransitionOverride>() {
         public ParticleFreezeTransitionOverride parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new ParticleFreezeTransitionOverride(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<ParticleFreezeTransitionOverride> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<ParticleFreezeTransitionOverride> getParserForType() {
         return PARSER;
       }
 
@@ -17550,7 +17550,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17566,7 +17566,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(1, freezeTransitionOverride_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -17582,24 +17582,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(java.io.InputStream input)
@@ -17608,7 +17608,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -17618,18 +17618,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -17643,7 +17643,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -17651,15 +17651,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.ParticleFreezeTransitionOverride}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.ParticleFreezeTransitionOverride)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverrideOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -17672,12 +17672,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -17695,7 +17695,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor;
         }
@@ -17725,7 +17725,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride)other);
           } else {
@@ -17748,13 +17748,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -17811,7 +17811,7 @@ public final class DemoUserMessages {
 
     public interface FreezeParticleInvolvingOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.FreezeParticleInvolving)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool set_frozen = 1;</code>
@@ -17844,15 +17844,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.FreezeParticleInvolving}
      */
     public static final class FreezeParticleInvolving extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.FreezeParticleInvolving)
         FreezeParticleInvolvingOrBuilder {
       // Use FreezeParticleInvolving.newBuilder() to construct.
-      private FreezeParticleInvolving(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private FreezeParticleInvolving(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private FreezeParticleInvolving(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private FreezeParticleInvolving(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final FreezeParticleInvolving defaultInstance;
       public static FreezeParticleInvolving getDefaultInstance() {
@@ -17863,20 +17863,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private FreezeParticleInvolving(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -17909,40 +17909,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<FreezeParticleInvolving> PARSER =
-          new com.google.protobuf.AbstractParser<FreezeParticleInvolving>() {
+      public static skadistats.clarity.protobuf.Parser<FreezeParticleInvolving> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<FreezeParticleInvolving>() {
         public FreezeParticleInvolving parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new FreezeParticleInvolving(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<FreezeParticleInvolving> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<FreezeParticleInvolving> getParserForType() {
         return PARSER;
       }
 
@@ -18007,7 +18007,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18029,15 +18029,15 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, setFrozen_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(2, transitionDuration_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, entityHandle_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -18053,24 +18053,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(java.io.InputStream input)
@@ -18079,7 +18079,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -18089,18 +18089,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -18114,7 +18114,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -18122,15 +18122,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.FreezeParticleInvolving}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.FreezeParticleInvolving)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -18143,12 +18143,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -18170,7 +18170,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
         }
@@ -18208,7 +18208,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving)other);
           } else {
@@ -18237,13 +18237,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -18364,7 +18364,7 @@ public final class DemoUserMessages {
 
     public interface AddModellistOverrideElementOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.AddModellistOverrideElement)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string model_name = 1;</code>
@@ -18377,7 +18377,7 @@ public final class DemoUserMessages {
       /**
        * <code>optional string model_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getModelNameBytes();
 
       /**
@@ -18402,15 +18402,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.AddModellistOverrideElement}
      */
     public static final class AddModellistOverrideElement extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.AddModellistOverrideElement)
         AddModellistOverrideElementOrBuilder {
       // Use AddModellistOverrideElement.newBuilder() to construct.
-      private AddModellistOverrideElement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private AddModellistOverrideElement(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private AddModellistOverrideElement(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private AddModellistOverrideElement(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final AddModellistOverrideElement defaultInstance;
       public static AddModellistOverrideElement getDefaultInstance() {
@@ -18421,20 +18421,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private AddModellistOverrideElement(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -18451,7 +18451,7 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 modelName_ = bs;
                 break;
@@ -18468,40 +18468,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<AddModellistOverrideElement> PARSER =
-          new com.google.protobuf.AbstractParser<AddModellistOverrideElement>() {
+      public static skadistats.clarity.protobuf.Parser<AddModellistOverrideElement> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<AddModellistOverrideElement>() {
         public AddModellistOverrideElement parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new AddModellistOverrideElement(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<AddModellistOverrideElement> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<AddModellistOverrideElement> getParserForType() {
         return PARSER;
       }
 
@@ -18522,8 +18522,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             modelName_ = s;
@@ -18534,17 +18534,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string model_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getModelNameBytes() {
         java.lang.Object ref = modelName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           modelName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -18593,7 +18593,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18615,15 +18615,15 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getModelNameBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(2, spawnProbability_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, groupid_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -18639,24 +18639,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(java.io.InputStream input)
@@ -18665,7 +18665,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -18675,18 +18675,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -18700,7 +18700,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -18708,15 +18708,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.AddModellistOverrideElement}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.AddModellistOverrideElement)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElementOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -18729,12 +18729,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -18756,7 +18756,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_descriptor;
         }
@@ -18794,7 +18794,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement)other);
           } else {
@@ -18825,13 +18825,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -18856,8 +18856,8 @@ public final class DemoUserMessages {
         public java.lang.String getModelName() {
           java.lang.Object ref = modelName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               modelName_ = s;
@@ -18870,17 +18870,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string model_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getModelNameBytes() {
           java.lang.Object ref = modelName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             modelName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -18909,7 +18909,7 @@ public final class DemoUserMessages {
          * <code>optional string model_name = 1;</code>
          */
         public Builder setModelNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -18996,7 +18996,7 @@ public final class DemoUserMessages {
 
     public interface ClearModellistOverrideOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.ClearModellistOverride)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint32 groupid = 1;</code>
@@ -19011,15 +19011,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.ClearModellistOverride}
      */
     public static final class ClearModellistOverride extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.ClearModellistOverride)
         ClearModellistOverrideOrBuilder {
       // Use ClearModellistOverride.newBuilder() to construct.
-      private ClearModellistOverride(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private ClearModellistOverride(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private ClearModellistOverride(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private ClearModellistOverride(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final ClearModellistOverride defaultInstance;
       public static ClearModellistOverride getDefaultInstance() {
@@ -19030,20 +19030,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private ClearModellistOverride(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -19066,40 +19066,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ClearModellistOverride_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ClearModellistOverride_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<ClearModellistOverride> PARSER =
-          new com.google.protobuf.AbstractParser<ClearModellistOverride>() {
+      public static skadistats.clarity.protobuf.Parser<ClearModellistOverride> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<ClearModellistOverride>() {
         public ClearModellistOverride parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new ClearModellistOverride(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<ClearModellistOverride> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<ClearModellistOverride> getParserForType() {
         return PARSER;
       }
 
@@ -19132,7 +19132,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -19148,7 +19148,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(1, groupid_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -19164,24 +19164,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(java.io.InputStream input)
@@ -19190,7 +19190,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -19200,18 +19200,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -19225,7 +19225,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -19233,15 +19233,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.ClearModellistOverride}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.ClearModellistOverride)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverrideOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ClearModellistOverride_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ClearModellistOverride_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -19254,12 +19254,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -19277,7 +19277,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_ClearModellistOverride_descriptor;
         }
@@ -19307,7 +19307,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride)other);
           } else {
@@ -19330,13 +19330,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -19393,7 +19393,7 @@ public final class DemoUserMessages {
 
     public interface SetParticleNamedValueContextOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>repeated .CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue float_values = 1;</code>
@@ -19495,15 +19495,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext}
      */
     public static final class SetParticleNamedValueContext extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext)
         SetParticleNamedValueContextOrBuilder {
       // Use SetParticleNamedValueContext.newBuilder() to construct.
-      private SetParticleNamedValueContext(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetParticleNamedValueContext(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetParticleNamedValueContext(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetParticleNamedValueContext(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetParticleNamedValueContext defaultInstance;
       public static SetParticleNamedValueContext getDefaultInstance() {
@@ -19514,20 +19514,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetParticleNamedValueContext(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -19577,10 +19577,10 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -19599,36 +19599,36 @@ public final class DemoUserMessages {
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetParticleNamedValueContext> PARSER =
-          new com.google.protobuf.AbstractParser<SetParticleNamedValueContext>() {
+      public static skadistats.clarity.protobuf.Parser<SetParticleNamedValueContext> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetParticleNamedValueContext>() {
         public SetParticleNamedValueContext parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetParticleNamedValueContext(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetParticleNamedValueContext> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetParticleNamedValueContext> getParserForType() {
         return PARSER;
       }
 
       public interface FloatContextValueOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue)
-          com.google.protobuf.MessageOrBuilder {
+          skadistats.clarity.protobuf.MessageOrBuilder {
 
         /**
          * <code>optional uint32 value_name_hash = 1;</code>
@@ -19652,15 +19652,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue}
        */
       public static final class FloatContextValue extends
-          com.google.protobuf.GeneratedMessage implements
+          skadistats.clarity.protobuf.GeneratedMessage implements
           // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue)
           FloatContextValueOrBuilder {
         // Use FloatContextValue.newBuilder() to construct.
-        private FloatContextValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        private FloatContextValue(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
           this.unknownFields = builder.getUnknownFields();
         }
-        private FloatContextValue(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        private FloatContextValue(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
         private static final FloatContextValue defaultInstance;
         public static FloatContextValue getDefaultInstance() {
@@ -19671,20 +19671,20 @@ public final class DemoUserMessages {
           return defaultInstance;
         }
 
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
         @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
+        public final skadistats.clarity.protobuf.UnknownFieldSet
             getUnknownFields() {
           return this.unknownFields;
         }
         private FloatContextValue(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           initFields();
           int mutable_bitField0_ = 0;
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+              skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
           try {
             boolean done = false;
             while (!done) {
@@ -19712,40 +19712,40 @@ public final class DemoUserMessages {
                 }
               }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
+            throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this);
           } finally {
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
         }
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue.Builder.class);
         }
 
-        public static com.google.protobuf.Parser<FloatContextValue> PARSER =
-            new com.google.protobuf.AbstractParser<FloatContextValue>() {
+        public static skadistats.clarity.protobuf.Parser<FloatContextValue> PARSER =
+            new skadistats.clarity.protobuf.AbstractParser<FloatContextValue>() {
           public FloatContextValue parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
             return new FloatContextValue(input, extensionRegistry);
           }
         };
 
         @java.lang.Override
-        public com.google.protobuf.Parser<FloatContextValue> getParserForType() {
+        public skadistats.clarity.protobuf.Parser<FloatContextValue> getParserForType() {
           return PARSER;
         }
 
@@ -19794,7 +19794,7 @@ public final class DemoUserMessages {
           return true;
         }
 
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
+        public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -19813,11 +19813,11 @@ public final class DemoUserMessages {
 
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeFloatSize(2, value_);
           }
           size += getUnknownFields().getSerializedSize();
@@ -19833,24 +19833,24 @@ public final class DemoUserMessages {
         }
 
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(
             byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(java.io.InputStream input)
@@ -19859,7 +19859,7 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -19869,18 +19869,18 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(
-            com.google.protobuf.CodedInputStream input)
+            skadistats.clarity.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -19894,7 +19894,7 @@ public final class DemoUserMessages {
 
         @java.lang.Override
         protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           Builder builder = new Builder(parent);
           return builder;
         }
@@ -19902,15 +19902,15 @@ public final class DemoUserMessages {
          * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue)
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValueOrBuilder {
-          public static final com.google.protobuf.Descriptors.Descriptor
+          public static final skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor;
           }
 
-          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
@@ -19923,12 +19923,12 @@ public final class DemoUserMessages {
           }
 
           private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
             super(parent);
             maybeForceBuilderInitialization();
           }
           private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             }
           }
           private static Builder create() {
@@ -19948,7 +19948,7 @@ public final class DemoUserMessages {
             return create().mergeFrom(buildPartial());
           }
 
-          public com.google.protobuf.Descriptors.Descriptor
+          public skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor;
           }
@@ -19982,7 +19982,7 @@ public final class DemoUserMessages {
             return result;
           }
 
-          public Builder mergeFrom(com.google.protobuf.Message other) {
+          public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
             if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue) {
               return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue)other);
             } else {
@@ -20008,13 +20008,13 @@ public final class DemoUserMessages {
           }
 
           public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
               parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue) e.getUnfinishedMessage();
               throw e;
             } finally {
@@ -20103,7 +20103,7 @@ public final class DemoUserMessages {
 
       public interface VectorContextValueOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue)
-          com.google.protobuf.MessageOrBuilder {
+          skadistats.clarity.protobuf.MessageOrBuilder {
 
         /**
          * <code>optional uint32 value_name_hash = 1;</code>
@@ -20131,15 +20131,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue}
        */
       public static final class VectorContextValue extends
-          com.google.protobuf.GeneratedMessage implements
+          skadistats.clarity.protobuf.GeneratedMessage implements
           // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue)
           VectorContextValueOrBuilder {
         // Use VectorContextValue.newBuilder() to construct.
-        private VectorContextValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        private VectorContextValue(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
           this.unknownFields = builder.getUnknownFields();
         }
-        private VectorContextValue(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        private VectorContextValue(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
         private static final VectorContextValue defaultInstance;
         public static VectorContextValue getDefaultInstance() {
@@ -20150,20 +20150,20 @@ public final class DemoUserMessages {
           return defaultInstance;
         }
 
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
         @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
+        public final skadistats.clarity.protobuf.UnknownFieldSet
             getUnknownFields() {
           return this.unknownFields;
         }
         private VectorContextValue(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           initFields();
           int mutable_bitField0_ = 0;
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+              skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
           try {
             boolean done = false;
             while (!done) {
@@ -20199,40 +20199,40 @@ public final class DemoUserMessages {
                 }
               }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
+            throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this);
           } finally {
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
         }
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue.Builder.class);
         }
 
-        public static com.google.protobuf.Parser<VectorContextValue> PARSER =
-            new com.google.protobuf.AbstractParser<VectorContextValue>() {
+        public static skadistats.clarity.protobuf.Parser<VectorContextValue> PARSER =
+            new skadistats.clarity.protobuf.AbstractParser<VectorContextValue>() {
           public VectorContextValue parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
             return new VectorContextValue(input, extensionRegistry);
           }
         };
 
         @java.lang.Override
-        public com.google.protobuf.Parser<VectorContextValue> getParserForType() {
+        public skadistats.clarity.protobuf.Parser<VectorContextValue> getParserForType() {
           return PARSER;
         }
 
@@ -20287,7 +20287,7 @@ public final class DemoUserMessages {
           return true;
         }
 
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
+        public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20306,11 +20306,11 @@ public final class DemoUserMessages {
 
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeMessageSize(2, value_);
           }
           size += getUnknownFields().getSerializedSize();
@@ -20326,24 +20326,24 @@ public final class DemoUserMessages {
         }
 
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(
             byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(java.io.InputStream input)
@@ -20352,7 +20352,7 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -20362,18 +20362,18 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(
-            com.google.protobuf.CodedInputStream input)
+            skadistats.clarity.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -20387,7 +20387,7 @@ public final class DemoUserMessages {
 
         @java.lang.Override
         protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           Builder builder = new Builder(parent);
           return builder;
         }
@@ -20395,15 +20395,15 @@ public final class DemoUserMessages {
          * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue)
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValueOrBuilder {
-          public static final com.google.protobuf.Descriptors.Descriptor
+          public static final skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor;
           }
 
-          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
@@ -20416,12 +20416,12 @@ public final class DemoUserMessages {
           }
 
           private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
             super(parent);
             maybeForceBuilderInitialization();
           }
           private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
               getValueFieldBuilder();
             }
           }
@@ -20446,7 +20446,7 @@ public final class DemoUserMessages {
             return create().mergeFrom(buildPartial());
           }
 
-          public com.google.protobuf.Descriptors.Descriptor
+          public skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor;
           }
@@ -20484,7 +20484,7 @@ public final class DemoUserMessages {
             return result;
           }
 
-          public Builder mergeFrom(com.google.protobuf.Message other) {
+          public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
             if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue) {
               return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue)other);
             } else {
@@ -20510,13 +20510,13 @@ public final class DemoUserMessages {
           }
 
           public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
               parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue) e.getUnfinishedMessage();
               throw e;
             } finally {
@@ -20561,7 +20561,7 @@ public final class DemoUserMessages {
           }
 
           private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector value_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-          private com.google.protobuf.SingleFieldBuilder<
+          private skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> valueBuilder_;
           /**
            * <code>optional .CMsgVector value = 2;</code>
@@ -20662,11 +20662,11 @@ public final class DemoUserMessages {
           /**
            * <code>optional .CMsgVector value = 2;</code>
            */
-          private com.google.protobuf.SingleFieldBuilder<
+          private skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
               getValueFieldBuilder() {
             if (valueBuilder_ == null) {
-              valueBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              valueBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                   skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                       getValue(),
                       getParentForChildren(),
@@ -20689,7 +20689,7 @@ public final class DemoUserMessages {
 
       public interface TransformContextValueOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue)
-          com.google.protobuf.MessageOrBuilder {
+          skadistats.clarity.protobuf.MessageOrBuilder {
 
         /**
          * <code>optional uint32 value_name_hash = 1;</code>
@@ -20730,15 +20730,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue}
        */
       public static final class TransformContextValue extends
-          com.google.protobuf.GeneratedMessage implements
+          skadistats.clarity.protobuf.GeneratedMessage implements
           // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue)
           TransformContextValueOrBuilder {
         // Use TransformContextValue.newBuilder() to construct.
-        private TransformContextValue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        private TransformContextValue(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
           this.unknownFields = builder.getUnknownFields();
         }
-        private TransformContextValue(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        private TransformContextValue(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
         private static final TransformContextValue defaultInstance;
         public static TransformContextValue getDefaultInstance() {
@@ -20749,20 +20749,20 @@ public final class DemoUserMessages {
           return defaultInstance;
         }
 
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
         @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
+        public final skadistats.clarity.protobuf.UnknownFieldSet
             getUnknownFields() {
           return this.unknownFields;
         }
         private TransformContextValue(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           initFields();
           int mutable_bitField0_ = 0;
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+              skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
           try {
             boolean done = false;
             while (!done) {
@@ -20811,40 +20811,40 @@ public final class DemoUserMessages {
                 }
               }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
+            throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this);
           } finally {
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
         }
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.Builder.class);
         }
 
-        public static com.google.protobuf.Parser<TransformContextValue> PARSER =
-            new com.google.protobuf.AbstractParser<TransformContextValue>() {
+        public static skadistats.clarity.protobuf.Parser<TransformContextValue> PARSER =
+            new skadistats.clarity.protobuf.AbstractParser<TransformContextValue>() {
           public TransformContextValue parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
             return new TransformContextValue(input, extensionRegistry);
           }
         };
 
         @java.lang.Override
-        public com.google.protobuf.Parser<TransformContextValue> getParserForType() {
+        public skadistats.clarity.protobuf.Parser<TransformContextValue> getParserForType() {
           return PARSER;
         }
 
@@ -20921,7 +20921,7 @@ public final class DemoUserMessages {
           return true;
         }
 
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
+        public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20943,15 +20943,15 @@ public final class DemoUserMessages {
 
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeMessageSize(2, angles_);
           }
           if (((bitField0_ & 0x00000004) == 0x00000004)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeMessageSize(3, translation_);
           }
           size += getUnknownFields().getSerializedSize();
@@ -20967,24 +20967,24 @@ public final class DemoUserMessages {
         }
 
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(
             byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(java.io.InputStream input)
@@ -20993,7 +20993,7 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -21003,18 +21003,18 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(
-            com.google.protobuf.CodedInputStream input)
+            skadistats.clarity.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -21028,7 +21028,7 @@ public final class DemoUserMessages {
 
         @java.lang.Override
         protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           Builder builder = new Builder(parent);
           return builder;
         }
@@ -21036,15 +21036,15 @@ public final class DemoUserMessages {
          * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue)
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValueOrBuilder {
-          public static final com.google.protobuf.Descriptors.Descriptor
+          public static final skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor;
           }
 
-          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
@@ -21057,12 +21057,12 @@ public final class DemoUserMessages {
           }
 
           private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
             super(parent);
             maybeForceBuilderInitialization();
           }
           private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
               getAnglesFieldBuilder();
               getTranslationFieldBuilder();
             }
@@ -21094,7 +21094,7 @@ public final class DemoUserMessages {
             return create().mergeFrom(buildPartial());
           }
 
-          public com.google.protobuf.Descriptors.Descriptor
+          public skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor;
           }
@@ -21140,7 +21140,7 @@ public final class DemoUserMessages {
             return result;
           }
 
-          public Builder mergeFrom(com.google.protobuf.Message other) {
+          public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
             if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue) {
               return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue)other);
             } else {
@@ -21169,13 +21169,13 @@ public final class DemoUserMessages {
           }
 
           public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
               parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue) e.getUnfinishedMessage();
               throw e;
             } finally {
@@ -21220,7 +21220,7 @@ public final class DemoUserMessages {
           }
 
           private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-          private com.google.protobuf.SingleFieldBuilder<
+          private skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> anglesBuilder_;
           /**
            * <code>optional .CMsgQAngle angles = 2;</code>
@@ -21321,11 +21321,11 @@ public final class DemoUserMessages {
           /**
            * <code>optional .CMsgQAngle angles = 2;</code>
            */
-          private com.google.protobuf.SingleFieldBuilder<
+          private skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
               getAnglesFieldBuilder() {
             if (anglesBuilder_ == null) {
-              anglesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              anglesBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                   skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                       getAngles(),
                       getParentForChildren(),
@@ -21336,7 +21336,7 @@ public final class DemoUserMessages {
           }
 
           private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector translation_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-          private com.google.protobuf.SingleFieldBuilder<
+          private skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> translationBuilder_;
           /**
            * <code>optional .CMsgVector translation = 3;</code>
@@ -21437,11 +21437,11 @@ public final class DemoUserMessages {
           /**
            * <code>optional .CMsgVector translation = 3;</code>
            */
-          private com.google.protobuf.SingleFieldBuilder<
+          private skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
               getTranslationFieldBuilder() {
             if (translationBuilder_ == null) {
-              translationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              translationBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                   skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                       getTranslation(),
                       getParentForChildren(),
@@ -21464,7 +21464,7 @@ public final class DemoUserMessages {
 
       public interface EHandleContextOrBuilder extends
           // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
-          com.google.protobuf.MessageOrBuilder {
+          skadistats.clarity.protobuf.MessageOrBuilder {
 
         /**
          * <code>optional uint32 value_name_hash = 1;</code>
@@ -21488,15 +21488,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext}
        */
       public static final class EHandleContext extends
-          com.google.protobuf.GeneratedMessage implements
+          skadistats.clarity.protobuf.GeneratedMessage implements
           // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
           EHandleContextOrBuilder {
         // Use EHandleContext.newBuilder() to construct.
-        private EHandleContext(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+        private EHandleContext(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
           super(builder);
           this.unknownFields = builder.getUnknownFields();
         }
-        private EHandleContext(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+        private EHandleContext(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
         private static final EHandleContext defaultInstance;
         public static EHandleContext getDefaultInstance() {
@@ -21507,20 +21507,20 @@ public final class DemoUserMessages {
           return defaultInstance;
         }
 
-        private final com.google.protobuf.UnknownFieldSet unknownFields;
+        private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
         @java.lang.Override
-        public final com.google.protobuf.UnknownFieldSet
+        public final skadistats.clarity.protobuf.UnknownFieldSet
             getUnknownFields() {
           return this.unknownFields;
         }
         private EHandleContext(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           initFields();
           int mutable_bitField0_ = 0;
-          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-              com.google.protobuf.UnknownFieldSet.newBuilder();
+          skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+              skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
           try {
             boolean done = false;
             while (!done) {
@@ -21548,40 +21548,40 @@ public final class DemoUserMessages {
                 }
               }
             }
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             throw e.setUnfinishedMessage(this);
           } catch (java.io.IOException e) {
-            throw new com.google.protobuf.InvalidProtocolBufferException(
+            throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
                 e.getMessage()).setUnfinishedMessage(this);
           } finally {
             this.unknownFields = unknownFields.build();
             makeExtensionsImmutable();
           }
         }
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder.class);
         }
 
-        public static com.google.protobuf.Parser<EHandleContext> PARSER =
-            new com.google.protobuf.AbstractParser<EHandleContext>() {
+        public static skadistats.clarity.protobuf.Parser<EHandleContext> PARSER =
+            new skadistats.clarity.protobuf.AbstractParser<EHandleContext>() {
           public EHandleContext parsePartialFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-              throws com.google.protobuf.InvalidProtocolBufferException {
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
             return new EHandleContext(input, extensionRegistry);
           }
         };
 
         @java.lang.Override
-        public com.google.protobuf.Parser<EHandleContext> getParserForType() {
+        public skadistats.clarity.protobuf.Parser<EHandleContext> getParserForType() {
           return PARSER;
         }
 
@@ -21630,7 +21630,7 @@ public final class DemoUserMessages {
           return true;
         }
 
-        public void writeTo(com.google.protobuf.CodedOutputStream output)
+        public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
           getSerializedSize();
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21649,11 +21649,11 @@ public final class DemoUserMessages {
 
           size = 0;
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(1, valueNameHash_);
           }
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
-            size += com.google.protobuf.CodedOutputStream
+            size += skadistats.clarity.protobuf.CodedOutputStream
               .computeUInt32Size(2, entIndex_);
           }
           size += getUnknownFields().getSerializedSize();
@@ -21669,24 +21669,24 @@ public final class DemoUserMessages {
         }
 
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
-            com.google.protobuf.ByteString data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
-            com.google.protobuf.ByteString data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ByteString data,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(byte[] data)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
             byte[] data,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(java.io.InputStream input)
@@ -21695,7 +21695,7 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -21705,18 +21705,18 @@ public final class DemoUserMessages {
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseDelimitedFrom(
             java.io.InputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseDelimitedFrom(input, extensionRegistry);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
-            com.google.protobuf.CodedInputStream input)
+            skadistats.clarity.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return PARSER.parseFrom(input);
         }
         public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parseFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return PARSER.parseFrom(input, extensionRegistry);
         }
@@ -21730,7 +21730,7 @@ public final class DemoUserMessages {
 
         @java.lang.Override
         protected Builder newBuilderForType(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           Builder builder = new Builder(parent);
           return builder;
         }
@@ -21738,15 +21738,15 @@ public final class DemoUserMessages {
          * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext}
          */
         public static final class Builder extends
-            com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+            skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
             // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder {
-          public static final com.google.protobuf.Descriptors.Descriptor
+          public static final skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptor() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
           }
 
-          protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
@@ -21759,12 +21759,12 @@ public final class DemoUserMessages {
           }
 
           private Builder(
-              com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+              skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
             super(parent);
             maybeForceBuilderInitialization();
           }
           private void maybeForceBuilderInitialization() {
-            if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             }
           }
           private static Builder create() {
@@ -21784,7 +21784,7 @@ public final class DemoUserMessages {
             return create().mergeFrom(buildPartial());
           }
 
-          public com.google.protobuf.Descriptors.Descriptor
+          public skadistats.clarity.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
             return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
           }
@@ -21818,7 +21818,7 @@ public final class DemoUserMessages {
             return result;
           }
 
-          public Builder mergeFrom(com.google.protobuf.Message other) {
+          public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
             if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext) {
               return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext)other);
             } else {
@@ -21844,13 +21844,13 @@ public final class DemoUserMessages {
           }
 
           public Builder mergeFrom(
-              com.google.protobuf.CodedInputStream input,
-              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              skadistats.clarity.protobuf.CodedInputStream input,
+              skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
               parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext) e.getUnfinishedMessage();
               throw e;
             } finally {
@@ -22093,7 +22093,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         for (int i = 0; i < floatValues_.size(); i++) {
@@ -22118,19 +22118,19 @@ public final class DemoUserMessages {
 
         size = 0;
         for (int i = 0; i < floatValues_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(1, floatValues_.get(i));
         }
         for (int i = 0; i < vectorValues_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, vectorValues_.get(i));
         }
         for (int i = 0; i < transformValues_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, transformValues_.get(i));
         }
         for (int i = 0; i < ehandleValues_.size(); i++) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(4, ehandleValues_.get(i));
         }
         size += getUnknownFields().getSerializedSize();
@@ -22146,24 +22146,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(java.io.InputStream input)
@@ -22172,7 +22172,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -22182,18 +22182,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -22207,7 +22207,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -22215,15 +22215,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleNamedValueContext}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleNamedValueContext)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContextOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -22236,12 +22236,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getFloatValuesFieldBuilder();
             getVectorValuesFieldBuilder();
             getTransformValuesFieldBuilder();
@@ -22285,7 +22285,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor;
         }
@@ -22345,7 +22345,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext)other);
           } else {
@@ -22375,7 +22375,7 @@ public final class DemoUserMessages {
                 floatValues_ = other.floatValues_;
                 bitField0_ = (bitField0_ & ~0x00000001);
                 floatValuesBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getFloatValuesFieldBuilder() : null;
               } else {
                 floatValuesBuilder_.addAllMessages(other.floatValues_);
@@ -22401,7 +22401,7 @@ public final class DemoUserMessages {
                 vectorValues_ = other.vectorValues_;
                 bitField0_ = (bitField0_ & ~0x00000002);
                 vectorValuesBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getVectorValuesFieldBuilder() : null;
               } else {
                 vectorValuesBuilder_.addAllMessages(other.vectorValues_);
@@ -22427,7 +22427,7 @@ public final class DemoUserMessages {
                 transformValues_ = other.transformValues_;
                 bitField0_ = (bitField0_ & ~0x00000004);
                 transformValuesBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getTransformValuesFieldBuilder() : null;
               } else {
                 transformValuesBuilder_.addAllMessages(other.transformValues_);
@@ -22453,7 +22453,7 @@ public final class DemoUserMessages {
                 ehandleValues_ = other.ehandleValues_;
                 bitField0_ = (bitField0_ & ~0x00000008);
                 ehandleValuesBuilder_ = 
-                  com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                  skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                      getEhandleValuesFieldBuilder() : null;
               } else {
                 ehandleValuesBuilder_.addAllMessages(other.ehandleValues_);
@@ -22469,13 +22469,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -22496,7 +22496,7 @@ public final class DemoUserMessages {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValueOrBuilder> floatValuesBuilder_;
 
         /**
@@ -22628,7 +22628,7 @@ public final class DemoUserMessages {
             java.lang.Iterable<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue> values) {
           if (floatValuesBuilder_ == null) {
             ensureFloatValuesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, floatValues_);
             onChanged();
           } else {
@@ -22712,11 +22712,11 @@ public final class DemoUserMessages {
              getFloatValuesBuilderList() {
           return getFloatValuesFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValueOrBuilder> 
             getFloatValuesFieldBuilder() {
           if (floatValuesBuilder_ == null) {
-            floatValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            floatValuesBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.FloatContextValueOrBuilder>(
                     floatValues_,
                     ((bitField0_ & 0x00000001) == 0x00000001),
@@ -22736,7 +22736,7 @@ public final class DemoUserMessages {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValueOrBuilder> vectorValuesBuilder_;
 
         /**
@@ -22868,7 +22868,7 @@ public final class DemoUserMessages {
             java.lang.Iterable<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue> values) {
           if (vectorValuesBuilder_ == null) {
             ensureVectorValuesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, vectorValues_);
             onChanged();
           } else {
@@ -22952,11 +22952,11 @@ public final class DemoUserMessages {
              getVectorValuesBuilderList() {
           return getVectorValuesFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValueOrBuilder> 
             getVectorValuesFieldBuilder() {
           if (vectorValuesBuilder_ == null) {
-            vectorValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            vectorValuesBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.VectorContextValueOrBuilder>(
                     vectorValues_,
                     ((bitField0_ & 0x00000002) == 0x00000002),
@@ -22976,7 +22976,7 @@ public final class DemoUserMessages {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValueOrBuilder> transformValuesBuilder_;
 
         /**
@@ -23108,7 +23108,7 @@ public final class DemoUserMessages {
             java.lang.Iterable<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue> values) {
           if (transformValuesBuilder_ == null) {
             ensureTransformValuesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, transformValues_);
             onChanged();
           } else {
@@ -23192,11 +23192,11 @@ public final class DemoUserMessages {
              getTransformValuesBuilderList() {
           return getTransformValuesFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValueOrBuilder> 
             getTransformValuesFieldBuilder() {
           if (transformValuesBuilder_ == null) {
-            transformValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            transformValuesBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValue.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.TransformContextValueOrBuilder>(
                     transformValues_,
                     ((bitField0_ & 0x00000004) == 0x00000004),
@@ -23216,7 +23216,7 @@ public final class DemoUserMessages {
            }
         }
 
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> ehandleValuesBuilder_;
 
         /**
@@ -23348,7 +23348,7 @@ public final class DemoUserMessages {
             java.lang.Iterable<? extends skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext> values) {
           if (ehandleValuesBuilder_ == null) {
             ensureEhandleValuesIsMutable();
-            com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
                 values, ehandleValues_);
             onChanged();
           } else {
@@ -23432,11 +23432,11 @@ public final class DemoUserMessages {
              getEhandleValuesBuilderList() {
           return getEhandleValuesFieldBuilder().getBuilderList();
         }
-        private com.google.protobuf.RepeatedFieldBuilder<
+        private skadistats.clarity.protobuf.RepeatedFieldBuilder<
             skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder> 
             getEhandleValuesFieldBuilder() {
           if (ehandleValuesBuilder_ == null) {
-            ehandleValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ehandleValuesBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.EHandleContextOrBuilder>(
                     ehandleValues_,
                     ((bitField0_ & 0x00000008) == 0x00000008),
@@ -23460,7 +23460,7 @@ public final class DemoUserMessages {
 
     public interface CreatePhysicsSimOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.CreatePhysicsSim)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string prop_group_name = 1;</code>
@@ -23473,7 +23473,7 @@ public final class DemoUserMessages {
       /**
        * <code>optional string prop_group_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getPropGroupNameBytes();
 
       /**
@@ -23498,15 +23498,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.CreatePhysicsSim}
      */
     public static final class CreatePhysicsSim extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.CreatePhysicsSim)
         CreatePhysicsSimOrBuilder {
       // Use CreatePhysicsSim.newBuilder() to construct.
-      private CreatePhysicsSim(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private CreatePhysicsSim(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private CreatePhysicsSim(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private CreatePhysicsSim(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final CreatePhysicsSim defaultInstance;
       public static CreatePhysicsSim getDefaultInstance() {
@@ -23517,20 +23517,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private CreatePhysicsSim(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -23547,7 +23547,7 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 propGroupName_ = bs;
                 break;
@@ -23564,40 +23564,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<CreatePhysicsSim> PARSER =
-          new com.google.protobuf.AbstractParser<CreatePhysicsSim>() {
+      public static skadistats.clarity.protobuf.Parser<CreatePhysicsSim> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<CreatePhysicsSim>() {
         public CreatePhysicsSim parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new CreatePhysicsSim(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<CreatePhysicsSim> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<CreatePhysicsSim> getParserForType() {
         return PARSER;
       }
 
@@ -23618,8 +23618,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             propGroupName_ = s;
@@ -23630,17 +23630,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string prop_group_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getPropGroupNameBytes() {
         java.lang.Object ref = propGroupName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           propGroupName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -23689,7 +23689,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -23711,15 +23711,15 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getPropGroupNameBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(2, useHighQualitySimulation_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, maxParticleCount_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -23735,24 +23735,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(java.io.InputStream input)
@@ -23761,7 +23761,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -23771,18 +23771,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -23796,7 +23796,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -23804,15 +23804,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.CreatePhysicsSim}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.CreatePhysicsSim)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSimOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -23825,12 +23825,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -23852,7 +23852,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_descriptor;
         }
@@ -23890,7 +23890,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim)other);
           } else {
@@ -23921,13 +23921,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -23952,8 +23952,8 @@ public final class DemoUserMessages {
         public java.lang.String getPropGroupName() {
           java.lang.Object ref = propGroupName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               propGroupName_ = s;
@@ -23966,17 +23966,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string prop_group_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getPropGroupNameBytes() {
           java.lang.Object ref = propGroupName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             propGroupName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -24005,7 +24005,7 @@ public final class DemoUserMessages {
          * <code>optional string prop_group_name = 1;</code>
          */
         public Builder setPropGroupNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -24092,21 +24092,21 @@ public final class DemoUserMessages {
 
     public interface DestroyPhysicsSimOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.DestroyPhysicsSim)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.DestroyPhysicsSim}
      */
     public static final class DestroyPhysicsSim extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.DestroyPhysicsSim)
         DestroyPhysicsSimOrBuilder {
       // Use DestroyPhysicsSim.newBuilder() to construct.
-      private DestroyPhysicsSim(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private DestroyPhysicsSim(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private DestroyPhysicsSim(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private DestroyPhysicsSim(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final DestroyPhysicsSim defaultInstance;
       public static DestroyPhysicsSim getDefaultInstance() {
@@ -24117,19 +24117,19 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private DestroyPhysicsSim(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -24147,40 +24147,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<DestroyPhysicsSim> PARSER =
-          new com.google.protobuf.AbstractParser<DestroyPhysicsSim>() {
+      public static skadistats.clarity.protobuf.Parser<DestroyPhysicsSim> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<DestroyPhysicsSim>() {
         public DestroyPhysicsSim parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new DestroyPhysicsSim(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<DestroyPhysicsSim> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<DestroyPhysicsSim> getParserForType() {
         return PARSER;
       }
 
@@ -24196,7 +24196,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         getUnknownFields().writeTo(output);
@@ -24221,24 +24221,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(java.io.InputStream input)
@@ -24247,7 +24247,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -24257,18 +24257,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -24282,7 +24282,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -24290,15 +24290,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.DestroyPhysicsSim}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.DestroyPhysicsSim)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSimOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -24311,12 +24311,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -24332,7 +24332,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_descriptor;
         }
@@ -24355,7 +24355,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim)other);
           } else {
@@ -24375,13 +24375,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -24405,7 +24405,7 @@ public final class DemoUserMessages {
 
     public interface SetVDataOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetVData)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string vdata_name = 1;</code>
@@ -24418,22 +24418,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string vdata_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getVdataNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetVData}
      */
     public static final class SetVData extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetVData)
         SetVDataOrBuilder {
       // Use SetVData.newBuilder() to construct.
-      private SetVData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetVData(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetVData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetVData(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetVData defaultInstance;
       public static SetVData getDefaultInstance() {
@@ -24444,20 +24444,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetVData(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -24474,47 +24474,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 vdataName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetVData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetVData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetVData> PARSER =
-          new com.google.protobuf.AbstractParser<SetVData>() {
+      public static skadistats.clarity.protobuf.Parser<SetVData> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetVData>() {
         public SetVData parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetVData(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetVData> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetVData> getParserForType() {
         return PARSER;
       }
 
@@ -24535,8 +24535,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             vdataName_ = s;
@@ -24547,17 +24547,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string vdata_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getVdataNameBytes() {
         java.lang.Object ref = vdataName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           vdataName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -24574,7 +24574,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -24590,7 +24590,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getVdataNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -24606,24 +24606,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(java.io.InputStream input)
@@ -24632,7 +24632,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -24642,18 +24642,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -24667,7 +24667,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -24675,15 +24675,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetVData}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetVData)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVDataOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetVData_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetVData_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -24696,12 +24696,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -24719,7 +24719,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetVData_descriptor;
         }
@@ -24749,7 +24749,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData)other);
           } else {
@@ -24774,13 +24774,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -24805,8 +24805,8 @@ public final class DemoUserMessages {
         public java.lang.String getVdataName() {
           java.lang.Object ref = vdataName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               vdataName_ = s;
@@ -24819,17 +24819,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string vdata_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getVdataNameBytes() {
           java.lang.Object ref = vdataName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             vdataName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -24858,7 +24858,7 @@ public final class DemoUserMessages {
          * <code>optional string vdata_name = 1;</code>
          */
         public Builder setVdataNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -24881,7 +24881,7 @@ public final class DemoUserMessages {
 
     public interface SetMaterialOverrideOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetMaterialOverride)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string material_name = 1;</code>
@@ -24894,7 +24894,7 @@ public final class DemoUserMessages {
       /**
        * <code>optional string material_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getMaterialNameBytes();
 
       /**
@@ -24910,15 +24910,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetMaterialOverride}
      */
     public static final class SetMaterialOverride extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetMaterialOverride)
         SetMaterialOverrideOrBuilder {
       // Use SetMaterialOverride.newBuilder() to construct.
-      private SetMaterialOverride(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetMaterialOverride(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetMaterialOverride(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetMaterialOverride(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetMaterialOverride defaultInstance;
       public static SetMaterialOverride getDefaultInstance() {
@@ -24929,20 +24929,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetMaterialOverride(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -24959,7 +24959,7 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 materialName_ = bs;
                 break;
@@ -24971,40 +24971,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetMaterialOverride_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetMaterialOverride> PARSER =
-          new com.google.protobuf.AbstractParser<SetMaterialOverride>() {
+      public static skadistats.clarity.protobuf.Parser<SetMaterialOverride> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetMaterialOverride>() {
         public SetMaterialOverride parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetMaterialOverride(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetMaterialOverride> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetMaterialOverride> getParserForType() {
         return PARSER;
       }
 
@@ -25025,8 +25025,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             materialName_ = s;
@@ -25037,17 +25037,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string material_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getMaterialNameBytes() {
         java.lang.Object ref = materialName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           materialName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -25080,7 +25080,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -25099,11 +25099,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getMaterialNameBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(2, includeChildren_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -25119,24 +25119,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(java.io.InputStream input)
@@ -25145,7 +25145,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -25155,18 +25155,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -25180,7 +25180,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -25188,15 +25188,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetMaterialOverride}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetMaterialOverride)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverrideOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetMaterialOverride_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -25209,12 +25209,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -25234,7 +25234,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor;
         }
@@ -25268,7 +25268,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride)other);
           } else {
@@ -25296,13 +25296,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -25327,8 +25327,8 @@ public final class DemoUserMessages {
         public java.lang.String getMaterialName() {
           java.lang.Object ref = materialName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               materialName_ = s;
@@ -25341,17 +25341,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string material_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getMaterialNameBytes() {
           java.lang.Object ref = materialName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             materialName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -25380,7 +25380,7 @@ public final class DemoUserMessages {
          * <code>optional string material_name = 1;</code>
          */
         public Builder setMaterialNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -25435,7 +25435,7 @@ public final class DemoUserMessages {
 
     public interface AddFanOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.AddFan)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool active = 1;</code>
@@ -25531,7 +25531,7 @@ public final class DemoUserMessages {
       /**
        * <code>optional string fan_force_curve = 8;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getFanForceCurveBytes();
 
       /**
@@ -25626,22 +25626,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string attachment_name = 18;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getAttachmentNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.AddFan}
      */
     public static final class AddFan extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.AddFan)
         AddFanOrBuilder {
       // Use AddFan.newBuilder() to construct.
-      private AddFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private AddFan(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private AddFan(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private AddFan(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final AddFan defaultInstance;
       public static AddFan getDefaultInstance() {
@@ -25652,20 +25652,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private AddFan(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -25757,7 +25757,7 @@ public final class DemoUserMessages {
                 break;
               }
               case 66: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000080;
                 fanForceCurve_ = bs;
                 break;
@@ -25808,47 +25808,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 146: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00020000;
                 attachmentName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<AddFan> PARSER =
-          new com.google.protobuf.AbstractParser<AddFan>() {
+      public static skadistats.clarity.protobuf.Parser<AddFan> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<AddFan>() {
         public AddFan parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new AddFan(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<AddFan> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<AddFan> getParserForType() {
         return PARSER;
       }
 
@@ -26004,8 +26004,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             fanForceCurve_ = s;
@@ -26016,17 +26016,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string fan_force_curve = 8;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getFanForceCurveBytes() {
         java.lang.Object ref = fanForceCurve_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           fanForceCurve_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -26181,8 +26181,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             attachmentName_ = s;
@@ -26193,17 +26193,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string attachment_name = 18;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getAttachmentNameBytes() {
         java.lang.Object ref = attachmentName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           attachmentName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -26237,7 +26237,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -26304,75 +26304,75 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, active_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, boundsMins_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, boundsMaxs_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(4, fanOrigin_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(5, fanOriginOffset_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(6, fanDirection_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(7, force_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(8, getFanForceCurveBytes());
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(9, falloff_);
         }
         if (((bitField0_ & 0x00000200) == 0x00000200)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(10, pullTowardsPoint_);
         }
         if (((bitField0_ & 0x00000400) == 0x00000400)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(11, curveMinDist_);
         }
         if (((bitField0_ & 0x00000800) == 0x00000800)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(12, curveMaxDist_);
         }
         if (((bitField0_ & 0x00001000) == 0x00001000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(13, fanType_);
         }
         if (((bitField0_ & 0x00002000) == 0x00002000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(14, coneStartRadius_);
         }
         if (((bitField0_ & 0x00004000) == 0x00004000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(15, coneEndRadius_);
         }
         if (((bitField0_ & 0x00008000) == 0x00008000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(16, coneLength_);
         }
         if (((bitField0_ & 0x00010000) == 0x00010000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(17, entityHandle_);
         }
         if (((bitField0_ & 0x00020000) == 0x00020000)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(18, getAttachmentNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -26388,24 +26388,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(java.io.InputStream input)
@@ -26414,7 +26414,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -26424,18 +26424,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -26449,7 +26449,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -26457,15 +26457,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.AddFan}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.AddFan)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -26478,12 +26478,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getBoundsMinsFieldBuilder();
             getBoundsMaxsFieldBuilder();
             getFanOriginFieldBuilder();
@@ -26560,7 +26560,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
         }
@@ -26678,7 +26678,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan)other);
           } else {
@@ -26756,13 +26756,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -26807,7 +26807,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMinsBuilder_;
         /**
          * <code>optional .CMsgVector bounds_mins = 2;</code>
@@ -26908,11 +26908,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector bounds_mins = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getBoundsMinsFieldBuilder() {
           if (boundsMinsBuilder_ == null) {
-            boundsMinsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            boundsMinsBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getBoundsMins(),
                     getParentForChildren(),
@@ -26923,7 +26923,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMaxsBuilder_;
         /**
          * <code>optional .CMsgVector bounds_maxs = 3;</code>
@@ -27024,11 +27024,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector bounds_maxs = 3;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getBoundsMaxsFieldBuilder() {
           if (boundsMaxsBuilder_ == null) {
-            boundsMaxsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            boundsMaxsBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getBoundsMaxs(),
                     getParentForChildren(),
@@ -27039,7 +27039,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginBuilder_;
         /**
          * <code>optional .CMsgVector fan_origin = 4;</code>
@@ -27140,11 +27140,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fan_origin = 4;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFanOriginFieldBuilder() {
           if (fanOriginBuilder_ == null) {
-            fanOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fanOriginBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFanOrigin(),
                     getParentForChildren(),
@@ -27155,7 +27155,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginOffsetBuilder_;
         /**
          * <code>optional .CMsgVector fan_origin_offset = 5;</code>
@@ -27256,11 +27256,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fan_origin_offset = 5;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFanOriginOffsetFieldBuilder() {
           if (fanOriginOffsetBuilder_ == null) {
-            fanOriginOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fanOriginOffsetBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFanOriginOffset(),
                     getParentForChildren(),
@@ -27271,7 +27271,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanDirectionBuilder_;
         /**
          * <code>optional .CMsgVector fan_direction = 6;</code>
@@ -27372,11 +27372,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fan_direction = 6;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFanDirectionFieldBuilder() {
           if (fanDirectionBuilder_ == null) {
-            fanDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fanDirectionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFanDirection(),
                     getParentForChildren(),
@@ -27431,8 +27431,8 @@ public final class DemoUserMessages {
         public java.lang.String getFanForceCurve() {
           java.lang.Object ref = fanForceCurve_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               fanForceCurve_ = s;
@@ -27445,17 +27445,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string fan_force_curve = 8;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getFanForceCurveBytes() {
           java.lang.Object ref = fanForceCurve_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             fanForceCurve_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -27484,7 +27484,7 @@ public final class DemoUserMessages {
          * <code>optional string fan_force_curve = 8;</code>
          */
         public Builder setFanForceCurveBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -27795,8 +27795,8 @@ public final class DemoUserMessages {
         public java.lang.String getAttachmentName() {
           java.lang.Object ref = attachmentName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               attachmentName_ = s;
@@ -27809,17 +27809,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string attachment_name = 18;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getAttachmentNameBytes() {
           java.lang.Object ref = attachmentName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             attachmentName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -27848,7 +27848,7 @@ public final class DemoUserMessages {
          * <code>optional string attachment_name = 18;</code>
          */
         public Builder setAttachmentNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -27871,7 +27871,7 @@ public final class DemoUserMessages {
 
     public interface UpdateFanOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.UpdateFan)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional bool active = 1;</code>
@@ -27960,15 +27960,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.UpdateFan}
      */
     public static final class UpdateFan extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.UpdateFan)
         UpdateFanOrBuilder {
       // Use UpdateFan.newBuilder() to construct.
-      private UpdateFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private UpdateFan(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private UpdateFan(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private UpdateFan(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final UpdateFan defaultInstance;
       public static UpdateFan getDefaultInstance() {
@@ -27979,20 +27979,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private UpdateFan(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -28085,40 +28085,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<UpdateFan> PARSER =
-          new com.google.protobuf.AbstractParser<UpdateFan>() {
+      public static skadistats.clarity.protobuf.Parser<UpdateFan> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<UpdateFan>() {
         public UpdateFan parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new UpdateFan(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<UpdateFan> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<UpdateFan> getParserForType() {
         return PARSER;
       }
 
@@ -28277,7 +28277,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -28311,31 +28311,31 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(1, active_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, fanOrigin_);
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(3, fanOriginOffset_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(4, fanDirection_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(5, boundsMins_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(6, boundsMaxs_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(7, fanRampRatio_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -28351,24 +28351,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(java.io.InputStream input)
@@ -28377,7 +28377,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -28387,18 +28387,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -28412,7 +28412,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -28420,15 +28420,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.UpdateFan}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.UpdateFan)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -28441,12 +28441,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getFanOriginFieldBuilder();
             getFanOriginOffsetFieldBuilder();
             getFanDirectionFieldBuilder();
@@ -28501,7 +28501,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
         }
@@ -28575,7 +28575,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan)other);
           } else {
@@ -28616,13 +28616,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -28667,7 +28667,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginBuilder_;
         /**
          * <code>optional .CMsgVector fan_origin = 2;</code>
@@ -28768,11 +28768,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fan_origin = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFanOriginFieldBuilder() {
           if (fanOriginBuilder_ == null) {
-            fanOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fanOriginBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFanOrigin(),
                     getParentForChildren(),
@@ -28783,7 +28783,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanOriginOffset_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanOriginOffsetBuilder_;
         /**
          * <code>optional .CMsgVector fan_origin_offset = 3;</code>
@@ -28884,11 +28884,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fan_origin_offset = 3;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFanOriginOffsetFieldBuilder() {
           if (fanOriginOffsetBuilder_ == null) {
-            fanOriginOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fanOriginOffsetBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFanOriginOffset(),
                     getParentForChildren(),
@@ -28899,7 +28899,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector fanDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> fanDirectionBuilder_;
         /**
          * <code>optional .CMsgVector fan_direction = 4;</code>
@@ -29000,11 +29000,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector fan_direction = 4;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getFanDirectionFieldBuilder() {
           if (fanDirectionBuilder_ == null) {
-            fanDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            fanDirectionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getFanDirection(),
                     getParentForChildren(),
@@ -29015,7 +29015,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMins_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMinsBuilder_;
         /**
          * <code>optional .CMsgVector bounds_mins = 5;</code>
@@ -29116,11 +29116,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector bounds_mins = 5;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getBoundsMinsFieldBuilder() {
           if (boundsMinsBuilder_ == null) {
-            boundsMinsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            boundsMinsBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getBoundsMins(),
                     getParentForChildren(),
@@ -29131,7 +29131,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector boundsMaxs_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> boundsMaxsBuilder_;
         /**
          * <code>optional .CMsgVector bounds_maxs = 6;</code>
@@ -29232,11 +29232,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector bounds_maxs = 6;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getBoundsMaxsFieldBuilder() {
           if (boundsMaxsBuilder_ == null) {
-            boundsMaxsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            boundsMaxsBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getBoundsMaxs(),
                     getParentForChildren(),
@@ -29291,21 +29291,21 @@ public final class DemoUserMessages {
 
     public interface RemoveFanOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.RemoveFan)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.RemoveFan}
      */
     public static final class RemoveFan extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.RemoveFan)
         RemoveFanOrBuilder {
       // Use RemoveFan.newBuilder() to construct.
-      private RemoveFan(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private RemoveFan(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private RemoveFan(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private RemoveFan(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final RemoveFan defaultInstance;
       public static RemoveFan getDefaultInstance() {
@@ -29316,19 +29316,19 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private RemoveFan(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -29346,40 +29346,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<RemoveFan> PARSER =
-          new com.google.protobuf.AbstractParser<RemoveFan>() {
+      public static skadistats.clarity.protobuf.Parser<RemoveFan> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<RemoveFan>() {
         public RemoveFan parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new RemoveFan(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<RemoveFan> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<RemoveFan> getParserForType() {
         return PARSER;
       }
 
@@ -29395,7 +29395,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         getUnknownFields().writeTo(output);
@@ -29420,24 +29420,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(java.io.InputStream input)
@@ -29446,7 +29446,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -29456,18 +29456,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -29481,7 +29481,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -29489,15 +29489,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.RemoveFan}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.RemoveFan)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -29510,12 +29510,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -29531,7 +29531,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
         }
@@ -29554,7 +29554,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan)other);
           } else {
@@ -29574,13 +29574,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -29604,7 +29604,7 @@ public final class DemoUserMessages {
 
     public interface SetParticleClusterGrowthOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetParticleClusterGrowth)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional float duration = 1;</code>
@@ -29632,15 +29632,15 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager.SetParticleClusterGrowth}
      */
     public static final class SetParticleClusterGrowth extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetParticleClusterGrowth)
         SetParticleClusterGrowthOrBuilder {
       // Use SetParticleClusterGrowth.newBuilder() to construct.
-      private SetParticleClusterGrowth(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetParticleClusterGrowth(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetParticleClusterGrowth(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetParticleClusterGrowth(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetParticleClusterGrowth defaultInstance;
       public static SetParticleClusterGrowth getDefaultInstance() {
@@ -29651,20 +29651,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetParticleClusterGrowth(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -29700,40 +29700,40 @@ public final class DemoUserMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetParticleClusterGrowth> PARSER =
-          new com.google.protobuf.AbstractParser<SetParticleClusterGrowth>() {
+      public static skadistats.clarity.protobuf.Parser<SetParticleClusterGrowth> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetParticleClusterGrowth>() {
         public SetParticleClusterGrowth parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetParticleClusterGrowth(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetParticleClusterGrowth> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetParticleClusterGrowth> getParserForType() {
         return PARSER;
       }
 
@@ -29788,7 +29788,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -29807,11 +29807,11 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(1, duration_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, origin_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -29827,24 +29827,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(java.io.InputStream input)
@@ -29853,7 +29853,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -29863,18 +29863,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -29888,7 +29888,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -29896,15 +29896,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetParticleClusterGrowth}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetParticleClusterGrowth)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -29917,12 +29917,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getOriginFieldBuilder();
           }
         }
@@ -29947,7 +29947,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
         }
@@ -29985,7 +29985,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth)other);
           } else {
@@ -30011,13 +30011,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -30062,7 +30062,7 @@ public final class DemoUserMessages {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> originBuilder_;
         /**
          * <code>optional .CMsgVector origin = 2;</code>
@@ -30163,11 +30163,11 @@ public final class DemoUserMessages {
         /**
          * <code>optional .CMsgVector origin = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
             getOriginFieldBuilder() {
           if (originBuilder_ == null) {
-            originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            originBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                     getOrigin(),
                     getParentForChildren(),
@@ -30190,7 +30190,7 @@ public final class DemoUserMessages {
 
     public interface SetOverrideTextureOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.SetOverrideTexture)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string texture_name = 1;</code>
@@ -30203,22 +30203,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string texture_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getTextureNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.SetOverrideTexture}
      */
     public static final class SetOverrideTexture extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.SetOverrideTexture)
         SetOverrideTextureOrBuilder {
       // Use SetOverrideTexture.newBuilder() to construct.
-      private SetOverrideTexture(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private SetOverrideTexture(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private SetOverrideTexture(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private SetOverrideTexture(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final SetOverrideTexture defaultInstance;
       public static SetOverrideTexture getDefaultInstance() {
@@ -30229,20 +30229,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private SetOverrideTexture(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -30259,47 +30259,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 textureName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<SetOverrideTexture> PARSER =
-          new com.google.protobuf.AbstractParser<SetOverrideTexture>() {
+      public static skadistats.clarity.protobuf.Parser<SetOverrideTexture> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<SetOverrideTexture>() {
         public SetOverrideTexture parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new SetOverrideTexture(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<SetOverrideTexture> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<SetOverrideTexture> getParserForType() {
         return PARSER;
       }
 
@@ -30320,8 +30320,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             textureName_ = s;
@@ -30332,17 +30332,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string texture_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getTextureNameBytes() {
         java.lang.Object ref = textureName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           textureName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -30359,7 +30359,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -30375,7 +30375,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getTextureNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -30391,24 +30391,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(java.io.InputStream input)
@@ -30417,7 +30417,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -30427,18 +30427,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -30452,7 +30452,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -30460,15 +30460,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.SetOverrideTexture}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.SetOverrideTexture)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -30481,12 +30481,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -30504,7 +30504,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
         }
@@ -30534,7 +30534,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture)other);
           } else {
@@ -30559,13 +30559,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -30590,8 +30590,8 @@ public final class DemoUserMessages {
         public java.lang.String getTextureName() {
           java.lang.Object ref = textureName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               textureName_ = s;
@@ -30604,17 +30604,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string texture_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getTextureNameBytes() {
           java.lang.Object ref = textureName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             textureName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -30643,7 +30643,7 @@ public final class DemoUserMessages {
          * <code>optional string texture_name = 1;</code>
          */
         public Builder setTextureNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -30666,7 +30666,7 @@ public final class DemoUserMessages {
 
     public interface CreateSmokeGridOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CUserMsg_ParticleManager.CreateSmokeGrid)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string vdata_name = 1;</code>
@@ -30679,22 +30679,22 @@ public final class DemoUserMessages {
       /**
        * <code>optional string vdata_name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getVdataNameBytes();
     }
     /**
      * Protobuf type {@code CUserMsg_ParticleManager.CreateSmokeGrid}
      */
     public static final class CreateSmokeGrid extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CUserMsg_ParticleManager.CreateSmokeGrid)
         CreateSmokeGridOrBuilder {
       // Use CreateSmokeGrid.newBuilder() to construct.
-      private CreateSmokeGrid(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private CreateSmokeGrid(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private CreateSmokeGrid(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private CreateSmokeGrid(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final CreateSmokeGrid defaultInstance;
       public static CreateSmokeGrid getDefaultInstance() {
@@ -30705,20 +30705,20 @@ public final class DemoUserMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private CreateSmokeGrid(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -30735,47 +30735,47 @@ public final class DemoUserMessages {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 vdataName_ = bs;
                 break;
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.class, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<CreateSmokeGrid> PARSER =
-          new com.google.protobuf.AbstractParser<CreateSmokeGrid>() {
+      public static skadistats.clarity.protobuf.Parser<CreateSmokeGrid> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<CreateSmokeGrid>() {
         public CreateSmokeGrid parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new CreateSmokeGrid(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<CreateSmokeGrid> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<CreateSmokeGrid> getParserForType() {
         return PARSER;
       }
 
@@ -30796,8 +30796,8 @@ public final class DemoUserMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             vdataName_ = s;
@@ -30808,17 +30808,17 @@ public final class DemoUserMessages {
       /**
        * <code>optional string vdata_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getVdataNameBytes() {
         java.lang.Object ref = vdataName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           vdataName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -30835,7 +30835,7 @@ public final class DemoUserMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -30851,7 +30851,7 @@ public final class DemoUserMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getVdataNameBytes());
         }
         size += getUnknownFields().getSerializedSize();
@@ -30867,24 +30867,24 @@ public final class DemoUserMessages {
       }
 
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(java.io.InputStream input)
@@ -30893,7 +30893,7 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -30903,18 +30903,18 @@ public final class DemoUserMessages {
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -30928,7 +30928,7 @@ public final class DemoUserMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -30936,15 +30936,15 @@ public final class DemoUserMessages {
        * Protobuf type {@code CUserMsg_ParticleManager.CreateSmokeGrid}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager.CreateSmokeGrid)
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -30957,12 +30957,12 @@ public final class DemoUserMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -30980,7 +30980,7 @@ public final class DemoUserMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
         }
@@ -31010,7 +31010,7 @@ public final class DemoUserMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid) {
             return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid)other);
           } else {
@@ -31035,13 +31035,13 @@ public final class DemoUserMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -31066,8 +31066,8 @@ public final class DemoUserMessages {
         public java.lang.String getVdataName() {
           java.lang.Object ref = vdataName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               vdataName_ = s;
@@ -31080,17 +31080,17 @@ public final class DemoUserMessages {
         /**
          * <code>optional string vdata_name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getVdataNameBytes() {
           java.lang.Object ref = vdataName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             vdataName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -31119,7 +31119,7 @@ public final class DemoUserMessages {
          * <code>optional string vdata_name = 1;</code>
          */
         public Builder setVdataNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -32100,10 +32100,10 @@ public final class DemoUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
-      com.google.protobuf.GeneratedMessage
+      skadistats.clarity.protobuf.GeneratedMessage
         .ExtendableMessage<skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager>.ExtensionWriter extensionWriter =
           newExtensionWriter();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -32246,175 +32246,175 @@ public final class DemoUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(1, type_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, index_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(3, releaseParticleIndex_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(4, createParticle_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(5, destroyParticle_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(6, destroyParticleInvolving_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(7, updateParticle_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(8, updateParticleFwd_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(9, updateParticleOrient_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(10, updateParticleFallback_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(11, updateParticleOffset_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(12, updateParticleEnt_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(14, updateParticleShouldDraw_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(15, updateParticleSetFrozen_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(16, changeControlPointAttachment_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(17, updateEntityPosition_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(18, setParticleFowProperties_);
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(19, setParticleText_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(20, setParticleShouldCheckFow_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(21, setControlPointModel_);
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(22, setControlPointSnapshot_);
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(23, setTextureAttribute_);
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(24, setSceneObjectGenericFlag_);
       }
       if (((bitField0_ & 0x00800000) == 0x00800000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(25, setSceneObjectTintAndDesat_);
       }
       if (((bitField0_ & 0x01000000) == 0x01000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(26, destroyParticleNamed_);
       }
       if (((bitField0_ & 0x02000000) == 0x02000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(27, particleSkipToTime_);
       }
       if (((bitField0_ & 0x04000000) == 0x04000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(28, particleCanFreeze_);
       }
       if (((bitField0_ & 0x08000000) == 0x08000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(29, setNamedValueContext_);
       }
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(30, updateParticleTransform_);
       }
       if (((bitField0_ & 0x20000000) == 0x20000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(31, particleFreezeTransitionOverride_);
       }
       if (((bitField0_ & 0x40000000) == 0x40000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(32, freezeParticleInvolving_);
       }
       if (((bitField0_ & 0x80000000) == 0x80000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(33, addModellistOverrideElement_);
       }
       if (((bitField1_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(34, clearModellistOverride_);
       }
       if (((bitField1_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(35, createPhysicsSim_);
       }
       if (((bitField1_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(36, destroyPhysicsSim_);
       }
       if (((bitField1_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(37, setVdata_);
       }
       if (((bitField1_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(38, setMaterialOverride_);
       }
       if (((bitField1_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(39, addFan_);
       }
       if (((bitField1_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(40, updateFan_);
       }
       if (((bitField1_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(41, setParticleClusterGrowth_);
       }
       if (((bitField1_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(42, removeFan_);
       }
       if (((bitField1_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(43, createSmokeGrid_);
       }
       if (((bitField1_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(44, setOverrideTexture_);
       }
       size += extensionsSerializedSize();
@@ -32431,24 +32431,24 @@ public final class DemoUserMessages {
     }
 
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(java.io.InputStream input)
@@ -32457,7 +32457,7 @@ public final class DemoUserMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -32467,18 +32467,18 @@ public final class DemoUserMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -32492,7 +32492,7 @@ public final class DemoUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -32500,16 +32500,16 @@ public final class DemoUserMessages {
      * Protobuf type {@code CUserMsg_ParticleManager}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.ExtendableBuilder<
+        skadistats.clarity.protobuf.GeneratedMessage.ExtendableBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager, Builder> implements
         // @@protoc_insertion_point(builder_implements:CUserMsg_ParticleManager)
         skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManagerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -32522,12 +32522,12 @@ public final class DemoUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getReleaseParticleIndexFieldBuilder();
           getCreateParticleFieldBuilder();
           getDestroyParticleFieldBuilder();
@@ -32834,7 +32834,7 @@ public final class DemoUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.internal_static_CUserMsg_ParticleManager_descriptor;
       }
@@ -33199,7 +33199,7 @@ public final class DemoUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager) {
           return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager)other);
         } else {
@@ -33361,13 +33361,13 @@ public final class DemoUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -33448,7 +33448,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex releaseParticleIndex_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndexOrBuilder> releaseParticleIndexBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.ReleaseParticleIndex release_particle_index = 3;</code>
@@ -33549,11 +33549,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.ReleaseParticleIndex release_particle_index = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndexOrBuilder> 
           getReleaseParticleIndexFieldBuilder() {
         if (releaseParticleIndexBuilder_ == null) {
-          releaseParticleIndexBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          releaseParticleIndexBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndex.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ReleaseParticleIndexOrBuilder>(
                   getReleaseParticleIndex(),
                   getParentForChildren(),
@@ -33564,7 +33564,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle createParticle_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticleOrBuilder> createParticleBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.CreateParticle create_particle = 4;</code>
@@ -33665,11 +33665,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.CreateParticle create_particle = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticleOrBuilder> 
           getCreateParticleFieldBuilder() {
         if (createParticleBuilder_ == null) {
-          createParticleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          createParticleBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticle.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateParticleOrBuilder>(
                   getCreateParticle(),
                   getParentForChildren(),
@@ -33680,7 +33680,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle destroyParticle_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleOrBuilder> destroyParticleBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyParticle destroy_particle = 5;</code>
@@ -33781,11 +33781,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyParticle destroy_particle = 5;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleOrBuilder> 
           getDestroyParticleFieldBuilder() {
         if (destroyParticleBuilder_ == null) {
-          destroyParticleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          destroyParticleBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticle.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleOrBuilder>(
                   getDestroyParticle(),
                   getParentForChildren(),
@@ -33796,7 +33796,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving destroyParticleInvolving_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolvingOrBuilder> destroyParticleInvolvingBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyParticleInvolving destroy_particle_involving = 6;</code>
@@ -33897,11 +33897,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyParticleInvolving destroy_particle_involving = 6;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolvingOrBuilder> 
           getDestroyParticleInvolvingFieldBuilder() {
         if (destroyParticleInvolvingBuilder_ == null) {
-          destroyParticleInvolvingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          destroyParticleInvolvingBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleInvolvingOrBuilder>(
                   getDestroyParticleInvolving(),
                   getParentForChildren(),
@@ -33912,7 +33912,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE updateParticle_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETEOrBuilder> updateParticleBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticle_OBSOLETE update_particle = 7;</code>
@@ -34013,11 +34013,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticle_OBSOLETE update_particle = 7;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETEOrBuilder> 
           getUpdateParticleFieldBuilder() {
         if (updateParticleBuilder_ == null) {
-          updateParticleBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticle_OBSOLETEOrBuilder>(
                   getUpdateParticle(),
                   getParentForChildren(),
@@ -34028,7 +34028,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE updateParticleFwd_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETEOrBuilder> updateParticleFwdBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE update_particle_fwd = 8;</code>
@@ -34129,11 +34129,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE update_particle_fwd = 8;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETEOrBuilder> 
           getUpdateParticleFwdFieldBuilder() {
         if (updateParticleFwdBuilder_ == null) {
-          updateParticleFwdBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleFwdBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFwd_OBSOLETEOrBuilder>(
                   getUpdateParticleFwd(),
                   getParentForChildren(),
@@ -34144,7 +34144,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE updateParticleOrient_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETEOrBuilder> updateParticleOrientBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE update_particle_orient = 9;</code>
@@ -34245,11 +34245,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE update_particle_orient = 9;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETEOrBuilder> 
           getUpdateParticleOrientFieldBuilder() {
         if (updateParticleOrientBuilder_ == null) {
-          updateParticleOrientBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleOrientBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETE.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOrient_OBSOLETEOrBuilder>(
                   getUpdateParticleOrient(),
                   getParentForChildren(),
@@ -34260,7 +34260,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback updateParticleFallback_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallbackOrBuilder> updateParticleFallbackBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleFallback update_particle_fallback = 10;</code>
@@ -34361,11 +34361,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleFallback update_particle_fallback = 10;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallbackOrBuilder> 
           getUpdateParticleFallbackFieldBuilder() {
         if (updateParticleFallbackBuilder_ == null) {
-          updateParticleFallbackBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleFallbackBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallback.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleFallbackOrBuilder>(
                   getUpdateParticleFallback(),
                   getParentForChildren(),
@@ -34376,7 +34376,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset updateParticleOffset_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffsetOrBuilder> updateParticleOffsetBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleOffset update_particle_offset = 11;</code>
@@ -34477,11 +34477,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleOffset update_particle_offset = 11;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffsetOrBuilder> 
           getUpdateParticleOffsetFieldBuilder() {
         if (updateParticleOffsetBuilder_ == null) {
-          updateParticleOffsetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleOffsetBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffset.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleOffsetOrBuilder>(
                   getUpdateParticleOffset(),
                   getParentForChildren(),
@@ -34492,7 +34492,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt updateParticleEnt_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEntOrBuilder> updateParticleEntBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleEnt update_particle_ent = 12;</code>
@@ -34593,11 +34593,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleEnt update_particle_ent = 12;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEntOrBuilder> 
           getUpdateParticleEntFieldBuilder() {
         if (updateParticleEntBuilder_ == null) {
-          updateParticleEntBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleEntBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEnt.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleEntOrBuilder>(
                   getUpdateParticleEnt(),
                   getParentForChildren(),
@@ -34608,7 +34608,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw updateParticleShouldDraw_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDrawOrBuilder> updateParticleShouldDrawBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleShouldDraw update_particle_should_draw = 14;</code>
@@ -34709,11 +34709,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleShouldDraw update_particle_should_draw = 14;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDrawOrBuilder> 
           getUpdateParticleShouldDrawFieldBuilder() {
         if (updateParticleShouldDrawBuilder_ == null) {
-          updateParticleShouldDrawBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleShouldDrawBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDraw.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleShouldDrawOrBuilder>(
                   getUpdateParticleShouldDraw(),
                   getParentForChildren(),
@@ -34724,7 +34724,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen updateParticleSetFrozen_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozenOrBuilder> updateParticleSetFrozenBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleSetFrozen update_particle_set_frozen = 15;</code>
@@ -34825,11 +34825,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleSetFrozen update_particle_set_frozen = 15;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozenOrBuilder> 
           getUpdateParticleSetFrozenFieldBuilder() {
         if (updateParticleSetFrozenBuilder_ == null) {
-          updateParticleSetFrozenBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleSetFrozenBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozen.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleSetFrozenOrBuilder>(
                   getUpdateParticleSetFrozen(),
                   getParentForChildren(),
@@ -34840,7 +34840,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment changeControlPointAttachment_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachmentOrBuilder> changeControlPointAttachmentBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.ChangeControlPointAttachment change_control_point_attachment = 16;</code>
@@ -34941,11 +34941,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.ChangeControlPointAttachment change_control_point_attachment = 16;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachmentOrBuilder> 
           getChangeControlPointAttachmentFieldBuilder() {
         if (changeControlPointAttachmentBuilder_ == null) {
-          changeControlPointAttachmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          changeControlPointAttachmentBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachment.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ChangeControlPointAttachmentOrBuilder>(
                   getChangeControlPointAttachment(),
                   getParentForChildren(),
@@ -34956,7 +34956,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition updateEntityPosition_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPositionOrBuilder> updateEntityPositionBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateEntityPosition update_entity_position = 17;</code>
@@ -35057,11 +35057,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateEntityPosition update_entity_position = 17;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPositionOrBuilder> 
           getUpdateEntityPositionFieldBuilder() {
         if (updateEntityPositionBuilder_ == null) {
-          updateEntityPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateEntityPositionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPosition.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateEntityPositionOrBuilder>(
                   getUpdateEntityPosition(),
                   getParentForChildren(),
@@ -35072,7 +35072,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties setParticleFowProperties_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWPropertiesOrBuilder> setParticleFowPropertiesBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleFoWProperties set_particle_fow_properties = 18;</code>
@@ -35173,11 +35173,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleFoWProperties set_particle_fow_properties = 18;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWPropertiesOrBuilder> 
           getSetParticleFowPropertiesFieldBuilder() {
         if (setParticleFowPropertiesBuilder_ == null) {
-          setParticleFowPropertiesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setParticleFowPropertiesBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWProperties.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleFoWPropertiesOrBuilder>(
                   getSetParticleFowProperties(),
                   getParentForChildren(),
@@ -35188,7 +35188,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText setParticleText_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleTextOrBuilder> setParticleTextBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleText set_particle_text = 19;</code>
@@ -35289,11 +35289,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleText set_particle_text = 19;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleTextOrBuilder> 
           getSetParticleTextFieldBuilder() {
         if (setParticleTextBuilder_ == null) {
-          setParticleTextBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setParticleTextBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleText.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleTextOrBuilder>(
                   getSetParticleText(),
                   getParentForChildren(),
@@ -35304,7 +35304,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW setParticleShouldCheckFow_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder> setParticleShouldCheckFowBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
@@ -35405,11 +35405,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleShouldCheckFoW set_particle_should_check_fow = 20;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder> 
           getSetParticleShouldCheckFowFieldBuilder() {
         if (setParticleShouldCheckFowBuilder_ == null) {
-          setParticleShouldCheckFowBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setParticleShouldCheckFowBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoW.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleShouldCheckFoWOrBuilder>(
                   getSetParticleShouldCheckFow(),
                   getParentForChildren(),
@@ -35420,7 +35420,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel setControlPointModel_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModelOrBuilder> setControlPointModelBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetControlPointModel set_control_point_model = 21;</code>
@@ -35521,11 +35521,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetControlPointModel set_control_point_model = 21;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModelOrBuilder> 
           getSetControlPointModelFieldBuilder() {
         if (setControlPointModelBuilder_ == null) {
-          setControlPointModelBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setControlPointModelBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModel.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointModelOrBuilder>(
                   getSetControlPointModel(),
                   getParentForChildren(),
@@ -35536,7 +35536,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot setControlPointSnapshot_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshotOrBuilder> setControlPointSnapshotBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetControlPointSnapshot set_control_point_snapshot = 22;</code>
@@ -35637,11 +35637,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetControlPointSnapshot set_control_point_snapshot = 22;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshotOrBuilder> 
           getSetControlPointSnapshotFieldBuilder() {
         if (setControlPointSnapshotBuilder_ == null) {
-          setControlPointSnapshotBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setControlPointSnapshotBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshot.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetControlPointSnapshotOrBuilder>(
                   getSetControlPointSnapshot(),
                   getParentForChildren(),
@@ -35652,7 +35652,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute setTextureAttribute_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttributeOrBuilder> setTextureAttributeBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetTextureAttribute set_texture_attribute = 23;</code>
@@ -35753,11 +35753,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetTextureAttribute set_texture_attribute = 23;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttributeOrBuilder> 
           getSetTextureAttributeFieldBuilder() {
         if (setTextureAttributeBuilder_ == null) {
-          setTextureAttributeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setTextureAttributeBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttribute.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetTextureAttributeOrBuilder>(
                   getSetTextureAttribute(),
                   getParentForChildren(),
@@ -35768,7 +35768,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag setSceneObjectGenericFlag_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlagOrBuilder> setSceneObjectGenericFlagBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetSceneObjectGenericFlag set_scene_object_generic_flag = 24;</code>
@@ -35869,11 +35869,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetSceneObjectGenericFlag set_scene_object_generic_flag = 24;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlagOrBuilder> 
           getSetSceneObjectGenericFlagFieldBuilder() {
         if (setSceneObjectGenericFlagBuilder_ == null) {
-          setSceneObjectGenericFlagBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setSceneObjectGenericFlagBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlag.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectGenericFlagOrBuilder>(
                   getSetSceneObjectGenericFlag(),
                   getParentForChildren(),
@@ -35884,7 +35884,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat setSceneObjectTintAndDesat_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesatOrBuilder> setSceneObjectTintAndDesatBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetSceneObjectTintAndDesat set_scene_object_tint_and_desat = 25;</code>
@@ -35985,11 +35985,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetSceneObjectTintAndDesat set_scene_object_tint_and_desat = 25;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesatOrBuilder> 
           getSetSceneObjectTintAndDesatFieldBuilder() {
         if (setSceneObjectTintAndDesatBuilder_ == null) {
-          setSceneObjectTintAndDesatBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setSceneObjectTintAndDesatBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesat.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetSceneObjectTintAndDesatOrBuilder>(
                   getSetSceneObjectTintAndDesat(),
                   getParentForChildren(),
@@ -36000,7 +36000,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed destroyParticleNamed_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamedOrBuilder> destroyParticleNamedBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyParticleNamed destroy_particle_named = 26;</code>
@@ -36101,11 +36101,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyParticleNamed destroy_particle_named = 26;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamedOrBuilder> 
           getDestroyParticleNamedFieldBuilder() {
         if (destroyParticleNamedBuilder_ == null) {
-          destroyParticleNamedBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          destroyParticleNamedBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamed.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyParticleNamedOrBuilder>(
                   getDestroyParticleNamed(),
                   getParentForChildren(),
@@ -36116,7 +36116,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime particleSkipToTime_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTimeOrBuilder> particleSkipToTimeBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.ParticleSkipToTime particle_skip_to_time = 27;</code>
@@ -36217,11 +36217,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.ParticleSkipToTime particle_skip_to_time = 27;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTimeOrBuilder> 
           getParticleSkipToTimeFieldBuilder() {
         if (particleSkipToTimeBuilder_ == null) {
-          particleSkipToTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          particleSkipToTimeBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTime.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleSkipToTimeOrBuilder>(
                   getParticleSkipToTime(),
                   getParentForChildren(),
@@ -36232,7 +36232,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze particleCanFreeze_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreezeOrBuilder> particleCanFreezeBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.ParticleCanFreeze particle_can_freeze = 28;</code>
@@ -36333,11 +36333,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.ParticleCanFreeze particle_can_freeze = 28;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreezeOrBuilder> 
           getParticleCanFreezeFieldBuilder() {
         if (particleCanFreezeBuilder_ == null) {
-          particleCanFreezeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          particleCanFreezeBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreeze.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleCanFreezeOrBuilder>(
                   getParticleCanFreeze(),
                   getParentForChildren(),
@@ -36348,7 +36348,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext setNamedValueContext_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContextOrBuilder> setNamedValueContextBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleNamedValueContext set_named_value_context = 29;</code>
@@ -36449,11 +36449,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleNamedValueContext set_named_value_context = 29;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContextOrBuilder> 
           getSetNamedValueContextFieldBuilder() {
         if (setNamedValueContextBuilder_ == null) {
-          setNamedValueContextBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setNamedValueContextBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContext.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleNamedValueContextOrBuilder>(
                   getSetNamedValueContext(),
                   getParentForChildren(),
@@ -36464,7 +36464,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform updateParticleTransform_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransformOrBuilder> updateParticleTransformBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleTransform update_particle_transform = 30;</code>
@@ -36565,11 +36565,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateParticleTransform update_particle_transform = 30;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransformOrBuilder> 
           getUpdateParticleTransformFieldBuilder() {
         if (updateParticleTransformBuilder_ == null) {
-          updateParticleTransformBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateParticleTransformBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateParticleTransformOrBuilder>(
                   getUpdateParticleTransform(),
                   getParentForChildren(),
@@ -36580,7 +36580,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride particleFreezeTransitionOverride_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverrideOrBuilder> particleFreezeTransitionOverrideBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.ParticleFreezeTransitionOverride particle_freeze_transition_override = 31;</code>
@@ -36681,11 +36681,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.ParticleFreezeTransitionOverride particle_freeze_transition_override = 31;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverrideOrBuilder> 
           getParticleFreezeTransitionOverrideFieldBuilder() {
         if (particleFreezeTransitionOverrideBuilder_ == null) {
-          particleFreezeTransitionOverrideBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          particleFreezeTransitionOverrideBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ParticleFreezeTransitionOverrideOrBuilder>(
                   getParticleFreezeTransitionOverride(),
                   getParentForChildren(),
@@ -36696,7 +36696,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving freezeParticleInvolving_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder> freezeParticleInvolvingBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
@@ -36797,11 +36797,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.FreezeParticleInvolving freeze_particle_involving = 32;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder> 
           getFreezeParticleInvolvingFieldBuilder() {
         if (freezeParticleInvolvingBuilder_ == null) {
-          freezeParticleInvolvingBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          freezeParticleInvolvingBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolving.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.FreezeParticleInvolvingOrBuilder>(
                   getFreezeParticleInvolving(),
                   getParentForChildren(),
@@ -36812,7 +36812,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement addModellistOverrideElement_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElementOrBuilder> addModellistOverrideElementBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.AddModellistOverrideElement add_modellist_override_element = 33;</code>
@@ -36913,11 +36913,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.AddModellistOverrideElement add_modellist_override_element = 33;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElementOrBuilder> 
           getAddModellistOverrideElementFieldBuilder() {
         if (addModellistOverrideElementBuilder_ == null) {
-          addModellistOverrideElementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          addModellistOverrideElementBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElement.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddModellistOverrideElementOrBuilder>(
                   getAddModellistOverrideElement(),
                   getParentForChildren(),
@@ -36928,7 +36928,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride clearModellistOverride_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverrideOrBuilder> clearModellistOverrideBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.ClearModellistOverride clear_modellist_override = 34;</code>
@@ -37029,11 +37029,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.ClearModellistOverride clear_modellist_override = 34;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverrideOrBuilder> 
           getClearModellistOverrideFieldBuilder() {
         if (clearModellistOverrideBuilder_ == null) {
-          clearModellistOverrideBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          clearModellistOverrideBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.ClearModellistOverrideOrBuilder>(
                   getClearModellistOverride(),
                   getParentForChildren(),
@@ -37044,7 +37044,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim createPhysicsSim_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSimOrBuilder> createPhysicsSimBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.CreatePhysicsSim create_physics_sim = 35;</code>
@@ -37145,11 +37145,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.CreatePhysicsSim create_physics_sim = 35;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSimOrBuilder> 
           getCreatePhysicsSimFieldBuilder() {
         if (createPhysicsSimBuilder_ == null) {
-          createPhysicsSimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          createPhysicsSimBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSim.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreatePhysicsSimOrBuilder>(
                   getCreatePhysicsSim(),
                   getParentForChildren(),
@@ -37160,7 +37160,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim destroyPhysicsSim_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSimOrBuilder> destroyPhysicsSimBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyPhysicsSim destroy_physics_sim = 36;</code>
@@ -37261,11 +37261,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.DestroyPhysicsSim destroy_physics_sim = 36;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSimOrBuilder> 
           getDestroyPhysicsSimFieldBuilder() {
         if (destroyPhysicsSimBuilder_ == null) {
-          destroyPhysicsSimBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          destroyPhysicsSimBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSim.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.DestroyPhysicsSimOrBuilder>(
                   getDestroyPhysicsSim(),
                   getParentForChildren(),
@@ -37276,7 +37276,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData setVdata_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVDataOrBuilder> setVdataBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetVData set_vdata = 37;</code>
@@ -37377,11 +37377,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetVData set_vdata = 37;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVDataOrBuilder> 
           getSetVdataFieldBuilder() {
         if (setVdataBuilder_ == null) {
-          setVdataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setVdataBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVData.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetVDataOrBuilder>(
                   getSetVdata(),
                   getParentForChildren(),
@@ -37392,7 +37392,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride setMaterialOverride_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverrideOrBuilder> setMaterialOverrideBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetMaterialOverride set_material_override = 38;</code>
@@ -37493,11 +37493,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetMaterialOverride set_material_override = 38;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverrideOrBuilder> 
           getSetMaterialOverrideFieldBuilder() {
         if (setMaterialOverrideBuilder_ == null) {
-          setMaterialOverrideBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setMaterialOverrideBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverride.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetMaterialOverrideOrBuilder>(
                   getSetMaterialOverride(),
                   getParentForChildren(),
@@ -37508,7 +37508,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan addFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder> addFanBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
@@ -37609,11 +37609,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.AddFan add_fan = 39;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder> 
           getAddFanFieldBuilder() {
         if (addFanBuilder_ == null) {
-          addFanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          addFanBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.AddFanOrBuilder>(
                   getAddFan(),
                   getParentForChildren(),
@@ -37624,7 +37624,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan updateFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder> updateFanBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
@@ -37725,11 +37725,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.UpdateFan update_fan = 40;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder> 
           getUpdateFanFieldBuilder() {
         if (updateFanBuilder_ == null) {
-          updateFanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          updateFanBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.UpdateFanOrBuilder>(
                   getUpdateFan(),
                   getParentForChildren(),
@@ -37740,7 +37740,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth setParticleClusterGrowth_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder> setParticleClusterGrowthBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
@@ -37841,11 +37841,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetParticleClusterGrowth set_particle_cluster_growth = 41;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder> 
           getSetParticleClusterGrowthFieldBuilder() {
         if (setParticleClusterGrowthBuilder_ == null) {
-          setParticleClusterGrowthBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setParticleClusterGrowthBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowth.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetParticleClusterGrowthOrBuilder>(
                   getSetParticleClusterGrowth(),
                   getParentForChildren(),
@@ -37856,7 +37856,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan removeFan_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder> removeFanBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
@@ -37957,11 +37957,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.RemoveFan remove_fan = 42;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder> 
           getRemoveFanFieldBuilder() {
         if (removeFanBuilder_ == null) {
-          removeFanBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          removeFanBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFan.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.RemoveFanOrBuilder>(
                   getRemoveFan(),
                   getParentForChildren(),
@@ -37972,7 +37972,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid createSmokeGrid_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder> createSmokeGridBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
@@ -38073,11 +38073,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.CreateSmokeGrid create_smoke_grid = 43;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder> 
           getCreateSmokeGridFieldBuilder() {
         if (createSmokeGridBuilder_ == null) {
-          createSmokeGridBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          createSmokeGridBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGrid.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.CreateSmokeGridOrBuilder>(
                   getCreateSmokeGrid(),
                   getParentForChildren(),
@@ -38088,7 +38088,7 @@ public final class DemoUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture setOverrideTexture_ = skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder> setOverrideTextureBuilder_;
       /**
        * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
@@ -38189,11 +38189,11 @@ public final class DemoUserMessages {
       /**
        * <code>optional .CUserMsg_ParticleManager.SetOverrideTexture set_override_texture = 44;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder> 
           getSetOverrideTextureFieldBuilder() {
         if (setOverrideTextureBuilder_ == null) {
-          setOverrideTextureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          setOverrideTextureBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTexture.Builder, skadistats.clarity.wire.shared.demo.proto.DemoUserMessages.CUserMsg_ParticleManager.SetOverrideTextureOrBuilder>(
                   getSetOverrideTexture(),
                   getParentForChildren(),
@@ -38214,242 +38214,242 @@ public final class DemoUserMessages {
     // @@protoc_insertion_point(class_scope:CUserMsg_ParticleManager)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_CreateParticle_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_DestroyParticle_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetControlPointModel_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetControlPointModel_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleText_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleText_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetTextureAttribute_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetTextureAttribute_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_ClearModellistOverride_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_ClearModellistOverride_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetVData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetVData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetMaterialOverride_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_AddFan_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -38713,294 +38713,294 @@ public final class DemoUserMessages {
       "RIDE_TEXTURE\020)B=\n)skadistats.clarity.wir" +
       "e.shared.demo.protoB\020DemoUserMessages"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CUserMsg_ParticleManager_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CUserMsg_ParticleManager_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_descriptor,
         new java.lang.String[] { "Type", "Index", "ReleaseParticleIndex", "CreateParticle", "DestroyParticle", "DestroyParticleInvolving", "UpdateParticle", "UpdateParticleFwd", "UpdateParticleOrient", "UpdateParticleFallback", "UpdateParticleOffset", "UpdateParticleEnt", "UpdateParticleShouldDraw", "UpdateParticleSetFrozen", "ChangeControlPointAttachment", "UpdateEntityPosition", "SetParticleFowProperties", "SetParticleText", "SetParticleShouldCheckFow", "SetControlPointModel", "SetControlPointSnapshot", "SetTextureAttribute", "SetSceneObjectGenericFlag", "SetSceneObjectTintAndDesat", "DestroyParticleNamed", "ParticleSkipToTime", "ParticleCanFreeze", "SetNamedValueContext", "UpdateParticleTransform", "ParticleFreezeTransitionOverride", "FreezeParticleInvolving", "AddModellistOverrideElement", "ClearModellistOverride", "CreatePhysicsSim", "DestroyPhysicsSim", "SetVdata", "SetMaterialOverride", "AddFan", "UpdateFan", "SetParticleClusterGrowth", "RemoveFan", "CreateSmokeGrid", "SetOverrideTexture", });
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(0);
     internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ReleaseParticleIndex_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(1);
     internal_static_CUserMsg_ParticleManager_CreateParticle_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_CreateParticle_descriptor,
         new java.lang.String[] { "ParticleNameIndex", "AttachType", "EntityHandle", "EntityHandleForModifiers", "ApplyVoiceBanRules", "TeamBehavior", "ControlPointConfiguration", "Cluster", "EndcapTime", "AggregationPosition", });
     internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(2);
     internal_static_CUserMsg_ParticleManager_DestroyParticle_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_DestroyParticle_descriptor,
         new java.lang.String[] { "DestroyImmediately", });
     internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(3);
     internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_DestroyParticleInvolving_descriptor,
         new java.lang.String[] { "DestroyImmediately", "EntityHandle", });
     internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(4);
     internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_DestroyParticleNamed_descriptor,
         new java.lang.String[] { "ParticleNameIndex", "EntityHandle", "DestroyImmediately", "PlayEndcap", });
     internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(5);
     internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticle_OBSOLETE_descriptor,
         new java.lang.String[] { "ControlPoint", "Position", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(6);
     internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleFwd_OBSOLETE_descriptor,
         new java.lang.String[] { "ControlPoint", "Forward", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(7);
     internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleOrient_OBSOLETE_descriptor,
         new java.lang.String[] { "ControlPoint", "Forward", "DeprecatedRight", "Up", "Left", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(8);
     internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleTransform_descriptor,
         new java.lang.String[] { "ControlPoint", "Position", "Orientation", "InterpolationInterval", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(9);
     internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleFallback_descriptor,
         new java.lang.String[] { "ControlPoint", "Position", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(10);
     internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleOffset_descriptor,
         new java.lang.String[] { "ControlPoint", "OriginOffset", "AngleOffset", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(11);
     internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleEnt_descriptor,
         new java.lang.String[] { "ControlPoint", "EntityHandle", "AttachType", "Attachment", "FallbackPosition", "IncludeWearables", "OffsetPosition", "OffsetAngles", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(12);
     internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleSetFrozen_descriptor,
         new java.lang.String[] { "SetFrozen", "TransitionDuration", });
     internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(13);
     internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateParticleShouldDraw_descriptor,
         new java.lang.String[] { "ShouldDraw", });
     internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(14);
     internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ChangeControlPointAttachment_descriptor,
         new java.lang.String[] { "AttachmentOld", "AttachmentNew", "EntityHandle", });
     internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(15);
     internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateEntityPosition_descriptor,
         new java.lang.String[] { "EntityHandle", "Position", });
     internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(16);
     internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleFoWProperties_descriptor,
         new java.lang.String[] { "FowControlPoint", "FowControlPoint2", "FowRadius", });
     internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(17);
     internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleShouldCheckFoW_descriptor,
         new java.lang.String[] { "CheckFow", });
     internal_static_CUserMsg_ParticleManager_SetControlPointModel_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(18);
     internal_static_CUserMsg_ParticleManager_SetControlPointModel_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetControlPointModel_descriptor,
         new java.lang.String[] { "ControlPoint", "ModelName", });
     internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(19);
     internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetControlPointSnapshot_descriptor,
         new java.lang.String[] { "ControlPoint", "SnapshotName", });
     internal_static_CUserMsg_ParticleManager_SetParticleText_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(20);
     internal_static_CUserMsg_ParticleManager_SetParticleText_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleText_descriptor,
         new java.lang.String[] { "Text", });
     internal_static_CUserMsg_ParticleManager_SetTextureAttribute_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(21);
     internal_static_CUserMsg_ParticleManager_SetTextureAttribute_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetTextureAttribute_descriptor,
         new java.lang.String[] { "AttributeName", "TextureName", });
     internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(22);
     internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetSceneObjectGenericFlag_descriptor,
         new java.lang.String[] { "FlagValue", });
     internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(23);
     internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetSceneObjectTintAndDesat_descriptor,
         new java.lang.String[] { "Tint", "Desat", });
     internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(24);
     internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ParticleSkipToTime_descriptor,
         new java.lang.String[] { "SkipToTime", });
     internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(25);
     internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ParticleCanFreeze_descriptor,
         new java.lang.String[] { "CanFreeze", });
     internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(26);
     internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ParticleFreezeTransitionOverride_descriptor,
         new java.lang.String[] { "FreezeTransitionOverride", });
     internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(27);
     internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_FreezeParticleInvolving_descriptor,
         new java.lang.String[] { "SetFrozen", "TransitionDuration", "EntityHandle", });
     internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(28);
     internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_AddModellistOverrideElement_descriptor,
         new java.lang.String[] { "ModelName", "SpawnProbability", "Groupid", });
     internal_static_CUserMsg_ParticleManager_ClearModellistOverride_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(29);
     internal_static_CUserMsg_ParticleManager_ClearModellistOverride_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_ClearModellistOverride_descriptor,
         new java.lang.String[] { "Groupid", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(30);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor,
         new java.lang.String[] { "FloatValues", "VectorValues", "TransformValues", "EhandleValues", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(0);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_FloatContextValue_descriptor,
         new java.lang.String[] { "ValueNameHash", "Value", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(1);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_VectorContextValue_descriptor,
         new java.lang.String[] { "ValueNameHash", "Value", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(2);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_TransformContextValue_descriptor,
         new java.lang.String[] { "ValueNameHash", "Angles", "Translation", });
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor =
       internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_descriptor.getNestedTypes().get(3);
     internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleNamedValueContext_EHandleContext_descriptor,
         new java.lang.String[] { "ValueNameHash", "EntIndex", });
     internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(31);
     internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_CreatePhysicsSim_descriptor,
         new java.lang.String[] { "PropGroupName", "UseHighQualitySimulation", "MaxParticleCount", });
     internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(32);
     internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_DestroyPhysicsSim_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMsg_ParticleManager_SetVData_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(33);
     internal_static_CUserMsg_ParticleManager_SetVData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetVData_descriptor,
         new java.lang.String[] { "VdataName", });
     internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(34);
     internal_static_CUserMsg_ParticleManager_SetMaterialOverride_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetMaterialOverride_descriptor,
         new java.lang.String[] { "MaterialName", "IncludeChildren", });
     internal_static_CUserMsg_ParticleManager_AddFan_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(35);
     internal_static_CUserMsg_ParticleManager_AddFan_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_AddFan_descriptor,
         new java.lang.String[] { "Active", "BoundsMins", "BoundsMaxs", "FanOrigin", "FanOriginOffset", "FanDirection", "Force", "FanForceCurve", "Falloff", "PullTowardsPoint", "CurveMinDist", "CurveMaxDist", "FanType", "ConeStartRadius", "ConeEndRadius", "ConeLength", "EntityHandle", "AttachmentName", });
     internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(36);
     internal_static_CUserMsg_ParticleManager_UpdateFan_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_UpdateFan_descriptor,
         new java.lang.String[] { "Active", "FanOrigin", "FanOriginOffset", "FanDirection", "BoundsMins", "BoundsMaxs", "FanRampRatio", });
     internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(37);
     internal_static_CUserMsg_ParticleManager_RemoveFan_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_RemoveFan_descriptor,
         new java.lang.String[] { });
     internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(38);
     internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetParticleClusterGrowth_descriptor,
         new java.lang.String[] { "Duration", "Origin", });
     internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(39);
     internal_static_CUserMsg_ParticleManager_SetOverrideTexture_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_SetOverrideTexture_descriptor,
         new java.lang.String[] { "TextureName", });
     internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor =
       internal_static_CUserMsg_ParticleManager_descriptor.getNestedTypes().get(40);
     internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CUserMsg_ParticleManager_CreateSmokeGrid_descriptor,
         new java.lang.String[] { "VdataName", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();

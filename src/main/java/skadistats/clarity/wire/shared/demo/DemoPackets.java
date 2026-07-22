@@ -1,6 +1,6 @@
 package skadistats.clarity.wire.shared.demo;
 
-import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.shared.demo.proto.Demo;
 

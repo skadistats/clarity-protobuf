@@ -1,6 +1,6 @@
 package skadistats.clarity.wire.deadlock.proto;
 
-import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.shared.common.proto.CommonNetMessages;

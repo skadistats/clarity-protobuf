@@ -29,3 +29,8 @@ do
   eval $CMD
 
 done
+
+# protoc hardcodes the runtime package in its output; rewrite it to the
+# relocated runtime package. Idempotent: no matches remain after the first pass.
+find ../java/skadistats -name '*.java' -exec \
+  sed -i 's/com\.google\.protobuf/skadistats.clarity.protobuf/g' {} +

@@ -6,11 +6,11 @@ package skadistats.clarity.wire.shared.s1.proto;
 public final class S1NetMessages {
   private S1NetMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   public interface CSVCMsg_SendTableOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_SendTable)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional bool is_end = 1;</code>
@@ -32,7 +32,7 @@ public final class S1NetMessages {
     /**
      * <code>optional string net_table_name = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getNetTableNameBytes();
 
     /**
@@ -72,15 +72,15 @@ public final class S1NetMessages {
    * Protobuf type {@code CSVCMsg_SendTable}
    */
   public static final class CSVCMsg_SendTable extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsg_SendTable)
       CSVCMsg_SendTableOrBuilder {
     // Use CSVCMsg_SendTable.newBuilder() to construct.
-    private CSVCMsg_SendTable(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsg_SendTable(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsg_SendTable(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsg_SendTable(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsg_SendTable defaultInstance;
     public static CSVCMsg_SendTable getDefaultInstance() {
@@ -91,20 +91,20 @@ public final class S1NetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsg_SendTable(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -126,7 +126,7 @@ public final class S1NetMessages {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               netTableName_ = bs;
               break;
@@ -146,10 +146,10 @@ public final class S1NetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
@@ -159,36 +159,36 @@ public final class S1NetMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.class, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsg_SendTable> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsg_SendTable>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsg_SendTable> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsg_SendTable>() {
       public CSVCMsg_SendTable parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsg_SendTable(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsg_SendTable> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsg_SendTable> getParserForType() {
       return PARSER;
     }
 
     public interface sendprop_tOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CSVCMsg_SendTable.sendprop_t)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 type = 1;</code>
@@ -210,7 +210,7 @@ public final class S1NetMessages {
       /**
        * <code>optional string var_name = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getVarNameBytes();
 
       /**
@@ -242,7 +242,7 @@ public final class S1NetMessages {
       /**
        * <code>optional string dt_name = 5;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getDtNameBytes();
 
       /**
@@ -285,15 +285,15 @@ public final class S1NetMessages {
      * Protobuf type {@code CSVCMsg_SendTable.sendprop_t}
      */
     public static final class sendprop_t extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CSVCMsg_SendTable.sendprop_t)
         sendprop_tOrBuilder {
       // Use sendprop_t.newBuilder() to construct.
-      private sendprop_t(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private sendprop_t(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private sendprop_t(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private sendprop_t(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final sendprop_t defaultInstance;
       public static sendprop_t getDefaultInstance() {
@@ -304,20 +304,20 @@ public final class S1NetMessages {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private sendprop_t(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -339,7 +339,7 @@ public final class S1NetMessages {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 varName_ = bs;
                 break;
@@ -355,7 +355,7 @@ public final class S1NetMessages {
                 break;
               }
               case 42: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000010;
                 dtName_ = bs;
                 break;
@@ -382,40 +382,40 @@ public final class S1NetMessages {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_sendprop_t_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_sendprop_t_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t.class, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<sendprop_t> PARSER =
-          new com.google.protobuf.AbstractParser<sendprop_t>() {
+      public static skadistats.clarity.protobuf.Parser<sendprop_t> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<sendprop_t>() {
         public sendprop_t parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new sendprop_t(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<sendprop_t> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<sendprop_t> getParserForType() {
         return PARSER;
       }
 
@@ -451,8 +451,8 @@ public final class S1NetMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             varName_ = s;
@@ -463,17 +463,17 @@ public final class S1NetMessages {
       /**
        * <code>optional string var_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getVarNameBytes() {
         java.lang.Object ref = varName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           varName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -523,8 +523,8 @@ public final class S1NetMessages {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             dtName_ = s;
@@ -535,17 +535,17 @@ public final class S1NetMessages {
       /**
        * <code>optional string dt_name = 5;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDtNameBytes() {
         java.lang.Object ref = dtName_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           dtName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -630,7 +630,7 @@ public final class S1NetMessages {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -670,39 +670,39 @@ public final class S1NetMessages {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, type_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getVarNameBytes());
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(3, flags_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(4, priority_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(5, getDtNameBytes());
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(6, numElements_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(7, lowValue_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(8, highValue_);
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(9, numBits_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -718,24 +718,24 @@ public final class S1NetMessages {
       }
 
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(java.io.InputStream input)
@@ -744,7 +744,7 @@ public final class S1NetMessages {
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -754,18 +754,18 @@ public final class S1NetMessages {
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -779,7 +779,7 @@ public final class S1NetMessages {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -787,15 +787,15 @@ public final class S1NetMessages {
        * Protobuf type {@code CSVCMsg_SendTable.sendprop_t}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CSVCMsg_SendTable.sendprop_t)
           skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_tOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_sendprop_t_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_sendprop_t_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -808,12 +808,12 @@ public final class S1NetMessages {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -847,7 +847,7 @@ public final class S1NetMessages {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_sendprop_t_descriptor;
         }
@@ -909,7 +909,7 @@ public final class S1NetMessages {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t) {
             return mergeFrom((skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t)other);
           } else {
@@ -960,13 +960,13 @@ public final class S1NetMessages {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -1023,8 +1023,8 @@ public final class S1NetMessages {
         public java.lang.String getVarName() {
           java.lang.Object ref = varName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               varName_ = s;
@@ -1037,17 +1037,17 @@ public final class S1NetMessages {
         /**
          * <code>optional string var_name = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getVarNameBytes() {
           java.lang.Object ref = varName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             varName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -1076,7 +1076,7 @@ public final class S1NetMessages {
          * <code>optional string var_name = 2;</code>
          */
         public Builder setVarNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -1163,8 +1163,8 @@ public final class S1NetMessages {
         public java.lang.String getDtName() {
           java.lang.Object ref = dtName_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               dtName_ = s;
@@ -1177,17 +1177,17 @@ public final class S1NetMessages {
         /**
          * <code>optional string dt_name = 5;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getDtNameBytes() {
           java.lang.Object ref = dtName_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             dtName_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -1216,7 +1216,7 @@ public final class S1NetMessages {
          * <code>optional string dt_name = 5;</code>
          */
         public Builder setDtNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -1397,8 +1397,8 @@ public final class S1NetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           netTableName_ = s;
@@ -1409,17 +1409,17 @@ public final class S1NetMessages {
     /**
      * <code>optional string net_table_name = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getNetTableNameBytes() {
       java.lang.Object ref = netTableName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         netTableName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -1489,7 +1489,7 @@ public final class S1NetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1514,19 +1514,19 @@ public final class S1NetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(1, isEnd_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getNetTableNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, needsDecoder_);
       }
       for (int i = 0; i < props_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(4, props_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
@@ -1542,24 +1542,24 @@ public final class S1NetMessages {
     }
 
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(java.io.InputStream input)
@@ -1568,7 +1568,7 @@ public final class S1NetMessages {
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1578,18 +1578,18 @@ public final class S1NetMessages {
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1603,7 +1603,7 @@ public final class S1NetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1611,15 +1611,15 @@ public final class S1NetMessages {
      * Protobuf type {@code CSVCMsg_SendTable}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsg_SendTable)
         skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTableOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1632,12 +1632,12 @@ public final class S1NetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPropsFieldBuilder();
         }
       }
@@ -1666,7 +1666,7 @@ public final class S1NetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_SendTable_descriptor;
       }
@@ -1713,7 +1713,7 @@ public final class S1NetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable) {
           return mergeFrom((skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable)other);
         } else {
@@ -1754,7 +1754,7 @@ public final class S1NetMessages {
               props_ = other.props_;
               bitField0_ = (bitField0_ & ~0x00000008);
               propsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getPropsFieldBuilder() : null;
             } else {
               propsBuilder_.addAllMessages(other.props_);
@@ -1770,13 +1770,13 @@ public final class S1NetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1833,8 +1833,8 @@ public final class S1NetMessages {
       public java.lang.String getNetTableName() {
         java.lang.Object ref = netTableName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             netTableName_ = s;
@@ -1847,17 +1847,17 @@ public final class S1NetMessages {
       /**
        * <code>optional string net_table_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getNetTableNameBytes() {
         java.lang.Object ref = netTableName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           netTableName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -1886,7 +1886,7 @@ public final class S1NetMessages {
        * <code>optional string net_table_name = 2;</code>
        */
       public Builder setNetTableNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1937,7 +1937,7 @@ public final class S1NetMessages {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t.Builder, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_tOrBuilder> propsBuilder_;
 
       /**
@@ -2069,7 +2069,7 @@ public final class S1NetMessages {
           java.lang.Iterable<? extends skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t> values) {
         if (propsBuilder_ == null) {
           ensurePropsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, props_);
           onChanged();
         } else {
@@ -2153,11 +2153,11 @@ public final class S1NetMessages {
            getPropsBuilderList() {
         return getPropsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t.Builder, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_tOrBuilder> 
           getPropsFieldBuilder() {
         if (propsBuilder_ == null) {
-          propsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          propsBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_t.Builder, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_SendTable.sendprop_tOrBuilder>(
                   props_,
                   ((bitField0_ & 0x00000008) == 0x00000008),
@@ -2181,7 +2181,7 @@ public final class S1NetMessages {
 
   public interface CSVCMsg_CreateStringTableOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_CreateStringTable)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string name = 1;</code>
@@ -2194,7 +2194,7 @@ public final class S1NetMessages {
     /**
      * <code>optional string name = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getNameBytes();
 
     /**
@@ -2258,21 +2258,21 @@ public final class S1NetMessages {
     /**
      * <code>optional bytes string_data = 8;</code>
      */
-    com.google.protobuf.ByteString getStringData();
+    skadistats.clarity.protobuf.ByteString getStringData();
   }
   /**
    * Protobuf type {@code CSVCMsg_CreateStringTable}
    */
   public static final class CSVCMsg_CreateStringTable extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsg_CreateStringTable)
       CSVCMsg_CreateStringTableOrBuilder {
     // Use CSVCMsg_CreateStringTable.newBuilder() to construct.
-    private CSVCMsg_CreateStringTable(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsg_CreateStringTable(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsg_CreateStringTable(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsg_CreateStringTable(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsg_CreateStringTable defaultInstance;
     public static CSVCMsg_CreateStringTable getDefaultInstance() {
@@ -2283,20 +2283,20 @@ public final class S1NetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsg_CreateStringTable(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2313,7 +2313,7 @@ public final class S1NetMessages {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               name_ = bs;
               break;
@@ -2355,40 +2355,40 @@ public final class S1NetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_CreateStringTable_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable.class, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsg_CreateStringTable> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsg_CreateStringTable>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsg_CreateStringTable> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsg_CreateStringTable>() {
       public CSVCMsg_CreateStringTable parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsg_CreateStringTable(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsg_CreateStringTable> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsg_CreateStringTable> getParserForType() {
       return PARSER;
     }
 
@@ -2409,8 +2409,8 @@ public final class S1NetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           name_ = s;
@@ -2421,17 +2421,17 @@ public final class S1NetMessages {
     /**
      * <code>optional string name = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         name_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -2526,7 +2526,7 @@ public final class S1NetMessages {
     }
 
     public static final int STRING_DATA_FIELD_NUMBER = 8;
-    private com.google.protobuf.ByteString stringData_;
+    private skadistats.clarity.protobuf.ByteString stringData_;
     /**
      * <code>optional bytes string_data = 8;</code>
      */
@@ -2536,7 +2536,7 @@ public final class S1NetMessages {
     /**
      * <code>optional bytes string_data = 8;</code>
      */
-    public com.google.protobuf.ByteString getStringData() {
+    public skadistats.clarity.protobuf.ByteString getStringData() {
       return stringData_;
     }
 
@@ -2548,7 +2548,7 @@ public final class S1NetMessages {
       userDataSize_ = 0;
       userDataSizeBits_ = 0;
       flags_ = 0;
-      stringData_ = com.google.protobuf.ByteString.EMPTY;
+      stringData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2560,7 +2560,7 @@ public final class S1NetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2597,35 +2597,35 @@ public final class S1NetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, maxEntries_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, numEntries_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(4, userDataFixedSize_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(5, userDataSize_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(6, userDataSizeBits_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, flags_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(8, stringData_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -2641,24 +2641,24 @@ public final class S1NetMessages {
     }
 
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(java.io.InputStream input)
@@ -2667,7 +2667,7 @@ public final class S1NetMessages {
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2677,18 +2677,18 @@ public final class S1NetMessages {
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2702,7 +2702,7 @@ public final class S1NetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2710,15 +2710,15 @@ public final class S1NetMessages {
      * Protobuf type {@code CSVCMsg_CreateStringTable}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsg_CreateStringTable)
         skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTableOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_CreateStringTable_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2731,12 +2731,12 @@ public final class S1NetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2759,7 +2759,7 @@ public final class S1NetMessages {
         bitField0_ = (bitField0_ & ~0x00000020);
         flags_ = 0;
         bitField0_ = (bitField0_ & ~0x00000040);
-        stringData_ = com.google.protobuf.ByteString.EMPTY;
+        stringData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
@@ -2768,7 +2768,7 @@ public final class S1NetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_CreateStringTable_descriptor;
       }
@@ -2826,7 +2826,7 @@ public final class S1NetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable) {
           return mergeFrom((skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable)other);
         } else {
@@ -2872,13 +2872,13 @@ public final class S1NetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_CreateStringTable) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2903,8 +2903,8 @@ public final class S1NetMessages {
       public java.lang.String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             name_ = s;
@@ -2917,17 +2917,17 @@ public final class S1NetMessages {
       /**
        * <code>optional string name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2956,7 +2956,7 @@ public final class S1NetMessages {
        * <code>optional string name = 1;</code>
        */
       public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3158,7 +3158,7 @@ public final class S1NetMessages {
         return this;
       }
 
-      private com.google.protobuf.ByteString stringData_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString stringData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes string_data = 8;</code>
        */
@@ -3168,13 +3168,13 @@ public final class S1NetMessages {
       /**
        * <code>optional bytes string_data = 8;</code>
        */
-      public com.google.protobuf.ByteString getStringData() {
+      public skadistats.clarity.protobuf.ByteString getStringData() {
         return stringData_;
       }
       /**
        * <code>optional bytes string_data = 8;</code>
        */
-      public Builder setStringData(com.google.protobuf.ByteString value) {
+      public Builder setStringData(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3206,7 +3206,7 @@ public final class S1NetMessages {
 
   public interface CSVCMsg_TempEntitiesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_TempEntities)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional bool reliable = 1;</code>
@@ -3233,21 +3233,21 @@ public final class S1NetMessages {
     /**
      * <code>optional bytes entity_data = 3;</code>
      */
-    com.google.protobuf.ByteString getEntityData();
+    skadistats.clarity.protobuf.ByteString getEntityData();
   }
   /**
    * Protobuf type {@code CSVCMsg_TempEntities}
    */
   public static final class CSVCMsg_TempEntities extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsg_TempEntities)
       CSVCMsg_TempEntitiesOrBuilder {
     // Use CSVCMsg_TempEntities.newBuilder() to construct.
-    private CSVCMsg_TempEntities(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsg_TempEntities(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsg_TempEntities(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsg_TempEntities(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsg_TempEntities defaultInstance;
     public static CSVCMsg_TempEntities getDefaultInstance() {
@@ -3258,20 +3258,20 @@ public final class S1NetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsg_TempEntities(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3304,40 +3304,40 @@ public final class S1NetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_TempEntities_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_TempEntities_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities.class, skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsg_TempEntities> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsg_TempEntities>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsg_TempEntities> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsg_TempEntities>() {
       public CSVCMsg_TempEntities parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsg_TempEntities(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsg_TempEntities> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsg_TempEntities> getParserForType() {
       return PARSER;
     }
 
@@ -3373,7 +3373,7 @@ public final class S1NetMessages {
     }
 
     public static final int ENTITY_DATA_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString entityData_;
+    private skadistats.clarity.protobuf.ByteString entityData_;
     /**
      * <code>optional bytes entity_data = 3;</code>
      */
@@ -3383,14 +3383,14 @@ public final class S1NetMessages {
     /**
      * <code>optional bytes entity_data = 3;</code>
      */
-    public com.google.protobuf.ByteString getEntityData() {
+    public skadistats.clarity.protobuf.ByteString getEntityData() {
       return entityData_;
     }
 
     private void initFields() {
       reliable_ = false;
       numEntries_ = 0;
-      entityData_ = com.google.protobuf.ByteString.EMPTY;
+      entityData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3402,7 +3402,7 @@ public final class S1NetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3424,15 +3424,15 @@ public final class S1NetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(1, reliable_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, numEntries_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(3, entityData_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3448,24 +3448,24 @@ public final class S1NetMessages {
     }
 
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(java.io.InputStream input)
@@ -3474,7 +3474,7 @@ public final class S1NetMessages {
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3484,18 +3484,18 @@ public final class S1NetMessages {
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3509,7 +3509,7 @@ public final class S1NetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3517,15 +3517,15 @@ public final class S1NetMessages {
      * Protobuf type {@code CSVCMsg_TempEntities}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsg_TempEntities)
         skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntitiesOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_TempEntities_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_TempEntities_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3538,12 +3538,12 @@ public final class S1NetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -3556,7 +3556,7 @@ public final class S1NetMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         numEntries_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        entityData_ = com.google.protobuf.ByteString.EMPTY;
+        entityData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -3565,7 +3565,7 @@ public final class S1NetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.s1.proto.S1NetMessages.internal_static_CSVCMsg_TempEntities_descriptor;
       }
@@ -3603,7 +3603,7 @@ public final class S1NetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities) {
           return mergeFrom((skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities)other);
         } else {
@@ -3632,13 +3632,13 @@ public final class S1NetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.s1.proto.S1NetMessages.CSVCMsg_TempEntities) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -3714,7 +3714,7 @@ public final class S1NetMessages {
         return this;
       }
 
-      private com.google.protobuf.ByteString entityData_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString entityData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes entity_data = 3;</code>
        */
@@ -3724,13 +3724,13 @@ public final class S1NetMessages {
       /**
        * <code>optional bytes entity_data = 3;</code>
        */
-      public com.google.protobuf.ByteString getEntityData() {
+      public skadistats.clarity.protobuf.ByteString getEntityData() {
         return entityData_;
       }
       /**
        * <code>optional bytes entity_data = 3;</code>
        */
-      public Builder setEntityData(com.google.protobuf.ByteString value) {
+      public Builder setEntityData(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3760,32 +3760,32 @@ public final class S1NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_TempEntities)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_SendTable_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_SendTable_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_SendTable_sendprop_t_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_SendTable_sendprop_t_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_CreateStringTable_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_TempEntities_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_TempEntities_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -3807,40 +3807,40 @@ public final class S1NetMessages {
       "\013entity_data\030\003 \001(\014B8\n\'skadistats.clarity" +
       ".wire.shared.s1.protoB\rS1NetMessages"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
     internal_static_CSVCMsg_SendTable_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CSVCMsg_SendTable_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_SendTable_descriptor,
         new java.lang.String[] { "IsEnd", "NetTableName", "NeedsDecoder", "Props", });
     internal_static_CSVCMsg_SendTable_sendprop_t_descriptor =
       internal_static_CSVCMsg_SendTable_descriptor.getNestedTypes().get(0);
     internal_static_CSVCMsg_SendTable_sendprop_t_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_SendTable_sendprop_t_descriptor,
         new java.lang.String[] { "Type", "VarName", "Flags", "Priority", "DtName", "NumElements", "LowValue", "HighValue", "NumBits", });
     internal_static_CSVCMsg_CreateStringTable_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CSVCMsg_CreateStringTable_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_CreateStringTable_descriptor,
         new java.lang.String[] { "Name", "MaxEntries", "NumEntries", "UserDataFixedSize", "UserDataSize", "UserDataSizeBits", "Flags", "StringData", });
     internal_static_CSVCMsg_TempEntities_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CSVCMsg_TempEntities_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_TempEntities_descriptor,
         new java.lang.String[] { "Reliable", "NumEntries", "EntityData", });
   }

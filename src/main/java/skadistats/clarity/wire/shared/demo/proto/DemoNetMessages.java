@@ -6,11 +6,11 @@ package skadistats.clarity.wire.shared.demo.proto;
 public final class DemoNetMessages {
   private DemoNetMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   public interface CMsgVoiceAudioOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgVoiceAudio)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .VoiceDataFormat_t format = 1 [default = VOICEDATA_FORMAT_STEAM];</code>
@@ -28,7 +28,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional bytes voice_data = 2;</code>
      */
-    com.google.protobuf.ByteString getVoiceData();
+    skadistats.clarity.protobuf.ByteString getVoiceData();
 
     /**
      * <code>optional int32 sequence_bytes = 3;</code>
@@ -101,15 +101,15 @@ public final class DemoNetMessages {
    * Protobuf type {@code CMsgVoiceAudio}
    */
   public static final class CMsgVoiceAudio extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgVoiceAudio)
       CMsgVoiceAudioOrBuilder {
     // Use CMsgVoiceAudio.newBuilder() to construct.
-    private CMsgVoiceAudio(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgVoiceAudio(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgVoiceAudio(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgVoiceAudio(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgVoiceAudio defaultInstance;
     public static CMsgVoiceAudio getDefaultInstance() {
@@ -120,20 +120,20 @@ public final class DemoNetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgVoiceAudio(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -218,10 +218,10 @@ public final class DemoNetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
@@ -231,30 +231,30 @@ public final class DemoNetMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CMsgVoiceAudio_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CMsgVoiceAudio_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.class, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgVoiceAudio> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgVoiceAudio>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgVoiceAudio> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgVoiceAudio>() {
       public CMsgVoiceAudio parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgVoiceAudio(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgVoiceAudio> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgVoiceAudio> getParserForType() {
       return PARSER;
     }
 
@@ -275,7 +275,7 @@ public final class DemoNetMessages {
     }
 
     public static final int VOICE_DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString voiceData_;
+    private skadistats.clarity.protobuf.ByteString voiceData_;
     /**
      * <code>optional bytes voice_data = 2;</code>
      */
@@ -285,7 +285,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional bytes voice_data = 2;</code>
      */
-    public com.google.protobuf.ByteString getVoiceData() {
+    public skadistats.clarity.protobuf.ByteString getVoiceData() {
       return voiceData_;
     }
 
@@ -404,7 +404,7 @@ public final class DemoNetMessages {
 
     private void initFields() {
       format_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
-      voiceData_ = com.google.protobuf.ByteString.EMPTY;
+      voiceData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       sequenceBytes_ = 0;
       sectionNumber_ = 0;
       sampleRate_ = 0;
@@ -423,7 +423,7 @@ public final class DemoNetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -467,49 +467,49 @@ public final class DemoNetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(1, format_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, voiceData_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, sequenceBytes_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, sectionNumber_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, sampleRate_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(6, uncompressedSampleOffset_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(7, numPackets_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < packetOffsets_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(packetOffsets_.get(i));
         }
         size += dataSize;
         if (!getPacketOffsetsList().isEmpty()) {
           size += 1;
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
               .computeInt32SizeNoTag(dataSize);
         }
         packetOffsetsMemoizedSerializedSize = dataSize;
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(9, voiceLevel_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -525,24 +525,24 @@ public final class DemoNetMessages {
     }
 
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(java.io.InputStream input)
@@ -551,7 +551,7 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -561,18 +561,18 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -586,7 +586,7 @@ public final class DemoNetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -594,15 +594,15 @@ public final class DemoNetMessages {
      * Protobuf type {@code CMsgVoiceAudio}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgVoiceAudio)
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudioOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CMsgVoiceAudio_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CMsgVoiceAudio_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -615,12 +615,12 @@ public final class DemoNetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -631,7 +631,7 @@ public final class DemoNetMessages {
         super.clear();
         format_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
         bitField0_ = (bitField0_ & ~0x00000001);
-        voiceData_ = com.google.protobuf.ByteString.EMPTY;
+        voiceData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
         sequenceBytes_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -654,7 +654,7 @@ public final class DemoNetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CMsgVoiceAudio_descriptor;
       }
@@ -717,7 +717,7 @@ public final class DemoNetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio) {
           return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio)other);
         } else {
@@ -771,13 +771,13 @@ public final class DemoNetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -824,7 +824,7 @@ public final class DemoNetMessages {
         return this;
       }
 
-      private com.google.protobuf.ByteString voiceData_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString voiceData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes voice_data = 2;</code>
        */
@@ -834,13 +834,13 @@ public final class DemoNetMessages {
       /**
        * <code>optional bytes voice_data = 2;</code>
        */
-      public com.google.protobuf.ByteString getVoiceData() {
+      public skadistats.clarity.protobuf.ByteString getVoiceData() {
         return voiceData_;
       }
       /**
        * <code>optional bytes voice_data = 2;</code>
        */
-      public Builder setVoiceData(com.google.protobuf.ByteString value) {
+      public Builder setVoiceData(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1070,7 +1070,7 @@ public final class DemoNetMessages {
       public Builder addAllPacketOffsets(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePacketOffsetsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, packetOffsets_);
         onChanged();
         return this;
@@ -1130,7 +1130,7 @@ public final class DemoNetMessages {
 
   public interface CCLCMsg_VoiceDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCLCMsg_VoiceData)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .CMsgVoiceAudio audio = 1;</code>
@@ -1167,15 +1167,15 @@ public final class DemoNetMessages {
    * Protobuf type {@code CCLCMsg_VoiceData}
    */
   public static final class CCLCMsg_VoiceData extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCLCMsg_VoiceData)
       CCLCMsg_VoiceDataOrBuilder {
     // Use CCLCMsg_VoiceData.newBuilder() to construct.
-    private CCLCMsg_VoiceData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCLCMsg_VoiceData(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCLCMsg_VoiceData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCLCMsg_VoiceData(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCLCMsg_VoiceData defaultInstance;
     public static CCLCMsg_VoiceData getDefaultInstance() {
@@ -1186,20 +1186,20 @@ public final class DemoNetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCLCMsg_VoiceData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1240,40 +1240,40 @@ public final class DemoNetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_VoiceData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_VoiceData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData.class, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCLCMsg_VoiceData> PARSER =
-        new com.google.protobuf.AbstractParser<CCLCMsg_VoiceData>() {
+    public static skadistats.clarity.protobuf.Parser<CCLCMsg_VoiceData> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCLCMsg_VoiceData>() {
       public CCLCMsg_VoiceData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCLCMsg_VoiceData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCLCMsg_VoiceData> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCLCMsg_VoiceData> getParserForType() {
       return PARSER;
     }
 
@@ -1344,7 +1344,7 @@ public final class DemoNetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1366,15 +1366,15 @@ public final class DemoNetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, audio_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed64Size(2, xuid_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, tick_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1390,24 +1390,24 @@ public final class DemoNetMessages {
     }
 
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(java.io.InputStream input)
@@ -1416,7 +1416,7 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1426,18 +1426,18 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1451,7 +1451,7 @@ public final class DemoNetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1459,15 +1459,15 @@ public final class DemoNetMessages {
      * Protobuf type {@code CCLCMsg_VoiceData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCLCMsg_VoiceData)
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_VoiceData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_VoiceData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1480,12 +1480,12 @@ public final class DemoNetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getAudioFieldBuilder();
         }
       }
@@ -1512,7 +1512,7 @@ public final class DemoNetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_VoiceData_descriptor;
       }
@@ -1554,7 +1554,7 @@ public final class DemoNetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData) {
           return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData)other);
         } else {
@@ -1583,13 +1583,13 @@ public final class DemoNetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_VoiceData) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1602,7 +1602,7 @@ public final class DemoNetMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio audio_ = skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudioOrBuilder> audioBuilder_;
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
@@ -1703,11 +1703,11 @@ public final class DemoNetMessages {
       /**
        * <code>optional .CMsgVoiceAudio audio = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudioOrBuilder> 
           getAudioFieldBuilder() {
         if (audioBuilder_ == null) {
-          audioBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          audioBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudio.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CMsgVoiceAudioOrBuilder>(
                   getAudio(),
                   getParentForChildren(),
@@ -1794,7 +1794,7 @@ public final class DemoNetMessages {
 
   public interface CCLCMsg_FileCRCCheckOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCLCMsg_FileCRCCheck)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 code_path = 1;</code>
@@ -1816,7 +1816,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string path = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getPathBytes();
 
     /**
@@ -1839,7 +1839,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string filename = 4;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getFilenameBytes();
 
     /**
@@ -1855,15 +1855,15 @@ public final class DemoNetMessages {
    * Protobuf type {@code CCLCMsg_FileCRCCheck}
    */
   public static final class CCLCMsg_FileCRCCheck extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCLCMsg_FileCRCCheck)
       CCLCMsg_FileCRCCheckOrBuilder {
     // Use CCLCMsg_FileCRCCheck.newBuilder() to construct.
-    private CCLCMsg_FileCRCCheck(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCLCMsg_FileCRCCheck(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCLCMsg_FileCRCCheck(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCLCMsg_FileCRCCheck(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCLCMsg_FileCRCCheck defaultInstance;
     public static CCLCMsg_FileCRCCheck getDefaultInstance() {
@@ -1874,20 +1874,20 @@ public final class DemoNetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCLCMsg_FileCRCCheck(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1909,7 +1909,7 @@ public final class DemoNetMessages {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               path_ = bs;
               break;
@@ -1920,7 +1920,7 @@ public final class DemoNetMessages {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
               filename_ = bs;
               break;
@@ -1932,40 +1932,40 @@ public final class DemoNetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_FileCRCCheck_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_FileCRCCheck_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck.class, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCLCMsg_FileCRCCheck> PARSER =
-        new com.google.protobuf.AbstractParser<CCLCMsg_FileCRCCheck>() {
+    public static skadistats.clarity.protobuf.Parser<CCLCMsg_FileCRCCheck> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCLCMsg_FileCRCCheck>() {
       public CCLCMsg_FileCRCCheck parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCLCMsg_FileCRCCheck(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCLCMsg_FileCRCCheck> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCLCMsg_FileCRCCheck> getParserForType() {
       return PARSER;
     }
 
@@ -2001,8 +2001,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           path_ = s;
@@ -2013,17 +2013,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string path = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         path_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -2058,8 +2058,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           filename_ = s;
@@ -2070,17 +2070,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string filename = 4;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getFilenameBytes() {
       java.lang.Object ref = filename_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         filename_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -2116,7 +2116,7 @@ public final class DemoNetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2144,23 +2144,23 @@ public final class DemoNetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, codePath_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getPathBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, codeFilename_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(4, getFilenameBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(5, crc_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -2176,24 +2176,24 @@ public final class DemoNetMessages {
     }
 
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(java.io.InputStream input)
@@ -2202,7 +2202,7 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2212,18 +2212,18 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2237,7 +2237,7 @@ public final class DemoNetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2245,15 +2245,15 @@ public final class DemoNetMessages {
      * Protobuf type {@code CCLCMsg_FileCRCCheck}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCLCMsg_FileCRCCheck)
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheckOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_FileCRCCheck_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_FileCRCCheck_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2266,12 +2266,12 @@ public final class DemoNetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2297,7 +2297,7 @@ public final class DemoNetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_FileCRCCheck_descriptor;
       }
@@ -2343,7 +2343,7 @@ public final class DemoNetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck) {
           return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck)other);
         } else {
@@ -2382,13 +2382,13 @@ public final class DemoNetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_FileCRCCheck) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2445,8 +2445,8 @@ public final class DemoNetMessages {
       public java.lang.String getPath() {
         java.lang.Object ref = path_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             path_ = s;
@@ -2459,17 +2459,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string path = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getPathBytes() {
         java.lang.Object ref = path_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           path_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2498,7 +2498,7 @@ public final class DemoNetMessages {
        * <code>optional string path = 2;</code>
        */
       public Builder setPathBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2553,8 +2553,8 @@ public final class DemoNetMessages {
       public java.lang.String getFilename() {
         java.lang.Object ref = filename_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             filename_ = s;
@@ -2567,17 +2567,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string filename = 4;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getFilenameBytes() {
         java.lang.Object ref = filename_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           filename_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -2606,7 +2606,7 @@ public final class DemoNetMessages {
        * <code>optional string filename = 4;</code>
        */
       public Builder setFilenameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2661,7 +2661,7 @@ public final class DemoNetMessages {
 
   public interface CCLCMsg_SplitPlayerConnectOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCLCMsg_SplitPlayerConnect)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string playername = 1;</code>
@@ -2674,22 +2674,22 @@ public final class DemoNetMessages {
     /**
      * <code>optional string playername = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getPlayernameBytes();
   }
   /**
    * Protobuf type {@code CCLCMsg_SplitPlayerConnect}
    */
   public static final class CCLCMsg_SplitPlayerConnect extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCLCMsg_SplitPlayerConnect)
       CCLCMsg_SplitPlayerConnectOrBuilder {
     // Use CCLCMsg_SplitPlayerConnect.newBuilder() to construct.
-    private CCLCMsg_SplitPlayerConnect(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCLCMsg_SplitPlayerConnect(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCLCMsg_SplitPlayerConnect(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCLCMsg_SplitPlayerConnect(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCLCMsg_SplitPlayerConnect defaultInstance;
     public static CCLCMsg_SplitPlayerConnect getDefaultInstance() {
@@ -2700,20 +2700,20 @@ public final class DemoNetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCLCMsg_SplitPlayerConnect(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2730,47 +2730,47 @@ public final class DemoNetMessages {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               playername_ = bs;
               break;
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_SplitPlayerConnect_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_SplitPlayerConnect_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect.class, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCLCMsg_SplitPlayerConnect> PARSER =
-        new com.google.protobuf.AbstractParser<CCLCMsg_SplitPlayerConnect>() {
+    public static skadistats.clarity.protobuf.Parser<CCLCMsg_SplitPlayerConnect> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCLCMsg_SplitPlayerConnect>() {
       public CCLCMsg_SplitPlayerConnect parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCLCMsg_SplitPlayerConnect(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCLCMsg_SplitPlayerConnect> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCLCMsg_SplitPlayerConnect> getParserForType() {
       return PARSER;
     }
 
@@ -2791,8 +2791,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           playername_ = s;
@@ -2803,17 +2803,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string playername = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getPlayernameBytes() {
       java.lang.Object ref = playername_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         playername_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -2830,7 +2830,7 @@ public final class DemoNetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2846,7 +2846,7 @@ public final class DemoNetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getPlayernameBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -2862,24 +2862,24 @@ public final class DemoNetMessages {
     }
 
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(java.io.InputStream input)
@@ -2888,7 +2888,7 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2898,18 +2898,18 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2923,7 +2923,7 @@ public final class DemoNetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2931,15 +2931,15 @@ public final class DemoNetMessages {
      * Protobuf type {@code CCLCMsg_SplitPlayerConnect}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCLCMsg_SplitPlayerConnect)
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnectOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_SplitPlayerConnect_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_SplitPlayerConnect_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2952,12 +2952,12 @@ public final class DemoNetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2975,7 +2975,7 @@ public final class DemoNetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CCLCMsg_SplitPlayerConnect_descriptor;
       }
@@ -3005,7 +3005,7 @@ public final class DemoNetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect) {
           return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect)other);
         } else {
@@ -3030,13 +3030,13 @@ public final class DemoNetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CCLCMsg_SplitPlayerConnect) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -3061,8 +3061,8 @@ public final class DemoNetMessages {
       public java.lang.String getPlayername() {
         java.lang.Object ref = playername_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             playername_ = s;
@@ -3075,17 +3075,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string playername = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getPlayernameBytes() {
         java.lang.Object ref = playername_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           playername_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -3114,7 +3114,7 @@ public final class DemoNetMessages {
        * <code>optional string playername = 1;</code>
        */
       public Builder setPlayernameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3137,7 +3137,7 @@ public final class DemoNetMessages {
 
   public interface CSVCMsg_ServerInfoOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_ServerInfo)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 protocol = 1;</code>
@@ -3267,7 +3267,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string game_dir = 14;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getGameDirBytes();
 
     /**
@@ -3281,7 +3281,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string map_name = 15;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getMapNameBytes();
 
     /**
@@ -3295,7 +3295,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string sky_name = 16;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getSkyNameBytes();
 
     /**
@@ -3309,7 +3309,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string host_name = 17;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getHostNameBytes();
 
     /**
@@ -3323,7 +3323,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional string addon_name = 18;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getAddonNameBytes();
 
     /**
@@ -3346,21 +3346,21 @@ public final class DemoNetMessages {
     /**
      * <code>optional bytes game_session_manifest = 20;</code>
      */
-    com.google.protobuf.ByteString getGameSessionManifest();
+    skadistats.clarity.protobuf.ByteString getGameSessionManifest();
   }
   /**
    * Protobuf type {@code CSVCMsg_ServerInfo}
    */
   public static final class CSVCMsg_ServerInfo extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsg_ServerInfo)
       CSVCMsg_ServerInfoOrBuilder {
     // Use CSVCMsg_ServerInfo.newBuilder() to construct.
-    private CSVCMsg_ServerInfo(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsg_ServerInfo(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsg_ServerInfo(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsg_ServerInfo(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsg_ServerInfo defaultInstance;
     public static CSVCMsg_ServerInfo getDefaultInstance() {
@@ -3371,20 +3371,20 @@ public final class DemoNetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsg_ServerInfo(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3466,31 +3466,31 @@ public final class DemoNetMessages {
               break;
             }
             case 114: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00002000;
               gameDir_ = bs;
               break;
             }
             case 122: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00004000;
               mapName_ = bs;
               break;
             }
             case 130: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00008000;
               skyName_ = bs;
               break;
             }
             case 138: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00010000;
               hostName_ = bs;
               break;
             }
             case 146: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00020000;
               addonName_ = bs;
               break;
@@ -3515,40 +3515,40 @@ public final class DemoNetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CSVCMsg_ServerInfo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CSVCMsg_ServerInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo.class, skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsg_ServerInfo> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsg_ServerInfo>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsg_ServerInfo> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsg_ServerInfo>() {
       public CSVCMsg_ServerInfo parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsg_ServerInfo(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsg_ServerInfo> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsg_ServerInfo> getParserForType() {
       return PARSER;
     }
 
@@ -3764,8 +3764,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           gameDir_ = s;
@@ -3776,17 +3776,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string game_dir = 14;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getGameDirBytes() {
       java.lang.Object ref = gameDir_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         gameDir_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -3806,8 +3806,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           mapName_ = s;
@@ -3818,17 +3818,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string map_name = 15;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getMapNameBytes() {
       java.lang.Object ref = mapName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         mapName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -3848,8 +3848,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           skyName_ = s;
@@ -3860,17 +3860,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string sky_name = 16;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getSkyNameBytes() {
       java.lang.Object ref = skyName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         skyName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -3890,8 +3890,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           hostName_ = s;
@@ -3902,17 +3902,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string host_name = 17;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getHostNameBytes() {
       java.lang.Object ref = hostName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         hostName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -3932,8 +3932,8 @@ public final class DemoNetMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           addonName_ = s;
@@ -3944,17 +3944,17 @@ public final class DemoNetMessages {
     /**
      * <code>optional string addon_name = 18;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getAddonNameBytes() {
       java.lang.Object ref = addonName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         addonName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -3980,7 +3980,7 @@ public final class DemoNetMessages {
     }
 
     public static final int GAME_SESSION_MANIFEST_FIELD_NUMBER = 20;
-    private com.google.protobuf.ByteString gameSessionManifest_;
+    private skadistats.clarity.protobuf.ByteString gameSessionManifest_;
     /**
      * <code>optional bytes game_session_manifest = 20;</code>
      */
@@ -3990,7 +3990,7 @@ public final class DemoNetMessages {
     /**
      * <code>optional bytes game_session_manifest = 20;</code>
      */
-    public com.google.protobuf.ByteString getGameSessionManifest() {
+    public skadistats.clarity.protobuf.ByteString getGameSessionManifest() {
       return gameSessionManifest_;
     }
 
@@ -4014,7 +4014,7 @@ public final class DemoNetMessages {
       hostName_ = "";
       addonName_ = "";
       gameSessionConfig_ = skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration.getDefaultInstance();
-      gameSessionManifest_ = com.google.protobuf.ByteString.EMPTY;
+      gameSessionManifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -4026,7 +4026,7 @@ public final class DemoNetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4099,83 +4099,83 @@ public final class DemoNetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, protocol_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, serverCount_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, isDedicated_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(4, isHltv_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(5, isReplay_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(6, cOs_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(7, mapCrc_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(8, clientCrc_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed32Size(9, stringTableCrc_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(10, maxClients_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(11, maxClasses_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(12, playerSlot_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(13, tickInterval_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(14, getGameDirBytes());
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(15, getMapNameBytes());
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(16, getSkyNameBytes());
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(17, getHostNameBytes());
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(18, getAddonNameBytes());
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(19, gameSessionConfig_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(20, gameSessionManifest_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -4191,24 +4191,24 @@ public final class DemoNetMessages {
     }
 
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(java.io.InputStream input)
@@ -4217,7 +4217,7 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4227,18 +4227,18 @@ public final class DemoNetMessages {
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4252,7 +4252,7 @@ public final class DemoNetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4260,15 +4260,15 @@ public final class DemoNetMessages {
      * Protobuf type {@code CSVCMsg_ServerInfo}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsg_ServerInfo)
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CSVCMsg_ServerInfo_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CSVCMsg_ServerInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4281,12 +4281,12 @@ public final class DemoNetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getGameSessionConfigFieldBuilder();
         }
       }
@@ -4338,7 +4338,7 @@ public final class DemoNetMessages {
           gameSessionConfigBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00040000);
-        gameSessionManifest_ = com.google.protobuf.ByteString.EMPTY;
+        gameSessionManifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00080000);
         return this;
       }
@@ -4347,7 +4347,7 @@ public final class DemoNetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.internal_static_CSVCMsg_ServerInfo_descriptor;
       }
@@ -4457,7 +4457,7 @@ public final class DemoNetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo) {
           return mergeFrom((skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo)other);
         } else {
@@ -4547,13 +4547,13 @@ public final class DemoNetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.demo.proto.DemoNetMessages.CSVCMsg_ServerInfo) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4994,8 +4994,8 @@ public final class DemoNetMessages {
       public java.lang.String getGameDir() {
         java.lang.Object ref = gameDir_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             gameDir_ = s;
@@ -5008,17 +5008,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string game_dir = 14;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getGameDirBytes() {
         java.lang.Object ref = gameDir_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           gameDir_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5047,7 +5047,7 @@ public final class DemoNetMessages {
        * <code>optional string game_dir = 14;</code>
        */
       public Builder setGameDirBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5070,8 +5070,8 @@ public final class DemoNetMessages {
       public java.lang.String getMapName() {
         java.lang.Object ref = mapName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             mapName_ = s;
@@ -5084,17 +5084,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string map_name = 15;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getMapNameBytes() {
         java.lang.Object ref = mapName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           mapName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5123,7 +5123,7 @@ public final class DemoNetMessages {
        * <code>optional string map_name = 15;</code>
        */
       public Builder setMapNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5146,8 +5146,8 @@ public final class DemoNetMessages {
       public java.lang.String getSkyName() {
         java.lang.Object ref = skyName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             skyName_ = s;
@@ -5160,17 +5160,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string sky_name = 16;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getSkyNameBytes() {
         java.lang.Object ref = skyName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           skyName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5199,7 +5199,7 @@ public final class DemoNetMessages {
        * <code>optional string sky_name = 16;</code>
        */
       public Builder setSkyNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5222,8 +5222,8 @@ public final class DemoNetMessages {
       public java.lang.String getHostName() {
         java.lang.Object ref = hostName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             hostName_ = s;
@@ -5236,17 +5236,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string host_name = 17;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getHostNameBytes() {
         java.lang.Object ref = hostName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           hostName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5275,7 +5275,7 @@ public final class DemoNetMessages {
        * <code>optional string host_name = 17;</code>
        */
       public Builder setHostNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5298,8 +5298,8 @@ public final class DemoNetMessages {
       public java.lang.String getAddonName() {
         java.lang.Object ref = addonName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             addonName_ = s;
@@ -5312,17 +5312,17 @@ public final class DemoNetMessages {
       /**
        * <code>optional string addon_name = 18;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getAddonNameBytes() {
         java.lang.Object ref = addonName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           addonName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5351,7 +5351,7 @@ public final class DemoNetMessages {
        * <code>optional string addon_name = 18;</code>
        */
       public Builder setAddonNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5362,7 +5362,7 @@ public final class DemoNetMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration gameSessionConfig_ = skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfigurationOrBuilder> gameSessionConfigBuilder_;
       /**
        * <code>optional .CSVCMsg_GameSessionConfiguration game_session_config = 19;</code>
@@ -5463,11 +5463,11 @@ public final class DemoNetMessages {
       /**
        * <code>optional .CSVCMsg_GameSessionConfiguration game_session_config = 19;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfigurationOrBuilder> 
           getGameSessionConfigFieldBuilder() {
         if (gameSessionConfigBuilder_ == null) {
-          gameSessionConfigBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          gameSessionConfigBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfiguration.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CSVCMsg_GameSessionConfigurationOrBuilder>(
                   getGameSessionConfig(),
                   getParentForChildren(),
@@ -5477,7 +5477,7 @@ public final class DemoNetMessages {
         return gameSessionConfigBuilder_;
       }
 
-      private com.google.protobuf.ByteString gameSessionManifest_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString gameSessionManifest_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes game_session_manifest = 20;</code>
        */
@@ -5487,13 +5487,13 @@ public final class DemoNetMessages {
       /**
        * <code>optional bytes game_session_manifest = 20;</code>
        */
-      public com.google.protobuf.ByteString getGameSessionManifest() {
+      public skadistats.clarity.protobuf.ByteString getGameSessionManifest() {
         return gameSessionManifest_;
       }
       /**
        * <code>optional bytes game_session_manifest = 20;</code>
        */
-      public Builder setGameSessionManifest(com.google.protobuf.ByteString value) {
+      public Builder setGameSessionManifest(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5523,37 +5523,37 @@ public final class DemoNetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_ServerInfo)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgVoiceAudio_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgVoiceAudio_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCLCMsg_VoiceData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCLCMsg_VoiceData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCLCMsg_FileCRCCheck_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCLCMsg_FileCRCCheck_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCLCMsg_SplitPlayerConnect_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCLCMsg_SplitPlayerConnect_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_ServerInfo_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_ServerInfo_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -5587,48 +5587,48 @@ public final class DemoNetMessages {
       "s.clarity.wire.shared.demo.protoB\017DemoNe" +
       "tMessages"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetMessages.getDescriptor(),
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CMsgVoiceAudio_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CMsgVoiceAudio_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgVoiceAudio_descriptor,
         new java.lang.String[] { "Format", "VoiceData", "SequenceBytes", "SectionNumber", "SampleRate", "UncompressedSampleOffset", "NumPackets", "PacketOffsets", "VoiceLevel", });
     internal_static_CCLCMsg_VoiceData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CCLCMsg_VoiceData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCLCMsg_VoiceData_descriptor,
         new java.lang.String[] { "Audio", "Xuid", "Tick", });
     internal_static_CCLCMsg_FileCRCCheck_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CCLCMsg_FileCRCCheck_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCLCMsg_FileCRCCheck_descriptor,
         new java.lang.String[] { "CodePath", "Path", "CodeFilename", "Filename", "Crc", });
     internal_static_CCLCMsg_SplitPlayerConnect_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CCLCMsg_SplitPlayerConnect_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCLCMsg_SplitPlayerConnect_descriptor,
         new java.lang.String[] { "Playername", });
     internal_static_CSVCMsg_ServerInfo_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CSVCMsg_ServerInfo_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_ServerInfo_descriptor,
         new java.lang.String[] { "Protocol", "ServerCount", "IsDedicated", "IsHltv", "IsReplay", "COs", "MapCrc", "ClientCrc", "StringTableCrc", "MaxClients", "MaxClasses", "PlayerSlot", "TickInterval", "GameDir", "MapName", "SkyName", "HostName", "AddonName", "GameSessionConfig", "GameSessionManifest", });
     skadistats.clarity.wire.shared.common.proto.CommonNetMessages.getDescriptor();

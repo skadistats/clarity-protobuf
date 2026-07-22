@@ -6,13 +6,13 @@ package skadistats.clarity.wire.cs.cs2.proto;
 public final class Cs2MessageId {
   private Cs2MessageId() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code NET_Messages}
    */
   public enum NET_Messages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>net_NOP = 0;</code>
      */
@@ -169,27 +169,27 @@ public final class Cs2MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<NET_Messages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<NET_Messages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<NET_Messages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<NET_Messages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<NET_Messages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<NET_Messages>() {
             public NET_Messages findValueByNumber(int number) {
               return NET_Messages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.cs.cs2.proto.Cs2MessageId.getDescriptor().getEnumTypes().get(0);
     }
@@ -197,7 +197,7 @@ public final class Cs2MessageId {
     private static final NET_Messages[] VALUES = values();
 
     public static NET_Messages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -220,7 +220,7 @@ public final class Cs2MessageId {
    * Protobuf enum {@code CLC_Messages}
    */
   public enum CLC_Messages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>clc_ClientInfo = 20;</code>
      */
@@ -395,27 +395,27 @@ public final class Cs2MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<CLC_Messages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<CLC_Messages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<CLC_Messages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<CLC_Messages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<CLC_Messages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<CLC_Messages>() {
             public CLC_Messages findValueByNumber(int number) {
               return CLC_Messages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.cs.cs2.proto.Cs2MessageId.getDescriptor().getEnumTypes().get(1);
     }
@@ -423,7 +423,7 @@ public final class Cs2MessageId {
     private static final CLC_Messages[] VALUES = values();
 
     public static CLC_Messages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -446,7 +446,7 @@ public final class Cs2MessageId {
    * Protobuf enum {@code SVC_Messages}
    */
   public enum SVC_Messages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>svc_ServerInfo = 40;</code>
      */
@@ -747,27 +747,27 @@ public final class Cs2MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<SVC_Messages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<SVC_Messages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<SVC_Messages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<SVC_Messages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<SVC_Messages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<SVC_Messages>() {
             public SVC_Messages findValueByNumber(int number) {
               return SVC_Messages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.cs.cs2.proto.Cs2MessageId.getDescriptor().getEnumTypes().get(2);
     }
@@ -775,7 +775,7 @@ public final class Cs2MessageId {
     private static final SVC_Messages[] VALUES = values();
 
     public static SVC_Messages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -798,7 +798,7 @@ public final class Cs2MessageId {
    * Protobuf enum {@code EBaseUserMessages}
    */
   public enum EBaseUserMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>UM_AchievementEvent = 101;</code>
      */
@@ -1279,27 +1279,27 @@ public final class Cs2MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseUserMessages>() {
             public EBaseUserMessages findValueByNumber(int number) {
               return EBaseUserMessages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.cs.cs2.proto.Cs2MessageId.getDescriptor().getEnumTypes().get(3);
     }
@@ -1307,7 +1307,7 @@ public final class Cs2MessageId {
     private static final EBaseUserMessages[] VALUES = values();
 
     public static EBaseUserMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1330,7 +1330,7 @@ public final class Cs2MessageId {
    * Protobuf enum {@code EBaseEntityMessages}
    */
   public enum EBaseEntityMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>EM_PlayJingle = 136;</code>
      */
@@ -1397,27 +1397,27 @@ public final class Cs2MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseEntityMessages>() {
             public EBaseEntityMessages findValueByNumber(int number) {
               return EBaseEntityMessages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.cs.cs2.proto.Cs2MessageId.getDescriptor().getEnumTypes().get(4);
     }
@@ -1425,7 +1425,7 @@ public final class Cs2MessageId {
     private static final EBaseEntityMessages[] VALUES = values();
 
     public static EBaseEntityMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1448,7 +1448,7 @@ public final class Cs2MessageId {
    * Protobuf enum {@code ECstrike15UserMessages}
    */
   public enum ECstrike15UserMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>CS_UM_VGUIMenu = 301;</code>
      */
@@ -2190,27 +2190,27 @@ public final class Cs2MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ECstrike15UserMessages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ECstrike15UserMessages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ECstrike15UserMessages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ECstrike15UserMessages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ECstrike15UserMessages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<ECstrike15UserMessages>() {
             public ECstrike15UserMessages findValueByNumber(int number) {
               return ECstrike15UserMessages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.cs.cs2.proto.Cs2MessageId.getDescriptor().getEnumTypes().get(5);
     }
@@ -2218,7 +2218,7 @@ public final class Cs2MessageId {
     private static final ECstrike15UserMessages[] VALUES = values();
 
     public static ECstrike15UserMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -2238,11 +2238,11 @@ public final class Cs2MessageId {
   }
 
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -2374,17 +2374,17 @@ public final class Cs2MessageId {
       "agDrop\020\205\003B4\n$skadistats.clarity.wire.cs." +
       "cs2.protoB\014Cs2MessageId"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
 

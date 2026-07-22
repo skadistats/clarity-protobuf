@@ -6,13 +6,13 @@ package skadistats.clarity.wire.shared.common.proto;
 public final class CommonNetworkBaseTypes {
   private CommonNetworkBaseTypes() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code SignonState_t}
    */
   public enum SignonState_t
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>SIGNONSTATE_NONE = 0;</code>
      */
@@ -97,27 +97,27 @@ public final class CommonNetworkBaseTypes {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<SignonState_t>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<SignonState_t>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<SignonState_t>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<SignonState_t>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<SignonState_t>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<SignonState_t>() {
             public SignonState_t findValueByNumber(int number) {
               return SignonState_t.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor().getEnumTypes().get(0);
     }
@@ -125,7 +125,7 @@ public final class CommonNetworkBaseTypes {
     private static final SignonState_t[] VALUES = values();
 
     public static SignonState_t valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -146,7 +146,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CMsgVectorOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgVector)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional float x = 1;</code>
@@ -188,15 +188,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CMsgVector}
    */
   public static final class CMsgVector extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgVector)
       CMsgVectorOrBuilder {
     // Use CMsgVector.newBuilder() to construct.
-    private CMsgVector(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgVector(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgVector(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgVector(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgVector defaultInstance;
     public static CMsgVector getDefaultInstance() {
@@ -207,20 +207,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgVector(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -258,40 +258,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgVector> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgVector>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgVector> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgVector>() {
       public CMsgVector parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgVector(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgVector> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgVector> getParserForType() {
       return PARSER;
     }
 
@@ -372,7 +372,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -397,19 +397,19 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(1, x_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(2, y_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(3, z_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(4, w_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -425,24 +425,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(java.io.InputStream input)
@@ -451,7 +451,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -461,18 +461,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -486,7 +486,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -494,15 +494,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CMsgVector}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgVector)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -515,12 +515,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -544,7 +544,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector_descriptor;
       }
@@ -586,7 +586,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector)other);
         } else {
@@ -618,13 +618,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -777,7 +777,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CMsgVector2DOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgVector2D)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional float x = 1;</code>
@@ -801,15 +801,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CMsgVector2D}
    */
   public static final class CMsgVector2D extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgVector2D)
       CMsgVector2DOrBuilder {
     // Use CMsgVector2D.newBuilder() to construct.
-    private CMsgVector2D(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgVector2D(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgVector2D(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgVector2D(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgVector2D defaultInstance;
     public static CMsgVector2D getDefaultInstance() {
@@ -820,20 +820,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgVector2D(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -861,40 +861,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector2D_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector2D_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgVector2D> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgVector2D>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgVector2D> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgVector2D>() {
       public CMsgVector2D parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgVector2D(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgVector2D> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgVector2D> getParserForType() {
       return PARSER;
     }
 
@@ -943,7 +943,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -962,11 +962,11 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(1, x_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(2, y_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -982,24 +982,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(java.io.InputStream input)
@@ -1008,7 +1008,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1018,18 +1018,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1043,7 +1043,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1051,15 +1051,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CMsgVector2D}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgVector2D)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2DOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector2D_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector2D_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1072,12 +1072,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -1097,7 +1097,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgVector2D_descriptor;
       }
@@ -1131,7 +1131,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D)other);
         } else {
@@ -1157,13 +1157,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector2D) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1252,7 +1252,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CMsgQAngleOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgQAngle)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional float x = 1;</code>
@@ -1285,15 +1285,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CMsgQAngle}
    */
   public static final class CMsgQAngle extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgQAngle)
       CMsgQAngleOrBuilder {
     // Use CMsgQAngle.newBuilder() to construct.
-    private CMsgQAngle(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgQAngle(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgQAngle(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgQAngle(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgQAngle defaultInstance;
     public static CMsgQAngle getDefaultInstance() {
@@ -1304,20 +1304,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgQAngle(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1350,40 +1350,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgQAngle_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgQAngle_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgQAngle> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgQAngle>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgQAngle> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgQAngle>() {
       public CMsgQAngle parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgQAngle(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgQAngle> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgQAngle> getParserForType() {
       return PARSER;
     }
 
@@ -1448,7 +1448,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1470,15 +1470,15 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(1, x_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(2, y_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(3, z_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1494,24 +1494,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(java.io.InputStream input)
@@ -1520,7 +1520,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1530,18 +1530,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1555,7 +1555,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1563,15 +1563,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CMsgQAngle}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgQAngle)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgQAngle_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgQAngle_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1584,12 +1584,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -1611,7 +1611,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgQAngle_descriptor;
       }
@@ -1649,7 +1649,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle)other);
         } else {
@@ -1678,13 +1678,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1805,7 +1805,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CMsgRGBAOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgRGBA)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 r = 1;</code>
@@ -1847,15 +1847,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CMsgRGBA}
    */
   public static final class CMsgRGBA extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgRGBA)
       CMsgRGBAOrBuilder {
     // Use CMsgRGBA.newBuilder() to construct.
-    private CMsgRGBA(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgRGBA(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgRGBA(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgRGBA(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgRGBA defaultInstance;
     public static CMsgRGBA getDefaultInstance() {
@@ -1866,20 +1866,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgRGBA(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1917,40 +1917,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgRGBA_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgRGBA_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgRGBA> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgRGBA>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgRGBA> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgRGBA>() {
       public CMsgRGBA parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgRGBA(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgRGBA> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgRGBA> getParserForType() {
       return PARSER;
     }
 
@@ -2031,7 +2031,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2056,19 +2056,19 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, r_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, g_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, b_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, a_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -2084,24 +2084,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(java.io.InputStream input)
@@ -2110,7 +2110,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2120,18 +2120,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -2145,7 +2145,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2153,15 +2153,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CMsgRGBA}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgRGBA)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBAOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgRGBA_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgRGBA_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -2174,12 +2174,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2203,7 +2203,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsgRGBA_descriptor;
       }
@@ -2245,7 +2245,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA)other);
         } else {
@@ -2277,13 +2277,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgRGBA) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2436,7 +2436,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CMsg_CVarsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsg_CVars)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>repeated .CMsg_CVars.CVar cvars = 1;</code>
@@ -2466,15 +2466,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CMsg_CVars}
    */
   public static final class CMsg_CVars extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsg_CVars)
       CMsg_CVarsOrBuilder {
     // Use CMsg_CVars.newBuilder() to construct.
-    private CMsg_CVars(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsg_CVars(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsg_CVars(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsg_CVars(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsg_CVars defaultInstance;
     public static CMsg_CVars getDefaultInstance() {
@@ -2485,20 +2485,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsg_CVars(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -2524,10 +2524,10 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2537,36 +2537,36 @@ public final class CommonNetworkBaseTypes {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsg_CVars> PARSER =
-        new com.google.protobuf.AbstractParser<CMsg_CVars>() {
+    public static skadistats.clarity.protobuf.Parser<CMsg_CVars> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsg_CVars>() {
       public CMsg_CVars parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsg_CVars(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsg_CVars> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsg_CVars> getParserForType() {
       return PARSER;
     }
 
     public interface CVarOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsg_CVars.CVar)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional string name = 1;</code>
@@ -2579,7 +2579,7 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string name = 1;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getNameBytes();
 
       /**
@@ -2593,7 +2593,7 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string value = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getValueBytes();
 
       /**
@@ -2609,15 +2609,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CMsg_CVars.CVar}
      */
     public static final class CVar extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsg_CVars.CVar)
         CVarOrBuilder {
       // Use CVar.newBuilder() to construct.
-      private CVar(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private CVar(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private CVar(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private CVar(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final CVar defaultInstance;
       public static CVar getDefaultInstance() {
@@ -2628,20 +2628,20 @@ public final class CommonNetworkBaseTypes {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private CVar(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -2658,13 +2658,13 @@ public final class CommonNetworkBaseTypes {
                 break;
               }
               case 10: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000001;
                 name_ = bs;
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 value_ = bs;
                 break;
@@ -2676,40 +2676,40 @@ public final class CommonNetworkBaseTypes {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_CVar_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_CVar_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<CVar> PARSER =
-          new com.google.protobuf.AbstractParser<CVar>() {
+      public static skadistats.clarity.protobuf.Parser<CVar> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<CVar>() {
         public CVar parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new CVar(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<CVar> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<CVar> getParserForType() {
         return PARSER;
       }
 
@@ -2730,8 +2730,8 @@ public final class CommonNetworkBaseTypes {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             name_ = s;
@@ -2742,17 +2742,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getNameBytes() {
         java.lang.Object ref = name_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           name_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -2772,8 +2772,8 @@ public final class CommonNetworkBaseTypes {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             value_ = s;
@@ -2784,17 +2784,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string value = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getValueBytes() {
         java.lang.Object ref = value_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           value_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -2828,7 +2828,7 @@ public final class CommonNetworkBaseTypes {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2850,15 +2850,15 @@ public final class CommonNetworkBaseTypes {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(1, getNameBytes());
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getValueBytes());
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(3, dictionaryName_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -2874,24 +2874,24 @@ public final class CommonNetworkBaseTypes {
       }
 
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(java.io.InputStream input)
@@ -2900,7 +2900,7 @@ public final class CommonNetworkBaseTypes {
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -2910,18 +2910,18 @@ public final class CommonNetworkBaseTypes {
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -2935,7 +2935,7 @@ public final class CommonNetworkBaseTypes {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -2943,15 +2943,15 @@ public final class CommonNetworkBaseTypes {
        * Protobuf type {@code CMsg_CVars.CVar}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsg_CVars.CVar)
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVarOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_CVar_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_CVar_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -2964,12 +2964,12 @@ public final class CommonNetworkBaseTypes {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -2991,7 +2991,7 @@ public final class CommonNetworkBaseTypes {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_CVar_descriptor;
         }
@@ -3029,7 +3029,7 @@ public final class CommonNetworkBaseTypes {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar) {
             return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar)other);
           } else {
@@ -3062,13 +3062,13 @@ public final class CommonNetworkBaseTypes {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -3093,8 +3093,8 @@ public final class CommonNetworkBaseTypes {
         public java.lang.String getName() {
           java.lang.Object ref = name_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               name_ = s;
@@ -3107,17 +3107,17 @@ public final class CommonNetworkBaseTypes {
         /**
          * <code>optional string name = 1;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getNameBytes() {
           java.lang.Object ref = name_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             name_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -3146,7 +3146,7 @@ public final class CommonNetworkBaseTypes {
          * <code>optional string name = 1;</code>
          */
         public Builder setNameBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -3169,8 +3169,8 @@ public final class CommonNetworkBaseTypes {
         public java.lang.String getValue() {
           java.lang.Object ref = value_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               value_ = s;
@@ -3183,17 +3183,17 @@ public final class CommonNetworkBaseTypes {
         /**
          * <code>optional string value = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getValueBytes() {
           java.lang.Object ref = value_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             value_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -3222,7 +3222,7 @@ public final class CommonNetworkBaseTypes {
          * <code>optional string value = 2;</code>
          */
         public Builder setValueBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -3323,7 +3323,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       for (int i = 0; i < cvars_.size(); i++) {
@@ -3339,7 +3339,7 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       for (int i = 0; i < cvars_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, cvars_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
@@ -3355,24 +3355,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(java.io.InputStream input)
@@ -3381,7 +3381,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3391,18 +3391,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3416,7 +3416,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3424,15 +3424,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CMsg_CVars}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsg_CVars)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVarsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3445,12 +3445,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getCvarsFieldBuilder();
         }
       }
@@ -3473,7 +3473,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CMsg_CVars_descriptor;
       }
@@ -3506,7 +3506,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars)other);
         } else {
@@ -3536,7 +3536,7 @@ public final class CommonNetworkBaseTypes {
               cvars_ = other.cvars_;
               bitField0_ = (bitField0_ & ~0x00000001);
               cvarsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getCvarsFieldBuilder() : null;
             } else {
               cvarsBuilder_.addAllMessages(other.cvars_);
@@ -3552,13 +3552,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -3579,7 +3579,7 @@ public final class CommonNetworkBaseTypes {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVarOrBuilder> cvarsBuilder_;
 
       /**
@@ -3711,7 +3711,7 @@ public final class CommonNetworkBaseTypes {
           java.lang.Iterable<? extends skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar> values) {
         if (cvarsBuilder_ == null) {
           ensureCvarsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, cvars_);
           onChanged();
         } else {
@@ -3795,11 +3795,11 @@ public final class CommonNetworkBaseTypes {
            getCvarsBuilderList() {
         return getCvarsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVarOrBuilder> 
           getCvarsFieldBuilder() {
         if (cvarsBuilder_ == null) {
-          cvarsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          cvarsBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVar.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.CVarOrBuilder>(
                   cvars_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
@@ -3823,21 +3823,21 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_NOPOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_NOP)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code CNETMsg_NOP}
    */
   public static final class CNETMsg_NOP extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_NOP)
       CNETMsg_NOPOrBuilder {
     // Use CNETMsg_NOP.newBuilder() to construct.
-    private CNETMsg_NOP(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_NOP(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_NOP(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_NOP(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_NOP defaultInstance;
     public static CNETMsg_NOP getDefaultInstance() {
@@ -3848,19 +3848,19 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_NOP(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3878,40 +3878,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_NOP_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_NOP_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_NOP> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_NOP>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_NOP> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_NOP>() {
       public CNETMsg_NOP parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_NOP(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_NOP> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_NOP> getParserForType() {
       return PARSER;
     }
 
@@ -3927,7 +3927,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       getUnknownFields().writeTo(output);
@@ -3952,24 +3952,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(java.io.InputStream input)
@@ -3978,7 +3978,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3988,18 +3988,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4013,7 +4013,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4021,15 +4021,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_NOP}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_NOP)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOPOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_NOP_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_NOP_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4042,12 +4042,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -4063,7 +4063,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_NOP_descriptor;
       }
@@ -4086,7 +4086,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP)other);
         } else {
@@ -4106,13 +4106,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_NOP) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4136,7 +4136,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_SplitScreenUserOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SplitScreenUser)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 slot = 1;</code>
@@ -4151,15 +4151,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CNETMsg_SplitScreenUser}
    */
   public static final class CNETMsg_SplitScreenUser extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SplitScreenUser)
       CNETMsg_SplitScreenUserOrBuilder {
     // Use CNETMsg_SplitScreenUser.newBuilder() to construct.
-    private CNETMsg_SplitScreenUser(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SplitScreenUser(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SplitScreenUser(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SplitScreenUser(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SplitScreenUser defaultInstance;
     public static CNETMsg_SplitScreenUser getDefaultInstance() {
@@ -4170,20 +4170,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SplitScreenUser(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4206,40 +4206,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SplitScreenUser_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SplitScreenUser_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SplitScreenUser> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SplitScreenUser>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SplitScreenUser> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SplitScreenUser>() {
       public CNETMsg_SplitScreenUser parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SplitScreenUser(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SplitScreenUser> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SplitScreenUser> getParserForType() {
       return PARSER;
     }
 
@@ -4272,7 +4272,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4288,7 +4288,7 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, slot_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -4304,24 +4304,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(java.io.InputStream input)
@@ -4330,7 +4330,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4340,18 +4340,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4365,7 +4365,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4373,15 +4373,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SplitScreenUser}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SplitScreenUser)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUserOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SplitScreenUser_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SplitScreenUser_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4394,12 +4394,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -4417,7 +4417,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SplitScreenUser_descriptor;
       }
@@ -4447,7 +4447,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser)other);
         } else {
@@ -4470,13 +4470,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SplitScreenUser) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4533,7 +4533,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_DisconnectOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_Disconnect)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string text = 1;</code>
@@ -4546,7 +4546,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string text = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getTextBytes();
 
     /**
@@ -4562,15 +4562,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CNETMsg_Disconnect}
    */
   public static final class CNETMsg_Disconnect extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_Disconnect)
       CNETMsg_DisconnectOrBuilder {
     // Use CNETMsg_Disconnect.newBuilder() to construct.
-    private CNETMsg_Disconnect(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_Disconnect(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_Disconnect(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_Disconnect(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_Disconnect defaultInstance;
     public static CNETMsg_Disconnect getDefaultInstance() {
@@ -4581,20 +4581,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_Disconnect(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4611,7 +4611,7 @@ public final class CommonNetworkBaseTypes {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               text_ = bs;
               break;
@@ -4629,40 +4629,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Disconnect_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Disconnect_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_Disconnect> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_Disconnect>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_Disconnect> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_Disconnect>() {
       public CNETMsg_Disconnect parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_Disconnect(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_Disconnect> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_Disconnect> getParserForType() {
       return PARSER;
     }
 
@@ -4683,8 +4683,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           text_ = s;
@@ -4695,17 +4695,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string text = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         text_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -4738,7 +4738,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4757,11 +4757,11 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getTextBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(2, reason_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
@@ -4777,24 +4777,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(java.io.InputStream input)
@@ -4803,7 +4803,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4813,18 +4813,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4838,7 +4838,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4846,15 +4846,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_Disconnect}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_Disconnect)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_DisconnectOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Disconnect_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Disconnect_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4867,12 +4867,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -4892,7 +4892,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Disconnect_descriptor;
       }
@@ -4926,7 +4926,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect)other);
         } else {
@@ -4954,13 +4954,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Disconnect) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4985,8 +4985,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             text_ = s;
@@ -4999,17 +4999,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string text = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getTextBytes() {
         java.lang.Object ref = text_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           text_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5038,7 +5038,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string text = 1;</code>
        */
       public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5096,7 +5096,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_FileOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_File)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 transfer_id = 1;</code>
@@ -5118,7 +5118,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string file_name = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getFileNameBytes();
 
     /**
@@ -5152,15 +5152,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CNETMsg_File}
    */
   public static final class CNETMsg_File extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_File)
       CNETMsg_FileOrBuilder {
     // Use CNETMsg_File.newBuilder() to construct.
-    private CNETMsg_File(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_File(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_File(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_File(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_File defaultInstance;
     public static CNETMsg_File getDefaultInstance() {
@@ -5171,20 +5171,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_File(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -5206,7 +5206,7 @@ public final class CommonNetworkBaseTypes {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               fileName_ = bs;
               break;
@@ -5228,40 +5228,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_File_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_File_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_File> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_File>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_File> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_File>() {
       public CNETMsg_File parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_File(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_File> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_File> getParserForType() {
       return PARSER;
     }
 
@@ -5297,8 +5297,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           fileName_ = s;
@@ -5309,17 +5309,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string file_name = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getFileNameBytes() {
       java.lang.Object ref = fileName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         fileName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -5385,7 +5385,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5413,23 +5413,23 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, transferId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getFileNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, isReplayDemoFile_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(4, deny_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(5, isFileRequested_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -5445,24 +5445,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(java.io.InputStream input)
@@ -5471,7 +5471,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -5481,18 +5481,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -5506,7 +5506,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5514,15 +5514,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_File}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_File)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_FileOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_File_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_File_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -5535,12 +5535,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -5566,7 +5566,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_File_descriptor;
       }
@@ -5612,7 +5612,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File)other);
         } else {
@@ -5649,13 +5649,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_File) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -5712,8 +5712,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getFileName() {
         java.lang.Object ref = fileName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             fileName_ = s;
@@ -5726,17 +5726,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string file_name = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getFileNameBytes() {
         java.lang.Object ref = fileName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           fileName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5765,7 +5765,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string file_name = 2;</code>
        */
       public Builder setFileNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5884,7 +5884,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_TickOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_Tick)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 tick = 1;</code>
@@ -5987,7 +5987,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string expected_long_tick_reason = 11;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getExpectedLongTickReasonBytes();
 
     /**
@@ -6003,15 +6003,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CNETMsg_Tick}
    */
   public static final class CNETMsg_Tick extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_Tick)
       CNETMsg_TickOrBuilder {
     // Use CNETMsg_Tick.newBuilder() to construct.
-    private CNETMsg_Tick(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_Tick(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_Tick(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_Tick(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_Tick defaultInstance;
     public static CNETMsg_Tick getDefaultInstance() {
@@ -6022,20 +6022,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_Tick(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -6102,7 +6102,7 @@ public final class CommonNetworkBaseTypes {
               break;
             }
             case 90: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000400;
               expectedLongTickReason_ = bs;
               break;
@@ -6114,40 +6114,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Tick_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Tick_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_Tick> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_Tick>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_Tick> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_Tick>() {
       public CNETMsg_Tick parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_Tick(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_Tick> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_Tick> getParserForType() {
       return PARSER;
     }
 
@@ -6318,8 +6318,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           expectedLongTickReason_ = s;
@@ -6330,17 +6330,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string expected_long_tick_reason = 11;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getExpectedLongTickReasonBytes() {
       java.lang.Object ref = expectedLongTickReason_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         expectedLongTickReason_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -6383,7 +6383,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6432,51 +6432,51 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, tick_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, hostFrametime_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, hostFrametimeStdDeviation_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, hostComputationtime_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, hostComputationtimeStdDeviation_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(6, hostFramestarttimeStdDeviation_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(7, hostLoss_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(8, hostUnfilteredFrametime_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(9, hltvReplayFlags_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(10, expectedLongTick_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(11, getExpectedLongTickReasonBytes());
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(12, jitter_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -6492,24 +6492,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(java.io.InputStream input)
@@ -6518,7 +6518,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -6528,18 +6528,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -6553,7 +6553,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6561,15 +6561,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_Tick}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_Tick)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_TickOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Tick_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Tick_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -6582,12 +6582,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -6627,7 +6627,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_Tick_descriptor;
       }
@@ -6701,7 +6701,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick)other);
         } else {
@@ -6759,13 +6759,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_Tick) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -7110,8 +7110,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getExpectedLongTickReason() {
         java.lang.Object ref = expectedLongTickReason_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             expectedLongTickReason_ = s;
@@ -7124,17 +7124,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string expected_long_tick_reason = 11;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getExpectedLongTickReasonBytes() {
         java.lang.Object ref = expectedLongTickReason_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           expectedLongTickReason_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -7163,7 +7163,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string expected_long_tick_reason = 11;</code>
        */
       public Builder setExpectedLongTickReasonBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7218,7 +7218,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_StringCmdOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_StringCmd)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string command = 1;</code>
@@ -7231,7 +7231,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string command = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getCommandBytes();
 
     /**
@@ -7247,15 +7247,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CNETMsg_StringCmd}
    */
   public static final class CNETMsg_StringCmd extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_StringCmd)
       CNETMsg_StringCmdOrBuilder {
     // Use CNETMsg_StringCmd.newBuilder() to construct.
-    private CNETMsg_StringCmd(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_StringCmd(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_StringCmd(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_StringCmd(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_StringCmd defaultInstance;
     public static CNETMsg_StringCmd getDefaultInstance() {
@@ -7266,20 +7266,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_StringCmd(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7296,7 +7296,7 @@ public final class CommonNetworkBaseTypes {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               command_ = bs;
               break;
@@ -7308,40 +7308,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_StringCmd_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_StringCmd_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_StringCmd> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_StringCmd>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_StringCmd> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_StringCmd>() {
       public CNETMsg_StringCmd parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_StringCmd(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_StringCmd> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_StringCmd> getParserForType() {
       return PARSER;
     }
 
@@ -7362,8 +7362,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           command_ = s;
@@ -7374,17 +7374,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string command = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getCommandBytes() {
       java.lang.Object ref = command_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         command_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -7417,7 +7417,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7436,11 +7436,11 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getCommandBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, predictionSync_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -7456,24 +7456,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(java.io.InputStream input)
@@ -7482,7 +7482,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -7492,18 +7492,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -7517,7 +7517,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7525,15 +7525,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_StringCmd}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_StringCmd)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmdOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_StringCmd_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_StringCmd_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -7546,12 +7546,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -7571,7 +7571,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_StringCmd_descriptor;
       }
@@ -7605,7 +7605,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd)other);
         } else {
@@ -7633,13 +7633,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_StringCmd) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -7664,8 +7664,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getCommand() {
         java.lang.Object ref = command_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             command_ = s;
@@ -7678,17 +7678,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string command = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getCommandBytes() {
         java.lang.Object ref = command_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           command_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -7717,7 +7717,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string command = 1;</code>
        */
       public Builder setCommandBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7772,7 +7772,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_SetConVarOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SetConVar)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .CMsg_CVars convars = 1;</code>
@@ -7791,15 +7791,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CNETMsg_SetConVar}
    */
   public static final class CNETMsg_SetConVar extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SetConVar)
       CNETMsg_SetConVarOrBuilder {
     // Use CNETMsg_SetConVar.newBuilder() to construct.
-    private CNETMsg_SetConVar(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SetConVar(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SetConVar(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SetConVar(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SetConVar defaultInstance;
     public static CNETMsg_SetConVar getDefaultInstance() {
@@ -7810,20 +7810,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SetConVar(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7854,40 +7854,40 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SetConVar_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SetConVar_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SetConVar> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SetConVar>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SetConVar> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SetConVar>() {
       public CNETMsg_SetConVar parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SetConVar(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SetConVar> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SetConVar> getParserForType() {
       return PARSER;
     }
 
@@ -7926,7 +7926,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7942,7 +7942,7 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, convars_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -7958,24 +7958,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(java.io.InputStream input)
@@ -7984,7 +7984,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -7994,18 +7994,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8019,7 +8019,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8027,15 +8027,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SetConVar}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SetConVar)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVarOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SetConVar_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SetConVar_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -8048,12 +8048,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getConvarsFieldBuilder();
         }
       }
@@ -8076,7 +8076,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SetConVar_descriptor;
       }
@@ -8110,7 +8110,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar)other);
         } else {
@@ -8133,13 +8133,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SetConVar) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -8152,7 +8152,7 @@ public final class CommonNetworkBaseTypes {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars convars_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVarsOrBuilder> convarsBuilder_;
       /**
        * <code>optional .CMsg_CVars convars = 1;</code>
@@ -8253,11 +8253,11 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional .CMsg_CVars convars = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVarsOrBuilder> 
           getConvarsFieldBuilder() {
         if (convarsBuilder_ == null) {
-          convarsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          convarsBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVars.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsg_CVarsOrBuilder>(
                   getConvars(),
                   getParentForChildren(),
@@ -8280,7 +8280,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CNETMsg_SignonStateOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CNETMsg_SignonState)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .SignonState_t signon_state = 1 [default = SIGNONSTATE_NONE];</code>
@@ -8312,7 +8312,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>repeated string players_networkids = 4;</code>
      */
-    com.google.protobuf.ProtocolStringList
+    skadistats.clarity.protobuf.ProtocolStringList
         getPlayersNetworkidsList();
     /**
      * <code>repeated string players_networkids = 4;</code>
@@ -8325,7 +8325,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>repeated string players_networkids = 4;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getPlayersNetworkidsBytes(int index);
 
     /**
@@ -8339,7 +8339,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string map_name = 5;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getMapNameBytes();
 
     /**
@@ -8353,22 +8353,22 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string addons = 6;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getAddonsBytes();
   }
   /**
    * Protobuf type {@code CNETMsg_SignonState}
    */
   public static final class CNETMsg_SignonState extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CNETMsg_SignonState)
       CNETMsg_SignonStateOrBuilder {
     // Use CNETMsg_SignonState.newBuilder() to construct.
-    private CNETMsg_SignonState(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CNETMsg_SignonState(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CNETMsg_SignonState(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CNETMsg_SignonState(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CNETMsg_SignonState defaultInstance;
     public static CNETMsg_SignonState getDefaultInstance() {
@@ -8379,20 +8379,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CNETMsg_SignonState(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -8430,32 +8430,32 @@ public final class CommonNetworkBaseTypes {
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                playersNetworkids_ = new com.google.protobuf.LazyStringArrayList();
+                playersNetworkids_ = new skadistats.clarity.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000008;
               }
               playersNetworkids_.add(bs);
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000008;
               mapName_ = bs;
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000010;
               addons_ = bs;
               break;
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
@@ -8465,30 +8465,30 @@ public final class CommonNetworkBaseTypes {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SignonState_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SignonState_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CNETMsg_SignonState> PARSER =
-        new com.google.protobuf.AbstractParser<CNETMsg_SignonState>() {
+    public static skadistats.clarity.protobuf.Parser<CNETMsg_SignonState> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CNETMsg_SignonState>() {
       public CNETMsg_SignonState parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CNETMsg_SignonState(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CNETMsg_SignonState> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CNETMsg_SignonState> getParserForType() {
       return PARSER;
     }
 
@@ -8539,11 +8539,11 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static final int PLAYERS_NETWORKIDS_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList playersNetworkids_;
+    private skadistats.clarity.protobuf.LazyStringList playersNetworkids_;
     /**
      * <code>repeated string players_networkids = 4;</code>
      */
-    public com.google.protobuf.ProtocolStringList
+    public skadistats.clarity.protobuf.ProtocolStringList
         getPlayersNetworkidsList() {
       return playersNetworkids_;
     }
@@ -8562,7 +8562,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>repeated string players_networkids = 4;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getPlayersNetworkidsBytes(int index) {
       return playersNetworkids_.getByteString(index);
     }
@@ -8583,8 +8583,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           mapName_ = s;
@@ -8595,17 +8595,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string map_name = 5;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getMapNameBytes() {
       java.lang.Object ref = mapName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         mapName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -8625,8 +8625,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           addons_ = s;
@@ -8637,17 +8637,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string addons = 6;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getAddonsBytes() {
       java.lang.Object ref = addons_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         addons_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -8655,7 +8655,7 @@ public final class CommonNetworkBaseTypes {
       signonState_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.SignonState_t.SIGNONSTATE_NONE;
       spawnCount_ = 0;
       numServerPlayers_ = 0;
-      playersNetworkids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      playersNetworkids_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       mapName_ = "";
       addons_ = "";
     }
@@ -8669,7 +8669,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8700,32 +8700,32 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(1, signonState_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, spawnCount_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, numServerPlayers_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < playersNetworkids_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSizeNoTag(playersNetworkids_.getByteString(i));
         }
         size += dataSize;
         size += 1 * getPlayersNetworkidsList().size();
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(5, getMapNameBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(6, getAddonsBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -8741,24 +8741,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(java.io.InputStream input)
@@ -8767,7 +8767,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8777,18 +8777,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8802,7 +8802,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8810,15 +8810,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CNETMsg_SignonState}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CNETMsg_SignonState)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonStateOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SignonState_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SignonState_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -8831,12 +8831,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -8851,7 +8851,7 @@ public final class CommonNetworkBaseTypes {
         bitField0_ = (bitField0_ & ~0x00000002);
         numServerPlayers_ = 0;
         bitField0_ = (bitField0_ & ~0x00000004);
-        playersNetworkids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        playersNetworkids_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         mapName_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -8864,7 +8864,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CNETMsg_SignonState_descriptor;
       }
@@ -8915,7 +8915,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState)other);
         } else {
@@ -8964,13 +8964,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CNETMsg_SignonState) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -9081,17 +9081,17 @@ public final class CommonNetworkBaseTypes {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList playersNetworkids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private skadistats.clarity.protobuf.LazyStringList playersNetworkids_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       private void ensurePlayersNetworkidsIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          playersNetworkids_ = new com.google.protobuf.LazyStringArrayList(playersNetworkids_);
+          playersNetworkids_ = new skadistats.clarity.protobuf.LazyStringArrayList(playersNetworkids_);
           bitField0_ |= 0x00000008;
          }
       }
       /**
        * <code>repeated string players_networkids = 4;</code>
        */
-      public com.google.protobuf.ProtocolStringList
+      public skadistats.clarity.protobuf.ProtocolStringList
           getPlayersNetworkidsList() {
         return playersNetworkids_.getUnmodifiableView();
       }
@@ -9110,7 +9110,7 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>repeated string players_networkids = 4;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getPlayersNetworkidsBytes(int index) {
         return playersNetworkids_.getByteString(index);
       }
@@ -9146,7 +9146,7 @@ public final class CommonNetworkBaseTypes {
       public Builder addAllPlayersNetworkids(
           java.lang.Iterable<java.lang.String> values) {
         ensurePlayersNetworkidsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playersNetworkids_);
         onChanged();
         return this;
@@ -9155,7 +9155,7 @@ public final class CommonNetworkBaseTypes {
        * <code>repeated string players_networkids = 4;</code>
        */
       public Builder clearPlayersNetworkids() {
-        playersNetworkids_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        playersNetworkids_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
@@ -9164,7 +9164,7 @@ public final class CommonNetworkBaseTypes {
        * <code>repeated string players_networkids = 4;</code>
        */
       public Builder addPlayersNetworkidsBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9187,8 +9187,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getMapName() {
         java.lang.Object ref = mapName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             mapName_ = s;
@@ -9201,17 +9201,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string map_name = 5;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getMapNameBytes() {
         java.lang.Object ref = mapName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           mapName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -9240,7 +9240,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string map_name = 5;</code>
        */
       public Builder setMapNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9263,8 +9263,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getAddons() {
         java.lang.Object ref = addons_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             addons_ = s;
@@ -9277,17 +9277,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string addons = 6;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getAddonsBytes() {
         java.lang.Object ref = addons_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           addons_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -9316,7 +9316,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string addons = 6;</code>
        */
       public Builder setAddonsBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -9339,7 +9339,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CSVCMsg_GameEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_GameEvent)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string event_name = 1;</code>
@@ -9352,7 +9352,7 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string event_name = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getEventNameBytes();
 
     /**
@@ -9401,15 +9401,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CSVCMsg_GameEvent}
    */
   public static final class CSVCMsg_GameEvent extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsg_GameEvent)
       CSVCMsg_GameEventOrBuilder {
     // Use CSVCMsg_GameEvent.newBuilder() to construct.
-    private CSVCMsg_GameEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsg_GameEvent(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsg_GameEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsg_GameEvent(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsg_GameEvent defaultInstance;
     public static CSVCMsg_GameEvent getDefaultInstance() {
@@ -9420,20 +9420,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsg_GameEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -9450,7 +9450,7 @@ public final class CommonNetworkBaseTypes {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               eventName_ = bs;
               break;
@@ -9475,10 +9475,10 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
@@ -9488,36 +9488,36 @@ public final class CommonNetworkBaseTypes {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsg_GameEvent> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsg_GameEvent>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsg_GameEvent> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsg_GameEvent>() {
       public CSVCMsg_GameEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsg_GameEvent(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsg_GameEvent> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsg_GameEvent> getParserForType() {
       return PARSER;
     }
 
     public interface key_tOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CSVCMsg_GameEvent.key_t)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 type = 1;</code>
@@ -9539,7 +9539,7 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string val_string = 2;</code>
        */
-      com.google.protobuf.ByteString
+      skadistats.clarity.protobuf.ByteString
           getValStringBytes();
 
       /**
@@ -9603,21 +9603,21 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional bytes val_wstring = 9;</code>
        */
-      com.google.protobuf.ByteString getValWstring();
+      skadistats.clarity.protobuf.ByteString getValWstring();
     }
     /**
      * Protobuf type {@code CSVCMsg_GameEvent.key_t}
      */
     public static final class key_t extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CSVCMsg_GameEvent.key_t)
         key_tOrBuilder {
       // Use key_t.newBuilder() to construct.
-      private key_t(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private key_t(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private key_t(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private key_t(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final key_t defaultInstance;
       public static key_t getDefaultInstance() {
@@ -9628,20 +9628,20 @@ public final class CommonNetworkBaseTypes {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private key_t(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -9663,7 +9663,7 @@ public final class CommonNetworkBaseTypes {
                 break;
               }
               case 18: {
-                com.google.protobuf.ByteString bs = input.readBytes();
+                skadistats.clarity.protobuf.ByteString bs = input.readBytes();
                 bitField0_ |= 0x00000002;
                 valString_ = bs;
                 break;
@@ -9705,40 +9705,40 @@ public final class CommonNetworkBaseTypes {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_key_t_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_key_t_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<key_t> PARSER =
-          new com.google.protobuf.AbstractParser<key_t>() {
+      public static skadistats.clarity.protobuf.Parser<key_t> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<key_t>() {
         public key_t parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new key_t(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<key_t> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<key_t> getParserForType() {
         return PARSER;
       }
 
@@ -9774,8 +9774,8 @@ public final class CommonNetworkBaseTypes {
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs = 
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs = 
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             valString_ = s;
@@ -9786,17 +9786,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string val_string = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getValStringBytes() {
         java.lang.Object ref = valString_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           valString_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
 
@@ -9891,7 +9891,7 @@ public final class CommonNetworkBaseTypes {
       }
 
       public static final int VAL_WSTRING_FIELD_NUMBER = 9;
-      private com.google.protobuf.ByteString valWstring_;
+      private skadistats.clarity.protobuf.ByteString valWstring_;
       /**
        * <code>optional bytes val_wstring = 9;</code>
        */
@@ -9901,7 +9901,7 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional bytes val_wstring = 9;</code>
        */
-      public com.google.protobuf.ByteString getValWstring() {
+      public skadistats.clarity.protobuf.ByteString getValWstring() {
         return valWstring_;
       }
 
@@ -9914,7 +9914,7 @@ public final class CommonNetworkBaseTypes {
         valByte_ = 0;
         valBool_ = false;
         valUint64_ = 0L;
-        valWstring_ = com.google.protobuf.ByteString.EMPTY;
+        valWstring_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       }
       private byte memoizedIsInitialized = -1;
       public final boolean isInitialized() {
@@ -9926,7 +9926,7 @@ public final class CommonNetworkBaseTypes {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -9966,39 +9966,39 @@ public final class CommonNetworkBaseTypes {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, type_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(2, getValStringBytes());
         }
         if (((bitField0_ & 0x00000004) == 0x00000004)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeFloatSize(3, valFloat_);
         }
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(4, valLong_);
         }
         if (((bitField0_ & 0x00000010) == 0x00000010)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(5, valShort_);
         }
         if (((bitField0_ & 0x00000020) == 0x00000020)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(6, valByte_);
         }
         if (((bitField0_ & 0x00000040) == 0x00000040)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBoolSize(7, valBool_);
         }
         if (((bitField0_ & 0x00000080) == 0x00000080)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt64Size(8, valUint64_);
         }
         if (((bitField0_ & 0x00000100) == 0x00000100)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSize(9, valWstring_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -10014,24 +10014,24 @@ public final class CommonNetworkBaseTypes {
       }
 
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(java.io.InputStream input)
@@ -10040,7 +10040,7 @@ public final class CommonNetworkBaseTypes {
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -10050,18 +10050,18 @@ public final class CommonNetworkBaseTypes {
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -10075,7 +10075,7 @@ public final class CommonNetworkBaseTypes {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -10083,15 +10083,15 @@ public final class CommonNetworkBaseTypes {
        * Protobuf type {@code CSVCMsg_GameEvent.key_t}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CSVCMsg_GameEvent.key_t)
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_tOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_key_t_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_key_t_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -10104,12 +10104,12 @@ public final class CommonNetworkBaseTypes {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -10134,7 +10134,7 @@ public final class CommonNetworkBaseTypes {
           bitField0_ = (bitField0_ & ~0x00000040);
           valUint64_ = 0L;
           bitField0_ = (bitField0_ & ~0x00000080);
-          valWstring_ = com.google.protobuf.ByteString.EMPTY;
+          valWstring_ = skadistats.clarity.protobuf.ByteString.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000100);
           return this;
         }
@@ -10143,7 +10143,7 @@ public final class CommonNetworkBaseTypes {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_key_t_descriptor;
         }
@@ -10205,7 +10205,7 @@ public final class CommonNetworkBaseTypes {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t) {
             return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t)other);
           } else {
@@ -10254,13 +10254,13 @@ public final class CommonNetworkBaseTypes {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -10317,8 +10317,8 @@ public final class CommonNetworkBaseTypes {
         public java.lang.String getValString() {
           java.lang.Object ref = valString_;
           if (!(ref instanceof java.lang.String)) {
-            com.google.protobuf.ByteString bs =
-                (com.google.protobuf.ByteString) ref;
+            skadistats.clarity.protobuf.ByteString bs =
+                (skadistats.clarity.protobuf.ByteString) ref;
             java.lang.String s = bs.toStringUtf8();
             if (bs.isValidUtf8()) {
               valString_ = s;
@@ -10331,17 +10331,17 @@ public final class CommonNetworkBaseTypes {
         /**
          * <code>optional string val_string = 2;</code>
          */
-        public com.google.protobuf.ByteString
+        public skadistats.clarity.protobuf.ByteString
             getValStringBytes() {
           java.lang.Object ref = valString_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b = 
-                com.google.protobuf.ByteString.copyFromUtf8(
+            skadistats.clarity.protobuf.ByteString b = 
+                skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             valString_ = b;
             return b;
           } else {
-            return (com.google.protobuf.ByteString) ref;
+            return (skadistats.clarity.protobuf.ByteString) ref;
           }
         }
         /**
@@ -10370,7 +10370,7 @@ public final class CommonNetworkBaseTypes {
          * <code>optional string val_string = 2;</code>
          */
         public Builder setValStringBytes(
-            com.google.protobuf.ByteString value) {
+            skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -10572,7 +10572,7 @@ public final class CommonNetworkBaseTypes {
           return this;
         }
 
-        private com.google.protobuf.ByteString valWstring_ = com.google.protobuf.ByteString.EMPTY;
+        private skadistats.clarity.protobuf.ByteString valWstring_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         /**
          * <code>optional bytes val_wstring = 9;</code>
          */
@@ -10582,13 +10582,13 @@ public final class CommonNetworkBaseTypes {
         /**
          * <code>optional bytes val_wstring = 9;</code>
          */
-        public com.google.protobuf.ByteString getValWstring() {
+        public skadistats.clarity.protobuf.ByteString getValWstring() {
           return valWstring_;
         }
         /**
          * <code>optional bytes val_wstring = 9;</code>
          */
-        public Builder setValWstring(com.google.protobuf.ByteString value) {
+        public Builder setValWstring(skadistats.clarity.protobuf.ByteString value) {
           if (value == null) {
     throw new NullPointerException();
   }
@@ -10635,8 +10635,8 @@ public final class CommonNetworkBaseTypes {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           eventName_ = s;
@@ -10647,17 +10647,17 @@ public final class CommonNetworkBaseTypes {
     /**
      * <code>optional string event_name = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getEventNameBytes() {
       java.lang.Object ref = eventName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         eventName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -10742,7 +10742,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -10767,19 +10767,19 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getEventNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, eventid_);
       }
       for (int i = 0; i < keys_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(3, keys_.get(i));
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, passthrough_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -10795,24 +10795,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(java.io.InputStream input)
@@ -10821,7 +10821,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -10831,18 +10831,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -10856,7 +10856,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -10864,15 +10864,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CSVCMsg_GameEvent}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsg_GameEvent)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -10885,12 +10885,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getKeysFieldBuilder();
         }
       }
@@ -10919,7 +10919,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsg_GameEvent_descriptor;
       }
@@ -10966,7 +10966,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent)other);
         } else {
@@ -11004,7 +11004,7 @@ public final class CommonNetworkBaseTypes {
               keys_ = other.keys_;
               bitField0_ = (bitField0_ & ~0x00000004);
               keysBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getKeysFieldBuilder() : null;
             } else {
               keysBuilder_.addAllMessages(other.keys_);
@@ -11023,13 +11023,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -11054,8 +11054,8 @@ public final class CommonNetworkBaseTypes {
       public java.lang.String getEventName() {
         java.lang.Object ref = eventName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             eventName_ = s;
@@ -11068,17 +11068,17 @@ public final class CommonNetworkBaseTypes {
       /**
        * <code>optional string event_name = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getEventNameBytes() {
         java.lang.Object ref = eventName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           eventName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -11107,7 +11107,7 @@ public final class CommonNetworkBaseTypes {
        * <code>optional string event_name = 1;</code>
        */
       public Builder setEventNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -11158,7 +11158,7 @@ public final class CommonNetworkBaseTypes {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_tOrBuilder> keysBuilder_;
 
       /**
@@ -11290,7 +11290,7 @@ public final class CommonNetworkBaseTypes {
           java.lang.Iterable<? extends skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t> values) {
         if (keysBuilder_ == null) {
           ensureKeysIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, keys_);
           onChanged();
         } else {
@@ -11374,11 +11374,11 @@ public final class CommonNetworkBaseTypes {
            getKeysBuilderList() {
         return getKeysFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_tOrBuilder> 
           getKeysFieldBuilder() {
         if (keysBuilder_ == null) {
-          keysBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          keysBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.key_tOrBuilder>(
                   keys_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
@@ -11434,7 +11434,7 @@ public final class CommonNetworkBaseTypes {
 
   public interface CSVCMsgList_GameEventsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsgList_GameEvents)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>repeated .CSVCMsgList_GameEvents.event_t events = 1;</code>
@@ -11464,15 +11464,15 @@ public final class CommonNetworkBaseTypes {
    * Protobuf type {@code CSVCMsgList_GameEvents}
    */
   public static final class CSVCMsgList_GameEvents extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsgList_GameEvents)
       CSVCMsgList_GameEventsOrBuilder {
     // Use CSVCMsgList_GameEvents.newBuilder() to construct.
-    private CSVCMsgList_GameEvents(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsgList_GameEvents(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsgList_GameEvents(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsgList_GameEvents(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsgList_GameEvents defaultInstance;
     public static CSVCMsgList_GameEvents getDefaultInstance() {
@@ -11483,20 +11483,20 @@ public final class CommonNetworkBaseTypes {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsgList_GameEvents(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -11522,10 +11522,10 @@ public final class CommonNetworkBaseTypes {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11535,36 +11535,36 @@ public final class CommonNetworkBaseTypes {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsgList_GameEvents> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsgList_GameEvents>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsgList_GameEvents> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsgList_GameEvents>() {
       public CSVCMsgList_GameEvents parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsgList_GameEvents(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsgList_GameEvents> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsgList_GameEvents> getParserForType() {
       return PARSER;
     }
 
     public interface event_tOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CSVCMsgList_GameEvents.event_t)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional int32 tick = 1;</code>
@@ -11592,15 +11592,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CSVCMsgList_GameEvents.event_t}
      */
     public static final class event_t extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CSVCMsgList_GameEvents.event_t)
         event_tOrBuilder {
       // Use event_t.newBuilder() to construct.
-      private event_t(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private event_t(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private event_t(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private event_t(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final event_t defaultInstance;
       public static event_t getDefaultInstance() {
@@ -11611,20 +11611,20 @@ public final class CommonNetworkBaseTypes {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private event_t(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -11660,40 +11660,40 @@ public final class CommonNetworkBaseTypes {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_event_t_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_event_t_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t.class, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<event_t> PARSER =
-          new com.google.protobuf.AbstractParser<event_t>() {
+      public static skadistats.clarity.protobuf.Parser<event_t> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<event_t>() {
         public event_t parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new event_t(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<event_t> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<event_t> getParserForType() {
         return PARSER;
       }
 
@@ -11748,7 +11748,7 @@ public final class CommonNetworkBaseTypes {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11767,11 +11767,11 @@ public final class CommonNetworkBaseTypes {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32Size(1, tick_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeMessageSize(2, event_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -11787,24 +11787,24 @@ public final class CommonNetworkBaseTypes {
       }
 
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(java.io.InputStream input)
@@ -11813,7 +11813,7 @@ public final class CommonNetworkBaseTypes {
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -11823,18 +11823,18 @@ public final class CommonNetworkBaseTypes {
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -11848,7 +11848,7 @@ public final class CommonNetworkBaseTypes {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -11856,15 +11856,15 @@ public final class CommonNetworkBaseTypes {
        * Protobuf type {@code CSVCMsgList_GameEvents.event_t}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CSVCMsgList_GameEvents.event_t)
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_tOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_event_t_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_event_t_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -11877,12 +11877,12 @@ public final class CommonNetworkBaseTypes {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
             getEventFieldBuilder();
           }
         }
@@ -11907,7 +11907,7 @@ public final class CommonNetworkBaseTypes {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_event_t_descriptor;
         }
@@ -11945,7 +11945,7 @@ public final class CommonNetworkBaseTypes {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t) {
             return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t)other);
           } else {
@@ -11971,13 +11971,13 @@ public final class CommonNetworkBaseTypes {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -12022,7 +12022,7 @@ public final class CommonNetworkBaseTypes {
         }
 
         private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent event_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.getDefaultInstance();
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEventOrBuilder> eventBuilder_;
         /**
          * <code>optional .CSVCMsg_GameEvent event = 2;</code>
@@ -12123,11 +12123,11 @@ public final class CommonNetworkBaseTypes {
         /**
          * <code>optional .CSVCMsg_GameEvent event = 2;</code>
          */
-        private com.google.protobuf.SingleFieldBuilder<
+        private skadistats.clarity.protobuf.SingleFieldBuilder<
             skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEventOrBuilder> 
             getEventFieldBuilder() {
           if (eventBuilder_ == null) {
-            eventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            eventBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
                 skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEvent.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsg_GameEventOrBuilder>(
                     getEvent(),
                     getParentForChildren(),
@@ -12196,7 +12196,7 @@ public final class CommonNetworkBaseTypes {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       for (int i = 0; i < events_.size(); i++) {
@@ -12212,7 +12212,7 @@ public final class CommonNetworkBaseTypes {
 
       size = 0;
       for (int i = 0; i < events_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, events_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
@@ -12228,24 +12228,24 @@ public final class CommonNetworkBaseTypes {
     }
 
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(java.io.InputStream input)
@@ -12254,7 +12254,7 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -12264,18 +12264,18 @@ public final class CommonNetworkBaseTypes {
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -12289,7 +12289,7 @@ public final class CommonNetworkBaseTypes {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -12297,15 +12297,15 @@ public final class CommonNetworkBaseTypes {
      * Protobuf type {@code CSVCMsgList_GameEvents}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsgList_GameEvents)
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEventsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -12318,12 +12318,12 @@ public final class CommonNetworkBaseTypes {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEventsFieldBuilder();
         }
       }
@@ -12346,7 +12346,7 @@ public final class CommonNetworkBaseTypes {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.internal_static_CSVCMsgList_GameEvents_descriptor;
       }
@@ -12379,7 +12379,7 @@ public final class CommonNetworkBaseTypes {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents) {
           return mergeFrom((skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents)other);
         } else {
@@ -12409,7 +12409,7 @@ public final class CommonNetworkBaseTypes {
               events_ = other.events_;
               bitField0_ = (bitField0_ & ~0x00000001);
               eventsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEventsFieldBuilder() : null;
             } else {
               eventsBuilder_.addAllMessages(other.events_);
@@ -12425,13 +12425,13 @@ public final class CommonNetworkBaseTypes {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -12452,7 +12452,7 @@ public final class CommonNetworkBaseTypes {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_tOrBuilder> eventsBuilder_;
 
       /**
@@ -12584,7 +12584,7 @@ public final class CommonNetworkBaseTypes {
           java.lang.Iterable<? extends skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t> values) {
         if (eventsBuilder_ == null) {
           ensureEventsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, events_);
           onChanged();
         } else {
@@ -12668,11 +12668,11 @@ public final class CommonNetworkBaseTypes {
            getEventsBuilderList() {
         return getEventsFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_tOrBuilder> 
           getEventsFieldBuilder() {
         if (eventsBuilder_ == null) {
-          eventsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          eventsBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_t.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CSVCMsgList_GameEvents.event_tOrBuilder>(
                   events_,
                   ((bitField0_ & 0x00000001) == 0x00000001),
@@ -12694,102 +12694,102 @@ public final class CommonNetworkBaseTypes {
     // @@protoc_insertion_point(class_scope:CSVCMsgList_GameEvents)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgVector_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgVector_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgVector2D_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgVector2D_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgQAngle_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgQAngle_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgRGBA_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgRGBA_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsg_CVars_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsg_CVars_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsg_CVars_CVar_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsg_CVars_CVar_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_NOP_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_NOP_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SplitScreenUser_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SplitScreenUser_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_Disconnect_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_Disconnect_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_File_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_File_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_Tick_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_Tick_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_StringCmd_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_StringCmd_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SetConVar_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SetConVar_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CNETMsg_SignonState_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CNETMsg_SignonState_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_GameEvent_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_GameEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_GameEvent_key_t_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_GameEvent_key_t_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsgList_GameEvents_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsgList_GameEvents_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsgList_GameEvents_event_t_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsgList_GameEvents_event_t_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -12846,125 +12846,125 @@ public final class CommonNetworkBaseTypes {
       "s.clarity.wire.shared.common.protoB\026Comm" +
       "onNetworkBaseTypes"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.getDescriptor(),
         }, assigner);
     internal_static_CMsgVector_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CMsgVector_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgVector_descriptor,
         new java.lang.String[] { "X", "Y", "Z", "W", });
     internal_static_CMsgVector2D_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CMsgVector2D_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgVector2D_descriptor,
         new java.lang.String[] { "X", "Y", });
     internal_static_CMsgQAngle_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CMsgQAngle_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgQAngle_descriptor,
         new java.lang.String[] { "X", "Y", "Z", });
     internal_static_CMsgRGBA_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CMsgRGBA_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgRGBA_descriptor,
         new java.lang.String[] { "R", "G", "B", "A", });
     internal_static_CMsg_CVars_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CMsg_CVars_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsg_CVars_descriptor,
         new java.lang.String[] { "Cvars", });
     internal_static_CMsg_CVars_CVar_descriptor =
       internal_static_CMsg_CVars_descriptor.getNestedTypes().get(0);
     internal_static_CMsg_CVars_CVar_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsg_CVars_CVar_descriptor,
         new java.lang.String[] { "Name", "Value", "DictionaryName", });
     internal_static_CNETMsg_NOP_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CNETMsg_NOP_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_NOP_descriptor,
         new java.lang.String[] { });
     internal_static_CNETMsg_SplitScreenUser_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_CNETMsg_SplitScreenUser_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SplitScreenUser_descriptor,
         new java.lang.String[] { "Slot", });
     internal_static_CNETMsg_Disconnect_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_CNETMsg_Disconnect_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_Disconnect_descriptor,
         new java.lang.String[] { "Text", "Reason", });
     internal_static_CNETMsg_File_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_CNETMsg_File_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_File_descriptor,
         new java.lang.String[] { "TransferId", "FileName", "IsReplayDemoFile", "Deny", "IsFileRequested", });
     internal_static_CNETMsg_Tick_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_CNETMsg_Tick_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_Tick_descriptor,
         new java.lang.String[] { "Tick", "HostFrametime", "HostFrametimeStdDeviation", "HostComputationtime", "HostComputationtimeStdDeviation", "HostFramestarttimeStdDeviation", "HostLoss", "HostUnfilteredFrametime", "HltvReplayFlags", "ExpectedLongTick", "ExpectedLongTickReason", "Jitter", });
     internal_static_CNETMsg_StringCmd_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_CNETMsg_StringCmd_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_StringCmd_descriptor,
         new java.lang.String[] { "Command", "PredictionSync", });
     internal_static_CNETMsg_SetConVar_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_CNETMsg_SetConVar_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SetConVar_descriptor,
         new java.lang.String[] { "Convars", });
     internal_static_CNETMsg_SignonState_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_CNETMsg_SignonState_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CNETMsg_SignonState_descriptor,
         new java.lang.String[] { "SignonState", "SpawnCount", "NumServerPlayers", "PlayersNetworkids", "MapName", "Addons", });
     internal_static_CSVCMsg_GameEvent_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_CSVCMsg_GameEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_GameEvent_descriptor,
         new java.lang.String[] { "EventName", "Eventid", "Keys", "Passthrough", });
     internal_static_CSVCMsg_GameEvent_key_t_descriptor =
       internal_static_CSVCMsg_GameEvent_descriptor.getNestedTypes().get(0);
     internal_static_CSVCMsg_GameEvent_key_t_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_GameEvent_key_t_descriptor,
         new java.lang.String[] { "Type", "ValString", "ValFloat", "ValLong", "ValShort", "ValByte", "ValBool", "ValUint64", "ValWstring", });
     internal_static_CSVCMsgList_GameEvents_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_CSVCMsgList_GameEvents_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsgList_GameEvents_descriptor,
         new java.lang.String[] { "Events", });
     internal_static_CSVCMsgList_GameEvents_event_t_descriptor =
       internal_static_CSVCMsgList_GameEvents_descriptor.getNestedTypes().get(0);
     internal_static_CSVCMsgList_GameEvents_event_t_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsgList_GameEvents_event_t_descriptor,
         new java.lang.String[] { "Tick", "Event", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.getDescriptor();

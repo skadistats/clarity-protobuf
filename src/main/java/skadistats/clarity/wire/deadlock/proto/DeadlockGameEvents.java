@@ -6,13 +6,13 @@ package skadistats.clarity.wire.deadlock.proto;
 public final class DeadlockGameEvents {
   private DeadlockGameEvents() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code ECitadelGameEvents}
    */
   public enum ECitadelGameEvents
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>GE_FireBullets = 450;</code>
      */
@@ -124,27 +124,27 @@ public final class DeadlockGameEvents {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ECitadelGameEvents>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ECitadelGameEvents>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ECitadelGameEvents>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ECitadelGameEvents>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ECitadelGameEvents>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<ECitadelGameEvents>() {
             public ECitadelGameEvents findValueByNumber(int number) {
               return ECitadelGameEvents.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.getDescriptor().getEnumTypes().get(0);
     }
@@ -152,7 +152,7 @@ public final class DeadlockGameEvents {
     private static final ECitadelGameEvents[] VALUES = values();
 
     public static ECitadelGameEvents valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -173,7 +173,7 @@ public final class DeadlockGameEvents {
 
   public interface CMsgFireBulletsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgFireBullets)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .CMsgVector origin = 1;</code>
@@ -417,15 +417,15 @@ public final class DeadlockGameEvents {
    * Protobuf type {@code CMsgFireBullets}
    */
   public static final class CMsgFireBullets extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgFireBullets)
       CMsgFireBulletsOrBuilder {
     // Use CMsgFireBullets.newBuilder() to construct.
-    private CMsgFireBullets(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgFireBullets(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgFireBullets(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgFireBullets(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgFireBullets defaultInstance;
     public static CMsgFireBullets getDefaultInstance() {
@@ -436,20 +436,20 @@ public final class DeadlockGameEvents {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgFireBullets(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -617,10 +617,10 @@ public final class DeadlockGameEvents {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
@@ -630,36 +630,36 @@ public final class DeadlockGameEvents {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.class, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgFireBullets> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgFireBullets>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgFireBullets> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgFireBullets>() {
       public CMsgFireBullets parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgFireBullets(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgFireBullets> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgFireBullets> getParserForType() {
       return PARSER;
     }
 
     public interface TracerAssignmentOrBuilder extends
         // @@protoc_insertion_point(interface_extends:CMsgFireBullets.TracerAssignment)
-        com.google.protobuf.MessageOrBuilder {
+        skadistats.clarity.protobuf.MessageOrBuilder {
 
       /**
        * <code>optional uint64 tracer_resource_id = 1;</code>
@@ -683,15 +683,15 @@ public final class DeadlockGameEvents {
      * Protobuf type {@code CMsgFireBullets.TracerAssignment}
      */
     public static final class TracerAssignment extends
-        com.google.protobuf.GeneratedMessage implements
+        skadistats.clarity.protobuf.GeneratedMessage implements
         // @@protoc_insertion_point(message_implements:CMsgFireBullets.TracerAssignment)
         TracerAssignmentOrBuilder {
       // Use TracerAssignment.newBuilder() to construct.
-      private TracerAssignment(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      private TracerAssignment(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
         super(builder);
         this.unknownFields = builder.getUnknownFields();
       }
-      private TracerAssignment(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+      private TracerAssignment(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
       private static final TracerAssignment defaultInstance;
       public static TracerAssignment getDefaultInstance() {
@@ -702,20 +702,20 @@ public final class DeadlockGameEvents {
         return defaultInstance;
       }
 
-      private final com.google.protobuf.UnknownFieldSet unknownFields;
+      private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
       @java.lang.Override
-      public final com.google.protobuf.UnknownFieldSet
+      public final skadistats.clarity.protobuf.UnknownFieldSet
           getUnknownFields() {
         return this.unknownFields;
       }
       private TracerAssignment(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         initFields();
         int mutable_bitField0_ = 0;
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-            com.google.protobuf.UnknownFieldSet.newBuilder();
+        skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+            skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
         try {
           boolean done = false;
           while (!done) {
@@ -743,40 +743,40 @@ public final class DeadlockGameEvents {
               }
             }
           }
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           throw e.setUnfinishedMessage(this);
         } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(
+          throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
               e.getMessage()).setUnfinishedMessage(this);
         } finally {
           this.unknownFields = unknownFields.build();
           makeExtensionsImmutable();
         }
       }
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_TracerAssignment_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_TracerAssignment_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.class, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder.class);
       }
 
-      public static com.google.protobuf.Parser<TracerAssignment> PARSER =
-          new com.google.protobuf.AbstractParser<TracerAssignment>() {
+      public static skadistats.clarity.protobuf.Parser<TracerAssignment> PARSER =
+          new skadistats.clarity.protobuf.AbstractParser<TracerAssignment>() {
         public TracerAssignment parsePartialFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-            throws com.google.protobuf.InvalidProtocolBufferException {
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
           return new TracerAssignment(input, extensionRegistry);
         }
       };
 
       @java.lang.Override
-      public com.google.protobuf.Parser<TracerAssignment> getParserForType() {
+      public skadistats.clarity.protobuf.Parser<TracerAssignment> getParserForType() {
         return PARSER;
       }
 
@@ -825,7 +825,7 @@ public final class DeadlockGameEvents {
         return true;
       }
 
-      public void writeTo(com.google.protobuf.CodedOutputStream output)
+      public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
         getSerializedSize();
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -844,11 +844,11 @@ public final class DeadlockGameEvents {
 
         size = 0;
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt64Size(1, tracerResourceId_);
         }
         if (((bitField0_ & 0x00000002) == 0x00000002)) {
-          size += com.google.protobuf.CodedOutputStream
+          size += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32Size(2, bulletIndicies_);
         }
         size += getUnknownFields().getSerializedSize();
@@ -864,24 +864,24 @@ public final class DeadlockGameEvents {
       }
 
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(
-          com.google.protobuf.ByteString data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(
-          com.google.protobuf.ByteString data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ByteString data,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(byte[] data)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(
           byte[] data,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(java.io.InputStream input)
@@ -890,7 +890,7 @@ public final class DeadlockGameEvents {
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -900,18 +900,18 @@ public final class DeadlockGameEvents {
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseDelimitedFrom(
           java.io.InputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseDelimitedFrom(input, extensionRegistry);
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(
-          com.google.protobuf.CodedInputStream input)
+          skadistats.clarity.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return PARSER.parseFrom(input);
       }
       public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parseFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return PARSER.parseFrom(input, extensionRegistry);
       }
@@ -925,7 +925,7 @@ public final class DeadlockGameEvents {
 
       @java.lang.Override
       protected Builder newBuilderForType(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         Builder builder = new Builder(parent);
         return builder;
       }
@@ -933,15 +933,15 @@ public final class DeadlockGameEvents {
        * Protobuf type {@code CMsgFireBullets.TracerAssignment}
        */
       public static final class Builder extends
-          com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+          skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
           // @@protoc_insertion_point(builder_implements:CMsgFireBullets.TracerAssignment)
           skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder {
-        public static final com.google.protobuf.Descriptors.Descriptor
+        public static final skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptor() {
           return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_TracerAssignment_descriptor;
         }
 
-        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
           return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_TracerAssignment_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
@@ -954,12 +954,12 @@ public final class DeadlockGameEvents {
         }
 
         private Builder(
-            com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
           super(parent);
           maybeForceBuilderInitialization();
         }
         private void maybeForceBuilderInitialization() {
-          if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+          if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           }
         }
         private static Builder create() {
@@ -979,7 +979,7 @@ public final class DeadlockGameEvents {
           return create().mergeFrom(buildPartial());
         }
 
-        public com.google.protobuf.Descriptors.Descriptor
+        public skadistats.clarity.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
           return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_TracerAssignment_descriptor;
         }
@@ -1013,7 +1013,7 @@ public final class DeadlockGameEvents {
           return result;
         }
 
-        public Builder mergeFrom(com.google.protobuf.Message other) {
+        public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
           if (other instanceof skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment) {
             return mergeFrom((skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment)other);
           } else {
@@ -1039,13 +1039,13 @@ public final class DeadlockGameEvents {
         }
 
         public Builder mergeFrom(
-            com.google.protobuf.CodedInputStream input,
-            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            skadistats.clarity.protobuf.CodedInputStream input,
+            skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
             parsedMessage = (skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment) e.getUnfinishedMessage();
             throw e;
           } finally {
@@ -1557,7 +1557,7 @@ public final class DeadlockGameEvents {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1639,95 +1639,95 @@ public final class DeadlockGameEvents {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, origin_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(2, angles_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, seed_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(5, shooterEntity_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, ability_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(8, penetrationPercent_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(9, spread_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(10, firedFromGun_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(11, bulletsOverride_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(12, tracerReplacement_);
       }
       for (int i = 0; i < tracerAdditional_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(13, tracerAdditional_.get(i));
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(14, anglesOriginal_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(15, weaponSubclassId_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(16, shotNumber_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(17, ignoreEntity_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(18, maxRange_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(19, shotId_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(20, predictHitsAgainstUnits_);
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(21, bulletRadiusOverride_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(22, bulletSpeedOverride_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(23, bulletGravityOverride_);
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(24, muzzleNumber_);
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(25, abilityAsBullet_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1743,24 +1743,24 @@ public final class DeadlockGameEvents {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(java.io.InputStream input)
@@ -1769,7 +1769,7 @@ public final class DeadlockGameEvents {
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1779,18 +1779,18 @@ public final class DeadlockGameEvents {
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1804,7 +1804,7 @@ public final class DeadlockGameEvents {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1812,15 +1812,15 @@ public final class DeadlockGameEvents {
      * Protobuf type {@code CMsgFireBullets}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgFireBullets)
         skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBulletsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1833,12 +1833,12 @@ public final class DeadlockGameEvents {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getOriginFieldBuilder();
           getAnglesFieldBuilder();
           getTracerReplacementFieldBuilder();
@@ -1925,7 +1925,7 @@ public final class DeadlockGameEvents {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgFireBullets_descriptor;
       }
@@ -2064,7 +2064,7 @@ public final class DeadlockGameEvents {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets)other);
         } else {
@@ -2124,7 +2124,7 @@ public final class DeadlockGameEvents {
               tracerAdditional_ = other.tracerAdditional_;
               bitField0_ = (bitField0_ & ~0x00000400);
               tracerAdditionalBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getTracerAdditionalFieldBuilder() : null;
             } else {
               tracerAdditionalBuilder_.addAllMessages(other.tracerAdditional_);
@@ -2176,13 +2176,13 @@ public final class DeadlockGameEvents {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2195,7 +2195,7 @@ public final class DeadlockGameEvents {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> originBuilder_;
       /**
        * <code>optional .CMsgVector origin = 1;</code>
@@ -2296,11 +2296,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgVector origin = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
-          originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          originBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getOrigin(),
                   getParentForChildren(),
@@ -2311,7 +2311,7 @@ public final class DeadlockGameEvents {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle angles_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> anglesBuilder_;
       /**
        * <code>optional .CMsgQAngle angles = 2;</code>
@@ -2412,11 +2412,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgQAngle angles = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
           getAnglesFieldBuilder() {
         if (anglesBuilder_ == null) {
-          anglesBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          anglesBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                   getAngles(),
                   getParentForChildren(),
@@ -2651,7 +2651,7 @@ public final class DeadlockGameEvents {
       }
 
       private skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment tracerReplacement_ = skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder> tracerReplacementBuilder_;
       /**
        * <code>optional .CMsgFireBullets.TracerAssignment tracer_replacement = 12;</code>
@@ -2752,11 +2752,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgFireBullets.TracerAssignment tracer_replacement = 12;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder> 
           getTracerReplacementFieldBuilder() {
         if (tracerReplacementBuilder_ == null) {
-          tracerReplacementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          tracerReplacementBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder>(
                   getTracerReplacement(),
                   getParentForChildren(),
@@ -2775,7 +2775,7 @@ public final class DeadlockGameEvents {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder> tracerAdditionalBuilder_;
 
       /**
@@ -2907,7 +2907,7 @@ public final class DeadlockGameEvents {
           java.lang.Iterable<? extends skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment> values) {
         if (tracerAdditionalBuilder_ == null) {
           ensureTracerAdditionalIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, tracerAdditional_);
           onChanged();
         } else {
@@ -2991,11 +2991,11 @@ public final class DeadlockGameEvents {
            getTracerAdditionalBuilderList() {
         return getTracerAdditionalFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder> 
           getTracerAdditionalFieldBuilder() {
         if (tracerAdditionalBuilder_ == null) {
-          tracerAdditionalBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          tracerAdditionalBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignment.Builder, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgFireBullets.TracerAssignmentOrBuilder>(
                   tracerAdditional_,
                   ((bitField0_ & 0x00000400) == 0x00000400),
@@ -3007,7 +3007,7 @@ public final class DeadlockGameEvents {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle anglesOriginal_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> anglesOriginalBuilder_;
       /**
        * <code>optional .CMsgQAngle angles_original = 14;</code>
@@ -3108,11 +3108,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgQAngle angles_original = 14;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder> 
           getAnglesOriginalFieldBuilder() {
         if (anglesOriginalBuilder_ == null) {
-          anglesOriginalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          anglesOriginalBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngle.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgQAngleOrBuilder>(
                   getAnglesOriginal(),
                   getParentForChildren(),
@@ -3487,7 +3487,7 @@ public final class DeadlockGameEvents {
 
   public interface CMsgBulletImpactOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CMsgBulletImpact)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .CMsgVector trace_start = 1;</code>
@@ -3604,15 +3604,15 @@ public final class DeadlockGameEvents {
    * Protobuf type {@code CMsgBulletImpact}
    */
   public static final class CMsgBulletImpact extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CMsgBulletImpact)
       CMsgBulletImpactOrBuilder {
     // Use CMsgBulletImpact.newBuilder() to construct.
-    private CMsgBulletImpact(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CMsgBulletImpact(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CMsgBulletImpact(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CMsgBulletImpact(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CMsgBulletImpact defaultInstance;
     public static CMsgBulletImpact getDefaultInstance() {
@@ -3623,20 +3623,20 @@ public final class DeadlockGameEvents {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CMsgBulletImpact(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3733,40 +3733,40 @@ public final class DeadlockGameEvents {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgBulletImpact_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgBulletImpact_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact.class, skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CMsgBulletImpact> PARSER =
-        new com.google.protobuf.AbstractParser<CMsgBulletImpact>() {
+    public static skadistats.clarity.protobuf.Parser<CMsgBulletImpact> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CMsgBulletImpact>() {
       public CMsgBulletImpact parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CMsgBulletImpact(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CMsgBulletImpact> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CMsgBulletImpact> getParserForType() {
       return PARSER;
     }
 
@@ -3977,7 +3977,7 @@ public final class DeadlockGameEvents {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4023,47 +4023,47 @@ public final class DeadlockGameEvents {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, traceStart_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(2, impactOrigin_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(3, surfaceNormal_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, damage_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, surfaceType_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, abilityEntindex_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(8, impactedEntindex_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(9, impactedHitbox_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(10, weaponSubclassId_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(11, shooterEntindex_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(12, bulletRadiusOverride_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -4079,24 +4079,24 @@ public final class DeadlockGameEvents {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(java.io.InputStream input)
@@ -4105,7 +4105,7 @@ public final class DeadlockGameEvents {
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4115,18 +4115,18 @@ public final class DeadlockGameEvents {
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4140,7 +4140,7 @@ public final class DeadlockGameEvents {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4148,15 +4148,15 @@ public final class DeadlockGameEvents {
      * Protobuf type {@code CMsgBulletImpact}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CMsgBulletImpact)
         skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpactOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgBulletImpact_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgBulletImpact_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4169,12 +4169,12 @@ public final class DeadlockGameEvents {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getTraceStartFieldBuilder();
           getImpactOriginFieldBuilder();
           getSurfaceNormalFieldBuilder();
@@ -4227,7 +4227,7 @@ public final class DeadlockGameEvents {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.internal_static_CMsgBulletImpact_descriptor;
       }
@@ -4309,7 +4309,7 @@ public final class DeadlockGameEvents {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact)other);
         } else {
@@ -4362,13 +4362,13 @@ public final class DeadlockGameEvents {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.DeadlockGameEvents.CMsgBulletImpact) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -4381,7 +4381,7 @@ public final class DeadlockGameEvents {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector traceStart_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> traceStartBuilder_;
       /**
        * <code>optional .CMsgVector trace_start = 1;</code>
@@ -4482,11 +4482,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgVector trace_start = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getTraceStartFieldBuilder() {
         if (traceStartBuilder_ == null) {
-          traceStartBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          traceStartBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getTraceStart(),
                   getParentForChildren(),
@@ -4497,7 +4497,7 @@ public final class DeadlockGameEvents {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector impactOrigin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> impactOriginBuilder_;
       /**
        * <code>optional .CMsgVector impact_origin = 2;</code>
@@ -4598,11 +4598,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgVector impact_origin = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getImpactOriginFieldBuilder() {
         if (impactOriginBuilder_ == null) {
-          impactOriginBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          impactOriginBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getImpactOrigin(),
                   getParentForChildren(),
@@ -4613,7 +4613,7 @@ public final class DeadlockGameEvents {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector surfaceNormal_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> surfaceNormalBuilder_;
       /**
        * <code>optional .CMsgVector surface_normal = 3;</code>
@@ -4714,11 +4714,11 @@ public final class DeadlockGameEvents {
       /**
        * <code>optional .CMsgVector surface_normal = 3;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getSurfaceNormalFieldBuilder() {
         if (surfaceNormalBuilder_ == null) {
-          surfaceNormalBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          surfaceNormalBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getSurfaceNormal(),
                   getParentForChildren(),
@@ -4995,27 +4995,27 @@ public final class DeadlockGameEvents {
     // @@protoc_insertion_point(class_scope:CMsgBulletImpact)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgFireBullets_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgFireBullets_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgFireBullets_TracerAssignment_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgFireBullets_TracerAssignment_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CMsgBulletImpact_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CMsgBulletImpact_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -5060,35 +5060,35 @@ public final class DeadlockGameEvents {
       "ats.clarity.wire.deadlock.protoB\022Deadloc" +
       "kGameEvents"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
         }, assigner);
     internal_static_CMsgFireBullets_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CMsgFireBullets_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgFireBullets_descriptor,
         new java.lang.String[] { "Origin", "Angles", "Seed", "ShooterEntity", "Ability", "PenetrationPercent", "Spread", "FiredFromGun", "BulletsOverride", "TracerReplacement", "TracerAdditional", "AnglesOriginal", "WeaponSubclassId", "ShotNumber", "IgnoreEntity", "MaxRange", "ShotId", "PredictHitsAgainstUnits", "BulletRadiusOverride", "BulletSpeedOverride", "BulletGravityOverride", "MuzzleNumber", "AbilityAsBullet", });
     internal_static_CMsgFireBullets_TracerAssignment_descriptor =
       internal_static_CMsgFireBullets_descriptor.getNestedTypes().get(0);
     internal_static_CMsgFireBullets_TracerAssignment_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgFireBullets_TracerAssignment_descriptor,
         new java.lang.String[] { "TracerResourceId", "BulletIndicies", });
     internal_static_CMsgBulletImpact_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CMsgBulletImpact_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CMsgBulletImpact_descriptor,
         new java.lang.String[] { "TraceStart", "ImpactOrigin", "SurfaceNormal", "Damage", "SurfaceType", "AbilityEntindex", "ImpactedEntindex", "ImpactedHitbox", "WeaponSubclassId", "ShooterEntindex", "BulletRadiusOverride", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();

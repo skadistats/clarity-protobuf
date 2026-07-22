@@ -6,13 +6,13 @@ package skadistats.clarity.wire.deadlock.proto;
 public final class DeadlockCommonGcMessages {
   private DeadlockCommonGcMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code CMsgLaneColor}
    */
   public enum CMsgLaneColor
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>k_ELaneColor_Invalid = 0;</code>
      */
@@ -70,27 +70,27 @@ public final class DeadlockCommonGcMessages {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<CMsgLaneColor>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<CMsgLaneColor>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<CMsgLaneColor>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<CMsgLaneColor>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<CMsgLaneColor>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<CMsgLaneColor>() {
             public CMsgLaneColor findValueByNumber(int number) {
               return CMsgLaneColor.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.DeadlockCommonGcMessages.getDescriptor().getEnumTypes().get(0);
     }
@@ -98,7 +98,7 @@ public final class DeadlockCommonGcMessages {
     private static final CMsgLaneColor[] VALUES = values();
 
     public static CMsgLaneColor valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -118,11 +118,11 @@ public final class DeadlockCommonGcMessages {
   }
 
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -134,17 +134,17 @@ public final class DeadlockCommonGcMessages {
       "e.deadlock.protoB\030DeadlockCommonGcMessag" +
       "es"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
 

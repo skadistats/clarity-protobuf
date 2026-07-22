@@ -6,14 +6,14 @@ package skadistats.clarity.wire.shared.common.proto;
 public final class CommonNetworkConnection {
   private CommonNetworkConnection() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
   }
   /**
    * Protobuf enum {@code ENetworkDisconnectionReason}
    */
   public enum ENetworkDisconnectionReason
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>NETWORK_DISCONNECT_INVALID = 0;</code>
      */
@@ -1097,27 +1097,27 @@ public final class CommonNetworkConnection {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ENetworkDisconnectionReason>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ENetworkDisconnectionReason>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ENetworkDisconnectionReason>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ENetworkDisconnectionReason>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ENetworkDisconnectionReason>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<ENetworkDisconnectionReason>() {
             public ENetworkDisconnectionReason findValueByNumber(int number) {
               return ENetworkDisconnectionReason.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.getDescriptor().getEnumTypes().get(0);
     }
@@ -1125,7 +1125,7 @@ public final class CommonNetworkConnection {
     private static final ENetworkDisconnectionReason[] VALUES = values();
 
     public static ENetworkDisconnectionReason valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1149,18 +1149,18 @@ public final class CommonNetworkConnection {
    * <code>extend .google.protobuf.EnumValueOptions { ... }</code>
    */
   public static final
-    com.google.protobuf.GeneratedMessage.GeneratedExtension<
-      com.google.protobuf.DescriptorProtos.EnumValueOptions,
-      java.lang.String> networkConnectionToken = com.google.protobuf.GeneratedMessage
+    skadistats.clarity.protobuf.GeneratedMessage.GeneratedExtension<
+      skadistats.clarity.protobuf.DescriptorProtos.EnumValueOptions,
+      java.lang.String> networkConnectionToken = skadistats.clarity.protobuf.GeneratedMessage
           .newFileScopedGeneratedExtension(
         java.lang.String.class,
         null);
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -1412,22 +1412,22 @@ public final class CommonNetworkConnection {
       "stats.clarity.wire.shared.common.protoB\027" +
       "CommonNetworkConnection"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.DescriptorProtos.getDescriptor(),
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
+          skadistats.clarity.protobuf.DescriptorProtos.getDescriptor(),
         }, assigner);
     networkConnectionToken.internalInit(descriptor.getExtensions().get(0));
-    com.google.protobuf.ExtensionRegistry registry =
-        com.google.protobuf.ExtensionRegistry.newInstance();
+    skadistats.clarity.protobuf.ExtensionRegistry registry =
+        skadistats.clarity.protobuf.ExtensionRegistry.newInstance();
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
@@ -1543,9 +1543,9 @@ public final class CommonNetworkConnection {
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
     registry.add(skadistats.clarity.wire.shared.common.proto.CommonNetworkConnection.networkConnectionToken);
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    com.google.protobuf.DescriptorProtos.getDescriptor();
+    skadistats.clarity.protobuf.DescriptorProtos.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

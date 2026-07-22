@@ -6,11 +6,11 @@ package skadistats.clarity.wire.dota.s1.proto;
 public final class DOTAS1NetMessages {
   private DOTAS1NetMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   public interface CSVCMsg_VoiceDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSVCMsg_VoiceData)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 client = 1;</code>
@@ -55,7 +55,7 @@ public final class DOTAS1NetMessages {
     /**
      * <code>optional bytes voice_data = 5;</code>
      */
-    com.google.protobuf.ByteString getVoiceData();
+    skadistats.clarity.protobuf.ByteString getVoiceData();
 
     /**
      * <code>optional .VoiceDataFormat_t format = 6 [default = VOICEDATA_FORMAT_STEAM];</code>
@@ -106,15 +106,15 @@ public final class DOTAS1NetMessages {
    * Protobuf type {@code CSVCMsg_VoiceData}
    */
   public static final class CSVCMsg_VoiceData extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSVCMsg_VoiceData)
       CSVCMsg_VoiceDataOrBuilder {
     // Use CSVCMsg_VoiceData.newBuilder() to construct.
-    private CSVCMsg_VoiceData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSVCMsg_VoiceData(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSVCMsg_VoiceData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSVCMsg_VoiceData(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSVCMsg_VoiceData defaultInstance;
     public static CSVCMsg_VoiceData getDefaultInstance() {
@@ -125,20 +125,20 @@ public final class DOTAS1NetMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSVCMsg_VoiceData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -212,40 +212,40 @@ public final class DOTAS1NetMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.internal_static_CSVCMsg_VoiceData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.internal_static_CSVCMsg_VoiceData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData.class, skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSVCMsg_VoiceData> PARSER =
-        new com.google.protobuf.AbstractParser<CSVCMsg_VoiceData>() {
+    public static skadistats.clarity.protobuf.Parser<CSVCMsg_VoiceData> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSVCMsg_VoiceData>() {
       public CSVCMsg_VoiceData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSVCMsg_VoiceData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSVCMsg_VoiceData> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSVCMsg_VoiceData> getParserForType() {
       return PARSER;
     }
 
@@ -311,7 +311,7 @@ public final class DOTAS1NetMessages {
     }
 
     public static final int VOICE_DATA_FIELD_NUMBER = 5;
-    private com.google.protobuf.ByteString voiceData_;
+    private skadistats.clarity.protobuf.ByteString voiceData_;
     /**
      * <code>optional bytes voice_data = 5;</code>
      */
@@ -321,7 +321,7 @@ public final class DOTAS1NetMessages {
     /**
      * <code>optional bytes voice_data = 5;</code>
      */
-    public com.google.protobuf.ByteString getVoiceData() {
+    public skadistats.clarity.protobuf.ByteString getVoiceData() {
       return voiceData_;
     }
 
@@ -405,7 +405,7 @@ public final class DOTAS1NetMessages {
       proximity_ = false;
       xuid_ = 0L;
       audibleMask_ = 0;
-      voiceData_ = com.google.protobuf.ByteString.EMPTY;
+      voiceData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       format_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
       sequenceBytes_ = 0;
       sectionNumber_ = 0;
@@ -422,7 +422,7 @@ public final class DOTAS1NetMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -465,43 +465,43 @@ public final class DOTAS1NetMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, client_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(2, proximity_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFixed64Size(3, xuid_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, audibleMask_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(5, voiceData_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(6, format_.getNumber());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, sequenceBytes_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(8, sectionNumber_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(9, uncompressedSampleOffset_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(10, tick_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -517,24 +517,24 @@ public final class DOTAS1NetMessages {
     }
 
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(java.io.InputStream input)
@@ -543,7 +543,7 @@ public final class DOTAS1NetMessages {
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -553,18 +553,18 @@ public final class DOTAS1NetMessages {
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -578,7 +578,7 @@ public final class DOTAS1NetMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -586,15 +586,15 @@ public final class DOTAS1NetMessages {
      * Protobuf type {@code CSVCMsg_VoiceData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSVCMsg_VoiceData)
         skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.internal_static_CSVCMsg_VoiceData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.internal_static_CSVCMsg_VoiceData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -607,12 +607,12 @@ public final class DOTAS1NetMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -629,7 +629,7 @@ public final class DOTAS1NetMessages {
         bitField0_ = (bitField0_ & ~0x00000004);
         audibleMask_ = 0;
         bitField0_ = (bitField0_ & ~0x00000008);
-        voiceData_ = com.google.protobuf.ByteString.EMPTY;
+        voiceData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
         format_ = skadistats.clarity.wire.shared.common.proto.CommonNetMessages.VoiceDataFormat_t.VOICEDATA_FORMAT_STEAM;
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -648,7 +648,7 @@ public final class DOTAS1NetMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.internal_static_CSVCMsg_VoiceData_descriptor;
       }
@@ -714,7 +714,7 @@ public final class DOTAS1NetMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData) {
           return mergeFrom((skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData)other);
         } else {
@@ -764,13 +764,13 @@ public final class DOTAS1NetMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s1.proto.DOTAS1NetMessages.CSVCMsg_VoiceData) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -910,7 +910,7 @@ public final class DOTAS1NetMessages {
         return this;
       }
 
-      private com.google.protobuf.ByteString voiceData_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString voiceData_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes voice_data = 5;</code>
        */
@@ -920,13 +920,13 @@ public final class DOTAS1NetMessages {
       /**
        * <code>optional bytes voice_data = 5;</code>
        */
-      public com.google.protobuf.ByteString getVoiceData() {
+      public skadistats.clarity.protobuf.ByteString getVoiceData() {
         return voiceData_;
       }
       /**
        * <code>optional bytes voice_data = 5;</code>
        */
-      public Builder setVoiceData(com.google.protobuf.ByteString value) {
+      public Builder setVoiceData(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1119,17 +1119,17 @@ public final class DOTAS1NetMessages {
     // @@protoc_insertion_point(class_scope:CSVCMsg_VoiceData)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSVCMsg_VoiceData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSVCMsg_VoiceData_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -1144,23 +1144,23 @@ public final class DOTAS1NetMessages {
       "skadistats.clarity.wire.dota.s1.protoB\021D" +
       "OTAS1NetMessages"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetMessages.getDescriptor(),
         }, assigner);
     internal_static_CSVCMsg_VoiceData_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CSVCMsg_VoiceData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSVCMsg_VoiceData_descriptor,
         new java.lang.String[] { "Client", "Proximity", "Xuid", "AudibleMask", "VoiceData", "Format", "SequenceBytes", "SectionNumber", "UncompressedSampleOffset", "Tick", });
     skadistats.clarity.wire.shared.common.proto.CommonNetMessages.getDescriptor();

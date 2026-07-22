@@ -15,10 +15,13 @@ Java **21** toolchain. Only runtime dep: `fastutil-core`.
 - `src/main/proto/`   — proto sources, hand-maintained (see Proto sync below)
 - `src/main/java/`    — **generated** Java classes, **checked in**.
   Regenerate via `src/main/proto/make.sh`.
-- `src/main/java/com/google/protobuf/` — vendored protobuf-2.x runtime,
-  also checked in. Not a typo: we're deliberately on proto2, invoked
-  through `/opt/protobuf2/bin/protoc`, because Valve's wire format
-  relies on proto2 semantics.
+- `src/main/java/skadistats/clarity/protobuf/` — vendored protobuf-2.x
+  runtime, also checked in. Relocated out of `com.google.protobuf` so
+  clarity can coexist with a stock `protobuf-java` on the classpath and
+  module path. We're deliberately on proto2, invoked through
+  `/opt/protobuf2/bin/protoc`, because Valve's wire format relies on
+  proto2 semantics. `make.sh` rewrites protoc's hardcoded
+  `com.google.protobuf` output to this package on every regen.
 - `tools/proto-sync/` — Python tool + RUNBOOK.md for syncing against
   SteamDatabase/Protobufs upstream.
 

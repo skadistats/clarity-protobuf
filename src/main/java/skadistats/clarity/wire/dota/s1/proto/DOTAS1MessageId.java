@@ -6,13 +6,13 @@ package skadistats.clarity.wire.dota.s1.proto;
 public final class DOTAS1MessageId {
   private DOTAS1MessageId() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code NET_Messages}
    */
   public enum NET_Messages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>net_NOP = 0;</code>
      */
@@ -169,27 +169,27 @@ public final class DOTAS1MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<NET_Messages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<NET_Messages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<NET_Messages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<NET_Messages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<NET_Messages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<NET_Messages>() {
             public NET_Messages findValueByNumber(int number) {
               return NET_Messages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s1.proto.DOTAS1MessageId.getDescriptor().getEnumTypes().get(0);
     }
@@ -197,7 +197,7 @@ public final class DOTAS1MessageId {
     private static final NET_Messages[] VALUES = values();
 
     public static NET_Messages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -220,7 +220,7 @@ public final class DOTAS1MessageId {
    * Protobuf enum {@code SVC_Messages}
    */
   public enum SVC_Messages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>svc_ServerInfo = 8;</code>
      */
@@ -467,27 +467,27 @@ public final class DOTAS1MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<SVC_Messages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<SVC_Messages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<SVC_Messages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<SVC_Messages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<SVC_Messages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<SVC_Messages>() {
             public SVC_Messages findValueByNumber(int number) {
               return SVC_Messages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s1.proto.DOTAS1MessageId.getDescriptor().getEnumTypes().get(1);
     }
@@ -495,7 +495,7 @@ public final class DOTAS1MessageId {
     private static final SVC_Messages[] VALUES = values();
 
     public static SVC_Messages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -518,7 +518,7 @@ public final class DOTAS1MessageId {
    * Protobuf enum {@code EBaseUserMessages}
    */
   public enum EBaseUserMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>UM_AchievementEvent = 1;</code>
      */
@@ -819,27 +819,27 @@ public final class DOTAS1MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseUserMessages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EBaseUserMessages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EBaseUserMessages>() {
             public EBaseUserMessages findValueByNumber(int number) {
               return EBaseUserMessages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s1.proto.DOTAS1MessageId.getDescriptor().getEnumTypes().get(2);
     }
@@ -847,7 +847,7 @@ public final class DOTAS1MessageId {
     private static final EBaseUserMessages[] VALUES = values();
 
     public static EBaseUserMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -870,7 +870,7 @@ public final class DOTAS1MessageId {
    * Protobuf enum {@code EDotaUserMessages}
    */
   public enum EDotaUserMessages
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>DOTA_UM_AddUnitToSelection = 64;</code>
      */
@@ -1594,27 +1594,27 @@ public final class DOTAS1MessageId {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<EDotaUserMessages>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<EDotaUserMessages>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<EDotaUserMessages>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<EDotaUserMessages>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<EDotaUserMessages>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<EDotaUserMessages>() {
             public EDotaUserMessages findValueByNumber(int number) {
               return EDotaUserMessages.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s1.proto.DOTAS1MessageId.getDescriptor().getEnumTypes().get(3);
     }
@@ -1622,7 +1622,7 @@ public final class DOTAS1MessageId {
     private static final EDotaUserMessages[] VALUES = values();
 
     public static EDotaUserMessages valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -1642,11 +1642,11 @@ public final class DOTAS1MessageId {
   }
 
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -1749,17 +1749,17 @@ public final class DOTAS1MessageId {
       "jectionEvent\020\217\001B8\n%skadistats.clarity.wi" +
       "re.dota.s1.protoB\017DOTAS1MessageId"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
   }
 

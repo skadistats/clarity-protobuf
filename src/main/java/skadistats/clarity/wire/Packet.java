@@ -1,7 +1,7 @@
 package skadistats.clarity.wire;
 
-import com.google.protobuf.ByteString;
-import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.protobuf.ByteString;
+import skadistats.clarity.protobuf.GeneratedMessage;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

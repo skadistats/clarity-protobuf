@@ -6,11 +6,11 @@ package skadistats.clarity.wire.dota.s2.proto;
 public final class DOTAS2BaseGcMessages {
   private DOTAS2BaseGcMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   public interface CSOEconItemAttributeOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSOEconItemAttribute)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 def_index = 1;</code>
@@ -37,21 +37,21 @@ public final class DOTAS2BaseGcMessages {
     /**
      * <code>optional bytes value_bytes = 3;</code>
      */
-    com.google.protobuf.ByteString getValueBytes();
+    skadistats.clarity.protobuf.ByteString getValueBytes();
   }
   /**
    * Protobuf type {@code CSOEconItemAttribute}
    */
   public static final class CSOEconItemAttribute extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSOEconItemAttribute)
       CSOEconItemAttributeOrBuilder {
     // Use CSOEconItemAttribute.newBuilder() to construct.
-    private CSOEconItemAttribute(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSOEconItemAttribute(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSOEconItemAttribute(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSOEconItemAttribute(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSOEconItemAttribute defaultInstance;
     public static CSOEconItemAttribute getDefaultInstance() {
@@ -62,20 +62,20 @@ public final class DOTAS2BaseGcMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSOEconItemAttribute(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -108,40 +108,40 @@ public final class DOTAS2BaseGcMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemAttribute_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemAttribute_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSOEconItemAttribute> PARSER =
-        new com.google.protobuf.AbstractParser<CSOEconItemAttribute>() {
+    public static skadistats.clarity.protobuf.Parser<CSOEconItemAttribute> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSOEconItemAttribute>() {
       public CSOEconItemAttribute parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSOEconItemAttribute(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSOEconItemAttribute> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSOEconItemAttribute> getParserForType() {
       return PARSER;
     }
 
@@ -177,7 +177,7 @@ public final class DOTAS2BaseGcMessages {
     }
 
     public static final int VALUE_BYTES_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString valueBytes_;
+    private skadistats.clarity.protobuf.ByteString valueBytes_;
     /**
      * <code>optional bytes value_bytes = 3;</code>
      */
@@ -187,14 +187,14 @@ public final class DOTAS2BaseGcMessages {
     /**
      * <code>optional bytes value_bytes = 3;</code>
      */
-    public com.google.protobuf.ByteString getValueBytes() {
+    public skadistats.clarity.protobuf.ByteString getValueBytes() {
       return valueBytes_;
     }
 
     private void initFields() {
       defIndex_ = 0;
       value_ = 0;
-      valueBytes_ = com.google.protobuf.ByteString.EMPTY;
+      valueBytes_ = skadistats.clarity.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -206,7 +206,7 @@ public final class DOTAS2BaseGcMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -228,15 +228,15 @@ public final class DOTAS2BaseGcMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, defIndex_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, value_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(3, valueBytes_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -252,24 +252,24 @@ public final class DOTAS2BaseGcMessages {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(java.io.InputStream input)
@@ -278,7 +278,7 @@ public final class DOTAS2BaseGcMessages {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -288,18 +288,18 @@ public final class DOTAS2BaseGcMessages {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -313,7 +313,7 @@ public final class DOTAS2BaseGcMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -321,15 +321,15 @@ public final class DOTAS2BaseGcMessages {
      * Protobuf type {@code CSOEconItemAttribute}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSOEconItemAttribute)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttributeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemAttribute_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemAttribute_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -342,12 +342,12 @@ public final class DOTAS2BaseGcMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -360,7 +360,7 @@ public final class DOTAS2BaseGcMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         value_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        valueBytes_ = com.google.protobuf.ByteString.EMPTY;
+        valueBytes_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -369,7 +369,7 @@ public final class DOTAS2BaseGcMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemAttribute_descriptor;
       }
@@ -407,7 +407,7 @@ public final class DOTAS2BaseGcMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute)other);
         } else {
@@ -436,13 +436,13 @@ public final class DOTAS2BaseGcMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -518,7 +518,7 @@ public final class DOTAS2BaseGcMessages {
         return this;
       }
 
-      private com.google.protobuf.ByteString valueBytes_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString valueBytes_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes value_bytes = 3;</code>
        */
@@ -528,13 +528,13 @@ public final class DOTAS2BaseGcMessages {
       /**
        * <code>optional bytes value_bytes = 3;</code>
        */
-      public com.google.protobuf.ByteString getValueBytes() {
+      public skadistats.clarity.protobuf.ByteString getValueBytes() {
         return valueBytes_;
       }
       /**
        * <code>optional bytes value_bytes = 3;</code>
        */
-      public Builder setValueBytes(com.google.protobuf.ByteString value) {
+      public Builder setValueBytes(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -566,7 +566,7 @@ public final class DOTAS2BaseGcMessages {
 
   public interface CSOEconItemEquippedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSOEconItemEquipped)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 new_class = 1;</code>
@@ -590,15 +590,15 @@ public final class DOTAS2BaseGcMessages {
    * Protobuf type {@code CSOEconItemEquipped}
    */
   public static final class CSOEconItemEquipped extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSOEconItemEquipped)
       CSOEconItemEquippedOrBuilder {
     // Use CSOEconItemEquipped.newBuilder() to construct.
-    private CSOEconItemEquipped(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSOEconItemEquipped(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSOEconItemEquipped(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSOEconItemEquipped(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSOEconItemEquipped defaultInstance;
     public static CSOEconItemEquipped getDefaultInstance() {
@@ -609,20 +609,20 @@ public final class DOTAS2BaseGcMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSOEconItemEquipped(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -650,40 +650,40 @@ public final class DOTAS2BaseGcMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemEquipped_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemEquipped_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSOEconItemEquipped> PARSER =
-        new com.google.protobuf.AbstractParser<CSOEconItemEquipped>() {
+    public static skadistats.clarity.protobuf.Parser<CSOEconItemEquipped> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSOEconItemEquipped>() {
       public CSOEconItemEquipped parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSOEconItemEquipped(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSOEconItemEquipped> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSOEconItemEquipped> getParserForType() {
       return PARSER;
     }
 
@@ -732,7 +732,7 @@ public final class DOTAS2BaseGcMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -751,11 +751,11 @@ public final class DOTAS2BaseGcMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, newClass_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, newSlot_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -771,24 +771,24 @@ public final class DOTAS2BaseGcMessages {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(java.io.InputStream input)
@@ -797,7 +797,7 @@ public final class DOTAS2BaseGcMessages {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -807,18 +807,18 @@ public final class DOTAS2BaseGcMessages {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -832,7 +832,7 @@ public final class DOTAS2BaseGcMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -840,15 +840,15 @@ public final class DOTAS2BaseGcMessages {
      * Protobuf type {@code CSOEconItemEquipped}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSOEconItemEquipped)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquippedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemEquipped_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemEquipped_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -861,12 +861,12 @@ public final class DOTAS2BaseGcMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -886,7 +886,7 @@ public final class DOTAS2BaseGcMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItemEquipped_descriptor;
       }
@@ -920,7 +920,7 @@ public final class DOTAS2BaseGcMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped)other);
         } else {
@@ -946,13 +946,13 @@ public final class DOTAS2BaseGcMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -1041,7 +1041,7 @@ public final class DOTAS2BaseGcMessages {
 
   public interface CSOEconItemOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CSOEconItem)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint64 id = 1;</code>
@@ -1216,15 +1216,15 @@ public final class DOTAS2BaseGcMessages {
    * Protobuf type {@code CSOEconItem}
    */
   public static final class CSOEconItem extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CSOEconItem)
       CSOEconItemOrBuilder {
     // Use CSOEconItem.newBuilder() to construct.
-    private CSOEconItem(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CSOEconItem(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CSOEconItem(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CSOEconItem(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CSOEconItem defaultInstance;
     public static CSOEconItem getDefaultInstance() {
@@ -1235,20 +1235,20 @@ public final class DOTAS2BaseGcMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CSOEconItem(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -1355,10 +1355,10 @@ public final class DOTAS2BaseGcMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
@@ -1371,30 +1371,30 @@ public final class DOTAS2BaseGcMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItem_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItem_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem.class, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CSOEconItem> PARSER =
-        new com.google.protobuf.AbstractParser<CSOEconItem>() {
+    public static skadistats.clarity.protobuf.Parser<CSOEconItem> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CSOEconItem>() {
       public CSOEconItem parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CSOEconItem(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CSOEconItem> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CSOEconItem> getParserForType() {
       return PARSER;
     }
 
@@ -1697,7 +1697,7 @@ public final class DOTAS2BaseGcMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1755,63 +1755,63 @@ public final class DOTAS2BaseGcMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, accountId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, inventory_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, defIndex_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, quantity_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(6, level_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(7, quality_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(8, flags_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(9, origin_);
       }
       for (int i = 0; i < attribute_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(12, attribute_.get(i));
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(13, interiorItem_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(14, inUse_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(15, style_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(16, originalId_);
       }
       for (int i = 0; i < equippedState_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(18, equippedState_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
@@ -1827,24 +1827,24 @@ public final class DOTAS2BaseGcMessages {
     }
 
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(java.io.InputStream input)
@@ -1853,7 +1853,7 @@ public final class DOTAS2BaseGcMessages {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1863,18 +1863,18 @@ public final class DOTAS2BaseGcMessages {
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1888,7 +1888,7 @@ public final class DOTAS2BaseGcMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1896,15 +1896,15 @@ public final class DOTAS2BaseGcMessages {
      * Protobuf type {@code CSOEconItem}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CSOEconItem)
         skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItem_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItem_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1917,12 +1917,12 @@ public final class DOTAS2BaseGcMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getAttributeFieldBuilder();
           getInteriorItemFieldBuilder();
           getEquippedStateFieldBuilder();
@@ -1983,7 +1983,7 @@ public final class DOTAS2BaseGcMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.internal_static_CSOEconItem_descriptor;
       }
@@ -2083,7 +2083,7 @@ public final class DOTAS2BaseGcMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem) {
           return mergeFrom((skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem)other);
         } else {
@@ -2140,7 +2140,7 @@ public final class DOTAS2BaseGcMessages {
               attribute_ = other.attribute_;
               bitField0_ = (bitField0_ & ~0x00000200);
               attributeBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getAttributeFieldBuilder() : null;
             } else {
               attributeBuilder_.addAllMessages(other.attribute_);
@@ -2178,7 +2178,7 @@ public final class DOTAS2BaseGcMessages {
               equippedState_ = other.equippedState_;
               bitField0_ = (bitField0_ & ~0x00004000);
               equippedStateBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                    getEquippedStateFieldBuilder() : null;
             } else {
               equippedStateBuilder_.addAllMessages(other.equippedState_);
@@ -2194,13 +2194,13 @@ public final class DOTAS2BaseGcMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2509,7 +2509,7 @@ public final class DOTAS2BaseGcMessages {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttributeOrBuilder> attributeBuilder_;
 
       /**
@@ -2641,7 +2641,7 @@ public final class DOTAS2BaseGcMessages {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute> values) {
         if (attributeBuilder_ == null) {
           ensureAttributeIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, attribute_);
           onChanged();
         } else {
@@ -2725,11 +2725,11 @@ public final class DOTAS2BaseGcMessages {
            getAttributeBuilderList() {
         return getAttributeFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttributeOrBuilder> 
           getAttributeFieldBuilder() {
         if (attributeBuilder_ == null) {
-          attributeBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          attributeBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttribute.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemAttributeOrBuilder>(
                   attribute_,
                   ((bitField0_ & 0x00000200) == 0x00000200),
@@ -2741,7 +2741,7 @@ public final class DOTAS2BaseGcMessages {
       }
 
       private skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem interiorItem_ = skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemOrBuilder> interiorItemBuilder_;
       /**
        * <code>optional .CSOEconItem interior_item = 13;</code>
@@ -2842,11 +2842,11 @@ public final class DOTAS2BaseGcMessages {
       /**
        * <code>optional .CSOEconItem interior_item = 13;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemOrBuilder> 
           getInteriorItemFieldBuilder() {
         if (interiorItemBuilder_ == null) {
-          interiorItemBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          interiorItemBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItem.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemOrBuilder>(
                   getInteriorItem(),
                   getParentForChildren(),
@@ -2961,7 +2961,7 @@ public final class DOTAS2BaseGcMessages {
          }
       }
 
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquippedOrBuilder> equippedStateBuilder_;
 
       /**
@@ -3093,7 +3093,7 @@ public final class DOTAS2BaseGcMessages {
           java.lang.Iterable<? extends skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped> values) {
         if (equippedStateBuilder_ == null) {
           ensureEquippedStateIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
               values, equippedState_);
           onChanged();
         } else {
@@ -3177,11 +3177,11 @@ public final class DOTAS2BaseGcMessages {
            getEquippedStateBuilderList() {
         return getEquippedStateFieldBuilder().getBuilderList();
       }
-      private com.google.protobuf.RepeatedFieldBuilder<
+      private skadistats.clarity.protobuf.RepeatedFieldBuilder<
           skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquippedOrBuilder> 
           getEquippedStateFieldBuilder() {
         if (equippedStateBuilder_ == null) {
-          equippedStateBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+          equippedStateBuilder_ = new skadistats.clarity.protobuf.RepeatedFieldBuilder<
               skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquipped.Builder, skadistats.clarity.wire.dota.s2.proto.DOTAS2BaseGcMessages.CSOEconItemEquippedOrBuilder>(
                   equippedState_,
                   ((bitField0_ & 0x00004000) == 0x00004000),
@@ -3203,27 +3203,27 @@ public final class DOTAS2BaseGcMessages {
     // @@protoc_insertion_point(class_scope:CSOEconItem)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSOEconItemAttribute_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSOEconItemAttribute_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSOEconItemEquipped_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSOEconItemEquipped_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CSOEconItem_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CSOEconItem_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -3243,34 +3243,34 @@ public final class DOTAS2BaseGcMessages {
       "temEquippedB=\n%skadistats.clarity.wire.d" +
       "ota.s2.protoB\024DOTAS2BaseGcMessages"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
     internal_static_CSOEconItemAttribute_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CSOEconItemAttribute_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSOEconItemAttribute_descriptor,
         new java.lang.String[] { "DefIndex", "Value", "ValueBytes", });
     internal_static_CSOEconItemEquipped_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_CSOEconItemEquipped_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSOEconItemEquipped_descriptor,
         new java.lang.String[] { "NewClass", "NewSlot", });
     internal_static_CSOEconItem_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CSOEconItem_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CSOEconItem_descriptor,
         new java.lang.String[] { "Id", "AccountId", "Inventory", "DefIndex", "Quantity", "Level", "Quality", "Flags", "Origin", "Attribute", "InteriorItem", "InUse", "Style", "OriginalId", "EquippedState", });
   }

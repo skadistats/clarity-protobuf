@@ -6,13 +6,13 @@ package skadistats.clarity.wire.deadlock.proto;
 public final class CitadelUserMessages {
   private CitadelUserMessages() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      skadistats.clarity.protobuf.ExtensionRegistry registry) {
   }
   /**
    * Protobuf enum {@code ChatMsgPingMarkerInfo}
    */
   public enum ChatMsgPingMarkerInfo
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>k_EPingMarkerInfo_ShowMarkerAndSound = 0;</code>
      */
@@ -79,27 +79,27 @@ public final class CitadelUserMessages {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ChatMsgPingMarkerInfo>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ChatMsgPingMarkerInfo>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ChatMsgPingMarkerInfo>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ChatMsgPingMarkerInfo>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ChatMsgPingMarkerInfo>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<ChatMsgPingMarkerInfo>() {
             public ChatMsgPingMarkerInfo findValueByNumber(int number) {
               return ChatMsgPingMarkerInfo.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(0);
     }
@@ -107,7 +107,7 @@ public final class CitadelUserMessages {
     private static final ChatMsgPingMarkerInfo[] VALUES = values();
 
     public static ChatMsgPingMarkerInfo valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -130,7 +130,7 @@ public final class CitadelUserMessages {
    * Protobuf enum {@code ECitadelChatMessage}
    */
   public enum ECitadelChatMessage
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>CITADEL_CHAT_MESSAGE_UNPAUSE_COUNTDOWN = 1;</code>
      */
@@ -260,27 +260,27 @@ public final class CitadelUserMessages {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<ECitadelChatMessage>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<ECitadelChatMessage>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<ECitadelChatMessage>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<ECitadelChatMessage>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<ECitadelChatMessage>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<ECitadelChatMessage>() {
             public ECitadelChatMessage findValueByNumber(int number) {
               return ECitadelChatMessage.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(1);
     }
@@ -288,7 +288,7 @@ public final class CitadelUserMessages {
     private static final ECitadelChatMessage[] VALUES = values();
 
     public static ECitadelChatMessage valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -311,7 +311,7 @@ public final class CitadelUserMessages {
    * Protobuf enum {@code PostProcessingGameStates}
    */
   public enum PostProcessingGameStates
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements skadistats.clarity.protobuf.ProtocolMessageEnum {
     /**
      * <code>PostProcState_Killed = 0;</code>
      */
@@ -378,27 +378,27 @@ public final class CitadelUserMessages {
       }
     }
 
-    public static com.google.protobuf.Internal.EnumLiteMap<PostProcessingGameStates>
+    public static skadistats.clarity.protobuf.Internal.EnumLiteMap<PostProcessingGameStates>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<PostProcessingGameStates>
+    private static skadistats.clarity.protobuf.Internal.EnumLiteMap<PostProcessingGameStates>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PostProcessingGameStates>() {
+          new skadistats.clarity.protobuf.Internal.EnumLiteMap<PostProcessingGameStates>() {
             public PostProcessingGameStates findValueByNumber(int number) {
               return PostProcessingGameStates.valueOf(number);
             }
           };
 
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final skadistats.clarity.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.getDescriptor().getEnumTypes().get(2);
     }
@@ -406,7 +406,7 @@ public final class CitadelUserMessages {
     private static final PostProcessingGameStates[] VALUES = values();
 
     public static PostProcessingGameStates valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        skadistats.clarity.protobuf.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -427,7 +427,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMessage_DamageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMessage_Damage)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 damage = 1;</code>
@@ -702,15 +702,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMessage_Damage}
    */
   public static final class CCitadelUserMessage_Damage extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMessage_Damage)
       CCitadelUserMessage_DamageOrBuilder {
     // Use CCitadelUserMessage_Damage.newBuilder() to construct.
-    private CCitadelUserMessage_Damage(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMessage_Damage(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMessage_Damage(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMessage_Damage(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMessage_Damage defaultInstance;
     public static CCitadelUserMessage_Damage getDefaultInstance() {
@@ -721,20 +721,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMessage_Damage(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -913,40 +913,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_Damage_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_Damage_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMessage_Damage> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMessage_Damage>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMessage_Damage> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMessage_Damage>() {
       public CCitadelUserMessage_Damage parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMessage_Damage(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMessage_Damage> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMessage_Damage> getParserForType() {
       return PARSER;
     }
 
@@ -1439,7 +1439,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1539,119 +1539,119 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, damage_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, preDamageDeprecated_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, type_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, citadelType_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(5, origin_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(6, entindexVictim_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, entindexInflictor_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(8, entindexAttacker_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(9, entindexAbility_);
       }
       if (((bitField0_ & 0x00000200) == 0x00000200)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(10, damageAbsorbedDeprecated_);
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(11, victimHealthMax_);
       }
       if (((bitField0_ & 0x00000800) == 0x00000800)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(12, victimHealthNew_);
       }
       if (((bitField0_ & 0x00001000) == 0x00001000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt64Size(13, flags_);
       }
       if (((bitField0_ & 0x00002000) == 0x00002000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(14, abilityId_);
       }
       if (((bitField0_ & 0x00004000) == 0x00004000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(15, attackerClass_);
       }
       if (((bitField0_ & 0x00008000) == 0x00008000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(16, victimClass_);
       }
       if (((bitField0_ & 0x00010000) == 0x00010000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(17, victimShieldMax_);
       }
       if (((bitField0_ & 0x00020000) == 0x00020000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(18, victimShieldNew_);
       }
       if (((bitField0_ & 0x00040000) == 0x00040000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(19, hits_);
       }
       if (((bitField0_ & 0x00080000) == 0x00080000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(20, healthLost_);
       }
       if (((bitField0_ & 0x00100000) == 0x00100000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(21, hitgroupId_);
       }
       if (((bitField0_ & 0x00200000) == 0x00200000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(22, entindexAttackingObject_);
       }
       if (((bitField0_ & 0x00400000) == 0x00400000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(23, damageDirection_);
       }
       if (((bitField0_ & 0x00800000) == 0x00800000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(24, isSecondaryStat_);
       }
       if (((bitField0_ & 0x01000000) == 0x01000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(25, effectiveness_);
       }
       if (((bitField0_ & 0x02000000) == 0x02000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(26, critDamage_);
       }
       if (((bitField0_ & 0x04000000) == 0x04000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(27, preDamage_);
       }
       if (((bitField0_ & 0x08000000) == 0x08000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(28, damageAbsorbed_);
       }
       if (((bitField0_ & 0x10000000) == 0x10000000)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(29, serverTick_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1667,24 +1667,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(java.io.InputStream input)
@@ -1693,7 +1693,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1703,18 +1703,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -1728,7 +1728,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1736,15 +1736,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMessage_Damage}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMessage_Damage)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_DamageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_Damage_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_Damage_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -1757,12 +1757,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getOriginFieldBuilder();
           getDamageDirectionFieldBuilder();
         }
@@ -1846,7 +1846,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_Damage_descriptor;
       }
@@ -1996,7 +1996,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage)other);
         } else {
@@ -2103,13 +2103,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_Damage) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -2250,7 +2250,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector origin_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> originBuilder_;
       /**
        * <code>optional .CMsgVector origin = 5;</code>
@@ -2351,11 +2351,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector origin = 5;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
-          originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          originBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getOrigin(),
                   getParentForChildren(),
@@ -2910,7 +2910,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector damageDirection_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> damageDirectionBuilder_;
       /**
        * <code>optional .CMsgVector damage_direction = 23;</code>
@@ -3011,11 +3011,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector damage_direction = 23;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getDamageDirectionFieldBuilder() {
         if (damageDirectionBuilder_ == null) {
-          damageDirectionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          damageDirectionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getDamageDirection(),
                   getParentForChildren(),
@@ -3230,7 +3230,7 @@ public final class CitadelUserMessages {
 
   public interface PingCommonDataOrBuilder extends
       // @@protoc_insertion_point(interface_extends:PingCommonData)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 ping_message_id = 1;</code>
@@ -3292,7 +3292,7 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string response_chosen = 6;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getResponseChosenBytes();
 
     /**
@@ -3308,15 +3308,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code PingCommonData}
    */
   public static final class PingCommonData extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:PingCommonData)
       PingCommonDataOrBuilder {
     // Use PingCommonData.newBuilder() to construct.
-    private PingCommonData(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private PingCommonData(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private PingCommonData(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private PingCommonData(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final PingCommonData defaultInstance;
     public static PingCommonData getDefaultInstance() {
@@ -3327,20 +3327,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private PingCommonData(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -3390,7 +3390,7 @@ public final class CitadelUserMessages {
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
               responseChosen_ = bs;
               break;
@@ -3402,40 +3402,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_PingCommonData_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_PingCommonData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<PingCommonData> PARSER =
-        new com.google.protobuf.AbstractParser<PingCommonData>() {
+    public static skadistats.clarity.protobuf.Parser<PingCommonData> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<PingCommonData>() {
       public PingCommonData parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new PingCommonData(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<PingCommonData> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<PingCommonData> getParserForType() {
       return PARSER;
     }
 
@@ -3537,8 +3537,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           responseChosen_ = s;
@@ -3549,17 +3549,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string response_chosen = 6;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getResponseChosenBytes() {
       java.lang.Object ref = responseChosen_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         responseChosen_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -3597,7 +3597,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3631,31 +3631,31 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, pingMessageId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(2, pingLocation_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, entityIndex_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, senderPlayerSlot_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(5, speechConcept_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(6, getResponseChosenBytes());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(7, cooldownTime_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3671,24 +3671,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(java.io.InputStream input)
@@ -3697,7 +3697,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3707,18 +3707,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -3732,7 +3732,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3740,15 +3740,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code PingCommonData}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:PingCommonData)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_PingCommonData_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_PingCommonData_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -3761,12 +3761,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPingLocationFieldBuilder();
         }
       }
@@ -3801,7 +3801,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_PingCommonData_descriptor;
       }
@@ -3859,7 +3859,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData)other);
         } else {
@@ -3902,13 +3902,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -3953,7 +3953,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector pingLocation_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> pingLocationBuilder_;
       /**
        * <code>optional .CMsgVector ping_location = 2;</code>
@@ -4054,11 +4054,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector ping_location = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getPingLocationFieldBuilder() {
         if (pingLocationBuilder_ == null) {
-          pingLocationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          pingLocationBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getPingLocation(),
                   getParentForChildren(),
@@ -4177,8 +4177,8 @@ public final class CitadelUserMessages {
       public java.lang.String getResponseChosen() {
         java.lang.Object ref = responseChosen_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             responseChosen_ = s;
@@ -4191,17 +4191,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string response_chosen = 6;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getResponseChosenBytes() {
         java.lang.Object ref = responseChosen_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           responseChosen_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -4230,7 +4230,7 @@ public final class CitadelUserMessages {
        * <code>optional string response_chosen = 6;</code>
        */
       public Builder setResponseChosenBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4285,7 +4285,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_MapPingOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_MapPing)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>required .PingCommonData ping_data = 1;</code>
@@ -4356,7 +4356,7 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string pinged_hero_name = 7;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getPingedHeroNameBytes();
 
     /**
@@ -4372,15 +4372,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_MapPing}
    */
   public static final class CCitadelUserMsg_MapPing extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_MapPing)
       CCitadelUserMsg_MapPingOrBuilder {
     // Use CCitadelUserMsg_MapPing.newBuilder() to construct.
-    private CCitadelUserMsg_MapPing(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_MapPing(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_MapPing(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_MapPing(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_MapPing defaultInstance;
     public static CCitadelUserMsg_MapPing getDefaultInstance() {
@@ -4391,20 +4391,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_MapPing(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -4465,7 +4465,7 @@ public final class CitadelUserMessages {
               break;
             }
             case 58: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000040;
               pingedHeroName_ = bs;
               break;
@@ -4477,40 +4477,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MapPing_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MapPing_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_MapPing> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_MapPing>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_MapPing> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_MapPing>() {
       public CCitadelUserMsg_MapPing parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_MapPing(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_MapPing> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_MapPing> getParserForType() {
       return PARSER;
     }
 
@@ -4627,8 +4627,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           pingedHeroName_ = s;
@@ -4639,17 +4639,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string pinged_hero_name = 7;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getPingedHeroNameBytes() {
       java.lang.Object ref = pingedHeroName_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         pingedHeroName_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -4692,7 +4692,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4729,35 +4729,35 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, pingData_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, eventType_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(3, pingMarkerAndSoundInfo_.getNumber());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(4, pingedEnemyEntity_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, pingedEntityClass_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(6, isMinimapPing_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(7, getPingedHeroNameBytes());
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(8, isBlindPing_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -4773,24 +4773,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(java.io.InputStream input)
@@ -4799,7 +4799,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4809,18 +4809,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -4834,7 +4834,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4842,15 +4842,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_MapPing}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_MapPing)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPingOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MapPing_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MapPing_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -4863,12 +4863,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPingDataFieldBuilder();
         }
       }
@@ -4905,7 +4905,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MapPing_descriptor;
       }
@@ -4967,7 +4967,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing)other);
         } else {
@@ -5017,13 +5017,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MapPing) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -5036,7 +5036,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData pingData_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder> pingDataBuilder_;
       /**
        * <code>required .PingCommonData ping_data = 1;</code>
@@ -5137,11 +5137,11 @@ public final class CitadelUserMessages {
       /**
        * <code>required .PingCommonData ping_data = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder> 
           getPingDataFieldBuilder() {
         if (pingDataBuilder_ == null) {
-          pingDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          pingDataBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder>(
                   getPingData(),
                   getParentForChildren(),
@@ -5327,8 +5327,8 @@ public final class CitadelUserMessages {
       public java.lang.String getPingedHeroName() {
         java.lang.Object ref = pingedHeroName_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             pingedHeroName_ = s;
@@ -5341,17 +5341,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string pinged_hero_name = 7;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getPingedHeroNameBytes() {
         java.lang.Object ref = pingedHeroName_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           pingedHeroName_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -5380,7 +5380,7 @@ public final class CitadelUserMessages {
        * <code>optional string pinged_hero_name = 7;</code>
        */
       public Builder setPingedHeroNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5435,7 +5435,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_TriggerDamageFlashOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_TriggerDamageFlash)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 entindex_flash_victim = 1 [default = -1];</code>
@@ -5508,15 +5508,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_TriggerDamageFlash}
    */
   public static final class CCitadelUserMsg_TriggerDamageFlash extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_TriggerDamageFlash)
       CCitadelUserMsg_TriggerDamageFlashOrBuilder {
     // Use CCitadelUserMsg_TriggerDamageFlash.newBuilder() to construct.
-    private CCitadelUserMsg_TriggerDamageFlash(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_TriggerDamageFlash(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_TriggerDamageFlash(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_TriggerDamageFlash(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_TriggerDamageFlash defaultInstance;
     public static CCitadelUserMsg_TriggerDamageFlash getDefaultInstance() {
@@ -5527,20 +5527,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_TriggerDamageFlash(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -5601,40 +5601,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TriggerDamageFlash_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TriggerDamageFlash_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_TriggerDamageFlash> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_TriggerDamageFlash>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_TriggerDamageFlash> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_TriggerDamageFlash>() {
       public CCitadelUserMsg_TriggerDamageFlash parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_TriggerDamageFlash(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_TriggerDamageFlash> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_TriggerDamageFlash> getParserForType() {
       return PARSER;
     }
 
@@ -5769,7 +5769,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5803,31 +5803,31 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, entindexFlashVictim_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, entindexFlashAttacker_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, entindexFlashHitgroup_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, flashValue_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, flashType_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(6, flashFlags_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(7, flashPosition_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -5843,24 +5843,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(java.io.InputStream input)
@@ -5869,7 +5869,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -5879,18 +5879,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -5904,7 +5904,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5912,15 +5912,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_TriggerDamageFlash}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_TriggerDamageFlash)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlashOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TriggerDamageFlash_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TriggerDamageFlash_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -5933,12 +5933,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getFlashPositionFieldBuilder();
         }
       }
@@ -5973,7 +5973,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TriggerDamageFlash_descriptor;
       }
@@ -6031,7 +6031,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash)other);
         } else {
@@ -6072,13 +6072,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TriggerDamageFlash) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -6283,7 +6283,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector flashPosition_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> flashPositionBuilder_;
       /**
        * <code>optional .CMsgVector flash_position = 7;</code>
@@ -6384,11 +6384,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector flash_position = 7;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getFlashPositionFieldBuilder() {
         if (flashPositionBuilder_ == null) {
-          flashPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          flashPositionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getFlashPosition(),
                   getParentForChildren(),
@@ -6411,7 +6411,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ChatWheelOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ChatWheel)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 chat_message_id = 1;</code>
@@ -6469,7 +6469,7 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string param_1 = 6;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getParam1Bytes();
 
     /**
@@ -6485,15 +6485,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ChatWheel}
    */
   public static final class CCitadelUserMsg_ChatWheel extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ChatWheel)
       CCitadelUserMsg_ChatWheelOrBuilder {
     // Use CCitadelUserMsg_ChatWheel.newBuilder() to construct.
-    private CCitadelUserMsg_ChatWheel(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ChatWheel(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ChatWheel(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ChatWheel(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ChatWheel defaultInstance;
     public static CCitadelUserMsg_ChatWheel getDefaultInstance() {
@@ -6504,20 +6504,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ChatWheel(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -6559,7 +6559,7 @@ public final class CitadelUserMessages {
               break;
             }
             case 50: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000020;
               param1_ = bs;
               break;
@@ -6577,40 +6577,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatWheel_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatWheel_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ChatWheel> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ChatWheel>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ChatWheel> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ChatWheel>() {
       public CCitadelUserMsg_ChatWheel parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ChatWheel(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ChatWheel> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ChatWheel> getParserForType() {
       return PARSER;
     }
 
@@ -6706,8 +6706,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           param1_ = s;
@@ -6718,17 +6718,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string param_1 = 6;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getParam1Bytes() {
       java.lang.Object ref = param1_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         param1_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -6766,7 +6766,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6800,31 +6800,31 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, chatMessageId_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, playerSlot_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, pawnEntindex_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, accountId_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, heroId_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(6, getParam1Bytes());
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(7, laneColor_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
@@ -6840,24 +6840,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(java.io.InputStream input)
@@ -6866,7 +6866,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -6876,18 +6876,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -6901,7 +6901,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -6909,15 +6909,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ChatWheel}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ChatWheel)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheelOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatWheel_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatWheel_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -6930,12 +6930,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -6965,7 +6965,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatWheel_descriptor;
       }
@@ -7019,7 +7019,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel)other);
         } else {
@@ -7062,13 +7062,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatWheel) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -7253,8 +7253,8 @@ public final class CitadelUserMessages {
       public java.lang.String getParam1() {
         java.lang.Object ref = param1_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             param1_ = s;
@@ -7267,17 +7267,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string param_1 = 6;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getParam1Bytes() {
         java.lang.Object ref = param1_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           param1_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -7306,7 +7306,7 @@ public final class CitadelUserMessages {
        * <code>optional string param_1 = 6;</code>
        */
       public Builder setParam1Bytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -7364,7 +7364,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ChatMsgOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ChatMsg)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 player_slot = 1 [default = -1];</code>
@@ -7386,7 +7386,7 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string text = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getTextBytes();
 
     /**
@@ -7411,15 +7411,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ChatMsg}
    */
   public static final class CCitadelUserMsg_ChatMsg extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ChatMsg)
       CCitadelUserMsg_ChatMsgOrBuilder {
     // Use CCitadelUserMsg_ChatMsg.newBuilder() to construct.
-    private CCitadelUserMsg_ChatMsg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ChatMsg(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ChatMsg(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ChatMsg(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ChatMsg defaultInstance;
     public static CCitadelUserMsg_ChatMsg getDefaultInstance() {
@@ -7430,20 +7430,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ChatMsg(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -7465,7 +7465,7 @@ public final class CitadelUserMessages {
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               text_ = bs;
               break;
@@ -7488,40 +7488,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatMsg_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ChatMsg> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ChatMsg>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ChatMsg> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ChatMsg>() {
       public CCitadelUserMsg_ChatMsg parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ChatMsg(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ChatMsg> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ChatMsg> getParserForType() {
       return PARSER;
     }
 
@@ -7557,8 +7557,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           text_ = s;
@@ -7569,17 +7569,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string text = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getTextBytes() {
       java.lang.Object ref = text_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         text_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -7629,7 +7629,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -7654,19 +7654,19 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, playerSlot_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getTextBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, allChat_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(4, laneColor_.getNumber());
       }
       size += getUnknownFields().getSerializedSize();
@@ -7682,24 +7682,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(java.io.InputStream input)
@@ -7708,7 +7708,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -7718,18 +7718,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -7743,7 +7743,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -7751,15 +7751,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ChatMsg}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ChatMsg)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsgOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatMsg_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -7772,12 +7772,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -7801,7 +7801,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatMsg_descriptor;
       }
@@ -7843,7 +7843,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg)other);
         } else {
@@ -7877,13 +7877,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatMsg) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -7940,8 +7940,8 @@ public final class CitadelUserMessages {
       public java.lang.String getText() {
         java.lang.Object ref = text_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             text_ = s;
@@ -7954,17 +7954,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string text = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getTextBytes() {
         java.lang.Object ref = text_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           text_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -7993,7 +7993,7 @@ public final class CitadelUserMessages {
        * <code>optional string text = 2;</code>
        */
       public Builder setTextBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8083,7 +8083,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_PostMatchDetailsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_PostMatchDetails)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional bytes match_details = 1;</code>
@@ -8092,21 +8092,21 @@ public final class CitadelUserMessages {
     /**
      * <code>optional bytes match_details = 1;</code>
      */
-    com.google.protobuf.ByteString getMatchDetails();
+    skadistats.clarity.protobuf.ByteString getMatchDetails();
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_PostMatchDetails}
    */
   public static final class CCitadelUserMsg_PostMatchDetails extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_PostMatchDetails)
       CCitadelUserMsg_PostMatchDetailsOrBuilder {
     // Use CCitadelUserMsg_PostMatchDetails.newBuilder() to construct.
-    private CCitadelUserMsg_PostMatchDetails(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_PostMatchDetails(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_PostMatchDetails(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_PostMatchDetails(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_PostMatchDetails defaultInstance;
     public static CCitadelUserMsg_PostMatchDetails getDefaultInstance() {
@@ -8117,20 +8117,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_PostMatchDetails(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -8153,46 +8153,46 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostMatchDetails_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostMatchDetails_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_PostMatchDetails> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_PostMatchDetails>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PostMatchDetails> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_PostMatchDetails>() {
       public CCitadelUserMsg_PostMatchDetails parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_PostMatchDetails(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_PostMatchDetails> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PostMatchDetails> getParserForType() {
       return PARSER;
     }
 
     private int bitField0_;
     public static final int MATCH_DETAILS_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString matchDetails_;
+    private skadistats.clarity.protobuf.ByteString matchDetails_;
     /**
      * <code>optional bytes match_details = 1;</code>
      */
@@ -8202,12 +8202,12 @@ public final class CitadelUserMessages {
     /**
      * <code>optional bytes match_details = 1;</code>
      */
-    public com.google.protobuf.ByteString getMatchDetails() {
+    public skadistats.clarity.protobuf.ByteString getMatchDetails() {
       return matchDetails_;
     }
 
     private void initFields() {
-      matchDetails_ = com.google.protobuf.ByteString.EMPTY;
+      matchDetails_ = skadistats.clarity.protobuf.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -8219,7 +8219,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8235,7 +8235,7 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, matchDetails_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -8251,24 +8251,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(java.io.InputStream input)
@@ -8277,7 +8277,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8287,18 +8287,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8312,7 +8312,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8320,15 +8320,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_PostMatchDetails}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_PostMatchDetails)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetailsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostMatchDetails_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostMatchDetails_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -8341,12 +8341,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -8355,7 +8355,7 @@ public final class CitadelUserMessages {
 
       public Builder clear() {
         super.clear();
-        matchDetails_ = com.google.protobuf.ByteString.EMPTY;
+        matchDetails_ = skadistats.clarity.protobuf.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
@@ -8364,7 +8364,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostMatchDetails_descriptor;
       }
@@ -8394,7 +8394,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails)other);
         } else {
@@ -8417,13 +8417,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostMatchDetails) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -8435,7 +8435,7 @@ public final class CitadelUserMessages {
       }
       private int bitField0_;
 
-      private com.google.protobuf.ByteString matchDetails_ = com.google.protobuf.ByteString.EMPTY;
+      private skadistats.clarity.protobuf.ByteString matchDetails_ = skadistats.clarity.protobuf.ByteString.EMPTY;
       /**
        * <code>optional bytes match_details = 1;</code>
        */
@@ -8445,13 +8445,13 @@ public final class CitadelUserMessages {
       /**
        * <code>optional bytes match_details = 1;</code>
        */
-      public com.google.protobuf.ByteString getMatchDetails() {
+      public skadistats.clarity.protobuf.ByteString getMatchDetails() {
         return matchDetails_;
       }
       /**
        * <code>optional bytes match_details = 1;</code>
        */
-      public Builder setMatchDetails(com.google.protobuf.ByteString value) {
+      public Builder setMatchDetails(skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -8483,7 +8483,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ChatEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ChatEvent)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .ECitadelChatMessage type = 1 [default = CITADEL_CHAT_MESSAGE_UNPAUSE_COUNTDOWN];</code>
@@ -8524,15 +8524,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ChatEvent}
    */
   public static final class CCitadelUserMsg_ChatEvent extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ChatEvent)
       CCitadelUserMsg_ChatEventOrBuilder {
     // Use CCitadelUserMsg_ChatEvent.newBuilder() to construct.
-    private CCitadelUserMsg_ChatEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ChatEvent(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ChatEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ChatEvent(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ChatEvent defaultInstance;
     public static CCitadelUserMsg_ChatEvent getDefaultInstance() {
@@ -8543,20 +8543,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ChatEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -8627,10 +8627,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -8643,30 +8643,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatEvent_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ChatEvent> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ChatEvent>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ChatEvent> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ChatEvent>() {
       public CCitadelUserMsg_ChatEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ChatEvent(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ChatEvent> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ChatEvent> getParserForType() {
       return PARSER;
     }
 
@@ -8745,7 +8745,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -8767,13 +8767,13 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(1, type_.getNumber());
       }
       {
         int dataSize = 0;
         for (int i = 0; i < values_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(values_.get(i));
         }
         size += dataSize;
@@ -8782,7 +8782,7 @@ public final class CitadelUserMessages {
       {
         int dataSize = 0;
         for (int i = 0; i < playerSlots_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(playerSlots_.get(i));
         }
         size += dataSize;
@@ -8801,24 +8801,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(java.io.InputStream input)
@@ -8827,7 +8827,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8837,18 +8837,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -8862,7 +8862,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -8870,15 +8870,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ChatEvent}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ChatEvent)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatEvent_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -8891,12 +8891,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -8918,7 +8918,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ChatEvent_descriptor;
       }
@@ -8958,7 +8958,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent)other);
         } else {
@@ -9001,13 +9001,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ChatEvent) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -9105,7 +9105,7 @@ public final class CitadelUserMessages {
       public Builder addAllValues(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureValuesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, values_);
         onChanged();
         return this;
@@ -9171,7 +9171,7 @@ public final class CitadelUserMessages {
       public Builder addAllPlayerSlots(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePlayerSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playerSlots_);
         onChanged();
         return this;
@@ -9199,7 +9199,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_HeroKilledOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_HeroKilled)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 entindex_victim = 1 [default = -1];</code>
@@ -9272,15 +9272,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_HeroKilled}
    */
   public static final class CCitadelUserMsg_HeroKilled extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_HeroKilled)
       CCitadelUserMsg_HeroKilledOrBuilder {
     // Use CCitadelUserMsg_HeroKilled.newBuilder() to construct.
-    private CCitadelUserMsg_HeroKilled(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_HeroKilled(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_HeroKilled(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_HeroKilled(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_HeroKilled defaultInstance;
     public static CCitadelUserMsg_HeroKilled getDefaultInstance() {
@@ -9291,20 +9291,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_HeroKilled(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -9373,10 +9373,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
@@ -9386,30 +9386,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HeroKilled_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HeroKilled_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_HeroKilled> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_HeroKilled>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_HeroKilled> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_HeroKilled>() {
       public CCitadelUserMsg_HeroKilled parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_HeroKilled(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_HeroKilled> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_HeroKilled> getParserForType() {
       return PARSER;
     }
 
@@ -9545,7 +9545,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -9579,36 +9579,36 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, entindexVictim_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, entindexInflictor_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, entindexAttacker_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < entindexAssisters_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(entindexAssisters_.get(i));
         }
         size += dataSize;
         size += 1 * getEntindexAssistersList().size();
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(5, entindexScorer_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(6, respawnReason_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, victimTeamNumber_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -9624,24 +9624,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(java.io.InputStream input)
@@ -9650,7 +9650,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -9660,18 +9660,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -9685,7 +9685,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -9693,15 +9693,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_HeroKilled}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_HeroKilled)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilledOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HeroKilled_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HeroKilled_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -9714,12 +9714,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -9749,7 +9749,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HeroKilled_descriptor;
       }
@@ -9804,7 +9804,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled)other);
         } else {
@@ -9852,13 +9852,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HeroKilled) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -10017,7 +10017,7 @@ public final class CitadelUserMessages {
       public Builder addAllEntindexAssisters(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureEntindexAssistersIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, entindexAssisters_);
         onChanged();
         return this;
@@ -10141,7 +10141,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelEntityMsg_BreakablePropSpawnDebrisOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelEntityMsg_BreakablePropSpawnDebris)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .CEntityMsg entity_msg = 1;</code>
@@ -10195,15 +10195,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelEntityMsg_BreakablePropSpawnDebris}
    */
   public static final class CCitadelEntityMsg_BreakablePropSpawnDebris extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelEntityMsg_BreakablePropSpawnDebris)
       CCitadelEntityMsg_BreakablePropSpawnDebrisOrBuilder {
     // Use CCitadelEntityMsg_BreakablePropSpawnDebris.newBuilder() to construct.
-    private CCitadelEntityMsg_BreakablePropSpawnDebris(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelEntityMsg_BreakablePropSpawnDebris(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelEntityMsg_BreakablePropSpawnDebris(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelEntityMsg_BreakablePropSpawnDebris(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelEntityMsg_BreakablePropSpawnDebris defaultInstance;
     public static CCitadelEntityMsg_BreakablePropSpawnDebris getDefaultInstance() {
@@ -10214,20 +10214,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelEntityMsg_BreakablePropSpawnDebris(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -10289,40 +10289,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelEntityMsg_BreakablePropSpawnDebris> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelEntityMsg_BreakablePropSpawnDebris>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelEntityMsg_BreakablePropSpawnDebris> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelEntityMsg_BreakablePropSpawnDebris>() {
       public CCitadelEntityMsg_BreakablePropSpawnDebris parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelEntityMsg_BreakablePropSpawnDebris(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelEntityMsg_BreakablePropSpawnDebris> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelEntityMsg_BreakablePropSpawnDebris> getParserForType() {
       return PARSER;
     }
 
@@ -10421,7 +10421,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -10446,19 +10446,19 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, entityMsg_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(2, damagePos_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(3, damage_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(4, damageForce_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -10474,24 +10474,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(java.io.InputStream input)
@@ -10500,7 +10500,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -10510,18 +10510,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -10535,7 +10535,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -10543,15 +10543,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelEntityMsg_BreakablePropSpawnDebris}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelEntityMsg_BreakablePropSpawnDebris)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebrisOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -10564,12 +10564,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEntityMsgFieldBuilder();
           getDamagePosFieldBuilder();
           getDamageForceFieldBuilder();
@@ -10608,7 +10608,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor;
       }
@@ -10662,7 +10662,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris)other);
         } else {
@@ -10694,13 +10694,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelEntityMsg_BreakablePropSpawnDebris) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -10713,7 +10713,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg entityMsg_ = skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsgOrBuilder> entityMsgBuilder_;
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
@@ -10814,11 +10814,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CEntityMsg entity_msg = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsgOrBuilder> 
           getEntityMsgFieldBuilder() {
         if (entityMsgBuilder_ == null) {
-          entityMsgBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          entityMsgBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsg.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CEntityMsgOrBuilder>(
                   getEntityMsg(),
                   getParentForChildren(),
@@ -10829,7 +10829,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector damagePos_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> damagePosBuilder_;
       /**
        * <code>optional .CMsgVector damage_pos = 2;</code>
@@ -10930,11 +10930,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector damage_pos = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getDamagePosFieldBuilder() {
         if (damagePosBuilder_ == null) {
-          damagePosBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          damagePosBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getDamagePos(),
                   getParentForChildren(),
@@ -10977,7 +10977,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector damageForce_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> damageForceBuilder_;
       /**
        * <code>optional .CMsgVector damage_force = 4;</code>
@@ -11078,11 +11078,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector damage_force = 4;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getDamageForceFieldBuilder() {
         if (damageForceBuilder_ == null) {
-          damageForceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          damageForceBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getDamageForce(),
                   getParentForChildren(),
@@ -11105,7 +11105,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_PostProcessingAnimOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_PostProcessingAnim)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 entindex_owner = 1 [default = -1];</code>
@@ -11183,15 +11183,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_PostProcessingAnim}
    */
   public static final class CCitadelUserMsg_PostProcessingAnim extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_PostProcessingAnim)
       CCitadelUserMsg_PostProcessingAnimOrBuilder {
     // Use CCitadelUserMsg_PostProcessingAnim.newBuilder() to construct.
-    private CCitadelUserMsg_PostProcessingAnim(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_PostProcessingAnim(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_PostProcessingAnim(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_PostProcessingAnim(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_PostProcessingAnim defaultInstance;
     public static CCitadelUserMsg_PostProcessingAnim getDefaultInstance() {
@@ -11202,20 +11202,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_PostProcessingAnim(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -11279,40 +11279,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostProcessingAnim_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_PostProcessingAnim> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_PostProcessingAnim>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PostProcessingAnim> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_PostProcessingAnim>() {
       public CCitadelUserMsg_PostProcessingAnim parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_PostProcessingAnim(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_PostProcessingAnim> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PostProcessingAnim> getParserForType() {
       return PARSER;
     }
 
@@ -11457,7 +11457,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -11494,35 +11494,35 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, entindexOwner_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(2, clearAllStates_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeEnumSize(3, state_.getNumber());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(4, startTime_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(5, fadeInTime_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(6, holdTime_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(7, fadeOutTime_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(8, scale_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -11538,24 +11538,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(java.io.InputStream input)
@@ -11564,7 +11564,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -11574,18 +11574,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -11599,7 +11599,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -11607,15 +11607,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_PostProcessingAnim}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_PostProcessingAnim)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnimOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostProcessingAnim_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -11628,12 +11628,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -11665,7 +11665,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor;
       }
@@ -11723,7 +11723,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim)other);
         } else {
@@ -11767,13 +11767,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PostProcessingAnim) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -12057,7 +12057,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMessage_AbilityNotifyOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMessage_AbilityNotify)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 entindex_victim = 1 [default = -1];</code>
@@ -12099,15 +12099,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMessage_AbilityNotify}
    */
   public static final class CCitadelUserMessage_AbilityNotify extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMessage_AbilityNotify)
       CCitadelUserMessage_AbilityNotifyOrBuilder {
     // Use CCitadelUserMessage_AbilityNotify.newBuilder() to construct.
-    private CCitadelUserMessage_AbilityNotify(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMessage_AbilityNotify(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMessage_AbilityNotify(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMessage_AbilityNotify(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMessage_AbilityNotify defaultInstance;
     public static CCitadelUserMessage_AbilityNotify getDefaultInstance() {
@@ -12118,20 +12118,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMessage_AbilityNotify(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -12169,40 +12169,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_AbilityNotify_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_AbilityNotify_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMessage_AbilityNotify> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMessage_AbilityNotify>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMessage_AbilityNotify> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMessage_AbilityNotify>() {
       public CCitadelUserMessage_AbilityNotify parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMessage_AbilityNotify(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMessage_AbilityNotify> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMessage_AbilityNotify> getParserForType() {
       return PARSER;
     }
 
@@ -12283,7 +12283,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12308,19 +12308,19 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, entindexVictim_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, entindexAttacker_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, abilityId_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, statusImpact_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -12336,24 +12336,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(java.io.InputStream input)
@@ -12362,7 +12362,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -12372,18 +12372,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -12397,7 +12397,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -12405,15 +12405,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMessage_AbilityNotify}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMessage_AbilityNotify)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotifyOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_AbilityNotify_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_AbilityNotify_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -12426,12 +12426,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -12455,7 +12455,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_AbilityNotify_descriptor;
       }
@@ -12497,7 +12497,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify)other);
         } else {
@@ -12529,13 +12529,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_AbilityNotify) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -12688,7 +12688,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMessage_GameOverOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMessage_GameOver)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 winning_team = 1;</code>
@@ -12712,15 +12712,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMessage_GameOver}
    */
   public static final class CCitadelUserMessage_GameOver extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMessage_GameOver)
       CCitadelUserMessage_GameOverOrBuilder {
     // Use CCitadelUserMessage_GameOver.newBuilder() to construct.
-    private CCitadelUserMessage_GameOver(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMessage_GameOver(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMessage_GameOver(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMessage_GameOver(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMessage_GameOver defaultInstance;
     public static CCitadelUserMessage_GameOver getDefaultInstance() {
@@ -12731,20 +12731,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMessage_GameOver(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -12772,40 +12772,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_GameOver_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_GameOver_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMessage_GameOver> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMessage_GameOver>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMessage_GameOver> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMessage_GameOver>() {
       public CCitadelUserMessage_GameOver parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMessage_GameOver(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMessage_GameOver> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMessage_GameOver> getParserForType() {
       return PARSER;
     }
 
@@ -12854,7 +12854,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -12873,11 +12873,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, winningTeam_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(2, justATest_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -12893,24 +12893,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(java.io.InputStream input)
@@ -12919,7 +12919,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -12929,18 +12929,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -12954,7 +12954,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -12962,15 +12962,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMessage_GameOver}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMessage_GameOver)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOverOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_GameOver_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_GameOver_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -12983,12 +12983,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -13008,7 +13008,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMessage_GameOver_descriptor;
       }
@@ -13042,7 +13042,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver)other);
         } else {
@@ -13068,13 +13068,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMessage_GameOver) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -13163,7 +13163,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ParticipantStartSoundEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ParticipantStartSoundEvent)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>required .CMsgSosStartSoundEvent event = 1;</code>
@@ -13195,15 +13195,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ParticipantStartSoundEvent}
    */
   public static final class CCitadelUserMsg_ParticipantStartSoundEvent extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ParticipantStartSoundEvent)
       CCitadelUserMsg_ParticipantStartSoundEventOrBuilder {
     // Use CCitadelUserMsg_ParticipantStartSoundEvent.newBuilder() to construct.
-    private CCitadelUserMsg_ParticipantStartSoundEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ParticipantStartSoundEvent(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ParticipantStartSoundEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ParticipantStartSoundEvent(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ParticipantStartSoundEvent defaultInstance;
     public static CCitadelUserMsg_ParticipantStartSoundEvent getDefaultInstance() {
@@ -13214,20 +13214,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ParticipantStartSoundEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -13279,10 +13279,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -13292,30 +13292,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ParticipantStartSoundEvent> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ParticipantStartSoundEvent>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantStartSoundEvent> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ParticipantStartSoundEvent>() {
       public CCitadelUserMsg_ParticipantStartSoundEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ParticipantStartSoundEvent(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ParticipantStartSoundEvent> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantStartSoundEvent> getParserForType() {
       return PARSER;
     }
 
@@ -13381,7 +13381,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -13400,13 +13400,13 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, event_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < playerSlots_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(playerSlots_.get(i));
         }
         size += dataSize;
@@ -13425,24 +13425,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(java.io.InputStream input)
@@ -13451,7 +13451,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -13461,18 +13461,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -13486,7 +13486,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -13494,15 +13494,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ParticipantStartSoundEvent}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ParticipantStartSoundEvent)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -13515,12 +13515,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEventFieldBuilder();
         }
       }
@@ -13545,7 +13545,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_descriptor;
       }
@@ -13584,7 +13584,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent)other);
         } else {
@@ -13621,13 +13621,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStartSoundEvent) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -13640,7 +13640,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent event_ = skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEventOrBuilder> eventBuilder_;
       /**
        * <code>required .CMsgSosStartSoundEvent event = 1;</code>
@@ -13741,11 +13741,11 @@ public final class CitadelUserMessages {
       /**
        * <code>required .CMsgSosStartSoundEvent event = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEventOrBuilder> 
           getEventFieldBuilder() {
         if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          eventBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEvent.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStartSoundEventOrBuilder>(
                   getEvent(),
                   getParentForChildren(),
@@ -13806,7 +13806,7 @@ public final class CitadelUserMessages {
       public Builder addAllPlayerSlots(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePlayerSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playerSlots_);
         onChanged();
         return this;
@@ -13834,7 +13834,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ParticipantStopSoundEventOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ParticipantStopSoundEvent)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>required .CMsgSosStopSoundEvent event = 1;</code>
@@ -13866,15 +13866,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ParticipantStopSoundEvent}
    */
   public static final class CCitadelUserMsg_ParticipantStopSoundEvent extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ParticipantStopSoundEvent)
       CCitadelUserMsg_ParticipantStopSoundEventOrBuilder {
     // Use CCitadelUserMsg_ParticipantStopSoundEvent.newBuilder() to construct.
-    private CCitadelUserMsg_ParticipantStopSoundEvent(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ParticipantStopSoundEvent(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ParticipantStopSoundEvent(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ParticipantStopSoundEvent(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ParticipantStopSoundEvent defaultInstance;
     public static CCitadelUserMsg_ParticipantStopSoundEvent getDefaultInstance() {
@@ -13885,20 +13885,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ParticipantStopSoundEvent(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -13950,10 +13950,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -13963,30 +13963,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEvent> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ParticipantStopSoundEvent>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEvent> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ParticipantStopSoundEvent>() {
       public CCitadelUserMsg_ParticipantStopSoundEvent parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ParticipantStopSoundEvent(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEvent> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEvent> getParserForType() {
       return PARSER;
     }
 
@@ -14052,7 +14052,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14071,13 +14071,13 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, event_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < playerSlots_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(playerSlots_.get(i));
         }
         size += dataSize;
@@ -14096,24 +14096,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(java.io.InputStream input)
@@ -14122,7 +14122,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -14132,18 +14132,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -14157,7 +14157,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -14165,15 +14165,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ParticipantStopSoundEvent}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ParticipantStopSoundEvent)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -14186,12 +14186,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEventFieldBuilder();
         }
       }
@@ -14216,7 +14216,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_descriptor;
       }
@@ -14255,7 +14255,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent)other);
         } else {
@@ -14292,13 +14292,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEvent) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -14311,7 +14311,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent event_ = skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventOrBuilder> eventBuilder_;
       /**
        * <code>required .CMsgSosStopSoundEvent event = 1;</code>
@@ -14412,11 +14412,11 @@ public final class CitadelUserMessages {
       /**
        * <code>required .CMsgSosStopSoundEvent event = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventOrBuilder> 
           getEventFieldBuilder() {
         if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          eventBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEvent.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventOrBuilder>(
                   getEvent(),
                   getParentForChildren(),
@@ -14477,7 +14477,7 @@ public final class CitadelUserMessages {
       public Builder addAllPlayerSlots(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePlayerSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playerSlots_);
         onChanged();
         return this;
@@ -14505,7 +14505,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ParticipantStopSoundEventHashOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ParticipantStopSoundEventHash)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>required .CMsgSosStopSoundEventHash event = 1;</code>
@@ -14537,15 +14537,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ParticipantStopSoundEventHash}
    */
   public static final class CCitadelUserMsg_ParticipantStopSoundEventHash extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ParticipantStopSoundEventHash)
       CCitadelUserMsg_ParticipantStopSoundEventHashOrBuilder {
     // Use CCitadelUserMsg_ParticipantStopSoundEventHash.newBuilder() to construct.
-    private CCitadelUserMsg_ParticipantStopSoundEventHash(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ParticipantStopSoundEventHash(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ParticipantStopSoundEventHash(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ParticipantStopSoundEventHash(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ParticipantStopSoundEventHash defaultInstance;
     public static CCitadelUserMsg_ParticipantStopSoundEventHash getDefaultInstance() {
@@ -14556,20 +14556,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ParticipantStopSoundEventHash(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -14621,10 +14621,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -14634,30 +14634,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEventHash> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ParticipantStopSoundEventHash>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEventHash> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ParticipantStopSoundEventHash>() {
       public CCitadelUserMsg_ParticipantStopSoundEventHash parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ParticipantStopSoundEventHash(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEventHash> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantStopSoundEventHash> getParserForType() {
       return PARSER;
     }
 
@@ -14723,7 +14723,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -14742,13 +14742,13 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, event_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < playerSlots_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(playerSlots_.get(i));
         }
         size += dataSize;
@@ -14767,24 +14767,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(java.io.InputStream input)
@@ -14793,7 +14793,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -14803,18 +14803,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -14828,7 +14828,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -14836,15 +14836,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ParticipantStopSoundEventHash}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ParticipantStopSoundEventHash)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHashOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -14857,12 +14857,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEventFieldBuilder();
         }
       }
@@ -14887,7 +14887,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_descriptor;
       }
@@ -14926,7 +14926,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash)other);
         } else {
@@ -14963,13 +14963,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantStopSoundEventHash) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -14982,7 +14982,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash event_ = skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHashOrBuilder> eventBuilder_;
       /**
        * <code>required .CMsgSosStopSoundEventHash event = 1;</code>
@@ -15083,11 +15083,11 @@ public final class CitadelUserMessages {
       /**
        * <code>required .CMsgSosStopSoundEventHash event = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHashOrBuilder> 
           getEventFieldBuilder() {
         if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          eventBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHash.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosStopSoundEventHashOrBuilder>(
                   getEvent(),
                   getParentForChildren(),
@@ -15148,7 +15148,7 @@ public final class CitadelUserMessages {
       public Builder addAllPlayerSlots(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePlayerSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playerSlots_);
         onChanged();
         return this;
@@ -15176,7 +15176,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ParticipantSetSoundEventParamsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ParticipantSetSoundEventParams)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>required .CMsgSosSetSoundEventParams event = 1;</code>
@@ -15208,15 +15208,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ParticipantSetSoundEventParams}
    */
   public static final class CCitadelUserMsg_ParticipantSetSoundEventParams extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ParticipantSetSoundEventParams)
       CCitadelUserMsg_ParticipantSetSoundEventParamsOrBuilder {
     // Use CCitadelUserMsg_ParticipantSetSoundEventParams.newBuilder() to construct.
-    private CCitadelUserMsg_ParticipantSetSoundEventParams(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ParticipantSetSoundEventParams(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ParticipantSetSoundEventParams(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ParticipantSetSoundEventParams(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ParticipantSetSoundEventParams defaultInstance;
     public static CCitadelUserMsg_ParticipantSetSoundEventParams getDefaultInstance() {
@@ -15227,20 +15227,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ParticipantSetSoundEventParams(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -15292,10 +15292,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -15305,30 +15305,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ParticipantSetSoundEventParams> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ParticipantSetSoundEventParams>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantSetSoundEventParams> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ParticipantSetSoundEventParams>() {
       public CCitadelUserMsg_ParticipantSetSoundEventParams parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ParticipantSetSoundEventParams(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ParticipantSetSoundEventParams> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantSetSoundEventParams> getParserForType() {
       return PARSER;
     }
 
@@ -15394,7 +15394,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -15413,13 +15413,13 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, event_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < playerSlots_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(playerSlots_.get(i));
         }
         size += dataSize;
@@ -15438,24 +15438,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(java.io.InputStream input)
@@ -15464,7 +15464,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -15474,18 +15474,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -15499,7 +15499,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -15507,15 +15507,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ParticipantSetSoundEventParams}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ParticipantSetSoundEventParams)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParamsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -15528,12 +15528,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEventFieldBuilder();
         }
       }
@@ -15558,7 +15558,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_descriptor;
       }
@@ -15597,7 +15597,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams)other);
         } else {
@@ -15634,13 +15634,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetSoundEventParams) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -15653,7 +15653,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams event_ = skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParamsOrBuilder> eventBuilder_;
       /**
        * <code>required .CMsgSosSetSoundEventParams event = 1;</code>
@@ -15754,11 +15754,11 @@ public final class CitadelUserMessages {
       /**
        * <code>required .CMsgSosSetSoundEventParams event = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParamsOrBuilder> 
           getEventFieldBuilder() {
         if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          eventBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParams.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetSoundEventParamsOrBuilder>(
                   getEvent(),
                   getParentForChildren(),
@@ -15819,7 +15819,7 @@ public final class CitadelUserMessages {
       public Builder addAllPlayerSlots(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePlayerSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playerSlots_);
         onChanged();
         return this;
@@ -15847,7 +15847,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ParticipantSetLibraryStackFieldsOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ParticipantSetLibraryStackFields)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>required .CMsgSosSetLibraryStackFields event = 1;</code>
@@ -15879,15 +15879,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ParticipantSetLibraryStackFields}
    */
   public static final class CCitadelUserMsg_ParticipantSetLibraryStackFields extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ParticipantSetLibraryStackFields)
       CCitadelUserMsg_ParticipantSetLibraryStackFieldsOrBuilder {
     // Use CCitadelUserMsg_ParticipantSetLibraryStackFields.newBuilder() to construct.
-    private CCitadelUserMsg_ParticipantSetLibraryStackFields(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ParticipantSetLibraryStackFields(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ParticipantSetLibraryStackFields(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ParticipantSetLibraryStackFields(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ParticipantSetLibraryStackFields defaultInstance;
     public static CCitadelUserMsg_ParticipantSetLibraryStackFields getDefaultInstance() {
@@ -15898,20 +15898,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ParticipantSetLibraryStackFields(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -15963,10 +15963,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
@@ -15976,30 +15976,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ParticipantSetLibraryStackFields> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ParticipantSetLibraryStackFields>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantSetLibraryStackFields> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ParticipantSetLibraryStackFields>() {
       public CCitadelUserMsg_ParticipantSetLibraryStackFields parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ParticipantSetLibraryStackFields(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ParticipantSetLibraryStackFields> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ParticipantSetLibraryStackFields> getParserForType() {
       return PARSER;
     }
 
@@ -16065,7 +16065,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16084,13 +16084,13 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, event_);
       }
       {
         int dataSize = 0;
         for (int i = 0; i < playerSlots_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeInt32SizeNoTag(playerSlots_.get(i));
         }
         size += dataSize;
@@ -16109,24 +16109,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(java.io.InputStream input)
@@ -16135,7 +16135,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -16145,18 +16145,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -16170,7 +16170,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -16178,15 +16178,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ParticipantSetLibraryStackFields}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ParticipantSetLibraryStackFields)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFieldsOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -16199,12 +16199,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEventFieldBuilder();
         }
       }
@@ -16229,7 +16229,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_descriptor;
       }
@@ -16268,7 +16268,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields)other);
         } else {
@@ -16305,13 +16305,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ParticipantSetLibraryStackFields) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -16324,7 +16324,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields event_ = skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFieldsOrBuilder> eventBuilder_;
       /**
        * <code>required .CMsgSosSetLibraryStackFields event = 1;</code>
@@ -16425,11 +16425,11 @@ public final class CitadelUserMessages {
       /**
        * <code>required .CMsgSosSetLibraryStackFields event = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFieldsOrBuilder> 
           getEventFieldBuilder() {
         if (eventBuilder_ == null) {
-          eventBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          eventBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFields.Builder, skadistats.clarity.wire.shared.s2.proto.S2GameEvents.CMsgSosSetLibraryStackFieldsOrBuilder>(
                   getEvent(),
                   getParentForChildren(),
@@ -16490,7 +16490,7 @@ public final class CitadelUserMessages {
       public Builder addAllPlayerSlots(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensurePlayerSlotsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, playerSlots_);
         onChanged();
         return this;
@@ -16518,7 +16518,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_BossKilledOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_BossKilled)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 objective_team = 1;</code>
@@ -16600,15 +16600,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_BossKilled}
    */
   public static final class CCitadelUserMsg_BossKilled extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_BossKilled)
       CCitadelUserMsg_BossKilledOrBuilder {
     // Use CCitadelUserMsg_BossKilled.newBuilder() to construct.
-    private CCitadelUserMsg_BossKilled(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_BossKilled(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_BossKilled(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_BossKilled(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_BossKilled defaultInstance;
     public static CCitadelUserMsg_BossKilled getDefaultInstance() {
@@ -16619,20 +16619,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_BossKilled(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -16698,40 +16698,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossKilled_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossKilled_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_BossKilled> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_BossKilled>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_BossKilled> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_BossKilled>() {
       public CCitadelUserMsg_BossKilled parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_BossKilled(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_BossKilled> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_BossKilled> getParserForType() {
       return PARSER;
     }
 
@@ -16898,7 +16898,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -16935,35 +16935,35 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, objectiveTeam_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, objectiveMaskChange_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, entityKilled_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, entityKilledClass_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(5, entityKiller_);
       }
       if (((bitField0_ & 0x00000020) == 0x00000020)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(6, gametime_);
       }
       if (((bitField0_ & 0x00000040) == 0x00000040)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(7, bossesRemaining_);
       }
       if (((bitField0_ & 0x00000080) == 0x00000080)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(8, entityPosition_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -16979,24 +16979,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(java.io.InputStream input)
@@ -17005,7 +17005,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -17015,18 +17015,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -17040,7 +17040,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -17048,15 +17048,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_BossKilled}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_BossKilled)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilledOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossKilled_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossKilled_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -17069,12 +17069,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getEntityPositionFieldBuilder();
         }
       }
@@ -17111,7 +17111,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossKilled_descriptor;
       }
@@ -17173,7 +17173,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled)other);
         } else {
@@ -17233,13 +17233,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossKilled) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -17476,7 +17476,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector entityPosition_ = skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> entityPositionBuilder_;
       /**
        * <code>optional .CMsgVector entity_position = 8;</code>
@@ -17577,11 +17577,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgVector entity_position = 8;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder> 
           getEntityPositionFieldBuilder() {
         if (entityPositionBuilder_ == null) {
-          entityPositionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          entityPositionBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVector.Builder, skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.CMsgVectorOrBuilder>(
                   getEntityPosition(),
                   getParentForChildren(),
@@ -17604,7 +17604,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_BossDamagedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_BossDamaged)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 objective_team = 1;</code>
@@ -17637,15 +17637,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_BossDamaged}
    */
   public static final class CCitadelUserMsg_BossDamaged extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_BossDamaged)
       CCitadelUserMsg_BossDamagedOrBuilder {
     // Use CCitadelUserMsg_BossDamaged.newBuilder() to construct.
-    private CCitadelUserMsg_BossDamaged(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_BossDamaged(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_BossDamaged(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_BossDamaged(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_BossDamaged defaultInstance;
     public static CCitadelUserMsg_BossDamaged getDefaultInstance() {
@@ -17656,20 +17656,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_BossDamaged(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -17702,40 +17702,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossDamaged_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossDamaged_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_BossDamaged> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_BossDamaged>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_BossDamaged> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_BossDamaged>() {
       public CCitadelUserMsg_BossDamaged parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_BossDamaged(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_BossDamaged> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_BossDamaged> getParserForType() {
       return PARSER;
     }
 
@@ -17800,7 +17800,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -17822,15 +17822,15 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, objectiveTeam_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, objectiveId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(3, entityDamaged_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -17846,24 +17846,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(java.io.InputStream input)
@@ -17872,7 +17872,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -17882,18 +17882,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -17907,7 +17907,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -17915,15 +17915,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_BossDamaged}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_BossDamaged)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamagedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossDamaged_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossDamaged_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -17936,12 +17936,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -17963,7 +17963,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BossDamaged_descriptor;
       }
@@ -18001,7 +18001,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged)other);
         } else {
@@ -18030,13 +18030,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BossDamaged) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -18157,21 +18157,21 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_MidBossSpawnedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_MidBossSpawned)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_MidBossSpawned}
    */
   public static final class CCitadelUserMsg_MidBossSpawned extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_MidBossSpawned)
       CCitadelUserMsg_MidBossSpawnedOrBuilder {
     // Use CCitadelUserMsg_MidBossSpawned.newBuilder() to construct.
-    private CCitadelUserMsg_MidBossSpawned(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_MidBossSpawned(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_MidBossSpawned(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_MidBossSpawned(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_MidBossSpawned defaultInstance;
     public static CCitadelUserMsg_MidBossSpawned getDefaultInstance() {
@@ -18182,19 +18182,19 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_MidBossSpawned(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -18212,40 +18212,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MidBossSpawned_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MidBossSpawned_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_MidBossSpawned> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_MidBossSpawned>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_MidBossSpawned> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_MidBossSpawned>() {
       public CCitadelUserMsg_MidBossSpawned parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_MidBossSpawned(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_MidBossSpawned> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_MidBossSpawned> getParserForType() {
       return PARSER;
     }
 
@@ -18261,7 +18261,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       getUnknownFields().writeTo(output);
@@ -18286,24 +18286,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(java.io.InputStream input)
@@ -18312,7 +18312,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -18322,18 +18322,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -18347,7 +18347,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -18355,15 +18355,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_MidBossSpawned}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_MidBossSpawned)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawnedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MidBossSpawned_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MidBossSpawned_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -18376,12 +18376,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -18397,7 +18397,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MidBossSpawned_descriptor;
       }
@@ -18420,7 +18420,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned)other);
         } else {
@@ -18440,13 +18440,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MidBossSpawned) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -18470,7 +18470,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_RejuvStatusOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_RejuvStatus)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 killing_team = 1;</code>
@@ -18512,15 +18512,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_RejuvStatus}
    */
   public static final class CCitadelUserMsg_RejuvStatus extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_RejuvStatus)
       CCitadelUserMsg_RejuvStatusOrBuilder {
     // Use CCitadelUserMsg_RejuvStatus.newBuilder() to construct.
-    private CCitadelUserMsg_RejuvStatus(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_RejuvStatus(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_RejuvStatus(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_RejuvStatus(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_RejuvStatus defaultInstance;
     public static CCitadelUserMsg_RejuvStatus getDefaultInstance() {
@@ -18531,20 +18531,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_RejuvStatus(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -18582,40 +18582,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_RejuvStatus_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_RejuvStatus_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_RejuvStatus> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_RejuvStatus>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_RejuvStatus> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_RejuvStatus>() {
       public CCitadelUserMsg_RejuvStatus parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_RejuvStatus(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_RejuvStatus> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_RejuvStatus> getParserForType() {
       return PARSER;
     }
 
@@ -18696,7 +18696,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -18721,19 +18721,19 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, killingTeam_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, playerPawn_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, userTeam_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, eventType_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -18749,24 +18749,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(java.io.InputStream input)
@@ -18775,7 +18775,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -18785,18 +18785,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -18810,7 +18810,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -18818,15 +18818,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_RejuvStatus}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_RejuvStatus)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatusOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_RejuvStatus_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_RejuvStatus_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -18839,12 +18839,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -18868,7 +18868,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_RejuvStatus_descriptor;
       }
@@ -18910,7 +18910,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus)other);
         } else {
@@ -18942,13 +18942,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_RejuvStatus) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -19101,7 +19101,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_KillStreakOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_KillStreak)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 player_pawn = 1 [default = 16777215];</code>
@@ -19152,15 +19152,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_KillStreak}
    */
   public static final class CCitadelUserMsg_KillStreak extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_KillStreak)
       CCitadelUserMsg_KillStreakOrBuilder {
     // Use CCitadelUserMsg_KillStreak.newBuilder() to construct.
-    private CCitadelUserMsg_KillStreak(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_KillStreak(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_KillStreak(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_KillStreak(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_KillStreak defaultInstance;
     public static CCitadelUserMsg_KillStreak getDefaultInstance() {
@@ -19171,20 +19171,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_KillStreak(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -19227,40 +19227,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_KillStreak_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_KillStreak_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_KillStreak> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_KillStreak>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_KillStreak> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_KillStreak>() {
       public CCitadelUserMsg_KillStreak parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_KillStreak(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_KillStreak> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_KillStreak> getParserForType() {
       return PARSER;
     }
 
@@ -19357,7 +19357,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -19385,23 +19385,23 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, playerPawn_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, numKills_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, isFirstBlood_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(4, streakEnded_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(5, duration_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -19417,24 +19417,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(java.io.InputStream input)
@@ -19443,7 +19443,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -19453,18 +19453,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -19478,7 +19478,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -19486,15 +19486,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_KillStreak}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_KillStreak)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreakOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_KillStreak_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_KillStreak_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -19507,12 +19507,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -19538,7 +19538,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_KillStreak_descriptor;
       }
@@ -19584,7 +19584,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak)other);
         } else {
@@ -19619,13 +19619,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_KillStreak) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -19810,7 +19810,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_TeamMsgOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_TeamMsg)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 event_type = 1;</code>
@@ -19852,15 +19852,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_TeamMsg}
    */
   public static final class CCitadelUserMsg_TeamMsg extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_TeamMsg)
       CCitadelUserMsg_TeamMsgOrBuilder {
     // Use CCitadelUserMsg_TeamMsg.newBuilder() to construct.
-    private CCitadelUserMsg_TeamMsg(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_TeamMsg(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_TeamMsg(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_TeamMsg(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_TeamMsg defaultInstance;
     public static CCitadelUserMsg_TeamMsg getDefaultInstance() {
@@ -19871,20 +19871,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_TeamMsg(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -19922,40 +19922,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TeamMsg_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TeamMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_TeamMsg> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_TeamMsg>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_TeamMsg> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_TeamMsg>() {
       public CCitadelUserMsg_TeamMsg parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_TeamMsg(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_TeamMsg> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_TeamMsg> getParserForType() {
       return PARSER;
     }
 
@@ -20036,7 +20036,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20061,19 +20061,19 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, eventType_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, teamNumber_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, laneColor_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(4, playerController_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -20089,24 +20089,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(java.io.InputStream input)
@@ -20115,7 +20115,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -20125,18 +20125,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -20150,7 +20150,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -20158,15 +20158,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_TeamMsg}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_TeamMsg)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsgOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TeamMsg_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TeamMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -20179,12 +20179,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -20208,7 +20208,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_TeamMsg_descriptor;
       }
@@ -20250,7 +20250,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg)other);
         } else {
@@ -20282,13 +20282,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_TeamMsg) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -20441,7 +20441,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_PlayerRespawnedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_PlayerRespawned)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 player_pawn = 1 [default = 16777215];</code>
@@ -20465,15 +20465,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_PlayerRespawned}
    */
   public static final class CCitadelUserMsg_PlayerRespawned extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_PlayerRespawned)
       CCitadelUserMsg_PlayerRespawnedOrBuilder {
     // Use CCitadelUserMsg_PlayerRespawned.newBuilder() to construct.
-    private CCitadelUserMsg_PlayerRespawned(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_PlayerRespawned(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_PlayerRespawned(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_PlayerRespawned(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_PlayerRespawned defaultInstance;
     public static CCitadelUserMsg_PlayerRespawned getDefaultInstance() {
@@ -20484,20 +20484,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_PlayerRespawned(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -20525,40 +20525,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerRespawned_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerRespawned_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_PlayerRespawned> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_PlayerRespawned>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PlayerRespawned> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_PlayerRespawned>() {
       public CCitadelUserMsg_PlayerRespawned parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_PlayerRespawned(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_PlayerRespawned> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_PlayerRespawned> getParserForType() {
       return PARSER;
     }
 
@@ -20607,7 +20607,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -20626,11 +20626,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, playerPawn_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeFloatSize(2, facingYaw_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -20646,24 +20646,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(java.io.InputStream input)
@@ -20672,7 +20672,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -20682,18 +20682,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -20707,7 +20707,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -20715,15 +20715,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_PlayerRespawned}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_PlayerRespawned)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawnedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerRespawned_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerRespawned_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -20736,12 +20736,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -20761,7 +20761,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_PlayerRespawned_descriptor;
       }
@@ -20795,7 +20795,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned)other);
         } else {
@@ -20821,13 +20821,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_PlayerRespawned) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -20916,7 +20916,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_CallCheaterVoteOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_CallCheaterVote)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 player_slot = 1 [default = -1];</code>
@@ -20931,15 +20931,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_CallCheaterVote}
    */
   public static final class CCitadelUserMsg_CallCheaterVote extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_CallCheaterVote)
       CCitadelUserMsg_CallCheaterVoteOrBuilder {
     // Use CCitadelUserMsg_CallCheaterVote.newBuilder() to construct.
-    private CCitadelUserMsg_CallCheaterVote(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_CallCheaterVote(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_CallCheaterVote(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_CallCheaterVote(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_CallCheaterVote defaultInstance;
     public static CCitadelUserMsg_CallCheaterVote getDefaultInstance() {
@@ -20950,20 +20950,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_CallCheaterVote(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -20986,40 +20986,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CallCheaterVote_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CallCheaterVote_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_CallCheaterVote> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_CallCheaterVote>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_CallCheaterVote> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_CallCheaterVote>() {
       public CCitadelUserMsg_CallCheaterVote parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_CallCheaterVote(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_CallCheaterVote> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_CallCheaterVote> getParserForType() {
       return PARSER;
     }
 
@@ -21052,7 +21052,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21068,7 +21068,7 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, playerSlot_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -21084,24 +21084,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(java.io.InputStream input)
@@ -21110,7 +21110,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -21120,18 +21120,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -21145,7 +21145,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -21153,15 +21153,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_CallCheaterVote}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_CallCheaterVote)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVoteOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CallCheaterVote_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CallCheaterVote_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -21174,12 +21174,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -21197,7 +21197,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_CallCheaterVote_descriptor;
       }
@@ -21227,7 +21227,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote)other);
         } else {
@@ -21250,13 +21250,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_CallCheaterVote) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -21313,7 +21313,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_FlexSlotUnlockedOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_FlexSlotUnlocked)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 team_number = 1;</code>
@@ -21337,15 +21337,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_FlexSlotUnlocked}
    */
   public static final class CCitadelUserMsg_FlexSlotUnlocked extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_FlexSlotUnlocked)
       CCitadelUserMsg_FlexSlotUnlockedOrBuilder {
     // Use CCitadelUserMsg_FlexSlotUnlocked.newBuilder() to construct.
-    private CCitadelUserMsg_FlexSlotUnlocked(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_FlexSlotUnlocked(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_FlexSlotUnlocked(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_FlexSlotUnlocked(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_FlexSlotUnlocked defaultInstance;
     public static CCitadelUserMsg_FlexSlotUnlocked getDefaultInstance() {
@@ -21356,20 +21356,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_FlexSlotUnlocked(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -21397,40 +21397,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_FlexSlotUnlocked_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_FlexSlotUnlocked> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_FlexSlotUnlocked>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_FlexSlotUnlocked> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_FlexSlotUnlocked>() {
       public CCitadelUserMsg_FlexSlotUnlocked parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_FlexSlotUnlocked(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_FlexSlotUnlocked> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_FlexSlotUnlocked> getParserForType() {
       return PARSER;
     }
 
@@ -21479,7 +21479,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21498,11 +21498,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, teamNumber_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(2, flexslotUnlocked_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -21518,24 +21518,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(java.io.InputStream input)
@@ -21544,7 +21544,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -21554,18 +21554,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -21579,7 +21579,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -21587,15 +21587,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_FlexSlotUnlocked}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_FlexSlotUnlocked)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlockedOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_FlexSlotUnlocked_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -21608,12 +21608,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -21633,7 +21633,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor;
       }
@@ -21667,7 +21667,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked)other);
         } else {
@@ -21693,13 +21693,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_FlexSlotUnlocked) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -21788,7 +21788,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_SeasonalKillOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_SeasonalKill)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 killer = 1 [default = 16777215];</code>
@@ -21812,15 +21812,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_SeasonalKill}
    */
   public static final class CCitadelUserMsg_SeasonalKill extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_SeasonalKill)
       CCitadelUserMsg_SeasonalKillOrBuilder {
     // Use CCitadelUserMsg_SeasonalKill.newBuilder() to construct.
-    private CCitadelUserMsg_SeasonalKill(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_SeasonalKill(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_SeasonalKill(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_SeasonalKill(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_SeasonalKill defaultInstance;
     public static CCitadelUserMsg_SeasonalKill getDefaultInstance() {
@@ -21831,20 +21831,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_SeasonalKill(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -21872,40 +21872,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_SeasonalKill_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_SeasonalKill_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_SeasonalKill> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_SeasonalKill>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_SeasonalKill> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_SeasonalKill>() {
       public CCitadelUserMsg_SeasonalKill parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_SeasonalKill(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_SeasonalKill> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_SeasonalKill> getParserForType() {
       return PARSER;
     }
 
@@ -21954,7 +21954,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -21973,11 +21973,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, killer_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(2, victim_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -21993,24 +21993,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(java.io.InputStream input)
@@ -22019,7 +22019,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -22029,18 +22029,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -22054,7 +22054,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -22062,15 +22062,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_SeasonalKill}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_SeasonalKill)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKillOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_SeasonalKill_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_SeasonalKill_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -22083,12 +22083,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -22108,7 +22108,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_SeasonalKill_descriptor;
       }
@@ -22142,7 +22142,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill)other);
         } else {
@@ -22168,13 +22168,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_SeasonalKill) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -22263,7 +22263,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_MusicQueueOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_MusicQueue)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 music_state = 1;</code>
@@ -22287,15 +22287,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_MusicQueue}
    */
   public static final class CCitadelUserMsg_MusicQueue extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_MusicQueue)
       CCitadelUserMsg_MusicQueueOrBuilder {
     // Use CCitadelUserMsg_MusicQueue.newBuilder() to construct.
-    private CCitadelUserMsg_MusicQueue(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_MusicQueue(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_MusicQueue(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_MusicQueue(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_MusicQueue defaultInstance;
     public static CCitadelUserMsg_MusicQueue getDefaultInstance() {
@@ -22306,20 +22306,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_MusicQueue(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -22347,40 +22347,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MusicQueue_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MusicQueue_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_MusicQueue> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_MusicQueue>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_MusicQueue> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_MusicQueue>() {
       public CCitadelUserMsg_MusicQueue parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_MusicQueue(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_MusicQueue> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_MusicQueue> getParserForType() {
       return PARSER;
     }
 
@@ -22429,7 +22429,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -22448,11 +22448,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, musicState_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(2, override_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -22468,24 +22468,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(java.io.InputStream input)
@@ -22494,7 +22494,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -22504,18 +22504,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -22529,7 +22529,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -22537,15 +22537,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_MusicQueue}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_MusicQueue)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueueOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MusicQueue_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MusicQueue_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -22558,12 +22558,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -22583,7 +22583,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_MusicQueue_descriptor;
       }
@@ -22617,7 +22617,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue)other);
         } else {
@@ -22643,13 +22643,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_MusicQueue) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -22738,7 +22738,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_AG2ParamTriggerOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_AG2ParamTrigger)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string param_id = 1;</code>
@@ -22751,7 +22751,7 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string param_id = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getParamIdBytes();
 
     /**
@@ -22765,22 +22765,22 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string param_value = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getParamValueBytes();
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_AG2ParamTrigger}
    */
   public static final class CCitadelUserMsg_AG2ParamTrigger extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_AG2ParamTrigger)
       CCitadelUserMsg_AG2ParamTriggerOrBuilder {
     // Use CCitadelUserMsg_AG2ParamTrigger.newBuilder() to construct.
-    private CCitadelUserMsg_AG2ParamTrigger(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_AG2ParamTrigger(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_AG2ParamTrigger(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_AG2ParamTrigger(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_AG2ParamTrigger defaultInstance;
     public static CCitadelUserMsg_AG2ParamTrigger getDefaultInstance() {
@@ -22791,20 +22791,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_AG2ParamTrigger(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -22821,53 +22821,53 @@ public final class CitadelUserMessages {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               paramId_ = bs;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               paramValue_ = bs;
               break;
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AG2ParamTrigger_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_AG2ParamTrigger> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_AG2ParamTrigger>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_AG2ParamTrigger> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_AG2ParamTrigger>() {
       public CCitadelUserMsg_AG2ParamTrigger parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_AG2ParamTrigger(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_AG2ParamTrigger> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_AG2ParamTrigger> getParserForType() {
       return PARSER;
     }
 
@@ -22888,8 +22888,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           paramId_ = s;
@@ -22900,17 +22900,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string param_id = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getParamIdBytes() {
       java.lang.Object ref = paramId_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         paramId_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -22930,8 +22930,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           paramValue_ = s;
@@ -22942,17 +22942,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string param_value = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getParamValueBytes() {
       java.lang.Object ref = paramValue_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         paramValue_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -22970,7 +22970,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -22989,11 +22989,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getParamIdBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getParamValueBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -23009,24 +23009,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(java.io.InputStream input)
@@ -23035,7 +23035,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -23045,18 +23045,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -23070,7 +23070,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -23078,15 +23078,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_AG2ParamTrigger}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_AG2ParamTrigger)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTriggerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AG2ParamTrigger_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -23099,12 +23099,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -23124,7 +23124,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor;
       }
@@ -23158,7 +23158,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger)other);
         } else {
@@ -23188,13 +23188,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_AG2ParamTrigger) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -23219,8 +23219,8 @@ public final class CitadelUserMessages {
       public java.lang.String getParamId() {
         java.lang.Object ref = paramId_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             paramId_ = s;
@@ -23233,17 +23233,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string param_id = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getParamIdBytes() {
         java.lang.Object ref = paramId_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           paramId_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -23272,7 +23272,7 @@ public final class CitadelUserMessages {
        * <code>optional string param_id = 1;</code>
        */
       public Builder setParamIdBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -23295,8 +23295,8 @@ public final class CitadelUserMessages {
       public java.lang.String getParamValue() {
         java.lang.Object ref = paramValue_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             paramValue_ = s;
@@ -23309,17 +23309,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string param_value = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getParamValueBytes() {
         java.lang.Object ref = paramValue_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           paramValue_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -23348,7 +23348,7 @@ public final class CitadelUserMessages {
        * <code>optional string param_value = 2;</code>
        */
       public Builder setParamValueBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -23371,7 +23371,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_EntityPortalledOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_EntityPortalled)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional uint32 entity_portalled = 1 [default = 16777215];</code>
@@ -23399,15 +23399,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_EntityPortalled}
    */
   public static final class CCitadelUserMsg_EntityPortalled extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_EntityPortalled)
       CCitadelUserMsg_EntityPortalledOrBuilder {
     // Use CCitadelUserMsg_EntityPortalled.newBuilder() to construct.
-    private CCitadelUserMsg_EntityPortalled(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_EntityPortalled(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_EntityPortalled(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_EntityPortalled(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_EntityPortalled defaultInstance;
     public static CCitadelUserMsg_EntityPortalled getDefaultInstance() {
@@ -23418,20 +23418,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_EntityPortalled(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -23467,40 +23467,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_EntityPortalled_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_EntityPortalled_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_EntityPortalled> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_EntityPortalled>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_EntityPortalled> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_EntityPortalled>() {
       public CCitadelUserMsg_EntityPortalled parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_EntityPortalled(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_EntityPortalled> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_EntityPortalled> getParserForType() {
       return PARSER;
     }
 
@@ -23555,7 +23555,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -23574,11 +23574,11 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeUInt32Size(1, entityPortalled_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(2, portalTransform_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -23594,24 +23594,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(java.io.InputStream input)
@@ -23620,7 +23620,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -23630,18 +23630,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -23655,7 +23655,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -23663,15 +23663,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_EntityPortalled}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_EntityPortalled)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalledOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_EntityPortalled_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_EntityPortalled_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -23684,12 +23684,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPortalTransformFieldBuilder();
         }
       }
@@ -23714,7 +23714,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_EntityPortalled_descriptor;
       }
@@ -23752,7 +23752,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled)other);
         } else {
@@ -23778,13 +23778,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_EntityPortalled) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -23829,7 +23829,7 @@ public final class CitadelUserMessages {
       }
 
       private skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform portalTransform_ = skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> portalTransformBuilder_;
       /**
        * <code>optional .CMsgTransform portal_transform = 2;</code>
@@ -23930,11 +23930,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .CMsgTransform portal_transform = 2;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder> 
           getPortalTransformFieldBuilder() {
         if (portalTransformBuilder_ == null) {
-          portalTransformBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          portalTransformBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransform.Builder, skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.CMsgTransformOrBuilder>(
                   getPortalTransform(),
                   getParentForChildren(),
@@ -23957,7 +23957,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_StreetBrawlScoringOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_StreetBrawlScoring)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional int32 scoring_team = 1;</code>
@@ -23999,15 +23999,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_StreetBrawlScoring}
    */
   public static final class CCitadelUserMsg_StreetBrawlScoring extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_StreetBrawlScoring)
       CCitadelUserMsg_StreetBrawlScoringOrBuilder {
     // Use CCitadelUserMsg_StreetBrawlScoring.newBuilder() to construct.
-    private CCitadelUserMsg_StreetBrawlScoring(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_StreetBrawlScoring(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_StreetBrawlScoring(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_StreetBrawlScoring(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_StreetBrawlScoring defaultInstance;
     public static CCitadelUserMsg_StreetBrawlScoring getDefaultInstance() {
@@ -24018,20 +24018,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_StreetBrawlScoring(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -24069,40 +24069,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_StreetBrawlScoring_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_StreetBrawlScoring> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_StreetBrawlScoring>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_StreetBrawlScoring> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_StreetBrawlScoring>() {
       public CCitadelUserMsg_StreetBrawlScoring parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_StreetBrawlScoring(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_StreetBrawlScoring> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_StreetBrawlScoring> getParserForType() {
       return PARSER;
     }
 
@@ -24183,7 +24183,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -24208,19 +24208,19 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(1, scoringTeam_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(2, justATest_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(3, sapphireScore_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeInt32Size(4, amberScore_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -24236,24 +24236,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(java.io.InputStream input)
@@ -24262,7 +24262,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -24272,18 +24272,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -24297,7 +24297,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -24305,15 +24305,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_StreetBrawlScoring}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_StreetBrawlScoring)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoringOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_StreetBrawlScoring_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -24326,12 +24326,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -24355,7 +24355,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor;
       }
@@ -24397,7 +24397,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring)other);
         } else {
@@ -24429,13 +24429,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_StreetBrawlScoring) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -24588,7 +24588,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_HudGameAnnouncementOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_HudGameAnnouncement)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional string title_locstring = 1;</code>
@@ -24601,7 +24601,7 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string title_locstring = 1;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getTitleLocstringBytes();
 
     /**
@@ -24615,13 +24615,13 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string description_locstring = 2;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getDescriptionLocstringBytes();
 
     /**
      * <code>repeated string classname = 3;</code>
      */
-    com.google.protobuf.ProtocolStringList
+    skadistats.clarity.protobuf.ProtocolStringList
         getClassnameList();
     /**
      * <code>repeated string classname = 3;</code>
@@ -24634,13 +24634,13 @@ public final class CitadelUserMessages {
     /**
      * <code>repeated string classname = 3;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getClassnameBytes(int index);
 
     /**
      * <code>repeated string dialog_variable_name = 4;</code>
      */
-    com.google.protobuf.ProtocolStringList
+    skadistats.clarity.protobuf.ProtocolStringList
         getDialogVariableNameList();
     /**
      * <code>repeated string dialog_variable_name = 4;</code>
@@ -24653,13 +24653,13 @@ public final class CitadelUserMessages {
     /**
      * <code>repeated string dialog_variable_name = 4;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getDialogVariableNameBytes(int index);
 
     /**
      * <code>repeated string dialog_variable_locstring = 5;</code>
      */
-    com.google.protobuf.ProtocolStringList
+    skadistats.clarity.protobuf.ProtocolStringList
         getDialogVariableLocstringList();
     /**
      * <code>repeated string dialog_variable_locstring = 5;</code>
@@ -24672,22 +24672,22 @@ public final class CitadelUserMessages {
     /**
      * <code>repeated string dialog_variable_locstring = 5;</code>
      */
-    com.google.protobuf.ByteString
+    skadistats.clarity.protobuf.ByteString
         getDialogVariableLocstringBytes(int index);
   }
   /**
    * Protobuf type {@code CCitadelUserMsg_HudGameAnnouncement}
    */
   public static final class CCitadelUserMsg_HudGameAnnouncement extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_HudGameAnnouncement)
       CCitadelUserMsg_HudGameAnnouncementOrBuilder {
     // Use CCitadelUserMsg_HudGameAnnouncement.newBuilder() to construct.
-    private CCitadelUserMsg_HudGameAnnouncement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_HudGameAnnouncement(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_HudGameAnnouncement(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_HudGameAnnouncement(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_HudGameAnnouncement defaultInstance;
     public static CCitadelUserMsg_HudGameAnnouncement getDefaultInstance() {
@@ -24698,20 +24698,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_HudGameAnnouncement(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -24728,39 +24728,39 @@ public final class CitadelUserMessages {
               break;
             }
             case 10: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000001;
               titleLocstring_ = bs;
               break;
             }
             case 18: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               bitField0_ |= 0x00000002;
               descriptionLocstring_ = bs;
               break;
             }
             case 26: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                classname_ = new com.google.protobuf.LazyStringArrayList();
+                classname_ = new skadistats.clarity.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000004;
               }
               classname_.add(bs);
               break;
             }
             case 34: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000008) == 0x00000008)) {
-                dialogVariableName_ = new com.google.protobuf.LazyStringArrayList();
+                dialogVariableName_ = new skadistats.clarity.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000008;
               }
               dialogVariableName_.add(bs);
               break;
             }
             case 42: {
-              com.google.protobuf.ByteString bs = input.readBytes();
+              skadistats.clarity.protobuf.ByteString bs = input.readBytes();
               if (!((mutable_bitField0_ & 0x00000010) == 0x00000010)) {
-                dialogVariableLocstring_ = new com.google.protobuf.LazyStringArrayList();
+                dialogVariableLocstring_ = new skadistats.clarity.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000010;
               }
               dialogVariableLocstring_.add(bs);
@@ -24768,10 +24768,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
@@ -24787,30 +24787,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HudGameAnnouncement_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_HudGameAnnouncement> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_HudGameAnnouncement>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_HudGameAnnouncement> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_HudGameAnnouncement>() {
       public CCitadelUserMsg_HudGameAnnouncement parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_HudGameAnnouncement(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_HudGameAnnouncement> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_HudGameAnnouncement> getParserForType() {
       return PARSER;
     }
 
@@ -24831,8 +24831,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           titleLocstring_ = s;
@@ -24843,17 +24843,17 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string title_locstring = 1;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getTitleLocstringBytes() {
       java.lang.Object ref = titleLocstring_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         titleLocstring_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
@@ -24873,8 +24873,8 @@ public final class CitadelUserMessages {
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        skadistats.clarity.protobuf.ByteString bs = 
+            (skadistats.clarity.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         if (bs.isValidUtf8()) {
           descriptionLocstring_ = s;
@@ -24885,26 +24885,26 @@ public final class CitadelUserMessages {
     /**
      * <code>optional string description_locstring = 2;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getDescriptionLocstringBytes() {
       java.lang.Object ref = descriptionLocstring_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
+        skadistats.clarity.protobuf.ByteString b = 
+            skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         descriptionLocstring_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (skadistats.clarity.protobuf.ByteString) ref;
       }
     }
 
     public static final int CLASSNAME_FIELD_NUMBER = 3;
-    private com.google.protobuf.LazyStringList classname_;
+    private skadistats.clarity.protobuf.LazyStringList classname_;
     /**
      * <code>repeated string classname = 3;</code>
      */
-    public com.google.protobuf.ProtocolStringList
+    public skadistats.clarity.protobuf.ProtocolStringList
         getClassnameList() {
       return classname_;
     }
@@ -24923,17 +24923,17 @@ public final class CitadelUserMessages {
     /**
      * <code>repeated string classname = 3;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getClassnameBytes(int index) {
       return classname_.getByteString(index);
     }
 
     public static final int DIALOG_VARIABLE_NAME_FIELD_NUMBER = 4;
-    private com.google.protobuf.LazyStringList dialogVariableName_;
+    private skadistats.clarity.protobuf.LazyStringList dialogVariableName_;
     /**
      * <code>repeated string dialog_variable_name = 4;</code>
      */
-    public com.google.protobuf.ProtocolStringList
+    public skadistats.clarity.protobuf.ProtocolStringList
         getDialogVariableNameList() {
       return dialogVariableName_;
     }
@@ -24952,17 +24952,17 @@ public final class CitadelUserMessages {
     /**
      * <code>repeated string dialog_variable_name = 4;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getDialogVariableNameBytes(int index) {
       return dialogVariableName_.getByteString(index);
     }
 
     public static final int DIALOG_VARIABLE_LOCSTRING_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList dialogVariableLocstring_;
+    private skadistats.clarity.protobuf.LazyStringList dialogVariableLocstring_;
     /**
      * <code>repeated string dialog_variable_locstring = 5;</code>
      */
-    public com.google.protobuf.ProtocolStringList
+    public skadistats.clarity.protobuf.ProtocolStringList
         getDialogVariableLocstringList() {
       return dialogVariableLocstring_;
     }
@@ -24981,7 +24981,7 @@ public final class CitadelUserMessages {
     /**
      * <code>repeated string dialog_variable_locstring = 5;</code>
      */
-    public com.google.protobuf.ByteString
+    public skadistats.clarity.protobuf.ByteString
         getDialogVariableLocstringBytes(int index) {
       return dialogVariableLocstring_.getByteString(index);
     }
@@ -24989,9 +24989,9 @@ public final class CitadelUserMessages {
     private void initFields() {
       titleLocstring_ = "";
       descriptionLocstring_ = "";
-      classname_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      dialogVariableName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      dialogVariableLocstring_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      classname_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      dialogVariableName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
+      dialogVariableLocstring_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -25003,7 +25003,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -25031,17 +25031,17 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(1, getTitleLocstringBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBytesSize(2, getDescriptionLocstringBytes());
       }
       {
         int dataSize = 0;
         for (int i = 0; i < classname_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSizeNoTag(classname_.getByteString(i));
         }
         size += dataSize;
@@ -25050,7 +25050,7 @@ public final class CitadelUserMessages {
       {
         int dataSize = 0;
         for (int i = 0; i < dialogVariableName_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSizeNoTag(dialogVariableName_.getByteString(i));
         }
         size += dataSize;
@@ -25059,7 +25059,7 @@ public final class CitadelUserMessages {
       {
         int dataSize = 0;
         for (int i = 0; i < dialogVariableLocstring_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeBytesSizeNoTag(dialogVariableLocstring_.getByteString(i));
         }
         size += dataSize;
@@ -25078,24 +25078,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(java.io.InputStream input)
@@ -25104,7 +25104,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -25114,18 +25114,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -25139,7 +25139,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -25147,15 +25147,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_HudGameAnnouncement}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_HudGameAnnouncement)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncementOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HudGameAnnouncement_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -25168,12 +25168,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -25186,11 +25186,11 @@ public final class CitadelUserMessages {
         bitField0_ = (bitField0_ & ~0x00000001);
         descriptionLocstring_ = "";
         bitField0_ = (bitField0_ & ~0x00000002);
-        classname_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        classname_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
-        dialogVariableName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        dialogVariableName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
-        dialogVariableLocstring_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        dialogVariableLocstring_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
@@ -25199,7 +25199,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor;
       }
@@ -25248,7 +25248,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement)other);
         } else {
@@ -25308,13 +25308,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_HudGameAnnouncement) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -25339,8 +25339,8 @@ public final class CitadelUserMessages {
       public java.lang.String getTitleLocstring() {
         java.lang.Object ref = titleLocstring_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             titleLocstring_ = s;
@@ -25353,17 +25353,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string title_locstring = 1;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getTitleLocstringBytes() {
         java.lang.Object ref = titleLocstring_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           titleLocstring_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -25392,7 +25392,7 @@ public final class CitadelUserMessages {
        * <code>optional string title_locstring = 1;</code>
        */
       public Builder setTitleLocstringBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -25415,8 +25415,8 @@ public final class CitadelUserMessages {
       public java.lang.String getDescriptionLocstring() {
         java.lang.Object ref = descriptionLocstring_;
         if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
+          skadistats.clarity.protobuf.ByteString bs =
+              (skadistats.clarity.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           if (bs.isValidUtf8()) {
             descriptionLocstring_ = s;
@@ -25429,17 +25429,17 @@ public final class CitadelUserMessages {
       /**
        * <code>optional string description_locstring = 2;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDescriptionLocstringBytes() {
         java.lang.Object ref = descriptionLocstring_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
+          skadistats.clarity.protobuf.ByteString b = 
+              skadistats.clarity.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           descriptionLocstring_ = b;
           return b;
         } else {
-          return (com.google.protobuf.ByteString) ref;
+          return (skadistats.clarity.protobuf.ByteString) ref;
         }
       }
       /**
@@ -25468,7 +25468,7 @@ public final class CitadelUserMessages {
        * <code>optional string description_locstring = 2;</code>
        */
       public Builder setDescriptionLocstringBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -25478,17 +25478,17 @@ public final class CitadelUserMessages {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList classname_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private skadistats.clarity.protobuf.LazyStringList classname_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       private void ensureClassnameIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          classname_ = new com.google.protobuf.LazyStringArrayList(classname_);
+          classname_ = new skadistats.clarity.protobuf.LazyStringArrayList(classname_);
           bitField0_ |= 0x00000004;
          }
       }
       /**
        * <code>repeated string classname = 3;</code>
        */
-      public com.google.protobuf.ProtocolStringList
+      public skadistats.clarity.protobuf.ProtocolStringList
           getClassnameList() {
         return classname_.getUnmodifiableView();
       }
@@ -25507,7 +25507,7 @@ public final class CitadelUserMessages {
       /**
        * <code>repeated string classname = 3;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getClassnameBytes(int index) {
         return classname_.getByteString(index);
       }
@@ -25543,7 +25543,7 @@ public final class CitadelUserMessages {
       public Builder addAllClassname(
           java.lang.Iterable<java.lang.String> values) {
         ensureClassnameIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, classname_);
         onChanged();
         return this;
@@ -25552,7 +25552,7 @@ public final class CitadelUserMessages {
        * <code>repeated string classname = 3;</code>
        */
       public Builder clearClassname() {
-        classname_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        classname_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
@@ -25561,7 +25561,7 @@ public final class CitadelUserMessages {
        * <code>repeated string classname = 3;</code>
        */
       public Builder addClassnameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -25571,17 +25571,17 @@ public final class CitadelUserMessages {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList dialogVariableName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private skadistats.clarity.protobuf.LazyStringList dialogVariableName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       private void ensureDialogVariableNameIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          dialogVariableName_ = new com.google.protobuf.LazyStringArrayList(dialogVariableName_);
+          dialogVariableName_ = new skadistats.clarity.protobuf.LazyStringArrayList(dialogVariableName_);
           bitField0_ |= 0x00000008;
          }
       }
       /**
        * <code>repeated string dialog_variable_name = 4;</code>
        */
-      public com.google.protobuf.ProtocolStringList
+      public skadistats.clarity.protobuf.ProtocolStringList
           getDialogVariableNameList() {
         return dialogVariableName_.getUnmodifiableView();
       }
@@ -25600,7 +25600,7 @@ public final class CitadelUserMessages {
       /**
        * <code>repeated string dialog_variable_name = 4;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDialogVariableNameBytes(int index) {
         return dialogVariableName_.getByteString(index);
       }
@@ -25636,7 +25636,7 @@ public final class CitadelUserMessages {
       public Builder addAllDialogVariableName(
           java.lang.Iterable<java.lang.String> values) {
         ensureDialogVariableNameIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, dialogVariableName_);
         onChanged();
         return this;
@@ -25645,7 +25645,7 @@ public final class CitadelUserMessages {
        * <code>repeated string dialog_variable_name = 4;</code>
        */
       public Builder clearDialogVariableName() {
-        dialogVariableName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        dialogVariableName_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
@@ -25654,7 +25654,7 @@ public final class CitadelUserMessages {
        * <code>repeated string dialog_variable_name = 4;</code>
        */
       public Builder addDialogVariableNameBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -25664,17 +25664,17 @@ public final class CitadelUserMessages {
         return this;
       }
 
-      private com.google.protobuf.LazyStringList dialogVariableLocstring_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private skadistats.clarity.protobuf.LazyStringList dialogVariableLocstring_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
       private void ensureDialogVariableLocstringIsMutable() {
         if (!((bitField0_ & 0x00000010) == 0x00000010)) {
-          dialogVariableLocstring_ = new com.google.protobuf.LazyStringArrayList(dialogVariableLocstring_);
+          dialogVariableLocstring_ = new skadistats.clarity.protobuf.LazyStringArrayList(dialogVariableLocstring_);
           bitField0_ |= 0x00000010;
          }
       }
       /**
        * <code>repeated string dialog_variable_locstring = 5;</code>
        */
-      public com.google.protobuf.ProtocolStringList
+      public skadistats.clarity.protobuf.ProtocolStringList
           getDialogVariableLocstringList() {
         return dialogVariableLocstring_.getUnmodifiableView();
       }
@@ -25693,7 +25693,7 @@ public final class CitadelUserMessages {
       /**
        * <code>repeated string dialog_variable_locstring = 5;</code>
        */
-      public com.google.protobuf.ByteString
+      public skadistats.clarity.protobuf.ByteString
           getDialogVariableLocstringBytes(int index) {
         return dialogVariableLocstring_.getByteString(index);
       }
@@ -25729,7 +25729,7 @@ public final class CitadelUserMessages {
       public Builder addAllDialogVariableLocstring(
           java.lang.Iterable<java.lang.String> values) {
         ensureDialogVariableLocstringIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, dialogVariableLocstring_);
         onChanged();
         return this;
@@ -25738,7 +25738,7 @@ public final class CitadelUserMessages {
        * <code>repeated string dialog_variable_locstring = 5;</code>
        */
       public Builder clearDialogVariableLocstring() {
-        dialogVariableLocstring_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        dialogVariableLocstring_ = skadistats.clarity.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
@@ -25747,7 +25747,7 @@ public final class CitadelUserMessages {
        * <code>repeated string dialog_variable_locstring = 5;</code>
        */
       public Builder addDialogVariableLocstringBytes(
-          com.google.protobuf.ByteString value) {
+          skadistats.clarity.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -25770,7 +25770,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_ItemDraftReactionOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_ItemDraftReaction)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>optional .PingCommonData ping_data = 1;</code>
@@ -25807,15 +25807,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_ItemDraftReaction}
    */
   public static final class CCitadelUserMsg_ItemDraftReaction extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_ItemDraftReaction)
       CCitadelUserMsg_ItemDraftReactionOrBuilder {
     // Use CCitadelUserMsg_ItemDraftReaction.newBuilder() to construct.
-    private CCitadelUserMsg_ItemDraftReaction(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_ItemDraftReaction(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_ItemDraftReaction(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_ItemDraftReaction(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_ItemDraftReaction defaultInstance;
     public static CCitadelUserMsg_ItemDraftReaction getDefaultInstance() {
@@ -25826,20 +25826,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_ItemDraftReaction(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -25880,40 +25880,40 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_ItemDraftReaction> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_ItemDraftReaction>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ItemDraftReaction> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_ItemDraftReaction>() {
       public CCitadelUserMsg_ItemDraftReaction parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_ItemDraftReaction(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_ItemDraftReaction> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_ItemDraftReaction> getParserForType() {
       return PARSER;
     }
 
@@ -25984,7 +25984,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -26006,15 +26006,15 @@ public final class CitadelUserMessages {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeMessageSize(1, pingData_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(2, rare_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += skadistats.clarity.protobuf.CodedOutputStream
           .computeBoolSize(3, legendary_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -26030,24 +26030,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(java.io.InputStream input)
@@ -26056,7 +26056,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -26066,18 +26066,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -26091,7 +26091,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -26099,15 +26099,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_ItemDraftReaction}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_ItemDraftReaction)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReactionOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -26120,12 +26120,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getPingDataFieldBuilder();
         }
       }
@@ -26152,7 +26152,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor;
       }
@@ -26194,7 +26194,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction)other);
         } else {
@@ -26223,13 +26223,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_ItemDraftReaction) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -26242,7 +26242,7 @@ public final class CitadelUserMessages {
       private int bitField0_;
 
       private skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData pingData_ = skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder> pingDataBuilder_;
       /**
        * <code>optional .PingCommonData ping_data = 1;</code>
@@ -26343,11 +26343,11 @@ public final class CitadelUserMessages {
       /**
        * <code>optional .PingCommonData ping_data = 1;</code>
        */
-      private com.google.protobuf.SingleFieldBuilder<
+      private skadistats.clarity.protobuf.SingleFieldBuilder<
           skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder> 
           getPingDataFieldBuilder() {
         if (pingDataBuilder_ == null) {
-          pingDataBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          pingDataBuilder_ = new skadistats.clarity.protobuf.SingleFieldBuilder<
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonData.Builder, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.PingCommonDataOrBuilder>(
                   getPingData(),
                   getParentForChildren(),
@@ -26434,7 +26434,7 @@ public final class CitadelUserMessages {
 
   public interface CCitadelUserMsg_BannedHeroesOrBuilder extends
       // @@protoc_insertion_point(interface_extends:CCitadelUserMsg_BannedHeroes)
-      com.google.protobuf.MessageOrBuilder {
+      skadistats.clarity.protobuf.MessageOrBuilder {
 
     /**
      * <code>repeated uint32 banned_hero_ids = 1;</code>
@@ -26453,15 +26453,15 @@ public final class CitadelUserMessages {
    * Protobuf type {@code CCitadelUserMsg_BannedHeroes}
    */
   public static final class CCitadelUserMsg_BannedHeroes extends
-      com.google.protobuf.GeneratedMessage implements
+      skadistats.clarity.protobuf.GeneratedMessage implements
       // @@protoc_insertion_point(message_implements:CCitadelUserMsg_BannedHeroes)
       CCitadelUserMsg_BannedHeroesOrBuilder {
     // Use CCitadelUserMsg_BannedHeroes.newBuilder() to construct.
-    private CCitadelUserMsg_BannedHeroes(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    private CCitadelUserMsg_BannedHeroes(skadistats.clarity.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
       this.unknownFields = builder.getUnknownFields();
     }
-    private CCitadelUserMsg_BannedHeroes(boolean noInit) { this.unknownFields = com.google.protobuf.UnknownFieldSet.getDefaultInstance(); }
+    private CCitadelUserMsg_BannedHeroes(boolean noInit) { this.unknownFields = skadistats.clarity.protobuf.UnknownFieldSet.getDefaultInstance(); }
 
     private static final CCitadelUserMsg_BannedHeroes defaultInstance;
     public static CCitadelUserMsg_BannedHeroes getDefaultInstance() {
@@ -26472,20 +26472,20 @@ public final class CitadelUserMessages {
       return defaultInstance;
     }
 
-    private final com.google.protobuf.UnknownFieldSet unknownFields;
+    private final skadistats.clarity.protobuf.UnknownFieldSet unknownFields;
     @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
+    public final skadistats.clarity.protobuf.UnknownFieldSet
         getUnknownFields() {
       return this.unknownFields;
     }
     private CCitadelUserMsg_BannedHeroes(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       initFields();
       int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
+      skadistats.clarity.protobuf.UnknownFieldSet.Builder unknownFields =
+          skadistats.clarity.protobuf.UnknownFieldSet.newBuilder();
       try {
         boolean done = false;
         while (!done) {
@@ -26524,10 +26524,10 @@ public final class CitadelUserMessages {
             }
           }
         }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+      } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
         throw e.setUnfinishedMessage(this);
       } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
+        throw new skadistats.clarity.protobuf.InvalidProtocolBufferException(
             e.getMessage()).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -26537,30 +26537,30 @@ public final class CitadelUserMessages {
         makeExtensionsImmutable();
       }
     }
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final skadistats.clarity.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BannedHeroes_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BannedHeroes_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes.class, skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes.Builder.class);
     }
 
-    public static com.google.protobuf.Parser<CCitadelUserMsg_BannedHeroes> PARSER =
-        new com.google.protobuf.AbstractParser<CCitadelUserMsg_BannedHeroes>() {
+    public static skadistats.clarity.protobuf.Parser<CCitadelUserMsg_BannedHeroes> PARSER =
+        new skadistats.clarity.protobuf.AbstractParser<CCitadelUserMsg_BannedHeroes>() {
       public CCitadelUserMsg_BannedHeroes parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
         return new CCitadelUserMsg_BannedHeroes(input, extensionRegistry);
       }
     };
 
     @java.lang.Override
-    public com.google.protobuf.Parser<CCitadelUserMsg_BannedHeroes> getParserForType() {
+    public skadistats.clarity.protobuf.Parser<CCitadelUserMsg_BannedHeroes> getParserForType() {
       return PARSER;
     }
 
@@ -26599,7 +26599,7 @@ public final class CitadelUserMessages {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(skadistats.clarity.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       for (int i = 0; i < bannedHeroIds_.size(); i++) {
@@ -26617,7 +26617,7 @@ public final class CitadelUserMessages {
       {
         int dataSize = 0;
         for (int i = 0; i < bannedHeroIds_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += skadistats.clarity.protobuf.CodedOutputStream
             .computeUInt32SizeNoTag(bannedHeroIds_.get(i));
         }
         size += dataSize;
@@ -26636,24 +26636,24 @@ public final class CitadelUserMessages {
     }
 
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ByteString data,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws skadistats.clarity.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(java.io.InputStream input)
@@ -26662,7 +26662,7 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -26672,18 +26672,18 @@ public final class CitadelUserMessages {
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        skadistats.clarity.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
     public static skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        skadistats.clarity.protobuf.CodedInputStream input,
+        skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
@@ -26697,7 +26697,7 @@ public final class CitadelUserMessages {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -26705,15 +26705,15 @@ public final class CitadelUserMessages {
      * Protobuf type {@code CCitadelUserMsg_BannedHeroes}
      */
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        skadistats.clarity.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:CCitadelUserMsg_BannedHeroes)
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroesOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptor() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BannedHeroes_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BannedHeroes_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
@@ -26726,12 +26726,12 @@ public final class CitadelUserMessages {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+          skadistats.clarity.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (skadistats.clarity.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -26749,7 +26749,7 @@ public final class CitadelUserMessages {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public skadistats.clarity.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.internal_static_CCitadelUserMsg_BannedHeroes_descriptor;
       }
@@ -26778,7 +26778,7 @@ public final class CitadelUserMessages {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(skadistats.clarity.protobuf.Message other) {
         if (other instanceof skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes) {
           return mergeFrom((skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes)other);
         } else {
@@ -26808,13 +26808,13 @@ public final class CitadelUserMessages {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          skadistats.clarity.protobuf.CodedInputStream input,
+          skadistats.clarity.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        } catch (skadistats.clarity.protobuf.InvalidProtocolBufferException e) {
           parsedMessage = (skadistats.clarity.wire.deadlock.proto.CitadelUserMessages.CCitadelUserMsg_BannedHeroes) e.getUnfinishedMessage();
           throw e;
         } finally {
@@ -26877,7 +26877,7 @@ public final class CitadelUserMessages {
       public Builder addAllBannedHeroIds(
           java.lang.Iterable<? extends java.lang.Integer> values) {
         ensureBannedHeroIdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+        skadistats.clarity.protobuf.AbstractMessageLite.Builder.addAll(
             values, bannedHeroIds_);
         onChanged();
         return this;
@@ -26903,187 +26903,187 @@ public final class CitadelUserMessages {
     // @@protoc_insertion_point(class_scope:CCitadelUserMsg_BannedHeroes)
   }
 
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMessage_Damage_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMessage_Damage_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_PingCommonData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_PingCommonData_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_MapPing_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_MapPing_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_TriggerDamageFlash_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_TriggerDamageFlash_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ChatWheel_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ChatWheel_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ChatMsg_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ChatMsg_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_PostMatchDetails_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_PostMatchDetails_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ChatEvent_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ChatEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_HeroKilled_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_HeroKilled_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_PostProcessingAnim_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMessage_AbilityNotify_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMessage_AbilityNotify_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMessage_GameOver_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMessage_GameOver_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_BossKilled_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_BossKilled_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_BossDamaged_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_BossDamaged_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_MidBossSpawned_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_MidBossSpawned_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_RejuvStatus_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_RejuvStatus_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_KillStreak_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_KillStreak_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_TeamMsg_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_TeamMsg_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_PlayerRespawned_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_PlayerRespawned_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_CallCheaterVote_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_CallCheaterVote_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_FlexSlotUnlocked_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_SeasonalKill_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_SeasonalKill_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_MusicQueue_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_MusicQueue_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_AG2ParamTrigger_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_EntityPortalled_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_EntityPortalled_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_StreetBrawlScoring_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_HudGameAnnouncement_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
+  private static final skadistats.clarity.protobuf.Descriptors.Descriptor
     internal_static_CCitadelUserMsg_BannedHeroes_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_CCitadelUserMsg_BannedHeroes_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static skadistats.clarity.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -27253,17 +27253,17 @@ public final class CitadelUserMessages {
       "chIntro\020\005B=\n&skadistats.clarity.wire.dea" +
       "dlock.protoB\023CitadelUserMessages"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public skadistats.clarity.protobuf.ExtensionRegistry assignDescriptors(
+              skadistats.clarity.protobuf.Descriptors.FileDescriptor root) {
             descriptor = root;
             return null;
           }
         };
-    com.google.protobuf.Descriptors.FileDescriptor
+    skadistats.clarity.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new skadistats.clarity.protobuf.Descriptors.FileDescriptor[] {
           skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor(),
           skadistats.clarity.wire.shared.demo.proto.DemoNetworkBaseTypes.getDescriptor(),
           skadistats.clarity.wire.shared.s2.proto.S2GameEvents.getDescriptor(),
@@ -27272,211 +27272,211 @@ public final class CitadelUserMessages {
     internal_static_CCitadelUserMessage_Damage_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_CCitadelUserMessage_Damage_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMessage_Damage_descriptor,
         new java.lang.String[] { "Damage", "PreDamageDeprecated", "Type", "CitadelType", "Origin", "EntindexVictim", "EntindexInflictor", "EntindexAttacker", "EntindexAbility", "DamageAbsorbedDeprecated", "VictimHealthMax", "VictimHealthNew", "Flags", "AbilityId", "AttackerClass", "VictimClass", "VictimShieldMax", "VictimShieldNew", "Hits", "HealthLost", "HitgroupId", "EntindexAttackingObject", "DamageDirection", "IsSecondaryStat", "Effectiveness", "CritDamage", "PreDamage", "DamageAbsorbed", "ServerTick", });
     internal_static_PingCommonData_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_PingCommonData_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_PingCommonData_descriptor,
         new java.lang.String[] { "PingMessageId", "PingLocation", "EntityIndex", "SenderPlayerSlot", "SpeechConcept", "ResponseChosen", "CooldownTime", });
     internal_static_CCitadelUserMsg_MapPing_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_CCitadelUserMsg_MapPing_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_MapPing_descriptor,
         new java.lang.String[] { "PingData", "EventType", "PingMarkerAndSoundInfo", "PingedEnemyEntity", "PingedEntityClass", "IsMinimapPing", "PingedHeroName", "IsBlindPing", });
     internal_static_CCitadelUserMsg_TriggerDamageFlash_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_CCitadelUserMsg_TriggerDamageFlash_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_TriggerDamageFlash_descriptor,
         new java.lang.String[] { "EntindexFlashVictim", "EntindexFlashAttacker", "EntindexFlashHitgroup", "FlashValue", "FlashType", "FlashFlags", "FlashPosition", });
     internal_static_CCitadelUserMsg_ChatWheel_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_CCitadelUserMsg_ChatWheel_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ChatWheel_descriptor,
         new java.lang.String[] { "ChatMessageId", "PlayerSlot", "PawnEntindex", "AccountId", "HeroId", "Param1", "LaneColor", });
     internal_static_CCitadelUserMsg_ChatMsg_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_CCitadelUserMsg_ChatMsg_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ChatMsg_descriptor,
         new java.lang.String[] { "PlayerSlot", "Text", "AllChat", "LaneColor", });
     internal_static_CCitadelUserMsg_PostMatchDetails_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_CCitadelUserMsg_PostMatchDetails_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_PostMatchDetails_descriptor,
         new java.lang.String[] { "MatchDetails", });
     internal_static_CCitadelUserMsg_ChatEvent_descriptor =
       getDescriptor().getMessageTypes().get(7);
     internal_static_CCitadelUserMsg_ChatEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ChatEvent_descriptor,
         new java.lang.String[] { "Type", "Values", "PlayerSlots", });
     internal_static_CCitadelUserMsg_HeroKilled_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_CCitadelUserMsg_HeroKilled_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_HeroKilled_descriptor,
         new java.lang.String[] { "EntindexVictim", "EntindexInflictor", "EntindexAttacker", "EntindexAssisters", "EntindexScorer", "RespawnReason", "VictimTeamNumber", });
     internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelEntityMsg_BreakablePropSpawnDebris_descriptor,
         new java.lang.String[] { "EntityMsg", "DamagePos", "Damage", "DamageForce", });
     internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor =
       getDescriptor().getMessageTypes().get(10);
     internal_static_CCitadelUserMsg_PostProcessingAnim_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_PostProcessingAnim_descriptor,
         new java.lang.String[] { "EntindexOwner", "ClearAllStates", "State", "StartTime", "FadeInTime", "HoldTime", "FadeOutTime", "Scale", });
     internal_static_CCitadelUserMessage_AbilityNotify_descriptor =
       getDescriptor().getMessageTypes().get(11);
     internal_static_CCitadelUserMessage_AbilityNotify_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMessage_AbilityNotify_descriptor,
         new java.lang.String[] { "EntindexVictim", "EntindexAttacker", "AbilityId", "StatusImpact", });
     internal_static_CCitadelUserMessage_GameOver_descriptor =
       getDescriptor().getMessageTypes().get(12);
     internal_static_CCitadelUserMessage_GameOver_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMessage_GameOver_descriptor,
         new java.lang.String[] { "WinningTeam", "JustATest", });
     internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_descriptor =
       getDescriptor().getMessageTypes().get(13);
     internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ParticipantStartSoundEvent_descriptor,
         new java.lang.String[] { "Event", "PlayerSlots", });
     internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_descriptor =
       getDescriptor().getMessageTypes().get(14);
     internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ParticipantStopSoundEvent_descriptor,
         new java.lang.String[] { "Event", "PlayerSlots", });
     internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_descriptor =
       getDescriptor().getMessageTypes().get(15);
     internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ParticipantStopSoundEventHash_descriptor,
         new java.lang.String[] { "Event", "PlayerSlots", });
     internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_descriptor =
       getDescriptor().getMessageTypes().get(16);
     internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ParticipantSetSoundEventParams_descriptor,
         new java.lang.String[] { "Event", "PlayerSlots", });
     internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_descriptor =
       getDescriptor().getMessageTypes().get(17);
     internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ParticipantSetLibraryStackFields_descriptor,
         new java.lang.String[] { "Event", "PlayerSlots", });
     internal_static_CCitadelUserMsg_BossKilled_descriptor =
       getDescriptor().getMessageTypes().get(18);
     internal_static_CCitadelUserMsg_BossKilled_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_BossKilled_descriptor,
         new java.lang.String[] { "ObjectiveTeam", "ObjectiveMaskChange", "EntityKilled", "EntityKilledClass", "EntityKiller", "Gametime", "BossesRemaining", "EntityPosition", });
     internal_static_CCitadelUserMsg_BossDamaged_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_CCitadelUserMsg_BossDamaged_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_BossDamaged_descriptor,
         new java.lang.String[] { "ObjectiveTeam", "ObjectiveId", "EntityDamaged", });
     internal_static_CCitadelUserMsg_MidBossSpawned_descriptor =
       getDescriptor().getMessageTypes().get(20);
     internal_static_CCitadelUserMsg_MidBossSpawned_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_MidBossSpawned_descriptor,
         new java.lang.String[] { });
     internal_static_CCitadelUserMsg_RejuvStatus_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_CCitadelUserMsg_RejuvStatus_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_RejuvStatus_descriptor,
         new java.lang.String[] { "KillingTeam", "PlayerPawn", "UserTeam", "EventType", });
     internal_static_CCitadelUserMsg_KillStreak_descriptor =
       getDescriptor().getMessageTypes().get(22);
     internal_static_CCitadelUserMsg_KillStreak_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_KillStreak_descriptor,
         new java.lang.String[] { "PlayerPawn", "NumKills", "IsFirstBlood", "StreakEnded", "Duration", });
     internal_static_CCitadelUserMsg_TeamMsg_descriptor =
       getDescriptor().getMessageTypes().get(23);
     internal_static_CCitadelUserMsg_TeamMsg_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_TeamMsg_descriptor,
         new java.lang.String[] { "EventType", "TeamNumber", "LaneColor", "PlayerController", });
     internal_static_CCitadelUserMsg_PlayerRespawned_descriptor =
       getDescriptor().getMessageTypes().get(24);
     internal_static_CCitadelUserMsg_PlayerRespawned_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_PlayerRespawned_descriptor,
         new java.lang.String[] { "PlayerPawn", "FacingYaw", });
     internal_static_CCitadelUserMsg_CallCheaterVote_descriptor =
       getDescriptor().getMessageTypes().get(25);
     internal_static_CCitadelUserMsg_CallCheaterVote_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_CallCheaterVote_descriptor,
         new java.lang.String[] { "PlayerSlot", });
     internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor =
       getDescriptor().getMessageTypes().get(26);
     internal_static_CCitadelUserMsg_FlexSlotUnlocked_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_FlexSlotUnlocked_descriptor,
         new java.lang.String[] { "TeamNumber", "FlexslotUnlocked", });
     internal_static_CCitadelUserMsg_SeasonalKill_descriptor =
       getDescriptor().getMessageTypes().get(27);
     internal_static_CCitadelUserMsg_SeasonalKill_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_SeasonalKill_descriptor,
         new java.lang.String[] { "Killer", "Victim", });
     internal_static_CCitadelUserMsg_MusicQueue_descriptor =
       getDescriptor().getMessageTypes().get(28);
     internal_static_CCitadelUserMsg_MusicQueue_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_MusicQueue_descriptor,
         new java.lang.String[] { "MusicState", "Override", });
     internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor =
       getDescriptor().getMessageTypes().get(29);
     internal_static_CCitadelUserMsg_AG2ParamTrigger_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_AG2ParamTrigger_descriptor,
         new java.lang.String[] { "ParamId", "ParamValue", });
     internal_static_CCitadelUserMsg_EntityPortalled_descriptor =
       getDescriptor().getMessageTypes().get(30);
     internal_static_CCitadelUserMsg_EntityPortalled_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_EntityPortalled_descriptor,
         new java.lang.String[] { "EntityPortalled", "PortalTransform", });
     internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor =
       getDescriptor().getMessageTypes().get(31);
     internal_static_CCitadelUserMsg_StreetBrawlScoring_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_StreetBrawlScoring_descriptor,
         new java.lang.String[] { "ScoringTeam", "JustATest", "SapphireScore", "AmberScore", });
     internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor =
       getDescriptor().getMessageTypes().get(32);
     internal_static_CCitadelUserMsg_HudGameAnnouncement_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_HudGameAnnouncement_descriptor,
         new java.lang.String[] { "TitleLocstring", "DescriptionLocstring", "Classname", "DialogVariableName", "DialogVariableLocstring", });
     internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_CCitadelUserMsg_ItemDraftReaction_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_ItemDraftReaction_descriptor,
         new java.lang.String[] { "PingData", "Rare", "Legendary", });
     internal_static_CCitadelUserMsg_BannedHeroes_descriptor =
       getDescriptor().getMessageTypes().get(34);
     internal_static_CCitadelUserMsg_BannedHeroes_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+      skadistats.clarity.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_CCitadelUserMsg_BannedHeroes_descriptor,
         new java.lang.String[] { "BannedHeroIds", });
     skadistats.clarity.wire.shared.common.proto.CommonNetworkBaseTypes.getDescriptor();

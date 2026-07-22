@@ -1,6 +1,6 @@
 package skadistats.clarity.wire.cs.cs2;
 
-import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.protobuf.GeneratedMessage;
 import skadistats.clarity.wire.ClassToKindMessageRegistry;
 import skadistats.clarity.wire.KindToClassMessageRegistry;
 import skadistats.clarity.wire.cs.common.proto.CsCommonUserMessages;

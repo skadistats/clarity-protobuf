@@ -1,6 +1,6 @@
 package skadistats.clarity.wire;
 
-import com.google.protobuf.GeneratedMessage;
+import skadistats.clarity.protobuf.GeneratedMessage;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 
 public class KindToClassMessageRegistry {

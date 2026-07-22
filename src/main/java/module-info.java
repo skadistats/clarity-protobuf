@@ -3,7 +3,7 @@ module com.skadistats.clarity.protobuf {
     requires it.unimi.dsi.fastutil.core;
     requires java.logging;
 
-    exports com.google.protobuf;
+    exports skadistats.clarity.protobuf;
     exports skadistats.clarity.wire;
     exports skadistats.clarity.wire.cs.common.proto;
     exports skadistats.clarity.wire.cs.csgo;
