@@ -11,7 +11,7 @@
 - [x] 2.3 Rewrite the qualified prefix `com.google.protobuf.` → `skadistats.clarity.protobuf.` across the 53 generated files under `skadistats/clarity/wire/`
 - [x] 2.4 Rewrite the same qualified prefix in the three hand-written files `skadistats/clarity/wire/{Packet,ClassToKindMessageRegistry,KindToClassMessageRegistry}.java`
 - [x] 2.5 Update `module-info.java`: `exports com.google.protobuf;` → `exports skadistats.clarity.protobuf;`
-- [~] 2.6 Keep tasks 2.2–2.5 in a single mechanical commit, separate from 2.1 and from section 3 — DEFERRED: all changes left uncommitted for review per session agreement; commit split (git mv / mechanical rewrite / make.sh) is documented for when the user commits
+- [x] 2.6 Keep tasks 2.2–2.5 in a single mechanical commit, separate from 2.1 and from section 3 — SUPERSEDED: user chose to commit the whole relocation as one commit (de5c477: git mv + rewrites + make.sh + module-info + openspec). Cohesive and reviewable; the CRLF normalization was split into its own later commit
 
 ## 3. Make the relocation durable
 
