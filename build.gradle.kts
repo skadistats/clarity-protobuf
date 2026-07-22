@@ -31,6 +31,34 @@ dependencies {
     api("it.unimi.dsi:fastutil-core:8.5.12")
 }
 
+val verifyRuntimeRelocated by tasks.registering {
+    group = "verification"
+    description = "Fail if com.google.protobuf reappears in sources (vendored runtime must stay in skadistats.clarity.protobuf)."
+    val srcDir = layout.projectDirectory.dir("src/main/java")
+    inputs.dir(srcDir)
+    val marker = layout.buildDirectory.file("verifyRuntimeRelocated.ok")
+    outputs.file(marker)
+    doLast {
+        val needle = "com.google.protobuf"
+        val offenders = srcDir.asFile.walkTopDown()
+            .filter { it.isFile && it.extension == "java" && it.readText().contains(needle) }
+            .map { it.relativeTo(projectDir).path }
+            .toList()
+        if (offenders.isNotEmpty()) {
+            throw GradleException(
+                "${offenders.size} file(s) still reference '$needle'. The vendored runtime lives in " +
+                "skadistats.clarity.protobuf; re-run src/main/proto/make.sh after regenerating. " +
+                "If a google/protobuf proto was compiled as a build target, vendor it into the runtime " +
+                "rather than leaving it in com.google.protobuf.\n" +
+                offenders.joinToString("\n").prependIndent("  ")
+            )
+        }
+        marker.get().asFile.apply { parentFile.mkdirs(); writeText("ok") }
+    }
+}
+
+tasks.named("check") { dependsOn(verifyRuntimeRelocated) }
+
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {

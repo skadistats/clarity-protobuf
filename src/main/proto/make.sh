@@ -34,3 +34,11 @@ done
 # relocated runtime package. Idempotent: no matches remain after the first pass.
 find ../java/skadistats -name '*.java' -exec \
   sed -i 's/com\.google\.protobuf/skadistats.clarity.protobuf/g' {} +
+
+# Assert over the whole output tree, not just skadistats/: a google/protobuf
+# proto compiled as a build target lands in ../java/com/google/protobuf/ and
+# cannot be fixed by the rewrite above (it also needs to move). Fail loudly.
+if grep -rq 'com\.google\.protobuf' ../java; then
+  echo "make.sh: com.google.protobuf survived — a google/protobuf proto was compiled as a build target and must be vendored into the runtime, not just rewritten" >&2
+  exit 1
+fi
