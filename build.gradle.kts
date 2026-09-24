@@ -31,7 +31,7 @@ dependencies {
     api("it.unimi.dsi:fastutil-core:8.5.12")
 }
 
-val verifyRuntimeRelocated by tasks.registering {
+val verifyRuntimeRelocated = tasks.register("verifyRuntimeRelocated") {
     group = "verification"
     description = "Fail if com.google.protobuf reappears in sources (vendored runtime must stay in skadistats.clarity.protobuf)."
     val srcDir = layout.projectDirectory.dir("src/main/java")
